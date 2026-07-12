@@ -2,10 +2,17 @@ import { expect, test } from '@playwright/test'
 import { gotoHydrated } from './helpers'
 
 test.describe('app shell', () => {
-  test('renders sidebar with real catalog stats', async ({ page }) => {
+  test('renders the brand mark and nav; favicon wired', async ({ page }) => {
     await gotoHydrated(page, '/')
     await expect(page.getByText('RankedModel').first()).toBeVisible()
-    await expect(page.getByTestId('footer-stats')).toContainText('55 models · 19 orgs')
+    await expect(page.locator('aside svg').first()).toBeVisible() // brand mark
+    await expect(page.locator('aside')).not.toContainText('snapshot v') // footer removed
+    await expect(page.locator('link[rel="icon"][type="image/svg+xml"]')).toHaveAttribute(
+      'href',
+      '/favicon.svg',
+    )
+    const icon = await page.request.get('/favicon.svg')
+    expect(icon.status()).toBe(200)
   })
 
   test('sidebar navigation drives the topbar title', async ({ page }) => {

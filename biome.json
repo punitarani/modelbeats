@@ -14,7 +14,8 @@
       "!**/routeTree.gen.ts",
       "!**/migrations",
       "!**/dist",
-      "!**/.wrangler"
+      "!**/.wrangler",
+      "!.claude"
     ]
   },
   "formatter": {

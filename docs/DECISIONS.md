@@ -8,7 +8,7 @@
 
 | # | Decision |
 |---|---|
-| **D1** | **Brand = RankedModel** (design prototype said "Modelboard"); keep the design's λ mark, sidebar layout, typography. |
+| **D1** | **Brand = RankedModel** (design prototype said "Modelboard"); keep the design's sidebar layout and typography. The prototype's λ placeholder mark was replaced with the user-supplied ranked-bars mark (2026-07-12): `components/shell/logo.tsx`, mirrored in `public/favicon.svg`, `favicon.ico`, and the apple-touch icon. |
 | **D2** | **Index = curated-bounds normalization** (design), not observed min-max (arch §5 original). `benchmarks.norm_min/norm_max` columns added — distinct from display scale. Stable across publishes; reproduces design numbers exactly. Formula in C1. |
 | **D3** | **Custom SVG charts only**; Recharts dropped. The design is 100% hand-rolled SVG (scatter, bars, sparkline, radar, cadence); custom components are pixel-faithful and lighter. |
 | **D4** | `/models` = **card grid + facet rail** (design); `/rankings` = **dense sortable table** (TanStack Table headless with design markup). TanStack Virtual deferred until the catalog outgrows ~200 rows. |
@@ -23,7 +23,7 @@
 | **D13** | Search: topbar dropdown + `/` shortcut (design) + `/search?q=` results page (SEO). ⌘K palette → post-v1. |
 | **D14** | `packages/ui` dropped (components live in `apps/web/src/components/`); Drizzle lives in **`packages/db`** rather than top-level `drizzle/` so the app and scripts import one workspace package. |
 | **D15** | Context units: curated files store K-tokens exactly as the design does (`400` = 400K, `2000` = 2M); D1 stores absolute tokens (×1000 at seed); `fmtCtx` renders `128K` / `2M`. |
-| **D16** | Sidebar nav = Dashboard, Rankings, Model Explorer, Compare, **Hardware, Benchmarks, Methodology** (design's 4 + 3 additions, same item styling). Footer keeps model/org counts, snapshot date, and the curation disclaimer. |
+| **D16** | Sidebar nav = Dashboard, Rankings, Model Explorer, Compare, **Hardware, Benchmarks, Methodology** (design's 4 + 3 additions, same item styling). The design's footer stats block (counts · snapshot version · disclaimer) was removed per user direction (2026-07-12); snapshot counts/version stay visible on `/debug/catalog`, and curation/freshness is disclosed on `/methodology`. |
 | **D17** | Server surface = **two functions**: `getCatalog` (KV snapshot, D1 fallback) and `getModel(slug)` (deep detail: multi-source results, quantizations, throughput, pricing, lineage). Everything else is pure **selectors in `packages/shared`** over the snapshot — unit-testable, identical on server and client. Preserves the architecture's two-read-path split without per-screen server functions. |
 | **D18** | **No native `<select>` anywhere** — all dropdowns are shadcn on Base UI, via two app wrappers: `FilterSelect` (plain `Select`; short static lists — size class, GPU facet, sort, hardware profile) and `SearchSelect` (`Combobox` with a select-look trigger and an in-popup search input; long lists — model pickers and org filters). Both keep the compact design-token field look, `aria-label`s, `data-testid`s, and URL-state `onValueChange` semantics; triggers render the selected label as SSR text (e2e asserts text, not form values). |
 
