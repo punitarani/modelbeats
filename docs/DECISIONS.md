@@ -38,7 +38,9 @@ norm(b, v)   = v == null ? null : clamp((v − b.norm_min) / (b.norm_max − b.n
 index(m)     = round(mean(norm over benchmarks with a score) × 1000) / 10   # 0–100, 0.1 step; missing excluded, no coverage penalty
 categoryIdx  = same mean restricted to the category's benchmarks
 radar axes   = PREF:[arena] · KNOW:[mmlu] · REASON:[gpqa,hle] · CODE:[swe,lcb] · MATH:[aime,math] · AGENT:[tau]
-movers       = per family (≥2 models, date-sorted): {latest, prev, Δindex} where Δ>0, sorted desc, top 5
+movers       = per lineage edge (model vs its predecessor): Δindex where Δ>0, sorted desc, top 5
+               — reproduces the design's family-list adjacency for the curated dataset (golden-tested);
+               same-day releases are size variants with no predecessor and produce no mover
 ranks        = dense rank by index desc (overall) and per benchmark by raw score desc
 ```
 

@@ -19,7 +19,8 @@
     "validate-data": "bun scripts/src/validate.ts",
     "ci": "bun run typecheck && bun run lint && bun run test && bun run build",
     "dev": "bun run --filter '@rankedmodel/web' dev",
-    "build": "bun run --filter '@rankedmodel/web' build"
+    "build": "bun run --filter '@rankedmodel/web' build",
+    "derive": "bun scripts/src/derive.ts"
   },
   "devDependencies": {
     "@biomejs/biome": "^2.3.0",

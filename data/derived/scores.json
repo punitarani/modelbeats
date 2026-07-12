@@ -1,0 +1,867 @@
+{
+  "computedFor": "2026-07-11",
+  "models": [
+    {
+      "slug": "claude-3-5-sonnet",
+      "overallIndex": 47.8,
+      "rankOverall": 40,
+      "arenaElo": 1310,
+      "categoryIdx": {
+        "human-preference": 43.2,
+        "knowledge": 81.2,
+        "reasoning": 27,
+        "coding": 44,
+        "math": 44.4,
+        "vision": 60.4,
+        "agents": 62.6
+      }
+    },
+    {
+      "slug": "claude-haiku-4-5",
+      "overallIndex": 69.8,
+      "rankOverall": 25,
+      "arenaElo": 1408,
+      "categoryIdx": {
+        "human-preference": 69.7,
+        "knowledge": 81.5,
+        "reasoning": 42,
+        "coding": 69.7,
+        "math": 87.3,
+        "vision": 70.5,
+        "agents": 78.2
+      }
+    },
+    {
+      "slug": "claude-opus-4-7",
+      "overallIndex": 86.3,
+      "rankOverall": 3,
+      "arenaElo": 1502,
+      "categoryIdx": {
+        "human-preference": 95.1,
+        "knowledge": 88,
+        "reasoning": 74.6,
+        "coding": 82.9,
+        "math": 98.4,
+        "vision": 82.1,
+        "agents": 85.9
+      }
+    },
+    {
+      "slug": "claude-opus-4-8",
+      "overallIndex": 87.9,
+      "rankOverall": 1,
+      "arenaElo": 1510,
+      "categoryIdx": {
+        "human-preference": 97.3,
+        "knowledge": 88.5,
+        "reasoning": 78.3,
+        "coding": 84.2,
+        "math": 99,
+        "vision": 83.5,
+        "agents": 87.1
+      }
+    },
+    {
+      "slug": "claude-sonnet-4",
+      "overallIndex": 70.8,
+      "rankOverall": 24,
+      "arenaElo": 1420,
+      "categoryIdx": {
+        "human-preference": 73,
+        "knowledge": 84,
+        "reasoning": 45.8,
+        "coding": 70.6,
+        "math": 84.7,
+        "vision": 72.4,
+        "agents": 76.5
+      }
+    },
+    {
+      "slug": "claude-sonnet-4-6",
+      "overallIndex": 82.7,
+      "rankOverall": 8,
+      "arenaElo": 1488,
+      "categoryIdx": {
+        "human-preference": 91.4,
+        "knowledge": 86.2,
+        "reasoning": 66.6,
+        "coding": 80.3,
+        "math": 96.4,
+        "vision": 79.3,
+        "agents": 84
+      }
+    },
+    {
+      "slug": "command-a",
+      "overallIndex": 40.2,
+      "rankOverall": 46,
+      "arenaElo": 1305,
+      "categoryIdx": {
+        "human-preference": 41.9,
+        "knowledge": 75.8,
+        "reasoning": 21.8,
+        "coding": 25.5,
+        "math": 48.9,
+        "vision": null,
+        "agents": 51.4
+      }
+    },
+    {
+      "slug": "deepseek-r1",
+      "overallIndex": 60.7,
+      "rankOverall": 33,
+      "arenaElo": 1358,
+      "categoryIdx": {
+        "human-preference": 56.2,
+        "knowledge": 84.7,
+        "reasoning": 36.5,
+        "coding": 57.6,
+        "math": 88.2,
+        "vision": null,
+        "agents": 41
+      }
+    },
+    {
+      "slug": "deepseek-v3-2",
+      "overallIndex": 76.6,
+      "rankOverall": 18,
+      "arenaElo": 1442,
+      "categoryIdx": {
+        "human-preference": 78.9,
+        "knowledge": 85,
+        "reasoning": 56.9,
+        "coding": 74.6,
+        "math": 95.2,
+        "vision": null,
+        "agents": 72
+      }
+    },
+    {
+      "slug": "deepseek-v4-1",
+      "overallIndex": 82.7,
+      "rankOverall": 9,
+      "arenaElo": 1478,
+      "categoryIdx": {
+        "human-preference": 88.6,
+        "knowledge": 87,
+        "reasoning": 69.2,
+        "coding": 80.8,
+        "math": 97.9,
+        "vision": 77,
+        "agents": 78.8
+      }
+    },
+    {
+      "slug": "deepseek-v4-5",
+      "overallIndex": 83.7,
+      "rankOverall": 6,
+      "arenaElo": 1483,
+      "categoryIdx": {
+        "human-preference": 90,
+        "knowledge": 87.3,
+        "reasoning": 70.9,
+        "coding": 81.7,
+        "math": 98.3,
+        "vision": 78,
+        "agents": 80.2
+      }
+    },
+    {
+      "slug": "gemini-2-5-flash",
+      "overallIndex": 64.9,
+      "rankOverall": 29,
+      "arenaElo": 1401,
+      "categoryIdx": {
+        "human-preference": 67.8,
+        "knowledge": 80.3,
+        "reasoning": 42.5,
+        "coding": 56.2,
+        "math": 84.9,
+        "vision": 70.9,
+        "agents": 63
+      }
+    },
+    {
+      "slug": "gemini-2-5-pro",
+      "overallIndex": 74.7,
+      "rankOverall": 22,
+      "arenaElo": 1451,
+      "categoryIdx": {
+        "human-preference": 81.4,
+        "knowledge": 84.7,
+        "reasoning": 52.3,
+        "coding": 69.7,
+        "math": 93.9,
+        "vision": 77.5,
+        "agents": 71.9
+      }
+    },
+    {
+      "slug": "gemini-3-1-pro",
+      "overallIndex": 85.9,
+      "rankOverall": 4,
+      "arenaElo": 1499,
+      "categoryIdx": {
+        "human-preference": 94.3,
+        "knowledge": 87.7,
+        "reasoning": 72.9,
+        "coding": 83.1,
+        "math": 98.9,
+        "vision": 85,
+        "agents": 82.7
+      }
+    },
+    {
+      "slug": "gemini-3-pro",
+      "overallIndex": 82.5,
+      "rankOverall": 10,
+      "arenaElo": 1490,
+      "categoryIdx": {
+        "human-preference": 91.9,
+        "knowledge": 86.7,
+        "reasoning": 63.7,
+        "coding": 80.6,
+        "math": 96.6,
+        "vision": 84.5,
+        "agents": 80.1
+      }
+    },
+    {
+      "slug": "gemma-3-12b",
+      "overallIndex": 30,
+      "rankOverall": 53,
+      "arenaElo": 1321,
+      "categoryIdx": {
+        "human-preference": 46.2,
+        "knowledge": 57.5,
+        "reasoning": 11.2,
+        "coding": 15.4,
+        "math": 34.8,
+        "vision": 49.5,
+        "agents": 24.5
+      }
+    },
+    {
+      "slug": "gemma-3-27b",
+      "overallIndex": 36.2,
+      "rankOverall": 50,
+      "arenaElo": 1341,
+      "categoryIdx": {
+        "human-preference": 51.6,
+        "knowledge": 64.3,
+        "reasoning": 16.5,
+        "coding": 19.9,
+        "math": 43.1,
+        "vision": 56.1,
+        "agents": 31
+      }
+    },
+    {
+      "slug": "glm-4-7",
+      "overallIndex": 78.1,
+      "rankOverall": 17,
+      "arenaElo": 1445,
+      "categoryIdx": {
+        "human-preference": 79.7,
+        "knowledge": 84.3,
+        "reasoning": 56.8,
+        "coding": 79.4,
+        "math": 96.6,
+        "vision": null,
+        "agents": 73.8
+      }
+    },
+    {
+      "slug": "glm-5",
+      "overallIndex": 79.8,
+      "rankOverall": 15,
+      "arenaElo": 1451,
+      "categoryIdx": {
+        "human-preference": 81.4,
+        "knowledge": 85.3,
+        "reasoning": 61.9,
+        "coding": 79.4,
+        "math": 96.7,
+        "vision": null,
+        "agents": 75.6
+      }
+    },
+    {
+      "slug": "glm-5-2",
+      "overallIndex": 82.3,
+      "rankOverall": 11,
+      "arenaElo": 1474,
+      "categoryIdx": {
+        "human-preference": 87.6,
+        "knowledge": 86.7,
+        "reasoning": 68,
+        "coding": 81.1,
+        "math": 97.5,
+        "vision": 76.1,
+        "agents": 79.4
+      }
+    },
+    {
+      "slug": "gpt-4o",
+      "overallIndex": 43.8,
+      "rankOverall": 43,
+      "arenaElo": 1336,
+      "categoryIdx": {
+        "human-preference": 50.3,
+        "knowledge": 81.2,
+        "reasoning": 22.6,
+        "coding": 33.6,
+        "math": 42.1,
+        "vision": 61.4,
+        "agents": 48.8
+      }
+    },
+    {
+      "slug": "gpt-5",
+      "overallIndex": 81.1,
+      "rankOverall": 12,
+      "arenaElo": 1481,
+      "categoryIdx": {
+        "human-preference": 89.5,
+        "knowledge": 86.5,
+        "reasoning": 64.4,
+        "coding": 77.4,
+        "math": 96.1,
+        "vision": 80.3,
+        "agents": 79
+      }
+    },
+    {
+      "slug": "gpt-5-5",
+      "overallIndex": 84.4,
+      "rankOverall": 5,
+      "arenaElo": 1494,
+      "categoryIdx": {
+        "human-preference": 93,
+        "knowledge": 87.3,
+        "reasoning": 71.2,
+        "coding": 80.3,
+        "math": 98.6,
+        "vision": 82.4,
+        "agents": 81.5
+      }
+    },
+    {
+      "slug": "gpt-5-5-pro",
+      "overallIndex": 87.1,
+      "rankOverall": 2,
+      "arenaElo": 1506,
+      "categoryIdx": {
+        "human-preference": 96.2,
+        "knowledge": 88.2,
+        "reasoning": 76.7,
+        "coding": 83,
+        "math": 99.5,
+        "vision": 84.3,
+        "agents": 84
+      }
+    },
+    {
+      "slug": "gpt-oss-120b",
+      "overallIndex": 62.9,
+      "rankOverall": 31,
+      "arenaElo": 1352,
+      "categoryIdx": {
+        "human-preference": 54.6,
+        "knowledge": 83.3,
+        "reasoning": 39.6,
+        "coding": 56.1,
+        "math": 87.7,
+        "vision": null,
+        "agents": 61.7
+      }
+    },
+    {
+      "slug": "gpt-oss-20b",
+      "overallIndex": 52.4,
+      "rankOverall": 38,
+      "arenaElo": 1288,
+      "categoryIdx": {
+        "human-preference": 37.3,
+        "knowledge": 75.5,
+        "reasoning": 32.2,
+        "coding": 42.8,
+        "math": 80.7,
+        "vision": null,
+        "agents": 47.2
+      }
+    },
+    {
+      "slug": "granite-4-h",
+      "overallIndex": 31.3,
+      "rankOverall": 52,
+      "arenaElo": 1246,
+      "categoryIdx": {
+        "human-preference": 25.9,
+        "knowledge": 64,
+        "reasoning": 16.3,
+        "coding": 18.9,
+        "math": 40.6,
+        "vision": null,
+        "agents": 40.2
+      }
+    },
+    {
+      "slug": "grok-4",
+      "overallIndex": 75.5,
+      "rankOverall": 20,
+      "arenaElo": 1446,
+      "categoryIdx": {
+        "human-preference": 80,
+        "knowledge": 86,
+        "reasoning": 54.9,
+        "coding": 72.7,
+        "math": 94.7,
+        "vision": 76.1,
+        "agents": 68.4
+      }
+    },
+    {
+      "slug": "grok-4-2",
+      "overallIndex": 82.8,
+      "rankOverall": 7,
+      "arenaElo": 1484,
+      "categoryIdx": {
+        "human-preference": 90.3,
+        "knowledge": 86.8,
+        "reasoning": 69.5,
+        "coding": 79.2,
+        "math": 98.5,
+        "vision": 78.9,
+        "agents": 77.9
+      }
+    },
+    {
+      "slug": "grok-4-fast",
+      "overallIndex": 69.1,
+      "rankOverall": 26,
+      "arenaElo": 1421,
+      "categoryIdx": {
+        "human-preference": 73.2,
+        "knowledge": 83,
+        "reasoning": 47.4,
+        "coding": 61.2,
+        "math": 92.6,
+        "vision": 70.6,
+        "agents": 62.1
+      }
+    },
+    {
+      "slug": "hermes-4-405b",
+      "overallIndex": 55.3,
+      "rankOverall": 36,
+      "arenaElo": 1322,
+      "categoryIdx": {
+        "human-preference": 46.5,
+        "knowledge": 79.8,
+        "reasoning": 36.2,
+        "coding": 40.1,
+        "math": 86.7,
+        "vision": null,
+        "agents": 44.9
+      }
+    },
+    {
+      "slug": "kimi-k2",
+      "overallIndex": 66.1,
+      "rankOverall": 28,
+      "arenaElo": 1416,
+      "categoryIdx": {
+        "human-preference": 71.9,
+        "knowledge": 82.5,
+        "reasoning": 41.9,
+        "coding": 59.7,
+        "math": 83.2,
+        "vision": null,
+        "agents": 70.6
+      }
+    },
+    {
+      "slug": "kimi-k2-5",
+      "overallIndex": 80.4,
+      "rankOverall": 14,
+      "arenaElo": 1448,
+      "categoryIdx": {
+        "human-preference": 80.5,
+        "knowledge": 85.7,
+        "reasoning": 64.7,
+        "coding": 80,
+        "math": 97.1,
+        "vision": 73.6,
+        "agents": 81
+      }
+    },
+    {
+      "slug": "llama-3-1-405b",
+      "overallIndex": 38.3,
+      "rankOverall": 48,
+      "arenaElo": 1269,
+      "categoryIdx": {
+        "human-preference": 32.2,
+        "knowledge": 81,
+        "reasoning": 21.7,
+        "coding": 26.1,
+        "math": 45.3,
+        "vision": null,
+        "agents": 45.2
+      }
+    },
+    {
+      "slug": "llama-3-1-8b",
+      "overallIndex": 17,
+      "rankOverall": 54,
+      "arenaElo": 1176,
+      "categoryIdx": {
+        "human-preference": 7,
+        "knowledge": 49,
+        "reasoning": 7.5,
+        "coding": 8,
+        "math": 23.3,
+        "vision": null,
+        "agents": 19.4
+      }
+    },
+    {
+      "slug": "llama-3-3-70b",
+      "overallIndex": 38.7,
+      "rankOverall": 47,
+      "arenaElo": 1290,
+      "categoryIdx": {
+        "human-preference": 37.8,
+        "knowledge": 76.7,
+        "reasoning": 21.2,
+        "coding": 25.2,
+        "math": 47.3,
+        "vision": null,
+        "agents": 46.8
+      }
+    },
+    {
+      "slug": "llama-4-maverick",
+      "overallIndex": 51.3,
+      "rankOverall": 39,
+      "arenaElo": 1354,
+      "categoryIdx": {
+        "human-preference": 55.1,
+        "knowledge": 75.8,
+        "reasoning": 34.1,
+        "coding": 38.8,
+        "math": 58.5,
+        "vision": 66.8,
+        "agents": 52
+      }
+    },
+    {
+      "slug": "llama-4-scout",
+      "overallIndex": 42.7,
+      "rankOverall": 44,
+      "arenaElo": 1318,
+      "categoryIdx": {
+        "human-preference": 45.4,
+        "knowledge": 66,
+        "reasoning": 26.7,
+        "coding": 30,
+        "math": 48.1,
+        "vision": 61.8,
+        "agents": 44.1
+      }
+    },
+    {
+      "slug": "llama-5",
+      "overallIndex": 78.7,
+      "rankOverall": 16,
+      "arenaElo": 1456,
+      "categoryIdx": {
+        "human-preference": 82.7,
+        "knowledge": 85.8,
+        "reasoning": 60.8,
+        "coding": 76.2,
+        "math": 96.2,
+        "vision": 78.1,
+        "agents": 74.5
+      }
+    },
+    {
+      "slug": "magistral-medium",
+      "overallIndex": 61.5,
+      "rankOverall": 32,
+      "arenaElo": 1370,
+      "categoryIdx": {
+        "human-preference": 59.5,
+        "knowledge": 78,
+        "reasoning": 38.2,
+        "coding": 51.4,
+        "math": 90.1,
+        "vision": 62.8,
+        "agents": 55
+      }
+    },
+    {
+      "slug": "minimax-m2-5",
+      "overallIndex": 76.3,
+      "rankOverall": 19,
+      "arenaElo": 1436,
+      "categoryIdx": {
+        "human-preference": 77.3,
+        "knowledge": 83.5,
+        "reasoning": 54.7,
+        "coding": 75.6,
+        "math": 94.6,
+        "vision": null,
+        "agents": 76.1
+      }
+    },
+    {
+      "slug": "mistral-large-3",
+      "overallIndex": 74.4,
+      "rankOverall": 23,
+      "arenaElo": 1430,
+      "categoryIdx": {
+        "human-preference": 75.7,
+        "knowledge": 83.7,
+        "reasoning": 54,
+        "coding": 72.7,
+        "math": 94.1,
+        "vision": 71.9,
+        "agents": 71.2
+      }
+    },
+    {
+      "slug": "mistral-small-3-2",
+      "overallIndex": 38.1,
+      "rankOverall": 49,
+      "arenaElo": 1330,
+      "categoryIdx": {
+        "human-preference": 48.6,
+        "knowledge": 67.8,
+        "reasoning": 18.8,
+        "coding": 23.1,
+        "math": 45.8,
+        "vision": 53.5,
+        "agents": 35.9
+      }
+    },
+    {
+      "slug": "nemotron-super-49b",
+      "overallIndex": 60.1,
+      "rankOverall": 34,
+      "arenaElo": 1360,
+      "categoryIdx": {
+        "human-preference": 56.8,
+        "knowledge": 78.8,
+        "reasoning": 36.8,
+        "coding": 49.6,
+        "math": 89,
+        "vision": null,
+        "agents": 54.3
+      }
+    },
+    {
+      "slug": "o3",
+      "overallIndex": 75.1,
+      "rankOverall": 21,
+      "arenaElo": 1444,
+      "categoryIdx": {
+        "human-preference": 79.5,
+        "knowledge": 85.3,
+        "reasoning": 52,
+        "coding": 72.4,
+        "math": 94.1,
+        "vision": 78.6,
+        "agents": 70.4
+      }
+    },
+    {
+      "slug": "olmo-3-32b",
+      "overallIndex": 45.8,
+      "rankOverall": 42,
+      "arenaElo": 1284,
+      "categoryIdx": {
+        "human-preference": 36.2,
+        "knowledge": 70.3,
+        "reasoning": 27,
+        "coding": 30.8,
+        "math": 80.8,
+        "vision": null,
+        "agents": 28.7
+      }
+    },
+    {
+      "slug": "phi-4",
+      "overallIndex": 34.5,
+      "rankOverall": 51,
+      "arenaElo": 1250,
+      "categoryIdx": {
+        "human-preference": 27,
+        "knowledge": 74.7,
+        "reasoning": 24.6,
+        "coding": 17,
+        "math": 52.8,
+        "vision": null,
+        "agents": 20.1
+      }
+    },
+    {
+      "slug": "phi-4-reasoning",
+      "overallIndex": 47.8,
+      "rankOverall": 41,
+      "arenaElo": 1262,
+      "categoryIdx": {
+        "human-preference": 30.3,
+        "knowledge": 75,
+        "reasoning": 34.1,
+        "coding": 31.7,
+        "math": 85.4,
+        "vision": null,
+        "agents": 22.6
+      }
+    },
+    {
+      "slug": "qwen3-235b",
+      "overallIndex": 63.1,
+      "rankOverall": 30,
+      "arenaElo": 1398,
+      "categoryIdx": {
+        "human-preference": 67,
+        "knowledge": 82.2,
+        "reasoning": 37.8,
+        "coding": 51.7,
+        "math": 90.4,
+        "vision": null,
+        "agents": 58.9
+      }
+    },
+    {
+      "slug": "qwen3-32b",
+      "overallIndex": 56.8,
+      "rankOverall": 35,
+      "arenaElo": 1349,
+      "categoryIdx": {
+        "human-preference": 53.8,
+        "knowledge": 77,
+        "reasoning": 32.8,
+        "coding": 44.8,
+        "math": 87.5,
+        "vision": null,
+        "agents": 49.7
+      }
+    },
+    {
+      "slug": "qwen3-7-max",
+      "overallIndex": 80.6,
+      "rankOverall": 13,
+      "arenaElo": 1470,
+      "categoryIdx": {
+        "human-preference": 86.5,
+        "knowledge": 86.3,
+        "reasoning": 64.3,
+        "coding": 78.3,
+        "math": 97,
+        "vision": 77.8,
+        "agents": 76.3
+      }
+    },
+    {
+      "slug": "qwen3-8b",
+      "overallIndex": 41,
+      "rankOverall": 45,
+      "arenaElo": 1276,
+      "categoryIdx": {
+        "human-preference": 34.1,
+        "knowledge": 61.5,
+        "reasoning": 19.3,
+        "coding": 25.4,
+        "math": 75.8,
+        "vision": null,
+        "agents": 32.8
+      }
+    },
+    {
+      "slug": "qwq-32b",
+      "overallIndex": 52.6,
+      "rankOverall": 37,
+      "arenaElo": 1316,
+      "categoryIdx": {
+        "human-preference": 44.9,
+        "knowledge": 72.5,
+        "reasoning": 28.8,
+        "coding": 43.7,
+        "math": 86.4,
+        "vision": null,
+        "agents": 38.4
+      }
+    },
+    {
+      "slug": "smollm3-3b",
+      "overallIndex": 11.2,
+      "rankOverall": 55,
+      "arenaElo": 1148,
+      "categoryIdx": {
+        "human-preference": 0,
+        "knowledge": 32.5,
+        "reasoning": 4.8,
+        "coding": 4.1,
+        "math": 21,
+        "vision": null,
+        "agents": 8.9
+      }
+    },
+    {
+      "slug": "step-3-5-flash",
+      "overallIndex": 68.7,
+      "rankOverall": 27,
+      "arenaElo": 1402,
+      "categoryIdx": {
+        "human-preference": 68.1,
+        "knowledge": 80.7,
+        "reasoning": 45.9,
+        "coding": 65.6,
+        "math": 92.8,
+        "vision": null,
+        "agents": 60.8
+      }
+    }
+  ],
+  "movers": [
+    {
+      "slug": "qwen3-7-max",
+      "name": "Qwen3.7 Max",
+      "prevSlug": "qwen3-8b",
+      "prevName": "Qwen3 8B",
+      "delta": 39.6
+    },
+    {
+      "slug": "llama-3-3-70b",
+      "name": "Llama 3.3 70B",
+      "prevSlug": "llama-3-1-8b",
+      "prevName": "Llama 3.1 8B",
+      "delta": 21.7
+    },
+    {
+      "slug": "kimi-k2-5",
+      "name": "Kimi K2.5",
+      "prevSlug": "kimi-k2",
+      "prevName": "Kimi K2",
+      "delta": 14.3
+    },
+    {
+      "slug": "grok-4-2",
+      "name": "Grok 4.2",
+      "prevSlug": "grok-4-fast",
+      "prevName": "Grok 4 Fast",
+      "delta": 13.7
+    },
+    {
+      "slug": "phi-4-reasoning",
+      "name": "Phi-4 Reasoning Plus",
+      "prevSlug": "phi-4",
+      "prevName": "Phi-4",
+      "delta": 13.3
+    }
+  ]
+}
