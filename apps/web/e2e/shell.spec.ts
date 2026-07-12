@@ -22,6 +22,26 @@ test.describe('app shell', () => {
     await expect(page.getByTestId('page-title')).toHaveText('Global Rankings')
   })
 
+  test('sidebar uses semantic Lucide icons for every primary destination', async ({ page }) => {
+    await gotoHydrated(page, '/')
+
+    const destinations = {
+      Dashboard: 'lucide-layout-dashboard',
+      Rankings: 'lucide-list-ordered',
+      'Model Explorer': 'lucide-brain-circuit',
+      Compare: 'lucide-git-compare-arrows',
+      Hardware: 'lucide-memory-stick',
+      Benchmarks: 'lucide-flask-conical',
+      Methodology: 'lucide-book-open-text',
+    }
+
+    for (const [label, iconClass] of Object.entries(destinations)) {
+      await expect(
+        page.locator('aside').getByRole('link', { name: label }).locator('svg'),
+      ).toHaveClass(new RegExp(`\\b${iconClass}\\b`))
+    }
+  })
+
   test('theme defaults dark, toggles, and persists across reload', async ({ page }) => {
     await gotoHydrated(page, '/')
     const html = page.locator('html')
@@ -32,6 +52,18 @@ test.describe('app shell', () => {
     await expect(html).not.toHaveClass(/dark/) // localStorage persisted 'light'
     await page.getByTestId('theme-toggle').click()
     await expect(html).toHaveClass(/dark/)
+  })
+
+  test('theme toggle and direct model BackLink use Lucide icons', async ({ page }) => {
+    await gotoHydrated(page, '/models/gpt-oss-20b')
+
+    const themeToggle = page.getByTestId('theme-toggle')
+    await expect.soft(themeToggle.locator('svg')).toHaveClass(/\blucide-moon\b/)
+    await themeToggle.click()
+    await expect.soft(themeToggle.locator('svg')).toHaveClass(/\blucide-sun\b/)
+
+    const backLink = page.locator('main').getByRole('link', { name: 'Model explorer' })
+    await expect.soft(backLink.locator('svg')).toHaveClass(/\blucide-arrow-left\b/)
   })
 
   test('unknown URL returns HTTP 404 with the designed copy', async ({ page }) => {

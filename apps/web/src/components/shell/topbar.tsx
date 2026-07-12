@@ -1,4 +1,5 @@
 import { useLocation } from '@tanstack/react-router'
+import { Moon, Sun } from 'lucide-react'
 import { useSyncExternalStore } from 'react'
 import { getTheme, toggleTheme } from '#/lib/theme'
 import { TopbarSearch } from './topbar-search'
@@ -50,10 +51,18 @@ export function Topbar() {
           toggleTheme()
           for (const l of themeListeners) l()
         }}
-        className="cursor-pointer whitespace-nowrap rounded-[7px] border border-border bg-panel2 px-[11px] py-1.5 text-[11.5px] text-mut hover:border-border2 hover:text-text"
+        className="inline-flex cursor-pointer items-center gap-1 whitespace-nowrap rounded-[7px] border border-border bg-panel2 px-[11px] py-1.5 text-[11.5px] text-mut hover:border-border2 hover:text-text"
         data-testid="theme-toggle"
       >
-        {theme === 'dark' ? '◐ Light' : '◑ Dark'}
+        {theme === 'dark' ? (
+          <>
+            <Moon aria-hidden="true" className="size-3.5 shrink-0" strokeWidth={1.75} /> Light
+          </>
+        ) : (
+          <>
+            <Sun aria-hidden="true" className="size-3.5 shrink-0" strokeWidth={1.75} /> Dark
+          </>
+        )}
       </button>
     </div>
   )

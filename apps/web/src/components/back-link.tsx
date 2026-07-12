@@ -1,4 +1,5 @@
 import { Link, type LinkProps, useCanGoBack, useRouter } from '@tanstack/react-router'
+import { ArrowLeft } from 'lucide-react'
 import type { ReactNode } from 'react'
 
 interface BackLinkProps {
@@ -23,7 +24,7 @@ export function BackLink({ to, params, fallbackLabel }: BackLinkProps) {
     <Link
       to={to}
       params={params}
-      className="text-[11.5px] text-mut hover:text-text"
+      className="inline-flex items-center gap-1 text-[11.5px] text-mut hover:text-text"
       onClick={(e) => {
         if (canGoBack) {
           e.preventDefault()
@@ -31,7 +32,8 @@ export function BackLink({ to, params, fallbackLabel }: BackLinkProps) {
         }
       }}
     >
-      ← {canGoBack ? 'Back' : fallbackLabel}
+      <ArrowLeft aria-hidden="true" className="size-3.5 shrink-0" strokeWidth={1.75} />
+      {canGoBack ? 'Back' : fallbackLabel}
     </Link>
   )
 }

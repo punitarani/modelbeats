@@ -1,18 +1,28 @@
 import { Link } from '@tanstack/react-router'
+import {
+  BookOpenText,
+  BrainCircuit,
+  FlaskConical,
+  GitCompareArrows,
+  LayoutDashboard,
+  ListOrdered,
+  type LucideIcon,
+  MemoryStick,
+} from 'lucide-react'
 import { BrandMark } from './logo'
 
 /**
  * Fixed sidebar per the design (210px, brand mark, mono icons) with the D16 nav
  * extension: the design's four items plus Hardware / Benchmarks / Methodology.
  */
-const NAV: { label: string; to: string; icon: string; exact?: boolean }[] = [
-  { label: 'Dashboard', to: '/', icon: '◧', exact: true },
-  { label: 'Rankings', to: '/rankings', icon: '↕' },
-  { label: 'Model Explorer', to: '/models', icon: '▤' },
-  { label: 'Compare', to: '/compare', icon: '⇄' },
-  { label: 'Hardware', to: '/hardware', icon: '⌗' },
-  { label: 'Benchmarks', to: '/benchmarks', icon: '◫' },
-  { label: 'Methodology', to: '/methodology', icon: '§' },
+const NAV: { label: string; to: string; icon: LucideIcon; exact?: boolean }[] = [
+  { label: 'Dashboard', to: '/', icon: LayoutDashboard, exact: true },
+  { label: 'Rankings', to: '/rankings', icon: ListOrdered },
+  { label: 'Model Explorer', to: '/models', icon: BrainCircuit },
+  { label: 'Compare', to: '/compare', icon: GitCompareArrows },
+  { label: 'Hardware', to: '/hardware', icon: MemoryStick },
+  { label: 'Benchmarks', to: '/benchmarks', icon: FlaskConical },
+  { label: 'Methodology', to: '/methodology', icon: BookOpenText },
 ]
 
 export function Sidebar() {
@@ -35,16 +45,20 @@ export function Sidebar() {
               className: 'bg-panel2 font-semibold text-text',
             }}
           >
-            {({ isActive }) => (
-              <>
-                <span
-                  className={`w-3.5 font-mono text-[11px] ${isActive ? 'text-acc' : 'text-dim'}`}
-                >
-                  {item.icon}
-                </span>
-                {item.label}
-              </>
-            )}
+            {({ isActive }) => {
+              const Icon = item.icon
+
+              return (
+                <>
+                  <span
+                    className={`w-3.5 font-mono text-[11px] ${isActive ? 'text-acc' : 'text-dim'}`}
+                  >
+                    <Icon aria-hidden="true" className="size-3.5 shrink-0" strokeWidth={1.75} />
+                  </span>
+                  {item.label}
+                </>
+              )
+            }}
           </Link>
         ))}
       </nav>

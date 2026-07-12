@@ -25,13 +25,13 @@ test.describe('organization + family hubs', () => {
     await page.getByRole('link', { name: 'GLM family' }).click()
     await expect(page).toHaveURL(/\/families\/glm$/)
     // with in-app history the top-left link is a true Back to the origin page
-    await page.getByRole('link', { name: '← Back' }).click()
+    await page.getByRole('link', { name: 'Back', exact: true }).click()
     await expect(page).toHaveURL(/\/models\/glm-5-2$/)
   })
 
   test('family hub on direct load falls back to the parent org link', async ({ page }) => {
     await gotoHydrated(page, '/families/glm')
-    await page.getByRole('link', { name: '← Zhipu AI' }).click()
+    await page.getByRole('link', { name: 'Zhipu AI', exact: true }).click()
     await expect(page).toHaveURL(/\/organizations\/zhipu-ai$/)
   })
 

@@ -13,6 +13,22 @@ test.describe('model detail', () => {
     await expect(page.getByText('MXFP4 · GGUF Q4 · GGUF Q8')).toBeVisible()
   })
 
+  test('Phi-4 Reasoning Plus shows two enabled and four disabled capability icons', async ({
+    page,
+  }) => {
+    await gotoHydrated(page, '/models/phi-4-reasoning')
+    await expect(page.getByTestId('capability-reasoning').locator('svg.lucide-check')).toHaveCount(
+      1,
+    )
+    await expect(page.getByTestId('capability-coding').locator('svg.lucide-check')).toHaveCount(1)
+    await expect(page.getByTestId('capability-vision').locator('svg.lucide-x')).toHaveCount(1)
+    await expect(
+      page.getByTestId('capability-functionCalling').locator('svg.lucide-x'),
+    ).toHaveCount(1)
+    await expect(page.getByTestId('capability-toolUse').locator('svg.lucide-x')).toHaveCount(1)
+    await expect(page.getByTestId('capability-agentic').locator('svg.lucide-x')).toHaveCount(1)
+  })
+
   test('closed model shows the API-only pricing card + index rank', async ({ page }) => {
     await gotoHydrated(page, '/models/claude-opus-4-8')
     await expect(page.getByTestId('model-index')).toHaveText('87.9')
