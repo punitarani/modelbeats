@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest'
-import { parseSort, selectRankings, toggleSort } from './selectors'
+import { parseSort, selectExplorer, selectRankings, toggleSort } from './selectors'
 import type { SnapshotModel } from './snapshot'
 
 const model = (over: Partial<SnapshotModel>): SnapshotModel =>
@@ -98,5 +98,72 @@ describe('selectRankings', () => {
   it('filters compose: open + text query', () => {
     const rows = selectRankings([A, B, C], { ...base, open: 'open', sort: '-index', q: 'alp' })
     expect(rows.map((m) => m.slug)).toEqual(['a'])
+  })
+})
+
+describe('selectExplorer', () => {
+  const gpus = [{ slug: 'rtx4090', vramGb: 24 }]
+  const open20b = model({
+    slug: 'oss20b',
+    name: 'OSS 20B',
+    open: true,
+    openness: 'open-weights',
+    params: 21,
+    vramQ4: 13,
+    price: { input: 0.1, output: 0.6 },
+    caps: {
+      reasoning: true,
+      coding: true,
+      vision: false,
+      functionCalling: true,
+      toolUse: true,
+      agentic: false,
+    },
+  })
+  const open120b = model({
+    slug: 'oss120b',
+    name: 'OSS 120B',
+    open: true,
+    openness: 'open-weights',
+    params: 117,
+    vramQ4: 66,
+    index: 60,
+  })
+  const closed = model({
+    slug: 'front',
+    name: 'Frontier',
+    params: null,
+    price: { input: 2, output: 8 },
+    index: 95,
+  })
+  const base = {
+    q: '',
+    org: 'all',
+    open: 'all' as const,
+    size: 'any' as const,
+    gpu: 'none',
+    caps: [] as never[],
+    sort: 'index' as const,
+  }
+
+  it('GPU facet keeps only curated-VRAM open models fitting 1.08×', () => {
+    const rows = selectExplorer([open20b, open120b, closed], { ...base, gpu: 'rtx4090' }, gpus)
+    expect(rows.map((m) => m.slug)).toEqual(['oss20b']) // 13×1.08=14.04 ≤ 24; 66×1.08 > 24; closed excluded
+  })
+  it('Largest-first treats undisclosed params as 1e6 (design quirk)', () => {
+    const rows = selectExplorer([open20b, open120b, closed], { ...base, sort: 'params' }, gpus)
+    expect(rows[0]?.slug).toBe('front')
+  })
+  it('cheapest sorts by output price with unpriced last', () => {
+    const rows = selectExplorer([open120b, closed, open20b], { ...base, sort: 'cheap' }, gpus)
+    expect(rows.map((m) => m.slug)).toEqual(['oss20b', 'front', 'oss120b'])
+  })
+  it('capability chips require every selected cap', () => {
+    const rows = selectExplorer(
+      [open20b, open120b, closed],
+      { ...base, caps: ['reasoning' as const] },
+      gpus,
+    )
+    expect(rows.map((m) => m.slug)).toEqual(['oss20b'])
   })
 })

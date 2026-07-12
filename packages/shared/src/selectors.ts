@@ -1,3 +1,5 @@
+import type { CapabilityKey } from './enums'
+import type { SizeClass } from './hardware-fit'
 import type { SnapshotModel } from './snapshot'
 
 /**
@@ -90,4 +92,71 @@ export function searchModels(models: SnapshotModel[], q: string, limit = 8): Sna
   const needle = q.trim().toLowerCase()
   if (!needle) return []
   return models.filter((m) => textHaystack(m).includes(needle)).slice(0, limit)
+}
+
+// ---------- explorer (design filter rail + card grid) ----------
+
+export type ExplorerSort = 'index' | 'date' | 'params' | 'cheap'
+
+export interface ExplorerQuery {
+  q: string
+  org: string
+  open: OpenFilter
+  size: SizeClass | 'any'
+  /** hardware profile slug, or 'none' for any hardware / API. */
+  gpu: string
+  caps: CapabilityKey[]
+  sort: ExplorerSort
+}
+
+export interface GpuBudget {
+  slug: string
+  vramGb: number
+}
+
+/**
+ * Explorer filtering + sorting, design-verbatim — including its quirks: the GPU facet
+ * requires a CURATED vramQ4 (no estimate fallback) with the boolean 1.08 rule, and
+ * "Largest first" treats undisclosed params as 1e6 so closed frontier models lead.
+ */
+export function selectExplorer(
+  models: SnapshotModel[],
+  query: ExplorerQuery,
+  gpus: GpuBudget[],
+): SnapshotModel[] {
+  const q = query.q.trim().toLowerCase()
+  const gpu = query.gpu === 'none' ? undefined : gpus.find((g) => g.slug === query.gpu)
+
+  const sizeOk = (m: SnapshotModel): boolean => {
+    if (query.size === 'any') return true
+    if (query.size === 'undisclosed') return m.params == null
+    if (m.params == null) return false
+    if (query.size === 's') return m.params < 15
+    if (query.size === 'm') return m.params >= 15 && m.params < 70
+    if (query.size === 'l') return m.params >= 70 && m.params < 300
+    return m.params >= 300
+  }
+
+  const rows = models.filter(
+    (m) =>
+      (!q || `${m.name} ${m.org} ${m.family}`.toLowerCase().includes(q)) &&
+      (query.open === 'all' || (query.open === 'open') === m.open) &&
+      (query.org === 'all' || m.orgSlug === query.org) &&
+      sizeOk(m) &&
+      (!gpu || (m.open && m.vramQ4 != null && m.vramQ4 * 1.08 <= gpu.vramGb)) &&
+      query.caps.every((cap) => m.caps[cap]),
+  )
+
+  return rows.sort((a, b) => {
+    switch (query.sort) {
+      case 'date':
+        return b.date.localeCompare(a.date)
+      case 'params':
+        return (b.params ?? 1e6) - (a.params ?? 1e6)
+      case 'cheap':
+        return (a.price?.output ?? 1e9) - (b.price?.output ?? 1e9)
+      default:
+        return b.index - a.index
+    }
+  })
 }

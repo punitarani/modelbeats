@@ -45,3 +45,52 @@ export const RANKINGS_BENCH_COLUMNS = [
   { slug: 'aime', label: 'AIME' },
   { slug: 'mmlu', label: 'MMLU' },
 ] as const
+
+/** Compact capability codes in URLs (C4 `?caps=fc,tools`) → shared CapabilityKey. */
+export const CAP_CODES = {
+  reason: 'reasoning',
+  vision: 'vision',
+  fc: 'functionCalling',
+  tools: 'toolUse',
+  agent: 'agentic',
+} as const
+
+export const sizeParam = z
+  .enum(['any', 's', 'm', 'l', 'xl', 'undisclosed'])
+  .default('any')
+  .catch('any')
+
+export const gpuParam = z.string().max(40).default('none').catch('none')
+
+export const capsParam = z
+  .string()
+  .regex(/^(reason|vision|fc|tools|agent)(,(reason|vision|fc|tools|agent))*$/)
+  .default('')
+  .catch('')
+
+export const explorerSortParam = z
+  .enum(['index', 'date', 'params', 'cheap'])
+  .default('index')
+  .catch('index')
+
+export const explorerSearchSchema = z.object({
+  q: textQueryParam,
+  open: openFilterParam,
+  org: orgParam,
+  size: sizeParam,
+  gpu: gpuParam,
+  caps: capsParam,
+  sort: explorerSortParam,
+})
+
+export const EXPLORER_SEARCH_DEFAULTS = {
+  q: '',
+  open: 'all',
+  org: 'all',
+  size: 'any',
+  gpu: 'none',
+  caps: '',
+  sort: 'index',
+} as const
+
+export type ExplorerSearch = z.infer<typeof explorerSearchSchema>
