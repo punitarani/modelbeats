@@ -1,8 +1,10 @@
 import { useSuspenseQuery } from '@tanstack/react-query'
 import { createFileRoute, stripSearchParams } from '@tanstack/react-router'
 import { z } from 'zod'
+import { BenchTab } from '#/components/dashboard/bench-tab'
 import { dashboardStats } from '#/components/dashboard/dashboard-data'
 import { OverviewTab } from '#/components/dashboard/overview-tab'
+import { ReleasesTab } from '#/components/dashboard/releases-tab'
 import { Segmented } from '#/components/segmented'
 import { catalogQueryOptions } from '#/lib/catalog'
 
@@ -99,16 +101,8 @@ function DashboardRoute() {
       </div>
 
       {tab === 'overview' && <OverviewTab catalog={data} />}
-      {tab === 'releases' && (
-        <div className="rounded-[10px] border border-border bg-card px-4 py-8 text-center text-xs text-mut">
-          Releases feed lands with the next commit.
-        </div>
-      )}
-      {tab === 'bench' && (
-        <div className="rounded-[10px] border border-border bg-card px-4 py-8 text-center text-xs text-mut">
-          Benchmark cards land with the next commit.
-        </div>
-      )}
+      {tab === 'releases' && <ReleasesTab catalog={data} />}
+      {tab === 'bench' && <BenchTab catalog={data} />}
     </div>
   )
 }

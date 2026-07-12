@@ -9,6 +9,7 @@
 // Additionally, you should also exclude this file from your linter and/or formatter to prevent it from being checked or modified.
 
 import { Route as rootRouteImport } from './routes/__root'
+import { Route as TimelineRouteImport } from './routes/timeline'
 import { Route as SavedRouteImport } from './routes/saved'
 import { Route as MethodologyRouteImport } from './routes/methodology'
 import { Route as HardwareRouteImport } from './routes/hardware'
@@ -23,8 +24,14 @@ import { Route as ModelsSlugRouteImport } from './routes/models.$slug'
 import { Route as FamiliesSlugRouteImport } from './routes/families.$slug'
 import { Route as DebugChartsRouteImport } from './routes/debug.charts'
 import { Route as DebugCatalogRouteImport } from './routes/debug.catalog'
+import { Route as BenchmarksSlugRouteImport } from './routes/benchmarks.$slug'
 import { Route as ApiCatalogVChar123versionChar125DotjsonRouteImport } from './routes/api/catalog.v{$version}[.]json'
 
+const TimelineRoute = TimelineRouteImport.update({
+  id: '/timeline',
+  path: '/timeline',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const SavedRoute = SavedRouteImport.update({
   id: '/saved',
   path: '/saved',
@@ -95,6 +102,11 @@ const DebugCatalogRoute = DebugCatalogRouteImport.update({
   path: '/debug/catalog',
   getParentRoute: () => rootRouteImport,
 } as any)
+const BenchmarksSlugRoute = BenchmarksSlugRouteImport.update({
+  id: '/benchmarks/$slug',
+  path: '/benchmarks/$slug',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const ApiCatalogVChar123versionChar125DotjsonRoute =
   ApiCatalogVChar123versionChar125DotjsonRouteImport.update({
     id: '/api/catalog/v{$version}.json',
@@ -108,6 +120,8 @@ export interface FileRoutesByFullPath {
   '/hardware': typeof HardwareRoute
   '/methodology': typeof MethodologyRoute
   '/saved': typeof SavedRoute
+  '/timeline': typeof TimelineRoute
+  '/benchmarks/$slug': typeof BenchmarksSlugRoute
   '/debug/catalog': typeof DebugCatalogRoute
   '/debug/charts': typeof DebugChartsRoute
   '/families/$slug': typeof FamiliesSlugRoute
@@ -125,6 +139,8 @@ export interface FileRoutesByTo {
   '/hardware': typeof HardwareRoute
   '/methodology': typeof MethodologyRoute
   '/saved': typeof SavedRoute
+  '/timeline': typeof TimelineRoute
+  '/benchmarks/$slug': typeof BenchmarksSlugRoute
   '/debug/catalog': typeof DebugCatalogRoute
   '/debug/charts': typeof DebugChartsRoute
   '/families/$slug': typeof FamiliesSlugRoute
@@ -143,6 +159,8 @@ export interface FileRoutesById {
   '/hardware': typeof HardwareRoute
   '/methodology': typeof MethodologyRoute
   '/saved': typeof SavedRoute
+  '/timeline': typeof TimelineRoute
+  '/benchmarks/$slug': typeof BenchmarksSlugRoute
   '/debug/catalog': typeof DebugCatalogRoute
   '/debug/charts': typeof DebugChartsRoute
   '/families/$slug': typeof FamiliesSlugRoute
@@ -162,6 +180,8 @@ export interface FileRouteTypes {
     | '/hardware'
     | '/methodology'
     | '/saved'
+    | '/timeline'
+    | '/benchmarks/$slug'
     | '/debug/catalog'
     | '/debug/charts'
     | '/families/$slug'
@@ -179,6 +199,8 @@ export interface FileRouteTypes {
     | '/hardware'
     | '/methodology'
     | '/saved'
+    | '/timeline'
+    | '/benchmarks/$slug'
     | '/debug/catalog'
     | '/debug/charts'
     | '/families/$slug'
@@ -196,6 +218,8 @@ export interface FileRouteTypes {
     | '/hardware'
     | '/methodology'
     | '/saved'
+    | '/timeline'
+    | '/benchmarks/$slug'
     | '/debug/catalog'
     | '/debug/charts'
     | '/families/$slug'
@@ -214,6 +238,8 @@ export interface RootRouteChildren {
   HardwareRoute: typeof HardwareRoute
   MethodologyRoute: typeof MethodologyRoute
   SavedRoute: typeof SavedRoute
+  TimelineRoute: typeof TimelineRoute
+  BenchmarksSlugRoute: typeof BenchmarksSlugRoute
   DebugCatalogRoute: typeof DebugCatalogRoute
   DebugChartsRoute: typeof DebugChartsRoute
   FamiliesSlugRoute: typeof FamiliesSlugRoute
@@ -228,6 +254,13 @@ export interface RootRouteChildren {
 
 declare module '@tanstack/react-router' {
   interface FileRoutesByPath {
+    '/timeline': {
+      id: '/timeline'
+      path: '/timeline'
+      fullPath: '/timeline'
+      preLoaderRoute: typeof TimelineRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/saved': {
       id: '/saved'
       path: '/saved'
@@ -326,6 +359,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof DebugCatalogRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/benchmarks/$slug': {
+      id: '/benchmarks/$slug'
+      path: '/benchmarks/$slug'
+      fullPath: '/benchmarks/$slug'
+      preLoaderRoute: typeof BenchmarksSlugRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/api/catalog/v{$version}.json': {
       id: '/api/catalog/v{$version}.json'
       path: '/api/catalog/v{$version}.json'
@@ -342,6 +382,8 @@ const rootRouteChildren: RootRouteChildren = {
   HardwareRoute: HardwareRoute,
   MethodologyRoute: MethodologyRoute,
   SavedRoute: SavedRoute,
+  TimelineRoute: TimelineRoute,
+  BenchmarksSlugRoute: BenchmarksSlugRoute,
   DebugCatalogRoute: DebugCatalogRoute,
   DebugChartsRoute: DebugChartsRoute,
   FamiliesSlugRoute: FamiliesSlugRoute,
