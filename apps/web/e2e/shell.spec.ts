@@ -10,7 +10,7 @@ test.describe('app shell', () => {
 
   test('sidebar navigation drives the topbar title', async ({ page }) => {
     await gotoHydrated(page, '/')
-    await page.getByRole('link', { name: 'Rankings' }).click()
+    await page.locator('aside').getByRole('link', { name: 'Rankings' }).click()
     await expect(page).toHaveURL(/\/rankings$/)
     await expect(page.getByTestId('page-title')).toHaveText('Global Rankings')
   })
