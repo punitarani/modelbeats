@@ -72,7 +72,7 @@ Derived fields (`index/rank/categoryIdx`) are precomputed at publish; normalizat
 
 ### C4 — URL search-param conventions (`apps/web/src/lib/search.ts`)
 
-Every param optional-with-fallback (invalid → default, never throw). Compact keys: `?tab=` · `?sort=-index` (leading `-` = desc) · `?org=` · `?open=all|open|closed` · `?size=any|s|m|l|xl|undisclosed` · `?gpu=` · `?caps=fc,tools` · `?q=` · `?m=a,b,c` · `?cat=`.
+Every param optional-with-fallback (invalid → default, never throw) via plain Zod v4 `.default().catch()` passed straight to `validateSearch` (Standard Schema). `@tanstack/zod-adapter` is deliberately NOT used — it pins its own zod 3 and collapses search typing. Compact keys: `?tab=` · `?sort=-index` (leading `-` = desc) · `?org=` · `?open=all|open|closed` · `?size=any|s|m|l|xl|undisclosed` · `?gpu=` · `?caps=fc,tools` · `?q=` · `?m=a,b,c` · `?cat=`.
 
 ### C5 — Design tokens (from the dc.html, exact)
 

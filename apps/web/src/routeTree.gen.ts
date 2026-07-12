@@ -9,23 +9,19 @@
 // Additionally, you should also exclude this file from your linter and/or formatter to prevent it from being checked or modified.
 
 import { Route as rootRouteImport } from './routes/__root'
-import { Route as RankingsRouteImport } from './routes/rankings'
 import { Route as MethodologyRouteImport } from './routes/methodology'
 import { Route as HardwareRouteImport } from './routes/hardware'
 import { Route as CompareRouteImport } from './routes/compare'
 import { Route as IndexRouteImport } from './routes/index'
+import { Route as RankingsIndexRouteImport } from './routes/rankings.index'
 import { Route as ModelsIndexRouteImport } from './routes/models.index'
 import { Route as BenchmarksIndexRouteImport } from './routes/benchmarks.index'
+import { Route as RankingsCategoryRouteImport } from './routes/rankings.$category'
 import { Route as ModelsSlugRouteImport } from './routes/models.$slug'
 import { Route as DebugChartsRouteImport } from './routes/debug.charts'
 import { Route as DebugCatalogRouteImport } from './routes/debug.catalog'
 import { Route as ApiCatalogVChar123versionChar125DotjsonRouteImport } from './routes/api/catalog.v{$version}[.]json'
 
-const RankingsRoute = RankingsRouteImport.update({
-  id: '/rankings',
-  path: '/rankings',
-  getParentRoute: () => rootRouteImport,
-} as any)
 const MethodologyRoute = MethodologyRouteImport.update({
   id: '/methodology',
   path: '/methodology',
@@ -46,6 +42,11 @@ const IndexRoute = IndexRouteImport.update({
   path: '/',
   getParentRoute: () => rootRouteImport,
 } as any)
+const RankingsIndexRoute = RankingsIndexRouteImport.update({
+  id: '/rankings/',
+  path: '/rankings/',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const ModelsIndexRoute = ModelsIndexRouteImport.update({
   id: '/models/',
   path: '/models/',
@@ -54,6 +55,11 @@ const ModelsIndexRoute = ModelsIndexRouteImport.update({
 const BenchmarksIndexRoute = BenchmarksIndexRouteImport.update({
   id: '/benchmarks/',
   path: '/benchmarks/',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const RankingsCategoryRoute = RankingsCategoryRouteImport.update({
+  id: '/rankings/$category',
+  path: '/rankings/$category',
   getParentRoute: () => rootRouteImport,
 } as any)
 const ModelsSlugRoute = ModelsSlugRouteImport.update({
@@ -83,12 +89,13 @@ export interface FileRoutesByFullPath {
   '/compare': typeof CompareRoute
   '/hardware': typeof HardwareRoute
   '/methodology': typeof MethodologyRoute
-  '/rankings': typeof RankingsRoute
   '/debug/catalog': typeof DebugCatalogRoute
   '/debug/charts': typeof DebugChartsRoute
   '/models/$slug': typeof ModelsSlugRoute
+  '/rankings/$category': typeof RankingsCategoryRoute
   '/benchmarks/': typeof BenchmarksIndexRoute
   '/models/': typeof ModelsIndexRoute
+  '/rankings/': typeof RankingsIndexRoute
   '/api/catalog/v{$version}.json': typeof ApiCatalogVChar123versionChar125DotjsonRoute
 }
 export interface FileRoutesByTo {
@@ -96,12 +103,13 @@ export interface FileRoutesByTo {
   '/compare': typeof CompareRoute
   '/hardware': typeof HardwareRoute
   '/methodology': typeof MethodologyRoute
-  '/rankings': typeof RankingsRoute
   '/debug/catalog': typeof DebugCatalogRoute
   '/debug/charts': typeof DebugChartsRoute
   '/models/$slug': typeof ModelsSlugRoute
+  '/rankings/$category': typeof RankingsCategoryRoute
   '/benchmarks': typeof BenchmarksIndexRoute
   '/models': typeof ModelsIndexRoute
+  '/rankings': typeof RankingsIndexRoute
   '/api/catalog/v{$version}.json': typeof ApiCatalogVChar123versionChar125DotjsonRoute
 }
 export interface FileRoutesById {
@@ -110,12 +118,13 @@ export interface FileRoutesById {
   '/compare': typeof CompareRoute
   '/hardware': typeof HardwareRoute
   '/methodology': typeof MethodologyRoute
-  '/rankings': typeof RankingsRoute
   '/debug/catalog': typeof DebugCatalogRoute
   '/debug/charts': typeof DebugChartsRoute
   '/models/$slug': typeof ModelsSlugRoute
+  '/rankings/$category': typeof RankingsCategoryRoute
   '/benchmarks/': typeof BenchmarksIndexRoute
   '/models/': typeof ModelsIndexRoute
+  '/rankings/': typeof RankingsIndexRoute
   '/api/catalog/v{$version}.json': typeof ApiCatalogVChar123versionChar125DotjsonRoute
 }
 export interface FileRouteTypes {
@@ -125,12 +134,13 @@ export interface FileRouteTypes {
     | '/compare'
     | '/hardware'
     | '/methodology'
-    | '/rankings'
     | '/debug/catalog'
     | '/debug/charts'
     | '/models/$slug'
+    | '/rankings/$category'
     | '/benchmarks/'
     | '/models/'
+    | '/rankings/'
     | '/api/catalog/v{$version}.json'
   fileRoutesByTo: FileRoutesByTo
   to:
@@ -138,12 +148,13 @@ export interface FileRouteTypes {
     | '/compare'
     | '/hardware'
     | '/methodology'
-    | '/rankings'
     | '/debug/catalog'
     | '/debug/charts'
     | '/models/$slug'
+    | '/rankings/$category'
     | '/benchmarks'
     | '/models'
+    | '/rankings'
     | '/api/catalog/v{$version}.json'
   id:
     | '__root__'
@@ -151,12 +162,13 @@ export interface FileRouteTypes {
     | '/compare'
     | '/hardware'
     | '/methodology'
-    | '/rankings'
     | '/debug/catalog'
     | '/debug/charts'
     | '/models/$slug'
+    | '/rankings/$category'
     | '/benchmarks/'
     | '/models/'
+    | '/rankings/'
     | '/api/catalog/v{$version}.json'
   fileRoutesById: FileRoutesById
 }
@@ -165,24 +177,18 @@ export interface RootRouteChildren {
   CompareRoute: typeof CompareRoute
   HardwareRoute: typeof HardwareRoute
   MethodologyRoute: typeof MethodologyRoute
-  RankingsRoute: typeof RankingsRoute
   DebugCatalogRoute: typeof DebugCatalogRoute
   DebugChartsRoute: typeof DebugChartsRoute
   ModelsSlugRoute: typeof ModelsSlugRoute
+  RankingsCategoryRoute: typeof RankingsCategoryRoute
   BenchmarksIndexRoute: typeof BenchmarksIndexRoute
   ModelsIndexRoute: typeof ModelsIndexRoute
+  RankingsIndexRoute: typeof RankingsIndexRoute
   ApiCatalogVChar123versionChar125DotjsonRoute: typeof ApiCatalogVChar123versionChar125DotjsonRoute
 }
 
 declare module '@tanstack/react-router' {
   interface FileRoutesByPath {
-    '/rankings': {
-      id: '/rankings'
-      path: '/rankings'
-      fullPath: '/rankings'
-      preLoaderRoute: typeof RankingsRouteImport
-      parentRoute: typeof rootRouteImport
-    }
     '/methodology': {
       id: '/methodology'
       path: '/methodology'
@@ -211,6 +217,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof IndexRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/rankings/': {
+      id: '/rankings/'
+      path: '/rankings'
+      fullPath: '/rankings/'
+      preLoaderRoute: typeof RankingsIndexRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/models/': {
       id: '/models/'
       path: '/models'
@@ -223,6 +236,13 @@ declare module '@tanstack/react-router' {
       path: '/benchmarks'
       fullPath: '/benchmarks/'
       preLoaderRoute: typeof BenchmarksIndexRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/rankings/$category': {
+      id: '/rankings/$category'
+      path: '/rankings/$category'
+      fullPath: '/rankings/$category'
+      preLoaderRoute: typeof RankingsCategoryRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/models/$slug': {
@@ -261,12 +281,13 @@ const rootRouteChildren: RootRouteChildren = {
   CompareRoute: CompareRoute,
   HardwareRoute: HardwareRoute,
   MethodologyRoute: MethodologyRoute,
-  RankingsRoute: RankingsRoute,
   DebugCatalogRoute: DebugCatalogRoute,
   DebugChartsRoute: DebugChartsRoute,
   ModelsSlugRoute: ModelsSlugRoute,
+  RankingsCategoryRoute: RankingsCategoryRoute,
   BenchmarksIndexRoute: BenchmarksIndexRoute,
   ModelsIndexRoute: ModelsIndexRoute,
+  RankingsIndexRoute: RankingsIndexRoute,
   ApiCatalogVChar123versionChar125DotjsonRoute:
     ApiCatalogVChar123versionChar125DotjsonRoute,
 }
