@@ -17,6 +17,7 @@ import { Route as IndexRouteImport } from './routes/index'
 import { Route as ModelsIndexRouteImport } from './routes/models.index'
 import { Route as BenchmarksIndexRouteImport } from './routes/benchmarks.index'
 import { Route as ModelsSlugRouteImport } from './routes/models.$slug'
+import { Route as DebugChartsRouteImport } from './routes/debug.charts'
 import { Route as DebugCatalogRouteImport } from './routes/debug.catalog'
 import { Route as ApiCatalogVChar123versionChar125DotjsonRouteImport } from './routes/api/catalog.v{$version}[.]json'
 
@@ -60,6 +61,11 @@ const ModelsSlugRoute = ModelsSlugRouteImport.update({
   path: '/models/$slug',
   getParentRoute: () => rootRouteImport,
 } as any)
+const DebugChartsRoute = DebugChartsRouteImport.update({
+  id: '/debug/charts',
+  path: '/debug/charts',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const DebugCatalogRoute = DebugCatalogRouteImport.update({
   id: '/debug/catalog',
   path: '/debug/catalog',
@@ -79,6 +85,7 @@ export interface FileRoutesByFullPath {
   '/methodology': typeof MethodologyRoute
   '/rankings': typeof RankingsRoute
   '/debug/catalog': typeof DebugCatalogRoute
+  '/debug/charts': typeof DebugChartsRoute
   '/models/$slug': typeof ModelsSlugRoute
   '/benchmarks/': typeof BenchmarksIndexRoute
   '/models/': typeof ModelsIndexRoute
@@ -91,6 +98,7 @@ export interface FileRoutesByTo {
   '/methodology': typeof MethodologyRoute
   '/rankings': typeof RankingsRoute
   '/debug/catalog': typeof DebugCatalogRoute
+  '/debug/charts': typeof DebugChartsRoute
   '/models/$slug': typeof ModelsSlugRoute
   '/benchmarks': typeof BenchmarksIndexRoute
   '/models': typeof ModelsIndexRoute
@@ -104,6 +112,7 @@ export interface FileRoutesById {
   '/methodology': typeof MethodologyRoute
   '/rankings': typeof RankingsRoute
   '/debug/catalog': typeof DebugCatalogRoute
+  '/debug/charts': typeof DebugChartsRoute
   '/models/$slug': typeof ModelsSlugRoute
   '/benchmarks/': typeof BenchmarksIndexRoute
   '/models/': typeof ModelsIndexRoute
@@ -118,6 +127,7 @@ export interface FileRouteTypes {
     | '/methodology'
     | '/rankings'
     | '/debug/catalog'
+    | '/debug/charts'
     | '/models/$slug'
     | '/benchmarks/'
     | '/models/'
@@ -130,6 +140,7 @@ export interface FileRouteTypes {
     | '/methodology'
     | '/rankings'
     | '/debug/catalog'
+    | '/debug/charts'
     | '/models/$slug'
     | '/benchmarks'
     | '/models'
@@ -142,6 +153,7 @@ export interface FileRouteTypes {
     | '/methodology'
     | '/rankings'
     | '/debug/catalog'
+    | '/debug/charts'
     | '/models/$slug'
     | '/benchmarks/'
     | '/models/'
@@ -155,6 +167,7 @@ export interface RootRouteChildren {
   MethodologyRoute: typeof MethodologyRoute
   RankingsRoute: typeof RankingsRoute
   DebugCatalogRoute: typeof DebugCatalogRoute
+  DebugChartsRoute: typeof DebugChartsRoute
   ModelsSlugRoute: typeof ModelsSlugRoute
   BenchmarksIndexRoute: typeof BenchmarksIndexRoute
   ModelsIndexRoute: typeof ModelsIndexRoute
@@ -219,6 +232,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof ModelsSlugRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/debug/charts': {
+      id: '/debug/charts'
+      path: '/debug/charts'
+      fullPath: '/debug/charts'
+      preLoaderRoute: typeof DebugChartsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/debug/catalog': {
       id: '/debug/catalog'
       path: '/debug/catalog'
@@ -243,6 +263,7 @@ const rootRouteChildren: RootRouteChildren = {
   MethodologyRoute: MethodologyRoute,
   RankingsRoute: RankingsRoute,
   DebugCatalogRoute: DebugCatalogRoute,
+  DebugChartsRoute: DebugChartsRoute,
   ModelsSlugRoute: ModelsSlugRoute,
   BenchmarksIndexRoute: BenchmarksIndexRoute,
   ModelsIndexRoute: ModelsIndexRoute,

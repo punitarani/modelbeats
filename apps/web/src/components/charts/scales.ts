@@ -1,0 +1,115 @@
+/**
+ * Chart math (contract C6) — constants and geometry copied verbatim from the design
+ * prototype so rendered charts are pixel-identical. All pure; unit-tested.
+ */
+
+/** Quality-vs-price scatter (viewBox 720×320): x = log₁₀(output $/Mtok) over [0.06, 200]. */
+export const SCATTER = {
+  viewBox: '0 0 720 320',
+  xMin: 0.06,
+  xMax: 200,
+  yMinElo: 1140,
+  yMaxElo: 1520,
+  left: 46,
+  right: 712,
+  top: 12,
+  bottom: 296,
+  yTicks: [1200, 1300, 1400, 1500],
+  xTicks: [0.1, 1, 10, 100],
+} as const
+
+export function scatterX(outputPrice: number): number {
+  const { xMin, xMax, left, right } = SCATTER
+  return (
+    left +
+    ((Math.log10(outputPrice) - Math.log10(xMin)) / (Math.log10(xMax) - Math.log10(xMin))) *
+      (right - left)
+  )
+}
+
+export function scatterY(elo: number): number {
+  const { yMinElo, yMaxElo, top, bottom } = SCATTER
+  return bottom - ((elo - yMinElo) / (yMaxElo - yMinElo)) * (bottom - top)
+}
+
+/** Arena leaderboard rail bars: pct of the 1250–1520 window. */
+export function arenaPct(elo: number): number {
+  return Math.round(((elo - 1250) / (1520 - 1250)) * 100)
+}
+
+/** Radar geometry (viewBox 280×260): center (140,126), r 92, six axes from −π/2. */
+export const RADAR = { cx: 140, cy: 126, r: 92, axes: 6, rings: [0.25, 0.5, 0.75, 1] } as const
+
+export function radarPoint(axisIndex: number, value: number): { x: number; y: number } {
+  const ang = -Math.PI / 2 + axisIndex * (Math.PI / 3)
+  return {
+    x: RADAR.cx + Math.cos(ang) * RADAR.r * value,
+    y: RADAR.cy + Math.sin(ang) * RADAR.r * value,
+  }
+}
+
+export function radarPolygonPoints(values: number[], floor = 0.03): string {
+  return values
+    .map((v, i) => {
+      const p = radarPoint(i, Math.max(floor, v))
+      return `${p.x.toFixed(1)},${p.y.toFixed(1)}`
+    })
+    .join(' ')
+}
+
+export function radarRings(): string[] {
+  return RADAR.rings.map((rv) => radarPolygonPoints(new Array(RADAR.axes).fill(rv), 0))
+}
+
+export interface RadarAxisMeta {
+  x2: string
+  y2: string
+  lx: string
+  ly: string
+  anchor: 'start' | 'middle' | 'end'
+}
+
+export function radarAxisMeta(axisIndex: number): RadarAxisMeta {
+  const ang = -Math.PI / 2 + axisIndex * (Math.PI / 3)
+  const edge = radarPoint(axisIndex, 1)
+  const lx = RADAR.cx + Math.cos(ang) * (RADAR.r + 14)
+  const ly = RADAR.cy + Math.sin(ang) * (RADAR.r + 14)
+  const cos = Math.cos(ang)
+  return {
+    x2: edge.x.toFixed(1),
+    y2: edge.y.toFixed(1),
+    lx: lx.toFixed(1),
+    ly: (ly + 3).toFixed(1),
+    anchor: Math.abs(cos) < 0.3 ? 'middle' : cos > 0 ? 'start' : 'end',
+  }
+}
+
+/** Family sparkline (viewBox 280×64): x 12→268 evenly (single point centers at 140), y 54→10 min-max. */
+export function sparklineX(i: number, count: number): number {
+  return count === 1 ? 140 : 12 + (i / (count - 1)) * 256
+}
+
+export function sparklineY(value: number, min: number, max: number): number {
+  return max === min ? 32 : 54 - ((value - min) / (max - min)) * 44
+}
+
+export function sparklinePoints(values: number[]): string {
+  const min = Math.min(...values)
+  const max = Math.max(...values)
+  return values
+    .map(
+      (v, i) => `${sparklineX(i, values.length).toFixed(1)},${sparklineY(v, min, max).toFixed(1)}`,
+    )
+    .join(' ')
+}
+
+/** Release-cadence quarter bars: height = count/max × 62px, floor 4px. */
+export function cadenceHeight(count: number, maxCount: number): number {
+  return Math.max(4, Math.round((count / Math.max(1, maxCount)) * 62))
+}
+
+/** Normalized bar width percent from curated bounds (design bars). */
+export function normPct(value: number | null | undefined, min: number, max: number): number {
+  if (value == null) return 0
+  return Math.round(Math.max(0, Math.min(1, (value - min) / (max - min))) * 100)
+}
