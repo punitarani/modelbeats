@@ -63,6 +63,18 @@ export const modelSchema = z.object({
   tps4090: z.number().positive().nullable(),
   /** Free-text throughput note when tps4090 doesn't apply (multi-GPU/Mac setups). */
   tpsNote: z.string().nullable(),
+  /**
+   * Reasoning-effort / compute-tier label when a vendor serves the SAME weights at
+   * multiple selectable budgets (e.g. "Medium"/"High"/"Max", "Instant"/"Thinking", an
+   * extended-thinking token budget). Each tier ships as its own model row (own slug, own
+   * benchmark scores) — this only labels which tier a row represents. `null` for the vast
+   * majority of models with no such axis.
+   */
+  effortLabel: z.string().min(1).nullable().default(null),
+  /** True iff this is the default tier a user gets without selecting a configuration. */
+  isDefaultConfig: z.boolean().default(true),
+  /** True iff this is the highest-capability/compute tier among its sibling configs. */
+  isBestConfig: z.boolean().default(true),
 })
 
 export type Model = z.infer<typeof modelSchema>

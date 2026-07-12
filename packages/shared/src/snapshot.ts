@@ -61,6 +61,10 @@ export const snapshotModelSchema = z.object({
   quants: z.array(z.string()),
   tps4090: z.number().nullable(),
   tpsNote: z.string().nullable(),
+  /** Reasoning-effort/compute-tier label (e.g. "High", "Max"); null = no such axis. */
+  effortLabel: z.string().nullable(),
+  isDefaultConfig: z.boolean(),
+  isBestConfig: z.boolean(),
   links: modelLinksSchema,
   note: z.string(),
   // publish-time derived (C1)

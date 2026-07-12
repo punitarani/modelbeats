@@ -85,6 +85,10 @@ export const models = sqliteTable(
     vramQ4Gb: real('vram_q4_gb'),
     vramFp16Gb: real('vram_fp16_gb'),
     tpsNote: text('tps_note'),
+    /** Reasoning-effort/compute-tier label (e.g. "High", "Max"); null = no such axis. */
+    effortLabel: text('effort_label'),
+    isDefaultConfig: integer('is_default_config', { mode: 'boolean' }).notNull().default(true),
+    isBestConfig: integer('is_best_config', { mode: 'boolean' }).notNull().default(true),
     updatedAt: text('updated_at').notNull().default(''),
   },
   (t) => [

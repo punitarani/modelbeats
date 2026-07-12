@@ -10,6 +10,7 @@
       "**",
       "!docs/design-handoff",
       "!data",
+      "!corpus",
       "!**/worker-configuration.d.ts",
       "!**/routeTree.gen.ts",
       "!**/migrations",

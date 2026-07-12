@@ -158,6 +158,34 @@ function crossChecks(ds: Dataset, errors: string[]): void {
     }
   }
 
+  // Effort/compute-tier cohorts (same weights, different serving budget): models sharing
+  // org+family+releaseDate+paramsB are configuration siblings — exactly one must be the
+  // default tier and exactly one the best tier. (Same-day DIFFERENT-size releases, e.g.
+  // Qwen3 235B/32B/8B, land in separate cohorts because paramsB differs, so this doesn't
+  // collide with the pre-existing same-day-size-variant pattern.)
+  const cohorts = new Map<string, typeof ds.models>()
+  for (const m of ds.models) {
+    const key = `${m.orgSlug}::${m.familySlug}::${m.releaseDate}::${m.paramsB ?? 'null'}`
+    const group = cohorts.get(key) ?? []
+    group.push(m)
+    cohorts.set(key, group)
+  }
+  for (const [key, group] of cohorts) {
+    if (group.length < 2) continue
+    const defaults = group.filter((m) => m.isDefaultConfig)
+    const bests = group.filter((m) => m.isBestConfig)
+    if (defaults.length !== 1) {
+      errors.push(
+        `config cohort '${key}': expected exactly 1 isDefaultConfig among ${group.length} siblings, found ${defaults.length}`,
+      )
+    }
+    if (bests.length !== 1) {
+      errors.push(
+        `config cohort '${key}': expected exactly 1 isBestConfig among ${group.length} siblings, found ${bests.length}`,
+      )
+    }
+  }
+
   // Models must price-match: a model with price in its file should have a pricing row and vice versa.
   const pricedModels = new Set(ds.pricing.map((p) => p.modelSlug))
   for (const m of ds.models) {

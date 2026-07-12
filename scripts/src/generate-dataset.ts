@@ -231,6 +231,9 @@ export function generate(corpus: Corpus): Generated {
         vramFp16Gb: m.vramFp16Gb,
         tps4090: m.tps4090,
         tpsNote: m.tpsNote,
+        effortLabel: m.effortLabel,
+        isDefaultConfig: m.isDefaultConfig,
+        isBestConfig: m.isBestConfig,
       })
     })
     .sort((a, b) => a.slug.localeCompare(b.slug))

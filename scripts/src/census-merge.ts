@@ -49,7 +49,7 @@ const ORG_ALIASES: Record<string, string> = {
   'alibaba damo academy': 'Alibaba',
   'x ai': 'xAI',
   'x.ai': 'xAI',
-  'mistral': 'Mistral AI',
+  mistral: 'Mistral AI',
   'allen institute for ai': 'Allen Institute for AI (AI2)',
   ai2: 'Allen Institute for AI (AI2)',
   'allen ai': 'Allen Institute for AI (AI2)',
@@ -68,7 +68,7 @@ const ORG_ALIASES: Record<string, string> = {
   internlm: 'InternLM (Shanghai AI Lab)',
   'lg ai': 'LG AI Research',
   'stability ai (stablelm)': 'Stability AI',
-  'moonshot': 'Moonshot AI',
+  moonshot: 'Moonshot AI',
   'moonshot ai (kimi)': 'Moonshot AI',
 }
 
@@ -159,7 +159,12 @@ async function main() {
         existing.aliases.push(m.name.trim())
       }
       // more precise date wins (longer string = more precise; earlier wins on ties)
-      if (m.approxDate && (m.approxDate.length > existing.approxDate.length || (m.approxDate.length === existing.approxDate.length && m.approxDate < existing.approxDate))) {
+      if (
+        m.approxDate &&
+        (m.approxDate.length > existing.approxDate.length ||
+          (m.approxDate.length === existing.approxDate.length &&
+            m.approxDate < existing.approxDate))
+      ) {
         existing.approxDate = m.approxDate
       }
       if (existing.paramsB == null && typeof m.paramsB === 'number') existing.paramsB = m.paramsB
@@ -169,7 +174,10 @@ async function main() {
   }
 
   const models = [...byKey.values()].sort(
-    (a, b) => a.orgSlug.localeCompare(b.orgSlug) || a.approxDate.localeCompare(b.approxDate) || a.name.localeCompare(b.name),
+    (a, b) =>
+      a.orgSlug.localeCompare(b.orgSlug) ||
+      a.approxDate.localeCompare(b.approxDate) ||
+      a.name.localeCompare(b.name),
   )
 
   // ---- stats ----
@@ -192,10 +200,18 @@ async function main() {
   }
 
   await writeFile(outFile, `${JSON.stringify({ stats, models }, null, 2)}\n`)
-  console.log(`census: ${raw.length} raw → ${models.length} canonical models across ${byOrg.size} orgs (from ${resultLines} agents)`)
+  console.log(
+    `census: ${raw.length} raw → ${models.length} canonical models across ${byOrg.size} orgs (from ${resultLines} agents)`,
+  )
   console.log(`openness: ${JSON.stringify(stats.byOpenness)}`)
   console.log(`by year: ${JSON.stringify(stats.byYear)}`)
-  console.log(`top orgs: ${[...byOrg.entries()].sort((a, b) => b[1] - a[1]).slice(0, 20).map(([o, n]) => `${o}(${n})`).join(', ')}`)
+  console.log(
+    `top orgs: ${[...byOrg.entries()]
+      .sort((a, b) => b[1] - a[1])
+      .slice(0, 20)
+      .map(([o, n]) => `${o}(${n})`)
+      .join(', ')}`,
+  )
 }
 
 main()

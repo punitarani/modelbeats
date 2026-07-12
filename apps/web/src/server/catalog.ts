@@ -144,6 +144,9 @@ async function rebuildFromD1(version: number): Promise<CatalogSnapshot> {
           quants: m.quants,
           tps4090: null, // filled from throughput below
           tpsNote: m.tpsNote,
+          effortLabel: m.effortLabel,
+          isDefaultConfig: m.isDefaultConfig,
+          isBestConfig: m.isBestConfig,
           links: m.links,
           note: m.note,
           index: score?.overallIndex ?? 0,

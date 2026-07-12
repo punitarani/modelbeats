@@ -80,6 +80,18 @@ export const corpusModelSchema = z.object({
   vramFp16Gb: z.number().positive().nullable(),
   tps4090: z.number().positive().nullable(),
   tpsNote: z.string().nullable().default(null),
+  /**
+   * Reasoning-effort/compute-tier label when this row is ONE of several selectable
+   * configurations of the same underlying weights (e.g. "Medium"/"High"/"Max",
+   * "Instant"/"Thinking"). Every configuration a benchmark was actually run on must be
+   * captured as its own corpus model entry sharing org+family+releaseDate+paramsB with its
+   * siblings. `null` when the model has no such axis.
+   */
+  effortLabel: z.string().min(1).nullable().default(null),
+  /** Exactly one sibling in the cohort must be true: the default tier without selection. */
+  isDefaultConfig: z.boolean().default(true),
+  /** Exactly one sibling in the cohort must be true: the highest-capability/compute tier. */
+  isBestConfig: z.boolean().default(true),
   /** Per-field provenance (audit only; not shipped to /data). e.g. { paramsB: url, releaseDate: url }. */
   specSources: z.record(z.string(), z.string()).optional(),
   /** Alternate names/ids this model was found under (dedup audit; not shipped). */
