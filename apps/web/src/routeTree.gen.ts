@@ -9,6 +9,7 @@
 // Additionally, you should also exclude this file from your linter and/or formatter to prevent it from being checked or modified.
 
 import { Route as rootRouteImport } from './routes/__root'
+import { Route as SavedRouteImport } from './routes/saved'
 import { Route as MethodologyRouteImport } from './routes/methodology'
 import { Route as HardwareRouteImport } from './routes/hardware'
 import { Route as CompareRouteImport } from './routes/compare'
@@ -24,6 +25,11 @@ import { Route as DebugChartsRouteImport } from './routes/debug.charts'
 import { Route as DebugCatalogRouteImport } from './routes/debug.catalog'
 import { Route as ApiCatalogVChar123versionChar125DotjsonRouteImport } from './routes/api/catalog.v{$version}[.]json'
 
+const SavedRoute = SavedRouteImport.update({
+  id: '/saved',
+  path: '/saved',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const MethodologyRoute = MethodologyRouteImport.update({
   id: '/methodology',
   path: '/methodology',
@@ -101,6 +107,7 @@ export interface FileRoutesByFullPath {
   '/compare': typeof CompareRoute
   '/hardware': typeof HardwareRoute
   '/methodology': typeof MethodologyRoute
+  '/saved': typeof SavedRoute
   '/debug/catalog': typeof DebugCatalogRoute
   '/debug/charts': typeof DebugChartsRoute
   '/families/$slug': typeof FamiliesSlugRoute
@@ -117,6 +124,7 @@ export interface FileRoutesByTo {
   '/compare': typeof CompareRoute
   '/hardware': typeof HardwareRoute
   '/methodology': typeof MethodologyRoute
+  '/saved': typeof SavedRoute
   '/debug/catalog': typeof DebugCatalogRoute
   '/debug/charts': typeof DebugChartsRoute
   '/families/$slug': typeof FamiliesSlugRoute
@@ -134,6 +142,7 @@ export interface FileRoutesById {
   '/compare': typeof CompareRoute
   '/hardware': typeof HardwareRoute
   '/methodology': typeof MethodologyRoute
+  '/saved': typeof SavedRoute
   '/debug/catalog': typeof DebugCatalogRoute
   '/debug/charts': typeof DebugChartsRoute
   '/families/$slug': typeof FamiliesSlugRoute
@@ -152,6 +161,7 @@ export interface FileRouteTypes {
     | '/compare'
     | '/hardware'
     | '/methodology'
+    | '/saved'
     | '/debug/catalog'
     | '/debug/charts'
     | '/families/$slug'
@@ -168,6 +178,7 @@ export interface FileRouteTypes {
     | '/compare'
     | '/hardware'
     | '/methodology'
+    | '/saved'
     | '/debug/catalog'
     | '/debug/charts'
     | '/families/$slug'
@@ -184,6 +195,7 @@ export interface FileRouteTypes {
     | '/compare'
     | '/hardware'
     | '/methodology'
+    | '/saved'
     | '/debug/catalog'
     | '/debug/charts'
     | '/families/$slug'
@@ -201,6 +213,7 @@ export interface RootRouteChildren {
   CompareRoute: typeof CompareRoute
   HardwareRoute: typeof HardwareRoute
   MethodologyRoute: typeof MethodologyRoute
+  SavedRoute: typeof SavedRoute
   DebugCatalogRoute: typeof DebugCatalogRoute
   DebugChartsRoute: typeof DebugChartsRoute
   FamiliesSlugRoute: typeof FamiliesSlugRoute
@@ -215,6 +228,13 @@ export interface RootRouteChildren {
 
 declare module '@tanstack/react-router' {
   interface FileRoutesByPath {
+    '/saved': {
+      id: '/saved'
+      path: '/saved'
+      fullPath: '/saved'
+      preLoaderRoute: typeof SavedRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/methodology': {
       id: '/methodology'
       path: '/methodology'
@@ -321,6 +341,7 @@ const rootRouteChildren: RootRouteChildren = {
   CompareRoute: CompareRoute,
   HardwareRoute: HardwareRoute,
   MethodologyRoute: MethodologyRoute,
+  SavedRoute: SavedRoute,
   DebugCatalogRoute: DebugCatalogRoute,
   DebugChartsRoute: DebugChartsRoute,
   FamiliesSlugRoute: FamiliesSlugRoute,

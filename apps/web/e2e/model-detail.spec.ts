@@ -1,8 +1,9 @@
 import { expect, test } from '@playwright/test'
+import { gotoHydrated } from './helpers'
 
 test.describe('model detail', () => {
   test('open model shows the Run-it-locally card matching the fit engine', async ({ page }) => {
-    await page.goto('/models/gpt-oss-20b')
+    await gotoHydrated(page, '/models/gpt-oss-20b')
     await expect(page.getByTestId('vram-q4')).toHaveText('13 GB')
     // 13×1.08 = 14.04: fits RTX 4070 Ti 16GB, not RTX 3060 12GB
     const chips = page.getByTestId('fits-chips')
@@ -13,7 +14,7 @@ test.describe('model detail', () => {
   })
 
   test('closed model shows the API-only pricing card + index rank', async ({ page }) => {
-    await page.goto('/models/claude-opus-4-8')
+    await gotoHydrated(page, '/models/claude-opus-4-8')
     await expect(page.getByTestId('model-index')).toHaveText('87.9')
     await expect(page.getByText('Index · rank #1')).toBeVisible()
     await expect(page.getByTestId('price-in')).toHaveText('$15')
@@ -25,14 +26,18 @@ test.describe('model detail', () => {
     await expect(page.getByTestId('family-list').getByRole('link')).toHaveCount(5)
   })
 
-  test('compare button deep-links both slugs', async ({ page }) => {
-    await page.goto('/models/claude-opus-4-8')
+  test('compare button lands on compare with both models loaded', async ({ page }) => {
+    await gotoHydrated(page, '/models/claude-opus-4-8')
     await page.getByTestId('compare-this').click()
-    await expect(page).toHaveURL(/\/compare\?m=claude-opus-4-8(%2C|,)deepseek-v4-5/)
+    // opus+deepseek is the compare default pair, so stripSearchParams yields a bare URL
+    await expect(page).toHaveURL(/\/compare$/)
+    const legend = page.getByTestId('compare-legend')
+    await expect(legend).toContainText('Claude Opus 4.8')
+    await expect(legend).toContainText('DeepSeek V4.5')
   })
 
   test('unknown model slug 404s with the designed copy', async ({ page }) => {
-    const res = await page.goto('/models/not-a-real-model')
+    const res = await gotoHydrated(page, '/models/not-a-real-model')
     expect(res?.status()).toBe(404)
     await expect(page.getByText('Model not found.')).toBeVisible()
   })

@@ -1,21 +1,22 @@
 import { expect, test } from '@playwright/test'
+import { gotoHydrated } from './helpers'
 
 test.describe('app shell', () => {
   test('renders sidebar with real catalog stats', async ({ page }) => {
-    await page.goto('/')
+    await gotoHydrated(page, '/')
     await expect(page.getByText('RankedModel').first()).toBeVisible()
     await expect(page.getByTestId('footer-stats')).toContainText('55 models · 19 orgs')
   })
 
   test('sidebar navigation drives the topbar title', async ({ page }) => {
-    await page.goto('/')
+    await gotoHydrated(page, '/')
     await page.getByRole('link', { name: 'Rankings' }).click()
     await expect(page).toHaveURL(/\/rankings$/)
     await expect(page.getByTestId('page-title')).toHaveText('Global Rankings')
   })
 
   test('theme defaults dark, toggles, and persists across reload', async ({ page }) => {
-    await page.goto('/')
+    await gotoHydrated(page, '/')
     const html = page.locator('html')
     await expect(html).toHaveClass(/dark/)
     await page.getByTestId('theme-toggle').click()
@@ -27,7 +28,7 @@ test.describe('app shell', () => {
   })
 
   test('unknown URL returns HTTP 404 with the designed copy', async ({ page }) => {
-    const response = await page.goto('/definitely-not-a-page')
+    const response = await gotoHydrated(page, '/definitely-not-a-page')
     expect(response?.status()).toBe(404)
     await expect(page.getByText('Page not found.')).toBeVisible()
   })

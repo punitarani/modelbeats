@@ -3,6 +3,7 @@ import type { QueryClient } from '@tanstack/react-query'
 import { createRootRouteWithContext, HeadContent, Outlet, Scripts } from '@tanstack/react-router'
 import { TanStackRouterDevtoolsPanel } from '@tanstack/react-router-devtools'
 
+import { useEffect } from 'react'
 import { NotFound } from '#/components/shell/not-found'
 import { Sidebar } from '#/components/shell/sidebar'
 import { Topbar } from '#/components/shell/topbar'
@@ -36,6 +37,10 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
 })
 
 function RootLayout() {
+  // e2e hydration marker: interactions are only meaningful once React owns the DOM.
+  useEffect(() => {
+    document.documentElement.dataset.hydrated = 'true'
+  }, [])
   return (
     <div className="flex min-h-screen bg-bg">
       <Sidebar />

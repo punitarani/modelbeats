@@ -1,8 +1,9 @@
 import { expect, test } from '@playwright/test'
+import { gotoHydrated } from './helpers'
 
 test.describe('rankings', () => {
   test('default view: 55 rows sorted by index, opus first', async ({ page }) => {
-    await page.goto('/rankings')
+    await gotoHydrated(page, '/rankings')
     await expect(page.getByTestId('rankings-meta')).toContainText('55 models · sorted by Index')
     const first = page.getByTestId('ranking-row').first()
     await expect(first).toContainText('Claude Opus 4.8')
@@ -10,7 +11,7 @@ test.describe('rankings', () => {
   })
 
   test('column sort click mutates URL and reorders rows', async ({ page }) => {
-    await page.goto('/rankings')
+    await gotoHydrated(page, '/rankings')
     await page.getByTestId('sort-lcb').click()
     await expect(page).toHaveURL(/sort=-lcb/)
     // LCB leader is Gemini 3.1 Pro (87.3), displacing opus
@@ -33,17 +34,17 @@ test.describe('rankings', () => {
   })
 
   test('org filter narrows rows', async ({ page }) => {
-    await page.goto('/rankings')
+    await gotoHydrated(page, '/rankings')
     await page.getByTestId('rankings-org').selectOption('anthropic')
     await expect(page).toHaveURL(/org=anthropic/)
     await expect(page.getByTestId('rankings-meta')).toContainText('6 models')
   })
 
   test('category param filters benchmark columns; bogus category 404s', async ({ page }) => {
-    await page.goto('/rankings/coding')
+    await gotoHydrated(page, '/rankings/coding')
     await expect(page.getByTestId('sort-swe')).toBeVisible()
     await expect(page.getByTestId('sort-mmlu')).not.toBeVisible()
-    const res = await page.goto('/rankings/astrology')
+    const res = await gotoHydrated(page, '/rankings/astrology')
     expect(res?.status()).toBe(404)
   })
 })
