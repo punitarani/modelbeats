@@ -8,6 +8,7 @@ import {
   sortParam,
   textQueryParam,
 } from '#/lib/search'
+import { seoMeta } from '#/lib/seo'
 
 const rankingsSearchSchema = z.object({
   sort: sortParam(RANKINGS_SORT_KEYS, '-index'),
@@ -19,16 +20,13 @@ const rankingsSearchSchema = z.object({
 export const Route = createFileRoute('/rankings/')({
   validateSearch: rankingsSearchSchema,
   search: { middlewares: [stripSearchParams({ sort: '-index', q: '', org: 'all', open: 'all' })] },
-  head: () => ({
-    meta: [
-      { title: 'Global LLM Rankings · RankedModel' },
-      {
-        name: 'description',
-        content:
-          'Every tracked language model ranked by normalized index and per-benchmark scores.',
-      },
-    ],
-  }),
+  head: () =>
+    seoMeta({
+      title: 'Global LLM Rankings · RankedModel',
+      description:
+        'Every tracked language model ranked by normalized index and per-benchmark scores.',
+      path: '/rankings',
+    }),
   component: RankingsRoute,
 })
 

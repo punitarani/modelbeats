@@ -10,8 +10,10 @@
 
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as TimelineRouteImport } from './routes/timeline'
+import { Route as SitemapDotxmlRouteImport } from './routes/sitemap[.]xml'
 import { Route as SearchRouteImport } from './routes/search'
 import { Route as SavedRouteImport } from './routes/saved'
+import { Route as RobotsDottxtRouteImport } from './routes/robots[.]txt'
 import { Route as MethodologyRouteImport } from './routes/methodology'
 import { Route as HardwareRouteImport } from './routes/hardware'
 import { Route as CompareRouteImport } from './routes/compare'
@@ -33,6 +35,11 @@ const TimelineRoute = TimelineRouteImport.update({
   path: '/timeline',
   getParentRoute: () => rootRouteImport,
 } as any)
+const SitemapDotxmlRoute = SitemapDotxmlRouteImport.update({
+  id: '/sitemap.xml',
+  path: '/sitemap.xml',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const SearchRoute = SearchRouteImport.update({
   id: '/search',
   path: '/search',
@@ -41,6 +48,11 @@ const SearchRoute = SearchRouteImport.update({
 const SavedRoute = SavedRouteImport.update({
   id: '/saved',
   path: '/saved',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const RobotsDottxtRoute = RobotsDottxtRouteImport.update({
+  id: '/robots.txt',
+  path: '/robots.txt',
   getParentRoute: () => rootRouteImport,
 } as any)
 const MethodologyRoute = MethodologyRouteImport.update({
@@ -125,8 +137,10 @@ export interface FileRoutesByFullPath {
   '/compare': typeof CompareRoute
   '/hardware': typeof HardwareRoute
   '/methodology': typeof MethodologyRoute
+  '/robots.txt': typeof RobotsDottxtRoute
   '/saved': typeof SavedRoute
   '/search': typeof SearchRoute
+  '/sitemap.xml': typeof SitemapDotxmlRoute
   '/timeline': typeof TimelineRoute
   '/benchmarks/$slug': typeof BenchmarksSlugRoute
   '/debug/catalog': typeof DebugCatalogRoute
@@ -145,8 +159,10 @@ export interface FileRoutesByTo {
   '/compare': typeof CompareRoute
   '/hardware': typeof HardwareRoute
   '/methodology': typeof MethodologyRoute
+  '/robots.txt': typeof RobotsDottxtRoute
   '/saved': typeof SavedRoute
   '/search': typeof SearchRoute
+  '/sitemap.xml': typeof SitemapDotxmlRoute
   '/timeline': typeof TimelineRoute
   '/benchmarks/$slug': typeof BenchmarksSlugRoute
   '/debug/catalog': typeof DebugCatalogRoute
@@ -166,8 +182,10 @@ export interface FileRoutesById {
   '/compare': typeof CompareRoute
   '/hardware': typeof HardwareRoute
   '/methodology': typeof MethodologyRoute
+  '/robots.txt': typeof RobotsDottxtRoute
   '/saved': typeof SavedRoute
   '/search': typeof SearchRoute
+  '/sitemap.xml': typeof SitemapDotxmlRoute
   '/timeline': typeof TimelineRoute
   '/benchmarks/$slug': typeof BenchmarksSlugRoute
   '/debug/catalog': typeof DebugCatalogRoute
@@ -188,8 +206,10 @@ export interface FileRouteTypes {
     | '/compare'
     | '/hardware'
     | '/methodology'
+    | '/robots.txt'
     | '/saved'
     | '/search'
+    | '/sitemap.xml'
     | '/timeline'
     | '/benchmarks/$slug'
     | '/debug/catalog'
@@ -208,8 +228,10 @@ export interface FileRouteTypes {
     | '/compare'
     | '/hardware'
     | '/methodology'
+    | '/robots.txt'
     | '/saved'
     | '/search'
+    | '/sitemap.xml'
     | '/timeline'
     | '/benchmarks/$slug'
     | '/debug/catalog'
@@ -228,8 +250,10 @@ export interface FileRouteTypes {
     | '/compare'
     | '/hardware'
     | '/methodology'
+    | '/robots.txt'
     | '/saved'
     | '/search'
+    | '/sitemap.xml'
     | '/timeline'
     | '/benchmarks/$slug'
     | '/debug/catalog'
@@ -249,8 +273,10 @@ export interface RootRouteChildren {
   CompareRoute: typeof CompareRoute
   HardwareRoute: typeof HardwareRoute
   MethodologyRoute: typeof MethodologyRoute
+  RobotsDottxtRoute: typeof RobotsDottxtRoute
   SavedRoute: typeof SavedRoute
   SearchRoute: typeof SearchRoute
+  SitemapDotxmlRoute: typeof SitemapDotxmlRoute
   TimelineRoute: typeof TimelineRoute
   BenchmarksSlugRoute: typeof BenchmarksSlugRoute
   DebugCatalogRoute: typeof DebugCatalogRoute
@@ -274,6 +300,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof TimelineRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/sitemap.xml': {
+      id: '/sitemap.xml'
+      path: '/sitemap.xml'
+      fullPath: '/sitemap.xml'
+      preLoaderRoute: typeof SitemapDotxmlRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/search': {
       id: '/search'
       path: '/search'
@@ -286,6 +319,13 @@ declare module '@tanstack/react-router' {
       path: '/saved'
       fullPath: '/saved'
       preLoaderRoute: typeof SavedRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/robots.txt': {
+      id: '/robots.txt'
+      path: '/robots.txt'
+      fullPath: '/robots.txt'
+      preLoaderRoute: typeof RobotsDottxtRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/methodology': {
@@ -401,8 +441,10 @@ const rootRouteChildren: RootRouteChildren = {
   CompareRoute: CompareRoute,
   HardwareRoute: HardwareRoute,
   MethodologyRoute: MethodologyRoute,
+  RobotsDottxtRoute: RobotsDottxtRoute,
   SavedRoute: SavedRoute,
   SearchRoute: SearchRoute,
+  SitemapDotxmlRoute: SitemapDotxmlRoute,
   TimelineRoute: TimelineRoute,
   BenchmarksSlugRoute: BenchmarksSlugRoute,
   DebugCatalogRoute: DebugCatalogRoute,
