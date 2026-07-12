@@ -30,3 +30,16 @@ test.describe('seo surface', () => {
     expect(html).toContain('https://rankedmodel.com/models/claude-opus-4-8')
   })
 })
+
+test.describe('cache headers (C7)', () => {
+  test('catalog JSON is immutable; sitemap is SWR-cached', async ({ request }) => {
+    const sitemap = await request.get('/sitemap.xml')
+    expect(sitemap.headers()['cache-control']).toContain('stale-while-revalidate')
+    const version = sitemap.headers()['x-data-version']
+    expect(Number(version)).toBeGreaterThan(0)
+    const catalog = await request.get(`/api/catalog/v${version}.json`)
+    expect(catalog.status()).toBe(200)
+    expect(catalog.headers()['cache-control']).toBe('public, max-age=31536000, immutable')
+    expect(catalog.headers()['x-data-version']).toBe(version)
+  })
+})
