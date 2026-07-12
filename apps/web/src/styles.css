@@ -1,3 +1,145 @@
+@import "@fontsource-variable/geist";
+@import "@fontsource-variable/geist-mono";
 @import "tailwindcss";
 
-/* Design tokens (DECISIONS.md C5) land with the UI-foundation milestone. */
+@custom-variant dark (&:is(.dark *));
+
+/*
+ * Design tokens — exact values from the design handoff (DECISIONS.md C5).
+ * :root carries the light palette; .dark the dark palette. The DEFAULT PREFERENCE is
+ * dark (D12): a pre-hydration script in __root sets the class before first paint, and
+ * SSR HTML stays user-agnostic for edge caching (no cookies).
+ */
+:root {
+  --bg: #f6f6f7;
+  --panel: #ffffff;
+  --panel2: #f0f0f2;
+  --card: #ffffff;
+  --border: #e4e4e8;
+  --border2: #d2d2d9;
+  --text: #191920;
+  --mut: #5f5f6b;
+  --dim: #9c9ca4;
+  --acc: #3565c8;
+  --accdim: rgba(53, 101, 200, 0.09);
+  --open: #178a56;
+  --opendim: rgba(23, 138, 86, 0.1);
+  --closed: #7a50d6;
+  --closeddim: rgba(122, 80, 214, 0.1);
+  --bar: #e9e9ee;
+  --hover: #f2f2f5;
+}
+
+.dark {
+  --bg: #0b0b0d;
+  --panel: #101013;
+  --panel2: #17171b;
+  --card: #121216;
+  --border: #222229;
+  --border2: #2e2e37;
+  --text: #ececf1;
+  --mut: #9a9aa5;
+  --dim: #60606b;
+  --acc: #7aa7ff;
+  --accdim: rgba(122, 167, 255, 0.13);
+  --open: #4cc38a;
+  --opendim: rgba(76, 195, 138, 0.13);
+  --closed: #b491f5;
+  --closeddim: rgba(180, 145, 245, 0.14);
+  --bar: #26262e;
+  --hover: #1a1a20;
+}
+
+@theme inline {
+  --font-sans: "Geist Variable", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "Geist Mono Variable", ui-monospace, "SF Mono", monospace;
+
+  /* design tokens as Tailwind colors: bg-bg, text-mut, border-border2, bg-accdim, ... */
+  --color-bg: var(--bg);
+  --color-panel: var(--panel);
+  --color-panel2: var(--panel2);
+  --color-card: var(--card);
+  --color-border: var(--border);
+  --color-border2: var(--border2);
+  --color-text: var(--text);
+  --color-mut: var(--mut);
+  --color-dim: var(--dim);
+  --color-acc: var(--acc);
+  --color-accdim: var(--accdim);
+  --color-open: var(--open);
+  --color-opendim: var(--opendim);
+  --color-closed: var(--closed);
+  --color-closeddim: var(--closeddim);
+  --color-bar: var(--bar);
+  --color-hover: var(--hover);
+
+  /* shadcn semantic aliases mapped onto the design tokens so registry components
+     render in the design language without their default palette (D12/D16). */
+  --color-background: var(--bg);
+  --color-foreground: var(--text);
+  --color-card-foreground: var(--text);
+  --color-popover: var(--panel);
+  --color-popover-foreground: var(--text);
+  --color-primary: var(--acc);
+  --color-primary-foreground: var(--bg);
+  --color-secondary: var(--panel2);
+  --color-secondary-foreground: var(--text);
+  --color-muted: var(--panel2);
+  --color-muted-foreground: var(--mut);
+  --color-accent: var(--hover);
+  --color-accent-foreground: var(--text);
+  --color-destructive: #e5484d;
+  --color-destructive-foreground: #ffffff;
+  --color-input: var(--border);
+  --color-ring: var(--acc);
+
+  --radius: 0.5rem;
+  --animate-fadeup: fadeup 0.18s ease;
+}
+
+@keyframes fadeup {
+  from {
+    opacity: 0;
+    transform: translateY(4px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@layer base {
+  html,
+  body {
+    margin: 0;
+    padding: 0;
+  }
+  body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: var(--font-sans);
+    -webkit-font-smoothing: antialiased;
+    font-size: 14px;
+  }
+  a {
+    color: var(--acc);
+    text-decoration: none;
+  }
+  a:hover {
+    text-decoration: underline;
+  }
+  ::selection {
+    background: var(--accdim);
+  }
+  ::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: var(--border2);
+    border-radius: 5px;
+  }
+  ::-webkit-scrollbar-track {
+    background: transparent;
+  }
+}
