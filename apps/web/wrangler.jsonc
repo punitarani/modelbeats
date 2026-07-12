@@ -17,7 +17,8 @@
     {
       "binding": "DB",
       "database_name": "rankedmodel",
-      "database_id": "local-rankedmodel-db"
+      "database_id": "local-rankedmodel-db",
+      "migrations_dir": "../../packages/db/migrations"
     }
   ],
   "kv_namespaces": [
@@ -33,7 +34,8 @@
         {
           "binding": "DB",
           "database_name": "rankedmodel-staging",
-          "database_id": "REPLACE_AT_DEPLOY_staging_d1_id"
+          "database_id": "REPLACE_AT_DEPLOY_staging_d1_id",
+          "migrations_dir": "../../packages/db/migrations"
         }
       ],
       "kv_namespaces": [
@@ -49,7 +51,8 @@
         {
           "binding": "DB",
           "database_name": "rankedmodel",
-          "database_id": "REPLACE_AT_DEPLOY_production_d1_id"
+          "database_id": "REPLACE_AT_DEPLOY_production_d1_id",
+          "migrations_dir": "../../packages/db/migrations"
         }
       ],
       "kv_namespaces": [
