@@ -13,10 +13,12 @@
   "scripts": {
     "lint": "biome check .",
     "format": "biome check --write .",
-    "typecheck": "tsc --noEmit -p tsconfig.json"
+    "typecheck": "bun run --filter '*' typecheck",
+    "dev": "bun run --filter '@rankedmodel/web' dev",
+    "build": "bun run --filter '@rankedmodel/web' build"
   },
   "devDependencies": {
     "@biomejs/biome": "^2.3.0",
-    "typescript": "^5.9.0"
+    "typescript": "^6.0.2"
   }
 }

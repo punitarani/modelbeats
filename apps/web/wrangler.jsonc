@@ -1,0 +1,63 @@
+/**
+ * Worker config: assets + SSR + server functions in one Worker.
+ * Local dev uses these top-level bindings against miniflare state in .wrangler/state —
+ * the ids below are stable local keys, not real Cloudflare resources.
+ * staging/production envs re-declare bindings (envs do not inherit them); their ids are
+ * placeholders filled from real resources at deploy time (docs/DEPLOY.md, ship-readiness).
+ */
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "rankedmodel",
+  "compatibility_date": "2026-07-01",
+  "compatibility_flags": ["nodejs_compat"],
+  "main": "@tanstack/react-start/server-entry",
+  "observability": { "enabled": true },
+  "upload_source_maps": true,
+  "d1_databases": [
+    {
+      "binding": "DB",
+      "database_name": "rankedmodel",
+      "database_id": "local-rankedmodel-db"
+    }
+  ],
+  "kv_namespaces": [
+    {
+      "binding": "CATALOG",
+      "id": "local-rankedmodel-catalog"
+    }
+  ],
+  "env": {
+    "staging": {
+      "name": "rankedmodel-staging",
+      "d1_databases": [
+        {
+          "binding": "DB",
+          "database_name": "rankedmodel-staging",
+          "database_id": "REPLACE_AT_DEPLOY_staging_d1_id"
+        }
+      ],
+      "kv_namespaces": [
+        {
+          "binding": "CATALOG",
+          "id": "REPLACE_AT_DEPLOY_staging_kv_id"
+        }
+      ]
+    },
+    "production": {
+      "name": "rankedmodel",
+      "d1_databases": [
+        {
+          "binding": "DB",
+          "database_name": "rankedmodel",
+          "database_id": "REPLACE_AT_DEPLOY_production_d1_id"
+        }
+      ],
+      "kv_namespaces": [
+        {
+          "binding": "CATALOG",
+          "id": "REPLACE_AT_DEPLOY_production_kv_id"
+        }
+      ]
+    }
+  }
+}
