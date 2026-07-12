@@ -10,33 +10,54 @@
 
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
+import { Route as DebugCatalogRouteImport } from './routes/debug.catalog'
+import { Route as ApiCatalogVChar123versionChar125DotjsonRouteImport } from './routes/api/catalog.v{$version}[.]json'
 
 const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
   getParentRoute: () => rootRouteImport,
 } as any)
+const DebugCatalogRoute = DebugCatalogRouteImport.update({
+  id: '/debug/catalog',
+  path: '/debug/catalog',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ApiCatalogVChar123versionChar125DotjsonRoute =
+  ApiCatalogVChar123versionChar125DotjsonRouteImport.update({
+    id: '/api/catalog/v{$version}.json',
+    path: '/api/catalog/v{$version}.json',
+    getParentRoute: () => rootRouteImport,
+  } as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/debug/catalog': typeof DebugCatalogRoute
+  '/api/catalog/v{$version}.json': typeof ApiCatalogVChar123versionChar125DotjsonRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/debug/catalog': typeof DebugCatalogRoute
+  '/api/catalog/v{$version}.json': typeof ApiCatalogVChar123versionChar125DotjsonRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/debug/catalog': typeof DebugCatalogRoute
+  '/api/catalog/v{$version}.json': typeof ApiCatalogVChar123versionChar125DotjsonRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/'
+  fullPaths: '/' | '/debug/catalog' | '/api/catalog/v{$version}.json'
   fileRoutesByTo: FileRoutesByTo
-  to: '/'
-  id: '__root__' | '/'
+  to: '/' | '/debug/catalog' | '/api/catalog/v{$version}.json'
+  id: '__root__' | '/' | '/debug/catalog' | '/api/catalog/v{$version}.json'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  DebugCatalogRoute: typeof DebugCatalogRoute
+  ApiCatalogVChar123versionChar125DotjsonRoute: typeof ApiCatalogVChar123versionChar125DotjsonRoute
 }
 
 declare module '@tanstack/react-router' {
@@ -48,11 +69,28 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof IndexRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/debug/catalog': {
+      id: '/debug/catalog'
+      path: '/debug/catalog'
+      fullPath: '/debug/catalog'
+      preLoaderRoute: typeof DebugCatalogRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/api/catalog/v{$version}.json': {
+      id: '/api/catalog/v{$version}.json'
+      path: '/api/catalog/v{$version}.json'
+      fullPath: '/api/catalog/v{$version}.json'
+      preLoaderRoute: typeof ApiCatalogVChar123versionChar125DotjsonRouteImport
+      parentRoute: typeof rootRouteImport
+    }
   }
 }
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  DebugCatalogRoute: DebugCatalogRoute,
+  ApiCatalogVChar123versionChar125DotjsonRoute:
+    ApiCatalogVChar123versionChar125DotjsonRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)

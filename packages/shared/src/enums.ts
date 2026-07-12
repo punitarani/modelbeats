@@ -38,6 +38,27 @@ export const RESULT_SOURCES = [
 ] as const
 export type ResultSource = (typeof RESULT_SOURCES)[number]
 
+/** When a model×benchmark has rows from several sources, this order picks the headline. */
+export const HEADLINE_SOURCE_PRECEDENCE: readonly ResultSource[] = [
+  'independent',
+  'arena',
+  'admin-run',
+  'curated',
+  'self-reported',
+]
+
+/** Headline score across multi-source rows (lowest precedence index wins). */
+export function pickHeadlineScore(
+  rows: readonly { score: number; source: ResultSource }[],
+): number | null {
+  let best: { score: number; rank: number } | null = null
+  for (const r of rows) {
+    const rank = HEADLINE_SOURCE_PRECEDENCE.indexOf(r.source)
+    if (best == null || rank < best.rank) best = { score: r.score, rank }
+  }
+  return best?.score ?? null
+}
+
 export const ARCH_CLASSES = ['dense', 'moe', 'ssm', 'hybrid'] as const
 export type ArchClass = (typeof ARCH_CLASSES)[number]
 
