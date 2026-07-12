@@ -1,0 +1,25 @@
+/**
+ * Test-only Worker config for @cloudflare/vitest-pool-workers: same bindings and
+ * compatibility surface as wrangler.jsonc but WITHOUT `main` — the pool cannot resolve
+ * the packaged TanStack server entry, and binding tests don't need it. Keep the
+ * bindings in lockstep with wrangler.jsonc.
+ */
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "rankedmodel-test",
+  "compatibility_date": "2026-07-01",
+  "compatibility_flags": ["nodejs_compat"],
+  "d1_databases": [
+    {
+      "binding": "DB",
+      "database_name": "rankedmodel-test",
+      "database_id": "test-rankedmodel-db"
+    }
+  ],
+  "kv_namespaces": [
+    {
+      "binding": "CATALOG",
+      "id": "test-rankedmodel-catalog"
+    }
+  ]
+}
