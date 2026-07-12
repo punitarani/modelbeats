@@ -119,6 +119,7 @@ export function HardwareScreen({
                 onChange={(e) => setGpu(e.target.value)}
                 className="min-w-[220px] rounded-md border border-border bg-panel2 px-2 py-[5px] text-xs outline-none focus:border-acc"
                 data-testid="hw-gpu"
+                aria-label="Hardware profile"
               >
                 {catalog.gpus.map((g) => (
                   <option key={g.slug} value={g.slug}>
@@ -253,6 +254,7 @@ export function HardwareScreen({
               onChange={(e) => navigateSearch({ model: e.target.value })}
               className="max-w-[320px] rounded-md border border-border bg-panel2 px-2 py-[5px] text-xs outline-none focus:border-acc"
               data-testid="hw-model"
+              aria-label="Model to check"
             >
               {catalog.models
                 .filter((m) => m.open && m.vramQ4 != null)

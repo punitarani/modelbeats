@@ -104,6 +104,7 @@ export function ExplorerScreen({
             onChange={(e) => navigateSearch({ org: e.target.value })}
             className="w-full rounded-md border border-border bg-panel2 px-2 py-[5px] text-xs outline-none focus:border-acc"
             data-testid="explorer-org"
+            aria-label="Filter by organization"
           >
             <option value="all">All orgs</option>
             {orgs.map((o) => (
@@ -120,6 +121,7 @@ export function ExplorerScreen({
             onChange={(e) => navigateSearch({ size: e.target.value as ExplorerSearch['size'] })}
             className="w-full rounded-md border border-border bg-panel2 px-2 py-[5px] text-xs outline-none focus:border-acc"
             data-testid="explorer-size"
+            aria-label="Filter by parameter size class"
           >
             <option value="any">Any size</option>
             <option value="s">{SIZE_CLASS_LABELS.s}</option>
@@ -136,6 +138,7 @@ export function ExplorerScreen({
             onChange={(e) => navigateSearch({ gpu: e.target.value })}
             className="w-full rounded-md border border-border bg-panel2 px-2 py-[5px] text-xs outline-none focus:border-acc"
             data-testid="explorer-gpu"
+            aria-label="Filter by hardware fit"
           >
             <option value="none">Any hardware / API</option>
             {data.gpus.map((g) => (
@@ -197,6 +200,7 @@ export function ExplorerScreen({
               onChange={(e) => navigateSearch({ sort: e.target.value as ExplorerSort })}
               className="rounded-md border border-border bg-panel2 px-2 py-[5px] text-xs outline-none focus:border-acc"
               data-testid="explorer-sort"
+              aria-label="Sort models"
             >
               <option value="index">Index score</option>
               <option value="date">Newest first</option>

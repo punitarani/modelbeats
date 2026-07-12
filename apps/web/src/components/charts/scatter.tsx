@@ -18,10 +18,11 @@ export function QualityPriceScatter({
   onSelect?: (slug: string) => void
 }) {
   return (
+    // biome-ignore lint/a11y/useSemanticElements: SVG chart with interactive child links — role=img would make them presentational and <fieldset> is not an SVG element
     <svg
       viewBox={SCATTER.viewBox}
       className="mt-2 block h-auto w-full"
-      role="img"
+      role="group"
       aria-label="Arena Elo against output price (log scale)"
     >
       {SCATTER.yTicks.map((elo) => {

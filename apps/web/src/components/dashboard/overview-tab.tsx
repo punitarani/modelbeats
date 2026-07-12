@@ -140,6 +140,7 @@ export function OverviewTab({ catalog }: { catalog: CatalogSnapshot }) {
               onChange={(e) => setQcA(e.target.value)}
               className="w-full rounded-md border border-border bg-panel2 px-2 py-[5px] text-xs outline-none focus:border-acc"
               data-testid="qc-a"
+              aria-label="Quick compare model A"
             >
               {options.map((o) => (
                 <option key={o.slug} value={o.slug}>
@@ -152,6 +153,7 @@ export function OverviewTab({ catalog }: { catalog: CatalogSnapshot }) {
               onChange={(e) => setQcB(e.target.value)}
               className="w-full rounded-md border border-border bg-panel2 px-2 py-[5px] text-xs outline-none focus:border-acc"
               data-testid="qc-b"
+              aria-label="Quick compare model B"
             >
               {options.map((o) => (
                 <option key={o.slug} value={o.slug}>

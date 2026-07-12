@@ -73,6 +73,7 @@ export function RankingsScreen({
             onChange={(e) => navigateSearch({ org: e.target.value })}
             className="rounded-md border border-border bg-panel2 px-2 py-[5px] text-xs outline-none focus:border-acc"
             data-testid="rankings-org"
+            aria-label="Filter by organization"
           >
             <option value="all">All orgs</option>
             {orgs.map((o) => (

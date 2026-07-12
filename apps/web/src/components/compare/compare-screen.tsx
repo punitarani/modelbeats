@@ -110,6 +110,7 @@ export function CompareScreen({
               onChange={(e) => setSlot(i, e.target.value)}
               className="min-w-[210px] rounded-md border border-border bg-panel2 px-2 py-[5px] text-xs outline-none focus:border-acc"
               data-testid={`compare-slot-${i}`}
+              aria-label={label}
             >
               <option value="">— none —</option>
               {options.map((o) => (

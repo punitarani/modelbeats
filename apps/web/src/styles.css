@@ -128,6 +128,14 @@
   a:hover {
     text-decoration: underline;
   }
+  /* a11y (link-in-text-block): links inside prose/muted copy need a non-color cue —
+     accent-on-muted falls under 3:1. Standalone links (nav, tables, cards) stay clean. */
+  p a,
+  .text-mut a,
+  .text-dim a {
+    text-decoration: underline;
+    text-underline-offset: 2px;
+  }
   ::selection {
     background: var(--accdim);
   }
