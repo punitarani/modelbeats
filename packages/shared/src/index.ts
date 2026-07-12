@@ -1,4 +1,5 @@
 export * from './enums'
 export * from './format'
+export * from './hardware-fit'
 export * from './schema'
 export * from './scoring'
