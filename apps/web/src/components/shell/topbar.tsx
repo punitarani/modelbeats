@@ -36,7 +36,10 @@ export function Topbar({ search }: { search?: React.ReactNode }) {
 
   return (
     <div className="sticky top-0 z-40 flex items-center gap-3.5 border-b border-border bg-bg px-6 py-2.5">
-      <div className="whitespace-nowrap text-[13px] font-semibold tracking-[-0.01em]">
+      <div
+        className="whitespace-nowrap text-[13px] font-semibold tracking-[-0.01em]"
+        data-testid="page-title"
+      >
         {pageTitle(pathname)}
       </div>
       <div className="relative ml-auto max-w-[420px] flex-1">
