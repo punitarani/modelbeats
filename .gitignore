@@ -25,5 +25,8 @@ coverage/
 # local session tooling
 .remember/
 
+# private strategy notes — never commit (history was scrubbed of this file)
+COMPETITIVE_ANALYSIS.md
+
 # os
 .DS_Store

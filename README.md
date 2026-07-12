@@ -6,8 +6,7 @@
 RankedModel collapses the four-tab workflow — **rank it, verify it, size it, run it** —
 into one provenance-honest, deep-linkable tool: 55 curated models across 19 orgs, 10
 benchmarks with published normalization bounds, version lineage, API pricing,
-quantizations, and a graded hardware-fit engine. Positioning in
-[COMPETITIVE_ANALYSIS.md](COMPETITIVE_ANALYSIS.md); system design in
+quantizations, and a graded hardware-fit engine. System design in
 [ARCHITECTURE.md](ARCHITECTURE.md) (§13 reconciles it with the committed design
 handoff); every locked decision and contract in [docs/DECISIONS.md](docs/DECISIONS.md).
 

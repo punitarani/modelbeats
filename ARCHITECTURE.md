@@ -344,7 +344,7 @@ Data curation runs continuously alongside all phases — it's the actual moat; t
 
 ## 13. Design reconciliation (July 2026)
 
-The Claude Design handoff (`docs/design-handoff/`) and `COMPETITIVE_ANALYSIS.md` arrived after this document; where they diverge from §1–§12, the following **locked decisions** govern. Full rationale + shared contracts (index formula, hardware-fit thresholds, snapshot schema, URL-param conventions, design tokens, chart math, caching): **[docs/DECISIONS.md](docs/DECISIONS.md)**.
+The Claude Design handoff (`docs/design-handoff/`) and a competitive analysis (kept private, not tracked in this repo) arrived after this document; where they diverge from §1–§12, the following **locked decisions** govern. Full rationale + shared contracts (index formula, hardware-fit thresholds, snapshot schema, URL-param conventions, design tokens, chart math, caching): **[docs/DECISIONS.md](docs/DECISIONS.md)**.
 
 | ID | Delta vs. this document |
 |---|---|
@@ -359,5 +359,5 @@ The Claude Design handoff (`docs/design-handoff/`) and `COMPETITIVE_ANALYSIS.md`
 | D14 | `packages/ui` dropped; Drizzle schema lives in `packages/db` (§10 layout amended). |
 | D15–D17 | Context stored in K-tokens in curated files (absolute in D1); sidebar nav gains Hardware/Benchmarks/Methodology; server surface is exactly `getCatalog` + `getModel` with all other reads as pure snapshot selectors in `packages/shared` (§6 amended). |
 
-**Positioning note (from COMPETITIVE_ANALYSIS.md):** hardware-fit + compare are the flagship wedge; provenance + methodology are the brand; rankings are table stakes. Community curation (CONTRIBUTING + data PRs) is a day-one requirement; ingestion-automation (Phase 4) is the freshness path and is sketched in `docs/DEPLOY.md` at ship readiness.
+**Positioning note:** hardware-fit + compare are the flagship wedge; provenance + methodology are the brand; rankings are table stakes. Community curation (CONTRIBUTING + data PRs) is a day-one requirement; ingestion-automation (Phase 4) is the freshness path and is sketched in `docs/DEPLOY.md` at ship readiness.
 

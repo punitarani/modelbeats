@@ -48,7 +48,7 @@ an older N (all versions are retained).
 - **Workers Logs / Analytics** — `observability.enabled` is on in wrangler.jsonc;
   dashboards exist only once deployed.
 
-## Phase-4 sketch: ingestion-as-PR automation (COMPETITIVE_ANALYSIS §5.2)
+## Phase-4 sketch: ingestion-as-PR automation
 
 Freshness is the #1 competitive deficit; the architecture already supports closing it
 without structural change:

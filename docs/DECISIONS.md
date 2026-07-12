@@ -1,7 +1,8 @@
 # Decisions & Contracts
 
 > Locked reconciliation between `ARCHITECTURE.md`, the design handoff (`docs/design-handoff/`), and
-> `COMPETITIVE_ANALYSIS.md`. Code cites these IDs. Change a decision here first, then in code.
+> the competitive analysis (kept private, not tracked in this repo). Code cites these IDs. Change a
+> decision here first, then in code.
 
 ## Part 1 — Decisions (D1–D18)
 
