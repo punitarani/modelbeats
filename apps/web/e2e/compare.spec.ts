@@ -1,5 +1,5 @@
 import { expect, test } from '@playwright/test'
-import { gotoHydrated } from './helpers'
+import { gotoHydrated, pickOption } from './helpers'
 
 test.describe('compare', () => {
   test('deep link renders two columns, radar polygons and legend', async ({ page }) => {
@@ -23,7 +23,7 @@ test.describe('compare', () => {
 
   test('changing slot C updates the URL', async ({ page }) => {
     await gotoHydrated(page, '/compare?m=claude-opus-4-8,deepseek-v4-5')
-    await page.getByTestId('compare-slot-2').selectOption('glm-5-2')
+    await pickOption(page, 'compare-slot-2', 'GLM-5.2 — Zhipu AI')
     await expect(page).toHaveURL(/m=claude-opus-4-8(%2C|,)deepseek-v4-5(%2C|,)glm-5-2/)
     await expect(page.getByTestId('compare-radar').locator('polygon')).toHaveCount(7)
   })

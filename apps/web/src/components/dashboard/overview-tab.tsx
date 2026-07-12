@@ -4,6 +4,7 @@ import { useState } from 'react'
 import { arenaPct } from '#/components/charts/scales'
 import { QualityPriceScatter } from '#/components/charts/scatter'
 import { ModelTag } from '#/components/model-tag'
+import { SearchSelect } from '#/components/search-select'
 import { arenaTop, dashboardMovers, latestReleases, SCATTER_LABELED } from './dashboard-data'
 
 export function OverviewTab({ catalog }: { catalog: CatalogSnapshot }) {
@@ -20,7 +21,9 @@ export function OverviewTab({ catalog }: { catalog: CatalogSnapshot }) {
       open: m.open,
       labeled: SCATTER_LABELED.has(m.slug),
     }))
-  const options = [...catalog.models].sort((a, b) => a.name.localeCompare(b.name))
+  const qcOptions = [...catalog.models]
+    .sort((a, b) => a.name.localeCompare(b.name))
+    .map((o) => ({ value: o.slug, label: `${o.name} — ${o.org}` }))
 
   return (
     <div className="grid grid-cols-1 items-start gap-3.5 lg:grid-cols-[minmax(0,1.9fr)_minmax(280px,1fr)]">
@@ -135,32 +138,24 @@ export function OverviewTab({ catalog }: { catalog: CatalogSnapshot }) {
         <div className="rounded-[10px] border border-border bg-card px-4 py-3.5">
           <div className="text-[13px] font-semibold">Quick compare</div>
           <div className="mt-2.5 flex flex-col gap-2">
-            <select
+            <SearchSelect
               value={qcA}
-              onChange={(e) => setQcA(e.target.value)}
-              className="w-full rounded-md border border-border bg-panel2 px-2 py-[5px] text-xs outline-none focus:border-acc"
-              data-testid="qc-a"
+              onValueChange={setQcA}
+              options={qcOptions}
               aria-label="Quick compare model A"
-            >
-              {options.map((o) => (
-                <option key={o.slug} value={o.slug}>
-                  {o.name} — {o.org}
-                </option>
-              ))}
-            </select>
-            <select
+              searchPlaceholder="Search models…"
+              testid="qc-a"
+              className="w-full"
+            />
+            <SearchSelect
               value={qcB}
-              onChange={(e) => setQcB(e.target.value)}
-              className="w-full rounded-md border border-border bg-panel2 px-2 py-[5px] text-xs outline-none focus:border-acc"
-              data-testid="qc-b"
+              onValueChange={setQcB}
+              options={qcOptions}
               aria-label="Quick compare model B"
-            >
-              {options.map((o) => (
-                <option key={o.slug} value={o.slug}>
-                  {o.name} — {o.org}
-                </option>
-              ))}
-            </select>
+              searchPlaceholder="Search models…"
+              testid="qc-b"
+              className="w-full"
+            />
             <button
               type="button"
               onClick={() => navigate({ to: '/compare', search: { m: `${qcA},${qcB}` } })}

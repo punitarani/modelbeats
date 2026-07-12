@@ -10,6 +10,7 @@ import { useState } from 'react'
 import { InlineBar } from '#/components/charts/inline-bar'
 import { Radar } from '#/components/charts/radar'
 import { normPct } from '#/components/charts/scales'
+import { SearchSelect } from '#/components/search-select'
 import { saveComparison } from '#/lib/saved'
 
 /** Slot colors per the design: A=accent, B=open-green, C=closed-purple. */
@@ -105,20 +106,18 @@ export function CompareScreen({
             >
               {label}
             </span>
-            <select
+            <SearchSelect
               value={slugs[i]}
-              onChange={(e) => setSlot(i, e.target.value)}
-              className="min-w-[210px] rounded-md border border-border bg-panel2 px-2 py-[5px] text-xs outline-none focus:border-acc"
-              data-testid={`compare-slot-${i}`}
+              onValueChange={(slug) => setSlot(i, slug)}
+              options={[
+                { value: '', label: '— none —' },
+                ...options.map((o) => ({ value: o.slug, label: `${o.name} — ${o.org}` })),
+              ]}
               aria-label={label}
-            >
-              <option value="">— none —</option>
-              {options.map((o) => (
-                <option key={o.slug} value={o.slug}>
-                  {o.name} — {o.org}
-                </option>
-              ))}
-            </select>
+              searchPlaceholder="Search models…"
+              testid={`compare-slot-${i}`}
+              className="min-w-[210px]"
+            />
           </div>
         ))}
         <div className="ml-auto flex items-end gap-1.5">

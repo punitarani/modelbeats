@@ -8,7 +8,9 @@ import {
 } from '@rankedmodel/shared'
 import { Link } from '@tanstack/react-router'
 import { InlineBar } from '#/components/charts/inline-bar'
+import { FilterSelect } from '#/components/filter-select'
 import { ModelTag } from '#/components/model-tag'
+import { SearchSelect } from '#/components/search-select'
 import { Segmented } from '#/components/segmented'
 import { storeProfile } from '#/lib/hardware-profile'
 import type { HardwareSearch } from '#/lib/search'
@@ -114,20 +116,17 @@ export function HardwareScreen({
               <span className="font-mono text-[9.5px] uppercase tracking-[0.06em] text-dim">
                 Hardware profile
               </span>
-              <select
+              <FilterSelect
                 value={search.gpu}
-                onChange={(e) => setGpu(e.target.value)}
-                className="min-w-[220px] rounded-md border border-border bg-panel2 px-2 py-[5px] text-xs outline-none focus:border-acc"
-                data-testid="hw-gpu"
+                onValueChange={setGpu}
+                options={[
+                  ...catalog.gpus.map((g) => ({ value: g.slug, label: g.name })),
+                  { value: 'manual', label: 'Manual VRAM…' },
+                ]}
                 aria-label="Hardware profile"
-              >
-                {catalog.gpus.map((g) => (
-                  <option key={g.slug} value={g.slug}>
-                    {g.name}
-                  </option>
-                ))}
-                <option value="manual">Manual VRAM…</option>
-              </select>
+                testid="hw-gpu"
+                className="min-w-[220px]"
+              />
             </div>
             {manual && (
               <div className="flex flex-col gap-1">
@@ -249,22 +248,18 @@ export function HardwareScreen({
             <span className="font-mono text-[9.5px] uppercase tracking-[0.06em] text-dim">
               Model
             </span>
-            <select
+            <SearchSelect
               value={search.model}
-              onChange={(e) => navigateSearch({ model: e.target.value })}
-              className="max-w-[320px] rounded-md border border-border bg-panel2 px-2 py-[5px] text-xs outline-none focus:border-acc"
-              data-testid="hw-model"
-              aria-label="Model to check"
-            >
-              {catalog.models
+              onValueChange={(model) => navigateSearch({ model })}
+              options={catalog.models
                 .filter((m) => m.open && m.vramQ4 != null)
                 .sort((a, b) => a.name.localeCompare(b.name))
-                .map((m) => (
-                  <option key={m.slug} value={m.slug}>
-                    {m.name} — {m.vramQ4} GB @ Q4
-                  </option>
-                ))}
-            </select>
+                .map((m) => ({ value: m.slug, label: `${m.name} — ${m.vramQ4} GB @ Q4` }))}
+              aria-label="Model to check"
+              searchPlaceholder="Search open models…"
+              testid="hw-model"
+              className="max-w-[320px]"
+            />
           </div>
           {inverseModel && (
             <div className="mt-3.5 grid grid-cols-1 gap-2 sm:grid-cols-2 lg:grid-cols-3">

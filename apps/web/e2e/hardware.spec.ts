@@ -26,7 +26,8 @@ test.describe('hardware explorer', () => {
     await expect(row).toContainText('~118')
     await page.getByRole('link', { name: 'Open in explorer →' }).click()
     await expect(page).toHaveURL(/\/models\?gpu=rtx4090/)
-    await expect(page.getByTestId('explorer-gpu')).toHaveValue('rtx4090')
+    // popup trigger renders the selected label as text (no form value to assert)
+    await expect(page.getByTestId('explorer-gpu')).toContainText('RTX 4090 24GB')
   })
 
   test('inverse mode grades one model across every profile', async ({ page }) => {

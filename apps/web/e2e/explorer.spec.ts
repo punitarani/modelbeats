@@ -1,5 +1,5 @@
 import { expect, test } from '@playwright/test'
-import { gotoHydrated } from './helpers'
+import { gotoHydrated, pickOption } from './helpers'
 
 test.describe('model explorer', () => {
   test('default grid shows all 55 models', async ({ page }) => {
@@ -10,7 +10,7 @@ test.describe('model explorer', () => {
 
   test('runs-on-my-hardware facet applies the curated 1.08× rule', async ({ page }) => {
     await gotoHydrated(page, '/models')
-    await page.getByTestId('explorer-gpu').selectOption('rtx4090')
+    await pickOption(page, 'explorer-gpu', 'RTX 4090 24GB')
     await expect(page).toHaveURL(/gpu=rtx4090/)
     // 13×1.08 = 14.04 ≤ 24 keeps GPT-OSS-20B; 66×1.08 > 24 drops GPT-OSS-120B
     await expect(page.getByTestId('explorer-card').filter({ hasText: 'GPT-OSS-20B' })).toHaveCount(
@@ -29,7 +29,7 @@ test.describe('model explorer', () => {
 
   test('cheapest-API sort puts Llama 3.1 8B first ($0.08/M out)', async ({ page }) => {
     await gotoHydrated(page, '/models')
-    await page.getByTestId('explorer-sort').selectOption('cheap')
+    await pickOption(page, 'explorer-sort', 'Cheapest API')
     await expect(page).toHaveURL(/sort=cheap/)
     await expect(page.getByTestId('explorer-card').first()).toContainText('Llama 3.1 8B')
   })

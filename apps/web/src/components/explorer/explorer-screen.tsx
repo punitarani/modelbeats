@@ -13,7 +13,9 @@ import {
 import { useSuspenseQuery } from '@tanstack/react-query'
 import { Link } from '@tanstack/react-router'
 import { InlineBar } from '#/components/charts/inline-bar'
+import { FilterSelect } from '#/components/filter-select'
 import { ModelTag } from '#/components/model-tag'
+import { SearchSelect } from '#/components/search-select'
 import { Segmented } from '#/components/segmented'
 import { catalogQueryOptions } from '#/lib/catalog'
 import { CAP_CODES, type ExplorerSearch } from '#/lib/search'
@@ -99,54 +101,50 @@ export function ExplorerScreen({
         </div>
         <div>
           <FacetLabel>Organization</FacetLabel>
-          <select
+          <SearchSelect
             value={search.org}
-            onChange={(e) => navigateSearch({ org: e.target.value })}
-            className="w-full rounded-md border border-border bg-panel2 px-2 py-[5px] text-xs outline-none focus:border-acc"
-            data-testid="explorer-org"
+            onValueChange={(org) => navigateSearch({ org })}
+            options={[
+              { value: 'all', label: 'All orgs' },
+              ...orgs.map((o) => ({ value: o.slug, label: o.name })),
+            ]}
             aria-label="Filter by organization"
-          >
-            <option value="all">All orgs</option>
-            {orgs.map((o) => (
-              <option key={o.slug} value={o.slug}>
-                {o.name}
-              </option>
-            ))}
-          </select>
+            searchPlaceholder="Search organizations…"
+            testid="explorer-org"
+            className="w-full"
+          />
         </div>
         <div>
           <FacetLabel>Total parameters</FacetLabel>
-          <select
+          <FilterSelect
             value={search.size}
-            onChange={(e) => navigateSearch({ size: e.target.value as ExplorerSearch['size'] })}
-            className="w-full rounded-md border border-border bg-panel2 px-2 py-[5px] text-xs outline-none focus:border-acc"
-            data-testid="explorer-size"
+            onValueChange={(size) => navigateSearch({ size: size as ExplorerSearch['size'] })}
+            options={[
+              { value: 'any', label: 'Any size' },
+              { value: 's', label: SIZE_CLASS_LABELS.s },
+              { value: 'm', label: SIZE_CLASS_LABELS.m },
+              { value: 'l', label: SIZE_CLASS_LABELS.l },
+              { value: 'xl', label: SIZE_CLASS_LABELS.xl },
+              { value: 'undisclosed', label: SIZE_CLASS_LABELS.undisclosed },
+            ]}
             aria-label="Filter by parameter size class"
-          >
-            <option value="any">Any size</option>
-            <option value="s">{SIZE_CLASS_LABELS.s}</option>
-            <option value="m">{SIZE_CLASS_LABELS.m}</option>
-            <option value="l">{SIZE_CLASS_LABELS.l}</option>
-            <option value="xl">{SIZE_CLASS_LABELS.xl}</option>
-            <option value="undisclosed">{SIZE_CLASS_LABELS.undisclosed}</option>
-          </select>
+            testid="explorer-size"
+            className="w-full"
+          />
         </div>
         <div>
           <FacetLabel>Runs on my hardware</FacetLabel>
-          <select
+          <FilterSelect
             value={search.gpu}
-            onChange={(e) => navigateSearch({ gpu: e.target.value })}
-            className="w-full rounded-md border border-border bg-panel2 px-2 py-[5px] text-xs outline-none focus:border-acc"
-            data-testid="explorer-gpu"
+            onValueChange={(gpu) => navigateSearch({ gpu })}
+            options={[
+              { value: 'none', label: 'Any hardware / API' },
+              ...data.gpus.map((g) => ({ value: g.slug, label: g.name })),
+            ]}
             aria-label="Filter by hardware fit"
-          >
-            <option value="none">Any hardware / API</option>
-            {data.gpus.map((g) => (
-              <option key={g.slug} value={g.slug}>
-                {g.name}
-              </option>
-            ))}
-          </select>
+            testid="explorer-gpu"
+            className="w-full"
+          />
           <div className="mt-[5px] text-[10.5px] leading-[1.45] text-dim">
             Filters open models whose Q4 quant fits in VRAM/unified memory.
           </div>
@@ -195,18 +193,18 @@ export function ExplorerScreen({
           </div>
           <div className="ml-auto flex items-center gap-[7px] text-[11.5px] text-mut">
             Sort
-            <select
+            <FilterSelect
               value={search.sort}
-              onChange={(e) => navigateSearch({ sort: e.target.value as ExplorerSort })}
-              className="rounded-md border border-border bg-panel2 px-2 py-[5px] text-xs outline-none focus:border-acc"
-              data-testid="explorer-sort"
+              onValueChange={(sort) => navigateSearch({ sort: sort as ExplorerSort })}
+              options={[
+                { value: 'index', label: 'Index score' },
+                { value: 'date', label: 'Newest first' },
+                { value: 'params', label: 'Largest first' },
+                { value: 'cheap', label: 'Cheapest API' },
+              ]}
               aria-label="Sort models"
-            >
-              <option value="index">Index score</option>
-              <option value="date">Newest first</option>
-              <option value="params">Largest first</option>
-              <option value="cheap">Cheapest API</option>
-            </select>
+              testid="explorer-sort"
+            />
           </div>
         </div>
         <div className="grid grid-cols-[repeat(auto-fill,minmax(270px,1fr))] gap-[11px]">

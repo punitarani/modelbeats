@@ -1,5 +1,5 @@
 import { expect, test } from '@playwright/test'
-import { gotoHydrated } from './helpers'
+import { gotoHydrated, pickOption } from './helpers'
 
 test.describe('dashboard overview', () => {
   test('stat strip reflects the real catalog', async ({ page }) => {
@@ -25,7 +25,7 @@ test.describe('dashboard overview', () => {
     const rail = page.getByTestId('arena-rail')
     await expect(rail).toContainText('Claude Opus 4.8')
     await expect(rail).toContainText('1510')
-    await page.getByTestId('qc-b').selectOption('glm-5-2')
+    await pickOption(page, 'qc-b', 'GLM-5.2 — Zhipu AI')
     await page.getByTestId('qc-go').click()
     await expect(page).toHaveURL(/m=claude-opus-4-8(%2C|,)glm-5-2/)
   })

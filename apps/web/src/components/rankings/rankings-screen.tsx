@@ -7,6 +7,7 @@ import {
 } from '@rankedmodel/shared'
 import { useSuspenseQuery } from '@tanstack/react-query'
 import { useNavigate } from '@tanstack/react-router'
+import { SearchSelect } from '#/components/search-select'
 import { Segmented } from '#/components/segmented'
 import { catalogQueryOptions } from '#/lib/catalog'
 import { RankingsTable } from './rankings-table'
@@ -68,20 +69,17 @@ export function RankingsScreen({
             className="w-[140px] rounded-md border border-border bg-panel2 px-[9px] py-[5px] text-xs text-text outline-none focus:border-acc"
             data-testid="rankings-filter"
           />
-          <select
+          <SearchSelect
             value={search.org}
-            onChange={(e) => navigateSearch({ org: e.target.value })}
-            className="rounded-md border border-border bg-panel2 px-2 py-[5px] text-xs outline-none focus:border-acc"
-            data-testid="rankings-org"
+            onValueChange={(org) => navigateSearch({ org })}
+            options={[
+              { value: 'all', label: 'All orgs' },
+              ...orgs.map((o) => ({ value: o.slug, label: o.name })),
+            ]}
             aria-label="Filter by organization"
-          >
-            <option value="all">All orgs</option>
-            {orgs.map((o) => (
-              <option key={o.slug} value={o.slug}>
-                {o.name}
-              </option>
-            ))}
-          </select>
+            searchPlaceholder="Search organizations…"
+            testid="rankings-org"
+          />
           <Segmented
             value={search.open}
             options={[

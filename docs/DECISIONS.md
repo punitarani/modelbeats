@@ -3,7 +3,7 @@
 > Locked reconciliation between `ARCHITECTURE.md`, the design handoff (`docs/design-handoff/`), and
 > `COMPETITIVE_ANALYSIS.md`. Code cites these IDs. Change a decision here first, then in code.
 
-## Part 1 — Decisions (D1–D17)
+## Part 1 — Decisions (D1–D18)
 
 | # | Decision |
 |---|---|
@@ -24,6 +24,7 @@
 | **D15** | Context units: curated files store K-tokens exactly as the design does (`400` = 400K, `2000` = 2M); D1 stores absolute tokens (×1000 at seed); `fmtCtx` renders `128K` / `2M`. |
 | **D16** | Sidebar nav = Dashboard, Rankings, Model Explorer, Compare, **Hardware, Benchmarks, Methodology** (design's 4 + 3 additions, same item styling). Footer keeps model/org counts, snapshot date, and the curation disclaimer. |
 | **D17** | Server surface = **two functions**: `getCatalog` (KV snapshot, D1 fallback) and `getModel(slug)` (deep detail: multi-source results, quantizations, throughput, pricing, lineage). Everything else is pure **selectors in `packages/shared`** over the snapshot — unit-testable, identical on server and client. Preserves the architecture's two-read-path split without per-screen server functions. |
+| **D18** | **No native `<select>` anywhere** — all dropdowns are shadcn on Base UI, via two app wrappers: `FilterSelect` (plain `Select`; short static lists — size class, GPU facet, sort, hardware profile) and `SearchSelect` (`Combobox` with a select-look trigger and an in-popup search input; long lists — model pickers and org filters). Both keep the compact design-token field look, `aria-label`s, `data-testid`s, and URL-state `onValueChange` semantics; triggers render the selected label as SSR text (e2e asserts text, not form values). |
 
 ## Part 2 — Contracts (C1–C7)
 

@@ -1,5 +1,5 @@
 import { expect, test } from '@playwright/test'
-import { gotoHydrated } from './helpers'
+import { gotoHydrated, pickOption } from './helpers'
 
 test.describe('rankings', () => {
   test('default view: 55 rows sorted by index, opus first', async ({ page }) => {
@@ -35,7 +35,7 @@ test.describe('rankings', () => {
 
   test('org filter narrows rows', async ({ page }) => {
     await gotoHydrated(page, '/rankings')
-    await page.getByTestId('rankings-org').selectOption('anthropic')
+    await pickOption(page, 'rankings-org', 'Anthropic')
     await expect(page).toHaveURL(/org=anthropic/)
     await expect(page.getByTestId('rankings-meta')).toContainText('6 models')
   })
