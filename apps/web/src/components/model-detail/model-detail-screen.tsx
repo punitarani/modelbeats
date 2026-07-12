@@ -9,6 +9,7 @@ import {
   type SnapshotModel,
 } from '@rankedmodel/shared'
 import { Link, useNavigate } from '@tanstack/react-router'
+import { Check, X } from 'lucide-react'
 import { BackLink } from '#/components/back-link'
 import { normPct } from '#/components/charts/scales'
 import { Sparkline } from '#/components/charts/sparkline'
@@ -150,17 +151,20 @@ export function ModelDetailScreen({
           <div className="mt-2.5 flex flex-wrap gap-[5px]">
             {CAP_ORDER.map((k) => {
               const has = model.caps[k]
+              const CapabilityIcon = has ? Check : X
               return (
                 <span
                   key={k}
-                  className="rounded-[20px] border px-[9px] py-0.5 text-[10.5px]"
+                  data-testid={`capability-${k}`}
+                  className="inline-flex items-center gap-1 rounded-[20px] border px-[9px] py-0.5 text-[10.5px]"
                   style={{
                     color: has ? 'var(--open)' : 'var(--dim)',
                     borderColor: has ? 'var(--open)' : 'var(--border)',
                     background: has ? 'var(--opendim)' : 'transparent',
                   }}
                 >
-                  {has ? '✓' : '✕'} {CAPABILITY_LABELS[k]}
+                  <CapabilityIcon aria-hidden="true" className="size-3" strokeWidth={1.75} />
+                  {CAPABILITY_LABELS[k]}
                 </span>
               )
             })}

@@ -8,7 +8,7 @@ test.describe('history-aware back links', () => {
     await gotoHydrated(page, '/rankings?org=anthropic')
     await page.getByTestId('ranking-row').first().click()
     await expect(page).toHaveURL(/\/models\/claude-opus-4-8$/)
-    await page.getByRole('link', { name: '← Back' }).click()
+    await page.getByRole('link', { name: 'Back', exact: true }).click()
     await expect(page).toHaveURL(/\/rankings\?org=anthropic$/)
   })
 
@@ -16,13 +16,13 @@ test.describe('history-aware back links', () => {
     await gotoHydrated(page, '/')
     await page.locator('a[aria-label^="DeepSeek V4.5 —"]').click()
     await expect(page).toHaveURL(/\/models\/deepseek-v4-5$/)
-    await page.getByRole('link', { name: '← Back' }).click()
+    await page.getByRole('link', { name: 'Back', exact: true }).click()
     await expect(page).toHaveURL(/\/$/)
   })
 
   test('direct model load falls back to a plain parent link', async ({ page }) => {
     await gotoHydrated(page, '/models/claude-opus-4-8')
-    const back = page.getByRole('link', { name: '← Model explorer' })
+    const back = page.getByRole('link', { name: 'Model explorer', exact: true })
     await expect(back).toBeVisible()
     await back.click()
     await expect(page).toHaveURL(/\/models$/)
@@ -32,7 +32,7 @@ test.describe('history-aware back links', () => {
     await gotoHydrated(page, '/models/deepseek-v4-5')
     await page.getByRole('link', { name: 'GPQA Diamond' }).first().click()
     await expect(page).toHaveURL(/\/benchmarks\/gpqa$/)
-    await page.getByRole('link', { name: '← Back' }).click()
+    await page.getByRole('link', { name: 'Back', exact: true }).click()
     await expect(page).toHaveURL(/\/models\/deepseek-v4-5$/)
   })
 })
