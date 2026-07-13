@@ -1,0 +1,77 @@
+{
+  "name": "Hunyuan-Large (A52B)",
+  "org": "Tencent",
+  "family": "Hunyuan",
+  "releaseDate": "2024-11-05",
+  "status": "released",
+  "openness": "open-weights",
+  "license": "Tencent Hunyuan Community License Agreement",
+  "paramsB": 389,
+  "activeParamsB": 52,
+  "archClass": "moe",
+  "archDisplay": "Sparse Transformer-based MoE (389B total / 52B active)",
+  "ctxK": 128,
+  "modalities": [
+    "text"
+  ],
+  "langCount": null,
+  "capabilities": {
+    "reasoning": false,
+    "coding": true,
+    "vision": false,
+    "functionCalling": true,
+    "toolUse": true,
+    "agentic": false
+  },
+  "apiAvailable": true,
+  "price": null,
+  "links": {
+    "hf": "tencent/Tencent-Hunyuan-Large",
+    "gh": "Tencent-Hunyuan/Tencent-Hunyuan-Large"
+  },
+  "note": "389B-total/52B-active open-weights MoE, the largest open-source Transformer-based MoE at release; beats Llama-3.1-405B on MMLU, GSM8K, MATH and HumanEval.",
+  "quants": [
+    "GGUF Q4"
+  ],
+  "vramQ4Gb": 215,
+  "vramFp16Gb": 780,
+  "tps4090": null,
+  "tpsNote": "389B total params vastly exceed a single RTX 4090's 24GB VRAM even at 4-bit; requires multi-GPU or heavy CPU offload to serve.",
+  "effortLabel": null,
+  "isDefaultConfig": true,
+  "isBestConfig": true,
+  "specSources": {
+    "paramsB": "https://huggingface.co/tencent/Tencent-Hunyuan-Large",
+    "ctxK": "https://huggingface.co/tencent/Tencent-Hunyuan-Large",
+    "releaseDate": "https://arxiv.org/html/2411.02265v3",
+    "openness": "https://huggingface.co/tencent/Tencent-Hunyuan-Large"
+  },
+  "results": [
+    {
+      "benchmarkSlug": "mmlu",
+      "score": 88.4,
+      "source": "self-reported",
+      "sourceUrl": "https://huggingface.co/tencent/Tencent-Hunyuan-Large",
+      "notes": "pretrained base vs Llama-3.1-405B's 85.2"
+    },
+    {
+      "benchmarkSlug": "gsm8k",
+      "score": 92.8,
+      "source": "self-reported",
+      "sourceUrl": "https://huggingface.co/tencent/Tencent-Hunyuan-Large"
+    },
+    {
+      "benchmarkSlug": "math",
+      "score": 69.8,
+      "source": "self-reported",
+      "sourceUrl": "https://huggingface.co/tencent/Tencent-Hunyuan-Large"
+    },
+    {
+      "benchmarkSlug": "humaneval",
+      "score": 71.4,
+      "source": "self-reported",
+      "sourceUrl": "https://huggingface.co/tencent/Tencent-Hunyuan-Large"
+    }
+  ],
+  "verificationNotes": "Re-fetched HF model card: 389B total / 52B active MoE confirmed exact; context 256K (pretrain) / 128K (instruct) confirmed, matching record's 128 (instruct default). License string 'Tencent Hunyuan Community License Agreement' confirmed verbatim via GitHub LICENSE.txt search. All 4 benchmark rows (MMLU 88.4 pretrain, GSM8K 92.8, MATH 69.8 pretrain, HumanEval 71.4 pretrain) confirmed literally on the HF card, matching the Llama-3.1-405B comparison framing. Release date: arxiv v1 was submitted 2024-11-04 (record says 2024-11-05, within 1 day of the paper's own v2 revision date) - close enough, not corrected. No changes made."
+}

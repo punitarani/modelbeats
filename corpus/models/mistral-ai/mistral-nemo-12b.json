@@ -1,0 +1,83 @@
+{
+  "name": "Mistral NeMo 12B",
+  "org": "Mistral AI",
+  "family": "Mistral NeMo",
+  "releaseDate": "2024-07-18",
+  "status": "deprecated",
+  "openness": "open-weights",
+  "license": "Apache 2.0",
+  "paramsB": 12,
+  "activeParamsB": null,
+  "archClass": "dense",
+  "archDisplay": "Dense Transformer (40 layers, 5120d, Tekken tokenizer)",
+  "ctxK": 128,
+  "modalities": [
+    "text"
+  ],
+  "langCount": 11,
+  "capabilities": {
+    "reasoning": false,
+    "coding": true,
+    "vision": false,
+    "functionCalling": true,
+    "toolUse": true,
+    "agentic": false
+  },
+  "apiAvailable": true,
+  "price": {
+    "input": 0.15,
+    "output": 0.15,
+    "provider": "Mistral La Plateforme"
+  },
+  "links": {
+    "hf": "mistralai/Mistral-Nemo-Instruct-2407",
+    "docs": "docs.mistral.ai/models/overview"
+  },
+  "note": "12B dense model co-built with NVIDIA; 128k context, Apache 2.0, new Tekken tokenizer; now in Mistral's retirement window.",
+  "quants": [
+    "GGUF Q4",
+    "MLX",
+    "AWQ"
+  ],
+  "vramQ4Gb": 7,
+  "vramFp16Gb": 24,
+  "tps4090": null,
+  "tpsNote": null,
+  "effortLabel": null,
+  "isDefaultConfig": true,
+  "isBestConfig": true,
+  "specSources": {
+    "paramsB": "https://mistral.ai/news/mistral-nemo/",
+    "ctxK": "https://mistral.ai/news/mistral-nemo/",
+    "releaseDate": "https://mistral.ai/news/mistral-nemo/",
+    "openness": "https://mistral.ai/news/mistral-nemo/"
+  },
+  "results": [
+    {
+      "benchmarkSlug": "mmlu",
+      "score": 68,
+      "source": "self-reported",
+      "sourceUrl": "https://huggingface.co/mistralai/Mistral-Nemo-Instruct-2407",
+      "evaluatedAt": "2024-07-18"
+    },
+    {
+      "benchmarkSlug": "hellaswag",
+      "score": 83.5,
+      "source": "self-reported",
+      "sourceUrl": "https://huggingface.co/mistralai/Mistral-Nemo-Instruct-2407"
+    },
+    {
+      "benchmarkSlug": "winogrande",
+      "score": 76.8,
+      "source": "self-reported",
+      "sourceUrl": "https://huggingface.co/mistralai/Mistral-Nemo-Instruct-2407"
+    },
+    {
+      "benchmarkSlug": "trivia-qa",
+      "score": 73.8,
+      "source": "self-reported",
+      "sourceUrl": "https://huggingface.co/mistralai/Mistral-Nemo-Instruct-2407"
+    }
+  ],
+  "verificationNotes": "Fetched mistral.ai/news/mistral-nemo/ directly: confirms 2024-07-18 release, 12B params, 128K context, Apache 2.0, function calling, 11 languages listed (English/French/German/Spanish/Italian/Portuguese/Chinese/Japanese/Korean/Arabic/Hindi). Fetched HF model card directly: MMLU 68.0, HellaSwag 83.5, Winogrande 76.8, TriviaQA 73.8 all match exactly. Docs.mistral.ai confirms model is now deprecated with retirement date 2026-07-31 (essentially now) -- status/note updated to reflect this. Pricing $0.15/$0.15 corroborated by multiple independent aggregators (Sim.ai, Inworld, pricepertoken.com) tied to official Mistral La Plateforme; a lower $0.02/$0.03 figure also appears in some trackers but I could not confirm it against a primary Mistral source, so kept the better-corroborated $0.15/$0.15 with this caveat noted."
+}

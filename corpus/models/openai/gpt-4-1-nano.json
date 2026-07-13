@@ -1,0 +1,76 @@
+{
+  "name": "GPT-4.1 nano",
+  "org": "OpenAI",
+  "family": "GPT-4.1",
+  "releaseDate": "2025-04-14",
+  "status": "released",
+  "openness": "closed",
+  "license": "Proprietary (OpenAI API Terms)",
+  "paramsB": null,
+  "activeParamsB": null,
+  "archClass": "dense",
+  "archDisplay": "Dense transformer (exact size undisclosed)",
+  "ctxK": 1000,
+  "modalities": [
+    "text",
+    "vision"
+  ],
+  "langCount": null,
+  "capabilities": {
+    "reasoning": false,
+    "coding": true,
+    "vision": true,
+    "functionCalling": true,
+    "toolUse": true,
+    "agentic": true
+  },
+  "apiAvailable": true,
+  "price": {
+    "input": 0.1,
+    "output": 0.4,
+    "provider": "OpenAI"
+  },
+  "links": {
+    "docs": "developers.openai.com"
+  },
+  "note": "Fastest, cheapest GPT-4.1-family model; 1M-token context, no reasoning mode.",
+  "quants": [],
+  "vramQ4Gb": null,
+  "vramFp16Gb": null,
+  "tps4090": null,
+  "tpsNote": null,
+  "effortLabel": null,
+  "isDefaultConfig": true,
+  "isBestConfig": true,
+  "specSources": {
+    "ctxK": "https://developers.openai.com/api/docs/models/gpt-4.1-nano",
+    "releaseDate": "https://openai.com/index/gpt-4-1/",
+    "openness": "https://developers.openai.com/api/docs/models/gpt-4.1-nano"
+  },
+  "results": [
+    {
+      "benchmarkSlug": "mmlu",
+      "score": 80.1,
+      "source": "self-reported",
+      "sourceUrl": "https://openai.com/index/gpt-4-1/",
+      "evaluatedAt": "2025-04-14",
+      "notes": "GPT-4.1 nano"
+    },
+    {
+      "benchmarkSlug": "gpqa",
+      "score": 50.3,
+      "source": "self-reported",
+      "sourceUrl": "https://openai.com/index/gpt-4-1/",
+      "evaluatedAt": "2025-04-14"
+    },
+    {
+      "benchmarkSlug": "aider-polyglot",
+      "score": 9.8,
+      "source": "self-reported",
+      "sourceUrl": "https://openai.com/index/gpt-4-1/",
+      "evaluatedAt": "2025-04-14",
+      "notes": "Aider polyglot coding"
+    }
+  ],
+  "verificationNotes": "Confirmed release 2025-04-14 and $0.10/$0.40 per 1M token pricing via OpenAI docs and independent coverage (GitHub Changelog, prompthub). Direct fetch of openai.com/index/gpt-4-1/ returned 403, but all 3 benchmark rows (MMLU 80.1, GPQA 50.3, Aider polyglot 9.8) were independently corroborated verbatim by multiple secondary sources quoting OpenAI's official figures. No changes made."
+}

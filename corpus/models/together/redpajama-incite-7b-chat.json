@@ -1,0 +1,52 @@
+{
+  "name": "RedPajama-INCITE-7B-Chat",
+  "org": "Together",
+  "family": "RedPajama-INCITE",
+  "releaseDate": "2023-06-06",
+  "status": "released",
+  "openness": "open-source",
+  "license": "Apache-2.0",
+  "paramsB": 6.9,
+  "activeParamsB": null,
+  "archClass": "dense",
+  "archDisplay": "GPT-NeoX / Pythia-style dense transformer",
+  "ctxK": 2,
+  "modalities": [
+    "text"
+  ],
+  "langCount": null,
+  "capabilities": {
+    "reasoning": false,
+    "coding": false,
+    "vision": false,
+    "functionCalling": false,
+    "toolUse": false,
+    "agentic": false
+  },
+  "apiAvailable": false,
+  "price": null,
+  "links": {
+    "hf": "togethercomputer/RedPajama-INCITE-7B-Chat",
+    "gh": "togethercomputer/OpenChatKit",
+    "docs": "together.ai/blog/redpajama-7b"
+  },
+  "note": "Chat variant fine-tuned on OASST1 + Dolly v2 via OpenChatKit, kept free of distilled proprietary data.",
+  "quants": [
+    "GGUF Q4"
+  ],
+  "vramQ4Gb": 5,
+  "vramFp16Gb": 14,
+  "tps4090": null,
+  "tpsNote": null,
+  "effortLabel": null,
+  "isDefaultConfig": true,
+  "isBestConfig": true,
+  "specSources": {
+    "paramsB": "https://huggingface.co/togethercomputer/RedPajama-INCITE-7B-Chat",
+    "ctxK": "https://www.together.ai/blog/redpajama-3b-updates",
+    "releaseDate": "https://www.together.ai/blog/redpajama-7b",
+    "openness": "https://huggingface.co/togethercomputer/RedPajama-INCITE-7B-Chat"
+  },
+  "results": [],
+  "verificationNotes": "Confirmed real model released alongside 7B-Base/Instruct per together.ai/blog/redpajama-7b (June 6, 2023), same 6.9B param count, GPT-NeoX architecture, and Apache 2.0 license as sibling 7B checkpoints. No results claimed, none added (no HELM score for Chat variant found in the blog or arxiv paper)."
+}

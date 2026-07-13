@@ -1,0 +1,67 @@
+{
+  "name": "Phi-4-multimodal-instruct",
+  "org": "Microsoft",
+  "family": "Phi-4",
+  "releaseDate": "2025-02-26",
+  "status": "released",
+  "openness": "open-weights",
+  "license": "MIT",
+  "paramsB": 5.6,
+  "activeParamsB": null,
+  "archClass": "dense",
+  "archDisplay": "Unified dense Transformer (frozen Phi-4-mini backbone + modality-specific LoRA adapters for vision/speech)",
+  "ctxK": 128,
+  "modalities": [
+    "text",
+    "vision",
+    "audio"
+  ],
+  "langCount": 23,
+  "capabilities": {
+    "reasoning": false,
+    "coding": true,
+    "vision": true,
+    "functionCalling": true,
+    "toolUse": true,
+    "agentic": true
+  },
+  "apiAvailable": true,
+  "price": {
+    "input": 0.08,
+    "output": 0.32,
+    "provider": "Azure AI Foundry"
+  },
+  "links": {
+    "hf": "microsoft/Phi-4-multimodal-instruct",
+    "gh": "microsoft/PhiCookBook",
+    "docs": "techcommunity.microsoft.com/blog/educatordeveloperblog/welcome-to-the-new-phi-4-models---microsoft-phi-4-mini--phi-4-multimodal/4386037"
+  },
+  "note": "Unified text + vision + speech model (5.6B, 128K ctx) built on frozen Phi-4-mini weights with LoRA adapters.",
+  "quants": [
+    "GGUF Q4",
+    "ONNX INT4"
+  ],
+  "vramQ4Gb": 5,
+  "vramFp16Gb": 12,
+  "tps4090": null,
+  "tpsNote": null,
+  "effortLabel": null,
+  "isDefaultConfig": true,
+  "isBestConfig": true,
+  "specSources": {
+    "paramsB": "https://huggingface.co/microsoft/Phi-4-multimodal-instruct",
+    "ctxK": "https://huggingface.co/microsoft/Phi-4-multimodal-instruct",
+    "releaseDate": "https://www.marktechpost.com/2025/02/27/microsoft-ai-releases-phi-4-multimodal-and-phi-4-mini-the-newest-models-in-microsofts-phi-family-of-small-language-models-slms/",
+    "openness": "https://huggingface.co/microsoft/Phi-4-multimodal-instruct"
+  },
+  "results": [
+    {
+      "benchmarkSlug": "mmmu",
+      "score": 55.1,
+      "source": "self-reported",
+      "sourceUrl": "https://arxiv.org/abs/2503.01743",
+      "notes": "MMMU val, confirmed in Table 1 of the Phi-4-Mini/Multimodal technical report"
+    }
+  ],
+  "verificationNotes": "Confirmed real via HF model card (microsoft/Phi-4-multimodal-instruct): 5.6B params, 128K context, MIT license, text+image+audio modalities, 23 languages (text) — matches record exactly, no correction needed. MMMU 55.1 independently confirmed in Table 1 of arXiv:2503.01743 (fetched via ar5iv HTML rendering)."
+}

@@ -1,0 +1,52 @@
+{
+  "name": "Mistral Medium 3",
+  "org": "Mistral AI",
+  "family": "Mistral Medium",
+  "releaseDate": "2025-05-07",
+  "status": "deprecated",
+  "openness": "closed",
+  "license": "Proprietary",
+  "paramsB": null,
+  "activeParamsB": null,
+  "archClass": "dense",
+  "archDisplay": "Undisclosed dense transformer, multimodal (closed weights)",
+  "ctxK": 128,
+  "modalities": [
+    "text",
+    "vision"
+  ],
+  "langCount": null,
+  "capabilities": {
+    "reasoning": false,
+    "coding": true,
+    "vision": true,
+    "functionCalling": true,
+    "toolUse": true,
+    "agentic": true
+  },
+  "apiAvailable": false,
+  "price": {
+    "input": 0.4,
+    "output": 2,
+    "provider": "Mistral AI (mistral-medium-2505, deprecation 2026-05-22)"
+  },
+  "links": {
+    "docs": "docs.mistral.ai/models/mistral-medium-3-25-05"
+  },
+  "note": "Cost-efficient closed frontier model claimed at ~90% of Claude 3.7 Sonnet across benchmarks, 8x cheaper.",
+  "quants": [],
+  "vramQ4Gb": null,
+  "vramFp16Gb": null,
+  "tps4090": null,
+  "tpsNote": null,
+  "effortLabel": null,
+  "isDefaultConfig": true,
+  "isBestConfig": true,
+  "specSources": {
+    "releaseDate": "https://mistral.ai/news/mistral-medium-3/",
+    "ctxK": "https://docs.mistral.ai/models/mistral-medium-3-25-05",
+    "openness": "https://mistral.ai/news/mistral-medium-3/"
+  },
+  "results": [],
+  "verificationNotes": "Confirmed via mistral.ai/news/mistral-medium-3/ (fetched directly, dated 2025-05-07, pricing '$0.4 input / $2 output per M token', claim 'performs at or above 90% of Claude Sonnet 3.7 on benchmarks across the board' — matches note verbatim in substance). AA Intelligence Index score of 12 confirmed literally on artificialanalysis.ai/models/mistral-medium-3. Deprecation date 2026-05-22 confirmed via docs.mistral.ai/models/overview legacy table (deprecation 5/22/2026, retirement 8/31/2026)."
+}

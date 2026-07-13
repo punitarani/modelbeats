@@ -1,0 +1,111 @@
+{
+  "name": "Gemini 3 Flash",
+  "org": "Google",
+  "family": "Gemini 3",
+  "releaseDate": "2025-12-17",
+  "status": "released",
+  "openness": "closed",
+  "license": "Proprietary (Google API Terms)",
+  "paramsB": null,
+  "activeParamsB": null,
+  "archClass": "moe",
+  "archDisplay": "Sparse Mixture-of-Experts Transformer (natively multimodal, based on Gemini 3 Pro)",
+  "ctxK": 1000,
+  "modalities": [
+    "text",
+    "vision",
+    "audio",
+    "video"
+  ],
+  "langCount": null,
+  "capabilities": {
+    "reasoning": true,
+    "coding": true,
+    "vision": true,
+    "functionCalling": true,
+    "toolUse": true,
+    "agentic": true
+  },
+  "apiAvailable": true,
+  "price": {
+    "input": 0.5,
+    "output": 3,
+    "provider": "Google (Gemini API)"
+  },
+  "links": {
+    "docs": "ai.google.dev/gemini-api/docs/gemini-3"
+  },
+  "note": "Pro-grade reasoning at Flash latency/cost via an adjustable thinking_level parameter; default model in the Gemini app.",
+  "quants": [],
+  "vramQ4Gb": null,
+  "vramFp16Gb": null,
+  "tps4090": null,
+  "tpsNote": null,
+  "effortLabel": null,
+  "isDefaultConfig": true,
+  "isBestConfig": true,
+  "specSources": {
+    "ctxK": "https://storage.googleapis.com/deepmind-media/Model-Cards/Gemini-3-Flash-Model-Card.pdf",
+    "releaseDate": "https://blog.google/products/gemini/gemini-3-flash/",
+    "openness": "https://ai.google.dev/gemini-api/docs/pricing"
+  },
+  "results": [
+    {
+      "benchmarkSlug": "gpqa",
+      "score": 90.4,
+      "source": "self-reported",
+      "sourceUrl": "https://storage.googleapis.com/deepmind-media/Model-Cards/Gemini-3-Flash-Model-Card.pdf",
+      "evaluatedAt": "2025-12-01",
+      "notes": "GPQA Diamond, no tools, thinking"
+    },
+    {
+      "benchmarkSlug": "aime",
+      "score": 95.2,
+      "source": "self-reported",
+      "sourceUrl": "https://storage.googleapis.com/deepmind-media/Model-Cards/Gemini-3-Flash-Model-Card.pdf",
+      "evaluatedAt": "2025-12-01",
+      "notes": "AIME 2025, no tools (99.7% with code execution)"
+    },
+    {
+      "benchmarkSlug": "hle",
+      "score": 33.7,
+      "source": "self-reported",
+      "sourceUrl": "https://storage.googleapis.com/deepmind-media/Model-Cards/Gemini-3-Flash-Model-Card.pdf",
+      "evaluatedAt": "2025-12-01",
+      "notes": "Humanity's Last Exam, no tools (43.5% with search+code exec)"
+    },
+    {
+      "benchmarkSlug": "swe-bench",
+      "score": 78,
+      "source": "self-reported",
+      "sourceUrl": "https://storage.googleapis.com/deepmind-media/Model-Cards/Gemini-3-Flash-Model-Card.pdf",
+      "evaluatedAt": "2025-12-01",
+      "notes": "SWE-Bench Verified, single attempt"
+    },
+    {
+      "benchmarkSlug": "mmmu",
+      "score": 81.2,
+      "source": "self-reported",
+      "sourceUrl": "https://storage.googleapis.com/deepmind-media/Model-Cards/Gemini-3-Flash-Model-Card.pdf",
+      "evaluatedAt": "2025-12-01",
+      "notes": "MMMU-Pro variant"
+    },
+    {
+      "benchmarkSlug": "mmlu",
+      "score": 91.8,
+      "source": "self-reported",
+      "sourceUrl": "https://storage.googleapis.com/deepmind-media/Model-Cards/Gemini-3-Flash-Model-Card.pdf",
+      "evaluatedAt": "2025-12-01",
+      "notes": "MMMLU, multilingual Q&A"
+    },
+    {
+      "benchmarkSlug": "livecodebench-pro",
+      "score": 2316,
+      "source": "self-reported",
+      "sourceUrl": "https://storage.googleapis.com/deepmind-media/Model-Cards/Gemini-3-Flash-Model-Card.pdf",
+      "evaluatedAt": "2025-12-01",
+      "notes": "LiveCodeBench Pro, Elo rating (not a 0-100 pass rate)"
+    }
+  ],
+  "verificationNotes": "Directly downloaded and read the official Gemini 3 Flash Model Card PDF ('Published: December 2025'), which includes a comparison table with a Gemini 3 Flash (Thinking) column. Every claimed score matches exactly: HLE 33.7% (45.8/43.5% is actually the search+code-exec figure — confirmed 43.5% specifically, not 45.8 which belongs to Gemini 3 Pro), GPQA 90.4, AIME 95.2% (99.7% with code execution), MMMU-Pro 81.2, SWE-Bench 78.0, MMMLU 91.8, LiveCodeBench Pro Elo 2,316. Release date Dec 17, 2025 corroborated by TechCrunch, 9to5Google, and blog.google. Pricing $0.50/$3.00 confirmed via multiple independent trackers (pricepertoken, OpenRouter) plus consistent with Google's per-tier structure. Model card confirms it is 'based on Gemini 3 Pro,' matching archDisplay wording."
+}

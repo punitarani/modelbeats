@@ -1,0 +1,68 @@
+{
+  "name": "DeepSeekMath 7B",
+  "org": "DeepSeek",
+  "family": "DeepSeekMath",
+  "releaseDate": "2024-02-05",
+  "status": "released",
+  "openness": "open-weights",
+  "license": "DeepSeek Model License",
+  "paramsB": 7,
+  "activeParamsB": null,
+  "archClass": "dense",
+  "archDisplay": "Dense transformer, initialized from DeepSeek-Coder-Base-v1.5 7B",
+  "ctxK": 4,
+  "modalities": [
+    "text"
+  ],
+  "langCount": null,
+  "capabilities": {
+    "reasoning": true,
+    "coding": true,
+    "vision": false,
+    "functionCalling": false,
+    "toolUse": false,
+    "agentic": false
+  },
+  "apiAvailable": false,
+  "price": null,
+  "links": {
+    "hf": "deepseek-ai/deepseek-math-7b-rl",
+    "gh": "deepseek-ai/DeepSeek-Math"
+  },
+  "note": "Debuted GRPO reinforcement learning (later reused for R1); DeepSeekMath-RL 7B hit 51.7% on MATH via CoT, near GPT-4/Gemini-Ultra level at just 7B.",
+  "quants": [
+    "GGUF"
+  ],
+  "vramQ4Gb": 4.5,
+  "vramFp16Gb": 14,
+  "tps4090": null,
+  "tpsNote": null,
+  "effortLabel": null,
+  "isDefaultConfig": true,
+  "isBestConfig": true,
+  "specSources": {
+    "paramsB": "https://huggingface.co/deepseek-ai/deepseek-math-7b-base",
+    "ctxK": "https://arxiv.org/abs/2402.03300",
+    "releaseDate": "https://arxiv.org/abs/2402.03300",
+    "openness": "https://github.com/deepseek-ai/DeepSeek-Math"
+  },
+  "results": [
+    {
+      "benchmarkSlug": "math",
+      "score": 51.7,
+      "source": "self-reported",
+      "sourceUrl": "https://arxiv.org/abs/2402.03300",
+      "evaluatedAt": "2024-02-01",
+      "notes": "DeepSeekMath-RL 7B, chain-of-thought, no external tools"
+    },
+    {
+      "benchmarkSlug": "gsm8k",
+      "score": 88.2,
+      "source": "self-reported",
+      "sourceUrl": "https://arxiv.org/abs/2402.03300",
+      "evaluatedAt": "2024-02-01",
+      "notes": "DeepSeekMath-RL 7B, chain-of-thought"
+    }
+  ],
+  "verificationNotes": "Confirmed via arxiv 2402.03300 (fetched via ar5iv rendering): initialized from DeepSeek-Coder-Base-v1.5 7B, paper's Table 5 literally shows DeepSeekMath-RL 7B row '88.2% 51.7% 79.6% 88.8%' — GSM8K 88.2 and MATH 51.7 (CoT, no tools) confirmed exactly. Feb 2024 release date matches arXiv submission date (2402.xxxxx = Feb 2024)."
+}

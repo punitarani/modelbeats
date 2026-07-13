@@ -1,0 +1,54 @@
+{
+  "name": "MiniCPM-Llama3-V 2.5",
+  "org": "OpenBMB",
+  "family": "MiniCPM-V",
+  "releaseDate": "2024-05-20",
+  "status": "released",
+  "openness": "open-weights",
+  "license": "MiniCPM Model License (custom; free for research and, after registration, commercial use) + Apache-2.0 code",
+  "paramsB": 8,
+  "activeParamsB": null,
+  "archClass": "dense",
+  "archDisplay": "SigLip-400M vision encoder + Llama3-8B-Instruct LLM",
+  "ctxK": 8,
+  "modalities": [
+    "text",
+    "vision"
+  ],
+  "langCount": 30,
+  "capabilities": {
+    "reasoning": false,
+    "coding": true,
+    "vision": true,
+    "functionCalling": false,
+    "toolUse": false,
+    "agentic": false
+  },
+  "apiAvailable": false,
+  "price": null,
+  "links": {
+    "hf": "openbmb/MiniCPM-Llama3-V-2_5",
+    "gh": "OpenBMB/MiniCPM-V"
+  },
+  "note": "First end-side 8B MLLM to reach GPT-4V level, surpassing Gemini Pro and Claude 3 on OpenCompass (65.1 avg).",
+  "quants": [
+    "GGUF Q4_K_M",
+    "GGUF Q5_K_S",
+    "GGUF Q2_K"
+  ],
+  "vramQ4Gb": 6,
+  "vramFp16Gb": 16,
+  "tps4090": null,
+  "tpsNote": null,
+  "effortLabel": null,
+  "isDefaultConfig": true,
+  "isBestConfig": true,
+  "specSources": {
+    "paramsB": "https://huggingface.co/openbmb/MiniCPM-Llama3-V-2_5",
+    "ctxK": "https://huggingface.co/openbmb/MiniCPM-Llama3-V-2_5/blob/main/config.json",
+    "releaseDate": "https://huggingface.co/openbmb/MiniCPM-Llama3-V-2_5",
+    "openness": "https://huggingface.co/openbmb/MiniCPM-Llama3-V-2_5"
+  },
+  "results": [],
+  "verificationNotes": "Confirmed real, independently re-fetched HF model card (openbmb/MiniCPM-Llama3-V-2_5): 8B params (SigLip-400M + Llama3-8B-Instruct), MiniCPM Model License weights / Apache-2.0 code, released 2024-05-20 as stated on the model card. Context length confirmed as 8192 (8k) directly from config.json max_position_embeddings, correcting an unverified assumption to a directly-confirmed primary-source value. OpenCompass 65.1 average score confirmed present verbatim on the HF model card."
+}

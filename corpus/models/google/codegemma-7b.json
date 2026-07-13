@@ -1,0 +1,70 @@
+{
+  "name": "CodeGemma 7B",
+  "org": "Google",
+  "family": "CodeGemma",
+  "releaseDate": "2024-04-09",
+  "status": "deprecated",
+  "openness": "open-weights",
+  "license": "Gemma Terms of Use",
+  "paramsB": 8.54,
+  "activeParamsB": null,
+  "archClass": "dense",
+  "archDisplay": "Dense decoder-only transformer (Gemma 7B architecture, continued pretrain for code)",
+  "ctxK": 8,
+  "modalities": [
+    "text"
+  ],
+  "langCount": null,
+  "capabilities": {
+    "reasoning": false,
+    "coding": true,
+    "vision": false,
+    "functionCalling": false,
+    "toolUse": false,
+    "agentic": false
+  },
+  "apiAvailable": true,
+  "price": null,
+  "links": {
+    "hf": "google/codegemma-7b",
+    "gh": "google-deepmind/gemma",
+    "docs": "ai.google.dev/gemma/docs/codegemma/model_card"
+  },
+  "note": "Gemma 7B continued-pretrained on ~500B tokens of code (80/20 code-to-text) with fill-in-the-middle for completion.",
+  "quants": [
+    "GGUF Q4_K_M",
+    "GGUF Q8_0",
+    "AWQ",
+    "MLX"
+  ],
+  "vramQ4Gb": 6,
+  "vramFp16Gb": 18,
+  "tps4090": null,
+  "tpsNote": null,
+  "effortLabel": null,
+  "isDefaultConfig": true,
+  "isBestConfig": true,
+  "specSources": {
+    "releaseDate": "https://huggingface.co/blog/codegemma",
+    "paramsB": "https://ai.google.dev/gemma/docs/codegemma/model_card",
+    "ctxK": "https://ai.google.dev/gemma/docs/codegemma/model_card",
+    "openness": "https://ai.google.dev/gemma/docs/codegemma/model_card"
+  },
+  "results": [
+    {
+      "benchmarkSlug": "humaneval",
+      "score": 44.5,
+      "source": "self-reported",
+      "sourceUrl": "https://ai.google.dev/gemma/docs/codegemma/model_card",
+      "notes": "7B pretrained (PT) variant"
+    },
+    {
+      "benchmarkSlug": "mbpp",
+      "score": 56.2,
+      "source": "self-reported",
+      "sourceUrl": "https://ai.google.dev/gemma/docs/codegemma/model_card",
+      "notes": "7B pretrained (PT) variant"
+    }
+  ],
+  "verificationNotes": "Existence and HumanEval/MBPP scores (44.5 / 56.2) for the 7B pretrained variant verbatim-confirmed on fetched ai.google.dev model card. Release date (April 9 2024) confirmed via Hugging Face blog announcement. 8K context confirmed by web search corroborating it inherits Gemma 7B's 8192-token context. No changes made."
+}

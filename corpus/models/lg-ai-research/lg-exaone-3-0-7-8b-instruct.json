@@ -1,0 +1,101 @@
+{
+  "name": "LG EXAONE 3.0 7.8B Instruct",
+  "org": "LG AI Research",
+  "family": "EXAONE 3.0",
+  "releaseDate": "2024-08-07",
+  "status": "released",
+  "openness": "open-weights",
+  "license": "EXAONE AI Model License Agreement 1.1 - NC",
+  "paramsB": 7.8,
+  "activeParamsB": null,
+  "archClass": "dense",
+  "archDisplay": "Dense decoder-only Transformer, 32 layers",
+  "ctxK": 4,
+  "modalities": [
+    "text"
+  ],
+  "langCount": 2,
+  "capabilities": {
+    "reasoning": false,
+    "coding": true,
+    "vision": false,
+    "functionCalling": false,
+    "toolUse": false,
+    "agentic": false
+  },
+  "apiAvailable": false,
+  "price": null,
+  "links": {
+    "hf": "LGAI-EXAONE/EXAONE-3.0-7.8B-Instruct",
+    "gh": "LG-AI-EXAONE/EXAONE-3.0"
+  },
+  "note": "LG's first public bilingual (KO/EN) open-weights instruct model, pretrained on 8T tokens.",
+  "quants": [
+    "GGUF Q4",
+    "AWQ"
+  ],
+  "vramQ4Gb": 5,
+  "vramFp16Gb": 16,
+  "tps4090": null,
+  "tpsNote": null,
+  "effortLabel": null,
+  "isDefaultConfig": true,
+  "isBestConfig": true,
+  "specSources": {
+    "paramsB": "https://huggingface.co/LGAI-EXAONE/EXAONE-3.0-7.8B-Instruct",
+    "ctxK": "https://www.lgresearch.ai/data/upload/tech_report/en/EXAONE_3.0_Technical_Report.pdf",
+    "releaseDate": "https://github.com/LG-AI-EXAONE/EXAONE-3.0",
+    "openness": "https://huggingface.co/LGAI-EXAONE/EXAONE-3.0-7.8B-Instruct/blob/main/LICENSE"
+  },
+  "results": [
+    {
+      "benchmarkSlug": "mt-bench",
+      "score": 9.01,
+      "source": "self-reported",
+      "sourceUrl": "https://huggingface.co/LGAI-EXAONE/EXAONE-3.0-7.8B-Instruct",
+      "evaluatedAt": "2024-08-01",
+      "notes": "English MT-Bench"
+    },
+    {
+      "benchmarkSlug": "arena-hard",
+      "score": 46.8,
+      "source": "self-reported",
+      "sourceUrl": "https://huggingface.co/LGAI-EXAONE/EXAONE-3.0-7.8B-Instruct",
+      "evaluatedAt": "2024-08-01",
+      "notes": "Arena-Hard-v0.1"
+    },
+    {
+      "benchmarkSlug": "wildbench",
+      "score": 48.2,
+      "source": "self-reported",
+      "sourceUrl": "https://huggingface.co/LGAI-EXAONE/EXAONE-3.0-7.8B-Instruct",
+      "evaluatedAt": "2024-08-01",
+      "notes": "WildBench"
+    },
+    {
+      "benchmarkSlug": "alpaca-eval",
+      "score": 45,
+      "source": "self-reported",
+      "sourceUrl": "https://huggingface.co/LGAI-EXAONE/EXAONE-3.0-7.8B-Instruct",
+      "evaluatedAt": "2024-08-01",
+      "notes": "AlpacaEval 2.0 LC"
+    },
+    {
+      "benchmarkSlug": "komt-bench",
+      "score": 8.92,
+      "source": "self-reported",
+      "sourceUrl": "https://huggingface.co/LGAI-EXAONE/EXAONE-3.0-7.8B-Instruct",
+      "evaluatedAt": "2024-08-01",
+      "notes": "Korean MT-Bench (KoMT-Bench)"
+    },
+    {
+      "benchmarkSlug": "logickor",
+      "score": 8.62,
+      "source": "self-reported",
+      "sourceUrl": "https://huggingface.co/LGAI-EXAONE/EXAONE-3.0-7.8B-Instruct",
+      "evaluatedAt": "2024-08-01",
+      "notes": "Korean LogicKor"
+    }
+  ],
+  "verificationNotes": "Existence, release date (2024-08-07), params (7.8B), NC license, and bilingual EN/KO scope confirmed directly on the HF model card and GitHub README (both fetched). Architecture (32 layers) and 4096-token context confirmed via independent search results citing the arXiv technical report (2408.03541) and GGUF metadata. All 6 benchmark rows (MT-Bench 9.01, Arena-Hard 46.8, WildBench 48.2, AlpacaEval 45.0, KoMT-Bench 8.92, LogicKor 8.62) literally appear on the cited HF/GitHub pages, verbatim match — no changes."
+}

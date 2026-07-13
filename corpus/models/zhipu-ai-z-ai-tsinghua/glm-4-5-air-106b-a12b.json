@@ -1,0 +1,103 @@
+{
+  "name": "GLM-4.5-Air (106B-A12B)",
+  "org": "Zhipu AI / Z.ai (Tsinghua)",
+  "family": "GLM-4.5",
+  "releaseDate": "2025-07-28",
+  "status": "released",
+  "openness": "open-weights",
+  "license": "MIT",
+  "paramsB": 106,
+  "activeParamsB": 12,
+  "archClass": "moe",
+  "archDisplay": "Mixture-of-Experts, 106B total / 12B active, hybrid thinking/non-thinking response modes",
+  "ctxK": 128,
+  "modalities": [
+    "text"
+  ],
+  "langCount": null,
+  "capabilities": {
+    "reasoning": true,
+    "coding": true,
+    "vision": false,
+    "functionCalling": true,
+    "toolUse": true,
+    "agentic": true
+  },
+  "apiAvailable": true,
+  "price": {
+    "input": 0.2,
+    "output": 1.1,
+    "provider": "Z.ai"
+  },
+  "links": {
+    "hf": "zai-org/GLM-4.5-Air",
+    "gh": "zai-org/GLM-4.5",
+    "docs": "docs.z.ai/guides/overview/pricing"
+  },
+  "note": "Compact MoE sibling of GLM-4.5 for efficient agentic deployment; scored 59.8 vs GLM-4.5's 63.2 on Zhipu's 12-benchmark composite at launch.",
+  "quants": [
+    "GGUF",
+    "AWQ",
+    "FP8"
+  ],
+  "vramQ4Gb": 55,
+  "vramFp16Gb": 212,
+  "tps4090": null,
+  "tpsNote": "~53-55GB minimum at Q4 exceeds a single RTX 4090's 24GB VRAM; needs multi-GPU or CPU offload for full 128K context.",
+  "effortLabel": null,
+  "isDefaultConfig": true,
+  "isBestConfig": true,
+  "specSources": {
+    "paramsB": "https://huggingface.co/zai-org/GLM-4.5-Air",
+    "ctxK": "https://llm-stats.com/models/compare/glm-4.5-vs-glm-4.5-air",
+    "releaseDate": "https://www.cometapi.com/zhipu-ai-releases-glm-4-5/",
+    "openness": "https://huggingface.co/zai-org/GLM-4.5-Air"
+  },
+  "results": [
+    {
+      "benchmarkSlug": "aime",
+      "score": 89.4,
+      "source": "independent",
+      "sourceUrl": "https://llm-stats.com/models/compare/glm-4.5-vs-glm-4.5-air",
+      "notes": "AIME 2024",
+      "evaluatedAt": "2026-07-12"
+    },
+    {
+      "benchmarkSlug": "mmlu-pro",
+      "score": 81.4,
+      "source": "independent",
+      "sourceUrl": "https://llm-stats.com/models/compare/glm-4.5-vs-glm-4.5-air",
+      "evaluatedAt": "2026-07-12"
+    },
+    {
+      "benchmarkSlug": "gpqa",
+      "score": 75,
+      "source": "independent",
+      "sourceUrl": "https://llm-stats.com/models/compare/glm-4.5-vs-glm-4.5-air",
+      "evaluatedAt": "2026-07-12"
+    },
+    {
+      "benchmarkSlug": "swe-bench",
+      "score": 57.6,
+      "source": "independent",
+      "sourceUrl": "https://llm-stats.com/models/compare/glm-4.5-vs-glm-4.5-air",
+      "notes": "SWE-bench Verified",
+      "evaluatedAt": "2026-07-12"
+    },
+    {
+      "benchmarkSlug": "livecodebench",
+      "score": 70.7,
+      "source": "independent",
+      "sourceUrl": "https://llm-stats.com/models/compare/glm-4.5-vs-glm-4.5-air",
+      "evaluatedAt": "2026-07-12"
+    },
+    {
+      "benchmarkSlug": "hle",
+      "score": 10.6,
+      "source": "independent",
+      "sourceUrl": "https://llm-stats.com/models/compare/glm-4.5-vs-glm-4.5-air",
+      "evaluatedAt": "2026-07-12"
+    }
+  ],
+  "verificationNotes": "Existence and identity confirmed via official Z.ai blog and Hugging Face model card (zai-org/GLM-4.5-Air). paramsB=106, activeParamsB=12 confirmed verbatim on HF card ('106 billion total parameters', '12 billion active parameters'). License MIT confirmed on HF card. Release date 2025-07-28 confirmed (released simultaneously with GLM-4.5 per cometapi article). All six independent benchmark rows (AIME 89.4, MMLU-Pro 81.4, GPQA 75.0, SWE-bench 57.6, LiveCodeBench 70.7, HLE 10.6) verbatim-confirmed on llm-stats.com/models/compare/glm-4.5-vs-glm-4.5-air. Pricing ($0.2/$1.1 per 1M tokens) confirmed on docs.z.ai/guides/overview/pricing. No changes made to the original record; all fields checked out."
+}

@@ -1,0 +1,52 @@
+{
+  "name": "Luminous Supreme (70B)",
+  "org": "Aleph Alpha",
+  "family": "Luminous",
+  "releaseDate": "2022-04-14",
+  "status": "deprecated",
+  "openness": "closed",
+  "license": "Proprietary (Aleph Alpha API Terms & Conditions, SaaS-only)",
+  "paramsB": 70,
+  "activeParamsB": null,
+  "archClass": "dense",
+  "archDisplay": "Dense decoder-only autoregressive transformer with rotary position embeddings",
+  "ctxK": 2,
+  "modalities": [
+    "text"
+  ],
+  "langCount": 5,
+  "capabilities": {
+    "reasoning": false,
+    "coding": false,
+    "vision": false,
+    "functionCalling": false,
+    "toolUse": false,
+    "agentic": false
+  },
+  "apiAvailable": true,
+  "price": {
+    "input": 175,
+    "output": 192.5,
+    "provider": "Aleph Alpha"
+  },
+  "links": {
+    "docs": "docs.aleph-alpha.com/docs/introduction/luminous"
+  },
+  "note": "Germany's first large-scale sovereign LLM; API-only 70B flagship of the original Luminous family, now a legacy offering behind PhariaAI.",
+  "quants": [],
+  "vramQ4Gb": null,
+  "vramFp16Gb": null,
+  "tps4090": null,
+  "tpsNote": null,
+  "effortLabel": null,
+  "isDefaultConfig": true,
+  "isBestConfig": true,
+  "specSources": {
+    "paramsB": "https://crfm.stanford.edu/fmti/May-2024/company-reports/Aleph%20Alpha_Luminous.html",
+    "releaseDate": "https://aleph-alpha.com/aleph-alpha-launches-its-luminous-series-for-users/",
+    "openness": "https://cloudprice.net/models/aleph-alpha-luminous-supreme",
+    "ctxK": "https://aleph-alpha-client.readthedocs.io/en/latest/aleph_alpha_client.html"
+  },
+  "results": [],
+  "verificationNotes": "Release date (Aleph Alpha press release, April 14, 2022, Heidelberg) and 70B parameter count for the Supreme tier of the 13B/30B/70B Luminous family confirmed via multiple independent sources (innFactory, CRFM Stanford FMTI report). Dense decoder-only transformer with rotary position embeddings architecture confirmed. 2048-token context length confirmed as the legacy Luminous spec. Pricing of $175 input / $192.5 output per 1M tokens confirmed by fetching cloudprice.net directly - matches exactly. Deprecated/legacy status is consistent with Aleph Alpha's late-2024 pivot away from marketing Luminous to new customers in favor of PhariaAI/Pharia-1."
+}

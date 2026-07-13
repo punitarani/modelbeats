@@ -1,0 +1,58 @@
+{
+  "name": "Mistral Medium (original)",
+  "org": "Mistral AI",
+  "family": "Mistral Medium",
+  "releaseDate": "2023-12-11",
+  "status": "deprecated",
+  "openness": "closed",
+  "license": "Proprietary",
+  "paramsB": null,
+  "activeParamsB": null,
+  "archClass": "dense",
+  "archDisplay": "Undisclosed dense transformer (closed weights)",
+  "ctxK": 32,
+  "modalities": [
+    "text"
+  ],
+  "langCount": 5,
+  "capabilities": {
+    "reasoning": false,
+    "coding": true,
+    "vision": false,
+    "functionCalling": false,
+    "toolUse": false,
+    "agentic": false
+  },
+  "apiAvailable": false,
+  "price": {
+    "input": 2.75,
+    "output": 8.1,
+    "provider": "Mistral AI (mistral-medium-2312, retired)"
+  },
+  "links": {
+    "docs": "docs.mistral.ai/resources/changelogs"
+  },
+  "note": "Early closed top-tier endpoint launched with la Plateforme beta; 8.6 MT-Bench; direct ancestor of Large/Medium 3.",
+  "quants": [],
+  "vramQ4Gb": null,
+  "vramFp16Gb": null,
+  "tps4090": null,
+  "tpsNote": null,
+  "effortLabel": null,
+  "isDefaultConfig": true,
+  "isBestConfig": true,
+  "specSources": {
+    "releaseDate": "https://mistral.ai/news/la-plateforme/",
+    "ctxK": "https://artificialanalysis.ai/models/mistral-medium",
+    "openness": "https://mistral.ai/news/la-plateforme/"
+  },
+  "results": [
+    {
+      "benchmarkSlug": "mt-bench",
+      "score": 8.6,
+      "source": "self-reported",
+      "sourceUrl": "https://mistral.ai/news/la-plateforme/"
+    }
+  ],
+  "verificationNotes": "Confirmed via mistral.ai/news/la-plateforme/ (fetched directly): dated 2023-12-11, describes 'mistral-medium' as a prototype closed endpoint scoring 8.6 on MT-Bench and mastering English/French/Italian/German/Spanish + code (5 languages, matches langCount). Pricing $2.75/$8.10 corroborated by independent pricing trackers; context window listed as ~33K on artificialanalysis.ai (rounds to the 32K class stated). No changes needed."
+}

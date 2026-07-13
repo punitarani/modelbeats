@@ -1,0 +1,67 @@
+{
+  "name": "Granite 8B Code Instruct",
+  "org": "IBM",
+  "family": "Granite Code",
+  "releaseDate": "2024-05-06",
+  "status": "deprecated",
+  "openness": "open-weights",
+  "license": "Apache 2.0",
+  "paramsB": 8,
+  "activeParamsB": null,
+  "archClass": "dense",
+  "archDisplay": "Dense decoder-only transformer",
+  "ctxK": 4,
+  "modalities": [
+    "text"
+  ],
+  "langCount": null,
+  "capabilities": {
+    "reasoning": false,
+    "coding": true,
+    "vision": false,
+    "functionCalling": true,
+    "toolUse": true,
+    "agentic": true
+  },
+  "apiAvailable": false,
+  "price": null,
+  "links": {
+    "hf": "ibm-granite/granite-8b-code-instruct-4k",
+    "gh": "ibm-granite/granite-code-models",
+    "docs": "ibm.com/granite/docs/models/code"
+  },
+  "note": "IBM's workhorse code model (family spans 3B-34B) trained on 116 languages; now deprecated in favor of newer Granite releases.",
+  "quants": [
+    "GGUF"
+  ],
+  "vramQ4Gb": 4.6,
+  "vramFp16Gb": 16,
+  "tps4090": null,
+  "tpsNote": null,
+  "effortLabel": null,
+  "isDefaultConfig": true,
+  "isBestConfig": true,
+  "specSources": {
+    "paramsB": "https://huggingface.co/ibm-granite/granite-8b-code-instruct-4k",
+    "ctxK": "https://huggingface.co/ibm-granite/granite-8b-code-instruct-4k",
+    "releaseDate": "https://huggingface.co/ibm-granite/granite-8b-code-instruct-4k",
+    "openness": "https://huggingface.co/ibm-granite/granite-8b-code-instruct-4k"
+  },
+  "results": [
+    {
+      "benchmarkSlug": "humaneval",
+      "score": 57.9,
+      "source": "self-reported",
+      "sourceUrl": "https://huggingface.co/ibm-granite/granite-8b-code-instruct-4k",
+      "notes": "HumanEvalSynthesize, Python pass@1"
+    },
+    {
+      "benchmarkSlug": "humaneval",
+      "score": 49.6,
+      "source": "independent",
+      "sourceUrl": "https://arxiv.org/html/2405.04324v1",
+      "notes": "HumanEvalSynthesize, avg across 6 languages (paper Table 3)"
+    }
+  ],
+  "verificationNotes": "Confirmed real via HF model card (fetched): 8B params, 4K context, Apache 2.0, released 2024-05-06, marked 'NOT RECOMMENDED FOR USE IN NEW PROJECTS' confirming deprecated status. 116-programming-language training corpus confirmed on HF card. Both result rows confirmed present on their sourceUrls: 57.9 (self-reported HF card) and 49.6 (arXiv paper v1, Table 3, avg across 6 languages). No changes made."
+}

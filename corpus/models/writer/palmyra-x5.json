@@ -1,0 +1,77 @@
+{
+  "name": "Palmyra X5",
+  "org": "Writer",
+  "family": "Palmyra X",
+  "releaseDate": "2025-04-28",
+  "status": "released",
+  "openness": "closed",
+  "license": "Proprietary (API-only, no released weights)",
+  "paramsB": null,
+  "activeParamsB": null,
+  "archClass": "dense",
+  "archDisplay": "Dense Transformer with adaptive/dynamic reasoning, 1M-token context (architecture undisclosed)",
+  "ctxK": 1000,
+  "modalities": [
+    "text"
+  ],
+  "langCount": null,
+  "capabilities": {
+    "reasoning": true,
+    "coding": true,
+    "vision": false,
+    "functionCalling": true,
+    "toolUse": true,
+    "agentic": true
+  },
+  "apiAvailable": true,
+  "price": {
+    "input": 0.6,
+    "output": 6,
+    "provider": "Writer"
+  },
+  "links": {
+    "docs": "writer.com"
+  },
+  "note": "1M-token context trained with synthetic data for ~$1M in GPU compute; reads 1M tokens in ~22s, ~300ms per function-call turn.",
+  "quants": [],
+  "vramQ4Gb": null,
+  "vramFp16Gb": null,
+  "tps4090": null,
+  "tpsNote": null,
+  "effortLabel": null,
+  "isDefaultConfig": true,
+  "isBestConfig": true,
+  "specSources": {
+    "ctxK": "https://siliconangle.com/2025/04/28/writer-announces-palmyra-x5-llm-1m-token-context-window-power-ai-agents/",
+    "releaseDate": "https://www.businesswire.com/news/home/20250428814263/en/Writer-Releases-New-Adaptive-Reasoning-LLM-Palmyra-X5-With-1M-Context-Window-to-Scale-Next-Era-of-Enterprise-AI-Agents",
+    "openness": "https://siliconangle.com/2025/04/28/writer-announces-palmyra-x5-llm-1m-token-context-window-power-ai-agents/"
+  },
+  "results": [
+    {
+      "benchmarkSlug": "gpqa",
+      "score": 47.2,
+      "source": "self-reported",
+      "sourceUrl": "https://dev.writer.com/home/models"
+    },
+    {
+      "benchmarkSlug": "mmlu-pro",
+      "score": 65.02,
+      "source": "self-reported",
+      "sourceUrl": "https://dev.writer.com/home/models"
+    },
+    {
+      "benchmarkSlug": "bbh",
+      "score": 70.99,
+      "source": "self-reported",
+      "sourceUrl": "https://dev.writer.com/home/models"
+    },
+    {
+      "benchmarkSlug": "math",
+      "score": 71.57,
+      "source": "self-reported",
+      "sourceUrl": "https://dev.writer.com/home/models",
+      "notes": "MATH-Hard subset"
+    }
+  ],
+  "verificationNotes": "Confirmed real release, April 28, 2025, via SiliconAngle (fetched): ~$1M GPU training cost, reads a 1M-token prompt in ~22s, ~300ms per function-calling turn, pricing $0.60/$6 per M tokens — all confirmed exactly. dev.writer.com/home/models (fetched) confirms exactly: 1M context, GPQA 47.2, MMLU-Pro 65.02, BBH 70.99, MATH-Hard 71.57. The LongBench-v2 53% figure could not be directly re-fetched from venturebeat.com or writer.com (both returned HTTP 403 to the fetcher), but is independently corroborated by search-engine snippets quoting Writer's own reporting of 'an impressive 53% average score' on LongBench v2 for Palmyra X5 — kept given this corroboration, though not a direct page fetch."
+}

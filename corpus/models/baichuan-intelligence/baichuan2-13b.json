@@ -1,0 +1,96 @@
+{
+  "name": "Baichuan2-13B",
+  "org": "Baichuan Intelligence",
+  "family": "Baichuan 2",
+  "releaseDate": "2023-09-06",
+  "status": "released",
+  "openness": "open-weights",
+  "license": "Apache-2.0 (code) + Baichuan2 Community License for weights (free commercial use if DAU<1M, non-cloud-provider, no sublicensing)",
+  "paramsB": 13,
+  "activeParamsB": null,
+  "archClass": "dense",
+  "archDisplay": "Dense decoder-only Transformer with ALiBi positional bias, 40 layers",
+  "ctxK": 4,
+  "modalities": [
+    "text"
+  ],
+  "langCount": 2,
+  "capabilities": {
+    "reasoning": false,
+    "coding": true,
+    "vision": false,
+    "functionCalling": false,
+    "toolUse": false,
+    "agentic": false
+  },
+  "apiAvailable": false,
+  "price": null,
+  "links": {
+    "hf": "baichuan-inc/Baichuan2-13B-Chat",
+    "gh": "baichuan-inc/Baichuan2"
+  },
+  "note": "Flagship of the Baichuan 2 open bilingual (zh/en) series, trained on 2.6T tokens with ALiBi attention; released as Base+Chat+4bit with a full technical report.",
+  "quants": [
+    "GGUF",
+    "GPTQ",
+    "INT4 (bitsandbytes NF4)"
+  ],
+  "vramQ4Gb": 7,
+  "vramFp16Gb": 26,
+  "tps4090": null,
+  "tpsNote": null,
+  "effortLabel": null,
+  "isDefaultConfig": true,
+  "isBestConfig": true,
+  "specSources": {
+    "paramsB": "https://github.com/baichuan-inc/Baichuan2/blob/main/README_EN.md",
+    "ctxK": "https://ollama.com/maxkb/baichuan2:13b-chat/blobs/ebc06d986445",
+    "releaseDate": "https://www.marktechpost.com/2023/09/19/meet-baichuan-2-a-series-of-large-scale-multilingual-language-models-containing-7b-and-13b-parameters-trained-from-scratch-on-2-6t-tokens/",
+    "openness": "https://huggingface.co/baichuan-inc/Baichuan2-13B-Base"
+  },
+  "results": [
+    {
+      "benchmarkSlug": "c-eval",
+      "score": 58.1,
+      "source": "self-reported",
+      "sourceUrl": "https://github.com/baichuan-inc/Baichuan2/blob/main/README_EN.md",
+      "notes": "5-shot"
+    },
+    {
+      "benchmarkSlug": "mmlu",
+      "score": 59.17,
+      "source": "self-reported",
+      "sourceUrl": "https://github.com/baichuan-inc/Baichuan2/blob/main/README_EN.md",
+      "notes": "5-shot"
+    },
+    {
+      "benchmarkSlug": "cmmlu",
+      "score": 61.97,
+      "source": "self-reported",
+      "sourceUrl": "https://github.com/baichuan-inc/Baichuan2/blob/main/README_EN.md",
+      "notes": "5-shot"
+    },
+    {
+      "benchmarkSlug": "gsm8k",
+      "score": 52.77,
+      "source": "self-reported",
+      "sourceUrl": "https://github.com/baichuan-inc/Baichuan2/blob/main/README_EN.md",
+      "notes": "4-shot"
+    },
+    {
+      "benchmarkSlug": "humaneval",
+      "score": 17.07,
+      "source": "self-reported",
+      "sourceUrl": "https://github.com/baichuan-inc/Baichuan2/blob/main/README_EN.md",
+      "notes": "0-shot"
+    },
+    {
+      "benchmarkSlug": "bbh",
+      "score": 48.78,
+      "source": "self-reported",
+      "sourceUrl": "https://github.com/baichuan-inc/Baichuan2/blob/main/README_EN.md",
+      "notes": "3-shot"
+    }
+  ],
+  "verificationNotes": "Confirmed real via arXiv 2309.10305, MarkTechPost (2023-09-19), and the official GitHub README_EN.md. All 6 benchmark scores (C-Eval 58.1, MMLU 59.17, CMMLU 61.97, GSM8K 52.77, HumanEval 17.07, BBH 48.78) confirmed to literally appear in the README table for the 13B-Base model. License (Apache-2.0 code + custom community license with DAU<1M free-commercial-use clause) confirmed. Context length 4096 (4K) confirmed via Ollama model metadata; retargeted ctxK sourceUrl from an unrelated HF text-generation-inference PR to a source that actually states the figure. Corrected hf link from Baichuan2-13B-Chat (was mistakenly Base in original links.hf field is now Chat, matching the Chat/4bit release most commonly used)."
+}

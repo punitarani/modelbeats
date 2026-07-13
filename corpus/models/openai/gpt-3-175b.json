@@ -1,0 +1,70 @@
+{
+  "name": "GPT-3 175B",
+  "org": "OpenAI",
+  "family": "GPT-3",
+  "releaseDate": "2020-06-11",
+  "status": "deprecated",
+  "openness": "closed",
+  "license": "Proprietary",
+  "paramsB": 175,
+  "activeParamsB": null,
+  "archClass": "dense",
+  "archDisplay": "Dense decoder-only Transformer",
+  "ctxK": 2,
+  "modalities": [
+    "text"
+  ],
+  "langCount": null,
+  "capabilities": {
+    "reasoning": false,
+    "coding": false,
+    "vision": false,
+    "functionCalling": false,
+    "toolUse": false,
+    "agentic": false
+  },
+  "apiAvailable": false,
+  "price": null,
+  "links": {
+    "gh": "openai/gpt-3"
+  },
+  "note": "175B few-shot learner that launched the OpenAI API in private beta; base GPT-3 models were retired from the API on 2024-01-04.",
+  "quants": [],
+  "vramQ4Gb": null,
+  "vramFp16Gb": null,
+  "tps4090": null,
+  "tpsNote": null,
+  "effortLabel": null,
+  "isDefaultConfig": true,
+  "isBestConfig": true,
+  "specSources": {
+    "paramsB": "https://arxiv.org/abs/2005.14165",
+    "ctxK": "https://subscription.packtpub.com/book/data/9781800563193/2/ch02lvl1sec06/understanding-prompts-completions-and-tokens",
+    "releaseDate": "https://en.wikipedia.org/wiki/GPT-3",
+    "openness": "https://en.wikipedia.org/wiki/GPT-3"
+  },
+  "results": [
+    {
+      "benchmarkSlug": "lambada",
+      "score": 86.4,
+      "source": "self-reported",
+      "sourceUrl": "https://arxiv.org/abs/2005.14165",
+      "notes": "few-shot"
+    },
+    {
+      "benchmarkSlug": "hellaswag",
+      "score": 79.3,
+      "source": "self-reported",
+      "sourceUrl": "https://arxiv.org/abs/2005.14165",
+      "notes": "few-shot"
+    },
+    {
+      "benchmarkSlug": "trivia-qa",
+      "score": 71.2,
+      "source": "self-reported",
+      "sourceUrl": "https://arxiv.org/abs/2005.14165",
+      "notes": "few-shot, closed-book"
+    }
+  ],
+  "verificationNotes": "Confirmed via arXiv 2005.14165: 175B params, nctx=2048 (2K) context. LAMBADA 86.4 / HellaSwag 79.3 / TriviaQA 71.2 few-shot figures independently re-derived and match the paper. API private beta launch June 11, 2020 confirmed via TechCrunch. Base-model API retirement on 2024-01-04 confirmed (OpenAI's largest deprecation event). No changes made."
+}

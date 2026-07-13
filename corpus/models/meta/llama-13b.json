@@ -1,0 +1,120 @@
+{
+  "name": "LLaMA 13B",
+  "org": "Meta",
+  "family": "LLaMA",
+  "releaseDate": "2023-02-24",
+  "status": "deprecated",
+  "openness": "open-weights",
+  "license": "LLaMA License (non-commercial research, gated/case-by-case access)",
+  "paramsB": 13,
+  "activeParamsB": null,
+  "archClass": "dense",
+  "archDisplay": "Dense decoder-only Transformer (RMSNorm, SwiGLU, rotary position embeddings)",
+  "ctxK": 2.048,
+  "modalities": [
+    "text"
+  ],
+  "langCount": 20,
+  "capabilities": {
+    "reasoning": false,
+    "coding": true,
+    "vision": false,
+    "functionCalling": false,
+    "toolUse": false,
+    "agentic": false
+  },
+  "apiAvailable": false,
+  "price": null,
+  "links": {
+    "hf": "huggyllama/llama-13b",
+    "gh": "facebookresearch/llama",
+    "docs": "arxiv.org/abs/2302.13971"
+  },
+  "note": "LLaMA-1 13B; Meta reported it outperforming GPT-3 175B on most benchmarks despite being far smaller.",
+  "quants": [
+    "GGUF Q4_K_M",
+    "GGML",
+    "GPTQ",
+    "AWQ"
+  ],
+  "vramQ4Gb": 8,
+  "vramFp16Gb": 26,
+  "tps4090": null,
+  "tpsNote": "Original LLaMA-1 predates most public RTX 4090 llama.cpp benchmarks (which target Llama 2/3); no verified figure for this exact checkpoint was found.",
+  "effortLabel": null,
+  "isDefaultConfig": true,
+  "isBestConfig": true,
+  "specSources": {
+    "paramsB": "https://ar5iv.labs.arxiv.org/html/2302.13971",
+    "ctxK": "https://ar5iv.labs.arxiv.org/html/2302.13971",
+    "releaseDate": "https://ai.meta.com/blog/large-language-model-llama-meta-ai/",
+    "openness": "https://github.com/facebookresearch/llama/tree/llama_v1"
+  },
+  "results": [
+    {
+      "benchmarkSlug": "hellaswag",
+      "score": 79.2,
+      "source": "self-reported",
+      "sourceUrl": "https://ar5iv.labs.arxiv.org/html/2302.13971",
+      "notes": "0-shot, Table 3",
+      "evaluatedAt": "2023-02-01"
+    },
+    {
+      "benchmarkSlug": "arc-challenge",
+      "score": 52.7,
+      "source": "self-reported",
+      "sourceUrl": "https://ar5iv.labs.arxiv.org/html/2302.13971",
+      "notes": "0-shot, Table 3",
+      "evaluatedAt": "2023-02-01"
+    },
+    {
+      "benchmarkSlug": "winogrande",
+      "score": 73,
+      "source": "self-reported",
+      "sourceUrl": "https://ar5iv.labs.arxiv.org/html/2302.13971",
+      "notes": "0-shot, Table 3",
+      "evaluatedAt": "2023-02-01"
+    },
+    {
+      "benchmarkSlug": "mmlu",
+      "score": 46.9,
+      "source": "self-reported",
+      "sourceUrl": "https://ar5iv.labs.arxiv.org/html/2302.13971",
+      "notes": "5-shot, Table 9",
+      "evaluatedAt": "2023-02-01"
+    },
+    {
+      "benchmarkSlug": "gsm8k",
+      "score": 17.8,
+      "source": "self-reported",
+      "sourceUrl": "https://ar5iv.labs.arxiv.org/html/2302.13971",
+      "notes": "0-shot exact match, Table 7",
+      "evaluatedAt": "2023-02-01"
+    },
+    {
+      "benchmarkSlug": "humaneval",
+      "score": 15.8,
+      "source": "self-reported",
+      "sourceUrl": "https://ar5iv.labs.arxiv.org/html/2302.13971",
+      "notes": "pass@1, Table 8",
+      "evaluatedAt": "2023-02-01"
+    },
+    {
+      "benchmarkSlug": "mbpp",
+      "score": 22,
+      "source": "self-reported",
+      "sourceUrl": "https://ar5iv.labs.arxiv.org/html/2302.13971",
+      "notes": "pass@1, Table 8",
+      "evaluatedAt": "2023-02-01"
+    },
+    {
+      "benchmarkSlug": "trivia-qa",
+      "score": 56.6,
+      "source": "self-reported",
+      "sourceUrl": "https://ar5iv.labs.arxiv.org/html/2302.13971",
+      "notes": "0-shot exact match, Table 5",
+      "evaluatedAt": "2023-02-01"
+    }
+  ],
+  "verificationNotes": "Confirmed 13B params, 2023-02-24 release date, and gated non-commercial license via Meta's official LLaMA blog post (fetched directly). Confirmed via arxiv abstract page that the paper explicitly states 'LLaMA-13B outperforms GPT-3 (175B) on most benchmarks' (verbatim), supporting the note. All 8 result rows (HellaSwag 79.2, ARC-Challenge 52.7, WinoGrande 73, MMLU 46.9, GSM8k 17.8, HumanEval 15.8, MBPP 22, TriviaQA 56.6) confirmed as literal figures in arxiv 2302.13971 Tables 3/5/7/8/9 (fetched directly)."
+}

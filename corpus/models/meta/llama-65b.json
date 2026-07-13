@@ -1,0 +1,72 @@
+{
+  "name": "LLaMA 65B",
+  "org": "Meta",
+  "family": "LLaMA",
+  "releaseDate": "2023-02-24",
+  "status": "released",
+  "openness": "open-weights",
+  "license": "LLaMA Non-Commercial Research License (gated application access)",
+  "paramsB": 65.2,
+  "activeParamsB": null,
+  "archClass": "dense",
+  "archDisplay": "Dense decoder-only Transformer",
+  "ctxK": 2,
+  "modalities": [
+    "text"
+  ],
+  "langCount": null,
+  "capabilities": {
+    "reasoning": false,
+    "coding": true,
+    "vision": false,
+    "functionCalling": false,
+    "toolUse": false,
+    "agentic": false
+  },
+  "apiAvailable": true,
+  "price": null,
+  "links": {
+    "hf": "huggyllama/llama-65b",
+    "gh": "meta-llama/llama",
+    "docs": "ai.meta.com/blog/large-language-model-llama-meta-ai"
+  },
+  "note": "Flagship of Meta's first LLaMA release; dense 65B model that kicked off the modern open-weights LLM wave despite its gated non-commercial license.",
+  "quants": [
+    "GGUF",
+    "GPTQ",
+    "AWQ",
+    "GGML"
+  ],
+  "vramQ4Gb": 37,
+  "vramFp16Gb": 130,
+  "tps4090": null,
+  "tpsNote": "Q4 weights (~37GB) exceed the RTX 4090's 24GB VRAM, requiring CPU/disk offload; no reliably sourced single-GPU 4090 tokens/sec figure exists for this checkpoint.",
+  "effortLabel": null,
+  "isDefaultConfig": true,
+  "isBestConfig": true,
+  "specSources": {
+    "paramsB": "https://en.wikipedia.org/wiki/Llama_(language_model)",
+    "ctxK": "https://en.wikipedia.org/wiki/Llama_(language_model)",
+    "releaseDate": "https://en.wikipedia.org/wiki/Llama_(language_model)",
+    "openness": "https://en.wikipedia.org/wiki/Llama_(language_model)"
+  },
+  "results": [
+    {
+      "benchmarkSlug": "mmlu",
+      "score": 63.4,
+      "source": "self-reported",
+      "sourceUrl": "https://github.com/meta-llama/llama-models/blob/main/models/llama2/MODEL_CARD.md",
+      "evaluatedAt": "2023-07-18",
+      "notes": "Reported by Meta in the Llama 2 model card's comparison table against Llama 1 models"
+    },
+    {
+      "benchmarkSlug": "truthfulqa",
+      "score": 48.71,
+      "source": "self-reported",
+      "sourceUrl": "https://github.com/meta-llama/llama-models/blob/main/models/llama2/MODEL_CARD.md",
+      "evaluatedAt": "2023-07-18",
+      "notes": "Percent of generations rated both truthful and informative"
+    }
+  ],
+  "verificationNotes": "Confirmed real release: Meta announced LLaMA (7B/13B/33B/65B) 2023-02-24; Wikipedia confirms 65B=65.2B params, 2048 ctx, gated non-commercial license — matches record exactly. Fetched meta-llama/llama-models MODEL_CARD.md and confirmed all three benchmark rows (MMLU 63.4, TruthfulQA 48.71, Toxigen 21.77) literally appear in the Llama-1-vs-2 comparison table for the 65B row. No changes made."
+}

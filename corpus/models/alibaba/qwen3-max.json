@@ -1,0 +1,74 @@
+{
+  "name": "Qwen3-Max",
+  "org": "Alibaba",
+  "family": "Qwen3-Max",
+  "releaseDate": "2025-09-05",
+  "status": "preview",
+  "openness": "closed",
+  "license": "Proprietary",
+  "paramsB": null,
+  "activeParamsB": null,
+  "archClass": "moe",
+  "archDisplay": "MoE, exact expert configuration undisclosed (>1T total params)",
+  "ctxK": 256,
+  "modalities": [
+    "text"
+  ],
+  "langCount": 100,
+  "capabilities": {
+    "reasoning": true,
+    "coding": true,
+    "vision": false,
+    "functionCalling": true,
+    "toolUse": true,
+    "agentic": true
+  },
+  "apiAvailable": true,
+  "price": {
+    "input": 1.2,
+    "output": 6,
+    "provider": "Alibaba Cloud Model Studio (DashScope)"
+  },
+  "links": {
+    "docs": "www.alibabacloud.com/help/en/model-studio/models"
+  },
+  "note": "Alibaba's biggest model yet, over 1T params (exact undisclosed) trained on 36T tokens; API-only preview.",
+  "quants": [],
+  "vramQ4Gb": null,
+  "vramFp16Gb": null,
+  "tps4090": null,
+  "tpsNote": null,
+  "effortLabel": null,
+  "isDefaultConfig": true,
+  "isBestConfig": true,
+  "specSources": {
+    "paramsB": "https://www.alibabacloud.com/blog/qwen3-max-just-scale-it_602621",
+    "ctxK": "https://openrouter.ai/qwen/qwen3-max",
+    "releaseDate": "https://www.marktechpost.com/2025/09/06/alibaba-ai-unveils-qwen3-max-preview-a-trillion-parameter-qwen-model-with-super-fast-speed-and-quality/",
+    "openness": "https://www.alibabacloud.com/blog/qwen3-max-just-scale-it_602621"
+  },
+  "results": [
+    {
+      "benchmarkSlug": "swe-bench",
+      "score": 69.6,
+      "source": "self-reported",
+      "sourceUrl": "https://www.alibabacloud.com/blog/qwen3-max-just-scale-it_602621",
+      "notes": "SWE-bench Verified, Qwen3-Max-Preview (Instruct)"
+    },
+    {
+      "benchmarkSlug": "tau-bench",
+      "score": 74.8,
+      "source": "self-reported",
+      "sourceUrl": "https://www.alibabacloud.com/blog/qwen3-max-just-scale-it_602621",
+      "notes": "Tau2-Bench, surpassing Claude Opus 4 and DeepSeek V3.1"
+    },
+    {
+      "benchmarkSlug": "super-gpqa",
+      "score": 81.4,
+      "source": "self-reported",
+      "sourceUrl": "https://dev.to/czmilo/qwen3-max-2025-complete-release-analysis-in-depth-review-of-alibabas-most-powerful-ai-model-3j7l",
+      "notes": "SuperGPQA"
+    }
+  ],
+  "verificationNotes": "Confirmed real: preview announced Sept 5, 2025 (X/Alibaba_Qwen, MarkTechPost, Cybernews, Interesting Engineering all corroborate), over 1T total params (undisclosed exact figure) trained on 36T tokens, MoE architecture, closed/API-only via Alibaba Cloud/DashScope -- all confirmed. SWE-bench Verified 69.6 and Tau2-Bench 74.8 confirmed verbatim via direct fetch of the cited alibabacloud.com blog. SuperGPQA 81.4 confirmed verbatim via direct fetch of the cited dev.to article. Pricing ($1.2/$6 per M, 0-32K tier) confirmed exactly via Alibaba Cloud Model Studio official pricing page. No changes made."
+}

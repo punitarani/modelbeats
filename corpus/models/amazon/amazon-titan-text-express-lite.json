@@ -1,0 +1,51 @@
+{
+  "name": "Amazon Titan Text (Express & Lite)",
+  "org": "Amazon",
+  "family": "Amazon Titan",
+  "releaseDate": "2023-11-29",
+  "status": "released",
+  "openness": "closed",
+  "license": "Proprietary (AWS Bedrock service terms)",
+  "paramsB": null,
+  "activeParamsB": null,
+  "archClass": "dense",
+  "archDisplay": "Dense transformer (parameter count undisclosed)",
+  "ctxK": 8,
+  "modalities": [
+    "text"
+  ],
+  "langCount": null,
+  "capabilities": {
+    "reasoning": false,
+    "coding": false,
+    "vision": false,
+    "functionCalling": false,
+    "toolUse": false,
+    "agentic": false
+  },
+  "apiAvailable": true,
+  "price": {
+    "input": 0.8,
+    "output": 1.6,
+    "provider": "AWS Bedrock (Titan Text Express; Titan Text Lite is $0.30/$0.40 per M tokens)"
+  },
+  "links": {
+    "docs": "docs.aws.amazon.com/bedrock/latest/userguide/titan-text-models.html"
+  },
+  "note": "Amazon's original Bedrock-native text duo predating Nova: Express (8K ctx, English + 100 languages in preview) and Lite (4K ctx, English-only, tuned for fine-tuning).",
+  "quants": [],
+  "vramQ4Gb": null,
+  "vramFp16Gb": null,
+  "tps4090": null,
+  "tpsNote": null,
+  "effortLabel": null,
+  "isDefaultConfig": true,
+  "isBestConfig": true,
+  "specSources": {
+    "releaseDate": "https://aws.amazon.com/about-aws/whats-new/2023/11/amazon-titan-models-express-lite-bedrock/",
+    "ctxK": "https://docs.aws.amazon.com/bedrock/latest/userguide/titan-text-models.html",
+    "openness": "https://docs.aws.amazon.com/bedrock/latest/userguide/titan-text-models.html"
+  },
+  "results": [],
+  "verificationNotes": "Confirmed real via AWS 'What's New' post (GA 2023-11-29, re:Invent 2023) and independently via SiliconANGLE coverage. Confirmed Express: 8K context, English + 100 languages in preview, $0.80/$1.60 per M tokens ($0.0008/$0.0016 per 1K). Confirmed Lite: 4K context, English-only, tuned for fine-tuning, $0.30/$0.40 per M tokens. All values match; no changes. Note: record intentionally combines two variants into one row using Express's spec as primary (ctxK=8); this is a simplification but not an error, and is disclosed in the note/price fields."
+}

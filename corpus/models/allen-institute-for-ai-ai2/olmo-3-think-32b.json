@@ -1,0 +1,99 @@
+{
+  "name": "OLMo 3-Think 32B",
+  "org": "Allen Institute for AI (Ai2)",
+  "family": "OLMo 3",
+  "releaseDate": "2025-11-20",
+  "status": "released",
+  "openness": "open-source",
+  "license": "Apache 2.0",
+  "paramsB": 32.23,
+  "activeParamsB": null,
+  "archClass": "dense",
+  "archDisplay": "Dense transformer (decoder-only, sliding/full attention mix, exposed CoT)",
+  "ctxK": 64,
+  "modalities": [
+    "text"
+  ],
+  "langCount": 1,
+  "capabilities": {
+    "reasoning": true,
+    "coding": true,
+    "vision": false,
+    "functionCalling": false,
+    "toolUse": false,
+    "agentic": false
+  },
+  "apiAvailable": true,
+  "price": {
+    "input": 0.15,
+    "output": 0.5,
+    "provider": "OpenRouter"
+  },
+  "links": {
+    "hf": "allenai/Olmo-3-32B-Think",
+    "gh": "allenai/OLMo-core",
+    "docs": "allenai.org/blog/olmo3"
+  },
+  "note": "Latest flagship and strongest fully open reasoning model; narrows the gap to Qwen 3-32B-Thinking on reasoning benchmarks while trained on ~6x fewer tokens.",
+  "quants": [
+    "GGUF Q4"
+  ],
+  "vramQ4Gb": 20,
+  "vramFp16Gb": 65,
+  "tps4090": null,
+  "tpsNote": null,
+  "effortLabel": null,
+  "isDefaultConfig": true,
+  "isBestConfig": true,
+  "specSources": {
+    "paramsB": "https://huggingface.co/allenai/Olmo-3-32B-Think/raw/main/model.safetensors.index.json",
+    "ctxK": "https://huggingface.co/allenai/Olmo-3-32B-Think/raw/main/config.json",
+    "releaseDate": "https://allenai.org/blog/olmo3",
+    "openness": "https://huggingface.co/allenai/Olmo-3-32B-Think/raw/main/README.md"
+  },
+  "results": [
+    {
+      "benchmarkSlug": "math",
+      "score": 96.1,
+      "source": "self-reported",
+      "sourceUrl": "https://huggingface.co/allenai/Olmo-3-32B-Think",
+      "notes": "Qwen 3 32B 95.4, Qwen 3 VL 32B Thinking 96.7"
+    },
+    {
+      "benchmarkSlug": "aime",
+      "score": 76.8,
+      "source": "self-reported",
+      "sourceUrl": "https://huggingface.co/allenai/Olmo-3-32B-Think",
+      "notes": "AIME 2024; Qwen 3 32B 80.8"
+    },
+    {
+      "benchmarkSlug": "bbh",
+      "score": 89.8,
+      "source": "self-reported",
+      "sourceUrl": "https://huggingface.co/allenai/Olmo-3-32B-Think",
+      "notes": "Qwen 3 32B 90.6"
+    },
+    {
+      "benchmarkSlug": "humaneval",
+      "score": 91.4,
+      "source": "self-reported",
+      "sourceUrl": "https://huggingface.co/allenai/Olmo-3-32B-Think",
+      "notes": "HumanEvalPlus; Qwen 3 32B 91.2"
+    },
+    {
+      "benchmarkSlug": "ifeval",
+      "score": 89,
+      "source": "self-reported",
+      "sourceUrl": "https://huggingface.co/allenai/Olmo-3-32B-Think",
+      "notes": "Qwen 3 32B 86.5"
+    },
+    {
+      "benchmarkSlug": "livecodebench",
+      "score": 83.5,
+      "source": "self-reported",
+      "sourceUrl": "https://huggingface.co/allenai/Olmo-3-32B-Think",
+      "notes": "LiveCodeBench v3; Qwen 3 32B 90.2"
+    }
+  ],
+  "verificationNotes": "Existence confirmed via allenai.org/blog/olmo3 and press coverage (Nov 20, 2025). paramsB re-derived from model.safetensors.index.json total ≈32.2B (matches 32.23 within rounding). config.json confirms max_position_embeddings=65536 (~64K) and hybrid sliding/full attention across 64 layers, and no tool-use/function-calling exposed on this model card (matches capability flags). All 6 result rows independently confirmed on the HF model card table, including every cited Qwen 3 32B comparison number (MATH 95.4, AIME 80.8, BBH 90.6, HumanEvalPlus 91.2, IFEval 86.5, LiveCodeBench 90.2) except the 'Qwen 3 VL 32B Thinking 96.7' aside which I could not independently re-confirm in my fetch (left in notes as unverified color, does not affect the primary score)."
+}

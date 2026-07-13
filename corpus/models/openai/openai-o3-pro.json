@@ -1,0 +1,74 @@
+{
+  "name": "OpenAI o3-pro",
+  "org": "OpenAI",
+  "family": "o3",
+  "releaseDate": "2025-06-10",
+  "status": "released",
+  "openness": "closed",
+  "license": "Proprietary (OpenAI API Terms)",
+  "paramsB": null,
+  "activeParamsB": null,
+  "archClass": "dense",
+  "archDisplay": "Dense transformer reasoning model, extended test-time compute (exact size undisclosed)",
+  "ctxK": 200,
+  "modalities": [
+    "text",
+    "vision"
+  ],
+  "langCount": null,
+  "capabilities": {
+    "reasoning": true,
+    "coding": true,
+    "vision": true,
+    "functionCalling": true,
+    "toolUse": true,
+    "agentic": true
+  },
+  "apiAvailable": true,
+  "price": {
+    "input": 20,
+    "output": 80,
+    "provider": "OpenAI"
+  },
+  "links": {
+    "docs": "developers.openai.com"
+  },
+  "note": "Higher-compute o3 variant for the most reliable answers; replaced o1-pro.",
+  "quants": [],
+  "vramQ4Gb": null,
+  "vramFp16Gb": null,
+  "tps4090": null,
+  "tpsNote": null,
+  "effortLabel": null,
+  "isDefaultConfig": true,
+  "isBestConfig": true,
+  "specSources": {
+    "ctxK": "https://developers.openai.com/api/docs/models/o3-pro",
+    "releaseDate": "https://techcrunch.com/2025/06/10/openai-releases-o3-pro-a-souped-up-version-of-its-o3-ai-reasoning-model/",
+    "openness": "https://developers.openai.com/api/docs/models/o3-pro"
+  },
+  "results": [
+    {
+      "benchmarkSlug": "aime",
+      "score": 93,
+      "source": "independent",
+      "sourceUrl": "https://binaryverseai.com/chatgpt-o3-pro-review-benchmarks-hacks/",
+      "notes": "AIME 2024; OpenAI has not published a full official benchmark table for o3-pro"
+    },
+    {
+      "benchmarkSlug": "gpqa",
+      "score": 84,
+      "source": "independent",
+      "sourceUrl": "https://binaryverseai.com/chatgpt-o3-pro-review-benchmarks-hacks/",
+      "notes": "GPQA Diamond"
+    },
+    {
+      "benchmarkSlug": "codeforces",
+      "score": 2748,
+      "source": "independent",
+      "sourceUrl": "https://binaryverseai.com/chatgpt-o3-pro-review-benchmarks-hacks/",
+      "notes": "Elo rating"
+    }
+  ],
+  "verificationNotes": "Confirmed real. TechCrunch (fetched) confirms June 10, 2025 launch, ChatGPT Pro/Team + API availability, and $20/$80 per-1M pricing verbatim. developers.openai.com/api/docs/models/o3-pro confirms 200K context / 100K max output. Fetched binaryverseai.com directly and confirmed all three claimed numbers appear verbatim on the page: AIME 2024 '93 percent,' GPQA Diamond '84 percent,' Codeforces '2,748 points.' No changes made."
+}

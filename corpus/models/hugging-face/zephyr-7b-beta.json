@@ -1,0 +1,110 @@
+{
+  "name": "Zephyr 7B Beta",
+  "org": "Hugging Face",
+  "family": "Zephyr",
+  "releaseDate": "2023-10-25",
+  "status": "released",
+  "openness": "open-source",
+  "license": "MIT",
+  "paramsB": 7.24,
+  "activeParamsB": null,
+  "archClass": "dense",
+  "archDisplay": "Decoder-only Transformer (Mistral-7B-v0.1 base), distilled SFT + Direct Preference Optimization on synthetic feedback data",
+  "ctxK": 8,
+  "modalities": [
+    "text"
+  ],
+  "langCount": null,
+  "capabilities": {
+    "reasoning": false,
+    "coding": false,
+    "vision": false,
+    "functionCalling": false,
+    "toolUse": false,
+    "agentic": false
+  },
+  "apiAvailable": false,
+  "price": null,
+  "links": {
+    "hf": "HuggingFaceH4/zephyr-7b-beta",
+    "gh": "huggingface/alignment-handbook",
+    "docs": "arxiv.org/abs/2310.16944"
+  },
+  "note": "DPO-aligned Mistral-7B fine-tune that popularized distilled preference tuning; weights, training recipe (alignment-handbook), and data all open under MIT.",
+  "quants": [
+    "GGUF Q4",
+    "AWQ",
+    "GPTQ"
+  ],
+  "vramQ4Gb": 5,
+  "vramFp16Gb": 15,
+  "tps4090": null,
+  "tpsNote": null,
+  "effortLabel": null,
+  "isDefaultConfig": true,
+  "isBestConfig": true,
+  "specSources": {
+    "paramsB": "https://huggingface.co/HuggingFaceH4/zephyr-7b-beta",
+    "ctxK": "https://huggingface.co/HuggingFaceH4/zephyr-7b-beta",
+    "releaseDate": "https://huggingface.co/HuggingFaceH4/zephyr-7b-beta",
+    "openness": "https://huggingface.co/HuggingFaceH4/zephyr-7b-beta"
+  },
+  "results": [
+    {
+      "benchmarkSlug": "mt-bench",
+      "score": 7.34,
+      "source": "self-reported",
+      "sourceUrl": "https://huggingface.co/HuggingFaceH4/zephyr-7b-beta"
+    },
+    {
+      "benchmarkSlug": "alpaca-eval",
+      "score": 90.6,
+      "source": "self-reported",
+      "sourceUrl": "https://huggingface.co/HuggingFaceH4/zephyr-7b-beta",
+      "notes": "win rate %"
+    },
+    {
+      "benchmarkSlug": "mmlu",
+      "score": 61.07,
+      "source": "self-reported",
+      "sourceUrl": "https://huggingface.co/HuggingFaceH4/zephyr-7b-beta",
+      "notes": "5-shot"
+    },
+    {
+      "benchmarkSlug": "hellaswag",
+      "score": 84.36,
+      "source": "self-reported",
+      "sourceUrl": "https://huggingface.co/HuggingFaceH4/zephyr-7b-beta",
+      "notes": "10-shot"
+    },
+    {
+      "benchmarkSlug": "arc-challenge",
+      "score": 62.03,
+      "source": "self-reported",
+      "sourceUrl": "https://huggingface.co/HuggingFaceH4/zephyr-7b-beta",
+      "notes": "25-shot"
+    },
+    {
+      "benchmarkSlug": "gsm8k",
+      "score": 12.74,
+      "source": "self-reported",
+      "sourceUrl": "https://huggingface.co/HuggingFaceH4/zephyr-7b-beta",
+      "notes": "5-shot"
+    },
+    {
+      "benchmarkSlug": "truthfulqa",
+      "score": 57.45,
+      "source": "self-reported",
+      "sourceUrl": "https://huggingface.co/HuggingFaceH4/zephyr-7b-beta",
+      "notes": "0-shot"
+    },
+    {
+      "benchmarkSlug": "winogrande",
+      "score": 77.74,
+      "source": "self-reported",
+      "sourceUrl": "https://huggingface.co/HuggingFaceH4/zephyr-7b-beta",
+      "notes": "5-shot"
+    }
+  ],
+  "verificationNotes": "Confirmed real Oct 25 2023 Hugging Face H4 release, MIT license, Mistral-7B-v0.1 base (7.24B params is the well-established exact count for that base model). All 8 benchmark rows (MT-Bench 7.34, AlpacaEval 90.6, MMLU 61.07, HellaSwag 84.36, ARC-Challenge 62.03, GSM8K 12.74, TruthfulQA 57.45, Winogrande 77.74) verified verbatim on the official model card — no changes needed."
+}

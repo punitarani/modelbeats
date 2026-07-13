@@ -1,0 +1,81 @@
+{
+  "name": "GPT-4o mini",
+  "org": "OpenAI",
+  "family": "GPT-4o",
+  "releaseDate": "2024-07-18",
+  "status": "released",
+  "openness": "closed",
+  "license": "Proprietary",
+  "paramsB": null,
+  "activeParamsB": null,
+  "archClass": "dense",
+  "archDisplay": "Dense, multimodal Transformer, small/low-cost tier (architecture/size undisclosed)",
+  "ctxK": 128,
+  "modalities": [
+    "text",
+    "vision"
+  ],
+  "langCount": null,
+  "capabilities": {
+    "reasoning": false,
+    "coding": true,
+    "vision": true,
+    "functionCalling": true,
+    "toolUse": true,
+    "agentic": true
+  },
+  "apiAvailable": true,
+  "price": {
+    "input": 0.15,
+    "output": 0.6,
+    "provider": "OpenAI"
+  },
+  "links": {
+    "docs": "developers.openai.com/api/docs/models/gpt-4o-mini"
+  },
+  "note": "Small, cheap GPT-4o sibling that replaced GPT-3.5 Turbo as OpenAI's default budget model in ChatGPT and the API.",
+  "quants": [],
+  "vramQ4Gb": null,
+  "vramFp16Gb": null,
+  "tps4090": null,
+  "tpsNote": null,
+  "effortLabel": null,
+  "isDefaultConfig": true,
+  "isBestConfig": true,
+  "specSources": {
+    "ctxK": "https://developers.openai.com/api/docs/models/gpt-4o-mini",
+    "releaseDate": "https://openai.com/index/gpt-4o-mini-advancing-cost-efficient-intelligence/",
+    "openness": "https://openai.com/index/gpt-4o-mini-advancing-cost-efficient-intelligence/"
+  },
+  "results": [
+    {
+      "benchmarkSlug": "mmlu",
+      "score": 82,
+      "source": "self-reported",
+      "sourceUrl": "https://openai.com/index/gpt-4o-mini-advancing-cost-efficient-intelligence/",
+      "evaluatedAt": "2024-07-18"
+    },
+    {
+      "benchmarkSlug": "mgsm",
+      "score": 87,
+      "source": "self-reported",
+      "sourceUrl": "https://openai.com/index/gpt-4o-mini-advancing-cost-efficient-intelligence/",
+      "evaluatedAt": "2024-07-18"
+    },
+    {
+      "benchmarkSlug": "humaneval",
+      "score": 87.2,
+      "source": "self-reported",
+      "sourceUrl": "https://openai.com/index/gpt-4o-mini-advancing-cost-efficient-intelligence/",
+      "evaluatedAt": "2024-07-18"
+    },
+    {
+      "benchmarkSlug": "mmmu",
+      "score": 59.4,
+      "source": "self-reported",
+      "sourceUrl": "https://openai.com/index/gpt-4o-mini-advancing-cost-efficient-intelligence/",
+      "evaluatedAt": "2024-07-18"
+    }
+  ],
+  "verificationNotes": "Confirmed via web search of OpenAI's official announcement (direct fetch blocked by 403, but search excerpts quote the page verbatim): MMLU 82%, MGSM 87%, HumanEval 87.2%, MMMU 59.4% all match exactly. Release date 2024-07-18, 128K context, and closed/proprietary licensing confirmed by independent sources (OpenAI blog via search, Azure blog, DataCamp). No changes made."
+}

@@ -1,0 +1,128 @@
+{
+  "name": "Gemini 1.5 Flash",
+  "org": "Google",
+  "family": "Gemini 1.5",
+  "releaseDate": "2024-05-14",
+  "status": "deprecated",
+  "openness": "closed",
+  "license": "Proprietary",
+  "paramsB": null,
+  "activeParamsB": null,
+  "archClass": "dense",
+  "archDisplay": "Dense Transformer decoder model (parameter count undisclosed), online-distilled from the larger Gemini 1.5 Pro",
+  "ctxK": 1000,
+  "modalities": [
+    "text",
+    "vision",
+    "audio",
+    "video"
+  ],
+  "langCount": 100,
+  "capabilities": {
+    "reasoning": false,
+    "coding": true,
+    "vision": true,
+    "functionCalling": true,
+    "toolUse": true,
+    "agentic": false
+  },
+  "apiAvailable": true,
+  "price": {
+    "input": 0.075,
+    "output": 0.3,
+    "provider": "Google (Gemini API, <=128K prompts)"
+  },
+  "links": {
+    "docs": "ai.google.dev/gemini-api/docs/models"
+  },
+  "note": "Distilled fast/cheap 1.5-series workhorse that became the free-tier Gemini model; 1M-token multimodal context.",
+  "quants": [],
+  "vramQ4Gb": null,
+  "vramFp16Gb": null,
+  "tps4090": null,
+  "tpsNote": null,
+  "effortLabel": null,
+  "isDefaultConfig": true,
+  "isBestConfig": true,
+  "specSources": {
+    "releaseDate": "https://blog.google/innovation-and-ai/products/google-gemini-update-flash-ai-assistant-io-2024/",
+    "ctxK": "https://storage.googleapis.com/deepmind-media/gemini/gemini_v1_5_report.pdf",
+    "openness": "https://ai.google.dev/gemini-api/docs/models",
+    "archClass": "https://storage.googleapis.com/deepmind-media/gemini/gemini_v1_5_report.pdf"
+  },
+  "results": [
+    {
+      "benchmarkSlug": "mmlu",
+      "score": 78.9,
+      "source": "self-reported",
+      "sourceUrl": "https://storage.googleapis.com/deepmind-media/gemini/gemini_v1_5_report.pdf",
+      "evaluatedAt": "2024-05-01",
+      "notes": "5-shot, Table 11"
+    },
+    {
+      "benchmarkSlug": "gpqa",
+      "score": 39.5,
+      "source": "self-reported",
+      "sourceUrl": "https://storage.googleapis.com/deepmind-media/gemini/gemini_v1_5_report.pdf",
+      "evaluatedAt": "2024-05-01",
+      "notes": "0-shot, Table 11"
+    },
+    {
+      "benchmarkSlug": "math",
+      "score": 54.9,
+      "source": "self-reported",
+      "sourceUrl": "https://storage.googleapis.com/deepmind-media/gemini/gemini_v1_5_report.pdf",
+      "evaluatedAt": "2024-05-01",
+      "notes": "4-shot Minerva prompt, Table 11"
+    },
+    {
+      "benchmarkSlug": "gsm8k",
+      "score": 86.2,
+      "source": "self-reported",
+      "sourceUrl": "https://storage.googleapis.com/deepmind-media/gemini/gemini_v1_5_report.pdf",
+      "evaluatedAt": "2024-05-01",
+      "notes": "11-shot, Table 11"
+    },
+    {
+      "benchmarkSlug": "bbh",
+      "score": 85.5,
+      "source": "self-reported",
+      "sourceUrl": "https://storage.googleapis.com/deepmind-media/gemini/gemini_v1_5_report.pdf",
+      "evaluatedAt": "2024-05-01",
+      "notes": "3-shot, Table 11"
+    },
+    {
+      "benchmarkSlug": "hellaswag",
+      "score": 86.5,
+      "source": "self-reported",
+      "sourceUrl": "https://storage.googleapis.com/deepmind-media/gemini/gemini_v1_5_report.pdf",
+      "evaluatedAt": "2024-05-01",
+      "notes": "10-shot, Table 11"
+    },
+    {
+      "benchmarkSlug": "drop",
+      "score": 78.4,
+      "source": "self-reported",
+      "sourceUrl": "https://storage.googleapis.com/deepmind-media/gemini/gemini_v1_5_report.pdf",
+      "evaluatedAt": "2024-05-01",
+      "notes": "F1, variable shots, Table 11"
+    },
+    {
+      "benchmarkSlug": "humaneval",
+      "score": 74.3,
+      "source": "self-reported",
+      "sourceUrl": "https://storage.googleapis.com/deepmind-media/gemini/gemini_v1_5_report.pdf",
+      "evaluatedAt": "2024-05-01",
+      "notes": "0-shot pass rate (PT chat preamble), Table 11"
+    },
+    {
+      "benchmarkSlug": "mmmu",
+      "score": 56.1,
+      "source": "self-reported",
+      "sourceUrl": "https://storage.googleapis.com/deepmind-media/gemini/gemini_v1_5_report.pdf",
+      "evaluatedAt": "2024-10-01",
+      "notes": "val split, 0-shot, Table 22"
+    }
+  ],
+  "verificationNotes": "CORRECTED: archClass changed from 'moe' to 'dense' and archDisplay rewritten — the official Gemini 1.5 technical report (Section 3.2 and Appendix 12.1 Model Card, Table 45) explicitly states 'Gemini 1.5 Flash is a dense Transformer based model that is online distilled ... from Gemini 1.5 Pro,' in direct contrast to 1.5 Pro which IS described as sparse MoE. Downloaded and text-extracted the full 154-page PDF report directly (prior fetch attempts were rate-limited/binary-blocked) and verbatim-confirmed all 9 result rows against Table 11 and Table 22. Release date (I/O, May 14 2024), 1M context, and '100+ languages' (developers.googleblog.com) also confirmed. Pricing ($0.075/$0.30 per 1M tokens, <=128K) confirmed as the Aug 2024 price-cut rate, matching the record."
+}

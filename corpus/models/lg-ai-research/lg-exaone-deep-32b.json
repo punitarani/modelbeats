@@ -1,0 +1,85 @@
+{
+  "name": "LG EXAONE Deep 32B",
+  "org": "LG AI Research",
+  "family": "EXAONE Deep",
+  "releaseDate": "2025-03-18",
+  "status": "released",
+  "openness": "open-weights",
+  "license": "EXAONE AI Model License Agreement 1.1 - NC",
+  "paramsB": 32,
+  "activeParamsB": null,
+  "archClass": "dense",
+  "archDisplay": "Dense Transformer, 64 layers, GQA (40 Q-heads / 8 KV-heads), <thought>-tag CoT reasoning",
+  "ctxK": 32,
+  "modalities": [
+    "text"
+  ],
+  "langCount": 2,
+  "capabilities": {
+    "reasoning": true,
+    "coding": true,
+    "vision": false,
+    "functionCalling": false,
+    "toolUse": false,
+    "agentic": false
+  },
+  "apiAvailable": false,
+  "price": null,
+  "links": {
+    "hf": "LGAI-EXAONE/EXAONE-Deep-32B",
+    "gh": "LG-AI-EXAONE/EXAONE-Deep"
+  },
+  "note": "Reasoning-specialized <thought>-tag CoT model rivaling much larger models on AIME/MATH.",
+  "quants": [
+    "GGUF Q4",
+    "AWQ"
+  ],
+  "vramQ4Gb": 20,
+  "vramFp16Gb": 62,
+  "tps4090": null,
+  "tpsNote": null,
+  "effortLabel": null,
+  "isDefaultConfig": true,
+  "isBestConfig": true,
+  "specSources": {
+    "paramsB": "https://huggingface.co/LGAI-EXAONE/EXAONE-Deep-32B",
+    "ctxK": "https://github.com/LG-AI-EXAONE/EXAONE-Deep",
+    "releaseDate": "https://github.com/LG-AI-EXAONE/EXAONE-Deep",
+    "openness": "https://huggingface.co/LGAI-EXAONE/EXAONE-Deep-32B"
+  },
+  "results": [
+    {
+      "benchmarkSlug": "math",
+      "score": 95.7,
+      "source": "self-reported",
+      "sourceUrl": "https://github.com/LG-AI-EXAONE/EXAONE-Deep",
+      "evaluatedAt": "2025-03-01",
+      "notes": "MATH-500, pass@1"
+    },
+    {
+      "benchmarkSlug": "aime",
+      "score": 72.1,
+      "source": "self-reported",
+      "sourceUrl": "https://github.com/LG-AI-EXAONE/EXAONE-Deep",
+      "evaluatedAt": "2025-03-01",
+      "notes": "AIME 2024, pass@1 (90.0 consistency@64)"
+    },
+    {
+      "benchmarkSlug": "gpqa",
+      "score": 66.1,
+      "source": "self-reported",
+      "sourceUrl": "https://github.com/LG-AI-EXAONE/EXAONE-Deep",
+      "evaluatedAt": "2025-03-01",
+      "notes": "GPQA Diamond, pass@1"
+    },
+    {
+      "benchmarkSlug": "livecodebench",
+      "score": 59.5,
+      "source": "self-reported",
+      "sourceUrl": "https://github.com/LG-AI-EXAONE/EXAONE-Deep",
+      "evaluatedAt": "2025-03-01",
+      "notes": "LiveCodeBench, pass@1"
+    }
+  ],
+  "verificationNotes": "Existence and release date (2025-03-18) confirmed on GitHub README and HF model card. Params (30.95B, rounded 32B), 32K context, and 64-layer/GQA(40Q/8KV) architecture confirmed via HF card and independent search (model shares EXAONE-3.5-32B backbone). All 4 benchmark rows (MATH-500 95.7, AIME2024 72.1/90.0, GPQA-Diamond 66.1, LiveCodeBench 59.5) verbatim-confirmed on both the HF card and GitHub README — no changes."
+}

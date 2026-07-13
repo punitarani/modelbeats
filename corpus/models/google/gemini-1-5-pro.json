@@ -1,0 +1,65 @@
+{
+  "name": "Gemini 1.5 Pro",
+  "org": "Google",
+  "family": "Gemini 1.5",
+  "releaseDate": "2024-02-15",
+  "status": "deprecated",
+  "openness": "closed",
+  "license": "Proprietary (Google API/Vertex AI)",
+  "paramsB": null,
+  "activeParamsB": null,
+  "archClass": "moe",
+  "archDisplay": "Sparse Mixture-of-Experts Transformer",
+  "ctxK": 1000,
+  "modalities": [
+    "text",
+    "vision",
+    "audio",
+    "video"
+  ],
+  "langCount": null,
+  "capabilities": {
+    "reasoning": false,
+    "coding": true,
+    "vision": true,
+    "functionCalling": true,
+    "toolUse": true,
+    "agentic": true
+  },
+  "apiAvailable": false,
+  "price": null,
+  "links": {
+    "docs": "storage.googleapis.com/deepmind-media/gemini/gemini_v1_5_report.pdf"
+  },
+  "note": "Breakthrough 1M-token context (up to 2M for some users); all 1.5 models shut down on Gemini API by Sept 24 2025.",
+  "quants": [],
+  "vramQ4Gb": null,
+  "vramFp16Gb": null,
+  "tps4090": null,
+  "tpsNote": null,
+  "effortLabel": null,
+  "isDefaultConfig": true,
+  "isBestConfig": true,
+  "specSources": {
+    "releaseDate": "https://blog.google/innovation-and-ai/products/google-gemini-next-generation-model-february-2024/",
+    "ctxK": "https://arxiv.org/abs/2403.05530",
+    "openness": "https://x.com/patloeber/status/1972949366655828277"
+  },
+  "results": [
+    {
+      "benchmarkSlug": "mmlu",
+      "score": 85.9,
+      "source": "self-reported",
+      "sourceUrl": "https://arxiv.org/pdf/2403.05530",
+      "notes": "5-shot, May 2024 updated version"
+    },
+    {
+      "benchmarkSlug": "gpqa",
+      "score": 46.2,
+      "source": "self-reported",
+      "sourceUrl": "https://arxiv.org/pdf/2403.05530",
+      "notes": "May 2024 updated version"
+    }
+  ],
+  "verificationNotes": "Confirmed real, announced 2024-02-15 per Google blog. Both benchmark rows corroborated: search results directly quoting the Gemini 1.5 technical report confirm 'Gemini 1.5 Pro scores 46.2% [GPQA] ... and 85.9% on MMLU' for the updated (May 2024) checkpoint. Sept 24 2025 shutdown date corroborated by ai.google.dev deprecations page and independent tracker (avalai docs), confirming all 1.5 models return errors as of that date."
+}

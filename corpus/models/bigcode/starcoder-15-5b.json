@@ -1,0 +1,66 @@
+{
+  "name": "StarCoder (15.5B)",
+  "org": "BigCode",
+  "family": "StarCoder",
+  "releaseDate": "2023-05-04",
+  "status": "released",
+  "openness": "open-weights",
+  "license": "BigCode OpenRAIL-M",
+  "paramsB": 15.5,
+  "activeParamsB": null,
+  "archClass": "dense",
+  "archDisplay": "GPT-2-style decoder with multi-query attention (GPTBigCode) + fill-in-the-middle, 8K context",
+  "ctxK": 8,
+  "modalities": [
+    "text"
+  ],
+  "langCount": 80,
+  "capabilities": {
+    "reasoning": false,
+    "coding": true,
+    "vision": false,
+    "functionCalling": false,
+    "toolUse": false,
+    "agentic": false
+  },
+  "apiAvailable": false,
+  "price": null,
+  "links": {
+    "hf": "bigcode/starcoder",
+    "gh": "bigcode-project/starcoder",
+    "docs": "bigcode-project.org/docs/about/models"
+  },
+  "note": "Pivotal 15.5B open code LLM trained on The Stack across 80+ languages; matched Codex-cushman on HumanEval/MBPP.",
+  "quants": [
+    "GGUF",
+    "GPTQ"
+  ],
+  "vramQ4Gb": 9.7,
+  "vramFp16Gb": 31.4,
+  "tps4090": null,
+  "tpsNote": null,
+  "effortLabel": null,
+  "isDefaultConfig": true,
+  "isBestConfig": true,
+  "specSources": {
+    "paramsB": "https://huggingface.co/bigcode/starcoder",
+    "ctxK": "https://huggingface.co/bigcode/starcoder",
+    "releaseDate": "https://huggingface.co/blog/starcoder",
+    "openness": "https://huggingface.co/bigcode/starcoder"
+  },
+  "results": [
+    {
+      "benchmarkSlug": "humaneval",
+      "score": 33.6,
+      "source": "self-reported",
+      "sourceUrl": "https://huggingface.co/blog/starcoder"
+    },
+    {
+      "benchmarkSlug": "mbpp",
+      "score": 52.7,
+      "source": "self-reported",
+      "sourceUrl": "https://huggingface.co/blog/starcoder"
+    }
+  ],
+  "verificationNotes": "Fetched HF blog (dated 2023-05-04) and model card: confirmed ~15B params, 80+ languages, BigCode OpenRAIL-M, HumanEval 33.6/MBPP 52.7 verbatim. No changes."
+}

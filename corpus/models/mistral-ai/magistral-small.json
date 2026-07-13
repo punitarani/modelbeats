@@ -1,0 +1,85 @@
+{
+  "name": "Magistral Small",
+  "org": "Mistral AI",
+  "family": "Magistral",
+  "releaseDate": "2025-06-10",
+  "status": "released",
+  "openness": "open-weights",
+  "license": "Apache 2.0",
+  "paramsB": 24,
+  "activeParamsB": null,
+  "archClass": "dense",
+  "archDisplay": "Dense transformer (24B), reasoning fine-tune of Mistral Small 3.1 with cold-start data distilled from Magistral Medium",
+  "ctxK": 128,
+  "modalities": [
+    "text"
+  ],
+  "langCount": 24,
+  "capabilities": {
+    "reasoning": true,
+    "coding": true,
+    "vision": false,
+    "functionCalling": true,
+    "toolUse": true,
+    "agentic": true
+  },
+  "apiAvailable": true,
+  "price": {
+    "input": 0.5,
+    "output": 1.5,
+    "provider": "Mistral La Plateforme"
+  },
+  "links": {
+    "hf": "mistralai/Magistral-Small-2506",
+    "docs": "docs.mistral.ai"
+  },
+  "note": "Mistral's first open-weights reasoning model (Apache 2.0); transparent multilingual chain-of-thought, fits a single RTX 4090 or 32GB Mac once quantized.",
+  "quants": [
+    "GGUF Q4",
+    "MLX"
+  ],
+  "vramQ4Gb": 14.5,
+  "vramFp16Gb": 55,
+  "tps4090": null,
+  "tpsNote": "Vendor states it fits and runs on a single RTX 4090 once quantized; no independently measured tok/s figure found",
+  "effortLabel": null,
+  "isDefaultConfig": true,
+  "isBestConfig": true,
+  "specSources": {
+    "releaseDate": "https://huggingface.co/mistralai/Magistral-Small-2506",
+    "openness": "https://huggingface.co/mistralai/Magistral-Small-2506",
+    "paramsB": "https://huggingface.co/mistralai/Magistral-Small-2506",
+    "ctxK": "https://huggingface.co/mistralai/Magistral-Small-2506"
+  },
+  "results": [
+    {
+      "benchmarkSlug": "aime",
+      "score": 70.68,
+      "source": "self-reported",
+      "sourceUrl": "https://huggingface.co/mistralai/Magistral-Small-2506",
+      "notes": "AIME2024 pass@1; 83.3% with maj@64 per Mistral's launch post"
+    },
+    {
+      "benchmarkSlug": "aime-2025",
+      "score": 62.76,
+      "source": "self-reported",
+      "sourceUrl": "https://huggingface.co/mistralai/Magistral-Small-2506",
+      "notes": "AIME2025 pass@1"
+    },
+    {
+      "benchmarkSlug": "gpqa",
+      "score": 68.18,
+      "source": "self-reported",
+      "sourceUrl": "https://huggingface.co/mistralai/Magistral-Small-2506",
+      "notes": "GPQA Diamond"
+    },
+    {
+      "benchmarkSlug": "livecodebench",
+      "score": 55.84,
+      "source": "self-reported",
+      "sourceUrl": "https://huggingface.co/mistralai/Magistral-Small-2506",
+      "notes": "LiveCodeBench v5"
+    }
+  ],
+  "verificationNotes": "Fully confirmed via huggingface.co/mistralai/Magistral-Small-2506: 24B params, Apache 2.0, 128k context window (with 40k recommended for best quality, matching vendor guidance), AIME24 70.68, AIME25 62.76, GPQA Diamond 68.18, LiveCodeBench 55.84 all literally present on the page. Release date, langCount (~24-25 languages, vendor markets it as '24+ languages'), and pricing ($0.5/$1.5) corroborated independently. No changes."
+}

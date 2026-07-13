@@ -1,0 +1,93 @@
+{
+  "name": "Phi-3-mini (3.8B)",
+  "org": "Microsoft",
+  "family": "Phi-3",
+  "releaseDate": "2024-04-23",
+  "status": "released",
+  "openness": "open-weights",
+  "license": "MIT",
+  "paramsB": 3.8,
+  "activeParamsB": null,
+  "archClass": "dense",
+  "archDisplay": "Dense decoder-only Transformer",
+  "ctxK": 4,
+  "modalities": [
+    "text"
+  ],
+  "langCount": null,
+  "capabilities": {
+    "reasoning": false,
+    "coding": true,
+    "vision": false,
+    "functionCalling": false,
+    "toolUse": false,
+    "agentic": false
+  },
+  "apiAvailable": true,
+  "price": {
+    "input": 0.13,
+    "output": 0.52,
+    "provider": "Azure AI Foundry"
+  },
+  "links": {
+    "hf": "microsoft/Phi-3-mini-4k-instruct",
+    "docs": "learn.microsoft.com/en-us/azure/ai-studio/how-to/deploy-models-phi-3"
+  },
+  "note": "First production-grade Phi; ~GPT-3.5-class quality at 3.8B, runs on-device, shipped in a 4K-context variant (this record) and a separate 128K-context sibling, both MIT-licensed.",
+  "quants": [
+    "GGUF",
+    "MLX",
+    "ONNX"
+  ],
+  "vramQ4Gb": 2.3,
+  "vramFp16Gb": 10,
+  "tps4090": null,
+  "tpsNote": null,
+  "effortLabel": null,
+  "isDefaultConfig": true,
+  "isBestConfig": true,
+  "specSources": {
+    "paramsB": "https://huggingface.co/microsoft/Phi-3-mini-4k-instruct",
+    "ctxK": "https://huggingface.co/microsoft/Phi-3-mini-4k-instruct",
+    "releaseDate": "https://azure.microsoft.com/en-us/blog/introducing-phi-3-redefining-whats-possible-with-slms/",
+    "openness": "https://huggingface.co/microsoft/Phi-3-mini-4k-instruct"
+  },
+  "results": [
+    {
+      "benchmarkSlug": "mmlu",
+      "score": 70.9,
+      "source": "self-reported",
+      "sourceUrl": "https://huggingface.co/microsoft/Phi-3-mini-4k-instruct",
+      "notes": "5-shot, June 2024 updated checkpoint numbers on the current model card"
+    },
+    {
+      "benchmarkSlug": "humaneval",
+      "score": 57.3,
+      "source": "self-reported",
+      "sourceUrl": "https://huggingface.co/microsoft/Phi-3-mini-4k-instruct",
+      "notes": "0-shot"
+    },
+    {
+      "benchmarkSlug": "gsm8k",
+      "score": 85.7,
+      "source": "self-reported",
+      "sourceUrl": "https://huggingface.co/microsoft/Phi-3-mini-4k-instruct",
+      "notes": "8-shot CoT"
+    },
+    {
+      "benchmarkSlug": "bbh",
+      "score": 73.5,
+      "source": "self-reported",
+      "sourceUrl": "https://huggingface.co/microsoft/Phi-3-mini-4k-instruct",
+      "notes": "3-shot CoT"
+    },
+    {
+      "benchmarkSlug": "gpqa",
+      "score": 30.6,
+      "source": "self-reported",
+      "sourceUrl": "https://huggingface.co/microsoft/Phi-3-mini-4k-instruct",
+      "notes": "0-shot"
+    }
+  ],
+  "verificationNotes": "Existence, 3.8B params, MIT license, April 23 2024 Azure launch all confirmed. CORRECTED ctxK from 128 to 4: the record's own hf link names the '4k' variant (microsoft/Phi-3-mini-4k-instruct), and that model card / the original Phi-3 Technical Report confirm a native 4096-token context window (128K belongs to the separate sibling microsoft/Phi-3-mini-128k-instruct) — kept the record scoped to the 4k-instruct card per its own hf link. Fetched the live HF model card and confirmed all 5 benchmark rows verbatim (MMLU 70.9, HumanEval 57.3, GSM8K 85.7, BBH 73.5, GPQA 30.6); note these are the card's 'June 2024 Update' numbers superseding the original April 2024 launch table in the arXiv report (MMLU 68.8, GPQA 23.7) — both are legitimately Microsoft-reported for this same model, just at different checkpoints, and the record's numbers match the current/live card. Azure AI Foundry price ($0.13/$0.52 per 1M tokens) could not be independently reconfirmed on the current pricing page (fetch timed out) but no contradicting figure was found either; left as reported."
+}

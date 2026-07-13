@@ -1,0 +1,65 @@
+{
+  "name": "Aya Expanse 32B",
+  "org": "Cohere Labs",
+  "family": "Aya Expanse",
+  "releaseDate": "2024-10-24",
+  "status": "released",
+  "openness": "open-weights",
+  "license": "CC-BY-NC",
+  "paramsB": 32,
+  "activeParamsB": null,
+  "archClass": "dense",
+  "archDisplay": "Dense transformer (Command-based, data arbitrage + model merging), 32B",
+  "ctxK": 128,
+  "modalities": [
+    "text"
+  ],
+  "langCount": 23,
+  "capabilities": {
+    "reasoning": false,
+    "coding": false,
+    "vision": false,
+    "functionCalling": false,
+    "toolUse": false,
+    "agentic": false
+  },
+  "apiAvailable": true,
+  "price": {
+    "input": 0.5,
+    "output": 1.5,
+    "provider": "Cohere"
+  },
+  "links": {
+    "hf": "CohereLabs/aya-expanse-32b",
+    "docs": "docs.cohere.com/docs/aya-expanse"
+  },
+  "note": "SOTA-for-size open multilingual 32B model built via data arbitrage, preference tuning, and model merging across 23 languages.",
+  "quants": [
+    "GGUF Q4",
+    "EXL2"
+  ],
+  "vramQ4Gb": 20,
+  "vramFp16Gb": 64,
+  "tps4090": null,
+  "tpsNote": null,
+  "effortLabel": null,
+  "isDefaultConfig": true,
+  "isBestConfig": true,
+  "specSources": {
+    "paramsB": "https://huggingface.co/CohereLabs/aya-expanse-32b",
+    "ctxK": "https://docs.cohere.com/docs/aya-expanse",
+    "releaseDate": "https://cohere.com/blog/aya-expanse-connecting-our-world",
+    "openness": "https://huggingface.co/CohereLabs/aya-expanse-32b"
+  },
+  "results": [
+    {
+      "benchmarkSlug": "mmlu-pro",
+      "score": 45.41,
+      "source": "self-reported",
+      "sourceUrl": "https://huggingface.co/CohereLabs/aya-expanse-32b",
+      "evaluatedAt": "2024-10-24",
+      "notes": "English MMLU-Pro"
+    }
+  ],
+  "verificationNotes": "Confirmed genuine via official Cohere blog (cohere.com/blog/aya-expanse-connecting-our-world, dated 2024-10-24, matches releaseDate) and SiliconANGLE coverage same date. Context length independently verified at 128K on the HF model card (not 8K as one community discussion questioned). MMLU-Pro 45.41 score directly fetched and confirmed present on the exact sourceUrl (huggingface.co/CohereLabs/aya-expanse-32b). API pricing $0.50/$1.50 confirmed via Cohere pricing docs. No changes needed."
+}

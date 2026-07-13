@@ -1,0 +1,78 @@
+{
+  "name": "Phi-4-mini-instruct",
+  "org": "Microsoft",
+  "family": "Phi-4",
+  "releaseDate": "2025-02-26",
+  "status": "released",
+  "openness": "open-weights",
+  "license": "MIT",
+  "paramsB": 3.8,
+  "activeParamsB": null,
+  "archClass": "dense",
+  "archDisplay": "Dense decoder-only Transformer (200K vocab, grouped-query attention, shared input/output embedding)",
+  "ctxK": 128,
+  "modalities": [
+    "text"
+  ],
+  "langCount": 23,
+  "capabilities": {
+    "reasoning": false,
+    "coding": true,
+    "vision": false,
+    "functionCalling": true,
+    "toolUse": true,
+    "agentic": true
+  },
+  "apiAvailable": true,
+  "price": {
+    "input": 0.075,
+    "output": 0.3,
+    "provider": "Azure AI Foundry"
+  },
+  "links": {
+    "hf": "microsoft/Phi-4-mini-instruct",
+    "gh": "microsoft/PhiCookBook",
+    "docs": "techcommunity.microsoft.com/blog/educatordeveloperblog/welcome-to-the-new-phi-4-models---microsoft-phi-4-mini--phi-4-multimodal/4386037"
+  },
+  "note": "Compact text-only Phi-4 (3.8B, 128K context) with built-in function calling; tops the 3-4B class, MIT-licensed.",
+  "quants": [
+    "GGUF Q4",
+    "MLX 4-bit",
+    "ONNX INT4"
+  ],
+  "vramQ4Gb": 4,
+  "vramFp16Gb": 8,
+  "tps4090": null,
+  "tpsNote": null,
+  "effortLabel": null,
+  "isDefaultConfig": true,
+  "isBestConfig": true,
+  "specSources": {
+    "paramsB": "https://huggingface.co/microsoft/Phi-4-mini-instruct",
+    "ctxK": "https://huggingface.co/microsoft/Phi-4-mini-instruct",
+    "releaseDate": "https://www.marktechpost.com/2025/02/27/microsoft-ai-releases-phi-4-multimodal-and-phi-4-mini-the-newest-models-in-microsofts-phi-family-of-small-language-models-slms/",
+    "openness": "https://huggingface.co/microsoft/Phi-4-mini-instruct"
+  },
+  "results": [
+    {
+      "benchmarkSlug": "gsm8k",
+      "score": 88.6,
+      "source": "self-reported",
+      "sourceUrl": "https://huggingface.co/microsoft/Phi-4-mini-instruct"
+    },
+    {
+      "benchmarkSlug": "mmlu",
+      "score": 67.3,
+      "source": "self-reported",
+      "sourceUrl": "https://huggingface.co/microsoft/Phi-4-mini-instruct"
+    },
+    {
+      "benchmarkSlug": "arena-hard",
+      "score": 32.8,
+      "source": "self-reported",
+      "sourceUrl": "https://huggingface.co/microsoft/Phi-4-mini-instruct",
+      "notes": "Arena-Hard win rate, not Chatbot Arena Elo"
+    }
+  ],
+  "verificationNotes": "Confirmed real via HF model card (microsoft/Phi-4-mini-instruct): 3.8B dense params, 128K context, MIT license, released Feb 2025 (marktechpost corroborates Feb 27 2025 announcement). All three benchmark rows (GSM8K 88.6, MMLU 67.3, Arena-Hard 32.8) literally confirmed on the HF card. Corrected langCount 22→23: the card's explicit language list (Arabic through Ukrainian) enumerates 23 languages, not 22."
+}

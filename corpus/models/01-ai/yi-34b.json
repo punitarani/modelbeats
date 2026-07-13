@@ -1,0 +1,101 @@
+{
+  "name": "Yi-34B",
+  "org": "01.AI",
+  "family": "Yi",
+  "releaseDate": "2023-11-02",
+  "status": "released",
+  "openness": "open-weights",
+  "license": "Apache 2.0",
+  "paramsB": 34,
+  "activeParamsB": null,
+  "archClass": "dense",
+  "archDisplay": "Dense decoder-only transformer (Llama-style, GQA, SwiGLU, RoPE with adjusted base frequency)",
+  "ctxK": 4,
+  "modalities": [
+    "text"
+  ],
+  "langCount": 2,
+  "capabilities": {
+    "reasoning": false,
+    "coding": true,
+    "vision": false,
+    "functionCalling": false,
+    "toolUse": false,
+    "agentic": false
+  },
+  "apiAvailable": true,
+  "price": null,
+  "links": {
+    "hf": "01-ai/Yi-34B",
+    "gh": "01-ai/Yi"
+  },
+  "note": "Flagship bilingual EN/ZH base model that briefly topped the HF Open LLM Leaderboard in Nov 2023, matching GPT-3.5 on many benchmarks.",
+  "quants": [
+    "GGUF Q4_K_M",
+    "AWQ",
+    "GPTQ"
+  ],
+  "vramQ4Gb": 22,
+  "vramFp16Gb": 68.8,
+  "tps4090": null,
+  "tpsNote": null,
+  "effortLabel": null,
+  "isDefaultConfig": true,
+  "isBestConfig": true,
+  "specSources": {
+    "paramsB": "https://huggingface.co/01-ai/Yi-34B",
+    "ctxK": "https://huggingface.co/01-ai/Yi-34B",
+    "releaseDate": "https://huggingface.co/01-ai/Yi-34B",
+    "openness": "https://huggingface.co/01-ai/Yi-34B"
+  },
+  "results": [
+    {
+      "benchmarkSlug": "mmlu",
+      "score": 76.3,
+      "source": "self-reported",
+      "sourceUrl": "https://arxiv.org/abs/2403.04652",
+      "evaluatedAt": "2024-03-01",
+      "notes": "Yi base model, from Yi technical report Table 2"
+    },
+    {
+      "benchmarkSlug": "bbh",
+      "score": 54.3,
+      "source": "self-reported",
+      "sourceUrl": "https://arxiv.org/abs/2403.04652",
+      "evaluatedAt": "2024-03-01"
+    },
+    {
+      "benchmarkSlug": "gsm8k",
+      "score": 67.2,
+      "source": "self-reported",
+      "sourceUrl": "https://arxiv.org/abs/2403.04652",
+      "evaluatedAt": "2024-03-01",
+      "notes": "8-shot pass@1"
+    },
+    {
+      "benchmarkSlug": "math",
+      "score": 14.4,
+      "source": "self-reported",
+      "sourceUrl": "https://arxiv.org/abs/2403.04652",
+      "evaluatedAt": "2024-03-01",
+      "notes": "4-shot pass@1"
+    },
+    {
+      "benchmarkSlug": "humaneval",
+      "score": 23.2,
+      "source": "self-reported",
+      "sourceUrl": "https://arxiv.org/abs/2403.04652",
+      "evaluatedAt": "2024-03-01",
+      "notes": "pass@1"
+    },
+    {
+      "benchmarkSlug": "mbpp",
+      "score": 41,
+      "source": "self-reported",
+      "sourceUrl": "https://arxiv.org/abs/2403.04652",
+      "evaluatedAt": "2024-03-01",
+      "notes": "pass@1"
+    }
+  ],
+  "verificationNotes": "Confirmed HF model card (release Nov 2, 2023; 34B; Apache 2.0; 4K default ctx, 32K inference-extendable, 200K variant separate; bilingual EN/ZH). Cross-checked all 6 benchmark numbers against the actual Yi technical report tables (fetched via ar5iv full-text render of arXiv 2403.04652, Tables 2 and 3): mmlu 76.3, bbh 54.3, gsm8k 67.2, math 14.4, humaneval 23.2, mbpp 41.0 — all match exactly. No changes made."
+}

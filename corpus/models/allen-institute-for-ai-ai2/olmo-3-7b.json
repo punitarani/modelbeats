@@ -1,0 +1,99 @@
+{
+  "name": "OLMo 3 7B",
+  "org": "Allen Institute for AI (Ai2)",
+  "family": "OLMo 3",
+  "releaseDate": "2025-11-20",
+  "status": "released",
+  "openness": "open-source",
+  "license": "Apache 2.0",
+  "paramsB": 7.3,
+  "activeParamsB": null,
+  "archClass": "dense",
+  "archDisplay": "Dense transformer (decoder-only, sliding/full attention mix)",
+  "ctxK": 64,
+  "modalities": [
+    "text"
+  ],
+  "langCount": 1,
+  "capabilities": {
+    "reasoning": false,
+    "coding": true,
+    "vision": false,
+    "functionCalling": true,
+    "toolUse": true,
+    "agentic": true
+  },
+  "apiAvailable": true,
+  "price": null,
+  "links": {
+    "hf": "allenai/Olmo-3-7B-Instruct",
+    "gh": "allenai/OLMo-core",
+    "docs": "allenai.org/blog/olmo3"
+  },
+  "note": "Lighter-weight member of the OLMo 3 family (Base/Think/Instruct) built on the Dolma 3 / Dolci stack; runs on a wider range of hardware.",
+  "quants": [
+    "GGUF Q4"
+  ],
+  "vramQ4Gb": 5,
+  "vramFp16Gb": 15,
+  "tps4090": null,
+  "tpsNote": null,
+  "effortLabel": null,
+  "isDefaultConfig": true,
+  "isBestConfig": true,
+  "specSources": {
+    "paramsB": "https://huggingface.co/allenai/Olmo-3-1025-7B/raw/main/model.safetensors.index.json",
+    "ctxK": "https://huggingface.co/allenai/Olmo-3-1025-7B/raw/main/config.json",
+    "releaseDate": "https://allenai.org/blog/olmo3",
+    "openness": "https://huggingface.co/allenai/Olmo-3-7B-Instruct/raw/main/README.md"
+  },
+  "results": [
+    {
+      "benchmarkSlug": "math",
+      "score": 87.3,
+      "source": "self-reported",
+      "sourceUrl": "https://huggingface.co/allenai/Olmo-3-7B-Instruct",
+      "notes": "Olmo 3 Instruct 7B final (RLVR)"
+    },
+    {
+      "benchmarkSlug": "aime",
+      "score": 44.3,
+      "source": "self-reported",
+      "sourceUrl": "https://huggingface.co/allenai/Olmo-3-7B-Instruct",
+      "notes": "AIME 2024"
+    },
+    {
+      "benchmarkSlug": "bbh",
+      "score": 71.2,
+      "source": "self-reported",
+      "sourceUrl": "https://huggingface.co/allenai/Olmo-3-7B-Instruct"
+    },
+    {
+      "benchmarkSlug": "humaneval",
+      "score": 77.2,
+      "source": "self-reported",
+      "sourceUrl": "https://huggingface.co/allenai/Olmo-3-7B-Instruct",
+      "notes": "HumanEvalPlus"
+    },
+    {
+      "benchmarkSlug": "ifeval",
+      "score": 85.6,
+      "source": "self-reported",
+      "sourceUrl": "https://huggingface.co/allenai/Olmo-3-7B-Instruct"
+    },
+    {
+      "benchmarkSlug": "mmlu",
+      "score": 69.1,
+      "source": "self-reported",
+      "sourceUrl": "https://huggingface.co/allenai/Olmo-3-7B-Instruct"
+    },
+    {
+      "benchmarkSlug": "livecodebench",
+      "score": 29.5,
+      "source": "self-reported",
+      "sourceUrl": "https://huggingface.co/allenai/Olmo-3-7B-Instruct",
+      "notes": "LiveCodeBench v3"
+    }
+  ],
+  "verificationNotes": "Existence confirmed: official Ai2 blog (allenai.org/blog/olmo3) and multiple press (MarkTechPost, GeekWire, InfoQ) confirm Nov 20, 2025 release. paramsB re-derived from allenai/Olmo-3-1025-7B model.safetensors.index.json: 7,298,011,136 params = 7.30B (exact match). config.json confirms max_position_embeddings=65536 (~64K, matches ctxK) and hybrid sliding-window/full-attention architecture (32 layers). License Apache 2.0 and function-calling system-message confirmed on the allenai/Olmo-3-7B-Instruct model card. All 7 benchmark rows (MATH 87.3, AIME2024 44.3, BBH 71.2, HumanEvalPlus 77.2, IFEval 85.6, MMLU 69.1, LiveCodeBench v3 29.5) were literally confirmed present on the cited HF model card."
+}

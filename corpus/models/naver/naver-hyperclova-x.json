@@ -1,0 +1,71 @@
+{
+  "name": "NAVER HyperCLOVA X",
+  "org": "NAVER",
+  "family": "HyperCLOVA X",
+  "releaseDate": "2023-08-24",
+  "status": "released",
+  "openness": "closed",
+  "license": "Proprietary",
+  "paramsB": 204,
+  "activeParamsB": null,
+  "archClass": "dense",
+  "archDisplay": "Dense transformer decoder (closed, details undisclosed)",
+  "ctxK": 32,
+  "modalities": [
+    "text"
+  ],
+  "langCount": null,
+  "capabilities": {
+    "reasoning": true,
+    "coding": true,
+    "vision": false,
+    "functionCalling": false,
+    "toolUse": false,
+    "agentic": false
+  },
+  "apiAvailable": true,
+  "price": null,
+  "links": {
+    "hf": "naver-hyperclovax",
+    "docs": "clova.ai/en/clova-studio"
+  },
+  "note": "NAVER's sovereign Korean-first LLM (~204B), successor to 2021 HyperCLOVA; served via CLOVA Studio/CLOVA X, API/service only.",
+  "quants": [],
+  "vramQ4Gb": null,
+  "vramFp16Gb": null,
+  "tps4090": null,
+  "tpsNote": null,
+  "effortLabel": null,
+  "isDefaultConfig": true,
+  "isBestConfig": true,
+  "specSources": {
+    "paramsB": "https://www.kedglobal.com/artificial-intelligence/newsView/ked202308240018",
+    "ctxK": "https://arxiv.org/abs/2404.01954",
+    "releaseDate": "https://techcrunch.com/2023/08/24/koreas-internet-giant-naver-unveils-generative-ai-services/",
+    "openness": "https://arxiv.org/abs/2404.01954"
+  },
+  "results": [
+    {
+      "benchmarkSlug": "mmlu",
+      "score": 67.98,
+      "source": "self-reported",
+      "sourceUrl": "https://arxiv.org/abs/2404.01954",
+      "notes": "HCX-L (flagship), 5-shot"
+    },
+    {
+      "benchmarkSlug": "gsm8k",
+      "score": 81.65,
+      "source": "self-reported",
+      "sourceUrl": "https://arxiv.org/abs/2404.01954",
+      "notes": "HCX-L, 8-shot maj@8"
+    },
+    {
+      "benchmarkSlug": "humaneval",
+      "score": 55.49,
+      "source": "self-reported",
+      "sourceUrl": "https://arxiv.org/abs/2404.01954",
+      "notes": "HCX-L, pass@1"
+    }
+  ],
+  "verificationNotes": "Confirmed real. Release 2023-08-24 corroborated by TechCrunch, KED Global, VentureBeat and NAVER's own press release. ~204B params corroborated by KED Global (NAVER itself did not disclose an exact breakdown beyond 'more than 204B'). All three HCX-L benchmark scores (MMLU 67.98, GSM8K 81.65, HumanEval 55.49) re-confirmed on arXiv 2404.01954. 32K context corroborated (paper describes final 10% of pretraining done at 32,768 tokens). No changes needed."
+}

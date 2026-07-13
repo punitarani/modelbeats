@@ -1,0 +1,85 @@
+{
+  "name": "Claude Opus 4.1",
+  "org": "Anthropic",
+  "family": "Claude 4",
+  "releaseDate": "2025-08-05",
+  "status": "deprecated",
+  "openness": "closed",
+  "license": "Proprietary",
+  "paramsB": null,
+  "activeParamsB": null,
+  "archClass": "dense",
+  "archDisplay": "Dense transformer, hybrid-reasoning (parameter count undisclosed)",
+  "ctxK": 200,
+  "modalities": [
+    "text",
+    "vision"
+  ],
+  "langCount": null,
+  "capabilities": {
+    "reasoning": true,
+    "coding": true,
+    "vision": true,
+    "functionCalling": true,
+    "toolUse": true,
+    "agentic": true
+  },
+  "apiAvailable": true,
+  "price": {
+    "input": 15,
+    "output": 75,
+    "provider": "Anthropic"
+  },
+  "links": {
+    "docs": "platform.claude.com"
+  },
+  "note": "Incremental Opus 4 upgrade improving agentic coding, refactoring and reasoning benchmarks; drop-in replacement at same price.",
+  "quants": [],
+  "vramFp16Gb": null,
+  "vramQ4Gb": null,
+  "tps4090": null,
+  "tpsNote": null,
+  "effortLabel": null,
+  "isDefaultConfig": true,
+  "isBestConfig": true,
+  "specSources": {
+    "releaseDate": "https://www.anthropic.com/news/claude-opus-4-1",
+    "ctxK": "https://platform.claude.com/docs/en/about-claude/models/overview",
+    "openness": "https://www.anthropic.com/news/claude-opus-4-1"
+  },
+  "results": [
+    {
+      "benchmarkSlug": "swe-bench",
+      "score": 74.5,
+      "source": "self-reported",
+      "sourceUrl": "https://www.infoq.com/news/2025/08/anthropic-claude-opus-4-1/",
+      "evaluatedAt": "2025-08-05",
+      "notes": "SWE-bench Verified, up from 72.5% on Opus 4; confirmed via direct fetch of InfoQ article"
+    },
+    {
+      "benchmarkSlug": "terminal-bench",
+      "score": 43.3,
+      "source": "self-reported",
+      "sourceUrl": "https://winbuzzer.com/2025/08/05/anthropic-launches-claude-opus-4-1-a-measured-upgrade-focused-on-coding-and-safety-xcxwbn/",
+      "evaluatedAt": "2025-08-05",
+      "notes": "Terminal-bench; original InfoQ sourceUrl did not contain this figure in extracted text (only SWE-bench and safety metrics were present), so sourceUrl swapped to Winbuzzer, which explicitly lists 43.3%"
+    },
+    {
+      "benchmarkSlug": "aime",
+      "score": 78,
+      "source": "self-reported",
+      "sourceUrl": "https://winbuzzer.com/2025/08/05/anthropic-launches-claude-opus-4-1-a-measured-upgrade-focused-on-coding-and-safety-xcxwbn/",
+      "evaluatedAt": "2025-08-05",
+      "notes": "AIME 2025, up from 75.5% on Opus 4; same sourceUrl correction as Terminal-bench row, confirmed 78.0% on Winbuzzer"
+    },
+    {
+      "benchmarkSlug": "gpqa",
+      "score": 80.9,
+      "source": "self-reported",
+      "sourceUrl": "https://winbuzzer.com/2025/08/05/anthropic-launches-claude-opus-4-1-a-measured-upgrade-focused-on-coding-and-safety-xcxwbn/",
+      "evaluatedAt": "2025-08-05",
+      "notes": "GPQA Diamond, up from 79.6% on Opus 4; same sourceUrl correction, confirmed 80.9% on Winbuzzer"
+    }
+  ],
+  "verificationNotes": "Real model, confirmed via anthropic.com/news/claude-opus-4-1 and Anthropic's X announcement (release 2025-08-05, same $15/$75 pricing as Opus 4, 200K context). SWE-bench 74.5% confirmed on InfoQ; the other 3 rows (Terminal-bench 43.3%, AIME 78%, GPQA 80.9%) were not literally present in the InfoQ text extraction, so sourceUrl was swapped to Winbuzzer's article, which explicitly lists all four figures. Per Anthropic's official model-deprecations page (fetched 2026-07-12): claude-opus-4-1-20250805 is currently 'Deprecated' (as of 2026-06-05) with tentative retirement 2026-08-05, which has NOT yet passed as of today (2026-07-12) — status='deprecated' and apiAvailable=true both confirmed correct as given."
+}

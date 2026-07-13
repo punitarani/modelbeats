@@ -1,0 +1,85 @@
+{
+  "name": "GPT-NeoX-20B",
+  "org": "EleutherAI",
+  "family": "GPT-NeoX",
+  "releaseDate": "2022-02-09",
+  "status": "released",
+  "openness": "open-source",
+  "license": "Apache-2.0",
+  "paramsB": 20.6,
+  "activeParamsB": null,
+  "archClass": "dense",
+  "archDisplay": "Decoder-only Transformer with RoPE and parallel attention+FF blocks (GPT-NeoX library, 44 layers)",
+  "ctxK": 2,
+  "modalities": [
+    "text"
+  ],
+  "langCount": 1,
+  "capabilities": {
+    "reasoning": false,
+    "coding": false,
+    "vision": false,
+    "functionCalling": false,
+    "toolUse": false,
+    "agentic": false
+  },
+  "apiAvailable": false,
+  "price": null,
+  "links": {
+    "hf": "EleutherAI/gpt-neox-20b",
+    "gh": "EleutherAI/gpt-neox",
+    "docs": "blog.eleuther.ai/announcing-20b"
+  },
+  "note": "Largest publicly available dense LM at its Feb 2022 release; trained on The Pile with the GPT-NeoX framework, Apache 2.0",
+  "quants": [
+    "GGUF"
+  ],
+  "vramQ4Gb": 13.1,
+  "vramFp16Gb": 43,
+  "tps4090": null,
+  "tpsNote": null,
+  "effortLabel": null,
+  "isDefaultConfig": true,
+  "isBestConfig": true,
+  "specSources": {
+    "paramsB": "https://huggingface.co/EleutherAI/gpt-neox-20b",
+    "ctxK": "https://huggingface.co/EleutherAI/gpt-neox-20b",
+    "releaseDate": "https://blog.eleuther.ai/announcing-20b/",
+    "openness": "https://huggingface.co/EleutherAI/gpt-neox-20b"
+  },
+  "results": [
+    {
+      "benchmarkSlug": "lambada",
+      "score": 72,
+      "source": "self-reported",
+      "sourceUrl": "https://blog.eleuther.ai/announcing-20b/",
+      "evaluatedAt": "2022-02-09",
+      "notes": "zero-shot accuracy, LM Eval Harness"
+    },
+    {
+      "benchmarkSlug": "winogrande",
+      "score": 66.1,
+      "source": "self-reported",
+      "sourceUrl": "https://blog.eleuther.ai/announcing-20b/",
+      "evaluatedAt": "2022-02-09",
+      "notes": "zero-shot, LM Eval Harness"
+    },
+    {
+      "benchmarkSlug": "hellaswag",
+      "score": 53.5,
+      "source": "self-reported",
+      "sourceUrl": "https://blog.eleuther.ai/announcing-20b/",
+      "evaluatedAt": "2022-02-09",
+      "notes": "zero-shot, LM Eval Harness"
+    },
+    {
+      "benchmarkSlug": "mmlu",
+      "score": 28.98,
+      "source": "self-reported",
+      "sourceUrl": "https://blog.eleuther.ai/announcing-20b/",
+      "evaluatedAt": "2022-02-09",
+      "notes": "average across Humanities/Social Science/STEM subject clusters; one of the earliest models eval'd on then-new MMLU"
+    }
+  ],
+  "verificationNotes": "Confirmed real: fetched blog.eleuther.ai/announcing-20b/ - all 4 scores (LAMBADA 72.00, Winogrande 66.10, HellaSwag 53.50, MMLU avg 28.98) verbatim-match. HF model card gives exact param count 20,554,567,680 which rounds to 20.6B, matching record. Apache-2.0 and 2022-02-09 release date confirmed. No changes needed."
+}

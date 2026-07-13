@@ -1,0 +1,112 @@
+{
+  "name": "Granite 3.3 8B Instruct",
+  "org": "IBM",
+  "family": "Granite 3.3",
+  "releaseDate": "2025-04-16",
+  "status": "released",
+  "openness": "open-weights",
+  "license": "Apache 2.0",
+  "paramsB": 8.1,
+  "activeParamsB": null,
+  "archClass": "dense",
+  "archDisplay": "Dense decoder-only transformer with fill-in-the-middle code training and think/response tags",
+  "ctxK": 128,
+  "modalities": [
+    "text"
+  ],
+  "langCount": 12,
+  "capabilities": {
+    "reasoning": true,
+    "coding": true,
+    "vision": false,
+    "functionCalling": true,
+    "toolUse": true,
+    "agentic": false
+  },
+  "apiAvailable": true,
+  "price": null,
+  "links": {
+    "hf": "ibm-granite/granite-3.3-8b-instruct",
+    "gh": "ibm-granite/granite-3.3-language-models",
+    "docs": "ibm.com/granite/docs/models/granite"
+  },
+  "note": "Adds fill-in-the-middle code generation and stronger math/symbolic reasoning; shipped alongside IBM's Granite Speech 3.3 8B speech-to-text model.",
+  "quants": [
+    "GGUF Q4_K_M",
+    "AWQ",
+    "GPTQ"
+  ],
+  "vramQ4Gb": 6,
+  "vramFp16Gb": 16.2,
+  "tps4090": null,
+  "tpsNote": null,
+  "effortLabel": null,
+  "isDefaultConfig": true,
+  "isBestConfig": true,
+  "specSources": {
+    "paramsB": "https://huggingface.co/ibm-granite/granite-3.3-8b-instruct",
+    "ctxK": "https://huggingface.co/ibm-granite/granite-3.3-8b-instruct",
+    "releaseDate": "https://huggingface.co/ibm-granite/granite-3.3-8b-instruct",
+    "openness": "https://huggingface.co/ibm-granite/granite-3.3-8b-instruct"
+  },
+  "results": [
+    {
+      "benchmarkSlug": "mmlu",
+      "score": 65.54,
+      "source": "self-reported",
+      "sourceUrl": "https://huggingface.co/ibm-granite/granite-3.3-8b-instruct"
+    },
+    {
+      "benchmarkSlug": "bbh",
+      "score": 69.13,
+      "source": "self-reported",
+      "sourceUrl": "https://huggingface.co/ibm-granite/granite-3.3-8b-instruct",
+      "notes": "BigBenchHard"
+    },
+    {
+      "benchmarkSlug": "gsm8k",
+      "score": 80.89,
+      "source": "self-reported",
+      "sourceUrl": "https://huggingface.co/ibm-granite/granite-3.3-8b-instruct"
+    },
+    {
+      "benchmarkSlug": "humaneval",
+      "score": 89.73,
+      "source": "self-reported",
+      "sourceUrl": "https://huggingface.co/ibm-granite/granite-3.3-8b-instruct"
+    },
+    {
+      "benchmarkSlug": "ifeval",
+      "score": 74.82,
+      "source": "self-reported",
+      "sourceUrl": "https://huggingface.co/ibm-granite/granite-3.3-8b-instruct"
+    },
+    {
+      "benchmarkSlug": "drop",
+      "score": 59.36,
+      "source": "self-reported",
+      "sourceUrl": "https://huggingface.co/ibm-granite/granite-3.3-8b-instruct"
+    },
+    {
+      "benchmarkSlug": "arena-hard",
+      "score": 57.56,
+      "source": "self-reported",
+      "sourceUrl": "https://huggingface.co/ibm-granite/granite-3.3-8b-instruct"
+    },
+    {
+      "benchmarkSlug": "aime",
+      "score": 8.12,
+      "source": "self-reported",
+      "sourceUrl": "https://huggingface.co/ibm-granite/granite-3.3-8b-instruct",
+      "notes": "AIME24"
+    },
+    {
+      "benchmarkSlug": "math",
+      "score": 69.02,
+      "source": "self-reported",
+      "sourceUrl": "https://huggingface.co/ibm-granite/granite-3.3-8b-instruct",
+      "notes": "MATH-500"
+    }
+  ],
+  "verificationNotes": "Fetched HF model card directly. Release date (Apr 16, 2025), params (8B), license (Apache 2.0), 128K context, 12 languages, and all 9 benchmark scores (mmlu 65.54, bbh 69.13, gsm8k 80.89, humaneval 89.73, ifeval 74.82, drop 59.36, arena-hard 57.56, aime24 8.12, math-500 69.02) confirmed verbatim on the page. No changes made."
+}

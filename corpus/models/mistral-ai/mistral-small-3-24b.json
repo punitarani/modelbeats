@@ -1,0 +1,90 @@
+{
+  "name": "Mistral Small 3 (24B)",
+  "org": "Mistral AI",
+  "family": "Mistral Small",
+  "releaseDate": "2025-01-30",
+  "status": "deprecated",
+  "openness": "open-weights",
+  "license": "Apache 2.0",
+  "paramsB": 24,
+  "activeParamsB": null,
+  "archClass": "dense",
+  "archDisplay": "Dense transformer — 24B, Tekken tokenizer (131k vocab)",
+  "ctxK": 32,
+  "modalities": [
+    "text"
+  ],
+  "langCount": null,
+  "capabilities": {
+    "reasoning": false,
+    "coding": true,
+    "vision": false,
+    "functionCalling": true,
+    "toolUse": true,
+    "agentic": false
+  },
+  "apiAvailable": false,
+  "price": {
+    "input": 0.1,
+    "output": 0.3,
+    "provider": "Mistral AI (mistral-small-2501, retired 2025-11-30)"
+  },
+  "links": {
+    "hf": "mistralai/Mistral-Small-24B-Instruct-2501",
+    "gh": "mistralai/mistral-inference",
+    "docs": "docs.mistral.ai/models/mistral-small-3-0-25-01"
+  },
+  "note": "24B Apache-2.0 latency-optimized model competitive with Llama 3.3 70B at 3x+ the speed; 81% MMLU.",
+  "quants": [
+    "GGUF Q4",
+    "AWQ",
+    "GPTQ",
+    "MLX"
+  ],
+  "vramQ4Gb": 14.5,
+  "vramFp16Gb": 55,
+  "tps4090": null,
+  "tpsNote": null,
+  "effortLabel": null,
+  "isDefaultConfig": true,
+  "isBestConfig": true,
+  "specSources": {
+    "paramsB": "https://huggingface.co/mistralai/Mistral-Small-24B-Instruct-2501",
+    "ctxK": "https://huggingface.co/mistralai/Mistral-Small-24B-Instruct-2501",
+    "releaseDate": "https://mistral.ai/news/mistral-small-3/",
+    "openness": "https://mistral.ai/news/mistral-small-3/"
+  },
+  "results": [
+    {
+      "benchmarkSlug": "mmlu",
+      "score": 81,
+      "source": "self-reported",
+      "sourceUrl": "https://mistral.ai/news/mistral-small-3/"
+    },
+    {
+      "benchmarkSlug": "mmlu-pro",
+      "score": 66.3,
+      "source": "self-reported",
+      "sourceUrl": "https://huggingface.co/mistralai/Mistral-Small-24B-Instruct-2501"
+    },
+    {
+      "benchmarkSlug": "humaneval",
+      "score": 84.8,
+      "source": "self-reported",
+      "sourceUrl": "https://huggingface.co/mistralai/Mistral-Small-24B-Instruct-2501"
+    },
+    {
+      "benchmarkSlug": "math",
+      "score": 70.6,
+      "source": "self-reported",
+      "sourceUrl": "https://huggingface.co/mistralai/Mistral-Small-24B-Instruct-2501"
+    },
+    {
+      "benchmarkSlug": "ifeval",
+      "score": 82.9,
+      "source": "self-reported",
+      "sourceUrl": "https://huggingface.co/mistralai/Mistral-Small-24B-Instruct-2501"
+    }
+  ],
+  "verificationNotes": "Confirmed via mistral.ai/news/mistral-small-3/ (dated 2025-01-30, '24B-parameter model released under Apache 2.0', 'over 81% accuracy on MMLU', 3x+ faster than comparable models) and HF mistralai/Mistral-Small-24B-Instruct-2501 card (24B params, 32k context, Apache-2.0). All 4 HF benchmark rows confirmed exactly: MMLU-Pro 0.663→66.3, HumanEval 0.848→84.8, MATH 0.706→70.6, IFEval 0.829→82.9. Pricing $0.10/$0.30 and retirement 2025-11-30 corroborated by docs.mistral.ai/models/overview legacy table."
+}

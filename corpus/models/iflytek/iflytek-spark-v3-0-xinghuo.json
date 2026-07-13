@@ -1,0 +1,49 @@
+{
+  "name": "iFlytek Spark V3.0 (Xinghuo)",
+  "org": "iFlytek",
+  "family": "Spark (Xinghuo)",
+  "releaseDate": "2023-10-24",
+  "status": "released",
+  "openness": "closed",
+  "license": "Proprietary",
+  "paramsB": null,
+  "activeParamsB": null,
+  "archClass": "dense",
+  "archDisplay": "Proprietary transformer (undisclosed)",
+  "ctxK": 8,
+  "modalities": [
+    "text",
+    "vision",
+    "audio"
+  ],
+  "langCount": null,
+  "capabilities": {
+    "reasoning": false,
+    "coding": true,
+    "vision": true,
+    "functionCalling": true,
+    "toolUse": true,
+    "agentic": true
+  },
+  "apiAvailable": true,
+  "price": null,
+  "links": {
+    "docs": "xfyun.cn/doc/spark"
+  },
+  "note": "Third-gen Spark benchmarked against ChatGPT-3.5, unveiled at the 2023 iFlytek 1024 Developer Festival in Hefei; later rebranded as the API's 'Spark Pro' tier.",
+  "quants": [],
+  "vramQ4Gb": null,
+  "vramFp16Gb": null,
+  "tps4090": null,
+  "tpsNote": null,
+  "effortLabel": null,
+  "isDefaultConfig": true,
+  "isBestConfig": true,
+  "specSources": {
+    "releaseDate": "https://www.iflytek.com/en/news-events/news/43.html",
+    "openness": "https://www.chinadaily.com.cn/a/202310/25/WS6538737ea31090682a5ea8b8.html",
+    "ctxK": "https://www.xfyun.cn/doc/spark/%E6%8E%A5%E5%8F%A3%E8%AF%B4%E6%98%8E.html"
+  },
+  "results": [],
+  "verificationNotes": "Existence and Oct 24, 2023 Hefei release confirmed via chinadaily.com.cn, iflytek.com, and multiple press (PRNewswire, Pandaily). SuperCLUE score of 59.33 (plus 51.74 OPEN / 77.03 OPT sub-scores) for Dec 2023 confirmed by fetching github.com/CLUEbenchmark/SuperCLUE directly - numbers match exactly. 'Rebranded as Spark Pro' claim is plausible per Chinese AI ecosystem reporting but not independently pinned to a single primary source; left in note field (non-critical, unverified nuance) rather than a hard spec."
+}

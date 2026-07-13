@@ -1,0 +1,88 @@
+{
+  "name": "Skywork-MoE-Base",
+  "org": "Kunlun Tech",
+  "family": "Skywork MoE",
+  "releaseDate": "2024-06-03",
+  "status": "released",
+  "openness": "open-weights",
+  "license": "Skywork Community License",
+  "paramsB": 146,
+  "activeParamsB": 22,
+  "archClass": "moe",
+  "archDisplay": "Mixture-of-Experts, 16 experts, 22B active (upcycled from Skywork-13B dense checkpoints)",
+  "ctxK": 8,
+  "modalities": [
+    "text"
+  ],
+  "langCount": 2,
+  "capabilities": {
+    "reasoning": false,
+    "coding": true,
+    "vision": false,
+    "functionCalling": false,
+    "toolUse": false,
+    "agentic": false
+  },
+  "apiAvailable": false,
+  "price": null,
+  "links": {
+    "hf": "Skywork/Skywork-MoE-Base",
+    "gh": "SkyworkAI/Skywork-MoE"
+  },
+  "note": "146B/22B-active MoE upcycled from Skywork-13B; first big open MoE runnable on a single 8x4090 server via FP8",
+  "quants": [
+    "FP8"
+  ],
+  "vramQ4Gb": null,
+  "vramFp16Gb": 292,
+  "tps4090": null,
+  "tpsNote": "Official FP8 checkpoint reaches ~2,200 tok/s aggregate across an 8x RTX4090 cluster via non-uniform tensor parallelism -- not a single-GPU llama.cpp Q4 measurement",
+  "effortLabel": null,
+  "isDefaultConfig": true,
+  "isBestConfig": true,
+  "specSources": {
+    "paramsB": "https://huggingface.co/Skywork/Skywork-MoE-Base",
+    "ctxK": "https://huggingface.co/Skywork/Skywork-MoE-Base/raw/main/config.json",
+    "releaseDate": "https://huggingface.co/Skywork/Skywork-MoE-Base",
+    "openness": "https://huggingface.co/Skywork/Skywork-MoE-Base"
+  },
+  "results": [
+    {
+      "benchmarkSlug": "c-eval",
+      "score": 82.2,
+      "source": "self-reported",
+      "sourceUrl": "https://arxiv.org/html/2406.06563v1"
+    },
+    {
+      "benchmarkSlug": "cmmlu",
+      "score": 79.5,
+      "source": "self-reported",
+      "sourceUrl": "https://arxiv.org/html/2406.06563v1"
+    },
+    {
+      "benchmarkSlug": "mmlu",
+      "score": 77.4,
+      "source": "self-reported",
+      "sourceUrl": "https://arxiv.org/html/2406.06563v1"
+    },
+    {
+      "benchmarkSlug": "gsm8k",
+      "score": 76.1,
+      "source": "self-reported",
+      "sourceUrl": "https://arxiv.org/html/2406.06563v1"
+    },
+    {
+      "benchmarkSlug": "math",
+      "score": 31.9,
+      "source": "self-reported",
+      "sourceUrl": "https://arxiv.org/html/2406.06563v1"
+    },
+    {
+      "benchmarkSlug": "humaneval",
+      "score": 43.9,
+      "source": "self-reported",
+      "sourceUrl": "https://arxiv.org/html/2406.06563v1"
+    }
+  ],
+  "verificationNotes": "Fetched HF model card (146B total/22B active/16 experts, released 2024-06-03) and config.json (max_position_embeddings=8192, confirms ctxK:8) and arXiv 2406.06563v1 Table 1 (C-Eval 82.2, CMMLU 79.5, MMLU 77.4, GSM8K 76.1, MATH 31.9, HumanEval 43.9, all verbatim). No changes."
+}

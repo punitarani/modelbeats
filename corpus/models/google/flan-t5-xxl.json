@@ -1,0 +1,68 @@
+{
+  "name": "Flan-T5 XXL",
+  "org": "Google",
+  "family": "Flan-T5",
+  "releaseDate": "2022-10-20",
+  "status": "released",
+  "openness": "open-source",
+  "license": "Apache 2.0",
+  "paramsB": 11,
+  "activeParamsB": null,
+  "archClass": "dense",
+  "archDisplay": "Dense encoder-decoder Transformer (11B, T5 + Flan instruction tuning)",
+  "ctxK": 1,
+  "modalities": [
+    "text"
+  ],
+  "langCount": null,
+  "capabilities": {
+    "reasoning": true,
+    "coding": false,
+    "vision": false,
+    "functionCalling": false,
+    "toolUse": false,
+    "agentic": false
+  },
+  "apiAvailable": false,
+  "price": null,
+  "links": {
+    "docs": "arxiv.org/abs/2210.11416",
+    "hf": "google/flan-t5-xxl",
+    "gh": "google-research/FLAN"
+  },
+  "note": "11B instruction-tuned T5; popularized the Flan instruction-tuning recipe on fully open weights.",
+  "quants": [
+    "GGUF Q4",
+    "GGUF Q8"
+  ],
+  "vramQ4Gb": 7,
+  "vramFp16Gb": 22,
+  "tps4090": null,
+  "tpsNote": "T5/encoder-decoder support in llama.cpp is limited/experimental; no widely measured RTX 4090 llama.cpp throughput figures found.",
+  "effortLabel": null,
+  "isDefaultConfig": true,
+  "isBestConfig": true,
+  "specSources": {
+    "paramsB": "https://huggingface.co/google/flan-t5-xxl",
+    "ctxK": "https://www.graphcore.ai/posts/fine-tuning-flan-t5-xxl-the-poweful-and-efficient-llm",
+    "releaseDate": "https://huggingface.co/google/flan-t5-xxl",
+    "openness": "https://huggingface.co/google/flan-t5-xxl"
+  },
+  "results": [
+    {
+      "benchmarkSlug": "mmlu",
+      "score": 55.1,
+      "source": "self-reported",
+      "sourceUrl": "https://arxiv.org/abs/2210.11416",
+      "notes": "5-shot, direct prompting, Table 3/5 of Scaling Instruction-Finetuned Language Models"
+    },
+    {
+      "benchmarkSlug": "bbh",
+      "score": 45.3,
+      "source": "self-reported",
+      "sourceUrl": "https://arxiv.org/abs/2210.11416",
+      "notes": "3-shot, direct prompting"
+    }
+  ],
+  "verificationNotes": "Confirmed real via Hugging Face google/flan-t5-xxl model card: 11B params, Apache 2.0 license, matches record. Fetched full paper text (ar5iv rendering of arxiv 2210.11416) Table 5 and confirmed Flan-T5-XXL (11B) scores literally: MMLU 5-shot direct = 55.1, BBH 3-shot direct = 45.3 -- both kept as exact matches. Context length is genuinely ambiguous across sources (tokenizer default 512, but Flan instruction-tuning used ~1024-token input sequences per the paper, and some summaries cite up to 2K); left ctxK=1 (1024) as a reasonable middle estimate rather than fabricating false precision. No changes to core fields."
+}

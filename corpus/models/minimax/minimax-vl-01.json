@@ -1,0 +1,81 @@
+{
+  "name": "MiniMax-VL-01",
+  "org": "MiniMax",
+  "family": "MiniMax-01",
+  "releaseDate": "2025-01-14",
+  "status": "released",
+  "openness": "open-weights",
+  "license": "Custom MiniMax Model License (free for most use; platforms with >100M MAU must request a separate license; code under MIT)",
+  "paramsB": 456,
+  "activeParamsB": 45.9,
+  "archClass": "hybrid",
+  "archDisplay": "Hybrid Lightning+Softmax Attention MoE (80 layers, 32 experts top-2) + 303M-param ViT/MLP vision encoder",
+  "ctxK": 1000,
+  "modalities": [
+    "text",
+    "vision"
+  ],
+  "langCount": null,
+  "capabilities": {
+    "reasoning": false,
+    "coding": false,
+    "vision": true,
+    "functionCalling": true,
+    "toolUse": true,
+    "agentic": false
+  },
+  "apiAvailable": true,
+  "price": {
+    "input": 0.2,
+    "output": 1.1,
+    "provider": "MiniMax (platform.minimax.io)"
+  },
+  "links": {
+    "hf": "MiniMaxAI/MiniMax-VL-01",
+    "gh": "MiniMax-AI/MiniMax-01",
+    "docs": "platform.minimax.io"
+  },
+  "note": "Vision-language sibling of MiniMax-Text-01, adding a dynamic-resolution (336px-2016px) ViT+MLP encoder atop the same 456B hybrid-attention MoE backbone.",
+  "quants": [],
+  "vramQ4Gb": null,
+  "vramFp16Gb": 912,
+  "tps4090": null,
+  "tpsNote": null,
+  "effortLabel": null,
+  "isDefaultConfig": true,
+  "isBestConfig": true,
+  "specSources": {
+    "paramsB": "https://huggingface.co/MiniMaxAI/MiniMax-VL-01",
+    "ctxK": "https://huggingface.co/MiniMaxAI/MiniMax-Text-01",
+    "releaseDate": "https://huggingface.co/MiniMaxAI/MiniMax-VL-01",
+    "openness": "https://huggingface.co/MiniMaxAI/MiniMax-VL-01"
+  },
+  "results": [
+    {
+      "benchmarkSlug": "mmmu",
+      "score": 68.5,
+      "source": "self-reported",
+      "sourceUrl": "https://huggingface.co/MiniMaxAI/MiniMax-VL-01"
+    },
+    {
+      "benchmarkSlug": "mathvista",
+      "score": 68.6,
+      "source": "self-reported",
+      "sourceUrl": "https://huggingface.co/MiniMaxAI/MiniMax-VL-01"
+    },
+    {
+      "benchmarkSlug": "docvqa",
+      "score": 96.4,
+      "source": "self-reported",
+      "sourceUrl": "https://huggingface.co/MiniMaxAI/MiniMax-VL-01"
+    },
+    {
+      "benchmarkSlug": "chartqa",
+      "score": 91.7,
+      "source": "self-reported",
+      "sourceUrl": "https://huggingface.co/MiniMaxAI/MiniMax-VL-01",
+      "notes": "relaxed accuracy"
+    }
+  ],
+  "verificationNotes": "Confirmed real via HF model card (MiniMaxAI/MiniMax-VL-01) and GitHub MiniMax-AI/MiniMax-01. 456B/45.9B MoE backbone + 303M ViT-MLP vision encoder, dynamic resolution 336-2016px all confirmed. All 4 benchmark scores (MMMU 68.5, MathVista 68.6, DocVQA 96.4, ChartQA 91.7) confirmed literally on the HF card. Price ($0.2 input / $1.1 output per 1M tokens) independently confirmed via current MiniMax pricing pages. No changes needed."
+}

@@ -1,0 +1,47 @@
+{
+  "name": "ERNIE Bot (ERNIE 3.5)",
+  "org": "Baidu",
+  "family": "ERNIE",
+  "releaseDate": "2023-06-26",
+  "status": "released",
+  "openness": "closed",
+  "license": "Proprietary",
+  "paramsB": null,
+  "activeParamsB": null,
+  "archClass": "dense",
+  "archDisplay": "Dense Transformer (parameter count undisclosed)",
+  "ctxK": 8,
+  "modalities": [
+    "text"
+  ],
+  "langCount": null,
+  "capabilities": {
+    "reasoning": false,
+    "coding": true,
+    "vision": false,
+    "functionCalling": true,
+    "toolUse": true,
+    "agentic": false
+  },
+  "apiAvailable": true,
+  "price": null,
+  "links": {
+    "docs": "qianfan.baidubce.com"
+  },
+  "note": "ERNIE Bot itself first launched March 16, 2023 running on the ERNIE 3.0 model; it was upgraded to the ERNIE 3.5 foundation model in June 2023 (Robin Li announced the 3.5 iteration at the WIC Nishan Dialogue on June 26, 2023). The ERNIE-3.5-8K endpoint remains a free Qianfan tier today.",
+  "quants": [],
+  "vramQ4Gb": null,
+  "vramFp16Gb": null,
+  "tps4090": null,
+  "tpsNote": null,
+  "effortLabel": null,
+  "isDefaultConfig": true,
+  "isBestConfig": true,
+  "specSources": {
+    "releaseDate": "https://en.wikipedia.org/wiki/Ernie_Bot",
+    "ctxK": "https://getfreeai.net/en/services/api/baidu/",
+    "openness": "https://getfreeai.net/en/services/api/baidu/"
+  },
+  "results": [],
+  "verificationNotes": "CORRECTED releaseDate: the input record paired the name 'ERNIE Bot (ERNIE 3.5)' with releaseDate 2023-03-16, but that date is when ERNIE Bot first launched running on ERNIE 3.0, NOT ERNIE 3.5. Multiple sources (Wikipedia Ernie Bot timeline, contemporary coverage of the WIC Nishan Dialogue) confirm Baidu's CEO announced the model's iteration to ERNIE 3.5 on June 26, 2023, with technical details given by CTO Wang Haifeng on June 27, 2023; Wikipedia states ERNIE 3.5 'released in June 2023.' Updated releaseDate to 2023-06-26 and updated note/specSources accordingly. Free ERNIE-3.5-8K Qianfan tier confirmed via getfreeai.net. paramsB left null (undisclosed, consistent with all public sources)."
+}

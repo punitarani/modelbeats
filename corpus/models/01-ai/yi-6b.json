@@ -1,0 +1,101 @@
+{
+  "name": "Yi-6B",
+  "org": "01.AI",
+  "family": "Yi",
+  "releaseDate": "2023-11-02",
+  "status": "released",
+  "openness": "open-weights",
+  "license": "Apache 2.0",
+  "paramsB": 6,
+  "activeParamsB": null,
+  "archClass": "dense",
+  "archDisplay": "Dense decoder-only transformer (Llama-style, GQA, SwiGLU, RoPE with adjusted base frequency)",
+  "ctxK": 4,
+  "modalities": [
+    "text"
+  ],
+  "langCount": 2,
+  "capabilities": {
+    "reasoning": false,
+    "coding": true,
+    "vision": false,
+    "functionCalling": false,
+    "toolUse": false,
+    "agentic": false
+  },
+  "apiAvailable": true,
+  "price": null,
+  "links": {
+    "hf": "01-ai/Yi-6B",
+    "gh": "01-ai/Yi"
+  },
+  "note": "Smaller bilingual EN/ZH sibling of Yi-34B from 01.AI's debut Yi series, trained on 3.1T tokens under Apache 2.0.",
+  "quants": [
+    "GGUF Q4_K_M",
+    "AWQ",
+    "GPTQ"
+  ],
+  "vramQ4Gb": 4.5,
+  "vramFp16Gb": 12.1,
+  "tps4090": null,
+  "tpsNote": null,
+  "effortLabel": null,
+  "isDefaultConfig": true,
+  "isBestConfig": true,
+  "specSources": {
+    "paramsB": "https://huggingface.co/01-ai/Yi-6B",
+    "ctxK": "https://huggingface.co/01-ai/Yi-6B",
+    "releaseDate": "https://huggingface.co/01-ai/Yi-6B",
+    "openness": "https://huggingface.co/01-ai/Yi-6B"
+  },
+  "results": [
+    {
+      "benchmarkSlug": "mmlu",
+      "score": 63.2,
+      "source": "self-reported",
+      "sourceUrl": "https://arxiv.org/abs/2403.04652",
+      "evaluatedAt": "2024-03-01",
+      "notes": "Yi base model, from Yi technical report Table 2"
+    },
+    {
+      "benchmarkSlug": "bbh",
+      "score": 42.8,
+      "source": "self-reported",
+      "sourceUrl": "https://arxiv.org/abs/2403.04652",
+      "evaluatedAt": "2024-03-01"
+    },
+    {
+      "benchmarkSlug": "gsm8k",
+      "score": 32.5,
+      "source": "self-reported",
+      "sourceUrl": "https://arxiv.org/abs/2403.04652",
+      "evaluatedAt": "2024-03-01",
+      "notes": "8-shot pass@1"
+    },
+    {
+      "benchmarkSlug": "math",
+      "score": 4.6,
+      "source": "self-reported",
+      "sourceUrl": "https://arxiv.org/abs/2403.04652",
+      "evaluatedAt": "2024-03-01",
+      "notes": "4-shot pass@1"
+    },
+    {
+      "benchmarkSlug": "humaneval",
+      "score": 15.9,
+      "source": "self-reported",
+      "sourceUrl": "https://arxiv.org/abs/2403.04652",
+      "evaluatedAt": "2024-03-01",
+      "notes": "pass@1"
+    },
+    {
+      "benchmarkSlug": "mbpp",
+      "score": 26.3,
+      "source": "self-reported",
+      "sourceUrl": "https://arxiv.org/abs/2403.04652",
+      "evaluatedAt": "2024-03-01",
+      "notes": "pass@1"
+    }
+  ],
+  "verificationNotes": "CORRECTED: input record's mbpp score of 23.2 does not appear in the source. Fetched the Yi technical report full text (ar5iv render of arXiv 2403.04652, Table 3: 'GSM8k, MATH, Human-Eval, and MBPP') and confirmed Yi-6B's actual MBPP pass@1 is 26.3, not 23.2 — corrected accordingly. All other benchmark numbers (mmlu 63.2, bbh 42.8, gsm8k 32.5, math 4.6, humaneval 15.9) and specs (release Nov 2, 2023; 6B; Apache 2.0; 4K ctx; bilingual) confirmed exactly against HF model card and the paper."
+}

@@ -1,0 +1,93 @@
+{
+  "name": "Claude 3.5 Haiku",
+  "org": "Anthropic",
+  "family": "Claude 3.5",
+  "releaseDate": "2024-10-22",
+  "status": "deprecated",
+  "openness": "closed",
+  "license": "Proprietary",
+  "paramsB": null,
+  "activeParamsB": null,
+  "archClass": "dense",
+  "archDisplay": "Dense transformer (parameter count undisclosed)",
+  "ctxK": 200,
+  "modalities": [
+    "text",
+    "vision"
+  ],
+  "langCount": null,
+  "capabilities": {
+    "reasoning": false,
+    "coding": true,
+    "vision": true,
+    "functionCalling": true,
+    "toolUse": true,
+    "agentic": true
+  },
+  "apiAvailable": false,
+  "price": {
+    "input": 0.8,
+    "output": 4,
+    "provider": "Anthropic"
+  },
+  "links": {
+    "docs": "platform.claude.com"
+  },
+  "note": "Fast low-cost Claude 3.5 tier that matched Claude 3 Opus on many benchmarks; retired Feb 2026.",
+  "quants": [],
+  "vramFp16Gb": null,
+  "vramQ4Gb": null,
+  "tps4090": null,
+  "tpsNote": null,
+  "effortLabel": null,
+  "isDefaultConfig": true,
+  "isBestConfig": true,
+  "specSources": {
+    "releaseDate": "https://www.anthropic.com/news/3-5-models-and-computer-use",
+    "ctxK": "https://artificialanalysis.ai/models/claude-3-5-haiku",
+    "openness": "https://www.anthropic.com/news/3-5-models-and-computer-use"
+  },
+  "results": [
+    {
+      "benchmarkSlug": "swe-bench",
+      "score": 40.6,
+      "source": "self-reported",
+      "sourceUrl": "https://www.anthropic.com/news/3-5-models-and-computer-use",
+      "evaluatedAt": "2024-11-04",
+      "notes": "SWE-bench Verified, at launch"
+    },
+    {
+      "benchmarkSlug": "gpqa",
+      "score": 41.6,
+      "source": "self-reported",
+      "sourceUrl": "https://assets.anthropic.com/m/1cd9d098ac3e6467/original/Claude-3-Model-Card-October-Addendum.pdf",
+      "evaluatedAt": "2024-11-04",
+      "notes": "GPQA Diamond, 0-shot CoT, official model card addendum Table 8"
+    },
+    {
+      "benchmarkSlug": "mmlu",
+      "score": 80.3,
+      "source": "self-reported",
+      "sourceUrl": "https://assets.anthropic.com/m/1cd9d098ac3e6467/original/Claude-3-Model-Card-October-Addendum.pdf",
+      "evaluatedAt": "2024-11-04",
+      "notes": "0-shot CoT, official model card addendum Table 8"
+    },
+    {
+      "benchmarkSlug": "math",
+      "score": 69.2,
+      "source": "self-reported",
+      "sourceUrl": "https://assets.anthropic.com/m/1cd9d098ac3e6467/original/Claude-3-Model-Card-October-Addendum.pdf",
+      "evaluatedAt": "2024-11-04",
+      "notes": "0-shot CoT, official model card addendum Table 8"
+    },
+    {
+      "benchmarkSlug": "humaneval",
+      "score": 88.1,
+      "source": "self-reported",
+      "sourceUrl": "https://assets.anthropic.com/m/1cd9d098ac3e6467/original/Claude-3-Model-Card-October-Addendum.pdf",
+      "evaluatedAt": "2024-11-04",
+      "notes": "0-shot, official model card addendum Table 8"
+    }
+  ],
+  "verificationNotes": "CORRECTED: apiAvailable changed from true to false — claude-3-5-haiku-20241022 was deprecated Dec 19, 2025 and retired from the Claude API on February 19, 2026 (confirmed on platform.claude.com/docs/en/about-claude/model-deprecations), so it is not currently API-available; this also matches the record's own note text ('retired Feb 2026'), which contradicted the old apiAvailable=true. DROPPED 2 rows: independent AA scores 'gpqa 40.8' and 'mmlu-pro 63.4' sourced to artificialanalysis.ai/models/claude-3-5-haiku — fetched the live page directly and it no longer surfaces individual GPQA Diamond or MMLU-Pro breakouts for this (now-retired) model under its current v4.1 Intelligence Index methodology, so the claimed numbers could not be confirmed on that page and were removed per instructions. KEPT and verified: SWE-bench 40.6% confirmed verbatim on the cited Anthropic blog post. GPQA 41.6, MMLU 80.3, MATH 69.2, HumanEval 88.1 all independently confirmed by downloading and reading (via pdftotext -layout) the actual Claude-3-Model-Card-October-Addendum.pdf, Table 8 (Claude 3.5 Haiku column) — all four numbers match verbatim. Pricing $0.80/$4 confirmed (Dec 2024 price cut). Release date 2024-10-22 corresponds to the official model ID (claude-3-5-haiku-20241022) and is what independent trackers list as the release date; note that broad public/API rollout was actually delayed about two weeks to November 4, 2024 for capacity reasons (confirmed via Simon Willison's Nov 4, 2024 post) — kept 2024-10-22 as it's the canonical/model-ID date, but flagging the nuance."
+}

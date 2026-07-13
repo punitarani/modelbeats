@@ -1,0 +1,119 @@
+{
+  "name": "Llama 3.1 405B",
+  "org": "Meta",
+  "family": "Llama 3.1",
+  "releaseDate": "2024-07-23",
+  "status": "released",
+  "openness": "open-weights",
+  "license": "Llama 3.1 Community License Agreement",
+  "paramsB": 405,
+  "activeParamsB": null,
+  "archClass": "dense",
+  "archDisplay": "Dense decoder-only Transformer (GQA)",
+  "ctxK": 128,
+  "modalities": [
+    "text"
+  ],
+  "langCount": 8,
+  "capabilities": {
+    "reasoning": false,
+    "coding": true,
+    "vision": false,
+    "functionCalling": true,
+    "toolUse": true,
+    "agentic": true
+  },
+  "apiAvailable": true,
+  "price": null,
+  "links": {
+    "hf": "meta-llama/Meta-Llama-3.1-405B-Instruct",
+    "gh": "meta-llama/llama-models",
+    "docs": "llama.com/docs/model-cards-and-prompt-formats/llama3_1"
+  },
+  "note": "First openly available model rivaling top closed frontier models on knowledge, math, and tool use; 128K context.",
+  "quants": [
+    "GGUF Q4",
+    "AWQ",
+    "GPTQ",
+    "MLX"
+  ],
+  "vramQ4Gb": 230,
+  "vramFp16Gb": 810,
+  "tps4090": null,
+  "tpsNote": "Far exceeds a single RTX 4090's 24GB VRAM even at Q4 (~230GB); needs multi-GPU or heavy CPU/disk offload, so no meaningful single-4090 tok/s figure is reported",
+  "effortLabel": null,
+  "isDefaultConfig": true,
+  "isBestConfig": true,
+  "specSources": {
+    "paramsB": "https://huggingface.co/meta-llama/Meta-Llama-3.1-8B",
+    "ctxK": "https://ai.meta.com/blog/meta-llama-3-1/",
+    "releaseDate": "https://ai.meta.com/blog/meta-llama-3-1/",
+    "openness": "https://github.com/meta-llama/llama-models/blob/main/models/llama3_1/MODEL_CARD.md"
+  },
+  "results": [
+    {
+      "benchmarkSlug": "mmlu",
+      "score": 87.3,
+      "source": "self-reported",
+      "sourceUrl": "https://huggingface.co/meta-llama/Meta-Llama-3.1-8B",
+      "evaluatedAt": "2024-07-01",
+      "notes": "Instruct"
+    },
+    {
+      "benchmarkSlug": "mmlu-pro",
+      "score": 73.3,
+      "source": "self-reported",
+      "sourceUrl": "https://huggingface.co/meta-llama/Meta-Llama-3.1-8B",
+      "evaluatedAt": "2024-07-01",
+      "notes": "Instruct, CoT"
+    },
+    {
+      "benchmarkSlug": "gpqa",
+      "score": 50.7,
+      "source": "self-reported",
+      "sourceUrl": "https://huggingface.co/meta-llama/Meta-Llama-3.1-8B",
+      "evaluatedAt": "2024-07-01",
+      "notes": "Instruct (corrected: original record mislabeled this as the base pretrained model; the 50.7 figure is the Instruct-model GPQA score in Meta's comparison table)"
+    },
+    {
+      "benchmarkSlug": "ifeval",
+      "score": 88.6,
+      "source": "self-reported",
+      "sourceUrl": "https://huggingface.co/meta-llama/Meta-Llama-3.1-8B",
+      "evaluatedAt": "2024-07-01",
+      "notes": "Instruct"
+    },
+    {
+      "benchmarkSlug": "humaneval",
+      "score": 89,
+      "source": "self-reported",
+      "sourceUrl": "https://huggingface.co/meta-llama/Meta-Llama-3.1-8B",
+      "evaluatedAt": "2024-07-01",
+      "notes": "Instruct"
+    },
+    {
+      "benchmarkSlug": "gsm8k",
+      "score": 96.8,
+      "source": "self-reported",
+      "sourceUrl": "https://huggingface.co/meta-llama/Meta-Llama-3.1-8B",
+      "evaluatedAt": "2024-07-01",
+      "notes": "Instruct, CoT"
+    },
+    {
+      "benchmarkSlug": "math",
+      "score": 73.8,
+      "source": "self-reported",
+      "sourceUrl": "https://huggingface.co/meta-llama/Meta-Llama-3.1-8B",
+      "evaluatedAt": "2024-07-01",
+      "notes": "Instruct, CoT"
+    },
+    {
+      "benchmarkSlug": "arena",
+      "score": 1229,
+      "source": "arena",
+      "sourceUrl": "https://lmmarketcap.com/benchmarks/arena_elo",
+      "notes": "Current LMArena Elo (dynamic, decays as newer models are added; peaked much higher at launch)"
+    }
+  ],
+  "verificationNotes": "Confirmed real. The cited HF page (meta-llama/Meta-Llama-3.1-8B) does contain comparative benchmark tables covering 8B/70B/405B together, and all seven Instruct scores for 405B (MMLU 87.3, MMLU-Pro 73.3, GPQA 50.7, IFEval 88.6, HumanEval 89.0, GSM8K 96.8, MATH 73.8) are literally present and match. Corrected the GPQA row's notes: it is the Instruct-model score per the table, not 'Base pretrained model' as the original record stated (score itself, 50.7, is unchanged and correct). Live-fetched lmmarketcap.com/benchmarks/arena_elo and confirmed it currently shows exactly 1229 Elo for Llama 3.1 405B. Release date (2024-07-23), 128K context, and Llama 3.1 Community License confirmed via Meta's blog and GitHub model card."
+}

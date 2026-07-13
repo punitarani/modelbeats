@@ -1,0 +1,58 @@
+{
+  "name": "BLOOM (176B)",
+  "org": "BigScience",
+  "family": "BLOOM",
+  "releaseDate": "2022-07-11",
+  "status": "released",
+  "openness": "open-weights",
+  "license": "BigScience RAIL License v1.0",
+  "paramsB": 176.25,
+  "activeParamsB": null,
+  "archClass": "dense",
+  "archDisplay": "Dense decoder-only transformer (ALiBi positional encoding, GPT-2-style, GeLU)",
+  "ctxK": 2,
+  "modalities": [
+    "text"
+  ],
+  "langCount": 59,
+  "capabilities": {
+    "reasoning": false,
+    "coding": true,
+    "vision": false,
+    "functionCalling": false,
+    "toolUse": false,
+    "agentic": false
+  },
+  "apiAvailable": true,
+  "price": null,
+  "links": {
+    "hf": "bigscience/bloom"
+  },
+  "note": "First openly-released 100B+ LLM, built by 1000+ BigScience researchers across 46 natural + 13 programming languages under RAIL license.",
+  "quants": [
+    "INT8 (bitsandbytes)"
+  ],
+  "vramQ4Gb": 106,
+  "vramFp16Gb": 352,
+  "tps4090": null,
+  "tpsNote": null,
+  "effortLabel": null,
+  "isDefaultConfig": true,
+  "isBestConfig": true,
+  "specSources": {
+    "paramsB": "https://huggingface.co/bigscience/bloom",
+    "ctxK": "https://huggingface.co/bigscience/bloom",
+    "releaseDate": "https://huggingface.co/bigscience/bloom",
+    "openness": "https://huggingface.co/bigscience/bloom"
+  },
+  "results": [
+    {
+      "benchmarkSlug": "humaneval",
+      "score": 15.5,
+      "source": "self-reported",
+      "sourceUrl": "https://huggingface.co/bigscience/bloom",
+      "notes": "pass@1, Python"
+    }
+  ],
+  "verificationNotes": "Confirmed on HF model card: 176,247,271,424 params (176.25B), RAIL v1.0 license, 2048-token context, 46 natural + 13 programming languages (59 total), HumanEval pass@1 15.5% all literally present on the page. July 11, 2022 release date matches the well-documented coordinated BLOOM family release. No changes made."
+}

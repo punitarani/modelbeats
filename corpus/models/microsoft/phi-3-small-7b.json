@@ -1,0 +1,83 @@
+{
+  "name": "Phi-3-small (7B)",
+  "org": "Microsoft",
+  "family": "Phi-3",
+  "releaseDate": "2024-05-21",
+  "status": "released",
+  "openness": "open-weights",
+  "license": "MIT",
+  "paramsB": 7,
+  "activeParamsB": null,
+  "archClass": "dense",
+  "archDisplay": "Dense decoder-only Transformer (alternating dense + blocksparse attention)",
+  "ctxK": 8,
+  "modalities": [
+    "text"
+  ],
+  "langCount": null,
+  "capabilities": {
+    "reasoning": false,
+    "coding": true,
+    "vision": false,
+    "functionCalling": false,
+    "toolUse": false,
+    "agentic": false
+  },
+  "apiAvailable": true,
+  "price": {
+    "input": 0.15,
+    "output": 0.6,
+    "provider": "Azure AI Foundry"
+  },
+  "links": {
+    "hf": "microsoft/Phi-3-small-8k-instruct",
+    "gh": "microsoft/PhiCookBook",
+    "docs": "azure.microsoft.com/en-us/blog/introducing-phi-3-redefining-whats-possible-with-slms"
+  },
+  "note": "7B dense mid-tier Phi-3 with blocksparse attention; 8K (also 128K variant), 75.7 MMLU.",
+  "quants": [
+    "GGUF Q4",
+    "ONNX INT4"
+  ],
+  "vramQ4Gb": 6,
+  "vramFp16Gb": 15,
+  "tps4090": null,
+  "tpsNote": null,
+  "effortLabel": null,
+  "isDefaultConfig": true,
+  "isBestConfig": true,
+  "specSources": {
+    "paramsB": "https://huggingface.co/microsoft/Phi-3-small-8k-instruct",
+    "ctxK": "https://huggingface.co/microsoft/Phi-3-small-8k-instruct",
+    "releaseDate": "https://huggingface.co/microsoft/Phi-3-small-8k-instruct",
+    "openness": "https://huggingface.co/microsoft/Phi-3-small-8k-instruct"
+  },
+  "results": [
+    {
+      "benchmarkSlug": "mmlu",
+      "score": 75.7,
+      "source": "self-reported",
+      "sourceUrl": "https://huggingface.co/microsoft/Phi-3-small-8k-instruct"
+    },
+    {
+      "benchmarkSlug": "hellaswag",
+      "score": 77,
+      "source": "self-reported",
+      "sourceUrl": "https://huggingface.co/microsoft/Phi-3-small-8k-instruct"
+    },
+    {
+      "benchmarkSlug": "gsm8k",
+      "score": 89.6,
+      "source": "self-reported",
+      "sourceUrl": "https://huggingface.co/microsoft/Phi-3-small-8k-instruct",
+      "notes": "CoT"
+    },
+    {
+      "benchmarkSlug": "humaneval",
+      "score": 61,
+      "source": "self-reported",
+      "sourceUrl": "https://huggingface.co/microsoft/Phi-3-small-8k-instruct"
+    }
+  ],
+  "verificationNotes": "Confirmed real via HF model card (microsoft/Phi-3-small-8k-instruct, fetched): 7B dense decoder-only with alternating dense/blocksparse attention, 8K context, MIT license. All four benchmark rows (MMLU 75.7, HellaSwag 77, GSM8K 89.6 CoT, HumanEval 61) literally match the card. GitHub repo microsoft/PhiCookBook confirmed to exist (Phi-3CookBook was renamed/merged into PhiCookBook)."
+}

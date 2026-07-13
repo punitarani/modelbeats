@@ -1,0 +1,82 @@
+{
+  "name": "Ministral 3B",
+  "org": "Mistral AI",
+  "family": "Ministral",
+  "releaseDate": "2024-10-16",
+  "status": "deprecated",
+  "openness": "closed",
+  "license": "Mistral Commercial License (proprietary; API-only, weights withheld)",
+  "paramsB": 3,
+  "activeParamsB": null,
+  "archClass": "dense",
+  "archDisplay": "Dense Transformer, 36 layers",
+  "ctxK": 128,
+  "modalities": [
+    "text"
+  ],
+  "langCount": null,
+  "capabilities": {
+    "reasoning": false,
+    "coding": true,
+    "vision": false,
+    "functionCalling": true,
+    "toolUse": true,
+    "agentic": true
+  },
+  "apiAvailable": false,
+  "price": {
+    "input": 0.04,
+    "output": 0.04,
+    "provider": "Mistral La Plateforme (launch pricing, now retired)"
+  },
+  "links": {
+    "docs": "docs.mistral.ai/models/overview"
+  },
+  "note": "Edge-class 3B model for on-device/low-latency use; API-only, weights never released; retired from platform as of late 2025.",
+  "quants": [],
+  "vramQ4Gb": null,
+  "vramFp16Gb": null,
+  "tps4090": null,
+  "tpsNote": null,
+  "effortLabel": null,
+  "isDefaultConfig": true,
+  "isBestConfig": true,
+  "specSources": {
+    "paramsB": "https://mistral.ai/news/ministraux/",
+    "ctxK": "https://mistral.ai/news/ministraux/",
+    "releaseDate": "https://siliconangle.com/2024/10/16/mistral-introduces-ministral-3b-8b-device-ai-computing-models/",
+    "openness": "https://mistral.ai/news/ministraux/"
+  },
+  "results": [
+    {
+      "benchmarkSlug": "mmlu",
+      "score": 60.9,
+      "source": "self-reported",
+      "sourceUrl": "https://huggingface.co/mistralai/Ministral-8B-Instruct-2410",
+      "evaluatedAt": "2024-10-16",
+      "notes": "pretrained/base model"
+    },
+    {
+      "benchmarkSlug": "humaneval",
+      "score": 77.4,
+      "source": "self-reported",
+      "sourceUrl": "https://huggingface.co/mistralai/Ministral-8B-Instruct-2410",
+      "notes": "pass@1"
+    },
+    {
+      "benchmarkSlug": "gsm8k",
+      "score": 50.9,
+      "source": "self-reported",
+      "sourceUrl": "https://huggingface.co/mistralai/Ministral-8B-Instruct-2410",
+      "notes": "maj@8, base model"
+    },
+    {
+      "benchmarkSlug": "math",
+      "score": 51.7,
+      "source": "self-reported",
+      "sourceUrl": "https://huggingface.co/mistralai/Ministral-8B-Instruct-2410",
+      "notes": "maj@1"
+    }
+  ],
+  "verificationNotes": "Real release confirmed via mistral.ai/news/ministraux/ (fetched): released 2024-10-16, Ministral 3B is API-only at $0.04/M tokens under Mistral Commercial License with no open-weights release (confirms 'closed' openness). Note: sourceUrl for all 4 result rows points to the Ministral-8B-Instruct-2410 HF card rather than a dedicated Ministral-3B card (none exists), but that HF page's comparison tables do contain a distinct Ministral-3B row - verified all 4 values appear literally there: MMLU 60.9 (base table), HumanEval pass@1 77.4 (instruct table), GSM8K maj@8 50.9 (base table), MATH maj@1 51.7 (instruct table). No corrections needed."
+}

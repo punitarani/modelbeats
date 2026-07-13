@@ -1,0 +1,53 @@
+{
+  "name": "MPT-30B-Instruct",
+  "org": "MosaicML",
+  "family": "MPT",
+  "releaseDate": "2023-06-22",
+  "status": "released",
+  "openness": "open-weights",
+  "license": "CC-BY-SA-3.0",
+  "paramsB": 30,
+  "activeParamsB": null,
+  "archClass": "dense",
+  "archDisplay": "Decoder-only Transformer w/ ALiBi + FlashAttention",
+  "ctxK": 8,
+  "modalities": [
+    "text"
+  ],
+  "langCount": null,
+  "capabilities": {
+    "reasoning": false,
+    "coding": true,
+    "vision": false,
+    "functionCalling": false,
+    "toolUse": false,
+    "agentic": false
+  },
+  "apiAvailable": false,
+  "price": null,
+  "links": {
+    "hf": "mosaicml/mpt-30b-instruct",
+    "gh": "mosaicml/llm-foundry",
+    "docs": "databricks.com"
+  },
+  "note": "Instruction-tuned MPT-30B for long-context single-turn tasks, fine-tuned on Dolly/HH-RLHF-derived data, released under CC-BY-SA-3.0.",
+  "quants": [
+    "GGUF Q4",
+    "AWQ"
+  ],
+  "vramQ4Gb": 19.1,
+  "vramFp16Gb": 60,
+  "tps4090": null,
+  "tpsNote": null,
+  "effortLabel": null,
+  "isDefaultConfig": true,
+  "isBestConfig": true,
+  "specSources": {
+    "paramsB": "https://huggingface.co/mosaicml/mpt-30b-instruct",
+    "ctxK": "https://www.databricks.com/blog/mpt-30b",
+    "releaseDate": "https://www.databricks.com/blog/mpt-30b",
+    "openness": "https://www.databricks.com/blog/mpt-30b"
+  },
+  "results": [],
+  "verificationNotes": "Confirmed released alongside MPT-30B base on 2023-06-22 (same Databricks announcement); HF model card and secondary sources confirm CC-BY-SA-3.0 license and Dolly/HH-RLHF-derived instruction tuning data. No result rows to verify. All fields left unchanged."
+}

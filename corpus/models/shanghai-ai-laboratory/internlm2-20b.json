@@ -1,0 +1,92 @@
+{
+  "name": "InternLM2-20B",
+  "org": "Shanghai AI Laboratory",
+  "family": "InternLM2",
+  "releaseDate": "2024-01-17",
+  "status": "released",
+  "openness": "open-weights",
+  "license": "Apache-2.0",
+  "paramsB": 20,
+  "activeParamsB": null,
+  "archClass": "dense",
+  "archDisplay": "Dense transformer decoder (GQA)",
+  "ctxK": 200,
+  "modalities": [
+    "text"
+  ],
+  "langCount": null,
+  "capabilities": {
+    "reasoning": true,
+    "coding": true,
+    "vision": false,
+    "functionCalling": true,
+    "toolUse": true,
+    "agentic": true
+  },
+  "apiAvailable": false,
+  "price": null,
+  "links": {
+    "hf": "internlm/internlm2-20b",
+    "gh": "InternLM/InternLM",
+    "docs": "internlm.readthedocs.io"
+  },
+  "note": "Flagship dense InternLM2 model; near-perfect 200K-token needle-in-haystack retrieval, free commercial weight license.",
+  "quants": [
+    "GGUF Q4",
+    "AWQ"
+  ],
+  "vramQ4Gb": 12,
+  "vramFp16Gb": 40,
+  "tps4090": null,
+  "tpsNote": null,
+  "effortLabel": null,
+  "isDefaultConfig": true,
+  "isBestConfig": true,
+  "specSources": {
+    "paramsB": "https://huggingface.co/internlm/internlm2-20b",
+    "ctxK": "https://huggingface.co/internlm/internlm2-chat-20b",
+    "releaseDate": "https://arxiv.org/abs/2403.17297",
+    "openness": "https://huggingface.co/internlm/internlm2-20b"
+  },
+  "results": [
+    {
+      "benchmarkSlug": "mmlu",
+      "score": 66.5,
+      "source": "self-reported",
+      "sourceUrl": "https://huggingface.co/internlm/internlm2-chat-20b",
+      "notes": "InternLM2-Chat-20B"
+    },
+    {
+      "benchmarkSlug": "gsm8k",
+      "score": 79.6,
+      "source": "self-reported",
+      "sourceUrl": "https://huggingface.co/internlm/internlm2-chat-20b",
+      "notes": "InternLM2-Chat-20B, 4-shot"
+    },
+    {
+      "benchmarkSlug": "math",
+      "score": 31.9,
+      "source": "self-reported",
+      "sourceUrl": "https://huggingface.co/internlm/internlm2-chat-20b"
+    },
+    {
+      "benchmarkSlug": "humaneval",
+      "score": 67.1,
+      "source": "self-reported",
+      "sourceUrl": "https://huggingface.co/internlm/internlm2-chat-20b"
+    },
+    {
+      "benchmarkSlug": "bbh",
+      "score": 68.3,
+      "source": "self-reported",
+      "sourceUrl": "https://huggingface.co/internlm/internlm2-chat-20b"
+    },
+    {
+      "benchmarkSlug": "mbpp",
+      "score": 65.8,
+      "source": "self-reported",
+      "sourceUrl": "https://huggingface.co/internlm/internlm2-chat-20b"
+    }
+  ],
+  "verificationNotes": "Confirmed real and existing as described. Release ~2024-01-17 corroborated by web search; arXiv 2403.17297 (InternLM2 Technical Report, March 2024) is the accompanying paper. Apache-2.0 code license + free commercial weight license confirmed on HF page. All six benchmark rows re-confirmed verbatim on the internlm2-chat-20b HF model card (rows are explicitly for the Chat-20B variant, as already disclosed in original notes). No changes needed."
+}

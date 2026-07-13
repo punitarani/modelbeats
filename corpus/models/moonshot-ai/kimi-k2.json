@@ -1,0 +1,90 @@
+{
+  "name": "Kimi K2",
+  "org": "Moonshot AI",
+  "family": "Kimi K2",
+  "releaseDate": "2025-07-11",
+  "status": "released",
+  "openness": "open-weights",
+  "license": "Modified MIT License",
+  "paramsB": 1000,
+  "activeParamsB": 32,
+  "archClass": "moe",
+  "archDisplay": "Mixture-of-Experts, 384 experts (8 active + 1 shared/token), 61 layers, MLA attention",
+  "ctxK": 128,
+  "modalities": [
+    "text"
+  ],
+  "langCount": null,
+  "capabilities": {
+    "reasoning": false,
+    "coding": true,
+    "vision": false,
+    "functionCalling": true,
+    "toolUse": true,
+    "agentic": true
+  },
+  "apiAvailable": true,
+  "price": {
+    "input": 0.57,
+    "output": 2.3,
+    "provider": "Moonshot AI"
+  },
+  "links": {
+    "hf": "moonshotai/Kimi-K2-Instruct",
+    "gh": "moonshotai/Kimi-K2",
+    "docs": "platform.moonshot.ai"
+  },
+  "note": "1T-parameter MoE agentic model trained with the MuonClip optimizer; open-sourced under a modified MIT license.",
+  "quants": [
+    "GGUF"
+  ],
+  "vramQ4Gb": 600,
+  "vramFp16Gb": 2000,
+  "tps4090": null,
+  "tpsNote": "Does not fit on a single RTX 4090 (24GB); practical Q4 quants need ~250-600GB combined RAM/VRAM, with heavy CPU/SSD offload reported at only ~5-10 tok/s",
+  "effortLabel": null,
+  "isDefaultConfig": true,
+  "isBestConfig": true,
+  "specSources": {
+    "paramsB": "https://huggingface.co/moonshotai/Kimi-K2-Instruct",
+    "ctxK": "https://huggingface.co/moonshotai/Kimi-K2-Instruct",
+    "releaseDate": "https://venturebeat.com/ai/moonshot-ais-kimi-k2-outperforms-gpt-4-in-key-benchmarks-and-its-free",
+    "openness": "https://huggingface.co/moonshotai/Kimi-K2-Instruct"
+  },
+  "results": [
+    {
+      "benchmarkSlug": "livecodebench",
+      "score": 53.7,
+      "source": "self-reported",
+      "sourceUrl": "https://huggingface.co/moonshotai/Kimi-K2-Instruct"
+    },
+    {
+      "benchmarkSlug": "aime",
+      "score": 69.6,
+      "source": "self-reported",
+      "sourceUrl": "https://huggingface.co/moonshotai/Kimi-K2-Instruct",
+      "notes": "AIME 2024, avg@64"
+    },
+    {
+      "benchmarkSlug": "mmlu",
+      "score": 89.5,
+      "source": "self-reported",
+      "sourceUrl": "https://huggingface.co/moonshotai/Kimi-K2-Instruct"
+    },
+    {
+      "benchmarkSlug": "swe-bench",
+      "score": 65.8,
+      "source": "self-reported",
+      "sourceUrl": "https://huggingface.co/moonshotai/Kimi-K2-Instruct",
+      "notes": "SWE-bench Verified, single-attempt agentic"
+    },
+    {
+      "benchmarkSlug": "math",
+      "score": 97.4,
+      "source": "independent",
+      "sourceUrl": "https://venturebeat.com/ai/moonshot-ais-kimi-k2-outperforms-gpt-4-in-key-benchmarks-and-its-free",
+      "notes": "MATH-500"
+    }
+  ],
+  "verificationNotes": "Confirmed real model. GitHub README (moonshotai/Kimi-K2, mirrors HF card) verified 1T total/32B active/384 experts/128K ctx/Modified MIT License and all 5 benchmark scores (LiveCodeBench 53.7, AIME24 69.6, MMLU 89.5, SWE-bench 65.8, MATH-500 97.4) verbatim. Exact release date July 11, 2025 confirmed via multiple sources (model's own '0711' version tag, Global Times, Wikipedia). Pricing $0.57/$2.30 per M tokens confirmed via OpenRouter/pricepertoken listings for 'Kimi K2 0711'. HF page itself was rate-limited (429) during this session but GitHub README mirror gave identical figures."
+}

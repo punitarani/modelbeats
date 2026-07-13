@@ -1,0 +1,51 @@
+{
+  "name": "Skywork-o1-Open-Llama-3.1-8B",
+  "org": "Kunlun Tech",
+  "family": "Skywork o1",
+  "releaseDate": "2024-11-26",
+  "status": "released",
+  "openness": "open-weights",
+  "license": "Skywork Community License",
+  "paramsB": 8,
+  "activeParamsB": null,
+  "archClass": "dense",
+  "archDisplay": "Dense transformer (Llama-3.1-8B architecture), fine-tuned with o1-style slow-thinking + process-reward-model data",
+  "ctxK": 128,
+  "modalities": [
+    "text"
+  ],
+  "langCount": null,
+  "capabilities": {
+    "reasoning": true,
+    "coding": true,
+    "vision": false,
+    "functionCalling": false,
+    "toolUse": false,
+    "agentic": false
+  },
+  "apiAvailable": false,
+  "price": null,
+  "links": {
+    "hf": "Skywork/Skywork-o1-Open-Llama-3.1-8B",
+    "gh": "SkyworkAI/skywork-o1-prm-inference"
+  },
+  "note": "Early open o1-style reasoning model built on Llama-3.1-8B with PRM-guided slow-thinking reasoning traces",
+  "quants": [
+    "GGUF Q4_K_M"
+  ],
+  "vramQ4Gb": 4.92,
+  "vramFp16Gb": 16.1,
+  "tps4090": null,
+  "tpsNote": null,
+  "effortLabel": null,
+  "isDefaultConfig": true,
+  "isBestConfig": true,
+  "specSources": {
+    "paramsB": "https://huggingface.co/Skywork/Skywork-o1-Open-Llama-3.1-8B",
+    "ctxK": "https://huggingface.co/Skywork/Skywork-o1-Open-Llama-3.1-8B/raw/main/config.json",
+    "releaseDate": "https://huggingface.co/Skywork/Skywork-o1-Open-Llama-3.1-8B/commits/main",
+    "openness": "https://huggingface.co/Skywork/Skywork-o1-Open-Llama-3.1-8B"
+  },
+  "results": [],
+  "verificationNotes": "Confirmed real HF repo exists with initial commit dated 2024-11-26 (matches release date). Config.json confirms max_position_embeddings=131072 (128K ctx, via RoPE scaling from base 8192) and 8B Llama-3.1 architecture. License and Kunlun/Skywork attribution confirmed via HF model card and press coverage of Skywork o1 series. No results rows were present to verify (none claimed)."
+}

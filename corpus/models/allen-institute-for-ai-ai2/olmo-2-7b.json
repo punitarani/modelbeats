@@ -1,0 +1,89 @@
+{
+  "name": "OLMo 2 7B",
+  "org": "Allen Institute for AI (Ai2)",
+  "family": "OLMo 2",
+  "releaseDate": "2024-11-26",
+  "status": "released",
+  "openness": "open-source",
+  "license": "Apache 2.0",
+  "paramsB": 7.3,
+  "activeParamsB": null,
+  "archClass": "dense",
+  "archDisplay": "Dense transformer (decoder-only)",
+  "ctxK": 4,
+  "modalities": [
+    "text"
+  ],
+  "langCount": 1,
+  "capabilities": {
+    "reasoning": false,
+    "coding": true,
+    "vision": false,
+    "functionCalling": false,
+    "toolUse": false,
+    "agentic": false
+  },
+  "apiAvailable": true,
+  "price": null,
+  "links": {
+    "hf": "allenai/OLMo-2-1124-7B",
+    "gh": "allenai/OLMo-core",
+    "docs": "allenai.org/blog/olmo2"
+  },
+  "note": "Fully open 7B trained on up to 5T tokens; outperforms Llama 3.1 8B on English academic benchmarks despite lower training FLOPs.",
+  "quants": [
+    "GGUF Q4"
+  ],
+  "vramQ4Gb": 5,
+  "vramFp16Gb": 15,
+  "tps4090": null,
+  "tpsNote": null,
+  "effortLabel": null,
+  "isDefaultConfig": true,
+  "isBestConfig": true,
+  "specSources": {
+    "paramsB": "https://huggingface.co/allenai/OLMo-2-1124-7B/raw/main/model.safetensors.index.json",
+    "ctxK": "https://huggingface.co/allenai/OLMo-2-1124-7B/raw/main/config.json",
+    "releaseDate": "https://allenai.org/blog/olmo2",
+    "openness": "https://allenai.org/blog/olmo2"
+  },
+  "results": [
+    {
+      "benchmarkSlug": "mmlu",
+      "score": 63.7,
+      "source": "self-reported",
+      "sourceUrl": "https://huggingface.co/allenai/OLMo-2-1124-7B"
+    },
+    {
+      "benchmarkSlug": "hellaswag",
+      "score": 83.8,
+      "source": "self-reported",
+      "sourceUrl": "https://huggingface.co/allenai/OLMo-2-1124-7B"
+    },
+    {
+      "benchmarkSlug": "gsm8k",
+      "score": 67.5,
+      "source": "self-reported",
+      "sourceUrl": "https://huggingface.co/allenai/OLMo-2-1124-7B"
+    },
+    {
+      "benchmarkSlug": "arc-challenge",
+      "score": 79.8,
+      "source": "self-reported",
+      "sourceUrl": "https://huggingface.co/allenai/OLMo-2-1124-7B"
+    },
+    {
+      "benchmarkSlug": "drop",
+      "score": 60.8,
+      "source": "self-reported",
+      "sourceUrl": "https://huggingface.co/allenai/OLMo-2-1124-7B"
+    },
+    {
+      "benchmarkSlug": "mmlu-pro",
+      "score": 31,
+      "source": "self-reported",
+      "sourceUrl": "https://huggingface.co/allenai/OLMo-2-1124-7B"
+    }
+  ],
+  "verificationNotes": "Release date (Nov 26 2024, same Ai2 blog as the 13B) confirmed. All six benchmark rows literally confirmed on the live HF base-model card. paramsB=7.3 confirmed precisely: safetensors index total 29,194,469,376 bytes / 4 bytes (fp32) = ~7.30B, exact match. Corrected release-date reasoning source: HF repo commit metadata suggested a Dec/Jan date tied to the later arXiv paper (2501.00656), but the model was publicly announced with the rest of the OLMo 2 family on the Nov 26 2024 Ai2 blog post, so the original date is kept. No other changes needed."
+}

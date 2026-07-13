@@ -1,0 +1,94 @@
+{
+  "name": "DeepSeek-R1-Distill-Llama-70B",
+  "org": "DeepSeek",
+  "family": "DeepSeek-R1",
+  "releaseDate": "2025-01-20",
+  "status": "released",
+  "openness": "open-weights",
+  "license": "Llama 3.3 Community License",
+  "paramsB": 70,
+  "activeParamsB": null,
+  "archClass": "dense",
+  "archDisplay": "Dense Transformer (Llama-3.3-70B-Instruct architecture, GQA)",
+  "ctxK": 128,
+  "modalities": [
+    "text"
+  ],
+  "langCount": null,
+  "capabilities": {
+    "reasoning": true,
+    "coding": true,
+    "vision": false,
+    "functionCalling": false,
+    "toolUse": false,
+    "agentic": false
+  },
+  "apiAvailable": false,
+  "price": null,
+  "links": {
+    "hf": "deepseek-ai/DeepSeek-R1-Distill-Llama-70B",
+    "gh": "deepseek-ai/DeepSeek-R1"
+  },
+  "note": "Largest R1 distill: Llama-3.3-70B fine-tuned on R1 reasoning traces, the most popular self-hostable strong reasoner from the release.",
+  "quants": [
+    "GGUF Q4_K_M",
+    "AWQ",
+    "GPTQ"
+  ],
+  "vramQ4Gb": 42,
+  "vramFp16Gb": 140,
+  "tps4090": null,
+  "tpsNote": "Q4_K_M needs ~40-42GB, exceeding a single 24GB 4090; community reports ~12-15 tok/s on dual RTX 3090 (48GB) setups.",
+  "effortLabel": null,
+  "isDefaultConfig": true,
+  "isBestConfig": true,
+  "specSources": {
+    "paramsB": "https://huggingface.co/deepseek-ai/DeepSeek-R1-Distill-Llama-70B",
+    "ctxK": "https://huggingface.co/deepseek-ai/DeepSeek-R1-Distill-Llama-70B",
+    "releaseDate": "https://github.com/deepseek-ai/DeepSeek-R1",
+    "openness": "https://github.com/deepseek-ai/DeepSeek-R1"
+  },
+  "results": [
+    {
+      "benchmarkSlug": "aime",
+      "score": 70,
+      "source": "self-reported",
+      "sourceUrl": "https://huggingface.co/deepseek-ai/DeepSeek-R1-Distill-Llama-70B",
+      "evaluatedAt": "2025-01-20",
+      "notes": "AIME 2024 pass@1"
+    },
+    {
+      "benchmarkSlug": "math",
+      "score": 94.5,
+      "source": "self-reported",
+      "sourceUrl": "https://huggingface.co/deepseek-ai/DeepSeek-R1-Distill-Llama-70B",
+      "evaluatedAt": "2025-01-20",
+      "notes": "MATH-500 pass@1"
+    },
+    {
+      "benchmarkSlug": "gpqa",
+      "score": 65.2,
+      "source": "self-reported",
+      "sourceUrl": "https://huggingface.co/deepseek-ai/DeepSeek-R1-Distill-Llama-70B",
+      "evaluatedAt": "2025-01-20",
+      "notes": "GPQA Diamond pass@1"
+    },
+    {
+      "benchmarkSlug": "livecodebench",
+      "score": 57.5,
+      "source": "self-reported",
+      "sourceUrl": "https://huggingface.co/deepseek-ai/DeepSeek-R1-Distill-Llama-70B",
+      "evaluatedAt": "2025-01-20",
+      "notes": "LiveCodeBench pass@1"
+    },
+    {
+      "benchmarkSlug": "codeforces",
+      "score": 1633,
+      "source": "self-reported",
+      "sourceUrl": "https://huggingface.co/deepseek-ai/DeepSeek-R1-Distill-Llama-70B",
+      "evaluatedAt": "2025-01-20",
+      "notes": "Codeforces rating"
+    }
+  ],
+  "verificationNotes": "Confirmed via HF model card. License verified against the DeepSeek-R1 GitHub License section, which states this distill 'is derived from Llama3.3-70B-Instruct and is originally licensed under Llama3.3 license' (not MIT, despite the base repo being MIT) - matches the record. All 5 result rows confirmed literally on the HF card."
+}

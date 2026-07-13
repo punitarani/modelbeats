@@ -1,0 +1,54 @@
+{
+  "name": "GLM-Z1-32B-0414",
+  "org": "Zhipu AI",
+  "family": "GLM-Z1",
+  "releaseDate": "2025-04-14",
+  "status": "released",
+  "openness": "open-weights",
+  "license": "MIT",
+  "paramsB": 32,
+  "activeParamsB": null,
+  "archClass": "dense",
+  "archDisplay": "Dense transformer (reasoning-tuned GLM-4-32B-0414 via cold-start SFT + RL)",
+  "ctxK": 32,
+  "modalities": [
+    "text"
+  ],
+  "langCount": 2,
+  "capabilities": {
+    "reasoning": true,
+    "coding": true,
+    "vision": false,
+    "functionCalling": true,
+    "toolUse": true,
+    "agentic": true
+  },
+  "apiAvailable": true,
+  "price": null,
+  "links": {
+    "hf": "zai-org/GLM-Z1-32B-0414",
+    "gh": "zai-org/GLM-4"
+  },
+  "note": "Open reasoning model built on GLM-4-32B-0414 via cold-start plus extended RL; evaluated on AIME24/25, MATH-500, GPQA and LiveCodeBench, marketed as much faster than DeepSeek-R1 (vendor claims up to 200 tok/s vs 671B R1).",
+  "quants": [
+    "GGUF Q4",
+    "GGUF Q8",
+    "MLX",
+    "GPTQ"
+  ],
+  "vramQ4Gb": 20,
+  "vramFp16Gb": 64,
+  "tps4090": null,
+  "tpsNote": "Vendor claims ~200 tok/s on Zhipu's own MaaS platform; not an independently measured RTX 4090 llama.cpp benchmark.",
+  "effortLabel": null,
+  "isDefaultConfig": true,
+  "isBestConfig": true,
+  "specSources": {
+    "paramsB": "https://huggingface.co/api/models/zai-org/GLM-Z1-32B-0414",
+    "ctxK": "https://huggingface.co/zai-org/GLM-Z1-32B-0414/raw/main/config.json",
+    "releaseDate": "https://www.prnewswire.com/news-releases/zai-unveils-new-glm-open-source-models-with-world-class-reasoning-performance-302429306.html",
+    "openness": "https://huggingface.co/zai-org/GLM-Z1-32B-0414"
+  },
+  "results": [],
+  "verificationNotes": "Confirmed real, released the same day (2025-04-14) as GLM-4-32B-0414 in the same Z.ai open-source batch ('base, reasoning, and rumination models... all under the MIT license' per PRNewswire announcement). MIT license and 'developed based on GLM-4-32B-0414 through cold start and extended reinforcement learning' description confirmed on the HF model card. HF safetensors API shows identical 32,566,081,536 params (32.57B, matches the 32B base it was tuned from). config.json max_position_embeddings=32768 confirms 32K context. Original record had zero result rows, so none needed to be dropped — nothing to verify there. No changes made."
+}

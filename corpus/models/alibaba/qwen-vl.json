@@ -1,0 +1,116 @@
+{
+  "name": "Qwen-VL",
+  "org": "Alibaba",
+  "family": "Qwen-VL",
+  "releaseDate": "2023-08-24",
+  "status": "released",
+  "openness": "open-weights",
+  "license": "Tongyi Qianwen LICENSE AGREEMENT (custom, free for research and commercial use)",
+  "paramsB": 9.6,
+  "activeParamsB": null,
+  "archClass": "dense",
+  "archDisplay": "OpenCLIP ViT-bigG vision encoder + Qwen-7B decoder, single-layer cross-attention position-aware adapter",
+  "ctxK": 8,
+  "modalities": [
+    "text",
+    "vision"
+  ],
+  "langCount": null,
+  "capabilities": {
+    "reasoning": false,
+    "coding": false,
+    "vision": true,
+    "functionCalling": false,
+    "toolUse": false,
+    "agentic": false
+  },
+  "apiAvailable": false,
+  "price": null,
+  "links": {
+    "hf": "Qwen/Qwen-VL",
+    "gh": "QwenLM/Qwen-VL"
+  },
+  "note": "First Qwen VLM (ViT-bigG + Qwen-7B, 9.6B total); accepts image/text/bounding-box input and can output bounding boxes for grounding.",
+  "quants": [
+    "GPTQ Int4"
+  ],
+  "vramQ4Gb": 6,
+  "vramFp16Gb": 19,
+  "tps4090": null,
+  "tpsNote": null,
+  "effortLabel": null,
+  "isDefaultConfig": true,
+  "isBestConfig": true,
+  "specSources": {
+    "paramsB": "https://ar5iv.labs.arxiv.org/html/2308.12966",
+    "ctxK": "https://huggingface.co/Qwen/Qwen-VL",
+    "releaseDate": "https://arxiv.org/abs/2308.12966",
+    "openness": "https://github.com/QwenLM/Qwen-VL"
+  },
+  "results": [
+    {
+      "benchmarkSlug": "vqav2",
+      "score": 78.8,
+      "source": "self-reported",
+      "sourceUrl": "https://huggingface.co/Qwen/Qwen-VL",
+      "notes": "Zero-shot VQAv2 test-dev"
+    },
+    {
+      "benchmarkSlug": "ok-vqa",
+      "score": 58.6,
+      "source": "self-reported",
+      "sourceUrl": "https://huggingface.co/Qwen/Qwen-VL",
+      "notes": "Zero-shot OK-VQA"
+    },
+    {
+      "benchmarkSlug": "gqa-vqa",
+      "score": 59.3,
+      "source": "self-reported",
+      "sourceUrl": "https://huggingface.co/Qwen/Qwen-VL",
+      "notes": "GQA visual-reasoning benchmark (unrelated to Grouped Query Attention)"
+    },
+    {
+      "benchmarkSlug": "textvqa",
+      "score": 63.8,
+      "source": "self-reported",
+      "sourceUrl": "https://huggingface.co/Qwen/Qwen-VL",
+      "notes": "Zero-shot TextVQA"
+    },
+    {
+      "benchmarkSlug": "docvqa",
+      "score": 65.1,
+      "source": "self-reported",
+      "sourceUrl": "https://huggingface.co/Qwen/Qwen-VL",
+      "notes": "DocVQA text-reading VQA"
+    },
+    {
+      "benchmarkSlug": "chartqa",
+      "score": 65.7,
+      "source": "self-reported",
+      "sourceUrl": "https://huggingface.co/Qwen/Qwen-VL",
+      "notes": "ChartQA"
+    },
+    {
+      "benchmarkSlug": "refcoco",
+      "score": 89.36,
+      "source": "self-reported",
+      "sourceUrl": "https://huggingface.co/Qwen/Qwen-VL",
+      "notes": "RefCOCO val, referring-expression grounding accuracy"
+    },
+    {
+      "benchmarkSlug": "refcoco-plus",
+      "score": 83.12,
+      "source": "self-reported",
+      "sourceUrl": "https://huggingface.co/Qwen/Qwen-VL",
+      "notes": "RefCOCO+ val"
+    },
+    {
+      "benchmarkSlug": "flickr30k",
+      "score": 85.8,
+      "source": "self-reported",
+      "sourceUrl": "https://huggingface.co/Qwen/Qwen-VL",
+      "notes": "Zero-shot captioning CIDEr, reported SOTA among generalist VLMs at release"
+    }
+  ],
+  "verificationNotes": "Confirmed real (arXiv 2308.12966, pub. 2023-08-24; GitHub QwenLM/Qwen-VL). 9.6B total params, 8,192 context, Tongyi Qianwen license (free research+commercial) all confirmed on HF/GitHub README. Re-fetched GitHub README benchmark tables: vqav2 78.8, ok-vqa 58.6, gqa-vqa 59.3, textvqa 63.8, docvqa 65.1, chartqa 65.7, refcoco 89.36, refcoco-plus 83.12, flickr30k 85.8 all literally match the 'Qwen-VL' (base model) row. DROPPED touchstone-en (645.2) and touchstone-zh (401.2): the README table shows these scores belong to the 'Qwen-VL-Chat' row, not the base 'Qwen-VL' pretrained model this record describes — no TouchStone score exists for base Qwen-VL, so the original attribution was wrong-model, not just wrong-number."
+}

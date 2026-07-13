@@ -1,0 +1,57 @@
+{
+  "name": "CodeT5+ 16B",
+  "org": "Salesforce",
+  "family": "CodeT5+",
+  "releaseDate": "2023-05-13",
+  "status": "released",
+  "openness": "open-weights",
+  "license": "BSD-3-Clause",
+  "paramsB": 16,
+  "activeParamsB": null,
+  "archClass": "dense",
+  "archDisplay": "Encoder-decoder (shallow encoder / deep decoder), initialized from CodeGen-350M-mono encoder + CodeGen-16B-mono decoder",
+  "ctxK": 2,
+  "modalities": [
+    "text"
+  ],
+  "langCount": null,
+  "capabilities": {
+    "reasoning": false,
+    "coding": true,
+    "vision": false,
+    "functionCalling": false,
+    "toolUse": false,
+    "agentic": false
+  },
+  "apiAvailable": false,
+  "price": null,
+  "links": {
+    "hf": "Salesforce/codet5p-16b",
+    "gh": "salesforce/CodeT5"
+  },
+  "note": "Encoder-decoder code LLM family (220M-16B); InstructCodeT5+ 16B tuned variant hit open-source SOTA HumanEval pass@1 in 2023 (non-commercial license)",
+  "quants": [],
+  "vramQ4Gb": null,
+  "vramFp16Gb": 32,
+  "tps4090": null,
+  "tpsNote": null,
+  "effortLabel": null,
+  "isDefaultConfig": true,
+  "isBestConfig": true,
+  "specSources": {
+    "paramsB": "https://arxiv.org/abs/2305.07922",
+    "ctxK": "https://huggingface.co/Salesforce/codet5p-16b/raw/main/config.json",
+    "releaseDate": "https://arxiv.org/abs/2305.07922",
+    "openness": "https://huggingface.co/Salesforce/codet5p-16b"
+  },
+  "results": [
+    {
+      "benchmarkSlug": "humaneval",
+      "score": 30.9,
+      "source": "self-reported",
+      "sourceUrl": "https://ar5iv.labs.arxiv.org/html/2305.07922",
+      "notes": "pass@1, base CodeT5+ 16B (pass@10 51.6)"
+    }
+  ],
+  "verificationNotes": "Confirmed real: arxiv 2305.07922 (submitted 2023-05-13) and HF repo Salesforce/codet5p-16b exist. Fetched ar5iv paper directly and confirmed base CodeT5+ 16B scores exactly 30.9 pass@1 / 51.6 pass@10 on HumanEval (distinct from the higher-scoring InstructCodeT5+ 16B variant at 35.0/54.5, which the record correctly does not conflate). License BSD-3-Clause confirmed on HF."
+}

@@ -1,0 +1,83 @@
+{
+  "name": "Apple DCLM-Baseline 7B",
+  "org": "Apple",
+  "family": "Apple DCLM",
+  "releaseDate": "2024-07-01",
+  "status": "released",
+  "openness": "open-source",
+  "license": "Apple Sample Code License",
+  "paramsB": 7,
+  "activeParamsB": null,
+  "archClass": "dense",
+  "archDisplay": "Dense decoder-only Transformer (32 layers, 4096 hidden, 32 heads)",
+  "ctxK": 2,
+  "modalities": [
+    "text"
+  ],
+  "langCount": null,
+  "capabilities": {
+    "reasoning": false,
+    "coding": true,
+    "vision": false,
+    "functionCalling": false,
+    "toolUse": false,
+    "agentic": false
+  },
+  "apiAvailable": false,
+  "price": null,
+  "links": {
+    "hf": "apple/DCLM-Baseline-7B"
+  },
+  "note": "Data-centric base LM trained on the curated DCLM-Baseline corpus (3.8T tokens + StarCoder/ProofPile2); not instruction-tuned.",
+  "quants": [],
+  "vramQ4Gb": null,
+  "vramFp16Gb": 14,
+  "tps4090": null,
+  "tpsNote": null,
+  "effortLabel": null,
+  "isDefaultConfig": true,
+  "isBestConfig": true,
+  "specSources": {
+    "paramsB": "https://huggingface.co/apple/DCLM-Baseline-7B",
+    "ctxK": "https://huggingface.co/apple/DCLM-Baseline-7B",
+    "releaseDate": "https://www.marktechpost.com/2024/07/21/apple-ai-released-a-7b-open-source-language-model-trained-on-2-5t-tokens-on-open-datasets/",
+    "openness": "https://huggingface.co/apple/DCLM-Baseline-7B"
+  },
+  "results": [
+    {
+      "benchmarkSlug": "mmlu",
+      "score": 63.72,
+      "source": "self-reported",
+      "sourceUrl": "https://huggingface.co/apple/DCLM-Baseline-7B",
+      "notes": "5-shot (few-shot MMLU row)"
+    },
+    {
+      "benchmarkSlug": "hellaswag",
+      "score": 80.43,
+      "source": "self-reported",
+      "sourceUrl": "https://huggingface.co/apple/DCLM-Baseline-7B",
+      "notes": "'HellaSwag' row (distinct from the separate 'HellaSwag (zero-shot)' row of 79.87)"
+    },
+    {
+      "benchmarkSlug": "arc-easy",
+      "score": 82.2,
+      "source": "self-reported",
+      "sourceUrl": "https://huggingface.co/apple/DCLM-Baseline-7B"
+    },
+    {
+      "benchmarkSlug": "winogrande",
+      "score": 72.69,
+      "source": "self-reported",
+      "sourceUrl": "https://huggingface.co/apple/DCLM-Baseline-7B",
+      "notes": "CORRECTED from original 88.28, which is actually the page's separate 'Winograd' score, not 'Winogrande'"
+    },
+    {
+      "benchmarkSlug": "gsm8k",
+      "score": 2.5,
+      "source": "self-reported",
+      "sourceUrl": "https://huggingface.co/apple/DCLM-Baseline-7B",
+      "notes": "chain-of-thought"
+    }
+  ],
+  "verificationNotes": "Confirmed real. HF apple/DCLM-Baseline-7B page confirms license tag 'apple-ascl' (Apple Sample Code License) and architecture exactly: 32 layers, 4096 hidden, 32 attention heads, 2048 context (matches ctxK=2). Full eval table pulled from the model card confirms MMLU-few-shot 63.72, ARC-Easy 82.20, GSM8K-CoT 2.50 exactly as given. CORRECTED an error: the record's WinoGrande score of 88.28 does not match the page's 'Winogrande' row (72.69) — 88.28 is actually the page's separate 'Winograd' benchmark score. Replaced with the verified correct WinoGrande value of 72.69. Also verified the page has two distinct HellaSwag rows ('HellaSwag (zero-shot)' = 79.87 and 'HellaSwag' = 80.43); the record's 80.43 matches the latter, so kept as-is."
+}

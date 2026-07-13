@@ -1,0 +1,56 @@
+{
+  "name": "Mistral Large",
+  "org": "Mistral AI",
+  "family": "Mistral Large",
+  "releaseDate": "2024-02-26",
+  "status": "deprecated",
+  "openness": "closed",
+  "license": "Proprietary",
+  "paramsB": null,
+  "activeParamsB": null,
+  "archClass": "dense",
+  "archDisplay": "Dense transformer (size undisclosed)",
+  "ctxK": 32,
+  "modalities": [
+    "text"
+  ],
+  "langCount": 5,
+  "capabilities": {
+    "reasoning": false,
+    "coding": true,
+    "vision": false,
+    "functionCalling": true,
+    "toolUse": true,
+    "agentic": false
+  },
+  "apiAvailable": false,
+  "price": null,
+  "links": {
+    "docs": "mistral.ai/news/mistral-large"
+  },
+  "note": "Mistral's first GPT-4-class closed flagship, launched with the Microsoft/Azure partnership and Le Chat; retired from the API by 2025.",
+  "quants": [],
+  "vramQ4Gb": null,
+  "vramFp16Gb": null,
+  "tps4090": null,
+  "tpsNote": null,
+  "effortLabel": null,
+  "isDefaultConfig": true,
+  "isBestConfig": true,
+  "specSources": {
+    "ctxK": "https://artificialanalysis.ai/models/mistral-large",
+    "releaseDate": "https://mistral.ai/news/mistral-large/",
+    "openness": "https://mistral.ai/news/mistral-large/"
+  },
+  "results": [
+    {
+      "benchmarkSlug": "mmlu",
+      "score": 81.2,
+      "source": "self-reported",
+      "sourceUrl": "https://www.promptingguide.ai/models/mistral-large",
+      "evaluatedAt": "2024-02-01",
+      "notes": "Reported as second only to GPT-4 at launch"
+    }
+  ],
+  "verificationNotes": "Fetched mistral.ai/news/mistral-large/ directly: confirms 2024-02-26 release, 32K context, native function calling. Fetched promptingguide.ai/models/mistral-large directly: literally confirms 'ranks second next to GPT-4 on the MMLU benchmark with a score of 81.2%'. Params/license genuinely undisclosed by Mistral for this closed model, correctly left null/Proprietary. No changes made."
+}

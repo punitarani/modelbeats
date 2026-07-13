@@ -1,0 +1,132 @@
+{
+  "name": "Granite 3.1 8B Instruct",
+  "org": "IBM",
+  "family": "Granite 3.1",
+  "releaseDate": "2024-12-18",
+  "status": "released",
+  "openness": "open-weights",
+  "license": "Apache 2.0",
+  "paramsB": 8.1,
+  "activeParamsB": null,
+  "archClass": "dense",
+  "archDisplay": "Dense decoder-only transformer (GQA, RoPE with adjusted theta for 128K context)",
+  "ctxK": 128,
+  "modalities": [
+    "text"
+  ],
+  "langCount": 12,
+  "capabilities": {
+    "reasoning": false,
+    "coding": true,
+    "vision": false,
+    "functionCalling": true,
+    "toolUse": true,
+    "agentic": false
+  },
+  "apiAvailable": true,
+  "price": null,
+  "links": {
+    "hf": "ibm-granite/granite-3.1-8b-instruct",
+    "gh": "ibm-granite/granite-3.1-language-models",
+    "docs": "ibm.com/granite/docs/models/granite"
+  },
+  "note": "Extends Granite 3.0's context from 4K to 128K via progressive RoPE training on ~500B additional tokens.",
+  "quants": [
+    "GGUF Q4_K_M",
+    "AWQ",
+    "GPTQ"
+  ],
+  "vramQ4Gb": 6,
+  "vramFp16Gb": 16.2,
+  "tps4090": null,
+  "tpsNote": null,
+  "effortLabel": null,
+  "isDefaultConfig": true,
+  "isBestConfig": true,
+  "specSources": {
+    "paramsB": "https://huggingface.co/ibm-granite/granite-3.1-8b-instruct",
+    "ctxK": "https://huggingface.co/ibm-granite/granite-3.1-8b-instruct",
+    "releaseDate": "https://www.ibm.com/new/announcements/ibm-granite-3-1-powerful-performance-long-context-and-more",
+    "openness": "https://huggingface.co/ibm-granite/granite-3.1-8b-instruct"
+  },
+  "results": [
+    {
+      "benchmarkSlug": "arc-challenge",
+      "score": 62.62,
+      "source": "independent",
+      "sourceUrl": "https://huggingface.co/ibm-granite/granite-3.1-8b-instruct",
+      "notes": "HF Open LLM Leaderboard V1"
+    },
+    {
+      "benchmarkSlug": "hellaswag",
+      "score": 84.48,
+      "source": "independent",
+      "sourceUrl": "https://huggingface.co/ibm-granite/granite-3.1-8b-instruct",
+      "notes": "HF Open LLM Leaderboard V1"
+    },
+    {
+      "benchmarkSlug": "mmlu",
+      "score": 65.34,
+      "source": "independent",
+      "sourceUrl": "https://huggingface.co/ibm-granite/granite-3.1-8b-instruct",
+      "notes": "HF Open LLM Leaderboard V1"
+    },
+    {
+      "benchmarkSlug": "winogrande",
+      "score": 75.37,
+      "source": "independent",
+      "sourceUrl": "https://huggingface.co/ibm-granite/granite-3.1-8b-instruct",
+      "notes": "HF Open LLM Leaderboard V1"
+    },
+    {
+      "benchmarkSlug": "gsm8k",
+      "score": 73.84,
+      "source": "independent",
+      "sourceUrl": "https://huggingface.co/ibm-granite/granite-3.1-8b-instruct",
+      "notes": "HF Open LLM Leaderboard V1"
+    },
+    {
+      "benchmarkSlug": "ifeval",
+      "score": 72.08,
+      "source": "independent",
+      "sourceUrl": "https://huggingface.co/ibm-granite/granite-3.1-8b-instruct",
+      "notes": "HF Open LLM Leaderboard V2"
+    },
+    {
+      "benchmarkSlug": "bbh",
+      "score": 34.09,
+      "source": "independent",
+      "sourceUrl": "https://huggingface.co/ibm-granite/granite-3.1-8b-instruct",
+      "notes": "HF Open LLM Leaderboard V2"
+    },
+    {
+      "benchmarkSlug": "math",
+      "score": 21.68,
+      "source": "independent",
+      "sourceUrl": "https://huggingface.co/ibm-granite/granite-3.1-8b-instruct",
+      "notes": "MATH Lvl 5, HF Open LLM Leaderboard V2"
+    },
+    {
+      "benchmarkSlug": "gpqa",
+      "score": 8.28,
+      "source": "independent",
+      "sourceUrl": "https://huggingface.co/ibm-granite/granite-3.1-8b-instruct",
+      "notes": "HF Open LLM Leaderboard V2"
+    },
+    {
+      "benchmarkSlug": "mmlu-pro",
+      "score": 28.19,
+      "source": "independent",
+      "sourceUrl": "https://huggingface.co/ibm-granite/granite-3.1-8b-instruct",
+      "notes": "HF Open LLM Leaderboard V2"
+    },
+    {
+      "benchmarkSlug": "mmlu-pro",
+      "score": 41.03,
+      "source": "self-reported",
+      "sourceUrl": "https://huggingface.co/ibm-granite/granite-3.1-8b-instruct",
+      "notes": "IBM's own separate MMLU-Pro evaluation"
+    }
+  ],
+  "verificationNotes": "Confirmed real via HF model card (fetched): 8.1B params, 128K context, Apache 2.0, released 2024-12-18. Progressive RoPE-theta context extension from 4K to 128K using ~500B additional tokens independently confirmed via ibm-granite/granite-3.1-8b-base GitHub README (web_search excerpt). All 11 result rows confirmed literally present on the cited HF model card (Leaderboard V1: ARC-C 62.62, HellaSwag 84.48, MMLU 65.34, Winogrande 75.37, GSM8K 73.84; Leaderboard V2: IFEval 72.08, BBH 34.09, MATH 21.68, GPQA 8.28, MMLU-Pro 28.19; plus IBM's own MMLU-Pro 41.03). No changes made."
+}

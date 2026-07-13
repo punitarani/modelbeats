@@ -1,0 +1,105 @@
+{
+  "name": "Grok-2 mini",
+  "org": "xAI",
+  "family": "Grok 2",
+  "releaseDate": "2024-08-13",
+  "status": "deprecated",
+  "openness": "closed",
+  "license": "Proprietary",
+  "paramsB": null,
+  "activeParamsB": null,
+  "archClass": "moe",
+  "archDisplay": "Mixture-of-Experts (size undisclosed by xAI; smaller sibling of Grok-2)",
+  "ctxK": 131,
+  "modalities": [
+    "text",
+    "vision"
+  ],
+  "langCount": null,
+  "capabilities": {
+    "reasoning": false,
+    "coding": true,
+    "vision": true,
+    "functionCalling": true,
+    "toolUse": true,
+    "agentic": false
+  },
+  "apiAvailable": true,
+  "price": null,
+  "links": {
+    "docs": "docs.x.ai"
+  },
+  "note": "Smaller, faster, cost-efficient sibling of Grok-2 launched in the same beta; no distinct API price could be confirmed post-2024.",
+  "quants": [],
+  "vramQ4Gb": null,
+  "vramFp16Gb": null,
+  "tps4090": null,
+  "tpsNote": null,
+  "effortLabel": null,
+  "isDefaultConfig": true,
+  "isBestConfig": true,
+  "specSources": {
+    "releaseDate": "https://x.ai/news/grok-2",
+    "ctxK": "https://www.promptfoo.dev/docs/providers/xai/",
+    "openness": "https://x.ai/news/grok-2"
+  },
+  "results": [
+    {
+      "benchmarkSlug": "mmlu",
+      "score": 86.2,
+      "source": "self-reported",
+      "sourceUrl": "https://klu.ai/glossary/xai-grok-2",
+      "evaluatedAt": "2024-08-13"
+    },
+    {
+      "benchmarkSlug": "humaneval",
+      "score": 85.7,
+      "source": "self-reported",
+      "sourceUrl": "https://klu.ai/glossary/xai-grok-2",
+      "evaluatedAt": "2024-08-13"
+    },
+    {
+      "benchmarkSlug": "math",
+      "score": 73,
+      "source": "self-reported",
+      "sourceUrl": "https://klu.ai/glossary/xai-grok-2",
+      "evaluatedAt": "2024-08-13"
+    },
+    {
+      "benchmarkSlug": "gpqa",
+      "score": 51,
+      "source": "self-reported",
+      "sourceUrl": "https://klu.ai/glossary/xai-grok-2",
+      "evaluatedAt": "2024-08-13"
+    },
+    {
+      "benchmarkSlug": "mmlu-pro",
+      "score": 72,
+      "source": "self-reported",
+      "sourceUrl": "https://klu.ai/glossary/xai-grok-2",
+      "evaluatedAt": "2024-08-13"
+    },
+    {
+      "benchmarkSlug": "mmmu",
+      "score": 63.2,
+      "source": "self-reported",
+      "sourceUrl": "https://klu.ai/glossary/xai-grok-2",
+      "evaluatedAt": "2024-08-13"
+    },
+    {
+      "benchmarkSlug": "mathvista",
+      "score": 68.1,
+      "source": "self-reported",
+      "sourceUrl": "https://klu.ai/glossary/xai-grok-2",
+      "evaluatedAt": "2024-08-13"
+    },
+    {
+      "benchmarkSlug": "docvqa",
+      "score": 93.2,
+      "source": "self-reported",
+      "sourceUrl": "https://klu.ai/glossary/xai-grok-2",
+      "evaluatedAt": "2024-08-13"
+    }
+  ],
+  "verificationNotes": "Confirmed real as part of the same Aug 13-14, 2024 xAI beta release announcing Grok-2 and Grok-2 mini together. All 8 benchmark rows literally confirmed on klu.ai/glossary/xai-grok-2 (fetched directly, exact match). No distinct API price found post-2024 for the mini variant, consistent with price:null. paramsB/activeParamsB correctly left null (undisclosed)."
+}

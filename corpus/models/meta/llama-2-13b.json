@@ -1,0 +1,64 @@
+{
+  "name": "Llama 2 13B",
+  "org": "Meta",
+  "family": "Llama 2",
+  "releaseDate": "2023-07-18",
+  "status": "released",
+  "openness": "open-weights",
+  "license": "Llama 2 Community License Agreement",
+  "paramsB": 13,
+  "activeParamsB": null,
+  "archClass": "dense",
+  "archDisplay": "Dense decoder-only Transformer",
+  "ctxK": 4,
+  "modalities": [
+    "text"
+  ],
+  "langCount": null,
+  "capabilities": {
+    "reasoning": false,
+    "coding": true,
+    "vision": false,
+    "functionCalling": false,
+    "toolUse": false,
+    "agentic": false
+  },
+  "apiAvailable": true,
+  "price": null,
+  "links": {
+    "hf": "meta-llama/Llama-2-13b",
+    "gh": "meta-llama/llama",
+    "docs": "ai.meta.com/llama"
+  },
+  "note": "Mid-size Llama 2 base model, pretrained on 2T tokens with a 4K context window and the first commercially-licensed Llama generation.",
+  "quants": [
+    "GGUF",
+    "GPTQ",
+    "AWQ",
+    "GGML"
+  ],
+  "vramQ4Gb": 10,
+  "vramFp16Gb": 26,
+  "tps4090": null,
+  "tpsNote": "No verified base-model-specific RTX 4090 figure; the widely-cited ~71 tok/s Ollama benchmark for 'llama2:13b' targets Ollama's default chat-tuned weights, not this base checkpoint.",
+  "effortLabel": null,
+  "isDefaultConfig": true,
+  "isBestConfig": true,
+  "specSources": {
+    "paramsB": "https://huggingface.co/meta-llama/Llama-2-13b",
+    "ctxK": "https://github.com/meta-llama/llama-models/blob/main/models/llama2/MODEL_CARD.md",
+    "releaseDate": "https://github.com/meta-llama/llama/blob/main/LICENSE",
+    "openness": "https://github.com/meta-llama/llama/blob/main/LICENSE"
+  },
+  "results": [
+    {
+      "benchmarkSlug": "mmlu",
+      "score": 54.8,
+      "source": "self-reported",
+      "sourceUrl": "https://github.com/meta-llama/llama-models/blob/main/models/llama2/MODEL_CARD.md",
+      "evaluatedAt": "2023-07-18",
+      "notes": "Reported by Meta in the Llama 2 model card"
+    }
+  ],
+  "verificationNotes": "Confirmed via Hugging Face meta-llama/Llama-2-13b page (13B params, 4096 ctx, Llama 2 Community License) and release date 2023-07-18 corroborated by Ollama/HF sources. Fetched MODEL_CARD.md and confirmed MMLU 54.8 appears for the Llama-2-13B pretrained row. No changes made."
+}

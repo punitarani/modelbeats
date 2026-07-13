@@ -1,0 +1,72 @@
+{
+  "name": "InternVL3-78B",
+  "org": "OpenGVLab (Shanghai AI Lab)",
+  "family": "InternVL3",
+  "releaseDate": "2025-04-11",
+  "status": "released",
+  "openness": "open-weights",
+  "license": "Qwen License (InternViT component MIT; Qwen2.5-72B component under Qwen License)",
+  "paramsB": 78,
+  "activeParamsB": null,
+  "archClass": "dense",
+  "archDisplay": "InternViT-6B-448px-V2.5 vision encoder + Qwen2.5-72B language model, natively multimodal pre-training",
+  "ctxK": 32,
+  "modalities": [
+    "text",
+    "vision"
+  ],
+  "langCount": null,
+  "capabilities": {
+    "reasoning": false,
+    "coding": false,
+    "vision": true,
+    "functionCalling": true,
+    "toolUse": true,
+    "agentic": true
+  },
+  "apiAvailable": true,
+  "price": null,
+  "links": {
+    "hf": "OpenGVLab/InternVL3-78B",
+    "gh": "OpenGVLab/InternVL"
+  },
+  "note": "Flagship of the natively-multimodal InternVL3 series, surpassing GPT-4o on MMMU; adds tool use, GUI agents and 3D perception.",
+  "quants": [
+    "AWQ"
+  ],
+  "vramQ4Gb": 53,
+  "vramFp16Gb": 156,
+  "tps4090": null,
+  "tpsNote": "78B model exceeds a single RTX 4090's 24GB VRAM even at Q4 (AWQ build is 53GB); no single-4090 measurement exists.",
+  "effortLabel": null,
+  "isDefaultConfig": true,
+  "isBestConfig": true,
+  "specSources": {
+    "paramsB": "https://huggingface.co/OpenGVLab/InternVL3-78B",
+    "ctxK": "https://arxiv.org/html/2504.10479v1",
+    "releaseDate": "https://internvl.github.io/blog/2025-04-11-InternVL-3.0/",
+    "openness": "https://huggingface.co/OpenGVLab/InternVL3-78B"
+  },
+  "results": [
+    {
+      "benchmarkSlug": "mmmu",
+      "score": 72.2,
+      "source": "self-reported",
+      "sourceUrl": "https://arxiv.org/html/2504.10479v1",
+      "notes": "Surpasses GPT-4o (70.7)"
+    },
+    {
+      "benchmarkSlug": "mathvista",
+      "score": 79,
+      "source": "self-reported",
+      "sourceUrl": "https://arxiv.org/html/2504.10479v1"
+    },
+    {
+      "benchmarkSlug": "ocrbench",
+      "score": 906,
+      "source": "self-reported",
+      "sourceUrl": "https://arxiv.org/html/2504.10479v1"
+    }
+  ],
+  "verificationNotes": "Confirmed real model. Corrected releaseDate source to the official OpenGVLab blog post (internvl.github.io, dated 2025-04-11), which matches the record's date — the arXiv paper (v1) was actually first submitted 2025-04-14, so that URL was a weaker/slightly inconsistent source for the release-date claim even though the date value itself was right. Confirmed via arXiv HTML (2504.10479v1) full text: MMMU 72.2, MathVista 79.0, OCRBench 906 all literally appear in the benchmark tables. Confirmed 32K context ('sequences of up to 32K tokens') in the same paper. Confirmed via HF model card: 78B total params, InternViT-6B-448px-V2_5 vision encoder, Qwen2.5-72B LLM backbone. Confirmed InternViT-6B is MIT-licensed (HF) and Qwen2.5-72B uses the non-Apache 'Qwen Research License Agreement' (HF LICENSE file / Qwen blog), matching the split-license description. Confirmed OpenGVLab/InternVL3-78B-AWQ exists on HF and is ~53GB, matching vramQ4Gb. No changes to numeric values were needed."
+}

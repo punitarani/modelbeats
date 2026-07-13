@@ -1,0 +1,47 @@
+{
+  "name": "Hunyuan (1st-gen)",
+  "org": "Tencent",
+  "family": "Hunyuan",
+  "releaseDate": "2023-09-07",
+  "status": "released",
+  "openness": "closed",
+  "license": "Proprietary",
+  "paramsB": null,
+  "activeParamsB": null,
+  "archClass": "dense",
+  "archDisplay": "Dense Transformer, 100B+ params (exact architecture undisclosed)",
+  "ctxK": 4,
+  "modalities": [
+    "text"
+  ],
+  "langCount": null,
+  "capabilities": {
+    "reasoning": false,
+    "coding": true,
+    "vision": false,
+    "functionCalling": false,
+    "toolUse": false,
+    "agentic": false
+  },
+  "apiAvailable": true,
+  "price": null,
+  "links": {
+    "docs": "cloud.tencent.com/product/tclm"
+  },
+  "note": "Tencent's first in-house foundation model (100B+ params, 2T+ pretraining tokens), launched for enterprises via Tencent Cloud API and wired into 50+ Tencent products.",
+  "quants": [],
+  "vramQ4Gb": null,
+  "vramFp16Gb": null,
+  "tps4090": null,
+  "tpsNote": null,
+  "effortLabel": null,
+  "isDefaultConfig": true,
+  "isBestConfig": true,
+  "specSources": {
+    "paramsB": "https://www.tencent.com/en-us/articles/2201685.html",
+    "releaseDate": "https://www.tencent.com/en-us/articles/2201685.html",
+    "openness": "https://www.tencent.com/en-us/articles/2201685.html"
+  },
+  "results": [],
+  "verificationNotes": "Confirmed existence and release (Sept 7, 2023, Global Digital Ecosystem Summit) plus '100B+ params, 2T+ tokens' claim via Tencent's own announcement article and corroborating press (Yahoo Finance/SCMP/Pandaily). FLAGGED, NOT CORRECTED: ctxK=4 (4K context) could not be independently confirmed — the cited source article does not mention context length at all, and no other primary source could be found tying a specific context-window figure to this original Sept-2023 release (later 2024-era Hunyuan API tiers like hunyuan-lite show 3K-28K depending on interface, unrelated to this model). Schema requires a numeric ctxK so the original value was kept, but treat it as low-confidence/unverified rather than confirmed. paramsB kept null since only '100B+' was ever disclosed, no exact figure found. No results/benchmark rows were present to verify."
+}

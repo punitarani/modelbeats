@@ -1,0 +1,112 @@
+{
+  "name": "Gemma 2 9B",
+  "org": "Google",
+  "family": "Gemma 2",
+  "releaseDate": "2024-06-27",
+  "status": "released",
+  "openness": "open-weights",
+  "license": "Gemma Terms of Use",
+  "paramsB": 9.24,
+  "activeParamsB": null,
+  "archClass": "dense",
+  "archDisplay": "Dense decoder-only Transformer, GQA + interleaved local/global attention, distilled from a larger model",
+  "ctxK": 8,
+  "modalities": [
+    "text"
+  ],
+  "langCount": null,
+  "capabilities": {
+    "reasoning": false,
+    "coding": true,
+    "vision": false,
+    "functionCalling": false,
+    "toolUse": false,
+    "agentic": false
+  },
+  "apiAvailable": false,
+  "price": null,
+  "links": {
+    "hf": "google/gemma-2-9b",
+    "gh": "google-deepmind/gemma",
+    "docs": "ai.google.dev/gemma/docs/core/model_card_2"
+  },
+  "note": "Efficient mid-size Gemma 2 with GQA, online-distilled; outperforms Llama 3 8B in its size class.",
+  "quants": [
+    "GGUF Q4",
+    "GGUF Q8",
+    "AWQ",
+    "MLX"
+  ],
+  "vramQ4Gb": 7,
+  "vramFp16Gb": 20,
+  "tps4090": null,
+  "tpsNote": null,
+  "effortLabel": null,
+  "isDefaultConfig": true,
+  "isBestConfig": true,
+  "specSources": {
+    "releaseDate": "https://blog.google/innovation-and-ai/technology/developers-tools/google-gemma-2/",
+    "paramsB": "https://storage.googleapis.com/deepmind-media/gemma/gemma-2-report.pdf",
+    "ctxK": "https://storage.googleapis.com/deepmind-media/gemma/gemma-2-report.pdf",
+    "openness": "https://ai.google.dev/gemma/terms"
+  },
+  "results": [
+    {
+      "benchmarkSlug": "mmlu",
+      "score": 71.3,
+      "source": "self-reported",
+      "sourceUrl": "https://ai.google.dev/gemma/docs/core/model_card_2",
+      "evaluatedAt": "2024-06-01",
+      "notes": "5-shot"
+    },
+    {
+      "benchmarkSlug": "gsm8k",
+      "score": 68.6,
+      "source": "self-reported",
+      "sourceUrl": "https://ai.google.dev/gemma/docs/core/model_card_2",
+      "evaluatedAt": "2024-06-01",
+      "notes": "5-shot maj@1"
+    },
+    {
+      "benchmarkSlug": "humaneval",
+      "score": 40.2,
+      "source": "self-reported",
+      "sourceUrl": "https://ai.google.dev/gemma/docs/core/model_card_2",
+      "evaluatedAt": "2024-06-01",
+      "notes": "pass@1"
+    },
+    {
+      "benchmarkSlug": "hellaswag",
+      "score": 81.9,
+      "source": "self-reported",
+      "sourceUrl": "https://ai.google.dev/gemma/docs/core/model_card_2",
+      "evaluatedAt": "2024-06-01",
+      "notes": "10-shot"
+    },
+    {
+      "benchmarkSlug": "arc-challenge",
+      "score": 68.4,
+      "source": "self-reported",
+      "sourceUrl": "https://ai.google.dev/gemma/docs/core/model_card_2",
+      "evaluatedAt": "2024-06-01",
+      "notes": "25-shot"
+    },
+    {
+      "benchmarkSlug": "winogrande",
+      "score": 80.6,
+      "source": "self-reported",
+      "sourceUrl": "https://ai.google.dev/gemma/docs/core/model_card_2",
+      "evaluatedAt": "2024-06-01",
+      "notes": "partial score"
+    },
+    {
+      "benchmarkSlug": "bbh",
+      "score": 68.2,
+      "source": "self-reported",
+      "sourceUrl": "https://ai.google.dev/gemma/docs/core/model_card_2",
+      "evaluatedAt": "2024-06-01",
+      "notes": "3-shot CoT"
+    }
+  ],
+  "verificationNotes": "Existence, release date (June 27 2024), 9B params (8T training tokens), 8192-token context, and all 7 benchmark rows verbatim-confirmed via fetched ai.google.dev model card. No changes made."
+}

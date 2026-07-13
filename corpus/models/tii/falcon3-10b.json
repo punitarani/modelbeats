@@ -1,0 +1,99 @@
+{
+  "name": "Falcon3-10B",
+  "org": "TII",
+  "family": "Falcon 3",
+  "releaseDate": "2024-12-17",
+  "status": "released",
+  "openness": "open-weights",
+  "license": "TII Falcon-LLM License 2.0",
+  "paramsB": 10,
+  "activeParamsB": null,
+  "archClass": "dense",
+  "archDisplay": "Dense decoder-only transformer (depth-upscaled from Falcon3-7B, GQA, SwiGLU)",
+  "ctxK": 32,
+  "modalities": [
+    "text"
+  ],
+  "langCount": 4,
+  "capabilities": {
+    "reasoning": false,
+    "coding": true,
+    "vision": false,
+    "functionCalling": true,
+    "toolUse": true,
+    "agentic": true
+  },
+  "apiAvailable": true,
+  "price": null,
+  "links": {
+    "hf": "tiiuae/Falcon3-10B-Instruct",
+    "docs": "falconllm.tii.ae/falcon3"
+  },
+  "note": "Depth-upscaled flagship of Falcon 3; topped Hugging Face's sub-13B leaderboard at release.",
+  "quants": [
+    "GGUF",
+    "AWQ",
+    "GPTQ",
+    "MLX"
+  ],
+  "vramQ4Gb": 6,
+  "vramFp16Gb": 22.94,
+  "tps4090": null,
+  "tpsNote": null,
+  "effortLabel": null,
+  "isDefaultConfig": true,
+  "isBestConfig": true,
+  "specSources": {
+    "paramsB": "https://huggingface.co/tiiuae/Falcon3-10B-Instruct",
+    "ctxK": "https://huggingface.co/blog/falcon3",
+    "releaseDate": "https://huggingface.co/blog/falcon3",
+    "openness": "https://huggingface.co/tiiuae/Falcon3-10B-Instruct"
+  },
+  "results": [
+    {
+      "benchmarkSlug": "ifeval",
+      "score": 78.17,
+      "source": "self-reported",
+      "sourceUrl": "https://huggingface.co/tiiuae/Falcon3-10B-Instruct"
+    },
+    {
+      "benchmarkSlug": "bbh",
+      "score": 44.82,
+      "source": "self-reported",
+      "sourceUrl": "https://huggingface.co/tiiuae/Falcon3-10B-Instruct"
+    },
+    {
+      "benchmarkSlug": "mmlu",
+      "score": 73.9,
+      "source": "self-reported",
+      "sourceUrl": "https://huggingface.co/tiiuae/Falcon3-10B-Instruct"
+    },
+    {
+      "benchmarkSlug": "gsm8k",
+      "score": 84.9,
+      "source": "self-reported",
+      "sourceUrl": "https://huggingface.co/tiiuae/Falcon3-10B-Instruct"
+    },
+    {
+      "benchmarkSlug": "math",
+      "score": 25.91,
+      "source": "self-reported",
+      "sourceUrl": "https://huggingface.co/tiiuae/Falcon3-10B-Instruct",
+      "notes": "MATH Level-5, 4-shot"
+    },
+    {
+      "benchmarkSlug": "gpqa",
+      "score": 10.51,
+      "source": "self-reported",
+      "sourceUrl": "https://huggingface.co/tiiuae/Falcon3-10B-Instruct"
+    },
+    {
+      "benchmarkSlug": "humaneval",
+      "score": 74.7,
+      "source": "self-reported",
+      "sourceUrl": "https://huggingface.co/tiiuae/Falcon3-10B-Instruct",
+      "notes": "EvalPlus code eval, 0-shot"
+    }
+  ],
+  "verificationNotes": "Confirmed real model via HF model card and HF blog (huggingface.co/blog/falcon3, fetched): release date 2024-12-17, 10B params via depth-upscaling of Falcon3-7B, 32K context, license 'TII Falcon-LLM License 2.0' confirmed verbatim. All 7 result rows verified by directly querying the model card's two benchmark tables: ifeval 78.17/bbh 44.82/math 25.91/gpqa 10.51 match the 'official HF leaderboard' table; mmlu 73.9/gsm8k 84.9/humaneval(EvalPlus) 74.7 match the 'internal pipeline' table. Both tables are on the same official model card so all rows stand. No changes made."
+}

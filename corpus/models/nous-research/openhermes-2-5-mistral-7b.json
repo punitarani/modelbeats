@@ -1,0 +1,82 @@
+{
+  "name": "OpenHermes 2.5 Mistral 7B",
+  "org": "Nous Research",
+  "family": "OpenHermes",
+  "releaseDate": "2023-11-03",
+  "status": "released",
+  "openness": "open-weights",
+  "license": "Apache-2.0",
+  "paramsB": 7.24,
+  "activeParamsB": null,
+  "archClass": "dense",
+  "archDisplay": "Dense transformer decoder (Mistral architecture: GQA + sliding-window attention)",
+  "ctxK": 8,
+  "modalities": [
+    "text"
+  ],
+  "langCount": null,
+  "capabilities": {
+    "reasoning": false,
+    "coding": true,
+    "vision": false,
+    "functionCalling": false,
+    "toolUse": false,
+    "agentic": false
+  },
+  "apiAvailable": true,
+  "price": null,
+  "links": {
+    "hf": "teknium/OpenHermes-2.5-Mistral-7B"
+  },
+  "note": "Hugely influential Mistral-7B fine-tune on ~1M mostly GPT-4-generated samples; adding code data lifted HumanEval from 43% to 50.7% pass@1.",
+  "quants": [
+    "GGUF Q4_K_M",
+    "GPTQ",
+    "AWQ",
+    "MLX"
+  ],
+  "vramQ4Gb": 6,
+  "vramFp16Gb": 15,
+  "tps4090": null,
+  "tpsNote": null,
+  "effortLabel": null,
+  "isDefaultConfig": true,
+  "isBestConfig": true,
+  "specSources": {
+    "paramsB": "https://huggingface.co/teknium/OpenHermes-2.5-Mistral-7B",
+    "ctxK": "https://huggingface.co/teknium/OpenHermes-2.5-Mistral-7B/discussions/6",
+    "releaseDate": "https://www.aimodels.fyi/models/huggingFace/openhermes-25-mistral-7b-teknium",
+    "openness": "https://huggingface.co/teknium/OpenHermes-2.5-Mistral-7B"
+  },
+  "results": [
+    {
+      "benchmarkSlug": "humaneval",
+      "score": 50.7,
+      "source": "self-reported",
+      "sourceUrl": "https://huggingface.co/teknium/OpenHermes-2.5-Mistral-7B",
+      "notes": "pass@1"
+    },
+    {
+      "benchmarkSlug": "truthfulqa",
+      "score": 53.04,
+      "source": "self-reported",
+      "sourceUrl": "https://huggingface.co/teknium/OpenHermes-2.5-Mistral-7B",
+      "notes": "MC2"
+    },
+    {
+      "benchmarkSlug": "agieval",
+      "score": 43.07,
+      "source": "self-reported",
+      "sourceUrl": "https://huggingface.co/teknium/OpenHermes-2.5-Mistral-7B",
+      "notes": "AGIEval average"
+    },
+    {
+      "benchmarkSlug": "bigbench",
+      "score": 40.96,
+      "source": "self-reported",
+      "sourceUrl": "https://huggingface.co/teknium/OpenHermes-2.5-Mistral-7B",
+      "notes": "BigBench average (custom subset used by Nous/Teknium)"
+    }
+  ],
+  "verificationNotes": "Confirmed on HF model card: Apache-2.0 license, HumanEval 50.7 pass@1, TruthfulQA MC2 53.04, AGIEval avg 43.07, BigBench avg 40.96 all literally present. CORRECTED releaseDate from 2023-11-01 to 2023-11-03: multiple independent sources (aimodels.fyi, llm-explorer, general web search consensus) consistently cite November 3, 2023 as the release date, not November 1."
+}

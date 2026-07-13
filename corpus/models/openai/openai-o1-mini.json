@@ -1,0 +1,69 @@
+{
+  "name": "OpenAI o1-mini",
+  "org": "OpenAI",
+  "family": "o1",
+  "releaseDate": "2024-09-12",
+  "status": "deprecated",
+  "openness": "closed",
+  "license": "Proprietary",
+  "paramsB": null,
+  "activeParamsB": null,
+  "archClass": "dense",
+  "archDisplay": "Dense transformer reasoning model (size undisclosed)",
+  "ctxK": 128,
+  "modalities": [
+    "text"
+  ],
+  "langCount": null,
+  "capabilities": {
+    "reasoning": true,
+    "coding": true,
+    "vision": false,
+    "functionCalling": false,
+    "toolUse": false,
+    "agentic": false
+  },
+  "apiAvailable": false,
+  "price": {
+    "input": 3,
+    "output": 12,
+    "provider": "OpenAI"
+  },
+  "links": {
+    "docs": "developers.openai.com/api/docs/models/o1-mini"
+  },
+  "note": "Cost-efficient STEM/coding reasoning model; retired from OpenAI's API on 2025-10-27.",
+  "quants": [],
+  "vramQ4Gb": null,
+  "vramFp16Gb": null,
+  "tps4090": null,
+  "tpsNote": null,
+  "effortLabel": null,
+  "isDefaultConfig": true,
+  "isBestConfig": true,
+  "specSources": {
+    "releaseDate": "https://developers.openai.com/api/docs/models/o1-mini",
+    "ctxK": "https://developers.openai.com/api/docs/models/o1-mini",
+    "openness": "https://developers.openai.com/api/docs/models/o1-mini",
+    "paramsB": "https://developers.openai.com/api/docs/models/o1-mini"
+  },
+  "results": [
+    {
+      "benchmarkSlug": "aime",
+      "score": 70,
+      "source": "independent",
+      "sourceUrl": "https://www.analyticsvidhya.com/blog/2024/09/o1-preview-vs-o1-mini/",
+      "evaluatedAt": "2024-09-01",
+      "notes": "AIME 2024, cited vs o1-preview 44.6%"
+    },
+    {
+      "benchmarkSlug": "codeforces",
+      "score": 1650,
+      "source": "independent",
+      "sourceUrl": "https://www.analyticsvidhya.com/blog/2024/09/o1-preview-vs-o1-mini/",
+      "evaluatedAt": "2024-09-01",
+      "notes": "Codeforces Elo, ~86th percentile"
+    }
+  ],
+  "verificationNotes": "Existence, release date (2024-09-12), and retirement date (2025-10-27, confirmed real since today is 2026-07-12) verified via independent sources (Portkey deprecation guide, OpenAI community, DocGPT). AIME 70.0% and Codeforces 1650 confirmed by direct fetch of analyticsvidhya.com article. Pricing $3/$12 per 1M tokens confirmed via two independent sources (artificialanalysis.ai, cross-referenced search) after an initial conflicting fetch of the (now-stale/redirect-confused) OpenAI docs page was discarded. No changes made."
+}

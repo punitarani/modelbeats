@@ -1,0 +1,95 @@
+{
+  "name": "Tülu 3 405B",
+  "org": "Allen Institute for AI (Ai2)",
+  "family": "Tülu 3",
+  "releaseDate": "2025-01-30",
+  "status": "released",
+  "openness": "open-weights",
+  "license": "Llama 3.1 Community License Agreement",
+  "paramsB": 405.85,
+  "activeParamsB": null,
+  "archClass": "dense",
+  "archDisplay": "Dense transformer (decoder-only, Llama 3.1 405B base)",
+  "ctxK": 128,
+  "modalities": [
+    "text"
+  ],
+  "langCount": 8,
+  "capabilities": {
+    "reasoning": false,
+    "coding": true,
+    "vision": false,
+    "functionCalling": false,
+    "toolUse": false,
+    "agentic": false
+  },
+  "apiAvailable": true,
+  "price": null,
+  "links": {
+    "hf": "allenai/Llama-3.1-Tulu-3-405B",
+    "gh": "allenai/open-instruct",
+    "docs": "allenai.org/blog/tulu-3-405b"
+  },
+  "note": "Scaled the fully open Tülu 3 RLVR recipe to 405B (on Llama 3.1); matches or beats DeepSeek V3 and GPT-4o on key benchmarks.",
+  "quants": [
+    "GGUF Q4"
+  ],
+  "vramQ4Gb": 230,
+  "vramFp16Gb": 810,
+  "tps4090": null,
+  "tpsNote": "Too large to run on a single RTX 4090 at any practical quant; requires multi-GPU or CPU offload.",
+  "effortLabel": null,
+  "isDefaultConfig": true,
+  "isBestConfig": true,
+  "specSources": {
+    "paramsB": "https://huggingface.co/allenai/Llama-3.1-Tulu-3-405B/raw/main/model.safetensors.index.json",
+    "ctxK": "https://huggingface.co/allenai/Llama-3.1-Tulu-3-405B/raw/main/config.json",
+    "releaseDate": "https://techcrunch.com/2025/01/30/ai2-says-its-new-ai-model-beats-one-of-deepseeks-best/",
+    "openness": "https://allenai.org/blog/tulu-3-405b"
+  },
+  "results": [
+    {
+      "benchmarkSlug": "mmlu",
+      "score": 87,
+      "source": "self-reported",
+      "sourceUrl": "https://huggingface.co/allenai/Llama-3.1-Tulu-3-405B",
+      "notes": "5-shot CoT; DeepSeek V3 82.1, GPT-4o 87.9, Llama 3.1 405B 88.0"
+    },
+    {
+      "benchmarkSlug": "gsm8k",
+      "score": 95.5,
+      "source": "self-reported",
+      "sourceUrl": "https://huggingface.co/allenai/Llama-3.1-Tulu-3-405B",
+      "notes": "8-shot CoT; DeepSeek V3 94.1, GPT-4o 91.7"
+    },
+    {
+      "benchmarkSlug": "bbh",
+      "score": 88.6,
+      "source": "self-reported",
+      "sourceUrl": "https://huggingface.co/allenai/Llama-3.1-Tulu-3-405B",
+      "notes": "DeepSeek V3 89.5, GPT-4o 83.3"
+    },
+    {
+      "benchmarkSlug": "ifeval",
+      "score": 86,
+      "source": "self-reported",
+      "sourceUrl": "https://huggingface.co/allenai/Llama-3.1-Tulu-3-405B",
+      "notes": "loose; DeepSeek V3 88.0, GPT-4o 84.8"
+    },
+    {
+      "benchmarkSlug": "math",
+      "score": 67.3,
+      "source": "self-reported",
+      "sourceUrl": "https://huggingface.co/allenai/Llama-3.1-Tulu-3-405B",
+      "notes": "4-shot Flex; DeepSeek V3 72.5, GPT-4o 68.8"
+    },
+    {
+      "benchmarkSlug": "humaneval",
+      "score": 95.9,
+      "source": "self-reported",
+      "sourceUrl": "https://huggingface.co/allenai/Llama-3.1-Tulu-3-405B",
+      "notes": "pass@10; DeepSeek V3 94.6, GPT-4o 97.0"
+    }
+  ],
+  "verificationNotes": "Release (Jan 30 2025) confirmed via TechCrunch, MarkTechPost, and Ai2's own X announcement. paramsB=405.85 confirmed precisely: safetensors index total 811,707,301,888 bytes / 2 bytes (bf16) = ~405.85B, exact match. ctxK=128 (131072) confirmed via config.json. All six benchmark rows confirmed present verbatim, but on the HF model card rather than the original allenai.org blog post (the blog's table is embedded as an image and not machine-readable) — sourceUrl updated from the blog URL to the HF card URL where the numbers were literally verified; scores themselves are unchanged. langCount=8 reflects Llama 3.1's documented 8 supported languages but is not explicitly restated in the Tülu 3 405B card itself (which says 'primarily English'); kept as a reasonable inherited spec but flagged as lower-confidence."
+}

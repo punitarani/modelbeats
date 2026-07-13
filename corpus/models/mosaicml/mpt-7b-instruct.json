@@ -1,0 +1,53 @@
+{
+  "name": "MPT-7B-Instruct",
+  "org": "MosaicML",
+  "family": "MPT",
+  "releaseDate": "2023-05-05",
+  "status": "released",
+  "openness": "open-weights",
+  "license": "CC-BY-SA-3.0",
+  "paramsB": 6.7,
+  "activeParamsB": null,
+  "archClass": "dense",
+  "archDisplay": "Decoder-only Transformer, no positional embeddings (ALiBi), FlashAttention; 32L/32H, d_model 4096",
+  "ctxK": 2.048,
+  "modalities": [
+    "text"
+  ],
+  "langCount": null,
+  "capabilities": {
+    "reasoning": false,
+    "coding": true,
+    "vision": false,
+    "functionCalling": false,
+    "toolUse": false,
+    "agentic": false
+  },
+  "apiAvailable": false,
+  "price": null,
+  "links": {
+    "hf": "mosaicml/mpt-7b-instruct",
+    "gh": "mosaicml/llm-foundry",
+    "docs": "databricks.com/blog/mpt-7b"
+  },
+  "note": "MPT-7B fine-tuned on Dolly-15k + Anthropic HH-RLHF (dolly_hhrlhf) for short-form instruction following; licensed CC-BY-SA-3.0 (more restrictive than the Apache-2.0 base model) due to the derived instruction dataset.",
+  "quants": [
+    "GGUF",
+    "GGML"
+  ],
+  "vramQ4Gb": 4.5,
+  "vramFp16Gb": 14.5,
+  "tps4090": null,
+  "tpsNote": null,
+  "effortLabel": null,
+  "isDefaultConfig": true,
+  "isBestConfig": true,
+  "specSources": {
+    "paramsB": "https://huggingface.co/mosaicml/mpt-7b-instruct",
+    "ctxK": "https://huggingface.co/mosaicml/mpt-7b-instruct",
+    "releaseDate": "https://huggingface.co/mosaicml/mpt-7b-instruct",
+    "openness": "https://www.databricks.com/blog/mpt-7b"
+  },
+  "results": [],
+  "verificationNotes": "Existence and release date (2023-05-05, same announcement as base MPT-7B), fine-tuning datasets (Dolly-15k + Anthropic HH-RLHF / dolly_hhrlhf), and 6.7B params all corroborated via HF and MosaicML sources. CORRECTED the license: the input record claimed 'Apache 2.0' (with a note claiming this reversed an early CC-BY-SA-3.0 designation) — this is backwards. The official Databricks/MosaicML announcement blog explicitly states MPT-7B-Instruct is licensed CC-By-SA-3.0 (distinct from the Apache-2.0 base model and the non-commercial CC-By-NC-SA-4.0 Chat variant), and this is corroborated by the model's actual HF README frontmatter and multiple independent trackers (e.g. eugeneyan/open-llms). No results rows were present to verify (array was empty)."
+}

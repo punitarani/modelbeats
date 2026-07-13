@@ -1,0 +1,74 @@
+{
+  "name": "Orca 2 (13B)",
+  "org": "Microsoft",
+  "family": "Orca",
+  "releaseDate": "2023-11-18",
+  "status": "released",
+  "openness": "open-weights",
+  "license": "Microsoft Research License",
+  "paramsB": 13,
+  "activeParamsB": null,
+  "archClass": "dense",
+  "archDisplay": "Dense decoder-only Transformer (Llama 2 13B backbone)",
+  "ctxK": 4,
+  "modalities": [
+    "text"
+  ],
+  "langCount": null,
+  "capabilities": {
+    "reasoning": true,
+    "coding": false,
+    "vision": false,
+    "functionCalling": false,
+    "toolUse": false,
+    "agentic": false
+  },
+  "apiAvailable": false,
+  "price": null,
+  "links": {
+    "hf": "microsoft/Orca-2-13b",
+    "gh": "microsoft/orca"
+  },
+  "note": "Reasoning-focused Llama-2 13B fine-tune trained with 'Prompt Erasure' to select its own reasoning strategy; rivals models 5-10x larger.",
+  "quants": [
+    "GGUF",
+    "GPTQ",
+    "AWQ"
+  ],
+  "vramQ4Gb": 7.5,
+  "vramFp16Gb": 26,
+  "tps4090": null,
+  "tpsNote": null,
+  "effortLabel": null,
+  "isDefaultConfig": true,
+  "isBestConfig": true,
+  "specSources": {
+    "paramsB": "https://huggingface.co/microsoft/Orca-2-13b",
+    "ctxK": "https://ar5iv.labs.arxiv.org/html/2311.11045",
+    "releaseDate": "https://arxiv.org/abs/2311.11045",
+    "openness": "https://huggingface.co/microsoft/Orca-2-13b/blob/main/LICENSE"
+  },
+  "results": [
+    {
+      "benchmarkSlug": "bbh",
+      "score": 50.18,
+      "source": "self-reported",
+      "sourceUrl": "https://ar5iv.labs.arxiv.org/html/2311.11045",
+      "notes": "zero-shot aggregate BigBench-Hard"
+    },
+    {
+      "benchmarkSlug": "gsm8k",
+      "score": 59.14,
+      "source": "self-reported",
+      "sourceUrl": "https://ar5iv.labs.arxiv.org/html/2311.11045",
+      "notes": "zero-shot"
+    },
+    {
+      "benchmarkSlug": "mmlu",
+      "score": 57.73,
+      "source": "self-reported",
+      "sourceUrl": "https://ar5iv.labs.arxiv.org/html/2311.11045"
+    }
+  ],
+  "verificationNotes": "Existence, Llama-2-13B backbone, Microsoft Research (non-commercial) License, and Nov 18 2023 HF card date all confirmed. Fetched arXiv 2311.11045 HTML directly and confirmed BBH 50.18, GSM8K 59.14, MMLU 57.73 verbatim (zero-shot). No discrepancies found."
+}

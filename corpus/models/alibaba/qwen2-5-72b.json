@@ -1,0 +1,98 @@
+{
+  "name": "Qwen2.5-72B",
+  "org": "Alibaba",
+  "family": "Qwen2.5",
+  "releaseDate": "2024-09-19",
+  "status": "released",
+  "openness": "open-weights",
+  "license": "Qwen (Tongyi Qianwen License)",
+  "paramsB": 72.7,
+  "activeParamsB": null,
+  "archClass": "dense",
+  "archDisplay": "Dense transformer, 80 layers (GQA 64Q/8KV)",
+  "ctxK": 128,
+  "modalities": [
+    "text"
+  ],
+  "langCount": 29,
+  "capabilities": {
+    "reasoning": true,
+    "coding": true,
+    "vision": false,
+    "functionCalling": true,
+    "toolUse": true,
+    "agentic": true
+  },
+  "apiAvailable": false,
+  "price": null,
+  "links": {
+    "hf": "Qwen/Qwen2.5-72B",
+    "gh": "QwenLM/Qwen2.5",
+    "docs": "qwenlm.github.io/blog/qwen2.5"
+  },
+  "note": "Gen-2.5 dense flagship trained on 18T tokens; large MMLU/MATH/coding gains over Qwen2; Qwen license (non-Apache) for the 72B/3B sizes.",
+  "quants": [
+    "GGUF",
+    "AWQ",
+    "GPTQ Int4",
+    "MLX"
+  ],
+  "vramQ4Gb": 47.4,
+  "vramFp16Gb": 145,
+  "tps4090": null,
+  "tpsNote": "Q4 weights (~47GB) exceed a single RTX 4090's 24GB VRAM; requires multi-GPU or CPU offload for local inference.",
+  "effortLabel": null,
+  "isDefaultConfig": true,
+  "isBestConfig": true,
+  "specSources": {
+    "paramsB": "https://huggingface.co/Qwen/Qwen2.5-72B",
+    "ctxK": "https://huggingface.co/Qwen/Qwen2.5-72B",
+    "releaseDate": "https://qwenlm.github.io/blog/qwen2.5/",
+    "openness": "https://huggingface.co/Qwen/Qwen2.5-72B"
+  },
+  "results": [
+    {
+      "benchmarkSlug": "mmlu",
+      "score": 86.1,
+      "source": "self-reported",
+      "sourceUrl": "https://qwenlm.github.io/blog/qwen2.5-llm/"
+    },
+    {
+      "benchmarkSlug": "mmlu-pro",
+      "score": 58.1,
+      "source": "self-reported",
+      "sourceUrl": "https://qwenlm.github.io/blog/qwen2.5-llm/"
+    },
+    {
+      "benchmarkSlug": "bbh",
+      "score": 86.3,
+      "source": "self-reported",
+      "sourceUrl": "https://qwenlm.github.io/blog/qwen2.5-llm/"
+    },
+    {
+      "benchmarkSlug": "math",
+      "score": 62.1,
+      "source": "self-reported",
+      "sourceUrl": "https://qwenlm.github.io/blog/qwen2.5-llm/"
+    },
+    {
+      "benchmarkSlug": "gsm8k",
+      "score": 91.5,
+      "source": "self-reported",
+      "sourceUrl": "https://qwenlm.github.io/blog/qwen2.5-llm/"
+    },
+    {
+      "benchmarkSlug": "humaneval",
+      "score": 59.1,
+      "source": "self-reported",
+      "sourceUrl": "https://qwenlm.github.io/blog/qwen2.5-llm/"
+    },
+    {
+      "benchmarkSlug": "mbpp",
+      "score": 84.7,
+      "source": "self-reported",
+      "sourceUrl": "https://qwenlm.github.io/blog/qwen2.5-llm/"
+    }
+  ],
+  "verificationNotes": "Existence, org, and Sept 19 2024 date confirmed via qwenlm.github.io/blog/qwen2.5/ byline. HF model card (huggingface.co/Qwen/Qwen2.5-72B) confirms 72.7B total / 70.0B non-embedding params, 80 layers, GQA 64Q/8KV, 131,072 ctx, 'qwen' (non-Apache) license. Blog confirms 29+ language support and Apache-2.0-except-3B/72B licensing. All 7 result rows (MMLU 86.1, MMLU-Pro 58.1, BBH 86.3, MATH 62.1, GSM8K 91.5, HumanEval 59.1, MBPP 84.7) verified verbatim on qwenlm.github.io/blog/qwen2.5-llm/. No changes made."
+}

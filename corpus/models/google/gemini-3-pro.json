@@ -1,0 +1,111 @@
+{
+  "name": "Gemini 3 Pro",
+  "org": "Google",
+  "family": "Gemini 3",
+  "releaseDate": "2025-11-18",
+  "status": "released",
+  "openness": "closed",
+  "license": "Proprietary (Google API Terms)",
+  "paramsB": null,
+  "activeParamsB": null,
+  "archClass": "moe",
+  "archDisplay": "Sparse Mixture-of-Experts Transformer (natively multimodal)",
+  "ctxK": 1000,
+  "modalities": [
+    "text",
+    "vision",
+    "audio",
+    "video"
+  ],
+  "langCount": null,
+  "capabilities": {
+    "reasoning": true,
+    "coding": true,
+    "vision": true,
+    "functionCalling": true,
+    "toolUse": true,
+    "agentic": true
+  },
+  "apiAvailable": true,
+  "price": {
+    "input": 2,
+    "output": 12,
+    "provider": "Google (Gemini API / Vertex AI)"
+  },
+  "links": {
+    "docs": "ai.google.dev/gemini-api/docs/gemini-3"
+  },
+  "note": "Google's frontier reasoning/agentic-coding flagship; sparse MoE, natively multimodal, 1M context; >200k-token prompts bill at $4/$18 per M.",
+  "quants": [],
+  "vramQ4Gb": null,
+  "vramFp16Gb": null,
+  "tps4090": null,
+  "tpsNote": null,
+  "effortLabel": null,
+  "isDefaultConfig": true,
+  "isBestConfig": true,
+  "specSources": {
+    "ctxK": "https://storage.googleapis.com/deepmind-media/Model-Cards/Gemini-3-Pro-Model-Card.pdf",
+    "releaseDate": "https://blog.google/products/gemini/gemini-3/",
+    "openness": "https://ai.google.dev/gemini-api/docs/pricing"
+  },
+  "results": [
+    {
+      "benchmarkSlug": "gpqa",
+      "score": 91.9,
+      "source": "self-reported",
+      "sourceUrl": "https://storage.googleapis.com/deepmind-media/Model-Cards/Gemini-3-Pro-Model-Card.pdf",
+      "evaluatedAt": "2025-11-01",
+      "notes": "GPQA Diamond, no tools"
+    },
+    {
+      "benchmarkSlug": "aime",
+      "score": 95,
+      "source": "self-reported",
+      "sourceUrl": "https://storage.googleapis.com/deepmind-media/Model-Cards/Gemini-3-Pro-Model-Card.pdf",
+      "evaluatedAt": "2025-11-01",
+      "notes": "AIME 2025, no tools (100% with code execution)"
+    },
+    {
+      "benchmarkSlug": "hle",
+      "score": 37.5,
+      "source": "self-reported",
+      "sourceUrl": "https://storage.googleapis.com/deepmind-media/Model-Cards/Gemini-3-Pro-Model-Card.pdf",
+      "evaluatedAt": "2025-11-01",
+      "notes": "Humanity's Last Exam, no tools (45.8% with search+code exec)"
+    },
+    {
+      "benchmarkSlug": "swe-bench",
+      "score": 76.2,
+      "source": "self-reported",
+      "sourceUrl": "https://storage.googleapis.com/deepmind-media/Model-Cards/Gemini-3-Pro-Model-Card.pdf",
+      "evaluatedAt": "2025-11-01",
+      "notes": "SWE-Bench Verified, single attempt"
+    },
+    {
+      "benchmarkSlug": "mmmu",
+      "score": 81,
+      "source": "self-reported",
+      "sourceUrl": "https://storage.googleapis.com/deepmind-media/Model-Cards/Gemini-3-Pro-Model-Card.pdf",
+      "evaluatedAt": "2025-11-01",
+      "notes": "MMMU-Pro variant"
+    },
+    {
+      "benchmarkSlug": "mmlu",
+      "score": 91.8,
+      "source": "self-reported",
+      "sourceUrl": "https://storage.googleapis.com/deepmind-media/Model-Cards/Gemini-3-Pro-Model-Card.pdf",
+      "evaluatedAt": "2025-11-01",
+      "notes": "MMMLU, multilingual Q&A"
+    },
+    {
+      "benchmarkSlug": "livecodebench-pro",
+      "score": 2439,
+      "source": "self-reported",
+      "sourceUrl": "https://storage.googleapis.com/deepmind-media/Model-Cards/Gemini-3-Pro-Model-Card.pdf",
+      "evaluatedAt": "2025-11-01",
+      "notes": "LiveCodeBench Pro, Elo rating (not a 0-100 pass rate)"
+    }
+  ],
+  "verificationNotes": "Directly downloaded and read the official Gemini 3 Pro Model Card PDF ('Model Release: November 2025'). Its evaluation table matches every claimed score digit-for-digit: GPQA 91.9, AIME 95.0 (100% with code execution), HLE 37.5 (45.8% with search+code exec), SWE-Bench 76.2, MMMU-Pro 81.0, MMMLU 91.8, LiveCodeBench Pro Elo 2,439. Release date Nov 18, 2025 corroborated by blog.google, CNBC, and InfoQ coverage. Pricing $2/$12 (base tier) and $4/$18 (>200k tokens) confirmed on ai.google.dev/gemini-api/docs/pricing (via the now-succeeding Gemini 3.1 Pro Preview page, which carries forward identical base-tier pricing). Model card explicitly names it a 'sparse mixture-of-experts (MoE) transformer-based model... with native multimodal support,' confirming archClass/archDisplay directly."
+}

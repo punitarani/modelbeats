@@ -1,0 +1,59 @@
+{
+  "name": "Codestral Mamba (7B)",
+  "org": "Mistral AI",
+  "family": "Codestral",
+  "releaseDate": "2024-07-16",
+  "status": "deprecated",
+  "openness": "open-source",
+  "license": "Apache 2.0",
+  "paramsB": 7.3,
+  "activeParamsB": null,
+  "archClass": "ssm",
+  "archDisplay": "Mamba2 state-space model (linear-time inference)",
+  "ctxK": 256,
+  "modalities": [
+    "text"
+  ],
+  "langCount": null,
+  "capabilities": {
+    "reasoning": false,
+    "coding": true,
+    "vision": false,
+    "functionCalling": false,
+    "toolUse": false,
+    "agentic": false
+  },
+  "apiAvailable": true,
+  "price": null,
+  "links": {
+    "hf": "mistralai/Mamba-Codestral-7B-v0.1",
+    "docs": "docs.mistral.ai/models/model-cards/codestral-mamba-7b-0-1"
+  },
+  "note": "First Mamba2-architecture code model from Mistral; linear-time inference, tested to 256K-token in-context retrieval, Apache 2.0.",
+  "quants": [
+    "GGUF Q4 (experimental Mamba2 support)"
+  ],
+  "vramQ4Gb": 5,
+  "vramFp16Gb": 15,
+  "tps4090": null,
+  "tpsNote": "Mamba2 quantization/support in llama.cpp was experimental and unstable at launch; state-space caching differs from transformer KV-cache VRAM scaling",
+  "effortLabel": null,
+  "isDefaultConfig": true,
+  "isBestConfig": true,
+  "specSources": {
+    "paramsB": "https://www.marktechpost.com/2024/07/17/mistral-ai-launches-codestral-mamba-7b-a-revolutionary-code-llm-achieving-75-on-humaneval-for-python-coding/",
+    "ctxK": "https://mistral.ai/news/codestral-mamba/",
+    "releaseDate": "https://mistral.ai/news/codestral-mamba/",
+    "openness": "https://huggingface.co/mistralai/Mamba-Codestral-7B-v0.1"
+  },
+  "results": [
+    {
+      "benchmarkSlug": "humaneval",
+      "score": 75,
+      "source": "independent",
+      "sourceUrl": "https://www.marktechpost.com/2024/07/17/mistral-ai-launches-codestral-mamba-7b-a-revolutionary-code-llm-achieving-75-on-humaneval-for-python-coding/",
+      "evaluatedAt": "2024-07-01"
+    }
+  ],
+  "verificationNotes": "Fetched mistral.ai/news/codestral-mamba/ directly: confirms 2024-07-16 release, Mamba2/linear-time architecture, Apache 2.0, tested to 256K-token in-context retrieval. Fetched marktechpost.com article directly: literal params 7,285,403,648 (~7.3B) and HumanEval 75% appear in the page title/headline; corroborated independently by Philipp Schmid and multiple other outlets in search results. No changes made."
+}

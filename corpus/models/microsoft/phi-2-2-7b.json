@@ -1,0 +1,85 @@
+{
+  "name": "Phi-2 (2.7B)",
+  "org": "Microsoft",
+  "family": "Phi-2",
+  "releaseDate": "2023-12-12",
+  "status": "released",
+  "openness": "open-weights",
+  "license": "MIT",
+  "paramsB": 2.7,
+  "activeParamsB": null,
+  "archClass": "dense",
+  "archDisplay": "Dense decoder-only Transformer",
+  "ctxK": 2,
+  "modalities": [
+    "text"
+  ],
+  "langCount": null,
+  "capabilities": {
+    "reasoning": false,
+    "coding": true,
+    "vision": false,
+    "functionCalling": false,
+    "toolUse": false,
+    "agentic": false
+  },
+  "apiAvailable": false,
+  "price": null,
+  "links": {
+    "hf": "microsoft/phi-2"
+  },
+  "note": "Breakout 2.7B base model matching/beating 7B-13B peers on reasoning, math and code; MIT-licensed, widely adopted for on-device use.",
+  "quants": [
+    "GGUF",
+    "GPTQ",
+    "MLX"
+  ],
+  "vramQ4Gb": 1.7,
+  "vramFp16Gb": 5.4,
+  "tps4090": null,
+  "tpsNote": null,
+  "effortLabel": null,
+  "isDefaultConfig": true,
+  "isBestConfig": true,
+  "specSources": {
+    "paramsB": "https://huggingface.co/microsoft/phi-2",
+    "ctxK": "https://huggingface.co/microsoft/phi-2/discussions/24",
+    "releaseDate": "https://www.microsoft.com/en-us/research/blog/phi-2-the-surprising-power-of-small-language-models/",
+    "openness": "https://huggingface.co/microsoft/phi-2/blob/main/LICENSE"
+  },
+  "results": [
+    {
+      "benchmarkSlug": "mmlu",
+      "score": 56.3,
+      "source": "self-reported",
+      "sourceUrl": "https://arxiv.org/pdf/2404.14219",
+      "notes": "reported in Phi-3 Technical Report comparison table"
+    },
+    {
+      "benchmarkSlug": "humaneval",
+      "score": 59,
+      "source": "self-reported",
+      "sourceUrl": "https://arxiv.org/pdf/2404.14219"
+    },
+    {
+      "benchmarkSlug": "gsm8k",
+      "score": 61.1,
+      "source": "self-reported",
+      "sourceUrl": "https://arxiv.org/pdf/2404.14219",
+      "notes": "8-shot CoT"
+    },
+    {
+      "benchmarkSlug": "bbh",
+      "score": 59.4,
+      "source": "self-reported",
+      "sourceUrl": "https://arxiv.org/pdf/2404.14219"
+    },
+    {
+      "benchmarkSlug": "arc-challenge",
+      "score": 75.9,
+      "source": "self-reported",
+      "sourceUrl": "https://arxiv.org/pdf/2404.14219"
+    }
+  ],
+  "verificationNotes": "Existence, 2.7B params, MIT license, and Dec 2023 Microsoft Research blog release all confirmed. Fetched the Phi-3 Technical Report (arXiv 2404.14219) comparison table and confirmed Phi-2 row verbatim: MMLU 56.3, HumanEval 59.0, GSM8K 61.1, BBH 59.4, ARC-Challenge 75.9. No discrepancies found."
+}

@@ -1,0 +1,92 @@
+{
+  "name": "GPT-4.1 mini",
+  "org": "OpenAI",
+  "family": "GPT-4.1",
+  "releaseDate": "2025-04-14",
+  "status": "released",
+  "openness": "closed",
+  "license": "Proprietary",
+  "paramsB": null,
+  "activeParamsB": null,
+  "archClass": "dense",
+  "archDisplay": "Dense transformer (size undisclosed; non-reasoning)",
+  "ctxK": 1000,
+  "modalities": [
+    "text",
+    "vision"
+  ],
+  "langCount": null,
+  "capabilities": {
+    "reasoning": false,
+    "coding": true,
+    "vision": true,
+    "functionCalling": true,
+    "toolUse": true,
+    "agentic": true
+  },
+  "apiAvailable": true,
+  "price": {
+    "input": 0.4,
+    "output": 1.6,
+    "provider": "OpenAI"
+  },
+  "links": {
+    "docs": "developers.openai.com/api/docs/models/gpt-4.1-mini"
+  },
+  "note": "Balanced mid-tier of the 4.1 family with a 1M-token context window, vision, and strong instruction-following.",
+  "quants": [],
+  "vramQ4Gb": null,
+  "vramFp16Gb": null,
+  "tps4090": null,
+  "tpsNote": null,
+  "effortLabel": null,
+  "isDefaultConfig": true,
+  "isBestConfig": true,
+  "specSources": {
+    "releaseDate": "https://developers.openai.com/api/docs/models/gpt-4.1-mini",
+    "ctxK": "https://developers.openai.com/api/docs/models/gpt-4.1-mini",
+    "openness": "https://developers.openai.com/api/docs/models/gpt-4.1-mini",
+    "paramsB": "https://developers.openai.com/api/docs/models/gpt-4.1-mini"
+  },
+  "results": [
+    {
+      "benchmarkSlug": "mmlu",
+      "score": 87.5,
+      "source": "independent",
+      "sourceUrl": "https://docsbot.ai/models/gpt-4-1-mini",
+      "evaluatedAt": "2025-04-01"
+    },
+    {
+      "benchmarkSlug": "gpqa",
+      "score": 65,
+      "source": "independent",
+      "sourceUrl": "https://docsbot.ai/models/gpt-4-1-mini",
+      "evaluatedAt": "2025-04-01",
+      "notes": "GPQA Diamond"
+    },
+    {
+      "benchmarkSlug": "swe-bench",
+      "score": 23.6,
+      "source": "independent",
+      "sourceUrl": "https://docsbot.ai/models/gpt-4-1-mini",
+      "evaluatedAt": "2025-04-01",
+      "notes": "SWE-bench Verified"
+    },
+    {
+      "benchmarkSlug": "aime",
+      "score": 49.6,
+      "source": "independent",
+      "sourceUrl": "https://docsbot.ai/models/gpt-4-1-mini",
+      "evaluatedAt": "2025-04-01",
+      "notes": "AIME 2024"
+    },
+    {
+      "benchmarkSlug": "ifeval",
+      "score": 84.1,
+      "source": "independent",
+      "sourceUrl": "https://docsbot.ai/models/gpt-4-1-mini",
+      "evaluatedAt": "2025-04-01"
+    }
+  ],
+  "verificationNotes": "Confirmed release 2025-04-14 and $0.40/$1.60 per 1M token pricing via OpenAI docs and independent coverage. All 5 benchmark rows (MMLU 87.5, GPQA 65, SWE-bench 23.6, AIME 49.6, IFEval 84.1) confirmed verbatim on the cited docsbot.ai page. No changes made."
+}

@@ -1,0 +1,86 @@
+{
+  "name": "Gemini 3.5 Flash",
+  "org": "Google",
+  "family": "Gemini 3.5",
+  "releaseDate": "2026-05-19",
+  "status": "released",
+  "openness": "closed",
+  "license": "Proprietary",
+  "paramsB": null,
+  "activeParamsB": null,
+  "archClass": "moe",
+  "archDisplay": "Sparse Mixture-of-Experts Transformer (configuration undisclosed)",
+  "ctxK": 1000,
+  "modalities": [
+    "text",
+    "vision",
+    "audio",
+    "video"
+  ],
+  "langCount": null,
+  "capabilities": {
+    "reasoning": true,
+    "coding": true,
+    "vision": true,
+    "functionCalling": true,
+    "toolUse": true,
+    "agentic": true
+  },
+  "apiAvailable": true,
+  "price": {
+    "input": 1.5,
+    "output": 9,
+    "provider": "Google AI Studio / Vertex AI (Gemini API)"
+  },
+  "links": {
+    "docs": "https://deepmind.google/models/gemini/flash/"
+  },
+  "note": "First Flash to beat the prior-gen Pro flagship; I/O 2026 headline, 4x faster output than rival frontier models.",
+  "quants": [],
+  "vramQ4Gb": null,
+  "vramFp16Gb": null,
+  "tps4090": null,
+  "tpsNote": null,
+  "effortLabel": null,
+  "isDefaultConfig": true,
+  "isBestConfig": true,
+  "specSources": {
+    "releaseDate": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-3-5/",
+    "ctxK": "https://deepmind.google/models/gemini/flash/",
+    "openness": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-3-5/"
+  },
+  "results": [
+    {
+      "benchmarkSlug": "swe-bench",
+      "score": 55.1,
+      "source": "self-reported",
+      "sourceUrl": "https://deepmind.google/models/gemini/flash/",
+      "evaluatedAt": "2026-05-19",
+      "notes": "SWE-bench Pro variant"
+    },
+    {
+      "benchmarkSlug": "mmmu-pro",
+      "score": 83.6,
+      "source": "self-reported",
+      "sourceUrl": "https://deepmind.google/models/gemini/flash/",
+      "evaluatedAt": "2026-05-19"
+    },
+    {
+      "benchmarkSlug": "terminal-bench",
+      "score": 76.2,
+      "source": "self-reported",
+      "sourceUrl": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-3-5/",
+      "evaluatedAt": "2026-05-19",
+      "notes": "Terminal-Bench 2.1"
+    },
+    {
+      "benchmarkSlug": "charxiv",
+      "score": 84.2,
+      "source": "self-reported",
+      "sourceUrl": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-3-5/",
+      "evaluatedAt": "2026-05-19",
+      "notes": "CharXiv multimodal reasoning"
+    }
+  ],
+  "verificationNotes": "Confirmed real: launched at Google I/O 2026-05-19 with immediate GA (no waitlist), confirmed via blog.google and deepmind.google/models/gemini/flash/ (both fetched directly). All 4 benchmark numbers (SWE-bench Pro 55.1, MMMU-Pro 83.6, Terminal-Bench 2.1 76.2, CharXiv 84.2) literally confirmed on the cited pages. 1M/64k context, text/image/video/audio input modalities, and $1.50/$9 pricing all confirmed independently. No changes to record."
+}

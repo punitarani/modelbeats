@@ -1,0 +1,93 @@
+{
+  "name": "DeepSeek-VL2",
+  "org": "DeepSeek",
+  "family": "DeepSeek-VL",
+  "releaseDate": "2024-12-13",
+  "status": "released",
+  "openness": "open-weights",
+  "license": "DeepSeek Model License (code: MIT)",
+  "paramsB": 27,
+  "activeParamsB": 4.5,
+  "archClass": "moe",
+  "archDisplay": "MoE vision-language transformer (Base variant), 27B total / 4.5B active — DeepSeekMoE+MLA language backbone + SigLIP-SO400M vision encoder with dynamic tiling (family also ships Tiny: 3B/1.0B-active, Small: 16B/2.8B-active)",
+  "ctxK": 4,
+  "modalities": [
+    "text",
+    "vision"
+  ],
+  "langCount": 2,
+  "capabilities": {
+    "reasoning": false,
+    "coding": false,
+    "vision": true,
+    "functionCalling": false,
+    "toolUse": false,
+    "agentic": false
+  },
+  "apiAvailable": false,
+  "price": null,
+  "links": {
+    "hf": "deepseek-ai/deepseek-vl2",
+    "gh": "deepseek-ai/DeepSeek-VL2"
+  },
+  "note": "MoE VLM family (Tiny/Small/Base) with dynamic image tiling; Base variant scores strongly on OCRBench (811) and DocVQA (93.3) among open VLMs of its era.",
+  "quants": [],
+  "vramQ4Gb": 14,
+  "vramFp16Gb": 54,
+  "tps4090": null,
+  "tpsNote": "No public RTX 4090 llama.cpp benchmark found; no confirmed GGUF/MLX conversion of the vision-language model",
+  "effortLabel": null,
+  "isDefaultConfig": true,
+  "isBestConfig": true,
+  "specSources": {
+    "paramsB": "https://arxiv.org/html/2412.10302v1",
+    "ctxK": "https://huggingface.co/deepseek-ai/deepseek-vl2/blob/main/config.json",
+    "releaseDate": "https://arxiv.org/abs/2412.10302",
+    "openness": "https://github.com/deepseek-ai/DeepSeek-VL2"
+  },
+  "results": [
+    {
+      "benchmarkSlug": "mmmu",
+      "score": 51.1,
+      "source": "self-reported",
+      "sourceUrl": "https://arxiv.org/html/2412.10302v1",
+      "notes": "Base (4.5B active) variant"
+    },
+    {
+      "benchmarkSlug": "mathvista",
+      "score": 62.8,
+      "source": "self-reported",
+      "sourceUrl": "https://arxiv.org/html/2412.10302v1",
+      "notes": "Base variant"
+    },
+    {
+      "benchmarkSlug": "docvqa",
+      "score": 93.3,
+      "source": "self-reported",
+      "sourceUrl": "https://arxiv.org/html/2412.10302v1",
+      "notes": "Base variant"
+    },
+    {
+      "benchmarkSlug": "chartqa",
+      "score": 86,
+      "source": "self-reported",
+      "sourceUrl": "https://arxiv.org/html/2412.10302v1",
+      "notes": "Base variant"
+    },
+    {
+      "benchmarkSlug": "ocrbench",
+      "score": 811,
+      "source": "self-reported",
+      "sourceUrl": "https://arxiv.org/html/2412.10302v1",
+      "notes": "Base variant, raw OCRBench score out of 1000"
+    },
+    {
+      "benchmarkSlug": "mmbench",
+      "score": 79.2,
+      "source": "self-reported",
+      "sourceUrl": "https://arxiv.org/html/2412.10302v1",
+      "notes": "Base variant, MMBench-V1.1 (testmini) column specifically — plain MMBench EN/CN test columns show 83.1/79.6"
+    }
+  ],
+  "verificationNotes": "Confirmed real via arxiv 2412.10302 (submitted 2024-12-13). CORRECTED apiAvailable from true to false: independent research confirms DeepSeek never exposed a vision/multimodal endpoint on its official API platform (platform.deepseek.com) — VL2 is only available via HF weights or third-party hosts (Replicate, SiliconFlow), never DeepSeek's own API. Params (27B/4.5B Base; Tiny 3B/1.0B, Small 16B/2.8B) and MMMU/MathVista/DocVQA/ChartQA/OCRBench all confirmed in Tables 3-4 of the paper. Context length 4096 (4K) confirmed directly in HF config.json's language_config. CLARIFIED the mmbench row: the paper's plain MMBench EN/CN test columns for the Base variant are 83.1/79.6, not 79.2 — the 79.2 figure the input record cited is real but belongs to the separate 'MMBench-V1.1 (testmini)' column; added a note rather than dropping since the number is genuinely on the page. Softened the 'leads open VLMs' superlative in note (unverifiable as literally true) to 'scores strongly among... of its era'."
+}

@@ -1,0 +1,86 @@
+{
+  "name": "GPT-J-6B",
+  "org": "EleutherAI",
+  "family": "GPT-J",
+  "releaseDate": "2021-06-09",
+  "status": "released",
+  "openness": "open-source",
+  "license": "Apache-2.0",
+  "paramsB": 6.05,
+  "activeParamsB": null,
+  "archClass": "dense",
+  "archDisplay": "Decoder-only Transformer with Rotary Position Embeddings and parallel attention+FF blocks (mesh-transformer-jax)",
+  "ctxK": 2,
+  "modalities": [
+    "text"
+  ],
+  "langCount": 1,
+  "capabilities": {
+    "reasoning": false,
+    "coding": false,
+    "vision": false,
+    "functionCalling": false,
+    "toolUse": false,
+    "agentic": false
+  },
+  "apiAvailable": false,
+  "price": null,
+  "links": {
+    "hf": "EleutherAI/gpt-j-6b",
+    "gh": "kingoflolz/mesh-transformer-jax",
+    "docs": "huggingface.co/docs/transformers/model_doc/gptj"
+  },
+  "note": "6B Pile-trained model built with mesh-transformer-jax, Apache 2.0; the standard open GPT-3 alternative for roughly two years",
+  "quants": [
+    "GGUF",
+    "Int8"
+  ],
+  "vramQ4Gb": 4.2,
+  "vramFp16Gb": 13.4,
+  "tps4090": null,
+  "tpsNote": null,
+  "effortLabel": null,
+  "isDefaultConfig": true,
+  "isBestConfig": true,
+  "specSources": {
+    "paramsB": "https://huggingface.co/EleutherAI/gpt-j-6b",
+    "ctxK": "https://huggingface.co/EleutherAI/gpt-j-6b",
+    "releaseDate": "https://en.wikipedia.org/wiki/GPT-J",
+    "openness": "https://huggingface.co/EleutherAI/gpt-j-6b"
+  },
+  "results": [
+    {
+      "benchmarkSlug": "lambada",
+      "score": 69.7,
+      "source": "self-reported",
+      "sourceUrl": "https://huggingface.co/EleutherAI/gpt-j-6b",
+      "evaluatedAt": "2021-06-09",
+      "notes": "zero-shot accuracy, LM Eval Harness"
+    },
+    {
+      "benchmarkSlug": "winogrande",
+      "score": 65.3,
+      "source": "self-reported",
+      "sourceUrl": "https://huggingface.co/EleutherAI/gpt-j-6b",
+      "evaluatedAt": "2021-06-09",
+      "notes": "zero-shot, LM Eval Harness"
+    },
+    {
+      "benchmarkSlug": "hellaswag",
+      "score": 66.1,
+      "source": "self-reported",
+      "sourceUrl": "https://huggingface.co/EleutherAI/gpt-j-6b",
+      "evaluatedAt": "2021-06-09",
+      "notes": "zero-shot, LM Eval Harness"
+    },
+    {
+      "benchmarkSlug": "piqa",
+      "score": 76.5,
+      "source": "self-reported",
+      "sourceUrl": "https://huggingface.co/EleutherAI/gpt-j-6b",
+      "evaluatedAt": "2021-06-09",
+      "notes": "zero-shot, LM Eval Harness"
+    }
+  ],
+  "verificationNotes": "Confirmed real: fetched huggingface.co/EleutherAI/gpt-j-6b model card, exact param count 6,053,381,344 = 6.05B matches record; Apache-2.0 license and 2048 context confirmed; evaluation table verbatim-matches all 4 scores. Wikipedia confirms release date June 9, 2021. No changes needed."
+}

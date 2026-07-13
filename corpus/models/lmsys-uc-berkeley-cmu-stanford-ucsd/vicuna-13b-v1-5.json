@@ -1,0 +1,68 @@
+{
+  "name": "Vicuna 13B v1.5",
+  "org": "LMSYS (UC Berkeley/CMU/Stanford/UCSD)",
+  "family": "Vicuna",
+  "releaseDate": "2023-08-01",
+  "status": "released",
+  "openness": "open-weights",
+  "license": "Llama 2 Community License Agreement",
+  "paramsB": 13,
+  "activeParamsB": null,
+  "archClass": "dense",
+  "archDisplay": "Llama-2-13B fine-tuned dense transformer (SFT on ShareGPT); a 16K-context variant was also released",
+  "ctxK": 4,
+  "modalities": [
+    "text"
+  ],
+  "langCount": null,
+  "capabilities": {
+    "reasoning": false,
+    "coding": false,
+    "vision": false,
+    "functionCalling": false,
+    "toolUse": false,
+    "agentic": false
+  },
+  "apiAvailable": true,
+  "price": null,
+  "links": {
+    "hf": "lmsys/vicuna-13b-v1.5",
+    "gh": "lm-sys/FastChat"
+  },
+  "note": "Llama-2-13B fine-tuned on ~125K ShareGPT chats; the more-permissive, commercially-usable successor to the original LLaMA-based Vicuna.",
+  "quants": [
+    "GGUF Q4",
+    "GPTQ",
+    "AWQ"
+  ],
+  "vramQ4Gb": 9,
+  "vramFp16Gb": 26,
+  "tps4090": null,
+  "tpsNote": null,
+  "effortLabel": null,
+  "isDefaultConfig": true,
+  "isBestConfig": true,
+  "specSources": {
+    "paramsB": "https://huggingface.co/lmsys/vicuna-13b-v1.5",
+    "ctxK": "https://huggingface.co/lmsys/vicuna-13b-v1.5-16k",
+    "releaseDate": "https://github.com/lm-sys/FastChat/blob/main/docs/vicuna_weights_version.md",
+    "openness": "https://huggingface.co/lmsys/vicuna-13b-v1.5"
+  },
+  "results": [
+    {
+      "benchmarkSlug": "mmlu",
+      "score": 55.8,
+      "source": "independent",
+      "sourceUrl": "https://huggingface.co/api/resolve-cache/spaces/lmarena-ai/arena-leaderboard/36556125921b70e4b87ae9b7aff2ac624b3c2220/leaderboard_table_20231220.csv?download=true&etag=%22c9eda02db9aa30464ba0334945d39e8f27b49bb6%22",
+      "notes": "LMSYS Chatbot Arena leaderboard snapshot, Dec 2023"
+    },
+    {
+      "benchmarkSlug": "arena",
+      "score": 1041,
+      "source": "arena",
+      "sourceUrl": "https://huggingface.co/api/resolve-cache/spaces/lmarena-ai/arena-leaderboard/36556125921b70e4b87ae9b7aff2ac624b3c2220/leaderboard_table_20231220.csv?download=true&etag=%22c9eda02db9aa30464ba0334945d39e8f27b49bb6%22",
+      "notes": "Elo rating, Chatbot Arena Dec 2023 snapshot"
+    }
+  ],
+  "verificationNotes": "Confirmed via huggingface.co/lmsys/vicuna-13b-v1.5 (Llama 2 Community License, fine-tuned from Llama 2 on ~125K ShareGPT conversations) and FastChat's vicuna_weights_version.md (v1.5 weights released 2023-08-01, matches releaseDate:2023-08). Fetched the cited leaderboard CSV directly and confirmed the exact row 'Vicuna-13B,6.57,1041,0.558,Llama 2 Community' — MMLU 0.558 (=55.8) and Elo 1041 both match the record precisely. No changes made."
+}

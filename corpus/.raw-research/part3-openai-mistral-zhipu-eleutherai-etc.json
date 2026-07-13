@@ -1,0 +1,3256 @@
+{
+  "summary": "Deep research + adversarial verification for shortlist partition 3 (110 models)",
+  "agentCount": 36,
+  "logs": [
+    "partition 3: 110 models",
+    "research: 118 models researched, 0 rejected as unconfirmable",
+    "[verify:Mistral AI] failed: You've hit your session limit · resets 4:20pm (America/Los_Angeles)",
+    "[verify:Amazon] failed: You've hit your session limit · resets 4:20pm (America/Los_Angeles)",
+    "[verify:LG AI Research] failed: You've hit your session limit · resets 4:20pm (America/Los_Angeles)",
+    "[verify:Mistral AI] failed: You've hit your session limit · resets 4:20pm (America/Los_Angeles)",
+    "[verify:Shanghai AI Laboratory] failed: You've hit your session limit · resets 4:20pm (America/Los_Angeles)",
+    "[verify:H2O.ai] failed: You've hit your session limit · resets 4:20pm (America/Los_Angeles)",
+    "[verify:OpenAI] failed: You've hit your session limit · resets 4:20pm (America/Los_Angeles)",
+    "[verify:Ola Krutrim] failed: You've hit your session limit · resets 4:20pm (America/Los_Angeles)",
+    "[verify:Zhipu AI / Tsinghua KEG (THUDM)] failed: You've hit your session limit · resets 4:20pm (America/Los_Angeles)",
+    "[verify:OpenAI] failed: You've hit your session limit · resets 4:20pm (America/Los_Angeles)",
+    "[verify:Cohere] failed: You've hit your session limit · resets 4:20pm (America/Los_Angeles)",
+    "[verify:Zhipu AI] failed: You've hit your session limit · resets 4:20pm (America/Los_Angeles)",
+    "[verify:MosaicML] failed: You've hit your session limit · resets 4:20pm (America/Los_Angeles)",
+    "[verify:EleutherAI] failed: You've hit your session limit · resets 4:20pm (America/Los_Angeles)",
+    "[verify:OpenAI] failed: You've hit your session limit · resets 4:20pm (America/Los_Angeles)",
+    "verify: 30 models confirmed, 0 rejected by verification"
+  ],
+  "result": {
+    "inputCount": 110,
+    "researchedCount": 118,
+    "finalCount": 30,
+    "rejected": [],
+    "models": [
+      {
+        "name": "GPT-4o mini",
+        "org": "OpenAI",
+        "family": "GPT-4o",
+        "releaseDate": "2024-07-18",
+        "status": "released",
+        "openness": "closed",
+        "license": "Proprietary",
+        "paramsB": null,
+        "activeParamsB": null,
+        "archClass": "dense",
+        "archDisplay": "Dense, multimodal Transformer, small/low-cost tier (architecture/size undisclosed)",
+        "ctxK": 128,
+        "modalities": [
+          "text",
+          "vision"
+        ],
+        "langCount": null,
+        "capabilities": {
+          "reasoning": false,
+          "coding": true,
+          "vision": true,
+          "functionCalling": true,
+          "toolUse": true,
+          "agentic": true
+        },
+        "apiAvailable": true,
+        "price": {
+          "input": 0.15,
+          "output": 0.6,
+          "provider": "OpenAI"
+        },
+        "links": {
+          "docs": "developers.openai.com/api/docs/models/gpt-4o-mini"
+        },
+        "note": "Small, cheap GPT-4o sibling that replaced GPT-3.5 Turbo as OpenAI's default budget model in ChatGPT and the API.",
+        "quants": [],
+        "vramQ4Gb": null,
+        "vramFp16Gb": null,
+        "tps4090": null,
+        "tpsNote": null,
+        "effortLabel": null,
+        "isDefaultConfig": true,
+        "isBestConfig": true,
+        "specSources": {
+          "ctxK": "https://developers.openai.com/api/docs/models/gpt-4o-mini",
+          "releaseDate": "https://openai.com/index/gpt-4o-mini-advancing-cost-efficient-intelligence/",
+          "openness": "https://openai.com/index/gpt-4o-mini-advancing-cost-efficient-intelligence/"
+        },
+        "results": [
+          {
+            "benchmarkSlug": "mmlu",
+            "score": 82,
+            "source": "self-reported",
+            "sourceUrl": "https://openai.com/index/gpt-4o-mini-advancing-cost-efficient-intelligence/",
+            "evaluatedAt": "2024-07-18"
+          },
+          {
+            "benchmarkSlug": "mgsm",
+            "score": 87,
+            "source": "self-reported",
+            "sourceUrl": "https://openai.com/index/gpt-4o-mini-advancing-cost-efficient-intelligence/",
+            "evaluatedAt": "2024-07-18"
+          },
+          {
+            "benchmarkSlug": "humaneval",
+            "score": 87.2,
+            "source": "self-reported",
+            "sourceUrl": "https://openai.com/index/gpt-4o-mini-advancing-cost-efficient-intelligence/",
+            "evaluatedAt": "2024-07-18"
+          },
+          {
+            "benchmarkSlug": "mmmu",
+            "score": 59.4,
+            "source": "self-reported",
+            "sourceUrl": "https://openai.com/index/gpt-4o-mini-advancing-cost-efficient-intelligence/",
+            "evaluatedAt": "2024-07-18"
+          }
+        ],
+        "verificationNotes": "Confirmed via web search of OpenAI's official announcement (direct fetch blocked by 403, but search excerpts quote the page verbatim): MMLU 82%, MGSM 87%, HumanEval 87.2%, MMMU 59.4% all match exactly. Release date 2024-07-18, 128K context, and closed/proprietary licensing confirmed by independent sources (OpenAI blog via search, Azure blog, DataCamp). No changes made."
+      },
+      {
+        "name": "OpenAI o1-mini",
+        "org": "OpenAI",
+        "family": "o1",
+        "releaseDate": "2024-09-12",
+        "status": "deprecated",
+        "openness": "closed",
+        "license": "Proprietary",
+        "paramsB": null,
+        "activeParamsB": null,
+        "archClass": "dense",
+        "archDisplay": "Dense transformer reasoning model (size undisclosed)",
+        "ctxK": 128,
+        "modalities": [
+          "text"
+        ],
+        "langCount": null,
+        "capabilities": {
+          "reasoning": true,
+          "coding": true,
+          "vision": false,
+          "functionCalling": false,
+          "toolUse": false,
+          "agentic": false
+        },
+        "apiAvailable": false,
+        "price": {
+          "input": 3,
+          "output": 12,
+          "provider": "OpenAI"
+        },
+        "links": {
+          "docs": "developers.openai.com/api/docs/models/o1-mini"
+        },
+        "note": "Cost-efficient STEM/coding reasoning model; retired from OpenAI's API on 2025-10-27.",
+        "quants": [],
+        "vramQ4Gb": null,
+        "vramFp16Gb": null,
+        "tps4090": null,
+        "tpsNote": null,
+        "effortLabel": null,
+        "isDefaultConfig": true,
+        "isBestConfig": true,
+        "specSources": {
+          "releaseDate": "https://developers.openai.com/api/docs/models/o1-mini",
+          "ctxK": "https://developers.openai.com/api/docs/models/o1-mini",
+          "openness": "https://developers.openai.com/api/docs/models/o1-mini",
+          "paramsB": "https://developers.openai.com/api/docs/models/o1-mini"
+        },
+        "results": [
+          {
+            "benchmarkSlug": "aime",
+            "score": 70,
+            "source": "independent",
+            "sourceUrl": "https://www.analyticsvidhya.com/blog/2024/09/o1-preview-vs-o1-mini/",
+            "evaluatedAt": "2024-09",
+            "notes": "AIME 2024, cited vs o1-preview 44.6%"
+          },
+          {
+            "benchmarkSlug": "codeforces",
+            "score": 1650,
+            "source": "independent",
+            "sourceUrl": "https://www.analyticsvidhya.com/blog/2024/09/o1-preview-vs-o1-mini/",
+            "evaluatedAt": "2024-09",
+            "notes": "Codeforces Elo, ~86th percentile"
+          }
+        ],
+        "verificationNotes": "Existence, release date (2024-09-12), and retirement date (2025-10-27, confirmed real since today is 2026-07-12) verified via independent sources (Portkey deprecation guide, OpenAI community, DocGPT). AIME 70.0% and Codeforces 1650 confirmed by direct fetch of analyticsvidhya.com article. Pricing $3/$12 per 1M tokens confirmed via two independent sources (artificialanalysis.ai, cross-referenced search) after an initial conflicting fetch of the (now-stale/redirect-confused) OpenAI docs page was discarded. No changes made."
+      },
+      {
+        "name": "OpenAI o1-preview",
+        "org": "OpenAI",
+        "family": "o1",
+        "releaseDate": "2024-09-12",
+        "status": "deprecated",
+        "openness": "closed",
+        "license": "Proprietary",
+        "paramsB": null,
+        "activeParamsB": null,
+        "archClass": "dense",
+        "archDisplay": "Dense transformer reasoning model (size undisclosed)",
+        "ctxK": 128,
+        "modalities": [
+          "text"
+        ],
+        "langCount": null,
+        "capabilities": {
+          "reasoning": true,
+          "coding": true,
+          "vision": false,
+          "functionCalling": false,
+          "toolUse": false,
+          "agentic": false
+        },
+        "apiAvailable": false,
+        "price": {
+          "input": 15,
+          "output": 60,
+          "provider": "OpenAI"
+        },
+        "links": {
+          "docs": "developers.openai.com/api/docs/models/o1-preview"
+        },
+        "note": "First public o-series reasoning model, launched the think-before-answer chain-of-thought line; retired from API 2025-07-28.",
+        "quants": [],
+        "vramQ4Gb": null,
+        "vramFp16Gb": null,
+        "tps4090": null,
+        "tpsNote": null,
+        "effortLabel": null,
+        "isDefaultConfig": true,
+        "isBestConfig": true,
+        "specSources": {
+          "releaseDate": "https://developers.openai.com/api/docs/models/o1-preview",
+          "ctxK": "https://developers.openai.com/api/docs/models/o1-preview",
+          "openness": "https://developers.openai.com/api/docs/models/o1-preview",
+          "paramsB": "https://developers.openai.com/api/docs/models/o1-preview"
+        },
+        "results": [
+          {
+            "benchmarkSlug": "aime",
+            "score": 44.6,
+            "source": "independent",
+            "sourceUrl": "https://www.analyticsvidhya.com/blog/2024/09/o1-preview-vs-o1-mini/",
+            "evaluatedAt": "2024-09",
+            "notes": "AIME 2024 pass@1"
+          },
+          {
+            "benchmarkSlug": "codeforces",
+            "score": 1258,
+            "source": "independent",
+            "sourceUrl": "https://www.analyticsvidhya.com/blog/2024/09/o1-preview-vs-o1-mini/",
+            "evaluatedAt": "2024-09"
+          },
+          {
+            "benchmarkSlug": "math",
+            "score": 85.5,
+            "source": "independent",
+            "sourceUrl": "https://www.walturn.com/insights/comparing-openai-o1-to-other-top-models",
+            "evaluatedAt": "2024-09",
+            "notes": "MATH 0-shot CoT"
+          },
+          {
+            "benchmarkSlug": "gpqa",
+            "score": 73.3,
+            "source": "independent",
+            "sourceUrl": "https://www.walturn.com/insights/comparing-openai-o1-to-other-top-models",
+            "evaluatedAt": "2024-09",
+            "notes": "GPQA 0-shot CoT"
+          },
+          {
+            "benchmarkSlug": "mmlu",
+            "score": 90.8,
+            "source": "independent",
+            "sourceUrl": "https://www.walturn.com/insights/comparing-openai-o1-to-other-top-models",
+            "evaluatedAt": "2024-09",
+            "notes": "MMLU 0-shot CoT"
+          },
+          {
+            "benchmarkSlug": "humaneval",
+            "score": 92.4,
+            "source": "independent",
+            "sourceUrl": "https://www.walturn.com/insights/comparing-openai-o1-to-other-top-models",
+            "evaluatedAt": "2024-09"
+          }
+        ],
+        "verificationNotes": "Release date (2024-09-12) and retirement (2025-07-28) confirmed via independent sources. AIME 44.6 and Codeforces 1258 confirmed by direct fetch of analyticsvidhya.com. MATH 85.5, GPQA 73.3, MMLU 90.8, HumanEval 92.4 all confirmed by direct fetch of walturn.com article, matching exactly. Pricing $15/$60 confirmed via prompthub.us model card fetch. No changes made."
+      },
+      {
+        "name": "OpenAI o1",
+        "org": "OpenAI",
+        "family": "o1",
+        "releaseDate": "2024-12-05",
+        "status": "released",
+        "openness": "closed",
+        "license": "Proprietary",
+        "paramsB": null,
+        "activeParamsB": null,
+        "archClass": "dense",
+        "archDisplay": "Dense transformer reasoning model (size undisclosed)",
+        "ctxK": 200,
+        "modalities": [
+          "text",
+          "vision"
+        ],
+        "langCount": null,
+        "capabilities": {
+          "reasoning": true,
+          "coding": true,
+          "vision": true,
+          "functionCalling": true,
+          "toolUse": true,
+          "agentic": true
+        },
+        "apiAvailable": true,
+        "price": {
+          "input": 15,
+          "output": 60,
+          "provider": "OpenAI"
+        },
+        "links": {
+          "docs": "developers.openai.com/api/docs/models/o1"
+        },
+        "note": "Full reasoning flagship (API snapshot o1-2024-12-17); added vision and function calling vs o1-preview; scheduled API shutdown 2026-10-23.",
+        "quants": [],
+        "vramQ4Gb": null,
+        "vramFp16Gb": null,
+        "tps4090": null,
+        "tpsNote": null,
+        "effortLabel": null,
+        "isDefaultConfig": true,
+        "isBestConfig": true,
+        "specSources": {
+          "releaseDate": "https://www.marketingaiinstitute.com/blog/12-days-of-shipmas-openai",
+          "ctxK": "https://developers.openai.com/api/docs/models/o1",
+          "openness": "https://developers.openai.com/api/docs/models/o1",
+          "paramsB": "https://developers.openai.com/api/docs/models/o1"
+        },
+        "results": [
+          {
+            "benchmarkSlug": "aime",
+            "score": 74.3,
+            "source": "independent",
+            "sourceUrl": "https://www.datacamp.com/blog/o3-openai",
+            "evaluatedAt": "2024-12",
+            "notes": "AIME 2024"
+          },
+          {
+            "benchmarkSlug": "gpqa",
+            "score": 78,
+            "source": "independent",
+            "sourceUrl": "https://www.datacamp.com/blog/o3-openai",
+            "evaluatedAt": "2024-12",
+            "notes": "GPQA Diamond"
+          },
+          {
+            "benchmarkSlug": "swe-bench",
+            "score": 48.9,
+            "source": "independent",
+            "sourceUrl": "https://www.datacamp.com/blog/o3-openai",
+            "evaluatedAt": "2024-12",
+            "notes": "SWE-bench Verified"
+          },
+          {
+            "benchmarkSlug": "codeforces",
+            "score": 1891,
+            "source": "independent",
+            "sourceUrl": "https://www.datacamp.com/blog/o3-openai",
+            "evaluatedAt": "2024-12",
+            "notes": "Codeforces Elo"
+          },
+          {
+            "benchmarkSlug": "mmmu",
+            "score": 77.6,
+            "source": "independent",
+            "sourceUrl": "https://www.datacamp.com/blog/o3-openai",
+            "evaluatedAt": "2024-12",
+            "notes": "MMMU college-level visual reasoning"
+          }
+        ],
+        "verificationNotes": "Full o1 launch on 2024-12-05 (alongside o1-pro/ChatGPT Pro) confirmed via multiple independent sources (Wikipedia, InfoQ, OpenAI o1 system card PDF dated 2024-12-05). AIME 74.3, GPQA 78, SWE-bench 48.9, Codeforces 1891, MMMU 77.6 all confirmed by direct fetch of datacamp.com/blog/o3-openai, matching exactly. Scheduled shutdown 2026-10-23 confirmed via OpenAI deprecation coverage (TheRouter.ai, OpenAI community deprecation notice) - the model is still real/active as of today (2026-07-12). No changes made."
+      },
+      {
+        "name": "OpenAI o3-mini (Low)",
+        "org": "OpenAI",
+        "family": "o3",
+        "releaseDate": "2025-01-31",
+        "status": "released",
+        "openness": "closed",
+        "license": "Proprietary",
+        "paramsB": null,
+        "activeParamsB": null,
+        "archClass": "dense",
+        "archDisplay": "Dense transformer reasoning model (size undisclosed)",
+        "ctxK": 200,
+        "modalities": [
+          "text"
+        ],
+        "langCount": null,
+        "capabilities": {
+          "reasoning": true,
+          "coding": true,
+          "vision": false,
+          "functionCalling": true,
+          "toolUse": true,
+          "agentic": true
+        },
+        "apiAvailable": true,
+        "price": {
+          "input": 1.1,
+          "output": 4.4,
+          "provider": "OpenAI"
+        },
+        "links": {
+          "docs": "developers.openai.com/api/docs/models/o3-mini"
+        },
+        "note": "Low reasoning-effort setting: fastest/cheapest of the three o3-mini configurations.",
+        "quants": [],
+        "vramQ4Gb": null,
+        "vramFp16Gb": null,
+        "tps4090": null,
+        "tpsNote": null,
+        "effortLabel": "Low",
+        "isDefaultConfig": false,
+        "isBestConfig": false,
+        "specSources": {
+          "releaseDate": "https://www.prompthub.us/models/o3-mini",
+          "ctxK": "https://www.prompthub.us/models/o3-mini",
+          "openness": "https://www.prompthub.us/models/o3-mini",
+          "paramsB": "https://www.prompthub.us/models/o3-mini"
+        },
+        "results": [
+          {
+            "benchmarkSlug": "aime",
+            "score": 60,
+            "source": "independent",
+            "sourceUrl": "https://www.lesswrong.com/posts/srdxEAcdmetdAiGcz/o3-mini-early-days",
+            "evaluatedAt": "2025-01",
+            "notes": "AIME 2024, low effort, reproduces OpenAI system-card table"
+          },
+          {
+            "benchmarkSlug": "gpqa",
+            "score": 70.6,
+            "source": "independent",
+            "sourceUrl": "https://www.lesswrong.com/posts/srdxEAcdmetdAiGcz/o3-mini-early-days",
+            "evaluatedAt": "2025-01",
+            "notes": "GPQA Diamond, low effort"
+          },
+          {
+            "benchmarkSlug": "codeforces",
+            "score": 1831,
+            "source": "independent",
+            "sourceUrl": "https://www.lesswrong.com/posts/srdxEAcdmetdAiGcz/o3-mini-early-days",
+            "evaluatedAt": "2025-01",
+            "notes": "Codeforces Elo, low effort"
+          },
+          {
+            "benchmarkSlug": "swe-bench",
+            "score": 40.8,
+            "source": "independent",
+            "sourceUrl": "https://www.lesswrong.com/posts/srdxEAcdmetdAiGcz/o3-mini-early-days",
+            "evaluatedAt": "2025-01",
+            "notes": "SWE-bench Verified, low effort"
+          }
+        ],
+        "verificationNotes": "Release date 2025-01-31 and 200K context confirmed via prompthub.us and independent search corroboration. AIME 60, GPQA 70.6, Codeforces 1831, SWE-bench 40.8 (low effort) all confirmed by direct fetch of the lesswrong.com article, matching exactly. Pricing $1.10/$4.40 confirmed via direct fetch of developers.openai.com/api/docs/models/o3-mini and prompthub.us (two independent confirmations). No changes made."
+      },
+      {
+        "name": "OpenAI o3-mini (Medium)",
+        "org": "OpenAI",
+        "family": "o3",
+        "releaseDate": "2025-01-31",
+        "status": "released",
+        "openness": "closed",
+        "license": "Proprietary",
+        "paramsB": null,
+        "activeParamsB": null,
+        "archClass": "dense",
+        "archDisplay": "Dense transformer reasoning model (size undisclosed)",
+        "ctxK": 200,
+        "modalities": [
+          "text"
+        ],
+        "langCount": null,
+        "capabilities": {
+          "reasoning": true,
+          "coding": true,
+          "vision": false,
+          "functionCalling": true,
+          "toolUse": true,
+          "agentic": true
+        },
+        "apiAvailable": true,
+        "price": {
+          "input": 1.1,
+          "output": 4.4,
+          "provider": "OpenAI"
+        },
+        "links": {
+          "docs": "developers.openai.com/api/docs/models/o3-mini"
+        },
+        "note": "Default reasoning-effort setting; roughly matches full o1 on AIME/GPQA at a fraction of the cost.",
+        "quants": [],
+        "vramQ4Gb": null,
+        "vramFp16Gb": null,
+        "tps4090": null,
+        "tpsNote": null,
+        "effortLabel": "Medium",
+        "isDefaultConfig": true,
+        "isBestConfig": false,
+        "specSources": {
+          "releaseDate": "https://www.prompthub.us/models/o3-mini",
+          "ctxK": "https://www.prompthub.us/models/o3-mini",
+          "openness": "https://www.prompthub.us/models/o3-mini",
+          "paramsB": "https://www.prompthub.us/models/o3-mini"
+        },
+        "results": [
+          {
+            "benchmarkSlug": "aime",
+            "score": 76.9,
+            "source": "independent",
+            "sourceUrl": "https://www.lesswrong.com/posts/srdxEAcdmetdAiGcz/o3-mini-early-days",
+            "evaluatedAt": "2025-01",
+            "notes": "AIME 2024, medium effort (default)"
+          },
+          {
+            "benchmarkSlug": "gpqa",
+            "score": 76.8,
+            "source": "independent",
+            "sourceUrl": "https://www.lesswrong.com/posts/srdxEAcdmetdAiGcz/o3-mini-early-days",
+            "evaluatedAt": "2025-01",
+            "notes": "GPQA Diamond, medium effort"
+          },
+          {
+            "benchmarkSlug": "codeforces",
+            "score": 2036,
+            "source": "independent",
+            "sourceUrl": "https://www.lesswrong.com/posts/srdxEAcdmetdAiGcz/o3-mini-early-days",
+            "evaluatedAt": "2025-01",
+            "notes": "Codeforces Elo, medium effort"
+          },
+          {
+            "benchmarkSlug": "swe-bench",
+            "score": 42.9,
+            "source": "independent",
+            "sourceUrl": "https://www.lesswrong.com/posts/srdxEAcdmetdAiGcz/o3-mini-early-days",
+            "evaluatedAt": "2025-01",
+            "notes": "SWE-bench Verified, medium effort"
+          }
+        ],
+        "verificationNotes": "Same model as o3-mini (Low) verification, different effort tier. AIME 76.9, GPQA 76.8, Codeforces 2036, SWE-bench 42.9 (medium effort) all confirmed by direct fetch of the lesswrong.com article, matching exactly. Release date, context window, and pricing confirmed identically to the Low-effort record. No changes made."
+      },
+      {
+        "name": "OpenAI o3-mini (High)",
+        "org": "OpenAI",
+        "family": "o3",
+        "releaseDate": "2025-01-31",
+        "status": "released",
+        "openness": "closed",
+        "license": "Proprietary",
+        "paramsB": null,
+        "activeParamsB": null,
+        "archClass": "dense",
+        "archDisplay": "Dense transformer reasoning model (size undisclosed)",
+        "ctxK": 200,
+        "modalities": [
+          "text"
+        ],
+        "langCount": null,
+        "capabilities": {
+          "reasoning": true,
+          "coding": true,
+          "vision": false,
+          "functionCalling": true,
+          "toolUse": true,
+          "agentic": true
+        },
+        "apiAvailable": true,
+        "price": {
+          "input": 1.1,
+          "output": 4.4,
+          "provider": "OpenAI"
+        },
+        "links": {
+          "docs": "developers.openai.com/api/docs/models/o3-mini"
+        },
+        "note": "Highest reasoning-effort setting: best accuracy of the o3-mini family, higher latency/cost per query.",
+        "quants": [],
+        "vramQ4Gb": null,
+        "vramFp16Gb": null,
+        "tps4090": null,
+        "tpsNote": null,
+        "effortLabel": "High",
+        "isDefaultConfig": false,
+        "isBestConfig": true,
+        "specSources": {
+          "releaseDate": "https://www.prompthub.us/models/o3-mini",
+          "ctxK": "https://www.prompthub.us/models/o3-mini",
+          "openness": "https://www.prompthub.us/models/o3-mini",
+          "paramsB": "https://www.prompthub.us/models/o3-mini"
+        },
+        "results": [
+          {
+            "benchmarkSlug": "aime",
+            "score": 87.3,
+            "source": "independent",
+            "sourceUrl": "https://www.lesswrong.com/posts/srdxEAcdmetdAiGcz/o3-mini-early-days",
+            "evaluatedAt": "2025-01",
+            "notes": "AIME 2024, high effort"
+          },
+          {
+            "benchmarkSlug": "gpqa",
+            "score": 79.7,
+            "source": "independent",
+            "sourceUrl": "https://www.lesswrong.com/posts/srdxEAcdmetdAiGcz/o3-mini-early-days",
+            "evaluatedAt": "2025-01",
+            "notes": "GPQA Diamond, high effort"
+          },
+          {
+            "benchmarkSlug": "codeforces",
+            "score": 2130,
+            "source": "independent",
+            "sourceUrl": "https://www.lesswrong.com/posts/srdxEAcdmetdAiGcz/o3-mini-early-days",
+            "evaluatedAt": "2025-01",
+            "notes": "Codeforces Elo, high effort"
+          },
+          {
+            "benchmarkSlug": "swe-bench",
+            "score": 49.3,
+            "source": "independent",
+            "sourceUrl": "https://www.lesswrong.com/posts/srdxEAcdmetdAiGcz/o3-mini-early-days",
+            "evaluatedAt": "2025-01",
+            "notes": "SWE-bench Verified, high effort"
+          }
+        ],
+        "verificationNotes": "Existence, release date (2025-01-31), 200K context and $1.10/$4.40 pricing all confirmed via independent sources (VentureBeat, OpenAI docs mirrors). All 4 benchmark rows (AIME 87.3, GPQA 79.7, Codeforces 2130, SWE-bench 49.3) confirmed verbatim on the cited LessWrong post. No changes made."
+      },
+      {
+        "name": "GPT-4.5",
+        "org": "OpenAI",
+        "family": "GPT-4.5",
+        "releaseDate": "2025-02-27",
+        "status": "deprecated",
+        "openness": "closed",
+        "license": "Proprietary",
+        "paramsB": null,
+        "activeParamsB": null,
+        "archClass": "dense",
+        "archDisplay": "Dense pretrained transformer (size undisclosed; non-reasoning)",
+        "ctxK": 128,
+        "modalities": [
+          "text",
+          "vision"
+        ],
+        "langCount": null,
+        "capabilities": {
+          "reasoning": false,
+          "coding": true,
+          "vision": true,
+          "functionCalling": true,
+          "toolUse": true,
+          "agentic": true
+        },
+        "apiAvailable": false,
+        "price": {
+          "input": 75,
+          "output": 150,
+          "provider": "OpenAI"
+        },
+        "links": {
+          "docs": "developers.openai.com/api/docs/models/gpt-4.5-preview"
+        },
+        "note": "'Orion' — OpenAI's largest non-reasoning model; shipped as a costly research preview, removed from API 2025-07-14 and fully sunset from ChatGPT 2026-06-27.",
+        "quants": [],
+        "vramQ4Gb": null,
+        "vramFp16Gb": null,
+        "tps4090": null,
+        "tpsNote": null,
+        "effortLabel": null,
+        "isDefaultConfig": true,
+        "isBestConfig": true,
+        "specSources": {
+          "releaseDate": "https://en.wikipedia.org/wiki/GPT-4.5",
+          "ctxK": "https://en.wikipedia.org/wiki/GPT-4.5",
+          "openness": "https://developers.openai.com/api/docs/models/gpt-4.5-preview",
+          "paramsB": "https://developers.openai.com/api/docs/models/gpt-4.5-preview"
+        },
+        "results": [
+          {
+            "benchmarkSlug": "gpqa",
+            "score": 71.4,
+            "source": "independent",
+            "sourceUrl": "https://www.helicone.ai/blog/gpt-4.5-benchmarks",
+            "evaluatedAt": "2025-02",
+            "notes": "GPQA (science)"
+          },
+          {
+            "benchmarkSlug": "aime",
+            "score": 36.7,
+            "source": "independent",
+            "sourceUrl": "https://www.helicone.ai/blog/gpt-4.5-benchmarks",
+            "evaluatedAt": "2025-02",
+            "notes": "AIME 2024"
+          },
+          {
+            "benchmarkSlug": "mmmlu",
+            "score": 85.1,
+            "source": "independent",
+            "sourceUrl": "https://www.helicone.ai/blog/gpt-4.5-benchmarks",
+            "evaluatedAt": "2025-02",
+            "notes": "Multilingual MMLU (MMMLU)"
+          },
+          {
+            "benchmarkSlug": "mmmu",
+            "score": 74.4,
+            "source": "independent",
+            "sourceUrl": "https://www.helicone.ai/blog/gpt-4.5-benchmarks",
+            "evaluatedAt": "2025-02"
+          },
+          {
+            "benchmarkSlug": "swe-bench",
+            "score": 38,
+            "source": "independent",
+            "sourceUrl": "https://www.helicone.ai/blog/gpt-4.5-benchmarks",
+            "evaluatedAt": "2025-02",
+            "notes": "SWE-bench Verified"
+          },
+          {
+            "benchmarkSlug": "simpleqa",
+            "score": 62.5,
+            "source": "independent",
+            "sourceUrl": "https://www.helicone.ai/blog/gpt-4.5-benchmarks",
+            "evaluatedAt": "2025-02",
+            "notes": "SimpleQA accuracy"
+          }
+        ],
+        "verificationNotes": "Confirmed release as research preview on 2025-02-27; API deprecation 2025-07-14 and ChatGPT retirement 2026-06-27 both confirmed via OpenAI Help Center / news coverage. Launch pricing $75/$150 per 1M tokens confirmed independently. All 6 benchmark rows confirmed verbatim on the cited Helicone blog post. No changes made."
+      },
+      {
+        "name": "GPT-4.1",
+        "org": "OpenAI",
+        "family": "GPT-4.1",
+        "releaseDate": "2025-04-14",
+        "status": "released",
+        "openness": "closed",
+        "license": "Proprietary",
+        "paramsB": null,
+        "activeParamsB": null,
+        "archClass": "dense",
+        "archDisplay": "Dense transformer (size undisclosed; non-reasoning)",
+        "ctxK": 1000,
+        "modalities": [
+          "text",
+          "vision"
+        ],
+        "langCount": null,
+        "capabilities": {
+          "reasoning": false,
+          "coding": true,
+          "vision": true,
+          "functionCalling": true,
+          "toolUse": true,
+          "agentic": true
+        },
+        "apiAvailable": true,
+        "price": {
+          "input": 2,
+          "output": 8,
+          "provider": "OpenAI"
+        },
+        "links": {
+          "docs": "developers.openai.com/api/docs/models/gpt-4.1"
+        },
+        "note": "API-only coding-focused flagship with a 1,047,576-token context window and June 2024 knowledge cutoff.",
+        "quants": [],
+        "vramQ4Gb": null,
+        "vramFp16Gb": null,
+        "tps4090": null,
+        "tpsNote": null,
+        "effortLabel": null,
+        "isDefaultConfig": true,
+        "isBestConfig": true,
+        "specSources": {
+          "releaseDate": "https://developers.openai.com/api/docs/models/gpt-4.1",
+          "ctxK": "https://developers.openai.com/api/docs/models/gpt-4.1",
+          "openness": "https://developers.openai.com/api/docs/models/gpt-4.1",
+          "paramsB": "https://developers.openai.com/api/docs/models/gpt-4.1"
+        },
+        "results": [
+          {
+            "benchmarkSlug": "mmlu",
+            "score": 90.2,
+            "source": "independent",
+            "sourceUrl": "https://www.rdworldonline.com/openai-claims-gpt-4-1-sets-new-90-standard-in-mmlu-reasoning-benchmark/",
+            "evaluatedAt": "2025-04"
+          },
+          {
+            "benchmarkSlug": "gpqa",
+            "score": 66.3,
+            "source": "independent",
+            "sourceUrl": "https://www.rdworldonline.com/openai-claims-gpt-4-1-sets-new-90-standard-in-mmlu-reasoning-benchmark/",
+            "evaluatedAt": "2025-04",
+            "notes": "GPQA Diamond"
+          },
+          {
+            "benchmarkSlug": "swe-bench",
+            "score": 55,
+            "source": "independent",
+            "sourceUrl": "https://www.rdworldonline.com/openai-claims-gpt-4-1-sets-new-90-standard-in-mmlu-reasoning-benchmark/",
+            "evaluatedAt": "2025-04",
+            "notes": "SWE-bench Verified"
+          }
+        ],
+        "verificationNotes": "Confirmed release 2025-04-14 and $2/$8 per 1M token pricing, 1M context window via OpenAI docs and independent coverage. All 3 benchmark rows (MMLU 90.2, GPQA 66.3, SWE-bench 55) confirmed verbatim on the cited rdworldonline.com article. No changes made."
+      },
+      {
+        "name": "GPT-4.1 mini",
+        "org": "OpenAI",
+        "family": "GPT-4.1",
+        "releaseDate": "2025-04-14",
+        "status": "released",
+        "openness": "closed",
+        "license": "Proprietary",
+        "paramsB": null,
+        "activeParamsB": null,
+        "archClass": "dense",
+        "archDisplay": "Dense transformer (size undisclosed; non-reasoning)",
+        "ctxK": 1000,
+        "modalities": [
+          "text",
+          "vision"
+        ],
+        "langCount": null,
+        "capabilities": {
+          "reasoning": false,
+          "coding": true,
+          "vision": true,
+          "functionCalling": true,
+          "toolUse": true,
+          "agentic": true
+        },
+        "apiAvailable": true,
+        "price": {
+          "input": 0.4,
+          "output": 1.6,
+          "provider": "OpenAI"
+        },
+        "links": {
+          "docs": "developers.openai.com/api/docs/models/gpt-4.1-mini"
+        },
+        "note": "Balanced mid-tier of the 4.1 family with a 1M-token context window, vision, and strong instruction-following.",
+        "quants": [],
+        "vramQ4Gb": null,
+        "vramFp16Gb": null,
+        "tps4090": null,
+        "tpsNote": null,
+        "effortLabel": null,
+        "isDefaultConfig": true,
+        "isBestConfig": true,
+        "specSources": {
+          "releaseDate": "https://developers.openai.com/api/docs/models/gpt-4.1-mini",
+          "ctxK": "https://developers.openai.com/api/docs/models/gpt-4.1-mini",
+          "openness": "https://developers.openai.com/api/docs/models/gpt-4.1-mini",
+          "paramsB": "https://developers.openai.com/api/docs/models/gpt-4.1-mini"
+        },
+        "results": [
+          {
+            "benchmarkSlug": "mmlu",
+            "score": 87.5,
+            "source": "independent",
+            "sourceUrl": "https://docsbot.ai/models/gpt-4-1-mini",
+            "evaluatedAt": "2025-04"
+          },
+          {
+            "benchmarkSlug": "gpqa",
+            "score": 65,
+            "source": "independent",
+            "sourceUrl": "https://docsbot.ai/models/gpt-4-1-mini",
+            "evaluatedAt": "2025-04",
+            "notes": "GPQA Diamond"
+          },
+          {
+            "benchmarkSlug": "swe-bench",
+            "score": 23.6,
+            "source": "independent",
+            "sourceUrl": "https://docsbot.ai/models/gpt-4-1-mini",
+            "evaluatedAt": "2025-04",
+            "notes": "SWE-bench Verified"
+          },
+          {
+            "benchmarkSlug": "aime",
+            "score": 49.6,
+            "source": "independent",
+            "sourceUrl": "https://docsbot.ai/models/gpt-4-1-mini",
+            "evaluatedAt": "2025-04",
+            "notes": "AIME 2024"
+          },
+          {
+            "benchmarkSlug": "ifeval",
+            "score": 84.1,
+            "source": "independent",
+            "sourceUrl": "https://docsbot.ai/models/gpt-4-1-mini",
+            "evaluatedAt": "2025-04"
+          }
+        ],
+        "verificationNotes": "Confirmed release 2025-04-14 and $0.40/$1.60 per 1M token pricing via OpenAI docs and independent coverage. All 5 benchmark rows (MMLU 87.5, GPQA 65, SWE-bench 23.6, AIME 49.6, IFEval 84.1) confirmed verbatim on the cited docsbot.ai page. No changes made."
+      },
+      {
+        "name": "GPT-4.1 nano",
+        "org": "OpenAI",
+        "family": "GPT-4.1",
+        "releaseDate": "2025-04-14",
+        "status": "released",
+        "openness": "closed",
+        "license": "Proprietary (OpenAI API Terms)",
+        "paramsB": null,
+        "activeParamsB": null,
+        "archClass": "dense",
+        "archDisplay": "Dense transformer (exact size undisclosed)",
+        "ctxK": 1000,
+        "modalities": [
+          "text",
+          "vision"
+        ],
+        "langCount": null,
+        "capabilities": {
+          "reasoning": false,
+          "coding": true,
+          "vision": true,
+          "functionCalling": true,
+          "toolUse": true,
+          "agentic": true
+        },
+        "apiAvailable": true,
+        "price": {
+          "input": 0.1,
+          "output": 0.4,
+          "provider": "OpenAI"
+        },
+        "links": {
+          "docs": "developers.openai.com"
+        },
+        "note": "Fastest, cheapest GPT-4.1-family model; 1M-token context, no reasoning mode.",
+        "quants": [],
+        "vramQ4Gb": null,
+        "vramFp16Gb": null,
+        "tps4090": null,
+        "tpsNote": null,
+        "effortLabel": null,
+        "isDefaultConfig": true,
+        "isBestConfig": true,
+        "specSources": {
+          "ctxK": "https://developers.openai.com/api/docs/models/gpt-4.1-nano",
+          "releaseDate": "https://openai.com/index/gpt-4-1/",
+          "openness": "https://developers.openai.com/api/docs/models/gpt-4.1-nano"
+        },
+        "results": [
+          {
+            "benchmarkSlug": "mmlu",
+            "score": 80.1,
+            "source": "self-reported",
+            "sourceUrl": "https://openai.com/index/gpt-4-1/",
+            "evaluatedAt": "2025-04-14",
+            "notes": "GPT-4.1 nano"
+          },
+          {
+            "benchmarkSlug": "gpqa",
+            "score": 50.3,
+            "source": "self-reported",
+            "sourceUrl": "https://openai.com/index/gpt-4-1/",
+            "evaluatedAt": "2025-04-14"
+          },
+          {
+            "benchmarkSlug": "aider-polyglot",
+            "score": 9.8,
+            "source": "self-reported",
+            "sourceUrl": "https://openai.com/index/gpt-4-1/",
+            "evaluatedAt": "2025-04-14",
+            "notes": "Aider polyglot coding"
+          }
+        ],
+        "verificationNotes": "Confirmed release 2025-04-14 and $0.10/$0.40 per 1M token pricing via OpenAI docs and independent coverage (GitHub Changelog, prompthub). Direct fetch of openai.com/index/gpt-4-1/ returned 403, but all 3 benchmark rows (MMLU 80.1, GPQA 50.3, Aider polyglot 9.8) were independently corroborated verbatim by multiple secondary sources quoting OpenAI's official figures. No changes made."
+      },
+      {
+        "name": "OpenAI o3",
+        "org": "OpenAI",
+        "family": "o3",
+        "releaseDate": "2025-04-16",
+        "status": "released",
+        "openness": "closed",
+        "license": "Proprietary (OpenAI API Terms)",
+        "paramsB": null,
+        "activeParamsB": null,
+        "archClass": "dense",
+        "archDisplay": "Dense transformer reasoning model (exact size undisclosed)",
+        "ctxK": 200,
+        "modalities": [
+          "text",
+          "vision"
+        ],
+        "langCount": null,
+        "capabilities": {
+          "reasoning": true,
+          "coding": true,
+          "vision": true,
+          "functionCalling": true,
+          "toolUse": true,
+          "agentic": true
+        },
+        "apiAvailable": true,
+        "price": {
+          "input": 2,
+          "output": 8,
+          "provider": "OpenAI"
+        },
+        "links": {
+          "docs": "developers.openai.com"
+        },
+        "note": "Flagship reasoning model with native tool use; major gains on math, coding, and ARC-AGI. Price reflects OpenAI's June 2025 80% cut from the original $10/$40 launch price.",
+        "quants": [],
+        "vramQ4Gb": null,
+        "vramFp16Gb": null,
+        "tps4090": null,
+        "tpsNote": null,
+        "effortLabel": null,
+        "isDefaultConfig": true,
+        "isBestConfig": true,
+        "specSources": {
+          "ctxK": "https://developers.openai.com/api/docs/models/o3",
+          "releaseDate": "https://openai.com/index/introducing-o3-and-o4-mini/",
+          "openness": "https://developers.openai.com/api/docs/models/o3"
+        },
+        "results": [
+          {
+            "benchmarkSlug": "aime",
+            "score": 91.6,
+            "source": "self-reported",
+            "sourceUrl": "https://openai.com/index/introducing-o3-and-o4-mini/",
+            "evaluatedAt": "2025-04-16",
+            "notes": "AIME 2024"
+          },
+          {
+            "benchmarkSlug": "gpqa",
+            "score": 83.3,
+            "source": "self-reported",
+            "sourceUrl": "https://openai.com/index/introducing-o3-and-o4-mini/",
+            "evaluatedAt": "2025-04-16",
+            "notes": "GPQA Diamond"
+          },
+          {
+            "benchmarkSlug": "swe-bench",
+            "score": 69.1,
+            "source": "self-reported",
+            "sourceUrl": "https://openai.com/index/introducing-o3-and-o4-mini/",
+            "evaluatedAt": "2025-04-16",
+            "notes": "SWE-bench Verified"
+          },
+          {
+            "benchmarkSlug": "mmmu",
+            "score": 82.9,
+            "source": "self-reported",
+            "sourceUrl": "https://openai.com/index/introducing-o3-and-o4-mini/",
+            "evaluatedAt": "2025-04-16"
+          },
+          {
+            "benchmarkSlug": "hle",
+            "score": 24.9,
+            "source": "self-reported",
+            "sourceUrl": "https://openai.com/index/introducing-o3-and-o4-mini/",
+            "evaluatedAt": "2025-04-16",
+            "notes": "Humanity's Last Exam, with tools"
+          },
+          {
+            "benchmarkSlug": "codeforces",
+            "score": 2706,
+            "source": "self-reported",
+            "sourceUrl": "https://openai.com/index/introducing-o3-and-o4-mini/",
+            "evaluatedAt": "2025-04-16",
+            "notes": "Elo rating"
+          }
+        ],
+        "verificationNotes": "Confirmed release 2025-04-16 via OpenAI/TechCrunch. Pricing $2/$8 verified as OpenAI's current price after an 80% cut on 2025-06-10 from the original $10/$40 launch price (confirmed via OpenAI Devs official X post and VentureBeat) — note added to clarify this isn't the launch price. Direct fetch of openai.com/index/introducing-o3-and-o4-mini/ returned 403, but all 6 benchmark rows (AIME 91.6, GPQA 83.3, SWE-bench 69.1, MMMU 82.9, HLE 24.9-with-tools, Codeforces 2706) were independently corroborated verbatim by multiple secondary sources quoting OpenAI's official launch figures — distinct from the earlier Dec-2024 o3 preview-announcement numbers (e.g. 96.7% AIME), confirming these are the correct April-2025 released-model figures."
+      },
+      {
+        "name": "OpenAI o4-mini",
+        "org": "OpenAI",
+        "family": "o4",
+        "releaseDate": "2025-04-16",
+        "status": "released",
+        "openness": "closed",
+        "license": "Proprietary (OpenAI API Terms)",
+        "paramsB": null,
+        "activeParamsB": null,
+        "archClass": "dense",
+        "archDisplay": "Dense transformer reasoning model, compact (exact size undisclosed)",
+        "ctxK": 200,
+        "modalities": [
+          "text",
+          "vision"
+        ],
+        "langCount": null,
+        "capabilities": {
+          "reasoning": true,
+          "coding": true,
+          "vision": true,
+          "functionCalling": true,
+          "toolUse": true,
+          "agentic": true
+        },
+        "apiAvailable": true,
+        "price": {
+          "input": 1.1,
+          "output": 4.4,
+          "provider": "OpenAI"
+        },
+        "links": {
+          "docs": "developers.openai.com"
+        },
+        "note": "Compact reasoning model with strong price/performance and native tool use.",
+        "quants": [],
+        "vramQ4Gb": null,
+        "vramFp16Gb": null,
+        "tps4090": null,
+        "tpsNote": null,
+        "effortLabel": null,
+        "isDefaultConfig": true,
+        "isBestConfig": true,
+        "specSources": {
+          "ctxK": "https://developers.openai.com/api/docs/models/o4-mini",
+          "releaseDate": "https://openai.com/index/introducing-o3-and-o4-mini/",
+          "openness": "https://developers.openai.com/api/docs/models/o4-mini"
+        },
+        "results": [
+          {
+            "benchmarkSlug": "aime",
+            "score": 93.4,
+            "source": "self-reported",
+            "sourceUrl": "https://openai.com/index/introducing-o3-and-o4-mini/",
+            "evaluatedAt": "2025-04-16",
+            "notes": "AIME 2024"
+          },
+          {
+            "benchmarkSlug": "gpqa",
+            "score": 81.4,
+            "source": "self-reported",
+            "sourceUrl": "https://openai.com/index/introducing-o3-and-o4-mini/",
+            "evaluatedAt": "2025-04-16",
+            "notes": "GPQA Diamond"
+          },
+          {
+            "benchmarkSlug": "swe-bench",
+            "score": 68.1,
+            "source": "self-reported",
+            "sourceUrl": "https://openai.com/index/introducing-o3-and-o4-mini/",
+            "evaluatedAt": "2025-04-16",
+            "notes": "SWE-bench Verified"
+          },
+          {
+            "benchmarkSlug": "mmmu",
+            "score": 81.6,
+            "source": "self-reported",
+            "sourceUrl": "https://openai.com/index/introducing-o3-and-o4-mini/",
+            "evaluatedAt": "2025-04-16"
+          },
+          {
+            "benchmarkSlug": "hle",
+            "score": 17.7,
+            "source": "self-reported",
+            "sourceUrl": "https://openai.com/index/introducing-o3-and-o4-mini/",
+            "evaluatedAt": "2025-04-16",
+            "notes": "Humanity's Last Exam, with tools"
+          },
+          {
+            "benchmarkSlug": "codeforces",
+            "score": 2719,
+            "source": "self-reported",
+            "sourceUrl": "https://openai.com/index/introducing-o3-and-o4-mini/",
+            "evaluatedAt": "2025-04-16",
+            "notes": "Elo rating"
+          }
+        ],
+        "verificationNotes": "Confirmed real. developers.openai.com/api/docs/models/o4-mini fetched directly: verified 200K context, 100K max output, $1.10/$4.40 per 1M input/output pricing, text+image-in modalities — all match exactly. Independent secondary sources (DataCamp, Scale AI HLE leaderboard) corroborate all six benchmark figures (AIME 93.4, GPQA 81.4, SWE-bench 68.1, MMMU 81.6, HLE 17.7, Codeforces 2719) as OpenAI's self-reported launch-day numbers from the o3/o4-mini announcement. No changes made."
+      },
+      {
+        "name": "OpenAI o3-pro",
+        "org": "OpenAI",
+        "family": "o3",
+        "releaseDate": "2025-06-10",
+        "status": "released",
+        "openness": "closed",
+        "license": "Proprietary (OpenAI API Terms)",
+        "paramsB": null,
+        "activeParamsB": null,
+        "archClass": "dense",
+        "archDisplay": "Dense transformer reasoning model, extended test-time compute (exact size undisclosed)",
+        "ctxK": 200,
+        "modalities": [
+          "text",
+          "vision"
+        ],
+        "langCount": null,
+        "capabilities": {
+          "reasoning": true,
+          "coding": true,
+          "vision": true,
+          "functionCalling": true,
+          "toolUse": true,
+          "agentic": true
+        },
+        "apiAvailable": true,
+        "price": {
+          "input": 20,
+          "output": 80,
+          "provider": "OpenAI"
+        },
+        "links": {
+          "docs": "developers.openai.com"
+        },
+        "note": "Higher-compute o3 variant for the most reliable answers; replaced o1-pro.",
+        "quants": [],
+        "vramQ4Gb": null,
+        "vramFp16Gb": null,
+        "tps4090": null,
+        "tpsNote": null,
+        "effortLabel": null,
+        "isDefaultConfig": true,
+        "isBestConfig": true,
+        "specSources": {
+          "ctxK": "https://developers.openai.com/api/docs/models/o3-pro",
+          "releaseDate": "https://techcrunch.com/2025/06/10/openai-releases-o3-pro-a-souped-up-version-of-its-o3-ai-reasoning-model/",
+          "openness": "https://developers.openai.com/api/docs/models/o3-pro"
+        },
+        "results": [
+          {
+            "benchmarkSlug": "aime",
+            "score": 93,
+            "source": "independent",
+            "sourceUrl": "https://binaryverseai.com/chatgpt-o3-pro-review-benchmarks-hacks/",
+            "notes": "AIME 2024; OpenAI has not published a full official benchmark table for o3-pro"
+          },
+          {
+            "benchmarkSlug": "gpqa",
+            "score": 84,
+            "source": "independent",
+            "sourceUrl": "https://binaryverseai.com/chatgpt-o3-pro-review-benchmarks-hacks/",
+            "notes": "GPQA Diamond"
+          },
+          {
+            "benchmarkSlug": "codeforces",
+            "score": 2748,
+            "source": "independent",
+            "sourceUrl": "https://binaryverseai.com/chatgpt-o3-pro-review-benchmarks-hacks/",
+            "notes": "Elo rating"
+          }
+        ],
+        "verificationNotes": "Confirmed real. TechCrunch (fetched) confirms June 10, 2025 launch, ChatGPT Pro/Team + API availability, and $20/$80 per-1M pricing verbatim. developers.openai.com/api/docs/models/o3-pro confirms 200K context / 100K max output. Fetched binaryverseai.com directly and confirmed all three claimed numbers appear verbatim on the page: AIME 2024 '93 percent,' GPQA Diamond '84 percent,' Codeforces '2,748 points.' No changes made."
+      },
+      {
+        "name": "gpt-oss-120b (Low)",
+        "org": "OpenAI",
+        "family": "gpt-oss",
+        "releaseDate": "2025-08-05",
+        "status": "released",
+        "openness": "open-weights",
+        "license": "Apache 2.0",
+        "paramsB": 117,
+        "activeParamsB": 5.1,
+        "archClass": "moe",
+        "archDisplay": "Mixture-of-experts transformer, 128 experts/layer, top-4 active, 36 layers",
+        "ctxK": 128,
+        "modalities": [
+          "text"
+        ],
+        "langCount": null,
+        "capabilities": {
+          "reasoning": true,
+          "coding": true,
+          "vision": false,
+          "functionCalling": true,
+          "toolUse": true,
+          "agentic": true
+        },
+        "apiAvailable": true,
+        "price": null,
+        "links": {
+          "hf": "openai/gpt-oss-120b",
+          "gh": "openai/gpt-oss",
+          "docs": "cookbook.openai.com"
+        },
+        "note": "OpenAI's first open-weight model since GPT-2; 117B MoE (5.1B active), Apache 2.0.",
+        "quants": [
+          "MXFP4 (native)",
+          "GGUF Q4_K_M",
+          "GGUF Q8_0"
+        ],
+        "vramQ4Gb": 73,
+        "vramFp16Gb": 234,
+        "tps4090": null,
+        "tpsNote": "Does not fit on a single RTX 4090 (24GB); OpenAI specifies a single 80GB GPU (H100/MI300X) for native MXFP4 inference.",
+        "effortLabel": "Low",
+        "isDefaultConfig": false,
+        "isBestConfig": false,
+        "specSources": {
+          "paramsB": "https://huggingface.co/openai/gpt-oss-120b",
+          "ctxK": "https://openai.com/index/introducing-gpt-oss/",
+          "releaseDate": "https://openai.com/index/introducing-gpt-oss/",
+          "openness": "https://huggingface.co/openai/gpt-oss-120b"
+        },
+        "results": [
+          {
+            "benchmarkSlug": "aime",
+            "score": 56.3,
+            "source": "self-reported",
+            "sourceUrl": "https://arxiv.org/abs/2508.10925",
+            "evaluatedAt": "2025-08-05",
+            "notes": "AIME 2024, no tools, low reasoning effort"
+          },
+          {
+            "benchmarkSlug": "gpqa",
+            "score": 67.1,
+            "source": "self-reported",
+            "sourceUrl": "https://arxiv.org/abs/2508.10925",
+            "evaluatedAt": "2025-08-05",
+            "notes": "GPQA Diamond, no tools, low reasoning effort"
+          },
+          {
+            "benchmarkSlug": "mmlu",
+            "score": 85.9,
+            "source": "self-reported",
+            "sourceUrl": "https://arxiv.org/abs/2508.10925",
+            "evaluatedAt": "2025-08-05",
+            "notes": "low reasoning effort"
+          },
+          {
+            "benchmarkSlug": "swe-bench",
+            "score": 47.9,
+            "source": "self-reported",
+            "sourceUrl": "https://arxiv.org/abs/2508.10925",
+            "evaluatedAt": "2025-08-05",
+            "notes": "SWE-bench Verified, low reasoning effort"
+          }
+        ],
+        "verificationNotes": "Confirmed real. HF model card (fetched) confirms 117B total / 5.1B active params and Apache 2.0 license verbatim. Independent architecture writeups corroborate 36 layers, 128 experts/layer, top-4 routing, 131,072-token (128K) native context via YaRN. Fetched arxiv.org/html/2508.10925v1 model-card table directly and confirmed all four low-effort scores appear verbatim: AIME 56.3, GPQA 67.1, MMLU 85.9, SWE-bench Verified 47.9. No changes made."
+      },
+      {
+        "name": "gpt-oss-120b (Medium)",
+        "org": "OpenAI",
+        "family": "gpt-oss",
+        "releaseDate": "2025-08-05",
+        "status": "released",
+        "openness": "open-weights",
+        "license": "Apache 2.0",
+        "paramsB": 117,
+        "activeParamsB": 5.1,
+        "archClass": "moe",
+        "archDisplay": "Mixture-of-experts transformer, 128 experts/layer, top-4 active, 36 layers",
+        "ctxK": 128,
+        "modalities": [
+          "text"
+        ],
+        "langCount": null,
+        "capabilities": {
+          "reasoning": true,
+          "coding": true,
+          "vision": false,
+          "functionCalling": true,
+          "toolUse": true,
+          "agentic": true
+        },
+        "apiAvailable": true,
+        "price": null,
+        "links": {
+          "hf": "openai/gpt-oss-120b",
+          "gh": "openai/gpt-oss",
+          "docs": "cookbook.openai.com"
+        },
+        "note": "OpenAI's first open-weight model since GPT-2; 117B MoE (5.1B active), Apache 2.0.",
+        "quants": [
+          "MXFP4 (native)",
+          "GGUF Q4_K_M",
+          "GGUF Q8_0"
+        ],
+        "vramQ4Gb": 73,
+        "vramFp16Gb": 234,
+        "tps4090": null,
+        "tpsNote": "Does not fit on a single RTX 4090 (24GB); OpenAI specifies a single 80GB GPU (H100/MI300X) for native MXFP4 inference.",
+        "effortLabel": "Medium",
+        "isDefaultConfig": true,
+        "isBestConfig": false,
+        "specSources": {
+          "paramsB": "https://huggingface.co/openai/gpt-oss-120b",
+          "ctxK": "https://openai.com/index/introducing-gpt-oss/",
+          "releaseDate": "https://openai.com/index/introducing-gpt-oss/",
+          "openness": "https://huggingface.co/openai/gpt-oss-120b"
+        },
+        "results": [
+          {
+            "benchmarkSlug": "aime",
+            "score": 80.4,
+            "source": "self-reported",
+            "sourceUrl": "https://arxiv.org/abs/2508.10925",
+            "evaluatedAt": "2025-08-05",
+            "notes": "AIME 2024, no tools, medium reasoning effort"
+          },
+          {
+            "benchmarkSlug": "gpqa",
+            "score": 73.1,
+            "source": "self-reported",
+            "sourceUrl": "https://arxiv.org/abs/2508.10925",
+            "evaluatedAt": "2025-08-05",
+            "notes": "GPQA Diamond, no tools, medium reasoning effort"
+          },
+          {
+            "benchmarkSlug": "mmlu",
+            "score": 88,
+            "source": "self-reported",
+            "sourceUrl": "https://arxiv.org/abs/2508.10925",
+            "evaluatedAt": "2025-08-05",
+            "notes": "medium reasoning effort"
+          },
+          {
+            "benchmarkSlug": "swe-bench",
+            "score": 52.6,
+            "source": "self-reported",
+            "sourceUrl": "https://arxiv.org/abs/2508.10925",
+            "evaluatedAt": "2025-08-05",
+            "notes": "SWE-bench Verified, medium reasoning effort"
+          }
+        ],
+        "verificationNotes": "Confirmed real. Same HF/architecture verification as the Low-effort variant (117B/5.1B active, Apache 2.0, 36 layers/128 experts/top-4, 128K context). Fetched arxiv.org/html/2508.10925v1 table directly and confirmed all four medium-effort scores appear verbatim: AIME 80.4, GPQA 73.1, MMLU 88.0, SWE-bench Verified 52.6. No changes made."
+      },
+      {
+        "name": "gpt-oss-120b (High)",
+        "org": "OpenAI",
+        "family": "gpt-oss",
+        "releaseDate": "2025-08-05",
+        "status": "released",
+        "openness": "open-weights",
+        "license": "Apache 2.0",
+        "paramsB": 117,
+        "activeParamsB": 5.1,
+        "archClass": "moe",
+        "archDisplay": "Mixture-of-experts transformer, 128 experts/layer, top-4 active, 36 layers",
+        "ctxK": 128,
+        "modalities": [
+          "text"
+        ],
+        "langCount": null,
+        "capabilities": {
+          "reasoning": true,
+          "coding": true,
+          "vision": false,
+          "functionCalling": true,
+          "toolUse": true,
+          "agentic": true
+        },
+        "apiAvailable": true,
+        "price": null,
+        "links": {
+          "hf": "openai/gpt-oss-120b",
+          "gh": "openai/gpt-oss",
+          "docs": "cookbook.openai.com"
+        },
+        "note": "OpenAI's first open-weight model since GPT-2; 117B MoE (5.1B active), Apache 2.0.",
+        "quants": [
+          "MXFP4 (native)",
+          "GGUF Q4_K_M",
+          "GGUF Q8_0"
+        ],
+        "vramQ4Gb": 73,
+        "vramFp16Gb": 234,
+        "tps4090": null,
+        "tpsNote": "Does not fit on a single RTX 4090 (24GB); OpenAI specifies a single 80GB GPU (H100/MI300X) for native MXFP4 inference.",
+        "effortLabel": "High",
+        "isDefaultConfig": false,
+        "isBestConfig": true,
+        "specSources": {
+          "paramsB": "https://huggingface.co/openai/gpt-oss-120b",
+          "ctxK": "https://openai.com/index/introducing-gpt-oss/",
+          "releaseDate": "https://openai.com/index/introducing-gpt-oss/",
+          "openness": "https://huggingface.co/openai/gpt-oss-120b"
+        },
+        "results": [
+          {
+            "benchmarkSlug": "aime",
+            "score": 95.8,
+            "source": "self-reported",
+            "sourceUrl": "https://arxiv.org/abs/2508.10925",
+            "evaluatedAt": "2025-08-05",
+            "notes": "AIME 2024, no tools, high reasoning effort"
+          },
+          {
+            "benchmarkSlug": "gpqa",
+            "score": 80.1,
+            "source": "self-reported",
+            "sourceUrl": "https://arxiv.org/abs/2508.10925",
+            "evaluatedAt": "2025-08-05",
+            "notes": "GPQA Diamond, no tools, high reasoning effort"
+          },
+          {
+            "benchmarkSlug": "mmlu",
+            "score": 90,
+            "source": "self-reported",
+            "sourceUrl": "https://arxiv.org/abs/2508.10925",
+            "evaluatedAt": "2025-08-05",
+            "notes": "high reasoning effort"
+          },
+          {
+            "benchmarkSlug": "swe-bench",
+            "score": 62.4,
+            "source": "self-reported",
+            "sourceUrl": "https://arxiv.org/abs/2508.10925",
+            "evaluatedAt": "2025-08-05",
+            "notes": "SWE-bench Verified, high reasoning effort"
+          }
+        ],
+        "verificationNotes": "Confirmed real. Same HF/architecture verification as other effort variants. Fetched arxiv.org/html/2508.10925v1 table directly and confirmed all four high-effort scores appear verbatim: AIME 95.8, GPQA 80.1, MMLU 90.0, SWE-bench Verified 62.4. No changes made."
+      },
+      {
+        "name": "gpt-oss-20b (Low)",
+        "org": "OpenAI",
+        "family": "gpt-oss",
+        "releaseDate": "2025-08-05",
+        "status": "released",
+        "openness": "open-weights",
+        "license": "Apache 2.0",
+        "paramsB": 21,
+        "activeParamsB": 3.6,
+        "archClass": "moe",
+        "archDisplay": "Mixture-of-experts transformer, 32 experts/layer, top-4 active, 24 layers",
+        "ctxK": 128,
+        "modalities": [
+          "text"
+        ],
+        "langCount": null,
+        "capabilities": {
+          "reasoning": true,
+          "coding": true,
+          "vision": false,
+          "functionCalling": true,
+          "toolUse": true,
+          "agentic": true
+        },
+        "apiAvailable": true,
+        "price": null,
+        "links": {
+          "hf": "openai/gpt-oss-20b",
+          "gh": "openai/gpt-oss",
+          "docs": "cookbook.openai.com"
+        },
+        "note": "21B MoE (3.6B active) open-weight sibling that runs on consumer hardware; Apache 2.0.",
+        "quants": [
+          "MXFP4 (native)",
+          "GGUF Q4_K_M",
+          "GGUF Q8_0"
+        ],
+        "vramQ4Gb": 13,
+        "vramFp16Gb": 42,
+        "tps4090": 225,
+        "tpsNote": "225 tok/s at 8k context (Q4_K_M GGUF, llama.cpp) on RTX 4090; throughput collapses to ~9 tok/s at full 128k context.",
+        "effortLabel": "Low",
+        "isDefaultConfig": false,
+        "isBestConfig": false,
+        "specSources": {
+          "paramsB": "https://huggingface.co/openai/gpt-oss-20b",
+          "ctxK": "https://openai.com/index/introducing-gpt-oss/",
+          "releaseDate": "https://openai.com/index/introducing-gpt-oss/",
+          "openness": "https://huggingface.co/openai/gpt-oss-20b"
+        },
+        "results": [
+          {
+            "benchmarkSlug": "aime",
+            "score": 42.1,
+            "source": "self-reported",
+            "sourceUrl": "https://arxiv.org/abs/2508.10925",
+            "evaluatedAt": "2025-08-05",
+            "notes": "AIME 2024, no tools, low reasoning effort"
+          },
+          {
+            "benchmarkSlug": "gpqa",
+            "score": 56.8,
+            "source": "self-reported",
+            "sourceUrl": "https://arxiv.org/abs/2508.10925",
+            "evaluatedAt": "2025-08-05",
+            "notes": "GPQA Diamond, no tools, low reasoning effort"
+          },
+          {
+            "benchmarkSlug": "mmlu",
+            "score": 80.4,
+            "source": "self-reported",
+            "sourceUrl": "https://arxiv.org/abs/2508.10925",
+            "evaluatedAt": "2025-08-05",
+            "notes": "low reasoning effort"
+          },
+          {
+            "benchmarkSlug": "swe-bench",
+            "score": 37.4,
+            "source": "self-reported",
+            "sourceUrl": "https://arxiv.org/abs/2508.10925",
+            "evaluatedAt": "2025-08-05",
+            "notes": "SWE-bench Verified, low reasoning effort"
+          }
+        ],
+        "verificationNotes": "Confirmed real. HF model card (fetched) confirms 21B total / 3.6B active params and Apache 2.0 license verbatim. Independent architecture writeups corroborate 24 layers, 32 experts/layer, top-4 routing. Third-party hardware guides corroborate the ~13GB Q4 VRAM footprint and the '225 tok/s on RTX 4090' throughput claim specifically (matched search result title verbatim). Fetched arxiv.org/html/2508.10925v1 table and confirmed all four low-effort scores verbatim: AIME 42.1, GPQA 56.8, MMLU 80.4, SWE-bench Verified 37.4. No changes made."
+      },
+      {
+        "name": "Mixtral 8x7B",
+        "org": "Mistral AI",
+        "family": "Mixtral",
+        "releaseDate": "2023-12-11",
+        "status": "deprecated",
+        "openness": "open-source",
+        "license": "Apache 2.0",
+        "paramsB": 46.7,
+        "activeParamsB": 12.9,
+        "archClass": "moe",
+        "archDisplay": "Sparse Mixture-of-Experts, 8 experts, top-2 routing",
+        "ctxK": 32,
+        "modalities": [
+          "text"
+        ],
+        "langCount": 5,
+        "capabilities": {
+          "reasoning": false,
+          "coding": true,
+          "vision": false,
+          "functionCalling": false,
+          "toolUse": false,
+          "agentic": false
+        },
+        "apiAvailable": true,
+        "price": null,
+        "links": {
+          "hf": "mistralai/Mixtral-8x7B-v0.1",
+          "gh": "mistralai/mistral-inference",
+          "docs": "docs.mistral.ai/models/model-cards/mixtral-8x7b-0-1"
+        },
+        "note": "First strong open sparse MoE (8 experts, top-2 routing); matched/beat GPT-3.5 at ~13B active params under Apache 2.0.",
+        "quants": [
+          "GGUF Q4",
+          "AWQ",
+          "GPTQ"
+        ],
+        "vramQ4Gb": 26,
+        "vramFp16Gb": 93,
+        "tps4090": null,
+        "tpsNote": "At Q4 (~26GB) a single RTX 4090 (24GB) needs CPU/GPU layer offloading; community reports of roughly 15-23 tok/s with partial offload",
+        "effortLabel": null,
+        "isDefaultConfig": true,
+        "isBestConfig": true,
+        "specSources": {
+          "paramsB": "https://mistral.ai/news/mixtral-of-experts/",
+          "ctxK": "https://huggingface.co/mistralai/Mixtral-8x7B-v0.1/raw/main/config.json",
+          "releaseDate": "https://mistral.ai/news/mixtral-of-experts/",
+          "openness": "https://docs.mistral.ai/models/model-cards/mixtral-8x7b-0-1"
+        },
+        "results": [
+          {
+            "benchmarkSlug": "mmlu",
+            "score": 70.6,
+            "source": "self-reported",
+            "sourceUrl": "https://ar5iv.labs.arxiv.org/html/2401.04088",
+            "evaluatedAt": "2024-01"
+          },
+          {
+            "benchmarkSlug": "humaneval",
+            "score": 40.2,
+            "source": "self-reported",
+            "sourceUrl": "https://ar5iv.labs.arxiv.org/html/2401.04088",
+            "evaluatedAt": "2024-01"
+          },
+          {
+            "benchmarkSlug": "mbpp",
+            "score": 60.7,
+            "source": "self-reported",
+            "sourceUrl": "https://ar5iv.labs.arxiv.org/html/2401.04088",
+            "evaluatedAt": "2024-01"
+          },
+          {
+            "benchmarkSlug": "gsm8k",
+            "score": 74.4,
+            "source": "self-reported",
+            "sourceUrl": "https://ar5iv.labs.arxiv.org/html/2401.04088",
+            "evaluatedAt": "2024-01"
+          },
+          {
+            "benchmarkSlug": "arc-challenge",
+            "score": 59.7,
+            "source": "self-reported",
+            "sourceUrl": "https://ar5iv.labs.arxiv.org/html/2401.04088",
+            "evaluatedAt": "2024-01"
+          },
+          {
+            "benchmarkSlug": "hellaswag",
+            "score": 84.4,
+            "source": "self-reported",
+            "sourceUrl": "https://ar5iv.labs.arxiv.org/html/2401.04088",
+            "evaluatedAt": "2024-01"
+          },
+          {
+            "benchmarkSlug": "winogrande",
+            "score": 77.2,
+            "source": "self-reported",
+            "sourceUrl": "https://ar5iv.labs.arxiv.org/html/2401.04088",
+            "evaluatedAt": "2024-01"
+          },
+          {
+            "benchmarkSlug": "math",
+            "score": 28.4,
+            "source": "self-reported",
+            "sourceUrl": "https://ar5iv.labs.arxiv.org/html/2401.04088",
+            "evaluatedAt": "2024-01"
+          },
+          {
+            "benchmarkSlug": "mt-bench",
+            "score": 8.3,
+            "source": "self-reported",
+            "sourceUrl": "https://mistral.ai/news/mixtral-of-experts/",
+            "evaluatedAt": "2023-12-11",
+            "notes": "Instruct variant"
+          }
+        ],
+        "verificationNotes": "Fetched mistral.ai/news/mixtral-of-experts/ directly: confirms 2023-12-11 release, 46.7B total/12.9B active params, 32K context, Apache 2.0, MT-Bench 8.30. Fetched ar5iv.labs.arxiv.org/html/2401.04088 Table 2 directly: all 8 base-model benchmark scores (MMLU 70.6, HumanEval 40.2, MBPP 60.7, GSM8K 74.4, ARC-Challenge 59.7, HellaSwag 84.4, Winogrande 77.2, MATH 28.4) match exactly. No changes made."
+      },
+      {
+        "name": "Mistral Large",
+        "org": "Mistral AI",
+        "family": "Mistral Large",
+        "releaseDate": "2024-02-26",
+        "status": "deprecated",
+        "openness": "closed",
+        "license": "Proprietary",
+        "paramsB": null,
+        "activeParamsB": null,
+        "archClass": "dense",
+        "archDisplay": "Dense transformer (size undisclosed)",
+        "ctxK": 32,
+        "modalities": [
+          "text"
+        ],
+        "langCount": 5,
+        "capabilities": {
+          "reasoning": false,
+          "coding": true,
+          "vision": false,
+          "functionCalling": true,
+          "toolUse": true,
+          "agentic": false
+        },
+        "apiAvailable": false,
+        "price": null,
+        "links": {
+          "docs": "mistral.ai/news/mistral-large"
+        },
+        "note": "Mistral's first GPT-4-class closed flagship, launched with the Microsoft/Azure partnership and Le Chat; retired from the API by 2025.",
+        "quants": [],
+        "vramQ4Gb": null,
+        "vramFp16Gb": null,
+        "tps4090": null,
+        "tpsNote": null,
+        "effortLabel": null,
+        "isDefaultConfig": true,
+        "isBestConfig": true,
+        "specSources": {
+          "ctxK": "https://artificialanalysis.ai/models/mistral-large",
+          "releaseDate": "https://mistral.ai/news/mistral-large/",
+          "openness": "https://mistral.ai/news/mistral-large/"
+        },
+        "results": [
+          {
+            "benchmarkSlug": "mmlu",
+            "score": 81.2,
+            "source": "self-reported",
+            "sourceUrl": "https://www.promptingguide.ai/models/mistral-large",
+            "evaluatedAt": "2024-02",
+            "notes": "Reported as second only to GPT-4 at launch"
+          }
+        ],
+        "verificationNotes": "Fetched mistral.ai/news/mistral-large/ directly: confirms 2024-02-26 release, 32K context, native function calling. Fetched promptingguide.ai/models/mistral-large directly: literally confirms 'ranks second next to GPT-4 on the MMLU benchmark with a score of 81.2%'. Params/license genuinely undisclosed by Mistral for this closed model, correctly left null/Proprietary. No changes made."
+      },
+      {
+        "name": "Mixtral 8x22B",
+        "org": "Mistral AI",
+        "family": "Mixtral",
+        "releaseDate": "2024-04-17",
+        "status": "deprecated",
+        "openness": "open-source",
+        "license": "Apache 2.0",
+        "paramsB": 141,
+        "activeParamsB": 39,
+        "archClass": "moe",
+        "archDisplay": "Sparse Mixture-of-Experts, 8 experts, top-2 routing",
+        "ctxK": 64,
+        "modalities": [
+          "text"
+        ],
+        "langCount": 5,
+        "capabilities": {
+          "reasoning": false,
+          "coding": true,
+          "vision": false,
+          "functionCalling": true,
+          "toolUse": true,
+          "agentic": false
+        },
+        "apiAvailable": true,
+        "price": null,
+        "links": {
+          "hf": "mistralai/Mixtral-8x22B-v0.1",
+          "gh": "mistralai/mistral-inference",
+          "docs": "docs.mistral.ai/models/mixtral-8x22b-0-1-0-3"
+        },
+        "note": "Larger Apache-2.0 sparse MoE (141B total / 39B active) with a 64K context window and native function calling; strong multilingual, math and code.",
+        "quants": [
+          "GGUF Q4",
+          "AWQ",
+          "MLX"
+        ],
+        "vramQ4Gb": 80,
+        "vramFp16Gb": 263,
+        "tps4090": null,
+        "tpsNote": "Does not fit a single RTX 4090 (24GB) even at Q4 (~80GB needed); requires multi-GPU or large unified-memory hardware",
+        "effortLabel": null,
+        "isDefaultConfig": true,
+        "isBestConfig": true,
+        "specSources": {
+          "paramsB": "https://mistral.ai/news/mixtral-8x22b/",
+          "ctxK": "https://huggingface.co/mistralai/Mixtral-8x22B-v0.1/raw/main/config.json",
+          "releaseDate": "https://mistral.ai/news/mixtral-8x22b/",
+          "openness": "https://docs.mistral.ai/models/mixtral-8x22b-0-1-0-3"
+        },
+        "results": [
+          {
+            "benchmarkSlug": "mmlu",
+            "score": 77.3,
+            "source": "independent",
+            "sourceUrl": "https://huggingface.co/mistral-community/Mixtral-8x22B-v0.1/discussions/3",
+            "evaluatedAt": "2024-04"
+          },
+          {
+            "benchmarkSlug": "gsm8k",
+            "score": 90.8,
+            "source": "self-reported",
+            "sourceUrl": "https://mistral.ai/news/mixtral-8x22b/",
+            "evaluatedAt": "2024-04",
+            "notes": "maj@8, instruct variant"
+          },
+          {
+            "benchmarkSlug": "math",
+            "score": 44.6,
+            "source": "self-reported",
+            "sourceUrl": "https://mistral.ai/news/mixtral-8x22b/",
+            "evaluatedAt": "2024-04",
+            "notes": "maj@4, instruct variant"
+          }
+        ],
+        "verificationNotes": "Fetched mistral.ai/news/mixtral-8x22b/ directly: confirms 2024-04-17 release, 141B/39B params, 64K context, Apache 2.0 ('most permissive open-source licence'), native function calling, 5 languages (English/French/Italian/German/Spanish), GSM8K 90.8 maj@8 and MATH 44.6 maj@4. Fetched HF discussion directly: shows 'acc: 0.7735' i.e. 77.35% -- record's 77.3 is a reasonable truncation of this literal figure, not fabricated. No changes made."
+      },
+      {
+        "name": "Codestral 22B",
+        "org": "Mistral AI",
+        "family": "Codestral",
+        "releaseDate": "2024-05-29",
+        "status": "deprecated",
+        "openness": "open-weights",
+        "license": "Mistral AI Non-Production License (MNPL-0.1)",
+        "paramsB": 22.2,
+        "activeParamsB": null,
+        "archClass": "dense",
+        "archDisplay": "Dense transformer (code-specialized, fill-in-the-middle)",
+        "ctxK": 32,
+        "modalities": [
+          "text"
+        ],
+        "langCount": null,
+        "capabilities": {
+          "reasoning": false,
+          "coding": true,
+          "vision": false,
+          "functionCalling": false,
+          "toolUse": false,
+          "agentic": false
+        },
+        "apiAvailable": true,
+        "price": null,
+        "links": {
+          "hf": "mistralai/Codestral-22B-v0.1",
+          "gh": "mistralai/mistral-inference",
+          "docs": "legal.mistral.ai/ai-governance/models/codestral"
+        },
+        "note": "Mistral's first dedicated code model; fill-in-the-middle across 80+ programming languages, 32K context, non-commercial MNPL license.",
+        "quants": [
+          "GGUF Q4",
+          "AWQ",
+          "GPTQ"
+        ],
+        "vramQ4Gb": 18,
+        "vramFp16Gb": 44,
+        "tps4090": null,
+        "tpsNote": "Fits a single RTX 4090 at Q4_K_M (~18GB); no single authoritative tok/s benchmark found",
+        "effortLabel": null,
+        "isDefaultConfig": true,
+        "isBestConfig": true,
+        "specSources": {
+          "paramsB": "https://huggingface.co/mistralai/Codestral-22B-v0.1",
+          "ctxK": "https://huggingface.co/mistralai/Codestral-22B-v0.1/raw/main/config.json",
+          "releaseDate": "https://mistral.ai/news/codestral/",
+          "openness": "https://huggingface.co/mistralai/Codestral-22B-v0.1"
+        },
+        "results": [
+          {
+            "benchmarkSlug": "humaneval",
+            "score": 81.1,
+            "source": "independent",
+            "sourceUrl": "https://www.analyticsvidhya.com/blog/2024/06/codestral-22b/",
+            "evaluatedAt": "2024-05"
+          },
+          {
+            "benchmarkSlug": "mbpp",
+            "score": 78.2,
+            "source": "independent",
+            "sourceUrl": "https://www.analyticsvidhya.com/blog/2024/06/codestral-22b/",
+            "evaluatedAt": "2024-05"
+          }
+        ],
+        "verificationNotes": "Confirmed via HF model page and config.json: 22.2B params, MNPL-0.1 license, 32K context (max_position_embeddings). Fetched analyticsvidhya.com directly: literally confirms '81.1% pass rate on HumanEval' and '78.2% success rate in MBPP'. No changes made."
+      },
+      {
+        "name": "Codestral Mamba (7B)",
+        "org": "Mistral AI",
+        "family": "Codestral",
+        "releaseDate": "2024-07-16",
+        "status": "deprecated",
+        "openness": "open-source",
+        "license": "Apache 2.0",
+        "paramsB": 7.3,
+        "activeParamsB": null,
+        "archClass": "ssm",
+        "archDisplay": "Mamba2 state-space model (linear-time inference)",
+        "ctxK": 256,
+        "modalities": [
+          "text"
+        ],
+        "langCount": null,
+        "capabilities": {
+          "reasoning": false,
+          "coding": true,
+          "vision": false,
+          "functionCalling": false,
+          "toolUse": false,
+          "agentic": false
+        },
+        "apiAvailable": true,
+        "price": null,
+        "links": {
+          "hf": "mistralai/Mamba-Codestral-7B-v0.1",
+          "docs": "docs.mistral.ai/models/model-cards/codestral-mamba-7b-0-1"
+        },
+        "note": "First Mamba2-architecture code model from Mistral; linear-time inference, tested to 256K-token in-context retrieval, Apache 2.0.",
+        "quants": [
+          "GGUF Q4 (experimental Mamba2 support)"
+        ],
+        "vramQ4Gb": 5,
+        "vramFp16Gb": 15,
+        "tps4090": null,
+        "tpsNote": "Mamba2 quantization/support in llama.cpp was experimental and unstable at launch; state-space caching differs from transformer KV-cache VRAM scaling",
+        "effortLabel": null,
+        "isDefaultConfig": true,
+        "isBestConfig": true,
+        "specSources": {
+          "paramsB": "https://www.marktechpost.com/2024/07/17/mistral-ai-launches-codestral-mamba-7b-a-revolutionary-code-llm-achieving-75-on-humaneval-for-python-coding/",
+          "ctxK": "https://mistral.ai/news/codestral-mamba/",
+          "releaseDate": "https://mistral.ai/news/codestral-mamba/",
+          "openness": "https://huggingface.co/mistralai/Mamba-Codestral-7B-v0.1"
+        },
+        "results": [
+          {
+            "benchmarkSlug": "humaneval",
+            "score": 75,
+            "source": "independent",
+            "sourceUrl": "https://www.marktechpost.com/2024/07/17/mistral-ai-launches-codestral-mamba-7b-a-revolutionary-code-llm-achieving-75-on-humaneval-for-python-coding/",
+            "evaluatedAt": "2024-07"
+          }
+        ],
+        "verificationNotes": "Fetched mistral.ai/news/codestral-mamba/ directly: confirms 2024-07-16 release, Mamba2/linear-time architecture, Apache 2.0, tested to 256K-token in-context retrieval. Fetched marktechpost.com article directly: literal params 7,285,403,648 (~7.3B) and HumanEval 75% appear in the page title/headline; corroborated independently by Philipp Schmid and multiple other outlets in search results. No changes made."
+      },
+      {
+        "name": "Mistral NeMo 12B",
+        "org": "Mistral AI",
+        "family": "Mistral NeMo",
+        "releaseDate": "2024-07-18",
+        "status": "deprecated",
+        "openness": "open-weights",
+        "license": "Apache 2.0",
+        "paramsB": 12,
+        "activeParamsB": null,
+        "archClass": "dense",
+        "archDisplay": "Dense Transformer (40 layers, 5120d, Tekken tokenizer)",
+        "ctxK": 128,
+        "modalities": [
+          "text"
+        ],
+        "langCount": 11,
+        "capabilities": {
+          "reasoning": false,
+          "coding": true,
+          "vision": false,
+          "functionCalling": true,
+          "toolUse": true,
+          "agentic": false
+        },
+        "apiAvailable": true,
+        "price": {
+          "input": 0.15,
+          "output": 0.15,
+          "provider": "Mistral La Plateforme"
+        },
+        "links": {
+          "hf": "mistralai/Mistral-Nemo-Instruct-2407",
+          "docs": "docs.mistral.ai/models/overview"
+        },
+        "note": "12B dense model co-built with NVIDIA; 128k context, Apache 2.0, new Tekken tokenizer; now in Mistral's retirement window.",
+        "quants": [
+          "GGUF Q4",
+          "MLX",
+          "AWQ"
+        ],
+        "vramQ4Gb": 7,
+        "vramFp16Gb": 24,
+        "tps4090": null,
+        "tpsNote": null,
+        "effortLabel": null,
+        "isDefaultConfig": true,
+        "isBestConfig": true,
+        "specSources": {
+          "paramsB": "https://mistral.ai/news/mistral-nemo/",
+          "ctxK": "https://mistral.ai/news/mistral-nemo/",
+          "releaseDate": "https://mistral.ai/news/mistral-nemo/",
+          "openness": "https://mistral.ai/news/mistral-nemo/"
+        },
+        "results": [
+          {
+            "benchmarkSlug": "mmlu",
+            "score": 68,
+            "source": "self-reported",
+            "sourceUrl": "https://huggingface.co/mistralai/Mistral-Nemo-Instruct-2407",
+            "evaluatedAt": "2024-07-18"
+          },
+          {
+            "benchmarkSlug": "hellaswag",
+            "score": 83.5,
+            "source": "self-reported",
+            "sourceUrl": "https://huggingface.co/mistralai/Mistral-Nemo-Instruct-2407"
+          },
+          {
+            "benchmarkSlug": "winogrande",
+            "score": 76.8,
+            "source": "self-reported",
+            "sourceUrl": "https://huggingface.co/mistralai/Mistral-Nemo-Instruct-2407"
+          },
+          {
+            "benchmarkSlug": "trivia-qa",
+            "score": 73.8,
+            "source": "self-reported",
+            "sourceUrl": "https://huggingface.co/mistralai/Mistral-Nemo-Instruct-2407"
+          }
+        ],
+        "verificationNotes": "Fetched mistral.ai/news/mistral-nemo/ directly: confirms 2024-07-18 release, 12B params, 128K context, Apache 2.0, function calling, 11 languages listed (English/French/German/Spanish/Italian/Portuguese/Chinese/Japanese/Korean/Arabic/Hindi). Fetched HF model card directly: MMLU 68.0, HellaSwag 83.5, Winogrande 76.8, TriviaQA 73.8 all match exactly. Docs.mistral.ai confirms model is now deprecated with retirement date 2026-07-31 (essentially now) -- status/note updated to reflect this. Pricing $0.15/$0.15 corroborated by multiple independent aggregators (Sim.ai, Inworld, pricepertoken.com) tied to official Mistral La Plateforme; a lower $0.02/$0.03 figure also appears in some trackers but I could not confirm it against a primary Mistral source, so kept the better-corroborated $0.15/$0.15 with this caveat noted."
+      },
+      {
+        "name": "Mistral Large 2 (24.07)",
+        "org": "Mistral AI",
+        "family": "Mistral Large",
+        "releaseDate": "2024-07-24",
+        "status": "deprecated",
+        "openness": "open-weights",
+        "license": "Mistral Research License (non-commercial; commercial license required for production)",
+        "paramsB": 123,
+        "activeParamsB": null,
+        "archClass": "dense",
+        "archDisplay": "Dense Transformer",
+        "ctxK": 128,
+        "modalities": [
+          "text"
+        ],
+        "langCount": 13,
+        "capabilities": {
+          "reasoning": false,
+          "coding": true,
+          "vision": false,
+          "functionCalling": true,
+          "toolUse": true,
+          "agentic": true
+        },
+        "apiAvailable": false,
+        "price": null,
+        "links": {
+          "hf": "mistralai/Mistral-Large-Instruct-2407",
+          "docs": "docs.mistral.ai/models/overview"
+        },
+        "note": "123B open-weights flagship rivaling Llama 3.1 405B on code/math (research license); fully retired from Mistral's API as of 2025.",
+        "quants": [
+          "GGUF Q4",
+          "AWQ",
+          "MLX"
+        ],
+        "vramQ4Gb": 74,
+        "vramFp16Gb": 246,
+        "tps4090": null,
+        "tpsNote": "123B model exceeds a single RTX 4090's 24GB VRAM even at Q4; requires multi-GPU or CPU offload.",
+        "effortLabel": null,
+        "isDefaultConfig": true,
+        "isBestConfig": true,
+        "specSources": {
+          "paramsB": "https://mistral.ai/news/mistral-large-2407/",
+          "ctxK": "https://mistral.ai/news/mistral-large-2407/",
+          "releaseDate": "https://mistral.ai/news/mistral-large-2407/",
+          "openness": "https://huggingface.co/mistralai/Mistral-Large-Instruct-2407"
+        },
+        "results": [
+          {
+            "benchmarkSlug": "mmlu",
+            "score": 84,
+            "source": "self-reported",
+            "sourceUrl": "https://mistral.ai/news/mistral-large-2407/",
+            "evaluatedAt": "2024-07-24"
+          },
+          {
+            "benchmarkSlug": "humaneval",
+            "score": 92,
+            "source": "self-reported",
+            "sourceUrl": "https://huggingface.co/mistralai/Mistral-Large-Instruct-2407"
+          },
+          {
+            "benchmarkSlug": "mbpp",
+            "score": 80,
+            "source": "self-reported",
+            "sourceUrl": "https://huggingface.co/mistralai/Mistral-Large-Instruct-2407",
+            "notes": "MBPP Base"
+          },
+          {
+            "benchmarkSlug": "gsm8k",
+            "score": 93,
+            "source": "self-reported",
+            "sourceUrl": "https://huggingface.co/mistralai/Mistral-Large-Instruct-2407"
+          }
+        ],
+        "verificationNotes": "Real release confirmed via mistral.ai/news/mistral-large-2407/ (fetched): 123B dense, 128k ctx, released 2024-07-24, Mistral Research License (HF model card literally says 'Mistral AI Research License' / license tag 'mrl', non-commercial). All 4 result rows independently confirmed literally present on their cited pages: MMLU 84.0 (mistral.ai blog), HumanEval 92%, MBPP Base 80%, GSM8K 93% (all on HF model card, also corroborated by an independent MarkTechPost article). No corrections needed."
+      },
+      {
+        "name": "Pixtral 12B",
+        "org": "Mistral AI",
+        "family": "Pixtral",
+        "releaseDate": "2024-09-11",
+        "status": "deprecated",
+        "openness": "open-weights",
+        "license": "Apache 2.0",
+        "paramsB": 12.4,
+        "activeParamsB": null,
+        "archClass": "dense",
+        "archDisplay": "Dense decoder (12B) + vision encoder (0.4B)",
+        "ctxK": 128,
+        "modalities": [
+          "text",
+          "vision"
+        ],
+        "langCount": null,
+        "capabilities": {
+          "reasoning": false,
+          "coding": true,
+          "vision": true,
+          "functionCalling": false,
+          "toolUse": false,
+          "agentic": false
+        },
+        "apiAvailable": false,
+        "price": null,
+        "links": {
+          "hf": "mistralai/Pixtral-12B-2409",
+          "docs": "docs.mistral.ai/models/overview"
+        },
+        "note": "Mistral's first multimodal model; 12B decoder + 400M vision encoder, 128k context, Apache 2.0; now retired from API.",
+        "quants": [
+          "GGUF Q4",
+          "MLX"
+        ],
+        "vramQ4Gb": 7.5,
+        "vramFp16Gb": 25,
+        "tps4090": null,
+        "tpsNote": null,
+        "effortLabel": null,
+        "isDefaultConfig": true,
+        "isBestConfig": true,
+        "specSources": {
+          "paramsB": "https://huggingface.co/mistralai/Pixtral-12B-2409",
+          "ctxK": "https://mistral.ai/news/pixtral-12b/",
+          "releaseDate": "https://mistral.ai/news/pixtral-12b/",
+          "openness": "https://huggingface.co/mistralai/Pixtral-12B-2409"
+        },
+        "results": [
+          {
+            "benchmarkSlug": "mmmu",
+            "score": 52.5,
+            "source": "self-reported",
+            "sourceUrl": "https://mistral.ai/news/pixtral-12b/",
+            "evaluatedAt": "2024-09-11",
+            "notes": "CoT prompting"
+          },
+          {
+            "benchmarkSlug": "mathvista",
+            "score": 58,
+            "source": "self-reported",
+            "sourceUrl": "https://mistral.ai/news/pixtral-12b/",
+            "notes": "CoT prompting"
+          },
+          {
+            "benchmarkSlug": "chartqa",
+            "score": 81.8,
+            "source": "self-reported",
+            "sourceUrl": "https://mistral.ai/news/pixtral-12b/",
+            "notes": "CoT prompting"
+          },
+          {
+            "benchmarkSlug": "docvqa",
+            "score": 90.7,
+            "source": "self-reported",
+            "sourceUrl": "https://mistral.ai/news/pixtral-12b/",
+            "notes": "ANLS metric"
+          }
+        ],
+        "verificationNotes": "Real release confirmed. Release date 2024-09-11 corroborated by two independent sources (TechCrunch article dated 2024-09-11, Simon Willison blog dated 2024-Sep-11) plus Mistral's own (now-marked '[Deprecated]') blog post. 12B decoder + 400M vision encoder, 128k ctx, Apache 2.0 confirmed via mistral.ai/news/pixtral-12b/ (fetched). All 4 benchmark rows confirmed literally on that page: MMMU 52.5 (CoT), MathVista 58.0 (CoT), ChartQA 81.8 (CoT), DocVQA 90.7 (ANLS). No corrections needed."
+      },
+      {
+        "name": "Ministral 3B",
+        "org": "Mistral AI",
+        "family": "Ministral",
+        "releaseDate": "2024-10-16",
+        "status": "deprecated",
+        "openness": "closed",
+        "license": "Mistral Commercial License (proprietary; API-only, weights withheld)",
+        "paramsB": 3,
+        "activeParamsB": null,
+        "archClass": "dense",
+        "archDisplay": "Dense Transformer, 36 layers",
+        "ctxK": 128,
+        "modalities": [
+          "text"
+        ],
+        "langCount": null,
+        "capabilities": {
+          "reasoning": false,
+          "coding": true,
+          "vision": false,
+          "functionCalling": true,
+          "toolUse": true,
+          "agentic": true
+        },
+        "apiAvailable": false,
+        "price": {
+          "input": 0.04,
+          "output": 0.04,
+          "provider": "Mistral La Plateforme (launch pricing, now retired)"
+        },
+        "links": {
+          "docs": "docs.mistral.ai/models/overview"
+        },
+        "note": "Edge-class 3B model for on-device/low-latency use; API-only, weights never released; retired from platform as of late 2025.",
+        "quants": [],
+        "vramQ4Gb": null,
+        "vramFp16Gb": null,
+        "tps4090": null,
+        "tpsNote": null,
+        "effortLabel": null,
+        "isDefaultConfig": true,
+        "isBestConfig": true,
+        "specSources": {
+          "paramsB": "https://mistral.ai/news/ministraux/",
+          "ctxK": "https://mistral.ai/news/ministraux/",
+          "releaseDate": "https://siliconangle.com/2024/10/16/mistral-introduces-ministral-3b-8b-device-ai-computing-models/",
+          "openness": "https://mistral.ai/news/ministraux/"
+        },
+        "results": [
+          {
+            "benchmarkSlug": "mmlu",
+            "score": 60.9,
+            "source": "self-reported",
+            "sourceUrl": "https://huggingface.co/mistralai/Ministral-8B-Instruct-2410",
+            "evaluatedAt": "2024-10-16",
+            "notes": "pretrained/base model"
+          },
+          {
+            "benchmarkSlug": "humaneval",
+            "score": 77.4,
+            "source": "self-reported",
+            "sourceUrl": "https://huggingface.co/mistralai/Ministral-8B-Instruct-2410",
+            "notes": "pass@1"
+          },
+          {
+            "benchmarkSlug": "gsm8k",
+            "score": 50.9,
+            "source": "self-reported",
+            "sourceUrl": "https://huggingface.co/mistralai/Ministral-8B-Instruct-2410",
+            "notes": "maj@8, base model"
+          },
+          {
+            "benchmarkSlug": "math",
+            "score": 51.7,
+            "source": "self-reported",
+            "sourceUrl": "https://huggingface.co/mistralai/Ministral-8B-Instruct-2410",
+            "notes": "maj@1"
+          }
+        ],
+        "verificationNotes": "Real release confirmed via mistral.ai/news/ministraux/ (fetched): released 2024-10-16, Ministral 3B is API-only at $0.04/M tokens under Mistral Commercial License with no open-weights release (confirms 'closed' openness). Note: sourceUrl for all 4 result rows points to the Ministral-8B-Instruct-2410 HF card rather than a dedicated Ministral-3B card (none exists), but that HF page's comparison tables do contain a distinct Ministral-3B row - verified all 4 values appear literally there: MMLU 60.9 (base table), HumanEval pass@1 77.4 (instruct table), GSM8K maj@8 50.9 (base table), MATH maj@1 51.7 (instruct table). No corrections needed."
+      },
+      {
+        "name": "Ministral 8B",
+        "org": "Mistral AI",
+        "family": "Ministral",
+        "releaseDate": "2024-10-16",
+        "status": "deprecated",
+        "openness": "open-weights",
+        "license": "Mistral Research License (non-commercial; commercial license required for production)",
+        "paramsB": 8.02,
+        "activeParamsB": null,
+        "archClass": "dense",
+        "archDisplay": "Dense Transformer w/ interleaved sliding-window attention, 36 layers",
+        "ctxK": 128,
+        "modalities": [
+          "text"
+        ],
+        "langCount": null,
+        "capabilities": {
+          "reasoning": false,
+          "coding": true,
+          "vision": false,
+          "functionCalling": true,
+          "toolUse": true,
+          "agentic": true
+        },
+        "apiAvailable": false,
+        "price": {
+          "input": 0.1,
+          "output": 0.1,
+          "provider": "Mistral La Plateforme (launch pricing, now retired)"
+        },
+        "links": {
+          "hf": "mistralai/Ministral-8B-Instruct-2410",
+          "docs": "docs.mistral.ai/models/overview"
+        },
+        "note": "Open-weights 8B edge model with interleaved sliding-window attention (research license); instruct weights on HF.",
+        "quants": [
+          "GGUF Q4",
+          "AWQ",
+          "MLX"
+        ],
+        "vramQ4Gb": 5,
+        "vramFp16Gb": 16,
+        "tps4090": null,
+        "tpsNote": null,
+        "effortLabel": null,
+        "isDefaultConfig": true,
+        "isBestConfig": true,
+        "specSources": {
+          "paramsB": "https://huggingface.co/mistralai/Ministral-8B-Instruct-2410",
+          "ctxK": "https://huggingface.co/mistralai/Ministral-8B-Instruct-2410",
+          "releaseDate": "https://mistral.ai/news/ministraux/",
+          "openness": "https://huggingface.co/mistralai/Ministral-8B-Instruct-2410"
+        },
+        "results": [
+          {
+            "benchmarkSlug": "mmlu",
+            "score": 65,
+            "source": "self-reported",
+            "sourceUrl": "https://huggingface.co/mistralai/Ministral-8B-Instruct-2410",
+            "evaluatedAt": "2024-10-16",
+            "notes": "base model"
+          },
+          {
+            "benchmarkSlug": "humaneval",
+            "score": 76.8,
+            "source": "self-reported",
+            "sourceUrl": "https://huggingface.co/mistralai/Ministral-8B-Instruct-2410",
+            "notes": "pass@1"
+          },
+          {
+            "benchmarkSlug": "mbpp",
+            "score": 70,
+            "source": "self-reported",
+            "sourceUrl": "https://huggingface.co/mistralai/Ministral-8B-Instruct-2410",
+            "notes": "pass@1"
+          },
+          {
+            "benchmarkSlug": "gsm8k",
+            "score": 64.5,
+            "source": "self-reported",
+            "sourceUrl": "https://huggingface.co/mistralai/Ministral-8B-Instruct-2410",
+            "notes": "maj@8, base model"
+          },
+          {
+            "benchmarkSlug": "math",
+            "score": 54.5,
+            "source": "self-reported",
+            "sourceUrl": "https://huggingface.co/mistralai/Ministral-8B-Instruct-2410",
+            "notes": "maj@1"
+          }
+        ],
+        "verificationNotes": "Real release confirmed. HF model card (fetched) states exactly '8,019,808,256' parameters (=8.02B, matches), 'Released under the Mistral Research License,' 128k context window with interleaved sliding-window attention, 36 layers - all confirmed. Release date 2024-10-16 confirmed via mistral.ai/news/ministraux/. All 5 benchmark rows confirmed literally present on the HF card: MMLU 65.0, HumanEval pass@1 76.8, MBPP pass@1 70.0, GSM8K maj@8 64.5, MATH maj@1 54.5. No corrections needed."
+      },
+      {
+        "name": "Mistral Large 24.11",
+        "org": "Mistral AI",
+        "family": "Mistral Large",
+        "releaseDate": "2024-11-18",
+        "status": "deprecated",
+        "openness": "open-weights",
+        "license": "Mistral Research License (non-commercial; commercial license required for production)",
+        "paramsB": 123,
+        "activeParamsB": null,
+        "archClass": "dense",
+        "archDisplay": "Dense Transformer",
+        "ctxK": 128,
+        "modalities": [
+          "text"
+        ],
+        "langCount": null,
+        "capabilities": {
+          "reasoning": false,
+          "coding": true,
+          "vision": false,
+          "functionCalling": true,
+          "toolUse": true,
+          "agentic": true
+        },
+        "apiAvailable": false,
+        "price": null,
+        "links": {
+          "hf": "mistralai/Mistral-Large-Instruct-2411",
+          "docs": "docs.mistral.ai/models/mistral-large-2-1-24-11"
+        },
+        "note": "Nov 2024 refresh of Large 2 with improved long-context handling, function calling and system prompt support.",
+        "quants": [
+          "GGUF Q4",
+          "AWQ",
+          "MLX"
+        ],
+        "vramQ4Gb": 74,
+        "vramFp16Gb": 246,
+        "tps4090": null,
+        "tpsNote": "123B model exceeds a single RTX 4090's 24GB VRAM even at Q4; requires multi-GPU or CPU offload.",
+        "effortLabel": null,
+        "isDefaultConfig": true,
+        "isBestConfig": true,
+        "specSources": {
+          "paramsB": "https://huggingface.co/mistralai/Mistral-Large-Instruct-2411",
+          "ctxK": "https://docs.mistral.ai/models/mistral-large-2-1-24-11",
+          "releaseDate": "https://docs.mistral.ai/models/mistral-large-2-1-24-11",
+          "openness": "https://huggingface.co/mistralai/Mistral-Large-Instruct-2411"
+        },
+        "results": [],
+        "verificationNotes": "Real release confirmed via HF model card (fetched): 123B params, 'mrl' (Mistral Research License) confirmed, 128k context confirmed. Release date 2024-11-18 corroborated by independent search results (one secondary source says Nov 19, but primary/majority sources and same-day Pixtral Large launch support Nov 18). No results rows were present in the input to verify (empty array retained). No corrections needed."
+      },
+      {
+        "name": "Pixtral Large (124B)",
+        "org": "Mistral AI",
+        "family": "Pixtral",
+        "releaseDate": "2024-11-18",
+        "status": "deprecated",
+        "openness": "open-weights",
+        "license": "Mistral Research License (non-commercial; commercial license required for production)",
+        "paramsB": 124,
+        "activeParamsB": null,
+        "archClass": "dense",
+        "archDisplay": "Dense decoder (123B, built on Mistral Large 2) + vision encoder (1B)",
+        "ctxK": 128,
+        "modalities": [
+          "text",
+          "vision"
+        ],
+        "langCount": null,
+        "capabilities": {
+          "reasoning": false,
+          "coding": true,
+          "vision": true,
+          "functionCalling": true,
+          "toolUse": true,
+          "agentic": true
+        },
+        "apiAvailable": false,
+        "price": null,
+        "links": {
+          "hf": "mistralai/Pixtral-Large-Instruct-2411",
+          "docs": "docs.mistral.ai/models/model-cards/pixtral-large-24-11"
+        },
+        "note": "124B multimodal model built on Large 2; strong chart/document/math-vision reasoning; led LMSys vision leaderboard among open-weights models at launch.",
+        "quants": [
+          "GGUF Q4",
+          "MLX"
+        ],
+        "vramQ4Gb": 75,
+        "vramFp16Gb": 248,
+        "tps4090": null,
+        "tpsNote": "124B model exceeds a single RTX 4090's 24GB VRAM even at Q4; requires multi-GPU or CPU offload.",
+        "effortLabel": null,
+        "isDefaultConfig": true,
+        "isBestConfig": true,
+        "specSources": {
+          "paramsB": "https://mistral.ai/news/pixtral-large/",
+          "ctxK": "https://mistral.ai/news/pixtral-large/",
+          "releaseDate": "https://mistral.ai/news/pixtral-large/",
+          "openness": "https://docs.mistral.ai/models/model-cards/pixtral-large-24-11"
+        },
+        "results": [
+          {
+            "benchmarkSlug": "mathvista",
+            "score": 69.4,
+            "source": "self-reported",
+            "sourceUrl": "https://mistral.ai/news/pixtral-large/",
+            "evaluatedAt": "2024-11-18"
+          }
+        ],
+        "verificationNotes": "Real release confirmed via mistral.ai/news/pixtral-large/ (fetched): released 2024-11-18, 124B total (123B decoder built on Mistral Large 2 + 1B vision encoder) confirmed, Mistral Research License confirmed, 128k context confirmed ('fits minimum of 30 high-resolution images'). Sole benchmark row confirmed literally on the page: MathVista 69.4%. No corrections needed."
+      }
+    ]
+  },
+  "workflowProgress": [
+    {
+      "type": "workflow_phase",
+      "index": 1,
+      "title": "Research"
+    },
+    {
+      "type": "workflow_phase",
+      "index": 2,
+      "title": "Verify"
+    },
+    {
+      "type": "workflow_agent",
+      "index": 1,
+      "label": "research:OpenAI",
+      "phaseIndex": 1,
+      "phaseTitle": "Research",
+      "agentId": "a258c38dfb1e39fb1",
+      "model": "claude-sonnet-5",
+      "state": "done",
+      "startedAt": 1783884180830,
+      "queuedAt": 1783884180820,
+      "attempt": 1,
+      "lastToolName": "StructuredOutput",
+      "promptPreview": "You have web research tools. FIRST load them: call ToolSearch with query \"select:mcp__4dbcbf51-5bb9-4f93-a61f-18044e1a3091__web_search,mcp__4dbcbf51-5bb9-4f93-a61f-18044e1a3091__web_fetch\" to load Parallel P0 web_search/web_fetch (pass a stable session_id + model_name on every call). Built-in WebSearch/WebFetch may also load via ToolSearch query \"web search fetch\". Use REAL searches — never answer…",
+      "lastProgressAt": 1783885242385,
+      "tokens": 131773,
+      "toolCalls": 64,
+      "durationMs": 1061555,
+      "resultPreview": "{\"models\":[{\"name\":\"GPT-3 175B\",\"org\":\"OpenAI\",\"family\":\"GPT-3\",\"releaseDate\":\"2020-06-11\",\"status\":\"deprecated\",\"openness\":\"closed\",\"license\":\"Proprietary\",\"paramsB\":175,\"activeParamsB\":null,\"archClass\":\"dense\",\"archDisplay\":\"Dense decoder-only Transformer, 96 layers / d_model 12,288 / 96 attention heads\",\"ctxK\":2,\"modalities\":[\"text\"],\"langCount\":null,\"capabilities\":{\"reasoning\":false,\"coding\":f…"
+    },
+    {
+      "type": "workflow_agent",
+      "index": 2,
+      "label": "research:OpenAI",
+      "phaseIndex": 1,
+      "phaseTitle": "Research",
+      "agentId": "afaa9724121be5aac",
+      "model": "claude-sonnet-5",
+      "state": "done",
+      "startedAt": 1783884180831,
+      "queuedAt": 1783884180820,
+      "attempt": 1,
+      "lastToolName": "StructuredOutput",
+      "promptPreview": "You have web research tools. FIRST load them: call ToolSearch with query \"select:mcp__4dbcbf51-5bb9-4f93-a61f-18044e1a3091__web_search,mcp__4dbcbf51-5bb9-4f93-a61f-18044e1a3091__web_fetch\" to load Parallel P0 web_search/web_fetch (pass a stable session_id + model_name on every call). Built-in WebSearch/WebFetch may also load via ToolSearch query \"web search fetch\". Use REAL searches — never answer…",
+      "lastProgressAt": 1783884876646,
+      "tokens": 126744,
+      "toolCalls": 84,
+      "durationMs": 695815,
+      "resultPreview": "{\"models\":[{\"name\":\"OpenAI o1-mini\",\"org\":\"OpenAI\",\"family\":\"o1\",\"releaseDate\":\"2024-09-12\",\"status\":\"deprecated\",\"openness\":\"closed\",\"license\":\"Proprietary\",\"paramsB\":null,\"activeParamsB\":null,\"archClass\":\"dense\",\"archDisplay\":\"Dense transformer reasoning model (size undisclosed)\",\"ctxK\":128,\"modalities\":[\"text\"],\"langCount\":null,\"capabilities\":{\"reasoning\":true,\"coding\":true,\"vision\":false,\"func…"
+    },
+    {
+      "type": "workflow_agent",
+      "index": 3,
+      "label": "research:OpenAI",
+      "phaseIndex": 1,
+      "phaseTitle": "Research",
+      "agentId": "a94e2ca0f4699bc08",
+      "model": "claude-sonnet-5",
+      "state": "done",
+      "startedAt": 1783884180831,
+      "queuedAt": 1783884180820,
+      "attempt": 1,
+      "lastToolName": "StructuredOutput",
+      "promptPreview": "You have web research tools. FIRST load them: call ToolSearch with query \"select:mcp__4dbcbf51-5bb9-4f93-a61f-18044e1a3091__web_search,mcp__4dbcbf51-5bb9-4f93-a61f-18044e1a3091__web_fetch\" to load Parallel P0 web_search/web_fetch (pass a stable session_id + model_name on every call). Built-in WebSearch/WebFetch may also load via ToolSearch query \"web search fetch\". Use REAL searches — never answer…",
+      "lastProgressAt": 1783885282404,
+      "tokens": 143009,
+      "toolCalls": 58,
+      "durationMs": 1101573,
+      "resultPreview": "{\"models\":[{\"name\":\"GPT-4.1 nano\",\"org\":\"OpenAI\",\"family\":\"GPT-4.1\",\"releaseDate\":\"2025-04-14\",\"status\":\"released\",\"openness\":\"closed\",\"license\":\"Proprietary (OpenAI API Terms)\",\"paramsB\":null,\"activeParamsB\":null,\"archClass\":\"dense\",\"archDisplay\":\"Dense transformer (exact size undisclosed)\",\"ctxK\":1000,\"modalities\":[\"text\",\"vision\"],\"langCount\":null,\"capabilities\":{\"reasoning\":false,\"coding\":true…"
+    },
+    {
+      "type": "workflow_agent",
+      "index": 4,
+      "label": "research:OpenAI",
+      "phaseIndex": 1,
+      "phaseTitle": "Research",
+      "agentId": "aee4ff3261c720bd1",
+      "model": "claude-sonnet-5",
+      "state": "done",
+      "startedAt": 1783884180832,
+      "queuedAt": 1783884180820,
+      "attempt": 1,
+      "lastToolName": "StructuredOutput",
+      "promptPreview": "You have web research tools. FIRST load them: call ToolSearch with query \"select:mcp__4dbcbf51-5bb9-4f93-a61f-18044e1a3091__web_search,mcp__4dbcbf51-5bb9-4f93-a61f-18044e1a3091__web_fetch\" to load Parallel P0 web_search/web_fetch (pass a stable session_id + model_name on every call). Built-in WebSearch/WebFetch may also load via ToolSearch query \"web search fetch\". Use REAL searches — never answer…",
+      "lastProgressAt": 1783884756658,
+      "tokens": 111433,
+      "toolCalls": 51,
+      "durationMs": 575826,
+      "resultPreview": "{\"models\":[{\"name\":\"GPT-5 mini\",\"org\":\"OpenAI\",\"family\":\"GPT-5\",\"releaseDate\":\"2025-08-07\",\"status\":\"released\",\"openness\":\"closed\",\"license\":\"Proprietary\",\"paramsB\":null,\"activeParamsB\":null,\"archClass\":\"moe\",\"archDisplay\":\"Transformer (Mixture-of-Experts likely; exact configuration undisclosed)\",\"ctxK\":400,\"modalities\":[\"text\",\"vision\"],\"langCount\":null,\"capabilities\":{\"reasoning\":true,\"coding\":t…"
+    },
+    {
+      "type": "workflow_agent",
+      "index": 5,
+      "label": "research:Mistral AI",
+      "phaseIndex": 1,
+      "phaseTitle": "Research",
+      "agentId": "a0700b80ccfa75f23",
+      "model": "claude-sonnet-5",
+      "state": "done",
+      "startedAt": 1783884180832,
+      "queuedAt": 1783884180820,
+      "attempt": 1,
+      "lastToolName": "StructuredOutput",
+      "promptPreview": "You have web research tools. FIRST load them: call ToolSearch with query \"select:mcp__4dbcbf51-5bb9-4f93-a61f-18044e1a3091__web_search,mcp__4dbcbf51-5bb9-4f93-a61f-18044e1a3091__web_fetch\" to load Parallel P0 web_search/web_fetch (pass a stable session_id + model_name on every call). Built-in WebSearch/WebFetch may also load via ToolSearch query \"web search fetch\". Use REAL searches — never answer…",
+      "lastProgressAt": 1783885049748,
+      "tokens": 147803,
+      "toolCalls": 91,
+      "durationMs": 868916,
+      "resultPreview": "{\"models\":[{\"name\":\"Mistral 7B\",\"org\":\"Mistral AI\",\"family\":\"Mistral 7B\",\"releaseDate\":\"2023-09-27\",\"status\":\"deprecated\",\"openness\":\"open-source\",\"license\":\"Apache 2.0\",\"paramsB\":7.3,\"activeParamsB\":null,\"archClass\":\"dense\",\"archDisplay\":\"Dense transformer (grouped-query + sliding-window attention)\",\"ctxK\":32,\"modalities\":[\"text\"],\"langCount\":null,\"capabilities\":{\"reasoning\":false,\"coding\":true,\"…"
+    },
+    {
+      "type": "workflow_agent",
+      "index": 6,
+      "label": "research:Mistral AI",
+      "phaseIndex": 1,
+      "phaseTitle": "Research",
+      "agentId": "a85c83fcf65071168",
+      "model": "claude-sonnet-5",
+      "state": "done",
+      "startedAt": 1783884180832,
+      "queuedAt": 1783884180820,
+      "attempt": 1,
+      "lastToolName": "StructuredOutput",
+      "promptPreview": "You have web research tools. FIRST load them: call ToolSearch with query \"select:mcp__4dbcbf51-5bb9-4f93-a61f-18044e1a3091__web_search,mcp__4dbcbf51-5bb9-4f93-a61f-18044e1a3091__web_fetch\" to load Parallel P0 web_search/web_fetch (pass a stable session_id + model_name on every call). Built-in WebSearch/WebFetch may also load via ToolSearch query \"web search fetch\". Use REAL searches — never answer…",
+      "lastProgressAt": 1783884651014,
+      "tokens": 102057,
+      "toolCalls": 45,
+      "durationMs": 470182,
+      "resultPreview": "{\"models\":[{\"name\":\"Mistral NeMo 12B\",\"org\":\"Mistral AI\",\"family\":\"Mistral NeMo\",\"releaseDate\":\"2024-07-18\",\"status\":\"deprecated\",\"openness\":\"open-weights\",\"license\":\"Apache 2.0\",\"paramsB\":12,\"activeParamsB\":null,\"archClass\":\"dense\",\"archDisplay\":\"Dense Transformer (40 layers, 5120d, Tekken tokenizer)\",\"ctxK\":128,\"modalities\":[\"text\"],\"langCount\":11,\"capabilities\":{\"reasoning\":false,\"coding\":true,…"
+    },
+    {
+      "type": "workflow_agent",
+      "index": 7,
+      "label": "research:Mistral AI",
+      "phaseIndex": 1,
+      "phaseTitle": "Research",
+      "agentId": "a8fcdcea2a2d4f76b",
+      "model": "claude-sonnet-5",
+      "state": "done",
+      "startedAt": 1783884180832,
+      "queuedAt": 1783884180820,
+      "attempt": 1,
+      "lastToolName": "StructuredOutput",
+      "promptPreview": "You have web research tools. FIRST load them: call ToolSearch with query \"select:mcp__4dbcbf51-5bb9-4f93-a61f-18044e1a3091__web_search,mcp__4dbcbf51-5bb9-4f93-a61f-18044e1a3091__web_fetch\" to load Parallel P0 web_search/web_fetch (pass a stable session_id + model_name on every call). Built-in WebSearch/WebFetch may also load via ToolSearch query \"web search fetch\". Use REAL searches — never answer…",
+      "lastProgressAt": 1783884825607,
+      "tokens": 115055,
+      "toolCalls": 66,
+      "durationMs": 644775,
+      "resultPreview": "{\"models\":[{\"name\":\"Codestral 25.01\",\"org\":\"Mistral AI\",\"family\":\"Codestral\",\"releaseDate\":\"2025-01-13\",\"status\":\"deprecated\",\"openness\":\"closed\",\"license\":\"Proprietary (Mistral commercial API terms)\",\"paramsB\":null,\"activeParamsB\":null,\"archClass\":\"dense\",\"archDisplay\":\"Dense Transformer (size undisclosed)\",\"ctxK\":256,\"modalities\":[\"text\"],\"langCount\":null,\"capabilities\":{\"reasoning\":false,\"codin…"
+    },
+    {
+      "type": "workflow_agent",
+      "index": 8,
+      "label": "research:Mistral AI",
+      "phaseIndex": 1,
+      "phaseTitle": "Research",
+      "agentId": "a4b311ffe214be5fd",
+      "model": "claude-sonnet-5",
+      "state": "done",
+      "startedAt": 1783884180833,
+      "queuedAt": 1783884180820,
+      "attempt": 1,
+      "lastToolName": "StructuredOutput",
+      "promptPreview": "You have web research tools. FIRST load them: call ToolSearch with query \"select:mcp__4dbcbf51-5bb9-4f93-a61f-18044e1a3091__web_search,mcp__4dbcbf51-5bb9-4f93-a61f-18044e1a3091__web_fetch\" to load Parallel P0 web_search/web_fetch (pass a stable session_id + model_name on every call). Built-in WebSearch/WebFetch may also load via ToolSearch query \"web search fetch\". Use REAL searches — never answer…",
+      "lastProgressAt": 1783884869209,
+      "tokens": 127771,
+      "toolCalls": 67,
+      "durationMs": 688376,
+      "resultPreview": "{\"models\":[{\"name\":\"Mistral Small 3.2 (24B)\",\"org\":\"Mistral AI\",\"family\":\"Mistral Small\",\"releaseDate\":\"2025-06-20\",\"status\":\"deprecated\",\"openness\":\"open-weights\",\"license\":\"Apache-2.0\",\"paramsB\":24,\"activeParamsB\":null,\"archClass\":\"dense\",\"archDisplay\":\"Dense transformer decoder + Pixtral-style vision encoder\",\"ctxK\":128,\"modalities\":[\"text\",\"vision\"],\"langCount\":24,\"capabilities\":{\"reasoning\":f…"
+    },
+    {
+      "type": "workflow_agent",
+      "index": 9,
+      "label": "research:Zhipu AI / THUDM (Tsinghua)",
+      "phaseIndex": 1,
+      "phaseTitle": "Research",
+      "agentId": "ae5f588f8b4eb51ad",
+      "model": "claude-sonnet-5",
+      "state": "done",
+      "startedAt": 1783884180833,
+      "queuedAt": 1783884180820,
+      "attempt": 1,
+      "lastToolName": "StructuredOutput",
+      "promptPreview": "You have web research tools. FIRST load them: call ToolSearch with query \"select:mcp__4dbcbf51-5bb9-4f93-a61f-18044e1a3091__web_search,mcp__4dbcbf51-5bb9-4f93-a61f-18044e1a3091__web_fetch\" to load Parallel P0 web_search/web_fetch (pass a stable session_id + model_name on every call). Built-in WebSearch/WebFetch may also load via ToolSearch query \"web search fetch\". Use REAL searches — never answer…",
+      "lastProgressAt": 1783884961076,
+      "tokens": 147351,
+      "toolCalls": 86,
+      "durationMs": 780243,
+      "resultPreview": "{\"models\":[{\"name\":\"GLM-4\",\"org\":\"Zhipu AI\",\"family\":\"GLM-4\",\"releaseDate\":\"2024-01-16\",\"status\":\"deprecated\",\"openness\":\"closed\",\"license\":\"Proprietary (Zhipu AI commercial API terms)\",\"paramsB\":null,\"activeParamsB\":null,\"archClass\":\"dense\",\"archDisplay\":\"Dense Transformer (parameter count undisclosed)\",\"ctxK\":128,\"modalities\":[\"text\"],\"langCount\":null,\"capabilities\":{\"reasoning\":true,\"coding\":tr…"
+    },
+    {
+      "type": "workflow_agent",
+      "index": 10,
+      "label": "research:EleutherAI",
+      "phaseIndex": 1,
+      "phaseTitle": "Research",
+      "agentId": "af4dcbabb9b20c3ea",
+      "model": "claude-sonnet-5",
+      "state": "done",
+      "startedAt": 1783884180833,
+      "queuedAt": 1783884180821,
+      "attempt": 1,
+      "lastToolName": "StructuredOutput",
+      "promptPreview": "You have web research tools. FIRST load them: call ToolSearch with query \"select:mcp__4dbcbf51-5bb9-4f93-a61f-18044e1a3091__web_search,mcp__4dbcbf51-5bb9-4f93-a61f-18044e1a3091__web_fetch\" to load Parallel P0 web_search/web_fetch (pass a stable session_id + model_name on every call). Built-in WebSearch/WebFetch may also load via ToolSearch query \"web search fetch\". Use REAL searches — never answer…",
+      "lastProgressAt": 1783884774126,
+      "tokens": 138349,
+      "toolCalls": 71,
+      "durationMs": 593293,
+      "resultPreview": "{\"models\":[{\"name\":\"GPT-J-6B\",\"org\":\"EleutherAI\",\"family\":\"GPT-J\",\"releaseDate\":\"2021-06-09\",\"status\":\"released\",\"openness\":\"open-source\",\"license\":\"Apache 2.0\",\"paramsB\":6.05,\"activeParamsB\":null,\"archClass\":\"dense\",\"archDisplay\":\"Dense transformer, 28 layers, RoPE on 64 dims/head, parallel attn+FFN blocks (GPT-J)\",\"ctxK\":2,\"modalities\":[\"text\"],\"langCount\":null,\"capabilities\":{\"reasoning\":false,…"
+    },
+    {
+      "type": "workflow_agent",
+      "index": 11,
+      "label": "research:Amazon",
+      "phaseIndex": 1,
+      "phaseTitle": "Research",
+      "agentId": "afc046dc2179d9b2a",
+      "model": "claude-sonnet-5",
+      "state": "done",
+      "startedAt": 1783884180833,
+      "queuedAt": 1783884180821,
+      "attempt": 1,
+      "lastToolName": "StructuredOutput",
+      "promptPreview": "You have web research tools. FIRST load them: call ToolSearch with query \"select:mcp__4dbcbf51-5bb9-4f93-a61f-18044e1a3091__web_search,mcp__4dbcbf51-5bb9-4f93-a61f-18044e1a3091__web_fetch\" to load Parallel P0 web_search/web_fetch (pass a stable session_id + model_name on every call). Built-in WebSearch/WebFetch may also load via ToolSearch query \"web search fetch\". Use REAL searches — never answer…",
+      "lastProgressAt": 1783884864035,
+      "tokens": 159460,
+      "toolCalls": 68,
+      "durationMs": 683202,
+      "resultPreview": "{\"models\":[{\"name\":\"Amazon Nova Micro\",\"org\":\"Amazon\",\"family\":\"Amazon Nova\",\"releaseDate\":\"2024-12-03\",\"status\":\"released\",\"openness\":\"closed\",\"license\":\"Proprietary\",\"paramsB\":null,\"activeParamsB\":null,\"archClass\":\"dense\",\"archDisplay\":\"Proprietary Transformer (architecture undisclosed)\",\"ctxK\":128,\"modalities\":[\"text\"],\"langCount\":200,\"capabilities\":{\"reasoning\":false,\"coding\":true,\"vision\":fal…"
+    },
+    {
+      "type": "workflow_agent",
+      "index": 12,
+      "label": "research:MosaicML",
+      "phaseIndex": 1,
+      "phaseTitle": "Research",
+      "agentId": "a9eb5f66801a7d1ea",
+      "model": "claude-sonnet-5",
+      "state": "done",
+      "startedAt": 1783884180834,
+      "queuedAt": 1783884180821,
+      "attempt": 1,
+      "lastToolName": "StructuredOutput",
+      "promptPreview": "You have web research tools. FIRST load them: call ToolSearch with query \"select:mcp__4dbcbf51-5bb9-4f93-a61f-18044e1a3091__web_search,mcp__4dbcbf51-5bb9-4f93-a61f-18044e1a3091__web_fetch\" to load Parallel P0 web_search/web_fetch (pass a stable session_id + model_name on every call). Built-in WebSearch/WebFetch may also load via ToolSearch query \"web search fetch\". Use REAL searches — never answer…",
+      "lastProgressAt": 1783885147850,
+      "tokens": 157166,
+      "toolCalls": 97,
+      "durationMs": 967016,
+      "resultPreview": "{\"models\":[{\"name\":\"MPT-30B-Instruct\",\"org\":\"MosaicML\",\"family\":\"MPT\",\"releaseDate\":\"2023-06-22\",\"status\":\"released\",\"openness\":\"open-weights\",\"license\":\"CC-BY-SA-3.0\",\"paramsB\":30,\"activeParamsB\":null,\"archClass\":\"dense\",\"archDisplay\":\"Decoder-only Transformer (ALiBi position bias, FlashAttention)\",\"ctxK\":8,\"modalities\":[\"text\"],\"langCount\":null,\"capabilities\":{\"reasoning\":false,\"coding\":true,\"vi…"
+    },
+    {
+      "type": "workflow_agent",
+      "index": 13,
+      "label": "research:Cohere",
+      "phaseIndex": 1,
+      "phaseTitle": "Research",
+      "agentId": "a30a3221b2e5634e2",
+      "model": "claude-sonnet-5",
+      "state": "done",
+      "startedAt": 1783884651014,
+      "queuedAt": 1783884180821,
+      "attempt": 1,
+      "lastToolName": "StructuredOutput",
+      "promptPreview": "You have web research tools. FIRST load them: call ToolSearch with query \"select:mcp__4dbcbf51-5bb9-4f93-a61f-18044e1a3091__web_search,mcp__4dbcbf51-5bb9-4f93-a61f-18044e1a3091__web_fetch\" to load Parallel P0 web_search/web_fetch (pass a stable session_id + model_name on every call). Built-in WebSearch/WebFetch may also load via ToolSearch query \"web search fetch\". Use REAL searches — never answer…",
+      "lastProgressAt": 1783885513121,
+      "tokens": 188152,
+      "toolCalls": 77,
+      "durationMs": 862107,
+      "resultPreview": "{\"models\":[{\"name\":\"Command R7B\",\"org\":\"Cohere\",\"family\":\"Command R\",\"releaseDate\":\"2024-12-13\",\"status\":\"deprecated\",\"openness\":\"open-weights\",\"license\":\"CC-BY-NC-4.0 (Cohere Labs), + Acceptable Use Policy\",\"paramsB\":8,\"activeParamsB\":null,\"archClass\":\"dense\",\"archDisplay\":\"Dense transformer, 3 sliding-window + 1 global-attention layer pattern (RoPE, GQA)\",\"ctxK\":128,\"modalities\":[\"text\"],\"langCo…"
+    },
+    {
+      "type": "workflow_agent",
+      "index": 14,
+      "label": "research:StepFun",
+      "phaseIndex": 1,
+      "phaseTitle": "Research",
+      "agentId": "a51844ceea5e27e3f",
+      "model": "claude-sonnet-5",
+      "state": "done",
+      "startedAt": 1783884756659,
+      "queuedAt": 1783884180821,
+      "attempt": 1,
+      "lastToolName": "StructuredOutput",
+      "promptPreview": "You have web research tools. FIRST load them: call ToolSearch with query \"select:mcp__4dbcbf51-5bb9-4f93-a61f-18044e1a3091__web_search,mcp__4dbcbf51-5bb9-4f93-a61f-18044e1a3091__web_fetch\" to load Parallel P0 web_search/web_fetch (pass a stable session_id + model_name on every call). Built-in WebSearch/WebFetch may also load via ToolSearch query \"web search fetch\". Use REAL searches — never answer…",
+      "lastProgressAt": 1783885509117,
+      "tokens": 166192,
+      "toolCalls": 60,
+      "durationMs": 752458,
+      "resultPreview": "{\"models\":[{\"name\":\"Step-2\",\"org\":\"StepFun\",\"family\":\"Step-2\",\"releaseDate\":\"2024-07-04\",\"status\":\"released\",\"openness\":\"closed\",\"license\":\"Proprietary\",\"paramsB\":1000,\"activeParamsB\":null,\"archClass\":\"moe\",\"archDisplay\":\"Mixture-of-Experts, ~1T total params (active params undisclosed)\",\"ctxK\":16,\"modalities\":[\"text\"],\"langCount\":null,\"capabilities\":{\"reasoning\":true,\"coding\":true,\"vision\":false,\"…"
+    },
+    {
+      "type": "workflow_agent",
+      "index": 15,
+      "label": "research:Aleph Alpha",
+      "phaseIndex": 1,
+      "phaseTitle": "Research",
+      "agentId": "aed8b45832a0d7d27",
+      "model": "claude-sonnet-5",
+      "state": "done",
+      "startedAt": 1783884774126,
+      "queuedAt": 1783884180821,
+      "attempt": 1,
+      "lastToolName": "StructuredOutput",
+      "promptPreview": "You have web research tools. FIRST load them: call ToolSearch with query \"select:mcp__4dbcbf51-5bb9-4f93-a61f-18044e1a3091__web_search,mcp__4dbcbf51-5bb9-4f93-a61f-18044e1a3091__web_fetch\" to load Parallel P0 web_search/web_fetch (pass a stable session_id + model_name on every call). Built-in WebSearch/WebFetch may also load via ToolSearch query \"web search fetch\". Use REAL searches — never answer…",
+      "lastProgressAt": 1783885409865,
+      "tokens": 144189,
+      "toolCalls": 70,
+      "durationMs": 635738,
+      "resultPreview": "{\"models\":[{\"name\":\"Pharia-1-LLM-7B (control)\",\"org\":\"Aleph Alpha\",\"family\":\"Pharia-1\",\"releaseDate\":\"2024-08-26\",\"status\":\"released\",\"openness\":\"open-weights\",\"license\":\"Open Aleph License (non-commercial research/education only)\",\"paramsB\":7.04,\"activeParamsB\":null,\"archClass\":\"dense\",\"archDisplay\":\"Dense decoder-only transformer, 27 layers, RoPE, GQA (4 kv heads), 128K vocab\",\"ctxK\":8,\"modaliti…"
+    },
+    {
+      "type": "workflow_agent",
+      "index": 16,
+      "label": "research:Deci AI",
+      "phaseIndex": 1,
+      "phaseTitle": "Research",
+      "agentId": "ac6d38a7cb9910307",
+      "model": "claude-sonnet-5",
+      "state": "done",
+      "startedAt": 1783884825608,
+      "queuedAt": 1783884180821,
+      "attempt": 1,
+      "lastToolName": "StructuredOutput",
+      "promptPreview": "You have web research tools. FIRST load them: call ToolSearch with query \"select:mcp__4dbcbf51-5bb9-4f93-a61f-18044e1a3091__web_search,mcp__4dbcbf51-5bb9-4f93-a61f-18044e1a3091__web_fetch\" to load Parallel P0 web_search/web_fetch (pass a stable session_id + model_name on every call). Built-in WebSearch/WebFetch may also load via ToolSearch query \"web search fetch\". Use REAL searches — never answer…",
+      "lastProgressAt": 1783885369639,
+      "tokens": 111912,
+      "toolCalls": 61,
+      "durationMs": 544031,
+      "resultPreview": "{\"models\":[{\"name\":\"DeciLM-7B\",\"org\":\"Deci AI\",\"family\":\"DeciLM\",\"releaseDate\":\"2023-12-12\",\"status\":\"released\",\"openness\":\"open-weights\",\"license\":\"Apache 2.0\",\"paramsB\":7.04,\"activeParamsB\":null,\"archClass\":\"dense\",\"archDisplay\":\"Dense transformer, NAS-designed variable Grouped-Query Attention (AutoNAC)\",\"ctxK\":8,\"modalities\":[\"text\"],\"langCount\":null,\"capabilities\":{\"reasoning\":false,\"coding\":f…"
+    },
+    {
+      "type": "workflow_agent",
+      "index": 17,
+      "label": "verify:OpenAI",
+      "phaseIndex": 2,
+      "phaseTitle": "Verify",
+      "agentId": "a10fe65ab44efed00",
+      "model": "claude-sonnet-5",
+      "state": "error",
+      "startedAt": 1783885513137,
+      "queuedAt": 1783885513125,
+      "attempt": 1,
+      "lastToolName": "WebSearch",
+      "lastToolSummary": "GPT-4 technical report table \"GPT-3.5\" MMLU 70.0% exam resu…",
+      "promptPreview": "You have web research tools. FIRST load them: call ToolSearch with query \"select:mcp__4dbcbf51-5bb9-4f93-a61f-18044e1a3091__web_search,mcp__4dbcbf51-5bb9-4f93-a61f-18044e1a3091__web_fetch\" to load Parallel P0 web_search/web_fetch (pass a stable session_id + model_name on every call). Built-in WebSearch/WebFetch may also load via ToolSearch query \"web search fetch\". Use REAL searches — never answer…",
+      "lastProgressAt": 1783885825688,
+      "error": "You've hit your session limit · resets 4:20pm (America/Los_Angeles)",
+      "tokens": 97167,
+      "toolCalls": 32,
+      "durationMs": 312551
+    },
+    {
+      "type": "workflow_agent",
+      "index": 18,
+      "label": "verify:OpenAI",
+      "phaseIndex": 2,
+      "phaseTitle": "Verify",
+      "agentId": "a3579d61cd25a5e7f",
+      "model": "claude-sonnet-5",
+      "state": "done",
+      "startedAt": 1783885513138,
+      "queuedAt": 1783885513125,
+      "attempt": 1,
+      "lastToolName": "StructuredOutput",
+      "promptPreview": "You have web research tools. FIRST load them: call ToolSearch with query \"select:mcp__4dbcbf51-5bb9-4f93-a61f-18044e1a3091__web_search,mcp__4dbcbf51-5bb9-4f93-a61f-18044e1a3091__web_fetch\" to load Parallel P0 web_search/web_fetch (pass a stable session_id + model_name on every call). Built-in WebSearch/WebFetch may also load via ToolSearch query \"web search fetch\". Use REAL searches — never answer…",
+      "lastProgressAt": 1783885759764,
+      "tokens": 79070,
+      "toolCalls": 31,
+      "durationMs": 246625,
+      "resultPreview": "{\"models\":[{\"name\":\"GPT-4o mini\",\"org\":\"OpenAI\",\"family\":\"GPT-4o\",\"releaseDate\":\"2024-07-18\",\"status\":\"released\",\"openness\":\"closed\",\"license\":\"Proprietary\",\"paramsB\":null,\"activeParamsB\":null,\"archClass\":\"dense\",\"archDisplay\":\"Dense, multimodal Transformer, small/low-cost tier (architecture/size undisclosed)\",\"ctxK\":128,\"modalities\":[\"text\",\"vision\"],\"langCount\":null,\"capabilities\":{\"reasoning\":f…"
+    },
+    {
+      "type": "workflow_agent",
+      "index": 19,
+      "label": "verify:OpenAI",
+      "phaseIndex": 2,
+      "phaseTitle": "Verify",
+      "agentId": "a0c23e87510e1a0c5",
+      "model": "claude-sonnet-5",
+      "state": "done",
+      "startedAt": 1783885513138,
+      "queuedAt": 1783885513125,
+      "attempt": 1,
+      "lastToolName": "StructuredOutput",
+      "promptPreview": "You have web research tools. FIRST load them: call ToolSearch with query \"select:mcp__4dbcbf51-5bb9-4f93-a61f-18044e1a3091__web_search,mcp__4dbcbf51-5bb9-4f93-a61f-18044e1a3091__web_fetch\" to load Parallel P0 web_search/web_fetch (pass a stable session_id + model_name on every call). Built-in WebSearch/WebFetch may also load via ToolSearch query \"web search fetch\". Use REAL searches — never answer…",
+      "lastProgressAt": 1783885808291,
+      "tokens": 87817,
+      "toolCalls": 39,
+      "durationMs": 295153,
+      "resultPreview": "{\"models\":[{\"name\":\"OpenAI o3-mini (High)\",\"org\":\"OpenAI\",\"family\":\"o3\",\"releaseDate\":\"2025-01-31\",\"status\":\"released\",\"openness\":\"closed\",\"license\":\"Proprietary\",\"paramsB\":null,\"activeParamsB\":null,\"archClass\":\"dense\",\"archDisplay\":\"Dense transformer reasoning model (size undisclosed)\",\"ctxK\":200,\"modalities\":[\"text\"],\"langCount\":null,\"capabilities\":{\"reasoning\":true,\"coding\":true,\"vision\":false,…"
+    },
+    {
+      "type": "workflow_agent",
+      "index": 20,
+      "label": "verify:OpenAI",
+      "phaseIndex": 2,
+      "phaseTitle": "Verify",
+      "agentId": "a753b571e0d71b16b",
+      "model": "claude-sonnet-5",
+      "state": "done",
+      "startedAt": 1783885513139,
+      "queuedAt": 1783885513125,
+      "attempt": 1,
+      "lastToolName": "StructuredOutput",
+      "promptPreview": "You have web research tools. FIRST load them: call ToolSearch with query \"select:mcp__4dbcbf51-5bb9-4f93-a61f-18044e1a3091__web_search,mcp__4dbcbf51-5bb9-4f93-a61f-18044e1a3091__web_fetch\" to load Parallel P0 web_search/web_fetch (pass a stable session_id + model_name on every call). Built-in WebSearch/WebFetch may also load via ToolSearch query \"web search fetch\". Use REAL searches — never answer…",
+      "lastProgressAt": 1783885845808,
+      "tokens": 76927,
+      "toolCalls": 31,
+      "durationMs": 332669,
+      "resultPreview": "{\"models\":[{\"name\":\"OpenAI o4-mini\",\"org\":\"OpenAI\",\"family\":\"o4\",\"releaseDate\":\"2025-04-16\",\"status\":\"released\",\"openness\":\"closed\",\"license\":\"Proprietary (OpenAI API Terms)\",\"paramsB\":null,\"activeParamsB\":null,\"archClass\":\"dense\",\"archDisplay\":\"Dense transformer reasoning model, compact (exact size undisclosed)\",\"ctxK\":200,\"modalities\":[\"text\",\"vision\"],\"langCount\":null,\"capabilities\":{\"reasoning…"
+    },
+    {
+      "type": "workflow_agent",
+      "index": 21,
+      "label": "verify:OpenAI",
+      "phaseIndex": 2,
+      "phaseTitle": "Verify",
+      "agentId": "a2530f429a16ffe99",
+      "model": "claude-sonnet-5",
+      "state": "error",
+      "startedAt": 1783885513139,
+      "queuedAt": 1783885513125,
+      "attempt": 1,
+      "lastToolName": "WebSearch",
+      "lastToolSummary": "gpt-oss-20b RTX 4090 tokens per second llama.cpp benchmark",
+      "promptPreview": "You have web research tools. FIRST load them: call ToolSearch with query \"select:mcp__4dbcbf51-5bb9-4f93-a61f-18044e1a3091__web_search,mcp__4dbcbf51-5bb9-4f93-a61f-18044e1a3091__web_fetch\" to load Parallel P0 web_search/web_fetch (pass a stable session_id + model_name on every call). Built-in WebSearch/WebFetch may also load via ToolSearch query \"web search fetch\". Use REAL searches — never answer…",
+      "lastProgressAt": 1783885833022,
+      "error": "You've hit your session limit · resets 4:20pm (America/Los_Angeles)",
+      "tokens": 101894,
+      "toolCalls": 36,
+      "durationMs": 319883
+    },
+    {
+      "type": "workflow_agent",
+      "index": 22,
+      "label": "verify:OpenAI",
+      "phaseIndex": 2,
+      "phaseTitle": "Verify",
+      "agentId": "a728f48058b4c5996",
+      "model": "claude-sonnet-5",
+      "state": "error",
+      "startedAt": 1783885513139,
+      "queuedAt": 1783885513125,
+      "attempt": 1,
+      "lastToolName": "WebSearch",
+      "lastToolSummary": "GPT-5.5 API access gated at launch no API OpenAI",
+      "promptPreview": "You have web research tools. FIRST load them: call ToolSearch with query \"select:mcp__4dbcbf51-5bb9-4f93-a61f-18044e1a3091__web_search,mcp__4dbcbf51-5bb9-4f93-a61f-18044e1a3091__web_fetch\" to load Parallel P0 web_search/web_fetch (pass a stable session_id + model_name on every call). Built-in WebSearch/WebFetch may also load via ToolSearch query \"web search fetch\". Use REAL searches — never answer…",
+      "lastProgressAt": 1783885828825,
+      "error": "You've hit your session limit · resets 4:20pm (America/Los_Angeles)",
+      "tokens": 97255,
+      "toolCalls": 49,
+      "durationMs": 315686
+    },
+    {
+      "type": "workflow_agent",
+      "index": 23,
+      "label": "verify:Mistral AI",
+      "phaseIndex": 2,
+      "phaseTitle": "Verify",
+      "agentId": "a59c37e2a2c269bb3",
+      "model": "claude-sonnet-5",
+      "state": "done",
+      "startedAt": 1783885513139,
+      "queuedAt": 1783885513125,
+      "attempt": 1,
+      "lastToolName": "StructuredOutput",
+      "promptPreview": "You have web research tools. FIRST load them: call ToolSearch with query \"select:mcp__4dbcbf51-5bb9-4f93-a61f-18044e1a3091__web_search,mcp__4dbcbf51-5bb9-4f93-a61f-18044e1a3091__web_fetch\" to load Parallel P0 web_search/web_fetch (pass a stable session_id + model_name on every call). Built-in WebSearch/WebFetch may also load via ToolSearch query \"web search fetch\". Use REAL searches — never answer…",
+      "lastProgressAt": 1783885901461,
+      "tokens": 81080,
+      "toolCalls": 43,
+      "durationMs": 388322,
+      "resultPreview": "{\"models\":[{\"name\":\"Mixtral 8x7B\",\"org\":\"Mistral AI\",\"family\":\"Mixtral\",\"releaseDate\":\"2023-12-11\",\"status\":\"deprecated\",\"openness\":\"open-source\",\"license\":\"Apache 2.0\",\"paramsB\":46.7,\"activeParamsB\":12.9,\"archClass\":\"moe\",\"archDisplay\":\"Sparse Mixture-of-Experts, 8 experts, top-2 routing\",\"ctxK\":32,\"modalities\":[\"text\"],\"langCount\":5,\"capabilities\":{\"reasoning\":false,\"coding\":true,\"vision\":false,…"
+    },
+    {
+      "type": "workflow_agent",
+      "index": 24,
+      "label": "verify:Mistral AI",
+      "phaseIndex": 2,
+      "phaseTitle": "Verify",
+      "agentId": "aa34b4369b02b7470",
+      "model": "claude-sonnet-5",
+      "state": "done",
+      "startedAt": 1783885513140,
+      "queuedAt": 1783885513126,
+      "attempt": 1,
+      "lastToolName": "StructuredOutput",
+      "promptPreview": "You have web research tools. FIRST load them: call ToolSearch with query \"select:mcp__4dbcbf51-5bb9-4f93-a61f-18044e1a3091__web_search,mcp__4dbcbf51-5bb9-4f93-a61f-18044e1a3091__web_fetch\" to load Parallel P0 web_search/web_fetch (pass a stable session_id + model_name on every call). Built-in WebSearch/WebFetch may also load via ToolSearch query \"web search fetch\". Use REAL searches — never answer…",
+      "lastProgressAt": 1783885810294,
+      "tokens": 72002,
+      "toolCalls": 27,
+      "durationMs": 297154,
+      "resultPreview": "{\"models\":[{\"name\":\"Mistral Large 2 (24.07)\",\"org\":\"Mistral AI\",\"family\":\"Mistral Large\",\"releaseDate\":\"2024-07-24\",\"status\":\"deprecated\",\"openness\":\"open-weights\",\"license\":\"Mistral Research License (non-commercial; commercial license required for production)\",\"paramsB\":123,\"activeParamsB\":null,\"archClass\":\"dense\",\"archDisplay\":\"Dense Transformer\",\"ctxK\":128,\"modalities\":[\"text\"],\"langCount\":13,\"…"
+    },
+    {
+      "type": "workflow_agent",
+      "index": 25,
+      "label": "verify:Mistral AI",
+      "phaseIndex": 2,
+      "phaseTitle": "Verify",
+      "agentId": "aa1c2fd994642331b",
+      "model": "claude-sonnet-5",
+      "state": "error",
+      "startedAt": 1783885513140,
+      "queuedAt": 1783885513126,
+      "attempt": 1,
+      "lastToolName": "WebSearch",
+      "lastToolSummary": "Codestral 25.01 pricing $0.3 input $0.9 output per million …",
+      "promptPreview": "You have web research tools. FIRST load them: call ToolSearch with query \"select:mcp__4dbcbf51-5bb9-4f93-a61f-18044e1a3091__web_search,mcp__4dbcbf51-5bb9-4f93-a61f-18044e1a3091__web_fetch\" to load Parallel P0 web_search/web_fetch (pass a stable session_id + model_name on every call). Built-in WebSearch/WebFetch may also load via ToolSearch query \"web search fetch\". Use REAL searches — never answer…",
+      "lastProgressAt": 1783885825002,
+      "error": "You've hit your session limit · resets 4:20pm (America/Los_Angeles)",
+      "tokens": 82393,
+      "toolCalls": 41,
+      "durationMs": 311862
+    },
+    {
+      "type": "workflow_agent",
+      "index": 26,
+      "label": "verify:Mistral AI",
+      "phaseIndex": 2,
+      "phaseTitle": "Verify",
+      "agentId": "a046c2a5eff10ee1d",
+      "model": "claude-sonnet-5",
+      "state": "error",
+      "startedAt": 1783885513140,
+      "queuedAt": 1783885513126,
+      "attempt": 1,
+      "lastToolName": "WebFetch",
+      "lastToolSummary": "Find Table 5 or similar showing pass@1 scores for CodeGeeX-…",
+      "promptPreview": "You have web research tools. FIRST load them: call ToolSearch with query \"select:mcp__4dbcbf51-5bb9-4f93-a61f-18044e1a3091__web_search,mcp__4dbcbf51-5bb9-4f93-a61f-18044e1a3091__web_fetch\" to load Parallel P0 web_search/web_fetch (pass a stable session_id + model_name on every call). Built-in WebSearch/WebFetch may also load via ToolSearch query \"web search fetch\". Use REAL searches — never answer…",
+      "lastProgressAt": 1783885823747,
+      "error": "You've hit your session limit · resets 4:20pm (America/Los_Angeles)",
+      "tokens": 81296,
+      "toolCalls": 37,
+      "durationMs": 310607
+    },
+    {
+      "type": "workflow_agent",
+      "index": 27,
+      "label": "verify:Zhipu AI / Tsinghua KEG (THUDM)",
+      "phaseIndex": 2,
+      "phaseTitle": "Verify",
+      "agentId": "a90357e0c8e2408ea",
+      "model": "claude-sonnet-5",
+      "state": "error",
+      "startedAt": 1783885513140,
+      "queuedAt": 1783885513126,
+      "attempt": 1,
+      "lastToolName": "WebFetch",
+      "lastToolSummary": "Confirm GLM-4 release date, context window (128K), and whet…",
+      "promptPreview": "You have web research tools. FIRST load them: call ToolSearch with query \"select:mcp__4dbcbf51-5bb9-4f93-a61f-18044e1a3091__web_search,mcp__4dbcbf51-5bb9-4f93-a61f-18044e1a3091__web_fetch\" to load Parallel P0 web_search/web_fetch (pass a stable session_id + model_name on every call). Built-in WebSearch/WebFetch may also load via ToolSearch query \"web search fetch\". Use REAL searches — never answer…",
+      "lastProgressAt": 1783885827493,
+      "error": "You've hit your session limit · resets 4:20pm (America/Los_Angeles)",
+      "tokens": 94013,
+      "toolCalls": 34,
+      "durationMs": 314353
+    },
+    {
+      "type": "workflow_agent",
+      "index": 28,
+      "label": "verify:Zhipu AI",
+      "phaseIndex": 2,
+      "phaseTitle": "Verify",
+      "agentId": "a46c173490ef0d98f",
+      "model": "claude-sonnet-5",
+      "state": "error",
+      "startedAt": 1783885513140,
+      "queuedAt": 1783885513126,
+      "attempt": 1,
+      "lastToolName": "WebFetch",
+      "lastToolSummary": "What is the exact total parameter count for GPT-NeoX-20B li…",
+      "promptPreview": "You have web research tools. FIRST load them: call ToolSearch with query \"select:mcp__4dbcbf51-5bb9-4f93-a61f-18044e1a3091__web_search,mcp__4dbcbf51-5bb9-4f93-a61f-18044e1a3091__web_fetch\" to load Parallel P0 web_search/web_fetch (pass a stable session_id + model_name on every call). Built-in WebSearch/WebFetch may also load via ToolSearch query \"web search fetch\". Use REAL searches — never answer…",
+      "lastProgressAt": 1783885830428,
+      "error": "You've hit your session limit · resets 4:20pm (America/Los_Angeles)",
+      "tokens": 119996,
+      "toolCalls": 42,
+      "durationMs": 317288
+    },
+    {
+      "type": "workflow_agent",
+      "index": 29,
+      "label": "verify:EleutherAI",
+      "phaseIndex": 2,
+      "phaseTitle": "Verify",
+      "agentId": "ace1298d13624ee5c",
+      "model": "claude-sonnet-5",
+      "state": "error",
+      "startedAt": 1783885759764,
+      "queuedAt": 1783885513126,
+      "attempt": 1,
+      "lastToolName": "Bash",
+      "lastToolSummary": "cd /Users/punit/.claude/projects/-Users-punit-projects-rank…",
+      "promptPreview": "You have web research tools. FIRST load them: call ToolSearch with query \"select:mcp__4dbcbf51-5bb9-4f93-a61f-18044e1a3091__web_search,mcp__4dbcbf51-5bb9-4f93-a61f-18044e1a3091__web_fetch\" to load Parallel P0 web_search/web_fetch (pass a stable session_id + model_name on every call). Built-in WebSearch/WebFetch may also load via ToolSearch query \"web search fetch\". Use REAL searches — never answer…",
+      "lastProgressAt": 1783885831599,
+      "error": "You've hit your session limit · resets 4:20pm (America/Los_Angeles)",
+      "tokens": 69880,
+      "toolCalls": 14,
+      "durationMs": 71834
+    },
+    {
+      "type": "workflow_agent",
+      "index": 30,
+      "label": "verify:Amazon",
+      "phaseIndex": 2,
+      "phaseTitle": "Verify",
+      "agentId": "aecfc5f858b4e9ac5",
+      "model": "claude-sonnet-5",
+      "state": "error",
+      "startedAt": 1783885808292,
+      "queuedAt": 1783885513126,
+      "attempt": 1,
+      "lastToolName": "mcp__4dbcbf51-5bb9-4f93-a61f-18044e1a3091__web_search",
+      "lastToolSummary": "Confirm MPT-30B release date, params, license via Databrick…",
+      "promptPreview": "You have web research tools. FIRST load them: call ToolSearch with query \"select:mcp__4dbcbf51-5bb9-4f93-a61f-18044e1a3091__web_search,mcp__4dbcbf51-5bb9-4f93-a61f-18044e1a3091__web_fetch\" to load Parallel P0 web_search/web_fetch (pass a stable session_id + model_name on every call). Built-in WebSearch/WebFetch may also load via ToolSearch query \"web search fetch\". Use REAL searches — never answer…",
+      "lastProgressAt": 1783885823843,
+      "error": "You've hit your session limit · resets 4:20pm (America/Los_Angeles)",
+      "tokens": 53772,
+      "toolCalls": 5,
+      "durationMs": 15551
+    },
+    {
+      "type": "workflow_agent",
+      "index": 31,
+      "label": "verify:MosaicML",
+      "phaseIndex": 2,
+      "phaseTitle": "Verify",
+      "agentId": "a278f20bd0c341694",
+      "model": "claude-sonnet-5",
+      "state": "error",
+      "startedAt": 1783885810295,
+      "queuedAt": 1783885513126,
+      "attempt": 1,
+      "lastToolName": "mcp__4dbcbf51-5bb9-4f93-a61f-18044e1a3091__web_search",
+      "lastToolSummary": "Verify Cohere Command model deprecation date September 15 2…",
+      "promptPreview": "You have web research tools. FIRST load them: call ToolSearch with query \"select:mcp__4dbcbf51-5bb9-4f93-a61f-18044e1a3091__web_search,mcp__4dbcbf51-5bb9-4f93-a61f-18044e1a3091__web_fetch\" to load Parallel P0 web_search/web_fetch (pass a stable session_id + model_name on every call). Built-in WebSearch/WebFetch may also load via ToolSearch query \"web search fetch\". Use REAL searches — never answer…",
+      "lastProgressAt": 1783885830659,
+      "error": "You've hit your session limit · resets 4:20pm (America/Los_Angeles)",
+      "tokens": 51545,
+      "toolCalls": 6,
+      "durationMs": 20364
+    },
+    {
+      "type": "workflow_agent",
+      "index": 32,
+      "label": "verify:Cohere",
+      "phaseIndex": 2,
+      "phaseTitle": "Verify",
+      "agentId": "ae4c65a18a6122499",
+      "model": "claude-sonnet-5",
+      "state": "error",
+      "startedAt": 1783885823747,
+      "queuedAt": 1783885513126,
+      "attempt": 1,
+      "lastToolName": "ToolSearch",
+      "lastToolSummary": "select:mcp__4dbcbf51-5bb9-4f93-a61f-18044e1a3091__web_searc…",
+      "promptPreview": "You have web research tools. FIRST load them: call ToolSearch with query \"select:mcp__4dbcbf51-5bb9-4f93-a61f-18044e1a3091__web_search,mcp__4dbcbf51-5bb9-4f93-a61f-18044e1a3091__web_fetch\" to load Parallel P0 web_search/web_fetch (pass a stable session_id + model_name on every call). Built-in WebSearch/WebFetch may also load via ToolSearch query \"web search fetch\". Use REAL searches — never answer…",
+      "lastProgressAt": 1783885828991,
+      "error": "You've hit your session limit · resets 4:20pm (America/Los_Angeles)",
+      "tokens": 46065,
+      "toolCalls": 1,
+      "durationMs": 5243
+    },
+    {
+      "type": "workflow_agent",
+      "index": 33,
+      "label": "verify:LG AI Research",
+      "phaseIndex": 2,
+      "phaseTitle": "Verify",
+      "agentId": "a73b820dd89a36f0a",
+      "model": "claude-sonnet-5",
+      "state": "error",
+      "startedAt": 1783885823844,
+      "queuedAt": 1783885513126,
+      "attempt": 1,
+      "promptPreview": "You have web research tools. FIRST load them: call ToolSearch with query \"select:mcp__4dbcbf51-5bb9-4f93-a61f-18044e1a3091__web_search,mcp__4dbcbf51-5bb9-4f93-a61f-18044e1a3091__web_fetch\" to load Parallel P0 web_search/web_fetch (pass a stable session_id + model_name on every call). Built-in WebSearch/WebFetch may also load via ToolSearch query \"web search fetch\". Use REAL searches — never answer…",
+      "lastProgressAt": 1783885824749,
+      "error": "You've hit your session limit · resets 4:20pm (America/Los_Angeles)",
+      "tokens": 0,
+      "toolCalls": 0,
+      "durationMs": 905
+    },
+    {
+      "type": "workflow_agent",
+      "index": 34,
+      "label": "verify:Shanghai AI Laboratory",
+      "phaseIndex": 2,
+      "phaseTitle": "Verify",
+      "agentId": "a56f16996ce2bd8a4",
+      "model": "claude-sonnet-5",
+      "state": "error",
+      "startedAt": 1783885824749,
+      "queuedAt": 1783885513127,
+      "attempt": 1,
+      "promptPreview": "You have web research tools. FIRST load them: call ToolSearch with query \"select:mcp__4dbcbf51-5bb9-4f93-a61f-18044e1a3091__web_search,mcp__4dbcbf51-5bb9-4f93-a61f-18044e1a3091__web_fetch\" to load Parallel P0 web_search/web_fetch (pass a stable session_id + model_name on every call). Built-in WebSearch/WebFetch may also load via ToolSearch query \"web search fetch\". Use REAL searches — never answer…",
+      "lastProgressAt": 1783885825314,
+      "error": "You've hit your session limit · resets 4:20pm (America/Los_Angeles)",
+      "tokens": 0,
+      "toolCalls": 0,
+      "durationMs": 565
+    },
+    {
+      "type": "workflow_agent",
+      "index": 35,
+      "label": "verify:H2O.ai",
+      "phaseIndex": 2,
+      "phaseTitle": "Verify",
+      "agentId": "aca65d889c2d95798",
+      "model": "claude-sonnet-5",
+      "state": "error",
+      "startedAt": 1783885825003,
+      "queuedAt": 1783885513127,
+      "attempt": 1,
+      "promptPreview": "You have web research tools. FIRST load them: call ToolSearch with query \"select:mcp__4dbcbf51-5bb9-4f93-a61f-18044e1a3091__web_search,mcp__4dbcbf51-5bb9-4f93-a61f-18044e1a3091__web_fetch\" to load Parallel P0 web_search/web_fetch (pass a stable session_id + model_name on every call). Built-in WebSearch/WebFetch may also load via ToolSearch query \"web search fetch\". Use REAL searches — never answer…",
+      "lastProgressAt": 1783885825335,
+      "error": "You've hit your session limit · resets 4:20pm (America/Los_Angeles)",
+      "tokens": 0,
+      "toolCalls": 0,
+      "durationMs": 332
+    },
+    {
+      "type": "workflow_agent",
+      "index": 36,
+      "label": "verify:Ola Krutrim",
+      "phaseIndex": 2,
+      "phaseTitle": "Verify",
+      "agentId": "a0fc2f807d70f292d",
+      "model": "claude-sonnet-5",
+      "state": "error",
+      "startedAt": 1783885825315,
+      "queuedAt": 1783885513127,
+      "attempt": 1,
+      "promptPreview": "You have web research tools. FIRST load them: call ToolSearch with query \"select:mcp__4dbcbf51-5bb9-4f93-a61f-18044e1a3091__web_search,mcp__4dbcbf51-5bb9-4f93-a61f-18044e1a3091__web_fetch\" to load Parallel P0 web_search/web_fetch (pass a stable session_id + model_name on every call). Built-in WebSearch/WebFetch may also load via ToolSearch query \"web search fetch\". Use REAL searches — never answer…",
+      "lastProgressAt": 1783885825769,
+      "error": "You've hit your session limit · resets 4:20pm (America/Los_Angeles)",
+      "tokens": 0,
+      "toolCalls": 0,
+      "durationMs": 454
+    }
+  ],
+  "totalTokens": 3510588,
+  "totalToolCalls": 1584
+}

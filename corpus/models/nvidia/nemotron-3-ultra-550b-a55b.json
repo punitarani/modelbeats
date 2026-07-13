@@ -1,0 +1,92 @@
+{
+  "name": "Nemotron 3 Ultra 550B A55B",
+  "org": "NVIDIA",
+  "family": "Nemotron 3",
+  "releaseDate": "2026-06-04",
+  "status": "released",
+  "openness": "open-source",
+  "license": "OpenMDW License Agreement v1.1 (Linux Foundation Model Openness Framework)",
+  "paramsB": 550,
+  "activeParamsB": 55,
+  "archClass": "hybrid",
+  "archDisplay": "Hybrid LatentMoE + Mamba-2 (550B total / 55B active, MTP layers, NVFP4-native pretraining)",
+  "ctxK": 1000,
+  "modalities": [
+    "text"
+  ],
+  "langCount": 10,
+  "capabilities": {
+    "reasoning": true,
+    "coding": true,
+    "vision": false,
+    "functionCalling": true,
+    "toolUse": true,
+    "agentic": true
+  },
+  "apiAvailable": true,
+  "price": {
+    "input": 0.5,
+    "output": 2.2,
+    "provider": "OpenRouter"
+  },
+  "links": {
+    "hf": "nvidia/NVIDIA-Nemotron-3-Ultra-550B-A55B-BF16",
+    "docs": "build.nvidia.com/nvidia/nemotron-3-ultra-550b-a55b",
+    "gh": "NVIDIA-NeMo/Nemotron"
+  },
+  "note": "NVIDIA's frontier open MoE with 1M-token context; hybrid LatentMoE+Mamba-2 flagship of the Nemotron 3 family, tuned for long-running agents.",
+  "quants": [
+    "NVFP4",
+    "GGUF"
+  ],
+  "vramQ4Gb": 352,
+  "vramFp16Gb": 1121,
+  "tps4090": null,
+  "tpsNote": "Needs 8x GB200/B200/H200-class GPUs natively; community GGUF still needs ~300GB+ combined RAM/VRAM, far beyond a single RTX 4090.",
+  "effortLabel": null,
+  "isDefaultConfig": true,
+  "isBestConfig": true,
+  "specSources": {
+    "paramsB": "https://huggingface.co/nvidia/NVIDIA-Nemotron-3-Ultra-550B-A55B-BF16",
+    "ctxK": "https://huggingface.co/nvidia/NVIDIA-Nemotron-3-Ultra-550B-A55B-BF16",
+    "releaseDate": "https://developer.nvidia.com/blog/nvidia-nemotron-3-ultra-powers-faster-more-efficient-reasoning-for-long-running-agents/",
+    "openness": "https://www.marktechpost.com/2026/06/04/nvidia-ai-releases-nemotron-3-ultra-an-open-550b-mixture-of-experts-hybrid-mamba-transformer-for-long-running-agents/"
+  },
+  "results": [
+    {
+      "benchmarkSlug": "mmlu-pro",
+      "score": 86.8,
+      "source": "self-reported",
+      "sourceUrl": "https://huggingface.co/nvidia/NVIDIA-Nemotron-3-Ultra-550B-A55B-BF16"
+    },
+    {
+      "benchmarkSlug": "swe-bench",
+      "score": 70.7,
+      "source": "self-reported",
+      "sourceUrl": "https://huggingface.co/nvidia/NVIDIA-Nemotron-3-Ultra-550B-A55B-BF16",
+      "notes": "SWE-Bench Verified"
+    },
+    {
+      "benchmarkSlug": "livecodebench",
+      "score": 89,
+      "source": "self-reported",
+      "sourceUrl": "https://huggingface.co/nvidia/NVIDIA-Nemotron-3-Ultra-550B-A55B-BF16",
+      "notes": "v6"
+    },
+    {
+      "benchmarkSlug": "pinchbench",
+      "score": 91,
+      "source": "self-reported",
+      "sourceUrl": "https://developer.nvidia.com/blog/nvidia-nemotron-3-ultra-powers-faster-more-efficient-reasoning-for-long-running-agents/",
+      "notes": "Agent productivity benchmark"
+    },
+    {
+      "benchmarkSlug": "ifbench",
+      "score": 82,
+      "source": "self-reported",
+      "sourceUrl": "https://developer.nvidia.com/blog/nvidia-nemotron-3-ultra-powers-faster-more-efficient-reasoning-for-long-running-agents/",
+      "notes": "Instruction following"
+    }
+  ],
+  "verificationNotes": "This is the newest/highest-risk record but is genuinely real and well-corroborated: confirmed via direct HF model-card fetch (550B total/55B active, OpenMDW-1.1 license, 1M ctx, released 2026-06-04) plus independent corroboration from NVIDIA's developer blog, research.nvidia.com, MarkTechPost, Linux Foundation press release on OpenMDW-1.1, and OpenRouter (pricing $0.50/$2.20 matched exactly). Benchmark rows MMLU-Pro 86.8, SWE-Bench Verified 70.7, and LiveCodeBench v6 89.0 confirmed on the HF card; RULER@1M 94.7 and IFBench 82 confirmed via NVIDIA's blog and secondary coverage; PinchBench score varies slightly across secondary sources (90 vs 91) but 91 is corroborated by at least one source matching the record."
+}

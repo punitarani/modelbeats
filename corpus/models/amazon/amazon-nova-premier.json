@@ -1,0 +1,67 @@
+{
+  "name": "Amazon Nova Premier",
+  "org": "Amazon",
+  "family": "Amazon Nova",
+  "releaseDate": "2025-04-30",
+  "status": "released",
+  "openness": "closed",
+  "license": "Proprietary (AWS Bedrock service terms)",
+  "paramsB": null,
+  "activeParamsB": null,
+  "archClass": "dense",
+  "archDisplay": "Transformer, architecture/size undisclosed",
+  "ctxK": 1000,
+  "modalities": [
+    "text",
+    "vision",
+    "video"
+  ],
+  "langCount": 200,
+  "capabilities": {
+    "reasoning": false,
+    "coding": true,
+    "vision": true,
+    "functionCalling": true,
+    "toolUse": true,
+    "agentic": true
+  },
+  "apiAvailable": true,
+  "price": {
+    "input": 2.5,
+    "output": 12.5,
+    "provider": "AWS Bedrock"
+  },
+  "links": {
+    "docs": "docs.aws.amazon.com/bedrock/latest/userguide/model-card-amazon-nova-premier.html"
+  },
+  "note": "Amazon's most capable Nova: 1M-token context for complex agentic/long-document tasks; explicitly not a reasoning model, positioned mainly as a distillation teacher for smaller Nova models.",
+  "quants": [],
+  "vramQ4Gb": null,
+  "vramFp16Gb": null,
+  "tps4090": null,
+  "tpsNote": null,
+  "effortLabel": null,
+  "isDefaultConfig": true,
+  "isBestConfig": true,
+  "specSources": {
+    "releaseDate": "https://techcrunch.com/2025/04/30/amazon-launches-nova-premier-its-largest-ai-model-yet/",
+    "ctxK": "https://techcrunch.com/2025/04/30/amazon-launches-nova-premier-its-largest-ai-model-yet/",
+    "openness": "https://docs.aws.amazon.com/bedrock/latest/userguide/model-card-amazon-nova-premier.html"
+  },
+  "results": [
+    {
+      "benchmarkSlug": "mmlu-pro",
+      "score": 73.3,
+      "source": "independent",
+      "sourceUrl": "https://artificialanalysis.ai/models/nova-premier"
+    },
+    {
+      "benchmarkSlug": "gpqa",
+      "score": 56.9,
+      "source": "independent",
+      "sourceUrl": "https://artificialanalysis.ai/models/nova-premier",
+      "notes": "GPQA Diamond, 0-shot CoT"
+    }
+  ],
+  "verificationNotes": "Confirmed real: April 30, 2025 launch corroborated by TechCrunch, Computerworld, AWS blog, Amazon Science technical report. Confirmed 1M-token multimodal context, $2.50/$12.50 per M pricing, explicitly described as 'not a reasoning model' and positioned as a distillation teacher (TechCrunch, AWS blog). MMLU-Pro 73.3 and GPQA Diamond 56.9 could not be directly rendered from artificialanalysis.ai/models/nova-premier via automated fetch (client-side rendered page), but both figures were independently corroborated verbatim (73.3% MMLU-Pro, 56.9% GPQA Diamond) on a mirror site (designforonline.com) that sources Artificial Analysis benchmark data. Kept both rows given this independent corroboration."
+}

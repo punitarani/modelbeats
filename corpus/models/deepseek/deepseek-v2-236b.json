@@ -1,0 +1,99 @@
+{
+  "name": "DeepSeek-V2 236B",
+  "org": "DeepSeek",
+  "family": "DeepSeek-V2",
+  "releaseDate": "2024-05-07",
+  "status": "released",
+  "openness": "open-weights",
+  "license": "DeepSeek Model License (code: MIT)",
+  "paramsB": 236,
+  "activeParamsB": 21,
+  "archClass": "moe",
+  "archDisplay": "MoE transformer, 236B total / 21B active — DeepSeekMoE + Multi-head Latent Attention (MLA)",
+  "ctxK": 128,
+  "modalities": [
+    "text"
+  ],
+  "langCount": null,
+  "capabilities": {
+    "reasoning": false,
+    "coding": true,
+    "vision": false,
+    "functionCalling": true,
+    "toolUse": true,
+    "agentic": false
+  },
+  "apiAvailable": true,
+  "price": {
+    "input": 0.14,
+    "output": 0.28,
+    "provider": "DeepSeek"
+  },
+  "links": {
+    "hf": "deepseek-ai/DeepSeek-V2-Chat",
+    "gh": "deepseek-ai/DeepSeek-V2",
+    "docs": "api-docs.deepseek.com"
+  },
+  "note": "Introduced Multi-head Latent Attention; its ultra-low launch price (~$0.14/$0.28 per M tokens) triggered China's 2024 LLM price war.",
+  "quants": [
+    "GGUF"
+  ],
+  "vramQ4Gb": 118,
+  "vramFp16Gb": 472,
+  "tps4090": null,
+  "tpsNote": "236B total params exceed a single RTX 4090's 24GB even at 4-bit; requires multi-GPU or CPU/RAM offload",
+  "effortLabel": null,
+  "isDefaultConfig": true,
+  "isBestConfig": true,
+  "specSources": {
+    "paramsB": "https://arxiv.org/abs/2405.04434",
+    "ctxK": "https://huggingface.co/deepseek-ai/DeepSeek-V2",
+    "releaseDate": "https://arxiv.org/abs/2405.04434",
+    "openness": "https://huggingface.co/deepseek-ai/DeepSeek-V2"
+  },
+  "results": [
+    {
+      "benchmarkSlug": "mmlu",
+      "score": 77.8,
+      "source": "self-reported",
+      "sourceUrl": "https://huggingface.co/deepseek-ai/DeepSeek-V2-Chat",
+      "notes": "Chat (RL) variant"
+    },
+    {
+      "benchmarkSlug": "bbh",
+      "score": 79.7,
+      "source": "self-reported",
+      "sourceUrl": "https://huggingface.co/deepseek-ai/DeepSeek-V2-Chat",
+      "notes": "Chat (RL) variant"
+    },
+    {
+      "benchmarkSlug": "humaneval",
+      "score": 81.1,
+      "source": "self-reported",
+      "sourceUrl": "https://huggingface.co/deepseek-ai/DeepSeek-V2-Chat",
+      "notes": "Chat (RL) variant"
+    },
+    {
+      "benchmarkSlug": "mbpp",
+      "score": 72,
+      "source": "self-reported",
+      "sourceUrl": "https://huggingface.co/deepseek-ai/DeepSeek-V2-Chat",
+      "notes": "Chat (RL) variant"
+    },
+    {
+      "benchmarkSlug": "gsm8k",
+      "score": 92.2,
+      "source": "self-reported",
+      "sourceUrl": "https://huggingface.co/deepseek-ai/DeepSeek-V2-Chat",
+      "notes": "Chat (RL) variant"
+    },
+    {
+      "benchmarkSlug": "math",
+      "score": 53.9,
+      "source": "self-reported",
+      "sourceUrl": "https://huggingface.co/deepseek-ai/DeepSeek-V2-Chat",
+      "notes": "Chat (RL) variant"
+    }
+  ],
+  "verificationNotes": "Confirmed real via arxiv 2405.04434 (submitted 2024-05-07) and HF model card: 236B total/21B active MoE, 128K context, MIT code license + DeepSeek Model License. Fetched full HF page and confirmed the Chat(RL) column literally shows MMLU 77.8, BBH 79.7 (this row is on the page though truncated in initial excerpt), HumanEval 81.1, MBPP 72.0, GSM8K 92.2, Math 53.9 — all match exactly. $0.14/$0.28 launch pricing corroborated by multiple independent sources discussing the 2024 China LLM price war. No changes needed."
+}

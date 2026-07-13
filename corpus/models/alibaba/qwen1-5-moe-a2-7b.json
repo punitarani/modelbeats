@@ -1,0 +1,74 @@
+{
+  "name": "Qwen1.5-MoE-A2.7B",
+  "org": "Alibaba",
+  "family": "Qwen1.5",
+  "releaseDate": "2024-03-28",
+  "status": "released",
+  "openness": "open-weights",
+  "license": "Tongyi Qianwen LICENSE AGREEMENT (custom, free commercial use below usage threshold)",
+  "paramsB": 14.3,
+  "activeParamsB": 2.7,
+  "archClass": "moe",
+  "archDisplay": "Fine-grained MoE, decoder-only, upcycled from Qwen-1.8B: 64 experts (4 always-on shared + 60 routed, 4 routed activated per token)",
+  "ctxK": 32,
+  "modalities": [
+    "text"
+  ],
+  "langCount": null,
+  "capabilities": {
+    "reasoning": false,
+    "coding": true,
+    "vision": false,
+    "functionCalling": false,
+    "toolUse": false,
+    "agentic": false
+  },
+  "apiAvailable": false,
+  "price": null,
+  "links": {
+    "hf": "Qwen/Qwen1.5-MoE-A2.7B",
+    "docs": "qwenlm.github.io/blog/qwen-moe"
+  },
+  "note": "First Qwen MoE model: 14.3B total/2.7B active params match dense Qwen1.5-7B quality at ~25% of its training cost and 1.74x inference throughput.",
+  "quants": [],
+  "vramQ4Gb": 9,
+  "vramFp16Gb": 29,
+  "tps4090": null,
+  "tpsNote": "VRAM sized on the 14.3B total weights (all experts must stay resident even though only 2.7B are active per token); at release only HF transformers and vLLM were supported, llama.cpp/GGUF support came later.",
+  "effortLabel": null,
+  "isDefaultConfig": true,
+  "isBestConfig": true,
+  "specSources": {
+    "paramsB": "https://qwenlm.github.io/blog/qwen-moe/",
+    "ctxK": "https://qwenlm.github.io/blog/qwen1.5/",
+    "releaseDate": "https://qwenlm.github.io/blog/qwen-moe/",
+    "openness": "https://huggingface.co/Qwen/Qwen1.5-MoE-A2.7B"
+  },
+  "results": [
+    {
+      "benchmarkSlug": "mmlu",
+      "score": 62.5,
+      "source": "self-reported",
+      "sourceUrl": "https://qwenlm.github.io/blog/qwen-moe/",
+      "evaluatedAt": "2024-03-28",
+      "notes": "base model"
+    },
+    {
+      "benchmarkSlug": "gsm8k",
+      "score": 61.5,
+      "source": "self-reported",
+      "sourceUrl": "https://qwenlm.github.io/blog/qwen-moe/",
+      "evaluatedAt": "2024-03-28",
+      "notes": "base model"
+    },
+    {
+      "benchmarkSlug": "humaneval",
+      "score": 34.2,
+      "source": "self-reported",
+      "sourceUrl": "https://qwenlm.github.io/blog/qwen-moe/",
+      "evaluatedAt": "2024-03-28",
+      "notes": "base model"
+    }
+  ],
+  "verificationNotes": "Fetched qwenlm.github.io/blog/qwen-moe/ directly: confirms release 2024-03-28, 14.3B total/2.7B activated params, 64 fine-grained experts (4 shared always-on + 60 routed, 4 activated/token), upcycled from Qwen-1.8B, ~25% training cost and 1.74x throughput vs Qwen1.5-7B. All 3 cited result rows (MMLU 62.5, GSM8K 61.5, HumanEval 34.2) appear verbatim on the page. 32K context corroborated by qwenlm.github.io/blog/qwen1.5/ (all Qwen1.5 models support 32768 tokens). No changes made."
+}

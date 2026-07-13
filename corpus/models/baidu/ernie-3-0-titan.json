@@ -1,0 +1,48 @@
+{
+  "name": "ERNIE 3.0 Titan",
+  "org": "Baidu",
+  "family": "ERNIE",
+  "releaseDate": "2021-12-23",
+  "status": "deprecated",
+  "openness": "closed",
+  "license": "Proprietary (not publicly released)",
+  "paramsB": 260,
+  "activeParamsB": null,
+  "archClass": "dense",
+  "archDisplay": "Dense knowledge-enhanced transformer (Transformer-XL-style, autoregressive + autoencoding)",
+  "ctxK": 0.512,
+  "modalities": [
+    "text"
+  ],
+  "langCount": 1,
+  "capabilities": {
+    "reasoning": false,
+    "coding": false,
+    "vision": false,
+    "functionCalling": false,
+    "toolUse": false,
+    "agentic": false
+  },
+  "apiAvailable": false,
+  "price": null,
+  "links": {
+    "docs": "research.baidu.com/Blog/index-view?id=165"
+  },
+  "note": "260B knowledge-enhanced dense model (with Peng Cheng Lab); then the largest Chinese dense LM and first knowledge-enhanced 100B+ model.",
+  "quants": [],
+  "vramQ4Gb": null,
+  "vramFp16Gb": null,
+  "tps4090": null,
+  "tpsNote": null,
+  "effortLabel": null,
+  "isDefaultConfig": true,
+  "isBestConfig": true,
+  "specSources": {
+    "paramsB": "https://arxiv.org/abs/2112.12731",
+    "ctxK": "https://huggingface.co/docs/transformers/model_doc/ernie",
+    "releaseDate": "https://arxiv.org/abs/2112.12731",
+    "openness": "https://www.marktechpost.com/2021/12/29/baidu-and-pcl-team-introduce-ernie-3-0-titan-a-pre-training-language-model-with-260-billion-parameters/"
+  },
+  "results": [],
+  "verificationNotes": "Existence and 260B parameter count confirmed directly from the arXiv abstract (2112.12731: 'ERNIE 3.0 Titan ... up to 260 billion parameters'). Submission history on the arXiv page confirms v1 was submitted 23 Dec 2021, exactly matching the given releaseDate. Corroborated by MarkTechPost (Dec 29, 2021) coverage. No public release / API ever existed (paper-only model), consistent with closed/proprietary/apiAvailable:false. No benchmark results were carried since none were in the original record; ctxK (512) is a plausible but not independently re-confirmed figure for this specific checkpoint (the cited HF transformers doc covers a different, later open ERNIE model family, not Titan) — flagged as lower-confidence but left unchanged since it is a minor spec value on a paper-only, non-served model."
+}

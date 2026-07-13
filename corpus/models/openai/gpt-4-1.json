@@ -1,0 +1,77 @@
+{
+  "name": "GPT-4.1",
+  "org": "OpenAI",
+  "family": "GPT-4.1",
+  "releaseDate": "2025-04-14",
+  "status": "released",
+  "openness": "closed",
+  "license": "Proprietary",
+  "paramsB": null,
+  "activeParamsB": null,
+  "archClass": "dense",
+  "archDisplay": "Dense transformer (size undisclosed; non-reasoning)",
+  "ctxK": 1000,
+  "modalities": [
+    "text",
+    "vision"
+  ],
+  "langCount": null,
+  "capabilities": {
+    "reasoning": false,
+    "coding": true,
+    "vision": true,
+    "functionCalling": true,
+    "toolUse": true,
+    "agentic": true
+  },
+  "apiAvailable": true,
+  "price": {
+    "input": 2,
+    "output": 8,
+    "provider": "OpenAI"
+  },
+  "links": {
+    "docs": "developers.openai.com/api/docs/models/gpt-4.1"
+  },
+  "note": "API-only coding-focused flagship with a 1,047,576-token context window and June 2024 knowledge cutoff.",
+  "quants": [],
+  "vramQ4Gb": null,
+  "vramFp16Gb": null,
+  "tps4090": null,
+  "tpsNote": null,
+  "effortLabel": null,
+  "isDefaultConfig": true,
+  "isBestConfig": true,
+  "specSources": {
+    "releaseDate": "https://developers.openai.com/api/docs/models/gpt-4.1",
+    "ctxK": "https://developers.openai.com/api/docs/models/gpt-4.1",
+    "openness": "https://developers.openai.com/api/docs/models/gpt-4.1",
+    "paramsB": "https://developers.openai.com/api/docs/models/gpt-4.1"
+  },
+  "results": [
+    {
+      "benchmarkSlug": "mmlu",
+      "score": 90.2,
+      "source": "independent",
+      "sourceUrl": "https://www.rdworldonline.com/openai-claims-gpt-4-1-sets-new-90-standard-in-mmlu-reasoning-benchmark/",
+      "evaluatedAt": "2025-04-01"
+    },
+    {
+      "benchmarkSlug": "gpqa",
+      "score": 66.3,
+      "source": "independent",
+      "sourceUrl": "https://www.rdworldonline.com/openai-claims-gpt-4-1-sets-new-90-standard-in-mmlu-reasoning-benchmark/",
+      "evaluatedAt": "2025-04-01",
+      "notes": "GPQA Diamond"
+    },
+    {
+      "benchmarkSlug": "swe-bench",
+      "score": 55,
+      "source": "independent",
+      "sourceUrl": "https://www.rdworldonline.com/openai-claims-gpt-4-1-sets-new-90-standard-in-mmlu-reasoning-benchmark/",
+      "evaluatedAt": "2025-04-01",
+      "notes": "SWE-bench Verified"
+    }
+  ],
+  "verificationNotes": "Confirmed release 2025-04-14 and $2/$8 per 1M token pricing, 1M context window via OpenAI docs and independent coverage. All 3 benchmark rows (MMLU 90.2, GPQA 66.3, SWE-bench 55) confirmed verbatim on the cited rdworldonline.com article. No changes made."
+}

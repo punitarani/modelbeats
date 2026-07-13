@@ -1,0 +1,48 @@
+{
+  "name": "Step-2",
+  "org": "StepFun",
+  "family": "Step-2",
+  "releaseDate": "2024-07-01",
+  "status": "deprecated",
+  "openness": "closed",
+  "license": "Proprietary",
+  "paramsB": 1000,
+  "activeParamsB": null,
+  "archClass": "moe",
+  "archDisplay": "Trillion-parameter Mixture-of-Experts (first from a Chinese firm)",
+  "ctxK": 16,
+  "modalities": [
+    "text"
+  ],
+  "langCount": 2,
+  "capabilities": {
+    "reasoning": false,
+    "coding": true,
+    "vision": false,
+    "functionCalling": false,
+    "toolUse": false,
+    "agentic": false
+  },
+  "apiAvailable": false,
+  "price": null,
+  "links": {
+    "docs": "platform.stepfun.com"
+  },
+  "note": "First trillion-parameter MoE LLM from a Chinese firm; previewed March 2024, officially launched July 2024 at WAIC; Step-2-16k ranked 5th globally (1st in China) on LiveBench in Nov 2024, behind only OpenAI and Google models.",
+  "quants": [],
+  "vramQ4Gb": null,
+  "vramFp16Gb": null,
+  "tps4090": null,
+  "tpsNote": null,
+  "effortLabel": null,
+  "isDefaultConfig": true,
+  "isBestConfig": true,
+  "specSources": {
+    "paramsB": "https://www.marktechpost.com/2024/11/20/chinese-agi-startup-stepfun-developed-step-2-a-new-trillion-parameter-moe-architecture-model-ranking-5th-on-livebench/",
+    "ctxK": "https://www.marktechpost.com/2024/11/20/chinese-agi-startup-stepfun-developed-step-2-a-new-trillion-parameter-moe-architecture-model-ranking-5th-on-livebench/",
+    "releaseDate": "https://en.wikipedia.org/wiki/StepFun",
+    "openness": "https://en.wikipedia.org/wiki/StepFun"
+  },
+  "results": [],
+  "verificationNotes": "Confirmed real: MarkTechPost (2024-11-20) independently corroborates trillion-parameter MoE architecture and 16k context for Step-2-16k, and WAIC July 2024 launch (with March 2024 preview) matches Wikipedia/search consensus. The LiveBench 57.68 global-average score, 5th-globally/1st-in-China ranking is confirmed via indexed content of the exact cited lianpr.com URL (direct fetch returned 403 but the search engine's cached excerpt of that same URL states the 57.68 figure verbatim); a separate ICLR 2025 LiveBench paper reports a different snapshot score (55.1) for a later dated checkpoint (step-2-16k-202411), which is consistent with LiveBench scores drifting across evaluation rounds rather than contradicting the cited claim."
+}

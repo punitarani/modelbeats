@@ -1,0 +1,96 @@
+{
+  "name": "GPT-3.5 Turbo",
+  "org": "OpenAI",
+  "family": "GPT-3.5",
+  "releaseDate": "2023-03-01",
+  "status": "released",
+  "openness": "closed",
+  "license": "Proprietary",
+  "paramsB": null,
+  "activeParamsB": null,
+  "archClass": "dense",
+  "archDisplay": "Transformer (architecture undisclosed)",
+  "ctxK": 16,
+  "modalities": [
+    "text"
+  ],
+  "langCount": null,
+  "capabilities": {
+    "reasoning": false,
+    "coding": true,
+    "vision": false,
+    "functionCalling": true,
+    "toolUse": true,
+    "agentic": false
+  },
+  "apiAvailable": true,
+  "price": {
+    "input": 0.5,
+    "output": 1.5,
+    "provider": "OpenAI"
+  },
+  "links": {
+    "docs": "developers.openai.com/api/docs/models/gpt-3.5-turbo"
+  },
+  "note": "Chat-tuned model behind ChatGPT's Nov 2022 launch; still served today with a 16K context window at $0.50/$1.50 per million tokens.",
+  "quants": [],
+  "vramQ4Gb": null,
+  "vramFp16Gb": null,
+  "tps4090": null,
+  "tpsNote": null,
+  "effortLabel": null,
+  "isDefaultConfig": true,
+  "isBestConfig": true,
+  "specSources": {
+    "releaseDate": "https://aiwiki.ai/wiki/openai_api",
+    "ctxK": "https://developers.openai.com/api/docs/models/gpt-3.5-turbo",
+    "openness": "https://developers.openai.com/api/docs/models/gpt-3.5-turbo"
+  },
+  "results": [
+    {
+      "benchmarkSlug": "mmlu",
+      "score": 70,
+      "source": "self-reported",
+      "sourceUrl": "https://arxiv.org/abs/2303.08774",
+      "notes": "reported in GPT-4 technical report comparison table"
+    },
+    {
+      "benchmarkSlug": "hellaswag",
+      "score": 85.5,
+      "source": "self-reported",
+      "sourceUrl": "https://arxiv.org/abs/2303.08774"
+    },
+    {
+      "benchmarkSlug": "arc-challenge",
+      "score": 85.2,
+      "source": "self-reported",
+      "sourceUrl": "https://arxiv.org/abs/2303.08774"
+    },
+    {
+      "benchmarkSlug": "winogrande",
+      "score": 81.6,
+      "source": "self-reported",
+      "sourceUrl": "https://arxiv.org/abs/2303.08774"
+    },
+    {
+      "benchmarkSlug": "humaneval",
+      "score": 48.1,
+      "source": "self-reported",
+      "sourceUrl": "https://arxiv.org/abs/2303.08774"
+    },
+    {
+      "benchmarkSlug": "drop",
+      "score": 64.1,
+      "source": "self-reported",
+      "sourceUrl": "https://arxiv.org/abs/2303.08774",
+      "notes": "F1 score"
+    },
+    {
+      "benchmarkSlug": "gsm8k",
+      "score": 57.1,
+      "source": "self-reported",
+      "sourceUrl": "https://arxiv.org/abs/2303.08774"
+    }
+  ],
+  "verificationNotes": "Release confirmed March 1, 2023 via OpenAI's 'Introducing ChatGPT and Whisper APIs' post. Current 16,385-token context and $0.50/$1.50 per-million pricing confirmed on OpenAI's live model docs page. All 7 benchmark rows (MMLU 70.0, HellaSwag 85.5, ARC 85.2, Winogrande 81.6, HumanEval 48.1, DROP 64.1 F1, GSM8K 57.1) verified to literally appear in arXiv 2303.08774's GPT-3.5 comparison column. No changes made."
+}

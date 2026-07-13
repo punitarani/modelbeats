@@ -1,0 +1,77 @@
+{
+  "name": "InternLM2.5-7B",
+  "org": "Shanghai AI Laboratory",
+  "family": "InternLM2.5",
+  "releaseDate": "2024-07-03",
+  "status": "released",
+  "openness": "open-weights",
+  "license": "Apache-2.0",
+  "paramsB": 7,
+  "activeParamsB": null,
+  "archClass": "dense",
+  "archDisplay": "Dense transformer decoder (GQA)",
+  "ctxK": 1000,
+  "modalities": [
+    "text"
+  ],
+  "langCount": null,
+  "capabilities": {
+    "reasoning": true,
+    "coding": true,
+    "vision": false,
+    "functionCalling": true,
+    "toolUse": true,
+    "agentic": true
+  },
+  "apiAvailable": false,
+  "price": null,
+  "links": {
+    "hf": "internlm/internlm2_5-7b-chat",
+    "gh": "InternLM/InternLM",
+    "docs": "internlm.readthedocs.io"
+  },
+  "note": "Widely used open 7B; near-perfect 1M-token needle retrieval via chat-1m checkpoint, state-of-the-art 7B-scale math reasoning.",
+  "quants": [
+    "GGUF Q4"
+  ],
+  "vramQ4Gb": 4.5,
+  "vramFp16Gb": 14,
+  "tps4090": null,
+  "tpsNote": null,
+  "effortLabel": null,
+  "isDefaultConfig": true,
+  "isBestConfig": true,
+  "specSources": {
+    "paramsB": "https://huggingface.co/internlm/internlm2_5-7b",
+    "ctxK": "https://huggingface.co/internlm/internlm2_5-7b-chat-1m",
+    "releaseDate": "https://github.com/InternLM/InternLM/blob/main/model_cards/internlm2.5_7b.md",
+    "openness": "https://huggingface.co/internlm/internlm2_5-7b-chat"
+  },
+  "results": [
+    {
+      "benchmarkSlug": "mmlu",
+      "score": 72.8,
+      "source": "self-reported",
+      "sourceUrl": "https://huggingface.co/internlm/internlm2_5-7b-chat"
+    },
+    {
+      "benchmarkSlug": "gsm8k",
+      "score": 86,
+      "source": "self-reported",
+      "sourceUrl": "https://huggingface.co/internlm/internlm2_5-7b-chat"
+    },
+    {
+      "benchmarkSlug": "math",
+      "score": 60.1,
+      "source": "self-reported",
+      "sourceUrl": "https://huggingface.co/internlm/internlm2_5-7b-chat"
+    },
+    {
+      "benchmarkSlug": "bbh",
+      "score": 71.6,
+      "source": "self-reported",
+      "sourceUrl": "https://huggingface.co/internlm/internlm2_5-7b-chat"
+    }
+  ],
+  "verificationNotes": "Confirmed real. Release date 2024-07-03 corroborated by web search (HF + GitHub model card). Apache-2.0 confirmed. All four benchmark rows re-confirmed verbatim on the internlm2_5-7b-chat HF model card. No changes needed."
+}

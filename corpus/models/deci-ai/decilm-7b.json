@@ -1,0 +1,82 @@
+{
+  "name": "DeciLM-7B",
+  "org": "Deci AI",
+  "family": "DeciLM",
+  "releaseDate": "2023-12-12",
+  "status": "released",
+  "openness": "open-weights",
+  "license": "Apache 2.0",
+  "paramsB": 7.04,
+  "activeParamsB": null,
+  "archClass": "dense",
+  "archDisplay": "AutoNAC (NAS)-designed dense transformer with variable per-layer Grouped-Query Attention",
+  "ctxK": 8,
+  "modalities": [
+    "text"
+  ],
+  "langCount": null,
+  "capabilities": {
+    "reasoning": false,
+    "coding": false,
+    "vision": false,
+    "functionCalling": false,
+    "toolUse": false,
+    "agentic": false
+  },
+  "apiAvailable": true,
+  "price": null,
+  "links": {
+    "hf": "Deci/DeciLM-7B"
+  },
+  "note": "AutoNAC-searched variable-GQA 7B; billed as the fastest and most accurate 7B base LLM at launch (up to 4.4x Mistral-7B throughput).",
+  "quants": [
+    "GGUF Q4",
+    "GGUF INT8"
+  ],
+  "vramQ4Gb": 5,
+  "vramFp16Gb": 14,
+  "tps4090": null,
+  "tpsNote": "Vendor reports 1,174 tok/s on A100 with PyTorch — not an RTX 4090 llama.cpp measurement",
+  "effortLabel": null,
+  "isDefaultConfig": true,
+  "isBestConfig": true,
+  "specSources": {
+    "paramsB": "https://huggingface.co/Deci/DeciLM-7B",
+    "ctxK": "https://huggingface.co/Deci/DeciLM-7B",
+    "releaseDate": "https://www.marktechpost.com/2023/12/14/deci-ai-introduces-decilm-7b-a-super-fast-and-super-accurate-7-billion-parameter-large-language-model-llm/",
+    "openness": "https://huggingface.co/Deci/DeciLM-7B"
+  },
+  "results": [
+    {
+      "benchmarkSlug": "arc-challenge",
+      "score": 59.39,
+      "source": "self-reported",
+      "sourceUrl": "https://huggingface.co/Deci/DeciLM-7B"
+    },
+    {
+      "benchmarkSlug": "hellaswag",
+      "score": 82.51,
+      "source": "self-reported",
+      "sourceUrl": "https://huggingface.co/Deci/DeciLM-7B"
+    },
+    {
+      "benchmarkSlug": "mmlu",
+      "score": 59.76,
+      "source": "self-reported",
+      "sourceUrl": "https://huggingface.co/Deci/DeciLM-7B"
+    },
+    {
+      "benchmarkSlug": "winogrande",
+      "score": 79.95,
+      "source": "self-reported",
+      "sourceUrl": "https://huggingface.co/Deci/DeciLM-7B"
+    },
+    {
+      "benchmarkSlug": "gsm8k",
+      "score": 47.38,
+      "source": "self-reported",
+      "sourceUrl": "https://huggingface.co/Deci/DeciLM-7B"
+    }
+  ],
+  "verificationNotes": "Confirmed via huggingface.co/Deci/DeciLM-7B (7.04B params, Apache 2.0 license, 8192-token/8K context, AutoNAC-designed variable GQA) — all matching. All five self-reported Open LLM Leaderboard scores (ARC 59.39, HellaSwag 82.51, MMLU 59.76, Winogrande 79.95, GSM8K 47.38) confirmed present on the HF model card. MarkTechPost coverage (article dated 2023-12-14) and independent sources confirm the model was announced via Deci's Twitter on 2023-12-12, matching releaseDate. The 1,174 tok/s A100/PyTorch figure was independently corroborated (batch size 352), correctly distinguished in tpsNote from an RTX 4090 llama.cpp measurement, which is not available for this model. No changes made."
+}

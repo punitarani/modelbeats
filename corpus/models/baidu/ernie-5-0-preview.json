@@ -1,0 +1,68 @@
+{
+  "name": "ERNIE 5.0 (Preview)",
+  "org": "Baidu",
+  "family": "ERNIE",
+  "releaseDate": "2025-11-13",
+  "status": "preview",
+  "openness": "closed",
+  "license": "Proprietary",
+  "paramsB": 2400,
+  "activeParamsB": null,
+  "archClass": "moe",
+  "archDisplay": "Natively omni-modal Mixture-of-Experts, unified autoregressive next-token objective, <3% of experts active per token",
+  "ctxK": 128,
+  "modalities": [
+    "text",
+    "vision",
+    "audio",
+    "video"
+  ],
+  "langCount": null,
+  "capabilities": {
+    "reasoning": true,
+    "coding": true,
+    "vision": true,
+    "functionCalling": true,
+    "toolUse": true,
+    "agentic": true
+  },
+  "apiAvailable": true,
+  "price": null,
+  "links": {
+    "docs": "ernie.baidu.com/blog/posts/ernie5.0"
+  },
+  "note": "2.4T-parameter natively omni-modal flagship unveiled at Baidu World 2025; scored 22 on Artificial Analysis's Intelligence Index as a free preview.",
+  "quants": [],
+  "vramQ4Gb": null,
+  "vramFp16Gb": null,
+  "tps4090": null,
+  "tpsNote": null,
+  "effortLabel": null,
+  "isDefaultConfig": true,
+  "isBestConfig": true,
+  "specSources": {
+    "paramsB": "https://winbuzzer.com/2025/11/13/baidu-unveils-2-4t-parameter-ernie-5-0-ai-model-claims-enterprise-ai-lead-over-gpt-5-1-xcxwbn/",
+    "ctxK": "https://artificialanalysis.ai/models/ernie-5-0-thinking-preview",
+    "releaseDate": "https://www.prnewswire.com/news-releases/baidu-unveils-ernie-5-0-and-a-series-of-ai-applications-at-baidu-world-2025--ramps-up-global-push-302614531.html",
+    "openness": "https://winbuzzer.com/2025/11/13/baidu-unveils-2-4t-parameter-ernie-5-0-ai-model-claims-enterprise-ai-lead-over-gpt-5-1-xcxwbn/"
+  },
+  "results": [
+    {
+      "benchmarkSlug": "gpqa",
+      "score": 78,
+      "source": "independent",
+      "sourceUrl": "https://artificialanalysis.ai/models/ernie-5-0-thinking-preview",
+      "notes": "GPQA Diamond, ERNIE 5.0 Thinking Preview",
+      "evaluatedAt": "2025-11-01"
+    },
+    {
+      "benchmarkSlug": "hle",
+      "score": 13,
+      "source": "independent",
+      "sourceUrl": "https://artificialanalysis.ai/models/ernie-5-0-thinking-preview",
+      "notes": "Humanity's Last Exam",
+      "evaluatedAt": "2025-11-01"
+    }
+  ],
+  "verificationNotes": "Confirmed real: unveiled Nov 13 2025 at Baidu World per PRNewswire/winbuzzer/SCMP, 2.4T params with <3% experts active per inference matches winbuzzer. GPQA Diamond=78 and HLE=13 both literally confirmed on the artificialanalysis.ai page (ERNIE 5.0 Thinking Preview row in the evaluation breakdown charts). Free ($0/$0) preview pricing also confirmed on that page."
+}

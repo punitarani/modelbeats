@@ -1,0 +1,102 @@
+{
+  "name": "MPT-7B",
+  "org": "MosaicML",
+  "family": "MPT",
+  "releaseDate": "2023-05-05",
+  "status": "released",
+  "openness": "open-source",
+  "license": "Apache 2.0",
+  "paramsB": 6.7,
+  "activeParamsB": null,
+  "archClass": "dense",
+  "archDisplay": "Decoder-only Transformer, no positional embeddings (ALiBi), FlashAttention; 32L/32H, d_model 4096",
+  "ctxK": 2.048,
+  "modalities": [
+    "text"
+  ],
+  "langCount": null,
+  "capabilities": {
+    "reasoning": false,
+    "coding": true,
+    "vision": false,
+    "functionCalling": false,
+    "toolUse": false,
+    "agentic": false
+  },
+  "apiAvailable": false,
+  "price": null,
+  "links": {
+    "hf": "mosaicml/mpt-7b",
+    "gh": "mosaicml/llm-foundry",
+    "docs": "databricks.com/blog/mpt-7b"
+  },
+  "note": "Apache-2.0 decoder-only transformer trained from scratch on 1T tokens; ALiBi removes fixed context limits, FlashAttention for efficient training/inference.",
+  "quants": [
+    "GGUF",
+    "GGML"
+  ],
+  "vramQ4Gb": 4.5,
+  "vramFp16Gb": 14.5,
+  "tps4090": null,
+  "tpsNote": null,
+  "effortLabel": null,
+  "isDefaultConfig": true,
+  "isBestConfig": true,
+  "specSources": {
+    "paramsB": "https://huggingface.co/mosaicml/mpt-7b",
+    "ctxK": "https://huggingface.co/mosaicml/mpt-7b",
+    "releaseDate": "https://huggingface.co/mosaicml/mpt-7b",
+    "openness": "https://huggingface.co/mosaicml/mpt-7b"
+  },
+  "results": [
+    {
+      "benchmarkSlug": "mmlu",
+      "score": 27.5,
+      "source": "independent",
+      "sourceUrl": "https://arxiv.org/abs/2405.13386",
+      "evaluatedAt": "2024-05-22",
+      "notes": "5-shot via OpenCompass, 360Zhinao Technical Report Table 2 — confirmed by direct read of table"
+    },
+    {
+      "benchmarkSlug": "hellaswag",
+      "score": 75,
+      "source": "independent",
+      "sourceUrl": "https://arxiv.org/abs/2405.13386",
+      "evaluatedAt": "2024-05-22",
+      "notes": "confirmed Table 2 (75.0)"
+    },
+    {
+      "benchmarkSlug": "humaneval",
+      "score": 17.1,
+      "source": "independent",
+      "sourceUrl": "https://arxiv.org/abs/2405.13386",
+      "evaluatedAt": "2024-05-22",
+      "notes": "confirmed Table 2"
+    },
+    {
+      "benchmarkSlug": "mbpp",
+      "score": 22.8,
+      "source": "independent",
+      "sourceUrl": "https://arxiv.org/abs/2405.13386",
+      "evaluatedAt": "2024-05-22",
+      "notes": "confirmed Table 2"
+    },
+    {
+      "benchmarkSlug": "gsm8k",
+      "score": 9.1,
+      "source": "independent",
+      "sourceUrl": "https://arxiv.org/abs/2405.13386",
+      "evaluatedAt": "2024-05-22",
+      "notes": "CORRECTED from 10 to 9.1 — the actual Table 2 value for MPT-7B GSM8K is 9.1, not 10; confirmed by direct read of the table"
+    },
+    {
+      "benchmarkSlug": "math",
+      "score": 2.9,
+      "source": "independent",
+      "sourceUrl": "https://arxiv.org/abs/2405.13386",
+      "evaluatedAt": "2024-05-22",
+      "notes": "confirmed Table 2"
+    }
+  ],
+  "verificationNotes": "Existence, org, release date (2023-05-05), 6.7B params, 32L/32H/d4096 architecture, Apache-2.0 license, 2048 native context (ALiBi-extendable), and 1T training tokens all corroborated via HF model card searches and the official Databricks/MosaicML announcement blog. Fetched arXiv 2405.13386 (360Zhinao Technical Report) full HTML/table directly: 5 of 6 benchmark rows matched exactly, but the input record's GSM8K score of 10 was WRONG — the paper's actual Table 2 value is 9.1. Corrected."
+}

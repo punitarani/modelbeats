@@ -1,0 +1,101 @@
+{
+  "name": "Phi-3.5-mini (3.8B)",
+  "org": "Microsoft",
+  "family": "Phi-3.5",
+  "releaseDate": "2024-08-20",
+  "status": "released",
+  "openness": "open-weights",
+  "license": "MIT",
+  "paramsB": 3.8,
+  "activeParamsB": null,
+  "archClass": "dense",
+  "archDisplay": "Dense decoder-only Transformer",
+  "ctxK": 128,
+  "modalities": [
+    "text"
+  ],
+  "langCount": 22,
+  "capabilities": {
+    "reasoning": false,
+    "coding": true,
+    "vision": false,
+    "functionCalling": false,
+    "toolUse": false,
+    "agentic": false
+  },
+  "apiAvailable": true,
+  "price": {
+    "input": 0.13,
+    "output": 0.52,
+    "provider": "Azure AI Foundry"
+  },
+  "links": {
+    "hf": "microsoft/Phi-3.5-mini-instruct",
+    "gh": "microsoft/PhiCookBook",
+    "docs": "techcommunity.microsoft.com/blog/azure-ai-foundry-blog/discover-the-new-multi-lingual-high-quality-phi-3-5-slms/4225280"
+  },
+  "note": "Refresh of Phi-3-mini with 22-language multilingual support and 128K context; beats Llama-3.1 8B on many tasks.",
+  "quants": [
+    "GGUF Q4",
+    "AWQ",
+    "ONNX INT4",
+    "MLX 4-bit"
+  ],
+  "vramQ4Gb": 4,
+  "vramFp16Gb": 8,
+  "tps4090": null,
+  "tpsNote": null,
+  "effortLabel": null,
+  "isDefaultConfig": true,
+  "isBestConfig": true,
+  "specSources": {
+    "paramsB": "https://huggingface.co/microsoft/Phi-3.5-mini-instruct",
+    "ctxK": "https://huggingface.co/microsoft/Phi-3.5-mini-instruct",
+    "releaseDate": "https://www.marktechpost.com/2024/08/21/microsoft-ai-releases-phi-3-5-mini-moe-and-vision-with-128k-context-multilingual-and-mit-license/",
+    "openness": "https://huggingface.co/microsoft/Phi-3.5-mini-instruct"
+  },
+  "results": [
+    {
+      "benchmarkSlug": "mmlu",
+      "score": 69,
+      "source": "self-reported",
+      "sourceUrl": "https://huggingface.co/microsoft/Phi-3.5-mini-instruct",
+      "notes": "5-shot"
+    },
+    {
+      "benchmarkSlug": "mmlu-pro",
+      "score": 47.4,
+      "source": "self-reported",
+      "sourceUrl": "https://huggingface.co/microsoft/Phi-3.5-mini-instruct",
+      "notes": "0-shot CoT"
+    },
+    {
+      "benchmarkSlug": "hellaswag",
+      "score": 69.4,
+      "source": "self-reported",
+      "sourceUrl": "https://huggingface.co/microsoft/Phi-3.5-mini-instruct",
+      "notes": "5-shot"
+    },
+    {
+      "benchmarkSlug": "gsm8k",
+      "score": 86.2,
+      "source": "self-reported",
+      "sourceUrl": "https://huggingface.co/microsoft/Phi-3.5-mini-instruct",
+      "notes": "8-shot CoT"
+    },
+    {
+      "benchmarkSlug": "math",
+      "score": 48.5,
+      "source": "self-reported",
+      "sourceUrl": "https://huggingface.co/microsoft/Phi-3.5-mini-instruct",
+      "notes": "0-shot CoT"
+    },
+    {
+      "benchmarkSlug": "humaneval",
+      "score": 62.8,
+      "source": "self-reported",
+      "sourceUrl": "https://huggingface.co/microsoft/Phi-3.5-mini-instruct"
+    }
+  ],
+  "verificationNotes": "Confirmed real via HF model card (microsoft/Phi-3.5-mini-instruct, fetched): 3.8B dense, 128K context, MIT license, released Aug 2024. All six benchmark rows literally match the card. Language count is ambiguous at the source itself: the card's prose says '22 languages' but the actual enumerated list contains 23 names (Arabic through Ukrainian) — this is Microsoft's own card's internal inconsistency, not a fabrication in this record, so kept langCount=22 to match the card's stated figure."
+}

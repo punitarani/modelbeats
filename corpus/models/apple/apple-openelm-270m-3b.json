@@ -1,0 +1,77 @@
+{
+  "name": "Apple OpenELM (270M–3B)",
+  "org": "Apple",
+  "family": "Apple OpenELM",
+  "releaseDate": "2024-04-24",
+  "status": "released",
+  "openness": "open-source",
+  "license": "Apple Sample Code License",
+  "paramsB": 3,
+  "activeParamsB": null,
+  "archClass": "dense",
+  "archDisplay": "Dense transformer with layer-wise parameter scaling (270M/450M/1.1B/3B family)",
+  "ctxK": 2,
+  "modalities": [
+    "text"
+  ],
+  "langCount": null,
+  "capabilities": {
+    "reasoning": false,
+    "coding": false,
+    "vision": false,
+    "functionCalling": false,
+    "toolUse": false,
+    "agentic": false
+  },
+  "apiAvailable": false,
+  "price": null,
+  "links": {
+    "hf": "apple/OpenELM",
+    "gh": "apple/corenet",
+    "docs": "machinelearning.apple.com/research/openelm"
+  },
+  "note": "Fully open, reproducible 270M/450M/1.1B/3B family with code, training logs, and checkpoints; layer-wise scaling beats OLMo at matched budget.",
+  "quants": [
+    "GGUF"
+  ],
+  "vramQ4Gb": 1.9,
+  "vramFp16Gb": 6.4,
+  "tps4090": null,
+  "tpsNote": null,
+  "effortLabel": null,
+  "isDefaultConfig": true,
+  "isBestConfig": true,
+  "specSources": {
+    "paramsB": "https://huggingface.co/apple/OpenELM-3B",
+    "ctxK": "https://arxiv.org/html/2404.14619",
+    "releaseDate": "https://www.theregister.com/2024/04/24/apple_openelm_ai/",
+    "openness": "https://huggingface.co/apple/OpenELM"
+  },
+  "results": [
+    {
+      "benchmarkSlug": "hellaswag",
+      "score": 72.44,
+      "source": "self-reported",
+      "sourceUrl": "https://huggingface.co/apple/OpenELM",
+      "evaluatedAt": "2024-04-01",
+      "notes": "OpenELM-3B (pretrained), zero-shot"
+    },
+    {
+      "benchmarkSlug": "arc-challenge",
+      "score": 35.58,
+      "source": "self-reported",
+      "sourceUrl": "https://huggingface.co/apple/OpenELM",
+      "evaluatedAt": "2024-04-01",
+      "notes": "OpenELM-3B (pretrained), ARC-Challenge, zero-shot"
+    },
+    {
+      "benchmarkSlug": "winogrande",
+      "score": 65.51,
+      "source": "self-reported",
+      "sourceUrl": "https://huggingface.co/apple/OpenELM",
+      "evaluatedAt": "2024-04-01",
+      "notes": "OpenELM-3B (pretrained), zero-shot"
+    }
+  ],
+  "verificationNotes": "Confirmed real and unchanged. Fetched huggingface.co/apple/OpenELM and /OpenELM-3B: license tag is literally 'apple-sample-code-license' (matches record), params 270M/450M/1.08B/3.04B confirmed in arXiv 2404.14619 Table 9 (rounds to 3B), training context length 2048 confirmed in same table (matches ctxK=2). All three result rows (HellaSwag 72.44, ARC-Challenge 35.58, WinoGrande 65.51) confirmed to literally appear on the cited HF page."
+}

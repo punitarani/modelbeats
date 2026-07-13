@@ -1,0 +1,74 @@
+{
+  "name": "StarCoder2 15B",
+  "org": "BigCode",
+  "family": "StarCoder2",
+  "releaseDate": "2024-02-28",
+  "status": "released",
+  "openness": "open-weights",
+  "license": "BigCode OpenRAIL-M",
+  "paramsB": 15,
+  "activeParamsB": null,
+  "archClass": "dense",
+  "archDisplay": "Transformer decoder, grouped-query + sliding-window attention (4K window/16K ctx), FIM; NVIDIA-trained",
+  "ctxK": 16,
+  "modalities": [
+    "text"
+  ],
+  "langCount": 600,
+  "capabilities": {
+    "reasoning": false,
+    "coding": true,
+    "vision": false,
+    "functionCalling": false,
+    "toolUse": false,
+    "agentic": false
+  },
+  "apiAvailable": false,
+  "price": null,
+  "links": {
+    "hf": "bigcode/starcoder2-15b",
+    "gh": "bigcode-project/starcoder2",
+    "docs": "bigcode-project.org/docs/about/models"
+  },
+  "note": "Flagship 2nd-gen BigCode model, NVIDIA-trained on The Stack v2 (600+ languages, 4T+ tokens); HF/ServiceNow/NVIDIA collaboration.",
+  "quants": [
+    "GGUF"
+  ],
+  "vramQ4Gb": 9.4,
+  "vramFp16Gb": 30.4,
+  "tps4090": null,
+  "tpsNote": null,
+  "effortLabel": null,
+  "isDefaultConfig": true,
+  "isBestConfig": true,
+  "specSources": {
+    "paramsB": "https://huggingface.co/bigcode/starcoder2-15b",
+    "ctxK": "https://huggingface.co/bigcode/starcoder2-15b",
+    "releaseDate": "https://huggingface.co/blog/starcoder2",
+    "openness": "https://huggingface.co/bigcode/starcoder2-15b"
+  },
+  "results": [
+    {
+      "benchmarkSlug": "humaneval",
+      "score": 46.3,
+      "source": "self-reported",
+      "sourceUrl": "https://huggingface.co/bigcode/starcoder2-15b",
+      "notes": "pass@1"
+    },
+    {
+      "benchmarkSlug": "gsm8k",
+      "score": 65.1,
+      "source": "self-reported",
+      "sourceUrl": "https://huggingface.co/bigcode/starcoder2-15b",
+      "notes": "PAL"
+    },
+    {
+      "benchmarkSlug": "ds-1000",
+      "score": 33.8,
+      "source": "self-reported",
+      "sourceUrl": "https://huggingface.co/bigcode/starcoder2-15b",
+      "notes": "pass@1"
+    }
+  ],
+  "verificationNotes": "Fetched HF blog (2024-02-28) and model card: confirmed 15B params, 16K ctx/4K sliding window, NVIDIA-trained (NeMo+Eos), BigCode OpenRAIL-M, HumanEval 46.3/GSM8K(PAL) 65.1/DS-1000 33.8 verbatim. No changes."
+}

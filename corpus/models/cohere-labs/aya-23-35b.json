@@ -1,0 +1,60 @@
+{
+  "name": "Aya 23 35B",
+  "org": "Cohere Labs",
+  "family": "Aya 23",
+  "releaseDate": "2024-05-23",
+  "status": "released",
+  "openness": "open-weights",
+  "license": "CC-BY-NC",
+  "paramsB": 35,
+  "activeParamsB": null,
+  "archClass": "dense",
+  "archDisplay": "Dense transformer (Command-based), 35B",
+  "ctxK": 8,
+  "modalities": [
+    "text"
+  ],
+  "langCount": 23,
+  "capabilities": {
+    "reasoning": false,
+    "coding": false,
+    "vision": false,
+    "functionCalling": false,
+    "toolUse": false,
+    "agentic": false
+  },
+  "apiAvailable": false,
+  "price": null,
+  "links": {
+    "hf": "CohereLabs/aya-23-35B",
+    "docs": "docs.cohere.com/docs/aya"
+  },
+  "note": "Cohere's 35B dense multilingual instruct model spanning 23 languages, research-only CC-BY-NC release.",
+  "quants": [
+    "GGUF Q4"
+  ],
+  "vramQ4Gb": 22,
+  "vramFp16Gb": 70,
+  "tps4090": null,
+  "tpsNote": null,
+  "effortLabel": null,
+  "isDefaultConfig": true,
+  "isBestConfig": true,
+  "specSources": {
+    "paramsB": "https://huggingface.co/CohereLabs/aya-23-35B",
+    "ctxK": "https://huggingface.co/CohereLabs/aya-23-35B",
+    "releaseDate": "https://huggingface.co/CohereLabs/aya-23-35B",
+    "openness": "https://cohere.com/blog/aya23"
+  },
+  "results": [
+    {
+      "benchmarkSlug": "mmlu",
+      "score": 58.2,
+      "source": "self-reported",
+      "sourceUrl": "https://arxiv.org/abs/2405.15032",
+      "evaluatedAt": "2024-05-23",
+      "notes": "Multilingual MMLU 5-shot avg across 14 languages"
+    }
+  ],
+  "verificationNotes": "Confirmed genuine via arXiv:2405.15032 (Aya 23: Open Weight Releases to Further Multilingual Progress, submitted 2024-05-23) and HF CohereLabs/aya-23-35B model card (CC-BY-NC license, 8192-token/8K context, GQA+256k BPE tokenizer). MMLU 58.2 score for the 35B variant specifically confirmed via search of the paper's content ('Aya-23-35B achieves an average score of 58.2 on multilingual MMLU'). No changes needed."
+}

@@ -1,0 +1,78 @@
+{
+  "name": "Gemini 3.1 Flash-Lite",
+  "org": "Google",
+  "family": "Gemini 3.1",
+  "releaseDate": "2026-03-03",
+  "status": "released",
+  "openness": "closed",
+  "license": "Proprietary",
+  "paramsB": null,
+  "activeParamsB": null,
+  "archClass": "moe",
+  "archDisplay": "Sparse Mixture-of-Experts Transformer (configuration undisclosed)",
+  "ctxK": 1000,
+  "modalities": [
+    "text",
+    "vision",
+    "audio",
+    "video"
+  ],
+  "langCount": null,
+  "capabilities": {
+    "reasoning": true,
+    "coding": true,
+    "vision": true,
+    "functionCalling": true,
+    "toolUse": true,
+    "agentic": true
+  },
+  "apiAvailable": true,
+  "price": {
+    "input": 0.25,
+    "output": 1.5,
+    "provider": "Google AI Studio / Vertex AI (Gemini API)"
+  },
+  "links": {
+    "docs": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-3-1-flash-lite/"
+  },
+  "note": "Ultra-cheap 3.x tier for high-volume workloads at $0.25/$1.50 per million tokens, 1M context.",
+  "quants": [],
+  "vramQ4Gb": null,
+  "vramFp16Gb": null,
+  "tps4090": null,
+  "tpsNote": null,
+  "effortLabel": null,
+  "isDefaultConfig": true,
+  "isBestConfig": true,
+  "specSources": {
+    "releaseDate": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-3-1-flash-lite/",
+    "ctxK": "https://ai.google.dev/gemini-api/docs/models/gemini-3.1-flash-lite-preview",
+    "openness": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-3-1-flash-lite/"
+  },
+  "results": [
+    {
+      "benchmarkSlug": "gpqa",
+      "score": 86.9,
+      "source": "self-reported",
+      "sourceUrl": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-3-1-flash-lite/",
+      "evaluatedAt": "2026-03-03",
+      "notes": "GPQA Diamond"
+    },
+    {
+      "benchmarkSlug": "mmmu-pro",
+      "score": 76.8,
+      "source": "self-reported",
+      "sourceUrl": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-3-1-flash-lite/",
+      "evaluatedAt": "2026-03-03"
+    },
+    {
+      "benchmarkSlug": "arena",
+      "score": 1432,
+      "source": "arena",
+      "sourceUrl": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-3-1-flash-lite/",
+      "evaluatedAt": "2026-03-03",
+      "notes": "Artificial Analysis text arena Elo"
+    }
+  ],
+  "verificationNotes": "Confirmed real: preview launched 2026-03-03 (blog.google, fetched), all 3 benchmark numbers (GPQA 86.9, MMMU-Pro 76.8, Arena Elo 1432) literally confirmed on that page. Pricing $0.25/$1.50 confirmed independently. CORRECTED status from 'preview' to 'released': the model reached general availability ~2026-05-07/08 (cloud.google.com GA blog, fetched) and the original preview checkpoint was deprecated/shut down 2026-05-25 (ai.google.dev docs, fetched) — as of today (2026-07-12) the model is GA, not preview. CORRECTED modalities: added 'video' — the official model docs page (ai.google.dev/gemini-api/docs/models/gemini-3.1-flash-lite-preview) confirms input modalities as Text, Image, Video, Audio, and PDF, so 'video' was missing from the original record."
+}

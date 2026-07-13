@@ -1,0 +1,109 @@
+{
+  "name": "Claude Sonnet 4",
+  "org": "Anthropic",
+  "family": "Claude 4",
+  "releaseDate": "2025-05-22",
+  "status": "deprecated",
+  "openness": "closed",
+  "license": "Proprietary",
+  "paramsB": null,
+  "activeParamsB": null,
+  "archClass": "dense",
+  "archDisplay": "Dense transformer, hybrid-reasoning (parameter count undisclosed)",
+  "ctxK": 200,
+  "modalities": [
+    "text",
+    "vision"
+  ],
+  "langCount": null,
+  "capabilities": {
+    "reasoning": true,
+    "coding": true,
+    "vision": true,
+    "functionCalling": true,
+    "toolUse": true,
+    "agentic": true
+  },
+  "apiAvailable": false,
+  "price": {
+    "input": 3,
+    "output": 15,
+    "provider": "Anthropic"
+  },
+  "links": {
+    "docs": "platform.claude.com"
+  },
+  "note": "Balanced Claude 4 model matching Opus 4 on SWE-bench Verified at a fraction of the price.",
+  "quants": [],
+  "vramFp16Gb": null,
+  "vramQ4Gb": null,
+  "tps4090": null,
+  "tpsNote": null,
+  "effortLabel": null,
+  "isDefaultConfig": true,
+  "isBestConfig": true,
+  "specSources": {
+    "releaseDate": "https://www.anthropic.com/news/claude-4",
+    "ctxK": "https://www.prompthub.us/models/claude-sonnet-4",
+    "openness": "https://www.anthropic.com/news/claude-4"
+  },
+  "results": [
+    {
+      "benchmarkSlug": "swe-bench",
+      "score": 72.7,
+      "source": "self-reported",
+      "sourceUrl": "https://www.datacamp.com/blog/claude-4",
+      "evaluatedAt": "2025-05-22",
+      "notes": "SWE-bench Verified, state-of-the-art at launch; confirmed via direct fetch"
+    },
+    {
+      "benchmarkSlug": "terminal-bench",
+      "score": 35.5,
+      "source": "self-reported",
+      "sourceUrl": "https://www.datacamp.com/blog/claude-4",
+      "evaluatedAt": "2025-05-22",
+      "notes": "Terminal-bench; confirmed via direct fetch"
+    },
+    {
+      "benchmarkSlug": "gpqa",
+      "score": 75.4,
+      "source": "self-reported",
+      "sourceUrl": "https://www.datacamp.com/blog/claude-4",
+      "evaluatedAt": "2025-05-22",
+      "notes": "GPQA Diamond, with extended thinking; confirmed via direct fetch"
+    },
+    {
+      "benchmarkSlug": "aime",
+      "score": 70.5,
+      "source": "self-reported",
+      "sourceUrl": "https://www.datacamp.com/blog/claude-4",
+      "evaluatedAt": "2025-05-22",
+      "notes": "AIME 2025, with extended thinking; confirmed via direct fetch"
+    },
+    {
+      "benchmarkSlug": "mmlu",
+      "score": 86.5,
+      "source": "self-reported",
+      "sourceUrl": "https://www.datacamp.com/blog/claude-4",
+      "evaluatedAt": "2025-05-22",
+      "notes": "with extended thinking; confirmed via direct fetch"
+    },
+    {
+      "benchmarkSlug": "tau-bench",
+      "score": 80.5,
+      "source": "self-reported",
+      "sourceUrl": "https://www.datacamp.com/blog/claude-4",
+      "evaluatedAt": "2025-05-22",
+      "notes": "tau-bench retail; confirmed via direct fetch"
+    },
+    {
+      "benchmarkSlug": "mmmu",
+      "score": 74.4,
+      "source": "self-reported",
+      "sourceUrl": "https://www.datacamp.com/blog/claude-4",
+      "evaluatedAt": "2025-05-22",
+      "notes": "multimodal understanding; confirmed via direct fetch"
+    }
+  ],
+  "verificationNotes": "Real model, confirmed via anthropic.com/news/claude-4 (release 2025-05-22, $3/$15 pricing, 200K context). All 7 result rows confirmed verbatim via direct fetch of datacamp.com/blog/claude-4. Note Sonnet 4's 72.7% SWE-bench actually edges out Opus 4's 72.5%, consistent with the 'matching...at a fraction of the price' framing. Per Anthropic's official model-deprecations page (fetched 2026-07-12), claude-sonnet-4-20250514 was deprecated 2026-04-14 and RETIRED 2026-06-15 — already past as of today (2026-07-12), so apiAvailable corrected to false (status kept as 'deprecated', closest available enum value; true current state is 'retired')."
+}

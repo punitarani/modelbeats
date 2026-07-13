@@ -1,0 +1,78 @@
+{
+  "name": "Snowflake Arctic",
+  "org": "Snowflake",
+  "family": "Arctic",
+  "releaseDate": "2024-04-24",
+  "status": "released",
+  "openness": "open-weights",
+  "license": "Apache-2.0",
+  "paramsB": 480,
+  "activeParamsB": 17,
+  "archClass": "hybrid",
+  "archDisplay": "Dense-MoE Hybrid (10B dense transformer + 128x3.66B residual MoE experts, top-2 gating)",
+  "ctxK": 4,
+  "modalities": [
+    "text"
+  ],
+  "langCount": null,
+  "capabilities": {
+    "reasoning": false,
+    "coding": true,
+    "vision": false,
+    "functionCalling": false,
+    "toolUse": false,
+    "agentic": false
+  },
+  "apiAvailable": true,
+  "price": null,
+  "links": {
+    "hf": "Snowflake/snowflake-arctic-instruct",
+    "gh": "Snowflake-Labs/snowflake-arctic",
+    "docs": "snowflake.com/en/blog/arctic-open-efficient-foundation-language-models-snowflake"
+  },
+  "note": "Apache-2.0 480B-total/17B-active dense+MoE hybrid (128 experts) tuned for enterprise SQL/code/instruction-following, trained for under $2M.",
+  "quants": [
+    "GGUF Q4"
+  ],
+  "vramQ4Gb": 291,
+  "vramFp16Gb": 960,
+  "tps4090": null,
+  "tpsNote": "480B total parameters (Q4 ~291GB) require a multi-GPU server; not runnable on a single consumer GPU, and mainline llama.cpp needs a community fork for Arctic's architecture.",
+  "effortLabel": null,
+  "isDefaultConfig": true,
+  "isBestConfig": true,
+  "specSources": {
+    "releaseDate": "https://www.snowflake.com/en/blog/arctic-open-efficient-foundation-language-models-snowflake/",
+    "paramsB": "https://huggingface.co/Snowflake/snowflake-arctic-instruct",
+    "ctxK": "https://huggingface.co/Snowflake/snowflake-arctic-instruct/raw/main/config.json",
+    "openness": "https://huggingface.co/Snowflake/snowflake-arctic-instruct"
+  },
+  "results": [
+    {
+      "benchmarkSlug": "mmlu",
+      "score": 67.3,
+      "source": "independent",
+      "sourceUrl": "https://www.flexera.com/blog/finops/snowflake-arctic",
+      "notes": "Reproduces Snowflake's official benchmark chart."
+    },
+    {
+      "benchmarkSlug": "gsm8k",
+      "score": 74.2,
+      "source": "independent",
+      "sourceUrl": "https://www.flexera.com/blog/finops/snowflake-arctic"
+    },
+    {
+      "benchmarkSlug": "humaneval",
+      "score": 64.3,
+      "source": "independent",
+      "sourceUrl": "https://www.flexera.com/blog/finops/snowflake-arctic"
+    },
+    {
+      "benchmarkSlug": "ifeval",
+      "score": 52.4,
+      "source": "independent",
+      "sourceUrl": "https://www.flexera.com/blog/finops/snowflake-arctic"
+    }
+  ],
+  "verificationNotes": "Confirmed real via Snowflake's official blog (fetched directly): 480B total / 17B active dense+MoE hybrid (10B dense + 128x3.66B experts, top-2 gating), Apache-2.0, released 2024-04-24, trained for under $2M. Context length of 4K confirmed directly from the HF config.json max_position_embeddings=4096 field. All 4 result rows (MMLU 67.3, GSM8k 74.2, HumanEval 64.3, IFEval 52.4) literally confirmed present on the cited Flexera blog page. No changes needed."
+}

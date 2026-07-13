@@ -1,0 +1,84 @@
+{
+  "name": "Gopher",
+  "org": "Google",
+  "family": "Gopher",
+  "releaseDate": "2021-12-08",
+  "status": "deprecated",
+  "openness": "closed",
+  "license": "Proprietary (Google DeepMind; research model, weights never released)",
+  "paramsB": 280,
+  "activeParamsB": null,
+  "archClass": "dense",
+  "archDisplay": "Dense decoder-only Transformer (280B)",
+  "ctxK": 2,
+  "modalities": [
+    "text"
+  ],
+  "langCount": null,
+  "capabilities": {
+    "reasoning": false,
+    "coding": false,
+    "vision": false,
+    "functionCalling": false,
+    "toolUse": false,
+    "agentic": false
+  },
+  "apiAvailable": false,
+  "price": null,
+  "links": {
+    "docs": "arxiv.org/abs/2112.11446"
+  },
+  "note": "280B dense decoder-only Transformer; DeepMind's key data point in scaling research ahead of Chinchilla.",
+  "quants": [],
+  "vramQ4Gb": null,
+  "vramFp16Gb": null,
+  "tps4090": null,
+  "tpsNote": null,
+  "effortLabel": null,
+  "isDefaultConfig": true,
+  "isBestConfig": true,
+  "specSources": {
+    "paramsB": "https://arxiv.org/abs/2112.11446",
+    "ctxK": "https://arxiv.org/abs/2112.11446",
+    "releaseDate": "https://deepmind.google/blog/language-modelling-at-scale-gopher-ethical-considerations-and-retrieval/",
+    "openness": "https://arxiv.org/abs/2112.11446"
+  },
+  "results": [
+    {
+      "benchmarkSlug": "mmlu",
+      "score": 60,
+      "source": "self-reported",
+      "sourceUrl": "https://arxiv.org/abs/2203.15556",
+      "notes": "5-shot average accuracy, reported in the Chinchilla paper's comparison table"
+    },
+    {
+      "benchmarkSlug": "bigbench",
+      "score": 54.4,
+      "source": "self-reported",
+      "sourceUrl": "https://arxiv.org/abs/2203.15556",
+      "notes": "Average accuracy across 62 BIG-bench tasks, reported in Chinchilla paper"
+    },
+    {
+      "benchmarkSlug": "race-h",
+      "score": 71.6,
+      "source": "self-reported",
+      "sourceUrl": "https://arxiv.org/abs/2203.15556",
+      "notes": "RACE-h few-shot reading comprehension score (corrected slug from 'arc-challenge', which was a mislabel in the source record -- this is RACE-h, not ARC-Challenge)"
+    },
+    {
+      "benchmarkSlug": "trivia-qa",
+      "score": 63.6,
+      "source": "self-reported",
+      "sourceUrl": "https://arxiv.org/abs/2203.15556",
+      "notes": "TriviaQA unfiltered, 5-shot"
+    },
+    {
+      "benchmarkSlug": "lambada",
+      "score": 74.5,
+      "source": "self-reported",
+      "sourceUrl": "https://arxiv.org/abs/2203.15556",
+      "notes": "Zero-shot LAMBADA accuracy"
+    }
+  ],
+  "verificationNotes": "Confirmed real via arxiv.org/abs/2112.11446 (submitted 2021-12-08, matches releaseDate) and press coverage (InfoQ) -- 280B dense decoder-only Transformer trained on MassiveText, matches paramsB/archDisplay. Confirmed 2048-token context window via independent summaries of the Gopher paper (matches ctxK=2). Fetched full text of the Chinchilla paper (arxiv 2203.15556, ar5iv rendering) and confirmed its comparison table literally shows Gopher: MMLU 60.0, BIG-bench 54.4, TriviaQA 63.6, LAMBADA 74.5, and RACE-h 71.6 -- all four numeric rows matched. Corrected one row: the source record labeled the 71.6 score 'arc-challenge' while its own notes admitted it was actually RACE-h; renamed the benchmarkSlug to 'race-h' to remove the mislabel rather than keep an inaccurate slug. Closed/proprietary status confirmed (DeepMind research model, no weight release)."
+}

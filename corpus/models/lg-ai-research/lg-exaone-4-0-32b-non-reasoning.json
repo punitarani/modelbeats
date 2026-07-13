@@ -1,0 +1,95 @@
+{
+  "name": "LG EXAONE 4.0 32B (Non-reasoning)",
+  "org": "LG AI Research",
+  "family": "EXAONE 4.0",
+  "releaseDate": "2025-07-15",
+  "status": "released",
+  "openness": "open-weights",
+  "license": "EXAONE AI Model License Agreement 1.2 (NC)",
+  "paramsB": 32,
+  "activeParamsB": null,
+  "archClass": "dense",
+  "archDisplay": "Dense hybrid-attention transformer, 64 layers, local:global attention 3:1, GQA (40Q/8KV), QK-Reorder-Norm; single checkpoint with toggleable non-reasoning/reasoning modes",
+  "ctxK": 131,
+  "modalities": [
+    "text"
+  ],
+  "langCount": 3,
+  "capabilities": {
+    "reasoning": false,
+    "coding": true,
+    "vision": false,
+    "functionCalling": true,
+    "toolUse": true,
+    "agentic": true
+  },
+  "apiAvailable": false,
+  "price": null,
+  "links": {
+    "hf": "LGAI-EXAONE/EXAONE-4.0-32B",
+    "gh": "LG-AI-EXAONE/EXAONE-4.0"
+  },
+  "note": "Default (non-reasoning) mode of Korea's first open-weight hybrid model; faster, lower scores on math/coding than reasoning mode.",
+  "quants": [
+    "FP8",
+    "GGUF Q4"
+  ],
+  "vramQ4Gb": 20,
+  "vramFp16Gb": 64,
+  "tps4090": null,
+  "tpsNote": null,
+  "effortLabel": "Non-reasoning",
+  "isDefaultConfig": true,
+  "isBestConfig": false,
+  "specSources": {
+    "paramsB": "https://huggingface.co/LGAI-EXAONE/EXAONE-4.0-32B",
+    "ctxK": "https://huggingface.co/LGAI-EXAONE/EXAONE-4.0-32B",
+    "releaseDate": "https://www.prnewswire.com/news-releases/lg-unveils-koreas-first-open-weight-hybrid-ai-exaone-4-0-302505577.html",
+    "openness": "https://huggingface.co/LGAI-EXAONE/EXAONE-4.0-32B"
+  },
+  "results": [
+    {
+      "benchmarkSlug": "mmlu-redux",
+      "score": 89.8,
+      "source": "self-reported",
+      "sourceUrl": "https://arxiv.org/abs/2507.11407",
+      "notes": "Non-reasoning mode"
+    },
+    {
+      "benchmarkSlug": "mmlu-pro",
+      "score": 77.6,
+      "source": "self-reported",
+      "sourceUrl": "https://arxiv.org/abs/2507.11407",
+      "notes": "Non-reasoning mode"
+    },
+    {
+      "benchmarkSlug": "gpqa",
+      "score": 63.7,
+      "source": "self-reported",
+      "sourceUrl": "https://arxiv.org/abs/2507.11407",
+      "notes": "GPQA-Diamond, non-reasoning mode"
+    },
+    {
+      "benchmarkSlug": "aime",
+      "score": 35.9,
+      "source": "self-reported",
+      "sourceUrl": "https://arxiv.org/abs/2507.11407",
+      "notes": "AIME 2025, non-reasoning mode"
+    },
+    {
+      "benchmarkSlug": "livecodebench",
+      "score": 43.3,
+      "source": "self-reported",
+      "sourceUrl": "https://arxiv.org/abs/2507.11407",
+      "notes": "LiveCodeBench v5, non-reasoning mode"
+    },
+    {
+      "benchmarkSlug": "ifeval",
+      "score": 84.8,
+      "source": "self-reported",
+      "sourceUrl": "https://arxiv.org/abs/2507.11407",
+      "notes": "Non-reasoning mode"
+    }
+  ],
+  "verificationNotes": "Existence, release date (2025-07-15, 'Korea's first open-weight hybrid AI model'), 131K context, license v1.2 NC, trilingual EN/KO/ES, and function-calling/tool-use/agentic support confirmed on HF model card and PR Newswire release. Fetched full text (arxiv.org/html/2507.11407) and confirmed all 6 non-reasoning-mode rows (Table 4) match exactly: MMLU-Redux 89.8, MMLU-Pro 77.6, GPQA-Diamond 63.7, AIME2025 35.9, LiveCodeBench v5 43.3, IFEval 84.8 — no changes."
+}

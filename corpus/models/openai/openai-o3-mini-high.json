@@ -1,0 +1,85 @@
+{
+  "name": "OpenAI o3-mini (High)",
+  "org": "OpenAI",
+  "family": "o3",
+  "releaseDate": "2025-01-31",
+  "status": "released",
+  "openness": "closed",
+  "license": "Proprietary",
+  "paramsB": null,
+  "activeParamsB": null,
+  "archClass": "dense",
+  "archDisplay": "Dense transformer reasoning model (size undisclosed)",
+  "ctxK": 200,
+  "modalities": [
+    "text"
+  ],
+  "langCount": null,
+  "capabilities": {
+    "reasoning": true,
+    "coding": true,
+    "vision": false,
+    "functionCalling": true,
+    "toolUse": true,
+    "agentic": true
+  },
+  "apiAvailable": true,
+  "price": {
+    "input": 1.1,
+    "output": 4.4,
+    "provider": "OpenAI"
+  },
+  "links": {
+    "docs": "developers.openai.com/api/docs/models/o3-mini"
+  },
+  "note": "Highest reasoning-effort setting: best accuracy of the o3-mini family, higher latency/cost per query.",
+  "quants": [],
+  "vramQ4Gb": null,
+  "vramFp16Gb": null,
+  "tps4090": null,
+  "tpsNote": null,
+  "effortLabel": "High",
+  "isDefaultConfig": false,
+  "isBestConfig": true,
+  "specSources": {
+    "releaseDate": "https://www.prompthub.us/models/o3-mini",
+    "ctxK": "https://www.prompthub.us/models/o3-mini",
+    "openness": "https://www.prompthub.us/models/o3-mini",
+    "paramsB": "https://www.prompthub.us/models/o3-mini"
+  },
+  "results": [
+    {
+      "benchmarkSlug": "aime",
+      "score": 87.3,
+      "source": "independent",
+      "sourceUrl": "https://www.lesswrong.com/posts/srdxEAcdmetdAiGcz/o3-mini-early-days",
+      "evaluatedAt": "2025-01-01",
+      "notes": "AIME 2024, high effort"
+    },
+    {
+      "benchmarkSlug": "gpqa",
+      "score": 79.7,
+      "source": "independent",
+      "sourceUrl": "https://www.lesswrong.com/posts/srdxEAcdmetdAiGcz/o3-mini-early-days",
+      "evaluatedAt": "2025-01-01",
+      "notes": "GPQA Diamond, high effort"
+    },
+    {
+      "benchmarkSlug": "codeforces",
+      "score": 2130,
+      "source": "independent",
+      "sourceUrl": "https://www.lesswrong.com/posts/srdxEAcdmetdAiGcz/o3-mini-early-days",
+      "evaluatedAt": "2025-01-01",
+      "notes": "Codeforces Elo, high effort"
+    },
+    {
+      "benchmarkSlug": "swe-bench",
+      "score": 49.3,
+      "source": "independent",
+      "sourceUrl": "https://www.lesswrong.com/posts/srdxEAcdmetdAiGcz/o3-mini-early-days",
+      "evaluatedAt": "2025-01-01",
+      "notes": "SWE-bench Verified, high effort"
+    }
+  ],
+  "verificationNotes": "Existence, release date (2025-01-31), 200K context and $1.10/$4.40 pricing all confirmed via independent sources (VentureBeat, OpenAI docs mirrors). All 4 benchmark rows (AIME 87.3, GPQA 79.7, Codeforces 2130, SWE-bench 49.3) confirmed verbatim on the cited LessWrong post. No changes made."
+}

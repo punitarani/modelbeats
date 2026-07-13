@@ -1,0 +1,51 @@
+{
+  "name": "RedPajama-INCITE-7B-Base",
+  "org": "Together",
+  "family": "RedPajama-INCITE",
+  "releaseDate": "2023-06-06",
+  "status": "released",
+  "openness": "open-source",
+  "license": "Apache-2.0",
+  "paramsB": 6.9,
+  "activeParamsB": null,
+  "archClass": "dense",
+  "archDisplay": "GPT-NeoX / Pythia-style dense transformer",
+  "ctxK": 2,
+  "modalities": [
+    "text"
+  ],
+  "langCount": null,
+  "capabilities": {
+    "reasoning": false,
+    "coding": false,
+    "vision": false,
+    "functionCalling": false,
+    "toolUse": false,
+    "agentic": false
+  },
+  "apiAvailable": false,
+  "price": null,
+  "links": {
+    "hf": "togethercomputer/RedPajama-INCITE-7B-Base",
+    "docs": "together.ai/blog/redpajama-7b"
+  },
+  "note": "Fully reproducible 7B trained on 1T RedPajama-1T tokens with 10 released checkpoints, Apache-2.0.",
+  "quants": [
+    "GGUF Q4"
+  ],
+  "vramQ4Gb": 5,
+  "vramFp16Gb": 14,
+  "tps4090": null,
+  "tpsNote": null,
+  "effortLabel": null,
+  "isDefaultConfig": true,
+  "isBestConfig": true,
+  "specSources": {
+    "paramsB": "https://huggingface.co/togethercomputer/RedPajama-INCITE-7B-Base",
+    "ctxK": "https://www.together.ai/blog/redpajama-3b-updates",
+    "releaseDate": "https://www.together.ai/blog/redpajama-7b",
+    "openness": "https://huggingface.co/togethercomputer/RedPajama-INCITE-7B-Base"
+  },
+  "results": [],
+  "verificationNotes": "Confirmed via together.ai/blog/redpajama-7b (published June 6, 2023): Apache 2.0, 10 intermediate checkpoints released, 1.001T training tokens. HF card confirms '6.9B parameter' count and GPT-NeoX architecture. Fetched arxiv.org/html/2411.12372 directly and confirmed Table 8 verbatim: RedPajama-INCITE-7B-Base 0.431, LLaMA-7B 0.472, Falcon-7B 0.441, MPT-7B 0.444 — exact match to claimed row."
+}

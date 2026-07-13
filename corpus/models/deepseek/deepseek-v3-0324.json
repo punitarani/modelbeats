@@ -1,0 +1,91 @@
+{
+  "name": "DeepSeek-V3-0324",
+  "org": "DeepSeek",
+  "family": "DeepSeek-V3",
+  "releaseDate": "2025-03-24",
+  "status": "released",
+  "openness": "open-weights",
+  "license": "MIT",
+  "paramsB": 671,
+  "activeParamsB": 37,
+  "archClass": "moe",
+  "archDisplay": "DeepSeekMoE: 256 routed + 1 shared expert, top-8 routing, 61 layers (3 dense + 58 MoE), Multi-head Latent Attention (MLA)",
+  "ctxK": 128,
+  "modalities": [
+    "text"
+  ],
+  "langCount": null,
+  "capabilities": {
+    "reasoning": false,
+    "coding": true,
+    "vision": false,
+    "functionCalling": true,
+    "toolUse": true,
+    "agentic": true
+  },
+  "apiAvailable": true,
+  "price": {
+    "input": 0.27,
+    "output": 1.1,
+    "provider": "DeepSeek"
+  },
+  "links": {
+    "hf": "deepseek-ai/DeepSeek-V3-0324",
+    "gh": "deepseek-ai/DeepSeek-V3",
+    "docs": "api-docs.deepseek.com"
+  },
+  "note": "March 2025 refresh of V3 with big reasoning/math/coding/front-end gains (AIME 39.6 to 59.4) and improved function calling and JSON output; MIT-licensed.",
+  "quants": [
+    "GGUF Q4_K_M",
+    "AWQ",
+    "MLX"
+  ],
+  "vramQ4Gb": 404,
+  "vramFp16Gb": 1342,
+  "tps4090": null,
+  "tpsNote": "671B MoE far exceeds a single 24GB 4090; typically deployed on multi-GPU servers or via CPU-offload dynamic GGUF quants (~150-250GB range).",
+  "effortLabel": null,
+  "isDefaultConfig": true,
+  "isBestConfig": true,
+  "specSources": {
+    "paramsB": "https://huggingface.co/deepseek-ai/DeepSeek-V3-0324",
+    "ctxK": "https://huggingface.co/deepseek-ai/DeepSeek-V3-0324/blob/main/config.json",
+    "releaseDate": "https://api-docs.deepseek.com/news/news250325/",
+    "openness": "https://huggingface.co/deepseek-ai/DeepSeek-V3-0324"
+  },
+  "results": [
+    {
+      "benchmarkSlug": "aime",
+      "score": 59.4,
+      "source": "self-reported",
+      "sourceUrl": "https://huggingface.co/deepseek-ai/DeepSeek-V3-0324",
+      "evaluatedAt": "2025-03-24",
+      "notes": "AIME 2024, up from 39.6 in Dec-2024 V3"
+    },
+    {
+      "benchmarkSlug": "gpqa",
+      "score": 68.4,
+      "source": "self-reported",
+      "sourceUrl": "https://huggingface.co/deepseek-ai/DeepSeek-V3-0324",
+      "evaluatedAt": "2025-03-24",
+      "notes": "GPQA Diamond"
+    },
+    {
+      "benchmarkSlug": "mmlu-pro",
+      "score": 81.2,
+      "source": "self-reported",
+      "sourceUrl": "https://huggingface.co/deepseek-ai/DeepSeek-V3-0324",
+      "evaluatedAt": "2025-03-24",
+      "notes": "MMLU-Pro"
+    },
+    {
+      "benchmarkSlug": "livecodebench",
+      "score": 49.2,
+      "source": "self-reported",
+      "sourceUrl": "https://huggingface.co/deepseek-ai/DeepSeek-V3-0324",
+      "evaluatedAt": "2025-03-24",
+      "notes": "LiveCodeBench"
+    }
+  ],
+  "verificationNotes": "Existence and release confirmed via DeepSeek's own news post (api-docs.deepseek.com/news/news250325, published 2025-03-25 referencing a 3/24 model card date) and the live HF card, both stating MIT license. Note: HF safetensors index sums to ~685B raw tensor weight but DeepSeek's own papers/cards and consistent third-party reporting describe the architecture as 671B total/37B active (685B includes the multi-token-prediction head), so 671B is kept as the standard-cited figure. All 4 result rows (AIME 59.4, GPQA 68.4, MMLU-Pro 81.2, LiveCodeBench 49.2) confirmed literally on the HF card as the 'after' values of the delta callouts. Caveat (not changed in record): DeepSeek's own 'deepseek-chat' API alias now silently routes to a newer V4-Flash model (since ~Apr 2026) and deprecates 2026-07-24, so the $0.27/$1.10 figure is the original 2025 DeepSeek-hosted launch price, not what DeepSeek's API bills today; the open weights remain genuinely available via self-host or third-party providers."
+}

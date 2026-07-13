@@ -1,0 +1,92 @@
+{
+  "name": "Qwen2.5-32B",
+  "org": "Alibaba",
+  "family": "Qwen2.5",
+  "releaseDate": "2024-09-19",
+  "status": "released",
+  "openness": "open-weights",
+  "license": "Apache-2.0",
+  "paramsB": 32.5,
+  "activeParamsB": null,
+  "archClass": "dense",
+  "archDisplay": "Dense transformer, 64 layers (GQA 40Q/8KV)",
+  "ctxK": 128,
+  "modalities": [
+    "text"
+  ],
+  "langCount": 29,
+  "capabilities": {
+    "reasoning": true,
+    "coding": true,
+    "vision": false,
+    "functionCalling": true,
+    "toolUse": true,
+    "agentic": true
+  },
+  "apiAvailable": false,
+  "price": null,
+  "links": {
+    "hf": "Qwen/Qwen2.5-32B",
+    "gh": "QwenLM/Qwen2.5",
+    "docs": "qwenlm.github.io/blog/qwen2.5"
+  },
+  "note": "Popular Apache-2.0 quality-per-cost dense model; officially reported to beat larger Gemma2-27B/Phi-3.5-MoE baselines.",
+  "quants": [
+    "GGUF",
+    "AWQ",
+    "GPTQ Int4",
+    "MLX"
+  ],
+  "vramQ4Gb": 19.9,
+  "vramFp16Gb": 65,
+  "tps4090": null,
+  "tpsNote": "~20GB Q4 fits within 24GB with limited headroom for context/KV cache; no single independently verified 4090 tok/s figure found.",
+  "effortLabel": null,
+  "isDefaultConfig": true,
+  "isBestConfig": true,
+  "specSources": {
+    "paramsB": "https://huggingface.co/Qwen/Qwen2.5-32B",
+    "ctxK": "https://huggingface.co/Qwen/Qwen2.5-32B",
+    "releaseDate": "https://qwenlm.github.io/blog/qwen2.5/",
+    "openness": "https://huggingface.co/Qwen/Qwen2.5-32B"
+  },
+  "results": [
+    {
+      "benchmarkSlug": "mmlu",
+      "score": 83.3,
+      "source": "self-reported",
+      "sourceUrl": "https://qwenlm.github.io/blog/qwen2.5-llm/"
+    },
+    {
+      "benchmarkSlug": "mmlu-pro",
+      "score": 55.1,
+      "source": "self-reported",
+      "sourceUrl": "https://qwenlm.github.io/blog/qwen2.5-llm/"
+    },
+    {
+      "benchmarkSlug": "math",
+      "score": 57.7,
+      "source": "self-reported",
+      "sourceUrl": "https://qwenlm.github.io/blog/qwen2.5-llm/"
+    },
+    {
+      "benchmarkSlug": "gsm8k",
+      "score": 92.9,
+      "source": "self-reported",
+      "sourceUrl": "https://qwenlm.github.io/blog/qwen2.5-llm/"
+    },
+    {
+      "benchmarkSlug": "humaneval",
+      "score": 58.5,
+      "source": "self-reported",
+      "sourceUrl": "https://qwenlm.github.io/blog/qwen2.5-llm/"
+    },
+    {
+      "benchmarkSlug": "mbpp",
+      "score": 84.5,
+      "source": "self-reported",
+      "sourceUrl": "https://qwenlm.github.io/blog/qwen2.5-llm/"
+    }
+  ],
+  "verificationNotes": "Fully confirmed via live fetch of qwenlm.github.io/blog/qwen2.5-llm/ base-model table: MMLU 83.3, MMLU-Pro 55.1, MATH 57.7, GSM8K 92.9, HumanEval 58.5, MBPP 84.5 all match exactly. License Apache 2.0 explicitly confirmed on the page. No changes needed."
+}

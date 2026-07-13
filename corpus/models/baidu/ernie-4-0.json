@@ -1,0 +1,48 @@
+{
+  "name": "ERNIE 4.0",
+  "org": "Baidu",
+  "family": "ERNIE",
+  "releaseDate": "2023-10-17",
+  "status": "released",
+  "openness": "closed",
+  "license": "Proprietary",
+  "paramsB": null,
+  "activeParamsB": null,
+  "archClass": "dense",
+  "archDisplay": "Dense Transformer (parameter count undisclosed)",
+  "ctxK": 8,
+  "modalities": [
+    "text",
+    "vision"
+  ],
+  "langCount": null,
+  "capabilities": {
+    "reasoning": false,
+    "coding": true,
+    "vision": true,
+    "functionCalling": true,
+    "toolUse": true,
+    "agentic": false
+  },
+  "apiAvailable": true,
+  "price": null,
+  "links": {
+    "docs": "qianfan.baidubce.com"
+  },
+  "note": "GPT-4-class flagship unveiled at Baidu World 2023; superseded by ERNIE 4.0 Turbo (2024, priced CNY12-20/M tokens) and later ERNIE 4.5/5.0.",
+  "quants": [],
+  "vramQ4Gb": null,
+  "vramFp16Gb": null,
+  "tps4090": null,
+  "tpsNote": null,
+  "effortLabel": null,
+  "isDefaultConfig": true,
+  "isBestConfig": true,
+  "specSources": {
+    "releaseDate": "https://voicebot.ai/2023/10/20/baidu-rolls-out-ernie-4-0-generative-ai-model-rivaling-gpt-4/",
+    "ctxK": "https://getfreeai.net/en/services/api/baidu/",
+    "openness": "https://technode.com/2023/10/18/baidu-claims-latest-version-of-ernie-ai-model-is-on-a-par-with-gpt-4/"
+  },
+  "results": [],
+  "verificationNotes": "Existence and Oct 17, 2023 release date (Baidu World 2023 keynote) confirmed via Voicebot.ai, PRNewswire, and CNBC coverage, all dated Oct 17-18 2023 reporting the same-day/previous-day launch — exact match to the given releaseDate. paramsB correctly left null; undisclosed in every source found. No specific benchmark result rows were present in the original record, so none were added (avoiding unverified numbers)."
+}

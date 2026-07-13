@@ -1,0 +1,80 @@
+{
+  "name": "InternVL2.5-78B",
+  "org": "OpenGVLab (Shanghai AI Lab)",
+  "family": "InternVL 2.5",
+  "releaseDate": "2024-12-05",
+  "status": "released",
+  "openness": "open-weights",
+  "license": "Qwen License (InternViT component MIT; Qwen2.5-72B-Instruct component under Qwen License)",
+  "paramsB": 78,
+  "activeParamsB": null,
+  "archClass": "dense",
+  "archDisplay": "InternViT-6B vision encoder + Qwen2.5-72B language model (dense composite MLLM)",
+  "ctxK": 32,
+  "modalities": [
+    "text",
+    "vision"
+  ],
+  "langCount": null,
+  "capabilities": {
+    "reasoning": false,
+    "coding": false,
+    "vision": true,
+    "functionCalling": false,
+    "toolUse": false,
+    "agentic": false
+  },
+  "apiAvailable": true,
+  "price": null,
+  "links": {
+    "hf": "OpenGVLab/InternVL2_5-78B",
+    "gh": "OpenGVLab/InternVL"
+  },
+  "note": "First open-source MLLM to exceed 70% on MMMU, rivaling GPT-4o while trained on far fewer tokens than competitors.",
+  "quants": [
+    "AWQ"
+  ],
+  "vramQ4Gb": 53,
+  "vramFp16Gb": 156,
+  "tps4090": null,
+  "tpsNote": "78B model exceeds a single RTX 4090's 24GB VRAM even at Q4 (~53GB needed); no single-4090 measurement exists.",
+  "effortLabel": null,
+  "isDefaultConfig": true,
+  "isBestConfig": true,
+  "specSources": {
+    "paramsB": "https://huggingface.co/OpenGVLab/InternVL2_5-78B",
+    "ctxK": "https://github.com/OpenGVLab/InternVL/issues/809",
+    "releaseDate": "https://internvl.github.io/blog/2024-12-05-InternVL-2.5/",
+    "openness": "https://huggingface.co/OpenGVLab/InternVL2_5-78B"
+  },
+  "results": [
+    {
+      "benchmarkSlug": "mmmu",
+      "score": 70.1,
+      "source": "self-reported",
+      "sourceUrl": "https://internvl.github.io/blog/2024-12-05-InternVL-2.5/",
+      "notes": "MMMU val, with CoT"
+    },
+    {
+      "benchmarkSlug": "mathvista",
+      "score": 72.3,
+      "source": "self-reported",
+      "sourceUrl": "https://internvl.github.io/blog/2024-12-05-InternVL-2.5/",
+      "notes": "MathVista mini"
+    },
+    {
+      "benchmarkSlug": "docvqa",
+      "score": 95.1,
+      "source": "self-reported",
+      "sourceUrl": "https://internvl.github.io/blog/2024-12-05-InternVL-2.5/",
+      "notes": "DocVQA test"
+    },
+    {
+      "benchmarkSlug": "ocrbench",
+      "score": 854,
+      "source": "self-reported",
+      "sourceUrl": "https://internvl.github.io/blog/2024-12-05-InternVL-2.5/"
+    }
+  ],
+  "verificationNotes": "Confirmed real: release date Dec 5, 2024 confirmed via internvl.github.io blog post. Fetched HF model card directly — confirms 78B total, architecture is InternViT-6B + Qwen2.5-72B-Instruct + MLP projector, and license is MIT for the project/InternViT component with Qwen2.5-72B-Instruct governed by the separate Qwen License (matches record). Fetched the InternVL 2.5 blog page directly and confirmed all four benchmark numbers verbatim: MMMU 70.1, MathVista 72.3, DocVQA 95.1, OCRBench 854. CAVEAT: ctxK=32 (32K) is inferred from the Qwen2.5-72B-Instruct backbone's native context length, not an explicit, directly-stated context spec for the multimodal InternVL2.5-78B checkpoint itself — the cited GitHub issue is an unanswered question, not a confirmation, and other InternVL documentation suggests InternVL2.5 models were officially evaluated at 16K rather than 32K. Kept the value since it is a defensible LLM-backbone-derived estimate, but confidence is moderate rather than high."
+}

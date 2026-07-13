@@ -1,0 +1,52 @@
+{
+  "name": "Claude Opus 4.5 (Medium)",
+  "org": "Anthropic",
+  "family": "Claude 4",
+  "releaseDate": "2025-11-24",
+  "status": "released",
+  "openness": "closed",
+  "license": "Proprietary",
+  "paramsB": null,
+  "activeParamsB": null,
+  "archClass": "dense",
+  "archDisplay": "Dense Transformer (undisclosed configuration)",
+  "ctxK": 200,
+  "modalities": [
+    "text",
+    "vision"
+  ],
+  "langCount": null,
+  "capabilities": {
+    "reasoning": true,
+    "coding": true,
+    "vision": true,
+    "functionCalling": true,
+    "toolUse": true,
+    "agentic": true
+  },
+  "apiAvailable": true,
+  "price": {
+    "input": 5,
+    "output": 25,
+    "provider": "Anthropic"
+  },
+  "links": {
+    "docs": "platform.claude.com"
+  },
+  "note": "Medium effort matches Sonnet 4.5's peak SWE-bench score while using 76% fewer output tokens.",
+  "quants": [],
+  "vramQ4Gb": null,
+  "vramFp16Gb": null,
+  "tps4090": null,
+  "tpsNote": null,
+  "effortLabel": "Medium",
+  "isDefaultConfig": false,
+  "isBestConfig": false,
+  "specSources": {
+    "releaseDate": "https://www.anthropic.com/news/claude-opus-4-5",
+    "ctxK": "https://www.anthropic.com/news/claude-opus-4-5",
+    "openness": "https://www.anthropic.com/news/claude-opus-4-5"
+  },
+  "results": [],
+  "verificationNotes": "Model confirmed real: release date 2025-11-24, 200K context, $5/$25 API pricing all verified live on anthropic.com/news/claude-opus-4-5. Anthropic's post and secondary write-ups (theunwindai, datacamp) only state qualitatively that medium effort 'matches Sonnet 4.5's best SWE-bench score' (Sonnet 4.5's own 77.2% is separately sourced elsewhere) — no page states a literal numeric SWE-bench score for Opus 4.5 itself at medium effort, so the unconfirmable 77.2 result row was dropped rather than kept as an inferred number."
+}

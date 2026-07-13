@@ -1,0 +1,87 @@
+{
+  "name": "gpt-oss-20b (Low)",
+  "org": "OpenAI",
+  "family": "gpt-oss",
+  "releaseDate": "2025-08-05",
+  "status": "released",
+  "openness": "open-weights",
+  "license": "Apache 2.0",
+  "paramsB": 21,
+  "activeParamsB": 3.6,
+  "archClass": "moe",
+  "archDisplay": "Mixture-of-experts transformer, 32 experts/layer, top-4 active, 24 layers",
+  "ctxK": 128,
+  "modalities": [
+    "text"
+  ],
+  "langCount": null,
+  "capabilities": {
+    "reasoning": true,
+    "coding": true,
+    "vision": false,
+    "functionCalling": true,
+    "toolUse": true,
+    "agentic": true
+  },
+  "apiAvailable": true,
+  "price": null,
+  "links": {
+    "hf": "openai/gpt-oss-20b",
+    "gh": "openai/gpt-oss",
+    "docs": "cookbook.openai.com"
+  },
+  "note": "21B MoE (3.6B active) open-weight sibling that runs on consumer hardware; Apache 2.0.",
+  "quants": [
+    "MXFP4 (native)",
+    "GGUF Q4_K_M",
+    "GGUF Q8_0"
+  ],
+  "vramQ4Gb": 13,
+  "vramFp16Gb": 42,
+  "tps4090": 225,
+  "tpsNote": "225 tok/s at 8k context (Q4_K_M GGUF, llama.cpp) on RTX 4090; throughput collapses to ~9 tok/s at full 128k context.",
+  "effortLabel": "Low",
+  "isDefaultConfig": false,
+  "isBestConfig": false,
+  "specSources": {
+    "paramsB": "https://huggingface.co/openai/gpt-oss-20b",
+    "ctxK": "https://openai.com/index/introducing-gpt-oss/",
+    "releaseDate": "https://openai.com/index/introducing-gpt-oss/",
+    "openness": "https://huggingface.co/openai/gpt-oss-20b"
+  },
+  "results": [
+    {
+      "benchmarkSlug": "aime",
+      "score": 42.1,
+      "source": "self-reported",
+      "sourceUrl": "https://arxiv.org/abs/2508.10925",
+      "evaluatedAt": "2025-08-05",
+      "notes": "AIME 2024, no tools, low reasoning effort"
+    },
+    {
+      "benchmarkSlug": "gpqa",
+      "score": 56.8,
+      "source": "self-reported",
+      "sourceUrl": "https://arxiv.org/abs/2508.10925",
+      "evaluatedAt": "2025-08-05",
+      "notes": "GPQA Diamond, no tools, low reasoning effort"
+    },
+    {
+      "benchmarkSlug": "mmlu",
+      "score": 80.4,
+      "source": "self-reported",
+      "sourceUrl": "https://arxiv.org/abs/2508.10925",
+      "evaluatedAt": "2025-08-05",
+      "notes": "low reasoning effort"
+    },
+    {
+      "benchmarkSlug": "swe-bench",
+      "score": 37.4,
+      "source": "self-reported",
+      "sourceUrl": "https://arxiv.org/abs/2508.10925",
+      "evaluatedAt": "2025-08-05",
+      "notes": "SWE-bench Verified, low reasoning effort"
+    }
+  ],
+  "verificationNotes": "Confirmed real. HF model card (fetched) confirms 21B total / 3.6B active params and Apache 2.0 license verbatim. Independent architecture writeups corroborate 24 layers, 32 experts/layer, top-4 routing. Third-party hardware guides corroborate the ~13GB Q4 VRAM footprint and the '225 tok/s on RTX 4090' throughput claim specifically (matched search result title verbatim). Fetched arxiv.org/html/2508.10925v1 table and confirmed all four low-effort scores verbatim: AIME 42.1, GPQA 56.8, MMLU 80.4, SWE-bench Verified 37.4. No changes made."
+}

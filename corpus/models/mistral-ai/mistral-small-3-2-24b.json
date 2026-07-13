@@ -1,0 +1,84 @@
+{
+  "name": "Mistral Small 3.2 (24B)",
+  "org": "Mistral AI",
+  "family": "Mistral Small",
+  "releaseDate": "2025-06-20",
+  "status": "released",
+  "openness": "open-weights",
+  "license": "Apache 2.0",
+  "paramsB": 24,
+  "activeParamsB": null,
+  "archClass": "dense",
+  "archDisplay": "Dense transformer (24B), vision-language, incremental update of Small 3.1",
+  "ctxK": 128,
+  "modalities": [
+    "text",
+    "vision"
+  ],
+  "langCount": null,
+  "capabilities": {
+    "reasoning": false,
+    "coding": true,
+    "vision": true,
+    "functionCalling": true,
+    "toolUse": true,
+    "agentic": true
+  },
+  "apiAvailable": true,
+  "price": {
+    "input": 0.08,
+    "output": 0.2,
+    "provider": "Mistral La Plateforme"
+  },
+  "links": {
+    "hf": "mistralai/Mistral-Small-3.2-24B-Instruct-2506",
+    "docs": "docs.mistral.ai"
+  },
+  "note": "Drop-in upgrade over 3.1: markedly better instruction following, roughly half the infinite-generation errors, more reliable function calling.",
+  "quants": [
+    "GGUF Q4",
+    "AWQ",
+    "MLX"
+  ],
+  "vramQ4Gb": 14.5,
+  "vramFp16Gb": 55,
+  "tps4090": 70,
+  "tpsNote": "~70 tok/s (est.) at Q4_K_M on RTX 4090, based on same-architecture Mistral Small 3.1 measurement",
+  "effortLabel": null,
+  "isDefaultConfig": true,
+  "isBestConfig": true,
+  "specSources": {
+    "releaseDate": "https://simonwillison.net/2025/Jun/20/mistral-small-32/",
+    "openness": "https://huggingface.co/mistralai/Mistral-Small-3.2-24B-Instruct-2506",
+    "paramsB": "https://huggingface.co/mistralai/Mistral-Small-3.2-24B-Instruct-2506",
+    "ctxK": "https://huggingface.co/mistralai/Mistral-Small-3.2-24B-Instruct-2506"
+  },
+  "results": [
+    {
+      "benchmarkSlug": "mmlu",
+      "score": 80.5,
+      "source": "self-reported",
+      "sourceUrl": "https://huggingface.co/mistralai/Mistral-Small-3.2-24B-Instruct-2506"
+    },
+    {
+      "benchmarkSlug": "math",
+      "score": 69.42,
+      "source": "self-reported",
+      "sourceUrl": "https://huggingface.co/mistralai/Mistral-Small-3.2-24B-Instruct-2506"
+    },
+    {
+      "benchmarkSlug": "humaneval",
+      "score": 92.9,
+      "source": "self-reported",
+      "sourceUrl": "https://huggingface.co/mistralai/Mistral-Small-3.2-24B-Instruct-2506",
+      "notes": "HumanEval Plus, pass@5"
+    },
+    {
+      "benchmarkSlug": "mmmu",
+      "score": 62.5,
+      "source": "self-reported",
+      "sourceUrl": "https://huggingface.co/mistralai/Mistral-Small-3.2-24B-Instruct-2506"
+    }
+  ],
+  "verificationNotes": "Confirmed via huggingface.co/mistralai/Mistral-Small-3.2-24B-Instruct-2506: 24B params, Apache 2.0, MMLU 80.5, MATH 69.42, HumanEval Plus pass@5 92.9, MMMU 62.5 all literally present. Release date 2025-06-20 corroborated by Simon Willison's contemporaneous blog post dated 2025/Jun/20. Pricing $0.08/$0.20 corroborated by independent pricing trackers. No changes."
+}

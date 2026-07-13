@@ -1,0 +1,82 @@
+{
+  "name": "SmolLM3 3B (No Thinking)",
+  "org": "Hugging Face",
+  "family": "SmolLM",
+  "releaseDate": "2025-07-08",
+  "status": "released",
+  "openness": "open-source",
+  "license": "Apache 2.0",
+  "paramsB": 3.08,
+  "activeParamsB": null,
+  "archClass": "dense",
+  "archDisplay": "Dense transformer decoder, GQA (4 groups) + NoPE/RoPE 3:1 ratio, tied embeddings; single checkpoint with think/no_think dual reasoning modes",
+  "ctxK": 128,
+  "modalities": [
+    "text"
+  ],
+  "langCount": 6,
+  "capabilities": {
+    "reasoning": false,
+    "coding": true,
+    "vision": false,
+    "functionCalling": true,
+    "toolUse": true,
+    "agentic": true
+  },
+  "apiAvailable": false,
+  "price": null,
+  "links": {
+    "hf": "HuggingFaceTB/SmolLM3-3B",
+    "gh": "huggingface/smollm"
+  },
+  "note": "Non-reasoning (/no_think) mode of SmolLM3; faster inference, still outperforms other 3B non-reasoning instruct models.",
+  "quants": [
+    "GGUF Q4",
+    "MLX",
+    "ONNX"
+  ],
+  "vramQ4Gb": 3,
+  "vramFp16Gb": 6,
+  "tps4090": 300,
+  "tpsNote": "Community-reported estimate for Q4_K_M GGUF inference on RTX 4090 (llama.cpp)",
+  "effortLabel": "No Thinking",
+  "isDefaultConfig": false,
+  "isBestConfig": false,
+  "specSources": {
+    "paramsB": "https://huggingface.co/HuggingFaceTB/SmolLM3-3B",
+    "ctxK": "https://huggingface.co/HuggingFaceTB/SmolLM3-3B",
+    "releaseDate": "https://huggingface.co/blog/smollm3",
+    "openness": "https://huggingface.co/HuggingFaceTB/SmolLM3-3B"
+  },
+  "results": [
+    {
+      "benchmarkSlug": "aime",
+      "score": 9.3,
+      "source": "self-reported",
+      "sourceUrl": "https://huggingface.co/HuggingFaceTB/SmolLM3-3B",
+      "notes": "AIME 2025, no extended thinking"
+    },
+    {
+      "benchmarkSlug": "gpqa",
+      "score": 35.7,
+      "source": "self-reported",
+      "sourceUrl": "https://huggingface.co/HuggingFaceTB/SmolLM3-3B",
+      "notes": "GPQA Diamond, no extended thinking"
+    },
+    {
+      "benchmarkSlug": "ifeval",
+      "score": 76.7,
+      "source": "self-reported",
+      "sourceUrl": "https://huggingface.co/HuggingFaceTB/SmolLM3-3B",
+      "notes": "No extended thinking"
+    },
+    {
+      "benchmarkSlug": "livecodebench",
+      "score": 15.2,
+      "source": "self-reported",
+      "sourceUrl": "https://huggingface.co/HuggingFaceTB/SmolLM3-3B",
+      "notes": "LiveCodeBench v4, no extended thinking"
+    }
+  ],
+  "verificationNotes": "Same verification basis as the Thinking variant (official HF blog + model card, 2025-07-08 release, 3.08B params, Apache 2.0, 128K ctx). All four No-Thinking benchmark rows (AIME 2025 9.3, GPQA Diamond 35.7, IFEval 76.7, LiveCodeBench v4 15.2) confirmed verbatim on the official model card's benchmark comparison table."
+}

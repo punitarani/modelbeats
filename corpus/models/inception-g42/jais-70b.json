@@ -1,0 +1,79 @@
+{
+  "name": "Jais 70B",
+  "org": "Inception (G42)",
+  "family": "Jais",
+  "releaseDate": "2024-08-05",
+  "status": "released",
+  "openness": "open-weights",
+  "license": "Apache 2.0",
+  "paramsB": 70,
+  "activeParamsB": null,
+  "archClass": "dense",
+  "archDisplay": "Dense Llama-2-70B architecture adapted with Arabic-expanded tokenizer (32K new Arabic tokens), RoPE + GQA",
+  "ctxK": 4,
+  "modalities": [
+    "text"
+  ],
+  "langCount": 2,
+  "capabilities": {
+    "reasoning": false,
+    "coding": false,
+    "vision": false,
+    "functionCalling": false,
+    "toolUse": false,
+    "agentic": false
+  },
+  "apiAvailable": false,
+  "price": null,
+  "links": {
+    "hf": "inceptionai/jais-adapted-70b"
+  },
+  "note": "Largest Jais model, adapted from Llama-2-70B; launched alongside 20+ other Jais variants (590M-70B) in the Aug 2024 family release.",
+  "quants": [
+    "GGUF Q4"
+  ],
+  "vramQ4Gb": 40,
+  "vramFp16Gb": 140,
+  "tps4090": null,
+  "tpsNote": null,
+  "effortLabel": null,
+  "isDefaultConfig": true,
+  "isBestConfig": true,
+  "specSources": {
+    "paramsB": "https://huggingface.co/inceptionai/jais-adapted-70b",
+    "ctxK": "https://huggingface.co/inceptionai/jais-adapted-70b",
+    "releaseDate": "https://www.g42.ai/resources/news/g42-launches-jais-70b-and-20-other-ai-models-champion-arabic-natural-language-processing",
+    "openness": "https://huggingface.co/inceptionai/jais-adapted-70b"
+  },
+  "results": [
+    {
+      "benchmarkSlug": "mmlu",
+      "score": 38.7,
+      "source": "self-reported",
+      "sourceUrl": "https://huggingface.co/inceptionai/jais-adapted-70b",
+      "notes": "English eval, jais-adapted-70b-chat"
+    },
+    {
+      "benchmarkSlug": "hellaswag",
+      "score": 82.7,
+      "source": "self-reported",
+      "sourceUrl": "https://huggingface.co/inceptionai/jais-adapted-70b",
+      "notes": "English eval, jais-adapted-70b-chat"
+    },
+    {
+      "benchmarkSlug": "arc-challenge",
+      "score": 54.9,
+      "source": "self-reported",
+      "sourceUrl": "https://huggingface.co/inceptionai/jais-adapted-70b",
+      "notes": "English eval, jais-adapted-70b-chat"
+    },
+    {
+      "benchmarkSlug": "winogrande",
+      "score": 75.7,
+      "source": "self-reported",
+      "sourceUrl": "https://huggingface.co/inceptionai/jais-adapted-70b",
+      "notes": "English eval, jais-adapted-70b-chat"
+    }
+  ],
+  "verificationNotes": "Confirmed real via the official HF model card (inceptionai/jais-adapted-70b, which lists both base and chat-variant scores) plus the G42/Inception press release dated 2024-08-05, matching the record exactly. Confirmed 70B params, Apache 2.0, 4096-token context, Llama-2-70B-adapted architecture with 32K new Arabic tokens, and that it launched alongside 20+ other Jais sizes (590M-70B). All four benchmark rows (MMLU 38.7, HellaSwag 82.7, ARC-Challenge 54.9, Winogrande 75.7) confirmed verbatim under the jais-adapted-70b-chat row on the HF page, consistent with the notes field (the base jais-adapted-70b row shows slightly different numbers: MMLU 40.4, HellaSwag 81.2, ARC-Challenge 50.4, Winogrande 75.8 — record correctly uses the chat variant as labeled)."
+}

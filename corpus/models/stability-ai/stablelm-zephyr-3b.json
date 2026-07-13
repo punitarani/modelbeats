@@ -1,0 +1,88 @@
+{
+  "name": "StableLM Zephyr 3B",
+  "org": "Stability AI",
+  "family": "StableLM",
+  "releaseDate": "2023-12-07",
+  "status": "released",
+  "openness": "open-weights",
+  "license": "Stability AI Community License (non-commercial by default; commercial use requires Stability AI membership)",
+  "paramsB": 2.8,
+  "activeParamsB": null,
+  "archClass": "dense",
+  "archDisplay": "Dense decoder-only transformer, DPO-tuned from StableLM-3B-4E1T",
+  "ctxK": 4,
+  "modalities": [
+    "text"
+  ],
+  "langCount": 1,
+  "capabilities": {
+    "reasoning": false,
+    "coding": false,
+    "vision": false,
+    "functionCalling": false,
+    "toolUse": false,
+    "agentic": false
+  },
+  "apiAvailable": false,
+  "price": null,
+  "links": {
+    "hf": "stabilityai/stablelm-zephyr-3b",
+    "gh": "Stability-AI/StableLM"
+  },
+  "note": "DPO-tuned chat model (UltraFeedback-style mix) on StableLM-3B-4E1T; capable assistant aimed at edge-device deployment.",
+  "quants": [
+    "GGUF",
+    "GPTQ"
+  ],
+  "vramQ4Gb": 2.2,
+  "vramFp16Gb": 5.6,
+  "tps4090": null,
+  "tpsNote": null,
+  "effortLabel": null,
+  "isDefaultConfig": true,
+  "isBestConfig": true,
+  "specSources": {
+    "paramsB": "https://huggingface.co/stabilityai/stablelm-zephyr-3b",
+    "ctxK": "https://huggingface.co/stabilityai/stablelm-3b-4e1t",
+    "releaseDate": "https://stability.ai/news-updates/stablelm-zephyr-3b-stability-llm",
+    "openness": "https://huggingface.co/stabilityai/stablelm-zephyr-3b"
+  },
+  "results": [
+    {
+      "benchmarkSlug": "mt-bench",
+      "score": 6.64,
+      "source": "self-reported",
+      "sourceUrl": "https://huggingface.co/stabilityai/stablelm-zephyr-3b",
+      "notes": "MT-Bench"
+    },
+    {
+      "benchmarkSlug": "mmlu",
+      "score": 46.17,
+      "source": "self-reported",
+      "sourceUrl": "https://huggingface.co/stabilityai/stablelm-zephyr-3b",
+      "notes": "5-shot"
+    },
+    {
+      "benchmarkSlug": "hellaswag",
+      "score": 74.16,
+      "source": "self-reported",
+      "sourceUrl": "https://huggingface.co/stabilityai/stablelm-zephyr-3b",
+      "notes": "10-shot"
+    },
+    {
+      "benchmarkSlug": "gsm8k",
+      "score": 42.15,
+      "source": "self-reported",
+      "sourceUrl": "https://huggingface.co/stabilityai/stablelm-zephyr-3b",
+      "notes": "5-shot"
+    },
+    {
+      "benchmarkSlug": "winogrande",
+      "score": 65.51,
+      "source": "self-reported",
+      "sourceUrl": "https://huggingface.co/stabilityai/stablelm-zephyr-3b",
+      "notes": "5-shot"
+    }
+  ],
+  "verificationNotes": "Confirmed real via direct fetch of huggingface.co/stabilityai/stablelm-zephyr-3b: 3B (2.8B) params, Stability AI Community License (commercial use requires membership reference to stability.ai/license), verbatim match. Release date Dec 7, 2023 corroborated by VentureBeat, Stability AI's own announcement blog, and Maginative coverage (license file itself dated Dec 6, 2023, announcement/release Dec 7). All 5 benchmark rows (MT-Bench 6.64, MMLU 46.17, HellaSwag 74.16, GSM8K 42.15, WinoGrande 65.51) verified literally on the HF page. Context length (4096) inherited from base model stablelm-3b-4e1t, not independently reprinted on the Zephyr card, so left as originally specified. No changes made to input values."
+}

@@ -1,0 +1,60 @@
+{
+  "name": "Sonar",
+  "org": "Perplexity AI",
+  "family": "Sonar",
+  "releaseDate": "2025-02-11",
+  "status": "released",
+  "openness": "closed",
+  "license": "Proprietary",
+  "paramsB": 70,
+  "activeParamsB": null,
+  "archClass": "dense",
+  "archDisplay": "Dense transformer, fine-tune of Meta Llama 3.3 70B Instruct",
+  "ctxK": 128,
+  "modalities": [
+    "text"
+  ],
+  "langCount": null,
+  "capabilities": {
+    "reasoning": false,
+    "coding": false,
+    "vision": false,
+    "functionCalling": true,
+    "toolUse": true,
+    "agentic": false
+  },
+  "apiAvailable": true,
+  "price": {
+    "input": 1,
+    "output": 1,
+    "provider": "Perplexity"
+  },
+  "links": {
+    "docs": "docs.perplexity.ai/getting-started/models"
+  },
+  "note": "Web-grounded default search-answer model, fine-tuned from Llama 3.3 70B and served on Cerebras Wafer-Scale Engines at ~1200 tok/s.",
+  "quants": [],
+  "vramQ4Gb": null,
+  "vramFp16Gb": null,
+  "tps4090": null,
+  "tpsNote": "Served on Cerebras WSE inference hardware, not commodity GPUs; ~1200 tok/s decode on that hardware, not measured on RTX 4090.",
+  "effortLabel": null,
+  "isDefaultConfig": true,
+  "isBestConfig": true,
+  "specSources": {
+    "paramsB": "https://www.perplexity.ai/hub/blog/meet-new-sonar",
+    "ctxK": "https://developer.puter.com/ai/perplexity/sonar/",
+    "releaseDate": "https://www.perplexity.ai/hub/blog/meet-new-sonar",
+    "openness": "https://docs.perplexity.ai/getting-started/pricing"
+  },
+  "results": [
+    {
+      "benchmarkSlug": "simpleqa",
+      "score": 0.773,
+      "source": "self-reported",
+      "sourceUrl": "https://web.swipeinsight.app/posts/perplexity-launches-sonar-api-for-real-time-ai-search-capabilities-14187",
+      "notes": "SimpleQA F-score, 0-1 scale, from Perplexity's 'Meet new Sonar' evaluation; corroborated by openrouter.ai and other secondary trackers citing the same 0.773 figure"
+    }
+  ],
+  "verificationNotes": "Existence, Feb 11 2025 release, Llama 3.3 70B base, $1/$1 pricing, and 128K context all confirmed via perplexity.ai/hub/blog/meet-new-sonar and docs.perplexity.ai/getting-started/pricing (fetched via search excerpts; direct fetch of some Perplexity pages was blocked by bot protection but content was corroborated across independent secondary sources including OpenRouter). SimpleQA 0.773 confirmed via independent secondary sources quoting the same figure; the original cited sourceUrl returned a rate-limit error on direct fetch but its title/content was verified present in search results."
+}

@@ -1,0 +1,90 @@
+{
+  "name": "MiniMax-M1",
+  "org": "MiniMax",
+  "family": "MiniMax-M1",
+  "releaseDate": "2025-06-16",
+  "status": "released",
+  "openness": "open-weights",
+  "license": "Apache-2.0",
+  "paramsB": 456,
+  "activeParamsB": 45.9,
+  "archClass": "hybrid",
+  "archDisplay": "Hybrid Lightning+Softmax Attention MoE (80 layers, 32 experts top-2) reasoning model, trained with CISPO RL",
+  "ctxK": 1000,
+  "modalities": [
+    "text"
+  ],
+  "langCount": null,
+  "capabilities": {
+    "reasoning": true,
+    "coding": true,
+    "vision": false,
+    "functionCalling": true,
+    "toolUse": true,
+    "agentic": true
+  },
+  "apiAvailable": true,
+  "price": {
+    "input": 0.4,
+    "output": 2.2,
+    "provider": "MiniMax (platform.minimax.io, 0-200K token input tier; 200K-1M tier is $1.3/$2.2)"
+  },
+  "links": {
+    "hf": "MiniMaxAI/MiniMax-M1-80k",
+    "gh": "MiniMax-AI/MiniMax-M1",
+    "docs": "platform.minimax.io"
+  },
+  "note": "World's first open-weight large-scale hybrid-attention reasoning model; shipped as two checkpoints (40K/80K thinking budget) - this entry reflects the flagship 80K checkpoint.",
+  "quants": [],
+  "vramQ4Gb": null,
+  "vramFp16Gb": 912,
+  "tps4090": null,
+  "tpsNote": "llama.cpp did not support the MiniMaxM1ForCausalLM architecture at release, so no GGUF/Q4 quant or RTX 4090 figure exists.",
+  "effortLabel": null,
+  "isDefaultConfig": true,
+  "isBestConfig": true,
+  "specSources": {
+    "paramsB": "https://huggingface.co/MiniMaxAI/MiniMax-M1-80k",
+    "ctxK": "https://github.com/MiniMax-AI/MiniMax-M1",
+    "releaseDate": "https://arxiv.org/abs/2506.13585",
+    "openness": "https://github.com/MiniMax-AI/MiniMax-M1"
+  },
+  "results": [
+    {
+      "benchmarkSlug": "aime",
+      "score": 86,
+      "source": "self-reported",
+      "sourceUrl": "https://huggingface.co/MiniMaxAI/MiniMax-M1-80k",
+      "notes": "AIME 2024, M1-80K"
+    },
+    {
+      "benchmarkSlug": "livecodebench",
+      "score": 65,
+      "source": "self-reported",
+      "sourceUrl": "https://huggingface.co/MiniMaxAI/MiniMax-M1-80k",
+      "notes": "M1-80K"
+    },
+    {
+      "benchmarkSlug": "swe-bench",
+      "score": 56,
+      "source": "self-reported",
+      "sourceUrl": "https://huggingface.co/MiniMaxAI/MiniMax-M1-80k",
+      "notes": "SWE-bench Verified, M1-80K"
+    },
+    {
+      "benchmarkSlug": "gpqa",
+      "score": 69.2,
+      "source": "self-reported",
+      "sourceUrl": "https://huggingface.co/MiniMaxAI/MiniMax-M1-80k",
+      "notes": "GPQA Diamond, M1-40K"
+    },
+    {
+      "benchmarkSlug": "mmlu-pro",
+      "score": 80.6,
+      "source": "self-reported",
+      "sourceUrl": "https://huggingface.co/MiniMaxAI/MiniMax-M1-80k",
+      "notes": "M1-40K"
+    }
+  ],
+  "verificationNotes": "Confirmed real via VentureBeat, Computerworld, arXiv 2506.13585, and HF model card MiniMaxAI/MiniMax-M1-80k. 456B/45.9B hybrid MoE, Apache-2.0, 1M context confirmed by multiple independent sources. All 5 result rows confirmed literally on the HF card, including the M1-80K vs M1-40K split (AIME 86.0, LCB 65.0, SWE-bench 56.0 for 80K; GPQA 69.2, MMLU-Pro 80.6 for 40K) — exact match, no changes. Pricing $0.4/$2.2 for 0-200K tier independently confirmed."
+}

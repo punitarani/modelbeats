@@ -1,0 +1,95 @@
+{
+  "name": "OLMo 2 32B",
+  "org": "Allen Institute for AI (Ai2)",
+  "family": "OLMo 2",
+  "releaseDate": "2025-03-13",
+  "status": "released",
+  "openness": "open-source",
+  "license": "Apache 2.0",
+  "paramsB": 32.23,
+  "activeParamsB": null,
+  "archClass": "dense",
+  "archDisplay": "Dense transformer (decoder-only)",
+  "ctxK": 4,
+  "modalities": [
+    "text"
+  ],
+  "langCount": 1,
+  "capabilities": {
+    "reasoning": false,
+    "coding": true,
+    "vision": false,
+    "functionCalling": false,
+    "toolUse": false,
+    "agentic": false
+  },
+  "apiAvailable": true,
+  "price": null,
+  "links": {
+    "hf": "allenai/OLMo-2-0325-32B-Instruct",
+    "gh": "allenai/OLMo-core",
+    "docs": "allenai.org/blog/olmo2-32B"
+  },
+  "note": "First fully open model to outperform GPT-3.5 Turbo and GPT-4o mini; trained to 6T tokens and post-trained with Tülu 3.1.",
+  "quants": [
+    "GGUF Q4"
+  ],
+  "vramQ4Gb": 20,
+  "vramFp16Gb": 65,
+  "tps4090": null,
+  "tpsNote": null,
+  "effortLabel": null,
+  "isDefaultConfig": true,
+  "isBestConfig": true,
+  "specSources": {
+    "paramsB": "https://huggingface.co/allenai/OLMo-2-0325-32B/raw/main/model.safetensors.index.json",
+    "ctxK": "https://huggingface.co/allenai/OLMo-2-0325-32B/raw/main/config.json",
+    "releaseDate": "https://allenai.org/blog/olmo2-32B",
+    "openness": "https://allenai.org/blog/olmo2-32B"
+  },
+  "results": [
+    {
+      "benchmarkSlug": "mmlu",
+      "score": 77.3,
+      "source": "self-reported",
+      "sourceUrl": "https://huggingface.co/allenai/OLMo-2-0325-32B-Instruct",
+      "notes": "GPT-3.5 Turbo 70.2, GPT-4o mini 82.2, Qwen2.5-32B 84.7"
+    },
+    {
+      "benchmarkSlug": "gsm8k",
+      "score": 87.6,
+      "source": "self-reported",
+      "sourceUrl": "https://huggingface.co/allenai/OLMo-2-0325-32B-Instruct",
+      "notes": "GPT-3.5 Turbo 74.3, GPT-4o mini 83.0"
+    },
+    {
+      "benchmarkSlug": "bbh",
+      "score": 70.6,
+      "source": "self-reported",
+      "sourceUrl": "https://huggingface.co/allenai/OLMo-2-0325-32B-Instruct",
+      "notes": "GPT-3.5 Turbo 66.6, GPT-4o mini 65.9"
+    },
+    {
+      "benchmarkSlug": "drop",
+      "score": 78,
+      "source": "self-reported",
+      "sourceUrl": "https://huggingface.co/allenai/OLMo-2-0325-32B-Instruct",
+      "notes": "GPT-3.5 Turbo 70.2, GPT-4o mini 36.3"
+    },
+    {
+      "benchmarkSlug": "ifeval",
+      "score": 85.6,
+      "source": "self-reported",
+      "sourceUrl": "https://huggingface.co/allenai/OLMo-2-0325-32B-Instruct",
+      "notes": "GPT-3.5 Turbo 66.9, GPT-4o mini 83.5"
+    },
+    {
+      "benchmarkSlug": "math",
+      "score": 49.7,
+      "source": "self-reported",
+      "sourceUrl": "https://huggingface.co/allenai/OLMo-2-0325-32B-Instruct",
+      "notes": "GPT-3.5 Turbo 41.2, GPT-4o mini 67.9"
+    }
+  ],
+  "verificationNotes": "Release (March 13 2025) confirmed via Ai2 blog title/URL and MarkTechPost coverage. All six benchmark rows literally confirmed on the live HF Instruct model card, including the comparator scores. paramsB=32.23 confirmed precisely: safetensors index total 128,937,119,744 bytes / 4 bytes (fp32) = ~32.23B, exact match. No changes needed."
+}

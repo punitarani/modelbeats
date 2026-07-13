@@ -1,0 +1,62 @@
+{
+  "name": "Devstral Small",
+  "org": "Mistral AI",
+  "family": "Devstral",
+  "releaseDate": "2025-05-21",
+  "status": "deprecated",
+  "openness": "open-weights",
+  "license": "Apache 2.0",
+  "paramsB": 24,
+  "activeParamsB": null,
+  "archClass": "dense",
+  "archDisplay": "Dense transformer — 24B, finetuned from Mistral-Small-3.1-24B-Base",
+  "ctxK": 128,
+  "modalities": [
+    "text"
+  ],
+  "langCount": null,
+  "capabilities": {
+    "reasoning": false,
+    "coding": true,
+    "vision": false,
+    "functionCalling": true,
+    "toolUse": true,
+    "agentic": true
+  },
+  "apiAvailable": false,
+  "price": null,
+  "links": {
+    "hf": "mistralai/Devstral-Small-2505",
+    "gh": "mistralai/mistral-inference",
+    "docs": "docs.mistral.ai/models/model-cards/devstral-small-1-0-25-05"
+  },
+  "note": "24B open agentic-coding model built with All Hands AI; 46.8% SWE-bench Verified, best open model under 100B at launch.",
+  "quants": [
+    "GGUF Q4",
+    "AWQ",
+    "MLX"
+  ],
+  "vramQ4Gb": 14.3,
+  "vramFp16Gb": 47.2,
+  "tps4090": null,
+  "tpsNote": null,
+  "effortLabel": null,
+  "isDefaultConfig": true,
+  "isBestConfig": true,
+  "specSources": {
+    "paramsB": "https://huggingface.co/mistralai/Devstral-Small-2505",
+    "ctxK": "https://huggingface.co/mistralai/Devstral-Small-2505",
+    "releaseDate": "https://mistral.ai/news/devstral/",
+    "openness": "https://mistral.ai/news/devstral/"
+  },
+  "results": [
+    {
+      "benchmarkSlug": "swe-bench",
+      "score": 46.8,
+      "source": "self-reported",
+      "sourceUrl": "https://mistral.ai/news/devstral/",
+      "notes": "SWE-Bench Verified, evaluated under the OpenHands scaffold"
+    }
+  ],
+  "verificationNotes": "Confirmed via mistral.ai/news/devstral/ (release date 2025-05-21, Apache 2.0, SWE-bench Verified 46.8%, All Hands AI collaboration) and huggingface.co/mistralai/Devstral-Small-2505 (24B params, 128k context, finetuned from Mistral-Small-3.1-24B-Base). Web search independently confirmed the 2025-11-30 retirement date. No changes — all values verified accurate."
+}

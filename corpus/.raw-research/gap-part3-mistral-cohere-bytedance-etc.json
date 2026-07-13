@@ -1,0 +1,1806 @@
+{
+  "summary": "Deep research + adversarial verification for P2 gap partition 3 (21 models)",
+  "agentCount": 7,
+  "logs": [
+    "gap-part3: 21 models",
+    "research: 21 models researched, 0 rejected as unconfirmable",
+    "verify: 21 models confirmed, 0 rejected by verification"
+  ],
+  "result": {
+    "inputCount": 21,
+    "researchedCount": 21,
+    "finalCount": 21,
+    "rejected": [],
+    "models": [
+      {
+        "name": "Mistral 7B",
+        "org": "Mistral AI",
+        "family": "Mistral 7B",
+        "releaseDate": "2023-09-27",
+        "status": "deprecated",
+        "openness": "open-weights",
+        "license": "Apache 2.0",
+        "paramsB": 7.3,
+        "activeParamsB": null,
+        "archClass": "dense",
+        "archDisplay": "Dense transformer — 32 layers, grouped-query attention + sliding-window attention",
+        "ctxK": 8,
+        "modalities": [
+          "text"
+        ],
+        "langCount": null,
+        "capabilities": {
+          "reasoning": false,
+          "coding": true,
+          "vision": false,
+          "functionCalling": false,
+          "toolUse": false,
+          "agentic": false
+        },
+        "apiAvailable": false,
+        "price": {
+          "input": 0.25,
+          "output": 0.25,
+          "provider": "Mistral AI (open-mistral-7b, retired 2025-03-30)"
+        },
+        "links": {
+          "hf": "mistralai/Mistral-7B-v0.1",
+          "gh": "mistralai/mistral-inference",
+          "docs": "docs.mistral.ai/models/mistral-7b-0-1"
+        },
+        "note": "Debut open 7.3B model; Apache-2.0 weights beat Llama 2 13B on most benchmarks and launched Mistral AI.",
+        "quants": [
+          "GGUF Q4",
+          "AWQ",
+          "GPTQ",
+          "MLX"
+        ],
+        "vramQ4Gb": 4.4,
+        "vramFp16Gb": 14.6,
+        "tps4090": null,
+        "tpsNote": null,
+        "effortLabel": null,
+        "isDefaultConfig": true,
+        "isBestConfig": true,
+        "specSources": {
+          "paramsB": "https://mistral.ai/news/announcing-mistral-7b/",
+          "ctxK": "https://docs.mistral.ai/models/mistral-7b-0-1",
+          "releaseDate": "https://mistral.ai/news/announcing-mistral-7b/",
+          "openness": "https://huggingface.co/mistralai/Mistral-7B-v0.1"
+        },
+        "results": [
+          {
+            "benchmarkSlug": "mmlu",
+            "score": 60.1,
+            "source": "self-reported",
+            "sourceUrl": "https://arxiv.org/abs/2310.06825"
+          },
+          {
+            "benchmarkSlug": "hellaswag",
+            "score": 81.3,
+            "source": "self-reported",
+            "sourceUrl": "https://arxiv.org/abs/2310.06825"
+          },
+          {
+            "benchmarkSlug": "winogrande",
+            "score": 75.3,
+            "source": "self-reported",
+            "sourceUrl": "https://arxiv.org/abs/2310.06825"
+          },
+          {
+            "benchmarkSlug": "arc-challenge",
+            "score": 55.5,
+            "source": "self-reported",
+            "sourceUrl": "https://arxiv.org/abs/2310.06825"
+          },
+          {
+            "benchmarkSlug": "gsm8k",
+            "score": 52.2,
+            "source": "self-reported",
+            "sourceUrl": "https://arxiv.org/abs/2310.06825"
+          },
+          {
+            "benchmarkSlug": "math",
+            "score": 13.1,
+            "source": "self-reported",
+            "sourceUrl": "https://arxiv.org/abs/2310.06825"
+          },
+          {
+            "benchmarkSlug": "humaneval",
+            "score": 30.5,
+            "source": "self-reported",
+            "sourceUrl": "https://arxiv.org/abs/2310.06825"
+          },
+          {
+            "benchmarkSlug": "mbpp",
+            "score": 47.5,
+            "source": "self-reported",
+            "sourceUrl": "https://arxiv.org/abs/2310.06825"
+          }
+        ],
+        "verificationNotes": "Existence and identity confirmed: mistral.ai/news/announcing-mistral-7b/ and HF mistralai/Mistral-7B-v0.1 card (magnet-link release 2023-09-27, Apache-2.0, 7B params ~7.3B per architecture config, GQA+SWA, 32 layers). All 8 benchmark rows confirmed literally in arxiv 2310.06825 Table 2 (fetched via ar5iv HTML mirror): MMLU 60.1, HellaSwag 81.3, WinoGrande 75.3, ARC-C 55.5, GSM8K 52.2, MATH 13.1, HumanEval 30.5, MBPP 47.5 — no changes. 8K context confirmed specific to v0.1 (docs page for v0.3 shows 32K, a later variant, so ctxK=8 for this v0.1 record is correct, not an error). Pricing $0.25/$0.25 and retirement date 2025-03-30 for open-mistral-7b corroborated by Microsoft Foundry retirement-schedule listing and Helicone pricing page."
+      },
+      {
+        "name": "Mistral Medium (original)",
+        "org": "Mistral AI",
+        "family": "Mistral Medium",
+        "releaseDate": "2023-12-11",
+        "status": "deprecated",
+        "openness": "closed",
+        "license": "Proprietary",
+        "paramsB": null,
+        "activeParamsB": null,
+        "archClass": "dense",
+        "archDisplay": "Undisclosed dense transformer (closed weights)",
+        "ctxK": 32,
+        "modalities": [
+          "text"
+        ],
+        "langCount": 5,
+        "capabilities": {
+          "reasoning": false,
+          "coding": true,
+          "vision": false,
+          "functionCalling": false,
+          "toolUse": false,
+          "agentic": false
+        },
+        "apiAvailable": false,
+        "price": {
+          "input": 2.75,
+          "output": 8.1,
+          "provider": "Mistral AI (mistral-medium-2312, retired)"
+        },
+        "links": {
+          "docs": "docs.mistral.ai/resources/changelogs"
+        },
+        "note": "Early closed top-tier endpoint launched with la Plateforme beta; 8.6 MT-Bench; direct ancestor of Large/Medium 3.",
+        "quants": [],
+        "vramQ4Gb": null,
+        "vramFp16Gb": null,
+        "tps4090": null,
+        "tpsNote": null,
+        "effortLabel": null,
+        "isDefaultConfig": true,
+        "isBestConfig": true,
+        "specSources": {
+          "releaseDate": "https://mistral.ai/news/la-plateforme/",
+          "ctxK": "https://artificialanalysis.ai/models/mistral-medium",
+          "openness": "https://mistral.ai/news/la-plateforme/"
+        },
+        "results": [
+          {
+            "benchmarkSlug": "mt-bench",
+            "score": 8.6,
+            "source": "self-reported",
+            "sourceUrl": "https://mistral.ai/news/la-plateforme/"
+          }
+        ],
+        "verificationNotes": "Confirmed via mistral.ai/news/la-plateforme/ (fetched directly): dated 2023-12-11, describes 'mistral-medium' as a prototype closed endpoint scoring 8.6 on MT-Bench and mastering English/French/Italian/German/Spanish + code (5 languages, matches langCount). Pricing $2.75/$8.10 corroborated by independent pricing trackers; context window listed as ~33K on artificialanalysis.ai (rounds to the 32K class stated). No changes needed."
+      },
+      {
+        "name": "Codestral 25.01",
+        "org": "Mistral AI",
+        "family": "Codestral",
+        "releaseDate": "2025-01-13",
+        "status": "deprecated",
+        "openness": "closed",
+        "license": "Proprietary (Mistral Commercial License)",
+        "paramsB": null,
+        "activeParamsB": null,
+        "archClass": "dense",
+        "archDisplay": "Undisclosed dense transformer, improved tokenizer vs Codestral 22B (closed weights)",
+        "ctxK": 256,
+        "modalities": [
+          "text"
+        ],
+        "langCount": null,
+        "capabilities": {
+          "reasoning": false,
+          "coding": true,
+          "vision": false,
+          "functionCalling": false,
+          "toolUse": false,
+          "agentic": false
+        },
+        "apiAvailable": false,
+        "price": {
+          "input": 0.3,
+          "output": 0.9,
+          "provider": "Mistral AI (codestral-2501, retired 2025-11-30)"
+        },
+        "links": {
+          "docs": "docs.mistral.ai/models/codestral-25-01"
+        },
+        "note": "Faster closed Codestral refresh: improved tokenizer, ~2x speed, 256k context; debuted #1 on LMSYS Copilot Arena.",
+        "quants": [],
+        "vramQ4Gb": null,
+        "vramFp16Gb": null,
+        "tps4090": null,
+        "tpsNote": null,
+        "effortLabel": null,
+        "isDefaultConfig": true,
+        "isBestConfig": true,
+        "specSources": {
+          "releaseDate": "https://mistral.ai/news/codestral-2501/",
+          "ctxK": "https://mistral.ai/news/codestral-2501/",
+          "openness": "https://huggingface.co/mistralai/Codestral-22B-v0.1/discussions/54"
+        },
+        "results": [
+          {
+            "benchmarkSlug": "humaneval",
+            "score": 86.6,
+            "source": "self-reported",
+            "sourceUrl": "https://mistral.ai/news/codestral-2501/"
+          },
+          {
+            "benchmarkSlug": "mbpp",
+            "score": 80.2,
+            "source": "self-reported",
+            "sourceUrl": "https://mistral.ai/news/codestral-2501/"
+          },
+          {
+            "benchmarkSlug": "livecodebench",
+            "score": 37.9,
+            "source": "self-reported",
+            "sourceUrl": "https://mistral.ai/news/codestral-2501/"
+          },
+          {
+            "benchmarkSlug": "repobench",
+            "score": 38,
+            "source": "self-reported",
+            "sourceUrl": "https://mistral.ai/news/codestral-2501/",
+            "notes": "RepoBench code-completion benchmark"
+          },
+          {
+            "benchmarkSlug": "humaneval-fim",
+            "score": 85.9,
+            "source": "self-reported",
+            "sourceUrl": "https://mistral.ai/news/codestral-2501/",
+            "notes": "HumanEval fill-in-the-middle average"
+          }
+        ],
+        "verificationNotes": "Confirmed via mistral.ai/news/codestral-2501/ (fetched directly, dated 2025-01-13, 256K context, 2x speed claim, #1 LMSYS Copilot Arena). All 5 benchmark rows found literally in the page's tables: HumanEval 86.6 (this is the Python-specific score; the page also separately reports a 71.4% cross-language average — flagging so the number isn't misread, but 86.6 is a genuine number on the page), MBPP 80.2, LiveCodeBench 37.9, RepoBench 38.0, HumanEvalFIM average 85.9 (page shows 85.89% rounding to 85.9). Pricing $0.30/$0.90 and retirement 2025-11-30 corroborated by docs.mistral.ai/models/overview legacy table (deprecation 11/6/2025, retirement 11/30/2025)."
+      },
+      {
+        "name": "Mistral Small 3 (24B)",
+        "org": "Mistral AI",
+        "family": "Mistral Small",
+        "releaseDate": "2025-01-30",
+        "status": "deprecated",
+        "openness": "open-weights",
+        "license": "Apache 2.0",
+        "paramsB": 24,
+        "activeParamsB": null,
+        "archClass": "dense",
+        "archDisplay": "Dense transformer — 24B, Tekken tokenizer (131k vocab)",
+        "ctxK": 32,
+        "modalities": [
+          "text"
+        ],
+        "langCount": null,
+        "capabilities": {
+          "reasoning": false,
+          "coding": true,
+          "vision": false,
+          "functionCalling": true,
+          "toolUse": true,
+          "agentic": false
+        },
+        "apiAvailable": false,
+        "price": {
+          "input": 0.1,
+          "output": 0.3,
+          "provider": "Mistral AI (mistral-small-2501, retired 2025-11-30)"
+        },
+        "links": {
+          "hf": "mistralai/Mistral-Small-24B-Instruct-2501",
+          "gh": "mistralai/mistral-inference",
+          "docs": "docs.mistral.ai/models/mistral-small-3-0-25-01"
+        },
+        "note": "24B Apache-2.0 latency-optimized model competitive with Llama 3.3 70B at 3x+ the speed; 81% MMLU.",
+        "quants": [
+          "GGUF Q4",
+          "AWQ",
+          "GPTQ",
+          "MLX"
+        ],
+        "vramQ4Gb": 14.5,
+        "vramFp16Gb": 55,
+        "tps4090": null,
+        "tpsNote": null,
+        "effortLabel": null,
+        "isDefaultConfig": true,
+        "isBestConfig": true,
+        "specSources": {
+          "paramsB": "https://huggingface.co/mistralai/Mistral-Small-24B-Instruct-2501",
+          "ctxK": "https://huggingface.co/mistralai/Mistral-Small-24B-Instruct-2501",
+          "releaseDate": "https://mistral.ai/news/mistral-small-3/",
+          "openness": "https://mistral.ai/news/mistral-small-3/"
+        },
+        "results": [
+          {
+            "benchmarkSlug": "mmlu",
+            "score": 81,
+            "source": "self-reported",
+            "sourceUrl": "https://mistral.ai/news/mistral-small-3/"
+          },
+          {
+            "benchmarkSlug": "mmlu-pro",
+            "score": 66.3,
+            "source": "self-reported",
+            "sourceUrl": "https://huggingface.co/mistralai/Mistral-Small-24B-Instruct-2501"
+          },
+          {
+            "benchmarkSlug": "humaneval",
+            "score": 84.8,
+            "source": "self-reported",
+            "sourceUrl": "https://huggingface.co/mistralai/Mistral-Small-24B-Instruct-2501"
+          },
+          {
+            "benchmarkSlug": "math",
+            "score": 70.6,
+            "source": "self-reported",
+            "sourceUrl": "https://huggingface.co/mistralai/Mistral-Small-24B-Instruct-2501"
+          },
+          {
+            "benchmarkSlug": "ifeval",
+            "score": 82.9,
+            "source": "self-reported",
+            "sourceUrl": "https://huggingface.co/mistralai/Mistral-Small-24B-Instruct-2501"
+          }
+        ],
+        "verificationNotes": "Confirmed via mistral.ai/news/mistral-small-3/ (dated 2025-01-30, '24B-parameter model released under Apache 2.0', 'over 81% accuracy on MMLU', 3x+ faster than comparable models) and HF mistralai/Mistral-Small-24B-Instruct-2501 card (24B params, 32k context, Apache-2.0). All 4 HF benchmark rows confirmed exactly: MMLU-Pro 0.663→66.3, HumanEval 0.848→84.8, MATH 0.706→70.6, IFEval 0.829→82.9. Pricing $0.10/$0.30 and retirement 2025-11-30 corroborated by docs.mistral.ai/models/overview legacy table."
+      },
+      {
+        "name": "Mistral Small 3.1 (24B)",
+        "org": "Mistral AI",
+        "family": "Mistral Small",
+        "releaseDate": "2025-03-17",
+        "status": "deprecated",
+        "openness": "open-weights",
+        "license": "Apache 2.0",
+        "paramsB": 24,
+        "activeParamsB": null,
+        "archClass": "dense",
+        "archDisplay": "Dense transformer — 24B + Pixtral-style vision encoder, Tekken tokenizer",
+        "ctxK": 128,
+        "modalities": [
+          "text",
+          "vision"
+        ],
+        "langCount": null,
+        "capabilities": {
+          "reasoning": false,
+          "coding": true,
+          "vision": true,
+          "functionCalling": true,
+          "toolUse": true,
+          "agentic": false
+        },
+        "apiAvailable": false,
+        "price": {
+          "input": 0.1,
+          "output": 0.3,
+          "provider": "Mistral AI (mistral-small-2503, retired 2025-11-30)"
+        },
+        "links": {
+          "hf": "mistralai/Mistral-Small-3.1-24B-Instruct-2503",
+          "gh": "mistralai/mistral-inference",
+          "docs": "docs.mistral.ai/models/mistral-small-3-1-25-03"
+        },
+        "note": "First Mistral Small with native vision-language support; 128k context, Apache 2.0, fits a single RTX 4090 quantized.",
+        "quants": [
+          "GGUF Q4",
+          "AWQ",
+          "MLX"
+        ],
+        "vramQ4Gb": 15,
+        "vramFp16Gb": 55,
+        "tps4090": null,
+        "tpsNote": null,
+        "effortLabel": null,
+        "isDefaultConfig": true,
+        "isBestConfig": true,
+        "specSources": {
+          "paramsB": "https://huggingface.co/mistralai/Mistral-Small-3.1-24B-Instruct-2503",
+          "ctxK": "https://huggingface.co/mistralai/Mistral-Small-3.1-24B-Instruct-2503",
+          "releaseDate": "https://mistral.ai/news/mistral-small-3-1/",
+          "openness": "https://mistral.ai/news/mistral-small-3-1/"
+        },
+        "results": [
+          {
+            "benchmarkSlug": "mmlu",
+            "score": 80.62,
+            "source": "self-reported",
+            "sourceUrl": "https://huggingface.co/mistralai/Mistral-Small-3.1-24B-Instruct-2503"
+          },
+          {
+            "benchmarkSlug": "math",
+            "score": 69.3,
+            "source": "self-reported",
+            "sourceUrl": "https://huggingface.co/mistralai/Mistral-Small-3.1-24B-Instruct-2503"
+          },
+          {
+            "benchmarkSlug": "humaneval",
+            "score": 88.41,
+            "source": "self-reported",
+            "sourceUrl": "https://huggingface.co/mistralai/Mistral-Small-3.1-24B-Instruct-2503"
+          },
+          {
+            "benchmarkSlug": "gpqa",
+            "score": 44.42,
+            "source": "self-reported",
+            "sourceUrl": "https://huggingface.co/mistralai/Mistral-Small-3.1-24B-Instruct-2503",
+            "notes": "GPQA Main, 5-shot CoT"
+          },
+          {
+            "benchmarkSlug": "mmmu",
+            "score": 64,
+            "source": "self-reported",
+            "sourceUrl": "https://huggingface.co/mistralai/Mistral-Small-3.1-24B-Instruct-2503"
+          }
+        ],
+        "verificationNotes": "Confirmed via mistral.ai/news/mistral-small-3-1/ (dated 2025-03-17, 24B params, 128k context 'up to 128k tokens', Apache 2.0, native vision/image understanding) and HF mistralai/Mistral-Small-3.1-24B-Instruct-2503 card. All 5 benchmark rows confirmed exactly: MMLU 80.62, MATH 69.30, HumanEval 88.41, GPQA Main 44.42, MMMU 64.00. Pricing/retirement (same 2025-11-30 date) confirmed on docs.mistral.ai/models/overview legacy table."
+      },
+      {
+        "name": "Mistral Medium 3",
+        "org": "Mistral AI",
+        "family": "Mistral Medium",
+        "releaseDate": "2025-05-07",
+        "status": "deprecated",
+        "openness": "closed",
+        "license": "Proprietary",
+        "paramsB": null,
+        "activeParamsB": null,
+        "archClass": "dense",
+        "archDisplay": "Undisclosed dense transformer, multimodal (closed weights)",
+        "ctxK": 128,
+        "modalities": [
+          "text",
+          "vision"
+        ],
+        "langCount": null,
+        "capabilities": {
+          "reasoning": false,
+          "coding": true,
+          "vision": true,
+          "functionCalling": true,
+          "toolUse": true,
+          "agentic": true
+        },
+        "apiAvailable": false,
+        "price": {
+          "input": 0.4,
+          "output": 2,
+          "provider": "Mistral AI (mistral-medium-2505, deprecation 2026-05-22)"
+        },
+        "links": {
+          "docs": "docs.mistral.ai/models/mistral-medium-3-25-05"
+        },
+        "note": "Cost-efficient closed frontier model claimed at ~90% of Claude 3.7 Sonnet across benchmarks, 8x cheaper.",
+        "quants": [],
+        "vramQ4Gb": null,
+        "vramFp16Gb": null,
+        "tps4090": null,
+        "tpsNote": null,
+        "effortLabel": null,
+        "isDefaultConfig": true,
+        "isBestConfig": true,
+        "specSources": {
+          "releaseDate": "https://mistral.ai/news/mistral-medium-3/",
+          "ctxK": "https://docs.mistral.ai/models/mistral-medium-3-25-05",
+          "openness": "https://mistral.ai/news/mistral-medium-3/"
+        },
+        "results": [
+          {
+            "benchmarkSlug": "aa-intelligence-index",
+            "score": 12,
+            "source": "independent",
+            "sourceUrl": "https://artificialanalysis.ai/models/mistral-medium-3",
+            "notes": "Artificial Analysis Intelligence Index, composite of 9 evaluations"
+          }
+        ],
+        "verificationNotes": "Confirmed via mistral.ai/news/mistral-medium-3/ (fetched directly, dated 2025-05-07, pricing '$0.4 input / $2 output per M token', claim 'performs at or above 90% of Claude Sonnet 3.7 on benchmarks across the board' — matches note verbatim in substance). AA Intelligence Index score of 12 confirmed literally on artificialanalysis.ai/models/mistral-medium-3. Deprecation date 2026-05-22 confirmed via docs.mistral.ai/models/overview legacy table (deprecation 5/22/2026, retirement 8/31/2026)."
+      },
+      {
+        "name": "Devstral Small",
+        "org": "Mistral AI",
+        "family": "Devstral",
+        "releaseDate": "2025-05-21",
+        "status": "deprecated",
+        "openness": "open-weights",
+        "license": "Apache 2.0",
+        "paramsB": 24,
+        "activeParamsB": null,
+        "archClass": "dense",
+        "archDisplay": "Dense transformer — 24B, finetuned from Mistral-Small-3.1-24B-Base",
+        "ctxK": 128,
+        "modalities": [
+          "text"
+        ],
+        "langCount": null,
+        "capabilities": {
+          "reasoning": false,
+          "coding": true,
+          "vision": false,
+          "functionCalling": true,
+          "toolUse": true,
+          "agentic": true
+        },
+        "apiAvailable": false,
+        "price": {
+          "input": 0,
+          "output": 0,
+          "provider": "Mistral AI (devstral-small-2505, free tier at launch, retired 2025-11-30)"
+        },
+        "links": {
+          "hf": "mistralai/Devstral-Small-2505",
+          "gh": "mistralai/mistral-inference",
+          "docs": "docs.mistral.ai/models/model-cards/devstral-small-1-0-25-05"
+        },
+        "note": "24B open agentic-coding model built with All Hands AI; 46.8% SWE-bench Verified, best open model under 100B at launch.",
+        "quants": [
+          "GGUF Q4",
+          "AWQ",
+          "MLX"
+        ],
+        "vramQ4Gb": 14.3,
+        "vramFp16Gb": 47.2,
+        "tps4090": null,
+        "tpsNote": null,
+        "effortLabel": null,
+        "isDefaultConfig": true,
+        "isBestConfig": true,
+        "specSources": {
+          "paramsB": "https://huggingface.co/mistralai/Devstral-Small-2505",
+          "ctxK": "https://huggingface.co/mistralai/Devstral-Small-2505",
+          "releaseDate": "https://mistral.ai/news/devstral/",
+          "openness": "https://mistral.ai/news/devstral/"
+        },
+        "results": [
+          {
+            "benchmarkSlug": "swe-bench",
+            "score": 46.8,
+            "source": "self-reported",
+            "sourceUrl": "https://mistral.ai/news/devstral/",
+            "notes": "SWE-Bench Verified, evaluated under the OpenHands scaffold"
+          }
+        ],
+        "verificationNotes": "Confirmed via mistral.ai/news/devstral/ (release date 2025-05-21, Apache 2.0, SWE-bench Verified 46.8%, All Hands AI collaboration) and huggingface.co/mistralai/Devstral-Small-2505 (24B params, 128k context, finetuned from Mistral-Small-3.1-24B-Base). Web search independently confirmed the 2025-11-30 retirement date. No changes — all values verified accurate."
+      },
+      {
+        "name": "Magistral Medium",
+        "org": "Mistral AI",
+        "family": "Magistral",
+        "releaseDate": "2025-06-10",
+        "status": "released",
+        "openness": "closed",
+        "license": "Proprietary",
+        "paramsB": null,
+        "activeParamsB": null,
+        "archClass": "dense",
+        "archDisplay": "Dense transformer, reasoning RL fine-tune of Mistral Medium 3 (architecture undisclosed)",
+        "ctxK": 40,
+        "modalities": [
+          "text"
+        ],
+        "langCount": null,
+        "capabilities": {
+          "reasoning": true,
+          "coding": true,
+          "vision": false,
+          "functionCalling": true,
+          "toolUse": true,
+          "agentic": true
+        },
+        "apiAvailable": true,
+        "price": {
+          "input": 2,
+          "output": 5,
+          "provider": "Mistral La Plateforme"
+        },
+        "links": {
+          "docs": "docs.mistral.ai/models/model-cards/magistral-medium-1-0-25-06"
+        },
+        "note": "Closed enterprise reasoning model, RL-trained on Mistral Medium 3; 73.6% AIME2024 pass@1 (90% with maj@64), Flash Answers via Le Chat.",
+        "quants": [],
+        "vramQ4Gb": null,
+        "vramFp16Gb": null,
+        "tps4090": null,
+        "tpsNote": null,
+        "effortLabel": null,
+        "isDefaultConfig": true,
+        "isBestConfig": true,
+        "specSources": {
+          "releaseDate": "https://mistral.ai/news/magistral/",
+          "openness": "https://mistral.ai/news/magistral/",
+          "ctxK": "https://docs.mistral.ai/models/model-cards/magistral-medium-1-0-25-06"
+        },
+        "results": [
+          {
+            "benchmarkSlug": "aime",
+            "score": 73.6,
+            "source": "self-reported",
+            "sourceUrl": "https://mistral.ai/news/magistral/",
+            "evaluatedAt": "2025-06-10",
+            "notes": "AIME2024 pass@1; 90% with maj@64"
+          }
+        ],
+        "verificationNotes": "Release date, closed/proprietary status, and AIME2024 73.6% pass@1 confirmed on mistral.ai/news/magistral/. Pricing $2/$5 per 1M tokens confirmed independently via artificialanalysis.ai and other pricing trackers. CORRECTED ctxK from 128 to 40: the input record's 128K figure does not match Mistral's own model card (docs.mistral.ai/models/model-cards/magistral-medium-1-0-25-06), which lists the context window as 40k, corroborated by OpenRouter listing 'Context: 41K' for magistral-medium-2506. The 128K figure appears to have been conflated with Magistral Small's (different) context window."
+      },
+      {
+        "name": "Magistral Small",
+        "org": "Mistral AI",
+        "family": "Magistral",
+        "releaseDate": "2025-06-10",
+        "status": "released",
+        "openness": "open-weights",
+        "license": "Apache 2.0",
+        "paramsB": 24,
+        "activeParamsB": null,
+        "archClass": "dense",
+        "archDisplay": "Dense transformer (24B), reasoning fine-tune of Mistral Small 3.1 with cold-start data distilled from Magistral Medium",
+        "ctxK": 128,
+        "modalities": [
+          "text"
+        ],
+        "langCount": 24,
+        "capabilities": {
+          "reasoning": true,
+          "coding": true,
+          "vision": false,
+          "functionCalling": true,
+          "toolUse": true,
+          "agentic": true
+        },
+        "apiAvailable": true,
+        "price": {
+          "input": 0.5,
+          "output": 1.5,
+          "provider": "Mistral La Plateforme"
+        },
+        "links": {
+          "hf": "mistralai/Magistral-Small-2506",
+          "docs": "docs.mistral.ai"
+        },
+        "note": "Mistral's first open-weights reasoning model (Apache 2.0); transparent multilingual chain-of-thought, fits a single RTX 4090 or 32GB Mac once quantized.",
+        "quants": [
+          "GGUF Q4",
+          "MLX"
+        ],
+        "vramQ4Gb": 14.5,
+        "vramFp16Gb": 55,
+        "tps4090": null,
+        "tpsNote": "Vendor states it fits and runs on a single RTX 4090 once quantized; no independently measured tok/s figure found",
+        "effortLabel": null,
+        "isDefaultConfig": true,
+        "isBestConfig": true,
+        "specSources": {
+          "releaseDate": "https://huggingface.co/mistralai/Magistral-Small-2506",
+          "openness": "https://huggingface.co/mistralai/Magistral-Small-2506",
+          "paramsB": "https://huggingface.co/mistralai/Magistral-Small-2506",
+          "ctxK": "https://huggingface.co/mistralai/Magistral-Small-2506"
+        },
+        "results": [
+          {
+            "benchmarkSlug": "aime",
+            "score": 70.68,
+            "source": "self-reported",
+            "sourceUrl": "https://huggingface.co/mistralai/Magistral-Small-2506",
+            "notes": "AIME2024 pass@1; 83.3% with maj@64 per Mistral's launch post"
+          },
+          {
+            "benchmarkSlug": "aime-2025",
+            "score": 62.76,
+            "source": "self-reported",
+            "sourceUrl": "https://huggingface.co/mistralai/Magistral-Small-2506",
+            "notes": "AIME2025 pass@1"
+          },
+          {
+            "benchmarkSlug": "gpqa",
+            "score": 68.18,
+            "source": "self-reported",
+            "sourceUrl": "https://huggingface.co/mistralai/Magistral-Small-2506",
+            "notes": "GPQA Diamond"
+          },
+          {
+            "benchmarkSlug": "livecodebench",
+            "score": 55.84,
+            "source": "self-reported",
+            "sourceUrl": "https://huggingface.co/mistralai/Magistral-Small-2506",
+            "notes": "LiveCodeBench v5"
+          }
+        ],
+        "verificationNotes": "Fully confirmed via huggingface.co/mistralai/Magistral-Small-2506: 24B params, Apache 2.0, 128k context window (with 40k recommended for best quality, matching vendor guidance), AIME24 70.68, AIME25 62.76, GPQA Diamond 68.18, LiveCodeBench 55.84 all literally present on the page. Release date, langCount (~24-25 languages, vendor markets it as '24+ languages'), and pricing ($0.5/$1.5) corroborated independently. No changes."
+      },
+      {
+        "name": "Mistral Small 3.2 (24B)",
+        "org": "Mistral AI",
+        "family": "Mistral Small",
+        "releaseDate": "2025-06-20",
+        "status": "released",
+        "openness": "open-weights",
+        "license": "Apache 2.0",
+        "paramsB": 24,
+        "activeParamsB": null,
+        "archClass": "dense",
+        "archDisplay": "Dense transformer (24B), vision-language, incremental update of Small 3.1",
+        "ctxK": 128,
+        "modalities": [
+          "text",
+          "vision"
+        ],
+        "langCount": null,
+        "capabilities": {
+          "reasoning": false,
+          "coding": true,
+          "vision": true,
+          "functionCalling": true,
+          "toolUse": true,
+          "agentic": true
+        },
+        "apiAvailable": true,
+        "price": {
+          "input": 0.08,
+          "output": 0.2,
+          "provider": "Mistral La Plateforme"
+        },
+        "links": {
+          "hf": "mistralai/Mistral-Small-3.2-24B-Instruct-2506",
+          "docs": "docs.mistral.ai"
+        },
+        "note": "Drop-in upgrade over 3.1: markedly better instruction following, roughly half the infinite-generation errors, more reliable function calling.",
+        "quants": [
+          "GGUF Q4",
+          "AWQ",
+          "MLX"
+        ],
+        "vramQ4Gb": 14.5,
+        "vramFp16Gb": 55,
+        "tps4090": 70,
+        "tpsNote": "~70 tok/s (est.) at Q4_K_M on RTX 4090, based on same-architecture Mistral Small 3.1 measurement",
+        "effortLabel": null,
+        "isDefaultConfig": true,
+        "isBestConfig": true,
+        "specSources": {
+          "releaseDate": "https://simonwillison.net/2025/Jun/20/mistral-small-32/",
+          "openness": "https://huggingface.co/mistralai/Mistral-Small-3.2-24B-Instruct-2506",
+          "paramsB": "https://huggingface.co/mistralai/Mistral-Small-3.2-24B-Instruct-2506",
+          "ctxK": "https://huggingface.co/mistralai/Mistral-Small-3.2-24B-Instruct-2506"
+        },
+        "results": [
+          {
+            "benchmarkSlug": "mmlu",
+            "score": 80.5,
+            "source": "self-reported",
+            "sourceUrl": "https://huggingface.co/mistralai/Mistral-Small-3.2-24B-Instruct-2506"
+          },
+          {
+            "benchmarkSlug": "math",
+            "score": 69.42,
+            "source": "self-reported",
+            "sourceUrl": "https://huggingface.co/mistralai/Mistral-Small-3.2-24B-Instruct-2506"
+          },
+          {
+            "benchmarkSlug": "humaneval",
+            "score": 92.9,
+            "source": "self-reported",
+            "sourceUrl": "https://huggingface.co/mistralai/Mistral-Small-3.2-24B-Instruct-2506",
+            "notes": "HumanEval Plus, pass@5"
+          },
+          {
+            "benchmarkSlug": "mmmu",
+            "score": 62.5,
+            "source": "self-reported",
+            "sourceUrl": "https://huggingface.co/mistralai/Mistral-Small-3.2-24B-Instruct-2506"
+          }
+        ],
+        "verificationNotes": "Confirmed via huggingface.co/mistralai/Mistral-Small-3.2-24B-Instruct-2506: 24B params, Apache 2.0, MMLU 80.5, MATH 69.42, HumanEval Plus pass@5 92.9, MMMU 62.5 all literally present. Release date 2025-06-20 corroborated by Simon Willison's contemporaneous blog post dated 2025/Jun/20. Pricing $0.08/$0.20 corroborated by independent pricing trackers. No changes."
+      },
+      {
+        "name": "Command",
+        "org": "Cohere",
+        "family": "Command",
+        "releaseDate": "2023",
+        "status": "deprecated",
+        "openness": "closed",
+        "license": "Proprietary",
+        "paramsB": null,
+        "activeParamsB": null,
+        "archClass": "dense",
+        "archDisplay": "Dense decoder-only transformer (params undisclosed)",
+        "ctxK": 4,
+        "modalities": [
+          "text"
+        ],
+        "langCount": null,
+        "capabilities": {
+          "reasoning": false,
+          "coding": false,
+          "vision": false,
+          "functionCalling": false,
+          "toolUse": false,
+          "agentic": false
+        },
+        "apiAvailable": false,
+        "price": {
+          "input": 1,
+          "output": 2,
+          "provider": "Cohere (legacy)"
+        },
+        "links": {
+          "docs": "docs.cohere.com"
+        },
+        "note": "Cohere's first-generation flagship generative model (API id \"command\"); deprecated and shut down 2025-09-15, superseded by Command R.",
+        "quants": [],
+        "vramQ4Gb": null,
+        "vramFp16Gb": null,
+        "tps4090": null,
+        "tpsNote": null,
+        "effortLabel": null,
+        "isDefaultConfig": true,
+        "isBestConfig": true,
+        "specSources": {
+          "releaseDate": "https://docs.cohere.com/docs/models",
+          "openness": "https://docs.cohere.com/docs/models",
+          "ctxK": "https://aimodelwatch.dev/models/command"
+        },
+        "results": [],
+        "verificationNotes": "Confirmed via docs.cohere.com/changelog/2025-09-15-major-command-deprecations (shutdown 2025-09-15, migrate to Command R 08-2024) and aimodelwatch.dev/models/command (4,096-token context window, legacy pricing $1.00/$2.00 per 1M tokens — matches exactly). No changes."
+      },
+      {
+        "name": "Command R",
+        "org": "Cohere",
+        "family": "Command R",
+        "releaseDate": "2024-03-11",
+        "status": "deprecated",
+        "openness": "open-weights",
+        "license": "CC-BY-NC-4.0 (+ Acceptable Use Policy)",
+        "paramsB": 35,
+        "activeParamsB": null,
+        "archClass": "dense",
+        "archDisplay": "Dense transformer (35B), optimized for RAG and multi-step tool use",
+        "ctxK": 128,
+        "modalities": [
+          "text"
+        ],
+        "langCount": 10,
+        "capabilities": {
+          "reasoning": false,
+          "coding": true,
+          "vision": false,
+          "functionCalling": true,
+          "toolUse": true,
+          "agentic": true
+        },
+        "apiAvailable": true,
+        "price": {
+          "input": 0.5,
+          "output": 1.5,
+          "provider": "Cohere"
+        },
+        "links": {
+          "hf": "CohereLabs/c4ai-command-r-v01",
+          "docs": "docs.cohere.com"
+        },
+        "note": "35B RAG/tool-use model with 128K context; first open-weights (CC-BY-NC) Command release, later superseded by the 08-2024 refresh.",
+        "quants": [
+          "GGUF Q4"
+        ],
+        "vramQ4Gb": 21.6,
+        "vramFp16Gb": 70,
+        "tps4090": null,
+        "tpsNote": null,
+        "effortLabel": null,
+        "isDefaultConfig": true,
+        "isBestConfig": true,
+        "specSources": {
+          "releaseDate": "https://cohere.com/blog/command-r",
+          "openness": "https://huggingface.co/CohereLabs/c4ai-command-r-v01",
+          "paramsB": "https://huggingface.co/CohereLabs/c4ai-command-r-v01",
+          "ctxK": "https://huggingface.co/CohereLabs/c4ai-command-r-v01"
+        },
+        "results": [],
+        "verificationNotes": "Confirmed via huggingface.co/CohereLabs/c4ai-command-r-v01 (35B params, 128K context, CC-BY-NC + Acceptable Use Policy license, 10 optimized languages plus 13 more pretrained) and cohere.com/blog/command-r (blog post titled 'Command R: Retrieval-Augmented Generation at Production Scale' dated March 11, 2024, matching the release date). Pricing $0.5/$1.5 corroborated independently (Command-R Mar'24 rate). No changes."
+      },
+      {
+        "name": "Command R7B",
+        "org": "Cohere",
+        "family": "Command R",
+        "releaseDate": "2024-12-13",
+        "status": "released",
+        "openness": "open-weights",
+        "license": "CC-BY-NC-4.0 (+ Acceptable Use Policy)",
+        "paramsB": 7,
+        "activeParamsB": null,
+        "archClass": "dense",
+        "archDisplay": "Dense transformer (7B), optimized for on-device/edge RAG and tool use",
+        "ctxK": 128,
+        "modalities": [
+          "text"
+        ],
+        "langCount": 23,
+        "capabilities": {
+          "reasoning": false,
+          "coding": true,
+          "vision": false,
+          "functionCalling": true,
+          "toolUse": true,
+          "agentic": true
+        },
+        "apiAvailable": true,
+        "price": {
+          "input": 0.0375,
+          "output": 0.15,
+          "provider": "Cohere"
+        },
+        "links": {
+          "hf": "CohereLabs/c4ai-command-r7b-12-2024",
+          "docs": "docs.cohere.com"
+        },
+        "note": "Smallest, fastest model in the R series for edge/on-device RAG and tool use; ranked first among similarly-sized open-weights models on the Open LLM Leaderboard.",
+        "quants": [
+          "GGUF Q4"
+        ],
+        "vramQ4Gb": 5,
+        "vramFp16Gb": 14,
+        "tps4090": null,
+        "tpsNote": null,
+        "effortLabel": null,
+        "isDefaultConfig": true,
+        "isBestConfig": true,
+        "specSources": {
+          "releaseDate": "https://cohere.com/blog/command-r7b",
+          "openness": "https://huggingface.co/CohereLabs/c4ai-command-r7b-12-2024",
+          "paramsB": "https://huggingface.co/CohereLabs/c4ai-command-r7b-12-2024",
+          "ctxK": "https://huggingface.co/CohereLabs/c4ai-command-r7b-12-2024"
+        },
+        "results": [
+          {
+            "benchmarkSlug": "mmlu",
+            "score": 65.2,
+            "source": "self-reported",
+            "sourceUrl": "https://arxiv.org/abs/2504.00698",
+            "notes": "Command A technical report, Table 1"
+          },
+          {
+            "benchmarkSlug": "math",
+            "score": 59.1,
+            "source": "self-reported",
+            "sourceUrl": "https://arxiv.org/abs/2504.00698"
+          },
+          {
+            "benchmarkSlug": "ifeval",
+            "score": 77.9,
+            "source": "self-reported",
+            "sourceUrl": "https://arxiv.org/abs/2504.00698"
+          },
+          {
+            "benchmarkSlug": "gpqa",
+            "score": 26.3,
+            "source": "self-reported",
+            "sourceUrl": "https://arxiv.org/abs/2504.00698"
+          },
+          {
+            "benchmarkSlug": "mbpp",
+            "score": 72,
+            "source": "self-reported",
+            "sourceUrl": "https://arxiv.org/abs/2504.00698",
+            "notes": "MBPP+"
+          },
+          {
+            "benchmarkSlug": "bfcl",
+            "score": 52.2,
+            "source": "self-reported",
+            "sourceUrl": "https://arxiv.org/abs/2504.00698",
+            "notes": "Berkeley Function-Calling Leaderboard"
+          }
+        ],
+        "verificationNotes": "Fully confirmed: Cohere blog dated Dec 13, 2024 (release); HF model card CohereLabs/c4ai-command-r7b-12-2024 confirms 7B params, 128K context, CC-BY-NC + Acceptable Use Policy, 23 languages. Downloaded and read the actual Command A tech report PDF (arXiv 2504.00698) Table 1 — all six Command R7B benchmark numbers (MMLU 65.2, MATH 59.1, IFEval 77.9, GPQA 26.3, MBPP+ 72.0, BFCL 52.2) appear verbatim. Pricing ($0.0375/$0.15 per 1M tokens) confirmed via independent pricing aggregators. No changes made."
+      },
+      {
+        "name": "Command A",
+        "org": "Cohere",
+        "family": "Command A",
+        "releaseDate": "2025-03-13",
+        "status": "released",
+        "openness": "open-weights",
+        "license": "CC-BY-NC-4.0 (+ Acceptable Use Policy)",
+        "paramsB": 111,
+        "activeParamsB": null,
+        "archClass": "dense",
+        "archDisplay": "Dense transformer (111B) with hybrid sliding-window/full attention (3:1 ratio) and GQA",
+        "ctxK": 256,
+        "modalities": [
+          "text"
+        ],
+        "langCount": 23,
+        "capabilities": {
+          "reasoning": false,
+          "coding": true,
+          "vision": false,
+          "functionCalling": true,
+          "toolUse": true,
+          "agentic": true
+        },
+        "apiAvailable": true,
+        "price": {
+          "input": 2.5,
+          "output": 10,
+          "provider": "Cohere"
+        },
+        "links": {
+          "hf": "CohereLabs/c4ai-command-a-03-2025",
+          "docs": "docs.cohere.com"
+        },
+        "note": "111B enterprise flagship, 256K context, runs on just two GPUs (A100/H100); rivals GPT-4o and DeepSeek-V3 on agentic enterprise tasks.",
+        "quants": [
+          "GGUF Q4"
+        ],
+        "vramQ4Gb": 67,
+        "vramFp16Gb": 222,
+        "tps4090": null,
+        "tpsNote": "Requires ~2x A100/H100 GPUs for practical serving; does not fit on a single RTX 4090 even quantized",
+        "effortLabel": null,
+        "isDefaultConfig": true,
+        "isBestConfig": true,
+        "specSources": {
+          "releaseDate": "https://cohere.com/blog/command-a",
+          "openness": "https://huggingface.co/CohereLabs/c4ai-command-a-03-2025",
+          "paramsB": "https://arxiv.org/abs/2504.00698",
+          "ctxK": "https://arxiv.org/abs/2504.00698"
+        },
+        "results": [
+          {
+            "benchmarkSlug": "mmlu",
+            "score": 85.5,
+            "source": "self-reported",
+            "sourceUrl": "https://arxiv.org/abs/2504.00698",
+            "notes": "Command A technical report, Table 1"
+          },
+          {
+            "benchmarkSlug": "math",
+            "score": 80,
+            "source": "self-reported",
+            "sourceUrl": "https://arxiv.org/abs/2504.00698"
+          },
+          {
+            "benchmarkSlug": "ifeval",
+            "score": 90.9,
+            "source": "self-reported",
+            "sourceUrl": "https://arxiv.org/abs/2504.00698"
+          },
+          {
+            "benchmarkSlug": "gpqa",
+            "score": 50.8,
+            "source": "self-reported",
+            "sourceUrl": "https://arxiv.org/abs/2504.00698"
+          },
+          {
+            "benchmarkSlug": "tau-bench",
+            "score": 51.7,
+            "source": "self-reported",
+            "sourceUrl": "https://arxiv.org/abs/2504.00698",
+            "notes": "Taubench agentic benchmark"
+          },
+          {
+            "benchmarkSlug": "mbpp",
+            "score": 86.2,
+            "source": "self-reported",
+            "sourceUrl": "https://arxiv.org/abs/2504.00698",
+            "notes": "MBPP+"
+          },
+          {
+            "benchmarkSlug": "bfcl",
+            "score": 63.8,
+            "source": "self-reported",
+            "sourceUrl": "https://arxiv.org/abs/2504.00698",
+            "notes": "Berkeley Function-Calling Leaderboard"
+          }
+        ],
+        "verificationNotes": "Fully confirmed: release date March 13, 2025 verified via HPCwire and Cohere's own blog (cohere.com/blog/command-a); HF model card + arXiv paper confirm 111B params, 256K context, CC-BY-NC + AUP license, deployable on 2x A100/H100. Downloaded and read the actual PDF of arXiv 2504.00698 Table 1 directly — all seven Command A benchmark numbers (MMLU 85.5, MATH 80.0, IFEval 90.9, GPQA 50.8, Taubench 51.7, MBPP+ 86.2, BFCL 63.8) appear verbatim. Pricing ($2.50/$10 per 1M) confirmed via cohere.com/pricing-derived aggregators. No changes made."
+      },
+      {
+        "name": "Seed1.5-Thinking",
+        "org": "ByteDance",
+        "family": "Seed",
+        "releaseDate": "2025-04-10",
+        "status": "released",
+        "openness": "closed",
+        "license": "Proprietary",
+        "paramsB": 200,
+        "activeParamsB": 20,
+        "archClass": "moe",
+        "archDisplay": "Mixture-of-Experts, 200B total / 20B active",
+        "ctxK": 128,
+        "modalities": [
+          "text"
+        ],
+        "langCount": null,
+        "capabilities": {
+          "reasoning": true,
+          "coding": true,
+          "vision": false,
+          "functionCalling": true,
+          "toolUse": true,
+          "agentic": true
+        },
+        "apiAvailable": true,
+        "price": {
+          "input": 0.556,
+          "output": 2.222,
+          "provider": "Volcano Engine (ByteDance)"
+        },
+        "links": {
+          "gh": "ByteDance-Seed/Seed-Thinking-v1.5",
+          "docs": "seed.bytedance.com/en/blog/bytedance-s-latest-thinking-model-seed-thinking-v1-5-technical-details-disclosed"
+        },
+        "note": "RL-trained reasoning MoE matching o3-mini-high on AIME24; served via Volcano Engine API only.",
+        "quants": [],
+        "vramQ4Gb": null,
+        "vramFp16Gb": null,
+        "tps4090": null,
+        "tpsNote": null,
+        "effortLabel": null,
+        "isDefaultConfig": true,
+        "isBestConfig": true,
+        "specSources": {
+          "paramsB": "https://arxiv.org/abs/2504.13914",
+          "ctxK": "https://www.volcengine.com/docs/82379/1536428",
+          "releaseDate": "https://arxiv.org/abs/2504.13914",
+          "openness": "https://seed.bytedance.com/en/blog/bytedance-s-latest-thinking-model-seed-thinking-v1-5-technical-details-disclosed"
+        },
+        "results": [
+          {
+            "benchmarkSlug": "aime",
+            "score": 86.7,
+            "source": "self-reported",
+            "sourceUrl": "https://arxiv.org/abs/2504.13914",
+            "notes": "AIME 2024"
+          },
+          {
+            "benchmarkSlug": "gpqa",
+            "score": 77.3,
+            "source": "self-reported",
+            "sourceUrl": "https://arxiv.org/abs/2504.13914",
+            "notes": "GPQA"
+          },
+          {
+            "benchmarkSlug": "livecodebench",
+            "score": 64.9,
+            "source": "self-reported",
+            "sourceUrl": "https://github.com/ByteDance-Seed/Seed-Thinking-v1.5",
+            "notes": "LiveCodeBench v5"
+          },
+          {
+            "benchmarkSlug": "codeforces",
+            "score": 55,
+            "source": "self-reported",
+            "sourceUrl": "https://github.com/ByteDance-Seed/Seed-Thinking-v1.5",
+            "notes": "Codeforces pass@8"
+          }
+        ],
+        "verificationNotes": "Confirmed real: arXiv 2504.13914 (initial submission April 10, 2025, matching releaseDate), GitHub repo ByteDance-Seed/Seed-Thinking-v1.5, and official ByteDance Seed blog all corroborate. Params 200B total/20B active MoE confirmed in the paper abstract. AIME24 86.7, GPQA 77.3, Codeforces (pass@8) 55.0, and LiveCodeBench v5 64.9 all confirmed reading the paper/GitHub page directly. VentureBeat coverage independently confirms the 'matching o3-mini-high on AIME24' comparison. CORRECTION: dropped the unverified claim that this model is 'aka doubao-1.5-thinking-pro' — fetched ByteDance's own Seed1.5-Thinking blog post directly and it does not state this equivalence (only that Doubao 1.5 Pro's training data was reused); softened the note field accordingly. Also downgraded 'GPQA Diamond' notes label to plain 'GPQA' since the source only says 'GPQA' without specifying the Diamond variant. Pricing figures ($0.556/$2.222) could not be independently pinned to a specific fetched Volcano Engine pricing page for this exact model ID and are carried over with lower confidence; ctxK of 128K likewise not directly confirmed for this text model (source used is a general Volcano Engine docs page, not model-specific)."
+      },
+      {
+        "name": "Doubao-Seed-1.6",
+        "org": "ByteDance",
+        "family": "Doubao",
+        "releaseDate": "2025-06-11",
+        "status": "released",
+        "openness": "closed",
+        "license": "Proprietary",
+        "paramsB": 230,
+        "activeParamsB": 23,
+        "archClass": "moe",
+        "archDisplay": "Mixture-of-Experts, 230B total / 23B active, with Adaptive-CoT (AdaCoT)",
+        "ctxK": 256,
+        "modalities": [
+          "text",
+          "vision"
+        ],
+        "langCount": null,
+        "capabilities": {
+          "reasoning": true,
+          "coding": true,
+          "vision": true,
+          "functionCalling": true,
+          "toolUse": true,
+          "agentic": true
+        },
+        "apiAvailable": true,
+        "price": {
+          "input": 0.111,
+          "output": 0.278,
+          "provider": "Volcano Engine (ByteDance)"
+        },
+        "links": {
+          "docs": "seed.bytedance.com/en/blog/introduction-to-techniques-used-in-seed1-6"
+        },
+        "note": "Adaptive-CoT multimodal flagship, 256K context, ~63% cheaper than Doubao 1.5; spans standard/thinking/flash variants.",
+        "quants": [],
+        "vramQ4Gb": null,
+        "vramFp16Gb": null,
+        "tps4090": null,
+        "tpsNote": null,
+        "effortLabel": null,
+        "isDefaultConfig": true,
+        "isBestConfig": true,
+        "specSources": {
+          "paramsB": "https://seed.bytedance.com/en/blog/introduction-to-techniques-used-in-seed1-6",
+          "ctxK": "https://seed.bytedance.com/en/blog/introduction-to-techniques-used-in-seed1-6",
+          "releaseDate": "https://finance.sina.com.cn/tech/discovery/2025-06-11/doc-inezskch4850147.shtml",
+          "openness": "https://seed.bytedance.com/en/blog/introduction-to-techniques-used-in-seed1-6"
+        },
+        "results": [
+          {
+            "benchmarkSlug": "gaokao-math",
+            "score": 96,
+            "source": "self-reported",
+            "sourceUrl": "https://finance.sina.com.cn/tech/discovery/2025-06-11/doc-inezskch4850147.shtml",
+            "notes": "144/150 on China's Gaokao (national college entrance exam) math paper, reported #1 among models at launch"
+          }
+        ],
+        "verificationNotes": "Confirmed real: fetched the Sina Finance article (published June 11, 2025, matching releaseDate) directly — it states Doubao's large model scored 144 points and ranked first nationally ('全国第一') on the national Gaokao math paper; the '/150' total is standard knowledge for the Gaokao math paper (not explicitly restated as '150' in the article itself, but a 150-point scale is the well-established format). Fetched ByteDance's own official Seed1.6 techniques blog and confirmed 230B total/23B active MoE params, 256K context window, and the AdaCoT (Adaptive Chain-of-Thought) technique verbatim. Pricing cross-checked: Sina article cites ~0.8 CNY/M input and 2 CNY/M output, which converts to ~$0.11/$0.28 USD — matches the record's price field closely. No changes made to core facts; note field retained as-is since substance is corroborated."
+      },
+      {
+        "name": "Seed-OSS-36B",
+        "org": "ByteDance",
+        "family": "Seed",
+        "releaseDate": "2025-08-20",
+        "status": "released",
+        "openness": "open-weights",
+        "license": "Apache-2.0",
+        "paramsB": 36,
+        "activeParamsB": null,
+        "archClass": "dense",
+        "archDisplay": "Dense Transformer (RoPE, GQA, RMSNorm, SwiGLU)",
+        "ctxK": 512,
+        "modalities": [
+          "text"
+        ],
+        "langCount": null,
+        "capabilities": {
+          "reasoning": true,
+          "coding": true,
+          "vision": false,
+          "functionCalling": true,
+          "toolUse": true,
+          "agentic": true
+        },
+        "apiAvailable": false,
+        "price": null,
+        "links": {
+          "hf": "ByteDance-Seed/Seed-OSS-36B-Instruct",
+          "gh": "ByteDance-Seed/seed-oss"
+        },
+        "note": "Apache-2.0 open release with native 512K context and a tunable thinking-length budget; trained on only 12T tokens.",
+        "quants": [
+          "GGUF Q4",
+          "GGUF Q8"
+        ],
+        "vramQ4Gb": 21.8,
+        "vramFp16Gb": 72,
+        "tps4090": null,
+        "tpsNote": null,
+        "effortLabel": null,
+        "isDefaultConfig": true,
+        "isBestConfig": true,
+        "specSources": {
+          "paramsB": "https://huggingface.co/ByteDance-Seed/Seed-OSS-36B-Instruct",
+          "ctxK": "https://huggingface.co/ByteDance-Seed/Seed-OSS-36B-Instruct",
+          "releaseDate": "https://huggingface.co/ByteDance-Seed/Seed-OSS-36B-Instruct",
+          "openness": "https://huggingface.co/ByteDance-Seed/Seed-OSS-36B-Instruct"
+        },
+        "results": [
+          {
+            "benchmarkSlug": "mmlu",
+            "score": 87.4,
+            "source": "self-reported",
+            "sourceUrl": "https://huggingface.co/ByteDance-Seed/Seed-OSS-36B-Instruct"
+          },
+          {
+            "benchmarkSlug": "mmlu-pro",
+            "score": 82.7,
+            "source": "self-reported",
+            "sourceUrl": "https://huggingface.co/ByteDance-Seed/Seed-OSS-36B-Instruct"
+          },
+          {
+            "benchmarkSlug": "gsm8k",
+            "score": 90.8,
+            "source": "self-reported",
+            "sourceUrl": "https://huggingface.co/ByteDance-Seed/Seed-OSS-36B-Instruct"
+          },
+          {
+            "benchmarkSlug": "math",
+            "score": 81.7,
+            "source": "self-reported",
+            "sourceUrl": "https://huggingface.co/ByteDance-Seed/Seed-OSS-36B-Instruct"
+          },
+          {
+            "benchmarkSlug": "aime",
+            "score": 91.7,
+            "source": "self-reported",
+            "sourceUrl": "https://huggingface.co/ByteDance-Seed/Seed-OSS-36B-Instruct",
+            "notes": "AIME24"
+          },
+          {
+            "benchmarkSlug": "livecodebench",
+            "score": 67.4,
+            "source": "self-reported",
+            "sourceUrl": "https://huggingface.co/ByteDance-Seed/Seed-OSS-36B-Instruct",
+            "notes": "LiveCodeBench v6"
+          }
+        ],
+        "verificationNotes": "Fully confirmed: fetched the HF model card ByteDance-Seed/Seed-OSS-36B-Instruct directly. Confirms 36B params, native 512K context, Apache-2.0 license, and release date Aug 20, 2025. All six benchmark numbers (MMLU 87.4, MMLU-Pro 82.7, GSM8K 90.8, MATH 81.7, AIME24 91.7, LiveCodeBench v6 67.4) appear verbatim on the model card. No changes made."
+      },
+      {
+        "name": "InternVL2.5-78B",
+        "org": "OpenGVLab (Shanghai AI Lab)",
+        "family": "InternVL 2.5",
+        "releaseDate": "2024-12-05",
+        "status": "released",
+        "openness": "open-weights",
+        "license": "Qwen License (InternViT component MIT; Qwen2.5-72B-Instruct component under Qwen License)",
+        "paramsB": 78,
+        "activeParamsB": null,
+        "archClass": "dense",
+        "archDisplay": "InternViT-6B vision encoder + Qwen2.5-72B language model (dense composite MLLM)",
+        "ctxK": 32,
+        "modalities": [
+          "text",
+          "vision"
+        ],
+        "langCount": null,
+        "capabilities": {
+          "reasoning": false,
+          "coding": false,
+          "vision": true,
+          "functionCalling": false,
+          "toolUse": false,
+          "agentic": false
+        },
+        "apiAvailable": true,
+        "price": null,
+        "links": {
+          "hf": "OpenGVLab/InternVL2_5-78B",
+          "gh": "OpenGVLab/InternVL"
+        },
+        "note": "First open-source MLLM to exceed 70% on MMMU, rivaling GPT-4o while trained on far fewer tokens than competitors.",
+        "quants": [
+          "AWQ"
+        ],
+        "vramQ4Gb": 53,
+        "vramFp16Gb": 156,
+        "tps4090": null,
+        "tpsNote": "78B model exceeds a single RTX 4090's 24GB VRAM even at Q4 (~53GB needed); no single-4090 measurement exists.",
+        "effortLabel": null,
+        "isDefaultConfig": true,
+        "isBestConfig": true,
+        "specSources": {
+          "paramsB": "https://huggingface.co/OpenGVLab/InternVL2_5-78B",
+          "ctxK": "https://github.com/OpenGVLab/InternVL/issues/809",
+          "releaseDate": "https://internvl.github.io/blog/2024-12-05-InternVL-2.5/",
+          "openness": "https://huggingface.co/OpenGVLab/InternVL2_5-78B"
+        },
+        "results": [
+          {
+            "benchmarkSlug": "mmmu",
+            "score": 70.1,
+            "source": "self-reported",
+            "sourceUrl": "https://internvl.github.io/blog/2024-12-05-InternVL-2.5/",
+            "notes": "MMMU val, with CoT"
+          },
+          {
+            "benchmarkSlug": "mathvista",
+            "score": 72.3,
+            "source": "self-reported",
+            "sourceUrl": "https://internvl.github.io/blog/2024-12-05-InternVL-2.5/",
+            "notes": "MathVista mini"
+          },
+          {
+            "benchmarkSlug": "docvqa",
+            "score": 95.1,
+            "source": "self-reported",
+            "sourceUrl": "https://internvl.github.io/blog/2024-12-05-InternVL-2.5/",
+            "notes": "DocVQA test"
+          },
+          {
+            "benchmarkSlug": "ocrbench",
+            "score": 854,
+            "source": "self-reported",
+            "sourceUrl": "https://internvl.github.io/blog/2024-12-05-InternVL-2.5/"
+          }
+        ],
+        "verificationNotes": "Confirmed real: release date Dec 5, 2024 confirmed via internvl.github.io blog post. Fetched HF model card directly — confirms 78B total, architecture is InternViT-6B + Qwen2.5-72B-Instruct + MLP projector, and license is MIT for the project/InternViT component with Qwen2.5-72B-Instruct governed by the separate Qwen License (matches record). Fetched the InternVL 2.5 blog page directly and confirmed all four benchmark numbers verbatim: MMMU 70.1, MathVista 72.3, DocVQA 95.1, OCRBench 854. CAVEAT: ctxK=32 (32K) is inferred from the Qwen2.5-72B-Instruct backbone's native context length, not an explicit, directly-stated context spec for the multimodal InternVL2.5-78B checkpoint itself — the cited GitHub issue is an unanswered question, not a confirmation, and other InternVL documentation suggests InternVL2.5 models were officially evaluated at 16K rather than 32K. Kept the value since it is a defensible LLM-backbone-derived estimate, but confidence is moderate rather than high."
+      },
+      {
+        "name": "InternVL3-78B",
+        "org": "OpenGVLab (Shanghai AI Lab)",
+        "family": "InternVL3",
+        "releaseDate": "2025-04-11",
+        "status": "released",
+        "openness": "open-weights",
+        "license": "Qwen License (InternViT component MIT; Qwen2.5-72B component under Qwen License)",
+        "paramsB": 78,
+        "activeParamsB": null,
+        "archClass": "dense",
+        "archDisplay": "InternViT-6B-448px-V2.5 vision encoder + Qwen2.5-72B language model, natively multimodal pre-training",
+        "ctxK": 32,
+        "modalities": [
+          "text",
+          "vision"
+        ],
+        "langCount": null,
+        "capabilities": {
+          "reasoning": false,
+          "coding": false,
+          "vision": true,
+          "functionCalling": true,
+          "toolUse": true,
+          "agentic": true
+        },
+        "apiAvailable": true,
+        "price": null,
+        "links": {
+          "hf": "OpenGVLab/InternVL3-78B",
+          "gh": "OpenGVLab/InternVL"
+        },
+        "note": "Flagship of the natively-multimodal InternVL3 series, surpassing GPT-4o on MMMU; adds tool use, GUI agents and 3D perception.",
+        "quants": [
+          "AWQ"
+        ],
+        "vramQ4Gb": 53,
+        "vramFp16Gb": 156,
+        "tps4090": null,
+        "tpsNote": "78B model exceeds a single RTX 4090's 24GB VRAM even at Q4 (AWQ build is 53GB); no single-4090 measurement exists.",
+        "effortLabel": null,
+        "isDefaultConfig": true,
+        "isBestConfig": true,
+        "specSources": {
+          "paramsB": "https://huggingface.co/OpenGVLab/InternVL3-78B",
+          "ctxK": "https://arxiv.org/html/2504.10479v1",
+          "releaseDate": "https://internvl.github.io/blog/2025-04-11-InternVL-3.0/",
+          "openness": "https://huggingface.co/OpenGVLab/InternVL3-78B"
+        },
+        "results": [
+          {
+            "benchmarkSlug": "mmmu",
+            "score": 72.2,
+            "source": "self-reported",
+            "sourceUrl": "https://arxiv.org/html/2504.10479v1",
+            "notes": "Surpasses GPT-4o (70.7)"
+          },
+          {
+            "benchmarkSlug": "mathvista",
+            "score": 79,
+            "source": "self-reported",
+            "sourceUrl": "https://arxiv.org/html/2504.10479v1"
+          },
+          {
+            "benchmarkSlug": "ocrbench",
+            "score": 906,
+            "source": "self-reported",
+            "sourceUrl": "https://arxiv.org/html/2504.10479v1"
+          }
+        ],
+        "verificationNotes": "Confirmed real model. Corrected releaseDate source to the official OpenGVLab blog post (internvl.github.io, dated 2025-04-11), which matches the record's date — the arXiv paper (v1) was actually first submitted 2025-04-14, so that URL was a weaker/slightly inconsistent source for the release-date claim even though the date value itself was right. Confirmed via arXiv HTML (2504.10479v1) full text: MMMU 72.2, MathVista 79.0, OCRBench 906 all literally appear in the benchmark tables. Confirmed 32K context ('sequences of up to 32K tokens') in the same paper. Confirmed via HF model card: 78B total params, InternViT-6B-448px-V2_5 vision encoder, Qwen2.5-72B LLM backbone. Confirmed InternViT-6B is MIT-licensed (HF) and Qwen2.5-72B uses the non-Apache 'Qwen Research License Agreement' (HF LICENSE file / Qwen blog), matching the split-license description. Confirmed OpenGVLab/InternVL3-78B-AWQ exists on HF and is ~53GB, matching vramQ4Gb. No changes to numeric values were needed."
+      },
+      {
+        "name": "Claude Opus 4.5",
+        "org": "Anthropic",
+        "family": "Claude 4",
+        "releaseDate": "2025-11-24",
+        "status": "released",
+        "openness": "closed",
+        "license": "Proprietary",
+        "paramsB": null,
+        "activeParamsB": null,
+        "archClass": "dense",
+        "archDisplay": "Transformer (architecture undisclosed)",
+        "ctxK": 200,
+        "modalities": [
+          "text",
+          "vision"
+        ],
+        "langCount": null,
+        "capabilities": {
+          "reasoning": true,
+          "coding": true,
+          "vision": true,
+          "functionCalling": true,
+          "toolUse": true,
+          "agentic": true
+        },
+        "apiAvailable": true,
+        "price": {
+          "input": 5,
+          "output": 25,
+          "provider": "Anthropic"
+        },
+        "links": {
+          "docs": "anthropic.com/news/claude-opus-4-5"
+        },
+        "note": "Efficiency-focused flagship: 67% price cut vs Opus 4.1 and state-of-the-art 80.9% SWE-bench Verified at launch.",
+        "quants": [],
+        "vramQ4Gb": null,
+        "vramFp16Gb": null,
+        "tps4090": null,
+        "tpsNote": null,
+        "effortLabel": null,
+        "isDefaultConfig": true,
+        "isBestConfig": true,
+        "specSources": {
+          "paramsB": "https://www.anthropic.com/news/claude-opus-4-5",
+          "ctxK": "https://www.anthropic.com/news/claude-opus-4-5",
+          "releaseDate": "https://www.anthropic.com/news/claude-opus-4-5",
+          "openness": "https://www.anthropic.com/news/claude-opus-4-5"
+        },
+        "results": [
+          {
+            "benchmarkSlug": "swe-bench",
+            "score": 80.9,
+            "source": "self-reported",
+            "sourceUrl": "https://www.anthropic.com/news/claude-opus-4-5",
+            "notes": "SWE-bench Verified"
+          },
+          {
+            "benchmarkSlug": "gpqa",
+            "score": 87,
+            "source": "self-reported",
+            "sourceUrl": "https://www.vellum.ai/blog/claude-opus-4-5-benchmarks",
+            "notes": "GPQA Diamond"
+          },
+          {
+            "benchmarkSlug": "mmlu",
+            "score": 90.8,
+            "source": "self-reported",
+            "sourceUrl": "https://www.vellum.ai/blog/claude-opus-4-5-benchmarks"
+          },
+          {
+            "benchmarkSlug": "mmmu",
+            "score": 80.7,
+            "source": "self-reported",
+            "sourceUrl": "https://www.vellum.ai/blog/claude-opus-4-5-benchmarks"
+          },
+          {
+            "benchmarkSlug": "hle",
+            "score": 43.2,
+            "source": "self-reported",
+            "sourceUrl": "https://www.vellum.ai/blog/claude-opus-4-5-benchmarks",
+            "notes": "Humanity's Last Exam, with search/tools"
+          },
+          {
+            "benchmarkSlug": "aime",
+            "score": 93,
+            "source": "self-reported",
+            "sourceUrl": "https://www.lesswrong.com/posts/HtdrtF5kcpLtWe5dW/claude-opus-4-5-is-the-best-model-available",
+            "notes": "AIME 2025 without code tools; Anthropic flagged that decontamination efforts for AIME were not fully successful"
+          },
+          {
+            "benchmarkSlug": "aa-intelligence-index",
+            "score": 70,
+            "source": "independent",
+            "sourceUrl": "https://artificialanalysis.ai/articles/claude-opus-4-5-benchmarks-and-analysis",
+            "notes": "Artificial Analysis Intelligence Index (thinking mode); #2 most-intelligent model at release per Artificial Analysis"
+          }
+        ],
+        "verificationNotes": "Confirmed real, released model via anthropic.com/news/claude-opus-4-5: release date 2025-11-24, pricing $5/$25 per million input/output tokens (67% cut vs Opus 4.1), 200K context, SWE-bench Verified 80.9% all literally appear on the official page. Cross-checked all vellum.ai-sourced rows by re-fetching that page directly: GPQA Diamond 87.0%, MMLU 90.8%, MMMU 80.7%, HLE (with search) ~43.2% all literally present. Confirmed AIME 93% (without code tools) and the AIME decontamination caveat by fetching the LessWrong post directly ('93% without code and 100% with Python'; Anthropic disclosed 'rephrased versions of at least some AIME questions... persisted in the training corpus'). Confirmed Artificial Analysis Intelligence Index score of 70 and #2 rank (behind Gemini 3 Pro at 73, tied GPT-5.1) by fetching artificialanalysis.ai directly. No changes to values were needed; architecture/params remain correctly marked null/undisclosed since Anthropic does not publish these."
+      },
+      {
+        "name": "Alpaca 7B",
+        "org": "Stanford (CRFM / Tatsu Lab)",
+        "family": "Alpaca",
+        "releaseDate": "2023-03-13",
+        "status": "released",
+        "openness": "open-weights",
+        "license": "CC-BY-NC-4.0 (data/weights, non-commercial); Apache-2.0 (training code)",
+        "paramsB": 6.7,
+        "activeParamsB": null,
+        "archClass": "dense",
+        "archDisplay": "Dense Transformer (LLaMA 7B architecture, fine-tuned)",
+        "ctxK": 0.512,
+        "modalities": [
+          "text"
+        ],
+        "langCount": 1,
+        "capabilities": {
+          "reasoning": false,
+          "coding": false,
+          "vision": false,
+          "functionCalling": false,
+          "toolUse": false,
+          "agentic": false
+        },
+        "apiAvailable": false,
+        "price": null,
+        "links": {
+          "gh": "tatsu-lab/stanford_alpaca",
+          "docs": "crfm.stanford.edu/2023/03/13/alpaca.html"
+        },
+        "note": "LLaMA 7B fine-tuned on 52K self-instruct demos for under $600; sparked the open instruction-tuning wave.",
+        "quants": [
+          "GGUF Q4"
+        ],
+        "vramQ4Gb": 6,
+        "vramFp16Gb": 13,
+        "tps4090": null,
+        "tpsNote": null,
+        "effortLabel": null,
+        "isDefaultConfig": true,
+        "isBestConfig": true,
+        "specSources": {
+          "paramsB": "https://github.com/tatsu-lab/stanford_alpaca",
+          "ctxK": "https://github.com/tatsu-lab/stanford_alpaca",
+          "releaseDate": "https://crfm.stanford.edu/2023/03/13/alpaca.html",
+          "openness": "https://github.com/tatsu-lab/stanford_alpaca"
+        },
+        "results": [
+          {
+            "benchmarkSlug": "alpaca-eval-vs-davinci003",
+            "score": 50.3,
+            "source": "self-reported",
+            "sourceUrl": "https://crfm.stanford.edu/2023/03/13/alpaca.html",
+            "notes": "Blind pairwise human comparison: Alpaca 7B won 90 of 179 head-to-head comparisons vs text-davinci-003 (essentially a statistical tie)"
+          }
+        ],
+        "verificationNotes": "Confirmed real release via crfm.stanford.edu/2023/03/13/alpaca.html (blog post dated 2023-03-13, exactly matching releaseDate). Confirmed via direct fetch of tatsu-lab/stanford_alpaca GitHub repo: three-license split is accurate (code = Apache 2.0, data = CC BY NC 4.0, weight diff = CC BY NC 4.0) and training used a 512-token max sequence length, matching ctxK 0.512. Confirmed the head-to-head result: CRFM blog states 'Alpaca wins 90 versus 89 comparisons against text-davinci-003' — 90+89=179, matching the record's '90 of 179' framing and the 50.3% win rate (90/179≈50.3%). paramsB 6.7 matches the well-documented actual parameter count of the 'LLaMA-7B' base model. No changes to values were needed."
+      }
+    ]
+  },
+  "workflowProgress": [
+    {
+      "type": "workflow_phase",
+      "index": 1,
+      "title": "Research"
+    },
+    {
+      "type": "workflow_phase",
+      "index": 2,
+      "title": "Verify"
+    },
+    {
+      "type": "workflow_agent",
+      "index": 1,
+      "label": "research:Mistral AI",
+      "phaseIndex": 1,
+      "phaseTitle": "Research",
+      "agentId": "a4d6510a97ab2e8ba",
+      "model": "claude-sonnet-5",
+      "state": "done",
+      "startedAt": 1783901484646,
+      "queuedAt": 1783901484630,
+      "attempt": 1,
+      "lastToolName": "StructuredOutput",
+      "promptPreview": "You have web research tools. FIRST load them: call ToolSearch with query \"select:mcp__4dbcbf51-5bb9-4f93-a61f-18044e1a3091__web_search,mcp__4dbcbf51-5bb9-4f93-a61f-18044e1a3091__web_fetch\" to load Parallel P0 web_search/web_fetch (pass a stable session_id + model_name on every call). Built-in WebSearch/WebFetch may also load via ToolSearch query \"web search fetch\". Use REAL searches — never answer…",
+      "lastProgressAt": 1783902307952,
+      "tokens": 133650,
+      "toolCalls": 79,
+      "durationMs": 823305,
+      "resultPreview": "{\"models\":[{\"name\":\"Mistral 7B\",\"org\":\"Mistral AI\",\"family\":\"Mistral 7B\",\"releaseDate\":\"2023-09-27\",\"status\":\"deprecated\",\"openness\":\"open-weights\",\"license\":\"Apache 2.0\",\"paramsB\":7.3,\"activeParamsB\":null,\"archClass\":\"dense\",\"archDisplay\":\"Dense transformer — 32 layers, grouped-query attention + sliding-window attention\",\"ctxK\":8,\"modalities\":[\"text\"],\"langCount\":null,\"capabilities\":{\"reasoning\":…"
+    },
+    {
+      "type": "workflow_agent",
+      "index": 2,
+      "label": "research:Mistral AI",
+      "phaseIndex": 1,
+      "phaseTitle": "Research",
+      "agentId": "ab41742b705d93933",
+      "model": "claude-sonnet-5",
+      "state": "done",
+      "startedAt": 1783901484647,
+      "queuedAt": 1783901484631,
+      "attempt": 1,
+      "lastToolName": "StructuredOutput",
+      "promptPreview": "You have web research tools. FIRST load them: call ToolSearch with query \"select:mcp__4dbcbf51-5bb9-4f93-a61f-18044e1a3091__web_search,mcp__4dbcbf51-5bb9-4f93-a61f-18044e1a3091__web_fetch\" to load Parallel P0 web_search/web_fetch (pass a stable session_id + model_name on every call). Built-in WebSearch/WebFetch may also load via ToolSearch query \"web search fetch\". Use REAL searches — never answer…",
+      "lastProgressAt": 1783902193519,
+      "tokens": 132625,
+      "toolCalls": 69,
+      "durationMs": 708872,
+      "resultPreview": "{\"models\":[{\"name\":\"Magistral Medium\",\"org\":\"Mistral AI\",\"family\":\"Magistral\",\"releaseDate\":\"2025-06-10\",\"status\":\"released\",\"openness\":\"closed\",\"license\":\"Proprietary\",\"paramsB\":null,\"activeParamsB\":null,\"archClass\":\"dense\",\"archDisplay\":\"Dense transformer, reasoning RL fine-tune of Mistral Medium 3 (architecture undisclosed)\",\"ctxK\":128,\"modalities\":[\"text\"],\"langCount\":null,\"capabilities\":{\"rea…"
+    },
+    {
+      "type": "workflow_agent",
+      "index": 3,
+      "label": "research:ByteDance",
+      "phaseIndex": 1,
+      "phaseTitle": "Research",
+      "agentId": "ac991a270799f7b97",
+      "model": "claude-sonnet-5",
+      "state": "done",
+      "startedAt": 1783901484647,
+      "queuedAt": 1783901484632,
+      "attempt": 1,
+      "lastToolName": "StructuredOutput",
+      "promptPreview": "You have web research tools. FIRST load them: call ToolSearch with query \"select:mcp__4dbcbf51-5bb9-4f93-a61f-18044e1a3091__web_search,mcp__4dbcbf51-5bb9-4f93-a61f-18044e1a3091__web_fetch\" to load Parallel P0 web_search/web_fetch (pass a stable session_id + model_name on every call). Built-in WebSearch/WebFetch may also load via ToolSearch query \"web search fetch\". Use REAL searches — never answer…",
+      "lastProgressAt": 1783902178096,
+      "tokens": 135567,
+      "toolCalls": 74,
+      "durationMs": 693449,
+      "resultPreview": "{\"models\":[{\"name\":\"Seed1.5-Thinking\",\"org\":\"ByteDance\",\"family\":\"Seed\",\"releaseDate\":\"2025-04-10\",\"status\":\"released\",\"openness\":\"closed\",\"license\":\"Proprietary\",\"paramsB\":200,\"activeParamsB\":20,\"archClass\":\"moe\",\"archDisplay\":\"Mixture-of-Experts, 200B total / 20B active\",\"ctxK\":128,\"modalities\":[\"text\"],\"langCount\":null,\"capabilities\":{\"reasoning\":true,\"coding\":true,\"vision\":false,\"functionCalli…"
+    },
+    {
+      "type": "workflow_agent",
+      "index": 4,
+      "label": "verify:Mistral AI",
+      "phaseIndex": 2,
+      "phaseTitle": "Verify",
+      "agentId": "a7b91b63220182db6",
+      "model": "claude-sonnet-5",
+      "state": "done",
+      "startedAt": 1783902307972,
+      "queuedAt": 1783902307955,
+      "attempt": 1,
+      "lastToolName": "StructuredOutput",
+      "promptPreview": "You have web research tools. FIRST load them: call ToolSearch with query \"select:mcp__4dbcbf51-5bb9-4f93-a61f-18044e1a3091__web_search,mcp__4dbcbf51-5bb9-4f93-a61f-18044e1a3091__web_fetch\" to load Parallel P0 web_search/web_fetch (pass a stable session_id + model_name on every call). Built-in WebSearch/WebFetch may also load via ToolSearch query \"web search fetch\". Use REAL searches — never answer…",
+      "lastProgressAt": 1783902611608,
+      "tokens": 84349,
+      "toolCalls": 37,
+      "durationMs": 303636,
+      "resultPreview": "{\"models\":[{\"name\":\"Mistral 7B\",\"org\":\"Mistral AI\",\"family\":\"Mistral 7B\",\"releaseDate\":\"2023-09-27\",\"status\":\"deprecated\",\"openness\":\"open-weights\",\"license\":\"Apache 2.0\",\"paramsB\":7.3,\"activeParamsB\":null,\"archClass\":\"dense\",\"archDisplay\":\"Dense transformer — 32 layers, grouped-query attention + sliding-window attention\",\"ctxK\":8,\"modalities\":[\"text\"],\"langCount\":null,\"capabilities\":{\"reasoning\":…"
+    },
+    {
+      "type": "workflow_agent",
+      "index": 5,
+      "label": "verify:Mistral AI",
+      "phaseIndex": 2,
+      "phaseTitle": "Verify",
+      "agentId": "ade952643112d27b8",
+      "model": "claude-sonnet-5",
+      "state": "done",
+      "startedAt": 1783902307973,
+      "queuedAt": 1783902307956,
+      "attempt": 1,
+      "lastToolName": "StructuredOutput",
+      "promptPreview": "You have web research tools. FIRST load them: call ToolSearch with query \"select:mcp__4dbcbf51-5bb9-4f93-a61f-18044e1a3091__web_search,mcp__4dbcbf51-5bb9-4f93-a61f-18044e1a3091__web_fetch\" to load Parallel P0 web_search/web_fetch (pass a stable session_id + model_name on every call). Built-in WebSearch/WebFetch may also load via ToolSearch query \"web search fetch\". Use REAL searches — never answer…",
+      "lastProgressAt": 1783902543951,
+      "tokens": 80957,
+      "toolCalls": 34,
+      "durationMs": 235978,
+      "resultPreview": "{\"models\":[{\"name\":\"Devstral Small\",\"org\":\"Mistral AI\",\"family\":\"Devstral\",\"releaseDate\":\"2025-05-21\",\"status\":\"deprecated\",\"openness\":\"open-weights\",\"license\":\"Apache 2.0\",\"paramsB\":24,\"activeParamsB\":null,\"archClass\":\"dense\",\"archDisplay\":\"Dense transformer — 24B, finetuned from Mistral-Small-3.1-24B-Base\",\"ctxK\":128,\"modalities\":[\"text\"],\"langCount\":null,\"capabilities\":{\"reasoning\":false,\"codin…"
+    },
+    {
+      "type": "workflow_agent",
+      "index": 6,
+      "label": "verify:Cohere",
+      "phaseIndex": 2,
+      "phaseTitle": "Verify",
+      "agentId": "aaa1e6afd449abfc4",
+      "model": "claude-sonnet-5",
+      "state": "done",
+      "startedAt": 1783902307973,
+      "queuedAt": 1783902307956,
+      "attempt": 1,
+      "lastToolName": "StructuredOutput",
+      "promptPreview": "You have web research tools. FIRST load them: call ToolSearch with query \"select:mcp__4dbcbf51-5bb9-4f93-a61f-18044e1a3091__web_search,mcp__4dbcbf51-5bb9-4f93-a61f-18044e1a3091__web_fetch\" to load Parallel P0 web_search/web_fetch (pass a stable session_id + model_name on every call). Built-in WebSearch/WebFetch may also load via ToolSearch query \"web search fetch\". Use REAL searches — never answer…",
+      "lastProgressAt": 1783902800640,
+      "tokens": 117945,
+      "toolCalls": 51,
+      "durationMs": 492667,
+      "resultPreview": "{\"models\":[{\"name\":\"Command R7B\",\"org\":\"Cohere\",\"family\":\"Command R\",\"releaseDate\":\"2024-12-13\",\"status\":\"released\",\"openness\":\"open-weights\",\"license\":\"CC-BY-NC-4.0 (+ Acceptable Use Policy)\",\"paramsB\":7,\"activeParamsB\":null,\"archClass\":\"dense\",\"archDisplay\":\"Dense transformer (7B), optimized for on-device/edge RAG and tool use\",\"ctxK\":128,\"modalities\":[\"text\"],\"langCount\":23,\"capabilities\":{\"rea…"
+    },
+    {
+      "type": "workflow_agent",
+      "index": 7,
+      "label": "verify:OpenGVLab (Shanghai AI Lab)",
+      "phaseIndex": 2,
+      "phaseTitle": "Verify",
+      "agentId": "aef28bb6ea2ca3817",
+      "model": "claude-sonnet-5",
+      "state": "done",
+      "startedAt": 1783902307974,
+      "queuedAt": 1783902307956,
+      "attempt": 1,
+      "lastToolName": "StructuredOutput",
+      "promptPreview": "You have web research tools. FIRST load them: call ToolSearch with query \"select:mcp__4dbcbf51-5bb9-4f93-a61f-18044e1a3091__web_search,mcp__4dbcbf51-5bb9-4f93-a61f-18044e1a3091__web_fetch\" to load Parallel P0 web_search/web_fetch (pass a stable session_id + model_name on every call). Built-in WebSearch/WebFetch may also load via ToolSearch query \"web search fetch\". Use REAL searches — never answer…",
+      "lastProgressAt": 1783902509525,
+      "tokens": 73660,
+      "toolCalls": 28,
+      "durationMs": 201551,
+      "resultPreview": "{\"models\":[{\"name\":\"InternVL3-78B\",\"org\":\"OpenGVLab (Shanghai AI Lab)\",\"family\":\"InternVL3\",\"releaseDate\":\"2025-04-11\",\"status\":\"released\",\"openness\":\"open-weights\",\"license\":\"Qwen License (InternViT component MIT; Qwen2.5-72B component under Qwen License)\",\"paramsB\":78,\"activeParamsB\":null,\"archClass\":\"dense\",\"archDisplay\":\"InternViT-6B-448px-V2.5 vision encoder + Qwen2.5-72B language model, nati…"
+    }
+  ],
+  "totalTokens": 758753,
+  "totalToolCalls": 372
+}

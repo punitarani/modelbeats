@@ -1,0 +1,83 @@
+{
+  "name": "Qwen-72B",
+  "org": "Alibaba",
+  "family": "Qwen",
+  "releaseDate": "2023-11-30",
+  "status": "deprecated",
+  "openness": "open-weights",
+  "license": "Tongyi Qianwen LICENSE AGREEMENT (custom, free commercial use below usage threshold)",
+  "paramsB": 72,
+  "activeParamsB": null,
+  "archClass": "dense",
+  "archDisplay": "Dense decoder-only transformer, 80 layers (RoPE, SwiGLU, RMSNorm)",
+  "ctxK": 32,
+  "modalities": [
+    "text"
+  ],
+  "langCount": null,
+  "capabilities": {
+    "reasoning": false,
+    "coding": true,
+    "vision": false,
+    "functionCalling": false,
+    "toolUse": false,
+    "agentic": false
+  },
+  "apiAvailable": false,
+  "price": null,
+  "links": {
+    "hf": "Qwen/Qwen-72B",
+    "gh": "QwenLM/Qwen"
+  },
+  "note": "Gen-1 flagship trained on 3T tokens with 32K context; beat Llama2-70B and topped GPT-3.5 on MMLU/C-Eval/GSM8K at release.",
+  "quants": [
+    "GPTQ Int4",
+    "GPTQ Int8",
+    "GGUF"
+  ],
+  "vramQ4Gb": 48,
+  "vramFp16Gb": 144,
+  "tps4090": null,
+  "tpsNote": "Q4 weights (~48GB) exceed a single RTX 4090's 24GB VRAM; requires multi-GPU or CPU/disk offload.",
+  "effortLabel": null,
+  "isDefaultConfig": true,
+  "isBestConfig": true,
+  "specSources": {
+    "paramsB": "https://github.com/QwenLM/Qwen/blob/main/README.md",
+    "ctxK": "https://github.com/QwenLM/Qwen/blob/main/README.md",
+    "releaseDate": "https://github.com/QwenLM/Qwen/blob/main/README.md",
+    "openness": "https://huggingface.co/Qwen/Qwen-72B/blob/main/LICENSE"
+  },
+  "results": [
+    {
+      "benchmarkSlug": "mmlu",
+      "score": 77.4,
+      "source": "self-reported",
+      "sourceUrl": "https://huggingface.co/Qwen/Qwen-72B",
+      "evaluatedAt": "2023-11-30"
+    },
+    {
+      "benchmarkSlug": "c-eval",
+      "score": 83.3,
+      "source": "self-reported",
+      "sourceUrl": "https://huggingface.co/Qwen/Qwen-72B",
+      "evaluatedAt": "2023-11-30"
+    },
+    {
+      "benchmarkSlug": "gsm8k",
+      "score": 78.9,
+      "source": "self-reported",
+      "sourceUrl": "https://huggingface.co/Qwen/Qwen-72B",
+      "evaluatedAt": "2023-11-30",
+      "notes": "vs Llama2-70B 63.5"
+    },
+    {
+      "benchmarkSlug": "humaneval",
+      "score": 35.4,
+      "source": "self-reported",
+      "sourceUrl": "https://huggingface.co/Qwen/Qwen-72B",
+      "evaluatedAt": "2023-11-30"
+    }
+  ],
+  "verificationNotes": "Confirmed real, released 2023-11-30 per GitHub README. 72B params and 80 hidden layers confirmed via raw config.json (num_hidden_layers=80). Native 32K context (adapted RoPE base, no NTK extension needed) confirmed via GitHub README. Tongyi Qianwen commercial license confirmed. All 4 benchmark scores (mmlu 77.4, c-eval 83.3, gsm8k 78.9, humaneval 35.4) confirmed verbatim on HF/GitHub."
+}

@@ -1,0 +1,105 @@
+{
+  "name": "DeepSeek-V3 671B",
+  "org": "DeepSeek",
+  "family": "DeepSeek-V3",
+  "releaseDate": "2024-12-26",
+  "status": "released",
+  "openness": "open-weights",
+  "license": "DeepSeek Model License (code: MIT)",
+  "paramsB": 671,
+  "activeParamsB": 37,
+  "archClass": "moe",
+  "archDisplay": "MoE transformer, 671B total / 37B active — DeepSeekMoE + MLA + multi-token prediction, auxiliary-loss-free load balancing",
+  "ctxK": 128,
+  "modalities": [
+    "text"
+  ],
+  "langCount": null,
+  "capabilities": {
+    "reasoning": false,
+    "coding": true,
+    "vision": false,
+    "functionCalling": true,
+    "toolUse": true,
+    "agentic": false
+  },
+  "apiAvailable": true,
+  "price": {
+    "input": 0.2,
+    "output": 0.8,
+    "provider": "OpenRouter"
+  },
+  "links": {
+    "hf": "deepseek-ai/DeepSeek-V3",
+    "gh": "deepseek-ai/DeepSeek-V3",
+    "docs": "api-docs.deepseek.com"
+  },
+  "note": "671B/37B MoE trained on 14.8T tokens for ~$5.6M (2.788M H800 GPU-hours); matched GPT-4o/Claude 3.5 quality at a fraction of the cost.",
+  "quants": [
+    "GGUF",
+    "MLX"
+  ],
+  "vramQ4Gb": 400,
+  "vramFp16Gb": 1342,
+  "tps4090": null,
+  "tpsNote": "671B total params vastly exceed a single RTX 4090's 24GB even at 4-bit; requires a multi-GPU cluster or heavy CPU/RAM offload",
+  "effortLabel": null,
+  "isDefaultConfig": true,
+  "isBestConfig": true,
+  "specSources": {
+    "paramsB": "https://huggingface.co/deepseek-ai/DeepSeek-V3",
+    "ctxK": "https://huggingface.co/deepseek-ai/DeepSeek-V3",
+    "releaseDate": "https://openrouter.ai/deepseek/deepseek-chat",
+    "openness": "https://huggingface.co/deepseek-ai/DeepSeek-V3"
+  },
+  "results": [
+    {
+      "benchmarkSlug": "mmlu",
+      "score": 88.5,
+      "source": "self-reported",
+      "sourceUrl": "https://huggingface.co/deepseek-ai/DeepSeek-V3"
+    },
+    {
+      "benchmarkSlug": "mmlu-pro",
+      "score": 75.9,
+      "source": "self-reported",
+      "sourceUrl": "https://huggingface.co/deepseek-ai/DeepSeek-V3"
+    },
+    {
+      "benchmarkSlug": "gpqa",
+      "score": 59.1,
+      "source": "self-reported",
+      "sourceUrl": "https://huggingface.co/deepseek-ai/DeepSeek-V3",
+      "notes": "GPQA-Diamond"
+    },
+    {
+      "benchmarkSlug": "math",
+      "score": 90.2,
+      "source": "self-reported",
+      "sourceUrl": "https://huggingface.co/deepseek-ai/DeepSeek-V3",
+      "notes": "MATH-500"
+    },
+    {
+      "benchmarkSlug": "humaneval",
+      "score": 82.6,
+      "source": "self-reported",
+      "sourceUrl": "https://huggingface.co/deepseek-ai/DeepSeek-V3",
+      "notes": "HumanEval-Mul"
+    },
+    {
+      "benchmarkSlug": "livecodebench",
+      "score": 37.6,
+      "source": "self-reported",
+      "sourceUrl": "https://huggingface.co/deepseek-ai/DeepSeek-V3",
+      "notes": "Pass@1"
+    },
+    {
+      "benchmarkSlug": "swe-bench",
+      "score": 42,
+      "source": "self-reported",
+      "sourceUrl": "https://huggingface.co/deepseek-ai/DeepSeek-V3",
+      "notes": "SWE-bench Verified, Resolved"
+    }
+  ],
+  "verificationNotes": "Confirmed real via HF model card: 671B total/37B active, 128K context, MIT code license + DeepSeek Model License. All seven benchmark rows (MMLU 88.5, MMLU-Pro 75.9, GPQA-Diamond 59.1, MATH-500 90.2, HumanEval-Mul 82.6, LiveCodeBench 37.6, SWE-bench Verified 42.0) confirmed literally on the HF page. 14.8T training tokens and 2.788M H800 GPU-hours figures also confirmed. No changes needed."
+}

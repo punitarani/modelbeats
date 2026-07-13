@@ -1,0 +1,108 @@
+{
+  "name": "Mistral 7B",
+  "org": "Mistral AI",
+  "family": "Mistral 7B",
+  "releaseDate": "2023-09-27",
+  "status": "deprecated",
+  "openness": "open-weights",
+  "license": "Apache 2.0",
+  "paramsB": 7.3,
+  "activeParamsB": null,
+  "archClass": "dense",
+  "archDisplay": "Dense transformer — 32 layers, grouped-query attention + sliding-window attention",
+  "ctxK": 8,
+  "modalities": [
+    "text"
+  ],
+  "langCount": null,
+  "capabilities": {
+    "reasoning": false,
+    "coding": true,
+    "vision": false,
+    "functionCalling": false,
+    "toolUse": false,
+    "agentic": false
+  },
+  "apiAvailable": false,
+  "price": {
+    "input": 0.25,
+    "output": 0.25,
+    "provider": "Mistral AI (open-mistral-7b, retired 2025-03-30)"
+  },
+  "links": {
+    "hf": "mistralai/Mistral-7B-v0.1",
+    "gh": "mistralai/mistral-inference",
+    "docs": "docs.mistral.ai/models/mistral-7b-0-1"
+  },
+  "note": "Debut open 7.3B model; Apache-2.0 weights beat Llama 2 13B on most benchmarks and launched Mistral AI.",
+  "quants": [
+    "GGUF Q4",
+    "AWQ",
+    "GPTQ",
+    "MLX"
+  ],
+  "vramQ4Gb": 4.4,
+  "vramFp16Gb": 14.6,
+  "tps4090": null,
+  "tpsNote": null,
+  "effortLabel": null,
+  "isDefaultConfig": true,
+  "isBestConfig": true,
+  "specSources": {
+    "paramsB": "https://mistral.ai/news/announcing-mistral-7b/",
+    "ctxK": "https://docs.mistral.ai/models/mistral-7b-0-1",
+    "releaseDate": "https://mistral.ai/news/announcing-mistral-7b/",
+    "openness": "https://huggingface.co/mistralai/Mistral-7B-v0.1"
+  },
+  "results": [
+    {
+      "benchmarkSlug": "mmlu",
+      "score": 60.1,
+      "source": "self-reported",
+      "sourceUrl": "https://arxiv.org/abs/2310.06825"
+    },
+    {
+      "benchmarkSlug": "hellaswag",
+      "score": 81.3,
+      "source": "self-reported",
+      "sourceUrl": "https://arxiv.org/abs/2310.06825"
+    },
+    {
+      "benchmarkSlug": "winogrande",
+      "score": 75.3,
+      "source": "self-reported",
+      "sourceUrl": "https://arxiv.org/abs/2310.06825"
+    },
+    {
+      "benchmarkSlug": "arc-challenge",
+      "score": 55.5,
+      "source": "self-reported",
+      "sourceUrl": "https://arxiv.org/abs/2310.06825"
+    },
+    {
+      "benchmarkSlug": "gsm8k",
+      "score": 52.2,
+      "source": "self-reported",
+      "sourceUrl": "https://arxiv.org/abs/2310.06825"
+    },
+    {
+      "benchmarkSlug": "math",
+      "score": 13.1,
+      "source": "self-reported",
+      "sourceUrl": "https://arxiv.org/abs/2310.06825"
+    },
+    {
+      "benchmarkSlug": "humaneval",
+      "score": 30.5,
+      "source": "self-reported",
+      "sourceUrl": "https://arxiv.org/abs/2310.06825"
+    },
+    {
+      "benchmarkSlug": "mbpp",
+      "score": 47.5,
+      "source": "self-reported",
+      "sourceUrl": "https://arxiv.org/abs/2310.06825"
+    }
+  ],
+  "verificationNotes": "Existence and identity confirmed: mistral.ai/news/announcing-mistral-7b/ and HF mistralai/Mistral-7B-v0.1 card (magnet-link release 2023-09-27, Apache-2.0, 7B params ~7.3B per architecture config, GQA+SWA, 32 layers). All 8 benchmark rows confirmed literally in arxiv 2310.06825 Table 2 (fetched via ar5iv HTML mirror): MMLU 60.1, HellaSwag 81.3, WinoGrande 75.3, ARC-C 55.5, GSM8K 52.2, MATH 13.1, HumanEval 30.5, MBPP 47.5 — no changes. 8K context confirmed specific to v0.1 (docs page for v0.3 shows 32K, a later variant, so ctxK=8 for this v0.1 record is correct, not an error). Pricing $0.25/$0.25 and retirement date 2025-03-30 for open-mistral-7b corroborated by Microsoft Foundry retirement-schedule listing and Helicone pricing page."
+}

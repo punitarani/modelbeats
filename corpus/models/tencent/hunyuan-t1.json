@@ -1,0 +1,86 @@
+{
+  "name": "Hunyuan-T1",
+  "org": "Tencent",
+  "family": "Hunyuan",
+  "releaseDate": "2025-03-21",
+  "status": "released",
+  "openness": "closed",
+  "license": "Proprietary",
+  "paramsB": null,
+  "activeParamsB": null,
+  "archClass": "hybrid",
+  "archDisplay": "Hybrid Transformer-Mamba MoE deep-reasoning model built on TurboS base (params undisclosed)",
+  "ctxK": 256,
+  "modalities": [
+    "text"
+  ],
+  "langCount": null,
+  "capabilities": {
+    "reasoning": true,
+    "coding": true,
+    "vision": false,
+    "functionCalling": true,
+    "toolUse": true,
+    "agentic": false
+  },
+  "apiAvailable": true,
+  "price": {
+    "input": 0.15,
+    "output": 0.59,
+    "provider": "Tencent Cloud"
+  },
+  "links": {
+    "docs": "tencent.github.io/llm.hunyuan.T1/README_EN.html"
+  },
+  "note": "Mamba-powered deep-reasoning flagship built on TurboS, API-only via Tencent Cloud/Yuanbao; scores 87.2 MMLU-Pro and 96.2 MATH-500, close to DeepSeek R1 and trailing only o1.",
+  "quants": [],
+  "vramQ4Gb": null,
+  "vramFp16Gb": null,
+  "tps4090": null,
+  "tpsNote": null,
+  "effortLabel": null,
+  "isDefaultConfig": true,
+  "isBestConfig": true,
+  "specSources": {
+    "ctxK": "https://www.analyticsvidhya.com/blog/2025/03/hunyuan-t1/",
+    "releaseDate": "https://www.marketscreener.com/quote/stock/TENCENT-HOLDINGS-LIMITED-3045861/news/Tencent-Launches-Hunyuan-T1-AI-Reasoning-Model-49409794/",
+    "openness": "https://tencent.github.io/llm.hunyuan.T1/README_EN.html"
+  },
+  "results": [
+    {
+      "benchmarkSlug": "mmlu-pro",
+      "score": 87.2,
+      "source": "self-reported",
+      "sourceUrl": "https://tencent.github.io/llm.hunyuan.T1/README_EN.html",
+      "notes": "ranks second only to o1"
+    },
+    {
+      "benchmarkSlug": "gpqa",
+      "score": 69.3,
+      "source": "self-reported",
+      "sourceUrl": "https://tencent.github.io/llm.hunyuan.T1/README_EN.html",
+      "notes": "GPQA-Diamond"
+    },
+    {
+      "benchmarkSlug": "math",
+      "score": 96.2,
+      "source": "self-reported",
+      "sourceUrl": "https://tencent.github.io/llm.hunyuan.T1/README_EN.html",
+      "notes": "MATH-500, closely trailing DeepSeek R1"
+    },
+    {
+      "benchmarkSlug": "livecodebench",
+      "score": 64.9,
+      "source": "self-reported",
+      "sourceUrl": "https://tencent.github.io/llm.hunyuan.T1/README_EN.html"
+    },
+    {
+      "benchmarkSlug": "arena-hard",
+      "score": 91.9,
+      "source": "self-reported",
+      "sourceUrl": "https://tencent.github.io/llm.hunyuan.T1/README_EN.html",
+      "notes": "Arena-Hard-Auto"
+    }
+  ],
+  "verificationNotes": "Confirmed real release: Tencent officially launched Hunyuan-T1 on 2025-03-21 (WinBuzzer, MarketScreener, AnalyticsVidhya all corroborate). Fetched the official Tencent GitHub model card directly and confirmed all five benchmark numbers (MMLU-Pro 87.2, GPQA-Diamond 69.3, MATH-500 96.2, LiveCodeBench 64.9, Arena-Hard 91.9) literally appear there. Confirmed Hybrid-Transformer-Mamba MoE architecture built on TurboS base, API-only/proprietary availability, and 256K context length via independent search (apxml.com, analyticsvidhya). Params remain undisclosed as stated."
+}

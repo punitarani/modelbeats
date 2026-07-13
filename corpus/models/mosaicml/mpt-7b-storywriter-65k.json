@@ -1,0 +1,53 @@
+{
+  "name": "MPT-7B-StoryWriter-65k+",
+  "org": "MosaicML",
+  "family": "MPT",
+  "releaseDate": "2023-05-05",
+  "status": "released",
+  "openness": "open-weights",
+  "license": "Apache-2.0",
+  "paramsB": 6.7,
+  "activeParamsB": null,
+  "archClass": "dense",
+  "archDisplay": "Decoder-only Transformer w/ ALiBi (65K-token fiction fine-tune)",
+  "ctxK": 65,
+  "modalities": [
+    "text"
+  ],
+  "langCount": null,
+  "capabilities": {
+    "reasoning": false,
+    "coding": false,
+    "vision": false,
+    "functionCalling": false,
+    "toolUse": false,
+    "agentic": false
+  },
+  "apiAvailable": false,
+  "price": null,
+  "links": {
+    "hf": "mosaicml/mpt-7b-storywriter",
+    "gh": "mosaicml/llm-foundry",
+    "docs": "databricks.com"
+  },
+  "note": "Fiction-focused MPT-7B fine-tune trained at 65k tokens via ALiBi; demonstrated generations to ~84k tokens on a single A100-80GB node.",
+  "quants": [
+    "GGUF Q4",
+    "GGML"
+  ],
+  "vramQ4Gb": 4.4,
+  "vramFp16Gb": 13.4,
+  "tps4090": null,
+  "tpsNote": null,
+  "effortLabel": null,
+  "isDefaultConfig": true,
+  "isBestConfig": true,
+  "specSources": {
+    "paramsB": "https://huggingface.co/mosaicml/mpt-7b-storywriter",
+    "ctxK": "https://huggingface.co/mosaicml/mpt-7b-storywriter",
+    "releaseDate": "https://www.databricks.com/blog/mpt-7b",
+    "openness": "https://huggingface.co/mosaicml/mpt-7b-storywriter"
+  },
+  "results": [],
+  "verificationNotes": "Confirmed via Databricks MPT-7B blog (published 2023-05-05, confirms 65k-token fiction fine-tune and demonstrated generations to 84k tokens matching the note) and HF model card mosaicml/mpt-7b-storywriter (Apache-2.0 license, 65k training context, requires trust_remote_code). No result rows were present to verify. All fields left unchanged."
+}

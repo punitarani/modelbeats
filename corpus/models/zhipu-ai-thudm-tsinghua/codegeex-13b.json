@@ -1,0 +1,59 @@
+{
+  "name": "CodeGeeX (13B)",
+  "org": "Zhipu AI / THUDM (Tsinghua)",
+  "family": "CodeGeeX",
+  "releaseDate": "2022-09-01",
+  "status": "released",
+  "openness": "open-weights",
+  "license": "Apache-2.0 (code); custom Model License for weights (free research use; commercial use after registration)",
+  "paramsB": 13,
+  "activeParamsB": null,
+  "archClass": "dense",
+  "archDisplay": "Dense autoregressive Transformer (GPT-style, trained w/ GLM recipe)",
+  "ctxK": 2,
+  "modalities": [
+    "text"
+  ],
+  "langCount": null,
+  "capabilities": {
+    "reasoning": false,
+    "coding": true,
+    "vision": false,
+    "functionCalling": false,
+    "toolUse": false,
+    "agentic": false
+  },
+  "apiAvailable": false,
+  "price": null,
+  "links": {
+    "gh": "zai-org/CodeGeeX",
+    "docs": "keg.cs.tsinghua.edu.cn/codegeex/"
+  },
+  "note": "13B multilingual code model covering 23 programming languages; introduced HumanEval-X benchmark (KDD 2023).",
+  "quants": [
+    "INT8"
+  ],
+  "vramQ4Gb": null,
+  "vramFp16Gb": null,
+  "tps4090": null,
+  "tpsNote": null,
+  "effortLabel": null,
+  "isDefaultConfig": true,
+  "isBestConfig": true,
+  "specSources": {
+    "paramsB": "https://github.com/zai-org/CodeGeeX",
+    "ctxK": "https://github.com/zai-org/CodeGeeX/blob/main/README.md",
+    "releaseDate": "https://github.com/zai-org/CodeGeeX/blob/main/README.md",
+    "openness": "https://github.com/zai-org/CodeGeeX/blob/main/README.md"
+  },
+  "results": [
+    {
+      "benchmarkSlug": "humaneval",
+      "score": 22.89,
+      "source": "self-reported",
+      "sourceUrl": "https://arxiv.org/pdf/2303.17568",
+      "notes": "HumanEval-X, Python, pass@1"
+    }
+  ],
+  "verificationNotes": "Confirmed via GitHub README (13B params, Apache-2.0 code license + separate MODEL_LICENSE for weights, max sequence length 2,048 = ctxK 2) and arXiv:2303.17568 HTML (Table 5: HumanEval-X Python pass@1 = 22.89% exact match). Paper accepted at KDD 2023 (Aug 2023, Long Beach) but model itself pretrained/released by Zhipu in Sept 2022, consistent with record. No changes made."
+}

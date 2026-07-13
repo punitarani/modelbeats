@@ -1,0 +1,85 @@
+{
+  "name": "Yi-1.5 34B",
+  "org": "01.AI",
+  "family": "Yi-1.5",
+  "releaseDate": "2024-05-13",
+  "status": "released",
+  "openness": "open-weights",
+  "license": "Apache 2.0",
+  "paramsB": 34.4,
+  "activeParamsB": null,
+  "archClass": "dense",
+  "archDisplay": "Dense decoder-only transformer, 34B",
+  "ctxK": 4,
+  "modalities": [
+    "text"
+  ],
+  "langCount": null,
+  "capabilities": {
+    "reasoning": false,
+    "coding": true,
+    "vision": false,
+    "functionCalling": false,
+    "toolUse": false,
+    "agentic": false
+  },
+  "apiAvailable": true,
+  "price": null,
+  "links": {
+    "hf": "01-ai/Yi-1.5-34B",
+    "gh": "01-ai/Yi-1.5"
+  },
+  "note": "Continually pretrained on 500B extra high-quality tokens; separate 16K/32K-context chat checkpoints also released.",
+  "quants": [
+    "GGUF Q4",
+    "EXL2"
+  ],
+  "vramQ4Gb": 20,
+  "vramFp16Gb": 69,
+  "tps4090": null,
+  "tpsNote": "Q4 GGUF (~20GB) fits a 24GB card only with reduced context headroom; no verified llama.cpp 4090 tok/s figure found.",
+  "effortLabel": null,
+  "isDefaultConfig": true,
+  "isBestConfig": true,
+  "specSources": {
+    "paramsB": "https://huggingface.co/01-ai/Yi-34B",
+    "ctxK": "https://github.com/01-ai/Yi-1.5",
+    "releaseDate": "https://github.com/01-ai/Yi-1.5",
+    "openness": "https://github.com/01-ai/Yi-1.5"
+  },
+  "results": [
+    {
+      "benchmarkSlug": "mmlu-pro",
+      "score": 47.1,
+      "source": "independent",
+      "sourceUrl": "https://huggingface.co/datasets/open-llm-leaderboard/01-ai__Yi-1.5-34B-32K-details",
+      "notes": "Yi-1.5-34B-32K base model, Open LLM Leaderboard v2"
+    },
+    {
+      "benchmarkSlug": "bbh",
+      "score": 59.8,
+      "source": "independent",
+      "sourceUrl": "https://huggingface.co/datasets/open-llm-leaderboard/01-ai__Yi-1.5-34B-32K-details"
+    },
+    {
+      "benchmarkSlug": "arc-challenge",
+      "score": 66.3,
+      "source": "independent",
+      "sourceUrl": "https://huggingface.co/datasets/open-llm-leaderboard/01-ai__Yi-1.5-34B-32K-details"
+    },
+    {
+      "benchmarkSlug": "gpqa",
+      "score": 36.3,
+      "source": "independent",
+      "sourceUrl": "https://huggingface.co/datasets/open-llm-leaderboard/01-ai__Yi-1.5-34B-32K-details"
+    },
+    {
+      "benchmarkSlug": "math",
+      "score": 13.4,
+      "source": "independent",
+      "sourceUrl": "https://huggingface.co/datasets/open-llm-leaderboard/01-ai__Yi-1.5-34B-32K-details",
+      "notes": "MATH Hard subset, exact match"
+    }
+  ],
+  "verificationNotes": "Confirmed via GitHub repo and web search: Yi-1.5 series (34B/9B/6B) open-sourced May 13, 2024, Apache 2.0, continually pretrained on 500B extra tokens with 4K/16K/32K context variants. Confirmed all 5 Open LLM Leaderboard v2 scores (mmlu-pro 47.1, bbh 59.8, arc-challenge 66.3, gpqa 36.3, math-hard 13.4) verbatim on the linked HF dataset page (evaluated 2024-06-17, for Yi-1.5-34B-32K variant as noted). paramsB 34.4 approximated from HF (34B nominal); exact figure not independently pinned down beyond 'B' rounding but consistent across sources. No score changes made."
+}

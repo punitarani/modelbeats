@@ -1,0 +1,102 @@
+{
+  "name": "Command A",
+  "org": "Cohere",
+  "family": "Command A",
+  "releaseDate": "2025-03-13",
+  "status": "released",
+  "openness": "open-weights",
+  "license": "CC-BY-NC-4.0 (+ Acceptable Use Policy)",
+  "paramsB": 111,
+  "activeParamsB": null,
+  "archClass": "dense",
+  "archDisplay": "Dense transformer (111B) with hybrid sliding-window/full attention (3:1 ratio) and GQA",
+  "ctxK": 256,
+  "modalities": [
+    "text"
+  ],
+  "langCount": 23,
+  "capabilities": {
+    "reasoning": false,
+    "coding": true,
+    "vision": false,
+    "functionCalling": true,
+    "toolUse": true,
+    "agentic": true
+  },
+  "apiAvailable": true,
+  "price": {
+    "input": 2.5,
+    "output": 10,
+    "provider": "Cohere"
+  },
+  "links": {
+    "hf": "CohereLabs/c4ai-command-a-03-2025",
+    "docs": "docs.cohere.com"
+  },
+  "note": "111B enterprise flagship, 256K context, runs on just two GPUs (A100/H100); rivals GPT-4o and DeepSeek-V3 on agentic enterprise tasks.",
+  "quants": [
+    "GGUF Q4"
+  ],
+  "vramQ4Gb": 67,
+  "vramFp16Gb": 222,
+  "tps4090": null,
+  "tpsNote": "Requires ~2x A100/H100 GPUs for practical serving; does not fit on a single RTX 4090 even quantized",
+  "effortLabel": null,
+  "isDefaultConfig": true,
+  "isBestConfig": true,
+  "specSources": {
+    "releaseDate": "https://cohere.com/blog/command-a",
+    "openness": "https://huggingface.co/CohereLabs/c4ai-command-a-03-2025",
+    "paramsB": "https://arxiv.org/abs/2504.00698",
+    "ctxK": "https://arxiv.org/abs/2504.00698"
+  },
+  "results": [
+    {
+      "benchmarkSlug": "mmlu",
+      "score": 85.5,
+      "source": "self-reported",
+      "sourceUrl": "https://arxiv.org/abs/2504.00698",
+      "notes": "Command A technical report, Table 1"
+    },
+    {
+      "benchmarkSlug": "math",
+      "score": 80,
+      "source": "self-reported",
+      "sourceUrl": "https://arxiv.org/abs/2504.00698"
+    },
+    {
+      "benchmarkSlug": "ifeval",
+      "score": 90.9,
+      "source": "self-reported",
+      "sourceUrl": "https://arxiv.org/abs/2504.00698"
+    },
+    {
+      "benchmarkSlug": "gpqa",
+      "score": 50.8,
+      "source": "self-reported",
+      "sourceUrl": "https://arxiv.org/abs/2504.00698"
+    },
+    {
+      "benchmarkSlug": "tau-bench",
+      "score": 51.7,
+      "source": "self-reported",
+      "sourceUrl": "https://arxiv.org/abs/2504.00698",
+      "notes": "Taubench agentic benchmark"
+    },
+    {
+      "benchmarkSlug": "mbpp",
+      "score": 86.2,
+      "source": "self-reported",
+      "sourceUrl": "https://arxiv.org/abs/2504.00698",
+      "notes": "MBPP+"
+    },
+    {
+      "benchmarkSlug": "bfcl",
+      "score": 63.8,
+      "source": "self-reported",
+      "sourceUrl": "https://arxiv.org/abs/2504.00698",
+      "notes": "Berkeley Function-Calling Leaderboard"
+    }
+  ],
+  "verificationNotes": "Fully confirmed: release date March 13, 2025 verified via HPCwire and Cohere's own blog (cohere.com/blog/command-a); HF model card + arXiv paper confirm 111B params, 256K context, CC-BY-NC + AUP license, deployable on 2x A100/H100. Downloaded and read the actual PDF of arXiv 2504.00698 Table 1 directly — all seven Command A benchmark numbers (MMLU 85.5, MATH 80.0, IFEval 90.9, GPQA 50.8, Taubench 51.7, MBPP+ 86.2, BFCL 63.8) appear verbatim. Pricing ($2.50/$10 per 1M) confirmed via cohere.com/pricing-derived aggregators. No changes made."
+}

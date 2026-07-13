@@ -1,0 +1,70 @@
+{
+  "name": "Gemini 2.5 Pro",
+  "org": "Google",
+  "family": "Gemini 2.5",
+  "releaseDate": "2025-03-25",
+  "status": "deprecated",
+  "openness": "closed",
+  "license": "Proprietary (Google API/Vertex AI)",
+  "paramsB": null,
+  "activeParamsB": null,
+  "archClass": "moe",
+  "archDisplay": "Sparse Mixture-of-Experts Transformer with native always-on thinking",
+  "ctxK": 1000,
+  "modalities": [
+    "text",
+    "vision",
+    "audio",
+    "video"
+  ],
+  "langCount": null,
+  "capabilities": {
+    "reasoning": true,
+    "coding": true,
+    "vision": true,
+    "functionCalling": true,
+    "toolUse": true,
+    "agentic": true
+  },
+  "apiAvailable": true,
+  "price": {
+    "input": 1.25,
+    "output": 10,
+    "provider": "Google AI Studio / Gemini API"
+  },
+  "links": {
+    "docs": "ai.google.dev/gemini-api/docs/models"
+  },
+  "note": "First Gemini with always-on thinking; #1 on LMArena at launch; official deprecation announced with successor gemini-3.1-pro-preview, shutdown scheduled ~Oct 2026.",
+  "quants": [],
+  "vramQ4Gb": null,
+  "vramFp16Gb": null,
+  "tps4090": null,
+  "tpsNote": null,
+  "effortLabel": null,
+  "isDefaultConfig": true,
+  "isBestConfig": true,
+  "specSources": {
+    "releaseDate": "https://blog.google/innovation-and-ai/models-and-research/google-deepmind/gemini-model-thinking-updates-march-2025/",
+    "ctxK": "https://blog.google/innovation-and-ai/models-and-research/google-deepmind/gemini-model-thinking-updates-march-2025/",
+    "openness": "https://arxiv.org/pdf/2507.06261",
+    "status": "https://ai.google.dev/gemini-api/docs/deprecations"
+  },
+  "results": [
+    {
+      "benchmarkSlug": "hle",
+      "score": 18.8,
+      "source": "self-reported",
+      "sourceUrl": "https://blog.google/innovation-and-ai/models-and-research/google-deepmind/gemini-model-thinking-updates-march-2025/",
+      "notes": "Humanity's Last Exam, no tools, SOTA at launch"
+    },
+    {
+      "benchmarkSlug": "swe-bench",
+      "score": 63.8,
+      "source": "self-reported",
+      "sourceUrl": "https://blog.google/innovation-and-ai/models-and-research/google-deepmind/gemini-model-thinking-updates-march-2025/",
+      "notes": "SWE-bench Verified, custom agent setup"
+    }
+  ],
+  "verificationNotes": "Fetched the primary blog.google launch post directly: confirmed publish date March 25, 2025 (updated Mar 26), and the exact HLE 18.8%, SWE-bench 63.8%, and '#1 on LMArena by a significant margin' quotes verbatim. Independently confirmed the deprecation claim via ai.google.dev/gemini-api/docs/deprecations live table: gemini-2.5-pro shutdown date is Oct 16, 2026, recommended replacement is gemini-3.1-pro-preview (a real, released model, confirmed via ai.google.dev model docs and Google Cloud blog) — matches the record's note exactly. Pricing $1.25/$10 confirmed on ai.google.dev/gemini-api/docs/pricing. Architecture 'sparse MoE transformer' confirmed via the official Gemini 2.5 Flash/3 Pro model cards' Architecture section (applies to the whole 2.5/3 family). No corrections needed."
+}

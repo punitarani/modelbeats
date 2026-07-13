@@ -1,0 +1,61 @@
+{
+  "name": "Claude 1",
+  "org": "Anthropic",
+  "family": "Claude 1",
+  "releaseDate": "2023-03-14",
+  "status": "deprecated",
+  "openness": "closed",
+  "license": "Proprietary",
+  "paramsB": null,
+  "activeParamsB": null,
+  "archClass": "dense",
+  "archDisplay": "Dense transformer (exact architecture undisclosed)",
+  "ctxK": 9,
+  "modalities": [
+    "text"
+  ],
+  "langCount": null,
+  "capabilities": {
+    "reasoning": false,
+    "coding": true,
+    "vision": false,
+    "functionCalling": false,
+    "toolUse": false,
+    "agentic": false
+  },
+  "apiAvailable": false,
+  "price": {
+    "input": 11.02,
+    "output": 32.68,
+    "provider": "Anthropic API (historical, retired Nov 2024)"
+  },
+  "links": {
+    "docs": "www.anthropic.com/news/introducing-claude"
+  },
+  "note": "Anthropic's first public model; brought Constitutional AI training to a commercial product. Retired Nov 2024.",
+  "quants": [],
+  "vramQ4Gb": null,
+  "vramFp16Gb": null,
+  "tps4090": null,
+  "tpsNote": null,
+  "effortLabel": null,
+  "isDefaultConfig": true,
+  "isBestConfig": true,
+  "specSources": {
+    "paramsB": "https://www.anthropic.com/news/introducing-claude",
+    "ctxK": "https://www-cdn.anthropic.com/b0d46f8c8e2f4cca2833c17cb68435035c0bb5a9/apr-pricing-tokens_2023-05-10-213025_tnty.pdf",
+    "releaseDate": "https://www.anthropic.com/news/introducing-claude",
+    "openness": "https://www.anthropic.com/news/introducing-claude"
+  },
+  "results": [
+    {
+      "benchmarkSlug": "arena",
+      "score": 1195,
+      "source": "independent",
+      "sourceUrl": "https://www.lmsys.org/blog/2023-05-25-leaderboard/",
+      "evaluatedAt": "2023-05-25",
+      "notes": "LMSYS Chatbot Arena Elo, 2nd place overall at the time"
+    }
+  ],
+  "verificationNotes": "Confirmed real: announced March 14, 2023 alongside Claude Instant (per Anthropic's own announcement and multiple retrospectives). Context window of 9,000 tokens and pricing of $11.02/$32.68 per M tokens confirmed verbatim by directly reading the official Anthropic pricing PDF (apr-pricing-tokens_2023-05-10 -- table explicitly lists 'Claude-v1: 9,000 tokens, Prompt $11.02/M, Completion $32.68/M'). Arena Elo 1195 (2nd place) confirmed verbatim via direct fetch of the cited lmsys.org blog post. Retirement Nov 2024 confirmed via multiple independent sources (Anthropic deprecation notices, Sept 4 2024 notice, retired Nov 6 2024). No changes made."
+}

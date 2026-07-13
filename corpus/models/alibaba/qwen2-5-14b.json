@@ -1,0 +1,92 @@
+{
+  "name": "Qwen2.5-14B",
+  "org": "Alibaba",
+  "family": "Qwen2.5",
+  "releaseDate": "2024-09-19",
+  "status": "released",
+  "openness": "open-weights",
+  "license": "Apache-2.0",
+  "paramsB": 14.7,
+  "activeParamsB": null,
+  "archClass": "dense",
+  "archDisplay": "Dense transformer (GQA)",
+  "ctxK": 128,
+  "modalities": [
+    "text"
+  ],
+  "langCount": 29,
+  "capabilities": {
+    "reasoning": true,
+    "coding": true,
+    "vision": false,
+    "functionCalling": true,
+    "toolUse": true,
+    "agentic": true
+  },
+  "apiAvailable": false,
+  "price": null,
+  "links": {
+    "hf": "Qwen/Qwen2.5-14B",
+    "gh": "QwenLM/Qwen2.5",
+    "docs": "qwenlm.github.io/blog/qwen2.5"
+  },
+  "note": "Apache-2.0 dense mid-size model from the 18T-token Qwen2.5 pretrain; 128K context via YaRN.",
+  "quants": [
+    "GGUF",
+    "AWQ",
+    "GPTQ Int4",
+    "MLX"
+  ],
+  "vramQ4Gb": 9,
+  "vramFp16Gb": 29,
+  "tps4090": null,
+  "tpsNote": "Fits comfortably in 24GB VRAM at Q4 (~9GB); no independently verified 4090 llama.cpp tok/s figure found.",
+  "effortLabel": null,
+  "isDefaultConfig": true,
+  "isBestConfig": true,
+  "specSources": {
+    "paramsB": "https://huggingface.co/Qwen/Qwen2.5-14B",
+    "ctxK": "https://huggingface.co/Qwen/Qwen2.5-14B",
+    "releaseDate": "https://qwenlm.github.io/blog/qwen2.5/",
+    "openness": "https://huggingface.co/Qwen/Qwen2.5-14B"
+  },
+  "results": [
+    {
+      "benchmarkSlug": "mmlu",
+      "score": 79.7,
+      "source": "self-reported",
+      "sourceUrl": "https://qwenlm.github.io/blog/qwen2.5-llm/"
+    },
+    {
+      "benchmarkSlug": "mmlu-pro",
+      "score": 51.2,
+      "source": "self-reported",
+      "sourceUrl": "https://qwenlm.github.io/blog/qwen2.5-llm/"
+    },
+    {
+      "benchmarkSlug": "math",
+      "score": 55.6,
+      "source": "self-reported",
+      "sourceUrl": "https://qwenlm.github.io/blog/qwen2.5-llm/"
+    },
+    {
+      "benchmarkSlug": "gsm8k",
+      "score": 90.2,
+      "source": "self-reported",
+      "sourceUrl": "https://qwenlm.github.io/blog/qwen2.5-llm/"
+    },
+    {
+      "benchmarkSlug": "humaneval",
+      "score": 56.7,
+      "source": "self-reported",
+      "sourceUrl": "https://qwenlm.github.io/blog/qwen2.5-llm/"
+    },
+    {
+      "benchmarkSlug": "mbpp",
+      "score": 76.7,
+      "source": "self-reported",
+      "sourceUrl": "https://qwenlm.github.io/blog/qwen2.5-llm/"
+    }
+  ],
+  "verificationNotes": "Fully confirmed via live fetch of qwenlm.github.io/blog/qwen2.5-llm/ base-model table: MMLU 79.7, MMLU-Pro 51.2, MATH 55.6, GSM8K 90.2, HumanEval 56.7, MBPP 76.7 all match exactly. License Apache 2.0 explicitly confirmed on the page for both 14B and 32B. No changes needed."
+}

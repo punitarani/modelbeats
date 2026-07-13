@@ -1,0 +1,52 @@
+{
+  "name": "Llama-3-ELYZA-JP-8B",
+  "org": "ELYZA",
+  "family": "ELYZA LLM for JP",
+  "releaseDate": "2024-06-26",
+  "status": "released",
+  "openness": "open-weights",
+  "license": "Llama 3 Community License",
+  "paramsB": 8,
+  "activeParamsB": null,
+  "archClass": "dense",
+  "archDisplay": "8B dense transformer (Llama-3 architecture, Japanese continual pretrain + instruction tuning)",
+  "ctxK": 8,
+  "modalities": [
+    "text"
+  ],
+  "langCount": 2,
+  "capabilities": {
+    "reasoning": false,
+    "coding": true,
+    "vision": false,
+    "functionCalling": false,
+    "toolUse": false,
+    "agentic": false
+  },
+  "apiAvailable": false,
+  "price": null,
+  "links": {
+    "hf": "elyza/Llama-3-ELYZA-JP-8B",
+    "docs": "elyza.ai"
+  },
+  "note": "Llama-3 8B continually pretrained and instruction-tuned for Japanese; comparable to GPT-3.5 Turbo/Claude 3 Haiku on ELYZA Tasks 100 (the flagship 70B model, not this 8B, is the one claimed to exceed GPT-4).",
+  "quants": [
+    "GGUF Q4",
+    "AWQ"
+  ],
+  "vramQ4Gb": 5,
+  "vramFp16Gb": 16.1,
+  "tps4090": null,
+  "tpsNote": null,
+  "effortLabel": null,
+  "isDefaultConfig": true,
+  "isBestConfig": true,
+  "specSources": {
+    "paramsB": "https://huggingface.co/elyza/Llama-3-ELYZA-JP-8B",
+    "ctxK": "https://llm-explorer.com/model/elyza%2FLlama-3-ELYZA-JP-8B,Ei5wSUXSaZnTBX3wGUvF8",
+    "releaseDate": "https://note.com/elyza/n/n360b6084fdbd?hl=en",
+    "openness": "https://note.com/elyza/n/n360b6084fdbd?hl=en"
+  },
+  "results": [],
+  "verificationNotes": "CONFIRMED. ELYZA's official note.com announcement confirms publication date June 26, 2024, states the 8B model is based on Meta-Llama-3-8B-Instruct with additional Japanese pretraining/instruction-tuning, is licensed under the Llama 3 Community License (commercial use permitted per Acceptable Use Policy), and performs comparably to GPT-3.5 Turbo/Claude 3 Haiku/Gemini 1.0 Pro (only the 70B sibling is claimed to exceed GPT-4 — record's note correctly distinguishes this). HF model card and llm-explorer confirm 8B params, 8K context (8,192 max tokens), 16.1GB fp16 VRAM — all match record exactly. No benchmark rows were present in the source record and none could be independently sourced with hard numbers on the model card, so the empty results array is correct as-is. No corrections required."
+}

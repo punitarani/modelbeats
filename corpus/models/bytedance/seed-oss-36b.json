@@ -1,0 +1,91 @@
+{
+  "name": "Seed-OSS-36B",
+  "org": "ByteDance",
+  "family": "Seed",
+  "releaseDate": "2025-08-20",
+  "status": "released",
+  "openness": "open-weights",
+  "license": "Apache-2.0",
+  "paramsB": 36,
+  "activeParamsB": null,
+  "archClass": "dense",
+  "archDisplay": "Dense Transformer (RoPE, GQA, RMSNorm, SwiGLU)",
+  "ctxK": 512,
+  "modalities": [
+    "text"
+  ],
+  "langCount": null,
+  "capabilities": {
+    "reasoning": true,
+    "coding": true,
+    "vision": false,
+    "functionCalling": true,
+    "toolUse": true,
+    "agentic": true
+  },
+  "apiAvailable": false,
+  "price": null,
+  "links": {
+    "hf": "ByteDance-Seed/Seed-OSS-36B-Instruct",
+    "gh": "ByteDance-Seed/seed-oss"
+  },
+  "note": "Apache-2.0 open release with native 512K context and a tunable thinking-length budget; trained on only 12T tokens.",
+  "quants": [
+    "GGUF Q4",
+    "GGUF Q8"
+  ],
+  "vramQ4Gb": 21.8,
+  "vramFp16Gb": 72,
+  "tps4090": null,
+  "tpsNote": null,
+  "effortLabel": null,
+  "isDefaultConfig": true,
+  "isBestConfig": true,
+  "specSources": {
+    "paramsB": "https://huggingface.co/ByteDance-Seed/Seed-OSS-36B-Instruct",
+    "ctxK": "https://huggingface.co/ByteDance-Seed/Seed-OSS-36B-Instruct",
+    "releaseDate": "https://huggingface.co/ByteDance-Seed/Seed-OSS-36B-Instruct",
+    "openness": "https://huggingface.co/ByteDance-Seed/Seed-OSS-36B-Instruct"
+  },
+  "results": [
+    {
+      "benchmarkSlug": "mmlu",
+      "score": 87.4,
+      "source": "self-reported",
+      "sourceUrl": "https://huggingface.co/ByteDance-Seed/Seed-OSS-36B-Instruct"
+    },
+    {
+      "benchmarkSlug": "mmlu-pro",
+      "score": 82.7,
+      "source": "self-reported",
+      "sourceUrl": "https://huggingface.co/ByteDance-Seed/Seed-OSS-36B-Instruct"
+    },
+    {
+      "benchmarkSlug": "gsm8k",
+      "score": 90.8,
+      "source": "self-reported",
+      "sourceUrl": "https://huggingface.co/ByteDance-Seed/Seed-OSS-36B-Instruct"
+    },
+    {
+      "benchmarkSlug": "math",
+      "score": 81.7,
+      "source": "self-reported",
+      "sourceUrl": "https://huggingface.co/ByteDance-Seed/Seed-OSS-36B-Instruct"
+    },
+    {
+      "benchmarkSlug": "aime",
+      "score": 91.7,
+      "source": "self-reported",
+      "sourceUrl": "https://huggingface.co/ByteDance-Seed/Seed-OSS-36B-Instruct",
+      "notes": "AIME24"
+    },
+    {
+      "benchmarkSlug": "livecodebench",
+      "score": 67.4,
+      "source": "self-reported",
+      "sourceUrl": "https://huggingface.co/ByteDance-Seed/Seed-OSS-36B-Instruct",
+      "notes": "LiveCodeBench v6"
+    }
+  ],
+  "verificationNotes": "Fully confirmed: fetched the HF model card ByteDance-Seed/Seed-OSS-36B-Instruct directly. Confirms 36B params, native 512K context, Apache-2.0 license, and release date Aug 20, 2025. All six benchmark numbers (MMLU 87.4, MMLU-Pro 82.7, GSM8K 90.8, MATH 81.7, AIME24 91.7, LiveCodeBench v6 67.4) appear verbatim on the model card. No changes made."
+}

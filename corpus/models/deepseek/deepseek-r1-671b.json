@@ -1,0 +1,116 @@
+{
+  "name": "DeepSeek-R1 671B",
+  "org": "DeepSeek",
+  "family": "DeepSeek-R1",
+  "releaseDate": "2025-01-20",
+  "status": "released",
+  "openness": "open-weights",
+  "license": "MIT",
+  "paramsB": 671,
+  "activeParamsB": 37,
+  "archClass": "moe",
+  "archDisplay": "DeepSeekMoE: 256 routed + 1 shared expert, top-8 routing, 61 layers (3 dense + 58 MoE), Multi-head Latent Attention (MLA)",
+  "ctxK": 128,
+  "modalities": [
+    "text"
+  ],
+  "langCount": null,
+  "capabilities": {
+    "reasoning": true,
+    "coding": true,
+    "vision": false,
+    "functionCalling": false,
+    "toolUse": false,
+    "agentic": false
+  },
+  "apiAvailable": true,
+  "price": {
+    "input": 0.55,
+    "output": 2.19,
+    "provider": "DeepSeek"
+  },
+  "links": {
+    "hf": "deepseek-ai/DeepSeek-R1",
+    "gh": "deepseek-ai/DeepSeek-R1",
+    "docs": "api-docs.deepseek.com"
+  },
+  "note": "Open reasoning flagship trained with RL on top of V3-Base; matched OpenAI o1 on math/code and triggered a historic US tech-stock selloff on release.",
+  "quants": [
+    "GGUF Q4_K_M",
+    "GGUF IQ1/IQ2 (Unsloth Dynamic)",
+    "AWQ",
+    "MLX"
+  ],
+  "vramQ4Gb": 404,
+  "vramFp16Gb": 1342,
+  "tps4090": null,
+  "tpsNote": "671B MoE far exceeds a single 24GB 4090; Q4_K_M alone needs ~404GB, so real deployments use multi-GPU servers or heavy CPU offload (Unsloth's 1.58-bit dynamic quant fits ~131-170GB for partial-offload rigs).",
+  "effortLabel": null,
+  "isDefaultConfig": true,
+  "isBestConfig": true,
+  "specSources": {
+    "paramsB": "https://huggingface.co/deepseek-ai/DeepSeek-R1",
+    "ctxK": "https://huggingface.co/deepseek-ai/DeepSeek-R1",
+    "releaseDate": "https://github.com/deepseek-ai/DeepSeek-R1",
+    "openness": "https://github.com/deepseek-ai/DeepSeek-R1"
+  },
+  "results": [
+    {
+      "benchmarkSlug": "aime",
+      "score": 79.8,
+      "source": "self-reported",
+      "sourceUrl": "https://huggingface.co/deepseek-ai/DeepSeek-R1",
+      "evaluatedAt": "2025-01-20",
+      "notes": "AIME 2024 pass@1"
+    },
+    {
+      "benchmarkSlug": "math",
+      "score": 97.3,
+      "source": "self-reported",
+      "sourceUrl": "https://huggingface.co/deepseek-ai/DeepSeek-R1",
+      "evaluatedAt": "2025-01-20",
+      "notes": "MATH-500 pass@1"
+    },
+    {
+      "benchmarkSlug": "gpqa",
+      "score": 71.5,
+      "source": "self-reported",
+      "sourceUrl": "https://huggingface.co/deepseek-ai/DeepSeek-R1",
+      "evaluatedAt": "2025-01-20",
+      "notes": "GPQA Diamond pass@1"
+    },
+    {
+      "benchmarkSlug": "mmlu",
+      "score": 90.8,
+      "source": "self-reported",
+      "sourceUrl": "https://huggingface.co/deepseek-ai/DeepSeek-R1",
+      "evaluatedAt": "2025-01-20",
+      "notes": "MMLU pass@1"
+    },
+    {
+      "benchmarkSlug": "swe-bench",
+      "score": 49.2,
+      "source": "self-reported",
+      "sourceUrl": "https://huggingface.co/deepseek-ai/DeepSeek-R1",
+      "evaluatedAt": "2025-01-20",
+      "notes": "SWE-bench Verified, resolved rate"
+    },
+    {
+      "benchmarkSlug": "livecodebench",
+      "score": 65.9,
+      "source": "self-reported",
+      "sourceUrl": "https://huggingface.co/deepseek-ai/DeepSeek-R1",
+      "evaluatedAt": "2025-01-20",
+      "notes": "LiveCodeBench pass@1"
+    },
+    {
+      "benchmarkSlug": "codeforces",
+      "score": 2029,
+      "source": "self-reported",
+      "sourceUrl": "https://huggingface.co/deepseek-ai/DeepSeek-R1",
+      "evaluatedAt": "2025-01-20",
+      "notes": "Codeforces rating, ~96.3rd percentile"
+    }
+  ],
+  "verificationNotes": "Existence, MIT license, 671B/37B params, 128K ctx, and Jan 20 2025 release date all confirmed by fetching the live HF model card and GitHub repo. All 7 result rows verified literally present on the HF card. Caveat (not changed in record): as of the current date DeepSeek's own hosted 'deepseek-reasoner' API alias has been quietly routing to a newer V4-Flash model since ~Apr 2026 and deprecates entirely 2026-07-24, so the listed $0.55/$2.19 DeepSeek-hosted pricing reflects the original 2025 launch price rather than what DeepSeek's API currently bills; the open weights remain genuinely available (self-host or third-party inference providers)."
+}

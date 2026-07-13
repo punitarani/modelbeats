@@ -1,0 +1,72 @@
+{
+  "name": "Code Llama 7B",
+  "org": "Meta",
+  "family": "Code Llama",
+  "releaseDate": "2023-08-24",
+  "status": "released",
+  "openness": "open-weights",
+  "license": "Llama 2 Community License",
+  "paramsB": 7,
+  "activeParamsB": null,
+  "archClass": "dense",
+  "archDisplay": "Dense transformer (decoder-only) with FIM infilling",
+  "ctxK": 16,
+  "modalities": [
+    "text"
+  ],
+  "langCount": null,
+  "capabilities": {
+    "reasoning": false,
+    "coding": true,
+    "vision": false,
+    "functionCalling": false,
+    "toolUse": false,
+    "agentic": false
+  },
+  "apiAvailable": true,
+  "price": null,
+  "links": {
+    "hf": "meta-llama/CodeLlama-7b-hf",
+    "gh": "facebookresearch/codellama",
+    "docs": "ai.meta.com/blog/code-llama-large-language-model-coding"
+  },
+  "note": "Code-specialized Llama 2 7B with FIM infilling, trained on 16K sequences, stable to ~100K in testing.",
+  "quants": [
+    "GGUF Q4",
+    "GPTQ",
+    "AWQ",
+    "MLX"
+  ],
+  "vramQ4Gb": 5,
+  "vramFp16Gb": 13.5,
+  "tps4090": null,
+  "tpsNote": null,
+  "effortLabel": null,
+  "isDefaultConfig": true,
+  "isBestConfig": true,
+  "specSources": {
+    "paramsB": "https://huggingface.co/meta-llama/CodeLlama-7b-hf",
+    "ctxK": "https://arxiv.org/html/2308.12950v3",
+    "releaseDate": "https://ai.meta.com/blog/code-llama-large-language-model-coding/",
+    "openness": "https://ai.meta.com/blog/code-llama-large-language-model-coding/"
+  },
+  "results": [
+    {
+      "benchmarkSlug": "humaneval",
+      "score": 33.5,
+      "source": "self-reported",
+      "sourceUrl": "https://arxiv.org/html/2308.12950v3",
+      "evaluatedAt": "2023-08-01",
+      "notes": "pass@1, base Code Llama 7B"
+    },
+    {
+      "benchmarkSlug": "mbpp",
+      "score": 41.4,
+      "source": "self-reported",
+      "sourceUrl": "https://arxiv.org/html/2308.12950v3",
+      "evaluatedAt": "2023-08-01",
+      "notes": "pass@1, base Code Llama 7B"
+    }
+  ],
+  "verificationNotes": "Confirmed release 2023-08-24 (TechCrunch, Meta blog) and Llama 2 Community License. Directly fetched arxiv.org/html/2308.12950v3 Table 2: HumanEval 33.5 / MBPP 41.4 for base Code Llama 7B both confirmed exactly (an initial secondary web-search summary had returned different, incorrect numbers (28.2/37.3) before the primary-source fetch corrected this). FIM infilling support for 7B confirmed via Meta docs/arXiv (7B and 13B support infilling; 34B does not)."
+}

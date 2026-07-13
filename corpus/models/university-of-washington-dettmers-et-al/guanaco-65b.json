@@ -1,0 +1,62 @@
+{
+  "name": "Guanaco 65B",
+  "org": "University of Washington (Dettmers et al.)",
+  "family": "Guanaco",
+  "releaseDate": "2023-05-23",
+  "status": "released",
+  "openness": "open-weights",
+  "license": "Apache-2.0 (LoRA adapter weights); base LLaMA weights remain under Meta's non-commercial research license",
+  "paramsB": 65,
+  "activeParamsB": null,
+  "archClass": "dense",
+  "archDisplay": "LLaMA (dense decoder-only transformer) + 4-bit QLoRA adapter",
+  "ctxK": 2,
+  "modalities": [
+    "text"
+  ],
+  "langCount": null,
+  "capabilities": {
+    "reasoning": false,
+    "coding": false,
+    "vision": false,
+    "functionCalling": false,
+    "toolUse": false,
+    "agentic": false
+  },
+  "apiAvailable": false,
+  "price": null,
+  "links": {
+    "hf": "timdettmers/guanaco-65b",
+    "gh": "artidoro/qlora"
+  },
+  "note": "4-bit QLoRA fine-tune of LLaMA 65B on OASST1, reaching 99.3% of ChatGPT's performance on the Vicuna benchmark in ~24 GPU-hours on one 48GB GPU.",
+  "quants": [
+    "GGUF Q4",
+    "GPTQ",
+    "GGML"
+  ],
+  "vramQ4Gb": 39,
+  "vramFp16Gb": 130,
+  "tps4090": null,
+  "tpsNote": "65B does not fit in a single RTX 4090's 24GB VRAM even at Q4 (~39GB needed); no verified single-GPU llama.cpp measurement found.",
+  "effortLabel": null,
+  "isDefaultConfig": true,
+  "isBestConfig": true,
+  "specSources": {
+    "paramsB": "https://huggingface.co/timdettmers/guanaco-65b",
+    "ctxK": "https://huggingface.co/docs/transformers/en/model_doc/llama",
+    "releaseDate": "https://arxiv.org/abs/2305.14314",
+    "openness": "https://huggingface.co/timdettmers/guanaco-65b"
+  },
+  "results": [
+    {
+      "benchmarkSlug": "vicuna-bench",
+      "score": 1023,
+      "source": "self-reported",
+      "sourceUrl": "https://huggingface.co/timdettmers/guanaco-65b",
+      "evaluatedAt": "2023-05-23",
+      "notes": "Vicuna benchmark Elo rating (human-judged); GPT-4-judged Elo was 1022. Paper separately reports reaching 99.3% of ChatGPT's performance level on this benchmark."
+    }
+  ],
+  "verificationNotes": "Confirmed real model via HF model card (fetched): 65B params, Apache-2.0 adapter license, Vicuna Elo human=1023/GPT-4=1022 literally match the page. releaseDate 2023-05-23 confirmed via arXiv (2305.14314). The paper's full text confirms 99.3% and '24 hours on a single [48GB] professional GPU' specifically describe the 65B (largest/best) model, so this note is correct as-is (no change needed, unlike the 33B record)."
+}

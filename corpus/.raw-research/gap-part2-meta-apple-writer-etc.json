@@ -1,0 +1,1714 @@
+{
+  "summary": "Deep research + adversarial verification for P2 gap partition 2 (21 models)",
+  "agentCount": 8,
+  "logs": [
+    "gap-part2: 21 models",
+    "[research:Apple] failed: API Error: Server error mid-response. The response above may be incomplete.",
+    "  retry 1/2 for research:Apple",
+    "research: 21 models researched, 0 rejected as unconfirmable",
+    "verify: 21 models confirmed, 0 rejected by verification"
+  ],
+  "result": {
+    "inputCount": 21,
+    "researchedCount": 21,
+    "finalCount": 21,
+    "rejected": [],
+    "models": [
+      {
+        "name": "LLaMA 65B",
+        "org": "Meta",
+        "family": "LLaMA",
+        "releaseDate": "2023-02-24",
+        "status": "released",
+        "openness": "open-weights",
+        "license": "LLaMA Non-Commercial Research License (gated application access)",
+        "paramsB": 65.2,
+        "activeParamsB": null,
+        "archClass": "dense",
+        "archDisplay": "Dense decoder-only Transformer",
+        "ctxK": 2,
+        "modalities": [
+          "text"
+        ],
+        "langCount": null,
+        "capabilities": {
+          "reasoning": false,
+          "coding": true,
+          "vision": false,
+          "functionCalling": false,
+          "toolUse": false,
+          "agentic": false
+        },
+        "apiAvailable": true,
+        "price": null,
+        "links": {
+          "hf": "huggyllama/llama-65b",
+          "gh": "meta-llama/llama",
+          "docs": "ai.meta.com/blog/large-language-model-llama-meta-ai"
+        },
+        "note": "Flagship of Meta's first LLaMA release; dense 65B model that kicked off the modern open-weights LLM wave despite its gated non-commercial license.",
+        "quants": [
+          "GGUF",
+          "GPTQ",
+          "AWQ",
+          "GGML"
+        ],
+        "vramQ4Gb": 37,
+        "vramFp16Gb": 130,
+        "tps4090": null,
+        "tpsNote": "Q4 weights (~37GB) exceed the RTX 4090's 24GB VRAM, requiring CPU/disk offload; no reliably sourced single-GPU 4090 tokens/sec figure exists for this checkpoint.",
+        "effortLabel": null,
+        "isDefaultConfig": true,
+        "isBestConfig": true,
+        "specSources": {
+          "paramsB": "https://en.wikipedia.org/wiki/Llama_(language_model)",
+          "ctxK": "https://en.wikipedia.org/wiki/Llama_(language_model)",
+          "releaseDate": "https://en.wikipedia.org/wiki/Llama_(language_model)",
+          "openness": "https://en.wikipedia.org/wiki/Llama_(language_model)"
+        },
+        "results": [
+          {
+            "benchmarkSlug": "mmlu",
+            "score": 63.4,
+            "source": "self-reported",
+            "sourceUrl": "https://github.com/meta-llama/llama-models/blob/main/models/llama2/MODEL_CARD.md",
+            "evaluatedAt": "2023-07-18",
+            "notes": "Reported by Meta in the Llama 2 model card's comparison table against Llama 1 models"
+          },
+          {
+            "benchmarkSlug": "truthfulqa",
+            "score": 48.71,
+            "source": "self-reported",
+            "sourceUrl": "https://github.com/meta-llama/llama-models/blob/main/models/llama2/MODEL_CARD.md",
+            "evaluatedAt": "2023-07-18",
+            "notes": "Percent of generations rated both truthful and informative"
+          },
+          {
+            "benchmarkSlug": "toxigen",
+            "score": 21.77,
+            "source": "self-reported",
+            "sourceUrl": "https://github.com/meta-llama/llama-models/blob/main/models/llama2/MODEL_CARD.md",
+            "evaluatedAt": "2023-07-18",
+            "notes": "Percent toxic generations; lower is better"
+          }
+        ],
+        "verificationNotes": "Confirmed real release: Meta announced LLaMA (7B/13B/33B/65B) 2023-02-24; Wikipedia confirms 65B=65.2B params, 2048 ctx, gated non-commercial license — matches record exactly. Fetched meta-llama/llama-models MODEL_CARD.md and confirmed all three benchmark rows (MMLU 63.4, TruthfulQA 48.71, Toxigen 21.77) literally appear in the Llama-1-vs-2 comparison table for the 65B row. No changes made."
+      },
+      {
+        "name": "LLaMA 7B",
+        "org": "Meta",
+        "family": "LLaMA",
+        "releaseDate": "2023-02-24",
+        "status": "released",
+        "openness": "open-weights",
+        "license": "LLaMA Non-Commercial Research License (gated application access)",
+        "paramsB": 6.7,
+        "activeParamsB": null,
+        "archClass": "dense",
+        "archDisplay": "Dense decoder-only Transformer",
+        "ctxK": 2,
+        "modalities": [
+          "text"
+        ],
+        "langCount": null,
+        "capabilities": {
+          "reasoning": false,
+          "coding": true,
+          "vision": false,
+          "functionCalling": false,
+          "toolUse": false,
+          "agentic": false
+        },
+        "apiAvailable": true,
+        "price": null,
+        "links": {
+          "hf": "huggyllama/llama-7b",
+          "gh": "meta-llama/llama",
+          "docs": "ai.meta.com/blog/large-language-model-llama-meta-ai"
+        },
+        "note": "Smallest first-gen LLaMA, trained on roughly 1T tokens for efficient research use under a gated non-commercial license.",
+        "quants": [
+          "GGUF",
+          "GPTQ",
+          "AWQ",
+          "GGML"
+        ],
+        "vramQ4Gb": 6.6,
+        "vramFp16Gb": 13.5,
+        "tps4090": null,
+        "tpsNote": "No verifiably-sourced LLaMA-1-7B-specific RTX 4090 llama.cpp benchmark was found; do not conflate with unrelated Llama-3/Mistral 7B figures circulating online.",
+        "effortLabel": null,
+        "isDefaultConfig": true,
+        "isBestConfig": true,
+        "specSources": {
+          "paramsB": "https://en.wikipedia.org/wiki/Llama_(language_model)",
+          "ctxK": "https://en.wikipedia.org/wiki/Llama_(language_model)",
+          "releaseDate": "https://en.wikipedia.org/wiki/Llama_(language_model)",
+          "openness": "https://en.wikipedia.org/wiki/Llama_(language_model)"
+        },
+        "results": [
+          {
+            "benchmarkSlug": "mmlu",
+            "score": 35.1,
+            "source": "self-reported",
+            "sourceUrl": "https://github.com/meta-llama/llama-models/blob/main/models/llama2/MODEL_CARD.md",
+            "evaluatedAt": "2023-07-18",
+            "notes": "Reported by Meta in the Llama 2 model card's comparison table against Llama 1 models"
+          },
+          {
+            "benchmarkSlug": "truthfulqa",
+            "score": 27.42,
+            "source": "self-reported",
+            "sourceUrl": "https://github.com/meta-llama/llama-models/blob/main/models/llama2/MODEL_CARD.md",
+            "evaluatedAt": "2023-07-18",
+            "notes": "Percent of generations rated both truthful and informative"
+          },
+          {
+            "benchmarkSlug": "toxigen",
+            "score": 23,
+            "source": "self-reported",
+            "sourceUrl": "https://github.com/meta-llama/llama-models/blob/main/models/llama2/MODEL_CARD.md",
+            "evaluatedAt": "2023-07-18",
+            "notes": "Percent toxic generations; lower is better"
+          }
+        ],
+        "verificationNotes": "Confirmed real release, part of the same 2023-02-24 LLaMA drop. Wikipedia confirms 7B=6.7B params exactly, 2048 ctx, gated non-commercial license. Fetched the MODEL_CARD.md comparison table and confirmed MMLU 35.1, TruthfulQA 27.42, Toxigen 23.00 all appear for the Llama-1-7B row. No changes made."
+      },
+      {
+        "name": "Llama 2 13B",
+        "org": "Meta",
+        "family": "Llama 2",
+        "releaseDate": "2023-07-18",
+        "status": "released",
+        "openness": "open-weights",
+        "license": "Llama 2 Community License Agreement",
+        "paramsB": 13,
+        "activeParamsB": null,
+        "archClass": "dense",
+        "archDisplay": "Dense decoder-only Transformer",
+        "ctxK": 4,
+        "modalities": [
+          "text"
+        ],
+        "langCount": null,
+        "capabilities": {
+          "reasoning": false,
+          "coding": true,
+          "vision": false,
+          "functionCalling": false,
+          "toolUse": false,
+          "agentic": false
+        },
+        "apiAvailable": true,
+        "price": null,
+        "links": {
+          "hf": "meta-llama/Llama-2-13b",
+          "gh": "meta-llama/llama",
+          "docs": "ai.meta.com/llama"
+        },
+        "note": "Mid-size Llama 2 base model, pretrained on 2T tokens with a 4K context window and the first commercially-licensed Llama generation.",
+        "quants": [
+          "GGUF",
+          "GPTQ",
+          "AWQ",
+          "GGML"
+        ],
+        "vramQ4Gb": 10,
+        "vramFp16Gb": 26,
+        "tps4090": null,
+        "tpsNote": "No verified base-model-specific RTX 4090 figure; the widely-cited ~71 tok/s Ollama benchmark for 'llama2:13b' targets Ollama's default chat-tuned weights, not this base checkpoint.",
+        "effortLabel": null,
+        "isDefaultConfig": true,
+        "isBestConfig": true,
+        "specSources": {
+          "paramsB": "https://huggingface.co/meta-llama/Llama-2-13b",
+          "ctxK": "https://github.com/meta-llama/llama-models/blob/main/models/llama2/MODEL_CARD.md",
+          "releaseDate": "https://github.com/meta-llama/llama/blob/main/LICENSE",
+          "openness": "https://github.com/meta-llama/llama/blob/main/LICENSE"
+        },
+        "results": [
+          {
+            "benchmarkSlug": "mmlu",
+            "score": 54.8,
+            "source": "self-reported",
+            "sourceUrl": "https://github.com/meta-llama/llama-models/blob/main/models/llama2/MODEL_CARD.md",
+            "evaluatedAt": "2023-07-18",
+            "notes": "Reported by Meta in the Llama 2 model card"
+          }
+        ],
+        "verificationNotes": "Confirmed via Hugging Face meta-llama/Llama-2-13b page (13B params, 4096 ctx, Llama 2 Community License) and release date 2023-07-18 corroborated by Ollama/HF sources. Fetched MODEL_CARD.md and confirmed MMLU 54.8 appears for the Llama-2-13B pretrained row. No changes made."
+      },
+      {
+        "name": "Llama 2 13B Chat",
+        "org": "Meta",
+        "family": "Llama 2",
+        "releaseDate": "2023-07-18",
+        "status": "released",
+        "openness": "open-weights",
+        "license": "Llama 2 Community License Agreement",
+        "paramsB": 13,
+        "activeParamsB": null,
+        "archClass": "dense",
+        "archDisplay": "Dense decoder-only Transformer",
+        "ctxK": 4,
+        "modalities": [
+          "text"
+        ],
+        "langCount": null,
+        "capabilities": {
+          "reasoning": false,
+          "coding": true,
+          "vision": false,
+          "functionCalling": false,
+          "toolUse": false,
+          "agentic": false
+        },
+        "apiAvailable": true,
+        "price": null,
+        "links": {
+          "hf": "meta-llama/Llama-2-13b-chat",
+          "gh": "meta-llama/llama",
+          "docs": "ai.meta.com/llama"
+        },
+        "note": "RLHF-tuned dialogue version of Llama 2 13B, fine-tuned with SFT plus human-preference RLHF for helpfulness and safety.",
+        "quants": [
+          "GGUF",
+          "GPTQ",
+          "AWQ",
+          "GGML"
+        ],
+        "vramQ4Gb": 10,
+        "vramFp16Gb": 26,
+        "tps4090": 70.9,
+        "tpsNote": "Measured via Ollama (llama.cpp backend) at Q4 on RTX 4090: ~92% GPU utilization, ~41% (~10GB) VRAM used, 70.90 tok/s evaluation speed.",
+        "effortLabel": null,
+        "isDefaultConfig": true,
+        "isBestConfig": true,
+        "specSources": {
+          "paramsB": "https://huggingface.co/meta-llama/Llama-2-13b-chat",
+          "ctxK": "https://github.com/meta-llama/llama-models/blob/main/models/llama2/MODEL_CARD.md",
+          "releaseDate": "https://github.com/meta-llama/llama/blob/main/LICENSE",
+          "openness": "https://github.com/meta-llama/llama/blob/main/LICENSE"
+        },
+        "results": [
+          {
+            "benchmarkSlug": "truthfulqa",
+            "score": 62.18,
+            "source": "self-reported",
+            "sourceUrl": "https://github.com/meta-llama/llama-models/blob/main/models/llama2/MODEL_CARD.md",
+            "evaluatedAt": "2023-07-18",
+            "notes": "Percent of generations rated both truthful and informative"
+          },
+          {
+            "benchmarkSlug": "toxigen",
+            "score": 0,
+            "source": "self-reported",
+            "sourceUrl": "https://github.com/meta-llama/llama-models/blob/main/models/llama2/MODEL_CARD.md",
+            "evaluatedAt": "2023-07-18",
+            "notes": "Percent toxic generations; lower is better"
+          }
+        ],
+        "verificationNotes": "Confirmed real model and specs via Hugging Face model card. Confirmed MODEL_CARD.md Llama-2-Chat safety table shows 13B row TruthfulQA 62.18 / Toxigen 0.00, matching exactly. Also independently verified the RTX 4090 benchmark figure (70.90 tok/s, 92% GPU util, 41% VRAM) on databasemart.com's Ollama GPU benchmark article for llama2:13b — number confirmed as literally reported. No changes made."
+      },
+      {
+        "name": "Llama 2 70B",
+        "org": "Meta",
+        "family": "Llama 2",
+        "releaseDate": "2023-07-18",
+        "status": "released",
+        "openness": "open-weights",
+        "license": "Llama 2 Community License Agreement",
+        "paramsB": 69,
+        "activeParamsB": null,
+        "archClass": "dense",
+        "archDisplay": "Dense decoder-only Transformer with Grouped-Query Attention (GQA)",
+        "ctxK": 4,
+        "modalities": [
+          "text"
+        ],
+        "langCount": null,
+        "capabilities": {
+          "reasoning": false,
+          "coding": true,
+          "vision": false,
+          "functionCalling": false,
+          "toolUse": false,
+          "agentic": false
+        },
+        "apiAvailable": true,
+        "price": null,
+        "links": {
+          "hf": "meta-llama/Llama-2-70b",
+          "gh": "meta-llama/llama",
+          "docs": "ai.meta.com/llama"
+        },
+        "note": "First open-weights LLM licensed for commercial use at flagship scale; Llama 2's dense 70B base model with GQA for inference efficiency.",
+        "quants": [
+          "GGUF",
+          "GPTQ",
+          "AWQ",
+          "GGML"
+        ],
+        "vramQ4Gb": 38,
+        "vramFp16Gb": 140,
+        "tps4090": null,
+        "tpsNote": "Q4_K_M weights (~38-41GB) exceed the RTX 4090's 24GB VRAM, forcing CPU offload; no reliably sourced single-GPU 4090 tokens/sec figure was found specifically for this model.",
+        "effortLabel": null,
+        "isDefaultConfig": true,
+        "isBestConfig": true,
+        "specSources": {
+          "paramsB": "https://en.wikipedia.org/wiki/Llama_(language_model)",
+          "ctxK": "https://github.com/meta-llama/llama-models/blob/main/models/llama2/MODEL_CARD.md",
+          "releaseDate": "https://github.com/meta-llama/llama/blob/main/LICENSE",
+          "openness": "https://github.com/meta-llama/llama/blob/main/LICENSE"
+        },
+        "results": [
+          {
+            "benchmarkSlug": "mmlu",
+            "score": 68.9,
+            "source": "self-reported",
+            "sourceUrl": "https://github.com/meta-llama/llama-models/blob/main/models/llama2/MODEL_CARD.md",
+            "evaluatedAt": "2023-07-18",
+            "notes": "Reported by Meta in the Llama 2 model card"
+          },
+          {
+            "benchmarkSlug": "truthfulqa",
+            "score": 50.18,
+            "source": "self-reported",
+            "sourceUrl": "https://github.com/meta-llama/llama-models/blob/main/models/llama2/MODEL_CARD.md",
+            "evaluatedAt": "2023-07-18",
+            "notes": "Percent of generations rated both truthful and informative"
+          },
+          {
+            "benchmarkSlug": "toxigen",
+            "score": 24.6,
+            "source": "self-reported",
+            "sourceUrl": "https://github.com/meta-llama/llama-models/blob/main/models/llama2/MODEL_CARD.md",
+            "evaluatedAt": "2023-07-18",
+            "notes": "Percent toxic generations; lower is better"
+          }
+        ],
+        "verificationNotes": "Confirmed via Hugging Face meta-llama/Llama-2-70b page (70B nominal/~69B actual params, 4096 ctx, Llama 2 Community License, trained Jan-Jul 2023). Fetched MODEL_CARD.md and confirmed MMLU 68.9, TruthfulQA 50.18, Toxigen 24.60 all appear for the Llama-2-70B pretrained row. No changes made."
+      },
+      {
+        "name": "Llama 2 70B Chat",
+        "org": "Meta",
+        "family": "Llama 2",
+        "releaseDate": "2023-07-18",
+        "status": "released",
+        "openness": "open-weights",
+        "license": "Llama 2 Community License Agreement",
+        "paramsB": 69,
+        "activeParamsB": null,
+        "archClass": "dense",
+        "archDisplay": "Dense decoder-only Transformer with Grouped-Query Attention (GQA)",
+        "ctxK": 4,
+        "modalities": [
+          "text"
+        ],
+        "langCount": null,
+        "capabilities": {
+          "reasoning": false,
+          "coding": true,
+          "vision": false,
+          "functionCalling": false,
+          "toolUse": false,
+          "agentic": false
+        },
+        "apiAvailable": true,
+        "price": null,
+        "links": {
+          "hf": "meta-llama/Llama-2-70b-chat",
+          "gh": "meta-llama/llama",
+          "docs": "ai.meta.com/llama"
+        },
+        "note": "Flagship RLHF chat model fine-tuned on 1M+ human annotations; Meta reported it on par with ChatGPT/PaLM in human helpfulness and safety evaluations.",
+        "quants": [
+          "GGUF",
+          "GPTQ",
+          "AWQ",
+          "GGML"
+        ],
+        "vramQ4Gb": 38,
+        "vramFp16Gb": 140,
+        "tps4090": null,
+        "tpsNote": "Q4_K_M weights (~38-41GB) exceed the RTX 4090's 24GB VRAM, forcing CPU offload; no reliably sourced single-GPU 4090 tokens/sec figure was found specifically for this model.",
+        "effortLabel": null,
+        "isDefaultConfig": true,
+        "isBestConfig": true,
+        "specSources": {
+          "paramsB": "https://en.wikipedia.org/wiki/Llama_(language_model)",
+          "ctxK": "https://github.com/meta-llama/llama-models/blob/main/models/llama2/MODEL_CARD.md",
+          "releaseDate": "https://github.com/meta-llama/llama/blob/main/LICENSE",
+          "openness": "https://github.com/meta-llama/llama/blob/main/LICENSE"
+        },
+        "results": [
+          {
+            "benchmarkSlug": "truthfulqa",
+            "score": 64.14,
+            "source": "self-reported",
+            "sourceUrl": "https://github.com/meta-llama/llama-models/blob/main/models/llama2/MODEL_CARD.md",
+            "evaluatedAt": "2023-07-18",
+            "notes": "Percent of generations rated both truthful and informative"
+          },
+          {
+            "benchmarkSlug": "toxigen",
+            "score": 0.01,
+            "source": "self-reported",
+            "sourceUrl": "https://github.com/meta-llama/llama-models/blob/main/models/llama2/MODEL_CARD.md",
+            "evaluatedAt": "2023-07-18",
+            "notes": "Percent toxic generations; lower is better"
+          }
+        ],
+        "verificationNotes": "Confirmed real model and specs (matches Llama-2-70B base specs). Fetched MODEL_CARD.md safety table for Llama-2-Chat and confirmed 70B row shows TruthfulQA 64.14 / Toxigen 0.01, matching exactly. No changes made."
+      },
+      {
+        "name": "Llama 2 7B",
+        "org": "Meta",
+        "family": "Llama 2",
+        "releaseDate": "2023-07-18",
+        "status": "released",
+        "openness": "open-weights",
+        "license": "Llama 2 Community License Agreement",
+        "paramsB": 6.7,
+        "activeParamsB": null,
+        "archClass": "dense",
+        "archDisplay": "Dense decoder-only Transformer",
+        "ctxK": 4,
+        "modalities": [
+          "text"
+        ],
+        "langCount": null,
+        "capabilities": {
+          "reasoning": false,
+          "coding": true,
+          "vision": false,
+          "functionCalling": false,
+          "toolUse": false,
+          "agentic": false
+        },
+        "apiAvailable": true,
+        "price": null,
+        "links": {
+          "hf": "meta-llama/Llama-2-7b",
+          "gh": "meta-llama/llama",
+          "docs": "ai.meta.com/llama"
+        },
+        "note": "Compact Llama 2 base model with 2T-token pretraining and a 4K context window, commercially licensed unlike its LLaMA 1 predecessor.",
+        "quants": [
+          "GGUF",
+          "GPTQ",
+          "AWQ",
+          "GGML"
+        ],
+        "vramQ4Gb": 6.6,
+        "vramFp16Gb": 13.5,
+        "tps4090": null,
+        "tpsNote": "No verifiably-sourced Llama-2-7B-base-specific RTX 4090 llama.cpp benchmark was found; only Llama 2 13B (chat) had a confirmed on-topic measurement.",
+        "effortLabel": null,
+        "isDefaultConfig": true,
+        "isBestConfig": true,
+        "specSources": {
+          "paramsB": "https://en.wikipedia.org/wiki/Llama_(language_model)",
+          "ctxK": "https://github.com/meta-llama/llama-models/blob/main/models/llama2/MODEL_CARD.md",
+          "releaseDate": "https://github.com/meta-llama/llama/blob/main/LICENSE",
+          "openness": "https://github.com/meta-llama/llama/blob/main/LICENSE"
+        },
+        "results": [
+          {
+            "benchmarkSlug": "mmlu",
+            "score": 45.3,
+            "source": "self-reported",
+            "sourceUrl": "https://github.com/meta-llama/llama-models/blob/main/models/llama2/MODEL_CARD.md",
+            "evaluatedAt": "2023-07-18",
+            "notes": "Reported by Meta in the Llama 2 model card"
+          },
+          {
+            "benchmarkSlug": "truthfulqa",
+            "score": 33.29,
+            "source": "self-reported",
+            "sourceUrl": "https://github.com/meta-llama/llama-models/blob/main/models/llama2/MODEL_CARD.md",
+            "evaluatedAt": "2023-07-18",
+            "notes": "Percent of generations rated both truthful and informative"
+          },
+          {
+            "benchmarkSlug": "toxigen",
+            "score": 21.25,
+            "source": "self-reported",
+            "sourceUrl": "https://github.com/meta-llama/llama-models/blob/main/models/llama2/MODEL_CARD.md",
+            "evaluatedAt": "2023-07-18",
+            "notes": "Percent toxic generations; lower is better"
+          }
+        ],
+        "verificationNotes": "Directly fetched Meta's official Llama 2 model card (github.com/meta-llama/llama-models MODEL_CARD.md): confirms MMLU 45.3, TruthfulQA 33.29%, ToxiGen 21.25%, 4K context window, 7B nominal params (actual param count ~6.7B, consistent with independently cross-checked calculations of 6.6-6.74B). Release date 2023-07-18 and Llama 2 Community License Agreement confirmed via Meta/GitHub. No changes made; all three benchmark rows confirmed literally present on the cited source."
+      },
+      {
+        "name": "Llama 2 7B Chat",
+        "org": "Meta",
+        "family": "Llama 2",
+        "releaseDate": "2023-07-18",
+        "status": "released",
+        "openness": "open-weights",
+        "license": "Llama 2 Community License",
+        "paramsB": 7,
+        "activeParamsB": null,
+        "archClass": "dense",
+        "archDisplay": "Dense transformer (decoder-only), RLHF-tuned",
+        "ctxK": 4,
+        "modalities": [
+          "text"
+        ],
+        "langCount": null,
+        "capabilities": {
+          "reasoning": false,
+          "coding": false,
+          "vision": false,
+          "functionCalling": false,
+          "toolUse": false,
+          "agentic": false
+        },
+        "apiAvailable": true,
+        "price": null,
+        "links": {
+          "hf": "meta-llama/Llama-2-7b-chat-hf",
+          "gh": "facebookresearch/llama",
+          "docs": "llama.com/llama2"
+        },
+        "note": "RLHF dialogue-tuned Llama 2 7B; 4K context; MMLU 45.3, far behind later Llama generations.",
+        "quants": [
+          "GGUF Q4",
+          "GPTQ",
+          "AWQ",
+          "MLX"
+        ],
+        "vramQ4Gb": 4.1,
+        "vramFp16Gb": 13.5,
+        "tps4090": null,
+        "tpsNote": null,
+        "effortLabel": null,
+        "isDefaultConfig": true,
+        "isBestConfig": true,
+        "specSources": {
+          "paramsB": "https://huggingface.co/meta-llama/Llama-2-7b-chat-hf",
+          "ctxK": "https://huggingface.co/meta-llama/Llama-2-7b-chat-hf",
+          "releaseDate": "https://huggingface.co/meta-llama/Llama-2-7b-chat-hf",
+          "openness": "https://huggingface.co/meta-llama/Llama-2-7b-chat-hf"
+        },
+        "results": [
+          {
+            "benchmarkSlug": "mmlu",
+            "score": 45.3,
+            "source": "independent",
+            "sourceUrl": "https://telnyx.com/llm-library/llama-2-7b-chat-hf",
+            "notes": "5-shot, reported for Llama-2-7b-chat-hf"
+          },
+          {
+            "benchmarkSlug": "arena",
+            "score": 1037,
+            "source": "arena",
+            "sourceUrl": "https://telnyx.com/llm-library/llama-2-7b-chat-hf",
+            "notes": "Chatbot Arena Elo (historical, 2023-era leaderboard)"
+          }
+        ],
+        "verificationNotes": "Confirmed existence and 2023-07-18 release via Meta/HF. Directly fetched telnyx.com/llm-library/llama-2-7b-chat-hf: both cited numbers (MMLU 45.3, Arena Elo 1037) literally appear on the page as text ('scores 45.3% on MMLU (5-shot)' and Arena Elo 1037), so both rows kept. Note: the same page also shows a separate spec-table MMLU figure of 45.8 elsewhere, an internal inconsistency on telnyx's own page, but the 45.3 figure is literally present and matches Meta's own reported base-model number, so it was not dropped."
+      },
+      {
+        "name": "Code Llama 7B",
+        "org": "Meta",
+        "family": "Code Llama",
+        "releaseDate": "2023-08-24",
+        "status": "released",
+        "openness": "open-weights",
+        "license": "Llama 2 Community License",
+        "paramsB": 7,
+        "activeParamsB": null,
+        "archClass": "dense",
+        "archDisplay": "Dense transformer (decoder-only) with FIM infilling",
+        "ctxK": 16,
+        "modalities": [
+          "text"
+        ],
+        "langCount": null,
+        "capabilities": {
+          "reasoning": false,
+          "coding": true,
+          "vision": false,
+          "functionCalling": false,
+          "toolUse": false,
+          "agentic": false
+        },
+        "apiAvailable": true,
+        "price": null,
+        "links": {
+          "hf": "meta-llama/CodeLlama-7b-hf",
+          "gh": "facebookresearch/codellama",
+          "docs": "ai.meta.com/blog/code-llama-large-language-model-coding"
+        },
+        "note": "Code-specialized Llama 2 7B with FIM infilling, trained on 16K sequences, stable to ~100K in testing.",
+        "quants": [
+          "GGUF Q4",
+          "GPTQ",
+          "AWQ",
+          "MLX"
+        ],
+        "vramQ4Gb": 5,
+        "vramFp16Gb": 13.5,
+        "tps4090": null,
+        "tpsNote": null,
+        "effortLabel": null,
+        "isDefaultConfig": true,
+        "isBestConfig": true,
+        "specSources": {
+          "paramsB": "https://huggingface.co/meta-llama/CodeLlama-7b-hf",
+          "ctxK": "https://arxiv.org/html/2308.12950v3",
+          "releaseDate": "https://ai.meta.com/blog/code-llama-large-language-model-coding/",
+          "openness": "https://ai.meta.com/blog/code-llama-large-language-model-coding/"
+        },
+        "results": [
+          {
+            "benchmarkSlug": "humaneval",
+            "score": 33.5,
+            "source": "self-reported",
+            "sourceUrl": "https://arxiv.org/html/2308.12950v3",
+            "evaluatedAt": "2023-08",
+            "notes": "pass@1, base Code Llama 7B"
+          },
+          {
+            "benchmarkSlug": "mbpp",
+            "score": 41.4,
+            "source": "self-reported",
+            "sourceUrl": "https://arxiv.org/html/2308.12950v3",
+            "evaluatedAt": "2023-08",
+            "notes": "pass@1, base Code Llama 7B"
+          }
+        ],
+        "verificationNotes": "Confirmed release 2023-08-24 (TechCrunch, Meta blog) and Llama 2 Community License. Directly fetched arxiv.org/html/2308.12950v3 Table 2: HumanEval 33.5 / MBPP 41.4 for base Code Llama 7B both confirmed exactly (an initial secondary web-search summary had returned different, incorrect numbers (28.2/37.3) before the primary-source fetch corrected this). FIM infilling support for 7B confirmed via Meta docs/arXiv (7B and 13B support infilling; 34B does not)."
+      },
+      {
+        "name": "Code Llama 13B",
+        "org": "Meta",
+        "family": "Code Llama",
+        "releaseDate": "2023-08-24",
+        "status": "released",
+        "openness": "open-weights",
+        "license": "Llama 2 Community License",
+        "paramsB": 13,
+        "activeParamsB": null,
+        "archClass": "dense",
+        "archDisplay": "Dense transformer (decoder-only) with FIM infilling",
+        "ctxK": 16,
+        "modalities": [
+          "text"
+        ],
+        "langCount": null,
+        "capabilities": {
+          "reasoning": false,
+          "coding": true,
+          "vision": false,
+          "functionCalling": false,
+          "toolUse": false,
+          "agentic": false
+        },
+        "apiAvailable": true,
+        "price": null,
+        "links": {
+          "hf": "meta-llama/CodeLlama-13b-hf",
+          "gh": "facebookresearch/codellama",
+          "docs": "ai.meta.com/blog/code-llama-large-language-model-coding"
+        },
+        "note": "13B code model with FIM infilling and fill-in-the-middle generation; HumanEval 36.0%.",
+        "quants": [
+          "GGUF Q4",
+          "GPTQ",
+          "AWQ",
+          "MLX"
+        ],
+        "vramQ4Gb": 8,
+        "vramFp16Gb": 26,
+        "tps4090": null,
+        "tpsNote": null,
+        "effortLabel": null,
+        "isDefaultConfig": true,
+        "isBestConfig": true,
+        "specSources": {
+          "paramsB": "https://huggingface.co/meta-llama/CodeLlama-13b-hf",
+          "ctxK": "https://arxiv.org/html/2308.12950v3",
+          "releaseDate": "https://ai.meta.com/blog/code-llama-large-language-model-coding/",
+          "openness": "https://ai.meta.com/blog/code-llama-large-language-model-coding/"
+        },
+        "results": [
+          {
+            "benchmarkSlug": "humaneval",
+            "score": 36,
+            "source": "self-reported",
+            "sourceUrl": "https://arxiv.org/html/2308.12950v3",
+            "evaluatedAt": "2023-08",
+            "notes": "pass@1, base Code Llama 13B"
+          },
+          {
+            "benchmarkSlug": "mbpp",
+            "score": 47,
+            "source": "self-reported",
+            "sourceUrl": "https://arxiv.org/html/2308.12950v3",
+            "evaluatedAt": "2023-08",
+            "notes": "pass@1, base Code Llama 13B"
+          }
+        ],
+        "verificationNotes": "Confirmed release 2023-08-24 and license. Directly fetched arxiv.org/html/2308.12950v3 Table 2: HumanEval 36.0 / MBPP 47.0 for base Code Llama 13B confirmed exactly. FIM infilling support confirmed for 13B."
+      },
+      {
+        "name": "Code Llama 34B",
+        "org": "Meta",
+        "family": "Code Llama",
+        "releaseDate": "2023-08-24",
+        "status": "released",
+        "openness": "open-weights",
+        "license": "Llama 2 Community License",
+        "paramsB": 34,
+        "activeParamsB": null,
+        "archClass": "dense",
+        "archDisplay": "Dense transformer (decoder-only), no infilling",
+        "ctxK": 16,
+        "modalities": [
+          "text"
+        ],
+        "langCount": null,
+        "capabilities": {
+          "reasoning": false,
+          "coding": true,
+          "vision": false,
+          "functionCalling": false,
+          "toolUse": false,
+          "agentic": false
+        },
+        "apiAvailable": true,
+        "price": null,
+        "links": {
+          "hf": "meta-llama/CodeLlama-34b-hf",
+          "gh": "facebookresearch/codellama",
+          "docs": "ai.meta.com/blog/code-llama-large-language-model-coding"
+        },
+        "note": "34B code flagship, no infilling; HumanEval 48.8% pass@1 (Python variant reaches 53.7%).",
+        "quants": [
+          "GGUF Q4",
+          "GPTQ",
+          "AWQ",
+          "MLX"
+        ],
+        "vramQ4Gb": 22,
+        "vramFp16Gb": 68,
+        "tps4090": null,
+        "tpsNote": null,
+        "effortLabel": null,
+        "isDefaultConfig": true,
+        "isBestConfig": true,
+        "specSources": {
+          "paramsB": "https://huggingface.co/meta-llama/CodeLlama-34b-hf",
+          "ctxK": "https://arxiv.org/html/2308.12950v3",
+          "releaseDate": "https://ai.meta.com/blog/code-llama-large-language-model-coding/",
+          "openness": "https://ai.meta.com/blog/code-llama-large-language-model-coding/"
+        },
+        "results": [
+          {
+            "benchmarkSlug": "humaneval",
+            "score": 48.8,
+            "source": "self-reported",
+            "sourceUrl": "https://arxiv.org/html/2308.12950v3",
+            "evaluatedAt": "2023-08",
+            "notes": "pass@1, base Code Llama 34B (not the Python-specialized variant)"
+          },
+          {
+            "benchmarkSlug": "mbpp",
+            "score": 55,
+            "source": "self-reported",
+            "sourceUrl": "https://arxiv.org/html/2308.12950v3",
+            "evaluatedAt": "2023-08",
+            "notes": "pass@1, base Code Llama 34B"
+          }
+        ],
+        "verificationNotes": "Confirmed release 2023-08-24 and license. Directly fetched arxiv.org/html/2308.12950v3 Table 2: HumanEval 48.8 / MBPP 55.0 for base Code Llama 34B confirmed exactly. Confirmed 34B does not support FIM infilling (only 7B/13B do), consistent with archDisplay."
+      },
+      {
+        "name": "Code Llama 34B Python",
+        "org": "Meta",
+        "family": "Code Llama",
+        "releaseDate": "2023-08-24",
+        "status": "released",
+        "openness": "open-weights",
+        "license": "Llama 2 Community License",
+        "paramsB": 34,
+        "activeParamsB": null,
+        "archClass": "dense",
+        "archDisplay": "Dense transformer (decoder-only), Python-specialized, no infilling",
+        "ctxK": 16,
+        "modalities": [
+          "text"
+        ],
+        "langCount": null,
+        "capabilities": {
+          "reasoning": false,
+          "coding": true,
+          "vision": false,
+          "functionCalling": false,
+          "toolUse": false,
+          "agentic": false
+        },
+        "apiAvailable": true,
+        "price": null,
+        "links": {
+          "hf": "meta-llama/CodeLlama-34b-Python-hf",
+          "gh": "facebookresearch/codellama",
+          "docs": "ai.meta.com/blog/code-llama-large-language-model-coding"
+        },
+        "note": "Python-specialized Code Llama 34B, further trained on 100B Python tokens; HumanEval 53.7%, MBPP 56.2%.",
+        "quants": [
+          "GGUF Q4",
+          "GPTQ",
+          "AWQ",
+          "MLX"
+        ],
+        "vramQ4Gb": 22,
+        "vramFp16Gb": 68,
+        "tps4090": null,
+        "tpsNote": null,
+        "effortLabel": null,
+        "isDefaultConfig": true,
+        "isBestConfig": true,
+        "specSources": {
+          "paramsB": "https://huggingface.co/meta-llama/CodeLlama-34b-Python-hf",
+          "ctxK": "https://arxiv.org/html/2308.12950v3",
+          "releaseDate": "https://ai.meta.com/blog/code-llama-large-language-model-coding/",
+          "openness": "https://ai.meta.com/blog/code-llama-large-language-model-coding/"
+        },
+        "results": [
+          {
+            "benchmarkSlug": "humaneval",
+            "score": 53.7,
+            "source": "self-reported",
+            "sourceUrl": "https://arxiv.org/html/2308.12950v3",
+            "evaluatedAt": "2023-08",
+            "notes": "pass@1, Code Llama - Python 34B; also cited in Meta's official blog"
+          },
+          {
+            "benchmarkSlug": "mbpp",
+            "score": 56.2,
+            "source": "self-reported",
+            "sourceUrl": "https://arxiv.org/html/2308.12950v3",
+            "evaluatedAt": "2023-08",
+            "notes": "pass@1, Code Llama - Python 34B"
+          }
+        ],
+        "verificationNotes": "Confirmed release 2023-08-24 and license. Directly fetched arxiv.org/html/2308.12950v3 Table 2: HumanEval 53.7 / MBPP 56.2 for Code Llama - Python 34B confirmed exactly; also consistent with the paper's original (pre-70B) abstract headline of 'up to 53% and 55%' on HumanEval/MBPP, which referred to this exact model before the 70B variant was added in a later paper revision."
+      },
+      {
+        "name": "Apple OpenELM (270M–3B)",
+        "org": "Apple",
+        "family": "Apple OpenELM",
+        "releaseDate": "2024-04-24",
+        "status": "released",
+        "openness": "open-source",
+        "license": "Apple Sample Code License",
+        "paramsB": 3,
+        "activeParamsB": null,
+        "archClass": "dense",
+        "archDisplay": "Dense transformer with layer-wise parameter scaling (270M/450M/1.1B/3B family)",
+        "ctxK": 2,
+        "modalities": [
+          "text"
+        ],
+        "langCount": null,
+        "capabilities": {
+          "reasoning": false,
+          "coding": false,
+          "vision": false,
+          "functionCalling": false,
+          "toolUse": false,
+          "agentic": false
+        },
+        "apiAvailable": false,
+        "price": null,
+        "links": {
+          "hf": "apple/OpenELM",
+          "gh": "apple/corenet",
+          "docs": "machinelearning.apple.com/research/openelm"
+        },
+        "note": "Fully open, reproducible 270M/450M/1.1B/3B family with code, training logs, and checkpoints; layer-wise scaling beats OLMo at matched budget.",
+        "quants": [
+          "GGUF"
+        ],
+        "vramQ4Gb": 1.9,
+        "vramFp16Gb": 6.4,
+        "tps4090": null,
+        "tpsNote": null,
+        "effortLabel": null,
+        "isDefaultConfig": true,
+        "isBestConfig": true,
+        "specSources": {
+          "paramsB": "https://huggingface.co/apple/OpenELM-3B",
+          "ctxK": "https://arxiv.org/html/2404.14619",
+          "releaseDate": "https://www.theregister.com/2024/04/24/apple_openelm_ai/",
+          "openness": "https://huggingface.co/apple/OpenELM"
+        },
+        "results": [
+          {
+            "benchmarkSlug": "hellaswag",
+            "score": 72.44,
+            "source": "self-reported",
+            "sourceUrl": "https://huggingface.co/apple/OpenELM",
+            "evaluatedAt": "2024-04",
+            "notes": "OpenELM-3B (pretrained), zero-shot"
+          },
+          {
+            "benchmarkSlug": "arc-challenge",
+            "score": 35.58,
+            "source": "self-reported",
+            "sourceUrl": "https://huggingface.co/apple/OpenELM",
+            "evaluatedAt": "2024-04",
+            "notes": "OpenELM-3B (pretrained), ARC-Challenge, zero-shot"
+          },
+          {
+            "benchmarkSlug": "winogrande",
+            "score": 65.51,
+            "source": "self-reported",
+            "sourceUrl": "https://huggingface.co/apple/OpenELM",
+            "evaluatedAt": "2024-04",
+            "notes": "OpenELM-3B (pretrained), zero-shot"
+          }
+        ],
+        "verificationNotes": "Confirmed real and unchanged. Fetched huggingface.co/apple/OpenELM and /OpenELM-3B: license tag is literally 'apple-sample-code-license' (matches record), params 270M/450M/1.08B/3.04B confirmed in arXiv 2404.14619 Table 9 (rounds to 3B), training context length 2048 confirmed in same table (matches ctxK=2). All three result rows (HellaSwag 72.44, ARC-Challenge 35.58, WinoGrande 65.51) confirmed to literally appear on the cited HF page."
+      },
+      {
+        "name": "Apple Foundation Model (on-device, ~3B)",
+        "org": "Apple",
+        "family": "Apple Foundation Models",
+        "releaseDate": "2024-06-10",
+        "status": "released",
+        "openness": "closed",
+        "license": "Proprietary",
+        "paramsB": 3,
+        "activeParamsB": null,
+        "archClass": "dense",
+        "archDisplay": "Dense transformer, GQA (24 query / 8 KV heads), 26 layers",
+        "ctxK": 32,
+        "modalities": [
+          "text"
+        ],
+        "langCount": null,
+        "capabilities": {
+          "reasoning": false,
+          "coding": false,
+          "vision": false,
+          "functionCalling": false,
+          "toolUse": true,
+          "agentic": true
+        },
+        "apiAvailable": false,
+        "price": null,
+        "links": {
+          "hf": "",
+          "gh": "",
+          "docs": "machinelearning.apple.com/research/introducing-apple-foundation-models"
+        },
+        "note": "~3B on-device model pruned from a 6.4B checkpoint; beat Phi-3-mini/Mistral-7B/Gemma-7B in Apple's 2024 evals, MMLU 61.4.",
+        "quants": [],
+        "vramQ4Gb": null,
+        "vramFp16Gb": null,
+        "tps4090": null,
+        "tpsNote": null,
+        "effortLabel": null,
+        "isDefaultConfig": true,
+        "isBestConfig": true,
+        "specSources": {
+          "paramsB": "https://arxiv.org/abs/2407.21075",
+          "ctxK": "https://arxiv.org/html/2407.21075v1",
+          "releaseDate": "https://www.apple.com/newsroom/2024/06/introducing-apple-intelligence-for-iphone-ipad-and-mac/",
+          "openness": "https://machinelearning.apple.com/research/introducing-apple-foundation-models"
+        },
+        "results": [
+          {
+            "benchmarkSlug": "mmlu",
+            "score": 61.4,
+            "source": "self-reported",
+            "sourceUrl": "https://arxiv.org/html/2407.21075v1",
+            "evaluatedAt": "2024-07",
+            "notes": "5-shot, AFM-on-device, from Apple's July 2024 tech report"
+          }
+        ],
+        "verificationNotes": "Confirmed real and unchanged. arXiv 2407.21075 (HTML) Table 1 confirms AFM-on-device architecture exactly: 26 layers, 24 query/8 KV heads GQA (matches record), and confirms model was pre-trained through stages up to 32768-token context (matches ctxK=32). Total params in the paper are 2.73B (2.58B non-embedding + 0.15B embedding); Apple's own materials describe it as '~3B', consistent with the record's rounded paramsB=3. Confirmed the model is initialized from a pruned 6.4B checkpoint via distillation, and confirmed via multiple secondary sources (Trail of Bits, InfoQ, Medium writeups of the paper) that AFM-on-device beats Phi-3-mini/Mistral-7B/Gemma-7B in Apple's human evals. WWDC keynote date June 10, 2024 confirmed via CNBC/Apple newsroom. MMLU 61.4 (HELM, 5-shot) confirmed literally on the cited arXiv HTML page."
+      },
+      {
+        "name": "Apple DCLM-Baseline 7B",
+        "org": "Apple",
+        "family": "Apple DCLM",
+        "releaseDate": "2024-07",
+        "status": "released",
+        "openness": "open-source",
+        "license": "Apple Sample Code License",
+        "paramsB": 7,
+        "activeParamsB": null,
+        "archClass": "dense",
+        "archDisplay": "Dense decoder-only Transformer (32 layers, 4096 hidden, 32 heads)",
+        "ctxK": 2,
+        "modalities": [
+          "text"
+        ],
+        "langCount": null,
+        "capabilities": {
+          "reasoning": false,
+          "coding": true,
+          "vision": false,
+          "functionCalling": false,
+          "toolUse": false,
+          "agentic": false
+        },
+        "apiAvailable": false,
+        "price": null,
+        "links": {
+          "hf": "apple/DCLM-Baseline-7B"
+        },
+        "note": "Data-centric base LM trained on the curated DCLM-Baseline corpus (3.8T tokens + StarCoder/ProofPile2); not instruction-tuned.",
+        "quants": [],
+        "vramQ4Gb": null,
+        "vramFp16Gb": 14,
+        "tps4090": null,
+        "tpsNote": null,
+        "effortLabel": null,
+        "isDefaultConfig": true,
+        "isBestConfig": true,
+        "specSources": {
+          "paramsB": "https://huggingface.co/apple/DCLM-Baseline-7B",
+          "ctxK": "https://huggingface.co/apple/DCLM-Baseline-7B",
+          "releaseDate": "https://www.marktechpost.com/2024/07/21/apple-ai-released-a-7b-open-source-language-model-trained-on-2-5t-tokens-on-open-datasets/",
+          "openness": "https://huggingface.co/apple/DCLM-Baseline-7B"
+        },
+        "results": [
+          {
+            "benchmarkSlug": "mmlu",
+            "score": 63.72,
+            "source": "self-reported",
+            "sourceUrl": "https://huggingface.co/apple/DCLM-Baseline-7B",
+            "notes": "5-shot (few-shot MMLU row)"
+          },
+          {
+            "benchmarkSlug": "hellaswag",
+            "score": 80.43,
+            "source": "self-reported",
+            "sourceUrl": "https://huggingface.co/apple/DCLM-Baseline-7B",
+            "notes": "'HellaSwag' row (distinct from the separate 'HellaSwag (zero-shot)' row of 79.87)"
+          },
+          {
+            "benchmarkSlug": "arc-easy",
+            "score": 82.2,
+            "source": "self-reported",
+            "sourceUrl": "https://huggingface.co/apple/DCLM-Baseline-7B"
+          },
+          {
+            "benchmarkSlug": "winogrande",
+            "score": 72.69,
+            "source": "self-reported",
+            "sourceUrl": "https://huggingface.co/apple/DCLM-Baseline-7B",
+            "notes": "CORRECTED from original 88.28, which is actually the page's separate 'Winograd' score, not 'Winogrande'"
+          },
+          {
+            "benchmarkSlug": "gsm8k",
+            "score": 2.5,
+            "source": "self-reported",
+            "sourceUrl": "https://huggingface.co/apple/DCLM-Baseline-7B",
+            "notes": "chain-of-thought"
+          }
+        ],
+        "verificationNotes": "Confirmed real. HF apple/DCLM-Baseline-7B page confirms license tag 'apple-ascl' (Apple Sample Code License) and architecture exactly: 32 layers, 4096 hidden, 32 attention heads, 2048 context (matches ctxK=2). Full eval table pulled from the model card confirms MMLU-few-shot 63.72, ARC-Easy 82.20, GSM8K-CoT 2.50 exactly as given. CORRECTED an error: the record's WinoGrande score of 88.28 does not match the page's 'Winogrande' row (72.69) — 88.28 is actually the page's separate 'Winograd' benchmark score. Replaced with the verified correct WinoGrande value of 72.69. Also verified the page has two distinct HellaSwag rows ('HellaSwag (zero-shot)' = 79.87 and 'HellaSwag' = 80.43); the record's 80.43 matches the latter, so kept as-is."
+      },
+      {
+        "name": "Palmyra Med 70B",
+        "org": "Writer",
+        "family": "Palmyra",
+        "releaseDate": "2024-07-31",
+        "status": "released",
+        "openness": "open-weights",
+        "license": "Writer Open Model License (non-commercial, research use)",
+        "paramsB": 70,
+        "activeParamsB": null,
+        "archClass": "dense",
+        "archDisplay": "Dense Transformer fine-tuned from Palmyra-X-003 (~70B) via DPO on biomedical instructions",
+        "ctxK": 8,
+        "modalities": [
+          "text"
+        ],
+        "langCount": 1,
+        "capabilities": {
+          "reasoning": true,
+          "coding": false,
+          "vision": false,
+          "functionCalling": false,
+          "toolUse": false,
+          "agentic": false
+        },
+        "apiAvailable": true,
+        "price": null,
+        "links": {
+          "hf": "Writer/Palmyra-Med-70B",
+          "docs": "docs.api.nvidia.com"
+        },
+        "note": "Healthcare specialist; zero-shot 85.9% avg across 9 biomedical benchmarks beats Med-PaLM-2's 5-shot 84%.",
+        "quants": [
+          "GGUF"
+        ],
+        "vramQ4Gb": 42,
+        "vramFp16Gb": 140,
+        "tps4090": null,
+        "tpsNote": null,
+        "effortLabel": null,
+        "isDefaultConfig": true,
+        "isBestConfig": true,
+        "specSources": {
+          "paramsB": "https://huggingface.co/Writer/Palmyra-Med-70B",
+          "ctxK": "https://huggingface.co/Writer/Palmyra-Med-70B",
+          "releaseDate": "https://siliconangle.com/2024/07/31/writer-releases-new-specialized-ai-models-healthcare-financial-services/",
+          "openness": "https://huggingface.co/Writer/Palmyra-Med-70B"
+        },
+        "results": [
+          {
+            "benchmarkSlug": "medical-benchmark-avg",
+            "score": 85.9,
+            "source": "self-reported",
+            "sourceUrl": "https://developer.nvidia.com/blog/writer-releases-domain-specific-llms-for-healthcare-and-finance/",
+            "notes": "average across 9 biomedical datasets, zero-shot"
+          },
+          {
+            "benchmarkSlug": "mmlu-clinical-knowledge",
+            "score": 90.9,
+            "source": "self-reported",
+            "sourceUrl": "https://developer.nvidia.com/blog/writer-releases-domain-specific-llms-for-healthcare-and-finance/"
+          },
+          {
+            "benchmarkSlug": "mmlu-medical-genetics",
+            "score": 94,
+            "source": "self-reported",
+            "sourceUrl": "https://developer.nvidia.com/blog/writer-releases-domain-specific-llms-for-healthcare-and-finance/"
+          },
+          {
+            "benchmarkSlug": "mmlu-anatomy",
+            "score": 83.7,
+            "source": "self-reported",
+            "sourceUrl": "https://developer.nvidia.com/blog/writer-releases-domain-specific-llms-for-healthcare-and-finance/"
+          }
+        ],
+        "verificationNotes": "Confirmed real. SiliconAngle article dated 2024-07-31 confirms the Palmyra-Med-70B/Palmyra-Fin-70B announcement and the 85.9% zero-shot figure. HF Writer/Palmyra-Med-70B confirms: license 'writer-open-model-license' restricted to non-commercial/research use (matches record), base model Palmyra-X-003, context length 8192 (matches ctxK=8), actual param count ~71B (record's 70 matches the model's own '70B' naming). NVIDIA developer blog confirms all four result rows literally: 85.9% average, 90.9% clinical knowledge, 94% medical genetics, 83.7% anatomy. Confirmed apiAvailable via Writer API / Baseten / prior NVIDIA NIM catalog listing (the specific NIM reference URL in the record is a generic docs-domain link, not independently re-verified as a live endpoint)."
+      },
+      {
+        "name": "Palmyra X 004",
+        "org": "Writer",
+        "family": "Palmyra X",
+        "releaseDate": "2024-10-09",
+        "status": "released",
+        "openness": "closed",
+        "license": "Proprietary (API-only, no released weights)",
+        "paramsB": null,
+        "activeParamsB": null,
+        "archClass": "dense",
+        "archDisplay": "Dense Transformer, enterprise frontier model (~150B, architecture undisclosed)",
+        "ctxK": 128,
+        "modalities": [
+          "text"
+        ],
+        "langCount": null,
+        "capabilities": {
+          "reasoning": true,
+          "coding": true,
+          "vision": false,
+          "functionCalling": true,
+          "toolUse": true,
+          "agentic": true
+        },
+        "apiAvailable": true,
+        "price": {
+          "input": 2.5,
+          "output": 10,
+          "provider": "Writer"
+        },
+        "links": {
+          "docs": "dev.writer.com"
+        },
+        "note": "Topped Berkeley's Tool-Calling Leaderboard (78.76% ACC) at launch; priced $5/$15 per M tokens at launch, now $2.50/$10.",
+        "quants": [],
+        "vramQ4Gb": null,
+        "vramFp16Gb": null,
+        "tps4090": null,
+        "tpsNote": null,
+        "effortLabel": null,
+        "isDefaultConfig": true,
+        "isBestConfig": true,
+        "specSources": {
+          "ctxK": "https://www.businesswire.com/news/home/20241009659164/en/Writer-Releases-New-Frontier-Model-Palmyra-X-004-to-Add-Intelligent-Action-to-Enterprise-AI-Applications",
+          "releaseDate": "https://www.businesswire.com/news/home/20241009659164/en/Writer-Releases-New-Frontier-Model-Palmyra-X-004-to-Add-Intelligent-Action-to-Enterprise-AI-Applications",
+          "openness": "https://www.businesswire.com/news/home/20241009659164/en/Writer-Releases-New-Frontier-Model-Palmyra-X-004-to-Add-Intelligent-Action-to-Enterprise-AI-Applications"
+        },
+        "results": [
+          {
+            "benchmarkSlug": "bfcl",
+            "score": 78.76,
+            "source": "self-reported",
+            "sourceUrl": "https://www.businesswire.com/news/home/20241009659164/en/Writer-Releases-New-Frontier-Model-Palmyra-X-004-to-Add-Intelligent-Action-to-Enterprise-AI-Applications",
+            "notes": "Berkeley Function-Calling Leaderboard overall accuracy"
+          },
+          {
+            "benchmarkSlug": "mmlu",
+            "score": 81.3,
+            "source": "self-reported",
+            "sourceUrl": "https://dev.writer.com/home/models",
+            "notes": "HELM MMLU"
+          },
+          {
+            "benchmarkSlug": "helm-lite",
+            "score": 86.1,
+            "source": "self-reported",
+            "sourceUrl": "https://dev.writer.com/home/models"
+          }
+        ],
+        "verificationNotes": "Confirmed real release, Oct 9, 2024, via BusinessWire/SiliconAngle/VentureBeat coverage: Palmyra X-004 topped Berkeley's Tool-Calling (BFCL) leaderboard with 78.76% accuracy, confirmed by multiple independent outlets. dev.writer.com/home/models (fetched) confirms exactly: 128K context window, current pricing $2.50 input / $10.00 output per M tokens, HELM MMLU 81.3, HELM-Lite 86.1 — all three result rows and price match exactly."
+      },
+      {
+        "name": "Palmyra X5",
+        "org": "Writer",
+        "family": "Palmyra X",
+        "releaseDate": "2025-04-28",
+        "status": "released",
+        "openness": "closed",
+        "license": "Proprietary (API-only, no released weights)",
+        "paramsB": null,
+        "activeParamsB": null,
+        "archClass": "dense",
+        "archDisplay": "Dense Transformer with adaptive/dynamic reasoning, 1M-token context (architecture undisclosed)",
+        "ctxK": 1000,
+        "modalities": [
+          "text"
+        ],
+        "langCount": null,
+        "capabilities": {
+          "reasoning": true,
+          "coding": true,
+          "vision": false,
+          "functionCalling": true,
+          "toolUse": true,
+          "agentic": true
+        },
+        "apiAvailable": true,
+        "price": {
+          "input": 0.6,
+          "output": 6,
+          "provider": "Writer"
+        },
+        "links": {
+          "docs": "writer.com"
+        },
+        "note": "1M-token context trained with synthetic data for ~$1M in GPU compute; reads 1M tokens in ~22s, ~300ms per function-call turn.",
+        "quants": [],
+        "vramQ4Gb": null,
+        "vramFp16Gb": null,
+        "tps4090": null,
+        "tpsNote": null,
+        "effortLabel": null,
+        "isDefaultConfig": true,
+        "isBestConfig": true,
+        "specSources": {
+          "ctxK": "https://siliconangle.com/2025/04/28/writer-announces-palmyra-x5-llm-1m-token-context-window-power-ai-agents/",
+          "releaseDate": "https://www.businesswire.com/news/home/20250428814263/en/Writer-Releases-New-Adaptive-Reasoning-LLM-Palmyra-X5-With-1M-Context-Window-to-Scale-Next-Era-of-Enterprise-AI-Agents",
+          "openness": "https://siliconangle.com/2025/04/28/writer-announces-palmyra-x5-llm-1m-token-context-window-power-ai-agents/"
+        },
+        "results": [
+          {
+            "benchmarkSlug": "gpqa",
+            "score": 47.2,
+            "source": "self-reported",
+            "sourceUrl": "https://dev.writer.com/home/models"
+          },
+          {
+            "benchmarkSlug": "mmlu-pro",
+            "score": 65.02,
+            "source": "self-reported",
+            "sourceUrl": "https://dev.writer.com/home/models"
+          },
+          {
+            "benchmarkSlug": "bbh",
+            "score": 70.99,
+            "source": "self-reported",
+            "sourceUrl": "https://dev.writer.com/home/models"
+          },
+          {
+            "benchmarkSlug": "math",
+            "score": 71.57,
+            "source": "self-reported",
+            "sourceUrl": "https://dev.writer.com/home/models",
+            "notes": "MATH-Hard subset"
+          },
+          {
+            "benchmarkSlug": "longbench-v2",
+            "score": 53,
+            "source": "self-reported",
+            "sourceUrl": "https://venturebeat.com/ai/writer-releases-palmyra-x5-delivers-near-gpt-4-performance-at-75-lower-cost",
+            "notes": "average score"
+          }
+        ],
+        "verificationNotes": "Confirmed real release, April 28, 2025, via SiliconAngle (fetched): ~$1M GPU training cost, reads a 1M-token prompt in ~22s, ~300ms per function-calling turn, pricing $0.60/$6 per M tokens — all confirmed exactly. dev.writer.com/home/models (fetched) confirms exactly: 1M context, GPQA 47.2, MMLU-Pro 65.02, BBH 70.99, MATH-Hard 71.57. The LongBench-v2 53% figure could not be directly re-fetched from venturebeat.com or writer.com (both returned HTTP 403 to the fetcher), but is independently corroborated by search-engine snippets quoting Writer's own reporting of 'an impressive 53% average score' on LongBench v2 for Palmyra X5 — kept given this corroboration, though not a direct page fetch."
+      },
+      {
+        "name": "Stable Beluga 1 (FreeWilly 1) 65B",
+        "org": "Stability AI (CarperAI)",
+        "family": "Stable Beluga (FreeWilly)",
+        "releaseDate": "2023-07-21",
+        "status": "released",
+        "openness": "open-weights",
+        "license": "CC BY-NC-4.0 (Non-Commercial Creative Commons License) — released as delta weights over Meta's LLaMA 65B",
+        "paramsB": 65,
+        "activeParamsB": null,
+        "archClass": "dense",
+        "archDisplay": "LLaMA 65B dense Transformer, Orca-style supervised fine-tune",
+        "ctxK": 2,
+        "modalities": [
+          "text"
+        ],
+        "langCount": null,
+        "capabilities": {
+          "reasoning": true,
+          "coding": false,
+          "vision": false,
+          "functionCalling": false,
+          "toolUse": false,
+          "agentic": false
+        },
+        "apiAvailable": false,
+        "price": null,
+        "links": {
+          "hf": "stabilityai/StableBeluga1-Delta"
+        },
+        "note": "Ranked #4 on the HF Open LLM Leaderboard at launch (Jul 27 2023); released as delta weights over Meta's LLaMA 65B.",
+        "quants": [],
+        "vramQ4Gb": null,
+        "vramFp16Gb": 130,
+        "tps4090": null,
+        "tpsNote": null,
+        "effortLabel": null,
+        "isDefaultConfig": true,
+        "isBestConfig": true,
+        "specSources": {
+          "paramsB": "https://huggingface.co/stabilityai/StableBeluga1-Delta",
+          "ctxK": "https://huggingface.co/stabilityai/StableBeluga1-Delta",
+          "releaseDate": "https://stability.ai/news/stable-beluga-large-instruction-fine-tuned-models",
+          "openness": "https://huggingface.co/stabilityai/StableBeluga1-Delta"
+        },
+        "results": [],
+        "verificationNotes": "CONFIRMED real via HF model card raw README (stabilityai/StableBeluga1-Delta) and Stability AI's blog post (published Jul 21 2023, updated Jul 28): LLaMA-65B base, Orca-style SFT, delta-weight release, ranked #4 on HF Open LLM Leaderboard as of Jul 27 2023 — matches the note. CORRECTED license: the HF README literally states 'Fine-tuned checkpoints (StableBeluga1) is licensed under the Non-Commercial Creative Commons license (CC BY-NC-4.0)' — this is NOT the 'Stable Beluga Non-Commercial Community License' (that named license applies only to Beluga 2). Context length (2048) is the standard LLaMA-1 architecture value; the HF card itself states no explicit max-sequence-length. DROPPED the sole result row (MMLU 64.83, sourceUrl llm.extractum.io): that URL fails TLS certificate validation (hostname mismatch — the domain now resolves to an unrelated site, ag3ntum.com) and no alternate source could be found confirming this exact figure, so it was removed per the no-unconfirmed-numbers rule."
+      },
+      {
+        "name": "Stable Beluga 2 (FreeWilly 2) 70B",
+        "org": "Stability AI (CarperAI)",
+        "family": "Stable Beluga (FreeWilly)",
+        "releaseDate": "2023-07-21",
+        "status": "released",
+        "openness": "open-weights",
+        "license": "Stable Beluga Non-Commercial Community License Agreement",
+        "paramsB": 70,
+        "activeParamsB": null,
+        "archClass": "dense",
+        "archDisplay": "Llama 2 70B dense Transformer, Orca-style supervised fine-tune",
+        "ctxK": 4,
+        "modalities": [
+          "text"
+        ],
+        "langCount": null,
+        "capabilities": {
+          "reasoning": true,
+          "coding": false,
+          "vision": false,
+          "functionCalling": false,
+          "toolUse": false,
+          "agentic": false
+        },
+        "apiAvailable": false,
+        "price": null,
+        "links": {
+          "hf": "stabilityai/StableBeluga2"
+        },
+        "note": "Briefly #1 on the HF Open LLM Leaderboard (Jul 27 2023); Llama 2 70B fine-tuned on ~600K Orca-style synthetic examples.",
+        "quants": [
+          "GGML",
+          "GGUF",
+          "GPTQ"
+        ],
+        "vramQ4Gb": 40,
+        "vramFp16Gb": 140,
+        "tps4090": null,
+        "tpsNote": null,
+        "effortLabel": null,
+        "isDefaultConfig": true,
+        "isBestConfig": true,
+        "specSources": {
+          "paramsB": "https://huggingface.co/stabilityai/StableBeluga2",
+          "ctxK": "https://huggingface.co/stabilityai/StableBeluga2",
+          "releaseDate": "https://stability.ai/news/stable-beluga-large-instruction-fine-tuned-models",
+          "openness": "https://huggingface.co/stabilityai/StableBeluga2"
+        },
+        "results": [
+          {
+            "benchmarkSlug": "mmlu",
+            "score": 68.8,
+            "source": "independent",
+            "sourceUrl": "https://patmcguinness.substack.com/p/fantastic-ai-models-and-where-to-ec5",
+            "notes": "article states verbatim: 'StableBeluga2 ... get 68.8 on MMLU'"
+          }
+        ],
+        "verificationNotes": "CONFIRMED real via HF model card raw README (stabilityai/StableBeluga2) and Stability AI's blog post (Jul 21 2023, updated Jul 28): Llama-2-70B base, Orca-style SFT, licensed under 'STABLE BELUGA NON-COMMERCIAL COMMUNITY LICENSE AGREEMENT' exactly as the card states (matches record). Blog confirms Stable Beluga 2 ranked #1 on HF Open LLM Leaderboard as of Jul 27 2023 — matches the note. MMLU 68.8 result CONFIRMED verbatim on patmcguinness.substack.com. DROPPED the open-llm-leaderboard-avg 71.4 result row: fetched winbuzzer.com's article twice (different objectives) and both times it discussed the ranking/GPT-3.5 comparison but contained no numeric aggregate leaderboard score anywhere on the page, so the figure could not be verified there and was removed."
+      },
+      {
+        "name": "Gorilla 7B",
+        "org": "UC Berkeley & Microsoft Research",
+        "family": "Gorilla",
+        "releaseDate": "2023-05-24",
+        "status": "released",
+        "openness": "open-weights",
+        "license": "Apache 2.0 (delta weights; base requires Meta LLaMA research license)",
+        "paramsB": 7,
+        "activeParamsB": null,
+        "archClass": "dense",
+        "archDisplay": "LLaMA-7B dense Transformer, retrieval-aware instruction fine-tune for API calls",
+        "ctxK": 2,
+        "modalities": [
+          "text"
+        ],
+        "langCount": null,
+        "capabilities": {
+          "reasoning": false,
+          "coding": false,
+          "vision": false,
+          "functionCalling": true,
+          "toolUse": true,
+          "agentic": false
+        },
+        "apiAvailable": false,
+        "price": null,
+        "links": {
+          "hf": "gorilla-llm/gorilla-7b-hf-delta-v1",
+          "gh": "ShishirPatil/gorilla"
+        },
+        "note": "Zero-shot beats GPT-4 by 20.4pp and ChatGPT by 10.75pp on APIBench across TorchHub/HuggingFace/TensorHub.",
+        "quants": [
+          "GGML",
+          "GGUF"
+        ],
+        "vramQ4Gb": 5,
+        "vramFp16Gb": 14,
+        "tps4090": null,
+        "tpsNote": null,
+        "effortLabel": null,
+        "isDefaultConfig": true,
+        "isBestConfig": true,
+        "specSources": {
+          "paramsB": "https://arxiv.org/abs/2305.15334",
+          "ctxK": "https://arxiv.org/abs/2305.15334",
+          "releaseDate": "https://arxiv.org/abs/2305.15334",
+          "openness": "https://huggingface.co/gorilla-llm/gorilla-7b-hf-delta-v1"
+        },
+        "results": [
+          {
+            "benchmarkSlug": "torchhub-apibench",
+            "score": 59.13,
+            "source": "self-reported",
+            "sourceUrl": "https://ar5iv.labs.arxiv.org/html/2305.15334",
+            "notes": "zero-shot, no retriever, overall accuracy — Table 1"
+          },
+          {
+            "benchmarkSlug": "huggingface-apibench",
+            "score": 71.68,
+            "source": "self-reported",
+            "sourceUrl": "https://ar5iv.labs.arxiv.org/html/2305.15334",
+            "notes": "zero-shot, no retriever, overall accuracy — Table 1"
+          },
+          {
+            "benchmarkSlug": "tensorhub-apibench",
+            "score": 83.79,
+            "source": "self-reported",
+            "sourceUrl": "https://ar5iv.labs.arxiv.org/html/2305.15334",
+            "notes": "zero-shot, no retriever, overall accuracy — Table 1"
+          }
+        ],
+        "verificationNotes": "CONFIRMED real: arXiv 2305.15334 (submitted 24 May 2023 — matches releaseDate exactly; authors Shishir G. Patil, Tianjun Zhang, Xin Wang, Joseph E. Gonzalez, UC Berkeley & Microsoft Research). HF repo gorilla-llm/gorilla-7b-hf-delta-v1 confirms Apache-2.0 delta weights over LLaMA-7B, matching license/paramsB. All three APIBench zero-shot/no-retriever scores (TorchHub 59.13, HuggingFace 71.68, TensorHub 83.79) CONFIRMED verbatim in the paper's Table 1. The paper text also literally states Gorilla is '20.43% better than GPT-4 and 10.75% better than ChatGPT' zero-shot — matches the note's 20.4pp/10.75pp. CORRECTED sourceUrl on all three result rows: the plain arxiv.org/abs/2305.15334 abstract page does not display the table/numbers (confirmed by direct fetch), so pointed instead to the full-text render at ar5iv.labs.arxiv.org/html/2305.15334 where the figures are literally visible."
+      }
+    ]
+  },
+  "workflowProgress": [
+    {
+      "type": "workflow_phase",
+      "index": 1,
+      "title": "Research"
+    },
+    {
+      "type": "workflow_phase",
+      "index": 2,
+      "title": "Verify"
+    },
+    {
+      "type": "workflow_agent",
+      "index": 1,
+      "label": "research:Meta",
+      "phaseIndex": 1,
+      "phaseTitle": "Research",
+      "agentId": "a5ea8aa8161e55630",
+      "model": "claude-sonnet-5",
+      "state": "done",
+      "startedAt": 1783901420598,
+      "queuedAt": 1783901420586,
+      "attempt": 1,
+      "lastToolName": "StructuredOutput",
+      "promptPreview": "You have web research tools. FIRST load them: call ToolSearch with query \"select:mcp__4dbcbf51-5bb9-4f93-a61f-18044e1a3091__web_search,mcp__4dbcbf51-5bb9-4f93-a61f-18044e1a3091__web_fetch\" to load Parallel P0 web_search/web_fetch (pass a stable session_id + model_name on every call). Built-in WebSearch/WebFetch may also load via ToolSearch query \"web search fetch\". Use REAL searches — never answer…",
+      "lastProgressAt": 1783902019066,
+      "tokens": 103193,
+      "toolCalls": 45,
+      "durationMs": 598468,
+      "resultPreview": "{\"models\":[{\"name\":\"LLaMA 65B\",\"org\":\"Meta\",\"family\":\"LLaMA\",\"releaseDate\":\"2023-02-24\",\"status\":\"released\",\"openness\":\"open-weights\",\"license\":\"LLaMA Non-Commercial Research License (gated application access)\",\"paramsB\":65.2,\"activeParamsB\":null,\"archClass\":\"dense\",\"archDisplay\":\"Dense decoder-only Transformer\",\"ctxK\":2,\"modalities\":[\"text\"],\"langCount\":null,\"capabilities\":{\"reasoning\":false,\"cod…"
+    },
+    {
+      "type": "workflow_agent",
+      "index": 2,
+      "label": "research:Meta",
+      "phaseIndex": 1,
+      "phaseTitle": "Research",
+      "agentId": "a0bc3cf86d20b1f8f",
+      "model": "claude-sonnet-5",
+      "state": "done",
+      "startedAt": 1783901420599,
+      "queuedAt": 1783901420586,
+      "attempt": 1,
+      "lastToolName": "StructuredOutput",
+      "promptPreview": "You have web research tools. FIRST load them: call ToolSearch with query \"select:mcp__4dbcbf51-5bb9-4f93-a61f-18044e1a3091__web_search,mcp__4dbcbf51-5bb9-4f93-a61f-18044e1a3091__web_fetch\" to load Parallel P0 web_search/web_fetch (pass a stable session_id + model_name on every call). Built-in WebSearch/WebFetch may also load via ToolSearch query \"web search fetch\". Use REAL searches — never answer…",
+      "lastProgressAt": 1783902096758,
+      "tokens": 113705,
+      "toolCalls": 59,
+      "durationMs": 676159,
+      "resultPreview": "{\"models\":[{\"name\":\"Llama 2 7B Chat\",\"org\":\"Meta\",\"family\":\"Llama 2\",\"releaseDate\":\"2023-07-18\",\"status\":\"released\",\"openness\":\"open-weights\",\"license\":\"Llama 2 Community License\",\"paramsB\":7,\"activeParamsB\":null,\"archClass\":\"dense\",\"archDisplay\":\"Dense transformer (decoder-only), RLHF-tuned\",\"ctxK\":4,\"modalities\":[\"text\"],\"langCount\":null,\"capabilities\":{\"reasoning\":false,\"coding\":false,\"vision\":…"
+    },
+    {
+      "type": "workflow_agent",
+      "index": 3,
+      "label": "research:Apple",
+      "phaseIndex": 1,
+      "phaseTitle": "Research",
+      "agentId": "a1bc00fb0c8583a13",
+      "model": "claude-sonnet-5",
+      "state": "error",
+      "startedAt": 1783901420600,
+      "queuedAt": 1783901420587,
+      "attempt": 1,
+      "lastToolName": "Bash",
+      "lastToolSummary": "for m in \"gorilla-llm/gorilla-7b-hf-delta-v0\" \"gorilla-llm/…",
+      "promptPreview": "You have web research tools. FIRST load them: call ToolSearch with query \"select:mcp__4dbcbf51-5bb9-4f93-a61f-18044e1a3091__web_search,mcp__4dbcbf51-5bb9-4f93-a61f-18044e1a3091__web_fetch\" to load Parallel P0 web_search/web_fetch (pass a stable session_id + model_name on every call). Built-in WebSearch/WebFetch may also load via ToolSearch query \"web search fetch\". Use REAL searches — never answer…",
+      "lastProgressAt": 1783902389181,
+      "error": "API Error: Server error mid-response. The response above may be incomplete.",
+      "tokens": 145001,
+      "toolCalls": 77,
+      "durationMs": 968581
+    },
+    {
+      "type": "workflow_agent",
+      "index": 4,
+      "label": "research:Apple",
+      "phaseIndex": 1,
+      "phaseTitle": "Research",
+      "agentId": "a1ee384574524089c",
+      "model": "claude-sonnet-5",
+      "state": "done",
+      "startedAt": 1783902389182,
+      "queuedAt": 1783902389181,
+      "attempt": 1,
+      "lastToolName": "StructuredOutput",
+      "promptPreview": "You have web research tools. FIRST load them: call ToolSearch with query \"select:mcp__4dbcbf51-5bb9-4f93-a61f-18044e1a3091__web_search,mcp__4dbcbf51-5bb9-4f93-a61f-18044e1a3091__web_fetch\" to load Parallel P0 web_search/web_fetch (pass a stable session_id + model_name on every call). Built-in WebSearch/WebFetch may also load via ToolSearch query \"web search fetch\". Use REAL searches — never answer…",
+      "lastProgressAt": 1783903193693,
+      "tokens": 151670,
+      "toolCalls": 78,
+      "durationMs": 804511,
+      "resultPreview": "{\"models\":[{\"name\":\"Apple DCLM-Baseline 7B\",\"org\":\"Apple\",\"family\":\"Apple DCLM\",\"releaseDate\":\"2024-07\",\"status\":\"released\",\"openness\":\"open-source\",\"license\":\"Apple Sample Code License\",\"paramsB\":7,\"activeParamsB\":null,\"archClass\":\"dense\",\"archDisplay\":\"Dense decoder-only Transformer (32 layers, 4096 hidden, 32 heads)\",\"ctxK\":2,\"modalities\":[\"text\"],\"langCount\":null,\"capabilities\":{\"reasoning\":fa…"
+    },
+    {
+      "type": "workflow_agent",
+      "index": 5,
+      "label": "verify:Meta",
+      "phaseIndex": 2,
+      "phaseTitle": "Verify",
+      "agentId": "a00a3e3d3a03ffded",
+      "model": "claude-sonnet-5",
+      "state": "done",
+      "startedAt": 1783903193772,
+      "queuedAt": 1783903193763,
+      "attempt": 1,
+      "lastToolName": "StructuredOutput",
+      "promptPreview": "You have web research tools. FIRST load them: call ToolSearch with query \"select:mcp__4dbcbf51-5bb9-4f93-a61f-18044e1a3091__web_search,mcp__4dbcbf51-5bb9-4f93-a61f-18044e1a3091__web_fetch\" to load Parallel P0 web_search/web_fetch (pass a stable session_id + model_name on every call). Built-in WebSearch/WebFetch may also load via ToolSearch query \"web search fetch\". Use REAL searches — never answer…",
+      "lastProgressAt": 1783903414033,
+      "tokens": 71970,
+      "toolCalls": 24,
+      "durationMs": 220261,
+      "resultPreview": "{\"models\":[{\"name\":\"LLaMA 65B\",\"org\":\"Meta\",\"family\":\"LLaMA\",\"releaseDate\":\"2023-02-24\",\"status\":\"released\",\"openness\":\"open-weights\",\"license\":\"LLaMA Non-Commercial Research License (gated application access)\",\"paramsB\":65.2,\"activeParamsB\":null,\"archClass\":\"dense\",\"archDisplay\":\"Dense decoder-only Transformer\",\"ctxK\":2,\"modalities\":[\"text\"],\"langCount\":null,\"capabilities\":{\"reasoning\":false,\"cod…"
+    },
+    {
+      "type": "workflow_agent",
+      "index": 6,
+      "label": "verify:Meta",
+      "phaseIndex": 2,
+      "phaseTitle": "Verify",
+      "agentId": "a0c423317da69d8ce",
+      "model": "claude-sonnet-5",
+      "state": "done",
+      "startedAt": 1783903193773,
+      "queuedAt": 1783903193763,
+      "attempt": 1,
+      "lastToolName": "StructuredOutput",
+      "promptPreview": "You have web research tools. FIRST load them: call ToolSearch with query \"select:mcp__4dbcbf51-5bb9-4f93-a61f-18044e1a3091__web_search,mcp__4dbcbf51-5bb9-4f93-a61f-18044e1a3091__web_fetch\" to load Parallel P0 web_search/web_fetch (pass a stable session_id + model_name on every call). Built-in WebSearch/WebFetch may also load via ToolSearch query \"web search fetch\". Use REAL searches — never answer…",
+      "lastProgressAt": 1783903413804,
+      "tokens": 75672,
+      "toolCalls": 23,
+      "durationMs": 220031,
+      "resultPreview": "{\"models\":[{\"name\":\"Llama 2 7B\",\"org\":\"Meta\",\"family\":\"Llama 2\",\"releaseDate\":\"2023-07-18\",\"status\":\"released\",\"openness\":\"open-weights\",\"license\":\"Llama 2 Community License Agreement\",\"paramsB\":6.7,\"activeParamsB\":null,\"archClass\":\"dense\",\"archDisplay\":\"Dense decoder-only Transformer\",\"ctxK\":4,\"modalities\":[\"text\"],\"langCount\":null,\"capabilities\":{\"reasoning\":false,\"coding\":true,\"vision\":false,\"f…"
+    },
+    {
+      "type": "workflow_agent",
+      "index": 7,
+      "label": "verify:Apple",
+      "phaseIndex": 2,
+      "phaseTitle": "Verify",
+      "agentId": "af083510bafec56e2",
+      "model": "claude-sonnet-5",
+      "state": "done",
+      "startedAt": 1783903193773,
+      "queuedAt": 1783903193763,
+      "attempt": 1,
+      "lastToolName": "StructuredOutput",
+      "promptPreview": "You have web research tools. FIRST load them: call ToolSearch with query \"select:mcp__4dbcbf51-5bb9-4f93-a61f-18044e1a3091__web_search,mcp__4dbcbf51-5bb9-4f93-a61f-18044e1a3091__web_fetch\" to load Parallel P0 web_search/web_fetch (pass a stable session_id + model_name on every call). Built-in WebSearch/WebFetch may also load via ToolSearch query \"web search fetch\". Use REAL searches — never answer…",
+      "lastProgressAt": 1783903609208,
+      "tokens": 86762,
+      "toolCalls": 36,
+      "durationMs": 415435,
+      "resultPreview": "{\"models\":[{\"name\":\"Apple OpenELM (270M–3B)\",\"org\":\"Apple\",\"family\":\"Apple OpenELM\",\"releaseDate\":\"2024-04-24\",\"status\":\"released\",\"openness\":\"open-source\",\"license\":\"Apple Sample Code License\",\"paramsB\":3,\"activeParamsB\":null,\"archClass\":\"dense\",\"archDisplay\":\"Dense transformer with layer-wise parameter scaling (270M/450M/1.1B/3B family)\",\"ctxK\":2,\"modalities\":[\"text\"],\"langCount\":null,\"capabilit…"
+    },
+    {
+      "type": "workflow_agent",
+      "index": 8,
+      "label": "verify:Stability AI (CarperAI)",
+      "phaseIndex": 2,
+      "phaseTitle": "Verify",
+      "agentId": "a77dbb524cdb149ae",
+      "model": "claude-sonnet-5",
+      "state": "done",
+      "startedAt": 1783903193773,
+      "queuedAt": 1783903193763,
+      "attempt": 1,
+      "lastToolName": "StructuredOutput",
+      "promptPreview": "You have web research tools. FIRST load them: call ToolSearch with query \"select:mcp__4dbcbf51-5bb9-4f93-a61f-18044e1a3091__web_search,mcp__4dbcbf51-5bb9-4f93-a61f-18044e1a3091__web_fetch\" to load Parallel P0 web_search/web_fetch (pass a stable session_id + model_name on every call). Built-in WebSearch/WebFetch may also load via ToolSearch query \"web search fetch\". Use REAL searches — never answer…",
+      "lastProgressAt": 1783903466250,
+      "tokens": 80902,
+      "toolCalls": 33,
+      "durationMs": 272477,
+      "resultPreview": "{\"models\":[{\"name\":\"Stable Beluga 1 (FreeWilly 1) 65B\",\"org\":\"Stability AI (CarperAI)\",\"family\":\"Stable Beluga (FreeWilly)\",\"releaseDate\":\"2023-07-21\",\"status\":\"released\",\"openness\":\"open-weights\",\"license\":\"CC BY-NC-4.0 (Non-Commercial Creative Commons License) — released as delta weights over Meta's LLaMA 65B\",\"paramsB\":65,\"activeParamsB\":null,\"archClass\":\"dense\",\"archDisplay\":\"LLaMA 65B dense T…"
+    }
+  ],
+  "totalTokens": 828875,
+  "totalToolCalls": 375
+}

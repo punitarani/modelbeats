@@ -1,0 +1,78 @@
+{
+  "name": "Kimi k1.5",
+  "org": "Moonshot AI",
+  "family": "Kimi k1.5",
+  "releaseDate": "2025-01-20",
+  "status": "deprecated",
+  "openness": "closed",
+  "license": "Proprietary",
+  "paramsB": null,
+  "activeParamsB": null,
+  "archClass": "dense",
+  "archDisplay": "Transformer, RL-trained long/short-CoT reasoning (parameter count undisclosed)",
+  "ctxK": 128,
+  "modalities": [
+    "text",
+    "vision"
+  ],
+  "langCount": null,
+  "capabilities": {
+    "reasoning": true,
+    "coding": true,
+    "vision": true,
+    "functionCalling": false,
+    "toolUse": false,
+    "agentic": false
+  },
+  "apiAvailable": false,
+  "price": null,
+  "links": {
+    "gh": "MoonshotAI/Kimi-k1.5",
+    "docs": "arxiv.org/abs/2501.12599"
+  },
+  "note": "Moonshot's first RL-trained multimodal reasoning model, claiming OpenAI o1-level math, coding, and vision performance.",
+  "quants": [],
+  "vramQ4Gb": null,
+  "vramFp16Gb": null,
+  "tps4090": null,
+  "tpsNote": null,
+  "effortLabel": null,
+  "isDefaultConfig": true,
+  "isBestConfig": true,
+  "specSources": {
+    "releaseDate": "https://en.wikipedia.org/wiki/Moonshot_AI",
+    "ctxK": "https://arxiv.org/abs/2501.12599",
+    "openness": "https://arxiv.org/abs/2501.12599"
+  },
+  "results": [
+    {
+      "benchmarkSlug": "aime",
+      "score": 77.5,
+      "source": "self-reported",
+      "sourceUrl": "https://arxiv.org/abs/2501.12599",
+      "notes": "Long-CoT variant"
+    },
+    {
+      "benchmarkSlug": "math",
+      "score": 96.2,
+      "source": "self-reported",
+      "sourceUrl": "https://arxiv.org/abs/2501.12599",
+      "notes": "MATH-500, long-CoT variant"
+    },
+    {
+      "benchmarkSlug": "livecodebench",
+      "score": 47.3,
+      "source": "self-reported",
+      "sourceUrl": "https://arxiv.org/abs/2501.12599",
+      "notes": "Short-CoT variant"
+    },
+    {
+      "benchmarkSlug": "mathvista",
+      "score": 74.9,
+      "source": "self-reported",
+      "sourceUrl": "https://arxiv.org/abs/2501.12599",
+      "notes": "Long-CoT variant, visual reasoning"
+    }
+  ],
+  "verificationNotes": "Confirmed genuine via arXiv:2501.12599 ('Kimi k1.5: Scaling Reinforcement Learning with LLMs', submitted 2025-01-20, matches releaseDate) and MoonshotAI/Kimi-k1.5 GitHub repo. All four benchmark rows (AIME 77.5, MATH-500 96.2, LiveCodeBench 47.3, MathVista 74.9) independently re-fetched from the exact sourceUrl and confirmed to literally match. apiAvailable:false confirmed correct — k1.5 was a research release; Moonshot's current public API model list (platform.kimi.ai) does not list a kimi-k1.5 model ID. No changes needed."
+}

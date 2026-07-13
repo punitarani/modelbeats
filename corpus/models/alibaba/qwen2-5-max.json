@@ -1,0 +1,79 @@
+{
+  "name": "Qwen2.5-Max",
+  "org": "Alibaba",
+  "family": "Qwen2.5",
+  "releaseDate": "2025-01-28",
+  "status": "deprecated",
+  "openness": "closed",
+  "license": "Proprietary",
+  "paramsB": null,
+  "activeParamsB": null,
+  "archClass": "moe",
+  "archDisplay": "Proprietary large-scale MoE (configuration undisclosed)",
+  "ctxK": 32,
+  "modalities": [
+    "text"
+  ],
+  "langCount": null,
+  "capabilities": {
+    "reasoning": false,
+    "coding": true,
+    "vision": false,
+    "functionCalling": true,
+    "toolUse": true,
+    "agentic": true
+  },
+  "apiAvailable": true,
+  "price": {
+    "input": 1.6,
+    "output": 6.4,
+    "provider": "Alibaba Cloud (DashScope)"
+  },
+  "links": {
+    "docs": "qwenlm.github.io/blog/qwen2.5-max"
+  },
+  "note": "Large proprietary MoE pretrained on 20T+ tokens; API model id qwen-max-2025-01-25, competitive with DeepSeek V3.",
+  "quants": [],
+  "vramQ4Gb": null,
+  "vramFp16Gb": null,
+  "tps4090": null,
+  "tpsNote": null,
+  "effortLabel": null,
+  "isDefaultConfig": true,
+  "isBestConfig": true,
+  "specSources": {
+    "paramsB": "https://qwenlm.github.io/blog/qwen2.5-max/",
+    "ctxK": "https://artificialanalysis.ai/models/qwen-2-5-max",
+    "releaseDate": "https://qwenlm.github.io/blog/qwen2.5-max/",
+    "openness": "https://artificialanalysis.ai/models/qwen-2-5-max"
+  },
+  "results": [
+    {
+      "benchmarkSlug": "arena-hard",
+      "score": 89.4,
+      "source": "self-reported",
+      "sourceUrl": "https://www.datacamp.com/blog/qwen-2-5-max",
+      "notes": "vs DeepSeek V3 85.5"
+    },
+    {
+      "benchmarkSlug": "mmlu-pro",
+      "score": 76.1,
+      "source": "self-reported",
+      "sourceUrl": "https://www.datacamp.com/blog/qwen-2-5-max"
+    },
+    {
+      "benchmarkSlug": "gpqa",
+      "score": 60.1,
+      "source": "self-reported",
+      "sourceUrl": "https://www.datacamp.com/blog/qwen-2-5-max",
+      "notes": "GPQA-Diamond"
+    },
+    {
+      "benchmarkSlug": "livecodebench",
+      "score": 38.7,
+      "source": "self-reported",
+      "sourceUrl": "https://www.datacamp.com/blog/qwen-2-5-max"
+    }
+  ],
+  "verificationNotes": "Confirmed real; blog qwenlm.github.io/blog/qwen2.5-max/ byline gives Jan 28 2025 (matches record; a secondary source said Jan 29, byline is authoritative), confirms closed/proprietary large-scale MoE pretrained on 20T+ tokens, API id qwen-max-2025-01-25, and that it beats DeepSeek V3 on Arena-Hard/LiveBench/LiveCodeBench/GPQA-Diamond. artificialanalysis.ai confirms 32K context and closed weights. DashScope pricing confirmed at $1.60/$6.40 per 1M input/output tokens. All 5 result rows verified verbatim on datacamp.com/blog/qwen-2-5-max. 'deprecated' status could not be confirmed via an explicit official deprecation notice -- it is a reasonable inference given Alibaba has since shipped Qwen3-Max/3.5/3.6/3.7-Max, but some third-party docs still list qwen-max-2025-01-25 as accessible; flagging this as lower-confidence than the other fields."
+}

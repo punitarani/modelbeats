@@ -1,0 +1,104 @@
+{
+  "name": "MiniMax-M2",
+  "org": "MiniMax",
+  "family": "MiniMax-M2",
+  "releaseDate": "2025-10-27",
+  "status": "released",
+  "openness": "open-weights",
+  "license": "MIT",
+  "paramsB": 229.9,
+  "activeParamsB": 9.8,
+  "archClass": "moe",
+  "archDisplay": "62-layer decoder-only Transformer, 256 experts (top-8, sigmoid gating) + Multi-Token Prediction module, full GQA attention",
+  "ctxK": 192,
+  "modalities": [
+    "text"
+  ],
+  "langCount": null,
+  "capabilities": {
+    "reasoning": true,
+    "coding": true,
+    "vision": false,
+    "functionCalling": true,
+    "toolUse": true,
+    "agentic": true
+  },
+  "apiAvailable": true,
+  "price": {
+    "input": 0.3,
+    "output": 1.2,
+    "provider": "MiniMax (platform.minimax.io)"
+  },
+  "links": {
+    "hf": "MiniMaxAI/MiniMax-M2",
+    "gh": "MiniMax-AI/MiniMax-M2",
+    "docs": "platform.minimax.io"
+  },
+  "note": "Compact 229.9B-total/9.8B-active MoE tuned for coding and agentic workflows with interleaved <think> reasoning; original M2 release is MIT-licensed (later M2.x point releases, e.g. M2.1/M2.7, moved to a restrictive 'Modified-MIT').",
+  "quants": [
+    "GGUF",
+    "AWQ"
+  ],
+  "vramQ4Gb": 130,
+  "vramFp16Gb": 460,
+  "tps4090": null,
+  "tpsNote": "Unsloth's UD-IQ4_XS dynamic GGUF (~108GB) is reported at ~15-25 tok/s on a single 16GB GPU + 96GB system RAM or Mac unified memory - no RTX-4090-specific figure found.",
+  "effortLabel": null,
+  "isDefaultConfig": true,
+  "isBestConfig": true,
+  "specSources": {
+    "paramsB": "https://github.com/MiniMax-AI/MiniMax-M2",
+    "ctxK": "https://huggingface.co/MiniMaxAI/MiniMax-M2/raw/main/config.json",
+    "releaseDate": "https://www.minimax.io/news/minimax-m2",
+    "openness": "https://github.com/MiniMax-AI/MiniMax-M2"
+  },
+  "results": [
+    {
+      "benchmarkSlug": "swe-bench",
+      "score": 69.4,
+      "source": "self-reported",
+      "sourceUrl": "https://github.com/MiniMax-AI/MiniMax-M2",
+      "notes": "SWE-bench Verified"
+    },
+    {
+      "benchmarkSlug": "livecodebench",
+      "score": 83,
+      "source": "self-reported",
+      "sourceUrl": "https://github.com/MiniMax-AI/MiniMax-M2"
+    },
+    {
+      "benchmarkSlug": "mmlu-pro",
+      "score": 82,
+      "source": "self-reported",
+      "sourceUrl": "https://github.com/MiniMax-AI/MiniMax-M2"
+    },
+    {
+      "benchmarkSlug": "aime",
+      "score": 78,
+      "source": "self-reported",
+      "sourceUrl": "https://github.com/MiniMax-AI/MiniMax-M2",
+      "notes": "AIME25"
+    },
+    {
+      "benchmarkSlug": "terminal-bench",
+      "score": 46.3,
+      "source": "self-reported",
+      "sourceUrl": "https://github.com/MiniMax-AI/MiniMax-M2"
+    },
+    {
+      "benchmarkSlug": "gaia",
+      "score": 75.7,
+      "source": "self-reported",
+      "sourceUrl": "https://github.com/MiniMax-AI/MiniMax-M2",
+      "notes": "text only"
+    },
+    {
+      "benchmarkSlug": "hle",
+      "score": 31.8,
+      "source": "self-reported",
+      "sourceUrl": "https://github.com/MiniMax-AI/MiniMax-M2",
+      "notes": "with tools"
+    }
+  ],
+  "verificationNotes": "Confirmed real; official minimax.io/news/minimax-m2 post is literally dated 2025.10.27, matching releaseDate exactly (MarkTechPost/Simon Willison coverage followed a day or two later). 229.9B total/9.8B active MIT-licensed MoE confirmed via GitHub repo and MarkTechPost. All 7 benchmark rows (SWE-bench 69.4, LiveCodeBench 83, MMLU-Pro 82, AIME25 78, Terminal-Bench 46.3, GAIA 75.7, HLE 31.8) confirmed literally on the GitHub README. Independently confirmed the note's claim that later M2.x point releases (M2.1, M2.7) carry a distinct 'Modified-MIT' license requiring UI attribution, unlike the base M2's plain MIT."
+}

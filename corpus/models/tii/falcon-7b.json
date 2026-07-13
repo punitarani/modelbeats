@@ -1,0 +1,53 @@
+{
+  "name": "Falcon-7B",
+  "org": "TII",
+  "family": "Falcon",
+  "releaseDate": "2023-05-25",
+  "status": "released",
+  "openness": "open-weights",
+  "license": "Apache 2.0",
+  "paramsB": 7,
+  "activeParamsB": null,
+  "archClass": "dense",
+  "archDisplay": "Causal decoder-only Transformer, 7B (32 layers, multiquery attention, RoPE, FlashAttention)",
+  "ctxK": 2,
+  "modalities": [
+    "text"
+  ],
+  "langCount": 11,
+  "capabilities": {
+    "reasoning": false,
+    "coding": false,
+    "vision": false,
+    "functionCalling": false,
+    "toolUse": false,
+    "agentic": false
+  },
+  "apiAvailable": false,
+  "price": null,
+  "links": {
+    "hf": "tiiuae/falcon-7b",
+    "docs": "falconllm.tii.ae"
+  },
+  "note": "Apache-2.0 causal decoder trained on 1.5T RefinedWeb tokens; the small, widely-adopted entry point of the original Falcon line.",
+  "quants": [
+    "GGUF",
+    "GPTQ",
+    "bitsandbytes 4-bit"
+  ],
+  "vramQ4Gb": 6,
+  "vramFp16Gb": 16.2,
+  "tps4090": null,
+  "tpsNote": null,
+  "effortLabel": null,
+  "isDefaultConfig": true,
+  "isBestConfig": true,
+  "specSources": {
+    "paramsB": "https://huggingface.co/tiiuae/falcon-7b",
+    "ctxK": "https://huggingface.co/tiiuae/falcon-7b",
+    "releaseDate": "https://www.tii.ae/news/uaes-technology-innovation-institute-launches-open-source-falcon-40b-large-language-model",
+    "openness": "https://huggingface.co/tiiuae/falcon-7b"
+  },
+  "results": [],
+  "verificationNotes": "Confirmed real via HF model card (tiiuae/falcon-7b) and TII/ATRC press coverage: 7B params, Apache 2.0, 2048-token (2K) context, released May 25 2023 together with Falcon-40B/1.3B. open-llm-leaderboard-avg 48.8 confirmed verbatim on huggingface.co/blog/falcon. Corrected langCount 9→11: the card's language list (English, German, Spanish, French primary + Italian, Portuguese, Polish, Dutch, Romanian, Czech, Swedish limited) is identical to Falcon-40B's and totals 11, not 9."
+}

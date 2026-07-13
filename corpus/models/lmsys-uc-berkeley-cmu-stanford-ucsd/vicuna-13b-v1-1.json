@@ -1,0 +1,52 @@
+{
+  "name": "Vicuna 13B (v1.1)",
+  "org": "LMSYS (UC Berkeley/CMU/Stanford/UCSD)",
+  "family": "Vicuna",
+  "releaseDate": "2023-04-12",
+  "status": "released",
+  "openness": "open-weights",
+  "license": "Non-commercial research (LLaMA license + OpenAI ToS + ShareGPT terms); serving code Apache 2.0",
+  "paramsB": 13,
+  "activeParamsB": null,
+  "archClass": "dense",
+  "archDisplay": "LLaMA-13B fine-tuned dense transformer (SFT on ShareGPT conversations)",
+  "ctxK": 2,
+  "modalities": [
+    "text"
+  ],
+  "langCount": null,
+  "capabilities": {
+    "reasoning": false,
+    "coding": false,
+    "vision": false,
+    "functionCalling": false,
+    "toolUse": false,
+    "agentic": false
+  },
+  "apiAvailable": true,
+  "price": null,
+  "links": {
+    "hf": "lmsys/vicuna-13b-v1.1",
+    "gh": "lm-sys/FastChat"
+  },
+  "note": "LLaMA-13B fine-tuned on 70K ShareGPT chats; ~92% ChatGPT quality per LMSYS's original GPT-4-as-judge eval, popularizing that evaluation method.",
+  "quants": [
+    "GGML",
+    "GPTQ"
+  ],
+  "vramQ4Gb": 9,
+  "vramFp16Gb": 26,
+  "tps4090": null,
+  "tpsNote": null,
+  "effortLabel": null,
+  "isDefaultConfig": true,
+  "isBestConfig": true,
+  "specSources": {
+    "paramsB": "https://huggingface.co/lmsys/vicuna-13b-v1.1",
+    "ctxK": "https://lmsys.org/blog/2023-03-30-vicuna/",
+    "releaseDate": "https://github.com/lm-sys/FastChat/blob/main/docs/vicuna_weights_version.md",
+    "openness": "https://huggingface.co/lmsys/vicuna-13b-v1.1"
+  },
+  "results": [],
+  "verificationNotes": "Confirmed existence and details by fetching lmsys.org/blog/2023-03-30-vicuna/ (published by 'The Vicuna Team', March 30, 2023): Table 2 literally states Vicuna-13B scores 92% of ChatGPT's score under the GPT-4-judge eval, and the blog states a 2048-token context window (matches ctxK:2). FastChat's vicuna_weights_version.md confirms v1.1 weights released 2023-04-12, fine-tuned from LLaMA-1 (matches releaseDate/archDisplay). Confirmed huggingface.co/lmsys/vicuna-13b-v1.1 exists with matching description ('fine-tuning LLaMA on user-shared conversations... ShareGPT') and non-commercial license. No changes made; all fields confirmed accurate."
+}

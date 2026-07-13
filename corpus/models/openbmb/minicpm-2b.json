@@ -1,0 +1,141 @@
+{
+  "name": "MiniCPM-2B",
+  "org": "OpenBMB",
+  "family": "MiniCPM",
+  "releaseDate": "2024-02-01",
+  "status": "released",
+  "openness": "open-weights",
+  "license": "Custom (OpenBMB General Model License; free for research, free commercial use after registration)",
+  "paramsB": 2.7,
+  "activeParamsB": null,
+  "archClass": "dense",
+  "archDisplay": "Decoder-only Transformer, deep-and-thin design (40 layers, 2304 hidden dim, Mistral-derived tokenizer)",
+  "ctxK": 4,
+  "modalities": [
+    "text"
+  ],
+  "langCount": 2,
+  "capabilities": {
+    "reasoning": false,
+    "coding": true,
+    "vision": false,
+    "functionCalling": false,
+    "toolUse": false,
+    "agentic": false
+  },
+  "apiAvailable": false,
+  "price": null,
+  "links": {
+    "hf": "openbmb/MiniCPM-2B-sft-bf16",
+    "gh": "OpenBMB/MiniCPM"
+  },
+  "note": "Pioneering ~2.4B-non-embedding edge LLM matching Mistral-7B on many benchmarks; runs on-device including smartphones",
+  "quants": [
+    "GGUF",
+    "Int4"
+  ],
+  "vramQ4Gb": 2,
+  "vramFp16Gb": 6.2,
+  "tps4090": null,
+  "tpsNote": null,
+  "effortLabel": null,
+  "isDefaultConfig": true,
+  "isBestConfig": true,
+  "specSources": {
+    "paramsB": "https://huggingface.co/openbmb/MiniCPM-2B-sft-bf16",
+    "ctxK": "https://github.com/OpenBMB/MiniCPM",
+    "releaseDate": "https://huggingface.co/openbmb/MiniCPM-2B-sft-bf16",
+    "openness": "https://huggingface.co/openbmb/MiniCPM-2B-sft-bf16"
+  },
+  "results": [
+    {
+      "benchmarkSlug": "mmlu",
+      "score": 53.46,
+      "source": "self-reported",
+      "sourceUrl": "https://github.com/OpenBMB/MiniCPM/blob/main/README-en.md",
+      "evaluatedAt": "2024-02-01",
+      "notes": "MiniCPM GitHub README benchmark table"
+    },
+    {
+      "benchmarkSlug": "bbh",
+      "score": 36.87,
+      "source": "self-reported",
+      "sourceUrl": "https://github.com/OpenBMB/MiniCPM/blob/main/README-en.md",
+      "evaluatedAt": "2024-02-01",
+      "notes": "MiniCPM GitHub README benchmark table"
+    },
+    {
+      "benchmarkSlug": "gsm8k",
+      "score": 53.83,
+      "source": "self-reported",
+      "sourceUrl": "https://github.com/OpenBMB/MiniCPM/blob/main/README-en.md",
+      "evaluatedAt": "2024-02-01",
+      "notes": "MiniCPM GitHub README benchmark table"
+    },
+    {
+      "benchmarkSlug": "math",
+      "score": 10.24,
+      "source": "self-reported",
+      "sourceUrl": "https://github.com/OpenBMB/MiniCPM/blob/main/README-en.md",
+      "evaluatedAt": "2024-02-01",
+      "notes": "MiniCPM GitHub README benchmark table"
+    },
+    {
+      "benchmarkSlug": "humaneval",
+      "score": 50,
+      "source": "self-reported",
+      "sourceUrl": "https://github.com/OpenBMB/MiniCPM/blob/main/README-en.md",
+      "evaluatedAt": "2024-02-01",
+      "notes": "MiniCPM GitHub README benchmark table"
+    },
+    {
+      "benchmarkSlug": "mbpp",
+      "score": 47.31,
+      "source": "self-reported",
+      "sourceUrl": "https://github.com/OpenBMB/MiniCPM/blob/main/README-en.md",
+      "evaluatedAt": "2024-02-01",
+      "notes": "MiniCPM GitHub README benchmark table"
+    },
+    {
+      "benchmarkSlug": "hellaswag",
+      "score": 68.25,
+      "source": "self-reported",
+      "sourceUrl": "https://github.com/OpenBMB/MiniCPM/blob/main/README-en.md",
+      "evaluatedAt": "2024-02-01",
+      "notes": "MiniCPM GitHub README benchmark table"
+    },
+    {
+      "benchmarkSlug": "arc-challenge",
+      "score": 68,
+      "source": "self-reported",
+      "sourceUrl": "https://github.com/OpenBMB/MiniCPM/blob/main/README-en.md",
+      "evaluatedAt": "2024-02-01",
+      "notes": "MiniCPM GitHub README benchmark table (ARC-c)"
+    },
+    {
+      "benchmarkSlug": "arc-easy",
+      "score": 85.44,
+      "source": "self-reported",
+      "sourceUrl": "https://github.com/OpenBMB/MiniCPM/blob/main/README-en.md",
+      "evaluatedAt": "2024-02-01",
+      "notes": "MiniCPM GitHub README benchmark table (ARC-e)"
+    },
+    {
+      "benchmarkSlug": "c-eval",
+      "score": 51.13,
+      "source": "self-reported",
+      "sourceUrl": "https://github.com/OpenBMB/MiniCPM/blob/main/README-en.md",
+      "evaluatedAt": "2024-02-01",
+      "notes": "MiniCPM GitHub README benchmark table; Chinese exam benchmark"
+    },
+    {
+      "benchmarkSlug": "cmmlu",
+      "score": 51.07,
+      "source": "self-reported",
+      "sourceUrl": "https://github.com/OpenBMB/MiniCPM/blob/main/README-en.md",
+      "evaluatedAt": "2024-02-01",
+      "notes": "MiniCPM GitHub README benchmark table; Chinese MMLU analogue"
+    }
+  ],
+  "verificationNotes": "Confirmed real model via HF model card (huggingface.co/openbmb/MiniCPM-2B-sft-bf16, 2.4B non-embedding params, Apache-2.0 code / custom GML weights license, Feb 1 2024 release corroborated by multiple independent sources). All 11 benchmark scores independently re-fetched from the OpenBMB/MiniCPM GitHub README table and match the input exactly (MMLU 53.46, BBH 36.87, GSM8K 53.83, MATH 10.24, HumanEval 50.00, MBPP 47.31, HellaSwag 68.25, ARC-C 68.00, ARC-E 85.44, C-Eval 51.13, CMMLU 51.07); swapped sourceUrl from the arxiv abstract page (which does not display the table) to the GitHub README that actually contains it, since arxiv abstract pages don't literally show these numbers."
+}

@@ -1,0 +1,50 @@
+{
+  "name": "Gemini 2.0 Pro Experimental",
+  "org": "Google",
+  "family": "Gemini 2.0",
+  "releaseDate": "2025-02-05",
+  "status": "deprecated",
+  "openness": "closed",
+  "license": "Proprietary",
+  "paramsB": null,
+  "activeParamsB": null,
+  "archClass": "moe",
+  "archDisplay": "Sparse Mixture-of-Experts Transformer (params undisclosed); never reached GA",
+  "ctxK": 2000,
+  "modalities": [
+    "text",
+    "vision",
+    "audio",
+    "video"
+  ],
+  "langCount": null,
+  "capabilities": {
+    "reasoning": false,
+    "coding": true,
+    "vision": true,
+    "functionCalling": true,
+    "toolUse": true,
+    "agentic": true
+  },
+  "apiAvailable": true,
+  "price": null,
+  "links": {
+    "docs": "ai.google.dev/gemini-api/docs/models"
+  },
+  "note": "Experimental-only 2.0 Pro preview with a 2M-token context window; Google's strongest 2.0-era coding/reasoning model, never GA'd.",
+  "quants": [],
+  "vramQ4Gb": null,
+  "vramFp16Gb": null,
+  "tps4090": null,
+  "tpsNote": null,
+  "effortLabel": null,
+  "isDefaultConfig": true,
+  "isBestConfig": true,
+  "specSources": {
+    "releaseDate": "https://blog.google/technology/google-deepmind/gemini-model-updates-february-2025/",
+    "ctxK": "https://blog.google/technology/google-deepmind/gemini-model-updates-february-2025/",
+    "openness": "https://ai.google.dev/gemini-api/docs/models"
+  },
+  "results": [],
+  "verificationNotes": "Confirmed real: launched Feb 5 2025 per official blog.google post and corroborated by VentureBeat/9to5Google coverage, as gemini-2.0-pro-exp-02-05, with a 2-million-token context window and positioned as Google's strongest 2.0-era coding model. Independently confirmed via targeted search that it never reached GA — Google moved directly to the Gemini 2.5 Pro line (GA June 17 2025) instead, and the experimental 2.0 Pro endpoints were later shut down. No results rows were present to verify (record correctly ships an empty results array). No changes made."
+}

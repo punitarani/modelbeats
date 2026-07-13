@@ -1,0 +1,62 @@
+{
+  "name": "GPT-5-Codex",
+  "org": "OpenAI",
+  "family": "GPT-5",
+  "releaseDate": "2025-09-15",
+  "status": "released",
+  "openness": "closed",
+  "license": "Proprietary (OpenAI API Terms)",
+  "paramsB": null,
+  "activeParamsB": null,
+  "archClass": "dense",
+  "archDisplay": "GPT-5 fine-tuned for agentic software engineering with dynamic thinking-time scaling; dense transformer, exact size undisclosed",
+  "ctxK": 400,
+  "modalities": [
+    "text",
+    "vision"
+  ],
+  "langCount": null,
+  "capabilities": {
+    "reasoning": true,
+    "coding": true,
+    "vision": true,
+    "functionCalling": true,
+    "toolUse": true,
+    "agentic": true
+  },
+  "apiAvailable": true,
+  "price": {
+    "input": 1.25,
+    "output": 10,
+    "provider": "OpenAI"
+  },
+  "links": {
+    "docs": "developers.openai.com/api/docs/models/gpt-5-codex"
+  },
+  "note": "GPT-5 optimized for agentic coding; can run autonomously for hours inside Codex.",
+  "quants": [],
+  "vramQ4Gb": null,
+  "vramFp16Gb": null,
+  "tps4090": null,
+  "tpsNote": null,
+  "effortLabel": "High",
+  "isDefaultConfig": true,
+  "isBestConfig": true,
+  "specSources": {
+    "releaseDate": "https://techcrunch.com/2025/09/15/openai-upgrades-codex-with-a-new-version-of-gpt-5/",
+    "ctxK": "https://developers.openai.com/api/docs/models/gpt-5-codex",
+    "openness": "https://developers.openai.com/api/docs/models/gpt-5-codex",
+    "paramsB": "https://developers.openai.com/api/docs/models/gpt-5-codex"
+  },
+  "results": [
+    {
+      "benchmarkSlug": "swe-bench",
+      "score": 74.5,
+      "source": "independent",
+      "sourceUrl": "https://www.webpronews.com/openais-gpt-5-codex-hits-74-5-on-swe-bench-boosts-coding-efficiency/",
+      "evaluatedAt": "2025-09-15",
+      "notes": "SWE-bench Verified, reported at launch"
+    }
+  ],
+  "verificationNotes": "Release date Sept 15, 2025 confirmed via multiple independent sources (TechCrunch 'openai-upgrades-codex-with-a-new-version-of-gpt-5' dated 2025-09-15, Simon Willison's blog dated same day, and search results confirming the OpenAI blog post itself was published 2025-09-15; general API availability to Codex-via-API-key followed on Sept 23). Pricing ($1.25/$10 per 1M) and 400K context confirmed by live-fetching developers.openai.com/api/docs/models/gpt-5-codex. SWE-bench Verified 74.5% confirmed present on the cited webpronews.com article and independently reproduced by Yahoo Tech coverage of the same launch. No changes made."
+}

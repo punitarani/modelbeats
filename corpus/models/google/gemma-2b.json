@@ -1,0 +1,88 @@
+{
+  "name": "Gemma 2B",
+  "org": "Google",
+  "family": "Gemma",
+  "releaseDate": "2024-02-21",
+  "status": "deprecated",
+  "openness": "open-weights",
+  "license": "Gemma Terms of Use",
+  "paramsB": 2.5,
+  "activeParamsB": null,
+  "archClass": "dense",
+  "archDisplay": "Dense decoder-only Transformer (MQA, RoPE, GeGLU)",
+  "ctxK": 8,
+  "modalities": [
+    "text"
+  ],
+  "langCount": null,
+  "capabilities": {
+    "reasoning": false,
+    "coding": true,
+    "vision": false,
+    "functionCalling": false,
+    "toolUse": false,
+    "agentic": false
+  },
+  "apiAvailable": false,
+  "price": null,
+  "links": {
+    "hf": "google/gemma-2b",
+    "gh": "google-deepmind/gemma",
+    "docs": "ai.google.dev/gemma/docs/releases"
+  },
+  "note": "Smallest first-gen open Gemma; runs on modest/consumer hardware; superseded by Gemma 2/3/4 generations.",
+  "quants": [
+    "GGUF Q4_K_M",
+    "GGUF Q8_0"
+  ],
+  "vramQ4Gb": 2,
+  "vramFp16Gb": 5,
+  "tps4090": null,
+  "tpsNote": "No verified RTX 4090 llama.cpp Q4 throughput number found for the original (Gemma 1) 2B checkpoint.",
+  "effortLabel": null,
+  "isDefaultConfig": true,
+  "isBestConfig": true,
+  "specSources": {
+    "releaseDate": "https://huggingface.co/blog/gemma",
+    "paramsB": "https://arxiv.org/html/2403.08295v4",
+    "ctxK": "https://huggingface.co/google/gemma-2b",
+    "openness": "https://ai.google.dev/gemma/docs/releases"
+  },
+  "results": [
+    {
+      "benchmarkSlug": "mmlu",
+      "score": 42.3,
+      "source": "self-reported",
+      "sourceUrl": "https://huggingface.co/google/gemma-2b",
+      "notes": "5-shot"
+    },
+    {
+      "benchmarkSlug": "hellaswag",
+      "score": 71.4,
+      "source": "self-reported",
+      "sourceUrl": "https://huggingface.co/google/gemma-2b",
+      "notes": "0-shot"
+    },
+    {
+      "benchmarkSlug": "arc-challenge",
+      "score": 42.1,
+      "source": "self-reported",
+      "sourceUrl": "https://huggingface.co/google/gemma-2b"
+    },
+    {
+      "benchmarkSlug": "humaneval",
+      "score": 22,
+      "source": "self-reported",
+      "sourceUrl": "https://huggingface.co/google/gemma-2b",
+      "notes": "pass@1"
+    },
+    {
+      "benchmarkSlug": "gsm8k",
+      "score": 17.7,
+      "source": "self-reported",
+      "sourceUrl": "https://huggingface.co/google/gemma-2b",
+      "notes": "maj@1"
+    }
+  ],
+  "verificationNotes": "Confirmed real: released 2024-02-21 per Hugging Face blog and Google blog (multiple independent sources agree). Directly fetched huggingface.co/google/gemma-2b model card: all five benchmark rows (MMLU 42.3, HellaSwag 71.4, ARC-c 42.1, HumanEval 22.0, GSM8K 17.7) appear verbatim in its evaluation table -- all confirmed exactly as claimed. Params corrected/confirmed at the source level: fetched arXiv 2403.08295v4 Table 2 directly, which gives an exact parameter count of 2,506,434,560 (524.5M embedding + 1.98B non-embedding) = 2.5B, matching paramsB despite the '2B' marketing name -- this is a genuine, well-documented quirk (Gemma 2B/7B names refer to rounded marketing tiers, not exact counts)."
+}

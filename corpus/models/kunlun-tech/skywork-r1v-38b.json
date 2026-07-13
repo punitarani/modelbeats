@@ -1,0 +1,84 @@
+{
+  "name": "Skywork-R1V (38B)",
+  "org": "Kunlun Tech",
+  "family": "Skywork R1V",
+  "releaseDate": "2025-03-18",
+  "status": "released",
+  "openness": "open-weights",
+  "license": "MIT",
+  "paramsB": 38,
+  "activeParamsB": null,
+  "archClass": "dense",
+  "archDisplay": "InternViT-6B-448px-V2_5 vision encoder + DeepSeek-R1-Distill-Qwen-32B LLM via lightweight visual projector",
+  "ctxK": 128,
+  "modalities": [
+    "text",
+    "vision"
+  ],
+  "langCount": null,
+  "capabilities": {
+    "reasoning": true,
+    "coding": true,
+    "vision": true,
+    "functionCalling": false,
+    "toolUse": false,
+    "agentic": false
+  },
+  "apiAvailable": false,
+  "price": null,
+  "links": {
+    "hf": "Skywork/Skywork-R1V-38B",
+    "gh": "SkyworkAI/Skywork-R1V"
+  },
+  "note": "First open-sourced multimodal reasoning model with visual chain-of-thought, pairing InternViT-6B with DeepSeek-R1-Distill-Qwen-32B",
+  "quants": [],
+  "vramQ4Gb": null,
+  "vramFp16Gb": 76,
+  "tps4090": null,
+  "tpsNote": null,
+  "effortLabel": null,
+  "isDefaultConfig": true,
+  "isBestConfig": true,
+  "specSources": {
+    "paramsB": "https://arxiv.org/abs/2504.05599",
+    "ctxK": "https://huggingface.co/Skywork/Skywork-R1V-38B/raw/main/config.json",
+    "releaseDate": "https://github.com/SkyworkAI/Skywork-R1V",
+    "openness": "https://github.com/SkyworkAI/Skywork-R1V/blob/main/LICENSE"
+  },
+  "results": [
+    {
+      "benchmarkSlug": "mmmu",
+      "score": 69,
+      "source": "self-reported",
+      "sourceUrl": "https://arxiv.org/abs/2504.05599",
+      "notes": "MMMU val, pass@1"
+    },
+    {
+      "benchmarkSlug": "mathvista",
+      "score": 67.5,
+      "source": "self-reported",
+      "sourceUrl": "https://arxiv.org/abs/2504.05599",
+      "notes": "MathVista-mini"
+    },
+    {
+      "benchmarkSlug": "math",
+      "score": 94,
+      "source": "self-reported",
+      "sourceUrl": "https://arxiv.org/abs/2504.05599"
+    },
+    {
+      "benchmarkSlug": "aime",
+      "score": 72,
+      "source": "self-reported",
+      "sourceUrl": "https://arxiv.org/abs/2504.05599",
+      "notes": "AIME 2024"
+    },
+    {
+      "benchmarkSlug": "gpqa",
+      "score": 61.6,
+      "source": "self-reported",
+      "sourceUrl": "https://arxiv.org/abs/2504.05599"
+    }
+  ],
+  "verificationNotes": "Confirmed real: arxiv 2504.05599 and HF/GitHub repos exist. Fetched arxiv 2504.05599 (html) directly and confirmed Table 1 literally shows MMMU 69.0, MathVista 67.5, MATH-500 94.0, AIME 72.0, GPQA 61.6 for Skywork-R1V-38B — all 5 result rows confirmed verbatim. Architecture (InternViT-6B-448px-V2_5 + DeepSeek-R1-Distill-Qwen-32B) confirmed via HF model card. Release date 2025-03-18 and MIT license confirmed via press/GitHub."
+}

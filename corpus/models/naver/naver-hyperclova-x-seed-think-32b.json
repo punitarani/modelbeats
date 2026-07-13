@@ -1,0 +1,60 @@
+{
+  "name": "NAVER HyperCLOVA X SEED Think 32B",
+  "org": "NAVER",
+  "family": "HyperCLOVA X SEED",
+  "releaseDate": "2025-12-26",
+  "status": "released",
+  "openness": "open-weights",
+  "license": "HyperCLOVA X SEED 32B Think Model License Agreement",
+  "paramsB": 32,
+  "activeParamsB": null,
+  "archClass": "dense",
+  "archDisplay": "Dense multimodal (vision-language) transformer with optional extended-thinking mode",
+  "ctxK": 128,
+  "modalities": [
+    "text",
+    "vision",
+    "video"
+  ],
+  "langCount": null,
+  "capabilities": {
+    "reasoning": true,
+    "coding": true,
+    "vision": true,
+    "functionCalling": true,
+    "toolUse": true,
+    "agentic": true
+  },
+  "apiAvailable": false,
+  "price": null,
+  "links": {
+    "hf": "naver-hyperclovax/HyperCLOVAX-SEED-Think-32B",
+    "docs": "artificialanalysis.ai/models/hyperclova-x-seed-think-32b"
+  },
+  "note": "Open-weights multimodal reasoning model; strong Korean open model, reported ahead of EXAONE 4.0 32B on Artificial Analysis Intelligence Index at launch (44 vs 43; later shown as 17 under recalibrated v4.1 methodology).",
+  "quants": [],
+  "vramQ4Gb": null,
+  "vramFp16Gb": 66,
+  "tps4090": null,
+  "tpsNote": "No community GGUF/MLX quantization confirmed yet as of research date; custom VLM architecture not yet supported by llama.cpp",
+  "effortLabel": null,
+  "isDefaultConfig": true,
+  "isBestConfig": true,
+  "specSources": {
+    "paramsB": "https://huggingface.co/naver-hyperclovax/HyperCLOVAX-SEED-Think-32B",
+    "ctxK": "https://artificialanalysis.ai/models/hyperclova-x-seed-think-32b",
+    "releaseDate": "https://www.ajupress.com/view/20251230092739502",
+    "openness": "https://huggingface.co/naver-hyperclovax/HyperCLOVAX-SEED-Think-32B"
+  },
+  "results": [
+    {
+      "benchmarkSlug": "tau-bench",
+      "score": 87,
+      "source": "independent",
+      "sourceUrl": "https://www.ajupress.com/view/20251230092739502",
+      "notes": "tau2-Bench Telecom, per Artificial Analysis (article phrases it as '87 percent in an evaluation that assessed agent tool usage capabilities through a simulated telecommunications customer support scenario')",
+      "evaluatedAt": "2025-12-26"
+    }
+  ],
+  "verificationNotes": "Confirmed genuinely real (highest-scrutiny record given Dec-2025 release date) — found live HF model card, arXiv paper 2601.03286, Artificial Analysis model page, and independent press/X coverage (Ajupress, Artificial Analysis and Wes Roth X posts) all describing this exact model. 32B params, license name, 128K context, and text/image/video modalities all confirmed verbatim on the HF page. The '87' tau-bench score is confirmed present on the ajupress.com sourceUrl (paraphrased as '87 percent' for an agentic telecom customer-support tool-use eval, i.e. tau2-Bench Telecom). The note's claim of an initial 44 vs EXAONE (43) at launch, later recalibrated to 17 under AA's v4.1 methodology, was independently verified: X posts from Artificial Analysis/Wes Roth at launch cite 44 outperforming EXAONE 4.0 32B, while the current live artificialanalysis.ai page now shows Intelligence Index 17 under v4.1 methodology — both halves of the note check out."
+}

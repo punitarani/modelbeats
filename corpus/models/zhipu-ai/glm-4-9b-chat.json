@@ -1,0 +1,91 @@
+{
+  "name": "GLM-4-9B-Chat",
+  "org": "Zhipu AI",
+  "family": "GLM-4",
+  "releaseDate": "2024-06-05",
+  "status": "released",
+  "openness": "open-weights",
+  "license": "GLM-4 License (custom, free for research & most commercial use)",
+  "paramsB": 9,
+  "activeParamsB": null,
+  "archClass": "dense",
+  "archDisplay": "Dense transformer (GLM-4 architecture)",
+  "ctxK": 128,
+  "modalities": [
+    "text"
+  ],
+  "langCount": 26,
+  "capabilities": {
+    "reasoning": false,
+    "coding": true,
+    "vision": false,
+    "functionCalling": true,
+    "toolUse": true,
+    "agentic": true
+  },
+  "apiAvailable": true,
+  "price": null,
+  "links": {
+    "hf": "zai-org/glm-4-9b-chat",
+    "gh": "zai-org/GLM-4"
+  },
+  "note": "Open 9B GLM-4 checkpoint (co-developed by Zhipu AI/THUDM Tsinghua) beating Llama-3-8B on semantics/math/code/reasoning; 26 languages, 128K context (separate 1M variant exists).",
+  "quants": [
+    "GGUF Q4",
+    "GGUF Q8",
+    "MLX"
+  ],
+  "vramQ4Gb": 6,
+  "vramFp16Gb": 18,
+  "tps4090": null,
+  "tpsNote": null,
+  "effortLabel": null,
+  "isDefaultConfig": true,
+  "isBestConfig": true,
+  "specSources": {
+    "paramsB": "https://huggingface.co/zai-org/glm-4-9b-chat",
+    "ctxK": "https://huggingface.co/zai-org/glm-4-9b-chat",
+    "releaseDate": "https://github.com/zai-org/GLM-4/blob/main/README_20240605.md",
+    "openness": "https://huggingface.co/zai-org/glm-4-9b-chat"
+  },
+  "results": [
+    {
+      "benchmarkSlug": "mmlu",
+      "score": 72.4,
+      "source": "self-reported",
+      "sourceUrl": "https://huggingface.co/THUDM/glm-4-9b-chat"
+    },
+    {
+      "benchmarkSlug": "gsm8k",
+      "score": 79.6,
+      "source": "self-reported",
+      "sourceUrl": "https://huggingface.co/THUDM/glm-4-9b-chat"
+    },
+    {
+      "benchmarkSlug": "math",
+      "score": 50.6,
+      "source": "self-reported",
+      "sourceUrl": "https://huggingface.co/THUDM/glm-4-9b-chat"
+    },
+    {
+      "benchmarkSlug": "humaneval",
+      "score": 71.8,
+      "source": "self-reported",
+      "sourceUrl": "https://huggingface.co/THUDM/glm-4-9b-chat"
+    },
+    {
+      "benchmarkSlug": "ifeval",
+      "score": 69,
+      "source": "self-reported",
+      "sourceUrl": "https://huggingface.co/THUDM/glm-4-9b-chat"
+    },
+    {
+      "benchmarkSlug": "c-eval",
+      "score": 75.6,
+      "source": "self-reported",
+      "sourceUrl": "https://huggingface.co/THUDM/glm-4-9b-chat",
+      "notes": "Chinese academic-exam benchmark"
+    }
+  ],
+  "verificationNotes": "Confirmed real. Release date 2024-06-05 verified via GitHub zai-org/GLM-4 file literally named README_20240605.md. HF safetensors metadata shows 9,399,951,392 params (9.4B, rounds to 9 — matches). config.json seq_length=131072 confirms 128K context. License tag is 'license:other' (custom GLM-4 license) — matches. All 6 result rows (MMLU 72.4, GSM8K 79.6, MATH 50.6, HumanEval 71.8, IFEval 69.0, C-Eval 75.6) re-confirmed verbatim on the HF README. No changes made."
+}

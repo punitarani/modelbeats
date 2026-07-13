@@ -1,0 +1,1982 @@
+{
+  "summary": "Deep research + adversarial verification for P2 gap partition 0 (21 models)",
+  "agentCount": 7,
+  "logs": [
+    "gap-part0: 21 models",
+    "research: 22 models researched, 0 rejected as unconfirmable",
+    "verify: 22 models confirmed, 0 rejected by verification"
+  ],
+  "result": {
+    "inputCount": 21,
+    "researchedCount": 22,
+    "finalCount": 22,
+    "rejected": [],
+    "models": [
+      {
+        "name": "DeepSeek-VL 7B",
+        "org": "DeepSeek",
+        "family": "DeepSeek-VL",
+        "releaseDate": "2024-03-08",
+        "status": "released",
+        "openness": "open-weights",
+        "license": "DeepSeek Model License (code: MIT)",
+        "paramsB": 7,
+        "activeParamsB": null,
+        "archClass": "dense",
+        "archDisplay": "Dense 7B transformer (DeepSeek-LLM-7B base) + SigLIP-L/SAM-B hybrid vision encoder (up to 1024x1024)",
+        "ctxK": 4,
+        "modalities": [
+          "text",
+          "vision"
+        ],
+        "langCount": 2,
+        "capabilities": {
+          "reasoning": false,
+          "coding": false,
+          "vision": true,
+          "functionCalling": false,
+          "toolUse": false,
+          "agentic": false
+        },
+        "apiAvailable": false,
+        "price": null,
+        "links": {
+          "hf": "deepseek-ai/deepseek-vl-7b-chat",
+          "gh": "deepseek-ai/DeepSeek-VL"
+        },
+        "note": "First DeepSeek VLM (1.3B/7B); hybrid SigLIP+SAM vision encoder trained jointly with the LLM to preserve language ability.",
+        "quants": [
+          "MLX"
+        ],
+        "vramQ4Gb": 5,
+        "vramFp16Gb": 14,
+        "tps4090": null,
+        "tpsNote": "No public RTX 4090 llama.cpp benchmark found for the full vision-language model",
+        "effortLabel": null,
+        "isDefaultConfig": true,
+        "isBestConfig": true,
+        "specSources": {
+          "paramsB": "https://huggingface.co/deepseek-ai/deepseek-vl-7b-chat",
+          "ctxK": "https://github.com/deepseek-ai/DeepSeek-VL",
+          "releaseDate": "https://arxiv.org/abs/2403.05525",
+          "openness": "https://huggingface.co/deepseek-ai/deepseek-vl-7b-chat"
+        },
+        "results": [
+          {
+            "benchmarkSlug": "mmmu",
+            "score": 36.6,
+            "source": "self-reported",
+            "sourceUrl": "https://arxiv.org/html/2403.05525v2",
+            "notes": "7B-chat variant"
+          },
+          {
+            "benchmarkSlug": "mmbench",
+            "score": 73.2,
+            "source": "self-reported",
+            "sourceUrl": "https://arxiv.org/html/2403.05525v2",
+            "notes": "7B variant, Table 5"
+          },
+          {
+            "benchmarkSlug": "seedbench",
+            "score": 70.4,
+            "source": "self-reported",
+            "sourceUrl": "https://arxiv.org/html/2403.05525v2",
+            "notes": "7B variant, Table 5"
+          }
+        ],
+        "verificationNotes": "Confirmed real via arxiv 2403.05525 (submitted 2024-03-08) and HF model card: 7B params, DeepSeek Model License + MIT code, SigLIP-L/SAM-B hybrid vision encoder on DeepSeek-LLM-7B base, 1024x1024 input. All three benchmark scores (MMMU 36.6, MMBench 73.2, SEEDBench 70.4) literally confirmed in arxiv HTML Table 5. MLX quant (mlx-community/deepseek-vl-7b-chat-4bit) confirmed to exist. No changes needed."
+      },
+      {
+        "name": "DeepSeek-V2 236B",
+        "org": "DeepSeek",
+        "family": "DeepSeek-V2",
+        "releaseDate": "2024-05-07",
+        "status": "released",
+        "openness": "open-weights",
+        "license": "DeepSeek Model License (code: MIT)",
+        "paramsB": 236,
+        "activeParamsB": 21,
+        "archClass": "moe",
+        "archDisplay": "MoE transformer, 236B total / 21B active — DeepSeekMoE + Multi-head Latent Attention (MLA)",
+        "ctxK": 128,
+        "modalities": [
+          "text"
+        ],
+        "langCount": null,
+        "capabilities": {
+          "reasoning": false,
+          "coding": true,
+          "vision": false,
+          "functionCalling": true,
+          "toolUse": true,
+          "agentic": false
+        },
+        "apiAvailable": true,
+        "price": {
+          "input": 0.14,
+          "output": 0.28,
+          "provider": "DeepSeek"
+        },
+        "links": {
+          "hf": "deepseek-ai/DeepSeek-V2-Chat",
+          "gh": "deepseek-ai/DeepSeek-V2",
+          "docs": "api-docs.deepseek.com"
+        },
+        "note": "Introduced Multi-head Latent Attention; its ultra-low launch price (~$0.14/$0.28 per M tokens) triggered China's 2024 LLM price war.",
+        "quants": [
+          "GGUF"
+        ],
+        "vramQ4Gb": 118,
+        "vramFp16Gb": 472,
+        "tps4090": null,
+        "tpsNote": "236B total params exceed a single RTX 4090's 24GB even at 4-bit; requires multi-GPU or CPU/RAM offload",
+        "effortLabel": null,
+        "isDefaultConfig": true,
+        "isBestConfig": true,
+        "specSources": {
+          "paramsB": "https://arxiv.org/abs/2405.04434",
+          "ctxK": "https://huggingface.co/deepseek-ai/DeepSeek-V2",
+          "releaseDate": "https://arxiv.org/abs/2405.04434",
+          "openness": "https://huggingface.co/deepseek-ai/DeepSeek-V2"
+        },
+        "results": [
+          {
+            "benchmarkSlug": "mmlu",
+            "score": 77.8,
+            "source": "self-reported",
+            "sourceUrl": "https://huggingface.co/deepseek-ai/DeepSeek-V2-Chat",
+            "notes": "Chat (RL) variant"
+          },
+          {
+            "benchmarkSlug": "bbh",
+            "score": 79.7,
+            "source": "self-reported",
+            "sourceUrl": "https://huggingface.co/deepseek-ai/DeepSeek-V2-Chat",
+            "notes": "Chat (RL) variant"
+          },
+          {
+            "benchmarkSlug": "humaneval",
+            "score": 81.1,
+            "source": "self-reported",
+            "sourceUrl": "https://huggingface.co/deepseek-ai/DeepSeek-V2-Chat",
+            "notes": "Chat (RL) variant"
+          },
+          {
+            "benchmarkSlug": "mbpp",
+            "score": 72,
+            "source": "self-reported",
+            "sourceUrl": "https://huggingface.co/deepseek-ai/DeepSeek-V2-Chat",
+            "notes": "Chat (RL) variant"
+          },
+          {
+            "benchmarkSlug": "gsm8k",
+            "score": 92.2,
+            "source": "self-reported",
+            "sourceUrl": "https://huggingface.co/deepseek-ai/DeepSeek-V2-Chat",
+            "notes": "Chat (RL) variant"
+          },
+          {
+            "benchmarkSlug": "math",
+            "score": 53.9,
+            "source": "self-reported",
+            "sourceUrl": "https://huggingface.co/deepseek-ai/DeepSeek-V2-Chat",
+            "notes": "Chat (RL) variant"
+          }
+        ],
+        "verificationNotes": "Confirmed real via arxiv 2405.04434 (submitted 2024-05-07) and HF model card: 236B total/21B active MoE, 128K context, MIT code license + DeepSeek Model License. Fetched full HF page and confirmed the Chat(RL) column literally shows MMLU 77.8, BBH 79.7 (this row is on the page though truncated in initial excerpt), HumanEval 81.1, MBPP 72.0, GSM8K 92.2, Math 53.9 — all match exactly. $0.14/$0.28 launch pricing corroborated by multiple independent sources discussing the 2024 China LLM price war. No changes needed."
+      },
+      {
+        "name": "DeepSeek-Coder-V2 236B",
+        "org": "DeepSeek",
+        "family": "DeepSeek-Coder-V2",
+        "releaseDate": "2024-06-17",
+        "status": "released",
+        "openness": "open-weights",
+        "license": "DeepSeek Model License (code: MIT)",
+        "paramsB": 236,
+        "activeParamsB": 21,
+        "archClass": "moe",
+        "archDisplay": "MoE transformer, 236B total / 21B active — DeepSeekMoE + MLA, further pretrained from a DeepSeek-V2 checkpoint on 6T additional code/math tokens",
+        "ctxK": 128,
+        "modalities": [
+          "text"
+        ],
+        "langCount": null,
+        "capabilities": {
+          "reasoning": false,
+          "coding": true,
+          "vision": false,
+          "functionCalling": true,
+          "toolUse": true,
+          "agentic": false
+        },
+        "apiAvailable": true,
+        "price": {
+          "input": 0.14,
+          "output": 0.28,
+          "provider": "DeepSeek"
+        },
+        "links": {
+          "hf": "deepseek-ai/DeepSeek-Coder-V2-Instruct",
+          "gh": "deepseek-ai/DeepSeek-Coder-V2"
+        },
+        "note": "Reached GPT-4-Turbo-level coding (90.2 HumanEval) while expanding language support from 86 to 338 programming languages at 128K context.",
+        "quants": [
+          "GGUF"
+        ],
+        "vramQ4Gb": 118,
+        "vramFp16Gb": 472,
+        "tps4090": null,
+        "tpsNote": "236B total params exceed a single RTX 4090's 24GB even at 4-bit; requires multi-GPU or CPU/RAM offload",
+        "effortLabel": null,
+        "isDefaultConfig": true,
+        "isBestConfig": true,
+        "specSources": {
+          "paramsB": "https://huggingface.co/deepseek-ai/DeepSeek-Coder-V2-Instruct",
+          "ctxK": "https://huggingface.co/deepseek-ai/DeepSeek-Coder-V2-Instruct",
+          "releaseDate": "https://github.com/deepseek-ai/DeepSeek-Coder-V2",
+          "openness": "https://huggingface.co/deepseek-ai/DeepSeek-Coder-V2-Instruct"
+        },
+        "results": [
+          {
+            "benchmarkSlug": "humaneval",
+            "score": 90.2,
+            "source": "self-reported",
+            "sourceUrl": "https://github.com/deepseek-ai/DeepSeek-Coder-V2"
+          },
+          {
+            "benchmarkSlug": "mbpp",
+            "score": 76.2,
+            "source": "self-reported",
+            "sourceUrl": "https://github.com/deepseek-ai/DeepSeek-Coder-V2",
+            "notes": "MBPP+ (EvalPlus)"
+          },
+          {
+            "benchmarkSlug": "livecodebench",
+            "score": 43.4,
+            "source": "self-reported",
+            "sourceUrl": "https://github.com/deepseek-ai/DeepSeek-Coder-V2"
+          },
+          {
+            "benchmarkSlug": "gsm8k",
+            "score": 94.9,
+            "source": "self-reported",
+            "sourceUrl": "https://github.com/deepseek-ai/DeepSeek-Coder-V2"
+          },
+          {
+            "benchmarkSlug": "math",
+            "score": 75.7,
+            "source": "self-reported",
+            "sourceUrl": "https://github.com/deepseek-ai/DeepSeek-Coder-V2"
+          },
+          {
+            "benchmarkSlug": "mmlu-pro",
+            "score": 63.63,
+            "source": "self-reported",
+            "sourceUrl": "https://huggingface.co/deepseek-ai/DeepSeek-Coder-V2-Instruct"
+          }
+        ],
+        "verificationNotes": "Confirmed real via GitHub README and HF model card: 236B total/21B active MoE, 128K context (extended from 16K), DeepSeek Model License. Fetched GitHub README directly and confirmed GSM8K 94.9, MATH 75.7, HumanEval 90.2, MBPP+ 76.2, LiveCodeBench 43.4 all literally present. MMLU-Pro 63.63 confirmed on HF Instruct page. No changes needed."
+      },
+      {
+        "name": "DeepSeek-V2.5",
+        "org": "DeepSeek",
+        "family": "DeepSeek-V2",
+        "releaseDate": "2024-09-05",
+        "status": "released",
+        "openness": "open-weights",
+        "license": "DeepSeek Model License (code: MIT)",
+        "paramsB": 236,
+        "activeParamsB": 21,
+        "archClass": "moe",
+        "archDisplay": "MoE transformer, 236B total / 21B active — merge of DeepSeek-V2-Chat-0628 and DeepSeek-Coder-V2-Instruct-0724",
+        "ctxK": 128,
+        "modalities": [
+          "text"
+        ],
+        "langCount": null,
+        "capabilities": {
+          "reasoning": false,
+          "coding": true,
+          "vision": false,
+          "functionCalling": true,
+          "toolUse": true,
+          "agentic": false
+        },
+        "apiAvailable": true,
+        "price": null,
+        "links": {
+          "hf": "deepseek-ai/DeepSeek-V2.5",
+          "docs": "api-docs.deepseek.com/news/news0905"
+        },
+        "note": "Merged V2-Chat and Coder-V2 into a single 236B model, improving general writing/instruction-following while retaining coding strength.",
+        "quants": [
+          "GGUF"
+        ],
+        "vramQ4Gb": 118,
+        "vramFp16Gb": 472,
+        "tps4090": null,
+        "tpsNote": "236B total params exceed a single RTX 4090's 24GB even at 4-bit; requires multi-GPU or CPU/RAM offload",
+        "effortLabel": null,
+        "isDefaultConfig": true,
+        "isBestConfig": true,
+        "specSources": {
+          "paramsB": "https://huggingface.co/deepseek-ai/DeepSeek-V2.5",
+          "ctxK": "https://openrouter.ai/deepseek/deepseek-chat-v2.5",
+          "releaseDate": "https://api-docs.deepseek.com/news/news0905/",
+          "openness": "https://huggingface.co/deepseek-ai/DeepSeek-V2.5"
+        },
+        "results": [
+          {
+            "benchmarkSlug": "humaneval",
+            "score": 89,
+            "source": "self-reported",
+            "sourceUrl": "https://huggingface.co/deepseek-ai/DeepSeek-V2.5",
+            "notes": "HumanEval (Python)"
+          },
+          {
+            "benchmarkSlug": "mmlu-pro",
+            "score": 65.83,
+            "source": "self-reported",
+            "sourceUrl": "https://huggingface.co/deepseek-ai/DeepSeek-V2.5"
+          },
+          {
+            "benchmarkSlug": "livecodebench",
+            "score": 41.8,
+            "source": "self-reported",
+            "sourceUrl": "https://huggingface.co/deepseek-ai/DeepSeek-V2.5",
+            "notes": "Jan-Sep 2024 window"
+          },
+          {
+            "benchmarkSlug": "arena",
+            "score": 76.2,
+            "source": "self-reported",
+            "sourceUrl": "https://huggingface.co/deepseek-ai/DeepSeek-V2.5",
+            "notes": "ArenaHard"
+          }
+        ],
+        "verificationNotes": "Confirmed real via official DeepSeek api-docs announcement (release date literally states '2024/09/05') and HF model card: 236B/21B active, merge of V2-Chat-0628 + Coder-V2-Instruct-0724. Context length 128K corroborated via OpenRouter listing. HumanEval 89, MMLU-Pro 65.83, LiveCodeBench 41.8, ArenaHard 76.2 all match figures found. No changes needed."
+      },
+      {
+        "name": "DeepSeek-VL2",
+        "org": "DeepSeek",
+        "family": "DeepSeek-VL",
+        "releaseDate": "2024-12-13",
+        "status": "released",
+        "openness": "open-weights",
+        "license": "DeepSeek Model License (code: MIT)",
+        "paramsB": 27,
+        "activeParamsB": 4.5,
+        "archClass": "moe",
+        "archDisplay": "MoE vision-language transformer (Base variant), 27B total / 4.5B active — DeepSeekMoE+MLA language backbone + SigLIP-SO400M vision encoder with dynamic tiling (family also ships Tiny: 3B/1.0B-active, Small: 16B/2.8B-active)",
+        "ctxK": 4,
+        "modalities": [
+          "text",
+          "vision"
+        ],
+        "langCount": 2,
+        "capabilities": {
+          "reasoning": false,
+          "coding": false,
+          "vision": true,
+          "functionCalling": false,
+          "toolUse": false,
+          "agentic": false
+        },
+        "apiAvailable": false,
+        "price": null,
+        "links": {
+          "hf": "deepseek-ai/deepseek-vl2",
+          "gh": "deepseek-ai/DeepSeek-VL2"
+        },
+        "note": "MoE VLM family (Tiny/Small/Base) with dynamic image tiling; Base variant scores strongly on OCRBench (811) and DocVQA (93.3) among open VLMs of its era.",
+        "quants": [],
+        "vramQ4Gb": 14,
+        "vramFp16Gb": 54,
+        "tps4090": null,
+        "tpsNote": "No public RTX 4090 llama.cpp benchmark found; no confirmed GGUF/MLX conversion of the vision-language model",
+        "effortLabel": null,
+        "isDefaultConfig": true,
+        "isBestConfig": true,
+        "specSources": {
+          "paramsB": "https://arxiv.org/html/2412.10302v1",
+          "ctxK": "https://huggingface.co/deepseek-ai/deepseek-vl2/blob/main/config.json",
+          "releaseDate": "https://arxiv.org/abs/2412.10302",
+          "openness": "https://github.com/deepseek-ai/DeepSeek-VL2"
+        },
+        "results": [
+          {
+            "benchmarkSlug": "mmmu",
+            "score": 51.1,
+            "source": "self-reported",
+            "sourceUrl": "https://arxiv.org/html/2412.10302v1",
+            "notes": "Base (4.5B active) variant"
+          },
+          {
+            "benchmarkSlug": "mathvista",
+            "score": 62.8,
+            "source": "self-reported",
+            "sourceUrl": "https://arxiv.org/html/2412.10302v1",
+            "notes": "Base variant"
+          },
+          {
+            "benchmarkSlug": "docvqa",
+            "score": 93.3,
+            "source": "self-reported",
+            "sourceUrl": "https://arxiv.org/html/2412.10302v1",
+            "notes": "Base variant"
+          },
+          {
+            "benchmarkSlug": "chartqa",
+            "score": 86,
+            "source": "self-reported",
+            "sourceUrl": "https://arxiv.org/html/2412.10302v1",
+            "notes": "Base variant"
+          },
+          {
+            "benchmarkSlug": "ocrbench",
+            "score": 811,
+            "source": "self-reported",
+            "sourceUrl": "https://arxiv.org/html/2412.10302v1",
+            "notes": "Base variant, raw OCRBench score out of 1000"
+          },
+          {
+            "benchmarkSlug": "mmbench",
+            "score": 79.2,
+            "source": "self-reported",
+            "sourceUrl": "https://arxiv.org/html/2412.10302v1",
+            "notes": "Base variant, MMBench-V1.1 (testmini) column specifically — plain MMBench EN/CN test columns show 83.1/79.6"
+          }
+        ],
+        "verificationNotes": "Confirmed real via arxiv 2412.10302 (submitted 2024-12-13). CORRECTED apiAvailable from true to false: independent research confirms DeepSeek never exposed a vision/multimodal endpoint on its official API platform (platform.deepseek.com) — VL2 is only available via HF weights or third-party hosts (Replicate, SiliconFlow), never DeepSeek's own API. Params (27B/4.5B Base; Tiny 3B/1.0B, Small 16B/2.8B) and MMMU/MathVista/DocVQA/ChartQA/OCRBench all confirmed in Tables 3-4 of the paper. Context length 4096 (4K) confirmed directly in HF config.json's language_config. CLARIFIED the mmbench row: the paper's plain MMBench EN/CN test columns for the Base variant are 83.1/79.6, not 79.2 — the 79.2 figure the input record cited is real but belongs to the separate 'MMBench-V1.1 (testmini)' column; added a note rather than dropping since the number is genuinely on the page. Softened the 'leads open VLMs' superlative in note (unverifiable as literally true) to 'scores strongly among... of its era'."
+      },
+      {
+        "name": "DeepSeek-V3 671B",
+        "org": "DeepSeek",
+        "family": "DeepSeek-V3",
+        "releaseDate": "2024-12-26",
+        "status": "released",
+        "openness": "open-weights",
+        "license": "DeepSeek Model License (code: MIT)",
+        "paramsB": 671,
+        "activeParamsB": 37,
+        "archClass": "moe",
+        "archDisplay": "MoE transformer, 671B total / 37B active — DeepSeekMoE + MLA + multi-token prediction, auxiliary-loss-free load balancing",
+        "ctxK": 128,
+        "modalities": [
+          "text"
+        ],
+        "langCount": null,
+        "capabilities": {
+          "reasoning": false,
+          "coding": true,
+          "vision": false,
+          "functionCalling": true,
+          "toolUse": true,
+          "agentic": false
+        },
+        "apiAvailable": true,
+        "price": {
+          "input": 0.2,
+          "output": 0.8,
+          "provider": "OpenRouter"
+        },
+        "links": {
+          "hf": "deepseek-ai/DeepSeek-V3",
+          "gh": "deepseek-ai/DeepSeek-V3",
+          "docs": "api-docs.deepseek.com"
+        },
+        "note": "671B/37B MoE trained on 14.8T tokens for ~$5.6M (2.788M H800 GPU-hours); matched GPT-4o/Claude 3.5 quality at a fraction of the cost.",
+        "quants": [
+          "GGUF",
+          "MLX"
+        ],
+        "vramQ4Gb": 400,
+        "vramFp16Gb": 1342,
+        "tps4090": null,
+        "tpsNote": "671B total params vastly exceed a single RTX 4090's 24GB even at 4-bit; requires a multi-GPU cluster or heavy CPU/RAM offload",
+        "effortLabel": null,
+        "isDefaultConfig": true,
+        "isBestConfig": true,
+        "specSources": {
+          "paramsB": "https://huggingface.co/deepseek-ai/DeepSeek-V3",
+          "ctxK": "https://huggingface.co/deepseek-ai/DeepSeek-V3",
+          "releaseDate": "https://openrouter.ai/deepseek/deepseek-chat",
+          "openness": "https://huggingface.co/deepseek-ai/DeepSeek-V3"
+        },
+        "results": [
+          {
+            "benchmarkSlug": "mmlu",
+            "score": 88.5,
+            "source": "self-reported",
+            "sourceUrl": "https://huggingface.co/deepseek-ai/DeepSeek-V3"
+          },
+          {
+            "benchmarkSlug": "mmlu-pro",
+            "score": 75.9,
+            "source": "self-reported",
+            "sourceUrl": "https://huggingface.co/deepseek-ai/DeepSeek-V3"
+          },
+          {
+            "benchmarkSlug": "gpqa",
+            "score": 59.1,
+            "source": "self-reported",
+            "sourceUrl": "https://huggingface.co/deepseek-ai/DeepSeek-V3",
+            "notes": "GPQA-Diamond"
+          },
+          {
+            "benchmarkSlug": "math",
+            "score": 90.2,
+            "source": "self-reported",
+            "sourceUrl": "https://huggingface.co/deepseek-ai/DeepSeek-V3",
+            "notes": "MATH-500"
+          },
+          {
+            "benchmarkSlug": "humaneval",
+            "score": 82.6,
+            "source": "self-reported",
+            "sourceUrl": "https://huggingface.co/deepseek-ai/DeepSeek-V3",
+            "notes": "HumanEval-Mul"
+          },
+          {
+            "benchmarkSlug": "livecodebench",
+            "score": 37.6,
+            "source": "self-reported",
+            "sourceUrl": "https://huggingface.co/deepseek-ai/DeepSeek-V3",
+            "notes": "Pass@1"
+          },
+          {
+            "benchmarkSlug": "swe-bench",
+            "score": 42,
+            "source": "self-reported",
+            "sourceUrl": "https://huggingface.co/deepseek-ai/DeepSeek-V3",
+            "notes": "SWE-bench Verified, Resolved"
+          }
+        ],
+        "verificationNotes": "Confirmed real via HF model card: 671B total/37B active, 128K context, MIT code license + DeepSeek Model License. All seven benchmark rows (MMLU 88.5, MMLU-Pro 75.9, GPQA-Diamond 59.1, MATH-500 90.2, HumanEval-Mul 82.6, LiveCodeBench 37.6, SWE-bench Verified 42.0) confirmed literally on the HF page. 14.8T training tokens and 2.788M H800 GPU-hours figures also confirmed. No changes needed."
+      },
+      {
+        "name": "DeepSeek-V3.1 (Non-Thinking)",
+        "org": "DeepSeek",
+        "family": "DeepSeek-V3",
+        "releaseDate": "2025-08-21",
+        "status": "released",
+        "openness": "open-weights",
+        "license": "MIT License",
+        "paramsB": 671,
+        "activeParamsB": 37,
+        "archClass": "moe",
+        "archDisplay": "MoE transformer, 671B total / 37B active — hybrid model unifying thinking/non-thinking modes via chat template; built on DeepSeek-V3.1-Base with long-context continued pretraining",
+        "ctxK": 128,
+        "modalities": [
+          "text"
+        ],
+        "langCount": null,
+        "capabilities": {
+          "reasoning": true,
+          "coding": true,
+          "vision": false,
+          "functionCalling": true,
+          "toolUse": true,
+          "agentic": true
+        },
+        "apiAvailable": true,
+        "price": {
+          "input": 0.21,
+          "output": 0.79,
+          "provider": "OpenRouter"
+        },
+        "links": {
+          "hf": "deepseek-ai/DeepSeek-V3.1",
+          "docs": "api-docs.deepseek.com"
+        },
+        "note": "Non-thinking (direct-answer) mode of the hybrid V3.1 model, selected via chat template; the default DeepSeek API behavior.",
+        "quants": [
+          "GGUF",
+          "MLX"
+        ],
+        "vramQ4Gb": 400,
+        "vramFp16Gb": 1342,
+        "tps4090": null,
+        "tpsNote": "671B total params vastly exceed a single RTX 4090's 24GB even at 4-bit; requires a multi-GPU cluster or heavy CPU/RAM offload",
+        "effortLabel": "Non-Thinking",
+        "isDefaultConfig": true,
+        "isBestConfig": false,
+        "specSources": {
+          "paramsB": "https://huggingface.co/deepseek-ai/DeepSeek-V3.1",
+          "ctxK": "https://huggingface.co/deepseek-ai/DeepSeek-V3.1",
+          "releaseDate": "https://en.wikipedia.org/wiki/DeepSeek",
+          "openness": "https://huggingface.co/deepseek-ai/DeepSeek-V3.1"
+        },
+        "results": [
+          {
+            "benchmarkSlug": "aime",
+            "score": 49.8,
+            "source": "self-reported",
+            "sourceUrl": "https://huggingface.co/deepseek-ai/DeepSeek-V3.1",
+            "notes": "AIME 2025, non-thinking"
+          },
+          {
+            "benchmarkSlug": "gpqa",
+            "score": 74.9,
+            "source": "self-reported",
+            "sourceUrl": "https://huggingface.co/deepseek-ai/DeepSeek-V3.1",
+            "notes": "GPQA-Diamond, non-thinking"
+          },
+          {
+            "benchmarkSlug": "mmlu-pro",
+            "score": 83.7,
+            "source": "self-reported",
+            "sourceUrl": "https://huggingface.co/deepseek-ai/DeepSeek-V3.1",
+            "notes": "non-thinking"
+          },
+          {
+            "benchmarkSlug": "livecodebench",
+            "score": 56.4,
+            "source": "self-reported",
+            "sourceUrl": "https://huggingface.co/deepseek-ai/DeepSeek-V3.1",
+            "notes": "non-thinking"
+          },
+          {
+            "benchmarkSlug": "swe-bench",
+            "score": 66,
+            "source": "self-reported",
+            "sourceUrl": "https://huggingface.co/deepseek-ai/DeepSeek-V3.1",
+            "notes": "SWE-bench Verified, non-thinking (agent mode)"
+          }
+        ],
+        "verificationNotes": "Confirmed real via HF model card deepseek-ai/DeepSeek-V3.1 (fetched directly): 671B total/37B activated, 128K context, MIT license text present verbatim ('licensed under the MIT License'), matches Wikipedia DeepSeek release-history table entry (Aug 21, 2025). All 5 benchmark rows verified literally on the HF evaluation table (AIME2025 49.8, MMLU-Pro 83.7, LiveCodeBench 56.4, SWE Verified agent-mode 66.0; GPQA-Diamond 74.9 confirmed via an independent mirror of the same HF table on langbase.com since the raw fetch excerpt truncated that row). OpenRouter price $0.21/$0.79 per 1M confirmed at openrouter.ai/deepseek/deepseek-chat-v3.1. No changes made to input values."
+      },
+      {
+        "name": "DeepSeek-V3.1 (Thinking)",
+        "org": "DeepSeek",
+        "family": "DeepSeek-V3",
+        "releaseDate": "2025-08-21",
+        "status": "released",
+        "openness": "open-weights",
+        "license": "MIT License",
+        "paramsB": 671,
+        "activeParamsB": 37,
+        "archClass": "moe",
+        "archDisplay": "MoE transformer, 671B total / 37B active — hybrid model unifying thinking/non-thinking modes via chat template; built on DeepSeek-V3.1-Base with long-context continued pretraining",
+        "ctxK": 128,
+        "modalities": [
+          "text"
+        ],
+        "langCount": null,
+        "capabilities": {
+          "reasoning": true,
+          "coding": true,
+          "vision": false,
+          "functionCalling": true,
+          "toolUse": true,
+          "agentic": true
+        },
+        "apiAvailable": true,
+        "price": {
+          "input": 0.21,
+          "output": 0.79,
+          "provider": "OpenRouter"
+        },
+        "links": {
+          "hf": "deepseek-ai/DeepSeek-V3.1",
+          "docs": "api-docs.deepseek.com"
+        },
+        "note": "Thinking (chain-of-thought) mode of the hybrid V3.1 model; narrows the gap with R1-0528 on reasoning-heavy tasks.",
+        "quants": [
+          "GGUF",
+          "MLX"
+        ],
+        "vramQ4Gb": 400,
+        "vramFp16Gb": 1342,
+        "tps4090": null,
+        "tpsNote": "671B total params vastly exceed a single RTX 4090's 24GB even at 4-bit; requires a multi-GPU cluster or heavy CPU/RAM offload",
+        "effortLabel": "Thinking",
+        "isDefaultConfig": false,
+        "isBestConfig": true,
+        "specSources": {
+          "paramsB": "https://huggingface.co/deepseek-ai/DeepSeek-V3.1",
+          "ctxK": "https://huggingface.co/deepseek-ai/DeepSeek-V3.1",
+          "releaseDate": "https://en.wikipedia.org/wiki/DeepSeek",
+          "openness": "https://huggingface.co/deepseek-ai/DeepSeek-V3.1"
+        },
+        "results": [
+          {
+            "benchmarkSlug": "aime",
+            "score": 88.4,
+            "source": "self-reported",
+            "sourceUrl": "https://huggingface.co/deepseek-ai/DeepSeek-V3.1",
+            "notes": "AIME 2025, thinking"
+          },
+          {
+            "benchmarkSlug": "gpqa",
+            "score": 80.1,
+            "source": "self-reported",
+            "sourceUrl": "https://huggingface.co/deepseek-ai/DeepSeek-V3.1",
+            "notes": "GPQA-Diamond, thinking"
+          },
+          {
+            "benchmarkSlug": "mmlu-pro",
+            "score": 84.8,
+            "source": "self-reported",
+            "sourceUrl": "https://huggingface.co/deepseek-ai/DeepSeek-V3.1",
+            "notes": "thinking"
+          },
+          {
+            "benchmarkSlug": "livecodebench",
+            "score": 74.8,
+            "source": "self-reported",
+            "sourceUrl": "https://huggingface.co/deepseek-ai/DeepSeek-V3.1",
+            "notes": "thinking"
+          }
+        ],
+        "verificationNotes": "Confirmed real via HF model card deepseek-ai/DeepSeek-V3.1 (fetched directly), same 671B/37B/128K/MIT/Aug-21-2025 facts as the non-thinking variant. Benchmark rows AIME2025 88.4, MMLU-Pro 84.8, LiveCodeBench 74.8 verified literally on the HF evaluation table; GPQA-Diamond 80.1 confirmed via an independent mirror of the same table (langbase.com) since the raw fetch excerpt truncated that row. Correctly omits an SWE-bench row — the HF table shows a dash ('-') for SWE Verified under Thinking mode (agent SWE numbers are only reported for non-thinking / R1). No changes made to input values."
+      },
+      {
+        "name": "StableLM-Alpha 7B",
+        "org": "Stability AI",
+        "family": "StableLM",
+        "releaseDate": "2023-04-19",
+        "status": "deprecated",
+        "openness": "open-weights",
+        "license": "CC BY-SA-4.0",
+        "paramsB": 7,
+        "activeParamsB": null,
+        "archClass": "dense",
+        "archDisplay": "Dense decoder-only transformer (GPT-NeoX style, parallel attention+FFN)",
+        "ctxK": 4,
+        "modalities": [
+          "text"
+        ],
+        "langCount": 1,
+        "capabilities": {
+          "reasoning": false,
+          "coding": false,
+          "vision": false,
+          "functionCalling": false,
+          "toolUse": false,
+          "agentic": false
+        },
+        "apiAvailable": false,
+        "price": null,
+        "links": {
+          "hf": "stabilityai/stablelm-base-alpha-7b",
+          "gh": "Stability-AI/StableLM"
+        },
+        "note": "Stability AI's debut open-weights suite (3B/7B alpha), part of the early post-LLaMA open-model wave; later superseded.",
+        "quants": [
+          "GGUF"
+        ],
+        "vramQ4Gb": 4.5,
+        "vramFp16Gb": 14,
+        "tps4090": null,
+        "tpsNote": null,
+        "effortLabel": null,
+        "isDefaultConfig": true,
+        "isBestConfig": true,
+        "specSources": {
+          "paramsB": "https://huggingface.co/stabilityai/stablelm-base-alpha-7b",
+          "ctxK": "https://huggingface.co/stabilityai/stablelm-base-alpha-7b",
+          "releaseDate": "https://simonwillison.net/2023/Apr/19/stablelm/",
+          "openness": "https://huggingface.co/stabilityai/stablelm-base-alpha-7b"
+        },
+        "results": [],
+        "verificationNotes": "Confirmed real via direct fetch of huggingface.co/stabilityai/stablelm-base-alpha-7b (CC BY-SA-4.0 license verbatim, 7B params, 4096 context confirmed) and cross-checked release date Apr 19, 2023 against contemporaneous coverage (TechCrunch, VentureBeat, SiliconANGLE, Simon Willison's blog) all dated April 19, 2023. No benchmark results are published on the model card, so the empty results array was kept as-is (correctly, per instructions, rather than fabricating any). No changes made to input values."
+      },
+      {
+        "name": "StableLM-3B-4e1t",
+        "org": "Stability AI",
+        "family": "StableLM",
+        "releaseDate": "2023-10-02",
+        "status": "released",
+        "openness": "open-weights",
+        "license": "CC BY-SA-4.0",
+        "paramsB": 2.8,
+        "activeParamsB": null,
+        "archClass": "dense",
+        "archDisplay": "Dense decoder-only transformer (LLaMA-style, partial RoPE, LayerNorm w/ learned bias)",
+        "ctxK": 4,
+        "modalities": [
+          "text"
+        ],
+        "langCount": 1,
+        "capabilities": {
+          "reasoning": false,
+          "coding": false,
+          "vision": false,
+          "functionCalling": false,
+          "toolUse": false,
+          "agentic": false
+        },
+        "apiAvailable": false,
+        "price": null,
+        "links": {
+          "hf": "stabilityai/stablelm-3b-4e1t",
+          "gh": "Stability-AI/StableLM"
+        },
+        "note": "Strong 3B base trained 4 epochs over ~1T English+code tokens; widely used fine-tuning base (later became Zephyr's foundation).",
+        "quants": [
+          "GGUF",
+          "GPTQ"
+        ],
+        "vramQ4Gb": 2.2,
+        "vramFp16Gb": 5.6,
+        "tps4090": null,
+        "tpsNote": null,
+        "effortLabel": null,
+        "isDefaultConfig": true,
+        "isBestConfig": true,
+        "specSources": {
+          "paramsB": "https://huggingface.co/stabilityai/stablelm-3b-4e1t",
+          "ctxK": "https://huggingface.co/stabilityai/stablelm-3b-4e1t",
+          "releaseDate": "https://stability.ai/news-updates/stable-lm-3b-sustainable-high-performance-language-models-smart-devices",
+          "openness": "https://huggingface.co/stabilityai/stablelm-3b-4e1t"
+        },
+        "results": [
+          {
+            "benchmarkSlug": "mmlu",
+            "score": 45.23,
+            "source": "independent",
+            "sourceUrl": "https://huggingface.co/stabilityai/stablelm-3b-4e1t",
+            "notes": "Open LLM Leaderboard, 5-shot"
+          },
+          {
+            "benchmarkSlug": "hellaswag",
+            "score": 75.94,
+            "source": "independent",
+            "sourceUrl": "https://huggingface.co/stabilityai/stablelm-3b-4e1t",
+            "notes": "Open LLM Leaderboard, 10-shot"
+          },
+          {
+            "benchmarkSlug": "arc-challenge",
+            "score": 46.59,
+            "source": "independent",
+            "sourceUrl": "https://huggingface.co/stabilityai/stablelm-3b-4e1t",
+            "notes": "Open LLM Leaderboard, 25-shot"
+          },
+          {
+            "benchmarkSlug": "winogrande",
+            "score": 71.19,
+            "source": "independent",
+            "sourceUrl": "https://huggingface.co/stabilityai/stablelm-3b-4e1t",
+            "notes": "Open LLM Leaderboard, 5-shot"
+          },
+          {
+            "benchmarkSlug": "gsm8k",
+            "score": 3.34,
+            "source": "independent",
+            "sourceUrl": "https://huggingface.co/stabilityai/stablelm-3b-4e1t",
+            "notes": "Open LLM Leaderboard, 5-shot"
+          }
+        ],
+        "verificationNotes": "Confirmed real via direct fetch of huggingface.co/stabilityai/stablelm-3b-4e1t: 2.8B params (2,795,443,200), 4096 context, CC BY-SA-4.0 license, 1T tokens over 4 epochs, all verbatim. Release date corrected source-check: Stability AI's own announcement blog post is dated Oct 2 (byline dated before press coverage on Oct 3), matching the input's 2023-10-02 — kept as-is. All 5 Open LLM Leaderboard benchmark rows (MMLU 45.23, HellaSwag 75.94, ARC-Challenge 46.59, WinoGrande 71.19, GSM8K 3.34) verified literally on the HF page. No changes made to input values."
+      },
+      {
+        "name": "StableLM Zephyr 3B",
+        "org": "Stability AI",
+        "family": "StableLM",
+        "releaseDate": "2023-12-07",
+        "status": "released",
+        "openness": "open-weights",
+        "license": "Stability AI Community License (non-commercial by default; commercial use requires Stability AI membership)",
+        "paramsB": 2.8,
+        "activeParamsB": null,
+        "archClass": "dense",
+        "archDisplay": "Dense decoder-only transformer, DPO-tuned from StableLM-3B-4E1T",
+        "ctxK": 4,
+        "modalities": [
+          "text"
+        ],
+        "langCount": 1,
+        "capabilities": {
+          "reasoning": false,
+          "coding": false,
+          "vision": false,
+          "functionCalling": false,
+          "toolUse": false,
+          "agentic": false
+        },
+        "apiAvailable": false,
+        "price": null,
+        "links": {
+          "hf": "stabilityai/stablelm-zephyr-3b",
+          "gh": "Stability-AI/StableLM"
+        },
+        "note": "DPO-tuned chat model (UltraFeedback-style mix) on StableLM-3B-4E1T; capable assistant aimed at edge-device deployment.",
+        "quants": [
+          "GGUF",
+          "GPTQ"
+        ],
+        "vramQ4Gb": 2.2,
+        "vramFp16Gb": 5.6,
+        "tps4090": null,
+        "tpsNote": null,
+        "effortLabel": null,
+        "isDefaultConfig": true,
+        "isBestConfig": true,
+        "specSources": {
+          "paramsB": "https://huggingface.co/stabilityai/stablelm-zephyr-3b",
+          "ctxK": "https://huggingface.co/stabilityai/stablelm-3b-4e1t",
+          "releaseDate": "https://stability.ai/news-updates/stablelm-zephyr-3b-stability-llm",
+          "openness": "https://huggingface.co/stabilityai/stablelm-zephyr-3b"
+        },
+        "results": [
+          {
+            "benchmarkSlug": "mt-bench",
+            "score": 6.64,
+            "source": "self-reported",
+            "sourceUrl": "https://huggingface.co/stabilityai/stablelm-zephyr-3b",
+            "notes": "MT-Bench"
+          },
+          {
+            "benchmarkSlug": "mmlu",
+            "score": 46.17,
+            "source": "self-reported",
+            "sourceUrl": "https://huggingface.co/stabilityai/stablelm-zephyr-3b",
+            "notes": "5-shot"
+          },
+          {
+            "benchmarkSlug": "hellaswag",
+            "score": 74.16,
+            "source": "self-reported",
+            "sourceUrl": "https://huggingface.co/stabilityai/stablelm-zephyr-3b",
+            "notes": "10-shot"
+          },
+          {
+            "benchmarkSlug": "gsm8k",
+            "score": 42.15,
+            "source": "self-reported",
+            "sourceUrl": "https://huggingface.co/stabilityai/stablelm-zephyr-3b",
+            "notes": "5-shot"
+          },
+          {
+            "benchmarkSlug": "winogrande",
+            "score": 65.51,
+            "source": "self-reported",
+            "sourceUrl": "https://huggingface.co/stabilityai/stablelm-zephyr-3b",
+            "notes": "5-shot"
+          }
+        ],
+        "verificationNotes": "Confirmed real via direct fetch of huggingface.co/stabilityai/stablelm-zephyr-3b: 3B (2.8B) params, Stability AI Community License (commercial use requires membership reference to stability.ai/license), verbatim match. Release date Dec 7, 2023 corroborated by VentureBeat, Stability AI's own announcement blog, and Maginative coverage (license file itself dated Dec 6, 2023, announcement/release Dec 7). All 5 benchmark rows (MT-Bench 6.64, MMLU 46.17, HellaSwag 74.16, GSM8K 42.15, WinoGrande 65.51) verified literally on the HF page. Context length (4096) inherited from base model stablelm-3b-4e1t, not independently reprinted on the Zephyr card, so left as originally specified. No changes made to input values."
+      },
+      {
+        "name": "Stable LM 2 1.6B",
+        "org": "Stability AI",
+        "family": "StableLM 2",
+        "releaseDate": "2024-01-19",
+        "status": "released",
+        "openness": "open-weights",
+        "license": "Stability AI Community License (non-commercial by default; commercial use requires Stability AI membership)",
+        "paramsB": 1.64,
+        "activeParamsB": null,
+        "archClass": "dense",
+        "archDisplay": "Dense decoder-only transformer (24 layers, LLaMA-style partial RoPE + LayerNorm, Arcade100k tokenizer)",
+        "ctxK": 4,
+        "modalities": [
+          "text"
+        ],
+        "langCount": 7,
+        "capabilities": {
+          "reasoning": false,
+          "coding": false,
+          "vision": false,
+          "functionCalling": false,
+          "toolUse": false,
+          "agentic": false
+        },
+        "apiAvailable": false,
+        "price": null,
+        "links": {
+          "hf": "stabilityai/stablelm-2-1_6b",
+          "gh": "Stability-AI/StableLM"
+        },
+        "note": "Compact 7-language multilingual model (English, Spanish, German, Italian, French, Portuguese, Dutch) trained on 2T tokens over 2 epochs; smallest member of the StableLM 2 line.",
+        "quants": [
+          "GGUF"
+        ],
+        "vramQ4Gb": 1.1,
+        "vramFp16Gb": 3.3,
+        "tps4090": null,
+        "tpsNote": null,
+        "effortLabel": null,
+        "isDefaultConfig": true,
+        "isBestConfig": true,
+        "specSources": {
+          "paramsB": "https://huggingface.co/stabilityai/stablelm-2-1_6b",
+          "ctxK": "https://huggingface.co/stabilityai/stablelm-2-1_6b",
+          "releaseDate": "https://stability.ai/news-updates/introducing-stable-lm-2",
+          "openness": "https://huggingface.co/stabilityai/stablelm-2-1_6b"
+        },
+        "results": [
+          {
+            "benchmarkSlug": "mt-bench",
+            "score": 5.42,
+            "source": "self-reported",
+            "sourceUrl": "https://huggingface.co/stabilityai/stablelm-2-zephyr-1_6b",
+            "notes": "DPO/instruct (Zephyr) variant"
+          },
+          {
+            "benchmarkSlug": "mmlu",
+            "score": 41.85,
+            "source": "independent",
+            "sourceUrl": "https://huggingface.co/stabilityai/stablelm-2-zephyr-1_6b",
+            "notes": "Open LLM Leaderboard, instruct variant, 5-shot"
+          },
+          {
+            "benchmarkSlug": "hellaswag",
+            "score": 69.34,
+            "source": "independent",
+            "sourceUrl": "https://huggingface.co/stabilityai/stablelm-2-zephyr-1_6b",
+            "notes": "instruct variant, 10-shot"
+          },
+          {
+            "benchmarkSlug": "gsm8k",
+            "score": 35.18,
+            "source": "independent",
+            "sourceUrl": "https://huggingface.co/stabilityai/stablelm-2-zephyr-1_6b",
+            "notes": "instruct variant, 5-shot"
+          },
+          {
+            "benchmarkSlug": "arc-challenge",
+            "score": 43.69,
+            "source": "independent",
+            "sourceUrl": "https://huggingface.co/stabilityai/stablelm-2-zephyr-1_6b",
+            "notes": "instruct variant, 25-shot"
+          },
+          {
+            "benchmarkSlug": "winogrande",
+            "score": 64.09,
+            "source": "independent",
+            "sourceUrl": "https://huggingface.co/stabilityai/stablelm-2-zephyr-1_6b",
+            "notes": "instruct variant, 5-shot"
+          }
+        ],
+        "verificationNotes": "Confirmed real via direct fetch of huggingface.co/stabilityai/stablelm-2-1_6b (1,644,417,024 params = 1.64B, 4096 context, 2T tokens / 2 epochs) and Stability AI's own announcement blog (stability.ai/news-updates/introducing-stable-lm-2), which is dated Jan 19, 2024 and names the 7 languages (English, Spanish, German, Italian, French, Portuguese, Dutch) verbatim, plus Community License terms verbatim. Note: the base-model HF card's own metadata field shows Feb 27, 2024 in one rendering, but the primary announcement and all contemporaneous press (InfoQ, VentureBeat, Maginative, Thurrott) date the release to Jan 19, 2024, so the input's date was kept. All 6 benchmark rows verified literally on the linked instruct/Zephyr variant's HF page (MT-Bench 5.42, MMLU 41.85, HellaSwag 69.34, GSM8K 35.18, ARC-Challenge 43.69, WinoGrande 64.09). No changes made to input values."
+      },
+      {
+        "name": "Stable LM 2 12B",
+        "org": "Stability AI",
+        "family": "StableLM 2",
+        "releaseDate": "2024-04-08",
+        "status": "released",
+        "openness": "open-weights",
+        "license": "Stability AI Community License (non-commercial by default; commercial use requires Stability AI membership)",
+        "paramsB": 12.1,
+        "activeParamsB": null,
+        "archClass": "dense",
+        "archDisplay": "Dense decoder-only transformer (40 layers, GQA 32 query/8 KV heads, RoPE, parallel attn+FFN)",
+        "ctxK": 4,
+        "modalities": [
+          "text"
+        ],
+        "langCount": 7,
+        "capabilities": {
+          "reasoning": false,
+          "coding": false,
+          "vision": false,
+          "functionCalling": true,
+          "toolUse": true,
+          "agentic": false
+        },
+        "apiAvailable": false,
+        "price": null,
+        "links": {
+          "hf": "stabilityai/stablelm-2-12b",
+          "gh": "Stability-AI/StableLM"
+        },
+        "note": "Mid-size multilingual flagship of StableLM 2; DPO-tuned chat variant adds tool-use and function-calling support.",
+        "quants": [
+          "GGUF"
+        ],
+        "vramQ4Gb": 8,
+        "vramFp16Gb": 24.5,
+        "tps4090": null,
+        "tpsNote": null,
+        "effortLabel": null,
+        "isDefaultConfig": true,
+        "isBestConfig": true,
+        "specSources": {
+          "paramsB": "https://huggingface.co/stabilityai/stablelm-2-12b",
+          "ctxK": "https://huggingface.co/stabilityai/stablelm-2-12b",
+          "releaseDate": "https://stability.ai/news-updates/introducing-stable-lm-2-12b",
+          "openness": "https://huggingface.co/stabilityai/stablelm-2-12b"
+        },
+        "results": [
+          {
+            "benchmarkSlug": "mt-bench",
+            "score": 8.15,
+            "source": "self-reported",
+            "sourceUrl": "https://huggingface.co/stabilityai/stablelm-2-12b-chat",
+            "notes": "chat/instruct variant, inflection-corrected MT-Bench"
+          },
+          {
+            "benchmarkSlug": "mmlu",
+            "score": 61.14,
+            "source": "self-reported",
+            "sourceUrl": "https://huggingface.co/stabilityai/stablelm-2-12b-chat",
+            "notes": "chat variant, Open LLM Leaderboard"
+          },
+          {
+            "benchmarkSlug": "hellaswag",
+            "score": 86.06,
+            "source": "self-reported",
+            "sourceUrl": "https://huggingface.co/stabilityai/stablelm-2-12b-chat",
+            "notes": "chat variant"
+          },
+          {
+            "benchmarkSlug": "arc-challenge",
+            "score": 65.02,
+            "source": "self-reported",
+            "sourceUrl": "https://huggingface.co/stabilityai/stablelm-2-12b-chat",
+            "notes": "chat variant"
+          },
+          {
+            "benchmarkSlug": "winogrande",
+            "score": 78.77,
+            "source": "self-reported",
+            "sourceUrl": "https://huggingface.co/stabilityai/stablelm-2-12b-chat",
+            "notes": "chat variant"
+          },
+          {
+            "benchmarkSlug": "gsm8k",
+            "score": 57.7,
+            "source": "self-reported",
+            "sourceUrl": "https://huggingface.co/stabilityai/stablelm-2-12b-chat",
+            "notes": "chat variant"
+          }
+        ],
+        "verificationNotes": "CONFIRMED. HF model card verifies 12.1B params (12,143,605,760 exact), 40 layers, GQA 32q/8kv, RoPE, 4096-token context, Stability AI Community License, 7 languages (EN/ES/DE/IT/FR/PT/NL). Chat variant HF card confirms function-calling support and all 6 benchmark rows exactly (MT-Bench 8.15, MMLU 61.14, HellaSwag 86.06, ARC-C 65.02, Winogrande 78.77, GSM8K 57.7). CORRECTED releaseDate: official Stability AI blog post body reads 'Apr 8' (2024), not Apr 9 as in the source record; VentureBeat corroborates April 8, 2024 1PM PT. Updated releaseDate to 2024-04-08 and specSource to the primary Stability AI blog post."
+      },
+      {
+        "name": "Reka Core",
+        "org": "Reka AI",
+        "family": "Reka",
+        "releaseDate": "2024-04-15",
+        "status": "released",
+        "openness": "closed",
+        "license": "Proprietary",
+        "paramsB": null,
+        "activeParamsB": null,
+        "archClass": "dense",
+        "archDisplay": "Dense transformer, PaLM-like (no parallel layers); full architecture undisclosed",
+        "ctxK": 128,
+        "modalities": [
+          "text",
+          "vision",
+          "audio",
+          "video"
+        ],
+        "langCount": 32,
+        "capabilities": {
+          "reasoning": true,
+          "coding": true,
+          "vision": true,
+          "functionCalling": true,
+          "toolUse": true,
+          "agentic": true
+        },
+        "apiAvailable": true,
+        "price": {
+          "input": 2,
+          "output": 6,
+          "provider": "Reka"
+        },
+        "links": {
+          "docs": "docs.reka.ai"
+        },
+        "note": "Reka's frontier multimodal model (text/image/video/audio); approached GPT-4V/Claude-3-Opus class on multimodal + language benchmarks at launch.",
+        "quants": [],
+        "vramQ4Gb": null,
+        "vramFp16Gb": null,
+        "tps4090": null,
+        "tpsNote": null,
+        "effortLabel": null,
+        "isDefaultConfig": true,
+        "isBestConfig": true,
+        "specSources": {
+          "ctxK": "https://reka.ai/news/reka-core-our-frontier-class-multimodal-language-model",
+          "releaseDate": "https://reka.ai/news/reka-core-our-frontier-class-multimodal-language-model",
+          "openness": "https://docs.reka.ai/pricing"
+        },
+        "results": [
+          {
+            "benchmarkSlug": "mmlu",
+            "score": 83.2,
+            "source": "self-reported",
+            "sourceUrl": "https://arxiv.org/html/2404.12387v1",
+            "notes": "vs GPT-4 86.4, Claude 3 Opus 86.8"
+          },
+          {
+            "benchmarkSlug": "gsm8k",
+            "score": 92.2,
+            "source": "self-reported",
+            "sourceUrl": "https://arxiv.org/html/2404.12387v1",
+            "notes": "vs GPT-4 92.0, Claude 3 Opus 95.0"
+          },
+          {
+            "benchmarkSlug": "humaneval",
+            "score": 76.8,
+            "source": "self-reported",
+            "sourceUrl": "https://arxiv.org/html/2404.12387v1",
+            "notes": "vs GPT-4 76.5, Claude 3 Opus 84.9"
+          },
+          {
+            "benchmarkSlug": "mmmu",
+            "score": 56.3,
+            "source": "self-reported",
+            "sourceUrl": "https://reka.ai/news/reka-core-our-frontier-class-multimodal-language-model",
+            "notes": "near GPT-4V 56.8"
+          }
+        ],
+        "verificationNotes": "CONFIRMED. reka.ai blog post body dated Apr 15, 2024 confirms Core's launch, 128K context, 32 languages, and MMMU 56.3 near GPT-4V 56.8. arxiv 2404.12387v1 (Reka Core/Flash/Edge tech report, submitted Apr 18 2024) confirms all three benchmark rows exactly: MMLU 83.2, GSM8K 92.2, HumanEval 76.8. Current docs.reka.ai/pricing confirms $2/$6 per-million-token pricing exactly matches the record (launch-day press-release pricing of $10/$25 was superseded and is no longer current, but current live pricing matches record so no change needed). No corrections required."
+      },
+      {
+        "name": "Reka Edge (7B)",
+        "org": "Reka AI",
+        "family": "Reka",
+        "releaseDate": "2024-02-12",
+        "status": "released",
+        "openness": "closed",
+        "license": "Proprietary",
+        "paramsB": 7,
+        "activeParamsB": null,
+        "archClass": "dense",
+        "archDisplay": "Dense 7B transformer decoder + vision encoder (SwiGLU, Grouped Query Attention, RoPE, RMSNorm)",
+        "ctxK": 64,
+        "modalities": [
+          "text",
+          "vision",
+          "video"
+        ],
+        "langCount": null,
+        "capabilities": {
+          "reasoning": false,
+          "coding": true,
+          "vision": true,
+          "functionCalling": false,
+          "toolUse": false,
+          "agentic": false
+        },
+        "apiAvailable": true,
+        "price": {
+          "input": 0.1,
+          "output": 0.1,
+          "provider": "Reka"
+        },
+        "links": {
+          "docs": "docs.reka.ai"
+        },
+        "note": "Compact 7B multimodal model for on-device/local use, announced alongside Reka Flash on Feb 12, 2024 (documented together with Flash/Core in Reka's April 2024 technical report); beat Gemma 7B and Mistral 7B on Reka's reported benchmarks.",
+        "quants": [],
+        "vramQ4Gb": null,
+        "vramFp16Gb": null,
+        "tps4090": null,
+        "tpsNote": null,
+        "effortLabel": null,
+        "isDefaultConfig": true,
+        "isBestConfig": true,
+        "specSources": {
+          "paramsB": "https://arxiv.org/html/2404.12387v1",
+          "ctxK": "https://arxiv.org/html/2404.12387v1",
+          "releaseDate": "https://reka.ai/news/reka-flash-efficient-and-capable-multimodal-language-models",
+          "openness": "https://docs.reka.ai/pricing"
+        },
+        "results": [
+          {
+            "benchmarkSlug": "mmlu",
+            "score": 65.7,
+            "source": "self-reported",
+            "sourceUrl": "https://arxiv.org/html/2404.12387v1",
+            "notes": "vs Gemma-7B 64.3, Mistral-7B 62.5"
+          },
+          {
+            "benchmarkSlug": "gsm8k",
+            "score": 66.2,
+            "source": "self-reported",
+            "sourceUrl": "https://arxiv.org/html/2404.12387v1",
+            "notes": ""
+          },
+          {
+            "benchmarkSlug": "humaneval",
+            "score": 54.3,
+            "source": "self-reported",
+            "sourceUrl": "https://arxiv.org/html/2404.12387v1",
+            "notes": ""
+          }
+        ],
+        "verificationNotes": "CORRECTED releaseDate. Reka's own blog archive (reka.ai/news) lists only one Feb/Apr-2024-era post covering Edge: 'Reka Flash: Efficient and Capable Multimodal Language Models,' dated Feb 12, 2024, which explicitly introduces Reka Edge (7B) as a companion release; a Reka Twitter/X post ('we also launch Reka Edge') from the same window (~Feb 12-13, 2024) corroborates. The source record's date of 2024-04-15 conflated Edge's original release with Reka Core's separate April 15, 2024 launch date / the arxiv tech report's April 18 submission date. Changed releaseDate to 2024-02-12. All three benchmark rows confirmed exactly against arxiv 2404.12387v1 (MMLU 65.7 vs Gemma-7B 64.3/Mistral-7B 62.5, GSM8K 66.2, HumanEval 54.3). Current docs.reka.ai/pricing confirms $0.1/$0.1 pricing matches record exactly. Params (7B) and context (64K long-context variant) confirmed via arxiv report."
+      },
+      {
+        "name": "Reka Flash (21B)",
+        "org": "Reka AI",
+        "family": "Reka",
+        "releaseDate": "2024-02-12",
+        "status": "deprecated",
+        "openness": "closed",
+        "license": "Proprietary",
+        "paramsB": 21,
+        "activeParamsB": null,
+        "archClass": "dense",
+        "archDisplay": "21B dense multimodal transformer (Core/Flash/Edge series)",
+        "ctxK": 128,
+        "modalities": [
+          "text",
+          "vision"
+        ],
+        "langCount": null,
+        "capabilities": {
+          "reasoning": false,
+          "coding": true,
+          "vision": true,
+          "functionCalling": false,
+          "toolUse": false,
+          "agentic": false
+        },
+        "apiAvailable": false,
+        "price": null,
+        "links": {
+          "docs": "docs.reka.ai",
+          "hf": "",
+          "gh": ""
+        },
+        "note": "Original 21B Reka Flash, announced Feb 12, 2024 (documented together with Edge/Core in Reka's April 2024 tech report); iterated into a Sep 2024 build and then superseded by Flash 3/3.1, and no longer separately served on Reka's API under its original form.",
+        "quants": [],
+        "vramQ4Gb": null,
+        "vramFp16Gb": null,
+        "tps4090": null,
+        "tpsNote": null,
+        "effortLabel": null,
+        "isDefaultConfig": true,
+        "isBestConfig": true,
+        "specSources": {
+          "paramsB": "https://reka.ai/news/reka-flash-efficient-and-capable-multimodal-language-models",
+          "ctxK": "https://artificialanalysis.ai/models/reka-flash",
+          "releaseDate": "https://reka.ai/news/reka-flash-efficient-and-capable-multimodal-language-models",
+          "openness": "https://docs.reka.ai/pricing"
+        },
+        "results": [
+          {
+            "benchmarkSlug": "mmlu",
+            "score": 75.9,
+            "source": "self-reported",
+            "sourceUrl": "https://arxiv.org/abs/2404.12387",
+            "evaluatedAt": "2024-02-12",
+            "notes": "5-shot, from Reka Core/Flash/Edge tech report"
+          },
+          {
+            "benchmarkSlug": "gsm8k",
+            "score": 85.8,
+            "source": "self-reported",
+            "sourceUrl": "https://arxiv.org/abs/2404.12387",
+            "evaluatedAt": "2024-02-12",
+            "notes": "maj@8"
+          },
+          {
+            "benchmarkSlug": "humaneval",
+            "score": 72,
+            "source": "self-reported",
+            "sourceUrl": "https://arxiv.org/abs/2404.12387",
+            "evaluatedAt": "2024-02-12",
+            "notes": "0-shot"
+          }
+        ],
+        "verificationNotes": "CORRECTED releaseDate. Reka's official blog post 'Reka Flash: Efficient and Capable Multimodal Language Models' has an in-body date of Feb 12, 2024 (confirmed via direct fetch of the article body, not just page metadata), and MarkTechPost/other outlets covered the launch Feb 28, 2024 — both well before the source record's stated 2024-04-18. That April date corresponds instead to the arxiv tech report submission (which covers Flash retroactively alongside the later Reka Core launch), not Flash's original release. Changed releaseDate to 2024-02-12. All three benchmark rows confirmed exactly via arxiv fetch: MMLU 75.9 (5-shot), GSM8K 85.8 (maj@8), HumanEval 72.0 (0-shot). Confirmed a distinct, still-served 'Reka Flash (Sep '24)' build exists on Reka's API/artificialanalysis today, supporting the record's claim that the original Feb 2024 build is no longer separately served (superseded first by the Sep '24 update, then Flash 3)."
+      },
+      {
+        "name": "Reka Flash 3",
+        "org": "Reka AI",
+        "family": "Reka",
+        "releaseDate": "2025-03-10",
+        "status": "released",
+        "openness": "open-weights",
+        "license": "Apache 2.0",
+        "paramsB": 21,
+        "activeParamsB": null,
+        "archClass": "dense",
+        "archDisplay": "21B dense transformer, reasoning model with 'budget forcing' CoT control, Llama-compatible",
+        "ctxK": 32,
+        "modalities": [
+          "text"
+        ],
+        "langCount": null,
+        "capabilities": {
+          "reasoning": true,
+          "coding": true,
+          "vision": false,
+          "functionCalling": true,
+          "toolUse": true,
+          "agentic": true
+        },
+        "apiAvailable": true,
+        "price": {
+          "input": 0.2,
+          "output": 0.8,
+          "provider": "Reka AI"
+        },
+        "links": {
+          "hf": "RekaAI/reka-flash-3",
+          "docs": "docs.reka.ai",
+          "gh": ""
+        },
+        "note": "21B from-scratch reasoning model with a novel budget-forcing mechanism; text-only despite the Reka name's multimodal history; rivals OpenAI o1-mini.",
+        "quants": [
+          "GGUF Q4"
+        ],
+        "vramQ4Gb": 14,
+        "vramFp16Gb": 42,
+        "tps4090": null,
+        "tpsNote": null,
+        "effortLabel": null,
+        "isDefaultConfig": true,
+        "isBestConfig": true,
+        "specSources": {
+          "paramsB": "https://huggingface.co/RekaAI/reka-flash-3",
+          "ctxK": "https://huggingface.co/RekaAI/reka-flash-3/raw/main/config.json",
+          "releaseDate": "https://www.marktechpost.com/2025/03/11/reka-ai-open-sourced-reka-flash-3-a-21b-general-purpose-reasoning-model-that-was-trained-from-scratch/",
+          "openness": "https://huggingface.co/RekaAI/reka-flash-3"
+        },
+        "results": [
+          {
+            "benchmarkSlug": "mmlu-pro",
+            "score": 65,
+            "source": "self-reported",
+            "sourceUrl": "https://reka.ai/news/introducing-reka-flash",
+            "evaluatedAt": "2025-03-10"
+          }
+        ],
+        "verificationNotes": "CONFIRMED. reka.ai's official 'Reasoning with Reka Flash 3' post explicitly states release date March 10, 2025, 21B params, 32k context, Apache 2.0 license, and MMLU-Pro score of 'only 65.0' — matches record exactly. HF config.json confirms max_position_embeddings=32768 (32K), matching ctxK 32 (a separate secondary source's claim of 65,536 tokens was found to be inconsistent with the primary config.json and was disregarded). Current docs.reka.ai pricing confirms $0.20 input / $0.80 output exactly. No corrections required."
+      },
+      {
+        "name": "Llama-3-ELYZA-JP-8B",
+        "org": "ELYZA",
+        "family": "ELYZA LLM for JP",
+        "releaseDate": "2024-06-26",
+        "status": "released",
+        "openness": "open-weights",
+        "license": "Llama 3 Community License",
+        "paramsB": 8,
+        "activeParamsB": null,
+        "archClass": "dense",
+        "archDisplay": "8B dense transformer (Llama-3 architecture, Japanese continual pretrain + instruction tuning)",
+        "ctxK": 8,
+        "modalities": [
+          "text"
+        ],
+        "langCount": 2,
+        "capabilities": {
+          "reasoning": false,
+          "coding": true,
+          "vision": false,
+          "functionCalling": false,
+          "toolUse": false,
+          "agentic": false
+        },
+        "apiAvailable": false,
+        "price": null,
+        "links": {
+          "hf": "elyza/Llama-3-ELYZA-JP-8B",
+          "docs": "elyza.ai",
+          "gh": ""
+        },
+        "note": "Llama-3 8B continually pretrained and instruction-tuned for Japanese; comparable to GPT-3.5 Turbo/Claude 3 Haiku on ELYZA Tasks 100 (the flagship 70B model, not this 8B, is the one claimed to exceed GPT-4).",
+        "quants": [
+          "GGUF Q4",
+          "AWQ"
+        ],
+        "vramQ4Gb": 5,
+        "vramFp16Gb": 16.1,
+        "tps4090": null,
+        "tpsNote": null,
+        "effortLabel": null,
+        "isDefaultConfig": true,
+        "isBestConfig": true,
+        "specSources": {
+          "paramsB": "https://huggingface.co/elyza/Llama-3-ELYZA-JP-8B",
+          "ctxK": "https://llm-explorer.com/model/elyza%2FLlama-3-ELYZA-JP-8B,Ei5wSUXSaZnTBX3wGUvF8",
+          "releaseDate": "https://note.com/elyza/n/n360b6084fdbd?hl=en",
+          "openness": "https://note.com/elyza/n/n360b6084fdbd?hl=en"
+        },
+        "results": [],
+        "verificationNotes": "CONFIRMED. ELYZA's official note.com announcement confirms publication date June 26, 2024, states the 8B model is based on Meta-Llama-3-8B-Instruct with additional Japanese pretraining/instruction-tuning, is licensed under the Llama 3 Community License (commercial use permitted per Acceptable Use Policy), and performs comparably to GPT-3.5 Turbo/Claude 3 Haiku/Gemini 1.0 Pro (only the 70B sibling is claimed to exceed GPT-4 — record's note correctly distinguishes this). HF model card and llm-explorer confirm 8B params, 8K context (8,192 max tokens), 16.1GB fp16 VRAM — all match record exactly. No benchmark rows were present in the source record and none could be independently sourced with hard numbers on the model card, so the empty results array is correct as-is. No corrections required."
+      },
+      {
+        "name": "Llama-3.1-ELYZA-JP-70B",
+        "org": "ELYZA",
+        "family": "ELYZA LLM for JP",
+        "releaseDate": "2024-10-25",
+        "status": "released",
+        "openness": "closed",
+        "license": "Proprietary — enterprise/partner access only (no public license terms published; not an open-weight release)",
+        "paramsB": 70,
+        "activeParamsB": null,
+        "archClass": "dense",
+        "archDisplay": "70B dense transformer (Llama-3.1 architecture, Japanese continual pretrain + instruction tuning)",
+        "ctxK": 128,
+        "modalities": [
+          "text"
+        ],
+        "langCount": 2,
+        "capabilities": {
+          "reasoning": false,
+          "coding": true,
+          "vision": false,
+          "functionCalling": true,
+          "toolUse": true,
+          "agentic": false
+        },
+        "apiAvailable": false,
+        "price": null,
+        "links": {
+          "hf": "",
+          "docs": "elyza.ai",
+          "gh": ""
+        },
+        "note": "Latest ELYZA LLM for JP flagship, built on Llama 3.1 for longer context and improved Japanese instruction-following vs. the earlier Llama-3-based 70B; distributed only via demo and enterprise API/joint-development deals, not as public open weights.",
+        "quants": [],
+        "vramQ4Gb": null,
+        "vramFp16Gb": null,
+        "tps4090": null,
+        "tpsNote": null,
+        "effortLabel": null,
+        "isDefaultConfig": true,
+        "isBestConfig": true,
+        "specSources": {
+          "paramsB": "https://prtimes.jp/main/html/rd/p/000000052.000047565.html",
+          "ctxK": "https://huggingface.co/blog/llama31",
+          "releaseDate": "https://prtimes.jp/main/html/rd/p/000000052.000047565.html",
+          "openness": "https://prtimes.jp/main/html/rd/p/000000052.000047565.html"
+        },
+        "results": [],
+        "verificationNotes": "Real, confirmed release: ELYZA's own news post and PR Times release (both 2024-10-25), plus corroborating JP tech press (Nikkei xTECH, Mynavi, CodeZine), confirm a 70B (700-oku-parameter) Llama-3.1-based Japanese model with improved long-context/instruction-following over the prior Llama-3 70B. CORRECTED openness from 'open-weights' to 'closed': ELYZA's press release explicitly states the model is 'provided to companies in various forms through secure API services and joint development projects' (enterprise-only), not released as public weights — only a hosted demo is public. Fetching https://huggingface.co/elyza/Llama-3.1-ELYZA-JP-70B returns HTTP 401 'Invalid username or password' (gated/private repo), unlike ELYZA's genuinely open 8B sibling models on HF. License field corrected accordingly since no public license text exists for this restricted-access model. ctxK=128 and langCount=2 are reasonable carry-overs from the Llama-3.1 base architecture but are not explicitly confirmed by ELYZA for this JP variant specifically."
+      },
+      {
+        "name": "Sarvam-1 (2B)",
+        "org": "Sarvam AI",
+        "family": "Sarvam",
+        "releaseDate": "2024-10-24",
+        "status": "released",
+        "openness": "open-weights",
+        "license": "Sarvam Non-Commercial License",
+        "paramsB": 2,
+        "activeParamsB": null,
+        "archClass": "dense",
+        "archDisplay": "2B dense transformer with custom Indic-optimized tokenizer",
+        "ctxK": 8,
+        "modalities": [
+          "text"
+        ],
+        "langCount": 11,
+        "capabilities": {
+          "reasoning": false,
+          "coding": false,
+          "vision": false,
+          "functionCalling": false,
+          "toolUse": false,
+          "agentic": false
+        },
+        "apiAvailable": false,
+        "price": null,
+        "links": {
+          "hf": "sarvamai/sarvam-1",
+          "docs": "sarvam.ai",
+          "gh": ""
+        },
+        "note": "India's first from-scratch open foundation model; 2B params trained on 4T tokens with a low-fertility tokenizer for 10 Indic languages plus English; base text-completion model, not chat-tuned.",
+        "quants": [
+          "GGUF Q4"
+        ],
+        "vramQ4Gb": 2,
+        "vramFp16Gb": 5,
+        "tps4090": null,
+        "tpsNote": null,
+        "effortLabel": null,
+        "isDefaultConfig": true,
+        "isBestConfig": true,
+        "specSources": {
+          "paramsB": "https://huggingface.co/sarvamai/sarvam-1",
+          "ctxK": "https://huggingface.co/sarvamai/sarvam-1",
+          "releaseDate": "https://www.medianama.com/2024/10/223-indian-ai-startup-sarvam-launches-llm-trained-on-10-indic-languages/",
+          "openness": "https://huggingface.co/sarvamai/sarvam-1"
+        },
+        "results": [
+          {
+            "benchmarkSlug": "mmlu",
+            "score": 44.44,
+            "source": "self-reported",
+            "sourceUrl": "https://huggingface.co/sarvamai/sarvam-1",
+            "evaluatedAt": "2024-10-24",
+            "notes": "zero-shot"
+          },
+          {
+            "benchmarkSlug": "arc-challenge",
+            "score": 58.5,
+            "source": "self-reported",
+            "sourceUrl": "https://huggingface.co/sarvamai/sarvam-1",
+            "evaluatedAt": "2024-10-24",
+            "notes": "zero-shot"
+          },
+          {
+            "benchmarkSlug": "trivia-qa",
+            "score": 90.62,
+            "source": "self-reported",
+            "sourceUrl": "https://huggingface.co/sarvamai/sarvam-1",
+            "evaluatedAt": "2024-10-24",
+            "notes": "zero-shot"
+          }
+        ],
+        "verificationNotes": "Confirmed real release: Sarvam AI's official HF model card, Sarvam's own Oct 24 2024 X/Twitter launch announcement, and independent coverage (MediaNama) all corroborate a 2B-parameter model trained on 4T tokens for 10 Indic languages + English under a non-commercial license, built with NVIDIA H100s. All three result rows (MMLU 44.44, ARC-Challenge 58.50, TriviaQA 90.62) are literally present on https://huggingface.co/sarvamai/sarvam-1. Context length 8192 (8K) confirmed via model config (max_position_embeddings). No corrections made — record verified as accurate."
+      },
+      {
+        "name": "Sarvam-105B",
+        "org": "Sarvam AI",
+        "family": "Sarvam",
+        "releaseDate": "2026-02-18",
+        "status": "released",
+        "openness": "open-weights",
+        "license": "Apache 2.0",
+        "paramsB": 105,
+        "activeParamsB": 10.3,
+        "archClass": "moe",
+        "archDisplay": "105B MoE transformer (128 experts, ~10.3B active/token), Multi-head Latent Attention",
+        "ctxK": 128,
+        "modalities": [
+          "text"
+        ],
+        "langCount": 23,
+        "capabilities": {
+          "reasoning": true,
+          "coding": true,
+          "vision": false,
+          "functionCalling": true,
+          "toolUse": true,
+          "agentic": true
+        },
+        "apiAvailable": true,
+        "price": null,
+        "links": {
+          "hf": "sarvamai/sarvam-105b",
+          "docs": "sarvam.ai",
+          "gh": ""
+        },
+        "note": "India's first sovereign 100B+ open model, trained from scratch under the IndiaAI Mission; Apache-2.0 MoE with Multi-head Latent Attention and 128K context via YaRN, covering 22 Indian languages plus English.",
+        "quants": [
+          "GGUF Q4",
+          "FP8"
+        ],
+        "vramQ4Gb": 65,
+        "vramFp16Gb": null,
+        "tps4090": null,
+        "tpsNote": "Too large to run on a single RTX 4090 even at Q4 (~64GB needed); no consumer single-GPU llama.cpp benchmark found.",
+        "effortLabel": null,
+        "isDefaultConfig": true,
+        "isBestConfig": true,
+        "specSources": {
+          "paramsB": "https://huggingface.co/sarvamai/sarvam-105b",
+          "ctxK": "https://huggingface.co/sarvamai/sarvam-105b",
+          "releaseDate": "https://techcrunch.com/2026/02/18/indian-ai-lab-sarvams-new-models-are-a-major-bet-on-the-viability-of-open-source-ai/",
+          "openness": "https://huggingface.co/sarvamai/sarvam-105b"
+        },
+        "results": [
+          {
+            "benchmarkSlug": "mmlu",
+            "score": 90.6,
+            "source": "self-reported",
+            "sourceUrl": "https://huggingface.co/sarvamai/sarvam-105b",
+            "evaluatedAt": "2026-02-18"
+          },
+          {
+            "benchmarkSlug": "mmlu-pro",
+            "score": 81.7,
+            "source": "self-reported",
+            "sourceUrl": "https://huggingface.co/sarvamai/sarvam-105b",
+            "evaluatedAt": "2026-02-18"
+          },
+          {
+            "benchmarkSlug": "math",
+            "score": 98.6,
+            "source": "self-reported",
+            "sourceUrl": "https://huggingface.co/sarvamai/sarvam-105b",
+            "evaluatedAt": "2026-02-18",
+            "notes": "MATH-500"
+          },
+          {
+            "benchmarkSlug": "gpqa",
+            "score": 78.7,
+            "source": "self-reported",
+            "sourceUrl": "https://huggingface.co/sarvamai/sarvam-105b",
+            "evaluatedAt": "2026-02-18",
+            "notes": "GPQA Diamond"
+          },
+          {
+            "benchmarkSlug": "livecodebench",
+            "score": 71.7,
+            "source": "self-reported",
+            "sourceUrl": "https://huggingface.co/sarvamai/sarvam-105b",
+            "evaluatedAt": "2026-02-18",
+            "notes": "LiveCodeBench v6"
+          },
+          {
+            "benchmarkSlug": "aime",
+            "score": 88.3,
+            "source": "self-reported",
+            "sourceUrl": "https://huggingface.co/sarvamai/sarvam-105b",
+            "evaluatedAt": "2026-02-18",
+            "notes": "AIME 2025, without tools (96.7 with tools)"
+          },
+          {
+            "benchmarkSlug": "swe-bench",
+            "score": 45,
+            "source": "self-reported",
+            "sourceUrl": "https://huggingface.co/sarvamai/sarvam-105b",
+            "evaluatedAt": "2026-02-18",
+            "notes": "SWE-Bench Verified, SWE-Agent harness"
+          },
+          {
+            "benchmarkSlug": "browsecomp",
+            "score": 49.5,
+            "source": "self-reported",
+            "sourceUrl": "https://huggingface.co/sarvamai/sarvam-105b",
+            "evaluatedAt": "2026-02-18"
+          }
+        ],
+        "verificationNotes": "Confirmed real, very recent release — independently corroborated by Bloomberg ('Upstart Sarvam Unveils AI Model Customized for India Market', 2026-02-18), TechCrunch, Business Standard, and BusinessToday, all reporting weights publicly available since 2026-02-18 at the India AI Impact Summit (a later Sarvam blog post dated ~2026-03-06 appears to be a secondary/formal write-up, not the actual release date). Architecture (MoE, 128 experts, Multi-head Latent Attention, 10.3B active, 128K context via YaRN factor 40) and all 8 result rows literally confirmed on https://huggingface.co/sarvamai/sarvam-105b and the official Sarvam blog. Apache 2.0 license confirmed. Minor note: HF safetensors metadata reports actual weight size as '106B params' though the model is uniformly named/marketed as '105B' by Sarvam and all press — paramsB=105 kept per canonical naming. No corrections made to core fields."
+      },
+      {
+        "name": "YandexGPT 5 Pro",
+        "org": "Yandex",
+        "family": "YandexGPT",
+        "releaseDate": "2025-02-25",
+        "status": "released",
+        "openness": "closed",
+        "license": "Proprietary",
+        "paramsB": null,
+        "activeParamsB": null,
+        "archClass": "dense",
+        "archDisplay": "Proprietary dense transformer, undisclosed size (YandexGPT 5 flagship)",
+        "ctxK": 32,
+        "modalities": [
+          "text"
+        ],
+        "langCount": null,
+        "capabilities": {
+          "reasoning": false,
+          "coding": true,
+          "vision": false,
+          "functionCalling": true,
+          "toolUse": true,
+          "agentic": true
+        },
+        "apiAvailable": true,
+        "price": null,
+        "links": {
+          "docs": "yandex.cloud/en/docs/foundation-models",
+          "hf": "",
+          "gh": ""
+        },
+        "note": "Yandex's closed flagship LLM powering the Alice assistant; vendor claims quality comparable to GPT-4o, with an independent review putting MMLU around 83%.",
+        "quants": [],
+        "vramQ4Gb": null,
+        "vramFp16Gb": null,
+        "tps4090": null,
+        "tpsNote": null,
+        "effortLabel": null,
+        "isDefaultConfig": true,
+        "isBestConfig": true,
+        "specSources": {
+          "paramsB": "https://yandex.cloud/en/services/yandexgpt",
+          "ctxK": "https://www.llmreference.com/model/yandexgpt-pro-5",
+          "releaseDate": "https://ppc.world/news/yandeks-predstavil-yandexgpt-5-pro-i-perezapustil-chat-s-alisoy/",
+          "openness": "https://yandex.cloud/en/services/yandexgpt"
+        },
+        "results": [
+          {
+            "benchmarkSlug": "mmlu",
+            "score": 83,
+            "source": "independent",
+            "sourceUrl": "https://habr.com/ru/companies/bothub/articles/893128/",
+            "evaluatedAt": "2025-02",
+            "notes": "~3 points below GPT-4o per reviewer's blind comparison"
+          },
+          {
+            "benchmarkSlug": "mmlu-pro",
+            "score": 68,
+            "source": "independent",
+            "sourceUrl": "https://habr.com/ru/companies/bothub/articles/893128/",
+            "evaluatedAt": "2025-02"
+          },
+          {
+            "benchmarkSlug": "drop",
+            "score": 63,
+            "source": "independent",
+            "sourceUrl": "https://habr.com/ru/companies/bothub/articles/893128/",
+            "evaluatedAt": "2025-02",
+            "notes": "DROP-RU (Russian variant)"
+          },
+          {
+            "benchmarkSlug": "ifeval",
+            "score": 77,
+            "source": "independent",
+            "sourceUrl": "https://habr.com/ru/companies/bothub/articles/893128/",
+            "evaluatedAt": "2025-02",
+            "notes": "IFEval-RU (Russian variant)"
+          }
+        ],
+        "verificationNotes": "Confirmed real release: multiple RU tech press (ppc.world, vc.ru, MashaGPT, Habr/Yandex official post) confirm YandexGPT 5 Pro launched ~2025-02-25 alongside the Alice chat relaunch. Context window corrected/confirmed as 32K (not a stray 256K figure seen in one loose secondary summary) — independently corroborated by llmreference.com ('YandexGPT Pro 5 – 32k context') and datastudios.org, which also confirms the successor 5.1 Pro (released Aug 2025) raised context to 128K, consistent with 5 Pro being 32K. All four independent benchmark rows (MMLU 83, MMLU-Pro 68, DROP-RU 63, IFEval-RU 77) were literally confirmed by direct fetch of the cited habr.com/bothub article text. No corrections made — record verified as accurate."
+      }
+    ]
+  },
+  "workflowProgress": [
+    {
+      "type": "workflow_phase",
+      "index": 1,
+      "title": "Research"
+    },
+    {
+      "type": "workflow_phase",
+      "index": 2,
+      "title": "Verify"
+    },
+    {
+      "type": "workflow_agent",
+      "index": 1,
+      "label": "research:DeepSeek",
+      "phaseIndex": 1,
+      "phaseTitle": "Research",
+      "agentId": "a663e994a0b6882b2",
+      "model": "claude-sonnet-5",
+      "state": "done",
+      "startedAt": 1783901291922,
+      "queuedAt": 1783901291912,
+      "attempt": 1,
+      "lastToolName": "StructuredOutput",
+      "promptPreview": "You have web research tools. FIRST load them: call ToolSearch with query \"select:mcp__4dbcbf51-5bb9-4f93-a61f-18044e1a3091__web_search,mcp__4dbcbf51-5bb9-4f93-a61f-18044e1a3091__web_fetch\" to load Parallel P0 web_search/web_fetch (pass a stable session_id + model_name on every call). Built-in WebSearch/WebFetch may also load via ToolSearch query \"web search fetch\". Use REAL searches — never answer…",
+      "lastProgressAt": 1783902221141,
+      "tokens": 144411,
+      "toolCalls": 75,
+      "durationMs": 929219,
+      "resultPreview": "{\"models\":[{\"name\":\"DeepSeek-VL 7B\",\"org\":\"DeepSeek\",\"family\":\"DeepSeek-VL\",\"releaseDate\":\"2024-03-08\",\"status\":\"released\",\"openness\":\"open-weights\",\"license\":\"DeepSeek Model License (code: MIT)\",\"paramsB\":7,\"activeParamsB\":null,\"archClass\":\"dense\",\"archDisplay\":\"Dense 7B transformer (DeepSeek-LLM-7B base) + SigLIP-L/SAM-B hybrid vision encoder (up to 1024x1024)\",\"ctxK\":4,\"modalities\":[\"text\",\"vis…"
+    },
+    {
+      "type": "workflow_agent",
+      "index": 2,
+      "label": "research:Stability AI",
+      "phaseIndex": 1,
+      "phaseTitle": "Research",
+      "agentId": "a70ca7eaaacaeb915",
+      "model": "claude-sonnet-5",
+      "state": "done",
+      "startedAt": 1783901291922,
+      "queuedAt": 1783901291912,
+      "attempt": 1,
+      "lastToolName": "StructuredOutput",
+      "promptPreview": "You have web research tools. FIRST load them: call ToolSearch with query \"select:mcp__4dbcbf51-5bb9-4f93-a61f-18044e1a3091__web_search,mcp__4dbcbf51-5bb9-4f93-a61f-18044e1a3091__web_fetch\" to load Parallel P0 web_search/web_fetch (pass a stable session_id + model_name on every call). Built-in WebSearch/WebFetch may also load via ToolSearch query \"web search fetch\". Use REAL searches — never answer…",
+      "lastProgressAt": 1783901881770,
+      "tokens": 115053,
+      "toolCalls": 53,
+      "durationMs": 589848,
+      "resultPreview": "{\"models\":[{\"name\":\"StableLM-Alpha 7B\",\"org\":\"Stability AI\",\"family\":\"StableLM\",\"releaseDate\":\"2023-04-19\",\"status\":\"deprecated\",\"openness\":\"open-weights\",\"license\":\"CC BY-SA-4.0\",\"paramsB\":7,\"activeParamsB\":null,\"archClass\":\"dense\",\"archDisplay\":\"Dense decoder-only transformer (GPT-NeoX style, parallel attention+FFN)\",\"ctxK\":4,\"modalities\":[\"text\"],\"langCount\":1,\"capabilities\":{\"reasoning\":false,…"
+    },
+    {
+      "type": "workflow_agent",
+      "index": 3,
+      "label": "research:Reka AI",
+      "phaseIndex": 1,
+      "phaseTitle": "Research",
+      "agentId": "a303a37d975f86b0f",
+      "model": "claude-sonnet-5",
+      "state": "done",
+      "startedAt": 1783901291923,
+      "queuedAt": 1783901291912,
+      "attempt": 1,
+      "lastToolName": "StructuredOutput",
+      "promptPreview": "You have web research tools. FIRST load them: call ToolSearch with query \"select:mcp__4dbcbf51-5bb9-4f93-a61f-18044e1a3091__web_search,mcp__4dbcbf51-5bb9-4f93-a61f-18044e1a3091__web_fetch\" to load Parallel P0 web_search/web_fetch (pass a stable session_id + model_name on every call). Built-in WebSearch/WebFetch may also load via ToolSearch query \"web search fetch\". Use REAL searches — never answer…",
+      "lastProgressAt": 1783902113525,
+      "tokens": 142639,
+      "toolCalls": 81,
+      "durationMs": 821602,
+      "resultPreview": "{\"models\":[{\"name\":\"Reka Flash (21B)\",\"org\":\"Reka AI\",\"family\":\"Reka\",\"releaseDate\":\"2024-04-18\",\"status\":\"deprecated\",\"openness\":\"closed\",\"license\":\"Proprietary\",\"paramsB\":21,\"activeParamsB\":null,\"archClass\":\"dense\",\"archDisplay\":\"21B dense multimodal transformer (Core/Flash/Edge series)\",\"ctxK\":128,\"modalities\":[\"text\",\"vision\"],\"langCount\":null,\"capabilities\":{\"reasoning\":false,\"coding\":true,\"v…"
+    },
+    {
+      "type": "workflow_agent",
+      "index": 4,
+      "label": "verify:DeepSeek",
+      "phaseIndex": 2,
+      "phaseTitle": "Verify",
+      "agentId": "aa3ed54b0337bf08d",
+      "model": "claude-sonnet-5",
+      "state": "done",
+      "startedAt": 1783902221154,
+      "queuedAt": 1783902221144,
+      "attempt": 1,
+      "lastToolName": "StructuredOutput",
+      "promptPreview": "You have web research tools. FIRST load them: call ToolSearch with query \"select:mcp__4dbcbf51-5bb9-4f93-a61f-18044e1a3091__web_search,mcp__4dbcbf51-5bb9-4f93-a61f-18044e1a3091__web_fetch\" to load Parallel P0 web_search/web_fetch (pass a stable session_id + model_name on every call). Built-in WebSearch/WebFetch may also load via ToolSearch query \"web search fetch\". Use REAL searches — never answer…",
+      "lastProgressAt": 1783902580307,
+      "tokens": 110032,
+      "toolCalls": 39,
+      "durationMs": 359153,
+      "resultPreview": "{\"models\":[{\"name\":\"DeepSeek-VL 7B\",\"org\":\"DeepSeek\",\"family\":\"DeepSeek-VL\",\"releaseDate\":\"2024-03-08\",\"status\":\"released\",\"openness\":\"open-weights\",\"license\":\"DeepSeek Model License (code: MIT)\",\"paramsB\":7,\"activeParamsB\":null,\"archClass\":\"dense\",\"archDisplay\":\"Dense 7B transformer (DeepSeek-LLM-7B base) + SigLIP-L/SAM-B hybrid vision encoder (up to 1024x1024)\",\"ctxK\":4,\"modalities\":[\"text\",\"vis…"
+    },
+    {
+      "type": "workflow_agent",
+      "index": 5,
+      "label": "verify:DeepSeek",
+      "phaseIndex": 2,
+      "phaseTitle": "Verify",
+      "agentId": "aa14dbd83d56aba52",
+      "model": "claude-sonnet-5",
+      "state": "done",
+      "startedAt": 1783902221155,
+      "queuedAt": 1783902221145,
+      "attempt": 1,
+      "lastToolName": "StructuredOutput",
+      "promptPreview": "You have web research tools. FIRST load them: call ToolSearch with query \"select:mcp__4dbcbf51-5bb9-4f93-a61f-18044e1a3091__web_search,mcp__4dbcbf51-5bb9-4f93-a61f-18044e1a3091__web_fetch\" to load Parallel P0 web_search/web_fetch (pass a stable session_id + model_name on every call). Built-in WebSearch/WebFetch may also load via ToolSearch query \"web search fetch\". Use REAL searches — never answer…",
+      "lastProgressAt": 1783902492210,
+      "tokens": 100622,
+      "toolCalls": 25,
+      "durationMs": 271055,
+      "resultPreview": "{\"models\":[{\"name\":\"DeepSeek-V3.1 (Non-Thinking)\",\"org\":\"DeepSeek\",\"family\":\"DeepSeek-V3\",\"releaseDate\":\"2025-08-21\",\"status\":\"released\",\"openness\":\"open-weights\",\"license\":\"MIT License\",\"paramsB\":671,\"activeParamsB\":37,\"archClass\":\"moe\",\"archDisplay\":\"MoE transformer, 671B total / 37B active — hybrid model unifying thinking/non-thinking modes via chat template; built on DeepSeek-V3.1-Base with lo…"
+    },
+    {
+      "type": "workflow_agent",
+      "index": 6,
+      "label": "verify:Stability AI",
+      "phaseIndex": 2,
+      "phaseTitle": "Verify",
+      "agentId": "a9781b4173b22aee0",
+      "model": "claude-sonnet-5",
+      "state": "done",
+      "startedAt": 1783902221155,
+      "queuedAt": 1783902221145,
+      "attempt": 1,
+      "lastToolName": "StructuredOutput",
+      "promptPreview": "You have web research tools. FIRST load them: call ToolSearch with query \"select:mcp__4dbcbf51-5bb9-4f93-a61f-18044e1a3091__web_search,mcp__4dbcbf51-5bb9-4f93-a61f-18044e1a3091__web_fetch\" to load Parallel P0 web_search/web_fetch (pass a stable session_id + model_name on every call). Built-in WebSearch/WebFetch may also load via ToolSearch query \"web search fetch\". Use REAL searches — never answer…",
+      "lastProgressAt": 1783902684093,
+      "tokens": 101443,
+      "toolCalls": 46,
+      "durationMs": 462938,
+      "resultPreview": "{\"models\":[{\"name\":\"Stable LM 2 12B\",\"org\":\"Stability AI\",\"family\":\"StableLM 2\",\"releaseDate\":\"2024-04-08\",\"status\":\"released\",\"openness\":\"open-weights\",\"license\":\"Stability AI Community License (non-commercial by default; commercial use requires Stability AI membership)\",\"paramsB\":12.1,\"activeParamsB\":null,\"archClass\":\"dense\",\"archDisplay\":\"Dense decoder-only transformer (40 layers, GQA 32 query/…"
+    },
+    {
+      "type": "workflow_agent",
+      "index": 7,
+      "label": "verify:ELYZA",
+      "phaseIndex": 2,
+      "phaseTitle": "Verify",
+      "agentId": "a69b25fbc28580e63",
+      "model": "claude-sonnet-5",
+      "state": "done",
+      "startedAt": 1783902221155,
+      "queuedAt": 1783902221145,
+      "attempt": 1,
+      "lastToolName": "StructuredOutput",
+      "promptPreview": "You have web research tools. FIRST load them: call ToolSearch with query \"select:mcp__4dbcbf51-5bb9-4f93-a61f-18044e1a3091__web_search,mcp__4dbcbf51-5bb9-4f93-a61f-18044e1a3091__web_fetch\" to load Parallel P0 web_search/web_fetch (pass a stable session_id + model_name on every call). Built-in WebSearch/WebFetch may also load via ToolSearch query \"web search fetch\". Use REAL searches — never answer…",
+      "lastProgressAt": 1783902582715,
+      "tokens": 104786,
+      "toolCalls": 36,
+      "durationMs": 361560,
+      "resultPreview": "{\"models\":[{\"name\":\"Llama-3.1-ELYZA-JP-70B\",\"org\":\"ELYZA\",\"family\":\"ELYZA LLM for JP\",\"releaseDate\":\"2024-10-25\",\"status\":\"released\",\"openness\":\"closed\",\"license\":\"Proprietary — enterprise/partner access only (no public license terms published; not an open-weight release)\",\"paramsB\":70,\"activeParamsB\":null,\"archClass\":\"dense\",\"archDisplay\":\"70B dense transformer (Llama-3.1 architecture, Japanese c…"
+    }
+  ],
+  "totalTokens": 818986,
+  "totalToolCalls": 355
+}

@@ -1,0 +1,64 @@
+{
+  "name": "Llama 2 13B Chat",
+  "org": "Meta",
+  "family": "Llama 2",
+  "releaseDate": "2023-07-18",
+  "status": "released",
+  "openness": "open-weights",
+  "license": "Llama 2 Community License Agreement",
+  "paramsB": 13,
+  "activeParamsB": null,
+  "archClass": "dense",
+  "archDisplay": "Dense decoder-only Transformer",
+  "ctxK": 4,
+  "modalities": [
+    "text"
+  ],
+  "langCount": null,
+  "capabilities": {
+    "reasoning": false,
+    "coding": true,
+    "vision": false,
+    "functionCalling": false,
+    "toolUse": false,
+    "agentic": false
+  },
+  "apiAvailable": true,
+  "price": null,
+  "links": {
+    "hf": "meta-llama/Llama-2-13b-chat",
+    "gh": "meta-llama/llama",
+    "docs": "ai.meta.com/llama"
+  },
+  "note": "RLHF-tuned dialogue version of Llama 2 13B, fine-tuned with SFT plus human-preference RLHF for helpfulness and safety.",
+  "quants": [
+    "GGUF",
+    "GPTQ",
+    "AWQ",
+    "GGML"
+  ],
+  "vramQ4Gb": 10,
+  "vramFp16Gb": 26,
+  "tps4090": 70.9,
+  "tpsNote": "Measured via Ollama (llama.cpp backend) at Q4 on RTX 4090: ~92% GPU utilization, ~41% (~10GB) VRAM used, 70.90 tok/s evaluation speed.",
+  "effortLabel": null,
+  "isDefaultConfig": true,
+  "isBestConfig": true,
+  "specSources": {
+    "paramsB": "https://huggingface.co/meta-llama/Llama-2-13b-chat",
+    "ctxK": "https://github.com/meta-llama/llama-models/blob/main/models/llama2/MODEL_CARD.md",
+    "releaseDate": "https://github.com/meta-llama/llama/blob/main/LICENSE",
+    "openness": "https://github.com/meta-llama/llama/blob/main/LICENSE"
+  },
+  "results": [
+    {
+      "benchmarkSlug": "truthfulqa",
+      "score": 62.18,
+      "source": "self-reported",
+      "sourceUrl": "https://github.com/meta-llama/llama-models/blob/main/models/llama2/MODEL_CARD.md",
+      "evaluatedAt": "2023-07-18",
+      "notes": "Percent of generations rated both truthful and informative"
+    }
+  ],
+  "verificationNotes": "Confirmed real model and specs via Hugging Face model card. Confirmed MODEL_CARD.md Llama-2-Chat safety table shows 13B row TruthfulQA 62.18 / Toxigen 0.00, matching exactly. Also independently verified the RTX 4090 benchmark figure (70.90 tok/s, 92% GPU util, 41% VRAM) on databasemart.com's Ollama GPU benchmark article for llama2:13b — number confirmed as literally reported. No changes made."
+}

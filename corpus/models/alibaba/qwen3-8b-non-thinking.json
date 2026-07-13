@@ -1,0 +1,95 @@
+{
+  "name": "Qwen3-8B (Non-Thinking)",
+  "org": "Alibaba",
+  "family": "Qwen3",
+  "releaseDate": "2025-04-29",
+  "status": "released",
+  "openness": "open-weights",
+  "license": "Apache 2.0",
+  "paramsB": 8.2,
+  "activeParamsB": null,
+  "archClass": "dense",
+  "archDisplay": "Dense transformer, GQA + SwiGLU + QK-Norm",
+  "ctxK": 128,
+  "modalities": [
+    "text"
+  ],
+  "langCount": 119,
+  "capabilities": {
+    "reasoning": true,
+    "coding": true,
+    "vision": false,
+    "functionCalling": true,
+    "toolUse": true,
+    "agentic": true
+  },
+  "apiAvailable": true,
+  "price": {
+    "input": 0.072,
+    "output": 0.287,
+    "provider": "Alibaba Cloud Model Studio (DashScope)"
+  },
+  "links": {
+    "hf": "Qwen/Qwen3-8B",
+    "gh": "QwenLM/Qwen3",
+    "docs": "qwen.readthedocs.io"
+  },
+  "note": "Fast non-thinking mode variant of the same 8B dense weights, for low-latency dialogue.",
+  "quants": [
+    "GGUF",
+    "AWQ",
+    "GPTQ",
+    "MLX"
+  ],
+  "vramQ4Gb": 5.1,
+  "vramFp16Gb": 16.4,
+  "tps4090": null,
+  "tpsNote": null,
+  "effortLabel": "Non-Thinking",
+  "isDefaultConfig": false,
+  "isBestConfig": false,
+  "specSources": {
+    "paramsB": "https://huggingface.co/Qwen/Qwen3-8B",
+    "ctxK": "https://arxiv.org/abs/2505.09388",
+    "releaseDate": "https://github.com/QwenLM/Qwen3",
+    "openness": "https://huggingface.co/Qwen/Qwen3-8B"
+  },
+  "results": [
+    {
+      "benchmarkSlug": "aime",
+      "score": 29.1,
+      "source": "self-reported",
+      "sourceUrl": "https://arxiv.org/abs/2505.09388",
+      "notes": "AIME'24, non-thinking mode, Table 18"
+    },
+    {
+      "benchmarkSlug": "gpqa",
+      "score": 39.3,
+      "source": "self-reported",
+      "sourceUrl": "https://arxiv.org/abs/2505.09388",
+      "notes": "GPQA-Diamond, non-thinking mode"
+    },
+    {
+      "benchmarkSlug": "livecodebench",
+      "score": 22.8,
+      "source": "self-reported",
+      "sourceUrl": "https://arxiv.org/abs/2505.09388",
+      "notes": "LiveCodeBench v5, non-thinking mode"
+    },
+    {
+      "benchmarkSlug": "arena-hard",
+      "score": 79.6,
+      "source": "self-reported",
+      "sourceUrl": "https://arxiv.org/abs/2505.09388",
+      "notes": "Arena-Hard, non-thinking mode"
+    },
+    {
+      "benchmarkSlug": "bfcl-v3",
+      "score": 60.2,
+      "source": "self-reported",
+      "sourceUrl": "https://arxiv.org/abs/2505.09388",
+      "notes": "BFCL v3, non-thinking mode"
+    }
+  ],
+  "verificationNotes": "Fully confirmed. Table 18 of fetched Qwen3 Technical Report PDF confirms all 5 rows exactly (AIME'24 29.1, GPQA-Diamond 39.3, LiveCodeBench v5 22.8, Arena-Hard 79.6, BFCL v3 60.2). Same model identity/specs verification as thinking-mode sibling."
+}

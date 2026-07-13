@@ -1,0 +1,95 @@
+{
+  "name": "DeepSeek-R1-Distill-Qwen-32B",
+  "org": "DeepSeek",
+  "family": "DeepSeek-R1",
+  "releaseDate": "2025-01-20",
+  "status": "released",
+  "openness": "open-weights",
+  "license": "Apache 2.0",
+  "paramsB": 32,
+  "activeParamsB": null,
+  "archClass": "dense",
+  "archDisplay": "Dense Transformer (Qwen2.5-32B architecture, GQA)",
+  "ctxK": 128,
+  "modalities": [
+    "text"
+  ],
+  "langCount": null,
+  "capabilities": {
+    "reasoning": true,
+    "coding": true,
+    "vision": false,
+    "functionCalling": false,
+    "toolUse": false,
+    "agentic": false
+  },
+  "apiAvailable": false,
+  "price": null,
+  "links": {
+    "hf": "deepseek-ai/DeepSeek-R1-Distill-Qwen-32B",
+    "gh": "deepseek-ai/DeepSeek-R1"
+  },
+  "note": "Best of the R1 distilled dense models: Qwen2.5-32B fine-tuned on R1 traces, outperformed OpenAI o1-mini for dense-model SOTA.",
+  "quants": [
+    "GGUF Q4_K_M",
+    "AWQ",
+    "GPTQ",
+    "MLX"
+  ],
+  "vramQ4Gb": 20,
+  "vramFp16Gb": 64,
+  "tps4090": 40,
+  "tpsNote": "Q4_K_M (~20GB) fits a single 24GB 4090; community llama.cpp/Ollama benchmarks report roughly 38-45 tok/s.",
+  "effortLabel": null,
+  "isDefaultConfig": true,
+  "isBestConfig": true,
+  "specSources": {
+    "paramsB": "https://huggingface.co/deepseek-ai/DeepSeek-R1-Distill-Qwen-32B",
+    "ctxK": "https://huggingface.co/deepseek-ai/DeepSeek-R1-Distill-Qwen-32B",
+    "releaseDate": "https://github.com/deepseek-ai/DeepSeek-R1",
+    "openness": "https://github.com/deepseek-ai/DeepSeek-R1"
+  },
+  "results": [
+    {
+      "benchmarkSlug": "aime",
+      "score": 72.6,
+      "source": "self-reported",
+      "sourceUrl": "https://huggingface.co/deepseek-ai/DeepSeek-R1-Distill-Qwen-32B",
+      "evaluatedAt": "2025-01-20",
+      "notes": "AIME 2024 pass@1"
+    },
+    {
+      "benchmarkSlug": "math",
+      "score": 94.3,
+      "source": "self-reported",
+      "sourceUrl": "https://huggingface.co/deepseek-ai/DeepSeek-R1-Distill-Qwen-32B",
+      "evaluatedAt": "2025-01-20",
+      "notes": "MATH-500 pass@1"
+    },
+    {
+      "benchmarkSlug": "gpqa",
+      "score": 62.1,
+      "source": "self-reported",
+      "sourceUrl": "https://huggingface.co/deepseek-ai/DeepSeek-R1-Distill-Qwen-32B",
+      "evaluatedAt": "2025-01-20",
+      "notes": "GPQA Diamond pass@1"
+    },
+    {
+      "benchmarkSlug": "livecodebench",
+      "score": 57.2,
+      "source": "self-reported",
+      "sourceUrl": "https://huggingface.co/deepseek-ai/DeepSeek-R1-Distill-Qwen-32B",
+      "evaluatedAt": "2025-01-20",
+      "notes": "LiveCodeBench pass@1"
+    },
+    {
+      "benchmarkSlug": "codeforces",
+      "score": 1691,
+      "source": "self-reported",
+      "sourceUrl": "https://huggingface.co/deepseek-ai/DeepSeek-R1-Distill-Qwen-32B",
+      "evaluatedAt": "2025-01-20",
+      "notes": "Codeforces rating"
+    }
+  ],
+  "verificationNotes": "Confirmed via HF model card: derived from Qwen2.5-32B (Apache 2.0), fine-tuned on 800k R1-generated samples. All 5 result rows confirmed literally on the HF card."
+}

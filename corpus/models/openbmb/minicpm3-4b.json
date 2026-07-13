@@ -1,0 +1,91 @@
+{
+  "name": "MiniCPM3-4B",
+  "org": "OpenBMB",
+  "family": "MiniCPM 3",
+  "releaseDate": "2024-09-05",
+  "status": "released",
+  "openness": "open-weights",
+  "license": "MiniCPM Model License (custom; free for research and, after registration, commercial use) + Apache-2.0 code",
+  "paramsB": 4,
+  "activeParamsB": null,
+  "archClass": "dense",
+  "archDisplay": "Dense causal transformer (third-gen MiniCPM)",
+  "ctxK": 32,
+  "modalities": [
+    "text"
+  ],
+  "langCount": 2,
+  "capabilities": {
+    "reasoning": false,
+    "coding": true,
+    "vision": false,
+    "functionCalling": true,
+    "toolUse": true,
+    "agentic": true
+  },
+  "apiAvailable": false,
+  "price": null,
+  "links": {
+    "hf": "openbmb/MiniCPM3-4B",
+    "gh": "OpenBMB/MiniCPM"
+  },
+  "note": "Third-gen 4B on-device LLM with function calling and code interpreter, outperforming GPT-3.5-Turbo-0125 and Phi-3.5-mini.",
+  "quants": [
+    "GGUF Q4_K_M",
+    "GGUF Q5_K_M",
+    "GGUF Q8_0"
+  ],
+  "vramQ4Gb": 3,
+  "vramFp16Gb": 8,
+  "tps4090": null,
+  "tpsNote": null,
+  "effortLabel": null,
+  "isDefaultConfig": true,
+  "isBestConfig": true,
+  "specSources": {
+    "paramsB": "https://huggingface.co/openbmb/MiniCPM3-4B",
+    "ctxK": "https://huggingface.co/openbmb/MiniCPM3-4B",
+    "releaseDate": "https://www.marktechpost.com/2024/09/11/minicpm3-4b-released-by-openbmb-a-versatile-and-efficient-language-model-with-advanced-functionality-extended-context-handling-and-code-generation-capabilities/",
+    "openness": "https://huggingface.co/openbmb/MiniCPM3-4B"
+  },
+  "results": [
+    {
+      "benchmarkSlug": "mmlu",
+      "score": 67.2,
+      "source": "self-reported",
+      "sourceUrl": "https://huggingface.co/openbmb/MiniCPM3-4B",
+      "evaluatedAt": "2024-09-01"
+    },
+    {
+      "benchmarkSlug": "gsm8k",
+      "score": 81.1,
+      "source": "self-reported",
+      "sourceUrl": "https://huggingface.co/openbmb/MiniCPM3-4B",
+      "evaluatedAt": "2024-09-01"
+    },
+    {
+      "benchmarkSlug": "humaneval",
+      "score": 68.3,
+      "source": "self-reported",
+      "sourceUrl": "https://huggingface.co/openbmb/MiniCPM3-4B",
+      "evaluatedAt": "2024-09-01",
+      "notes": "HumanEval+"
+    },
+    {
+      "benchmarkSlug": "bfcl",
+      "score": 76,
+      "source": "self-reported",
+      "sourceUrl": "https://huggingface.co/openbmb/MiniCPM3-4B",
+      "evaluatedAt": "2024-09-01",
+      "notes": "BFCL v2 function-calling benchmark"
+    },
+    {
+      "benchmarkSlug": "mt-bench",
+      "score": 8.41,
+      "source": "self-reported",
+      "sourceUrl": "https://huggingface.co/openbmb/MiniCPM3-4B",
+      "evaluatedAt": "2024-09-01"
+    }
+  ],
+  "verificationNotes": "Confirmed real, independently re-fetched HF model card: 4B params, 32k native context, MiniCPM Model License (weights) + Apache-2.0 (code), function calling + code interpreter support. Release date 2024-09-05 corroborated by MarkTechPost coverage (2024-09-11) and OpenBMB's own announcement tweet; all five benchmark numbers (MMLU 67.2, GSM8K 81.1, HumanEval+ 68.3, BFCL v2 76.0, MT-Bench 8.41) confirmed present on the HF model card."
+}

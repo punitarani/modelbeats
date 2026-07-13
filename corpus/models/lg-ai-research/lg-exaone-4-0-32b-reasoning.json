@@ -1,0 +1,95 @@
+{
+  "name": "LG EXAONE 4.0 32B (Reasoning)",
+  "org": "LG AI Research",
+  "family": "EXAONE 4.0",
+  "releaseDate": "2025-07-15",
+  "status": "released",
+  "openness": "open-weights",
+  "license": "EXAONE AI Model License Agreement 1.2 (NC)",
+  "paramsB": 32,
+  "activeParamsB": null,
+  "archClass": "dense",
+  "archDisplay": "Dense hybrid-attention transformer, 64 layers, local:global attention 3:1, GQA (40Q/8KV), QK-Reorder-Norm; single checkpoint with toggleable non-reasoning/reasoning modes",
+  "ctxK": 131,
+  "modalities": [
+    "text"
+  ],
+  "langCount": 3,
+  "capabilities": {
+    "reasoning": true,
+    "coding": true,
+    "vision": false,
+    "functionCalling": true,
+    "toolUse": true,
+    "agentic": true
+  },
+  "apiAvailable": false,
+  "price": null,
+  "links": {
+    "hf": "LGAI-EXAONE/EXAONE-4.0-32B",
+    "gh": "LG-AI-EXAONE/EXAONE-4.0"
+  },
+  "note": "Opt-in reasoning (enable_thinking=True) mode of Korea's first open-weight hybrid model; highest 32B-class score on math/coding/knowledge benchmarks.",
+  "quants": [
+    "FP8",
+    "GGUF Q4"
+  ],
+  "vramQ4Gb": 20,
+  "vramFp16Gb": 64,
+  "tps4090": null,
+  "tpsNote": null,
+  "effortLabel": "Reasoning",
+  "isDefaultConfig": false,
+  "isBestConfig": true,
+  "specSources": {
+    "paramsB": "https://huggingface.co/LGAI-EXAONE/EXAONE-4.0-32B",
+    "ctxK": "https://huggingface.co/LGAI-EXAONE/EXAONE-4.0-32B",
+    "releaseDate": "https://www.prnewswire.com/news-releases/lg-unveils-koreas-first-open-weight-hybrid-ai-exaone-4-0-302505577.html",
+    "openness": "https://huggingface.co/LGAI-EXAONE/EXAONE-4.0-32B"
+  },
+  "results": [
+    {
+      "benchmarkSlug": "mmlu-redux",
+      "score": 92.3,
+      "source": "self-reported",
+      "sourceUrl": "https://arxiv.org/abs/2507.11407",
+      "notes": "Reasoning mode"
+    },
+    {
+      "benchmarkSlug": "mmlu-pro",
+      "score": 81.8,
+      "source": "self-reported",
+      "sourceUrl": "https://arxiv.org/abs/2507.11407",
+      "notes": "Reasoning mode"
+    },
+    {
+      "benchmarkSlug": "gpqa",
+      "score": 75.4,
+      "source": "self-reported",
+      "sourceUrl": "https://arxiv.org/abs/2507.11407",
+      "notes": "GPQA-Diamond, reasoning mode"
+    },
+    {
+      "benchmarkSlug": "aime",
+      "score": 85.3,
+      "source": "self-reported",
+      "sourceUrl": "https://arxiv.org/abs/2507.11407",
+      "notes": "AIME 2025, reasoning mode"
+    },
+    {
+      "benchmarkSlug": "livecodebench",
+      "score": 72.6,
+      "source": "self-reported",
+      "sourceUrl": "https://arxiv.org/abs/2507.11407",
+      "notes": "LiveCodeBench v5, reasoning mode"
+    },
+    {
+      "benchmarkSlug": "ifeval",
+      "score": 83.7,
+      "source": "self-reported",
+      "sourceUrl": "https://arxiv.org/abs/2507.11407",
+      "notes": "Reasoning mode"
+    }
+  ],
+  "verificationNotes": "Same underlying checkpoint as the non-reasoning entry, verified identically (HF card, PR Newswire, release date, license, context, capabilities). LG's own PR Newswire release independently cites the reasoning-mode headline numbers (MMLU-Redux/Pro 92.3/81.8, GPQA-Diamond 75.4, AIME2025 85.3), corroborating them outside the paper. Fetched arxiv.org/html/2507.11407 and confirmed all 6 reasoning-mode rows (Table 3) match exactly: MMLU-Redux 92.3, MMLU-Pro 81.8, GPQA-Diamond 75.4, AIME2025 85.3, LiveCodeBench v5 72.6, IFEval 83.7 — no changes."
+}

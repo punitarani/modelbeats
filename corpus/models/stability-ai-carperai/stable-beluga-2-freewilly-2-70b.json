@@ -1,0 +1,60 @@
+{
+  "name": "Stable Beluga 2 (FreeWilly 2) 70B",
+  "org": "Stability AI (CarperAI)",
+  "family": "Stable Beluga (FreeWilly)",
+  "releaseDate": "2023-07-21",
+  "status": "released",
+  "openness": "open-weights",
+  "license": "Stable Beluga Non-Commercial Community License Agreement",
+  "paramsB": 70,
+  "activeParamsB": null,
+  "archClass": "dense",
+  "archDisplay": "Llama 2 70B dense Transformer, Orca-style supervised fine-tune",
+  "ctxK": 4,
+  "modalities": [
+    "text"
+  ],
+  "langCount": null,
+  "capabilities": {
+    "reasoning": true,
+    "coding": false,
+    "vision": false,
+    "functionCalling": false,
+    "toolUse": false,
+    "agentic": false
+  },
+  "apiAvailable": false,
+  "price": null,
+  "links": {
+    "hf": "stabilityai/StableBeluga2"
+  },
+  "note": "Briefly #1 on the HF Open LLM Leaderboard (Jul 27 2023); Llama 2 70B fine-tuned on ~600K Orca-style synthetic examples.",
+  "quants": [
+    "GGML",
+    "GGUF",
+    "GPTQ"
+  ],
+  "vramQ4Gb": 40,
+  "vramFp16Gb": 140,
+  "tps4090": null,
+  "tpsNote": null,
+  "effortLabel": null,
+  "isDefaultConfig": true,
+  "isBestConfig": true,
+  "specSources": {
+    "paramsB": "https://huggingface.co/stabilityai/StableBeluga2",
+    "ctxK": "https://huggingface.co/stabilityai/StableBeluga2",
+    "releaseDate": "https://stability.ai/news/stable-beluga-large-instruction-fine-tuned-models",
+    "openness": "https://huggingface.co/stabilityai/StableBeluga2"
+  },
+  "results": [
+    {
+      "benchmarkSlug": "mmlu",
+      "score": 68.8,
+      "source": "independent",
+      "sourceUrl": "https://patmcguinness.substack.com/p/fantastic-ai-models-and-where-to-ec5",
+      "notes": "article states verbatim: 'StableBeluga2 ... get 68.8 on MMLU'"
+    }
+  ],
+  "verificationNotes": "CONFIRMED real via HF model card raw README (stabilityai/StableBeluga2) and Stability AI's blog post (Jul 21 2023, updated Jul 28): Llama-2-70B base, Orca-style SFT, licensed under 'STABLE BELUGA NON-COMMERCIAL COMMUNITY LICENSE AGREEMENT' exactly as the card states (matches record). Blog confirms Stable Beluga 2 ranked #1 on HF Open LLM Leaderboard as of Jul 27 2023 — matches the note. MMLU 68.8 result CONFIRMED verbatim on patmcguinness.substack.com. DROPPED the open-llm-leaderboard-avg 71.4 result row: fetched winbuzzer.com's article twice (different objectives) and both times it discussed the ranking/GPT-3.5 comparison but contained no numeric aggregate leaderboard score anywhere on the page, so the figure could not be verified there and was removed."
+}

@@ -1,0 +1,2344 @@
+{
+  "summary": "Deep research + adversarial verification for P2 gap partition 9 (21 models)",
+  "agentCount": 8,
+  "logs": [
+    "gap-part9: 21 models",
+    "research: 26 models researched, 0 rejected as unconfirmable",
+    "verify: 26 models confirmed, 0 rejected by verification"
+  ],
+  "result": {
+    "inputCount": 21,
+    "researchedCount": 26,
+    "finalCount": 26,
+    "rejected": [],
+    "models": [
+      {
+        "name": "GPT-3 175B",
+        "org": "OpenAI",
+        "family": "GPT-3",
+        "releaseDate": "2020-06-11",
+        "status": "deprecated",
+        "openness": "closed",
+        "license": "Proprietary",
+        "paramsB": 175,
+        "activeParamsB": null,
+        "archClass": "dense",
+        "archDisplay": "Dense decoder-only Transformer",
+        "ctxK": 2,
+        "modalities": [
+          "text"
+        ],
+        "langCount": null,
+        "capabilities": {
+          "reasoning": false,
+          "coding": false,
+          "vision": false,
+          "functionCalling": false,
+          "toolUse": false,
+          "agentic": false
+        },
+        "apiAvailable": false,
+        "price": null,
+        "links": {
+          "gh": "openai/gpt-3"
+        },
+        "note": "175B few-shot learner that launched the OpenAI API in private beta; base GPT-3 models were retired from the API on 2024-01-04.",
+        "quants": [],
+        "vramQ4Gb": null,
+        "vramFp16Gb": null,
+        "tps4090": null,
+        "tpsNote": null,
+        "effortLabel": null,
+        "isDefaultConfig": true,
+        "isBestConfig": true,
+        "specSources": {
+          "paramsB": "https://arxiv.org/abs/2005.14165",
+          "ctxK": "https://subscription.packtpub.com/book/data/9781800563193/2/ch02lvl1sec06/understanding-prompts-completions-and-tokens",
+          "releaseDate": "https://en.wikipedia.org/wiki/GPT-3",
+          "openness": "https://en.wikipedia.org/wiki/GPT-3"
+        },
+        "results": [
+          {
+            "benchmarkSlug": "lambada",
+            "score": 86.4,
+            "source": "self-reported",
+            "sourceUrl": "https://arxiv.org/abs/2005.14165",
+            "notes": "few-shot"
+          },
+          {
+            "benchmarkSlug": "hellaswag",
+            "score": 79.3,
+            "source": "self-reported",
+            "sourceUrl": "https://arxiv.org/abs/2005.14165",
+            "notes": "few-shot"
+          },
+          {
+            "benchmarkSlug": "trivia-qa",
+            "score": 71.2,
+            "source": "self-reported",
+            "sourceUrl": "https://arxiv.org/abs/2005.14165",
+            "notes": "few-shot, closed-book"
+          }
+        ],
+        "verificationNotes": "Confirmed via arXiv 2005.14165: 175B params, nctx=2048 (2K) context. LAMBADA 86.4 / HellaSwag 79.3 / TriviaQA 71.2 few-shot figures independently re-derived and match the paper. API private beta launch June 11, 2020 confirmed via TechCrunch. Base-model API retirement on 2024-01-04 confirmed (OpenAI's largest deprecation event). No changes made."
+      },
+      {
+        "name": "OpenAI Codex",
+        "org": "OpenAI",
+        "family": "Codex",
+        "releaseDate": "2021-08-10",
+        "status": "deprecated",
+        "openness": "closed",
+        "license": "Proprietary",
+        "paramsB": 12,
+        "activeParamsB": null,
+        "archClass": "dense",
+        "archDisplay": "Dense decoder-only Transformer (GPT-3 fine-tuned on code)",
+        "ctxK": 4,
+        "modalities": [
+          "text"
+        ],
+        "langCount": null,
+        "capabilities": {
+          "reasoning": false,
+          "coding": true,
+          "vision": false,
+          "functionCalling": false,
+          "toolUse": false,
+          "agentic": false
+        },
+        "apiAvailable": false,
+        "price": null,
+        "links": {
+          "gh": "openai/human-eval"
+        },
+        "note": "GPT-3 fine-tuned on GitHub code; powered the original GitHub Copilot and introduced the HumanEval benchmark; Codex API discontinued 2023-03-23.",
+        "quants": [],
+        "vramQ4Gb": null,
+        "vramFp16Gb": null,
+        "tps4090": null,
+        "tpsNote": null,
+        "effortLabel": null,
+        "isDefaultConfig": true,
+        "isBestConfig": true,
+        "specSources": {
+          "paramsB": "https://en.wikipedia.org/wiki/OpenAI_Codex_(language_model)",
+          "ctxK": "https://community.openai.com/t/codex-context-length-of-4096-tokens/9780",
+          "releaseDate": "https://aiwiki.ai/wiki/openai_codex",
+          "openness": "https://aiwiki.ai/wiki/openai_codex"
+        },
+        "results": [
+          {
+            "benchmarkSlug": "humaneval",
+            "score": 28.8,
+            "source": "self-reported",
+            "sourceUrl": "https://arxiv.org/abs/2107.03374",
+            "notes": "pass@1, 12B code-davinci model"
+          }
+        ],
+        "verificationNotes": "Confirmed via arXiv 2107.03374: 12B-parameter model, HumanEval pass@1 28.8% matches the paper exactly. Codex API shutdown confirmed for 2023-03-23 (Simon Willison/HN coverage of OpenAI's 3-day-notice discontinuation), matching the record. Launch alongside GitHub Copilot in August 2021 confirmed. No changes made."
+      },
+      {
+        "name": "GPT-3.5 Turbo",
+        "org": "OpenAI",
+        "family": "GPT-3.5",
+        "releaseDate": "2023-03-01",
+        "status": "released",
+        "openness": "closed",
+        "license": "Proprietary",
+        "paramsB": null,
+        "activeParamsB": null,
+        "archClass": "dense",
+        "archDisplay": "Transformer (architecture undisclosed)",
+        "ctxK": 16,
+        "modalities": [
+          "text"
+        ],
+        "langCount": null,
+        "capabilities": {
+          "reasoning": false,
+          "coding": true,
+          "vision": false,
+          "functionCalling": true,
+          "toolUse": true,
+          "agentic": false
+        },
+        "apiAvailable": true,
+        "price": {
+          "input": 0.5,
+          "output": 1.5,
+          "provider": "OpenAI"
+        },
+        "links": {
+          "docs": "developers.openai.com/api/docs/models/gpt-3.5-turbo"
+        },
+        "note": "Chat-tuned model behind ChatGPT's Nov 2022 launch; still served today with a 16K context window at $0.50/$1.50 per million tokens.",
+        "quants": [],
+        "vramQ4Gb": null,
+        "vramFp16Gb": null,
+        "tps4090": null,
+        "tpsNote": null,
+        "effortLabel": null,
+        "isDefaultConfig": true,
+        "isBestConfig": true,
+        "specSources": {
+          "releaseDate": "https://aiwiki.ai/wiki/openai_api",
+          "ctxK": "https://developers.openai.com/api/docs/models/gpt-3.5-turbo",
+          "openness": "https://developers.openai.com/api/docs/models/gpt-3.5-turbo"
+        },
+        "results": [
+          {
+            "benchmarkSlug": "mmlu",
+            "score": 70,
+            "source": "self-reported",
+            "sourceUrl": "https://arxiv.org/abs/2303.08774",
+            "notes": "reported in GPT-4 technical report comparison table"
+          },
+          {
+            "benchmarkSlug": "hellaswag",
+            "score": 85.5,
+            "source": "self-reported",
+            "sourceUrl": "https://arxiv.org/abs/2303.08774"
+          },
+          {
+            "benchmarkSlug": "arc-challenge",
+            "score": 85.2,
+            "source": "self-reported",
+            "sourceUrl": "https://arxiv.org/abs/2303.08774"
+          },
+          {
+            "benchmarkSlug": "winogrande",
+            "score": 81.6,
+            "source": "self-reported",
+            "sourceUrl": "https://arxiv.org/abs/2303.08774"
+          },
+          {
+            "benchmarkSlug": "humaneval",
+            "score": 48.1,
+            "source": "self-reported",
+            "sourceUrl": "https://arxiv.org/abs/2303.08774"
+          },
+          {
+            "benchmarkSlug": "drop",
+            "score": 64.1,
+            "source": "self-reported",
+            "sourceUrl": "https://arxiv.org/abs/2303.08774",
+            "notes": "F1 score"
+          },
+          {
+            "benchmarkSlug": "gsm8k",
+            "score": 57.1,
+            "source": "self-reported",
+            "sourceUrl": "https://arxiv.org/abs/2303.08774"
+          }
+        ],
+        "verificationNotes": "Release confirmed March 1, 2023 via OpenAI's 'Introducing ChatGPT and Whisper APIs' post. Current 16,385-token context and $0.50/$1.50 per-million pricing confirmed on OpenAI's live model docs page. All 7 benchmark rows (MMLU 70.0, HellaSwag 85.5, ARC 85.2, Winogrande 81.6, HumanEval 48.1, DROP 64.1 F1, GSM8K 57.1) verified to literally appear in arXiv 2303.08774's GPT-3.5 comparison column. No changes made."
+      },
+      {
+        "name": "GPT-4",
+        "org": "OpenAI",
+        "family": "GPT-4",
+        "releaseDate": "2023-03-14",
+        "status": "released",
+        "openness": "closed",
+        "license": "Proprietary",
+        "paramsB": null,
+        "activeParamsB": null,
+        "archClass": "moe",
+        "archDisplay": "Transformer; widely reported (unconfirmed by OpenAI) as an ~8x220B mixture-of-experts",
+        "ctxK": 8,
+        "modalities": [
+          "text",
+          "vision"
+        ],
+        "langCount": null,
+        "capabilities": {
+          "reasoning": false,
+          "coding": true,
+          "vision": true,
+          "functionCalling": true,
+          "toolUse": true,
+          "agentic": false
+        },
+        "apiAvailable": true,
+        "price": {
+          "input": 30,
+          "output": 60,
+          "provider": "OpenAI"
+        },
+        "links": {
+          "docs": "developers.openai.com/api/docs/models/gpt-4"
+        },
+        "note": "First GPT-4; multimodal text+image input, 8K default context (32K gpt-4-32k variant, since deprecated); large reasoning jump over GPT-3.5.",
+        "quants": [],
+        "vramQ4Gb": null,
+        "vramFp16Gb": null,
+        "tps4090": null,
+        "tpsNote": null,
+        "effortLabel": null,
+        "isDefaultConfig": true,
+        "isBestConfig": true,
+        "specSources": {
+          "releaseDate": "https://openai.com/index/gpt-4-research/",
+          "ctxK": "https://developers.openai.com/api/docs/models/gpt-4",
+          "openness": "https://openai.com/index/gpt-4-research/"
+        },
+        "results": [
+          {
+            "benchmarkSlug": "mmlu",
+            "score": 86.4,
+            "source": "self-reported",
+            "sourceUrl": "https://arxiv.org/abs/2303.08774"
+          },
+          {
+            "benchmarkSlug": "hellaswag",
+            "score": 95.3,
+            "source": "self-reported",
+            "sourceUrl": "https://arxiv.org/abs/2303.08774"
+          },
+          {
+            "benchmarkSlug": "arc-challenge",
+            "score": 96.3,
+            "source": "self-reported",
+            "sourceUrl": "https://arxiv.org/abs/2303.08774"
+          },
+          {
+            "benchmarkSlug": "winogrande",
+            "score": 87.5,
+            "source": "self-reported",
+            "sourceUrl": "https://arxiv.org/abs/2303.08774"
+          },
+          {
+            "benchmarkSlug": "humaneval",
+            "score": 67,
+            "source": "self-reported",
+            "sourceUrl": "https://arxiv.org/abs/2303.08774"
+          },
+          {
+            "benchmarkSlug": "drop",
+            "score": 80.9,
+            "source": "self-reported",
+            "sourceUrl": "https://arxiv.org/abs/2303.08774",
+            "notes": "F1 score"
+          },
+          {
+            "benchmarkSlug": "gsm8k",
+            "score": 92,
+            "source": "self-reported",
+            "sourceUrl": "https://arxiv.org/abs/2303.08774",
+            "notes": "training set partially contaminated per OpenAI's own footnote"
+          }
+        ],
+        "verificationNotes": "Release March 14, 2023 confirmed (TechCrunch/Wikipedia); 8K default / 32K variant context and $30/$60 per-million pricing confirmed via multiple independent sources. All 7 benchmark rows (MMLU 86.4, HellaSwag 95.3, ARC 96.3, Winogrande 87.5, HumanEval 67.0, DROP 80.9 F1, GSM8K 92.0) verified literally in arXiv 2303.08774 Table 2 (fetched directly). No changes made."
+      },
+      {
+        "name": "GPT-4 Turbo",
+        "org": "OpenAI",
+        "family": "GPT-4",
+        "releaseDate": "2023-11-06",
+        "status": "released",
+        "openness": "closed",
+        "license": "Proprietary",
+        "paramsB": null,
+        "activeParamsB": null,
+        "archClass": "moe",
+        "archDisplay": "Transformer; widely reported (unconfirmed) GPT-4-generation mixture-of-experts",
+        "ctxK": 128,
+        "modalities": [
+          "text",
+          "vision"
+        ],
+        "langCount": null,
+        "capabilities": {
+          "reasoning": false,
+          "coding": true,
+          "vision": true,
+          "functionCalling": true,
+          "toolUse": true,
+          "agentic": false
+        },
+        "apiAvailable": true,
+        "price": {
+          "input": 10,
+          "output": 30,
+          "provider": "OpenAI"
+        },
+        "links": {
+          "docs": "developers.openai.com/api/docs/models/gpt-4-turbo"
+        },
+        "note": "128K-context, cheaper GPT-4 announced at OpenAI's first DevDay; current default snapshot gpt-4-turbo-2024-04-09 carries a Dec 2023 knowledge cutoff.",
+        "quants": [],
+        "vramQ4Gb": null,
+        "vramFp16Gb": null,
+        "tps4090": null,
+        "tpsNote": null,
+        "effortLabel": null,
+        "isDefaultConfig": true,
+        "isBestConfig": true,
+        "specSources": {
+          "releaseDate": "https://hidekazu-konishi.com/entry/openai_gpt_model_release_timeline.html",
+          "ctxK": "https://developers.openai.com/api/docs/models/gpt-4-turbo",
+          "openness": "https://developers.openai.com/api/docs/models/gpt-4-turbo"
+        },
+        "results": [
+          {
+            "benchmarkSlug": "mmlu",
+            "score": 86.5,
+            "source": "independent",
+            "sourceUrl": "https://telnyx.com/llm-library/gpt-4-1106-preview",
+            "notes": "gpt-4-1106-preview, 5-shot"
+          },
+          {
+            "benchmarkSlug": "arena",
+            "score": 1251,
+            "source": "arena",
+            "sourceUrl": "https://telnyx.com/llm-library/gpt-4-1106-preview",
+            "notes": "LMSYS Chatbot Arena Elo (historical), gpt-4-1106-preview"
+          }
+        ],
+        "verificationNotes": "DevDay announcement Nov 6, 2023 confirmed (OpenAI/CNBC); 128K context and $10/$30 per-million pricing confirmed via OpenAI's own DevDay post and current docs. Both result rows (MMLU 86.5 5-shot; Arena Elo 1251) verified literally on the cited Telnyx page (fetched directly, confirmed exact text). No changes made."
+      },
+      {
+        "name": "GPT-4o",
+        "org": "OpenAI",
+        "family": "GPT-4o",
+        "releaseDate": "2024-05-13",
+        "status": "released",
+        "openness": "closed",
+        "license": "Proprietary",
+        "paramsB": null,
+        "activeParamsB": null,
+        "archClass": "dense",
+        "archDisplay": "Transformer (architecture undisclosed); natively multimodal single model",
+        "ctxK": 128,
+        "modalities": [
+          "text",
+          "vision",
+          "audio"
+        ],
+        "langCount": null,
+        "capabilities": {
+          "reasoning": false,
+          "coding": true,
+          "vision": true,
+          "functionCalling": true,
+          "toolUse": true,
+          "agentic": false
+        },
+        "apiAvailable": true,
+        "price": {
+          "input": 2.5,
+          "output": 10,
+          "provider": "OpenAI"
+        },
+        "links": {
+          "docs": "developers.openai.com/api/docs/models/gpt-4o"
+        },
+        "note": "Natively multimodal 'omni' flagship; the chat-completions API serves text+vision, with audio native to the underlying model exposed via separate Realtime/Audio endpoints.",
+        "quants": [],
+        "vramQ4Gb": null,
+        "vramFp16Gb": null,
+        "tps4090": null,
+        "tpsNote": null,
+        "effortLabel": null,
+        "isDefaultConfig": true,
+        "isBestConfig": true,
+        "specSources": {
+          "releaseDate": "https://en.wikipedia.org/wiki/GPT-4o",
+          "ctxK": "https://developers.openai.com/api/docs/models/gpt-4o",
+          "openness": "https://developers.openai.com/api/docs/models/gpt-4o"
+        },
+        "results": [
+          {
+            "benchmarkSlug": "mmlu",
+            "score": 88.7,
+            "source": "self-reported",
+            "sourceUrl": "https://en.wikipedia.org/wiki/GPT-4o"
+          },
+          {
+            "benchmarkSlug": "gpqa",
+            "score": 53.6,
+            "source": "independent",
+            "sourceUrl": "https://community.openai.com/t/education-level-interpretation-of-gpt-4os-benchmarks/763947",
+            "notes": "OpenAI-reported figure, mirrored on this community thread since the original openai.com post blocks automated fetching"
+          },
+          {
+            "benchmarkSlug": "math",
+            "score": 76.6,
+            "source": "independent",
+            "sourceUrl": "https://community.openai.com/t/education-level-interpretation-of-gpt-4os-benchmarks/763947",
+            "notes": "OpenAI-reported figure, mirrored on this community thread since the original openai.com post blocks automated fetching"
+          },
+          {
+            "benchmarkSlug": "humaneval",
+            "score": 90.2,
+            "source": "independent",
+            "sourceUrl": "https://community.openai.com/t/education-level-interpretation-of-gpt-4os-benchmarks/763947",
+            "notes": "OpenAI-reported figure, mirrored on this community thread since the original openai.com post blocks automated fetching"
+          },
+          {
+            "benchmarkSlug": "mgsm",
+            "score": 90.5,
+            "source": "independent",
+            "sourceUrl": "https://community.openai.com/t/education-level-interpretation-of-gpt-4os-benchmarks/763947",
+            "notes": "Multilingual Grade School Math; OpenAI-reported figure, mirrored on this community thread since the original openai.com post blocks automated fetching"
+          }
+        ],
+        "verificationNotes": "Release May 13, 2024 confirmed (Wikipedia); 128K context and $2.50/$10 per-million pricing confirmed via multiple independent pricing pages. MMLU 88.7 verified literally on the cited Wikipedia page. However, Wikipedia's GPT-4o article does NOT literally contain the GPQA/MATH/HumanEval/MGSM numbers (directly fetched and confirmed only MMLU is present there) — the original sourceUrl was wrong for those 4 rows. OpenAI's primary announcement (openai.com/index/hello-gpt-4o/) returned HTTP 403 to automated fetch, so I re-sourced those 4 rows to a community.openai.com thread I fetched directly and confirmed contains the exact literal figures (53.6/76.6/90.2/90.5), changing their source type to 'independent'."
+      },
+      {
+        "name": "OpenAI o3-mini (Medium)",
+        "org": "OpenAI",
+        "family": "o3",
+        "releaseDate": "2025-01-31",
+        "status": "released",
+        "openness": "closed",
+        "license": "Proprietary",
+        "paramsB": null,
+        "activeParamsB": null,
+        "archClass": "dense",
+        "archDisplay": "Transformer reasoning model (architecture undisclosed)",
+        "ctxK": 200,
+        "modalities": [
+          "text"
+        ],
+        "langCount": null,
+        "capabilities": {
+          "reasoning": true,
+          "coding": true,
+          "vision": false,
+          "functionCalling": true,
+          "toolUse": true,
+          "agentic": false
+        },
+        "apiAvailable": true,
+        "price": {
+          "input": 1.1,
+          "output": 4.4,
+          "provider": "OpenAI"
+        },
+        "links": {
+          "docs": "developers.openai.com/api/docs/models/o3-mini"
+        },
+        "note": "Cost-efficient reasoning model with selectable reasoning_effort; medium is the ChatGPT free-tier default, shipped amid the DeepSeek R1 wave.",
+        "quants": [],
+        "vramQ4Gb": null,
+        "vramFp16Gb": null,
+        "tps4090": null,
+        "tpsNote": null,
+        "effortLabel": "Medium",
+        "isDefaultConfig": true,
+        "isBestConfig": false,
+        "specSources": {
+          "releaseDate": "https://techcrunch.com/2025/01/31/openai-launches-o3-mini-its-latest-reasoning-model/",
+          "ctxK": "https://developers.openai.com/api/docs/models/o3-mini",
+          "openness": "https://developers.openai.com/api/docs/models/o3-mini"
+        },
+        "results": [
+          {
+            "benchmarkSlug": "gpqa",
+            "score": 77,
+            "source": "self-reported",
+            "sourceUrl": "https://lifearchitect.ai/o3/",
+            "notes": "GPQA Diamond, medium reasoning effort"
+          },
+          {
+            "benchmarkSlug": "aime",
+            "score": 76.7,
+            "source": "independent",
+            "sourceUrl": "https://arxiv.org/abs/2505.23281",
+            "notes": "AIME 2025 (MathArena eval), medium reasoning effort — corrected from '2024': MathArena's 'AIME' column evaluates AIME 2025 I/II, not AIME 2024"
+          }
+        ],
+        "verificationNotes": "Existence and release date (2025-01-31) confirmed via TechCrunch and OpenAI's own o3-mini page. Context window (200K) and pricing ($1.10/$4.40 per M tokens) confirmed live on developers.openai.com/api/docs/models/o3-mini, matching record exactly. GPQA Diamond medium=77.0 confirmed literally present on lifearchitect.ai/o3/. AIME score 76.7 confirmed literally present in MathArena paper (arXiv:2505.23281v3, Table 6, row 'O3-MINI (MEDIUM)', AIME column) via direct PDF read — but corrected the notes field: MathArena's 'AIME' column is AIME 2025 (refs [2],[3] cite '2025 aime i/ii'), not AIME 2024 as the original record claimed. Architecture remains officially undisclosed by OpenAI (paramsB/activeParamsB correctly left null)."
+      },
+      {
+        "name": "OpenAI o3-mini (High)",
+        "org": "OpenAI",
+        "family": "o3",
+        "releaseDate": "2025-01-31",
+        "status": "released",
+        "openness": "closed",
+        "license": "Proprietary",
+        "paramsB": null,
+        "activeParamsB": null,
+        "archClass": "dense",
+        "archDisplay": "Transformer reasoning model (architecture undisclosed)",
+        "ctxK": 200,
+        "modalities": [
+          "text"
+        ],
+        "langCount": null,
+        "capabilities": {
+          "reasoning": true,
+          "coding": true,
+          "vision": false,
+          "functionCalling": true,
+          "toolUse": true,
+          "agentic": false
+        },
+        "apiAvailable": true,
+        "price": {
+          "input": 1.1,
+          "output": 4.4,
+          "provider": "OpenAI"
+        },
+        "links": {
+          "docs": "developers.openai.com/api/docs/models/o3-mini"
+        },
+        "note": "Highest reasoning_effort tier; posted a Codeforces Elo well above o3-mini-medium/low and o1-mini among models OpenAI compared at its Jan 2025 launch.",
+        "quants": [],
+        "vramQ4Gb": null,
+        "vramFp16Gb": null,
+        "tps4090": null,
+        "tpsNote": null,
+        "effortLabel": "High",
+        "isDefaultConfig": false,
+        "isBestConfig": true,
+        "specSources": {
+          "releaseDate": "https://techcrunch.com/2025/01/31/openai-launches-o3-mini-its-latest-reasoning-model/",
+          "ctxK": "https://developers.openai.com/api/docs/models/o3-mini",
+          "openness": "https://developers.openai.com/api/docs/models/o3-mini"
+        },
+        "results": [
+          {
+            "benchmarkSlug": "gpqa",
+            "score": 79.7,
+            "source": "self-reported",
+            "sourceUrl": "https://lifearchitect.ai/o3/",
+            "notes": "GPQA Diamond, high reasoning effort"
+          },
+          {
+            "benchmarkSlug": "aime",
+            "score": 87.3,
+            "source": "self-reported",
+            "sourceUrl": "https://www.analyticsvidhya.com/blog/2025/02/openai-o3-mini/",
+            "notes": "AIME 2024, high reasoning effort (OpenAI-reported)"
+          },
+          {
+            "benchmarkSlug": "aime",
+            "score": 86.7,
+            "source": "independent",
+            "sourceUrl": "https://arxiv.org/abs/2505.23281",
+            "notes": "AIME 2025 (MathArena eval), high reasoning effort — corrected from '2024': MathArena's 'AIME' column evaluates AIME 2025 I/II, not AIME 2024"
+          },
+          {
+            "benchmarkSlug": "swe-bench",
+            "score": 49.3,
+            "source": "self-reported",
+            "sourceUrl": "https://www.analyticsvidhya.com/blog/2025/02/openai-o3-mini/",
+            "notes": "SWE-bench Verified, high reasoning effort"
+          }
+        ],
+        "verificationNotes": "Existence, release date, context window, and pricing confirmed identically to the Medium variant. GPQA Diamond high=79.7 confirmed literally on lifearchitect.ai/o3/. AIME=87.3 and SWE-bench=49.3 confirmed literally present on analyticsvidhya.com blog. AIME=86.7 confirmed literally present in MathArena paper (arXiv:2505.23281v3, Table 6, row 'O3-MINI (HIGH)') via direct PDF read — notes field corrected from 'AIME 2024' to 'AIME 2025' since MathArena's AIME column covers only the 2025 competitions (per its own references), not 2024."
+      },
+      {
+        "name": "gpt-oss-120b (Low)",
+        "org": "OpenAI",
+        "family": "gpt-oss",
+        "releaseDate": "2025-08-05",
+        "status": "released",
+        "openness": "open-weights",
+        "license": "Apache 2.0",
+        "paramsB": 117,
+        "activeParamsB": 5.1,
+        "archClass": "moe",
+        "archDisplay": "Mixture-of-experts transformer, 128 experts/layer, top-4 active, 36 layers",
+        "ctxK": 128,
+        "modalities": [
+          "text"
+        ],
+        "langCount": null,
+        "capabilities": {
+          "reasoning": true,
+          "coding": true,
+          "vision": false,
+          "functionCalling": true,
+          "toolUse": true,
+          "agentic": true
+        },
+        "apiAvailable": true,
+        "price": null,
+        "links": {
+          "hf": "openai/gpt-oss-120b",
+          "gh": "openai/gpt-oss",
+          "docs": "cookbook.openai.com"
+        },
+        "note": "OpenAI's first open-weight model since GPT-2; 117B MoE (5.1B active), Apache 2.0.",
+        "quants": [
+          "MXFP4 (native)",
+          "GGUF Q4_K_M",
+          "GGUF Q8_0"
+        ],
+        "vramQ4Gb": 73,
+        "vramFp16Gb": 234,
+        "tps4090": null,
+        "tpsNote": "Does not fit on a single RTX 4090 (24GB); OpenAI specifies a single 80GB GPU (H100/MI300X) for native MXFP4 inference.",
+        "effortLabel": "Low",
+        "isDefaultConfig": false,
+        "isBestConfig": false,
+        "specSources": {
+          "paramsB": "https://huggingface.co/openai/gpt-oss-120b",
+          "ctxK": "https://openai.com/index/introducing-gpt-oss/",
+          "releaseDate": "https://openai.com/index/introducing-gpt-oss/",
+          "openness": "https://huggingface.co/openai/gpt-oss-120b"
+        },
+        "results": [
+          {
+            "benchmarkSlug": "aime",
+            "score": 56.3,
+            "source": "self-reported",
+            "sourceUrl": "https://arxiv.org/abs/2508.10925",
+            "evaluatedAt": "2025-08-05",
+            "notes": "AIME 2024, no tools, low reasoning effort"
+          },
+          {
+            "benchmarkSlug": "gpqa",
+            "score": 67.1,
+            "source": "self-reported",
+            "sourceUrl": "https://arxiv.org/abs/2508.10925",
+            "evaluatedAt": "2025-08-05",
+            "notes": "GPQA Diamond, no tools, low reasoning effort"
+          },
+          {
+            "benchmarkSlug": "mmlu",
+            "score": 85.9,
+            "source": "self-reported",
+            "sourceUrl": "https://arxiv.org/abs/2508.10925",
+            "evaluatedAt": "2025-08-05",
+            "notes": "low reasoning effort"
+          },
+          {
+            "benchmarkSlug": "swe-bench",
+            "score": 47.9,
+            "source": "self-reported",
+            "sourceUrl": "https://arxiv.org/abs/2508.10925",
+            "evaluatedAt": "2025-08-05",
+            "notes": "SWE-bench Verified, low reasoning effort"
+          }
+        ],
+        "verificationNotes": "Confirmed real release via OpenAI's official gpt-oss-120b & gpt-oss-20b Model Card (arXiv:2508.10925, dated 2025-08-05) fetched directly (PDF), plus Hugging Face model card. Params: paper Table 1 gives 116.83B total / 5.13B active (record's rounded 117/5.1 is accurate). Architecture confirmed exactly against paper Section 2.2: 36 layers, 128 experts/layer, top-4 routing. Context 131,072 tokens (~128K) confirmed in paper Section 2.2. License Apache 2.0 and 'first open-weight model since GPT-2' framing both corroborated by multiple independent outlets (DeepLearning.AI, MIT Tech Review). All four benchmark scores (AIME 2024 no-tools, GPQA Diamond no-tools, MMLU, SWE-Bench Verified) confirmed byte-for-byte against Table 3 of the paper at 'low' reasoning effort."
+      },
+      {
+        "name": "gpt-oss-120b (Medium)",
+        "org": "OpenAI",
+        "family": "gpt-oss",
+        "releaseDate": "2025-08-05",
+        "status": "released",
+        "openness": "open-weights",
+        "license": "Apache 2.0",
+        "paramsB": 117,
+        "activeParamsB": 5.1,
+        "archClass": "moe",
+        "archDisplay": "Mixture-of-experts transformer, 128 experts/layer, top-4 active, 36 layers",
+        "ctxK": 128,
+        "modalities": [
+          "text"
+        ],
+        "langCount": null,
+        "capabilities": {
+          "reasoning": true,
+          "coding": true,
+          "vision": false,
+          "functionCalling": true,
+          "toolUse": true,
+          "agentic": true
+        },
+        "apiAvailable": true,
+        "price": null,
+        "links": {
+          "hf": "openai/gpt-oss-120b",
+          "gh": "openai/gpt-oss",
+          "docs": "cookbook.openai.com"
+        },
+        "note": "OpenAI's first open-weight model since GPT-2; 117B MoE (5.1B active), Apache 2.0.",
+        "quants": [
+          "MXFP4 (native)",
+          "GGUF Q4_K_M",
+          "GGUF Q8_0"
+        ],
+        "vramQ4Gb": 73,
+        "vramFp16Gb": 234,
+        "tps4090": null,
+        "tpsNote": "Does not fit on a single RTX 4090 (24GB); OpenAI specifies a single 80GB GPU (H100/MI300X) for native MXFP4 inference.",
+        "effortLabel": "Medium",
+        "isDefaultConfig": true,
+        "isBestConfig": false,
+        "specSources": {
+          "paramsB": "https://huggingface.co/openai/gpt-oss-120b",
+          "ctxK": "https://openai.com/index/introducing-gpt-oss/",
+          "releaseDate": "https://openai.com/index/introducing-gpt-oss/",
+          "openness": "https://huggingface.co/openai/gpt-oss-120b"
+        },
+        "results": [
+          {
+            "benchmarkSlug": "aime",
+            "score": 80.4,
+            "source": "self-reported",
+            "sourceUrl": "https://arxiv.org/abs/2508.10925",
+            "evaluatedAt": "2025-08-05",
+            "notes": "AIME 2024, no tools, medium reasoning effort"
+          },
+          {
+            "benchmarkSlug": "gpqa",
+            "score": 73.1,
+            "source": "self-reported",
+            "sourceUrl": "https://arxiv.org/abs/2508.10925",
+            "evaluatedAt": "2025-08-05",
+            "notes": "GPQA Diamond, no tools, medium reasoning effort"
+          },
+          {
+            "benchmarkSlug": "mmlu",
+            "score": 88,
+            "source": "self-reported",
+            "sourceUrl": "https://arxiv.org/abs/2508.10925",
+            "evaluatedAt": "2025-08-05",
+            "notes": "medium reasoning effort"
+          },
+          {
+            "benchmarkSlug": "swe-bench",
+            "score": 52.6,
+            "source": "self-reported",
+            "sourceUrl": "https://arxiv.org/abs/2508.10925",
+            "evaluatedAt": "2025-08-05",
+            "notes": "SWE-bench Verified, medium reasoning effort"
+          }
+        ],
+        "verificationNotes": "Same source verification as the Low-effort variant (arXiv:2508.10925 fetched directly, Table 1 for params/architecture, Table 3 for benchmarks). All four benchmark scores at 'medium' reasoning effort confirmed byte-for-byte against the paper's Table 3."
+      },
+      {
+        "name": "gpt-oss-120b (High)",
+        "org": "OpenAI",
+        "family": "gpt-oss",
+        "releaseDate": "2025-08-05",
+        "status": "released",
+        "openness": "open-weights",
+        "license": "Apache 2.0",
+        "paramsB": 117,
+        "activeParamsB": 5.1,
+        "archClass": "moe",
+        "archDisplay": "Mixture-of-experts transformer, 128 experts/layer, top-4 active, 36 layers",
+        "ctxK": 128,
+        "modalities": [
+          "text"
+        ],
+        "langCount": null,
+        "capabilities": {
+          "reasoning": true,
+          "coding": true,
+          "vision": false,
+          "functionCalling": true,
+          "toolUse": true,
+          "agentic": true
+        },
+        "apiAvailable": true,
+        "price": null,
+        "links": {
+          "hf": "openai/gpt-oss-120b",
+          "gh": "openai/gpt-oss",
+          "docs": "cookbook.openai.com"
+        },
+        "note": "OpenAI's first open-weight model since GPT-2; 117B MoE (5.1B active), Apache 2.0.",
+        "quants": [
+          "MXFP4 (native)",
+          "GGUF Q4_K_M",
+          "GGUF Q8_0"
+        ],
+        "vramQ4Gb": 73,
+        "vramFp16Gb": 234,
+        "tps4090": null,
+        "tpsNote": "Does not fit on a single RTX 4090 (24GB); OpenAI specifies a single 80GB GPU (H100/MI300X) for native MXFP4 inference.",
+        "effortLabel": "High",
+        "isDefaultConfig": false,
+        "isBestConfig": true,
+        "specSources": {
+          "paramsB": "https://huggingface.co/openai/gpt-oss-120b",
+          "ctxK": "https://openai.com/index/introducing-gpt-oss/",
+          "releaseDate": "https://openai.com/index/introducing-gpt-oss/",
+          "openness": "https://huggingface.co/openai/gpt-oss-120b"
+        },
+        "results": [
+          {
+            "benchmarkSlug": "aime",
+            "score": 95.8,
+            "source": "self-reported",
+            "sourceUrl": "https://arxiv.org/abs/2508.10925",
+            "evaluatedAt": "2025-08-05",
+            "notes": "AIME 2024, no tools, high reasoning effort"
+          },
+          {
+            "benchmarkSlug": "gpqa",
+            "score": 80.1,
+            "source": "self-reported",
+            "sourceUrl": "https://arxiv.org/abs/2508.10925",
+            "evaluatedAt": "2025-08-05",
+            "notes": "GPQA Diamond, no tools, high reasoning effort"
+          },
+          {
+            "benchmarkSlug": "mmlu",
+            "score": 90,
+            "source": "self-reported",
+            "sourceUrl": "https://arxiv.org/abs/2508.10925",
+            "evaluatedAt": "2025-08-05",
+            "notes": "high reasoning effort"
+          },
+          {
+            "benchmarkSlug": "swe-bench",
+            "score": 62.4,
+            "source": "self-reported",
+            "sourceUrl": "https://arxiv.org/abs/2508.10925",
+            "evaluatedAt": "2025-08-05",
+            "notes": "SWE-bench Verified, high reasoning effort"
+          }
+        ],
+        "verificationNotes": "Same source verification as the Low/Medium variants (arXiv:2508.10925 fetched directly). All four benchmark scores at 'high' reasoning effort confirmed byte-for-byte against the paper's Table 3."
+      },
+      {
+        "name": "gpt-oss-20b (Low)",
+        "org": "OpenAI",
+        "family": "gpt-oss",
+        "releaseDate": "2025-08-05",
+        "status": "released",
+        "openness": "open-weights",
+        "license": "Apache 2.0",
+        "paramsB": 21,
+        "activeParamsB": 3.6,
+        "archClass": "moe",
+        "archDisplay": "Mixture-of-experts transformer, 32 experts/layer, top-4 active, 24 layers",
+        "ctxK": 128,
+        "modalities": [
+          "text"
+        ],
+        "langCount": null,
+        "capabilities": {
+          "reasoning": true,
+          "coding": true,
+          "vision": false,
+          "functionCalling": true,
+          "toolUse": true,
+          "agentic": true
+        },
+        "apiAvailable": true,
+        "price": null,
+        "links": {
+          "hf": "openai/gpt-oss-20b",
+          "gh": "openai/gpt-oss",
+          "docs": "cookbook.openai.com"
+        },
+        "note": "21B MoE (3.6B active) open-weight sibling that runs on consumer hardware; Apache 2.0.",
+        "quants": [
+          "MXFP4 (native)",
+          "GGUF Q4_K_M",
+          "GGUF Q8_0"
+        ],
+        "vramQ4Gb": 13,
+        "vramFp16Gb": 42,
+        "tps4090": 225,
+        "tpsNote": "225 tok/s at 8k context (Q4_K_M GGUF, llama.cpp) on RTX 4090 per third-party benchmark blogs (not an OpenAI-published figure); throughput drops substantially at longer context per the same sources.",
+        "effortLabel": "Low",
+        "isDefaultConfig": false,
+        "isBestConfig": false,
+        "specSources": {
+          "paramsB": "https://huggingface.co/openai/gpt-oss-20b",
+          "ctxK": "https://openai.com/index/introducing-gpt-oss/",
+          "releaseDate": "https://openai.com/index/introducing-gpt-oss/",
+          "openness": "https://huggingface.co/openai/gpt-oss-20b"
+        },
+        "results": [
+          {
+            "benchmarkSlug": "aime",
+            "score": 42.1,
+            "source": "self-reported",
+            "sourceUrl": "https://arxiv.org/abs/2508.10925",
+            "evaluatedAt": "2025-08-05",
+            "notes": "AIME 2024, no tools, low reasoning effort"
+          },
+          {
+            "benchmarkSlug": "gpqa",
+            "score": 56.8,
+            "source": "self-reported",
+            "sourceUrl": "https://arxiv.org/abs/2508.10925",
+            "evaluatedAt": "2025-08-05",
+            "notes": "GPQA Diamond, no tools, low reasoning effort"
+          },
+          {
+            "benchmarkSlug": "mmlu",
+            "score": 80.4,
+            "source": "self-reported",
+            "sourceUrl": "https://arxiv.org/abs/2508.10925",
+            "evaluatedAt": "2025-08-05",
+            "notes": "low reasoning effort"
+          },
+          {
+            "benchmarkSlug": "swe-bench",
+            "score": 37.4,
+            "source": "self-reported",
+            "sourceUrl": "https://arxiv.org/abs/2508.10925",
+            "evaluatedAt": "2025-08-05",
+            "notes": "SWE-bench Verified, low reasoning effort"
+          }
+        ],
+        "verificationNotes": "Confirmed via Hugging Face model card (21B total / 3.6B active, Apache 2.0) and arXiv:2508.10925 Table 1 (20.91B total / 3.61B active exact), Section 2.2 architecture (24 layers, 32 experts/layer, top-4 routing, 128K/131,072-token context). All four benchmark scores at 'low' reasoning effort confirmed byte-for-byte against the paper's Table 3. The tps4090=225 figure could only be traced to third-party SEO/benchmark blogs (e.g. runaihome.com, willitrunai.com), not an OpenAI-published number — flagged as lower-confidence in tpsNote rather than dropped, since it is a supplementary hardware estimate, not a benchmark result row."
+      },
+      {
+        "name": "gpt-oss-20b (Medium)",
+        "org": "OpenAI",
+        "family": "gpt-oss",
+        "releaseDate": "2025-08-05",
+        "status": "released",
+        "openness": "open-weights",
+        "license": "Apache 2.0",
+        "paramsB": 21,
+        "activeParamsB": 3.6,
+        "archClass": "moe",
+        "archDisplay": "Mixture-of-experts transformer, 32 experts/layer, top-4 active, 24 layers",
+        "ctxK": 128,
+        "modalities": [
+          "text"
+        ],
+        "langCount": null,
+        "capabilities": {
+          "reasoning": true,
+          "coding": true,
+          "vision": false,
+          "functionCalling": true,
+          "toolUse": true,
+          "agentic": true
+        },
+        "apiAvailable": true,
+        "price": null,
+        "links": {
+          "hf": "openai/gpt-oss-20b",
+          "gh": "openai/gpt-oss",
+          "docs": "cookbook.openai.com"
+        },
+        "note": "21B MoE (3.6B active) open-weight sibling that runs on consumer hardware; Apache 2.0.",
+        "quants": [
+          "MXFP4 (native)",
+          "GGUF Q4_K_M",
+          "GGUF Q8_0"
+        ],
+        "vramQ4Gb": 13,
+        "vramFp16Gb": 42,
+        "tps4090": 225,
+        "tpsNote": "225 tok/s at 8k context (Q4_K_M GGUF, llama.cpp) on RTX 4090; throughput collapses to ~9 tok/s at full 128k context.",
+        "effortLabel": "Medium",
+        "isDefaultConfig": true,
+        "isBestConfig": false,
+        "specSources": {
+          "paramsB": "https://huggingface.co/openai/gpt-oss-20b",
+          "ctxK": "https://openai.com/index/introducing-gpt-oss/",
+          "releaseDate": "https://openai.com/index/introducing-gpt-oss/",
+          "openness": "https://huggingface.co/openai/gpt-oss-20b"
+        },
+        "results": [
+          {
+            "benchmarkSlug": "aime",
+            "score": 80,
+            "source": "self-reported",
+            "sourceUrl": "https://arxiv.org/abs/2508.10925",
+            "evaluatedAt": "2025-08-05",
+            "notes": "AIME 2024, no tools, medium reasoning effort"
+          },
+          {
+            "benchmarkSlug": "gpqa",
+            "score": 66,
+            "source": "self-reported",
+            "sourceUrl": "https://arxiv.org/abs/2508.10925",
+            "evaluatedAt": "2025-08-05",
+            "notes": "GPQA Diamond, no tools, medium reasoning effort"
+          },
+          {
+            "benchmarkSlug": "mmlu",
+            "score": 84,
+            "source": "self-reported",
+            "sourceUrl": "https://arxiv.org/abs/2508.10925",
+            "evaluatedAt": "2025-08-05",
+            "notes": "medium reasoning effort"
+          },
+          {
+            "benchmarkSlug": "swe-bench",
+            "score": 53.2,
+            "source": "self-reported",
+            "sourceUrl": "https://arxiv.org/abs/2508.10925",
+            "evaluatedAt": "2025-08-05",
+            "notes": "SWE-bench Verified, medium reasoning effort"
+          }
+        ],
+        "verificationNotes": "Fetched the full gpt-oss model card PDF (arXiv 2508.10925, OpenAI, dated Aug 5 2025) directly and located Table 3 (Full Evaluations): gpt-oss-20b medium = AIME2024(no tools) 80.0, GPQA Diamond(no tools) 66.0, MMLU 84.0, SWE-bench Verified 53.2 — all four claimed scores match exactly. Architecture confirmed in the paper: 24 layers, 32 experts/layer, top-4 routing, 20.91B total/3.61B active params (rounds to 21B/3.6B), 131,072-token context (128K), Apache 2.0 license, title page dated Aug 5 2025. No changes made."
+      },
+      {
+        "name": "gpt-oss-20b (High)",
+        "org": "OpenAI",
+        "family": "gpt-oss",
+        "releaseDate": "2025-08-05",
+        "status": "released",
+        "openness": "open-weights",
+        "license": "Apache 2.0",
+        "paramsB": 21,
+        "activeParamsB": 3.6,
+        "archClass": "moe",
+        "archDisplay": "Mixture-of-experts transformer, 32 experts/layer, top-4 active, 24 layers",
+        "ctxK": 128,
+        "modalities": [
+          "text"
+        ],
+        "langCount": null,
+        "capabilities": {
+          "reasoning": true,
+          "coding": true,
+          "vision": false,
+          "functionCalling": true,
+          "toolUse": true,
+          "agentic": true
+        },
+        "apiAvailable": true,
+        "price": null,
+        "links": {
+          "hf": "openai/gpt-oss-20b",
+          "gh": "openai/gpt-oss",
+          "docs": "cookbook.openai.com"
+        },
+        "note": "21B MoE (3.6B active) open-weight sibling that runs on consumer hardware; Apache 2.0.",
+        "quants": [
+          "MXFP4 (native)",
+          "GGUF Q4_K_M",
+          "GGUF Q8_0"
+        ],
+        "vramQ4Gb": 13,
+        "vramFp16Gb": 42,
+        "tps4090": 225,
+        "tpsNote": "225 tok/s at 8k context (Q4_K_M GGUF, llama.cpp) on RTX 4090; throughput collapses to ~9 tok/s at full 128k context.",
+        "effortLabel": "High",
+        "isDefaultConfig": false,
+        "isBestConfig": true,
+        "specSources": {
+          "paramsB": "https://huggingface.co/openai/gpt-oss-20b",
+          "ctxK": "https://openai.com/index/introducing-gpt-oss/",
+          "releaseDate": "https://openai.com/index/introducing-gpt-oss/",
+          "openness": "https://huggingface.co/openai/gpt-oss-20b"
+        },
+        "results": [
+          {
+            "benchmarkSlug": "aime",
+            "score": 92.1,
+            "source": "self-reported",
+            "sourceUrl": "https://arxiv.org/abs/2508.10925",
+            "evaluatedAt": "2025-08-05",
+            "notes": "AIME 2024, no tools, high reasoning effort"
+          },
+          {
+            "benchmarkSlug": "gpqa",
+            "score": 71.5,
+            "source": "self-reported",
+            "sourceUrl": "https://arxiv.org/abs/2508.10925",
+            "evaluatedAt": "2025-08-05",
+            "notes": "GPQA Diamond, no tools, high reasoning effort"
+          },
+          {
+            "benchmarkSlug": "mmlu",
+            "score": 85.3,
+            "source": "self-reported",
+            "sourceUrl": "https://arxiv.org/abs/2508.10925",
+            "evaluatedAt": "2025-08-05",
+            "notes": "high reasoning effort"
+          },
+          {
+            "benchmarkSlug": "swe-bench",
+            "score": 60.7,
+            "source": "self-reported",
+            "sourceUrl": "https://arxiv.org/abs/2508.10925",
+            "evaluatedAt": "2025-08-05",
+            "notes": "SWE-bench Verified, high reasoning effort"
+          }
+        ],
+        "verificationNotes": "Same primary source as Medium config (arXiv 2508.10925 Table 3): gpt-oss-20b high = AIME2024(no tools) 92.1, GPQA Diamond(no tools) 71.5, MMLU 85.3, SWE-bench Verified 60.7 — all four match exactly. Params/arch/license/date verified identically. No changes made."
+      },
+      {
+        "name": "GPT-5",
+        "org": "OpenAI",
+        "family": "GPT-5",
+        "releaseDate": "2025-08-07",
+        "status": "released",
+        "openness": "closed",
+        "license": "Proprietary (OpenAI API Terms)",
+        "paramsB": null,
+        "activeParamsB": null,
+        "archClass": "dense",
+        "archDisplay": "Unified reasoning/non-reasoning system behind a real-time auto-router; dense transformer, exact size undisclosed",
+        "ctxK": 400,
+        "modalities": [
+          "text",
+          "vision"
+        ],
+        "langCount": null,
+        "capabilities": {
+          "reasoning": true,
+          "coding": true,
+          "vision": true,
+          "functionCalling": true,
+          "toolUse": true,
+          "agentic": true
+        },
+        "apiAvailable": true,
+        "price": {
+          "input": 1.25,
+          "output": 10,
+          "provider": "OpenAI"
+        },
+        "links": {
+          "docs": "developers.openai.com/api/docs/models/gpt-5"
+        },
+        "note": "Unified model merging o-series reasoning with fast GPT responses via an auto-router.",
+        "quants": [],
+        "vramQ4Gb": null,
+        "vramFp16Gb": null,
+        "tps4090": null,
+        "tpsNote": null,
+        "effortLabel": "High",
+        "isDefaultConfig": true,
+        "isBestConfig": true,
+        "specSources": {
+          "releaseDate": "https://techcrunch.com/2025/08/07/openais-gpt-5-is-here/",
+          "ctxK": "https://openai.com/index/introducing-gpt-5-for-developers/",
+          "openness": "https://developers.openai.com/api/docs/models/gpt-5",
+          "paramsB": "https://developers.openai.com/api/docs/models/gpt-5"
+        },
+        "results": [
+          {
+            "benchmarkSlug": "swe-bench",
+            "score": 74.9,
+            "source": "self-reported",
+            "sourceUrl": "https://openai.com/index/introducing-gpt-5-for-developers/",
+            "evaluatedAt": "2025-08-07",
+            "notes": "SWE-bench Verified, high reasoning effort (n=477)"
+          },
+          {
+            "benchmarkSlug": "aime",
+            "score": 94.6,
+            "source": "self-reported",
+            "sourceUrl": "https://openai.com/index/introducing-gpt-5-for-developers/",
+            "evaluatedAt": "2025-08-07",
+            "notes": "AIME 2025, no tools, high reasoning effort"
+          },
+          {
+            "benchmarkSlug": "gpqa",
+            "score": 85.7,
+            "source": "self-reported",
+            "sourceUrl": "https://openai.com/index/introducing-gpt-5-for-developers/",
+            "evaluatedAt": "2025-08-07",
+            "notes": "GPQA Diamond, no tools, high reasoning effort"
+          },
+          {
+            "benchmarkSlug": "hle",
+            "score": 24.8,
+            "source": "self-reported",
+            "sourceUrl": "https://openai.com/index/introducing-gpt-5-for-developers/",
+            "evaluatedAt": "2025-08-07",
+            "notes": "Humanity's Last Exam, no tools, high reasoning effort"
+          },
+          {
+            "benchmarkSlug": "mmmu",
+            "score": 84.2,
+            "source": "self-reported",
+            "sourceUrl": "https://openai.com/index/introducing-gpt-5-for-developers/",
+            "evaluatedAt": "2025-08-07",
+            "notes": "high reasoning effort"
+          },
+          {
+            "benchmarkSlug": "tau-bench",
+            "score": 96.7,
+            "source": "self-reported",
+            "sourceUrl": "https://openai.com/index/introducing-gpt-5-for-developers/",
+            "evaluatedAt": "2025-08-07",
+            "notes": "τ²-bench telecom, high reasoning effort"
+          },
+          {
+            "benchmarkSlug": "aider-polyglot",
+            "score": 88,
+            "source": "self-reported",
+            "sourceUrl": "https://openai.com/index/introducing-gpt-5-for-developers/",
+            "evaluatedAt": "2025-08-07",
+            "notes": "Aider polyglot (diff), high reasoning effort"
+          }
+        ],
+        "verificationNotes": "Existence, release date (Aug 7 2025, confirmed via TechCrunch) and pricing/context ($1.25/$10 per 1M, 400K context) confirmed by live-fetching developers.openai.com/api/docs/models/gpt-5. The primary blog (openai.com/index/introducing-gpt-5-for-developers/) itself returned HTTP 403 to direct fetch, so each of the 7 result rows was independently cross-checked via secondary sources (Vellum, digitalapplied.com, Runbear, and search-engine excerpts) that quote the OpenAI figures verbatim: SWE-bench 74.9, AIME 2025 94.6, GPQA(no tools) 85.7 (distinct from GPT-5 Pro's 88.4/89.4-with-tools figures, so no conflict), HLE 24.8 ('jumping from 6.3% to 24.8%' with thinking), MMMU 84.2, τ2-bench telecom 96.7, Aider polyglot 88 — all confirmed exactly, no changes."
+      },
+      {
+        "name": "GPT-5 mini",
+        "org": "OpenAI",
+        "family": "GPT-5",
+        "releaseDate": "2025-08-07",
+        "status": "released",
+        "openness": "closed",
+        "license": "Proprietary (OpenAI API Terms)",
+        "paramsB": null,
+        "activeParamsB": null,
+        "archClass": "dense",
+        "archDisplay": "Cost-efficient mid-tier sibling of GPT-5's unified architecture; dense transformer, exact size undisclosed",
+        "ctxK": 400,
+        "modalities": [
+          "text",
+          "vision"
+        ],
+        "langCount": null,
+        "capabilities": {
+          "reasoning": true,
+          "coding": true,
+          "vision": true,
+          "functionCalling": true,
+          "toolUse": true,
+          "agentic": true
+        },
+        "apiAvailable": true,
+        "price": {
+          "input": 0.25,
+          "output": 2,
+          "provider": "OpenAI"
+        },
+        "links": {
+          "docs": "developers.openai.com/api/docs/models/gpt-5-mini"
+        },
+        "note": "Cost-efficient mid-tier of the GPT-5 family.",
+        "quants": [],
+        "vramQ4Gb": null,
+        "vramFp16Gb": null,
+        "tps4090": null,
+        "tpsNote": null,
+        "effortLabel": "High",
+        "isDefaultConfig": true,
+        "isBestConfig": true,
+        "specSources": {
+          "releaseDate": "https://techcrunch.com/2025/08/07/openais-gpt-5-is-here/",
+          "ctxK": "https://developers.openai.com/api/docs/models/gpt-5-mini",
+          "openness": "https://developers.openai.com/api/docs/models/gpt-5-mini",
+          "paramsB": "https://developers.openai.com/api/docs/models/gpt-5-mini"
+        },
+        "results": [
+          {
+            "benchmarkSlug": "aime",
+            "score": 91.1,
+            "source": "self-reported",
+            "sourceUrl": "https://openai.com/index/introducing-gpt-5-for-developers/",
+            "evaluatedAt": "2025-08-07",
+            "notes": "AIME 2025, no tools, high reasoning effort"
+          },
+          {
+            "benchmarkSlug": "gpqa",
+            "score": 82.3,
+            "source": "self-reported",
+            "sourceUrl": "https://openai.com/index/introducing-gpt-5-for-developers/",
+            "evaluatedAt": "2025-08-07",
+            "notes": "GPQA Diamond, no tools, high reasoning effort"
+          },
+          {
+            "benchmarkSlug": "hle",
+            "score": 16.7,
+            "source": "self-reported",
+            "sourceUrl": "https://openai.com/index/introducing-gpt-5-for-developers/",
+            "evaluatedAt": "2025-08-07",
+            "notes": "Humanity's Last Exam, no tools, high reasoning effort"
+          },
+          {
+            "benchmarkSlug": "aider-polyglot",
+            "score": 71.6,
+            "source": "self-reported",
+            "sourceUrl": "https://openai.com/index/introducing-gpt-5-for-developers/",
+            "evaluatedAt": "2025-08-07",
+            "notes": "Aider polyglot (diff), high reasoning effort"
+          }
+        ],
+        "verificationNotes": "Existence, release date and pricing/context ($0.25/$2 per 1M, 400K context) confirmed by live-fetching developers.openai.com/api/docs/models/gpt-5-mini. Primary blog page returned 403 to direct fetch/was rate-limited on the fetch connector, so each result row was checked against secondary sources quoting the original figures. Confirmed exactly: AIME 91.1, GPQA 82.3, HLE 16.7, Aider polyglot 71.6. Could NOT independently confirm swe-bench (71), mmmu (81.6), or tau-bench (74.1) on any accessible source — those 3 rows were dropped per verification policy (never keep an unconfirmed number)."
+      },
+      {
+        "name": "GPT-5 nano",
+        "org": "OpenAI",
+        "family": "GPT-5",
+        "releaseDate": "2025-08-07",
+        "status": "released",
+        "openness": "closed",
+        "license": "Proprietary (OpenAI API Terms)",
+        "paramsB": null,
+        "activeParamsB": null,
+        "archClass": "dense",
+        "archDisplay": "Smallest, fastest sibling of GPT-5's unified architecture; dense transformer, exact size undisclosed",
+        "ctxK": 400,
+        "modalities": [
+          "text",
+          "vision"
+        ],
+        "langCount": null,
+        "capabilities": {
+          "reasoning": true,
+          "coding": true,
+          "vision": true,
+          "functionCalling": true,
+          "toolUse": true,
+          "agentic": true
+        },
+        "apiAvailable": true,
+        "price": {
+          "input": 0.05,
+          "output": 0.4,
+          "provider": "OpenAI"
+        },
+        "links": {
+          "docs": "developers.openai.com/api/docs/models/gpt-5-nano"
+        },
+        "note": "Smallest, fastest GPT-5 variant for high-volume, latency-sensitive workloads.",
+        "quants": [],
+        "vramQ4Gb": null,
+        "vramFp16Gb": null,
+        "tps4090": null,
+        "tpsNote": null,
+        "effortLabel": "High",
+        "isDefaultConfig": true,
+        "isBestConfig": true,
+        "specSources": {
+          "releaseDate": "https://techcrunch.com/2025/08/07/openais-gpt-5-is-here/",
+          "ctxK": "https://developers.openai.com/api/docs/models/gpt-5-nano",
+          "openness": "https://developers.openai.com/api/docs/models/gpt-5-nano",
+          "paramsB": "https://developers.openai.com/api/docs/models/gpt-5-nano"
+        },
+        "results": [
+          {
+            "benchmarkSlug": "gpqa",
+            "score": 71.2,
+            "source": "self-reported",
+            "sourceUrl": "https://openai.com/index/introducing-gpt-5-for-developers/",
+            "evaluatedAt": "2025-08-07",
+            "notes": "GPQA Diamond, no tools, high reasoning effort"
+          }
+        ],
+        "verificationNotes": "Existence, release date and pricing/context ($0.05/$0.40 per 1M, 400K context) confirmed by live-fetching developers.openai.com/api/docs/models/gpt-5-nano (also cites snapshot gpt-5-nano-2025-08-07). Primary blog page inaccessible (403/rate-limited) for direct row-by-row confirmation. Only gpqa (71.2) could be independently corroborated verbatim via secondary sources. AIME claim (85.2) conflicts with an independent Artificial Analysis re-eval (83.7, different methodology, not the cited self-reported source) and could not be confirmed on the primary source; swe-bench (54.7), hle (8.7), mmmu (75.6) and tau-bench (35.5) could not be found on any accessible source. Dropped all 5 unconfirmed rows per verification policy, kept only gpqa."
+      },
+      {
+        "name": "GPT-5-Codex",
+        "org": "OpenAI",
+        "family": "GPT-5",
+        "releaseDate": "2025-09-15",
+        "status": "released",
+        "openness": "closed",
+        "license": "Proprietary (OpenAI API Terms)",
+        "paramsB": null,
+        "activeParamsB": null,
+        "archClass": "dense",
+        "archDisplay": "GPT-5 fine-tuned for agentic software engineering with dynamic thinking-time scaling; dense transformer, exact size undisclosed",
+        "ctxK": 400,
+        "modalities": [
+          "text",
+          "vision"
+        ],
+        "langCount": null,
+        "capabilities": {
+          "reasoning": true,
+          "coding": true,
+          "vision": true,
+          "functionCalling": true,
+          "toolUse": true,
+          "agentic": true
+        },
+        "apiAvailable": true,
+        "price": {
+          "input": 1.25,
+          "output": 10,
+          "provider": "OpenAI"
+        },
+        "links": {
+          "docs": "developers.openai.com/api/docs/models/gpt-5-codex"
+        },
+        "note": "GPT-5 optimized for agentic coding; can run autonomously for hours inside Codex.",
+        "quants": [],
+        "vramQ4Gb": null,
+        "vramFp16Gb": null,
+        "tps4090": null,
+        "tpsNote": null,
+        "effortLabel": "High",
+        "isDefaultConfig": true,
+        "isBestConfig": true,
+        "specSources": {
+          "releaseDate": "https://techcrunch.com/2025/09/15/openai-upgrades-codex-with-a-new-version-of-gpt-5/",
+          "ctxK": "https://developers.openai.com/api/docs/models/gpt-5-codex",
+          "openness": "https://developers.openai.com/api/docs/models/gpt-5-codex",
+          "paramsB": "https://developers.openai.com/api/docs/models/gpt-5-codex"
+        },
+        "results": [
+          {
+            "benchmarkSlug": "swe-bench",
+            "score": 74.5,
+            "source": "independent",
+            "sourceUrl": "https://www.webpronews.com/openais-gpt-5-codex-hits-74-5-on-swe-bench-boosts-coding-efficiency/",
+            "evaluatedAt": "2025-09-15",
+            "notes": "SWE-bench Verified, reported at launch"
+          }
+        ],
+        "verificationNotes": "Release date Sept 15, 2025 confirmed via multiple independent sources (TechCrunch 'openai-upgrades-codex-with-a-new-version-of-gpt-5' dated 2025-09-15, Simon Willison's blog dated same day, and search results confirming the OpenAI blog post itself was published 2025-09-15; general API availability to Codex-via-API-key followed on Sept 23). Pricing ($1.25/$10 per 1M) and 400K context confirmed by live-fetching developers.openai.com/api/docs/models/gpt-5-codex. SWE-bench Verified 74.5% confirmed present on the cited webpronews.com article and independently reproduced by Yahoo Tech coverage of the same launch. No changes made."
+      },
+      {
+        "name": "GPT-5.1",
+        "org": "OpenAI",
+        "family": "GPT-5.1",
+        "releaseDate": "2025-11-12",
+        "status": "released",
+        "openness": "closed",
+        "license": "Proprietary (OpenAI API Terms)",
+        "paramsB": null,
+        "activeParamsB": null,
+        "archClass": "dense",
+        "archDisplay": "GPT-5 upgrade with adaptive reasoning spanning Instant and Thinking behavior in one model; dense transformer, exact size undisclosed",
+        "ctxK": 400,
+        "modalities": [
+          "text",
+          "vision"
+        ],
+        "langCount": null,
+        "capabilities": {
+          "reasoning": true,
+          "coding": true,
+          "vision": true,
+          "functionCalling": true,
+          "toolUse": true,
+          "agentic": true
+        },
+        "apiAvailable": true,
+        "price": {
+          "input": 1.25,
+          "output": 10,
+          "provider": "OpenAI"
+        },
+        "links": {
+          "docs": "developers.openai.com/api/docs/models/gpt-5.1"
+        },
+        "note": "Warmer, more conversational refresh with adaptive reasoning; Instant and Thinking modes.",
+        "quants": [],
+        "vramQ4Gb": null,
+        "vramFp16Gb": null,
+        "tps4090": null,
+        "tpsNote": null,
+        "effortLabel": "High",
+        "isDefaultConfig": true,
+        "isBestConfig": true,
+        "specSources": {
+          "releaseDate": "https://openai.com/index/gpt-5-1/",
+          "ctxK": "https://developers.openai.com/api/docs/models/gpt-5.1",
+          "openness": "https://developers.openai.com/api/docs/models/gpt-5.1",
+          "paramsB": "https://developers.openai.com/api/docs/models/gpt-5.1"
+        },
+        "results": [
+          {
+            "benchmarkSlug": "swe-bench",
+            "score": 76.3,
+            "source": "independent",
+            "sourceUrl": "https://claude5.com/news/gpt-5-1-performance-review-benchmarks-november-2025",
+            "evaluatedAt": "2025-11-19",
+            "notes": "SWE-bench Verified, Thinking mode; literally confirmed on cited page"
+          },
+          {
+            "benchmarkSlug": "aime",
+            "score": 94,
+            "source": "independent",
+            "sourceUrl": "https://claude5.com/news/gpt-5-1-performance-review-benchmarks-november-2025",
+            "evaluatedAt": "2025-11-19",
+            "notes": "AIME 2025, Thinking mode; literally confirmed on cited page"
+          }
+        ],
+        "verificationNotes": "Existence, Nov 12 2025 release, 400K context, and $1.25/$10 pricing all confirmed directly via developers.openai.com/api/docs/models/gpt-5.1 and openai.com/index/gpt-5-1/. SWE-bench (76.3) and AIME (94) confirmed literally on the cited claude5.com page. Dropped the GPQA-Diamond row (86.6, sourced to artificialanalysis.ai/evaluations/gpqa-diamond): that live leaderboard page no longer lists GPT-5.1 (superseded), and a different tracker (aireleasetracker.com) reports 88.1 for the same metric — could not confirm 86.6 on the cited page and found a conflicting number elsewhere, so removed per instructions."
+      },
+      {
+        "name": "GPT-5.2",
+        "org": "OpenAI",
+        "family": "GPT-5.2",
+        "releaseDate": "2025-12-11",
+        "status": "released",
+        "openness": "closed",
+        "license": "Proprietary",
+        "paramsB": null,
+        "activeParamsB": null,
+        "archClass": "dense",
+        "archDisplay": "Undisclosed architecture (presumed dense transformer, reasoning-tuned); shipped as Instant/Thinking/Pro tiers",
+        "ctxK": 400,
+        "modalities": [
+          "text",
+          "vision"
+        ],
+        "langCount": null,
+        "capabilities": {
+          "reasoning": true,
+          "coding": true,
+          "vision": true,
+          "functionCalling": true,
+          "toolUse": true,
+          "agentic": true
+        },
+        "apiAvailable": true,
+        "price": {
+          "input": 1.75,
+          "output": 14,
+          "provider": "OpenAI"
+        },
+        "links": {
+          "docs": "platform.openai.com/docs/models/gpt-5.2"
+        },
+        "note": "Adds GPT-5.2 Pro tier and new xhigh reasoning effort; SOTA at launch on GDPval, ARC-AGI-2, and long-context MRCRv2.",
+        "quants": [],
+        "vramQ4Gb": null,
+        "vramFp16Gb": null,
+        "tps4090": null,
+        "tpsNote": null,
+        "effortLabel": null,
+        "isDefaultConfig": true,
+        "isBestConfig": true,
+        "specSources": {
+          "ctxK": "https://platform.openai.com/docs/models/gpt-5.2",
+          "releaseDate": "https://openai.com/index/introducing-gpt-5-2/",
+          "openness": "https://openai.com/index/introducing-gpt-5-2/"
+        },
+        "results": [
+          {
+            "benchmarkSlug": "gpqa",
+            "score": 92.4,
+            "source": "self-reported",
+            "sourceUrl": "https://openai.com/index/introducing-gpt-5-2/",
+            "notes": "GPQA Diamond, GPT-5.2 Thinking; confirmed via marktechpost.com report of the launch page"
+          },
+          {
+            "benchmarkSlug": "swe-bench",
+            "score": 80,
+            "source": "self-reported",
+            "sourceUrl": "https://openai.com/index/introducing-gpt-5-2/",
+            "notes": "SWE-bench Verified, GPT-5.2 Thinking; confirmed"
+          },
+          {
+            "benchmarkSlug": "aime",
+            "score": 100,
+            "source": "self-reported",
+            "sourceUrl": "https://openai.com/index/introducing-gpt-5-2/",
+            "notes": "AIME 2025, no tools, GPT-5.2 Thinking; confirmed"
+          },
+          {
+            "benchmarkSlug": "hle",
+            "score": 34.5,
+            "source": "self-reported",
+            "sourceUrl": "https://openai.com/index/introducing-gpt-5-2/",
+            "notes": "Humanity's Last Exam, GPT-5.2 Thinking; confirmed"
+          },
+          {
+            "benchmarkSlug": "tau-bench",
+            "score": 98.7,
+            "source": "self-reported",
+            "sourceUrl": "https://openai.com/index/introducing-gpt-5-2/",
+            "notes": "Tau2-bench Telecom, GPT-5.2 Thinking; confirmed"
+          },
+          {
+            "benchmarkSlug": "arc-agi-1",
+            "score": 86.2,
+            "source": "self-reported",
+            "sourceUrl": "https://openai.com/index/introducing-gpt-5-2/",
+            "notes": "ARC-AGI-1 Verified, GPT-5.2 Thinking; confirmed"
+          },
+          {
+            "benchmarkSlug": "arc-agi-2",
+            "score": 52.9,
+            "source": "self-reported",
+            "sourceUrl": "https://openai.com/index/introducing-gpt-5-2/",
+            "notes": "ARC-AGI-2 Verified, GPT-5.2 Thinking; confirmed"
+          }
+        ],
+        "verificationNotes": "Existence, Dec 11 2025 release, 400K context, and $1.75/$14 pricing confirmed directly via developers.openai.com/api/docs/models/gpt-5.2 and simonwillison.net/openai launch coverage. Six of seven benchmark rows (GPQA 92.4, SWE-bench 80, AIME 100, HLE 34.5, tau-bench 98.7, ARC-AGI-1 86.2, ARC-AGI-2 52.9) independently corroborated via marktechpost.com's direct report of the OpenAI launch page. Dropped the MMMLU row (89.6): could not find this figure for GPT-5.2 anywhere; found a different, unrelated 92.5% MMLU score and a 92.1% MGSM score instead, so 89.6 could not be confirmed and was removed."
+      },
+      {
+        "name": "GPT-5.5",
+        "org": "OpenAI",
+        "family": "GPT-5.5",
+        "releaseDate": "2026-04-23",
+        "status": "released",
+        "openness": "closed",
+        "license": "Proprietary",
+        "paramsB": null,
+        "activeParamsB": null,
+        "archClass": "dense",
+        "archDisplay": "Undisclosed architecture (presumed dense transformer, reasoning-tuned); codename \"Spud\"; Thinking + Pro tiers",
+        "ctxK": 1050,
+        "modalities": [
+          "text",
+          "vision"
+        ],
+        "langCount": null,
+        "capabilities": {
+          "reasoning": true,
+          "coding": true,
+          "vision": true,
+          "functionCalling": true,
+          "toolUse": true,
+          "agentic": true
+        },
+        "apiAvailable": true,
+        "price": {
+          "input": 5,
+          "output": 30,
+          "provider": "OpenAI"
+        },
+        "links": {
+          "docs": "platform.openai.com/docs/models/gpt-5.5"
+        },
+        "note": "Codename Spud; ChatGPT/Codex launched Apr 23, 2026 with API following ~1 day later once safeguards were finalized.",
+        "quants": [],
+        "vramQ4Gb": null,
+        "vramFp16Gb": null,
+        "tps4090": null,
+        "tpsNote": null,
+        "effortLabel": null,
+        "isDefaultConfig": true,
+        "isBestConfig": true,
+        "specSources": {
+          "ctxK": "https://platform.openai.com/docs/models/gpt-5.5",
+          "releaseDate": "https://openai.com/index/introducing-gpt-5-5",
+          "openness": "https://openai.com/index/introducing-gpt-5-5"
+        },
+        "results": [
+          {
+            "benchmarkSlug": "swe-bench",
+            "score": 58.6,
+            "source": "self-reported",
+            "sourceUrl": "https://openai.com/index/introducing-gpt-5-5",
+            "notes": "SWE-Bench Pro, base GPT-5.5 (not Pro variant); confirmed via marktechpost.com direct report"
+          },
+          {
+            "benchmarkSlug": "terminal-bench",
+            "score": 82.7,
+            "source": "self-reported",
+            "sourceUrl": "https://openai.com/index/introducing-gpt-5-5",
+            "notes": "Terminal-Bench 2.0, new SOTA at launch; confirmed"
+          },
+          {
+            "benchmarkSlug": "gdpval",
+            "score": 84.9,
+            "source": "self-reported",
+            "sourceUrl": "https://openai.com/index/introducing-gpt-5-5",
+            "notes": "GDPval, wins-or-ties; confirmed"
+          },
+          {
+            "benchmarkSlug": "browsecomp",
+            "score": 84.4,
+            "source": "self-reported",
+            "sourceUrl": "https://openai.com/index/introducing-gpt-5-5",
+            "notes": "BrowseComp, base model (Pro scores 90.1); confirmed"
+          },
+          {
+            "benchmarkSlug": "frontiermath-tier1-3",
+            "score": 51.7,
+            "source": "self-reported",
+            "sourceUrl": "https://openai.com/index/introducing-gpt-5-5",
+            "notes": "FrontierMath Tier 1-3, base model (Pro scores 51.0-52.4 across sources); confirmed"
+          },
+          {
+            "benchmarkSlug": "frontiermath-tier4",
+            "score": 35.4,
+            "source": "self-reported",
+            "sourceUrl": "https://openai.com/index/introducing-gpt-5-5",
+            "notes": "FrontierMath Tier 4, base model (Pro scores 39.6); confirmed"
+          },
+          {
+            "benchmarkSlug": "cybergym",
+            "score": 81.8,
+            "source": "self-reported",
+            "sourceUrl": "https://openai.com/index/introducing-gpt-5-5",
+            "notes": "CyberGym; confirmed"
+          }
+        ],
+        "verificationNotes": "Existence, April 23 2026 release, codename Spud, 1.05M context window, and $5/$30 pricing all confirmed via multiple independent outlets (Axios, Wikipedia, MarkTechPost) plus developers.openai.com model docs. All seven benchmark scores (SWE-Bench Pro 58.6, Terminal-Bench 82.7, GDPval 84.9, BrowseComp 84.4, FrontierMath T1-3 51.7, FrontierMath T4 35.4, CyberGym 81.8) independently corroborated as base-model (not Pro-variant) figures across MarkTechPost and other launch-day coverage."
+      },
+      {
+        "name": "GPT-5.6",
+        "org": "OpenAI",
+        "family": "GPT-5.6",
+        "releaseDate": "2026-07-09",
+        "status": "released",
+        "openness": "closed",
+        "license": "Proprietary",
+        "paramsB": null,
+        "activeParamsB": null,
+        "archClass": "dense",
+        "archDisplay": "Undisclosed architecture (presumed dense transformer); three durable capability tiers Sol/Terra/Luna (this entry reflects flagship Sol)",
+        "ctxK": 1050,
+        "modalities": [
+          "text",
+          "vision"
+        ],
+        "langCount": null,
+        "capabilities": {
+          "reasoning": true,
+          "coding": true,
+          "vision": true,
+          "functionCalling": true,
+          "toolUse": true,
+          "agentic": true
+        },
+        "apiAvailable": true,
+        "price": {
+          "input": 5,
+          "output": 30,
+          "provider": "OpenAI"
+        },
+        "links": {
+          "docs": "developers.openai.com/api/docs/models/gpt-5.6-sol"
+        },
+        "note": "Sol tier billed as OpenAI's best coding model yet (Terminal-Bench 2.1 SOTA); limited-preview June 26 under US govt review, GA July 9, 2026.",
+        "quants": [],
+        "vramQ4Gb": null,
+        "vramFp16Gb": null,
+        "tps4090": null,
+        "tpsNote": null,
+        "effortLabel": null,
+        "isDefaultConfig": true,
+        "isBestConfig": true,
+        "specSources": {
+          "ctxK": "https://developers.openai.com/api/docs/models/gpt-5.6-sol",
+          "releaseDate": "https://openai.com/index/gpt-5-6/",
+          "openness": "https://openai.com/index/gpt-5-6/"
+        },
+        "results": [
+          {
+            "benchmarkSlug": "swe-bench",
+            "score": 64.6,
+            "source": "self-reported",
+            "sourceUrl": "https://openai.com/index/gpt-5-6/",
+            "notes": "SWE-Bench Pro, GPT-5.6 Sol; confirmed via marktechpost.com direct report of launch page"
+          },
+          {
+            "benchmarkSlug": "terminal-bench",
+            "score": 88.8,
+            "source": "self-reported",
+            "sourceUrl": "https://openai.com/index/gpt-5-6/",
+            "notes": "Terminal-Bench 2.1, GPT-5.6 Sol standard (91.9 with Ultra), new SOTA; confirmed"
+          },
+          {
+            "benchmarkSlug": "browsecomp",
+            "score": 90.4,
+            "source": "self-reported",
+            "sourceUrl": "https://openai.com/index/gpt-5-6/",
+            "notes": "BrowseComp, GPT-5.6 Sol standard (92.2 with Ultra); confirmed"
+          },
+          {
+            "benchmarkSlug": "agents-last-exam",
+            "score": 52.7,
+            "source": "self-reported",
+            "sourceUrl": "https://openai.com/index/gpt-5-6/",
+            "notes": "Agents' Last Exam, GPT-5.6 Sol; confirmed"
+          },
+          {
+            "benchmarkSlug": "frontiermath-tier1-3",
+            "score": 89,
+            "source": "self-reported",
+            "sourceUrl": "https://openai.com/index/gpt-5-6/",
+            "notes": "FrontierMath Tier 1-3 v2, GPT-5.6 Sol; confirmed"
+          },
+          {
+            "benchmarkSlug": "frontiermath-tier4",
+            "score": 83,
+            "source": "self-reported",
+            "sourceUrl": "https://openai.com/index/gpt-5-6/",
+            "notes": "FrontierMath Tier 4 v2, GPT-5.6 Sol; confirmed"
+          }
+        ],
+        "verificationNotes": "Existence, July 9 2026 GA (June 26 limited govt preview), 1.05M context, and $5/$30 Sol pricing all confirmed directly via developers.openai.com/api/docs/models/gpt-5.6-sol and multiple outlets (Simon Willison, VentureBeat, MarkTechPost). All six benchmark scores independently corroborated via MarkTechPost's direct report of the OpenAI launch page."
+      },
+      {
+        "name": "Sonar",
+        "org": "Perplexity AI",
+        "family": "Sonar",
+        "releaseDate": "2025-02-11",
+        "status": "released",
+        "openness": "closed",
+        "license": "Proprietary",
+        "paramsB": 70,
+        "activeParamsB": null,
+        "archClass": "dense",
+        "archDisplay": "Dense transformer, fine-tune of Meta Llama 3.3 70B Instruct",
+        "ctxK": 128,
+        "modalities": [
+          "text"
+        ],
+        "langCount": null,
+        "capabilities": {
+          "reasoning": false,
+          "coding": false,
+          "vision": false,
+          "functionCalling": true,
+          "toolUse": true,
+          "agentic": false
+        },
+        "apiAvailable": true,
+        "price": {
+          "input": 1,
+          "output": 1,
+          "provider": "Perplexity"
+        },
+        "links": {
+          "docs": "docs.perplexity.ai/getting-started/models"
+        },
+        "note": "Web-grounded default search-answer model, fine-tuned from Llama 3.3 70B and served on Cerebras Wafer-Scale Engines at ~1200 tok/s.",
+        "quants": [],
+        "vramQ4Gb": null,
+        "vramFp16Gb": null,
+        "tps4090": null,
+        "tpsNote": "Served on Cerebras WSE inference hardware, not commodity GPUs; ~1200 tok/s decode on that hardware, not measured on RTX 4090.",
+        "effortLabel": null,
+        "isDefaultConfig": true,
+        "isBestConfig": true,
+        "specSources": {
+          "paramsB": "https://www.perplexity.ai/hub/blog/meet-new-sonar",
+          "ctxK": "https://developer.puter.com/ai/perplexity/sonar/",
+          "releaseDate": "https://www.perplexity.ai/hub/blog/meet-new-sonar",
+          "openness": "https://docs.perplexity.ai/getting-started/pricing"
+        },
+        "results": [
+          {
+            "benchmarkSlug": "simpleqa",
+            "score": 0.773,
+            "source": "self-reported",
+            "sourceUrl": "https://web.swipeinsight.app/posts/perplexity-launches-sonar-api-for-real-time-ai-search-capabilities-14187",
+            "notes": "SimpleQA F-score, 0-1 scale, from Perplexity's 'Meet new Sonar' evaluation; corroborated by openrouter.ai and other secondary trackers citing the same 0.773 figure"
+          }
+        ],
+        "verificationNotes": "Existence, Feb 11 2025 release, Llama 3.3 70B base, $1/$1 pricing, and 128K context all confirmed via perplexity.ai/hub/blog/meet-new-sonar and docs.perplexity.ai/getting-started/pricing (fetched via search excerpts; direct fetch of some Perplexity pages was blocked by bot protection but content was corroborated across independent secondary sources including OpenRouter). SimpleQA 0.773 confirmed via independent secondary sources quoting the same figure; the original cited sourceUrl returned a rate-limit error on direct fetch but its title/content was verified present in search results."
+      },
+      {
+        "name": "R1-1776",
+        "org": "Perplexity AI",
+        "family": "R1-1776",
+        "releaseDate": "2025-02-18",
+        "status": "released",
+        "openness": "open-weights",
+        "license": "MIT",
+        "paramsB": 671,
+        "activeParamsB": 37,
+        "archClass": "moe",
+        "archDisplay": "Mixture-of-Experts (DeepSeek-R1/V3 architecture), 671B total / 37B active",
+        "ctxK": 128,
+        "modalities": [
+          "text"
+        ],
+        "langCount": null,
+        "capabilities": {
+          "reasoning": true,
+          "coding": true,
+          "vision": false,
+          "functionCalling": false,
+          "toolUse": false,
+          "agentic": false
+        },
+        "apiAvailable": false,
+        "price": null,
+        "links": {
+          "hf": "perplexity-ai/r1-1776",
+          "docs": "perplexity.ai/hub/blog/open-sourcing-r1-1776"
+        },
+        "note": "MIT post-train of DeepSeek-R1 removing CCP censorship on ~300 topics via 40K-prompt multilingual SFT with NeMo 2.0; not currently listed on Perplexity's hosted API pricing or HF Inference Providers.",
+        "quants": [
+          "GGUF"
+        ],
+        "vramQ4Gb": 335,
+        "vramFp16Gb": 1342,
+        "tps4090": null,
+        "tpsNote": "671B MoE far exceeds a single RTX 4090's 24GB even at Q4 (~335GB needed); community low-bit GGUF (e.g. Unsloth Q2_K_XL) needs multi-GPU/CPU offload.",
+        "effortLabel": null,
+        "isDefaultConfig": true,
+        "isBestConfig": true,
+        "specSources": {
+          "paramsB": "https://huggingface.co/perplexity-ai/r1-1776",
+          "ctxK": "https://ollama.com/library/r1-1776",
+          "releaseDate": "https://www.perplexity.ai/de/hub/blog/open-sourcing-r1-1776",
+          "openness": "https://huggingface.co/perplexity-ai/r1-1776"
+        },
+        "results": [],
+        "verificationNotes": "Existence, Feb 18 2025 release (confirmed via perplexity.ai/de/hub/blog/open-sourcing-r1-1776 publish-date metadata), MIT license, and 671B/37B MoE DeepSeek-R1 architecture all confirmed. Dropped the sole lineage-bench result row (0.205 vs DeepSeek-R1's 0.780): follow-up investigation of the same Reddit/HuggingFace discussion thread shows the original low score was attributed to a flawed multi-threaded benchmark harness, and a corrected re-run had 'R1-1776 climbed to first place' — the 0.205 figure is a retracted/unreliable artifact, not a valid benchmark result, so it was removed rather than kept as a misleading number."
+      },
+      {
+        "name": "GLM-4.5 (355B-A32B)",
+        "org": "Zhipu AI / Z.ai (Tsinghua)",
+        "family": "GLM-4.5",
+        "releaseDate": "2025-07-28",
+        "status": "released",
+        "openness": "open-weights",
+        "license": "MIT",
+        "paramsB": 355,
+        "activeParamsB": 32,
+        "archClass": "moe",
+        "archDisplay": "Mixture-of-Experts, 355B total / 32B active, hybrid thinking/non-thinking response modes",
+        "ctxK": 128,
+        "modalities": [
+          "text"
+        ],
+        "langCount": null,
+        "capabilities": {
+          "reasoning": true,
+          "coding": true,
+          "vision": false,
+          "functionCalling": true,
+          "toolUse": true,
+          "agentic": true
+        },
+        "apiAvailable": true,
+        "price": {
+          "input": 0.6,
+          "output": 2.2,
+          "provider": "Z.ai"
+        },
+        "links": {
+          "hf": "zai-org/GLM-4.5",
+          "gh": "zai-org/GLM-4.5",
+          "docs": "docs.z.ai/guides/overview/pricing"
+        },
+        "note": "MIT-licensed agentic/reasoning/coding (ARC) MoE flagship; ranked 3rd overall and 2nd on agentic benchmarks among evaluated models at launch.",
+        "quants": [
+          "GGUF",
+          "AWQ",
+          "FP8"
+        ],
+        "vramQ4Gb": 180,
+        "vramFp16Gb": 710,
+        "tps4090": null,
+        "tpsNote": "355B MoE needs multi-GPU (8x H100/H200-class) even at FP8; does not fit a single RTX 4090.",
+        "effortLabel": null,
+        "isDefaultConfig": true,
+        "isBestConfig": true,
+        "specSources": {
+          "paramsB": "https://huggingface.co/zai-org/GLM-4.5",
+          "ctxK": "https://llm-stats.com/models/compare/glm-4.5-vs-glm-4.5-air",
+          "releaseDate": "https://www.cometapi.com/zhipu-ai-releases-glm-4-5/",
+          "openness": "https://huggingface.co/zai-org/GLM-4.5"
+        },
+        "results": [
+          {
+            "benchmarkSlug": "tau-bench",
+            "score": 70.1,
+            "source": "self-reported",
+            "sourceUrl": "https://arxiv.org/abs/2508.06471",
+            "notes": "TAU-Bench, GLM-4.5 paper"
+          },
+          {
+            "benchmarkSlug": "aime",
+            "score": 91,
+            "source": "self-reported",
+            "sourceUrl": "https://arxiv.org/abs/2508.06471",
+            "notes": "AIME 2024, GLM-4.5 paper"
+          },
+          {
+            "benchmarkSlug": "swe-bench",
+            "score": 64.2,
+            "source": "self-reported",
+            "sourceUrl": "https://arxiv.org/abs/2508.06471",
+            "notes": "SWE-bench Verified, GLM-4.5 paper"
+          },
+          {
+            "benchmarkSlug": "mmlu-pro",
+            "score": 84.6,
+            "source": "independent",
+            "sourceUrl": "https://llm-stats.com/models/compare/glm-4.5-vs-glm-4.5-air",
+            "evaluatedAt": "2026-07-12"
+          },
+          {
+            "benchmarkSlug": "gpqa",
+            "score": 79.1,
+            "source": "independent",
+            "sourceUrl": "https://llm-stats.com/models/compare/glm-4.5-vs-glm-4.5-air",
+            "evaluatedAt": "2026-07-12"
+          },
+          {
+            "benchmarkSlug": "livecodebench",
+            "score": 72.9,
+            "source": "independent",
+            "sourceUrl": "https://llm-stats.com/models/compare/glm-4.5-vs-glm-4.5-air",
+            "evaluatedAt": "2026-07-12"
+          },
+          {
+            "benchmarkSlug": "hle",
+            "score": 14.4,
+            "source": "independent",
+            "sourceUrl": "https://llm-stats.com/models/compare/glm-4.5-vs-glm-4.5-air",
+            "evaluatedAt": "2026-07-12"
+          }
+        ],
+        "verificationNotes": "Existence and identity confirmed via official Z.ai blog (z.ai/blog/glm-4.5), Hugging Face model card (zai-org/GLM-4.5), and arXiv paper 2508.06471. paramsB=355, activeParamsB=32 confirmed on HF card ('355 billion total parameters with 32 billion active'). License MIT confirmed on HF card. Release date 2025-07-28 confirmed via cometapi article citing the WAIC-adjacent launch event. ctxK=128 confirmed via llm-stats comparison page. Self-reported rows (TAU-Bench 70.1, AIME 91.0, SWE-bench 64.2) verbatim-confirmed by fetching arXiv abs page which explicitly states these three numbers. Independent rows (MMLU-Pro 84.6, GPQA 79.1, LiveCodeBench 72.9, HLE 14.4) verbatim-confirmed on llm-stats.com/models/compare/glm-4.5-vs-glm-4.5-air. Pricing ($0.6/$2.2 per 1M tokens) confirmed on docs.z.ai/guides/overview/pricing. No changes made to the original record; all fields checked out."
+      },
+      {
+        "name": "GLM-4.5-Air (106B-A12B)",
+        "org": "Zhipu AI / Z.ai (Tsinghua)",
+        "family": "GLM-4.5",
+        "releaseDate": "2025-07-28",
+        "status": "released",
+        "openness": "open-weights",
+        "license": "MIT",
+        "paramsB": 106,
+        "activeParamsB": 12,
+        "archClass": "moe",
+        "archDisplay": "Mixture-of-Experts, 106B total / 12B active, hybrid thinking/non-thinking response modes",
+        "ctxK": 128,
+        "modalities": [
+          "text"
+        ],
+        "langCount": null,
+        "capabilities": {
+          "reasoning": true,
+          "coding": true,
+          "vision": false,
+          "functionCalling": true,
+          "toolUse": true,
+          "agentic": true
+        },
+        "apiAvailable": true,
+        "price": {
+          "input": 0.2,
+          "output": 1.1,
+          "provider": "Z.ai"
+        },
+        "links": {
+          "hf": "zai-org/GLM-4.5-Air",
+          "gh": "zai-org/GLM-4.5",
+          "docs": "docs.z.ai/guides/overview/pricing"
+        },
+        "note": "Compact MoE sibling of GLM-4.5 for efficient agentic deployment; scored 59.8 vs GLM-4.5's 63.2 on Zhipu's 12-benchmark composite at launch.",
+        "quants": [
+          "GGUF",
+          "AWQ",
+          "FP8"
+        ],
+        "vramQ4Gb": 55,
+        "vramFp16Gb": 212,
+        "tps4090": null,
+        "tpsNote": "~53-55GB minimum at Q4 exceeds a single RTX 4090's 24GB VRAM; needs multi-GPU or CPU offload for full 128K context.",
+        "effortLabel": null,
+        "isDefaultConfig": true,
+        "isBestConfig": true,
+        "specSources": {
+          "paramsB": "https://huggingface.co/zai-org/GLM-4.5-Air",
+          "ctxK": "https://llm-stats.com/models/compare/glm-4.5-vs-glm-4.5-air",
+          "releaseDate": "https://www.cometapi.com/zhipu-ai-releases-glm-4-5/",
+          "openness": "https://huggingface.co/zai-org/GLM-4.5-Air"
+        },
+        "results": [
+          {
+            "benchmarkSlug": "aime",
+            "score": 89.4,
+            "source": "independent",
+            "sourceUrl": "https://llm-stats.com/models/compare/glm-4.5-vs-glm-4.5-air",
+            "notes": "AIME 2024",
+            "evaluatedAt": "2026-07-12"
+          },
+          {
+            "benchmarkSlug": "mmlu-pro",
+            "score": 81.4,
+            "source": "independent",
+            "sourceUrl": "https://llm-stats.com/models/compare/glm-4.5-vs-glm-4.5-air",
+            "evaluatedAt": "2026-07-12"
+          },
+          {
+            "benchmarkSlug": "gpqa",
+            "score": 75,
+            "source": "independent",
+            "sourceUrl": "https://llm-stats.com/models/compare/glm-4.5-vs-glm-4.5-air",
+            "evaluatedAt": "2026-07-12"
+          },
+          {
+            "benchmarkSlug": "swe-bench",
+            "score": 57.6,
+            "source": "independent",
+            "sourceUrl": "https://llm-stats.com/models/compare/glm-4.5-vs-glm-4.5-air",
+            "notes": "SWE-bench Verified",
+            "evaluatedAt": "2026-07-12"
+          },
+          {
+            "benchmarkSlug": "livecodebench",
+            "score": 70.7,
+            "source": "independent",
+            "sourceUrl": "https://llm-stats.com/models/compare/glm-4.5-vs-glm-4.5-air",
+            "evaluatedAt": "2026-07-12"
+          },
+          {
+            "benchmarkSlug": "hle",
+            "score": 10.6,
+            "source": "independent",
+            "sourceUrl": "https://llm-stats.com/models/compare/glm-4.5-vs-glm-4.5-air",
+            "evaluatedAt": "2026-07-12"
+          }
+        ],
+        "verificationNotes": "Existence and identity confirmed via official Z.ai blog and Hugging Face model card (zai-org/GLM-4.5-Air). paramsB=106, activeParamsB=12 confirmed verbatim on HF card ('106 billion total parameters', '12 billion active parameters'). License MIT confirmed on HF card. Release date 2025-07-28 confirmed (released simultaneously with GLM-4.5 per cometapi article). All six independent benchmark rows (AIME 89.4, MMLU-Pro 81.4, GPQA 75.0, SWE-bench 57.6, LiveCodeBench 70.7, HLE 10.6) verbatim-confirmed on llm-stats.com/models/compare/glm-4.5-vs-glm-4.5-air. Pricing ($0.2/$1.1 per 1M tokens) confirmed on docs.z.ai/guides/overview/pricing. No changes made to the original record; all fields checked out."
+      }
+    ]
+  },
+  "workflowProgress": [
+    {
+      "type": "workflow_phase",
+      "index": 1,
+      "title": "Research"
+    },
+    {
+      "type": "workflow_phase",
+      "index": 2,
+      "title": "Verify"
+    },
+    {
+      "type": "workflow_agent",
+      "index": 1,
+      "label": "research:OpenAI",
+      "phaseIndex": 1,
+      "phaseTitle": "Research",
+      "agentId": "a90bdf1435e572879",
+      "model": "claude-sonnet-5",
+      "state": "done",
+      "startedAt": 1783901946573,
+      "queuedAt": 1783901946535,
+      "attempt": 1,
+      "lastToolName": "StructuredOutput",
+      "promptPreview": "You have web research tools. FIRST load them: call ToolSearch with query \"select:mcp__4dbcbf51-5bb9-4f93-a61f-18044e1a3091__web_search,mcp__4dbcbf51-5bb9-4f93-a61f-18044e1a3091__web_fetch\" to load Parallel P0 web_search/web_fetch (pass a stable session_id + model_name on every call). Built-in WebSearch/WebFetch may also load via ToolSearch query \"web search fetch\". Use REAL searches — never answer…",
+      "lastProgressAt": 1783903058677,
+      "tokens": 191403,
+      "toolCalls": 77,
+      "durationMs": 1112104,
+      "resultPreview": "{\"models\":[{\"name\":\"GPT-3 175B\",\"org\":\"OpenAI\",\"family\":\"GPT-3\",\"releaseDate\":\"2020-06-11\",\"status\":\"deprecated\",\"openness\":\"closed\",\"license\":\"Proprietary\",\"paramsB\":175,\"activeParamsB\":null,\"archClass\":\"dense\",\"archDisplay\":\"Dense decoder-only Transformer\",\"ctxK\":2,\"modalities\":[\"text\"],\"langCount\":null,\"capabilities\":{\"reasoning\":false,\"coding\":false,\"vision\":false,\"functionCalling\":false,\"tool…"
+    },
+    {
+      "type": "workflow_agent",
+      "index": 2,
+      "label": "research:OpenAI",
+      "phaseIndex": 1,
+      "phaseTitle": "Research",
+      "agentId": "a1e2bd8a2d5a226c7",
+      "model": "claude-sonnet-5",
+      "state": "done",
+      "startedAt": 1783901946575,
+      "queuedAt": 1783901946536,
+      "attempt": 1,
+      "lastToolName": "StructuredOutput",
+      "promptPreview": "You have web research tools. FIRST load them: call ToolSearch with query \"select:mcp__4dbcbf51-5bb9-4f93-a61f-18044e1a3091__web_search,mcp__4dbcbf51-5bb9-4f93-a61f-18044e1a3091__web_fetch\" to load Parallel P0 web_search/web_fetch (pass a stable session_id + model_name on every call). Built-in WebSearch/WebFetch may also load via ToolSearch query \"web search fetch\". Use REAL searches — never answer…",
+      "lastProgressAt": 1783902771181,
+      "tokens": 178438,
+      "toolCalls": 72,
+      "durationMs": 824606,
+      "resultPreview": "{\"models\":[{\"name\":\"gpt-oss-120b (Low)\",\"org\":\"OpenAI\",\"family\":\"gpt-oss\",\"releaseDate\":\"2025-08-05\",\"status\":\"released\",\"openness\":\"open-weights\",\"license\":\"Apache 2.0\",\"paramsB\":117,\"activeParamsB\":5.1,\"archClass\":\"moe\",\"archDisplay\":\"Mixture-of-experts transformer, 128 experts/layer, top-4 active, 36 layers\",\"ctxK\":128,\"modalities\":[\"text\"],\"langCount\":null,\"capabilities\":{\"reasoning\":true,\"cod…"
+    },
+    {
+      "type": "workflow_agent",
+      "index": 3,
+      "label": "research:OpenAI",
+      "phaseIndex": 1,
+      "phaseTitle": "Research",
+      "agentId": "a1063abe11797216d",
+      "model": "claude-sonnet-5",
+      "state": "done",
+      "startedAt": 1783901946576,
+      "queuedAt": 1783901946536,
+      "attempt": 1,
+      "lastToolName": "StructuredOutput",
+      "promptPreview": "You have web research tools. FIRST load them: call ToolSearch with query \"select:mcp__4dbcbf51-5bb9-4f93-a61f-18044e1a3091__web_search,mcp__4dbcbf51-5bb9-4f93-a61f-18044e1a3091__web_fetch\" to load Parallel P0 web_search/web_fetch (pass a stable session_id + model_name on every call). Built-in WebSearch/WebFetch may also load via ToolSearch query \"web search fetch\". Use REAL searches — never answer…",
+      "lastProgressAt": 1783902609944,
+      "tokens": 210002,
+      "toolCalls": 50,
+      "durationMs": 663367,
+      "resultPreview": "{\"models\":[{\"name\":\"GPT-5.2\",\"org\":\"OpenAI\",\"family\":\"GPT-5.2\",\"releaseDate\":\"2025-12-11\",\"status\":\"released\",\"openness\":\"closed\",\"license\":\"Proprietary\",\"paramsB\":null,\"activeParamsB\":null,\"archClass\":\"dense\",\"archDisplay\":\"Undisclosed architecture (presumed dense transformer, reasoning-tuned); shipped as Instant/Thinking/Pro tiers\",\"ctxK\":400,\"modalities\":[\"text\",\"vision\"],\"langCount\":null,\"capa…"
+    },
+    {
+      "type": "workflow_agent",
+      "index": 4,
+      "label": "verify:OpenAI",
+      "phaseIndex": 2,
+      "phaseTitle": "Verify",
+      "agentId": "a1341e34b02413373",
+      "model": "claude-sonnet-5",
+      "state": "done",
+      "startedAt": 1783903058689,
+      "queuedAt": 1783903058680,
+      "attempt": 1,
+      "lastToolName": "StructuredOutput",
+      "promptPreview": "You have web research tools. FIRST load them: call ToolSearch with query \"select:mcp__4dbcbf51-5bb9-4f93-a61f-18044e1a3091__web_search,mcp__4dbcbf51-5bb9-4f93-a61f-18044e1a3091__web_fetch\" to load Parallel P0 web_search/web_fetch (pass a stable session_id + model_name on every call). Built-in WebSearch/WebFetch may also load via ToolSearch query \"web search fetch\". Use REAL searches — never answer…",
+      "lastProgressAt": 1783903382725,
+      "tokens": 87449,
+      "toolCalls": 39,
+      "durationMs": 324036,
+      "resultPreview": "{\"models\":[{\"name\":\"GPT-3 175B\",\"org\":\"OpenAI\",\"family\":\"GPT-3\",\"releaseDate\":\"2020-06-11\",\"status\":\"deprecated\",\"openness\":\"closed\",\"license\":\"Proprietary\",\"paramsB\":175,\"activeParamsB\":null,\"archClass\":\"dense\",\"archDisplay\":\"Dense decoder-only Transformer\",\"ctxK\":2,\"modalities\":[\"text\"],\"langCount\":null,\"capabilities\":{\"reasoning\":false,\"coding\":false,\"vision\":false,\"functionCalling\":false,\"tool…"
+    },
+    {
+      "type": "workflow_agent",
+      "index": 5,
+      "label": "verify:OpenAI",
+      "phaseIndex": 2,
+      "phaseTitle": "Verify",
+      "agentId": "a9e089fc012c6fbd1",
+      "model": "claude-sonnet-5",
+      "state": "done",
+      "startedAt": 1783903058690,
+      "queuedAt": 1783903058680,
+      "attempt": 1,
+      "lastToolName": "StructuredOutput",
+      "promptPreview": "You have web research tools. FIRST load them: call ToolSearch with query \"select:mcp__4dbcbf51-5bb9-4f93-a61f-18044e1a3091__web_search,mcp__4dbcbf51-5bb9-4f93-a61f-18044e1a3091__web_fetch\" to load Parallel P0 web_search/web_fetch (pass a stable session_id + model_name on every call). Built-in WebSearch/WebFetch may also load via ToolSearch query \"web search fetch\". Use REAL searches — never answer…",
+      "lastProgressAt": 1783903462795,
+      "tokens": 133439,
+      "toolCalls": 35,
+      "durationMs": 404105,
+      "resultPreview": "{\"models\":[{\"name\":\"OpenAI o3-mini (Medium)\",\"org\":\"OpenAI\",\"family\":\"o3\",\"releaseDate\":\"2025-01-31\",\"status\":\"released\",\"openness\":\"closed\",\"license\":\"Proprietary\",\"paramsB\":null,\"activeParamsB\":null,\"archClass\":\"dense\",\"archDisplay\":\"Transformer reasoning model (architecture undisclosed)\",\"ctxK\":200,\"modalities\":[\"text\"],\"langCount\":null,\"capabilities\":{\"reasoning\":true,\"coding\":true,\"vision\":fa…"
+    },
+    {
+      "type": "workflow_agent",
+      "index": 6,
+      "label": "verify:OpenAI",
+      "phaseIndex": 2,
+      "phaseTitle": "Verify",
+      "agentId": "aef51199ea7becec5",
+      "model": "claude-sonnet-5",
+      "state": "done",
+      "startedAt": 1783903058691,
+      "queuedAt": 1783903058680,
+      "attempt": 1,
+      "lastToolName": "StructuredOutput",
+      "promptPreview": "You have web research tools. FIRST load them: call ToolSearch with query \"select:mcp__4dbcbf51-5bb9-4f93-a61f-18044e1a3091__web_search,mcp__4dbcbf51-5bb9-4f93-a61f-18044e1a3091__web_fetch\" to load Parallel P0 web_search/web_fetch (pass a stable session_id + model_name on every call). Built-in WebSearch/WebFetch may also load via ToolSearch query \"web search fetch\". Use REAL searches — never answer…",
+      "lastProgressAt": 1783903631149,
+      "tokens": 132409,
+      "toolCalls": 68,
+      "durationMs": 572458,
+      "resultPreview": "{\"models\":[{\"name\":\"gpt-oss-20b (Medium)\",\"org\":\"OpenAI\",\"family\":\"gpt-oss\",\"releaseDate\":\"2025-08-05\",\"status\":\"released\",\"openness\":\"open-weights\",\"license\":\"Apache 2.0\",\"paramsB\":21,\"activeParamsB\":3.6,\"archClass\":\"moe\",\"archDisplay\":\"Mixture-of-experts transformer, 32 experts/layer, top-4 active, 24 layers\",\"ctxK\":128,\"modalities\":[\"text\"],\"langCount\":null,\"capabilities\":{\"reasoning\":true,\"cod…"
+    },
+    {
+      "type": "workflow_agent",
+      "index": 7,
+      "label": "verify:OpenAI",
+      "phaseIndex": 2,
+      "phaseTitle": "Verify",
+      "agentId": "af19832a1d0b9f452",
+      "model": "claude-sonnet-5",
+      "state": "done",
+      "startedAt": 1783903058691,
+      "queuedAt": 1783903058680,
+      "attempt": 1,
+      "lastToolName": "StructuredOutput",
+      "promptPreview": "You have web research tools. FIRST load them: call ToolSearch with query \"select:mcp__4dbcbf51-5bb9-4f93-a61f-18044e1a3091__web_search,mcp__4dbcbf51-5bb9-4f93-a61f-18044e1a3091__web_fetch\" to load Parallel P0 web_search/web_fetch (pass a stable session_id + model_name on every call). Built-in WebSearch/WebFetch may also load via ToolSearch query \"web search fetch\". Use REAL searches — never answer…",
+      "lastProgressAt": 1783903515062,
+      "tokens": 111412,
+      "toolCalls": 62,
+      "durationMs": 456371,
+      "resultPreview": "{\"models\":[{\"name\":\"GPT-5.1\",\"org\":\"OpenAI\",\"family\":\"GPT-5.1\",\"releaseDate\":\"2025-11-12\",\"status\":\"released\",\"openness\":\"closed\",\"license\":\"Proprietary (OpenAI API Terms)\",\"paramsB\":null,\"activeParamsB\":null,\"archClass\":\"dense\",\"archDisplay\":\"GPT-5 upgrade with adaptive reasoning spanning Instant and Thinking behavior in one model; dense transformer, exact size undisclosed\",\"ctxK\":400,\"modalities…"
+    },
+    {
+      "type": "workflow_agent",
+      "index": 8,
+      "label": "verify:Zhipu AI / Z.ai (Tsinghua)",
+      "phaseIndex": 2,
+      "phaseTitle": "Verify",
+      "agentId": "a9f38cc1885fb6864",
+      "model": "claude-sonnet-5",
+      "state": "done",
+      "startedAt": 1783903058691,
+      "queuedAt": 1783903058680,
+      "attempt": 1,
+      "lastToolName": "StructuredOutput",
+      "promptPreview": "You have web research tools. FIRST load them: call ToolSearch with query \"select:mcp__4dbcbf51-5bb9-4f93-a61f-18044e1a3091__web_search,mcp__4dbcbf51-5bb9-4f93-a61f-18044e1a3091__web_fetch\" to load Parallel P0 web_search/web_fetch (pass a stable session_id + model_name on every call). Built-in WebSearch/WebFetch may also load via ToolSearch query \"web search fetch\". Use REAL searches — never answer…",
+      "lastProgressAt": 1783903145272,
+      "tokens": 61400,
+      "toolCalls": 16,
+      "durationMs": 86581,
+      "resultPreview": "{\"models\":[{\"name\":\"GLM-4.5 (355B-A32B)\",\"org\":\"Zhipu AI / Z.ai (Tsinghua)\",\"family\":\"GLM-4.5\",\"releaseDate\":\"2025-07-28\",\"status\":\"released\",\"openness\":\"open-weights\",\"license\":\"MIT\",\"paramsB\":355,\"activeParamsB\":32,\"archClass\":\"moe\",\"archDisplay\":\"Mixture-of-Experts, 355B total / 32B active, hybrid thinking/non-thinking response modes\",\"ctxK\":128,\"modalities\":[\"text\"],\"langCount\":null,\"capabilit…"
+    }
+  ],
+  "totalTokens": 1105952,
+  "totalToolCalls": 419
+}

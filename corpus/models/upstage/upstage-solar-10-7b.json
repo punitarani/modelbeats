@@ -1,0 +1,53 @@
+{
+  "name": "Upstage SOLAR 10.7B",
+  "org": "Upstage",
+  "family": "SOLAR",
+  "releaseDate": "2023-12-13",
+  "status": "released",
+  "openness": "open-weights",
+  "license": "Apache 2.0 (base); Instruct variant is CC-BY-NC-4.0",
+  "paramsB": 10.7,
+  "activeParamsB": null,
+  "archClass": "dense",
+  "archDisplay": "Depth Up-Scaled (DUS) dense transformer — two 24-layer Mistral-7B-derived stacks merged to 48 layers, then continually pretrained",
+  "ctxK": 4,
+  "modalities": [
+    "text"
+  ],
+  "langCount": null,
+  "capabilities": {
+    "reasoning": false,
+    "coding": false,
+    "vision": false,
+    "functionCalling": false,
+    "toolUse": false,
+    "agentic": false
+  },
+  "apiAvailable": true,
+  "price": null,
+  "links": {
+    "hf": "upstage/SOLAR-10.7B-v1.0",
+    "docs": "upstage.ai"
+  },
+  "note": "DUS-merged from two Mistral-7B copies; the Instruct variant (H6=74.20) briefly topped the Dec 2023 HF Open LLM Leaderboard.",
+  "quants": [
+    "GGUF Q4",
+    "AWQ",
+    "GPTQ"
+  ],
+  "vramQ4Gb": 7,
+  "vramFp16Gb": 21,
+  "tps4090": null,
+  "tpsNote": null,
+  "effortLabel": null,
+  "isDefaultConfig": true,
+  "isBestConfig": true,
+  "specSources": {
+    "paramsB": "https://huggingface.co/upstage/SOLAR-10.7B-v1.0",
+    "ctxK": "https://huggingface.co/upstage/SOLAR-10.7B-Instruct-v1.0",
+    "releaseDate": "https://www.upstage.ai/news/solar-10-7b-emerges-as-worlds-top-pre-trained-llm",
+    "openness": "https://huggingface.co/upstage/SOLAR-10.7B-v1.0"
+  },
+  "results": [],
+  "verificationNotes": "Confirmed real: Upstage released SOLAR-10.7B on 2023-12-13, topping the HF Open LLM Leaderboard (confirmed via Upstage's own news page and MarkTechPost). Fetched the Hugging Face model card and confirmed ~11B (10.7B) params, Depth Up-Scaling from Mistral-7B, Apache 2.0 license for the base model, and the H6 base score of 66.04 literally appears there. Instruct variant's 74.20 H6 (cited only in the note, not a results row) independently corroborated by search."
+}

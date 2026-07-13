@@ -1,0 +1,88 @@
+{
+  "name": "StableLM-3B-4e1t",
+  "org": "Stability AI",
+  "family": "StableLM",
+  "releaseDate": "2023-10-02",
+  "status": "released",
+  "openness": "open-weights",
+  "license": "CC BY-SA-4.0",
+  "paramsB": 2.8,
+  "activeParamsB": null,
+  "archClass": "dense",
+  "archDisplay": "Dense decoder-only transformer (LLaMA-style, partial RoPE, LayerNorm w/ learned bias)",
+  "ctxK": 4,
+  "modalities": [
+    "text"
+  ],
+  "langCount": 1,
+  "capabilities": {
+    "reasoning": false,
+    "coding": false,
+    "vision": false,
+    "functionCalling": false,
+    "toolUse": false,
+    "agentic": false
+  },
+  "apiAvailable": false,
+  "price": null,
+  "links": {
+    "hf": "stabilityai/stablelm-3b-4e1t",
+    "gh": "Stability-AI/StableLM"
+  },
+  "note": "Strong 3B base trained 4 epochs over ~1T English+code tokens; widely used fine-tuning base (later became Zephyr's foundation).",
+  "quants": [
+    "GGUF",
+    "GPTQ"
+  ],
+  "vramQ4Gb": 2.2,
+  "vramFp16Gb": 5.6,
+  "tps4090": null,
+  "tpsNote": null,
+  "effortLabel": null,
+  "isDefaultConfig": true,
+  "isBestConfig": true,
+  "specSources": {
+    "paramsB": "https://huggingface.co/stabilityai/stablelm-3b-4e1t",
+    "ctxK": "https://huggingface.co/stabilityai/stablelm-3b-4e1t",
+    "releaseDate": "https://stability.ai/news-updates/stable-lm-3b-sustainable-high-performance-language-models-smart-devices",
+    "openness": "https://huggingface.co/stabilityai/stablelm-3b-4e1t"
+  },
+  "results": [
+    {
+      "benchmarkSlug": "mmlu",
+      "score": 45.23,
+      "source": "independent",
+      "sourceUrl": "https://huggingface.co/stabilityai/stablelm-3b-4e1t",
+      "notes": "Open LLM Leaderboard, 5-shot"
+    },
+    {
+      "benchmarkSlug": "hellaswag",
+      "score": 75.94,
+      "source": "independent",
+      "sourceUrl": "https://huggingface.co/stabilityai/stablelm-3b-4e1t",
+      "notes": "Open LLM Leaderboard, 10-shot"
+    },
+    {
+      "benchmarkSlug": "arc-challenge",
+      "score": 46.59,
+      "source": "independent",
+      "sourceUrl": "https://huggingface.co/stabilityai/stablelm-3b-4e1t",
+      "notes": "Open LLM Leaderboard, 25-shot"
+    },
+    {
+      "benchmarkSlug": "winogrande",
+      "score": 71.19,
+      "source": "independent",
+      "sourceUrl": "https://huggingface.co/stabilityai/stablelm-3b-4e1t",
+      "notes": "Open LLM Leaderboard, 5-shot"
+    },
+    {
+      "benchmarkSlug": "gsm8k",
+      "score": 3.34,
+      "source": "independent",
+      "sourceUrl": "https://huggingface.co/stabilityai/stablelm-3b-4e1t",
+      "notes": "Open LLM Leaderboard, 5-shot"
+    }
+  ],
+  "verificationNotes": "Confirmed real via direct fetch of huggingface.co/stabilityai/stablelm-3b-4e1t: 2.8B params (2,795,443,200), 4096 context, CC BY-SA-4.0 license, 1T tokens over 4 epochs, all verbatim. Release date corrected source-check: Stability AI's own announcement blog post is dated Oct 2 (byline dated before press coverage on Oct 3), matching the input's 2023-10-02 — kept as-is. All 5 Open LLM Leaderboard benchmark rows (MMLU 45.23, HellaSwag 75.94, ARC-Challenge 46.59, WinoGrande 71.19, GSM8K 3.34) verified literally on the HF page. No changes made to input values."
+}

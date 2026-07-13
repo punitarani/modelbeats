@@ -1,0 +1,94 @@
+{
+  "name": "OpenAI o1",
+  "org": "OpenAI",
+  "family": "o1",
+  "releaseDate": "2024-12-05",
+  "status": "released",
+  "openness": "closed",
+  "license": "Proprietary",
+  "paramsB": null,
+  "activeParamsB": null,
+  "archClass": "dense",
+  "archDisplay": "Dense transformer reasoning model (size undisclosed)",
+  "ctxK": 200,
+  "modalities": [
+    "text",
+    "vision"
+  ],
+  "langCount": null,
+  "capabilities": {
+    "reasoning": true,
+    "coding": true,
+    "vision": true,
+    "functionCalling": true,
+    "toolUse": true,
+    "agentic": true
+  },
+  "apiAvailable": true,
+  "price": {
+    "input": 15,
+    "output": 60,
+    "provider": "OpenAI"
+  },
+  "links": {
+    "docs": "developers.openai.com/api/docs/models/o1"
+  },
+  "note": "Full reasoning flagship (API snapshot o1-2024-12-17); added vision and function calling vs o1-preview; scheduled API shutdown 2026-10-23.",
+  "quants": [],
+  "vramQ4Gb": null,
+  "vramFp16Gb": null,
+  "tps4090": null,
+  "tpsNote": null,
+  "effortLabel": null,
+  "isDefaultConfig": true,
+  "isBestConfig": true,
+  "specSources": {
+    "releaseDate": "https://www.marketingaiinstitute.com/blog/12-days-of-shipmas-openai",
+    "ctxK": "https://developers.openai.com/api/docs/models/o1",
+    "openness": "https://developers.openai.com/api/docs/models/o1",
+    "paramsB": "https://developers.openai.com/api/docs/models/o1"
+  },
+  "results": [
+    {
+      "benchmarkSlug": "aime",
+      "score": 74.3,
+      "source": "independent",
+      "sourceUrl": "https://www.datacamp.com/blog/o3-openai",
+      "evaluatedAt": "2024-12-01",
+      "notes": "AIME 2024"
+    },
+    {
+      "benchmarkSlug": "gpqa",
+      "score": 78,
+      "source": "independent",
+      "sourceUrl": "https://www.datacamp.com/blog/o3-openai",
+      "evaluatedAt": "2024-12-01",
+      "notes": "GPQA Diamond"
+    },
+    {
+      "benchmarkSlug": "swe-bench",
+      "score": 48.9,
+      "source": "independent",
+      "sourceUrl": "https://www.datacamp.com/blog/o3-openai",
+      "evaluatedAt": "2024-12-01",
+      "notes": "SWE-bench Verified"
+    },
+    {
+      "benchmarkSlug": "codeforces",
+      "score": 1891,
+      "source": "independent",
+      "sourceUrl": "https://www.datacamp.com/blog/o3-openai",
+      "evaluatedAt": "2024-12-01",
+      "notes": "Codeforces Elo"
+    },
+    {
+      "benchmarkSlug": "mmmu",
+      "score": 77.6,
+      "source": "independent",
+      "sourceUrl": "https://www.datacamp.com/blog/o3-openai",
+      "evaluatedAt": "2024-12-01",
+      "notes": "MMMU college-level visual reasoning"
+    }
+  ],
+  "verificationNotes": "Full o1 launch on 2024-12-05 (alongside o1-pro/ChatGPT Pro) confirmed via multiple independent sources (Wikipedia, InfoQ, OpenAI o1 system card PDF dated 2024-12-05). AIME 74.3, GPQA 78, SWE-bench 48.9, Codeforces 1891, MMMU 77.6 all confirmed by direct fetch of datacamp.com/blog/o3-openai, matching exactly. Scheduled shutdown 2026-10-23 confirmed via OpenAI deprecation coverage (TheRouter.ai, OpenAI community deprecation notice) - the model is still real/active as of today (2026-07-12). No changes made."
+}

@@ -1,0 +1,82 @@
+{
+  "name": "Qwen3-14B (Non-Thinking)",
+  "org": "Alibaba",
+  "family": "Qwen3",
+  "releaseDate": "2025-04-29",
+  "status": "released",
+  "openness": "open-weights",
+  "license": "Apache 2.0",
+  "paramsB": 14.8,
+  "activeParamsB": null,
+  "archClass": "dense",
+  "archDisplay": "Dense Transformer (GQA, QK-Norm, hybrid thinking mode)",
+  "ctxK": 128,
+  "modalities": [
+    "text"
+  ],
+  "langCount": 119,
+  "capabilities": {
+    "reasoning": false,
+    "coding": true,
+    "vision": false,
+    "functionCalling": true,
+    "toolUse": true,
+    "agentic": true
+  },
+  "apiAvailable": true,
+  "price": null,
+  "links": {
+    "hf": "Qwen/Qwen3-14B",
+    "gh": "QwenLM/Qwen3",
+    "docs": "qwen.readthedocs.io"
+  },
+  "note": "Mid-size Gen-3 dense model, non-thinking (fast dialogue) mode; Apache 2.0.",
+  "quants": [
+    "GGUF",
+    "FP8"
+  ],
+  "vramQ4Gb": 8.4,
+  "vramFp16Gb": 29.6,
+  "tps4090": 60,
+  "tpsNote": "Approximate community llama.cpp Q4 benchmark, not vendor-reported.",
+  "effortLabel": "Non-Thinking",
+  "isDefaultConfig": false,
+  "isBestConfig": false,
+  "specSources": {
+    "paramsB": "https://huggingface.co/Qwen/Qwen3-14B",
+    "ctxK": "https://arxiv.org/pdf/2505.09388",
+    "releaseDate": "https://qwenlm.github.io/blog/qwen3/",
+    "openness": "https://huggingface.co/Qwen/Qwen3-14B"
+  },
+  "results": [
+    {
+      "benchmarkSlug": "aime",
+      "score": 31.7,
+      "source": "self-reported",
+      "sourceUrl": "https://arxiv.org/pdf/2505.09388",
+      "notes": "AIME'24, Non-thinking mode, Table 16"
+    },
+    {
+      "benchmarkSlug": "livecodebench",
+      "score": 29,
+      "source": "self-reported",
+      "sourceUrl": "https://arxiv.org/pdf/2505.09388",
+      "notes": "LiveCodeBench v5, Non-thinking mode"
+    },
+    {
+      "benchmarkSlug": "gpqa",
+      "score": 54.8,
+      "source": "self-reported",
+      "sourceUrl": "https://arxiv.org/pdf/2505.09388",
+      "notes": "GPQA-Diamond, Non-thinking mode"
+    },
+    {
+      "benchmarkSlug": "bfcl",
+      "score": 61.5,
+      "source": "self-reported",
+      "sourceUrl": "https://arxiv.org/pdf/2505.09388",
+      "notes": "BFCL v3, Non-thinking mode"
+    }
+  ],
+  "verificationNotes": "Same model/spec sourcing as Thinking variant (verified). Read Table 16 of arxiv.org/pdf/2505.09388 directly: Qwen3-14B (Non-thinking) row shows AIME'24=31.7, LiveCodeBench v5=29.0, GPQA-Diamond=54.8, BFCL v3=61.5 — every value matches exactly. No changes."
+}

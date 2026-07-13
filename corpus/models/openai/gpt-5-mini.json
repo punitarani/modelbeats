@@ -1,0 +1,86 @@
+{
+  "name": "GPT-5 mini",
+  "org": "OpenAI",
+  "family": "GPT-5",
+  "releaseDate": "2025-08-07",
+  "status": "released",
+  "openness": "closed",
+  "license": "Proprietary (OpenAI API Terms)",
+  "paramsB": null,
+  "activeParamsB": null,
+  "archClass": "dense",
+  "archDisplay": "Cost-efficient mid-tier sibling of GPT-5's unified architecture; dense transformer, exact size undisclosed",
+  "ctxK": 400,
+  "modalities": [
+    "text",
+    "vision"
+  ],
+  "langCount": null,
+  "capabilities": {
+    "reasoning": true,
+    "coding": true,
+    "vision": true,
+    "functionCalling": true,
+    "toolUse": true,
+    "agentic": true
+  },
+  "apiAvailable": true,
+  "price": {
+    "input": 0.25,
+    "output": 2,
+    "provider": "OpenAI"
+  },
+  "links": {
+    "docs": "developers.openai.com/api/docs/models/gpt-5-mini"
+  },
+  "note": "Cost-efficient mid-tier of the GPT-5 family.",
+  "quants": [],
+  "vramQ4Gb": null,
+  "vramFp16Gb": null,
+  "tps4090": null,
+  "tpsNote": null,
+  "effortLabel": null,
+  "isDefaultConfig": true,
+  "isBestConfig": true,
+  "specSources": {
+    "releaseDate": "https://techcrunch.com/2025/08/07/openais-gpt-5-is-here/",
+    "ctxK": "https://developers.openai.com/api/docs/models/gpt-5-mini",
+    "openness": "https://developers.openai.com/api/docs/models/gpt-5-mini",
+    "paramsB": "https://developers.openai.com/api/docs/models/gpt-5-mini"
+  },
+  "results": [
+    {
+      "benchmarkSlug": "aime",
+      "score": 91.1,
+      "source": "self-reported",
+      "sourceUrl": "https://openai.com/index/introducing-gpt-5-for-developers/",
+      "evaluatedAt": "2025-08-07",
+      "notes": "AIME 2025, no tools, high reasoning effort"
+    },
+    {
+      "benchmarkSlug": "gpqa",
+      "score": 82.3,
+      "source": "self-reported",
+      "sourceUrl": "https://openai.com/index/introducing-gpt-5-for-developers/",
+      "evaluatedAt": "2025-08-07",
+      "notes": "GPQA Diamond, no tools, high reasoning effort"
+    },
+    {
+      "benchmarkSlug": "hle",
+      "score": 16.7,
+      "source": "self-reported",
+      "sourceUrl": "https://openai.com/index/introducing-gpt-5-for-developers/",
+      "evaluatedAt": "2025-08-07",
+      "notes": "Humanity's Last Exam, no tools, high reasoning effort"
+    },
+    {
+      "benchmarkSlug": "aider-polyglot",
+      "score": 71.6,
+      "source": "self-reported",
+      "sourceUrl": "https://openai.com/index/introducing-gpt-5-for-developers/",
+      "evaluatedAt": "2025-08-07",
+      "notes": "Aider polyglot (diff), high reasoning effort"
+    }
+  ],
+  "verificationNotes": "Existence, release date and pricing/context ($0.25/$2 per 1M, 400K context) confirmed by live-fetching developers.openai.com/api/docs/models/gpt-5-mini. Primary blog page returned 403 to direct fetch/was rate-limited on the fetch connector, so each result row was checked against secondary sources quoting the original figures. Confirmed exactly: AIME 91.1, GPQA 82.3, HLE 16.7, Aider polyglot 71.6. Could NOT independently confirm swe-bench (71), mmmu (81.6), or tau-bench (74.1) on any accessible source — those 3 rows were dropped per verification policy (never keep an unconfirmed number)."
+}

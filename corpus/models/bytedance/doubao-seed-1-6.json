@@ -1,0 +1,61 @@
+{
+  "name": "Doubao-Seed-1.6",
+  "org": "ByteDance",
+  "family": "Doubao",
+  "releaseDate": "2025-06-11",
+  "status": "released",
+  "openness": "closed",
+  "license": "Proprietary",
+  "paramsB": 230,
+  "activeParamsB": 23,
+  "archClass": "moe",
+  "archDisplay": "Mixture-of-Experts, 230B total / 23B active, with Adaptive-CoT (AdaCoT)",
+  "ctxK": 256,
+  "modalities": [
+    "text",
+    "vision"
+  ],
+  "langCount": null,
+  "capabilities": {
+    "reasoning": true,
+    "coding": true,
+    "vision": true,
+    "functionCalling": true,
+    "toolUse": true,
+    "agentic": true
+  },
+  "apiAvailable": true,
+  "price": {
+    "input": 0.111,
+    "output": 0.278,
+    "provider": "Volcano Engine (ByteDance)"
+  },
+  "links": {
+    "docs": "seed.bytedance.com/en/blog/introduction-to-techniques-used-in-seed1-6"
+  },
+  "note": "Adaptive-CoT multimodal flagship, 256K context, ~63% cheaper than Doubao 1.5; spans standard/thinking/flash variants.",
+  "quants": [],
+  "vramQ4Gb": null,
+  "vramFp16Gb": null,
+  "tps4090": null,
+  "tpsNote": null,
+  "effortLabel": null,
+  "isDefaultConfig": true,
+  "isBestConfig": true,
+  "specSources": {
+    "paramsB": "https://seed.bytedance.com/en/blog/introduction-to-techniques-used-in-seed1-6",
+    "ctxK": "https://seed.bytedance.com/en/blog/introduction-to-techniques-used-in-seed1-6",
+    "releaseDate": "https://finance.sina.com.cn/tech/discovery/2025-06-11/doc-inezskch4850147.shtml",
+    "openness": "https://seed.bytedance.com/en/blog/introduction-to-techniques-used-in-seed1-6"
+  },
+  "results": [
+    {
+      "benchmarkSlug": "gaokao-math",
+      "score": 96,
+      "source": "self-reported",
+      "sourceUrl": "https://finance.sina.com.cn/tech/discovery/2025-06-11/doc-inezskch4850147.shtml",
+      "notes": "144/150 on China's Gaokao (national college entrance exam) math paper, reported #1 among models at launch"
+    }
+  ],
+  "verificationNotes": "Confirmed real: fetched the Sina Finance article (published June 11, 2025, matching releaseDate) directly — it states Doubao's large model scored 144 points and ranked first nationally ('全国第一') on the national Gaokao math paper; the '/150' total is standard knowledge for the Gaokao math paper (not explicitly restated as '150' in the article itself, but a 150-point scale is the well-established format). Fetched ByteDance's own official Seed1.6 techniques blog and confirmed 230B total/23B active MoE params, 256K context window, and the AdaCoT (Adaptive Chain-of-Thought) technique verbatim. Pricing cross-checked: Sina article cites ~0.8 CNY/M input and 2 CNY/M output, which converts to ~$0.11/$0.28 USD — matches the record's price field closely. No changes made to core facts; note field retained as-is since substance is corroborated."
+}

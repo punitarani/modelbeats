@@ -1,0 +1,98 @@
+{
+  "name": "Qwen3-235B-A22B-Instruct-2507",
+  "org": "Alibaba",
+  "family": "Qwen3",
+  "releaseDate": "2025-07-21",
+  "status": "released",
+  "openness": "open-weights",
+  "license": "Apache 2.0",
+  "paramsB": 235,
+  "activeParamsB": 22,
+  "archClass": "moe",
+  "archDisplay": "MoE, 128 experts / 8 active",
+  "ctxK": 256,
+  "modalities": [
+    "text"
+  ],
+  "langCount": 119,
+  "capabilities": {
+    "reasoning": true,
+    "coding": true,
+    "vision": false,
+    "functionCalling": true,
+    "toolUse": true,
+    "agentic": true
+  },
+  "apiAvailable": true,
+  "price": {
+    "input": 0.23,
+    "output": 0.92,
+    "provider": "Alibaba Cloud Model Studio (DashScope, Intl.)"
+  },
+  "links": {
+    "hf": "Qwen/Qwen3-235B-A22B-Instruct-2507",
+    "gh": "QwenLM/Qwen3",
+    "docs": "qwen.readthedocs.io"
+  },
+  "note": "July refresh drops hybrid mode for a dedicated non-thinking Instruct model with native 256K context.",
+  "quants": [
+    "GGUF",
+    "FP8",
+    "AWQ"
+  ],
+  "vramQ4Gb": 142,
+  "vramFp16Gb": 470,
+  "tps4090": null,
+  "tpsNote": "Too large to run on a single RTX 4090 even at Q4; requires multi-GPU or CPU offload.",
+  "effortLabel": null,
+  "isDefaultConfig": true,
+  "isBestConfig": true,
+  "specSources": {
+    "paramsB": "https://huggingface.co/Qwen/Qwen3-235B-A22B-Instruct-2507",
+    "ctxK": "https://huggingface.co/Qwen/Qwen3-235B-A22B-Instruct-2507",
+    "releaseDate": "https://github.com/QwenLM/Qwen3",
+    "openness": "https://huggingface.co/Qwen/Qwen3-235B-A22B-Instruct-2507"
+  },
+  "results": [
+    {
+      "benchmarkSlug": "mmlu-pro",
+      "score": 83,
+      "source": "self-reported",
+      "sourceUrl": "https://huggingface.co/Qwen/Qwen3-235B-A22B-Instruct-2507",
+      "notes": "MMLU-Pro"
+    },
+    {
+      "benchmarkSlug": "gpqa",
+      "score": 77.5,
+      "source": "self-reported",
+      "sourceUrl": "https://huggingface.co/Qwen/Qwen3-235B-A22B-Instruct-2507"
+    },
+    {
+      "benchmarkSlug": "aime",
+      "score": 70.3,
+      "source": "self-reported",
+      "sourceUrl": "https://huggingface.co/Qwen/Qwen3-235B-A22B-Instruct-2507",
+      "notes": "AIME'25"
+    },
+    {
+      "benchmarkSlug": "livecodebench",
+      "score": 51.8,
+      "source": "self-reported",
+      "sourceUrl": "https://huggingface.co/Qwen/Qwen3-235B-A22B-Instruct-2507",
+      "notes": "LiveCodeBench v6"
+    },
+    {
+      "benchmarkSlug": "arena-hard-v2",
+      "score": 79.2,
+      "source": "self-reported",
+      "sourceUrl": "https://huggingface.co/Qwen/Qwen3-235B-A22B-Instruct-2507"
+    },
+    {
+      "benchmarkSlug": "bfcl-v3",
+      "score": 70.9,
+      "source": "self-reported",
+      "sourceUrl": "https://huggingface.co/Qwen/Qwen3-235B-A22B-Instruct-2507"
+    }
+  ],
+  "verificationNotes": "Fully confirmed via direct fetch of the HF model card: 235B total/22B active params, 128 experts/8 active, Apache 2.0, native 262,144-token (256K) context, all six benchmark scores match verbatim. Independently confirmed 119-language support via Qwen3 Technical Report (arXiv 2505.09388) and Alibaba_Qwen official tweet. Pricing ($0.23/$0.92 per M tokens) confirmed exactly via Alibaba Cloud Model Studio official international pricing page. No changes made."
+}

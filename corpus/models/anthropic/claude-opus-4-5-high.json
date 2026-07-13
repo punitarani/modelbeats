@@ -1,0 +1,97 @@
+{
+  "name": "Claude Opus 4.5 (High)",
+  "org": "Anthropic",
+  "family": "Claude 4",
+  "releaseDate": "2025-11-24",
+  "status": "released",
+  "openness": "closed",
+  "license": "Proprietary",
+  "paramsB": null,
+  "activeParamsB": null,
+  "archClass": "dense",
+  "archDisplay": "Dense Transformer (undisclosed configuration)",
+  "ctxK": 200,
+  "modalities": [
+    "text",
+    "vision"
+  ],
+  "langCount": null,
+  "capabilities": {
+    "reasoning": true,
+    "coding": true,
+    "vision": true,
+    "functionCalling": true,
+    "toolUse": true,
+    "agentic": true
+  },
+  "apiAvailable": true,
+  "price": {
+    "input": 5,
+    "output": 25,
+    "provider": "Anthropic"
+  },
+  "links": {
+    "docs": "platform.claude.com"
+  },
+  "note": "Efficiency-focused flagship; API default (high) effort; record 80.9% SWE-bench Verified with major price cut vs Opus 4.1.",
+  "quants": [],
+  "vramQ4Gb": null,
+  "vramFp16Gb": null,
+  "tps4090": null,
+  "tpsNote": null,
+  "effortLabel": "High",
+  "isDefaultConfig": true,
+  "isBestConfig": true,
+  "specSources": {
+    "releaseDate": "https://www.anthropic.com/news/claude-opus-4-5",
+    "ctxK": "https://www.anthropic.com/news/claude-opus-4-5",
+    "openness": "https://www.anthropic.com/news/claude-opus-4-5"
+  },
+  "results": [
+    {
+      "benchmarkSlug": "swe-bench",
+      "score": 80.9,
+      "source": "self-reported",
+      "sourceUrl": "https://www.theunwindai.com/p/claude-opus-4-5-scores-80-9-on-swe-bench",
+      "evaluatedAt": "2025-11-24",
+      "notes": "High (default) effort, headline launch score"
+    },
+    {
+      "benchmarkSlug": "gpqa",
+      "score": 87,
+      "source": "self-reported",
+      "sourceUrl": "https://www.vellum.ai/blog/claude-opus-4-5-benchmarks",
+      "evaluatedAt": "2025-11-24"
+    },
+    {
+      "benchmarkSlug": "mmlu",
+      "score": 90.8,
+      "source": "self-reported",
+      "sourceUrl": "https://www.vellum.ai/blog/claude-opus-4-5-benchmarks",
+      "evaluatedAt": "2025-11-24"
+    },
+    {
+      "benchmarkSlug": "mmmu",
+      "score": 80.7,
+      "source": "self-reported",
+      "sourceUrl": "https://www.vellum.ai/blog/claude-opus-4-5-benchmarks",
+      "evaluatedAt": "2025-11-24"
+    },
+    {
+      "benchmarkSlug": "hle",
+      "score": 43.2,
+      "source": "self-reported",
+      "sourceUrl": "https://www.vellum.ai/blog/claude-opus-4-5-benchmarks",
+      "evaluatedAt": "2025-11-24",
+      "notes": "with search/tool use"
+    },
+    {
+      "benchmarkSlug": "terminal-bench",
+      "score": 59.3,
+      "source": "self-reported",
+      "sourceUrl": "https://www.vellum.ai/blog/claude-opus-4-5-benchmarks",
+      "evaluatedAt": "2025-11-24"
+    }
+  ],
+  "verificationNotes": "Confirmed real; anthropic.com/news/claude-opus-4-5 verifies release date, 200K context, $5/$25 pricing. The 80.9% SWE-bench figure is a genuine, widely-reported Anthropic claim, but it appears on anthropic.com's own page only as a chart label, not literal text, so the sourceUrl was swapped to theunwindai.com, whose headline literally states 'Claude Opus 4.5 Scores 80.9% on SWE-bench.' The other four rows (GPQA 87.0, MMLU 90.8, MMMU 80.7, HLE-with-search 43.2, Terminal-Bench 59.3) were all confirmed as literal quotes on vellum.ai/blog/claude-opus-4-5-benchmarks."
+}

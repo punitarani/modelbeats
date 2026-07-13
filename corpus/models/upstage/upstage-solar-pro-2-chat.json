@@ -1,0 +1,52 @@
+{
+  "name": "Upstage Solar Pro 2 (Chat)",
+  "org": "Upstage",
+  "family": "SOLAR",
+  "releaseDate": "2025-07-10",
+  "status": "released",
+  "openness": "closed",
+  "license": "Proprietary",
+  "paramsB": 31,
+  "activeParamsB": null,
+  "archClass": "dense",
+  "archDisplay": "Dense transformer with switchable Chat / Reasoning (chain-of-thought) inference modes",
+  "ctxK": 64,
+  "modalities": [
+    "text"
+  ],
+  "langCount": null,
+  "capabilities": {
+    "reasoning": true,
+    "coding": true,
+    "vision": false,
+    "functionCalling": true,
+    "toolUse": true,
+    "agentic": true
+  },
+  "apiAvailable": true,
+  "price": {
+    "input": 0.15,
+    "output": 0.6,
+    "provider": "Upstage"
+  },
+  "links": {
+    "docs": "upstage.ai"
+  },
+  "note": "31B 'frontier' model billed as Korea's first; Chat mode is the fast default, Reasoning mode trades latency for accuracy on hard tasks.",
+  "quants": [],
+  "vramQ4Gb": null,
+  "vramFp16Gb": null,
+  "tps4090": null,
+  "tpsNote": null,
+  "effortLabel": "Chat",
+  "isDefaultConfig": true,
+  "isBestConfig": false,
+  "specSources": {
+    "paramsB": "https://koreatechdesk.com/upstage-solar-pro-2-korean-global-ai-frontier-model",
+    "ctxK": "https://artificialanalysis.ai/models/solar-pro-2",
+    "releaseDate": "https://www.upstage.ai/news/solar-pro-2",
+    "openness": "https://www.upstage.ai/pricing/api"
+  },
+  "results": [],
+  "verificationNotes": "Confirmed real: Upstage officially released Solar Pro 2 on 2025-07-10 per Upstage's own news page byline/announcement (not the previously-guessed July 21). Confirmed 31B params, $0.15/$0.6 per-1M-token pricing, and 64K context (doubled from 32K) via Upstage pricing page and independent coverage. Fetched artificialanalysis.ai/models/solar-pro-2 directly and confirmed the Non-reasoning score of 8 literally appears there. Model is API-only/proprietary (no open weights found), consistent with 'closed' openness."
+}

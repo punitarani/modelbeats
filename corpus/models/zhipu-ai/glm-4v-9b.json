@@ -1,0 +1,80 @@
+{
+  "name": "GLM-4V-9B",
+  "org": "Zhipu AI",
+  "family": "GLM-4",
+  "releaseDate": "2024-06-05",
+  "status": "released",
+  "openness": "open-weights",
+  "license": "GLM-4 License (custom, free for research & most commercial use)",
+  "paramsB": 14,
+  "activeParamsB": null,
+  "archClass": "dense",
+  "archDisplay": "Dense transformer + ViT vision encoder (GLM-4V, CogVLM-style)",
+  "ctxK": 8,
+  "modalities": [
+    "text",
+    "vision"
+  ],
+  "langCount": 2,
+  "capabilities": {
+    "reasoning": false,
+    "coding": true,
+    "vision": true,
+    "functionCalling": false,
+    "toolUse": false,
+    "agentic": false
+  },
+  "apiAvailable": true,
+  "price": null,
+  "links": {
+    "hf": "zai-org/glm-4v-9b",
+    "gh": "zai-org/GLM-4"
+  },
+  "note": "Open multimodal GLM-4 variant adding 1120x1120 Chinese/English image understanding; claimed to beat GPT-4-turbo-2024-04-09, Gemini 1.0 Pro, Qwen-VL-Max and Claude 3 Opus on multimodal benchmarks.",
+  "quants": [
+    "GPTQ 4-bit"
+  ],
+  "vramQ4Gb": 8,
+  "vramFp16Gb": 28,
+  "tps4090": null,
+  "tpsNote": null,
+  "effortLabel": null,
+  "isDefaultConfig": true,
+  "isBestConfig": true,
+  "specSources": {
+    "paramsB": "https://huggingface.co/zai-org/glm-4v-9b",
+    "ctxK": "https://huggingface.co/zai-org/glm-4v-9b",
+    "releaseDate": "https://github.com/zai-org/GLM-4/blob/main/README_20240605.md",
+    "openness": "https://huggingface.co/zai-org/glm-4v-9b"
+  },
+  "results": [
+    {
+      "benchmarkSlug": "mmbench-en",
+      "score": 81.1,
+      "source": "self-reported",
+      "sourceUrl": "https://huggingface.co/THUDM/glm-4v-9b",
+      "notes": "MMBench-EN-Test"
+    },
+    {
+      "benchmarkSlug": "mmbench-cn",
+      "score": 79.4,
+      "source": "self-reported",
+      "sourceUrl": "https://huggingface.co/THUDM/glm-4v-9b",
+      "notes": "MMBench-CN-Test"
+    },
+    {
+      "benchmarkSlug": "ai2d",
+      "score": 81.1,
+      "source": "self-reported",
+      "sourceUrl": "https://huggingface.co/THUDM/glm-4v-9b"
+    },
+    {
+      "benchmarkSlug": "ocrbench",
+      "score": 786,
+      "source": "self-reported",
+      "sourceUrl": "https://huggingface.co/THUDM/glm-4v-9b",
+      "notes": "out of 1000"
+    }
+  ],
+  "verificationNotes": "Confirmed real, same 2024-06-05 release batch as GLM-4-9B-Chat (GitHub README_20240605.md). Notably the paramsB:14 in the source record (despite the '9B' model name) is CORRECT — verified via HF API safetensors metadata showing 13,906,320,928 total params (13.9B, rounds to 14) because of the added ViT vision encoder. config.json seq_length=8192 confirms 8K context (matches ctxK:8, unusually short vs the text-only 9B's 128K). All 4 result rows (MMBench-EN 81.1, MMBench-CN 79.4, AI2D 81.1, OCRBench 786) re-confirmed verbatim on the HF README. No changes made."
+}

@@ -1,0 +1,68 @@
+{
+  "name": "Pharia-1-LLM-7B (control)",
+  "org": "Aleph Alpha",
+  "family": "Pharia-1",
+  "releaseDate": "2024-08-26",
+  "status": "released",
+  "openness": "open-weights",
+  "license": "Open Aleph License (non-commercial research/educational use)",
+  "paramsB": 7.04,
+  "activeParamsB": null,
+  "archClass": "dense",
+  "archDisplay": "Dense decoder-only transformer, 27 layers, 4-head grouped-query attention",
+  "ctxK": 8,
+  "modalities": [
+    "text"
+  ],
+  "langCount": 4,
+  "capabilities": {
+    "reasoning": false,
+    "coding": false,
+    "vision": false,
+    "functionCalling": false,
+    "toolUse": false,
+    "agentic": false
+  },
+  "apiAvailable": false,
+  "price": null,
+  "links": {
+    "hf": "Aleph-Alpha/Pharia-1-LLM-7B-control",
+    "docs": "docs.aleph-alpha.com/products/pharia-1-llm/overview"
+  },
+  "note": "Open, EU-compliance-focused 7B trained on lawfully sourced data; Aleph Alpha's strategic successor to Luminous.",
+  "quants": [],
+  "vramQ4Gb": 4.5,
+  "vramFp16Gb": 14.5,
+  "tps4090": null,
+  "tpsNote": null,
+  "effortLabel": null,
+  "isDefaultConfig": true,
+  "isBestConfig": true,
+  "specSources": {
+    "paramsB": "https://huggingface.co/Aleph-Alpha/Pharia-1-LLM-7B-control",
+    "openness": "https://huggingface.co/Aleph-Alpha/Pharia-1-LLM-7B-control",
+    "releaseDate": "https://aleph-alpha.com/introducing-pharia-1-llm-transparent-and-compliant/",
+    "ctxK": "https://huggingface.co/Aleph-Alpha/Pharia-1-LLM-7B-control"
+  },
+  "results": [
+    {
+      "benchmarkSlug": "mmlu",
+      "score": 48.4,
+      "source": "self-reported",
+      "sourceUrl": "https://huggingface.co/Aleph-Alpha/Pharia-1-LLM-7B-control"
+    },
+    {
+      "benchmarkSlug": "hellaswag",
+      "score": 64.6,
+      "source": "self-reported",
+      "sourceUrl": "https://huggingface.co/Aleph-Alpha/Pharia-1-LLM-7B-control"
+    },
+    {
+      "benchmarkSlug": "gsm8k",
+      "score": 1.4,
+      "source": "self-reported",
+      "sourceUrl": "https://huggingface.co/Aleph-Alpha/Pharia-1-LLM-7B-control"
+    }
+  ],
+  "verificationNotes": "Existence and Aug 26, 2024 release confirmed via aleph-alpha.com blog post and corroborating coverage (VentureBeat, Maginative, dataphoenix, and Aleph Alpha's own X/Twitter announcement). 7.04B params (7,041,544,704 exact) and Open Aleph License (non-commercial research/educational use) confirmed by fetching the HF model card directly. All three benchmark scores (MMLU 48.4, HellaSwag 64.6, GSM8K 1.4) confirmed to literally appear on huggingface.co/Aleph-Alpha/Pharia-1-LLM-7B-control - exact match, no changes needed."
+}

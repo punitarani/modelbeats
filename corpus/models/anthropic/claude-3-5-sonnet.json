@@ -1,0 +1,125 @@
+{
+  "name": "Claude 3.5 Sonnet",
+  "org": "Anthropic",
+  "family": "Claude 3.5",
+  "releaseDate": "2024-06-20",
+  "status": "deprecated",
+  "openness": "closed",
+  "license": "Proprietary (Anthropic Commercial Terms of Service)",
+  "paramsB": null,
+  "activeParamsB": null,
+  "archClass": "dense",
+  "archDisplay": "Dense multimodal Transformer (parameter count undisclosed)",
+  "ctxK": 200,
+  "modalities": [
+    "text",
+    "vision"
+  ],
+  "langCount": null,
+  "capabilities": {
+    "reasoning": true,
+    "coding": true,
+    "vision": true,
+    "functionCalling": true,
+    "toolUse": true,
+    "agentic": true
+  },
+  "apiAvailable": false,
+  "price": {
+    "input": 3,
+    "output": 15,
+    "provider": "Anthropic"
+  },
+  "links": {
+    "docs": "docs.claude.com"
+  },
+  "note": "Mid-tier that beat Opus 3, launched the Artifacts feature, and led coding/agentic benchmarks at a fraction of Opus's price.",
+  "quants": [],
+  "vramQ4Gb": null,
+  "vramFp16Gb": null,
+  "tps4090": null,
+  "tpsNote": null,
+  "effortLabel": null,
+  "isDefaultConfig": true,
+  "isBestConfig": true,
+  "specSources": {
+    "releaseDate": "https://www.anthropic.com/news/claude-3-5-sonnet",
+    "ctxK": "https://www.anthropic.com/news/claude-3-5-sonnet",
+    "openness": "https://www.anthropic.com/news/claude-3-5-sonnet"
+  },
+  "results": [
+    {
+      "benchmarkSlug": "mmlu",
+      "score": 88.7,
+      "source": "self-reported",
+      "sourceUrl": "https://www-cdn.anthropic.com/fed9cc193a14b84131812372d8d5857f8f304c52/Model_Card_Claude_3_Addendum.pdf",
+      "evaluatedAt": "2024-06-20",
+      "notes": "5-shot"
+    },
+    {
+      "benchmarkSlug": "math",
+      "score": 71.1,
+      "source": "self-reported",
+      "sourceUrl": "https://www-cdn.anthropic.com/fed9cc193a14b84131812372d8d5857f8f304c52/Model_Card_Claude_3_Addendum.pdf",
+      "evaluatedAt": "2024-06-20",
+      "notes": "0-shot CoT"
+    },
+    {
+      "benchmarkSlug": "gsm8k",
+      "score": 96.4,
+      "source": "self-reported",
+      "sourceUrl": "https://www-cdn.anthropic.com/fed9cc193a14b84131812372d8d5857f8f304c52/Model_Card_Claude_3_Addendum.pdf",
+      "evaluatedAt": "2024-06-20",
+      "notes": "0-shot CoT"
+    },
+    {
+      "benchmarkSlug": "humaneval",
+      "score": 92,
+      "source": "self-reported",
+      "sourceUrl": "https://www-cdn.anthropic.com/fed9cc193a14b84131812372d8d5857f8f304c52/Model_Card_Claude_3_Addendum.pdf",
+      "evaluatedAt": "2024-06-20",
+      "notes": "0-shot"
+    },
+    {
+      "benchmarkSlug": "gpqa",
+      "score": 59.4,
+      "source": "self-reported",
+      "sourceUrl": "https://www-cdn.anthropic.com/fed9cc193a14b84131812372d8d5857f8f304c52/Model_Card_Claude_3_Addendum.pdf",
+      "evaluatedAt": "2024-06-20",
+      "notes": "GPQA Diamond, 0-shot CoT"
+    },
+    {
+      "benchmarkSlug": "bbh",
+      "score": 93.1,
+      "source": "self-reported",
+      "sourceUrl": "https://www-cdn.anthropic.com/fed9cc193a14b84131812372d8d5857f8f304c52/Model_Card_Claude_3_Addendum.pdf",
+      "evaluatedAt": "2024-06-20",
+      "notes": "3-shot CoT"
+    },
+    {
+      "benchmarkSlug": "drop",
+      "score": 87.1,
+      "source": "self-reported",
+      "sourceUrl": "https://www-cdn.anthropic.com/fed9cc193a14b84131812372d8d5857f8f304c52/Model_Card_Claude_3_Addendum.pdf",
+      "evaluatedAt": "2024-06-20",
+      "notes": "F1 score, 3-shot"
+    },
+    {
+      "benchmarkSlug": "mmmu",
+      "score": 68.3,
+      "source": "self-reported",
+      "sourceUrl": "https://www-cdn.anthropic.com/fed9cc193a14b84131812372d8d5857f8f304c52/Model_Card_Claude_3_Addendum.pdf",
+      "evaluatedAt": "2024-06-20",
+      "notes": "Validation set, overall"
+    },
+    {
+      "benchmarkSlug": "swe-bench",
+      "score": 33,
+      "source": "self-reported",
+      "sourceUrl": "https://www.anthropic.com/research/swe-bench-sonnet",
+      "evaluatedAt": "2025-01-06",
+      "notes": "SWE-bench Verified; reported as 'Claude 3.5 Sonnet (old)' i.e. the June 2024 checkpoint, using Anthropic's agent scaffold"
+    }
+  ],
+  "verificationNotes": "Confirmed real via anthropic.com/news/claude-3-5-sonnet (release date 2024-06-20 per multiple independent sources incl. Simon Willison's dated post; $3/$15 pricing; 200K ctx; Artifacts feature). Downloaded and fully read Model_Card_Claude_3_Addendum.pdf Table 1/Table 5: all 8 self-reported benchmark numbers (MMLU 88.7, MATH 71.1, GSM8K 96.4, HumanEval 92.0, GPQA 59.4, BBH 93.1, DROP 87.1, MMMU 68.3) and the needle-in-haystack cross-reference match the PDF verbatim. SWE-bench 33% confirmed on anthropic.com/research/swe-bench-sonnet (labeled 'Claude 3.5 Sonnet (old)'). apiAvailable=false confirmed: claude-3-5-sonnet-20240620 retired from API October 28, 2025. No changes made."
+}

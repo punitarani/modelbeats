@@ -1,0 +1,80 @@
+{
+  "name": "Mistral Large 2 (24.07)",
+  "org": "Mistral AI",
+  "family": "Mistral Large",
+  "releaseDate": "2024-07-24",
+  "status": "deprecated",
+  "openness": "open-weights",
+  "license": "Mistral Research License (non-commercial; commercial license required for production)",
+  "paramsB": 123,
+  "activeParamsB": null,
+  "archClass": "dense",
+  "archDisplay": "Dense Transformer",
+  "ctxK": 128,
+  "modalities": [
+    "text"
+  ],
+  "langCount": 13,
+  "capabilities": {
+    "reasoning": false,
+    "coding": true,
+    "vision": false,
+    "functionCalling": true,
+    "toolUse": true,
+    "agentic": true
+  },
+  "apiAvailable": false,
+  "price": null,
+  "links": {
+    "hf": "mistralai/Mistral-Large-Instruct-2407",
+    "docs": "docs.mistral.ai/models/overview"
+  },
+  "note": "123B open-weights flagship rivaling Llama 3.1 405B on code/math (research license); fully retired from Mistral's API as of 2025.",
+  "quants": [
+    "GGUF Q4",
+    "AWQ",
+    "MLX"
+  ],
+  "vramQ4Gb": 74,
+  "vramFp16Gb": 246,
+  "tps4090": null,
+  "tpsNote": "123B model exceeds a single RTX 4090's 24GB VRAM even at Q4; requires multi-GPU or CPU offload.",
+  "effortLabel": null,
+  "isDefaultConfig": true,
+  "isBestConfig": true,
+  "specSources": {
+    "paramsB": "https://mistral.ai/news/mistral-large-2407/",
+    "ctxK": "https://mistral.ai/news/mistral-large-2407/",
+    "releaseDate": "https://mistral.ai/news/mistral-large-2407/",
+    "openness": "https://huggingface.co/mistralai/Mistral-Large-Instruct-2407"
+  },
+  "results": [
+    {
+      "benchmarkSlug": "mmlu",
+      "score": 84,
+      "source": "self-reported",
+      "sourceUrl": "https://mistral.ai/news/mistral-large-2407/",
+      "evaluatedAt": "2024-07-24"
+    },
+    {
+      "benchmarkSlug": "humaneval",
+      "score": 92,
+      "source": "self-reported",
+      "sourceUrl": "https://huggingface.co/mistralai/Mistral-Large-Instruct-2407"
+    },
+    {
+      "benchmarkSlug": "mbpp",
+      "score": 80,
+      "source": "self-reported",
+      "sourceUrl": "https://huggingface.co/mistralai/Mistral-Large-Instruct-2407",
+      "notes": "MBPP Base"
+    },
+    {
+      "benchmarkSlug": "gsm8k",
+      "score": 93,
+      "source": "self-reported",
+      "sourceUrl": "https://huggingface.co/mistralai/Mistral-Large-Instruct-2407"
+    }
+  ],
+  "verificationNotes": "Real release confirmed via mistral.ai/news/mistral-large-2407/ (fetched): 123B dense, 128k ctx, released 2024-07-24, Mistral Research License (HF model card literally says 'Mistral AI Research License' / license tag 'mrl', non-commercial). All 4 result rows independently confirmed literally present on their cited pages: MMLU 84.0 (mistral.ai blog), HumanEval 92%, MBPP Base 80%, GSM8K 93% (all on HF model card, also corroborated by an independent MarkTechPost article). No corrections needed."
+}

@@ -1,0 +1,105 @@
+{
+  "name": "Llama 3.3 70B",
+  "org": "Meta",
+  "family": "Llama 3.3",
+  "releaseDate": "2024-12-06",
+  "status": "released",
+  "openness": "open-weights",
+  "license": "Llama 3.3 Community License Agreement",
+  "paramsB": 70,
+  "activeParamsB": null,
+  "archClass": "dense",
+  "archDisplay": "Dense transformer decoder with grouped-query attention, 128K context",
+  "ctxK": 128,
+  "modalities": [
+    "text"
+  ],
+  "langCount": 8,
+  "capabilities": {
+    "reasoning": false,
+    "coding": true,
+    "vision": false,
+    "functionCalling": true,
+    "toolUse": true,
+    "agentic": true
+  },
+  "apiAvailable": true,
+  "price": null,
+  "links": {
+    "hf": "meta-llama/Llama-3.3-70B-Instruct",
+    "gh": "meta-llama/llama-models",
+    "docs": "llama.com/docs/model-cards-and-prompt-formats/llama3_3"
+  },
+  "note": "Text-only 70B matching Llama 3.1 405B quality on many benchmarks at roughly 4-5x lower serving cost.",
+  "quants": [
+    "GGUF",
+    "AWQ",
+    "GPTQ",
+    "MLX"
+  ],
+  "vramQ4Gb": 42,
+  "vramFp16Gb": 140,
+  "tps4090": null,
+  "tpsNote": "70B exceeds a single RTX 4090's 24GB VRAM even at Q4 (~42GB); no verified single-4090 llama.cpp benchmark found.",
+  "effortLabel": null,
+  "isDefaultConfig": true,
+  "isBestConfig": true,
+  "specSources": {
+    "paramsB": "https://huggingface.co/meta-llama/Llama-3.3-70B-Instruct",
+    "ctxK": "https://huggingface.co/meta-llama/Llama-3.3-70B-Instruct",
+    "releaseDate": "https://huggingface.co/meta-llama/Llama-3.3-70B-Instruct",
+    "openness": "https://huggingface.co/meta-llama/Llama-3.3-70B-Instruct"
+  },
+  "results": [
+    {
+      "benchmarkSlug": "mmlu",
+      "score": 86,
+      "source": "self-reported",
+      "sourceUrl": "https://huggingface.co/meta-llama/Llama-3.3-70B-Instruct",
+      "notes": "MMLU CoT"
+    },
+    {
+      "benchmarkSlug": "mmlu-pro",
+      "score": 68.9,
+      "source": "self-reported",
+      "sourceUrl": "https://huggingface.co/meta-llama/Llama-3.3-70B-Instruct",
+      "notes": "MMLU Pro CoT, 5-shot"
+    },
+    {
+      "benchmarkSlug": "humaneval",
+      "score": 88.4,
+      "source": "self-reported",
+      "sourceUrl": "https://huggingface.co/meta-llama/Llama-3.3-70B-Instruct",
+      "notes": ""
+    },
+    {
+      "benchmarkSlug": "gsm8k",
+      "score": 94.84,
+      "source": "self-reported",
+      "sourceUrl": "https://huggingface.co/meta-llama/Llama-3.3-70B-Instruct",
+      "notes": ""
+    },
+    {
+      "benchmarkSlug": "math",
+      "score": 77,
+      "source": "self-reported",
+      "sourceUrl": "https://huggingface.co/meta-llama/Llama-3.3-70B-Instruct",
+      "notes": "MATH CoT"
+    },
+    {
+      "benchmarkSlug": "ifeval",
+      "score": 92.1,
+      "source": "self-reported",
+      "sourceUrl": "https://huggingface.co/meta-llama/Llama-3.3-70B-Instruct",
+      "notes": ""
+    },
+    {
+      "benchmarkSlug": "gpqa",
+      "score": 50.5,
+      "source": "self-reported",
+      "sourceUrl": "https://huggingface.co/meta-llama/Llama-3.3-70B-Instruct",
+      "notes": "GPQA Diamond CoT"
+    }
+  ],
+  "verificationNotes": "Confirmed real via HF model card fetch: params 70B, release 2024-12-06 (matches TechCrunch/Simon Willison contemporaneous coverage of the Dec 6 2024 surprise release), 8-language multilingual support (En/De/Fr/It/Pt/Hi/Es/Th). All 7 benchmark rows (MMLU 86.0, MMLU-Pro 68.9, HumanEval 88.4, GSM8K 94.84, MATH 77.0, IFEval 92.1, GPQA Diamond 50.5) literally confirmed on the cited HF page. Corrected license string from 'Llama 3.3 Community License' to the official 'Llama 3.3 Community License Agreement'."
+}

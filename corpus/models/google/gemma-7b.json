@@ -1,0 +1,96 @@
+{
+  "name": "Gemma 7B",
+  "org": "Google",
+  "family": "Gemma",
+  "releaseDate": "2024-02-21",
+  "status": "deprecated",
+  "openness": "open-weights",
+  "license": "Gemma Terms of Use",
+  "paramsB": 8.54,
+  "activeParamsB": null,
+  "archClass": "dense",
+  "archDisplay": "Dense decoder-only transformer (28 layers, d_model 3072, 256k vocab)",
+  "ctxK": 8,
+  "modalities": [
+    "text"
+  ],
+  "langCount": null,
+  "capabilities": {
+    "reasoning": false,
+    "coding": true,
+    "vision": false,
+    "functionCalling": false,
+    "toolUse": false,
+    "agentic": false
+  },
+  "apiAvailable": true,
+  "price": null,
+  "links": {
+    "hf": "google/gemma-7b",
+    "gh": "google-deepmind/gemma",
+    "docs": "ai.google.dev/gemma/docs/releases"
+  },
+  "note": "First open-weights model built from Gemini research; 8.54B params, 8K context, strong for its size on MMLU/HellaSwag.",
+  "quants": [
+    "GGUF Q4_K_M",
+    "GGUF Q8_0",
+    "AWQ",
+    "MLX"
+  ],
+  "vramQ4Gb": 6,
+  "vramFp16Gb": 18,
+  "tps4090": null,
+  "tpsNote": null,
+  "effortLabel": null,
+  "isDefaultConfig": true,
+  "isBestConfig": true,
+  "specSources": {
+    "releaseDate": "https://blog.google/technology/developers/gemma-open-models/",
+    "paramsB": "https://arxiv.org/html/2403.08295v4",
+    "ctxK": "https://arxiv.org/html/2403.08295v4",
+    "openness": "https://ai.google.dev/gemma/terms"
+  },
+  "results": [
+    {
+      "benchmarkSlug": "mmlu",
+      "score": 64.3,
+      "source": "self-reported",
+      "sourceUrl": "https://arxiv.org/html/2403.08295v4",
+      "notes": "5-shot"
+    },
+    {
+      "benchmarkSlug": "hellaswag",
+      "score": 81.2,
+      "source": "self-reported",
+      "sourceUrl": "https://arxiv.org/html/2403.08295v4",
+      "notes": "0-shot"
+    },
+    {
+      "benchmarkSlug": "humaneval",
+      "score": 32.3,
+      "source": "self-reported",
+      "sourceUrl": "https://arxiv.org/html/2403.08295v4",
+      "notes": "pass@1"
+    },
+    {
+      "benchmarkSlug": "gsm8k",
+      "score": 46.4,
+      "source": "self-reported",
+      "sourceUrl": "https://arxiv.org/html/2403.08295v4",
+      "notes": "maj@1"
+    },
+    {
+      "benchmarkSlug": "arc-challenge",
+      "score": 53.2,
+      "source": "self-reported",
+      "sourceUrl": "https://arxiv.org/html/2403.08295v4"
+    },
+    {
+      "benchmarkSlug": "winogrande",
+      "score": 72.3,
+      "source": "self-reported",
+      "sourceUrl": "https://arxiv.org/html/2403.08295v4"
+    }
+  ],
+  "verificationNotes": "Existence, release date (Feb 21 2024, blog.google), params (~8.54B: 786.8M embedding + 7.75B non-embedding, Table 2), 8K context, and license all confirmed via fetched arXiv HTML (2403.08295v4) and ai.google.dev. All 6 benchmark rows (MMLU 64.3, HellaSwag 81.2, HumanEval 32.3, GSM8K 46.4, ARC-c 53.2, Winogrande 72.3) verbatim-confirmed on the fetched arXiv page. No changes made."
+}

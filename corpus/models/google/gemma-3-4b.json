@@ -1,0 +1,125 @@
+{
+  "name": "Gemma 3 4B",
+  "org": "Google",
+  "family": "Gemma 3",
+  "releaseDate": "2025-03-12",
+  "status": "released",
+  "openness": "open-weights",
+  "license": "Gemma",
+  "paramsB": 4.3,
+  "activeParamsB": null,
+  "archClass": "dense",
+  "archDisplay": "Dense decoder-only Transformer, GQA + 5:1 local:global attention, shared frozen SigLIP-400M vision encoder",
+  "ctxK": 128,
+  "modalities": [
+    "text",
+    "vision"
+  ],
+  "langCount": 140,
+  "capabilities": {
+    "reasoning": false,
+    "coding": true,
+    "vision": true,
+    "functionCalling": true,
+    "toolUse": true,
+    "agentic": false
+  },
+  "apiAvailable": true,
+  "price": null,
+  "links": {
+    "hf": "google/gemma-3-4b-it",
+    "gh": "google-deepmind/gemma",
+    "docs": "ai.google.dev/gemma/docs/core"
+  },
+  "note": "Compact multimodal Gemma 3 for edge deployment; dense decoder + shared SigLIP vision encoder, 128K context.",
+  "quants": [
+    "GGUF Q4_K_M",
+    "GGUF Q8_0",
+    "AWQ",
+    "MLX",
+    "QAT Int4"
+  ],
+  "vramQ4Gb": 2.6,
+  "vramFp16Gb": 8,
+  "tps4090": null,
+  "tpsNote": null,
+  "effortLabel": null,
+  "isDefaultConfig": true,
+  "isBestConfig": true,
+  "specSources": {
+    "paramsB": "https://storage.googleapis.com/deepmind-media/gemma/Gemma3Report.pdf",
+    "ctxK": "https://storage.googleapis.com/deepmind-media/gemma/Gemma3Report.pdf",
+    "releaseDate": "https://blog.google/innovation-and-ai/technology/developers-tools/gemma-3/",
+    "openness": "https://ai.google.dev/gemma/terms"
+  },
+  "results": [
+    {
+      "benchmarkSlug": "mmlu-pro",
+      "score": 43.6,
+      "source": "self-reported",
+      "sourceUrl": "https://storage.googleapis.com/deepmind-media/gemma/Gemma3Report.pdf",
+      "evaluatedAt": "2025-03-12"
+    },
+    {
+      "benchmarkSlug": "gpqa",
+      "score": 30.8,
+      "source": "self-reported",
+      "sourceUrl": "https://storage.googleapis.com/deepmind-media/gemma/Gemma3Report.pdf",
+      "evaluatedAt": "2025-03-12",
+      "notes": "GPQA Diamond"
+    },
+    {
+      "benchmarkSlug": "math",
+      "score": 75.6,
+      "source": "self-reported",
+      "sourceUrl": "https://storage.googleapis.com/deepmind-media/gemma/Gemma3Report.pdf",
+      "evaluatedAt": "2025-03-12"
+    },
+    {
+      "benchmarkSlug": "mmmu",
+      "score": 48.8,
+      "source": "self-reported",
+      "sourceUrl": "https://storage.googleapis.com/deepmind-media/gemma/Gemma3Report.pdf",
+      "evaluatedAt": "2025-03-12",
+      "notes": "MMMU val"
+    },
+    {
+      "benchmarkSlug": "livecodebench",
+      "score": 12.6,
+      "source": "self-reported",
+      "sourceUrl": "https://storage.googleapis.com/deepmind-media/gemma/Gemma3Report.pdf",
+      "evaluatedAt": "2025-03-12"
+    },
+    {
+      "benchmarkSlug": "bird-sql",
+      "score": 36.3,
+      "source": "self-reported",
+      "sourceUrl": "https://storage.googleapis.com/deepmind-media/gemma/Gemma3Report.pdf",
+      "evaluatedAt": "2025-03-12",
+      "notes": "Bird-SQL dev"
+    },
+    {
+      "benchmarkSlug": "facts-grounding",
+      "score": 70.1,
+      "source": "self-reported",
+      "sourceUrl": "https://storage.googleapis.com/deepmind-media/gemma/Gemma3Report.pdf",
+      "evaluatedAt": "2025-03-12"
+    },
+    {
+      "benchmarkSlug": "simpleqa",
+      "score": 4,
+      "source": "self-reported",
+      "sourceUrl": "https://storage.googleapis.com/deepmind-media/gemma/Gemma3Report.pdf",
+      "evaluatedAt": "2025-03-12"
+    },
+    {
+      "benchmarkSlug": "mmlu",
+      "score": 54.5,
+      "source": "self-reported",
+      "sourceUrl": "https://storage.googleapis.com/deepmind-media/gemma/Gemma3Report.pdf",
+      "evaluatedAt": "2025-03-12",
+      "notes": "Global MMLU-Lite variant"
+    }
+  ],
+  "verificationNotes": "Fetched the official Gemma 3 Technical Report PDF (dated 2025-03-12, Google DeepMind). Table 1 confirms 4B total params = vision encoder 417M + embedding 675M + non-embedding 3,209M = 4,301M ≈ 4.3B, matching paramsB exactly. Table 6 confirms every one of the 9 benchmark rows verbatim for the 4B IT column: MMLU-Pro 43.6, GPQA Diamond 30.8, MATH 75.6, MMMU val 48.8, LiveCodeBench 12.6, Bird-SQL dev 36.3, FACTS Grounding 70.1, SimpleQA 4.0, Global MMLU-Lite 54.5. Release date, 128K context (128K confirmed text: 'Gemma 3 models support context length of 128K tokens, with the exception of the 1B model'), and 140-language support corroborated by Google's developer blog. License 'Gemma' and open-weights status confirmed via ai.google.dev/gemma/terms. No changes made."
+}

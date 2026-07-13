@@ -1,0 +1,52 @@
+{
+  "name": "Viking 7B",
+  "org": "Silo AI (LumiOpen)",
+  "family": "Viking",
+  "releaseDate": "2024-05-15",
+  "status": "released",
+  "openness": "open-weights",
+  "license": "Apache-2.0",
+  "paramsB": 7.55,
+  "activeParamsB": null,
+  "archClass": "dense",
+  "archDisplay": "Dense transformer, LLaMA-style + RoPE + FlashAttention, standard multi-head attention (32 layers, d_model 4096, 32 heads)",
+  "ctxK": 4,
+  "modalities": [
+    "text"
+  ],
+  "langCount": 6,
+  "capabilities": {
+    "reasoning": false,
+    "coding": true,
+    "vision": false,
+    "functionCalling": false,
+    "toolUse": false,
+    "agentic": false
+  },
+  "apiAvailable": false,
+  "price": null,
+  "links": {
+    "hf": "LumiOpen/Viking-7B",
+    "docs": "amd.com/en/blogs/2024/viking-7b-13b-33b-sailing-the-nordic-seas-of-multilinguality.html"
+  },
+  "note": "First open LLM covering all Nordic languages plus English and code; base checkpoint of the 7B/13B/33B Viking family trained on LUMI.",
+  "quants": [
+    "GGUF",
+    "EXL2"
+  ],
+  "vramQ4Gb": 5,
+  "vramFp16Gb": 15,
+  "tps4090": null,
+  "tpsNote": null,
+  "effortLabel": null,
+  "isDefaultConfig": true,
+  "isBestConfig": true,
+  "specSources": {
+    "paramsB": "https://huggingface.co/LumiOpen/Viking-7B",
+    "ctxK": "https://www.amd.com/en/blogs/2024/viking-7b-13b-33b-sailing-the-nordic-seas-of-multilinguality.html",
+    "releaseDate": "https://tech.eu/2024/05/15/silo-ai-s-new-release-viking-7b-bridges-the-gap-for-low-resource-languages/",
+    "openness": "https://huggingface.co/LumiOpen/Viking-7B"
+  },
+  "results": [],
+  "verificationNotes": "Confirmed via HF model card (7.55B params, 32 layers, d_model 4096, RoPE+FlashAttention, Apache-2.0, 4096 seq length, Finnish/English/Swedish/Danish/Norwegian/Icelandic+code, 2T training tokens) and tech.eu article (release date 2024-05-15). CORRECTED: the original record's architecture claim of \"grouped-query attention\" is false — fetched the model's config.json directly and found num_attention_heads == num_key_value_heads == 32, i.e. standard multi-head attention, not GQA. archDisplay updated accordingly; no other changes."
+}

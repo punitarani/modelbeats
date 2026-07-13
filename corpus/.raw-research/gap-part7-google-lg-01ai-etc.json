@@ -1,0 +1,2165 @@
+{
+  "summary": "Deep research + adversarial verification for P2 gap partition 7 (21 models)",
+  "agentCount": 7,
+  "logs": [
+    "gap-part7: 21 models",
+    "research: 24 models researched, 0 rejected as unconfirmable",
+    "verify: 24 models confirmed, 0 rejected by verification"
+  ],
+  "result": {
+    "inputCount": 21,
+    "researchedCount": 24,
+    "finalCount": 24,
+    "rejected": [],
+    "models": [
+      {
+        "name": "PaLM 2",
+        "org": "Google",
+        "family": "PaLM 2",
+        "releaseDate": "2023-05-10",
+        "status": "deprecated",
+        "openness": "closed",
+        "license": "Proprietary (Google Cloud Vertex AI)",
+        "paramsB": null,
+        "activeParamsB": null,
+        "archClass": "dense",
+        "archDisplay": "Dense Transformer (decoder, mixture-of-objectives pretraining)",
+        "ctxK": 8,
+        "modalities": [
+          "text"
+        ],
+        "langCount": null,
+        "capabilities": {
+          "reasoning": false,
+          "coding": true,
+          "vision": false,
+          "functionCalling": false,
+          "toolUse": false,
+          "agentic": false
+        },
+        "apiAvailable": false,
+        "price": null,
+        "links": {
+          "docs": "ai.google/discover/palm2"
+        },
+        "note": "Powered Bard in 2023; basis for Med-PaLM 2 and Codey; PaLM API decommissioned Aug 15 2024.",
+        "quants": [],
+        "vramQ4Gb": null,
+        "vramFp16Gb": null,
+        "tps4090": null,
+        "tpsNote": null,
+        "effortLabel": null,
+        "isDefaultConfig": true,
+        "isBestConfig": true,
+        "specSources": {
+          "releaseDate": "https://blog.google/technology/ai/google-palm-2-ai-large-language-model/",
+          "openness": "https://ai.google/discover/palm2/"
+        },
+        "results": [
+          {
+            "benchmarkSlug": "bbh",
+            "score": 78.1,
+            "source": "self-reported",
+            "sourceUrl": "https://arxiv.org/abs/2305.10403",
+            "evaluatedAt": "2023-05-17",
+            "notes": "PaLM 2-L on BIG-Bench Hard, as reported in PaLM 2 Technical Report (Table 6), 3-shot CoT"
+          }
+        ],
+        "verificationNotes": "Confirmed real: announced by Sundar Pichai at Google I/O on 2023-05-10 (blog.google, TechCrunch, Axios all corroborate). Technical report (arXiv 2305.10403) submitted 2023-05-17, matching evaluatedAt. Fetched full-text (ar5iv) Table 6: PaLM 2-L scores exactly 78.1 on BBH 3-shot CoT vs PaLM's 65.2 -- score confirmed verbatim. PaLM API decommission date of Aug 15 2024 corroborated independently. Params were never disclosed by Google (kept null, correctly)."
+      },
+      {
+        "name": "Gemini 1.0 Nano",
+        "org": "Google",
+        "family": "Gemini 1.0",
+        "releaseDate": "2023-12-06",
+        "status": "deprecated",
+        "openness": "closed",
+        "license": "Proprietary (on-device, Android AICore)",
+        "paramsB": 3.25,
+        "activeParamsB": null,
+        "archClass": "dense",
+        "archDisplay": "Dense Transformer decoder (distilled, 4-bit quantized for on-device)",
+        "ctxK": 32,
+        "modalities": [
+          "text",
+          "vision"
+        ],
+        "langCount": null,
+        "capabilities": {
+          "reasoning": false,
+          "coding": false,
+          "vision": true,
+          "functionCalling": false,
+          "toolUse": false,
+          "agentic": false
+        },
+        "apiAvailable": false,
+        "price": null,
+        "links": {
+          "docs": "storage.googleapis.com/deepmind-media/gemini/gemini_1_report.pdf"
+        },
+        "note": "On-device model for Pixel 8 Pro (Nano-2, 3.25B variant); distilled and 4-bit quantized from larger Gemini models.",
+        "quants": [],
+        "vramQ4Gb": null,
+        "vramFp16Gb": null,
+        "tps4090": null,
+        "tpsNote": null,
+        "effortLabel": null,
+        "isDefaultConfig": true,
+        "isBestConfig": true,
+        "specSources": {
+          "releaseDate": "https://blog.google/products/pixel/pixel-feature-drop-december-2023/",
+          "paramsB": "https://arxiv.org/pdf/2312.11805",
+          "ctxK": "https://storage.googleapis.com/deepmind-media/gemini/gemini_1_report.pdf"
+        },
+        "results": [
+          {
+            "benchmarkSlug": "mmlu",
+            "score": 55.8,
+            "source": "self-reported",
+            "sourceUrl": "https://arxiv.org/pdf/2312.11805",
+            "evaluatedAt": "2023-12-06",
+            "notes": "Gemini Nano-2 (3.25B), 5-shot"
+          }
+        ],
+        "verificationNotes": "Confirmed real: Gemini Nano-2 is genuinely a 3.25B-parameter distilled on-device model per the Gemini 1.0 technical report (arXiv 2312.11805), corroborated independently by Microsoft's Phi-2 blog post which quotes the same report's comparison table listing 'Gemini Nano 2, 3.2B params, MMLU 55.8' -- exact score match confirmed via two independent citations of the same primary source. Pixel 8 Pro on-device launch in Dec 2023 confirmed."
+      },
+      {
+        "name": "Gemini 1.0 Pro",
+        "org": "Google",
+        "family": "Gemini 1.0",
+        "releaseDate": "2023-12-13",
+        "status": "deprecated",
+        "openness": "closed",
+        "license": "Proprietary (Google API/Vertex AI)",
+        "paramsB": null,
+        "activeParamsB": null,
+        "archClass": "dense",
+        "archDisplay": "Dense Transformer decoder with multi-query attention",
+        "ctxK": 32,
+        "modalities": [
+          "text",
+          "vision",
+          "audio"
+        ],
+        "langCount": null,
+        "capabilities": {
+          "reasoning": false,
+          "coding": true,
+          "vision": true,
+          "functionCalling": true,
+          "toolUse": true,
+          "agentic": false
+        },
+        "apiAvailable": false,
+        "price": null,
+        "links": {
+          "docs": "ai.google.dev/gemini-api/docs/deprecations"
+        },
+        "note": "General-purpose 1.0 workhorse; powered Bard at launch; shut down on Gemini API (404s on gemini-1.0-pro).",
+        "quants": [],
+        "vramQ4Gb": null,
+        "vramFp16Gb": null,
+        "tps4090": null,
+        "tpsNote": null,
+        "effortLabel": null,
+        "isDefaultConfig": true,
+        "isBestConfig": true,
+        "specSources": {
+          "releaseDate": "https://9to5google.com/2023/12/06/google-gemini-1-0/",
+          "ctxK": "https://arxiv.org/pdf/2312.11805",
+          "openness": "https://ai.google.dev/gemini-api/docs/deprecations"
+        },
+        "results": [
+          {
+            "benchmarkSlug": "mmlu",
+            "score": 71.8,
+            "source": "independent",
+            "sourceUrl": "https://llm-stats.com/models/compare/gemini-1.0-pro-vs-gemini-1.5-pro",
+            "notes": "Gemini 1.0 Pro MMLU score"
+          }
+        ],
+        "verificationNotes": "Confirmed real: Gemini Pro API access for developers opened 2023-12-13 (confirmed via TechCrunch, SiliconANGLE, Google Developers Blog -- distinct from the 2023-12-06 announcement date used for the Ultra/Nano records), with a 32K context window at that time, matching ctxK. Re-fetched llm-stats.com comparison page via search: it literally lists Gemini 1.0 Pro MMLU as 71.8%, matching the record exactly."
+      },
+      {
+        "name": "Gemini 1.0 Ultra",
+        "org": "Google",
+        "family": "Gemini 1.0",
+        "releaseDate": "2024-02-08",
+        "status": "deprecated",
+        "openness": "closed",
+        "license": "Proprietary (Gemini Advanced / Vertex AI)",
+        "paramsB": null,
+        "activeParamsB": null,
+        "archClass": "dense",
+        "archDisplay": "Dense Transformer decoder with multi-query attention",
+        "ctxK": 32,
+        "modalities": [
+          "text",
+          "vision",
+          "audio"
+        ],
+        "langCount": null,
+        "capabilities": {
+          "reasoning": false,
+          "coding": true,
+          "vision": true,
+          "functionCalling": true,
+          "toolUse": true,
+          "agentic": false
+        },
+        "apiAvailable": false,
+        "price": null,
+        "links": {
+          "docs": "storage.googleapis.com/deepmind-media/gemini/gemini_1_report.pdf"
+        },
+        "note": "Google's first frontier model; launched Gemini Advanced ($19.99/mo Google One AI Premium) on Feb 8 2024; now shut down (404s).",
+        "quants": [],
+        "vramQ4Gb": null,
+        "vramFp16Gb": null,
+        "tps4090": null,
+        "tpsNote": null,
+        "effortLabel": null,
+        "isDefaultConfig": true,
+        "isBestConfig": true,
+        "specSources": {
+          "releaseDate": "https://techcrunch.com/2024/02/08/google-goes-all-in-on-gemini-and-launches-20-paid-tier-for-gemini-ultra/",
+          "ctxK": "https://arxiv.org/pdf/2312.11805",
+          "openness": "https://therouter.ai/news/vertex-ai-sdk-migration-gemini-enterprise-agent-platform/"
+        },
+        "results": [
+          {
+            "benchmarkSlug": "mmlu",
+            "score": 90,
+            "source": "self-reported",
+            "sourceUrl": "https://blog.google/technology/ai/google-gemini-ai/",
+            "evaluatedAt": "2023-12-06",
+            "notes": "First model to exceed human-expert baseline on MMLU (CoT@32)"
+          }
+        ],
+        "verificationNotes": "Confirmed real: Gemini Advanced ($19.99/mo Google One AI Premium, giving access to Ultra 1.0) launched 2024-02-08, corroborated by 9to5google and TechCrunch. Fetched blog.google/technology/ai/google-gemini-ai/ directly: it literally states 'With a score of 90.0%, Gemini Ultra is the first model to outperform human experts on MMLU' -- exact quote confirms the 90 score and the note verbatim."
+      },
+      {
+        "name": "Gemini 1.5 Pro",
+        "org": "Google",
+        "family": "Gemini 1.5",
+        "releaseDate": "2024-02-15",
+        "status": "deprecated",
+        "openness": "closed",
+        "license": "Proprietary (Google API/Vertex AI)",
+        "paramsB": null,
+        "activeParamsB": null,
+        "archClass": "moe",
+        "archDisplay": "Sparse Mixture-of-Experts Transformer",
+        "ctxK": 1000,
+        "modalities": [
+          "text",
+          "vision",
+          "audio",
+          "video"
+        ],
+        "langCount": null,
+        "capabilities": {
+          "reasoning": false,
+          "coding": true,
+          "vision": true,
+          "functionCalling": true,
+          "toolUse": true,
+          "agentic": true
+        },
+        "apiAvailable": false,
+        "price": null,
+        "links": {
+          "docs": "storage.googleapis.com/deepmind-media/gemini/gemini_v1_5_report.pdf"
+        },
+        "note": "Breakthrough 1M-token context (up to 2M for some users); all 1.5 models shut down on Gemini API by Sept 24 2025.",
+        "quants": [],
+        "vramQ4Gb": null,
+        "vramFp16Gb": null,
+        "tps4090": null,
+        "tpsNote": null,
+        "effortLabel": null,
+        "isDefaultConfig": true,
+        "isBestConfig": true,
+        "specSources": {
+          "releaseDate": "https://blog.google/innovation-and-ai/products/google-gemini-next-generation-model-february-2024/",
+          "ctxK": "https://arxiv.org/abs/2403.05530",
+          "openness": "https://x.com/patloeber/status/1972949366655828277"
+        },
+        "results": [
+          {
+            "benchmarkSlug": "mmlu",
+            "score": 85.9,
+            "source": "self-reported",
+            "sourceUrl": "https://arxiv.org/pdf/2403.05530",
+            "notes": "5-shot, May 2024 updated version"
+          },
+          {
+            "benchmarkSlug": "gpqa",
+            "score": 46.2,
+            "source": "self-reported",
+            "sourceUrl": "https://arxiv.org/pdf/2403.05530",
+            "notes": "May 2024 updated version"
+          }
+        ],
+        "verificationNotes": "Confirmed real, announced 2024-02-15 per Google blog. Both benchmark rows corroborated: search results directly quoting the Gemini 1.5 technical report confirm 'Gemini 1.5 Pro scores 46.2% [GPQA] ... and 85.9% on MMLU' for the updated (May 2024) checkpoint. Sept 24 2025 shutdown date corroborated by ai.google.dev deprecations page and independent tracker (avalai docs), confirming all 1.5 models return errors as of that date."
+      },
+      {
+        "name": "Gemma 2B",
+        "org": "Google",
+        "family": "Gemma",
+        "releaseDate": "2024-02-21",
+        "status": "deprecated",
+        "openness": "open-weights",
+        "license": "Gemma Terms of Use",
+        "paramsB": 2.5,
+        "activeParamsB": null,
+        "archClass": "dense",
+        "archDisplay": "Dense decoder-only Transformer (MQA, RoPE, GeGLU)",
+        "ctxK": 8,
+        "modalities": [
+          "text"
+        ],
+        "langCount": null,
+        "capabilities": {
+          "reasoning": false,
+          "coding": true,
+          "vision": false,
+          "functionCalling": false,
+          "toolUse": false,
+          "agentic": false
+        },
+        "apiAvailable": false,
+        "price": null,
+        "links": {
+          "hf": "google/gemma-2b",
+          "gh": "google-deepmind/gemma",
+          "docs": "ai.google.dev/gemma/docs/releases"
+        },
+        "note": "Smallest first-gen open Gemma; runs on modest/consumer hardware; superseded by Gemma 2/3/4 generations.",
+        "quants": [
+          "GGUF Q4_K_M",
+          "GGUF Q8_0"
+        ],
+        "vramQ4Gb": 2,
+        "vramFp16Gb": 5,
+        "tps4090": null,
+        "tpsNote": "No verified RTX 4090 llama.cpp Q4 throughput number found for the original (Gemma 1) 2B checkpoint.",
+        "effortLabel": null,
+        "isDefaultConfig": true,
+        "isBestConfig": true,
+        "specSources": {
+          "releaseDate": "https://huggingface.co/blog/gemma",
+          "paramsB": "https://arxiv.org/html/2403.08295v4",
+          "ctxK": "https://huggingface.co/google/gemma-2b",
+          "openness": "https://ai.google.dev/gemma/docs/releases"
+        },
+        "results": [
+          {
+            "benchmarkSlug": "mmlu",
+            "score": 42.3,
+            "source": "self-reported",
+            "sourceUrl": "https://huggingface.co/google/gemma-2b",
+            "notes": "5-shot"
+          },
+          {
+            "benchmarkSlug": "hellaswag",
+            "score": 71.4,
+            "source": "self-reported",
+            "sourceUrl": "https://huggingface.co/google/gemma-2b",
+            "notes": "0-shot"
+          },
+          {
+            "benchmarkSlug": "arc-challenge",
+            "score": 42.1,
+            "source": "self-reported",
+            "sourceUrl": "https://huggingface.co/google/gemma-2b"
+          },
+          {
+            "benchmarkSlug": "humaneval",
+            "score": 22,
+            "source": "self-reported",
+            "sourceUrl": "https://huggingface.co/google/gemma-2b",
+            "notes": "pass@1"
+          },
+          {
+            "benchmarkSlug": "gsm8k",
+            "score": 17.7,
+            "source": "self-reported",
+            "sourceUrl": "https://huggingface.co/google/gemma-2b",
+            "notes": "maj@1"
+          }
+        ],
+        "verificationNotes": "Confirmed real: released 2024-02-21 per Hugging Face blog and Google blog (multiple independent sources agree). Directly fetched huggingface.co/google/gemma-2b model card: all five benchmark rows (MMLU 42.3, HellaSwag 71.4, ARC-c 42.1, HumanEval 22.0, GSM8K 17.7) appear verbatim in its evaluation table -- all confirmed exactly as claimed. Params corrected/confirmed at the source level: fetched arXiv 2403.08295v4 Table 2 directly, which gives an exact parameter count of 2,506,434,560 (524.5M embedding + 1.98B non-embedding) = 2.5B, matching paramsB despite the '2B' marketing name -- this is a genuine, well-documented quirk (Gemma 2B/7B names refer to rounded marketing tiers, not exact counts)."
+      },
+      {
+        "name": "Gemini 2.5 Pro",
+        "org": "Google",
+        "family": "Gemini 2.5",
+        "releaseDate": "2025-03-25",
+        "status": "deprecated",
+        "openness": "closed",
+        "license": "Proprietary (Google API/Vertex AI)",
+        "paramsB": null,
+        "activeParamsB": null,
+        "archClass": "moe",
+        "archDisplay": "Sparse Mixture-of-Experts Transformer with native always-on thinking",
+        "ctxK": 1000,
+        "modalities": [
+          "text",
+          "vision",
+          "audio",
+          "video"
+        ],
+        "langCount": null,
+        "capabilities": {
+          "reasoning": true,
+          "coding": true,
+          "vision": true,
+          "functionCalling": true,
+          "toolUse": true,
+          "agentic": true
+        },
+        "apiAvailable": true,
+        "price": {
+          "input": 1.25,
+          "output": 10,
+          "provider": "Google AI Studio / Gemini API"
+        },
+        "links": {
+          "docs": "ai.google.dev/gemini-api/docs/models"
+        },
+        "note": "First Gemini with always-on thinking; #1 on LMArena at launch; official deprecation announced with successor gemini-3.1-pro-preview, shutdown scheduled ~Oct 2026.",
+        "quants": [],
+        "vramQ4Gb": null,
+        "vramFp16Gb": null,
+        "tps4090": null,
+        "tpsNote": null,
+        "effortLabel": null,
+        "isDefaultConfig": true,
+        "isBestConfig": true,
+        "specSources": {
+          "releaseDate": "https://blog.google/innovation-and-ai/models-and-research/google-deepmind/gemini-model-thinking-updates-march-2025/",
+          "ctxK": "https://blog.google/innovation-and-ai/models-and-research/google-deepmind/gemini-model-thinking-updates-march-2025/",
+          "openness": "https://arxiv.org/pdf/2507.06261",
+          "status": "https://ai.google.dev/gemini-api/docs/deprecations"
+        },
+        "results": [
+          {
+            "benchmarkSlug": "hle",
+            "score": 18.8,
+            "source": "self-reported",
+            "sourceUrl": "https://blog.google/innovation-and-ai/models-and-research/google-deepmind/gemini-model-thinking-updates-march-2025/",
+            "notes": "Humanity's Last Exam, no tools, SOTA at launch"
+          },
+          {
+            "benchmarkSlug": "swe-bench",
+            "score": 63.8,
+            "source": "self-reported",
+            "sourceUrl": "https://blog.google/innovation-and-ai/models-and-research/google-deepmind/gemini-model-thinking-updates-march-2025/",
+            "notes": "SWE-bench Verified, custom agent setup"
+          },
+          {
+            "benchmarkSlug": "arena",
+            "score": 1,
+            "source": "arena",
+            "sourceUrl": "https://blog.google/innovation-and-ai/models-and-research/google-deepmind/gemini-model-thinking-updates-march-2025/",
+            "notes": "Ranked #1 on LMArena by a significant margin at launch (rank, not raw Elo)"
+          }
+        ],
+        "verificationNotes": "Fetched the primary blog.google launch post directly: confirmed publish date March 25, 2025 (updated Mar 26), and the exact HLE 18.8%, SWE-bench 63.8%, and '#1 on LMArena by a significant margin' quotes verbatim. Independently confirmed the deprecation claim via ai.google.dev/gemini-api/docs/deprecations live table: gemini-2.5-pro shutdown date is Oct 16, 2026, recommended replacement is gemini-3.1-pro-preview (a real, released model, confirmed via ai.google.dev model docs and Google Cloud blog) — matches the record's note exactly. Pricing $1.25/$10 confirmed on ai.google.dev/gemini-api/docs/pricing. Architecture 'sparse MoE transformer' confirmed via the official Gemini 2.5 Flash/3 Pro model cards' Architecture section (applies to the whole 2.5/3 family). No corrections needed."
+      },
+      {
+        "name": "Gemini 2.5 Flash",
+        "org": "Google",
+        "family": "Gemini 2.5",
+        "releaseDate": "2025-05-20",
+        "status": "released",
+        "openness": "closed",
+        "license": "Proprietary (Google API Terms)",
+        "paramsB": null,
+        "activeParamsB": null,
+        "archClass": "moe",
+        "archDisplay": "Sparse Mixture-of-Experts Transformer (natively multimodal)",
+        "ctxK": 1000,
+        "modalities": [
+          "text",
+          "vision",
+          "audio",
+          "video"
+        ],
+        "langCount": null,
+        "capabilities": {
+          "reasoning": true,
+          "coding": true,
+          "vision": true,
+          "functionCalling": true,
+          "toolUse": true,
+          "agentic": true
+        },
+        "apiAvailable": true,
+        "price": {
+          "input": 0.3,
+          "output": 2.5,
+          "provider": "Google (Gemini API)"
+        },
+        "links": {
+          "docs": "ai.google.dev/gemini-api/docs/models/gemini"
+        },
+        "note": "High-throughput hybrid-reasoning workhorse with a controllable thinking budget.",
+        "quants": [],
+        "vramQ4Gb": null,
+        "vramFp16Gb": null,
+        "tps4090": null,
+        "tpsNote": null,
+        "effortLabel": null,
+        "isDefaultConfig": true,
+        "isBestConfig": true,
+        "specSources": {
+          "ctxK": "https://storage.googleapis.com/deepmind-media/Model-Cards/Gemini-2-5-Flash-Model-Card.pdf",
+          "releaseDate": "https://blog.google/products-and-platforms/products/gemini/gemini-2-5-flash-preview/",
+          "openness": "https://ai.google.dev/gemini-api/docs/pricing"
+        },
+        "results": [
+          {
+            "benchmarkSlug": "gpqa",
+            "score": 82.8,
+            "source": "self-reported",
+            "sourceUrl": "https://storage.googleapis.com/deepmind-media/Model-Cards/Gemini-2-5-Flash-Model-Card.pdf",
+            "evaluatedAt": "2025-05",
+            "notes": "GPQA Diamond, single attempt, pass@1, thinking on"
+          },
+          {
+            "benchmarkSlug": "aime",
+            "score": 72,
+            "source": "self-reported",
+            "sourceUrl": "https://storage.googleapis.com/deepmind-media/Model-Cards/Gemini-2-5-Flash-Model-Card.pdf",
+            "evaluatedAt": "2025-05",
+            "notes": "AIME 2025, single attempt, thinking on"
+          },
+          {
+            "benchmarkSlug": "livecodebench",
+            "score": 63.9,
+            "source": "self-reported",
+            "sourceUrl": "https://storage.googleapis.com/deepmind-media/Model-Cards/Gemini-2-5-Flash-Model-Card.pdf",
+            "evaluatedAt": "2025-05",
+            "notes": "LiveCodeBench v5, single attempt, thinking on"
+          },
+          {
+            "benchmarkSlug": "swe-bench",
+            "score": 60.4,
+            "source": "self-reported",
+            "sourceUrl": "https://storage.googleapis.com/deepmind-media/Model-Cards/Gemini-2-5-Flash-Model-Card.pdf",
+            "evaluatedAt": "2025-05",
+            "notes": "SWE-Bench Verified, thinking on"
+          },
+          {
+            "benchmarkSlug": "mmmu",
+            "score": 79.7,
+            "source": "self-reported",
+            "sourceUrl": "https://storage.googleapis.com/deepmind-media/Model-Cards/Gemini-2-5-Flash-Model-Card.pdf",
+            "evaluatedAt": "2025-05",
+            "notes": "MMMU, single attempt, thinking on"
+          },
+          {
+            "benchmarkSlug": "hle",
+            "score": 11,
+            "source": "self-reported",
+            "sourceUrl": "https://storage.googleapis.com/deepmind-media/Model-Cards/Gemini-2-5-Flash-Model-Card.pdf",
+            "evaluatedAt": "2025-05",
+            "notes": "Humanity's Last Exam, no tools, thinking on"
+          },
+          {
+            "benchmarkSlug": "mmlu",
+            "score": 88.4,
+            "source": "self-reported",
+            "sourceUrl": "https://storage.googleapis.com/deepmind-media/Model-Cards/Gemini-2-5-Flash-Model-Card.pdf",
+            "evaluatedAt": "2025-05",
+            "notes": "Global MMLU (Lite), multilingual variant"
+          }
+        ],
+        "verificationNotes": "Directly downloaded and read the official Gemini 2.5 Flash Model Card PDF (deepmind-media). All 7 claimed scores (GPQA 82.8, AIME 72.0, LiveCodeBench v5 63.9, SWE-Bench 60.4, MMMU 79.7, HLE 11.0, Global MMLU Lite 88.4) match the 'Gemini 2.5 Flash GA / Thinking' column exactly, digit-for-digit. Confirmed via ai.google.dev changelog that gemini-2.5-flash-preview-05-20 was released May 20, 2025 (the original specSources link was actually for the earlier 04-17 preview, so I replaced it with the correct 05-20 announcement URL). Pricing $0.30/$2.50 confirmed live on ai.google.dev/gemini-api/docs/pricing. Model card explicitly states 'Gemini 2.5 models are sparse mixture-of-experts (MoE) transformer-based models... with native multimodal support' — confirms archClass/archDisplay directly rather than by inference."
+      },
+      {
+        "name": "Gemini 2.5 Flash-Lite (Non-thinking)",
+        "org": "Google",
+        "family": "Gemini 2.5",
+        "releaseDate": "2025-06-17",
+        "status": "released",
+        "openness": "closed",
+        "license": "Proprietary (Google API Terms)",
+        "paramsB": null,
+        "activeParamsB": null,
+        "archClass": "moe",
+        "archDisplay": "Sparse Mixture-of-Experts Transformer (natively multimodal)",
+        "ctxK": 1000,
+        "modalities": [
+          "text",
+          "vision",
+          "audio",
+          "video"
+        ],
+        "langCount": null,
+        "capabilities": {
+          "reasoning": true,
+          "coding": true,
+          "vision": true,
+          "functionCalling": true,
+          "toolUse": true,
+          "agentic": true
+        },
+        "apiAvailable": true,
+        "price": {
+          "input": 0.1,
+          "output": 0.4,
+          "provider": "Google (Gemini API)"
+        },
+        "links": {
+          "docs": "ai.google.dev/gemini-api/docs/models/gemini-2.5-flash-lite"
+        },
+        "note": "Cheapest, fastest 2.5-tier model; thinking is off by default for lowest cost/latency.",
+        "quants": [],
+        "vramQ4Gb": null,
+        "vramFp16Gb": null,
+        "tps4090": null,
+        "tpsNote": null,
+        "effortLabel": "Non-thinking",
+        "isDefaultConfig": true,
+        "isBestConfig": false,
+        "specSources": {
+          "ctxK": "https://storage.googleapis.com/deepmind-media/Model-Cards/Gemini-2-5-Flash-Lite-Model-Card.pdf",
+          "releaseDate": "https://storage.googleapis.com/deepmind-media/Model-Cards/Gemini-2-5-Flash-Lite-Model-Card.pdf",
+          "openness": "https://ai.google.dev/gemini-api/docs/pricing"
+        },
+        "results": [
+          {
+            "benchmarkSlug": "gpqa",
+            "score": 64.6,
+            "source": "self-reported",
+            "sourceUrl": "https://storage.googleapis.com/deepmind-media/Model-Cards/Gemini-2-5-Flash-Lite-Model-Card.pdf",
+            "evaluatedAt": "2025-06",
+            "notes": "GPQA diamond, (06-17) release, non-thinking"
+          },
+          {
+            "benchmarkSlug": "aime",
+            "score": 49.8,
+            "source": "self-reported",
+            "sourceUrl": "https://storage.googleapis.com/deepmind-media/Model-Cards/Gemini-2-5-Flash-Lite-Model-Card.pdf",
+            "evaluatedAt": "2025-06",
+            "notes": "AIME 2025, (06-17) release, non-thinking"
+          },
+          {
+            "benchmarkSlug": "livecodebench",
+            "score": 33.7,
+            "source": "self-reported",
+            "sourceUrl": "https://storage.googleapis.com/deepmind-media/Model-Cards/Gemini-2-5-Flash-Lite-Model-Card.pdf",
+            "evaluatedAt": "2025-06",
+            "notes": "LiveCodeBench v5, (06-17), non-thinking"
+          },
+          {
+            "benchmarkSlug": "swe-bench",
+            "score": 31.6,
+            "source": "self-reported",
+            "sourceUrl": "https://storage.googleapis.com/deepmind-media/Model-Cards/Gemini-2-5-Flash-Lite-Model-Card.pdf",
+            "evaluatedAt": "2025-06",
+            "notes": "SWE-Bench Verified, single attempt, (06-17), non-thinking"
+          },
+          {
+            "benchmarkSlug": "hle",
+            "score": 5.1,
+            "source": "self-reported",
+            "sourceUrl": "https://storage.googleapis.com/deepmind-media/Model-Cards/Gemini-2-5-Flash-Lite-Model-Card.pdf",
+            "evaluatedAt": "2025-06",
+            "notes": "Humanity's Last Exam, no tools, (06-17), non-thinking"
+          },
+          {
+            "benchmarkSlug": "mmlu",
+            "score": 81.1,
+            "source": "self-reported",
+            "sourceUrl": "https://storage.googleapis.com/deepmind-media/Model-Cards/Gemini-2-5-Flash-Lite-Model-Card.pdf",
+            "evaluatedAt": "2025-06",
+            "notes": "Global MMLU (Lite), non-thinking"
+          }
+        ],
+        "verificationNotes": "Confirmed release timeline via Google Cloud blog: Gemini 2.5 Flash-Lite preview rolled out June 17, 2025 (stable GA came July 22, 2025). Cross-checked all 6 benchmark rows against an independent secondary source (langbase.com model benchmarks page) which reproduced the official model card's non-thinking numbers exactly (GPQA 64.6, AIME 49.8, LiveCodeBench 33.7, SWE-Bench 31.6, HLE 5.1, MMLU 81.1) including the same 'multiple attempts 42.6%' SWE-bench detail that corroborates the thinking variant's note — strong signal this reflects the genuine model card table (direct PDF fetch was rate-limited/unparseable but WebSearch snippets independently corroborated GPQA/AIME directly from the card too). Pricing $0.10/$0.40 confirmed on ai.google.dev/gemini-api/docs/pricing."
+      },
+      {
+        "name": "Gemini 2.5 Flash-Lite (Thinking)",
+        "org": "Google",
+        "family": "Gemini 2.5",
+        "releaseDate": "2025-06-17",
+        "status": "released",
+        "openness": "closed",
+        "license": "Proprietary (Google API Terms)",
+        "paramsB": null,
+        "activeParamsB": null,
+        "archClass": "moe",
+        "archDisplay": "Sparse Mixture-of-Experts Transformer (natively multimodal)",
+        "ctxK": 1000,
+        "modalities": [
+          "text",
+          "vision",
+          "audio",
+          "video"
+        ],
+        "langCount": null,
+        "capabilities": {
+          "reasoning": true,
+          "coding": true,
+          "vision": true,
+          "functionCalling": true,
+          "toolUse": true,
+          "agentic": true
+        },
+        "apiAvailable": true,
+        "price": {
+          "input": 0.1,
+          "output": 0.4,
+          "provider": "Google (Gemini API)"
+        },
+        "links": {
+          "docs": "ai.google.dev/gemini-api/docs/models/gemini-2.5-flash-lite"
+        },
+        "note": "Same Flash-Lite weights with thinking budget enabled for stronger reasoning at extra cost.",
+        "quants": [],
+        "vramQ4Gb": null,
+        "vramFp16Gb": null,
+        "tps4090": null,
+        "tpsNote": null,
+        "effortLabel": "Thinking",
+        "isDefaultConfig": false,
+        "isBestConfig": true,
+        "specSources": {
+          "ctxK": "https://storage.googleapis.com/deepmind-media/Model-Cards/Gemini-2-5-Flash-Lite-Model-Card.pdf",
+          "releaseDate": "https://storage.googleapis.com/deepmind-media/Model-Cards/Gemini-2-5-Flash-Lite-Model-Card.pdf",
+          "openness": "https://ai.google.dev/gemini-api/docs/pricing"
+        },
+        "results": [
+          {
+            "benchmarkSlug": "gpqa",
+            "score": 66.7,
+            "source": "self-reported",
+            "sourceUrl": "https://storage.googleapis.com/deepmind-media/Model-Cards/Gemini-2-5-Flash-Lite-Model-Card.pdf",
+            "evaluatedAt": "2025-06",
+            "notes": "GPQA diamond, (06-17) release, thinking on"
+          },
+          {
+            "benchmarkSlug": "aime",
+            "score": 63.1,
+            "source": "self-reported",
+            "sourceUrl": "https://storage.googleapis.com/deepmind-media/Model-Cards/Gemini-2-5-Flash-Lite-Model-Card.pdf",
+            "evaluatedAt": "2025-06",
+            "notes": "AIME 2025, (06-17) release, thinking on"
+          },
+          {
+            "benchmarkSlug": "livecodebench",
+            "score": 34.3,
+            "source": "self-reported",
+            "sourceUrl": "https://storage.googleapis.com/deepmind-media/Model-Cards/Gemini-2-5-Flash-Lite-Model-Card.pdf",
+            "evaluatedAt": "2025-06",
+            "notes": "LiveCodeBench v5, (06-17), thinking on"
+          },
+          {
+            "benchmarkSlug": "swe-bench",
+            "score": 27.6,
+            "source": "self-reported",
+            "sourceUrl": "https://storage.googleapis.com/deepmind-media/Model-Cards/Gemini-2-5-Flash-Lite-Model-Card.pdf",
+            "evaluatedAt": "2025-06",
+            "notes": "SWE-Bench Verified, single attempt, (06-17), thinking on (44.9% with multiple attempts)"
+          },
+          {
+            "benchmarkSlug": "hle",
+            "score": 6.9,
+            "source": "self-reported",
+            "sourceUrl": "https://storage.googleapis.com/deepmind-media/Model-Cards/Gemini-2-5-Flash-Lite-Model-Card.pdf",
+            "evaluatedAt": "2025-06",
+            "notes": "Humanity's Last Exam, no tools, (06-17), thinking on"
+          },
+          {
+            "benchmarkSlug": "mmlu",
+            "score": 84.5,
+            "source": "self-reported",
+            "sourceUrl": "https://storage.googleapis.com/deepmind-media/Model-Cards/Gemini-2-5-Flash-Lite-Model-Card.pdf",
+            "evaluatedAt": "2025-06",
+            "notes": "Global MMLU (Lite), thinking on"
+          }
+        ],
+        "verificationNotes": "Same verification path as the non-thinking variant: release date June 17, 2025 confirmed via Google Cloud blog; all 6 thinking-mode benchmark rows (GPQA 66.7, AIME 63.1, LiveCodeBench 34.3, SWE-Bench 27.6 incl. the 44.9% multi-attempt detail, HLE 6.9, MMLU 84.5) reproduced exactly by an independent secondary source citing the official model card. Pricing identical to non-thinking variant, confirmed on ai.google.dev/gemini-api/docs/pricing (same underlying model, thinking toggle only)."
+      },
+      {
+        "name": "Gemini 3 Pro",
+        "org": "Google",
+        "family": "Gemini 3",
+        "releaseDate": "2025-11-18",
+        "status": "released",
+        "openness": "closed",
+        "license": "Proprietary (Google API Terms)",
+        "paramsB": null,
+        "activeParamsB": null,
+        "archClass": "moe",
+        "archDisplay": "Sparse Mixture-of-Experts Transformer (natively multimodal)",
+        "ctxK": 1000,
+        "modalities": [
+          "text",
+          "vision",
+          "audio",
+          "video"
+        ],
+        "langCount": null,
+        "capabilities": {
+          "reasoning": true,
+          "coding": true,
+          "vision": true,
+          "functionCalling": true,
+          "toolUse": true,
+          "agentic": true
+        },
+        "apiAvailable": true,
+        "price": {
+          "input": 2,
+          "output": 12,
+          "provider": "Google (Gemini API / Vertex AI)"
+        },
+        "links": {
+          "docs": "ai.google.dev/gemini-api/docs/gemini-3"
+        },
+        "note": "Google's frontier reasoning/agentic-coding flagship; sparse MoE, natively multimodal, 1M context; >200k-token prompts bill at $4/$18 per M.",
+        "quants": [],
+        "vramQ4Gb": null,
+        "vramFp16Gb": null,
+        "tps4090": null,
+        "tpsNote": null,
+        "effortLabel": null,
+        "isDefaultConfig": true,
+        "isBestConfig": true,
+        "specSources": {
+          "ctxK": "https://storage.googleapis.com/deepmind-media/Model-Cards/Gemini-3-Pro-Model-Card.pdf",
+          "releaseDate": "https://blog.google/products/gemini/gemini-3/",
+          "openness": "https://ai.google.dev/gemini-api/docs/pricing"
+        },
+        "results": [
+          {
+            "benchmarkSlug": "gpqa",
+            "score": 91.9,
+            "source": "self-reported",
+            "sourceUrl": "https://storage.googleapis.com/deepmind-media/Model-Cards/Gemini-3-Pro-Model-Card.pdf",
+            "evaluatedAt": "2025-11",
+            "notes": "GPQA Diamond, no tools"
+          },
+          {
+            "benchmarkSlug": "aime",
+            "score": 95,
+            "source": "self-reported",
+            "sourceUrl": "https://storage.googleapis.com/deepmind-media/Model-Cards/Gemini-3-Pro-Model-Card.pdf",
+            "evaluatedAt": "2025-11",
+            "notes": "AIME 2025, no tools (100% with code execution)"
+          },
+          {
+            "benchmarkSlug": "hle",
+            "score": 37.5,
+            "source": "self-reported",
+            "sourceUrl": "https://storage.googleapis.com/deepmind-media/Model-Cards/Gemini-3-Pro-Model-Card.pdf",
+            "evaluatedAt": "2025-11",
+            "notes": "Humanity's Last Exam, no tools (45.8% with search+code exec)"
+          },
+          {
+            "benchmarkSlug": "swe-bench",
+            "score": 76.2,
+            "source": "self-reported",
+            "sourceUrl": "https://storage.googleapis.com/deepmind-media/Model-Cards/Gemini-3-Pro-Model-Card.pdf",
+            "evaluatedAt": "2025-11",
+            "notes": "SWE-Bench Verified, single attempt"
+          },
+          {
+            "benchmarkSlug": "mmmu",
+            "score": 81,
+            "source": "self-reported",
+            "sourceUrl": "https://storage.googleapis.com/deepmind-media/Model-Cards/Gemini-3-Pro-Model-Card.pdf",
+            "evaluatedAt": "2025-11",
+            "notes": "MMMU-Pro variant"
+          },
+          {
+            "benchmarkSlug": "mmlu",
+            "score": 91.8,
+            "source": "self-reported",
+            "sourceUrl": "https://storage.googleapis.com/deepmind-media/Model-Cards/Gemini-3-Pro-Model-Card.pdf",
+            "evaluatedAt": "2025-11",
+            "notes": "MMMLU, multilingual Q&A"
+          },
+          {
+            "benchmarkSlug": "livecodebench",
+            "score": 2439,
+            "source": "self-reported",
+            "sourceUrl": "https://storage.googleapis.com/deepmind-media/Model-Cards/Gemini-3-Pro-Model-Card.pdf",
+            "evaluatedAt": "2025-11",
+            "notes": "LiveCodeBench Pro, Elo rating (not a 0-100 pass rate)"
+          }
+        ],
+        "verificationNotes": "Directly downloaded and read the official Gemini 3 Pro Model Card PDF ('Model Release: November 2025'). Its evaluation table matches every claimed score digit-for-digit: GPQA 91.9, AIME 95.0 (100% with code execution), HLE 37.5 (45.8% with search+code exec), SWE-Bench 76.2, MMMU-Pro 81.0, MMMLU 91.8, LiveCodeBench Pro Elo 2,439. Release date Nov 18, 2025 corroborated by blog.google, CNBC, and InfoQ coverage. Pricing $2/$12 (base tier) and $4/$18 (>200k tokens) confirmed on ai.google.dev/gemini-api/docs/pricing (via the now-succeeding Gemini 3.1 Pro Preview page, which carries forward identical base-tier pricing). Model card explicitly names it a 'sparse mixture-of-experts (MoE) transformer-based model... with native multimodal support,' confirming archClass/archDisplay directly."
+      },
+      {
+        "name": "Gemini 3 Flash",
+        "org": "Google",
+        "family": "Gemini 3",
+        "releaseDate": "2025-12-17",
+        "status": "released",
+        "openness": "closed",
+        "license": "Proprietary (Google API Terms)",
+        "paramsB": null,
+        "activeParamsB": null,
+        "archClass": "moe",
+        "archDisplay": "Sparse Mixture-of-Experts Transformer (natively multimodal, based on Gemini 3 Pro)",
+        "ctxK": 1000,
+        "modalities": [
+          "text",
+          "vision",
+          "audio",
+          "video"
+        ],
+        "langCount": null,
+        "capabilities": {
+          "reasoning": true,
+          "coding": true,
+          "vision": true,
+          "functionCalling": true,
+          "toolUse": true,
+          "agentic": true
+        },
+        "apiAvailable": true,
+        "price": {
+          "input": 0.5,
+          "output": 3,
+          "provider": "Google (Gemini API)"
+        },
+        "links": {
+          "docs": "ai.google.dev/gemini-api/docs/gemini-3"
+        },
+        "note": "Pro-grade reasoning at Flash latency/cost via an adjustable thinking_level parameter; default model in the Gemini app.",
+        "quants": [],
+        "vramQ4Gb": null,
+        "vramFp16Gb": null,
+        "tps4090": null,
+        "tpsNote": null,
+        "effortLabel": null,
+        "isDefaultConfig": true,
+        "isBestConfig": true,
+        "specSources": {
+          "ctxK": "https://storage.googleapis.com/deepmind-media/Model-Cards/Gemini-3-Flash-Model-Card.pdf",
+          "releaseDate": "https://blog.google/products/gemini/gemini-3-flash/",
+          "openness": "https://ai.google.dev/gemini-api/docs/pricing"
+        },
+        "results": [
+          {
+            "benchmarkSlug": "gpqa",
+            "score": 90.4,
+            "source": "self-reported",
+            "sourceUrl": "https://storage.googleapis.com/deepmind-media/Model-Cards/Gemini-3-Flash-Model-Card.pdf",
+            "evaluatedAt": "2025-12",
+            "notes": "GPQA Diamond, no tools, thinking"
+          },
+          {
+            "benchmarkSlug": "aime",
+            "score": 95.2,
+            "source": "self-reported",
+            "sourceUrl": "https://storage.googleapis.com/deepmind-media/Model-Cards/Gemini-3-Flash-Model-Card.pdf",
+            "evaluatedAt": "2025-12",
+            "notes": "AIME 2025, no tools (99.7% with code execution)"
+          },
+          {
+            "benchmarkSlug": "hle",
+            "score": 33.7,
+            "source": "self-reported",
+            "sourceUrl": "https://storage.googleapis.com/deepmind-media/Model-Cards/Gemini-3-Flash-Model-Card.pdf",
+            "evaluatedAt": "2025-12",
+            "notes": "Humanity's Last Exam, no tools (43.5% with search+code exec)"
+          },
+          {
+            "benchmarkSlug": "swe-bench",
+            "score": 78,
+            "source": "self-reported",
+            "sourceUrl": "https://storage.googleapis.com/deepmind-media/Model-Cards/Gemini-3-Flash-Model-Card.pdf",
+            "evaluatedAt": "2025-12",
+            "notes": "SWE-Bench Verified, single attempt"
+          },
+          {
+            "benchmarkSlug": "mmmu",
+            "score": 81.2,
+            "source": "self-reported",
+            "sourceUrl": "https://storage.googleapis.com/deepmind-media/Model-Cards/Gemini-3-Flash-Model-Card.pdf",
+            "evaluatedAt": "2025-12",
+            "notes": "MMMU-Pro variant"
+          },
+          {
+            "benchmarkSlug": "mmlu",
+            "score": 91.8,
+            "source": "self-reported",
+            "sourceUrl": "https://storage.googleapis.com/deepmind-media/Model-Cards/Gemini-3-Flash-Model-Card.pdf",
+            "evaluatedAt": "2025-12",
+            "notes": "MMMLU, multilingual Q&A"
+          },
+          {
+            "benchmarkSlug": "livecodebench",
+            "score": 2316,
+            "source": "self-reported",
+            "sourceUrl": "https://storage.googleapis.com/deepmind-media/Model-Cards/Gemini-3-Flash-Model-Card.pdf",
+            "evaluatedAt": "2025-12",
+            "notes": "LiveCodeBench Pro, Elo rating (not a 0-100 pass rate)"
+          }
+        ],
+        "verificationNotes": "Directly downloaded and read the official Gemini 3 Flash Model Card PDF ('Published: December 2025'), which includes a comparison table with a Gemini 3 Flash (Thinking) column. Every claimed score matches exactly: HLE 33.7% (45.8/43.5% is actually the search+code-exec figure — confirmed 43.5% specifically, not 45.8 which belongs to Gemini 3 Pro), GPQA 90.4, AIME 95.2% (99.7% with code execution), MMMU-Pro 81.2, SWE-Bench 78.0, MMMLU 91.8, LiveCodeBench Pro Elo 2,316. Release date Dec 17, 2025 corroborated by TechCrunch, 9to5Google, and blog.google. Pricing $0.50/$3.00 confirmed via multiple independent trackers (pricepertoken, OpenRouter) plus consistent with Google's per-tier structure. Model card confirms it is 'based on Gemini 3 Pro,' matching archDisplay wording."
+      },
+      {
+        "name": "LG EXAONE 3.0 7.8B Instruct",
+        "org": "LG AI Research",
+        "family": "EXAONE 3.0",
+        "releaseDate": "2024-08-07",
+        "status": "released",
+        "openness": "open-weights",
+        "license": "EXAONE AI Model License Agreement 1.1 - NC",
+        "paramsB": 7.8,
+        "activeParamsB": null,
+        "archClass": "dense",
+        "archDisplay": "Dense decoder-only Transformer, 32 layers",
+        "ctxK": 4,
+        "modalities": [
+          "text"
+        ],
+        "langCount": 2,
+        "capabilities": {
+          "reasoning": false,
+          "coding": true,
+          "vision": false,
+          "functionCalling": false,
+          "toolUse": false,
+          "agentic": false
+        },
+        "apiAvailable": false,
+        "price": null,
+        "links": {
+          "hf": "LGAI-EXAONE/EXAONE-3.0-7.8B-Instruct",
+          "gh": "LG-AI-EXAONE/EXAONE-3.0"
+        },
+        "note": "LG's first public bilingual (KO/EN) open-weights instruct model, pretrained on 8T tokens.",
+        "quants": [
+          "GGUF Q4",
+          "AWQ"
+        ],
+        "vramQ4Gb": 5,
+        "vramFp16Gb": 16,
+        "tps4090": null,
+        "tpsNote": null,
+        "effortLabel": null,
+        "isDefaultConfig": true,
+        "isBestConfig": true,
+        "specSources": {
+          "paramsB": "https://huggingface.co/LGAI-EXAONE/EXAONE-3.0-7.8B-Instruct",
+          "ctxK": "https://www.lgresearch.ai/data/upload/tech_report/en/EXAONE_3.0_Technical_Report.pdf",
+          "releaseDate": "https://github.com/LG-AI-EXAONE/EXAONE-3.0",
+          "openness": "https://huggingface.co/LGAI-EXAONE/EXAONE-3.0-7.8B-Instruct/blob/main/LICENSE"
+        },
+        "results": [
+          {
+            "benchmarkSlug": "mt-bench",
+            "score": 9.01,
+            "source": "self-reported",
+            "sourceUrl": "https://huggingface.co/LGAI-EXAONE/EXAONE-3.0-7.8B-Instruct",
+            "evaluatedAt": "2024-08",
+            "notes": "English MT-Bench"
+          },
+          {
+            "benchmarkSlug": "arena-hard",
+            "score": 46.8,
+            "source": "self-reported",
+            "sourceUrl": "https://huggingface.co/LGAI-EXAONE/EXAONE-3.0-7.8B-Instruct",
+            "evaluatedAt": "2024-08",
+            "notes": "Arena-Hard-v0.1"
+          },
+          {
+            "benchmarkSlug": "wildbench",
+            "score": 48.2,
+            "source": "self-reported",
+            "sourceUrl": "https://huggingface.co/LGAI-EXAONE/EXAONE-3.0-7.8B-Instruct",
+            "evaluatedAt": "2024-08",
+            "notes": "WildBench"
+          },
+          {
+            "benchmarkSlug": "alpaca-eval",
+            "score": 45,
+            "source": "self-reported",
+            "sourceUrl": "https://huggingface.co/LGAI-EXAONE/EXAONE-3.0-7.8B-Instruct",
+            "evaluatedAt": "2024-08",
+            "notes": "AlpacaEval 2.0 LC"
+          },
+          {
+            "benchmarkSlug": "komt-bench",
+            "score": 8.92,
+            "source": "self-reported",
+            "sourceUrl": "https://huggingface.co/LGAI-EXAONE/EXAONE-3.0-7.8B-Instruct",
+            "evaluatedAt": "2024-08",
+            "notes": "Korean MT-Bench (KoMT-Bench)"
+          },
+          {
+            "benchmarkSlug": "logickor",
+            "score": 8.62,
+            "source": "self-reported",
+            "sourceUrl": "https://huggingface.co/LGAI-EXAONE/EXAONE-3.0-7.8B-Instruct",
+            "evaluatedAt": "2024-08",
+            "notes": "Korean LogicKor"
+          }
+        ],
+        "verificationNotes": "Existence, release date (2024-08-07), params (7.8B), NC license, and bilingual EN/KO scope confirmed directly on the HF model card and GitHub README (both fetched). Architecture (32 layers) and 4096-token context confirmed via independent search results citing the arXiv technical report (2408.03541) and GGUF metadata. All 6 benchmark rows (MT-Bench 9.01, Arena-Hard 46.8, WildBench 48.2, AlpacaEval 45.0, KoMT-Bench 8.92, LogicKor 8.62) literally appear on the cited HF/GitHub pages, verbatim match — no changes."
+      },
+      {
+        "name": "LG EXAONE 3.5 32B Instruct",
+        "org": "LG AI Research",
+        "family": "EXAONE 3.5",
+        "releaseDate": "2024-12-09",
+        "status": "released",
+        "openness": "open-weights",
+        "license": "EXAONE AI Model License Agreement 1.1 - NC",
+        "paramsB": 32,
+        "activeParamsB": null,
+        "archClass": "dense",
+        "archDisplay": "Dense Transformer, 64 layers, GQA (40 Q-heads / 8 KV-heads)",
+        "ctxK": 32,
+        "modalities": [
+          "text"
+        ],
+        "langCount": 2,
+        "capabilities": {
+          "reasoning": false,
+          "coding": true,
+          "vision": false,
+          "functionCalling": false,
+          "toolUse": false,
+          "agentic": false
+        },
+        "apiAvailable": false,
+        "price": null,
+        "links": {
+          "hf": "LGAI-EXAONE/EXAONE-3.5-32B-Instruct",
+          "gh": "LG-AI-EXAONE/EXAONE-3.5"
+        },
+        "note": "Flagship of the 2.4B/7.8B/32B EXAONE 3.5 family; 32K context, strong instruction-following.",
+        "quants": [
+          "GGUF Q4",
+          "AWQ"
+        ],
+        "vramQ4Gb": 20,
+        "vramFp16Gb": 62,
+        "tps4090": null,
+        "tpsNote": null,
+        "effortLabel": null,
+        "isDefaultConfig": true,
+        "isBestConfig": true,
+        "specSources": {
+          "paramsB": "https://huggingface.co/LGAI-EXAONE/EXAONE-3.5-32B-Instruct",
+          "ctxK": "https://github.com/LG-AI-EXAONE/EXAONE-3.5",
+          "releaseDate": "https://github.com/LG-AI-EXAONE/EXAONE-3.5",
+          "openness": "https://huggingface.co/LGAI-EXAONE/EXAONE-3.5-32B-Instruct"
+        },
+        "results": [
+          {
+            "benchmarkSlug": "mt-bench",
+            "score": 8.51,
+            "source": "self-reported",
+            "sourceUrl": "https://github.com/LG-AI-EXAONE/EXAONE-3.5",
+            "evaluatedAt": "2024-12",
+            "notes": "MT-Bench"
+          },
+          {
+            "benchmarkSlug": "arena-hard",
+            "score": 78.6,
+            "source": "self-reported",
+            "sourceUrl": "https://github.com/LG-AI-EXAONE/EXAONE-3.5",
+            "evaluatedAt": "2024-12",
+            "notes": "Arena-Hard"
+          },
+          {
+            "benchmarkSlug": "alpaca-eval",
+            "score": 60.6,
+            "source": "self-reported",
+            "sourceUrl": "https://github.com/LG-AI-EXAONE/EXAONE-3.5",
+            "evaluatedAt": "2024-12",
+            "notes": "AlpacaEval"
+          },
+          {
+            "benchmarkSlug": "ifeval",
+            "score": 81.7,
+            "source": "self-reported",
+            "sourceUrl": "https://github.com/LG-AI-EXAONE/EXAONE-3.5",
+            "evaluatedAt": "2024-12",
+            "notes": "IFEval"
+          },
+          {
+            "benchmarkSlug": "komt-bench",
+            "score": 8.05,
+            "source": "self-reported",
+            "sourceUrl": "https://github.com/LG-AI-EXAONE/EXAONE-3.5",
+            "evaluatedAt": "2024-12",
+            "notes": "Korean MT-Bench"
+          },
+          {
+            "benchmarkSlug": "logickor",
+            "score": 9.06,
+            "source": "self-reported",
+            "sourceUrl": "https://github.com/LG-AI-EXAONE/EXAONE-3.5",
+            "evaluatedAt": "2024-12",
+            "notes": "Korean LogicKor"
+          }
+        ],
+        "verificationNotes": "Existence and release date confirmed via GitHub README (states Dec 9, 2024; HF collection metadata shows Dec 6 as an alternate weight-upload date — kept 2024-12-09 per the cited primary GitHub source). Params (30.95B, rounded 32B), 32K context, NC license, and architecture (64 layers, GQA 40Q/8KV) confirmed on HF model card. All 6 benchmark rows (MT-Bench 8.51, Arena-Hard 78.6, AlpacaEval 60.6, IFEval 81.7, KoMT-Bench 8.05, LogicKor 9.06) verbatim-confirmed on the cited GitHub README — no changes."
+      },
+      {
+        "name": "LG EXAONE Deep 32B",
+        "org": "LG AI Research",
+        "family": "EXAONE Deep",
+        "releaseDate": "2025-03-18",
+        "status": "released",
+        "openness": "open-weights",
+        "license": "EXAONE AI Model License Agreement 1.1 - NC",
+        "paramsB": 32,
+        "activeParamsB": null,
+        "archClass": "dense",
+        "archDisplay": "Dense Transformer, 64 layers, GQA (40 Q-heads / 8 KV-heads), <thought>-tag CoT reasoning",
+        "ctxK": 32,
+        "modalities": [
+          "text"
+        ],
+        "langCount": 2,
+        "capabilities": {
+          "reasoning": true,
+          "coding": true,
+          "vision": false,
+          "functionCalling": false,
+          "toolUse": false,
+          "agentic": false
+        },
+        "apiAvailable": false,
+        "price": null,
+        "links": {
+          "hf": "LGAI-EXAONE/EXAONE-Deep-32B",
+          "gh": "LG-AI-EXAONE/EXAONE-Deep"
+        },
+        "note": "Reasoning-specialized <thought>-tag CoT model rivaling much larger models on AIME/MATH.",
+        "quants": [
+          "GGUF Q4",
+          "AWQ"
+        ],
+        "vramQ4Gb": 20,
+        "vramFp16Gb": 62,
+        "tps4090": null,
+        "tpsNote": null,
+        "effortLabel": null,
+        "isDefaultConfig": true,
+        "isBestConfig": true,
+        "specSources": {
+          "paramsB": "https://huggingface.co/LGAI-EXAONE/EXAONE-Deep-32B",
+          "ctxK": "https://github.com/LG-AI-EXAONE/EXAONE-Deep",
+          "releaseDate": "https://github.com/LG-AI-EXAONE/EXAONE-Deep",
+          "openness": "https://huggingface.co/LGAI-EXAONE/EXAONE-Deep-32B"
+        },
+        "results": [
+          {
+            "benchmarkSlug": "math",
+            "score": 95.7,
+            "source": "self-reported",
+            "sourceUrl": "https://github.com/LG-AI-EXAONE/EXAONE-Deep",
+            "evaluatedAt": "2025-03",
+            "notes": "MATH-500, pass@1"
+          },
+          {
+            "benchmarkSlug": "aime",
+            "score": 72.1,
+            "source": "self-reported",
+            "sourceUrl": "https://github.com/LG-AI-EXAONE/EXAONE-Deep",
+            "evaluatedAt": "2025-03",
+            "notes": "AIME 2024, pass@1 (90.0 consistency@64)"
+          },
+          {
+            "benchmarkSlug": "gpqa",
+            "score": 66.1,
+            "source": "self-reported",
+            "sourceUrl": "https://github.com/LG-AI-EXAONE/EXAONE-Deep",
+            "evaluatedAt": "2025-03",
+            "notes": "GPQA Diamond, pass@1"
+          },
+          {
+            "benchmarkSlug": "livecodebench",
+            "score": 59.5,
+            "source": "self-reported",
+            "sourceUrl": "https://github.com/LG-AI-EXAONE/EXAONE-Deep",
+            "evaluatedAt": "2025-03",
+            "notes": "LiveCodeBench, pass@1"
+          }
+        ],
+        "verificationNotes": "Existence and release date (2025-03-18) confirmed on GitHub README and HF model card. Params (30.95B, rounded 32B), 32K context, and 64-layer/GQA(40Q/8KV) architecture confirmed via HF card and independent search (model shares EXAONE-3.5-32B backbone). All 4 benchmark rows (MATH-500 95.7, AIME2024 72.1/90.0, GPQA-Diamond 66.1, LiveCodeBench 59.5) verbatim-confirmed on both the HF card and GitHub README — no changes."
+      },
+      {
+        "name": "LG EXAONE 4.0 32B (Non-reasoning)",
+        "org": "LG AI Research",
+        "family": "EXAONE 4.0",
+        "releaseDate": "2025-07-15",
+        "status": "released",
+        "openness": "open-weights",
+        "license": "EXAONE AI Model License Agreement 1.2 (NC)",
+        "paramsB": 32,
+        "activeParamsB": null,
+        "archClass": "dense",
+        "archDisplay": "Dense hybrid-attention transformer, 64 layers, local:global attention 3:1, GQA (40Q/8KV), QK-Reorder-Norm; single checkpoint with toggleable non-reasoning/reasoning modes",
+        "ctxK": 131,
+        "modalities": [
+          "text"
+        ],
+        "langCount": 3,
+        "capabilities": {
+          "reasoning": false,
+          "coding": true,
+          "vision": false,
+          "functionCalling": true,
+          "toolUse": true,
+          "agentic": true
+        },
+        "apiAvailable": false,
+        "price": null,
+        "links": {
+          "hf": "LGAI-EXAONE/EXAONE-4.0-32B",
+          "gh": "LG-AI-EXAONE/EXAONE-4.0"
+        },
+        "note": "Default (non-reasoning) mode of Korea's first open-weight hybrid model; faster, lower scores on math/coding than reasoning mode.",
+        "quants": [
+          "FP8",
+          "GGUF Q4"
+        ],
+        "vramQ4Gb": 20,
+        "vramFp16Gb": 64,
+        "tps4090": null,
+        "tpsNote": null,
+        "effortLabel": "Non-reasoning",
+        "isDefaultConfig": true,
+        "isBestConfig": false,
+        "specSources": {
+          "paramsB": "https://huggingface.co/LGAI-EXAONE/EXAONE-4.0-32B",
+          "ctxK": "https://huggingface.co/LGAI-EXAONE/EXAONE-4.0-32B",
+          "releaseDate": "https://www.prnewswire.com/news-releases/lg-unveils-koreas-first-open-weight-hybrid-ai-exaone-4-0-302505577.html",
+          "openness": "https://huggingface.co/LGAI-EXAONE/EXAONE-4.0-32B"
+        },
+        "results": [
+          {
+            "benchmarkSlug": "mmlu-redux",
+            "score": 89.8,
+            "source": "self-reported",
+            "sourceUrl": "https://arxiv.org/abs/2507.11407",
+            "notes": "Non-reasoning mode"
+          },
+          {
+            "benchmarkSlug": "mmlu-pro",
+            "score": 77.6,
+            "source": "self-reported",
+            "sourceUrl": "https://arxiv.org/abs/2507.11407",
+            "notes": "Non-reasoning mode"
+          },
+          {
+            "benchmarkSlug": "gpqa",
+            "score": 63.7,
+            "source": "self-reported",
+            "sourceUrl": "https://arxiv.org/abs/2507.11407",
+            "notes": "GPQA-Diamond, non-reasoning mode"
+          },
+          {
+            "benchmarkSlug": "aime",
+            "score": 35.9,
+            "source": "self-reported",
+            "sourceUrl": "https://arxiv.org/abs/2507.11407",
+            "notes": "AIME 2025, non-reasoning mode"
+          },
+          {
+            "benchmarkSlug": "livecodebench",
+            "score": 43.3,
+            "source": "self-reported",
+            "sourceUrl": "https://arxiv.org/abs/2507.11407",
+            "notes": "LiveCodeBench v5, non-reasoning mode"
+          },
+          {
+            "benchmarkSlug": "ifeval",
+            "score": 84.8,
+            "source": "self-reported",
+            "sourceUrl": "https://arxiv.org/abs/2507.11407",
+            "notes": "Non-reasoning mode"
+          }
+        ],
+        "verificationNotes": "Existence, release date (2025-07-15, 'Korea's first open-weight hybrid AI model'), 131K context, license v1.2 NC, trilingual EN/KO/ES, and function-calling/tool-use/agentic support confirmed on HF model card and PR Newswire release. Fetched full text (arxiv.org/html/2507.11407) and confirmed all 6 non-reasoning-mode rows (Table 4) match exactly: MMLU-Redux 89.8, MMLU-Pro 77.6, GPQA-Diamond 63.7, AIME2025 35.9, LiveCodeBench v5 43.3, IFEval 84.8 — no changes."
+      },
+      {
+        "name": "LG EXAONE 4.0 32B (Reasoning)",
+        "org": "LG AI Research",
+        "family": "EXAONE 4.0",
+        "releaseDate": "2025-07-15",
+        "status": "released",
+        "openness": "open-weights",
+        "license": "EXAONE AI Model License Agreement 1.2 (NC)",
+        "paramsB": 32,
+        "activeParamsB": null,
+        "archClass": "dense",
+        "archDisplay": "Dense hybrid-attention transformer, 64 layers, local:global attention 3:1, GQA (40Q/8KV), QK-Reorder-Norm; single checkpoint with toggleable non-reasoning/reasoning modes",
+        "ctxK": 131,
+        "modalities": [
+          "text"
+        ],
+        "langCount": 3,
+        "capabilities": {
+          "reasoning": true,
+          "coding": true,
+          "vision": false,
+          "functionCalling": true,
+          "toolUse": true,
+          "agentic": true
+        },
+        "apiAvailable": false,
+        "price": null,
+        "links": {
+          "hf": "LGAI-EXAONE/EXAONE-4.0-32B",
+          "gh": "LG-AI-EXAONE/EXAONE-4.0"
+        },
+        "note": "Opt-in reasoning (enable_thinking=True) mode of Korea's first open-weight hybrid model; highest 32B-class score on math/coding/knowledge benchmarks.",
+        "quants": [
+          "FP8",
+          "GGUF Q4"
+        ],
+        "vramQ4Gb": 20,
+        "vramFp16Gb": 64,
+        "tps4090": null,
+        "tpsNote": null,
+        "effortLabel": "Reasoning",
+        "isDefaultConfig": false,
+        "isBestConfig": true,
+        "specSources": {
+          "paramsB": "https://huggingface.co/LGAI-EXAONE/EXAONE-4.0-32B",
+          "ctxK": "https://huggingface.co/LGAI-EXAONE/EXAONE-4.0-32B",
+          "releaseDate": "https://www.prnewswire.com/news-releases/lg-unveils-koreas-first-open-weight-hybrid-ai-exaone-4-0-302505577.html",
+          "openness": "https://huggingface.co/LGAI-EXAONE/EXAONE-4.0-32B"
+        },
+        "results": [
+          {
+            "benchmarkSlug": "mmlu-redux",
+            "score": 92.3,
+            "source": "self-reported",
+            "sourceUrl": "https://arxiv.org/abs/2507.11407",
+            "notes": "Reasoning mode"
+          },
+          {
+            "benchmarkSlug": "mmlu-pro",
+            "score": 81.8,
+            "source": "self-reported",
+            "sourceUrl": "https://arxiv.org/abs/2507.11407",
+            "notes": "Reasoning mode"
+          },
+          {
+            "benchmarkSlug": "gpqa",
+            "score": 75.4,
+            "source": "self-reported",
+            "sourceUrl": "https://arxiv.org/abs/2507.11407",
+            "notes": "GPQA-Diamond, reasoning mode"
+          },
+          {
+            "benchmarkSlug": "aime",
+            "score": 85.3,
+            "source": "self-reported",
+            "sourceUrl": "https://arxiv.org/abs/2507.11407",
+            "notes": "AIME 2025, reasoning mode"
+          },
+          {
+            "benchmarkSlug": "livecodebench",
+            "score": 72.6,
+            "source": "self-reported",
+            "sourceUrl": "https://arxiv.org/abs/2507.11407",
+            "notes": "LiveCodeBench v5, reasoning mode"
+          },
+          {
+            "benchmarkSlug": "ifeval",
+            "score": 83.7,
+            "source": "self-reported",
+            "sourceUrl": "https://arxiv.org/abs/2507.11407",
+            "notes": "Reasoning mode"
+          }
+        ],
+        "verificationNotes": "Same underlying checkpoint as the non-reasoning entry, verified identically (HF card, PR Newswire, release date, license, context, capabilities). LG's own PR Newswire release independently cites the reasoning-mode headline numbers (MMLU-Redux/Pro 92.3/81.8, GPQA-Diamond 75.4, AIME2025 85.3), corroborating them outside the paper. Fetched arxiv.org/html/2507.11407 and confirmed all 6 reasoning-mode rows (Table 3) match exactly: MMLU-Redux 92.3, MMLU-Pro 81.8, GPQA-Diamond 75.4, AIME2025 85.3, LiveCodeBench v5 72.6, IFEval 83.7 — no changes."
+      },
+      {
+        "name": "Yi-1.5 9B",
+        "org": "01.AI",
+        "family": "Yi-1.5",
+        "releaseDate": "2024-05-13",
+        "status": "released",
+        "openness": "open-weights",
+        "license": "Apache 2.0",
+        "paramsB": 9,
+        "activeParamsB": null,
+        "archClass": "dense",
+        "archDisplay": "Dense Llama-style decoder-only transformer",
+        "ctxK": 4,
+        "modalities": [
+          "text"
+        ],
+        "langCount": null,
+        "capabilities": {
+          "reasoning": false,
+          "coding": true,
+          "vision": false,
+          "functionCalling": false,
+          "toolUse": false,
+          "agentic": false
+        },
+        "apiAvailable": false,
+        "price": null,
+        "links": {
+          "hf": "01-ai/Yi-1.5-9B",
+          "gh": "01-ai/Yi-1.5"
+        },
+        "note": "Popular mid-size Yi-1.5 variant, continually pretrained on 3.6T tokens; top performer among similarly sized open models at launch.",
+        "quants": [
+          "GGUF Q4"
+        ],
+        "vramQ4Gb": 6,
+        "vramFp16Gb": 18,
+        "tps4090": null,
+        "tpsNote": null,
+        "effortLabel": null,
+        "isDefaultConfig": true,
+        "isBestConfig": true,
+        "specSources": {
+          "paramsB": "https://huggingface.co/01-ai/Yi-1.5-9B",
+          "ctxK": "https://huggingface.co/01-ai/Yi-1.5-9B",
+          "releaseDate": "https://github.com/01-ai/Yi-1.5",
+          "openness": "https://huggingface.co/01-ai/Yi-1.5-9B"
+        },
+        "results": [
+          {
+            "benchmarkSlug": "mmlu-pro",
+            "score": 45.95,
+            "source": "independent",
+            "sourceUrl": "https://huggingface.co/01-ai/Yi-1.5-9B-Chat",
+            "notes": "Yi-1.5-9B-Chat variant, via TIGER-Lab MMLU-Pro leaderboard evaluation"
+          }
+        ],
+        "verificationNotes": "Existence and release date (2024-05-13) confirmed on GitHub README ('Yi-1.5 series models are open-sourced'). Apache 2.0 license, 9B params, base-variant 4K context (vs the separate -16K/-32K suffixed checkpoints), and 3.6T-token continual pretraining confirmed on HF model card. The single result row is explicitly for the -Chat variant per its own notes field; fetched the cited HF page (01-ai/Yi-1.5-9B-Chat) and confirmed the MMLU-Pro 45.95 score literally appears there — no changes."
+      },
+      {
+        "name": "Yi-Lightning",
+        "org": "01.AI",
+        "family": "Yi-Lightning",
+        "releaseDate": "2024-10-16",
+        "status": "released",
+        "openness": "closed",
+        "license": "Proprietary (closed weights, API-only)",
+        "paramsB": null,
+        "activeParamsB": null,
+        "archClass": "moe",
+        "archDisplay": "Mixture-of-Experts transformer with fine-grained expert segmentation & routing, hybrid attention, optimized KV-caching",
+        "ctxK": 16,
+        "modalities": [
+          "text"
+        ],
+        "langCount": null,
+        "capabilities": {
+          "reasoning": false,
+          "coding": true,
+          "vision": false,
+          "functionCalling": false,
+          "toolUse": false,
+          "agentic": false
+        },
+        "apiAvailable": true,
+        "price": {
+          "input": 0.14,
+          "output": 0.14,
+          "provider": "01.AI (platform.lingyiwanwu.com)"
+        },
+        "links": {
+          "docs": "platform.lingyiwanwu.com/docs"
+        },
+        "note": "API-only MoE flagship; reached #6 on LMArena/Chatbot Arena at launch, first Chinese model to surpass GPT-4o there, at $0.14/M tokens.",
+        "quants": [],
+        "vramQ4Gb": null,
+        "vramFp16Gb": null,
+        "tps4090": null,
+        "tpsNote": null,
+        "effortLabel": null,
+        "isDefaultConfig": true,
+        "isBestConfig": true,
+        "specSources": {
+          "ctxK": "https://serenitiesai.com/benchmark/models/yi-lightning",
+          "releaseDate": "https://arxiv.org/abs/2412.01253",
+          "openness": "https://crafiq.ai/models/language/01ai-yi-lightning"
+        },
+        "results": [
+          {
+            "benchmarkSlug": "arena",
+            "score": 1287,
+            "source": "arena",
+            "sourceUrl": "https://arxiv.org/abs/2412.01253",
+            "notes": "Chatbot Arena Elo at launch, ranked 6th overall, 1st in China"
+          },
+          {
+            "benchmarkSlug": "math",
+            "score": 76.4,
+            "source": "self-reported",
+            "sourceUrl": "https://arxiv.org/abs/2412.01253",
+            "notes": "0-shot"
+          },
+          {
+            "benchmarkSlug": "humaneval",
+            "score": 83.5,
+            "source": "self-reported",
+            "sourceUrl": "https://arxiv.org/abs/2412.01253",
+            "notes": "0-shot"
+          },
+          {
+            "benchmarkSlug": "gpqa",
+            "score": 50.9,
+            "source": "self-reported",
+            "sourceUrl": "https://arxiv.org/abs/2412.01253",
+            "notes": "0-shot"
+          },
+          {
+            "benchmarkSlug": "ifeval",
+            "score": 81.9,
+            "source": "self-reported",
+            "sourceUrl": "https://arxiv.org/abs/2412.01253",
+            "notes": "Prompt-level loose accuracy"
+          }
+        ],
+        "verificationNotes": "Confirmed real via arXiv:2412.01253 (fetched html version) plus independent coverage (Kai-Fu Lee's own launch tweet, Pandaily, lmarena.ai's X post). Release date 2024-10-16, org 01.AI, and Arena score 1287 / rank #6 (matching GPT-4o-0513's #7/1285) all confirmed. All four benchmark rows (MATH 76.4, HumanEval 83.5, GPQA 50.9, IFEval 81.9) confirmed verbatim on the technical report. Confirmed the deployed API context is capped at 16K tokens (per crafiq.ai, serenitiesai.com, and an HN discussion) even though training data included longer sequences up to 64K — ctxK:16 is correct. Confirmed parameter count is genuinely undisclosed by 01.AI, so paramsB/activeParamsB null is correct. Pricing $0.14/M input+output confirmed via web search of platform docs."
+      },
+      {
+        "name": "Jais-13B",
+        "org": "Inception (G42)",
+        "family": "Jais",
+        "releaseDate": "2023-08-30",
+        "status": "released",
+        "openness": "open-weights",
+        "license": "Apache 2.0",
+        "paramsB": 13,
+        "activeParamsB": null,
+        "archClass": "dense",
+        "archDisplay": "Dense GPT-3-style decoder-only transformer, trained from scratch with SwiGLU activations and ALiBi position encoding",
+        "ctxK": 2,
+        "modalities": [
+          "text"
+        ],
+        "langCount": 2,
+        "capabilities": {
+          "reasoning": false,
+          "coding": false,
+          "vision": false,
+          "functionCalling": false,
+          "toolUse": false,
+          "agentic": false
+        },
+        "apiAvailable": false,
+        "price": null,
+        "links": {
+          "hf": "inceptionai/jais-13b"
+        },
+        "note": "First flagship open Arabic-English bilingual LLM, built with MBZUAI and trained on Cerebras' Condor Galaxy supercomputer.",
+        "quants": [
+          "GGUF Q4",
+          "GPTQ"
+        ],
+        "vramQ4Gb": 9,
+        "vramFp16Gb": 27,
+        "tps4090": null,
+        "tpsNote": null,
+        "effortLabel": null,
+        "isDefaultConfig": true,
+        "isBestConfig": true,
+        "specSources": {
+          "paramsB": "https://huggingface.co/inceptionai/jais-13b",
+          "ctxK": "https://arxiv.org/abs/2308.16149",
+          "releaseDate": "https://www.cerebras.ai/press-release/meet-jais-the-worlds-most-advanced-arabic-large-language-model-open-sourced-by-g42s-inception",
+          "openness": "https://huggingface.co/inceptionai/jais-13b"
+        },
+        "results": [
+          {
+            "benchmarkSlug": "mmlu",
+            "score": 30,
+            "source": "self-reported",
+            "sourceUrl": "https://huggingface.co/inceptionai/jais-13b",
+            "notes": "Arabic-translated MMLU"
+          },
+          {
+            "benchmarkSlug": "hellaswag",
+            "score": 57.7,
+            "source": "self-reported",
+            "sourceUrl": "https://huggingface.co/inceptionai/jais-13b",
+            "notes": "Arabic Hellaswag"
+          },
+          {
+            "benchmarkSlug": "truthfulqa",
+            "score": 41.1,
+            "source": "self-reported",
+            "sourceUrl": "https://huggingface.co/inceptionai/jais-13b"
+          }
+        ],
+        "verificationNotes": "Confirmed real via the official HF model card plus independent press (Cerebras/MBZUAI press releases, HPCwire) — all dated 2023-08-30, exactly matching the record. Confirmed 13B params, Apache 2.0 license, bilingual Arabic-English decoder-only transformer built by Inception/MBZUAI/Cerebras and trained on the Condor Galaxy-1 supercomputer. All three benchmark rows (MMLU 30.0, HellaSwag 57.7, TruthfulQA 41.1, Arabic evals) confirmed verbatim on the official HF model card."
+      },
+      {
+        "name": "Jais 70B",
+        "org": "Inception (G42)",
+        "family": "Jais",
+        "releaseDate": "2024-08-05",
+        "status": "released",
+        "openness": "open-weights",
+        "license": "Apache 2.0",
+        "paramsB": 70,
+        "activeParamsB": null,
+        "archClass": "dense",
+        "archDisplay": "Dense Llama-2-70B architecture adapted with Arabic-expanded tokenizer (32K new Arabic tokens), RoPE + GQA",
+        "ctxK": 4,
+        "modalities": [
+          "text"
+        ],
+        "langCount": 2,
+        "capabilities": {
+          "reasoning": false,
+          "coding": false,
+          "vision": false,
+          "functionCalling": false,
+          "toolUse": false,
+          "agentic": false
+        },
+        "apiAvailable": false,
+        "price": null,
+        "links": {
+          "hf": "inceptionai/jais-adapted-70b"
+        },
+        "note": "Largest Jais model, adapted from Llama-2-70B; launched alongside 20+ other Jais variants (590M-70B) in the Aug 2024 family release.",
+        "quants": [
+          "GGUF Q4"
+        ],
+        "vramQ4Gb": 40,
+        "vramFp16Gb": 140,
+        "tps4090": null,
+        "tpsNote": null,
+        "effortLabel": null,
+        "isDefaultConfig": true,
+        "isBestConfig": true,
+        "specSources": {
+          "paramsB": "https://huggingface.co/inceptionai/jais-adapted-70b",
+          "ctxK": "https://huggingface.co/inceptionai/jais-adapted-70b",
+          "releaseDate": "https://www.g42.ai/resources/news/g42-launches-jais-70b-and-20-other-ai-models-champion-arabic-natural-language-processing",
+          "openness": "https://huggingface.co/inceptionai/jais-adapted-70b"
+        },
+        "results": [
+          {
+            "benchmarkSlug": "mmlu",
+            "score": 38.7,
+            "source": "self-reported",
+            "sourceUrl": "https://huggingface.co/inceptionai/jais-adapted-70b",
+            "notes": "English eval, jais-adapted-70b-chat"
+          },
+          {
+            "benchmarkSlug": "hellaswag",
+            "score": 82.7,
+            "source": "self-reported",
+            "sourceUrl": "https://huggingface.co/inceptionai/jais-adapted-70b",
+            "notes": "English eval, jais-adapted-70b-chat"
+          },
+          {
+            "benchmarkSlug": "arc-challenge",
+            "score": 54.9,
+            "source": "self-reported",
+            "sourceUrl": "https://huggingface.co/inceptionai/jais-adapted-70b",
+            "notes": "English eval, jais-adapted-70b-chat"
+          },
+          {
+            "benchmarkSlug": "winogrande",
+            "score": 75.7,
+            "source": "self-reported",
+            "sourceUrl": "https://huggingface.co/inceptionai/jais-adapted-70b",
+            "notes": "English eval, jais-adapted-70b-chat"
+          }
+        ],
+        "verificationNotes": "Confirmed real via the official HF model card (inceptionai/jais-adapted-70b, which lists both base and chat-variant scores) plus the G42/Inception press release dated 2024-08-05, matching the record exactly. Confirmed 70B params, Apache 2.0, 4096-token context, Llama-2-70B-adapted architecture with 32K new Arabic tokens, and that it launched alongside 20+ other Jais sizes (590M-70B). All four benchmark rows (MMLU 38.7, HellaSwag 82.7, ARC-Challenge 54.9, Winogrande 75.7) confirmed verbatim under the jais-adapted-70b-chat row on the HF page, consistent with the notes field (the base jais-adapted-70b row shows slightly different numbers: MMLU 40.4, HellaSwag 81.2, ARC-Challenge 50.4, Winogrande 75.8 — record correctly uses the chat variant as labeled)."
+      },
+      {
+        "name": "SmolLM3 3B (Thinking)",
+        "org": "Hugging Face",
+        "family": "SmolLM",
+        "releaseDate": "2025-07-08",
+        "status": "released",
+        "openness": "open-source",
+        "license": "Apache 2.0",
+        "paramsB": 3.08,
+        "activeParamsB": null,
+        "archClass": "dense",
+        "archDisplay": "Dense transformer decoder, GQA (4 groups) + NoPE/RoPE 3:1 ratio, tied embeddings; single checkpoint with think/no_think dual reasoning modes",
+        "ctxK": 128,
+        "modalities": [
+          "text"
+        ],
+        "langCount": 6,
+        "capabilities": {
+          "reasoning": true,
+          "coding": true,
+          "vision": false,
+          "functionCalling": true,
+          "toolUse": true,
+          "agentic": true
+        },
+        "apiAvailable": false,
+        "price": null,
+        "links": {
+          "hf": "HuggingFaceTB/SmolLM3-3B",
+          "gh": "huggingface/smollm"
+        },
+        "note": "Extended-thinking (default) mode of SmolLM3; scores highest on math/coding/knowledge among the two reasoning settings.",
+        "quants": [
+          "GGUF Q4",
+          "MLX",
+          "ONNX"
+        ],
+        "vramQ4Gb": 3,
+        "vramFp16Gb": 6,
+        "tps4090": 300,
+        "tpsNote": "Community-reported estimate for Q4_K_M GGUF inference on RTX 4090 (llama.cpp)",
+        "effortLabel": "Thinking",
+        "isDefaultConfig": true,
+        "isBestConfig": true,
+        "specSources": {
+          "paramsB": "https://huggingface.co/HuggingFaceTB/SmolLM3-3B",
+          "ctxK": "https://huggingface.co/HuggingFaceTB/SmolLM3-3B",
+          "releaseDate": "https://huggingface.co/blog/smollm3",
+          "openness": "https://huggingface.co/HuggingFaceTB/SmolLM3-3B"
+        },
+        "results": [
+          {
+            "benchmarkSlug": "aime",
+            "score": 36.7,
+            "source": "self-reported",
+            "sourceUrl": "https://huggingface.co/HuggingFaceTB/SmolLM3-3B",
+            "notes": "AIME 2025, extended thinking mode"
+          },
+          {
+            "benchmarkSlug": "gpqa",
+            "score": 41.7,
+            "source": "self-reported",
+            "sourceUrl": "https://huggingface.co/HuggingFaceTB/SmolLM3-3B",
+            "notes": "GPQA Diamond, extended thinking mode"
+          },
+          {
+            "benchmarkSlug": "ifeval",
+            "score": 71.2,
+            "source": "self-reported",
+            "sourceUrl": "https://huggingface.co/HuggingFaceTB/SmolLM3-3B",
+            "notes": "Extended thinking mode"
+          },
+          {
+            "benchmarkSlug": "livecodebench",
+            "score": 30,
+            "source": "self-reported",
+            "sourceUrl": "https://huggingface.co/HuggingFaceTB/SmolLM3-3B",
+            "notes": "LiveCodeBench v4, extended thinking mode"
+          }
+        ],
+        "verificationNotes": "Confirmed real via the official HF model card and blog post (huggingface.co/blog/smollm3), corroborated by MarkTechPost and other independent coverage, all dated 2025-07-08. Confirmed 3.08B params and architecture (GQA with 4 groups, NoPE removed from every 4th layer = 3:1 RoPE:NoPE ratio, tied embeddings, SwiGLU, 36 layers, hidden 2048) via the blog post plus secondary aggregators. Confirmed Apache 2.0, 128K context via YARN extrapolation (64K native training). All four Extended-Thinking benchmark rows (AIME 2025 36.7, GPQA Diamond 41.7, IFEval 71.2, LiveCodeBench v4 30.0) confirmed verbatim on the official model card's benchmark comparison table."
+      },
+      {
+        "name": "SmolLM3 3B (No Thinking)",
+        "org": "Hugging Face",
+        "family": "SmolLM",
+        "releaseDate": "2025-07-08",
+        "status": "released",
+        "openness": "open-source",
+        "license": "Apache 2.0",
+        "paramsB": 3.08,
+        "activeParamsB": null,
+        "archClass": "dense",
+        "archDisplay": "Dense transformer decoder, GQA (4 groups) + NoPE/RoPE 3:1 ratio, tied embeddings; single checkpoint with think/no_think dual reasoning modes",
+        "ctxK": 128,
+        "modalities": [
+          "text"
+        ],
+        "langCount": 6,
+        "capabilities": {
+          "reasoning": false,
+          "coding": true,
+          "vision": false,
+          "functionCalling": true,
+          "toolUse": true,
+          "agentic": true
+        },
+        "apiAvailable": false,
+        "price": null,
+        "links": {
+          "hf": "HuggingFaceTB/SmolLM3-3B",
+          "gh": "huggingface/smollm"
+        },
+        "note": "Non-reasoning (/no_think) mode of SmolLM3; faster inference, still outperforms other 3B non-reasoning instruct models.",
+        "quants": [
+          "GGUF Q4",
+          "MLX",
+          "ONNX"
+        ],
+        "vramQ4Gb": 3,
+        "vramFp16Gb": 6,
+        "tps4090": 300,
+        "tpsNote": "Community-reported estimate for Q4_K_M GGUF inference on RTX 4090 (llama.cpp)",
+        "effortLabel": "No Thinking",
+        "isDefaultConfig": false,
+        "isBestConfig": false,
+        "specSources": {
+          "paramsB": "https://huggingface.co/HuggingFaceTB/SmolLM3-3B",
+          "ctxK": "https://huggingface.co/HuggingFaceTB/SmolLM3-3B",
+          "releaseDate": "https://huggingface.co/blog/smollm3",
+          "openness": "https://huggingface.co/HuggingFaceTB/SmolLM3-3B"
+        },
+        "results": [
+          {
+            "benchmarkSlug": "aime",
+            "score": 9.3,
+            "source": "self-reported",
+            "sourceUrl": "https://huggingface.co/HuggingFaceTB/SmolLM3-3B",
+            "notes": "AIME 2025, no extended thinking"
+          },
+          {
+            "benchmarkSlug": "gpqa",
+            "score": 35.7,
+            "source": "self-reported",
+            "sourceUrl": "https://huggingface.co/HuggingFaceTB/SmolLM3-3B",
+            "notes": "GPQA Diamond, no extended thinking"
+          },
+          {
+            "benchmarkSlug": "ifeval",
+            "score": 76.7,
+            "source": "self-reported",
+            "sourceUrl": "https://huggingface.co/HuggingFaceTB/SmolLM3-3B",
+            "notes": "No extended thinking"
+          },
+          {
+            "benchmarkSlug": "livecodebench",
+            "score": 15.2,
+            "source": "self-reported",
+            "sourceUrl": "https://huggingface.co/HuggingFaceTB/SmolLM3-3B",
+            "notes": "LiveCodeBench v4, no extended thinking"
+          }
+        ],
+        "verificationNotes": "Same verification basis as the Thinking variant (official HF blog + model card, 2025-07-08 release, 3.08B params, Apache 2.0, 128K ctx). All four No-Thinking benchmark rows (AIME 2025 9.3, GPQA Diamond 35.7, IFEval 76.7, LiveCodeBench v4 15.2) confirmed verbatim on the official model card's benchmark comparison table."
+      },
+      {
+        "name": "OpenLLaMA 7B",
+        "org": "OpenLM Research (Berkeley)",
+        "family": "OpenLLaMA",
+        "releaseDate": "2023-05-03",
+        "status": "released",
+        "openness": "open-source",
+        "license": "Apache 2.0",
+        "paramsB": 6.7,
+        "activeParamsB": null,
+        "archClass": "dense",
+        "archDisplay": "Dense LLaMA-architecture transformer decoder, from-scratch reproduction trained on RedPajama",
+        "ctxK": 2,
+        "modalities": [
+          "text"
+        ],
+        "langCount": null,
+        "capabilities": {
+          "reasoning": false,
+          "coding": false,
+          "vision": false,
+          "functionCalling": false,
+          "toolUse": false,
+          "agentic": false
+        },
+        "apiAvailable": false,
+        "price": null,
+        "links": {
+          "hf": "openlm-research/open_llama_7b",
+          "gh": "openlm-research/open_llama"
+        },
+        "note": "Apache-2.0 from-scratch reproduction of Meta LLaMA on RedPajama (3B/7B/13B, plus v2); a permissive drop-in base free of LLaMA's license.",
+        "quants": [
+          "GGUF Q4",
+          "GPTQ"
+        ],
+        "vramQ4Gb": 4.5,
+        "vramFp16Gb": 13.5,
+        "tps4090": null,
+        "tpsNote": null,
+        "effortLabel": null,
+        "isDefaultConfig": true,
+        "isBestConfig": true,
+        "specSources": {
+          "paramsB": "https://huggingface.co/openlm-research/open_llama_7b",
+          "ctxK": "https://huggingface.co/openlm-research/open_llama_7b",
+          "releaseDate": "https://simonwillison.net/2023/May/3/openllama/",
+          "openness": "https://github.com/openlm-research/open_llama"
+        },
+        "results": [
+          {
+            "benchmarkSlug": "arc-challenge",
+            "score": 38,
+            "source": "self-reported",
+            "sourceUrl": "https://github.com/openlm-research/open_llama",
+            "notes": "arc_challenge/acc_norm via lm-evaluation-harness, OpenLLaMA 7B (v1)"
+          }
+        ],
+        "verificationNotes": "Confirmed real via the official GitHub repo (openlm-research/open_llama) and HF model card (openlm-research/open_llama_7b): Apache 2.0, LLaMA-architecture from-scratch reproduction trained on RedPajama, 6.7B actual params (standard for the '7B' LLaMA architecture). ARC-Challenge acc_norm of 38 (0.38) confirmed verbatim in the GitHub README's lm-evaluation-harness results table for the v1 7B model. Note on releaseDate: 2023-05-03 (Simon Willison's post, confirmed) is the date of the initial preview checkpoint (200B tokens); per the GitHub README's own changelog, a 700B-token checkpoint followed on 2023-05-22 and the final 1T-token 7B/3B checkpoints were released 2023-06-07. Kept 2023-05-03 as in the source record since it is the widely-cited public announcement/release date of the OpenLLaMA 7B project, but the final trained weights arrived about five weeks later."
+      }
+    ]
+  },
+  "workflowProgress": [
+    {
+      "type": "workflow_phase",
+      "index": 1,
+      "title": "Research"
+    },
+    {
+      "type": "workflow_phase",
+      "index": 2,
+      "title": "Verify"
+    },
+    {
+      "type": "workflow_agent",
+      "index": 1,
+      "label": "research:Google",
+      "phaseIndex": 1,
+      "phaseTitle": "Research",
+      "agentId": "abfb88d9eec023e91",
+      "model": "claude-sonnet-5",
+      "state": "done",
+      "startedAt": 1783901816402,
+      "queuedAt": 1783901816369,
+      "attempt": 1,
+      "lastToolName": "StructuredOutput",
+      "promptPreview": "You have web research tools. FIRST load them: call ToolSearch with query \"select:mcp__4dbcbf51-5bb9-4f93-a61f-18044e1a3091__web_search,mcp__4dbcbf51-5bb9-4f93-a61f-18044e1a3091__web_fetch\" to load Parallel P0 web_search/web_fetch (pass a stable session_id + model_name on every call). Built-in WebSearch/WebFetch may also load via ToolSearch query \"web search fetch\". Use REAL searches — never answer…",
+      "lastProgressAt": 1783902154563,
+      "tokens": 98895,
+      "toolCalls": 42,
+      "durationMs": 338161,
+      "resultPreview": "{\"models\":[{\"name\":\"PaLM 2\",\"org\":\"Google\",\"family\":\"PaLM 2\",\"releaseDate\":\"2023-05-10\",\"status\":\"deprecated\",\"openness\":\"closed\",\"license\":\"Proprietary (Google Cloud Vertex AI)\",\"paramsB\":null,\"activeParamsB\":null,\"archClass\":\"dense\",\"archDisplay\":\"Dense Transformer (decoder, mixture-of-objectives pretraining)\",\"ctxK\":8,\"modalities\":[\"text\"],\"langCount\":null,\"capabilities\":{\"reasoning\":false,\"cod…"
+    },
+    {
+      "type": "workflow_agent",
+      "index": 2,
+      "label": "research:Google",
+      "phaseIndex": 1,
+      "phaseTitle": "Research",
+      "agentId": "ae5c0fb39b83b8093",
+      "model": "claude-sonnet-5",
+      "state": "done",
+      "startedAt": 1783901816404,
+      "queuedAt": 1783901816370,
+      "attempt": 1,
+      "lastToolName": "StructuredOutput",
+      "promptPreview": "You have web research tools. FIRST load them: call ToolSearch with query \"select:mcp__4dbcbf51-5bb9-4f93-a61f-18044e1a3091__web_search,mcp__4dbcbf51-5bb9-4f93-a61f-18044e1a3091__web_fetch\" to load Parallel P0 web_search/web_fetch (pass a stable session_id + model_name on every call). Built-in WebSearch/WebFetch may also load via ToolSearch query \"web search fetch\". Use REAL searches — never answer…",
+      "lastProgressAt": 1783902420738,
+      "tokens": 161244,
+      "toolCalls": 59,
+      "durationMs": 604333,
+      "resultPreview": "{\"models\":[{\"name\":\"Gemini 2.5 Flash\",\"org\":\"Google\",\"family\":\"Gemini 2.5\",\"releaseDate\":\"2025-05-20\",\"status\":\"released\",\"openness\":\"closed\",\"license\":\"Proprietary (Google API Terms)\",\"paramsB\":null,\"activeParamsB\":null,\"archClass\":\"moe\",\"archDisplay\":\"Sparse Mixture-of-Experts Transformer (natively multimodal)\",\"ctxK\":1000,\"modalities\":[\"text\",\"vision\",\"audio\",\"video\"],\"langCount\":null,\"capabili…"
+    },
+    {
+      "type": "workflow_agent",
+      "index": 3,
+      "label": "research:LG AI Research",
+      "phaseIndex": 1,
+      "phaseTitle": "Research",
+      "agentId": "a09175dc320a85ad2",
+      "model": "claude-sonnet-5",
+      "state": "done",
+      "startedAt": 1783901816406,
+      "queuedAt": 1783901816371,
+      "attempt": 1,
+      "lastToolName": "StructuredOutput",
+      "promptPreview": "You have web research tools. FIRST load them: call ToolSearch with query \"select:mcp__4dbcbf51-5bb9-4f93-a61f-18044e1a3091__web_search,mcp__4dbcbf51-5bb9-4f93-a61f-18044e1a3091__web_fetch\" to load Parallel P0 web_search/web_fetch (pass a stable session_id + model_name on every call). Built-in WebSearch/WebFetch may also load via ToolSearch query \"web search fetch\". Use REAL searches — never answer…",
+      "lastProgressAt": 1783902652199,
+      "tokens": 172437,
+      "toolCalls": 74,
+      "durationMs": 835793,
+      "resultPreview": "{\"models\":[{\"name\":\"LG EXAONE 4.0 32B (Non-reasoning)\",\"org\":\"LG AI Research\",\"family\":\"EXAONE 4.0\",\"releaseDate\":\"2025-07-15\",\"status\":\"released\",\"openness\":\"open-weights\",\"license\":\"EXAONE AI Model License Agreement 1.2 (NC)\",\"paramsB\":32,\"activeParamsB\":null,\"archClass\":\"dense\",\"archDisplay\":\"Dense hybrid-attention transformer, 64 layers, local:global attention 3:1, GQA (40Q/8KV), QK-Reorder-No…"
+    },
+    {
+      "type": "workflow_agent",
+      "index": 4,
+      "label": "verify:Google",
+      "phaseIndex": 2,
+      "phaseTitle": "Verify",
+      "agentId": "a482d65a2d95016bc",
+      "model": "claude-sonnet-5",
+      "state": "done",
+      "startedAt": 1783902652215,
+      "queuedAt": 1783902652204,
+      "attempt": 1,
+      "lastToolName": "StructuredOutput",
+      "promptPreview": "You have web research tools. FIRST load them: call ToolSearch with query \"select:mcp__4dbcbf51-5bb9-4f93-a61f-18044e1a3091__web_search,mcp__4dbcbf51-5bb9-4f93-a61f-18044e1a3091__web_fetch\" to load Parallel P0 web_search/web_fetch (pass a stable session_id + model_name on every call). Built-in WebSearch/WebFetch may also load via ToolSearch query \"web search fetch\". Use REAL searches — never answer…",
+      "lastProgressAt": 1783902941060,
+      "tokens": 84915,
+      "toolCalls": 37,
+      "durationMs": 288845,
+      "resultPreview": "{\"models\":[{\"name\":\"PaLM 2\",\"org\":\"Google\",\"family\":\"PaLM 2\",\"releaseDate\":\"2023-05-10\",\"status\":\"deprecated\",\"openness\":\"closed\",\"license\":\"Proprietary (Google Cloud Vertex AI)\",\"paramsB\":null,\"activeParamsB\":null,\"archClass\":\"dense\",\"archDisplay\":\"Dense Transformer (decoder, mixture-of-objectives pretraining)\",\"ctxK\":8,\"modalities\":[\"text\"],\"langCount\":null,\"capabilities\":{\"reasoning\":false,\"cod…"
+    },
+    {
+      "type": "workflow_agent",
+      "index": 5,
+      "label": "verify:Google",
+      "phaseIndex": 2,
+      "phaseTitle": "Verify",
+      "agentId": "a5b2c42c3ce4a801e",
+      "model": "claude-sonnet-5",
+      "state": "done",
+      "startedAt": 1783902652216,
+      "queuedAt": 1783902652204,
+      "attempt": 1,
+      "lastToolName": "StructuredOutput",
+      "promptPreview": "You have web research tools. FIRST load them: call ToolSearch with query \"select:mcp__4dbcbf51-5bb9-4f93-a61f-18044e1a3091__web_search,mcp__4dbcbf51-5bb9-4f93-a61f-18044e1a3091__web_fetch\" to load Parallel P0 web_search/web_fetch (pass a stable session_id + model_name on every call). Built-in WebSearch/WebFetch may also load via ToolSearch query \"web search fetch\". Use REAL searches — never answer…",
+      "lastProgressAt": 1783903184103,
+      "tokens": 150947,
+      "toolCalls": 57,
+      "durationMs": 531887,
+      "resultPreview": "{\"models\":[{\"name\":\"Gemini 2.5 Pro\",\"org\":\"Google\",\"family\":\"Gemini 2.5\",\"releaseDate\":\"2025-03-25\",\"status\":\"deprecated\",\"openness\":\"closed\",\"license\":\"Proprietary (Google API/Vertex AI)\",\"paramsB\":null,\"activeParamsB\":null,\"archClass\":\"moe\",\"archDisplay\":\"Sparse Mixture-of-Experts Transformer with native always-on thinking\",\"ctxK\":1000,\"modalities\":[\"text\",\"vision\",\"audio\",\"video\"],\"langCount\":n…"
+    },
+    {
+      "type": "workflow_agent",
+      "index": 6,
+      "label": "verify:LG AI Research",
+      "phaseIndex": 2,
+      "phaseTitle": "Verify",
+      "agentId": "a252e7b20aa4738b3",
+      "model": "claude-sonnet-5",
+      "state": "done",
+      "startedAt": 1783902652216,
+      "queuedAt": 1783902652204,
+      "attempt": 1,
+      "lastToolName": "StructuredOutput",
+      "promptPreview": "You have web research tools. FIRST load them: call ToolSearch with query \"select:mcp__4dbcbf51-5bb9-4f93-a61f-18044e1a3091__web_search,mcp__4dbcbf51-5bb9-4f93-a61f-18044e1a3091__web_fetch\" to load Parallel P0 web_search/web_fetch (pass a stable session_id + model_name on every call). Built-in WebSearch/WebFetch may also load via ToolSearch query \"web search fetch\". Use REAL searches — never answer…",
+      "lastProgressAt": 1783902867030,
+      "tokens": 74996,
+      "toolCalls": 26,
+      "durationMs": 214814,
+      "resultPreview": "{\"models\":[{\"name\":\"LG EXAONE 3.0 7.8B Instruct\",\"org\":\"LG AI Research\",\"family\":\"EXAONE 3.0\",\"releaseDate\":\"2024-08-07\",\"status\":\"released\",\"openness\":\"open-weights\",\"license\":\"EXAONE AI Model License Agreement 1.1 - NC\",\"paramsB\":7.8,\"activeParamsB\":null,\"archClass\":\"dense\",\"archDisplay\":\"Dense decoder-only Transformer, 32 layers\",\"ctxK\":4,\"modalities\":[\"text\"],\"langCount\":2,\"capabilities\":{\"rea…"
+    },
+    {
+      "type": "workflow_agent",
+      "index": 7,
+      "label": "verify:01.AI",
+      "phaseIndex": 2,
+      "phaseTitle": "Verify",
+      "agentId": "a281116bf6cf046e8",
+      "model": "claude-sonnet-5",
+      "state": "done",
+      "startedAt": 1783902652217,
+      "queuedAt": 1783902652205,
+      "attempt": 1,
+      "lastToolName": "StructuredOutput",
+      "promptPreview": "You have web research tools. FIRST load them: call ToolSearch with query \"select:mcp__4dbcbf51-5bb9-4f93-a61f-18044e1a3091__web_search,mcp__4dbcbf51-5bb9-4f93-a61f-18044e1a3091__web_fetch\" to load Parallel P0 web_search/web_fetch (pass a stable session_id + model_name on every call). Built-in WebSearch/WebFetch may also load via ToolSearch query \"web search fetch\". Use REAL searches — never answer…",
+      "lastProgressAt": 1783902925628,
+      "tokens": 84972,
+      "toolCalls": 33,
+      "durationMs": 273411,
+      "resultPreview": "{\"models\":[{\"name\":\"Yi-Lightning\",\"org\":\"01.AI\",\"family\":\"Yi-Lightning\",\"releaseDate\":\"2024-10-16\",\"status\":\"released\",\"openness\":\"closed\",\"license\":\"Proprietary (closed weights, API-only)\",\"paramsB\":null,\"activeParamsB\":null,\"archClass\":\"moe\",\"archDisplay\":\"Mixture-of-Experts transformer with fine-grained expert segmentation & routing, hybrid attention, optimized KV-caching\",\"ctxK\":16,\"modalities…"
+    }
+  ],
+  "totalTokens": 828406,
+  "totalToolCalls": 328
+}

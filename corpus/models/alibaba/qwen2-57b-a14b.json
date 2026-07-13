@@ -1,0 +1,119 @@
+{
+  "name": "Qwen2-57B-A14B",
+  "org": "Alibaba",
+  "family": "Qwen2",
+  "releaseDate": "2024-06-07",
+  "status": "released",
+  "openness": "open-weights",
+  "license": "Apache 2.0",
+  "paramsB": 57,
+  "activeParamsB": 14,
+  "archClass": "moe",
+  "archDisplay": "Mixture-of-Experts Transformer decoder (57B total / 14B active per token)",
+  "ctxK": 64,
+  "modalities": [
+    "text"
+  ],
+  "langCount": 30,
+  "capabilities": {
+    "reasoning": false,
+    "coding": true,
+    "vision": false,
+    "functionCalling": true,
+    "toolUse": true,
+    "agentic": true
+  },
+  "apiAvailable": false,
+  "price": null,
+  "links": {
+    "hf": "Qwen/Qwen2-57B-A14B-Instruct",
+    "gh": "QwenLM/Qwen2",
+    "docs": "qwenlm.github.io/blog/qwen2"
+  },
+  "note": "Gen-2 MoE (14B active of 57B total) matching ~30B-dense-class quality; Apache 2.0.",
+  "quants": [
+    "GGUF",
+    "AWQ",
+    "GPTQ"
+  ],
+  "vramFp16Gb": 115,
+  "vramQ4Gb": 32,
+  "tps4090": null,
+  "tpsNote": "57B total weights exceed a single RTX 4090's 24GB VRAM even at Q4.",
+  "effortLabel": null,
+  "isDefaultConfig": true,
+  "isBestConfig": true,
+  "specSources": {
+    "paramsB": "https://arxiv.org/html/2407.10671v1",
+    "ctxK": "https://qwenlm.github.io/blog/qwen2/",
+    "releaseDate": "https://qwenlm.github.io/blog/qwen2/",
+    "openness": "https://huggingface.co/Qwen/Qwen2-57B-A14B"
+  },
+  "results": [
+    {
+      "benchmarkSlug": "mmlu",
+      "score": 76.5,
+      "source": "self-reported",
+      "sourceUrl": "https://qwenlm.github.io/blog/qwen2/",
+      "evaluatedAt": "2024-06-07",
+      "notes": "Base model"
+    },
+    {
+      "benchmarkSlug": "mmlu-pro",
+      "score": 43,
+      "source": "self-reported",
+      "sourceUrl": "https://qwenlm.github.io/blog/qwen2/",
+      "evaluatedAt": "2024-06-07",
+      "notes": "Base model"
+    },
+    {
+      "benchmarkSlug": "gpqa",
+      "score": 34.3,
+      "source": "self-reported",
+      "sourceUrl": "https://qwenlm.github.io/blog/qwen2/",
+      "evaluatedAt": "2024-06-07",
+      "notes": "Base model"
+    },
+    {
+      "benchmarkSlug": "humaneval",
+      "score": 53,
+      "source": "self-reported",
+      "sourceUrl": "https://qwenlm.github.io/blog/qwen2/",
+      "evaluatedAt": "2024-06-07",
+      "notes": "Base model"
+    },
+    {
+      "benchmarkSlug": "mbpp",
+      "score": 71.9,
+      "source": "self-reported",
+      "sourceUrl": "https://qwenlm.github.io/blog/qwen2/",
+      "evaluatedAt": "2024-06-07",
+      "notes": "Base model"
+    },
+    {
+      "benchmarkSlug": "gsm8k",
+      "score": 80.7,
+      "source": "self-reported",
+      "sourceUrl": "https://qwenlm.github.io/blog/qwen2/",
+      "evaluatedAt": "2024-06-07",
+      "notes": "Base model"
+    },
+    {
+      "benchmarkSlug": "math",
+      "score": 43,
+      "source": "self-reported",
+      "sourceUrl": "https://qwenlm.github.io/blog/qwen2/",
+      "evaluatedAt": "2024-06-07",
+      "notes": "Base model"
+    },
+    {
+      "benchmarkSlug": "bbh",
+      "score": 67,
+      "source": "self-reported",
+      "sourceUrl": "https://qwenlm.github.io/blog/qwen2/",
+      "evaluatedAt": "2024-06-07",
+      "notes": "Base model"
+    }
+  ],
+  "verificationNotes": "Fetched qwenlm.github.io/blog/qwen2/ directly: confirms release 2024-06-07, 57.41B total/14B active MoE, 64K context, Apache 2.0, ~30 languages (27 additional beyond English/Chinese, commonly rounded to 30 across Qwen materials). 8 of the original 9 result rows are confirmed verbatim on the cited blog (MMLU 76.5, MMLU-Pro 43, GPQA 34.3, HumanEval 53, MBPP 71.9, GSM8K 80.7, MATH 43, BBH 67). DROPPED the HellaSwag=85.2 row: I confirmed 85.2 is a real number for this model but it appears only in the Qwen2 arxiv technical report (2407.10671), not on the cited sourceUrl (qwenlm.github.io/blog/qwen2/) — that page's benchmark table for Qwen2-57B-A14B has no HellaSwag row at all, so per the verification rule the row must be dropped rather than kept against a source that doesn't show it."
+}

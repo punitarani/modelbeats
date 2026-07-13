@@ -1,0 +1,149 @@
+{
+  "name": "Claude 3 Sonnet",
+  "org": "Anthropic",
+  "family": "Claude 3",
+  "releaseDate": "2024-03-04",
+  "status": "deprecated",
+  "openness": "closed",
+  "license": "Proprietary (Anthropic Commercial Terms of Service)",
+  "paramsB": null,
+  "activeParamsB": null,
+  "archClass": "dense",
+  "archDisplay": "Dense multimodal Transformer (parameter count undisclosed)",
+  "ctxK": 200,
+  "modalities": [
+    "text",
+    "vision"
+  ],
+  "langCount": null,
+  "capabilities": {
+    "reasoning": true,
+    "coding": true,
+    "vision": true,
+    "functionCalling": true,
+    "toolUse": true,
+    "agentic": true
+  },
+  "apiAvailable": false,
+  "price": {
+    "input": 3,
+    "output": 15,
+    "provider": "Anthropic"
+  },
+  "links": {
+    "docs": "docs.claude.com"
+  },
+  "note": "Balanced mid-tier of the Claude 3 family; roughly 2x faster than Claude 2 at a fraction of the cost.",
+  "quants": [],
+  "vramQ4Gb": null,
+  "vramFp16Gb": null,
+  "tps4090": null,
+  "tpsNote": null,
+  "effortLabel": null,
+  "isDefaultConfig": true,
+  "isBestConfig": true,
+  "specSources": {
+    "releaseDate": "https://www.anthropic.com/news/claude-3-family",
+    "ctxK": "https://www.anthropic.com/news/claude-3-family",
+    "openness": "https://www.anthropic.com/news/claude-3-family"
+  },
+  "results": [
+    {
+      "benchmarkSlug": "mmlu",
+      "score": 79,
+      "source": "self-reported",
+      "sourceUrl": "https://www-cdn.anthropic.com/de8ba9b01c9ab7cbabf5c33b80b7bbc618857627/Model_Card_Claude_3.pdf",
+      "evaluatedAt": "2024-03-04",
+      "notes": "5-shot"
+    },
+    {
+      "benchmarkSlug": "math",
+      "score": 43.1,
+      "source": "self-reported",
+      "sourceUrl": "https://www-cdn.anthropic.com/de8ba9b01c9ab7cbabf5c33b80b7bbc618857627/Model_Card_Claude_3.pdf",
+      "evaluatedAt": "2024-03-04",
+      "notes": "0-shot CoT"
+    },
+    {
+      "benchmarkSlug": "gsm8k",
+      "score": 92.3,
+      "source": "self-reported",
+      "sourceUrl": "https://www-cdn.anthropic.com/de8ba9b01c9ab7cbabf5c33b80b7bbc618857627/Model_Card_Claude_3.pdf",
+      "evaluatedAt": "2024-03-04",
+      "notes": "0-shot CoT"
+    },
+    {
+      "benchmarkSlug": "humaneval",
+      "score": 73,
+      "source": "self-reported",
+      "sourceUrl": "https://www-cdn.anthropic.com/de8ba9b01c9ab7cbabf5c33b80b7bbc618857627/Model_Card_Claude_3.pdf",
+      "evaluatedAt": "2024-03-04",
+      "notes": "0-shot"
+    },
+    {
+      "benchmarkSlug": "gpqa",
+      "score": 40.4,
+      "source": "self-reported",
+      "sourceUrl": "https://www-cdn.anthropic.com/de8ba9b01c9ab7cbabf5c33b80b7bbc618857627/Model_Card_Claude_3.pdf",
+      "evaluatedAt": "2024-03-04",
+      "notes": "GPQA Diamond, 0-shot CoT"
+    },
+    {
+      "benchmarkSlug": "bbh",
+      "score": 82.9,
+      "source": "self-reported",
+      "sourceUrl": "https://www-cdn.anthropic.com/de8ba9b01c9ab7cbabf5c33b80b7bbc618857627/Model_Card_Claude_3.pdf",
+      "evaluatedAt": "2024-03-04",
+      "notes": "3-shot CoT"
+    },
+    {
+      "benchmarkSlug": "arc-challenge",
+      "score": 93.2,
+      "source": "self-reported",
+      "sourceUrl": "https://www-cdn.anthropic.com/de8ba9b01c9ab7cbabf5c33b80b7bbc618857627/Model_Card_Claude_3.pdf",
+      "evaluatedAt": "2024-03-04",
+      "notes": "25-shot"
+    },
+    {
+      "benchmarkSlug": "hellaswag",
+      "score": 89,
+      "source": "self-reported",
+      "sourceUrl": "https://www-cdn.anthropic.com/de8ba9b01c9ab7cbabf5c33b80b7bbc618857627/Model_Card_Claude_3.pdf",
+      "evaluatedAt": "2024-03-04",
+      "notes": "10-shot"
+    },
+    {
+      "benchmarkSlug": "winogrande",
+      "score": 75.1,
+      "source": "self-reported",
+      "sourceUrl": "https://www-cdn.anthropic.com/de8ba9b01c9ab7cbabf5c33b80b7bbc618857627/Model_Card_Claude_3.pdf",
+      "evaluatedAt": "2024-03-04",
+      "notes": "5-shot"
+    },
+    {
+      "benchmarkSlug": "drop",
+      "score": 78.9,
+      "source": "self-reported",
+      "sourceUrl": "https://www-cdn.anthropic.com/de8ba9b01c9ab7cbabf5c33b80b7bbc618857627/Model_Card_Claude_3.pdf",
+      "evaluatedAt": "2024-03-04",
+      "notes": "F1 score, 3-shot"
+    },
+    {
+      "benchmarkSlug": "mbpp",
+      "score": 79.4,
+      "source": "self-reported",
+      "sourceUrl": "https://www-cdn.anthropic.com/de8ba9b01c9ab7cbabf5c33b80b7bbc618857627/Model_Card_Claude_3.pdf",
+      "evaluatedAt": "2024-03-04",
+      "notes": "Pass@1"
+    },
+    {
+      "benchmarkSlug": "mmmu",
+      "score": 53.1,
+      "source": "self-reported",
+      "sourceUrl": "https://www-cdn.anthropic.com/de8ba9b01c9ab7cbabf5c33b80b7bbc618857627/Model_Card_Claude_3.pdf",
+      "evaluatedAt": "2024-03-04",
+      "notes": "Validation set, overall"
+    }
+  ],
+  "verificationNotes": "Confirmed real via anthropic.com/news/claude-3-family (release date, $3/$15 pricing, 200K ctx). Downloaded and read the actual Model_Card_Claude_3.pdf Table 1/Table 3: all 12 self-reported benchmark numbers for Claude 3 Sonnet (MMLU 79.0, MATH 43.1, GSM8K 92.3, HumanEval 73.0, GPQA 40.4, BBH 82.9, ARC-Challenge 93.2, HellaSwag 89.0, WinoGrande 75.1, DROP 78.9, MBPP 79.4, MMMU 53.1) match the PDF verbatim (note: a later June-2024 addendum re-reports Sonnet's MMLU 5-shot as 78.3 in a different table, but the ORIGINAL model card cited here shows 79.0, so no change made). apiAvailable=false confirmed: claude-3-sonnet-20240229 retired from API July 21, 2025."
+}

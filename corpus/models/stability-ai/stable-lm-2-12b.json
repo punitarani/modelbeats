@@ -1,0 +1,94 @@
+{
+  "name": "Stable LM 2 12B",
+  "org": "Stability AI",
+  "family": "StableLM 2",
+  "releaseDate": "2024-04-08",
+  "status": "released",
+  "openness": "open-weights",
+  "license": "Stability AI Community License (non-commercial by default; commercial use requires Stability AI membership)",
+  "paramsB": 12.1,
+  "activeParamsB": null,
+  "archClass": "dense",
+  "archDisplay": "Dense decoder-only transformer (40 layers, GQA 32 query/8 KV heads, RoPE, parallel attn+FFN)",
+  "ctxK": 4,
+  "modalities": [
+    "text"
+  ],
+  "langCount": 7,
+  "capabilities": {
+    "reasoning": false,
+    "coding": false,
+    "vision": false,
+    "functionCalling": true,
+    "toolUse": true,
+    "agentic": false
+  },
+  "apiAvailable": false,
+  "price": null,
+  "links": {
+    "hf": "stabilityai/stablelm-2-12b",
+    "gh": "Stability-AI/StableLM"
+  },
+  "note": "Mid-size multilingual flagship of StableLM 2; DPO-tuned chat variant adds tool-use and function-calling support.",
+  "quants": [
+    "GGUF"
+  ],
+  "vramQ4Gb": 8,
+  "vramFp16Gb": 24.5,
+  "tps4090": null,
+  "tpsNote": null,
+  "effortLabel": null,
+  "isDefaultConfig": true,
+  "isBestConfig": true,
+  "specSources": {
+    "paramsB": "https://huggingface.co/stabilityai/stablelm-2-12b",
+    "ctxK": "https://huggingface.co/stabilityai/stablelm-2-12b",
+    "releaseDate": "https://stability.ai/news-updates/introducing-stable-lm-2-12b",
+    "openness": "https://huggingface.co/stabilityai/stablelm-2-12b"
+  },
+  "results": [
+    {
+      "benchmarkSlug": "mt-bench",
+      "score": 8.15,
+      "source": "self-reported",
+      "sourceUrl": "https://huggingface.co/stabilityai/stablelm-2-12b-chat",
+      "notes": "chat/instruct variant, inflection-corrected MT-Bench"
+    },
+    {
+      "benchmarkSlug": "mmlu",
+      "score": 61.14,
+      "source": "self-reported",
+      "sourceUrl": "https://huggingface.co/stabilityai/stablelm-2-12b-chat",
+      "notes": "chat variant, Open LLM Leaderboard"
+    },
+    {
+      "benchmarkSlug": "hellaswag",
+      "score": 86.06,
+      "source": "self-reported",
+      "sourceUrl": "https://huggingface.co/stabilityai/stablelm-2-12b-chat",
+      "notes": "chat variant"
+    },
+    {
+      "benchmarkSlug": "arc-challenge",
+      "score": 65.02,
+      "source": "self-reported",
+      "sourceUrl": "https://huggingface.co/stabilityai/stablelm-2-12b-chat",
+      "notes": "chat variant"
+    },
+    {
+      "benchmarkSlug": "winogrande",
+      "score": 78.77,
+      "source": "self-reported",
+      "sourceUrl": "https://huggingface.co/stabilityai/stablelm-2-12b-chat",
+      "notes": "chat variant"
+    },
+    {
+      "benchmarkSlug": "gsm8k",
+      "score": 57.7,
+      "source": "self-reported",
+      "sourceUrl": "https://huggingface.co/stabilityai/stablelm-2-12b-chat",
+      "notes": "chat variant"
+    }
+  ],
+  "verificationNotes": "CONFIRMED. HF model card verifies 12.1B params (12,143,605,760 exact), 40 layers, GQA 32q/8kv, RoPE, 4096-token context, Stability AI Community License, 7 languages (EN/ES/DE/IT/FR/PT/NL). Chat variant HF card confirms function-calling support and all 6 benchmark rows exactly (MT-Bench 8.15, MMLU 61.14, HellaSwag 86.06, ARC-C 65.02, Winogrande 78.77, GSM8K 57.7). CORRECTED releaseDate: official Stability AI blog post body reads 'Apr 8' (2024), not Apr 9 as in the source record; VentureBeat corroborates April 8, 2024 1PM PT. Updated releaseDate to 2024-04-08 and specSource to the primary Stability AI blog post."
+}

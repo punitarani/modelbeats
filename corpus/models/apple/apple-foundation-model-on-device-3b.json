@@ -1,0 +1,57 @@
+{
+  "name": "Apple Foundation Model (on-device, ~3B)",
+  "org": "Apple",
+  "family": "Apple Foundation Models",
+  "releaseDate": "2024-06-10",
+  "status": "released",
+  "openness": "closed",
+  "license": "Proprietary",
+  "paramsB": 3,
+  "activeParamsB": null,
+  "archClass": "dense",
+  "archDisplay": "Dense transformer, GQA (24 query / 8 KV heads), 26 layers",
+  "ctxK": 32,
+  "modalities": [
+    "text"
+  ],
+  "langCount": null,
+  "capabilities": {
+    "reasoning": false,
+    "coding": false,
+    "vision": false,
+    "functionCalling": false,
+    "toolUse": true,
+    "agentic": true
+  },
+  "apiAvailable": false,
+  "price": null,
+  "links": {
+    "docs": "machinelearning.apple.com/research/introducing-apple-foundation-models"
+  },
+  "note": "~3B on-device model pruned from a 6.4B checkpoint; beat Phi-3-mini/Mistral-7B/Gemma-7B in Apple's 2024 evals, MMLU 61.4.",
+  "quants": [],
+  "vramQ4Gb": null,
+  "vramFp16Gb": null,
+  "tps4090": null,
+  "tpsNote": null,
+  "effortLabel": null,
+  "isDefaultConfig": true,
+  "isBestConfig": true,
+  "specSources": {
+    "paramsB": "https://arxiv.org/abs/2407.21075",
+    "ctxK": "https://arxiv.org/html/2407.21075v1",
+    "releaseDate": "https://www.apple.com/newsroom/2024/06/introducing-apple-intelligence-for-iphone-ipad-and-mac/",
+    "openness": "https://machinelearning.apple.com/research/introducing-apple-foundation-models"
+  },
+  "results": [
+    {
+      "benchmarkSlug": "mmlu",
+      "score": 61.4,
+      "source": "self-reported",
+      "sourceUrl": "https://arxiv.org/html/2407.21075v1",
+      "evaluatedAt": "2024-07-01",
+      "notes": "5-shot, AFM-on-device, from Apple's July 2024 tech report"
+    }
+  ],
+  "verificationNotes": "Confirmed real and unchanged. arXiv 2407.21075 (HTML) Table 1 confirms AFM-on-device architecture exactly: 26 layers, 24 query/8 KV heads GQA (matches record), and confirms model was pre-trained through stages up to 32768-token context (matches ctxK=32). Total params in the paper are 2.73B (2.58B non-embedding + 0.15B embedding); Apple's own materials describe it as '~3B', consistent with the record's rounded paramsB=3. Confirmed the model is initialized from a pruned 6.4B checkpoint via distillation, and confirmed via multiple secondary sources (Trail of Bits, InfoQ, Medium writeups of the paper) that AFM-on-device beats Phi-3-mini/Mistral-7B/Gemma-7B in Apple's human evals. WWDC keynote date June 10, 2024 confirmed via CNBC/Apple newsroom. MMLU 61.4 (HELM, 5-shot) confirmed literally on the cited arXiv HTML page."
+}

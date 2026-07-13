@@ -1,0 +1,99 @@
+{
+  "name": "OpenAI o1-preview",
+  "org": "OpenAI",
+  "family": "o1",
+  "releaseDate": "2024-09-12",
+  "status": "deprecated",
+  "openness": "closed",
+  "license": "Proprietary",
+  "paramsB": null,
+  "activeParamsB": null,
+  "archClass": "dense",
+  "archDisplay": "Dense transformer reasoning model (size undisclosed)",
+  "ctxK": 128,
+  "modalities": [
+    "text"
+  ],
+  "langCount": null,
+  "capabilities": {
+    "reasoning": true,
+    "coding": true,
+    "vision": false,
+    "functionCalling": false,
+    "toolUse": false,
+    "agentic": false
+  },
+  "apiAvailable": false,
+  "price": {
+    "input": 15,
+    "output": 60,
+    "provider": "OpenAI"
+  },
+  "links": {
+    "docs": "developers.openai.com/api/docs/models/o1-preview"
+  },
+  "note": "First public o-series reasoning model, launched the think-before-answer chain-of-thought line; retired from API 2025-07-28.",
+  "quants": [],
+  "vramQ4Gb": null,
+  "vramFp16Gb": null,
+  "tps4090": null,
+  "tpsNote": null,
+  "effortLabel": null,
+  "isDefaultConfig": true,
+  "isBestConfig": true,
+  "specSources": {
+    "releaseDate": "https://developers.openai.com/api/docs/models/o1-preview",
+    "ctxK": "https://developers.openai.com/api/docs/models/o1-preview",
+    "openness": "https://developers.openai.com/api/docs/models/o1-preview",
+    "paramsB": "https://developers.openai.com/api/docs/models/o1-preview"
+  },
+  "results": [
+    {
+      "benchmarkSlug": "aime",
+      "score": 44.6,
+      "source": "independent",
+      "sourceUrl": "https://www.analyticsvidhya.com/blog/2024/09/o1-preview-vs-o1-mini/",
+      "evaluatedAt": "2024-09-01",
+      "notes": "AIME 2024 pass@1"
+    },
+    {
+      "benchmarkSlug": "codeforces",
+      "score": 1258,
+      "source": "independent",
+      "sourceUrl": "https://www.analyticsvidhya.com/blog/2024/09/o1-preview-vs-o1-mini/",
+      "evaluatedAt": "2024-09-01"
+    },
+    {
+      "benchmarkSlug": "math",
+      "score": 85.5,
+      "source": "independent",
+      "sourceUrl": "https://www.walturn.com/insights/comparing-openai-o1-to-other-top-models",
+      "evaluatedAt": "2024-09-01",
+      "notes": "MATH 0-shot CoT"
+    },
+    {
+      "benchmarkSlug": "gpqa",
+      "score": 73.3,
+      "source": "independent",
+      "sourceUrl": "https://www.walturn.com/insights/comparing-openai-o1-to-other-top-models",
+      "evaluatedAt": "2024-09-01",
+      "notes": "GPQA 0-shot CoT"
+    },
+    {
+      "benchmarkSlug": "mmlu",
+      "score": 90.8,
+      "source": "independent",
+      "sourceUrl": "https://www.walturn.com/insights/comparing-openai-o1-to-other-top-models",
+      "evaluatedAt": "2024-09-01",
+      "notes": "MMLU 0-shot CoT"
+    },
+    {
+      "benchmarkSlug": "humaneval",
+      "score": 92.4,
+      "source": "independent",
+      "sourceUrl": "https://www.walturn.com/insights/comparing-openai-o1-to-other-top-models",
+      "evaluatedAt": "2024-09-01"
+    }
+  ],
+  "verificationNotes": "Release date (2024-09-12) and retirement (2025-07-28) confirmed via independent sources. AIME 44.6 and Codeforces 1258 confirmed by direct fetch of analyticsvidhya.com. MATH 85.5, GPQA 73.3, MMLU 90.8, HumanEval 92.4 all confirmed by direct fetch of walturn.com article, matching exactly. Pricing $15/$60 confirmed via prompthub.us model card fetch. No changes made."
+}

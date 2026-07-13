@@ -1,0 +1,59 @@
+{
+  "name": "Yi-1.5 9B",
+  "org": "01.AI",
+  "family": "Yi-1.5",
+  "releaseDate": "2024-05-13",
+  "status": "released",
+  "openness": "open-weights",
+  "license": "Apache 2.0",
+  "paramsB": 9,
+  "activeParamsB": null,
+  "archClass": "dense",
+  "archDisplay": "Dense Llama-style decoder-only transformer",
+  "ctxK": 4,
+  "modalities": [
+    "text"
+  ],
+  "langCount": null,
+  "capabilities": {
+    "reasoning": false,
+    "coding": true,
+    "vision": false,
+    "functionCalling": false,
+    "toolUse": false,
+    "agentic": false
+  },
+  "apiAvailable": false,
+  "price": null,
+  "links": {
+    "hf": "01-ai/Yi-1.5-9B",
+    "gh": "01-ai/Yi-1.5"
+  },
+  "note": "Popular mid-size Yi-1.5 variant, continually pretrained on 3.6T tokens; top performer among similarly sized open models at launch.",
+  "quants": [
+    "GGUF Q4"
+  ],
+  "vramQ4Gb": 6,
+  "vramFp16Gb": 18,
+  "tps4090": null,
+  "tpsNote": null,
+  "effortLabel": null,
+  "isDefaultConfig": true,
+  "isBestConfig": true,
+  "specSources": {
+    "paramsB": "https://huggingface.co/01-ai/Yi-1.5-9B",
+    "ctxK": "https://huggingface.co/01-ai/Yi-1.5-9B",
+    "releaseDate": "https://github.com/01-ai/Yi-1.5",
+    "openness": "https://huggingface.co/01-ai/Yi-1.5-9B"
+  },
+  "results": [
+    {
+      "benchmarkSlug": "mmlu-pro",
+      "score": 45.95,
+      "source": "independent",
+      "sourceUrl": "https://huggingface.co/01-ai/Yi-1.5-9B-Chat",
+      "notes": "Yi-1.5-9B-Chat variant, via TIGER-Lab MMLU-Pro leaderboard evaluation"
+    }
+  ],
+  "verificationNotes": "Existence and release date (2024-05-13) confirmed on GitHub README ('Yi-1.5 series models are open-sourced'). Apache 2.0 license, 9B params, base-variant 4K context (vs the separate -16K/-32K suffixed checkpoints), and 3.6T-token continual pretraining confirmed on HF model card. The single result row is explicitly for the -Chat variant per its own notes field; fetched the cited HF page (01-ai/Yi-1.5-9B-Chat) and confirmed the MMLU-Pro 45.95 score literally appears there — no changes."
+}

@@ -1,0 +1,83 @@
+{
+  "name": "Reka Core",
+  "org": "Reka AI",
+  "family": "Reka",
+  "releaseDate": "2024-04-15",
+  "status": "released",
+  "openness": "closed",
+  "license": "Proprietary",
+  "paramsB": null,
+  "activeParamsB": null,
+  "archClass": "dense",
+  "archDisplay": "Dense transformer, PaLM-like (no parallel layers); full architecture undisclosed",
+  "ctxK": 128,
+  "modalities": [
+    "text",
+    "vision",
+    "audio",
+    "video"
+  ],
+  "langCount": 32,
+  "capabilities": {
+    "reasoning": true,
+    "coding": true,
+    "vision": true,
+    "functionCalling": true,
+    "toolUse": true,
+    "agentic": true
+  },
+  "apiAvailable": true,
+  "price": {
+    "input": 2,
+    "output": 6,
+    "provider": "Reka"
+  },
+  "links": {
+    "docs": "docs.reka.ai"
+  },
+  "note": "Reka's frontier multimodal model (text/image/video/audio); approached GPT-4V/Claude-3-Opus class on multimodal + language benchmarks at launch.",
+  "quants": [],
+  "vramQ4Gb": null,
+  "vramFp16Gb": null,
+  "tps4090": null,
+  "tpsNote": null,
+  "effortLabel": null,
+  "isDefaultConfig": true,
+  "isBestConfig": true,
+  "specSources": {
+    "ctxK": "https://reka.ai/news/reka-core-our-frontier-class-multimodal-language-model",
+    "releaseDate": "https://reka.ai/news/reka-core-our-frontier-class-multimodal-language-model",
+    "openness": "https://docs.reka.ai/pricing"
+  },
+  "results": [
+    {
+      "benchmarkSlug": "mmlu",
+      "score": 83.2,
+      "source": "self-reported",
+      "sourceUrl": "https://arxiv.org/html/2404.12387v1",
+      "notes": "vs GPT-4 86.4, Claude 3 Opus 86.8"
+    },
+    {
+      "benchmarkSlug": "gsm8k",
+      "score": 92.2,
+      "source": "self-reported",
+      "sourceUrl": "https://arxiv.org/html/2404.12387v1",
+      "notes": "vs GPT-4 92.0, Claude 3 Opus 95.0"
+    },
+    {
+      "benchmarkSlug": "humaneval",
+      "score": 76.8,
+      "source": "self-reported",
+      "sourceUrl": "https://arxiv.org/html/2404.12387v1",
+      "notes": "vs GPT-4 76.5, Claude 3 Opus 84.9"
+    },
+    {
+      "benchmarkSlug": "mmmu",
+      "score": 56.3,
+      "source": "self-reported",
+      "sourceUrl": "https://reka.ai/news/reka-core-our-frontier-class-multimodal-language-model",
+      "notes": "near GPT-4V 56.8"
+    }
+  ],
+  "verificationNotes": "CONFIRMED. reka.ai blog post body dated Apr 15, 2024 confirms Core's launch, 128K context, 32 languages, and MMMU 56.3 near GPT-4V 56.8. arxiv 2404.12387v1 (Reka Core/Flash/Edge tech report, submitted Apr 18 2024) confirms all three benchmark rows exactly: MMLU 83.2, GSM8K 92.2, HumanEval 76.8. Current docs.reka.ai/pricing confirms $2/$6 per-million-token pricing exactly matches the record (launch-day press-release pricing of $10/$25 was superseded and is no longer current, but current live pricing matches record so no change needed). No corrections required."
+}

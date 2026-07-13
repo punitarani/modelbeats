@@ -1,0 +1,80 @@
+{
+  "name": "QVQ-72B-Preview",
+  "org": "Alibaba",
+  "family": "QVQ",
+  "releaseDate": "2024-12-25",
+  "status": "preview",
+  "openness": "open-weights",
+  "license": "Qwen (Tongyi Qianwen) License",
+  "paramsB": 73,
+  "activeParamsB": null,
+  "archClass": "dense",
+  "archDisplay": "Dense Vision-Language Transformer (built on Qwen2-VL-72B)",
+  "ctxK": 32,
+  "modalities": [
+    "text",
+    "vision"
+  ],
+  "langCount": null,
+  "capabilities": {
+    "reasoning": true,
+    "coding": false,
+    "vision": true,
+    "functionCalling": false,
+    "toolUse": false,
+    "agentic": false
+  },
+  "apiAvailable": true,
+  "price": null,
+  "links": {
+    "hf": "Qwen/QVQ-72B-Preview",
+    "docs": "qwenlm.github.io/blog/qvq-72b-preview"
+  },
+  "note": "Experimental step-by-step visual reasoning model on a Qwen2-VL-72B base; single-round dialogue, no video input.",
+  "quants": [
+    "GGUF"
+  ],
+  "vramQ4Gb": 47,
+  "vramFp16Gb": 146,
+  "tps4090": null,
+  "tpsNote": null,
+  "effortLabel": null,
+  "isDefaultConfig": true,
+  "isBestConfig": true,
+  "specSources": {
+    "paramsB": "https://huggingface.co/Qwen/QVQ-72B-Preview",
+    "ctxK": "https://huggingface.co/Qwen/QVQ-72B-Preview",
+    "releaseDate": "https://qwenlm.github.io/blog/qvq-72b-preview/",
+    "openness": "https://huggingface.co/Qwen/QVQ-72B-Preview"
+  },
+  "results": [
+    {
+      "benchmarkSlug": "mmmu",
+      "score": 70.3,
+      "source": "self-reported",
+      "sourceUrl": "https://huggingface.co/Qwen/QVQ-72B-Preview",
+      "notes": "MMMU val"
+    },
+    {
+      "benchmarkSlug": "mathvista",
+      "score": 71.4,
+      "source": "self-reported",
+      "sourceUrl": "https://huggingface.co/Qwen/QVQ-72B-Preview",
+      "notes": "MathVista mini"
+    },
+    {
+      "benchmarkSlug": "mathvision",
+      "score": 35.9,
+      "source": "self-reported",
+      "sourceUrl": "https://huggingface.co/Qwen/QVQ-72B-Preview",
+      "notes": "MathVision full"
+    },
+    {
+      "benchmarkSlug": "olympiadbench",
+      "score": 20.4,
+      "source": "self-reported",
+      "sourceUrl": "https://huggingface.co/Qwen/QVQ-72B-Preview"
+    }
+  ],
+  "verificationNotes": "Confirmed real; blog qwenlm.github.io/blog/qvq-72b-preview/ gives Dec 25 2024 release, built on Qwen2-VL-72B. HF README (huggingface.co/Qwen/QVQ-72B-Preview) confirms 73B params, 'Qwen' license, 32,768 (32K) ctx (per third-party docs/config), and states verbatim it 'only supports single-round dialogues and image outputs... does not support video inputs' -- matches the note exactly. All 4 result rows (MMMU 70.3, MathVista 71.4, MathVision 35.9, OlympiadBench 20.4) verified verbatim on the HF model card. No changes made."
+}

@@ -1,0 +1,105 @@
+{
+  "name": "Poro 34B",
+  "org": "Silo AI (LumiOpen)",
+  "family": "Poro",
+  "releaseDate": "2024-04-01",
+  "status": "released",
+  "openness": "open-weights",
+  "license": "Apache-2.0",
+  "paramsB": 34.2,
+  "activeParamsB": null,
+  "archClass": "dense",
+  "archDisplay": "Dense transformer, BLOOM architecture + ALiBi (54 layers, d_model 7168, 56 heads)",
+  "ctxK": 2,
+  "modalities": [
+    "text"
+  ],
+  "langCount": 2,
+  "capabilities": {
+    "reasoning": false,
+    "coding": true,
+    "vision": false,
+    "functionCalling": false,
+    "toolUse": false,
+    "agentic": false
+  },
+  "apiAvailable": false,
+  "price": null,
+  "links": {
+    "hf": "LumiOpen/Poro-34B",
+    "docs": "arxiv.org/abs/2404.01856"
+  },
+  "note": "Fully open Apache-2.0 Finnish/English/code model trained on 1T tokens on the LUMI supercomputer; pivotal European low-resource open LLM.",
+  "quants": [
+    "GGUF",
+    "AWQ"
+  ],
+  "vramQ4Gb": 20,
+  "vramFp16Gb": 68,
+  "tps4090": null,
+  "tpsNote": "Q4 GGUF (~20GB) fits on a single 24GB RTX 4090 with limited headroom for context.",
+  "effortLabel": null,
+  "isDefaultConfig": true,
+  "isBestConfig": true,
+  "specSources": {
+    "paramsB": "https://huggingface.co/LumiOpen/Poro-34B",
+    "ctxK": "https://arxiv.org/abs/2404.01856",
+    "releaseDate": "https://arxiv.org/abs/2404.01856",
+    "openness": "https://huggingface.co/LumiOpen/Poro-34B"
+  },
+  "results": [
+    {
+      "benchmarkSlug": "hellaswag",
+      "score": 77.77,
+      "source": "self-reported",
+      "sourceUrl": "https://arxiv.org/abs/2404.01856",
+      "notes": "English"
+    },
+    {
+      "benchmarkSlug": "arc-challenge",
+      "score": 53.16,
+      "source": "self-reported",
+      "sourceUrl": "https://arxiv.org/abs/2404.01856",
+      "notes": "English"
+    },
+    {
+      "benchmarkSlug": "mmlu",
+      "score": 46.29,
+      "source": "self-reported",
+      "sourceUrl": "https://arxiv.org/abs/2404.01856"
+    },
+    {
+      "benchmarkSlug": "winogrande",
+      "score": 72.77,
+      "source": "self-reported",
+      "sourceUrl": "https://arxiv.org/abs/2404.01856"
+    },
+    {
+      "benchmarkSlug": "gsm8k",
+      "score": 11.75,
+      "source": "self-reported",
+      "sourceUrl": "https://arxiv.org/abs/2404.01856"
+    },
+    {
+      "benchmarkSlug": "fin-bench",
+      "score": 66.28,
+      "source": "self-reported",
+      "sourceUrl": "https://arxiv.org/abs/2404.01856",
+      "notes": "Finnish FIN-bench average; FinGPT 13B scored 48.92 for comparison"
+    },
+    {
+      "benchmarkSlug": "truthfulqa",
+      "score": 41.66,
+      "source": "self-reported",
+      "sourceUrl": "https://arxiv.org/abs/2404.01856"
+    },
+    {
+      "benchmarkSlug": "humaneval",
+      "score": 41.8,
+      "source": "self-reported",
+      "sourceUrl": "https://arxiv.org/abs/2404.01856",
+      "notes": "Average of HumanEval and MBPP code accuracy as reported in paper"
+    }
+  ],
+  "verificationNotes": "Fully confirmed by fetching the actual arXiv PDF (2404.01856, Luukkonen et al., \"Poro 34B and the Blessing of Multilinguality\") and the HF model card. Architecture (54 layers, d_model 7168, 56 heads, BLOOM+ALiBi), 34.2B params, Apache-2.0 license, and 2048 sequence length all match Table 5 of the paper exactly. All 8 benchmark rows verified literally against Tables 6, 7, and 8 of the paper, including the FinGPT-13B=48.92 comparison note and the HumanEval/MBPP average (37.20/47.40 → 41.80)."
+}

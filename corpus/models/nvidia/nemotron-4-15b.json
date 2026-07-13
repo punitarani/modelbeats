@@ -1,0 +1,88 @@
+{
+  "name": "Nemotron-4 15B",
+  "org": "NVIDIA",
+  "family": "Nemotron-4",
+  "releaseDate": "2024-02-26",
+  "status": "released",
+  "openness": "open-weights",
+  "license": "NVIDIA Open Model License",
+  "paramsB": 15,
+  "activeParamsB": null,
+  "archClass": "dense",
+  "archDisplay": "Dense Transformer (decoder-only, GQA, RoPE, squared-ReLU MLP)",
+  "ctxK": 4,
+  "modalities": [
+    "text"
+  ],
+  "langCount": 54,
+  "capabilities": {
+    "reasoning": false,
+    "coding": true,
+    "vision": false,
+    "functionCalling": false,
+    "toolUse": false,
+    "agentic": false
+  },
+  "apiAvailable": false,
+  "price": null,
+  "links": {
+    "hf": "nvidia/Nemotron-4-15B-Base",
+    "docs": "research.nvidia.com"
+  },
+  "note": "15B multilingual base trained on 8T tokens (50+ languages, 40+ code); beat 4x-larger models on multilingual tasks.",
+  "quants": [],
+  "vramQ4Gb": 10,
+  "vramFp16Gb": 32,
+  "tps4090": null,
+  "tpsNote": null,
+  "effortLabel": null,
+  "isDefaultConfig": true,
+  "isBestConfig": true,
+  "specSources": {
+    "paramsB": "https://arxiv.org/abs/2402.16819",
+    "ctxK": "https://unfoldai.com/nemotron-4-nvidia-powerful-language-model/",
+    "releaseDate": "https://arxiv.org/abs/2402.16819",
+    "openness": "https://www.marktechpost.com/2024/03/06/nvidia-researchers-introduce-nemotron-4-15b-a-15b-parameter-large-multilingual-language-model-trained-on-8t-text-tokens/"
+  },
+  "results": [
+    {
+      "benchmarkSlug": "mmlu",
+      "score": 64.2,
+      "source": "self-reported",
+      "sourceUrl": "https://unfoldai.com/nemotron-4-nvidia-powerful-language-model/",
+      "evaluatedAt": "2024-02-26",
+      "notes": "5-shot"
+    },
+    {
+      "benchmarkSlug": "bbh",
+      "score": 58.7,
+      "source": "self-reported",
+      "sourceUrl": "https://unfoldai.com/nemotron-4-nvidia-powerful-language-model/",
+      "evaluatedAt": "2024-02-26",
+      "notes": "3-shot"
+    },
+    {
+      "benchmarkSlug": "gsm8k",
+      "score": 46,
+      "source": "self-reported",
+      "sourceUrl": "https://unfoldai.com/nemotron-4-nvidia-powerful-language-model/",
+      "evaluatedAt": "2024-02-26"
+    },
+    {
+      "benchmarkSlug": "humaneval",
+      "score": 31.6,
+      "source": "self-reported",
+      "sourceUrl": "https://unfoldai.com/nemotron-4-nvidia-powerful-language-model/",
+      "evaluatedAt": "2024-02-26",
+      "notes": "0-shot pass@1"
+    },
+    {
+      "benchmarkSlug": "mbpp",
+      "score": 40.6,
+      "source": "self-reported",
+      "sourceUrl": "https://unfoldai.com/nemotron-4-nvidia-powerful-language-model/",
+      "evaluatedAt": "2024-02-26"
+    }
+  ],
+  "verificationNotes": "Confirmed real: arXiv:2402.16819 (submitted Feb 26/27, 2024) verifies 15B params, 8T training tokens, and multilingual claims. Architecture (decoder-only, GQA, RoPE, squared-ReLU MLP activations, no bias terms, untied embeddings) confirmed via technical-report summaries (32 layers, hidden dim 6144, 48 heads, 4096-token sequence length, 256K vocab). License (NVIDIA Open Model License) and open-weights status confirmed via HuggingFace search results for nvidia/Nemotron-4-15B-Base. All five benchmark scores (MMLU 64.2, BBH 58.7, GSM8K 46.0, HumanEval 31.6, MBPP 40.6) confirmed as literal text on unfoldai.com. langCount 54 reconciled from 'English + 53 additional languages.' No changes made."
+}

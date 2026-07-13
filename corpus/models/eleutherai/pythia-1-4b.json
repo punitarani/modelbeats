@@ -1,0 +1,51 @@
+{
+  "name": "Pythia-1.4B",
+  "org": "EleutherAI",
+  "family": "Pythia",
+  "releaseDate": "2023-04-03",
+  "status": "released",
+  "openness": "open-source",
+  "license": "Apache-2.0",
+  "paramsB": 1.4,
+  "activeParamsB": null,
+  "archClass": "dense",
+  "archDisplay": "Decoder-only Transformer (GPT-NeoX architecture, RoPE, parallel attention+FF, 24 layers)",
+  "ctxK": 2,
+  "modalities": [
+    "text"
+  ],
+  "langCount": 1,
+  "capabilities": {
+    "reasoning": false,
+    "coding": false,
+    "vision": false,
+    "functionCalling": false,
+    "toolUse": false,
+    "agentic": false
+  },
+  "apiAvailable": false,
+  "price": null,
+  "links": {
+    "hf": "EleutherAI/pythia-1.4b",
+    "gh": "EleutherAI/pythia"
+  },
+  "note": "Smaller checkpoint in the 8-model Pythia interpretability suite, identical data/order across all scales",
+  "quants": [
+    "GGUF"
+  ],
+  "vramQ4Gb": 1.2,
+  "vramFp16Gb": 3.3,
+  "tps4090": null,
+  "tpsNote": null,
+  "effortLabel": null,
+  "isDefaultConfig": true,
+  "isBestConfig": true,
+  "specSources": {
+    "paramsB": "https://huggingface.co/EleutherAI/pythia-1.4b",
+    "ctxK": "https://github.com/EleutherAI/pythia",
+    "releaseDate": "https://arxiv.org/abs/2304.01373",
+    "openness": "https://huggingface.co/EleutherAI/pythia-1.4b"
+  },
+  "results": [],
+  "verificationNotes": "Confirmed real: fetched huggingface.co/EleutherAI/pythia-1.4b - exact param count 1,414,647,808 (=1.41B, rounds to 1.4 matching record), 24 layers, Apache-2.0 license confirmed. Training used 2048 sequence length (ctxK=2 confirmed via arxiv paper details). Paper submission date 2023-04-03 confirmed on arxiv. No results rows to verify (none were provided)."
+}

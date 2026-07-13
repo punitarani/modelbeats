@@ -1,0 +1,85 @@
+{
+  "name": "GPT-Neo 2.7B",
+  "org": "EleutherAI",
+  "family": "GPT-Neo",
+  "releaseDate": "2021-03-21",
+  "status": "released",
+  "openness": "open-source",
+  "license": "MIT",
+  "paramsB": 2.7,
+  "activeParamsB": null,
+  "archClass": "dense",
+  "archDisplay": "Decoder-only Transformer, alternating local (256-token window) and global sparse attention (GPT-3 replication)",
+  "ctxK": 2,
+  "modalities": [
+    "text"
+  ],
+  "langCount": 1,
+  "capabilities": {
+    "reasoning": false,
+    "coding": false,
+    "vision": false,
+    "functionCalling": false,
+    "toolUse": false,
+    "agentic": false
+  },
+  "apiAvailable": false,
+  "price": null,
+  "links": {
+    "hf": "EleutherAI/gpt-neo-2.7B",
+    "gh": "EleutherAI/gpt-neo",
+    "docs": "huggingface.co/docs/transformers/model_doc/gpt_neo"
+  },
+  "note": "First open GPT-3-style replication trained on The Pile; largest freely available autoregressive LM at its March 2021 launch",
+  "quants": [
+    "Int8"
+  ],
+  "vramQ4Gb": 2.2,
+  "vramFp16Gb": 6.4,
+  "tps4090": null,
+  "tpsNote": null,
+  "effortLabel": null,
+  "isDefaultConfig": true,
+  "isBestConfig": true,
+  "specSources": {
+    "paramsB": "https://huggingface.co/EleutherAI/gpt-neo-2.7B",
+    "ctxK": "https://huggingface.co/docs/transformers/model_doc/gpt_neo",
+    "releaseDate": "https://www.eleuther.ai/artifacts/gpt-neo",
+    "openness": "https://huggingface.co/EleutherAI/gpt-neo-2.7B"
+  },
+  "results": [
+    {
+      "benchmarkSlug": "lambada",
+      "score": 62.22,
+      "source": "self-reported",
+      "sourceUrl": "https://huggingface.co/EleutherAI/gpt-neo-2.7B",
+      "evaluatedAt": "2021-03-21",
+      "notes": "zero-shot accuracy, LM Eval Harness"
+    },
+    {
+      "benchmarkSlug": "winogrande",
+      "score": 56.5,
+      "source": "self-reported",
+      "sourceUrl": "https://huggingface.co/EleutherAI/gpt-neo-2.7B",
+      "evaluatedAt": "2021-03-21",
+      "notes": "zero-shot, LM Eval Harness"
+    },
+    {
+      "benchmarkSlug": "hellaswag",
+      "score": 42.73,
+      "source": "self-reported",
+      "sourceUrl": "https://huggingface.co/EleutherAI/gpt-neo-2.7B",
+      "evaluatedAt": "2021-03-21",
+      "notes": "zero-shot, LM Eval Harness"
+    },
+    {
+      "benchmarkSlug": "piqa",
+      "score": 72.14,
+      "source": "self-reported",
+      "sourceUrl": "https://huggingface.co/EleutherAI/gpt-neo-2.7B",
+      "evaluatedAt": "2021-03-21",
+      "notes": "zero-shot, LM Eval Harness"
+    }
+  ],
+  "verificationNotes": "Confirmed real: fetched huggingface.co/EleutherAI/gpt-neo-2.7B model card table verbatim-matches all 4 scores (LAMBADA 62.22, Winogrande 56.50, HellaSwag 42.73, PIQA 72.14). MIT license and 2021-03-21 release date (eleuther.ai/artifacts/gpt-neo shows '21 Mar') confirmed. No changes needed."
+}

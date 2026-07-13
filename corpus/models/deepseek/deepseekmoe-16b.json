@@ -1,0 +1,80 @@
+{
+  "name": "DeepSeekMoE 16B",
+  "org": "DeepSeek",
+  "family": "DeepSeekMoE",
+  "releaseDate": "2024-01-11",
+  "status": "released",
+  "openness": "open-weights",
+  "license": "DeepSeek Model License (custom, commercial use permitted)",
+  "paramsB": 16.4,
+  "activeParamsB": 2.8,
+  "archClass": "moe",
+  "archDisplay": "MoE — 2 shared + 64 fine-grained routed experts (2 shared + 6 routed active/token), 4K context",
+  "ctxK": 4,
+  "modalities": [
+    "text"
+  ],
+  "langCount": 2,
+  "capabilities": {
+    "reasoning": false,
+    "coding": true,
+    "vision": false,
+    "functionCalling": false,
+    "toolUse": false,
+    "agentic": false
+  },
+  "apiAvailable": true,
+  "price": null,
+  "links": {
+    "hf": "deepseek-ai/deepseek-moe-16b-base",
+    "gh": "deepseek-ai/DeepSeek-MoE"
+  },
+  "note": "Introduced the DeepSeekMoE fine-grained + shared-expert architecture; matched LLaMA2 7B at roughly 40% of the compute.",
+  "quants": [
+    "GGUF"
+  ],
+  "vramQ4Gb": 10,
+  "vramFp16Gb": 33,
+  "tps4090": null,
+  "tpsNote": "Fits comfortably within a 24GB RTX 4090 at Q4 (~10GB); no specific verified 4090 llama.cpp tokens/sec benchmark was found.",
+  "effortLabel": null,
+  "isDefaultConfig": true,
+  "isBestConfig": true,
+  "specSources": {
+    "paramsB": "https://huggingface.co/deepseek-ai/deepseek-moe-16b-base",
+    "ctxK": "https://github.com/deepseek-ai/DeepSeek-MoE",
+    "releaseDate": "https://ar5iv.labs.arxiv.org/html/2401.06066",
+    "openness": "https://huggingface.co/deepseek-ai/deepseek-moe-16b-base"
+  },
+  "results": [
+    {
+      "benchmarkSlug": "humaneval",
+      "score": 26.8,
+      "source": "self-reported",
+      "sourceUrl": "https://ar5iv.labs.arxiv.org/html/2401.06066",
+      "notes": "Base variant, pass@1"
+    },
+    {
+      "benchmarkSlug": "gsm8k",
+      "score": 18.8,
+      "source": "self-reported",
+      "sourceUrl": "https://ar5iv.labs.arxiv.org/html/2401.06066",
+      "notes": "Base variant, EM 8-shot"
+    },
+    {
+      "benchmarkSlug": "mmlu",
+      "score": 45,
+      "source": "self-reported",
+      "sourceUrl": "https://ar5iv.labs.arxiv.org/html/2401.06066",
+      "notes": "Base variant, 5-shot"
+    },
+    {
+      "benchmarkSlug": "hellaswag",
+      "score": 77.1,
+      "source": "self-reported",
+      "sourceUrl": "https://ar5iv.labs.arxiv.org/html/2401.06066",
+      "notes": "Base variant, 0-shot"
+    }
+  ],
+  "verificationNotes": "Confirmed via ar5iv/2401.06066: 16.4B total / 2.8B active params, 2 shared + 64 routed fine-grained experts (2 shared + 6 routed active per token = 8 total active experts), 4K context, 2T training tokens. Base-model scores literally match: HumanEval 26.8, GSM8K 18.8, MMLU 45.0, HellaSwag 77.1. Release date 2024-01-11 corroborated by independent web search (HF last-update ~2024-01-12)."
+}

@@ -1,0 +1,74 @@
+{
+  "name": "Reka Flash (21B)",
+  "org": "Reka AI",
+  "family": "Reka",
+  "releaseDate": "2024-02-12",
+  "status": "deprecated",
+  "openness": "closed",
+  "license": "Proprietary",
+  "paramsB": 21,
+  "activeParamsB": null,
+  "archClass": "dense",
+  "archDisplay": "21B dense multimodal transformer (Core/Flash/Edge series)",
+  "ctxK": 128,
+  "modalities": [
+    "text",
+    "vision"
+  ],
+  "langCount": null,
+  "capabilities": {
+    "reasoning": false,
+    "coding": true,
+    "vision": true,
+    "functionCalling": false,
+    "toolUse": false,
+    "agentic": false
+  },
+  "apiAvailable": false,
+  "price": null,
+  "links": {
+    "docs": "docs.reka.ai"
+  },
+  "note": "Original 21B Reka Flash, announced Feb 12, 2024 (documented together with Edge/Core in Reka's April 2024 tech report); iterated into a Sep 2024 build and then superseded by Flash 3/3.1, and no longer separately served on Reka's API under its original form.",
+  "quants": [],
+  "vramQ4Gb": null,
+  "vramFp16Gb": null,
+  "tps4090": null,
+  "tpsNote": null,
+  "effortLabel": null,
+  "isDefaultConfig": true,
+  "isBestConfig": true,
+  "specSources": {
+    "paramsB": "https://reka.ai/news/reka-flash-efficient-and-capable-multimodal-language-models",
+    "ctxK": "https://artificialanalysis.ai/models/reka-flash",
+    "releaseDate": "https://reka.ai/news/reka-flash-efficient-and-capable-multimodal-language-models",
+    "openness": "https://docs.reka.ai/pricing"
+  },
+  "results": [
+    {
+      "benchmarkSlug": "mmlu",
+      "score": 75.9,
+      "source": "self-reported",
+      "sourceUrl": "https://arxiv.org/abs/2404.12387",
+      "evaluatedAt": "2024-02-12",
+      "notes": "5-shot, from Reka Core/Flash/Edge tech report"
+    },
+    {
+      "benchmarkSlug": "gsm8k",
+      "score": 85.8,
+      "source": "self-reported",
+      "sourceUrl": "https://arxiv.org/abs/2404.12387",
+      "evaluatedAt": "2024-02-12",
+      "notes": "maj@8"
+    },
+    {
+      "benchmarkSlug": "humaneval",
+      "score": 72,
+      "source": "self-reported",
+      "sourceUrl": "https://arxiv.org/abs/2404.12387",
+      "evaluatedAt": "2024-02-12",
+      "notes": "0-shot"
+    }
+  ],
+  "verificationNotes": "CORRECTED releaseDate. Reka's official blog post 'Reka Flash: Efficient and Capable Multimodal Language Models' has an in-body date of Feb 12, 2024 (confirmed via direct fetch of the article body, not just page metadata), and MarkTechPost/other outlets covered the launch Feb 28, 2024 — both well before the source record's stated 2024-04-18. That April date corresponds instead to the arxiv tech report submission (which covers Flash retroactively alongside the later Reka Core launch), not Flash's original release. Changed releaseDate to 2024-02-12. All three benchmark rows confirmed exactly via arxiv fetch: MMLU 75.9 (5-shot), GSM8K 85.8 (maj@8), HumanEval 72.0 (0-shot). Confirmed a distinct, still-served 'Reka Flash (Sep '24)' build exists on Reka's API/artificialanalysis today, supporting the record's claim that the original Feb 2024 build is no longer separately served (superseded first by the Sep '24 update, then Flash 3)."
+}

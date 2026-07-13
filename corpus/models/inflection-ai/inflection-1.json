@@ -1,0 +1,55 @@
+{
+  "name": "Inflection-1",
+  "org": "Inflection AI",
+  "family": "Inflection",
+  "releaseDate": "2023-06-22",
+  "status": "deprecated",
+  "openness": "closed",
+  "license": "Proprietary",
+  "paramsB": null,
+  "activeParamsB": null,
+  "archClass": "dense",
+  "archDisplay": "Dense Transformer (architecture, dataset, and training procedure undisclosed)",
+  "ctxK": 8,
+  "modalities": [
+    "text"
+  ],
+  "langCount": null,
+  "capabilities": {
+    "reasoning": false,
+    "coding": true,
+    "vision": false,
+    "functionCalling": false,
+    "toolUse": false,
+    "agentic": false
+  },
+  "apiAvailable": false,
+  "price": null,
+  "links": {
+    "docs": "inflection.ai/inflection-1"
+  },
+  "note": "Pi's original in-house model; GPT-3.5-class personal-AI chatbot tuned for empathetic conversation over coding or reasoning.",
+  "quants": [],
+  "vramQ4Gb": null,
+  "vramFp16Gb": null,
+  "tps4090": null,
+  "tpsNote": null,
+  "effortLabel": null,
+  "isDefaultConfig": true,
+  "isBestConfig": true,
+  "specSources": {
+    "releaseDate": "https://inflection.ai/inflection-1",
+    "openness": "https://inflection.ai/inflection-1"
+  },
+  "results": [
+    {
+      "benchmarkSlug": "mmlu",
+      "score": 72.7,
+      "source": "self-reported",
+      "sourceUrl": "https://inflection.ai/inflection-1",
+      "evaluatedAt": "2023-06-22",
+      "notes": "Average across 57 MMLU tasks; outperformed GPT-3.5, LLaMA, and PaLM-540B per Inflection's technical memo."
+    }
+  ],
+  "verificationNotes": "Confirmed real via direct fetch of inflection.ai/inflection-1: page literally states '72.7% on average across all 57 tasks' on MMLU, matching the score exactly. Fetch also confirmed the June 22 2023 announcement date. No changes made."
+}

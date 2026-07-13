@@ -1,0 +1,87 @@
+{
+  "name": "Nemotron-3 8B",
+  "org": "NVIDIA",
+  "family": "Nemotron-3",
+  "releaseDate": "2023-11-15",
+  "status": "released",
+  "openness": "open-weights",
+  "license": "NVIDIA AI Foundation Models Community License Agreement",
+  "paramsB": 8,
+  "activeParamsB": null,
+  "archClass": "dense",
+  "archDisplay": "Dense Transformer (GPT-3 style decoder-only)",
+  "ctxK": 4,
+  "modalities": [
+    "text"
+  ],
+  "langCount": 53,
+  "capabilities": {
+    "reasoning": false,
+    "coding": true,
+    "vision": false,
+    "functionCalling": false,
+    "toolUse": false,
+    "agentic": false
+  },
+  "apiAvailable": false,
+  "price": null,
+  "links": {
+    "hf": "nvidia/nemotron-3-8b-base-4k",
+    "docs": "developer.nvidia.com"
+  },
+  "note": "NVIDIA's first Nemotron-branded open LLM family, aimed at enterprise chat/copilot builds via NeMo.",
+  "quants": [
+    "GGUF Q4"
+  ],
+  "vramQ4Gb": 5.4,
+  "vramFp16Gb": 17,
+  "tps4090": null,
+  "tpsNote": null,
+  "effortLabel": null,
+  "isDefaultConfig": true,
+  "isBestConfig": true,
+  "specSources": {
+    "paramsB": "https://huggingface.co/nvidia/nemotron-3-8b-base-4k",
+    "ctxK": "https://huggingface.co/nvidia/nemotron-3-8b-base-4k",
+    "releaseDate": "https://en.wikipedia.org/wiki/Nemotron",
+    "openness": "https://huggingface.co/nvidia/nemotron-3-8b-base-4k"
+  },
+  "results": [
+    {
+      "benchmarkSlug": "mmlu",
+      "score": 54.4,
+      "source": "self-reported",
+      "sourceUrl": "https://huggingface.co/nvidia/nemotron-3-8b-base-4k",
+      "notes": "5-shot"
+    },
+    {
+      "benchmarkSlug": "hellaswag",
+      "score": 76.4,
+      "source": "self-reported",
+      "sourceUrl": "https://huggingface.co/nvidia/nemotron-3-8b-base-4k",
+      "notes": "0-shot"
+    },
+    {
+      "benchmarkSlug": "winogrande",
+      "score": 70.9,
+      "source": "self-reported",
+      "sourceUrl": "https://huggingface.co/nvidia/nemotron-3-8b-base-4k",
+      "notes": "0-shot"
+    },
+    {
+      "benchmarkSlug": "lambada",
+      "score": 70.6,
+      "source": "self-reported",
+      "sourceUrl": "https://huggingface.co/nvidia/nemotron-3-8b-base-4k",
+      "notes": "0-shot"
+    },
+    {
+      "benchmarkSlug": "gsm8k",
+      "score": 39.4,
+      "source": "self-reported",
+      "sourceUrl": "https://huggingface.co/nvidia/nemotron-3-8b-base-4k",
+      "notes": "8-shot, majority voting"
+    }
+  ],
+  "verificationNotes": "Confirmed real and distinct from NVIDIA's unrelated December 2025 'Nemotron 3' family rebrand (Nano/Super/Ultra) — this is the original Nov 15, 2023 release, corroborated by Wikipedia's Nemotron timeline and a Microsoft Tech Community post ('Introducing NVIDIA Nemotron-3 8B LLMs on the Model Catalog'). All specs (8B params, 4096-token context, 53 languages + 37 programming languages, NVIDIA AI Foundation Models Community License Agreement) and all five benchmark scores (MMLU 54.4, HellaSwag 76.4, WinoGrande 70.9, LAMBADA 70.6, GSM8K 39.4) confirmed as literal text on the cited HuggingFace model card. No changes made."
+}

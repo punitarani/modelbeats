@@ -1,0 +1,77 @@
+{
+  "name": "Claude Haiku 4.5",
+  "org": "Anthropic",
+  "family": "Claude 4",
+  "releaseDate": "2025-10-15",
+  "status": "released",
+  "openness": "closed",
+  "license": "Proprietary",
+  "paramsB": null,
+  "activeParamsB": null,
+  "archClass": "dense",
+  "archDisplay": "Dense transformer, hybrid-reasoning (parameter count undisclosed)",
+  "ctxK": 200,
+  "modalities": [
+    "text",
+    "vision"
+  ],
+  "langCount": null,
+  "capabilities": {
+    "reasoning": true,
+    "coding": true,
+    "vision": true,
+    "functionCalling": true,
+    "toolUse": true,
+    "agentic": true
+  },
+  "apiAvailable": true,
+  "price": {
+    "input": 1,
+    "output": 5,
+    "provider": "Anthropic"
+  },
+  "links": {
+    "docs": "platform.claude.com"
+  },
+  "note": "First Claude-4-generation Haiku, matching Sonnet 4 coding performance at one-third the cost and 2x+ the speed.",
+  "quants": [],
+  "vramFp16Gb": null,
+  "vramQ4Gb": null,
+  "tps4090": null,
+  "tpsNote": null,
+  "effortLabel": null,
+  "isDefaultConfig": true,
+  "isBestConfig": true,
+  "specSources": {
+    "releaseDate": "https://www.anthropic.com/news/claude-haiku-4-5",
+    "ctxK": "https://platform.claude.com/docs/en/about-claude/models/overview",
+    "openness": "https://www.anthropic.com/news/claude-haiku-4-5"
+  },
+  "results": [
+    {
+      "benchmarkSlug": "swe-bench",
+      "score": 73.3,
+      "source": "self-reported",
+      "sourceUrl": "https://www.anthropic.com/news/claude-haiku-4-5",
+      "evaluatedAt": "2025-10-15",
+      "notes": "SWE-bench Verified, averaged over 50 trials, 128K thinking budget; confirmed via search corroboration of the official announcement"
+    },
+    {
+      "benchmarkSlug": "gpqa",
+      "score": 64.6,
+      "source": "independent",
+      "sourceUrl": "https://artificialanalysis.ai/models/claude-4-5-haiku",
+      "evaluatedAt": "2025-10-01",
+      "notes": "independent evaluation; AA page is JS-rendered and could not be scraped directly via fetch tools, but the exact 64.6% figure was cross-confirmed via secondary aggregators (e.g. pricepertoken.com, morphllm.com) explicitly citing Artificial Analysis's Claude Haiku 4.5 page"
+    },
+    {
+      "benchmarkSlug": "mmlu-pro",
+      "score": 80,
+      "source": "independent",
+      "sourceUrl": "https://artificialanalysis.ai/models/claude-4-5-haiku",
+      "evaluatedAt": "2025-10-01",
+      "notes": "independent evaluation; same caveat as GPQA row — 80.0% figure cross-confirmed via secondary aggregators citing Artificial Analysis"
+    }
+  ],
+  "verificationNotes": "Real model, confirmed via anthropic.com/news/claude-haiku-4-5 (release 2025-10-15, $1/$5 pricing, 200K context, 'one-third the cost and more than twice the speed of Sonnet 4' claim verified verbatim). IMPORTANT CORRECTION: input record marked status='deprecated', but Anthropic's official model-deprecations page (fetched 2026-07-12) lists claude-haiku-4-5-20251001 as 'Active' with tentative retirement 'not sooner than 2026-10-15' — this model is currently live, not deprecated. Status corrected to 'released' (closest enum to 'Active'); apiAvailable=true confirmed correct. GPQA/MMLU-Pro rows: could not directly scrape the JS-rendered artificialanalysis.ai page, but the specific numbers were independently corroborated by secondary sources quoting the same Artificial Analysis data, so kept (not dropped) with sourceUrl unchanged and caveat noted."
+}

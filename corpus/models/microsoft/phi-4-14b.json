@@ -1,0 +1,100 @@
+{
+  "name": "Phi-4 (14B)",
+  "org": "Microsoft",
+  "family": "Phi-4",
+  "releaseDate": "2024-12-12",
+  "status": "released",
+  "openness": "open-weights",
+  "license": "MIT",
+  "paramsB": 14,
+  "activeParamsB": null,
+  "archClass": "dense",
+  "archDisplay": "Dense decoder-only Transformer (phi-3-medium-style architecture, tiktoken tokenizer)",
+  "ctxK": 16,
+  "modalities": [
+    "text"
+  ],
+  "langCount": null,
+  "capabilities": {
+    "reasoning": false,
+    "coding": true,
+    "vision": false,
+    "functionCalling": false,
+    "toolUse": false,
+    "agentic": false
+  },
+  "apiAvailable": true,
+  "price": {
+    "input": 0.125,
+    "output": 0.5,
+    "provider": "Azure AI Foundry"
+  },
+  "links": {
+    "hf": "microsoft/phi-4",
+    "gh": "microsoft/PhiCookBook",
+    "docs": "arxiv.org/abs/2412.08905"
+  },
+  "note": "Flagship 14B trained on ~9.8T tokens of heavy synthetic data; surpassed teacher GPT-4o on GPQA and MATH; weights fully opened on HF Jan 8, 2025.",
+  "quants": [
+    "GGUF Q4",
+    "MLX 4-bit"
+  ],
+  "vramQ4Gb": 11,
+  "vramFp16Gb": 29,
+  "tps4090": null,
+  "tpsNote": null,
+  "effortLabel": null,
+  "isDefaultConfig": true,
+  "isBestConfig": true,
+  "specSources": {
+    "paramsB": "https://arxiv.org/abs/2412.08905",
+    "ctxK": "https://huggingface.co/microsoft/phi-4",
+    "releaseDate": "https://arxiv.org/abs/2412.08905",
+    "openness": "https://www.marktechpost.com/2025/01/08/microsoft-ai-just-fully-open-sourced-phi-4-a-small-language-model-available-on-hugging-face-under-the-mit-license/"
+  },
+  "results": [
+    {
+      "benchmarkSlug": "mmlu",
+      "score": 84.8,
+      "source": "self-reported",
+      "sourceUrl": "https://huggingface.co/microsoft/phi-4"
+    },
+    {
+      "benchmarkSlug": "gpqa",
+      "score": 56.1,
+      "source": "self-reported",
+      "sourceUrl": "https://huggingface.co/microsoft/phi-4"
+    },
+    {
+      "benchmarkSlug": "math",
+      "score": 80.4,
+      "source": "self-reported",
+      "sourceUrl": "https://huggingface.co/microsoft/phi-4"
+    },
+    {
+      "benchmarkSlug": "humaneval",
+      "score": 82.6,
+      "source": "self-reported",
+      "sourceUrl": "https://huggingface.co/microsoft/phi-4"
+    },
+    {
+      "benchmarkSlug": "drop",
+      "score": 75.5,
+      "source": "self-reported",
+      "sourceUrl": "https://huggingface.co/microsoft/phi-4"
+    },
+    {
+      "benchmarkSlug": "mgsm",
+      "score": 80.6,
+      "source": "self-reported",
+      "sourceUrl": "https://huggingface.co/microsoft/phi-4"
+    },
+    {
+      "benchmarkSlug": "simpleqa",
+      "score": 3,
+      "source": "self-reported",
+      "sourceUrl": "https://huggingface.co/microsoft/phi-4"
+    }
+  ],
+  "verificationNotes": "Confirmed real via HF model card (microsoft/phi-4, fetched) plus independent news coverage of both milestones: announced/research-preview Dec 12, 2024 (TechCrunch, MarkTechPost, TheTechPortal — initially research-license-only via Azure AI Foundry) and fully open-sourced under MIT on Hugging Face Jan 8, 2025 (MarkTechPost, VentureBeat, Winbuzzer). All seven benchmark rows (MMLU 84.8, GPQA 56.1, MATH 80.4, HumanEval 82.6, DROP 75.5, MGSM 80.6, SimpleQA 3.0) literally match the card. 16K context and phi-3-medium-style architecture also confirmed. releaseDate kept as the initial 2024-12-12 announcement while license/openness reflect the final MIT/open-weights state reached Jan 8, 2025 — consistent with the record's own note."
+}

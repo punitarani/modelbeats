@@ -1,0 +1,76 @@
+{
+  "name": "Skywork-13B",
+  "org": "Kunlun Tech",
+  "family": "Skywork",
+  "releaseDate": "2023-10-30",
+  "status": "released",
+  "openness": "open-weights",
+  "license": "Skywork Community License",
+  "paramsB": 13,
+  "activeParamsB": null,
+  "archClass": "dense",
+  "archDisplay": "Dense transformer, 52 layers (thinner/deeper than Llama-2-13B), 4608 hidden dim",
+  "ctxK": 4,
+  "modalities": [
+    "text"
+  ],
+  "langCount": 2,
+  "capabilities": {
+    "reasoning": false,
+    "coding": true,
+    "vision": false,
+    "functionCalling": false,
+    "toolUse": false,
+    "agentic": false
+  },
+  "apiAvailable": false,
+  "price": null,
+  "links": {
+    "hf": "Skywork/Skywork-13B-base",
+    "gh": "SkyworkAI/Skywork"
+  },
+  "note": "Bilingual (Chinese/English) base LLM trained on 3.2T tokens; best-in-class among ~13B Chinese open models at release",
+  "quants": [
+    "GGUF Q4_K_M"
+  ],
+  "vramQ4Gb": 8.4,
+  "vramFp16Gb": 26,
+  "tps4090": null,
+  "tpsNote": null,
+  "effortLabel": null,
+  "isDefaultConfig": true,
+  "isBestConfig": true,
+  "specSources": {
+    "paramsB": "https://huggingface.co/Skywork/Skywork-13B-base",
+    "ctxK": "https://huggingface.co/Skywork/Skywork-13B-base",
+    "releaseDate": "https://huggingface.co/Skywork/Skywork-13B-base",
+    "openness": "https://github.com/SkyworkAI/Skywork"
+  },
+  "results": [
+    {
+      "benchmarkSlug": "mmlu",
+      "score": 62.1,
+      "source": "self-reported",
+      "sourceUrl": "https://huggingface.co/Skywork/Skywork-13B-base"
+    },
+    {
+      "benchmarkSlug": "c-eval",
+      "score": 60.6,
+      "source": "self-reported",
+      "sourceUrl": "https://huggingface.co/Skywork/Skywork-13B-base"
+    },
+    {
+      "benchmarkSlug": "cmmlu",
+      "score": 61.8,
+      "source": "self-reported",
+      "sourceUrl": "https://huggingface.co/Skywork/Skywork-13B-base"
+    },
+    {
+      "benchmarkSlug": "gsm8k",
+      "score": 55.8,
+      "source": "self-reported",
+      "sourceUrl": "https://huggingface.co/Skywork/Skywork-13B-base"
+    }
+  ],
+  "verificationNotes": "Fetched HF model card: confirmed 13B params, 4K ctx, Skywork Community License, 3.2T tokens bilingual, MMLU 62.1/C-Eval 60.6/CMMLU 61.8/GSM8K 55.8 verbatim, Oct 2023 release. No changes."
+}

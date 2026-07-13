@@ -1,0 +1,2693 @@
+{
+  "summary": "Deep research + adversarial verification for P2 gap partition 5 (21 models)",
+  "agentCount": 8,
+  "logs": [
+    "gap-part5: 21 models",
+    "research: 26 models researched, 0 rejected as unconfirmable",
+    "verify: 26 models confirmed, 0 rejected by verification"
+  ],
+  "result": {
+    "inputCount": 21,
+    "researchedCount": 26,
+    "finalCount": 26,
+    "rejected": [],
+    "models": [
+      {
+        "name": "Qwen3-8B (Thinking)",
+        "org": "Alibaba",
+        "family": "Qwen3",
+        "releaseDate": "2025-04-28",
+        "status": "released",
+        "openness": "open-weights",
+        "license": "Apache 2.0",
+        "paramsB": 8.2,
+        "activeParamsB": null,
+        "archClass": "dense",
+        "archDisplay": "Dense Transformer (GQA 32Q/8KV, SwiGLU, RoPE, RMSNorm, QK-Norm; 36L)",
+        "ctxK": 128,
+        "modalities": [
+          "text"
+        ],
+        "langCount": 119,
+        "capabilities": {
+          "reasoning": true,
+          "coding": true,
+          "vision": false,
+          "functionCalling": true,
+          "toolUse": true,
+          "agentic": true
+        },
+        "apiAvailable": true,
+        "price": {
+          "input": 0.18,
+          "output": 2.1,
+          "provider": "Alibaba Cloud Model Studio (Singapore/international, DashScope)"
+        },
+        "links": {
+          "hf": "Qwen/Qwen3-8B",
+          "gh": "QwenLM/Qwen3",
+          "docs": "qwenlm.github.io/blog/qwen3"
+        },
+        "note": "Popular small dense Gen-3 model in thinking mode; strong AIME/LiveCodeBench scores for its size via strong-to-weak distillation.",
+        "quants": [
+          "GGUF",
+          "AWQ",
+          "GPTQ",
+          "MLX",
+          "FP8"
+        ],
+        "vramQ4Gb": 5.5,
+        "vramFp16Gb": 18,
+        "tps4090": null,
+        "tpsNote": null,
+        "effortLabel": "Thinking",
+        "isDefaultConfig": true,
+        "isBestConfig": true,
+        "specSources": {
+          "paramsB": "https://huggingface.co/Qwen/Qwen3-8B",
+          "ctxK": "https://arxiv.org/abs/2505.09388",
+          "releaseDate": "https://techcrunch.com/2025/04/28/alibaba-unveils-qwen-3-a-family-of-hybrid-ai-reasoning-models/",
+          "openness": "https://arxiv.org/abs/2505.09388"
+        },
+        "results": [
+          {
+            "benchmarkSlug": "mmlu-redux",
+            "score": 87.5,
+            "source": "self-reported",
+            "sourceUrl": "https://arxiv.org/abs/2505.09388",
+            "evaluatedAt": "2025-05-15",
+            "notes": "Qwen3 Technical Report Table 17, thinking mode"
+          },
+          {
+            "benchmarkSlug": "gpqa",
+            "score": 62,
+            "source": "self-reported",
+            "sourceUrl": "https://arxiv.org/abs/2505.09388",
+            "evaluatedAt": "2025-05-15",
+            "notes": "GPQA-Diamond, thinking mode"
+          },
+          {
+            "benchmarkSlug": "arena",
+            "score": 85.8,
+            "source": "self-reported",
+            "sourceUrl": "https://arxiv.org/abs/2505.09388",
+            "evaluatedAt": "2025-05-15",
+            "notes": "Arena-Hard, thinking mode"
+          },
+          {
+            "benchmarkSlug": "ifeval",
+            "score": 85,
+            "source": "self-reported",
+            "sourceUrl": "https://arxiv.org/abs/2505.09388",
+            "evaluatedAt": "2025-05-15",
+            "notes": "strict prompt, thinking mode"
+          },
+          {
+            "benchmarkSlug": "math",
+            "score": 97.4,
+            "source": "self-reported",
+            "sourceUrl": "https://arxiv.org/abs/2505.09388",
+            "evaluatedAt": "2025-05-15",
+            "notes": "MATH-500, thinking mode"
+          },
+          {
+            "benchmarkSlug": "aime",
+            "score": 76,
+            "source": "self-reported",
+            "sourceUrl": "https://arxiv.org/abs/2505.09388",
+            "evaluatedAt": "2025-05-15",
+            "notes": "AIME 2024, thinking mode, avg of 64 samples"
+          },
+          {
+            "benchmarkSlug": "livecodebench",
+            "score": 57.5,
+            "source": "self-reported",
+            "sourceUrl": "https://arxiv.org/abs/2505.09388",
+            "evaluatedAt": "2025-05-15",
+            "notes": "LiveCodeBench v5, thinking mode"
+          },
+          {
+            "benchmarkSlug": "bfcl",
+            "score": 68.1,
+            "source": "self-reported",
+            "sourceUrl": "https://arxiv.org/abs/2505.09388",
+            "evaluatedAt": "2025-05-15",
+            "notes": "BFCL v3 function calling, thinking mode"
+          }
+        ],
+        "verificationNotes": "Existence/specs confirmed on HF model card (Qwen/Qwen3-8B: 8.2B total, 36 layers, GQA 32Q/8KV, native ctx 32,768 extendable to 131,072 via YaRN, apache-2.0). Fetched the actual Qwen3 Technical Report PDF (arXiv 2505.09388) Table 17 and every one of the 8 claimed thinking-mode scores for Qwen3-8B matches exactly (87.5/62.0/85.8/85.0/97.4/76.0/57.5/68.1). Release date 2025-04-28 corroborated by TechCrunch's same-day report (Qwen's own blog post is timestamped 4/29 due to timezone). DashScope Singapore pricing $0.18 in / $2.1 out (thinking) confirmed on Alibaba Cloud's official model-pricing page. Minor note: ctxK=128 represents the YaRN-extended max rather than the 32K native default context — flagging for consistency but not altering since this appears to be the corpus-wide convention."
+      },
+      {
+        "name": "Qwen3-8B (Non-thinking)",
+        "org": "Alibaba",
+        "family": "Qwen3",
+        "releaseDate": "2025-04-28",
+        "status": "released",
+        "openness": "open-weights",
+        "license": "Apache 2.0",
+        "paramsB": 8.2,
+        "activeParamsB": null,
+        "archClass": "dense",
+        "archDisplay": "Dense Transformer (GQA 32Q/8KV, SwiGLU, RoPE, RMSNorm, QK-Norm; 36L)",
+        "ctxK": 128,
+        "modalities": [
+          "text"
+        ],
+        "langCount": 119,
+        "capabilities": {
+          "reasoning": true,
+          "coding": true,
+          "vision": false,
+          "functionCalling": true,
+          "toolUse": true,
+          "agentic": true
+        },
+        "apiAvailable": true,
+        "price": {
+          "input": 0.18,
+          "output": 0.7,
+          "provider": "Alibaba Cloud Model Studio (Singapore/international, DashScope)"
+        },
+        "links": {
+          "hf": "Qwen/Qwen3-8B",
+          "gh": "QwenLM/Qwen3",
+          "docs": "qwenlm.github.io/blog/qwen3"
+        },
+        "note": "Same dense 8B weights with thinking disabled via enable_thinking=False, for fast low-latency chat.",
+        "quants": [
+          "GGUF",
+          "AWQ",
+          "GPTQ",
+          "MLX",
+          "FP8"
+        ],
+        "vramQ4Gb": 5.5,
+        "vramFp16Gb": 18,
+        "tps4090": null,
+        "tpsNote": null,
+        "effortLabel": "Non-thinking",
+        "isDefaultConfig": false,
+        "isBestConfig": false,
+        "specSources": {
+          "paramsB": "https://huggingface.co/Qwen/Qwen3-8B",
+          "ctxK": "https://arxiv.org/abs/2505.09388",
+          "releaseDate": "https://techcrunch.com/2025/04/28/alibaba-unveils-qwen-3-a-family-of-hybrid-ai-reasoning-models/",
+          "openness": "https://arxiv.org/abs/2505.09388"
+        },
+        "results": [
+          {
+            "benchmarkSlug": "mmlu-redux",
+            "score": 79.5,
+            "source": "self-reported",
+            "sourceUrl": "https://arxiv.org/abs/2505.09388",
+            "evaluatedAt": "2025-05-15",
+            "notes": "Qwen3 Technical Report Table 18, non-thinking mode"
+          },
+          {
+            "benchmarkSlug": "gpqa",
+            "score": 39.3,
+            "source": "self-reported",
+            "sourceUrl": "https://arxiv.org/abs/2505.09388",
+            "evaluatedAt": "2025-05-15",
+            "notes": "GPQA-Diamond, non-thinking mode"
+          },
+          {
+            "benchmarkSlug": "arena",
+            "score": 79.6,
+            "source": "self-reported",
+            "sourceUrl": "https://arxiv.org/abs/2505.09388",
+            "evaluatedAt": "2025-05-15",
+            "notes": "Arena-Hard, non-thinking mode"
+          },
+          {
+            "benchmarkSlug": "ifeval",
+            "score": 83,
+            "source": "self-reported",
+            "sourceUrl": "https://arxiv.org/abs/2505.09388",
+            "evaluatedAt": "2025-05-15",
+            "notes": "strict prompt, non-thinking mode"
+          },
+          {
+            "benchmarkSlug": "math",
+            "score": 87.4,
+            "source": "self-reported",
+            "sourceUrl": "https://arxiv.org/abs/2505.09388",
+            "evaluatedAt": "2025-05-15",
+            "notes": "MATH-500, non-thinking mode"
+          },
+          {
+            "benchmarkSlug": "aime",
+            "score": 29.1,
+            "source": "self-reported",
+            "sourceUrl": "https://arxiv.org/abs/2505.09388",
+            "evaluatedAt": "2025-05-15",
+            "notes": "AIME 2024, non-thinking mode"
+          },
+          {
+            "benchmarkSlug": "livecodebench",
+            "score": 22.8,
+            "source": "self-reported",
+            "sourceUrl": "https://arxiv.org/abs/2505.09388",
+            "evaluatedAt": "2025-05-15",
+            "notes": "LiveCodeBench v5, non-thinking mode"
+          },
+          {
+            "benchmarkSlug": "bfcl",
+            "score": 60.2,
+            "source": "self-reported",
+            "sourceUrl": "https://arxiv.org/abs/2505.09388",
+            "evaluatedAt": "2025-05-15",
+            "notes": "BFCL v3 function calling, non-thinking mode"
+          }
+        ],
+        "verificationNotes": "Same underlying model as Qwen3-8B (Thinking); specs re-confirmed via HF card. Fetched Technical Report Table 18 and all 8 claimed non-thinking scores for Qwen3-8B match exactly (79.5/39.3/79.6/83.0/87.4/29.1/22.8/60.2). DashScope pricing $0.18 in / $0.7 out (non-thinking) confirmed on Alibaba's official model-pricing page. Release date and license verified as in the thinking-mode sibling record."
+      },
+      {
+        "name": "Qwen3-14B (Thinking)",
+        "org": "Alibaba",
+        "family": "Qwen3",
+        "releaseDate": "2025-04-28",
+        "status": "released",
+        "openness": "open-weights",
+        "license": "Apache 2.0",
+        "paramsB": 14.8,
+        "activeParamsB": null,
+        "archClass": "dense",
+        "archDisplay": "Dense Transformer (GQA 40Q/8KV, SwiGLU, RoPE, RMSNorm, QK-Norm; 40L)",
+        "ctxK": 128,
+        "modalities": [
+          "text"
+        ],
+        "langCount": 119,
+        "capabilities": {
+          "reasoning": true,
+          "coding": true,
+          "vision": false,
+          "functionCalling": true,
+          "toolUse": true,
+          "agentic": true
+        },
+        "apiAvailable": true,
+        "price": {
+          "input": 0.35,
+          "output": 4.2,
+          "provider": "Alibaba Cloud Model Studio (Singapore/international, DashScope)"
+        },
+        "links": {
+          "hf": "Qwen/Qwen3-14B",
+          "gh": "QwenLM/Qwen3",
+          "docs": "qwenlm.github.io/blog/qwen3"
+        },
+        "note": "Mid-size dense Gen-3 model in thinking mode; beats Qwen2.5-14B/32B-Instruct baselines on reasoning-heavy tasks.",
+        "quants": [
+          "GGUF",
+          "AWQ",
+          "GPTQ",
+          "MLX",
+          "FP8"
+        ],
+        "vramQ4Gb": 9,
+        "vramFp16Gb": 31.1,
+        "tps4090": null,
+        "tpsNote": null,
+        "effortLabel": "Thinking",
+        "isDefaultConfig": true,
+        "isBestConfig": true,
+        "specSources": {
+          "paramsB": "https://huggingface.co/Qwen/Qwen3-14B",
+          "ctxK": "https://arxiv.org/abs/2505.09388",
+          "releaseDate": "https://techcrunch.com/2025/04/28/alibaba-unveils-qwen-3-a-family-of-hybrid-ai-reasoning-models/",
+          "openness": "https://arxiv.org/abs/2505.09388"
+        },
+        "results": [
+          {
+            "benchmarkSlug": "mmlu-redux",
+            "score": 88.6,
+            "source": "self-reported",
+            "sourceUrl": "https://arxiv.org/abs/2505.09388",
+            "evaluatedAt": "2025-05-15",
+            "notes": "Qwen3 Technical Report Table 15, thinking mode"
+          },
+          {
+            "benchmarkSlug": "gpqa",
+            "score": 64,
+            "source": "self-reported",
+            "sourceUrl": "https://arxiv.org/abs/2505.09388",
+            "evaluatedAt": "2025-05-15",
+            "notes": "GPQA-Diamond, thinking mode"
+          },
+          {
+            "benchmarkSlug": "arena",
+            "score": 91.7,
+            "source": "self-reported",
+            "sourceUrl": "https://arxiv.org/abs/2505.09388",
+            "evaluatedAt": "2025-05-15",
+            "notes": "Arena-Hard, thinking mode"
+          },
+          {
+            "benchmarkSlug": "ifeval",
+            "score": 85.4,
+            "source": "self-reported",
+            "sourceUrl": "https://arxiv.org/abs/2505.09388",
+            "evaluatedAt": "2025-05-15",
+            "notes": "strict prompt, thinking mode"
+          },
+          {
+            "benchmarkSlug": "math",
+            "score": 96.8,
+            "source": "self-reported",
+            "sourceUrl": "https://arxiv.org/abs/2505.09388",
+            "evaluatedAt": "2025-05-15",
+            "notes": "MATH-500, thinking mode"
+          },
+          {
+            "benchmarkSlug": "aime",
+            "score": 79.3,
+            "source": "self-reported",
+            "sourceUrl": "https://arxiv.org/abs/2505.09388",
+            "evaluatedAt": "2025-05-15",
+            "notes": "AIME 2024, thinking mode"
+          },
+          {
+            "benchmarkSlug": "livecodebench",
+            "score": 63.5,
+            "source": "self-reported",
+            "sourceUrl": "https://arxiv.org/abs/2505.09388",
+            "evaluatedAt": "2025-05-15",
+            "notes": "LiveCodeBench v5, thinking mode"
+          },
+          {
+            "benchmarkSlug": "bfcl",
+            "score": 70.4,
+            "source": "self-reported",
+            "sourceUrl": "https://arxiv.org/abs/2505.09388",
+            "evaluatedAt": "2025-05-15",
+            "notes": "BFCL v3 function calling, thinking mode"
+          }
+        ],
+        "verificationNotes": "Existence/specs confirmed on HF model card (Qwen/Qwen3-14B: 14.8B total, 40 layers, GQA 40Q/8KV, apache-2.0, native 32K/YaRN 131,072). Fetched Technical Report Table 15 (Qwen3-30B-A3B/Qwen3-14B thinking comparison) and all 8 claimed scores for the Qwen3-14B column match exactly (88.6/64.0/91.7/85.4/96.8/79.3/63.5/70.4). DashScope pricing $0.35 in / $4.2 out (thinking) confirmed on Alibaba's official pricing page. Note the 'note' field's claim that it beats Qwen2.5-32B-Instruct is only true on some benchmarks in Table 16 (e.g. it trails on MMLU-Redux 82.0 vs 83.9 and LiveCodeBench 29.0 vs 30.7) — left as a subjective marketing-style note, not a hard data field."
+      },
+      {
+        "name": "Qwen3-14B (Non-thinking)",
+        "org": "Alibaba",
+        "family": "Qwen3",
+        "releaseDate": "2025-04-28",
+        "status": "released",
+        "openness": "open-weights",
+        "license": "Apache 2.0",
+        "paramsB": 14.8,
+        "activeParamsB": null,
+        "archClass": "dense",
+        "archDisplay": "Dense Transformer (GQA 40Q/8KV, SwiGLU, RoPE, RMSNorm, QK-Norm; 40L)",
+        "ctxK": 128,
+        "modalities": [
+          "text"
+        ],
+        "langCount": 119,
+        "capabilities": {
+          "reasoning": true,
+          "coding": true,
+          "vision": false,
+          "functionCalling": true,
+          "toolUse": true,
+          "agentic": true
+        },
+        "apiAvailable": true,
+        "price": {
+          "input": 0.35,
+          "output": 1.4,
+          "provider": "Alibaba Cloud Model Studio (Singapore/international, DashScope)"
+        },
+        "links": {
+          "hf": "Qwen/Qwen3-14B",
+          "gh": "QwenLM/Qwen3",
+          "docs": "qwenlm.github.io/blog/qwen3"
+        },
+        "note": "Same dense 14B weights with thinking disabled, for fast general-purpose responses.",
+        "quants": [
+          "GGUF",
+          "AWQ",
+          "GPTQ",
+          "MLX",
+          "FP8"
+        ],
+        "vramQ4Gb": 9,
+        "vramFp16Gb": 31.1,
+        "tps4090": null,
+        "tpsNote": null,
+        "effortLabel": "Non-thinking",
+        "isDefaultConfig": false,
+        "isBestConfig": false,
+        "specSources": {
+          "paramsB": "https://huggingface.co/Qwen/Qwen3-14B",
+          "ctxK": "https://arxiv.org/abs/2505.09388",
+          "releaseDate": "https://techcrunch.com/2025/04/28/alibaba-unveils-qwen-3-a-family-of-hybrid-ai-reasoning-models/",
+          "openness": "https://arxiv.org/abs/2505.09388"
+        },
+        "results": [
+          {
+            "benchmarkSlug": "mmlu-redux",
+            "score": 82,
+            "source": "self-reported",
+            "sourceUrl": "https://arxiv.org/abs/2505.09388",
+            "evaluatedAt": "2025-05-15",
+            "notes": "Qwen3 Technical Report Table 16, non-thinking mode"
+          },
+          {
+            "benchmarkSlug": "gpqa",
+            "score": 54.8,
+            "source": "self-reported",
+            "sourceUrl": "https://arxiv.org/abs/2505.09388",
+            "evaluatedAt": "2025-05-15",
+            "notes": "GPQA-Diamond, non-thinking mode"
+          },
+          {
+            "benchmarkSlug": "arena",
+            "score": 86.3,
+            "source": "self-reported",
+            "sourceUrl": "https://arxiv.org/abs/2505.09388",
+            "evaluatedAt": "2025-05-15",
+            "notes": "Arena-Hard, non-thinking mode"
+          },
+          {
+            "benchmarkSlug": "ifeval",
+            "score": 84.8,
+            "source": "self-reported",
+            "sourceUrl": "https://arxiv.org/abs/2505.09388",
+            "evaluatedAt": "2025-05-15",
+            "notes": "strict prompt, non-thinking mode"
+          },
+          {
+            "benchmarkSlug": "math",
+            "score": 90,
+            "source": "self-reported",
+            "sourceUrl": "https://arxiv.org/abs/2505.09388",
+            "evaluatedAt": "2025-05-15",
+            "notes": "MATH-500, non-thinking mode"
+          },
+          {
+            "benchmarkSlug": "aime",
+            "score": 31.7,
+            "source": "self-reported",
+            "sourceUrl": "https://arxiv.org/abs/2505.09388",
+            "evaluatedAt": "2025-05-15",
+            "notes": "AIME 2024, non-thinking mode"
+          },
+          {
+            "benchmarkSlug": "livecodebench",
+            "score": 29,
+            "source": "self-reported",
+            "sourceUrl": "https://arxiv.org/abs/2505.09388",
+            "evaluatedAt": "2025-05-15",
+            "notes": "LiveCodeBench v5, non-thinking mode"
+          },
+          {
+            "benchmarkSlug": "bfcl",
+            "score": 61.5,
+            "source": "self-reported",
+            "sourceUrl": "https://arxiv.org/abs/2505.09388",
+            "evaluatedAt": "2025-05-15",
+            "notes": "BFCL v3 function calling, non-thinking mode"
+          }
+        ],
+        "verificationNotes": "Same underlying model as Qwen3-14B (Thinking). Fetched Technical Report Table 16 and all 8 claimed non-thinking scores for the Qwen3-14B column match exactly (82.0/54.8/86.3/84.8/90.0/31.7/29.0/61.5). DashScope pricing $0.35 in / $1.4 out (non-thinking) confirmed on Alibaba's official pricing page."
+      },
+      {
+        "name": "Qwen3-32B (Thinking)",
+        "org": "Alibaba",
+        "family": "Qwen3",
+        "releaseDate": "2025-04-28",
+        "status": "released",
+        "openness": "open-weights",
+        "license": "Apache 2.0",
+        "paramsB": 32.8,
+        "activeParamsB": null,
+        "archClass": "dense",
+        "archDisplay": "Dense Transformer (GQA 64Q/8KV, SwiGLU, RoPE, RMSNorm, QK-Norm; 64L)",
+        "ctxK": 128,
+        "modalities": [
+          "text"
+        ],
+        "langCount": 119,
+        "capabilities": {
+          "reasoning": true,
+          "coding": true,
+          "vision": false,
+          "functionCalling": true,
+          "toolUse": true,
+          "agentic": true
+        },
+        "apiAvailable": true,
+        "price": {
+          "input": 0.16,
+          "output": 0.64,
+          "provider": "Alibaba Cloud Model Studio (Singapore/international, DashScope)"
+        },
+        "links": {
+          "hf": "Qwen/Qwen3-32B",
+          "gh": "QwenLM/Qwen3",
+          "docs": "qwenlm.github.io/blog/qwen3"
+        },
+        "note": "Largest Gen-3 dense model in thinking mode; outperforms QwQ-32B and rivals OpenAI o3-mini (medium) on reasoning.",
+        "quants": [
+          "GGUF",
+          "AWQ",
+          "GPTQ",
+          "MLX",
+          "FP8"
+        ],
+        "vramQ4Gb": 19,
+        "vramFp16Gb": 68,
+        "tps4090": null,
+        "tpsNote": "32.8B dense model exceeds a single RTX 4090's 24GB VRAM at FP16 and is tight even at Q4 with long context; no verified single-4090 llama.cpp figure found.",
+        "effortLabel": "Thinking",
+        "isDefaultConfig": true,
+        "isBestConfig": true,
+        "specSources": {
+          "paramsB": "https://huggingface.co/Qwen/Qwen3-32B",
+          "ctxK": "https://arxiv.org/abs/2505.09388",
+          "releaseDate": "https://techcrunch.com/2025/04/28/alibaba-unveils-qwen-3-a-family-of-hybrid-ai-reasoning-models/",
+          "openness": "https://arxiv.org/abs/2505.09388"
+        },
+        "results": [
+          {
+            "benchmarkSlug": "mmlu-redux",
+            "score": 90.9,
+            "source": "self-reported",
+            "sourceUrl": "https://arxiv.org/abs/2505.09388",
+            "evaluatedAt": "2025-05-15",
+            "notes": "Qwen3 Technical Report Table 13, thinking mode"
+          },
+          {
+            "benchmarkSlug": "gpqa",
+            "score": 68.4,
+            "source": "self-reported",
+            "sourceUrl": "https://arxiv.org/abs/2505.09388",
+            "evaluatedAt": "2025-05-15",
+            "notes": "GPQA-Diamond, thinking mode"
+          },
+          {
+            "benchmarkSlug": "arena",
+            "score": 93.8,
+            "source": "self-reported",
+            "sourceUrl": "https://arxiv.org/abs/2505.09388",
+            "evaluatedAt": "2025-05-15",
+            "notes": "Arena-Hard, thinking mode"
+          },
+          {
+            "benchmarkSlug": "ifeval",
+            "score": 85,
+            "source": "self-reported",
+            "sourceUrl": "https://arxiv.org/abs/2505.09388",
+            "evaluatedAt": "2025-05-15",
+            "notes": "strict prompt, thinking mode"
+          },
+          {
+            "benchmarkSlug": "math",
+            "score": 97.2,
+            "source": "self-reported",
+            "sourceUrl": "https://arxiv.org/abs/2505.09388",
+            "evaluatedAt": "2025-05-15",
+            "notes": "MATH-500, thinking mode"
+          },
+          {
+            "benchmarkSlug": "aime",
+            "score": 81.4,
+            "source": "self-reported",
+            "sourceUrl": "https://arxiv.org/abs/2505.09388",
+            "evaluatedAt": "2025-05-15",
+            "notes": "AIME 2024, thinking mode"
+          },
+          {
+            "benchmarkSlug": "livecodebench",
+            "score": 65.7,
+            "source": "self-reported",
+            "sourceUrl": "https://arxiv.org/abs/2505.09388",
+            "evaluatedAt": "2025-05-15",
+            "notes": "LiveCodeBench v5, thinking mode"
+          },
+          {
+            "benchmarkSlug": "bfcl",
+            "score": 70.3,
+            "source": "self-reported",
+            "sourceUrl": "https://arxiv.org/abs/2505.09388",
+            "evaluatedAt": "2025-05-15",
+            "notes": "BFCL v3 function calling, thinking mode"
+          }
+        ],
+        "verificationNotes": "Existence/specs confirmed on HF model card (Qwen/Qwen3-32B: 32.8B total, 64 layers, GQA 64Q/8KV, apache-2.0, native 32K/YaRN 131,072). Fetched Technical Report Table 13 (Qwen3-32B thinking vs DeepSeek-R1-Distill-Llama-70B/QwQ-32B/o3-mini) and all 8 claimed scores match exactly (90.9/68.4/93.8/85.0/97.2/81.4/65.7/70.3). DashScope pricing $0.16 in / $0.64 out confirmed on Alibaba's official pricing page (Alibaba charges the same $0.64 output rate for both thinking and non-thinking on this model, unlike the 8B/14B tiers)."
+      },
+      {
+        "name": "Qwen3-32B (Non-thinking)",
+        "org": "Alibaba",
+        "family": "Qwen3",
+        "releaseDate": "2025-04-28",
+        "status": "released",
+        "openness": "open-weights",
+        "license": "Apache 2.0",
+        "paramsB": 32.8,
+        "activeParamsB": null,
+        "archClass": "dense",
+        "archDisplay": "Dense Transformer (GQA 64Q/8KV, SwiGLU, RoPE, RMSNorm, QK-Norm; 64L)",
+        "ctxK": 128,
+        "modalities": [
+          "text"
+        ],
+        "langCount": 119,
+        "capabilities": {
+          "reasoning": true,
+          "coding": true,
+          "vision": false,
+          "functionCalling": true,
+          "toolUse": true,
+          "agentic": true
+        },
+        "apiAvailable": true,
+        "price": {
+          "input": 0.16,
+          "output": 0.64,
+          "provider": "Alibaba Cloud Model Studio (Singapore/international, DashScope)"
+        },
+        "links": {
+          "hf": "Qwen/Qwen3-32B",
+          "gh": "QwenLM/Qwen3",
+          "docs": "qwenlm.github.io/blog/qwen3"
+        },
+        "note": "Same dense 32B weights, non-thinking mode; matches Qwen2.5-72B-Instruct despite under half the parameters.",
+        "quants": [
+          "GGUF",
+          "AWQ",
+          "GPTQ",
+          "MLX",
+          "FP8"
+        ],
+        "vramQ4Gb": 19,
+        "vramFp16Gb": 68,
+        "tps4090": null,
+        "tpsNote": "32.8B dense model exceeds a single RTX 4090's 24GB VRAM at FP16 and is tight even at Q4 with long context; no verified single-4090 llama.cpp figure found.",
+        "effortLabel": "Non-thinking",
+        "isDefaultConfig": false,
+        "isBestConfig": false,
+        "specSources": {
+          "paramsB": "https://huggingface.co/Qwen/Qwen3-32B",
+          "ctxK": "https://arxiv.org/abs/2505.09388",
+          "releaseDate": "https://techcrunch.com/2025/04/28/alibaba-unveils-qwen-3-a-family-of-hybrid-ai-reasoning-models/",
+          "openness": "https://arxiv.org/abs/2505.09388"
+        },
+        "results": [
+          {
+            "benchmarkSlug": "mmlu-redux",
+            "score": 85.7,
+            "source": "self-reported",
+            "sourceUrl": "https://arxiv.org/abs/2505.09388",
+            "evaluatedAt": "2025-05-15",
+            "notes": "Qwen3 Technical Report Table 14, non-thinking mode"
+          },
+          {
+            "benchmarkSlug": "gpqa",
+            "score": 54.6,
+            "source": "self-reported",
+            "sourceUrl": "https://arxiv.org/abs/2505.09388",
+            "evaluatedAt": "2025-05-15",
+            "notes": "GPQA-Diamond, non-thinking mode"
+          },
+          {
+            "benchmarkSlug": "arena",
+            "score": 92.8,
+            "source": "self-reported",
+            "sourceUrl": "https://arxiv.org/abs/2505.09388",
+            "evaluatedAt": "2025-05-15",
+            "notes": "Arena-Hard, non-thinking mode"
+          },
+          {
+            "benchmarkSlug": "ifeval",
+            "score": 83.2,
+            "source": "self-reported",
+            "sourceUrl": "https://arxiv.org/abs/2505.09388",
+            "evaluatedAt": "2025-05-15",
+            "notes": "strict prompt, non-thinking mode"
+          },
+          {
+            "benchmarkSlug": "math",
+            "score": 88.6,
+            "source": "self-reported",
+            "sourceUrl": "https://arxiv.org/abs/2505.09388",
+            "evaluatedAt": "2025-05-15",
+            "notes": "MATH-500, non-thinking mode"
+          },
+          {
+            "benchmarkSlug": "aime",
+            "score": 31,
+            "source": "self-reported",
+            "sourceUrl": "https://arxiv.org/abs/2505.09388",
+            "evaluatedAt": "2025-05-15",
+            "notes": "AIME 2024, non-thinking mode"
+          },
+          {
+            "benchmarkSlug": "livecodebench",
+            "score": 31.3,
+            "source": "self-reported",
+            "sourceUrl": "https://arxiv.org/abs/2505.09388",
+            "evaluatedAt": "2025-05-15",
+            "notes": "LiveCodeBench v5, non-thinking mode"
+          },
+          {
+            "benchmarkSlug": "bfcl",
+            "score": 63,
+            "source": "self-reported",
+            "sourceUrl": "https://arxiv.org/abs/2505.09388",
+            "evaluatedAt": "2025-05-15",
+            "notes": "BFCL v3 function calling, non-thinking mode"
+          }
+        ],
+        "verificationNotes": "Same underlying model as Qwen3-32B (Thinking). Fetched Technical Report Table 14 and all 8 claimed non-thinking scores match exactly (85.7/54.6/92.8/83.2/88.6/31.0/31.3/63.0). DashScope pricing $0.16 in / $0.64 out confirmed on Alibaba's official pricing page (identical output rate to thinking mode for this tier)."
+      },
+      {
+        "name": "Qwen3-30B-A3B (Thinking)",
+        "org": "Alibaba",
+        "family": "Qwen3",
+        "releaseDate": "2025-04-28",
+        "status": "released",
+        "openness": "open-weights",
+        "license": "Apache 2.0",
+        "paramsB": 30.5,
+        "activeParamsB": 3.3,
+        "archClass": "moe",
+        "archDisplay": "MoE Transformer (128 experts, 8 active; GQA 32Q/4KV; 48L)",
+        "ctxK": 128,
+        "modalities": [
+          "text"
+        ],
+        "langCount": 119,
+        "capabilities": {
+          "reasoning": true,
+          "coding": true,
+          "vision": false,
+          "functionCalling": true,
+          "toolUse": true,
+          "agentic": true
+        },
+        "apiAvailable": true,
+        "price": {
+          "input": 0.2,
+          "output": 2.4,
+          "provider": "Alibaba Cloud Model Studio (Singapore/international, DashScope)"
+        },
+        "links": {
+          "hf": "Qwen/Qwen3-30B-A3B",
+          "gh": "QwenLM/Qwen3",
+          "docs": "qwenlm.github.io/blog/qwen3"
+        },
+        "note": "Efficient Gen-3 MoE (3.3B active/30.5B total) in thinking mode; rivals QwQ-32B with roughly 1/10th the activated params.",
+        "quants": [
+          "GGUF",
+          "AWQ",
+          "GPTQ",
+          "MLX",
+          "FP8"
+        ],
+        "vramQ4Gb": 18,
+        "vramFp16Gb": 64,
+        "tps4090": null,
+        "tpsNote": null,
+        "effortLabel": "Thinking",
+        "isDefaultConfig": true,
+        "isBestConfig": true,
+        "specSources": {
+          "paramsB": "https://huggingface.co/Qwen/Qwen3-30B-A3B",
+          "ctxK": "https://arxiv.org/abs/2505.09388",
+          "releaseDate": "https://techcrunch.com/2025/04/28/alibaba-unveils-qwen-3-a-family-of-hybrid-ai-reasoning-models/",
+          "openness": "https://arxiv.org/abs/2505.09388"
+        },
+        "results": [
+          {
+            "benchmarkSlug": "mmlu-redux",
+            "score": 89.5,
+            "source": "self-reported",
+            "sourceUrl": "https://arxiv.org/abs/2505.09388",
+            "evaluatedAt": "2025-05-15",
+            "notes": "Qwen3 Technical Report Table 15, thinking mode — confirmed by direct read of table (col Qwen3-30B-A3B, MMLU-Redux row)"
+          },
+          {
+            "benchmarkSlug": "gpqa",
+            "score": 65.8,
+            "source": "self-reported",
+            "sourceUrl": "https://arxiv.org/abs/2505.09388",
+            "evaluatedAt": "2025-05-15",
+            "notes": "GPQA-Diamond, thinking mode — confirmed Table 15"
+          },
+          {
+            "benchmarkSlug": "arena",
+            "score": 91,
+            "source": "self-reported",
+            "sourceUrl": "https://arxiv.org/abs/2505.09388",
+            "evaluatedAt": "2025-05-15",
+            "notes": "Arena-Hard, thinking mode — confirmed Table 15 (91.0)"
+          },
+          {
+            "benchmarkSlug": "ifeval",
+            "score": 86.5,
+            "source": "self-reported",
+            "sourceUrl": "https://arxiv.org/abs/2505.09388",
+            "evaluatedAt": "2025-05-15",
+            "notes": "strict prompt, thinking mode — confirmed Table 15"
+          },
+          {
+            "benchmarkSlug": "math",
+            "score": 98,
+            "source": "self-reported",
+            "sourceUrl": "https://arxiv.org/abs/2505.09388",
+            "evaluatedAt": "2025-05-15",
+            "notes": "MATH-500, thinking mode — confirmed Table 15 (98.0)"
+          },
+          {
+            "benchmarkSlug": "aime",
+            "score": 80.4,
+            "source": "self-reported",
+            "sourceUrl": "https://arxiv.org/abs/2505.09388",
+            "evaluatedAt": "2025-05-15",
+            "notes": "AIME 2024, thinking mode — confirmed Table 15"
+          },
+          {
+            "benchmarkSlug": "livecodebench",
+            "score": 62.6,
+            "source": "self-reported",
+            "sourceUrl": "https://arxiv.org/abs/2505.09388",
+            "evaluatedAt": "2025-05-15",
+            "notes": "LiveCodeBench v5, thinking mode — confirmed Table 15"
+          },
+          {
+            "benchmarkSlug": "bfcl",
+            "score": 69.1,
+            "source": "self-reported",
+            "sourceUrl": "https://arxiv.org/abs/2505.09388",
+            "evaluatedAt": "2025-05-15",
+            "notes": "BFCL v3 function calling, thinking mode — confirmed Table 15"
+          }
+        ],
+        "verificationNotes": "Fully verified against primary source: fetched Qwen3 Technical Report PDF (arXiv 2505.09388) directly and visually confirmed Table 2 (arch: 48L, 32Q/4KV, 128/8 experts, 128K ctx) and Table 15 (all 8 benchmark scores match exactly). HF page confirmed 30.5B total/3.3B active params, Apache-2.0. Release date (2025-04-28) and 119 languages corroborated by TechCrunch and paper abstract. DashScope international pricing ($0.2/$2.4 thinking) confirmed on Alibaba Cloud's official model-pricing doc. No changes made — record was accurate."
+      },
+      {
+        "name": "Qwen3-30B-A3B (Non-thinking)",
+        "org": "Alibaba",
+        "family": "Qwen3",
+        "releaseDate": "2025-04-28",
+        "status": "released",
+        "openness": "open-weights",
+        "license": "Apache 2.0",
+        "paramsB": 30.5,
+        "activeParamsB": 3.3,
+        "archClass": "moe",
+        "archDisplay": "MoE Transformer (128 experts, 8 active; GQA 32Q/4KV; 48L)",
+        "ctxK": 128,
+        "modalities": [
+          "text"
+        ],
+        "langCount": 119,
+        "capabilities": {
+          "reasoning": true,
+          "coding": true,
+          "vision": false,
+          "functionCalling": true,
+          "toolUse": true,
+          "agentic": true
+        },
+        "apiAvailable": true,
+        "price": {
+          "input": 0.2,
+          "output": 0.8,
+          "provider": "Alibaba Cloud Model Studio (Singapore/international, DashScope)"
+        },
+        "links": {
+          "hf": "Qwen/Qwen3-30B-A3B",
+          "gh": "QwenLM/Qwen3",
+          "docs": "qwenlm.github.io/blog/qwen3"
+        },
+        "note": "Same MoE weights with thinking disabled; strong efficiency-to-quality ratio among sub-30B-active models.",
+        "quants": [
+          "GGUF",
+          "AWQ",
+          "GPTQ",
+          "MLX",
+          "FP8"
+        ],
+        "vramQ4Gb": 18,
+        "vramFp16Gb": 64,
+        "tps4090": null,
+        "tpsNote": null,
+        "effortLabel": "Non-thinking",
+        "isDefaultConfig": false,
+        "isBestConfig": false,
+        "specSources": {
+          "paramsB": "https://huggingface.co/Qwen/Qwen3-30B-A3B",
+          "ctxK": "https://arxiv.org/abs/2505.09388",
+          "releaseDate": "https://techcrunch.com/2025/04/28/alibaba-unveils-qwen-3-a-family-of-hybrid-ai-reasoning-models/",
+          "openness": "https://arxiv.org/abs/2505.09388"
+        },
+        "results": [
+          {
+            "benchmarkSlug": "mmlu-redux",
+            "score": 84.1,
+            "source": "self-reported",
+            "sourceUrl": "https://arxiv.org/abs/2505.09388",
+            "evaluatedAt": "2025-05-15",
+            "notes": "Qwen3 Technical Report Table 16, non-thinking mode — confirmed by direct read of table"
+          },
+          {
+            "benchmarkSlug": "arena",
+            "score": 88,
+            "source": "self-reported",
+            "sourceUrl": "https://arxiv.org/abs/2505.09388",
+            "evaluatedAt": "2025-05-15",
+            "notes": "Arena-Hard, non-thinking mode — confirmed Table 16 (88.0)"
+          },
+          {
+            "benchmarkSlug": "ifeval",
+            "score": 83.7,
+            "source": "self-reported",
+            "sourceUrl": "https://arxiv.org/abs/2505.09388",
+            "evaluatedAt": "2025-05-15",
+            "notes": "strict prompt, non-thinking mode — confirmed Table 16"
+          },
+          {
+            "benchmarkSlug": "math",
+            "score": 89.8,
+            "source": "self-reported",
+            "sourceUrl": "https://arxiv.org/abs/2505.09388",
+            "evaluatedAt": "2025-05-15",
+            "notes": "MATH-500, non-thinking mode — confirmed Table 16"
+          },
+          {
+            "benchmarkSlug": "aime",
+            "score": 32.8,
+            "source": "self-reported",
+            "sourceUrl": "https://arxiv.org/abs/2505.09388",
+            "evaluatedAt": "2025-05-15",
+            "notes": "AIME 2024, non-thinking mode — confirmed Table 16"
+          },
+          {
+            "benchmarkSlug": "livecodebench",
+            "score": 29.8,
+            "source": "self-reported",
+            "sourceUrl": "https://arxiv.org/abs/2505.09388",
+            "evaluatedAt": "2025-05-15",
+            "notes": "LiveCodeBench v5, non-thinking mode — confirmed Table 16"
+          },
+          {
+            "benchmarkSlug": "bfcl",
+            "score": 58.6,
+            "source": "self-reported",
+            "sourceUrl": "https://arxiv.org/abs/2505.09388",
+            "evaluatedAt": "2025-05-15",
+            "notes": "BFCL v3 function calling, non-thinking mode — confirmed Table 16"
+          }
+        ],
+        "verificationNotes": "Fully verified against primary source: visually confirmed Table 16 of arXiv 2505.09388 — all 7 benchmark scores match exactly. Pricing ($0.2/$0.8 non-thinking) confirmed on Alibaba Cloud's official model-pricing documentation. No changes made — record was accurate."
+      },
+      {
+        "name": "Qwen3-235B-A22B (Thinking)",
+        "org": "Alibaba",
+        "family": "Qwen3",
+        "releaseDate": "2025-04-28",
+        "status": "released",
+        "openness": "open-weights",
+        "license": "Apache 2.0",
+        "paramsB": 235,
+        "activeParamsB": 22,
+        "archClass": "moe",
+        "archDisplay": "MoE Transformer (128 experts, 8 active; GQA 64Q/4KV; 94L)",
+        "ctxK": 128,
+        "modalities": [
+          "text"
+        ],
+        "langCount": 119,
+        "capabilities": {
+          "reasoning": true,
+          "coding": true,
+          "vision": false,
+          "functionCalling": true,
+          "toolUse": true,
+          "agentic": true
+        },
+        "apiAvailable": true,
+        "price": {
+          "input": 0.7,
+          "output": 8.4,
+          "provider": "Alibaba Cloud Model Studio (Singapore/international, DashScope)"
+        },
+        "links": {
+          "hf": "Qwen/Qwen3-235B-A22B",
+          "gh": "QwenLM/Qwen3",
+          "docs": "qwenlm.github.io/blog/qwen3"
+        },
+        "note": "Gen-3 flagship MoE (22B active/235B total) in thinking mode; rivals DeepSeek-R1, o1, and Gemini 2.5 Pro on reasoning.",
+        "quants": [
+          "GGUF",
+          "AWQ",
+          "GPTQ",
+          "MLX",
+          "FP8"
+        ],
+        "vramQ4Gb": 135,
+        "vramFp16Gb": 490,
+        "tps4090": null,
+        "tpsNote": "Too large for a single RTX 4090 even at Q4 (~135GB weights); requires multi-GPU or CPU offload, so no single-4090 tokens/sec figure applies.",
+        "effortLabel": "Thinking",
+        "isDefaultConfig": true,
+        "isBestConfig": true,
+        "specSources": {
+          "paramsB": "https://huggingface.co/Qwen/Qwen3-235B-A22B",
+          "ctxK": "https://arxiv.org/abs/2505.09388",
+          "releaseDate": "https://techcrunch.com/2025/04/28/alibaba-unveils-qwen-3-a-family-of-hybrid-ai-reasoning-models/",
+          "openness": "https://arxiv.org/abs/2505.09388"
+        },
+        "results": [
+          {
+            "benchmarkSlug": "mmlu-redux",
+            "score": 92.7,
+            "source": "self-reported",
+            "sourceUrl": "https://arxiv.org/abs/2505.09388",
+            "evaluatedAt": "2025-05-15",
+            "notes": "Qwen3 Technical Report Table 11, thinking mode — confirmed by direct read of table"
+          },
+          {
+            "benchmarkSlug": "gpqa",
+            "score": 71.1,
+            "source": "self-reported",
+            "sourceUrl": "https://arxiv.org/abs/2505.09388",
+            "evaluatedAt": "2025-05-15",
+            "notes": "GPQA-Diamond, thinking mode — confirmed Table 11"
+          },
+          {
+            "benchmarkSlug": "arena",
+            "score": 95.6,
+            "source": "self-reported",
+            "sourceUrl": "https://arxiv.org/abs/2505.09388",
+            "evaluatedAt": "2025-05-15",
+            "notes": "Arena-Hard, thinking mode — confirmed Table 11"
+          },
+          {
+            "benchmarkSlug": "ifeval",
+            "score": 83.4,
+            "source": "self-reported",
+            "sourceUrl": "https://arxiv.org/abs/2505.09388",
+            "evaluatedAt": "2025-05-15",
+            "notes": "strict prompt, thinking mode — confirmed Table 11"
+          },
+          {
+            "benchmarkSlug": "math",
+            "score": 98,
+            "source": "self-reported",
+            "sourceUrl": "https://arxiv.org/abs/2505.09388",
+            "evaluatedAt": "2025-05-15",
+            "notes": "MATH-500, thinking mode — confirmed Table 11 (98.0)"
+          },
+          {
+            "benchmarkSlug": "aime",
+            "score": 85.7,
+            "source": "self-reported",
+            "sourceUrl": "https://arxiv.org/abs/2505.09388",
+            "evaluatedAt": "2025-05-15",
+            "notes": "AIME 2024, thinking mode — confirmed Table 11 and paper abstract/intro"
+          },
+          {
+            "benchmarkSlug": "livecodebench",
+            "score": 70.7,
+            "source": "self-reported",
+            "sourceUrl": "https://arxiv.org/abs/2505.09388",
+            "evaluatedAt": "2025-05-15",
+            "notes": "LiveCodeBench v5, thinking mode — confirmed Table 11 and paper intro"
+          },
+          {
+            "benchmarkSlug": "bfcl",
+            "score": 70.8,
+            "source": "self-reported",
+            "sourceUrl": "https://arxiv.org/abs/2505.09388",
+            "evaluatedAt": "2025-05-15",
+            "notes": "BFCL v3 function calling, thinking mode — confirmed Table 11 and paper intro"
+          }
+        ],
+        "verificationNotes": "Fully verified against primary source: visually confirmed Table 2 (94L, 64Q/4KV, 128/8 experts, 128K ctx) and Table 11 of arXiv 2505.09388 — all 8 benchmark scores match exactly, and AIME'24/LiveCodeBench/BFCL figures also independently corroborated in the paper's own abstract/intro text. HF page confirmed 235B total/22B active params, Apache-2.0. Pricing ($0.7/$8.4 thinking) confirmed on Alibaba Cloud's official pricing doc. No changes made — record was accurate."
+      },
+      {
+        "name": "Qwen3-235B-A22B (Non-thinking)",
+        "org": "Alibaba",
+        "family": "Qwen3",
+        "releaseDate": "2025-04-28",
+        "status": "released",
+        "openness": "open-weights",
+        "license": "Apache 2.0",
+        "paramsB": 235,
+        "activeParamsB": 22,
+        "archClass": "moe",
+        "archDisplay": "MoE Transformer (128 experts, 8 active; GQA 64Q/4KV; 94L)",
+        "ctxK": 128,
+        "modalities": [
+          "text"
+        ],
+        "langCount": 119,
+        "capabilities": {
+          "reasoning": true,
+          "coding": true,
+          "vision": false,
+          "functionCalling": true,
+          "toolUse": true,
+          "agentic": true
+        },
+        "apiAvailable": true,
+        "price": {
+          "input": 0.7,
+          "output": 2.8,
+          "provider": "Alibaba Cloud Model Studio (Singapore/international, DashScope)"
+        },
+        "links": {
+          "hf": "Qwen/Qwen3-235B-A22B",
+          "gh": "QwenLM/Qwen3",
+          "docs": "qwenlm.github.io/blog/qwen3"
+        },
+        "note": "Same flagship MoE weights, thinking disabled; still beats GPT-4o and DeepSeek-V3 on most benchmarks.",
+        "quants": [
+          "GGUF",
+          "AWQ",
+          "GPTQ",
+          "MLX",
+          "FP8"
+        ],
+        "vramQ4Gb": 135,
+        "vramFp16Gb": 490,
+        "tps4090": null,
+        "tpsNote": "Too large for a single RTX 4090 even at Q4 (~135GB weights); requires multi-GPU or CPU offload, so no single-4090 tokens/sec figure applies.",
+        "effortLabel": "Non-thinking",
+        "isDefaultConfig": false,
+        "isBestConfig": false,
+        "specSources": {
+          "paramsB": "https://huggingface.co/Qwen/Qwen3-235B-A22B",
+          "ctxK": "https://arxiv.org/abs/2505.09388",
+          "releaseDate": "https://techcrunch.com/2025/04/28/alibaba-unveils-qwen-3-a-family-of-hybrid-ai-reasoning-models/",
+          "openness": "https://arxiv.org/abs/2505.09388"
+        },
+        "results": [
+          {
+            "benchmarkSlug": "mmlu-redux",
+            "score": 89.2,
+            "source": "self-reported",
+            "sourceUrl": "https://arxiv.org/abs/2505.09388",
+            "evaluatedAt": "2025-05-15",
+            "notes": "Qwen3 Technical Report Table 12, non-thinking mode — confirmed by direct read of table"
+          },
+          {
+            "benchmarkSlug": "gpqa",
+            "score": 62.9,
+            "source": "self-reported",
+            "sourceUrl": "https://arxiv.org/abs/2505.09388",
+            "evaluatedAt": "2025-05-15",
+            "notes": "GPQA-Diamond, non-thinking mode — confirmed Table 12"
+          },
+          {
+            "benchmarkSlug": "arena",
+            "score": 96.1,
+            "source": "self-reported",
+            "sourceUrl": "https://arxiv.org/abs/2505.09388",
+            "evaluatedAt": "2025-05-15",
+            "notes": "Arena-Hard, non-thinking mode — confirmed Table 12"
+          },
+          {
+            "benchmarkSlug": "ifeval",
+            "score": 83.2,
+            "source": "self-reported",
+            "sourceUrl": "https://arxiv.org/abs/2505.09388",
+            "evaluatedAt": "2025-05-15",
+            "notes": "strict prompt, non-thinking mode — confirmed Table 12"
+          },
+          {
+            "benchmarkSlug": "math",
+            "score": 91.2,
+            "source": "self-reported",
+            "sourceUrl": "https://arxiv.org/abs/2505.09388",
+            "evaluatedAt": "2025-05-15",
+            "notes": "MATH-500, non-thinking mode — confirmed Table 12"
+          },
+          {
+            "benchmarkSlug": "aime",
+            "score": 40.1,
+            "source": "self-reported",
+            "sourceUrl": "https://arxiv.org/abs/2505.09388",
+            "evaluatedAt": "2025-05-15",
+            "notes": "AIME 2024, non-thinking mode — confirmed Table 12"
+          },
+          {
+            "benchmarkSlug": "livecodebench",
+            "score": 35.3,
+            "source": "self-reported",
+            "sourceUrl": "https://arxiv.org/abs/2505.09388",
+            "evaluatedAt": "2025-05-15",
+            "notes": "LiveCodeBench v5, non-thinking mode — confirmed Table 12"
+          },
+          {
+            "benchmarkSlug": "bfcl",
+            "score": 68,
+            "source": "self-reported",
+            "sourceUrl": "https://arxiv.org/abs/2505.09388",
+            "evaluatedAt": "2025-05-15",
+            "notes": "BFCL v3 function calling, non-thinking mode — confirmed Table 12 (68.0)"
+          }
+        ],
+        "verificationNotes": "Fully verified against primary source: visually confirmed Table 12 of arXiv 2505.09388 — all 8 benchmark scores match exactly. Pricing ($0.7/$2.8 non-thinking) confirmed on Alibaba Cloud's official pricing doc. No changes made — record was accurate."
+      },
+      {
+        "name": "MPT-7B",
+        "org": "MosaicML",
+        "family": "MPT",
+        "releaseDate": "2023-05-05",
+        "status": "released",
+        "openness": "open-source",
+        "license": "Apache 2.0",
+        "paramsB": 6.7,
+        "activeParamsB": null,
+        "archClass": "dense",
+        "archDisplay": "Decoder-only Transformer, no positional embeddings (ALiBi), FlashAttention; 32L/32H, d_model 4096",
+        "ctxK": 2.048,
+        "modalities": [
+          "text"
+        ],
+        "langCount": null,
+        "capabilities": {
+          "reasoning": false,
+          "coding": true,
+          "vision": false,
+          "functionCalling": false,
+          "toolUse": false,
+          "agentic": false
+        },
+        "apiAvailable": false,
+        "price": null,
+        "links": {
+          "hf": "mosaicml/mpt-7b",
+          "gh": "mosaicml/llm-foundry",
+          "docs": "databricks.com/blog/mpt-7b"
+        },
+        "note": "Apache-2.0 decoder-only transformer trained from scratch on 1T tokens; ALiBi removes fixed context limits, FlashAttention for efficient training/inference.",
+        "quants": [
+          "GGUF",
+          "GGML"
+        ],
+        "vramQ4Gb": 4.5,
+        "vramFp16Gb": 14.5,
+        "tps4090": null,
+        "tpsNote": null,
+        "effortLabel": null,
+        "isDefaultConfig": true,
+        "isBestConfig": true,
+        "specSources": {
+          "paramsB": "https://huggingface.co/mosaicml/mpt-7b",
+          "ctxK": "https://huggingface.co/mosaicml/mpt-7b",
+          "releaseDate": "https://huggingface.co/mosaicml/mpt-7b",
+          "openness": "https://huggingface.co/mosaicml/mpt-7b"
+        },
+        "results": [
+          {
+            "benchmarkSlug": "mmlu",
+            "score": 27.5,
+            "source": "independent",
+            "sourceUrl": "https://arxiv.org/abs/2405.13386",
+            "evaluatedAt": "2024-05-22",
+            "notes": "5-shot via OpenCompass, 360Zhinao Technical Report Table 2 — confirmed by direct read of table"
+          },
+          {
+            "benchmarkSlug": "hellaswag",
+            "score": 75,
+            "source": "independent",
+            "sourceUrl": "https://arxiv.org/abs/2405.13386",
+            "evaluatedAt": "2024-05-22",
+            "notes": "confirmed Table 2 (75.0)"
+          },
+          {
+            "benchmarkSlug": "humaneval",
+            "score": 17.1,
+            "source": "independent",
+            "sourceUrl": "https://arxiv.org/abs/2405.13386",
+            "evaluatedAt": "2024-05-22",
+            "notes": "confirmed Table 2"
+          },
+          {
+            "benchmarkSlug": "mbpp",
+            "score": 22.8,
+            "source": "independent",
+            "sourceUrl": "https://arxiv.org/abs/2405.13386",
+            "evaluatedAt": "2024-05-22",
+            "notes": "confirmed Table 2"
+          },
+          {
+            "benchmarkSlug": "gsm8k",
+            "score": 9.1,
+            "source": "independent",
+            "sourceUrl": "https://arxiv.org/abs/2405.13386",
+            "evaluatedAt": "2024-05-22",
+            "notes": "CORRECTED from 10 to 9.1 — the actual Table 2 value for MPT-7B GSM8K is 9.1, not 10; confirmed by direct read of the table"
+          },
+          {
+            "benchmarkSlug": "math",
+            "score": 2.9,
+            "source": "independent",
+            "sourceUrl": "https://arxiv.org/abs/2405.13386",
+            "evaluatedAt": "2024-05-22",
+            "notes": "confirmed Table 2"
+          }
+        ],
+        "verificationNotes": "Existence, org, release date (2023-05-05), 6.7B params, 32L/32H/d4096 architecture, Apache-2.0 license, 2048 native context (ALiBi-extendable), and 1T training tokens all corroborated via HF model card searches and the official Databricks/MosaicML announcement blog. Fetched arXiv 2405.13386 (360Zhinao Technical Report) full HTML/table directly: 5 of 6 benchmark rows matched exactly, but the input record's GSM8K score of 10 was WRONG — the paper's actual Table 2 value is 9.1. Corrected."
+      },
+      {
+        "name": "MPT-7B-Instruct",
+        "org": "MosaicML",
+        "family": "MPT",
+        "releaseDate": "2023-05-05",
+        "status": "released",
+        "openness": "open-weights",
+        "license": "CC-BY-SA-3.0",
+        "paramsB": 6.7,
+        "activeParamsB": null,
+        "archClass": "dense",
+        "archDisplay": "Decoder-only Transformer, no positional embeddings (ALiBi), FlashAttention; 32L/32H, d_model 4096",
+        "ctxK": 2.048,
+        "modalities": [
+          "text"
+        ],
+        "langCount": null,
+        "capabilities": {
+          "reasoning": false,
+          "coding": true,
+          "vision": false,
+          "functionCalling": false,
+          "toolUse": false,
+          "agentic": false
+        },
+        "apiAvailable": false,
+        "price": null,
+        "links": {
+          "hf": "mosaicml/mpt-7b-instruct",
+          "gh": "mosaicml/llm-foundry",
+          "docs": "databricks.com/blog/mpt-7b"
+        },
+        "note": "MPT-7B fine-tuned on Dolly-15k + Anthropic HH-RLHF (dolly_hhrlhf) for short-form instruction following; licensed CC-BY-SA-3.0 (more restrictive than the Apache-2.0 base model) due to the derived instruction dataset.",
+        "quants": [
+          "GGUF",
+          "GGML"
+        ],
+        "vramQ4Gb": 4.5,
+        "vramFp16Gb": 14.5,
+        "tps4090": null,
+        "tpsNote": null,
+        "effortLabel": null,
+        "isDefaultConfig": true,
+        "isBestConfig": true,
+        "specSources": {
+          "paramsB": "https://huggingface.co/mosaicml/mpt-7b-instruct",
+          "ctxK": "https://huggingface.co/mosaicml/mpt-7b-instruct",
+          "releaseDate": "https://huggingface.co/mosaicml/mpt-7b-instruct",
+          "openness": "https://www.databricks.com/blog/mpt-7b"
+        },
+        "results": [],
+        "verificationNotes": "Existence and release date (2023-05-05, same announcement as base MPT-7B), fine-tuning datasets (Dolly-15k + Anthropic HH-RLHF / dolly_hhrlhf), and 6.7B params all corroborated via HF and MosaicML sources. CORRECTED the license: the input record claimed 'Apache 2.0' (with a note claiming this reversed an early CC-BY-SA-3.0 designation) — this is backwards. The official Databricks/MosaicML announcement blog explicitly states MPT-7B-Instruct is licensed CC-By-SA-3.0 (distinct from the Apache-2.0 base model and the non-commercial CC-By-NC-SA-4.0 Chat variant), and this is corroborated by the model's actual HF README frontmatter and multiple independent trackers (e.g. eugeneyan/open-llms). No results rows were present to verify (array was empty)."
+      },
+      {
+        "name": "MPT-7B-StoryWriter-65k+",
+        "org": "MosaicML",
+        "family": "MPT",
+        "releaseDate": "2023-05-05",
+        "status": "released",
+        "openness": "open-weights",
+        "license": "Apache-2.0",
+        "paramsB": 6.7,
+        "activeParamsB": null,
+        "archClass": "dense",
+        "archDisplay": "Decoder-only Transformer w/ ALiBi (65K-token fiction fine-tune)",
+        "ctxK": 65,
+        "modalities": [
+          "text"
+        ],
+        "langCount": null,
+        "capabilities": {
+          "reasoning": false,
+          "coding": false,
+          "vision": false,
+          "functionCalling": false,
+          "toolUse": false,
+          "agentic": false
+        },
+        "apiAvailable": false,
+        "price": null,
+        "links": {
+          "hf": "mosaicml/mpt-7b-storywriter",
+          "gh": "mosaicml/llm-foundry",
+          "docs": "databricks.com"
+        },
+        "note": "Fiction-focused MPT-7B fine-tune trained at 65k tokens via ALiBi; demonstrated generations to ~84k tokens on a single A100-80GB node.",
+        "quants": [
+          "GGUF Q4",
+          "GGML"
+        ],
+        "vramQ4Gb": 4.4,
+        "vramFp16Gb": 13.4,
+        "tps4090": null,
+        "tpsNote": null,
+        "effortLabel": null,
+        "isDefaultConfig": true,
+        "isBestConfig": true,
+        "specSources": {
+          "paramsB": "https://huggingface.co/mosaicml/mpt-7b-storywriter",
+          "ctxK": "https://huggingface.co/mosaicml/mpt-7b-storywriter",
+          "releaseDate": "https://www.databricks.com/blog/mpt-7b",
+          "openness": "https://huggingface.co/mosaicml/mpt-7b-storywriter"
+        },
+        "results": [],
+        "verificationNotes": "Confirmed via Databricks MPT-7B blog (published 2023-05-05, confirms 65k-token fiction fine-tune and demonstrated generations to 84k tokens matching the note) and HF model card mosaicml/mpt-7b-storywriter (Apache-2.0 license, 65k training context, requires trust_remote_code). No result rows were present to verify. All fields left unchanged."
+      },
+      {
+        "name": "MPT-30B",
+        "org": "MosaicML",
+        "family": "MPT",
+        "releaseDate": "2023-06-22",
+        "status": "released",
+        "openness": "open-source",
+        "license": "Apache-2.0",
+        "paramsB": 30,
+        "activeParamsB": null,
+        "archClass": "dense",
+        "archDisplay": "Decoder-only Transformer w/ ALiBi + FlashAttention",
+        "ctxK": 8,
+        "modalities": [
+          "text"
+        ],
+        "langCount": null,
+        "capabilities": {
+          "reasoning": false,
+          "coding": true,
+          "vision": false,
+          "functionCalling": false,
+          "toolUse": false,
+          "agentic": false
+        },
+        "apiAvailable": false,
+        "price": null,
+        "links": {
+          "hf": "mosaicml/mpt-30b",
+          "gh": "mosaicml/llm-foundry",
+          "docs": "databricks.com"
+        },
+        "note": "Base 30B decoder pretrained on 1T tokens of English text and code, 8k context via ALiBi, sized to run on a single 80GB GPU.",
+        "quants": [
+          "GGUF Q4",
+          "AWQ"
+        ],
+        "vramQ4Gb": 19.1,
+        "vramFp16Gb": 60,
+        "tps4090": null,
+        "tpsNote": null,
+        "effortLabel": null,
+        "isDefaultConfig": true,
+        "isBestConfig": true,
+        "specSources": {
+          "paramsB": "https://huggingface.co/mosaicml/mpt-30b",
+          "ctxK": "https://www.databricks.com/blog/mpt-30b",
+          "releaseDate": "https://www.businesswire.com/news/home/20230622195151/en/MosaicML-Releases-Open-Source-MPT-30B-LLMs-Trained-on-H100s-to-Power-Generative-AI-Applications",
+          "openness": "https://huggingface.co/mosaicml/mpt-30b"
+        },
+        "results": [],
+        "verificationNotes": "Confirmed via Databricks MPT-30B blog (published 2023-06-22): 30B params, 1T tokens total (1T at 2k context + 50B extension tokens for 8k context), 8k context window, Apache-2.0, trained on H100s, sized for single 80GB GPU deployment. No result rows to verify. All fields left unchanged."
+      },
+      {
+        "name": "MPT-30B-Instruct",
+        "org": "MosaicML",
+        "family": "MPT",
+        "releaseDate": "2023-06-22",
+        "status": "released",
+        "openness": "open-weights",
+        "license": "CC-BY-SA-3.0",
+        "paramsB": 30,
+        "activeParamsB": null,
+        "archClass": "dense",
+        "archDisplay": "Decoder-only Transformer w/ ALiBi + FlashAttention",
+        "ctxK": 8,
+        "modalities": [
+          "text"
+        ],
+        "langCount": null,
+        "capabilities": {
+          "reasoning": false,
+          "coding": true,
+          "vision": false,
+          "functionCalling": false,
+          "toolUse": false,
+          "agentic": false
+        },
+        "apiAvailable": false,
+        "price": null,
+        "links": {
+          "hf": "mosaicml/mpt-30b-instruct",
+          "gh": "mosaicml/llm-foundry",
+          "docs": "databricks.com"
+        },
+        "note": "Instruction-tuned MPT-30B for long-context single-turn tasks, fine-tuned on Dolly/HH-RLHF-derived data, released under CC-BY-SA-3.0.",
+        "quants": [
+          "GGUF Q4",
+          "AWQ"
+        ],
+        "vramQ4Gb": 19.1,
+        "vramFp16Gb": 60,
+        "tps4090": null,
+        "tpsNote": null,
+        "effortLabel": null,
+        "isDefaultConfig": true,
+        "isBestConfig": true,
+        "specSources": {
+          "paramsB": "https://huggingface.co/mosaicml/mpt-30b-instruct",
+          "ctxK": "https://www.databricks.com/blog/mpt-30b",
+          "releaseDate": "https://www.databricks.com/blog/mpt-30b",
+          "openness": "https://www.databricks.com/blog/mpt-30b"
+        },
+        "results": [],
+        "verificationNotes": "Confirmed released alongside MPT-30B base on 2023-06-22 (same Databricks announcement); HF model card and secondary sources confirm CC-BY-SA-3.0 license and Dolly/HH-RLHF-derived instruction tuning data. No result rows to verify. All fields left unchanged."
+      },
+      {
+        "name": "AI21 Jurassic-2 (Ultra)",
+        "org": "AI21 Labs",
+        "family": "AI21 Jurassic",
+        "releaseDate": "2023-03-09",
+        "status": "deprecated",
+        "openness": "closed",
+        "license": "Proprietary",
+        "paramsB": null,
+        "activeParamsB": null,
+        "archClass": "dense",
+        "archDisplay": "Dense Transformer (architecture undisclosed)",
+        "ctxK": 8,
+        "modalities": [
+          "text"
+        ],
+        "langCount": 7,
+        "capabilities": {
+          "reasoning": false,
+          "coding": false,
+          "vision": false,
+          "functionCalling": false,
+          "toolUse": false,
+          "agentic": false
+        },
+        "apiAvailable": true,
+        "price": {
+          "input": 18.8,
+          "output": 18.8,
+          "provider": "AI21 Studio"
+        },
+        "links": {
+          "docs": "docs.ai21.com"
+        },
+        "note": "AI21's 2023 flagship API model (renamed from Jumbo) with zero-shot instruction-following and multilingual support; now Legacy on Bedrock.",
+        "quants": [],
+        "vramQ4Gb": null,
+        "vramFp16Gb": null,
+        "tps4090": null,
+        "tpsNote": null,
+        "effortLabel": null,
+        "isDefaultConfig": true,
+        "isBestConfig": true,
+        "specSources": {
+          "paramsB": "https://www.ai21.com/blog/introducing-j2/",
+          "ctxK": "https://docs.aws.amazon.com/bedrock/latest/userguide/model-parameters-jurassic2.html",
+          "releaseDate": "https://www.ai21.com/blog/introducing-j2/",
+          "openness": "https://www.ai21.com/blog/introducing-j2/"
+        },
+        "results": [
+          {
+            "benchmarkSlug": "helm-win-rate",
+            "score": 86.8,
+            "source": "self-reported",
+            "sourceUrl": "https://www.ai21.com/blog/introducing-j2/",
+            "notes": "J2 Jumbo (renamed Ultra) HELM win-rate per AI21 internal evaluation"
+          }
+        ],
+        "verificationNotes": "Confirmed via ai21.com/blog/introducing-j2/ (published 2023-03-09): announces J2 Large/Grande/Jumbo family, 6 non-English languages (Spanish, French, German, Portuguese, Italian, Dutch) plus English = 7 total, and literally states 'J2 Jumbo ... an 86.8% win-rate on HELM by our internal evaluations' confirming the result row. Jumbo->Ultra renaming and AWS Bedrock's 8,192-token limit and 'Legacy' lifecycle status confirmed via AWS Bedrock docs and secondary sources. Current $18.8/M input+output pricing corroborated by independent pricing trackers. All fields left unchanged."
+      },
+      {
+        "name": "AI21 Jamba",
+        "org": "AI21 Labs",
+        "family": "AI21 Jamba",
+        "releaseDate": "2024-03-28",
+        "status": "released",
+        "openness": "open-weights",
+        "license": "Apache-2.0",
+        "paramsB": 52,
+        "activeParamsB": 12,
+        "archClass": "hybrid",
+        "archDisplay": "Hybrid Mamba-Transformer MoE (Jamba)",
+        "ctxK": 256,
+        "modalities": [
+          "text"
+        ],
+        "langCount": null,
+        "capabilities": {
+          "reasoning": false,
+          "coding": false,
+          "vision": false,
+          "functionCalling": false,
+          "toolUse": false,
+          "agentic": false
+        },
+        "apiAvailable": false,
+        "price": null,
+        "links": {
+          "hf": "ai21labs/Jamba-v0.1",
+          "docs": "docs.ai21.com"
+        },
+        "note": "First production-grade hybrid Mamba-Transformer MoE base model, 12B/52B active/total, 256K context fitting 140K tokens on one 80GB GPU.",
+        "quants": [
+          "GGUF Q4",
+          "GPTQ"
+        ],
+        "vramQ4Gb": 29.5,
+        "vramFp16Gb": 104,
+        "tps4090": null,
+        "tpsNote": null,
+        "effortLabel": null,
+        "isDefaultConfig": true,
+        "isBestConfig": true,
+        "specSources": {
+          "paramsB": "https://huggingface.co/ai21labs/Jamba-v0.1",
+          "ctxK": "https://huggingface.co/ai21labs/Jamba-v0.1",
+          "releaseDate": "https://huggingface.co/ai21labs/Jamba-v0.1",
+          "openness": "https://www.ai21.com/blog/announcing-jamba/"
+        },
+        "results": [
+          {
+            "benchmarkSlug": "mmlu",
+            "score": 67.4,
+            "source": "self-reported",
+            "sourceUrl": "https://huggingface.co/ai21labs/Jamba-v0.1"
+          },
+          {
+            "benchmarkSlug": "hellaswag",
+            "score": 87.1,
+            "source": "self-reported",
+            "sourceUrl": "https://huggingface.co/ai21labs/Jamba-v0.1"
+          },
+          {
+            "benchmarkSlug": "arc-challenge",
+            "score": 64.4,
+            "source": "self-reported",
+            "sourceUrl": "https://huggingface.co/ai21labs/Jamba-v0.1"
+          },
+          {
+            "benchmarkSlug": "gsm8k",
+            "score": 59.9,
+            "source": "self-reported",
+            "sourceUrl": "https://huggingface.co/ai21labs/Jamba-v0.1",
+            "notes": "CoT"
+          },
+          {
+            "benchmarkSlug": "winogrande",
+            "score": 82.5,
+            "source": "self-reported",
+            "sourceUrl": "https://huggingface.co/ai21labs/Jamba-v0.1"
+          },
+          {
+            "benchmarkSlug": "bbh",
+            "score": 45.4,
+            "source": "self-reported",
+            "sourceUrl": "https://huggingface.co/ai21labs/Jamba-v0.1"
+          },
+          {
+            "benchmarkSlug": "piqa",
+            "score": 83.2,
+            "source": "self-reported",
+            "sourceUrl": "https://huggingface.co/ai21labs/Jamba-v0.1"
+          },
+          {
+            "benchmarkSlug": "truthfulqa",
+            "score": 46.4,
+            "source": "self-reported",
+            "sourceUrl": "https://huggingface.co/ai21labs/Jamba-v0.1"
+          }
+        ],
+        "verificationNotes": "Confirmed via ai21.com/blog/announcing-jamba/ (published 2024-03-28: Apache-2.0 open weights, 256K context window, 140K tokens on a single 80GB GPU) and HF model card ai21labs/Jamba-v0.1 (12B active/52B total MoE, hybrid Mamba-Transformer-MoE). All 8 benchmark rows (MMLU 67.4, HellaSwag 87.1, ARC-Challenge 64.4, GSM8K/CoT 59.9, WinoGrande 82.5, BBH 45.4, PIQA 83.2, TruthfulQA 46.4) were fetched directly from the HF model card's academic benchmarks table and match exactly. All fields left unchanged."
+      },
+      {
+        "name": "AI21 Jamba 1.5 Large",
+        "org": "AI21 Labs",
+        "family": "AI21 Jamba",
+        "releaseDate": "2024-08-22",
+        "status": "released",
+        "openness": "open-weights",
+        "license": "Jamba Open Model License",
+        "paramsB": 398,
+        "activeParamsB": 94,
+        "archClass": "hybrid",
+        "archDisplay": "Hybrid Mamba-Transformer MoE (Jamba)",
+        "ctxK": 256,
+        "modalities": [
+          "text"
+        ],
+        "langCount": 9,
+        "capabilities": {
+          "reasoning": false,
+          "coding": true,
+          "vision": false,
+          "functionCalling": true,
+          "toolUse": true,
+          "agentic": true
+        },
+        "apiAvailable": true,
+        "price": {
+          "input": 2,
+          "output": 8,
+          "provider": "AI21 Studio"
+        },
+        "links": {
+          "hf": "ai21labs/AI21-Jamba-Large-1.5",
+          "docs": "docs.ai21.com"
+        },
+        "note": "Flagship open hybrid SSM-Transformer MoE, 94B/398B active/total, RULER-verified 256K context, function calling and JSON output.",
+        "quants": [
+          "GGUF Q4"
+        ],
+        "vramQ4Gb": 240.4,
+        "vramFp16Gb": 796,
+        "tps4090": null,
+        "tpsNote": "Too large to run on a single RTX 4090 even at Q4; requires multi-GPU or CPU offload.",
+        "effortLabel": null,
+        "isDefaultConfig": true,
+        "isBestConfig": true,
+        "specSources": {
+          "paramsB": "https://huggingface.co/ai21labs/AI21-Jamba-Large-1.5",
+          "ctxK": "https://www.ai21.com/blog/announcing-jamba-model-family/",
+          "releaseDate": "https://www.ai21.com/blog/announcing-jamba-model-family/",
+          "openness": "https://huggingface.co/ai21labs/AI21-Jamba-Large-1.5"
+        },
+        "results": [
+          {
+            "benchmarkSlug": "mmlu",
+            "score": 80,
+            "source": "self-reported",
+            "sourceUrl": "https://arxiv.org/html/2408.12570v1"
+          },
+          {
+            "benchmarkSlug": "mmlu-pro",
+            "score": 48.3,
+            "source": "self-reported",
+            "sourceUrl": "https://arxiv.org/html/2408.12570v1"
+          },
+          {
+            "benchmarkSlug": "gpqa",
+            "score": 36.9,
+            "source": "self-reported",
+            "sourceUrl": "https://arxiv.org/html/2408.12570v1"
+          },
+          {
+            "benchmarkSlug": "arc-challenge",
+            "score": 93,
+            "source": "self-reported",
+            "sourceUrl": "https://arxiv.org/html/2408.12570v1"
+          },
+          {
+            "benchmarkSlug": "bbh",
+            "score": 65.5,
+            "source": "self-reported",
+            "sourceUrl": "https://arxiv.org/html/2408.12570v1"
+          },
+          {
+            "benchmarkSlug": "humaneval",
+            "score": 71.3,
+            "source": "self-reported",
+            "sourceUrl": "https://arxiv.org/html/2408.12570v1"
+          },
+          {
+            "benchmarkSlug": "gsm8k",
+            "score": 87,
+            "source": "self-reported",
+            "sourceUrl": "https://arxiv.org/html/2408.12570v1"
+          },
+          {
+            "benchmarkSlug": "ifeval",
+            "score": 81.5,
+            "source": "self-reported",
+            "sourceUrl": "https://arxiv.org/html/2408.12570v1"
+          },
+          {
+            "benchmarkSlug": "bfcl",
+            "score": 85.5,
+            "source": "self-reported",
+            "sourceUrl": "https://arxiv.org/html/2408.12570v1",
+            "notes": "Berkeley Function-Calling Leaderboard"
+          },
+          {
+            "benchmarkSlug": "arena",
+            "score": 65.4,
+            "source": "self-reported",
+            "sourceUrl": "https://www.ai21.com/blog/announcing-jamba-model-family/",
+            "notes": "Arena-Hard"
+          },
+          {
+            "benchmarkSlug": "ruler",
+            "score": 95.7,
+            "source": "self-reported",
+            "sourceUrl": "https://arxiv.org/html/2408.12570v1",
+            "notes": "Average effective accuracy across context lengths up to 256K"
+          }
+        ],
+        "verificationNotes": "Confirmed via HF model card ai21labs/AI21-Jamba-Large-1.5 (94B active/398B total, Jamba Open Model License permitting commercial use, 256K context, 9 languages: English, Spanish, French, Portuguese, Italian, Dutch, German, Arabic, Hebrew) and ai21.com/blog/announcing-jamba-model-family/ (published 2024-08-22, 256K effective context, Arena-Hard 65.4 for Large matching the arena result row). All 9 arxiv-sourced benchmark rows (MMLU 80, MMLU-Pro 48.3, GPQA 36.9, ARC-Challenge 93, BBH 65.5, HumanEval 71.3, GSM8K 87, IFEval 81.5, BFCL 85.5) plus RULER 95.7 were fetched directly from arxiv.org/html/2408.12570v1 Tables 2/4 and match exactly. $2/$8 per-million-token pricing corroborated by independent pricing aggregators. All fields left unchanged."
+      },
+      {
+        "name": "AI21 Jamba 1.5 Mini",
+        "org": "AI21 Labs",
+        "family": "AI21 Jamba",
+        "releaseDate": "2024-08-22",
+        "status": "released",
+        "openness": "open-weights",
+        "license": "Jamba Open Model License",
+        "paramsB": 52,
+        "activeParamsB": 12,
+        "archClass": "hybrid",
+        "archDisplay": "Hybrid Mamba-Transformer MoE (Jamba)",
+        "ctxK": 256,
+        "modalities": [
+          "text"
+        ],
+        "langCount": 9,
+        "capabilities": {
+          "reasoning": false,
+          "coding": true,
+          "vision": false,
+          "functionCalling": true,
+          "toolUse": true,
+          "agentic": true
+        },
+        "apiAvailable": true,
+        "price": {
+          "input": 0.2,
+          "output": 0.4,
+          "provider": "AI21 Studio"
+        },
+        "links": {
+          "hf": "ai21labs/AI21-Jamba-Mini-1.5",
+          "docs": "docs.ai21.com"
+        },
+        "note": "Open hybrid SSM-Transformer, 12B/52B active/total, 256K context under the Jamba Open Model License; strongest Arena-Hard score in its class.",
+        "quants": [
+          "GGUF Q4"
+        ],
+        "vramQ4Gb": 29.5,
+        "vramFp16Gb": 103.2,
+        "tps4090": null,
+        "tpsNote": null,
+        "effortLabel": null,
+        "isDefaultConfig": true,
+        "isBestConfig": true,
+        "specSources": {
+          "paramsB": "https://arxiv.org/html/2408.12570v1",
+          "ctxK": "https://www.ai21.com/blog/announcing-jamba-model-family/",
+          "releaseDate": "https://www.ai21.com/blog/announcing-jamba-model-family/",
+          "openness": "https://huggingface.co/ai21labs/AI21-Jamba-Mini-1.5"
+        },
+        "results": [
+          {
+            "benchmarkSlug": "mmlu",
+            "score": 69.7,
+            "source": "self-reported",
+            "sourceUrl": "https://arxiv.org/html/2408.12570v1"
+          },
+          {
+            "benchmarkSlug": "mmlu-pro",
+            "score": 39.8,
+            "source": "self-reported",
+            "sourceUrl": "https://arxiv.org/html/2408.12570v1"
+          },
+          {
+            "benchmarkSlug": "gpqa",
+            "score": 32.3,
+            "source": "self-reported",
+            "sourceUrl": "https://arxiv.org/html/2408.12570v1"
+          },
+          {
+            "benchmarkSlug": "arc-challenge",
+            "score": 85.7,
+            "source": "self-reported",
+            "sourceUrl": "https://arxiv.org/html/2408.12570v1"
+          },
+          {
+            "benchmarkSlug": "bbh",
+            "score": 53.4,
+            "source": "self-reported",
+            "sourceUrl": "https://arxiv.org/html/2408.12570v1"
+          },
+          {
+            "benchmarkSlug": "humaneval",
+            "score": 62.8,
+            "source": "self-reported",
+            "sourceUrl": "https://arxiv.org/html/2408.12570v1"
+          },
+          {
+            "benchmarkSlug": "gsm8k",
+            "score": 75.8,
+            "source": "self-reported",
+            "sourceUrl": "https://arxiv.org/html/2408.12570v1"
+          },
+          {
+            "benchmarkSlug": "ifeval",
+            "score": 75.8,
+            "source": "self-reported",
+            "sourceUrl": "https://arxiv.org/html/2408.12570v1"
+          },
+          {
+            "benchmarkSlug": "bfcl",
+            "score": 80.7,
+            "source": "self-reported",
+            "sourceUrl": "https://arxiv.org/html/2408.12570v1",
+            "notes": "Berkeley Function-Calling Leaderboard"
+          },
+          {
+            "benchmarkSlug": "arena",
+            "score": 46.1,
+            "source": "self-reported",
+            "sourceUrl": "https://www.ai21.com/blog/announcing-jamba-model-family/",
+            "notes": "Arena-Hard"
+          },
+          {
+            "benchmarkSlug": "ruler",
+            "score": 92.6,
+            "source": "self-reported",
+            "sourceUrl": "https://arxiv.org/html/2408.12570v1",
+            "notes": "Average effective accuracy across context lengths up to 256K (Table 4: 95.7/95.2/94.7/93.8/92.7/89.8/86.1 at 4k-256k)"
+          }
+        ],
+        "verificationNotes": "Fully confirmed. AI21 blog (announcing-jamba-model-family) confirms release date 2024-08-22, 256K context, Arena-Hard 46.1. arXiv 2408.12570v1 (Jamba-1.5 tech report) confirms 52B total/12B active params, 9 pretraining languages, and every benchmark row incl. RULER 92.6 average (verified against the full per-length table). No changes needed."
+      },
+      {
+        "name": "InternLM2-20B",
+        "org": "Shanghai AI Laboratory",
+        "family": "InternLM2",
+        "releaseDate": "2024-01-17",
+        "status": "released",
+        "openness": "open-weights",
+        "license": "Apache-2.0",
+        "paramsB": 20,
+        "activeParamsB": null,
+        "archClass": "dense",
+        "archDisplay": "Dense transformer decoder (GQA)",
+        "ctxK": 200,
+        "modalities": [
+          "text"
+        ],
+        "langCount": null,
+        "capabilities": {
+          "reasoning": true,
+          "coding": true,
+          "vision": false,
+          "functionCalling": true,
+          "toolUse": true,
+          "agentic": true
+        },
+        "apiAvailable": false,
+        "price": null,
+        "links": {
+          "hf": "internlm/internlm2-20b",
+          "gh": "InternLM/InternLM",
+          "docs": "internlm.readthedocs.io"
+        },
+        "note": "Flagship dense InternLM2 model; near-perfect 200K-token needle-in-haystack retrieval, free commercial weight license.",
+        "quants": [
+          "GGUF Q4",
+          "AWQ"
+        ],
+        "vramQ4Gb": 12,
+        "vramFp16Gb": 40,
+        "tps4090": null,
+        "tpsNote": null,
+        "effortLabel": null,
+        "isDefaultConfig": true,
+        "isBestConfig": true,
+        "specSources": {
+          "paramsB": "https://huggingface.co/internlm/internlm2-20b",
+          "ctxK": "https://huggingface.co/internlm/internlm2-chat-20b",
+          "releaseDate": "https://arxiv.org/abs/2403.17297",
+          "openness": "https://huggingface.co/internlm/internlm2-20b"
+        },
+        "results": [
+          {
+            "benchmarkSlug": "mmlu",
+            "score": 66.5,
+            "source": "self-reported",
+            "sourceUrl": "https://huggingface.co/internlm/internlm2-chat-20b",
+            "notes": "InternLM2-Chat-20B"
+          },
+          {
+            "benchmarkSlug": "gsm8k",
+            "score": 79.6,
+            "source": "self-reported",
+            "sourceUrl": "https://huggingface.co/internlm/internlm2-chat-20b",
+            "notes": "InternLM2-Chat-20B, 4-shot"
+          },
+          {
+            "benchmarkSlug": "math",
+            "score": 31.9,
+            "source": "self-reported",
+            "sourceUrl": "https://huggingface.co/internlm/internlm2-chat-20b"
+          },
+          {
+            "benchmarkSlug": "humaneval",
+            "score": 67.1,
+            "source": "self-reported",
+            "sourceUrl": "https://huggingface.co/internlm/internlm2-chat-20b"
+          },
+          {
+            "benchmarkSlug": "bbh",
+            "score": 68.3,
+            "source": "self-reported",
+            "sourceUrl": "https://huggingface.co/internlm/internlm2-chat-20b"
+          },
+          {
+            "benchmarkSlug": "mbpp",
+            "score": 65.8,
+            "source": "self-reported",
+            "sourceUrl": "https://huggingface.co/internlm/internlm2-chat-20b"
+          }
+        ],
+        "verificationNotes": "Confirmed real and existing as described. Release ~2024-01-17 corroborated by web search; arXiv 2403.17297 (InternLM2 Technical Report, March 2024) is the accompanying paper. Apache-2.0 code license + free commercial weight license confirmed on HF page. All six benchmark rows re-confirmed verbatim on the internlm2-chat-20b HF model card (rows are explicitly for the Chat-20B variant, as already disclosed in original notes). No changes needed."
+      },
+      {
+        "name": "InternLM2.5-7B",
+        "org": "Shanghai AI Laboratory",
+        "family": "InternLM2.5",
+        "releaseDate": "2024-07-03",
+        "status": "released",
+        "openness": "open-weights",
+        "license": "Apache-2.0",
+        "paramsB": 7,
+        "activeParamsB": null,
+        "archClass": "dense",
+        "archDisplay": "Dense transformer decoder (GQA)",
+        "ctxK": 1000,
+        "modalities": [
+          "text"
+        ],
+        "langCount": null,
+        "capabilities": {
+          "reasoning": true,
+          "coding": true,
+          "vision": false,
+          "functionCalling": true,
+          "toolUse": true,
+          "agentic": true
+        },
+        "apiAvailable": false,
+        "price": null,
+        "links": {
+          "hf": "internlm/internlm2_5-7b-chat",
+          "gh": "InternLM/InternLM",
+          "docs": "internlm.readthedocs.io"
+        },
+        "note": "Widely used open 7B; near-perfect 1M-token needle retrieval via chat-1m checkpoint, state-of-the-art 7B-scale math reasoning.",
+        "quants": [
+          "GGUF Q4"
+        ],
+        "vramQ4Gb": 4.5,
+        "vramFp16Gb": 14,
+        "tps4090": null,
+        "tpsNote": null,
+        "effortLabel": null,
+        "isDefaultConfig": true,
+        "isBestConfig": true,
+        "specSources": {
+          "paramsB": "https://huggingface.co/internlm/internlm2_5-7b",
+          "ctxK": "https://huggingface.co/internlm/internlm2_5-7b-chat-1m",
+          "releaseDate": "https://github.com/InternLM/InternLM/blob/main/model_cards/internlm2.5_7b.md",
+          "openness": "https://huggingface.co/internlm/internlm2_5-7b-chat"
+        },
+        "results": [
+          {
+            "benchmarkSlug": "mmlu",
+            "score": 72.8,
+            "source": "self-reported",
+            "sourceUrl": "https://huggingface.co/internlm/internlm2_5-7b-chat"
+          },
+          {
+            "benchmarkSlug": "gsm8k",
+            "score": 86,
+            "source": "self-reported",
+            "sourceUrl": "https://huggingface.co/internlm/internlm2_5-7b-chat"
+          },
+          {
+            "benchmarkSlug": "math",
+            "score": 60.1,
+            "source": "self-reported",
+            "sourceUrl": "https://huggingface.co/internlm/internlm2_5-7b-chat"
+          },
+          {
+            "benchmarkSlug": "bbh",
+            "score": 71.6,
+            "source": "self-reported",
+            "sourceUrl": "https://huggingface.co/internlm/internlm2_5-7b-chat"
+          }
+        ],
+        "verificationNotes": "Confirmed real. Release date 2024-07-03 corroborated by web search (HF + GitHub model card). Apache-2.0 confirmed. All four benchmark rows re-confirmed verbatim on the internlm2_5-7b-chat HF model card. No changes needed."
+      },
+      {
+        "name": "InternLM3-8B-Instruct",
+        "org": "Shanghai AI Laboratory",
+        "family": "InternLM3",
+        "releaseDate": "2025-01-15",
+        "status": "released",
+        "openness": "open-weights",
+        "license": "Apache-2.0",
+        "paramsB": 8,
+        "activeParamsB": null,
+        "archClass": "dense",
+        "archDisplay": "Dense transformer decoder; hybrid deep-thinking/normal response modes",
+        "ctxK": 128,
+        "modalities": [
+          "text"
+        ],
+        "langCount": null,
+        "capabilities": {
+          "reasoning": true,
+          "coding": true,
+          "vision": false,
+          "functionCalling": true,
+          "toolUse": true,
+          "agentic": true
+        },
+        "apiAvailable": false,
+        "price": null,
+        "links": {
+          "hf": "internlm/internlm3-8b-instruct",
+          "gh": "InternLM/InternLM",
+          "docs": "internlm.readthedocs.io"
+        },
+        "note": "Apache-2.0 hybrid deep-thinking/normal-mode model trained on only 4T tokens, saving over 75% of training cost vs peers.",
+        "quants": [
+          "GGUF Q4",
+          "GPTQ Int4"
+        ],
+        "vramQ4Gb": 5.5,
+        "vramFp16Gb": 16,
+        "tps4090": null,
+        "tpsNote": null,
+        "effortLabel": null,
+        "isDefaultConfig": true,
+        "isBestConfig": true,
+        "specSources": {
+          "paramsB": "https://huggingface.co/internlm/internlm3-8b-instruct",
+          "ctxK": "https://internlm.readthedocs.io/en/latest/model_card/InternLM3.html",
+          "releaseDate": "https://x.com/intern_lm/status/1879513004011896969",
+          "openness": "https://huggingface.co/internlm/internlm3-8b-instruct"
+        },
+        "results": [
+          {
+            "benchmarkSlug": "mmlu",
+            "score": 76.6,
+            "source": "self-reported",
+            "sourceUrl": "https://internlm.readthedocs.io/en/latest/model_card/InternLM3.html"
+          },
+          {
+            "benchmarkSlug": "mmlu-pro",
+            "score": 57.6,
+            "source": "self-reported",
+            "sourceUrl": "https://internlm.readthedocs.io/en/latest/model_card/InternLM3.html"
+          },
+          {
+            "benchmarkSlug": "gpqa",
+            "score": 37.4,
+            "source": "self-reported",
+            "sourceUrl": "https://internlm.readthedocs.io/en/latest/model_card/InternLM3.html",
+            "notes": "GPQA-Diamond"
+          },
+          {
+            "benchmarkSlug": "math",
+            "score": 83,
+            "source": "self-reported",
+            "sourceUrl": "https://internlm.readthedocs.io/en/latest/model_card/InternLM3.html",
+            "notes": "MATH-500, thinking mode"
+          },
+          {
+            "benchmarkSlug": "aime",
+            "score": 20,
+            "source": "self-reported",
+            "sourceUrl": "https://internlm.readthedocs.io/en/latest/model_card/InternLM3.html",
+            "notes": "AIME2024"
+          },
+          {
+            "benchmarkSlug": "livecodebench",
+            "score": 17.8,
+            "source": "self-reported",
+            "sourceUrl": "https://internlm.readthedocs.io/en/latest/model_card/InternLM3.html"
+          },
+          {
+            "benchmarkSlug": "humaneval",
+            "score": 82.3,
+            "source": "self-reported",
+            "sourceUrl": "https://huggingface.co/internlm/internlm3-8b-instruct"
+          },
+          {
+            "benchmarkSlug": "ifeval",
+            "score": 79.3,
+            "source": "self-reported",
+            "sourceUrl": "https://internlm.readthedocs.io/en/latest/model_card/InternLM3.html"
+          }
+        ],
+        "verificationNotes": "Confirmed real. Official announcement via Intern Large Models X post (2025-01-15) and OpenMMLab Medium post confirm release date, Apache-2.0 license, and the '4T tokens / 75% training-cost savings' claim verbatim. All eight benchmark rows re-confirmed verbatim on the readthedocs model card and HF page (HumanEval 82.3 on HF page). Minor note: HF safetensors metadata labels the checkpoint '9B params' though it is named/branded 8B (common rounding quirk, e.g. embeddings); kept paramsB=8 per model name/family convention."
+      },
+      {
+        "name": "NAVER HyperCLOVA X",
+        "org": "NAVER",
+        "family": "HyperCLOVA X",
+        "releaseDate": "2023-08-24",
+        "status": "released",
+        "openness": "closed",
+        "license": "Proprietary",
+        "paramsB": 204,
+        "activeParamsB": null,
+        "archClass": "dense",
+        "archDisplay": "Dense transformer decoder (closed, details undisclosed)",
+        "ctxK": 32,
+        "modalities": [
+          "text"
+        ],
+        "langCount": null,
+        "capabilities": {
+          "reasoning": true,
+          "coding": true,
+          "vision": false,
+          "functionCalling": false,
+          "toolUse": false,
+          "agentic": false
+        },
+        "apiAvailable": true,
+        "price": null,
+        "links": {
+          "hf": "naver-hyperclovax",
+          "docs": "clova.ai/en/clova-studio"
+        },
+        "note": "NAVER's sovereign Korean-first LLM (~204B), successor to 2021 HyperCLOVA; served via CLOVA Studio/CLOVA X, API/service only.",
+        "quants": [],
+        "vramQ4Gb": null,
+        "vramFp16Gb": null,
+        "tps4090": null,
+        "tpsNote": null,
+        "effortLabel": null,
+        "isDefaultConfig": true,
+        "isBestConfig": true,
+        "specSources": {
+          "paramsB": "https://www.kedglobal.com/artificial-intelligence/newsView/ked202308240018",
+          "ctxK": "https://arxiv.org/abs/2404.01954",
+          "releaseDate": "https://techcrunch.com/2023/08/24/koreas-internet-giant-naver-unveils-generative-ai-services/",
+          "openness": "https://arxiv.org/abs/2404.01954"
+        },
+        "results": [
+          {
+            "benchmarkSlug": "mmlu",
+            "score": 67.98,
+            "source": "self-reported",
+            "sourceUrl": "https://arxiv.org/abs/2404.01954",
+            "notes": "HCX-L (flagship), 5-shot"
+          },
+          {
+            "benchmarkSlug": "gsm8k",
+            "score": 81.65,
+            "source": "self-reported",
+            "sourceUrl": "https://arxiv.org/abs/2404.01954",
+            "notes": "HCX-L, 8-shot maj@8"
+          },
+          {
+            "benchmarkSlug": "humaneval",
+            "score": 55.49,
+            "source": "self-reported",
+            "sourceUrl": "https://arxiv.org/abs/2404.01954",
+            "notes": "HCX-L, pass@1"
+          }
+        ],
+        "verificationNotes": "Confirmed real. Release 2023-08-24 corroborated by TechCrunch, KED Global, VentureBeat and NAVER's own press release. ~204B params corroborated by KED Global (NAVER itself did not disclose an exact breakdown beyond 'more than 204B'). All three HCX-L benchmark scores (MMLU 67.98, GSM8K 81.65, HumanEval 55.49) re-confirmed on arXiv 2404.01954. 32K context corroborated (paper describes final 10% of pretraining done at 32,768 tokens). No changes needed."
+      },
+      {
+        "name": "NAVER HyperCLOVA X SEED Think 32B",
+        "org": "NAVER",
+        "family": "HyperCLOVA X SEED",
+        "releaseDate": "2025-12-26",
+        "status": "released",
+        "openness": "open-weights",
+        "license": "HyperCLOVA X SEED 32B Think Model License Agreement",
+        "paramsB": 32,
+        "activeParamsB": null,
+        "archClass": "dense",
+        "archDisplay": "Dense multimodal (vision-language) transformer with optional extended-thinking mode",
+        "ctxK": 128,
+        "modalities": [
+          "text",
+          "vision",
+          "video"
+        ],
+        "langCount": null,
+        "capabilities": {
+          "reasoning": true,
+          "coding": true,
+          "vision": true,
+          "functionCalling": true,
+          "toolUse": true,
+          "agentic": true
+        },
+        "apiAvailable": false,
+        "price": null,
+        "links": {
+          "hf": "naver-hyperclovax/HyperCLOVAX-SEED-Think-32B",
+          "docs": "artificialanalysis.ai/models/hyperclova-x-seed-think-32b"
+        },
+        "note": "Open-weights multimodal reasoning model; strong Korean open model, reported ahead of EXAONE 4.0 32B on Artificial Analysis Intelligence Index at launch (44 vs 43; later shown as 17 under recalibrated v4.1 methodology).",
+        "quants": [],
+        "vramQ4Gb": null,
+        "vramFp16Gb": 66,
+        "tps4090": null,
+        "tpsNote": "No community GGUF/MLX quantization confirmed yet as of research date; custom VLM architecture not yet supported by llama.cpp",
+        "effortLabel": null,
+        "isDefaultConfig": true,
+        "isBestConfig": true,
+        "specSources": {
+          "paramsB": "https://huggingface.co/naver-hyperclovax/HyperCLOVAX-SEED-Think-32B",
+          "ctxK": "https://artificialanalysis.ai/models/hyperclova-x-seed-think-32b",
+          "releaseDate": "https://www.ajupress.com/view/20251230092739502",
+          "openness": "https://huggingface.co/naver-hyperclovax/HyperCLOVAX-SEED-Think-32B"
+        },
+        "results": [
+          {
+            "benchmarkSlug": "tau-bench",
+            "score": 87,
+            "source": "independent",
+            "sourceUrl": "https://www.ajupress.com/view/20251230092739502",
+            "notes": "tau2-Bench Telecom, per Artificial Analysis (article phrases it as '87 percent in an evaluation that assessed agent tool usage capabilities through a simulated telecommunications customer support scenario')",
+            "evaluatedAt": "2025-12-26"
+          }
+        ],
+        "verificationNotes": "Confirmed genuinely real (highest-scrutiny record given Dec-2025 release date) — found live HF model card, arXiv paper 2601.03286, Artificial Analysis model page, and independent press/X coverage (Ajupress, Artificial Analysis and Wes Roth X posts) all describing this exact model. 32B params, license name, 128K context, and text/image/video modalities all confirmed verbatim on the HF page. The '87' tau-bench score is confirmed present on the ajupress.com sourceUrl (paraphrased as '87 percent' for an agentic telecom customer-support tool-use eval, i.e. tau2-Bench Telecom). The note's claim of an initial 44 vs EXAONE (43) at launch, later recalibrated to 17 under AA's v4.1 methodology, was independently verified: X posts from Artificial Analysis/Wes Roth at launch cite 44 outperforming EXAONE 4.0 32B, while the current live artificialanalysis.ai page now shows Intelligence Index 17 under v4.1 methodology — both halves of the note check out."
+      },
+      {
+        "name": "DBRX",
+        "org": "Databricks",
+        "family": "DBRX",
+        "releaseDate": "2024-03-27",
+        "status": "released",
+        "openness": "open-weights",
+        "license": "Databricks Open Model License",
+        "paramsB": 132,
+        "activeParamsB": 36,
+        "archClass": "moe",
+        "archDisplay": "Fine-grained MoE, 16 experts (4 active per token)",
+        "ctxK": 32,
+        "modalities": [
+          "text"
+        ],
+        "langCount": null,
+        "capabilities": {
+          "reasoning": true,
+          "coding": true,
+          "vision": false,
+          "functionCalling": true,
+          "toolUse": true,
+          "agentic": false
+        },
+        "apiAvailable": true,
+        "price": null,
+        "links": {
+          "hf": "databricks/dbrx-instruct",
+          "gh": "databricks/dbrx",
+          "docs": "www.databricks.com/blog/introducing-dbrx-new-state-art-open-llm"
+        },
+        "note": "Fine-grained MoE (132B total/36B active) pretrained on 12T tokens; a leading open model at launch, beating GPT-3.5 on MMLU/GSM8K/HumanEval.",
+        "quants": [
+          "GGUF Q4"
+        ],
+        "vramQ4Gb": 66,
+        "vramFp16Gb": 264,
+        "tps4090": null,
+        "tpsNote": "Exceeds a single RTX 4090's 24GB VRAM even at Q4 (~66GB needed); requires multi-GPU or CPU offload",
+        "effortLabel": null,
+        "isDefaultConfig": true,
+        "isBestConfig": true,
+        "specSources": {
+          "paramsB": "https://www.databricks.com/blog/introducing-dbrx-new-state-art-open-llm",
+          "ctxK": "https://www.databricks.com/blog/introducing-dbrx-new-state-art-open-llm",
+          "releaseDate": "https://www.databricks.com/company/newsroom/press-releases/databricks-launches-dbrx-new-standard-efficient-open-source-models",
+          "openness": "https://www.databricks.com/legal/open-model-license"
+        },
+        "results": [
+          {
+            "benchmarkSlug": "mmlu",
+            "score": 73.7,
+            "source": "self-reported",
+            "sourceUrl": "https://www.databricks.com/blog/introducing-dbrx-new-state-art-open-llm"
+          },
+          {
+            "benchmarkSlug": "humaneval",
+            "score": 70.1,
+            "source": "self-reported",
+            "sourceUrl": "https://www.databricks.com/blog/introducing-dbrx-new-state-art-open-llm"
+          },
+          {
+            "benchmarkSlug": "gsm8k",
+            "score": 66.9,
+            "source": "self-reported",
+            "sourceUrl": "https://www.databricks.com/blog/introducing-dbrx-new-state-art-open-llm",
+            "notes": "5-shot CoT"
+          },
+          {
+            "benchmarkSlug": "hellaswag",
+            "score": 89,
+            "source": "self-reported",
+            "sourceUrl": "https://www.databricks.com/blog/introducing-dbrx-new-state-art-open-llm"
+          }
+        ],
+        "verificationNotes": "Fully confirmed via fetch of the official Databricks blog post: release date March 27, 2024; 132B total/36B active fine-grained MoE with 16 experts (4 active per token); 32K max context; 12T pretraining tokens. License name 'Databricks Open Model License' confirmed verbatim via databricks.com/legal/open-model-license. All four benchmark rows (MMLU 73.7, HumanEval 70.1, GSM8K 66.9 5-shot, HellaSwag 89.0) literally appear on the cited blog page. No changes made; nothing dropped."
+      },
+      {
+        "name": "rinna japanese-gpt-neox-3.6b",
+        "org": "rinna",
+        "family": "japanese-gpt-neox",
+        "releaseDate": "2023-05-17",
+        "status": "released",
+        "openness": "open-weights",
+        "license": "MIT",
+        "paramsB": 3.6,
+        "activeParamsB": null,
+        "archClass": "dense",
+        "archDisplay": "Dense GPT-NeoX transformer (36 layers, 2816 hidden size)",
+        "ctxK": 2,
+        "modalities": [
+          "text"
+        ],
+        "langCount": 1,
+        "capabilities": {
+          "reasoning": false,
+          "coding": false,
+          "vision": false,
+          "functionCalling": false,
+          "toolUse": false,
+          "agentic": false
+        },
+        "apiAvailable": false,
+        "price": null,
+        "links": {
+          "hf": "rinna/japanese-gpt-neox-3.6b",
+          "docs": "rinna.co.jp"
+        },
+        "note": "One of Japan's earliest openly released, MIT-licensed Japanese LLMs, launched alongside an instruction-tuned SFT variant the same day.",
+        "quants": [
+          "GGUF Q4"
+        ],
+        "vramQ4Gb": 2.2,
+        "vramFp16Gb": 7.2,
+        "tps4090": null,
+        "tpsNote": null,
+        "effortLabel": null,
+        "isDefaultConfig": true,
+        "isBestConfig": true,
+        "specSources": {
+          "paramsB": "https://huggingface.co/rinna/japanese-gpt-neox-3.6b",
+          "ctxK": "https://huggingface.co/rinna/japanese-gpt-neox-3.6b-instruction-ppo/discussions/3",
+          "releaseDate": "https://digital-shift.jp/flash_news/FN230518_3",
+          "openness": "https://huggingface.co/rinna/japanese-gpt-neox-3.6b"
+        },
+        "results": [],
+        "verificationNotes": "Confirmed real via independent Japanese news coverage and technical write-ups (Ledge.ai, digital-shift.jp, Qiita, Zenn, Hatena blog posts dated around the release). 3.6B params, MIT license, dense 36-layer/2816-hidden GPT-NeoX architecture, and 2048-token (2K) context all corroborated across multiple independent sources; trained on ~312.5B tokens from Japanese CC-100/C4/Wikipedia, released alongside an instruction-sft dialogue variant the same day, matching the record's note. The original prtimes.jp specSource URL for releaseDate 404'd (dead link) and could not be verified directly (HuggingFace and prtimes pages also blocked automated fetch with 401s), so I replaced it with a working corroborating source (digital-shift.jp), which independently reports the same May 17-18, 2023 release window, 3.6B params, and MIT license. Kept releaseDate as 2023-05-17 since a Japanese blog post literally dated 2023/05/17 discusses trying the model that day. No results rows were present in the input to verify."
+      }
+    ]
+  },
+  "workflowProgress": [
+    {
+      "type": "workflow_phase",
+      "index": 1,
+      "title": "Research"
+    },
+    {
+      "type": "workflow_phase",
+      "index": 2,
+      "title": "Verify"
+    },
+    {
+      "type": "workflow_agent",
+      "index": 1,
+      "label": "research:Alibaba",
+      "phaseIndex": 1,
+      "phaseTitle": "Research",
+      "agentId": "a83006809e7ba90fa",
+      "model": "claude-sonnet-5",
+      "state": "done",
+      "startedAt": 1783901628486,
+      "queuedAt": 1783901628410,
+      "attempt": 1,
+      "lastToolName": "StructuredOutput",
+      "promptPreview": "You have web research tools. FIRST load them: call ToolSearch with query \"select:mcp__4dbcbf51-5bb9-4f93-a61f-18044e1a3091__web_search,mcp__4dbcbf51-5bb9-4f93-a61f-18044e1a3091__web_fetch\" to load Parallel P0 web_search/web_fetch (pass a stable session_id + model_name on every call). Built-in WebSearch/WebFetch may also load via ToolSearch query \"web search fetch\". Use REAL searches — never answer…",
+      "lastProgressAt": 1783902592866,
+      "tokens": 173260,
+      "toolCalls": 52,
+      "durationMs": 964380,
+      "resultPreview": "{\"models\":[{\"name\":\"Qwen3-8B (Thinking)\",\"org\":\"Alibaba\",\"family\":\"Qwen3\",\"releaseDate\":\"2025-04-28\",\"status\":\"released\",\"openness\":\"open-weights\",\"license\":\"Apache 2.0\",\"paramsB\":8.2,\"activeParamsB\":null,\"archClass\":\"dense\",\"archDisplay\":\"Dense Transformer (GQA 32Q/8KV, SwiGLU, RoPE, RMSNorm, QK-Norm; 36L)\",\"ctxK\":128,\"modalities\":[\"text\"],\"langCount\":119,\"capabilities\":{\"reasoning\":true,\"coding\"…"
+    },
+    {
+      "type": "workflow_agent",
+      "index": 2,
+      "label": "research:MosaicML",
+      "phaseIndex": 1,
+      "phaseTitle": "Research",
+      "agentId": "a9c7dc7ab0b3fd214",
+      "model": "claude-sonnet-5",
+      "state": "done",
+      "startedAt": 1783901628491,
+      "queuedAt": 1783901628412,
+      "attempt": 1,
+      "lastToolName": "StructuredOutput",
+      "promptPreview": "You have web research tools. FIRST load them: call ToolSearch with query \"select:mcp__4dbcbf51-5bb9-4f93-a61f-18044e1a3091__web_search,mcp__4dbcbf51-5bb9-4f93-a61f-18044e1a3091__web_fetch\" to load Parallel P0 web_search/web_fetch (pass a stable session_id + model_name on every call). Built-in WebSearch/WebFetch may also load via ToolSearch query \"web search fetch\". Use REAL searches — never answer…",
+      "lastProgressAt": 1783902387671,
+      "tokens": 156871,
+      "toolCalls": 85,
+      "durationMs": 759180,
+      "resultPreview": "{\"models\":[{\"name\":\"MPT-7B-StoryWriter-65k+\",\"org\":\"MosaicML\",\"family\":\"MPT\",\"releaseDate\":\"2023-05-05\",\"status\":\"released\",\"openness\":\"open-weights\",\"license\":\"Apache-2.0\",\"paramsB\":6.7,\"activeParamsB\":null,\"archClass\":\"dense\",\"archDisplay\":\"Decoder-only Transformer w/ ALiBi (65K-token fiction fine-tune)\",\"ctxK\":65,\"modalities\":[\"text\"],\"langCount\":null,\"capabilities\":{\"reasoning\":false,\"coding\":…"
+    },
+    {
+      "type": "workflow_agent",
+      "index": 3,
+      "label": "research:InternLM (Shanghai AI Lab)",
+      "phaseIndex": 1,
+      "phaseTitle": "Research",
+      "agentId": "adab17cd6fcc4d9fc",
+      "model": "claude-sonnet-5",
+      "state": "done",
+      "startedAt": 1783901628493,
+      "queuedAt": 1783901628412,
+      "attempt": 1,
+      "lastToolName": "StructuredOutput",
+      "promptPreview": "You have web research tools. FIRST load them: call ToolSearch with query \"select:mcp__4dbcbf51-5bb9-4f93-a61f-18044e1a3091__web_search,mcp__4dbcbf51-5bb9-4f93-a61f-18044e1a3091__web_fetch\" to load Parallel P0 web_search/web_fetch (pass a stable session_id + model_name on every call). Built-in WebSearch/WebFetch may also load via ToolSearch query \"web search fetch\". Use REAL searches — never answer…",
+      "lastProgressAt": 1783902337425,
+      "tokens": 133163,
+      "toolCalls": 71,
+      "durationMs": 708931,
+      "resultPreview": "{\"models\":[{\"name\":\"InternLM2-20B\",\"org\":\"Shanghai AI Laboratory\",\"family\":\"InternLM2\",\"releaseDate\":\"2024-01-17\",\"status\":\"released\",\"openness\":\"open-weights\",\"license\":\"Apache-2.0\",\"paramsB\":20,\"activeParamsB\":null,\"archClass\":\"dense\",\"archDisplay\":\"Dense transformer decoder (GQA)\",\"ctxK\":200,\"modalities\":[\"text\"],\"langCount\":null,\"capabilities\":{\"reasoning\":true,\"coding\":true,\"vision\":false,\"fu…"
+    },
+    {
+      "type": "workflow_agent",
+      "index": 4,
+      "label": "verify:Alibaba",
+      "phaseIndex": 2,
+      "phaseTitle": "Verify",
+      "agentId": "a20dfe09541669451",
+      "model": "claude-sonnet-5",
+      "state": "done",
+      "startedAt": 1783902592884,
+      "queuedAt": 1783902592872,
+      "attempt": 1,
+      "lastToolName": "StructuredOutput",
+      "promptPreview": "You have web research tools. FIRST load them: call ToolSearch with query \"select:mcp__4dbcbf51-5bb9-4f93-a61f-18044e1a3091__web_search,mcp__4dbcbf51-5bb9-4f93-a61f-18044e1a3091__web_fetch\" to load Parallel P0 web_search/web_fetch (pass a stable session_id + model_name on every call). Built-in WebSearch/WebFetch may also load via ToolSearch query \"web search fetch\". Use REAL searches — never answer…",
+      "lastProgressAt": 1783902874319,
+      "tokens": 90688,
+      "toolCalls": 23,
+      "durationMs": 281435,
+      "resultPreview": "{\"models\":[{\"name\":\"Qwen3-8B (Thinking)\",\"org\":\"Alibaba\",\"family\":\"Qwen3\",\"releaseDate\":\"2025-04-28\",\"status\":\"released\",\"openness\":\"open-weights\",\"license\":\"Apache 2.0\",\"paramsB\":8.2,\"activeParamsB\":null,\"archClass\":\"dense\",\"archDisplay\":\"Dense Transformer (GQA 32Q/8KV, SwiGLU, RoPE, RMSNorm, QK-Norm; 36L)\",\"ctxK\":128,\"modalities\":[\"text\"],\"langCount\":119,\"capabilities\":{\"reasoning\":true,\"coding\"…"
+    },
+    {
+      "type": "workflow_agent",
+      "index": 5,
+      "label": "verify:Alibaba",
+      "phaseIndex": 2,
+      "phaseTitle": "Verify",
+      "agentId": "a125ac666286de43e",
+      "model": "claude-sonnet-5",
+      "state": "done",
+      "startedAt": 1783902592884,
+      "queuedAt": 1783902592873,
+      "attempt": 1,
+      "lastToolName": "StructuredOutput",
+      "promptPreview": "You have web research tools. FIRST load them: call ToolSearch with query \"select:mcp__4dbcbf51-5bb9-4f93-a61f-18044e1a3091__web_search,mcp__4dbcbf51-5bb9-4f93-a61f-18044e1a3091__web_fetch\" to load Parallel P0 web_search/web_fetch (pass a stable session_id + model_name on every call). Built-in WebSearch/WebFetch may also load via ToolSearch query \"web search fetch\". Use REAL searches — never answer…",
+      "lastProgressAt": 1783903016202,
+      "tokens": 107604,
+      "toolCalls": 49,
+      "durationMs": 423318,
+      "resultPreview": "{\"models\":[{\"name\":\"Qwen3-30B-A3B (Thinking)\",\"org\":\"Alibaba\",\"family\":\"Qwen3\",\"releaseDate\":\"2025-04-28\",\"status\":\"released\",\"openness\":\"open-weights\",\"license\":\"Apache 2.0\",\"paramsB\":30.5,\"activeParamsB\":3.3,\"archClass\":\"moe\",\"archDisplay\":\"MoE Transformer (128 experts, 8 active; GQA 32Q/4KV; 48L)\",\"ctxK\":128,\"modalities\":[\"text\"],\"langCount\":119,\"capabilities\":{\"reasoning\":true,\"coding\":true,\"v…"
+    },
+    {
+      "type": "workflow_agent",
+      "index": 6,
+      "label": "verify:MosaicML",
+      "phaseIndex": 2,
+      "phaseTitle": "Verify",
+      "agentId": "ae65af78fc0136cee",
+      "model": "claude-sonnet-5",
+      "state": "done",
+      "startedAt": 1783902592885,
+      "queuedAt": 1783902592873,
+      "attempt": 1,
+      "lastToolName": "StructuredOutput",
+      "promptPreview": "You have web research tools. FIRST load them: call ToolSearch with query \"select:mcp__4dbcbf51-5bb9-4f93-a61f-18044e1a3091__web_search,mcp__4dbcbf51-5bb9-4f93-a61f-18044e1a3091__web_fetch\" to load Parallel P0 web_search/web_fetch (pass a stable session_id + model_name on every call). Built-in WebSearch/WebFetch may also load via ToolSearch query \"web search fetch\". Use REAL searches — never answer…",
+      "lastProgressAt": 1783902849719,
+      "tokens": 86501,
+      "toolCalls": 40,
+      "durationMs": 256834,
+      "resultPreview": "{\"models\":[{\"name\":\"MPT-7B-StoryWriter-65k+\",\"org\":\"MosaicML\",\"family\":\"MPT\",\"releaseDate\":\"2023-05-05\",\"status\":\"released\",\"openness\":\"open-weights\",\"license\":\"Apache-2.0\",\"paramsB\":6.7,\"activeParamsB\":null,\"archClass\":\"dense\",\"archDisplay\":\"Decoder-only Transformer w/ ALiBi (65K-token fiction fine-tune)\",\"ctxK\":65,\"modalities\":[\"text\"],\"langCount\":null,\"capabilities\":{\"reasoning\":false,\"coding\":…"
+    },
+    {
+      "type": "workflow_agent",
+      "index": 7,
+      "label": "verify:AI21 Labs",
+      "phaseIndex": 2,
+      "phaseTitle": "Verify",
+      "agentId": "a583234a9a0826e04",
+      "model": "claude-sonnet-5",
+      "state": "done",
+      "startedAt": 1783902592885,
+      "queuedAt": 1783902592873,
+      "attempt": 1,
+      "lastToolName": "StructuredOutput",
+      "promptPreview": "You have web research tools. FIRST load them: call ToolSearch with query \"select:mcp__4dbcbf51-5bb9-4f93-a61f-18044e1a3091__web_search,mcp__4dbcbf51-5bb9-4f93-a61f-18044e1a3091__web_fetch\" to load Parallel P0 web_search/web_fetch (pass a stable session_id + model_name on every call). Built-in WebSearch/WebFetch may also load via ToolSearch query \"web search fetch\". Use REAL searches — never answer…",
+      "lastProgressAt": 1783902889429,
+      "tokens": 84940,
+      "toolCalls": 38,
+      "durationMs": 296544,
+      "resultPreview": "{\"models\":[{\"name\":\"AI21 Jamba 1.5 Mini\",\"org\":\"AI21 Labs\",\"family\":\"AI21 Jamba\",\"releaseDate\":\"2024-08-22\",\"status\":\"released\",\"openness\":\"open-weights\",\"license\":\"Jamba Open Model License\",\"paramsB\":52,\"activeParamsB\":12,\"archClass\":\"hybrid\",\"archDisplay\":\"Hybrid Mamba-Transformer MoE (Jamba)\",\"ctxK\":256,\"modalities\":[\"text\"],\"langCount\":9,\"capabilities\":{\"reasoning\":false,\"coding\":true,\"vision\"…"
+    },
+    {
+      "type": "workflow_agent",
+      "index": 8,
+      "label": "verify:Databricks",
+      "phaseIndex": 2,
+      "phaseTitle": "Verify",
+      "agentId": "ae8761257de198e1c",
+      "model": "claude-sonnet-5",
+      "state": "done",
+      "startedAt": 1783902592885,
+      "queuedAt": 1783902592873,
+      "attempt": 1,
+      "lastToolName": "StructuredOutput",
+      "promptPreview": "You have web research tools. FIRST load them: call ToolSearch with query \"select:mcp__4dbcbf51-5bb9-4f93-a61f-18044e1a3091__web_search,mcp__4dbcbf51-5bb9-4f93-a61f-18044e1a3091__web_fetch\" to load Parallel P0 web_search/web_fetch (pass a stable session_id + model_name on every call). Built-in WebSearch/WebFetch may also load via ToolSearch query \"web search fetch\". Use REAL searches — never answer…",
+      "lastProgressAt": 1783902810409,
+      "tokens": 71572,
+      "toolCalls": 29,
+      "durationMs": 217524,
+      "resultPreview": "{\"models\":[{\"name\":\"DBRX\",\"org\":\"Databricks\",\"family\":\"DBRX\",\"releaseDate\":\"2024-03-27\",\"status\":\"released\",\"openness\":\"open-weights\",\"license\":\"Databricks Open Model License\",\"paramsB\":132,\"activeParamsB\":36,\"archClass\":\"moe\",\"archDisplay\":\"Fine-grained MoE, 16 experts (4 active per token)\",\"ctxK\":32,\"modalities\":[\"text\"],\"langCount\":null,\"capabilities\":{\"reasoning\":true,\"coding\":true,\"vision\":fa…"
+    }
+  ],
+  "totalTokens": 904599,
+  "totalToolCalls": 387
+}

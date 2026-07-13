@@ -1,0 +1,95 @@
+{
+  "name": "Command R7B",
+  "org": "Cohere",
+  "family": "Command R",
+  "releaseDate": "2024-12-13",
+  "status": "released",
+  "openness": "open-weights",
+  "license": "CC-BY-NC-4.0 (+ Acceptable Use Policy)",
+  "paramsB": 7,
+  "activeParamsB": null,
+  "archClass": "dense",
+  "archDisplay": "Dense transformer (7B), optimized for on-device/edge RAG and tool use",
+  "ctxK": 128,
+  "modalities": [
+    "text"
+  ],
+  "langCount": 23,
+  "capabilities": {
+    "reasoning": false,
+    "coding": true,
+    "vision": false,
+    "functionCalling": true,
+    "toolUse": true,
+    "agentic": true
+  },
+  "apiAvailable": true,
+  "price": {
+    "input": 0.0375,
+    "output": 0.15,
+    "provider": "Cohere"
+  },
+  "links": {
+    "hf": "CohereLabs/c4ai-command-r7b-12-2024",
+    "docs": "docs.cohere.com"
+  },
+  "note": "Smallest, fastest model in the R series for edge/on-device RAG and tool use; ranked first among similarly-sized open-weights models on the Open LLM Leaderboard.",
+  "quants": [
+    "GGUF Q4"
+  ],
+  "vramQ4Gb": 5,
+  "vramFp16Gb": 14,
+  "tps4090": null,
+  "tpsNote": null,
+  "effortLabel": null,
+  "isDefaultConfig": true,
+  "isBestConfig": true,
+  "specSources": {
+    "releaseDate": "https://cohere.com/blog/command-r7b",
+    "openness": "https://huggingface.co/CohereLabs/c4ai-command-r7b-12-2024",
+    "paramsB": "https://huggingface.co/CohereLabs/c4ai-command-r7b-12-2024",
+    "ctxK": "https://huggingface.co/CohereLabs/c4ai-command-r7b-12-2024"
+  },
+  "results": [
+    {
+      "benchmarkSlug": "mmlu",
+      "score": 65.2,
+      "source": "self-reported",
+      "sourceUrl": "https://arxiv.org/abs/2504.00698",
+      "notes": "Command A technical report, Table 1"
+    },
+    {
+      "benchmarkSlug": "math",
+      "score": 59.1,
+      "source": "self-reported",
+      "sourceUrl": "https://arxiv.org/abs/2504.00698"
+    },
+    {
+      "benchmarkSlug": "ifeval",
+      "score": 77.9,
+      "source": "self-reported",
+      "sourceUrl": "https://arxiv.org/abs/2504.00698"
+    },
+    {
+      "benchmarkSlug": "gpqa",
+      "score": 26.3,
+      "source": "self-reported",
+      "sourceUrl": "https://arxiv.org/abs/2504.00698"
+    },
+    {
+      "benchmarkSlug": "mbpp",
+      "score": 72,
+      "source": "self-reported",
+      "sourceUrl": "https://arxiv.org/abs/2504.00698",
+      "notes": "MBPP+"
+    },
+    {
+      "benchmarkSlug": "bfcl",
+      "score": 52.2,
+      "source": "self-reported",
+      "sourceUrl": "https://arxiv.org/abs/2504.00698",
+      "notes": "Berkeley Function-Calling Leaderboard"
+    }
+  ],
+  "verificationNotes": "Fully confirmed: Cohere blog dated Dec 13, 2024 (release); HF model card CohereLabs/c4ai-command-r7b-12-2024 confirms 7B params, 128K context, CC-BY-NC + Acceptable Use Policy, 23 languages. Downloaded and read the actual Command A tech report PDF (arXiv 2504.00698) Table 1 — all six Command R7B benchmark numbers (MMLU 65.2, MATH 59.1, IFEval 77.9, GPQA 26.3, MBPP+ 72.0, BFCL 52.2) appear verbatim. Pricing ($0.0375/$0.15 per 1M tokens) confirmed via independent pricing aggregators. No changes made."
+}

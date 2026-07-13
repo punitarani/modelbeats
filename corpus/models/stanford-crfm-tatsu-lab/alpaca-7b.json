@@ -1,0 +1,51 @@
+{
+  "name": "Alpaca 7B",
+  "org": "Stanford (CRFM / Tatsu Lab)",
+  "family": "Alpaca",
+  "releaseDate": "2023-03-13",
+  "status": "released",
+  "openness": "open-weights",
+  "license": "CC-BY-NC-4.0 (data/weights, non-commercial); Apache-2.0 (training code)",
+  "paramsB": 6.7,
+  "activeParamsB": null,
+  "archClass": "dense",
+  "archDisplay": "Dense Transformer (LLaMA 7B architecture, fine-tuned)",
+  "ctxK": 0.512,
+  "modalities": [
+    "text"
+  ],
+  "langCount": 1,
+  "capabilities": {
+    "reasoning": false,
+    "coding": false,
+    "vision": false,
+    "functionCalling": false,
+    "toolUse": false,
+    "agentic": false
+  },
+  "apiAvailable": false,
+  "price": null,
+  "links": {
+    "gh": "tatsu-lab/stanford_alpaca",
+    "docs": "crfm.stanford.edu/2023/03/13/alpaca.html"
+  },
+  "note": "LLaMA 7B fine-tuned on 52K self-instruct demos for under $600; sparked the open instruction-tuning wave.",
+  "quants": [
+    "GGUF Q4"
+  ],
+  "vramQ4Gb": 6,
+  "vramFp16Gb": 13,
+  "tps4090": null,
+  "tpsNote": null,
+  "effortLabel": null,
+  "isDefaultConfig": true,
+  "isBestConfig": true,
+  "specSources": {
+    "paramsB": "https://github.com/tatsu-lab/stanford_alpaca",
+    "ctxK": "https://github.com/tatsu-lab/stanford_alpaca",
+    "releaseDate": "https://crfm.stanford.edu/2023/03/13/alpaca.html",
+    "openness": "https://github.com/tatsu-lab/stanford_alpaca"
+  },
+  "results": [],
+  "verificationNotes": "Confirmed real release via crfm.stanford.edu/2023/03/13/alpaca.html (blog post dated 2023-03-13, exactly matching releaseDate). Confirmed via direct fetch of tatsu-lab/stanford_alpaca GitHub repo: three-license split is accurate (code = Apache 2.0, data = CC BY NC 4.0, weight diff = CC BY NC 4.0) and training used a 512-token max sequence length, matching ctxK 0.512. Confirmed the head-to-head result: CRFM blog states 'Alpaca wins 90 versus 89 comparisons against text-davinci-003' — 90+89=179, matching the record's '90 of 179' framing and the 50.3% win rate (90/179≈50.3%). paramsB 6.7 matches the well-documented actual parameter count of the 'LLaMA-7B' base model. No changes to values were needed."
+}

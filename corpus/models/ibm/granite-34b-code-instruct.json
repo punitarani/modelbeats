@@ -1,0 +1,67 @@
+{
+  "name": "Granite 34B Code Instruct",
+  "org": "IBM",
+  "family": "Granite Code",
+  "releaseDate": "2024-05-06",
+  "status": "deprecated",
+  "openness": "open-weights",
+  "license": "Apache 2.0",
+  "paramsB": 34,
+  "activeParamsB": null,
+  "archClass": "dense",
+  "archDisplay": "Dense decoder-only transformer (depth-upscaled from Granite-20B-Code)",
+  "ctxK": 8,
+  "modalities": [
+    "text"
+  ],
+  "langCount": null,
+  "capabilities": {
+    "reasoning": false,
+    "coding": true,
+    "vision": false,
+    "functionCalling": true,
+    "toolUse": true,
+    "agentic": true
+  },
+  "apiAvailable": false,
+  "price": null,
+  "links": {
+    "hf": "ibm-granite/granite-34b-code-instruct-8k",
+    "gh": "ibm-granite/granite-code-models",
+    "docs": "ibm.com/granite/docs/models/code"
+  },
+  "note": "Largest Granite Code model, depth-upscaled from Granite-20B-Code; now deprecated by IBM in favor of newer Granite releases.",
+  "quants": [
+    "GGUF"
+  ],
+  "vramQ4Gb": 21.4,
+  "vramFp16Gb": 68,
+  "tps4090": null,
+  "tpsNote": null,
+  "effortLabel": null,
+  "isDefaultConfig": true,
+  "isBestConfig": true,
+  "specSources": {
+    "paramsB": "https://huggingface.co/ibm-granite/granite-34b-code-instruct-8k",
+    "ctxK": "https://github.com/ibm-granite/granite-code-models",
+    "releaseDate": "https://huggingface.co/ibm-granite/granite-34b-code-instruct-8k",
+    "openness": "https://huggingface.co/ibm-granite/granite-34b-code-instruct-8k"
+  },
+  "results": [
+    {
+      "benchmarkSlug": "humaneval",
+      "score": 62.2,
+      "source": "self-reported",
+      "sourceUrl": "https://huggingface.co/ibm-granite/granite-34b-code-instruct-8k",
+      "notes": "HumanEvalSynthesize, Python pass@1"
+    },
+    {
+      "benchmarkSlug": "humaneval",
+      "score": 54.8,
+      "source": "independent",
+      "sourceUrl": "https://arxiv.org/html/2405.04324v1",
+      "notes": "HumanEvalSynthesize, avg across 6 languages (paper Table 3)"
+    }
+  ],
+  "verificationNotes": "Confirmed real via HF model card (fetched): 34B params, 8K context, Apache 2.0, released 2024-05-06, explicitly marked 'NOT RECOMMENDED FOR USE IN NEW PROJECTS' / historical-only, confirming deprecated status. Depth-upscaling from Granite-20B-Code (52-layer 20B duplicated, 8 layers trimmed from each copy, concatenated to 88 layers) independently confirmed via GitHub/arXiv paper description. Both result rows confirmed present on their sourceUrls: 62.2 (self-reported HF card) and 54.8 (arXiv paper v1, Table 3, avg across 6 languages). No changes made."
+}

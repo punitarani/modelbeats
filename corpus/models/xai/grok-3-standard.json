@@ -1,0 +1,68 @@
+{
+  "name": "Grok-3 (Standard)",
+  "org": "xAI",
+  "family": "Grok 3",
+  "releaseDate": "2025-02-17",
+  "status": "deprecated",
+  "openness": "closed",
+  "license": "Proprietary",
+  "paramsB": null,
+  "activeParamsB": null,
+  "archClass": "moe",
+  "archDisplay": "Mixture-of-Experts (size undisclosed; trained on Colossus, ~10x Grok-2 compute)",
+  "ctxK": 131,
+  "modalities": [
+    "text"
+  ],
+  "langCount": null,
+  "capabilities": {
+    "reasoning": false,
+    "coding": true,
+    "vision": false,
+    "functionCalling": true,
+    "toolUse": true,
+    "agentic": false
+  },
+  "apiAvailable": true,
+  "price": {
+    "input": 3,
+    "output": 15,
+    "provider": "xAI"
+  },
+  "links": {
+    "docs": "docs.x.ai"
+  },
+  "note": "Instant/non-reasoning mode of Grok 3; API model card lists it as text-only. Deprecated May 15, 2026, requests now redirect to Grok 4.3.",
+  "quants": [],
+  "vramQ4Gb": null,
+  "vramFp16Gb": null,
+  "tps4090": null,
+  "tpsNote": null,
+  "effortLabel": "Standard",
+  "isDefaultConfig": true,
+  "isBestConfig": false,
+  "specSources": {
+    "releaseDate": "https://x.ai/news/grok-3",
+    "ctxK": "https://docs.oracle.com/en-us/iaas/Content/generative-ai/xai-grok-3.htm",
+    "openness": "https://docs.oracle.com/en-us/iaas/Content/generative-ai/xai-grok-3.htm"
+  },
+  "results": [
+    {
+      "benchmarkSlug": "aime",
+      "score": 52.2,
+      "source": "self-reported",
+      "sourceUrl": "https://medium.com/@bernardloki/grok-3-review-a-critical-look-at-xais-smartest-ai-claim-aea15ca38b66",
+      "evaluatedAt": "2025-02-17",
+      "notes": "AIME 2024, non-reasoning mode"
+    },
+    {
+      "benchmarkSlug": "gpqa",
+      "score": 75.4,
+      "source": "self-reported",
+      "sourceUrl": "https://medium.com/@bernardloki/grok-3-review-a-critical-look-at-xais-smartest-ai-claim-aea15ca38b66",
+      "evaluatedAt": "2025-02-17",
+      "notes": "non-reasoning mode"
+    }
+  ],
+  "verificationNotes": "Confirmed real: Grok 3 launched Feb 17, 2025 via livestream (TechCrunch, multiple outlets). Both result rows literally confirmed by fetching the medium.com source directly ('52.2%... AIME'24' and '75.4% on GPQA'). Oracle docs confirm 131,072 ctx, text-only, and deprecated May 15, 2026 status. Pricing $3/$15 per 1M tokens corroborated independently."
+}

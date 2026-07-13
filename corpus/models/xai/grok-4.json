@@ -1,0 +1,92 @@
+{
+  "name": "Grok-4",
+  "org": "xAI",
+  "family": "Grok 4",
+  "releaseDate": "2025-07-09",
+  "status": "deprecated",
+  "openness": "closed",
+  "license": "Proprietary",
+  "paramsB": null,
+  "activeParamsB": null,
+  "archClass": "moe",
+  "archDisplay": "Mixture-of-Experts (size undisclosed; RL-trained at pretraining scale on Colossus, ~200K H100s)",
+  "ctxK": 256,
+  "modalities": [
+    "text",
+    "vision"
+  ],
+  "langCount": null,
+  "capabilities": {
+    "reasoning": true,
+    "coding": true,
+    "vision": true,
+    "functionCalling": true,
+    "toolUse": true,
+    "agentic": true
+  },
+  "apiAvailable": true,
+  "price": {
+    "input": 3,
+    "output": 15,
+    "provider": "xAI"
+  },
+  "links": {
+    "docs": "docs.x.ai"
+  },
+  "note": "Native tool-use reasoning flagship; led ARC-AGI-2 at launch. Official model card published by xAI (data.x.ai). Deprecated in the May 15, 2026 retirement wave, redirects to Grok 4.3.",
+  "quants": [],
+  "vramQ4Gb": null,
+  "vramFp16Gb": null,
+  "tps4090": null,
+  "tpsNote": null,
+  "effortLabel": null,
+  "isDefaultConfig": true,
+  "isBestConfig": true,
+  "specSources": {
+    "releaseDate": "https://epoch.ai/models/grok-4",
+    "ctxK": "https://www.promptfoo.dev/docs/providers/xai/",
+    "openness": "https://data.x.ai/2025-08-20-grok-4-model-card.pdf"
+  },
+  "results": [
+    {
+      "benchmarkSlug": "hle",
+      "score": 25.4,
+      "source": "self-reported",
+      "sourceUrl": "https://www.scientificamerican.com/article/elon-musks-new-grok-4-takes-on-humanitys-last-exam-as-the-ai-race-heats-up/",
+      "evaluatedAt": "2025-07-09",
+      "notes": "without tools"
+    },
+    {
+      "benchmarkSlug": "gpqa",
+      "score": 87.5,
+      "source": "self-reported",
+      "sourceUrl": "https://www.datacamp.com/blog/grok-4",
+      "evaluatedAt": "2025-07-09",
+      "notes": "GPQA Diamond, no tools"
+    },
+    {
+      "benchmarkSlug": "aime",
+      "score": 91.7,
+      "source": "self-reported",
+      "sourceUrl": "https://www.datacamp.com/blog/grok-4",
+      "evaluatedAt": "2025-07-09",
+      "notes": "AIME 2025, no tools"
+    },
+    {
+      "benchmarkSlug": "livecodebench",
+      "score": 79,
+      "source": "self-reported",
+      "sourceUrl": "https://www.datacamp.com/blog/grok-4",
+      "evaluatedAt": "2025-07-09",
+      "notes": "no tools"
+    },
+    {
+      "benchmarkSlug": "arc-agi-2",
+      "score": 15.9,
+      "source": "self-reported",
+      "sourceUrl": "https://introl.com/blog/grok-4-just-shattered-the-ai-ceilingheres-why-that-changes-everything",
+      "evaluatedAt": "2025-07-09"
+    }
+  ],
+  "verificationNotes": "Confirmed real: launched July 9, 2025 via livestream (Teslarati, TechCrunch, etc.), official model card exists at data.x.ai/2025-08-20-grok-4-model-card.pdf. GPQA 87.5, AIME 91.7, and LiveCodeBench 79 confirmed literally present on datacamp.com/blog/grok-4 via direct fetch. HLE 25.4 confirmed literally on scientificamerican.com ('scored 25.4 percent'). CORRECTED the ARC-AGI-2 sourceUrl: the original x.com/xai tweet URL returned HTTP 402 (paywalled, unfetchable); replaced with introl.com, which was fetched directly and literally contains '15.9%' attributed to Grok 4 Thinking mode on ARC-AGI-2 — independently corroborated by ARC Prize Foundation's own announcement (x.com/arcprize) and multiple outlets (Built In, Teslarati). Context window 256K and pricing $3/$15 confirmed independently. 200K H100 Colossus claim confirmed via xAI/NVIDIA/Tom's Hardware coverage."
+}

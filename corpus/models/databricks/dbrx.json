@@ -1,0 +1,78 @@
+{
+  "name": "DBRX",
+  "org": "Databricks",
+  "family": "DBRX",
+  "releaseDate": "2024-03-27",
+  "status": "released",
+  "openness": "open-weights",
+  "license": "Databricks Open Model License",
+  "paramsB": 132,
+  "activeParamsB": 36,
+  "archClass": "moe",
+  "archDisplay": "Fine-grained MoE, 16 experts (4 active per token)",
+  "ctxK": 32,
+  "modalities": [
+    "text"
+  ],
+  "langCount": null,
+  "capabilities": {
+    "reasoning": true,
+    "coding": true,
+    "vision": false,
+    "functionCalling": true,
+    "toolUse": true,
+    "agentic": false
+  },
+  "apiAvailable": true,
+  "price": null,
+  "links": {
+    "hf": "databricks/dbrx-instruct",
+    "gh": "databricks/dbrx",
+    "docs": "www.databricks.com/blog/introducing-dbrx-new-state-art-open-llm"
+  },
+  "note": "Fine-grained MoE (132B total/36B active) pretrained on 12T tokens; a leading open model at launch, beating GPT-3.5 on MMLU/GSM8K/HumanEval.",
+  "quants": [
+    "GGUF Q4"
+  ],
+  "vramQ4Gb": 66,
+  "vramFp16Gb": 264,
+  "tps4090": null,
+  "tpsNote": "Exceeds a single RTX 4090's 24GB VRAM even at Q4 (~66GB needed); requires multi-GPU or CPU offload",
+  "effortLabel": null,
+  "isDefaultConfig": true,
+  "isBestConfig": true,
+  "specSources": {
+    "paramsB": "https://www.databricks.com/blog/introducing-dbrx-new-state-art-open-llm",
+    "ctxK": "https://www.databricks.com/blog/introducing-dbrx-new-state-art-open-llm",
+    "releaseDate": "https://www.databricks.com/company/newsroom/press-releases/databricks-launches-dbrx-new-standard-efficient-open-source-models",
+    "openness": "https://www.databricks.com/legal/open-model-license"
+  },
+  "results": [
+    {
+      "benchmarkSlug": "mmlu",
+      "score": 73.7,
+      "source": "self-reported",
+      "sourceUrl": "https://www.databricks.com/blog/introducing-dbrx-new-state-art-open-llm"
+    },
+    {
+      "benchmarkSlug": "humaneval",
+      "score": 70.1,
+      "source": "self-reported",
+      "sourceUrl": "https://www.databricks.com/blog/introducing-dbrx-new-state-art-open-llm"
+    },
+    {
+      "benchmarkSlug": "gsm8k",
+      "score": 66.9,
+      "source": "self-reported",
+      "sourceUrl": "https://www.databricks.com/blog/introducing-dbrx-new-state-art-open-llm",
+      "notes": "5-shot CoT"
+    },
+    {
+      "benchmarkSlug": "hellaswag",
+      "score": 89,
+      "source": "self-reported",
+      "sourceUrl": "https://www.databricks.com/blog/introducing-dbrx-new-state-art-open-llm"
+    }
+  ],
+  "verificationNotes": "Fully confirmed via fetch of the official Databricks blog post: release date March 27, 2024; 132B total/36B active fine-grained MoE with 16 experts (4 active per token); 32K max context; 12T pretraining tokens. License name 'Databricks Open Model License' confirmed verbatim via databricks.com/legal/open-model-license. All four benchmark rows (MMLU 73.7, HumanEval 70.1, GSM8K 66.9 5-shot, HellaSwag 89.0) literally appear on the cited blog page. No changes made; nothing dropped."
+}

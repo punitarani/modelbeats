@@ -1,0 +1,72 @@
+{
+  "name": "Code Llama 34B Python",
+  "org": "Meta",
+  "family": "Code Llama",
+  "releaseDate": "2023-08-24",
+  "status": "released",
+  "openness": "open-weights",
+  "license": "Llama 2 Community License",
+  "paramsB": 34,
+  "activeParamsB": null,
+  "archClass": "dense",
+  "archDisplay": "Dense transformer (decoder-only), Python-specialized, no infilling",
+  "ctxK": 16,
+  "modalities": [
+    "text"
+  ],
+  "langCount": null,
+  "capabilities": {
+    "reasoning": false,
+    "coding": true,
+    "vision": false,
+    "functionCalling": false,
+    "toolUse": false,
+    "agentic": false
+  },
+  "apiAvailable": true,
+  "price": null,
+  "links": {
+    "hf": "meta-llama/CodeLlama-34b-Python-hf",
+    "gh": "facebookresearch/codellama",
+    "docs": "ai.meta.com/blog/code-llama-large-language-model-coding"
+  },
+  "note": "Python-specialized Code Llama 34B, further trained on 100B Python tokens; HumanEval 53.7%, MBPP 56.2%.",
+  "quants": [
+    "GGUF Q4",
+    "GPTQ",
+    "AWQ",
+    "MLX"
+  ],
+  "vramQ4Gb": 22,
+  "vramFp16Gb": 68,
+  "tps4090": null,
+  "tpsNote": null,
+  "effortLabel": null,
+  "isDefaultConfig": true,
+  "isBestConfig": true,
+  "specSources": {
+    "paramsB": "https://huggingface.co/meta-llama/CodeLlama-34b-Python-hf",
+    "ctxK": "https://arxiv.org/html/2308.12950v3",
+    "releaseDate": "https://ai.meta.com/blog/code-llama-large-language-model-coding/",
+    "openness": "https://ai.meta.com/blog/code-llama-large-language-model-coding/"
+  },
+  "results": [
+    {
+      "benchmarkSlug": "humaneval",
+      "score": 53.7,
+      "source": "self-reported",
+      "sourceUrl": "https://arxiv.org/html/2308.12950v3",
+      "evaluatedAt": "2023-08-01",
+      "notes": "pass@1, Code Llama - Python 34B; also cited in Meta's official blog"
+    },
+    {
+      "benchmarkSlug": "mbpp",
+      "score": 56.2,
+      "source": "self-reported",
+      "sourceUrl": "https://arxiv.org/html/2308.12950v3",
+      "evaluatedAt": "2023-08-01",
+      "notes": "pass@1, Code Llama - Python 34B"
+    }
+  ],
+  "verificationNotes": "Confirmed release 2023-08-24 and license. Directly fetched arxiv.org/html/2308.12950v3 Table 2: HumanEval 53.7 / MBPP 56.2 for Code Llama - Python 34B confirmed exactly; also consistent with the paper's original (pre-70B) abstract headline of 'up to 53% and 55%' on HumanEval/MBPP, which referred to this exact model before the 70B variant was added in a later paper revision."
+}

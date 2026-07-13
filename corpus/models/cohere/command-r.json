@@ -1,0 +1,55 @@
+{
+  "name": "Command R",
+  "org": "Cohere",
+  "family": "Command R",
+  "releaseDate": "2024-03-11",
+  "status": "deprecated",
+  "openness": "open-weights",
+  "license": "CC-BY-NC-4.0 (+ Acceptable Use Policy)",
+  "paramsB": 35,
+  "activeParamsB": null,
+  "archClass": "dense",
+  "archDisplay": "Dense transformer (35B), optimized for RAG and multi-step tool use",
+  "ctxK": 128,
+  "modalities": [
+    "text"
+  ],
+  "langCount": 10,
+  "capabilities": {
+    "reasoning": false,
+    "coding": true,
+    "vision": false,
+    "functionCalling": true,
+    "toolUse": true,
+    "agentic": true
+  },
+  "apiAvailable": true,
+  "price": {
+    "input": 0.5,
+    "output": 1.5,
+    "provider": "Cohere"
+  },
+  "links": {
+    "hf": "CohereLabs/c4ai-command-r-v01",
+    "docs": "docs.cohere.com"
+  },
+  "note": "35B RAG/tool-use model with 128K context; first open-weights (CC-BY-NC) Command release, later superseded by the 08-2024 refresh.",
+  "quants": [
+    "GGUF Q4"
+  ],
+  "vramQ4Gb": 21.6,
+  "vramFp16Gb": 70,
+  "tps4090": null,
+  "tpsNote": null,
+  "effortLabel": null,
+  "isDefaultConfig": true,
+  "isBestConfig": true,
+  "specSources": {
+    "releaseDate": "https://cohere.com/blog/command-r",
+    "openness": "https://huggingface.co/CohereLabs/c4ai-command-r-v01",
+    "paramsB": "https://huggingface.co/CohereLabs/c4ai-command-r-v01",
+    "ctxK": "https://huggingface.co/CohereLabs/c4ai-command-r-v01"
+  },
+  "results": [],
+  "verificationNotes": "Confirmed via huggingface.co/CohereLabs/c4ai-command-r-v01 (35B params, 128K context, CC-BY-NC + Acceptable Use Policy license, 10 optimized languages plus 13 more pretrained) and cohere.com/blog/command-r (blog post titled 'Command R: Retrieval-Augmented Generation at Production Scale' dated March 11, 2024, matching the release date). Pricing $0.5/$1.5 corroborated independently (Command-R Mar'24 rate). No changes."
+}

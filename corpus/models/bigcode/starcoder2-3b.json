@@ -1,0 +1,74 @@
+{
+  "name": "StarCoder2 3B",
+  "org": "BigCode",
+  "family": "StarCoder2",
+  "releaseDate": "2024-02-28",
+  "status": "released",
+  "openness": "open-weights",
+  "license": "BigCode OpenRAIL-M",
+  "paramsB": 3,
+  "activeParamsB": null,
+  "archClass": "dense",
+  "archDisplay": "Transformer decoder, grouped-query + sliding-window attention (4K window/16K ctx), FIM; ServiceNow-trained",
+  "ctxK": 16,
+  "modalities": [
+    "text"
+  ],
+  "langCount": 17,
+  "capabilities": {
+    "reasoning": false,
+    "coding": true,
+    "vision": false,
+    "functionCalling": false,
+    "toolUse": false,
+    "agentic": false
+  },
+  "apiAvailable": false,
+  "price": null,
+  "links": {
+    "hf": "bigcode/starcoder2-3b",
+    "gh": "bigcode-project/starcoder2",
+    "docs": "bigcode-project.org/docs/about/models"
+  },
+  "note": "ServiceNow-trained 3B StarCoder2 for laptop/edge code generation; outperforms original 15B StarCoder on many benchmarks.",
+  "quants": [
+    "GGUF"
+  ],
+  "vramQ4Gb": 2.1,
+  "vramFp16Gb": 6,
+  "tps4090": null,
+  "tpsNote": null,
+  "effortLabel": null,
+  "isDefaultConfig": true,
+  "isBestConfig": true,
+  "specSources": {
+    "paramsB": "https://huggingface.co/bigcode/starcoder2-3b",
+    "ctxK": "https://huggingface.co/bigcode/starcoder2-3b",
+    "releaseDate": "https://huggingface.co/blog/starcoder2",
+    "openness": "https://huggingface.co/bigcode/starcoder2-3b"
+  },
+  "results": [
+    {
+      "benchmarkSlug": "humaneval",
+      "score": 31.7,
+      "source": "self-reported",
+      "sourceUrl": "https://huggingface.co/bigcode/starcoder2-3b",
+      "notes": "pass@1"
+    },
+    {
+      "benchmarkSlug": "gsm8k",
+      "score": 27.7,
+      "source": "self-reported",
+      "sourceUrl": "https://huggingface.co/bigcode/starcoder2-3b",
+      "notes": "PAL"
+    },
+    {
+      "benchmarkSlug": "ds-1000",
+      "score": 25,
+      "source": "self-reported",
+      "sourceUrl": "https://huggingface.co/bigcode/starcoder2-3b",
+      "notes": "pass@1"
+    }
+  ],
+  "verificationNotes": "Fetched HF model card: confirmed 3B params, 16K ctx, ServiceNow-trained, 17 languages, HumanEval 31.7/GSM8K(PAL) 27.7/DS-1000 25.0 verbatim. No changes."
+}

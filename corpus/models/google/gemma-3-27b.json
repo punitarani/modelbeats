@@ -1,0 +1,133 @@
+{
+  "name": "Gemma 3 27B",
+  "org": "Google",
+  "family": "Gemma 3",
+  "releaseDate": "2025-03-12",
+  "status": "released",
+  "openness": "open-weights",
+  "license": "Gemma",
+  "paramsB": 27.4,
+  "activeParamsB": null,
+  "archClass": "dense",
+  "archDisplay": "Dense decoder-only Transformer, GQA + 5:1 local:global attention, shared frozen SigLIP-400M vision encoder",
+  "ctxK": 128,
+  "modalities": [
+    "text",
+    "vision"
+  ],
+  "langCount": 140,
+  "capabilities": {
+    "reasoning": false,
+    "coding": true,
+    "vision": true,
+    "functionCalling": true,
+    "toolUse": true,
+    "agentic": false
+  },
+  "apiAvailable": true,
+  "price": null,
+  "links": {
+    "hf": "google/gemma-3-27b-it",
+    "gh": "google-deepmind/gemma",
+    "docs": "ai.google.dev/gemma/docs/core"
+  },
+  "note": "Best-in-class single-GPU open VLM of early 2025; LMSYS Arena Elo 1338, top-10 among all models at launch.",
+  "quants": [
+    "GGUF Q4_K_M",
+    "GGUF Q8_0",
+    "AWQ",
+    "MLX",
+    "QAT Int4"
+  ],
+  "vramQ4Gb": 14.1,
+  "vramFp16Gb": 54,
+  "tps4090": null,
+  "tpsNote": null,
+  "effortLabel": null,
+  "isDefaultConfig": true,
+  "isBestConfig": true,
+  "specSources": {
+    "paramsB": "https://storage.googleapis.com/deepmind-media/gemma/Gemma3Report.pdf",
+    "ctxK": "https://storage.googleapis.com/deepmind-media/gemma/Gemma3Report.pdf",
+    "releaseDate": "https://blog.google/innovation-and-ai/technology/developers-tools/gemma-3/",
+    "openness": "https://ai.google.dev/gemma/terms"
+  },
+  "results": [
+    {
+      "benchmarkSlug": "mmlu-pro",
+      "score": 67.5,
+      "source": "self-reported",
+      "sourceUrl": "https://storage.googleapis.com/deepmind-media/gemma/Gemma3Report.pdf",
+      "evaluatedAt": "2025-03-12"
+    },
+    {
+      "benchmarkSlug": "gpqa",
+      "score": 42.4,
+      "source": "self-reported",
+      "sourceUrl": "https://storage.googleapis.com/deepmind-media/gemma/Gemma3Report.pdf",
+      "evaluatedAt": "2025-03-12",
+      "notes": "GPQA Diamond"
+    },
+    {
+      "benchmarkSlug": "math",
+      "score": 89,
+      "source": "self-reported",
+      "sourceUrl": "https://storage.googleapis.com/deepmind-media/gemma/Gemma3Report.pdf",
+      "evaluatedAt": "2025-03-12"
+    },
+    {
+      "benchmarkSlug": "mmmu",
+      "score": 64.9,
+      "source": "self-reported",
+      "sourceUrl": "https://storage.googleapis.com/deepmind-media/gemma/Gemma3Report.pdf",
+      "evaluatedAt": "2025-03-12",
+      "notes": "MMMU val"
+    },
+    {
+      "benchmarkSlug": "livecodebench",
+      "score": 29.7,
+      "source": "self-reported",
+      "sourceUrl": "https://storage.googleapis.com/deepmind-media/gemma/Gemma3Report.pdf",
+      "evaluatedAt": "2025-03-12"
+    },
+    {
+      "benchmarkSlug": "bird-sql",
+      "score": 54.4,
+      "source": "self-reported",
+      "sourceUrl": "https://storage.googleapis.com/deepmind-media/gemma/Gemma3Report.pdf",
+      "evaluatedAt": "2025-03-12",
+      "notes": "Bird-SQL dev"
+    },
+    {
+      "benchmarkSlug": "facts-grounding",
+      "score": 74.9,
+      "source": "self-reported",
+      "sourceUrl": "https://storage.googleapis.com/deepmind-media/gemma/Gemma3Report.pdf",
+      "evaluatedAt": "2025-03-12"
+    },
+    {
+      "benchmarkSlug": "simpleqa",
+      "score": 10,
+      "source": "self-reported",
+      "sourceUrl": "https://storage.googleapis.com/deepmind-media/gemma/Gemma3Report.pdf",
+      "evaluatedAt": "2025-03-12"
+    },
+    {
+      "benchmarkSlug": "mmlu",
+      "score": 75.1,
+      "source": "self-reported",
+      "sourceUrl": "https://storage.googleapis.com/deepmind-media/gemma/Gemma3Report.pdf",
+      "evaluatedAt": "2025-03-12",
+      "notes": "Global MMLU-Lite variant"
+    },
+    {
+      "benchmarkSlug": "arena",
+      "score": 1338,
+      "source": "arena",
+      "sourceUrl": "https://storage.googleapis.com/deepmind-media/gemma/Gemma3Report.pdf",
+      "evaluatedAt": "2025-03-08",
+      "notes": "LMSys Chatbot Arena Elo, preliminary result; ranked top-10 at launch"
+    }
+  ],
+  "verificationNotes": "Fetched the official Gemma 3 Technical Report PDF. Table 1 confirms 27B total params = vision 417M + embedding 1,416M + non-embedding 25,600M = 27,433M ≈ 27.4B, matching paramsB exactly. Table 6 confirms every one of the 9 benchmark rows verbatim for the 27B IT column: MMLU-Pro 67.5, GPQA Diamond 42.4, MATH 89.0, MMMU val 64.9, LiveCodeBench 29.7, Bird-SQL dev 54.4, FACTS Grounding 74.9, SimpleQA 10.0, Global MMLU-Lite 75.1. Table 5 (Chatbot Arena) confirms Gemma-3-27B-IT scored Elo 1338, rank 9 (top-10), explicitly noted as 'preliminary results received on March 8, 2025' — matches record's arena result exactly. No changes made."
+}

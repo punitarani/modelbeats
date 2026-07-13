@@ -1,0 +1,87 @@
+{
+  "name": "Grok 4 Heavy",
+  "org": "xAI",
+  "family": "Grok 4",
+  "releaseDate": "2025-07-09",
+  "status": "deprecated",
+  "openness": "closed",
+  "license": "Proprietary",
+  "paramsB": null,
+  "activeParamsB": null,
+  "archClass": "moe",
+  "archDisplay": "Grok 4 base model served via parallel multi-agent test-time compute (reports describe 8-32 agents cross-checking answers)",
+  "ctxK": 256,
+  "modalities": [
+    "text",
+    "vision"
+  ],
+  "langCount": null,
+  "capabilities": {
+    "reasoning": true,
+    "coding": true,
+    "vision": true,
+    "functionCalling": true,
+    "toolUse": true,
+    "agentic": true
+  },
+  "apiAvailable": false,
+  "price": null,
+  "links": {
+    "docs": "docs.x.ai"
+  },
+  "note": "Multi-agent 'Heavy' configuration of Grok 4, consumer-only via the $300/month SuperGrok Heavy tier; no public API model slug.",
+  "quants": [],
+  "vramQ4Gb": null,
+  "vramFp16Gb": null,
+  "tps4090": null,
+  "tpsNote": null,
+  "effortLabel": null,
+  "isDefaultConfig": true,
+  "isBestConfig": true,
+  "specSources": {
+    "releaseDate": "https://epoch.ai/models/grok-4-heavy",
+    "ctxK": "https://www.datastudios.org/post/xai-grok-4-heavy-pricing-subscription-model-premium-access-and-developer-costs-fully-explained",
+    "openness": "https://grokmag.com/grok-4-heavy/"
+  },
+  "results": [
+    {
+      "benchmarkSlug": "hle",
+      "score": 44.4,
+      "source": "self-reported",
+      "sourceUrl": "https://www.scientificamerican.com/article/elon-musks-new-grok-4-takes-on-humanitys-last-exam-as-the-ai-race-heats-up/",
+      "evaluatedAt": "2025-07-09"
+    },
+    {
+      "benchmarkSlug": "gpqa",
+      "score": 88.9,
+      "source": "self-reported",
+      "sourceUrl": "https://www.datacamp.com/blog/grok-4",
+      "evaluatedAt": "2025-07-09",
+      "notes": "GPQA Diamond"
+    },
+    {
+      "benchmarkSlug": "aime",
+      "score": 100,
+      "source": "self-reported",
+      "sourceUrl": "https://www.datacamp.com/blog/grok-4",
+      "evaluatedAt": "2025-07-09",
+      "notes": "AIME 2025"
+    },
+    {
+      "benchmarkSlug": "livecodebench",
+      "score": 79.4,
+      "source": "self-reported",
+      "sourceUrl": "https://www.datacamp.com/blog/grok-4",
+      "evaluatedAt": "2025-07-09"
+    },
+    {
+      "benchmarkSlug": "usamo",
+      "score": 61.9,
+      "source": "self-reported",
+      "sourceUrl": "https://www.datacamp.com/blog/grok-4",
+      "evaluatedAt": "2025-07-09",
+      "notes": "USAMO 2025"
+    }
+  ],
+  "verificationNotes": "Confirmed real: xAI shipped Grok 4 (incl. the Heavy multi-agent config, gated behind the $300/mo SuperGrok Heavy tier) on 2025-07-09, corroborated by x.ai and multiple independent outlets. All 5 result rows confirmed verbatim on their cited pages: HLE 44.4% appears literally on the Scientific American article ('That jumped to 44.4 percent with a version called Grok 4 Heavy'); GPQA 88.9%, AIME25 100.0%, LiveCodeBench 79.4%, and USAMO25 61.9% all appear literally in DataCamp's Grok 4 benchmark table. Confirmed via search that Grok 4 Heavy remains consumer-only (no API slug) and Grok 4 carries a 256K context window. paramsB/activeParamsB correctly left null — xAI has not disclosed them. Note xAI has since shipped newer Grok 4.3/4.20/4.5 variants, consistent with the 'deprecated' status."
+}

@@ -1,0 +1,48 @@
+{
+  "name": "Step-1V",
+  "org": "StepFun",
+  "family": "Step-1",
+  "releaseDate": "2024-09-01",
+  "status": "deprecated",
+  "openness": "closed",
+  "license": "Proprietary",
+  "paramsB": null,
+  "activeParamsB": null,
+  "archClass": "dense",
+  "archDisplay": "Dense multimodal transformer (LLM backbone + vision encoder), exact scale undisclosed",
+  "ctxK": 32,
+  "modalities": [
+    "text",
+    "vision"
+  ],
+  "langCount": null,
+  "capabilities": {
+    "reasoning": false,
+    "coding": true,
+    "vision": true,
+    "functionCalling": true,
+    "toolUse": true,
+    "agentic": false
+  },
+  "apiAvailable": false,
+  "price": null,
+  "links": {
+    "docs": "platform.stepfun.com/docs/api-reference/models/list"
+  },
+  "note": "StepFun's first publicly released multimodal (vision) model, adding image understanding atop the Step-1 text base in September 2024; since deprecated in favor of newer Step vision models.",
+  "quants": [],
+  "vramQ4Gb": null,
+  "vramFp16Gb": null,
+  "tps4090": null,
+  "tpsNote": null,
+  "effortLabel": null,
+  "isDefaultConfig": true,
+  "isBestConfig": true,
+  "specSources": {
+    "releaseDate": "https://nextomoro.com/stepfun/",
+    "openness": "https://platform.stepfun.com/docs/api-reference/models/list",
+    "ctxK": "https://platform.stepfun.com/docs/api-reference/models/list"
+  },
+  "results": [],
+  "verificationNotes": "Confirmed real: nextomoro and other search results independently confirm Step-1V launched September 2024 as StepFun's first public multimodal model, with Step-Audio/Step-Video following in Oct/Nov 2024. Confirmed a step-1v-32k variant genuinely exists in StepFun's official model-list docs, supporting the ctxK=32 value. No result rows were provided to verify. Params left null (undisclosed) as given."
+}

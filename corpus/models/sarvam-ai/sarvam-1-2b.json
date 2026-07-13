@@ -1,0 +1,76 @@
+{
+  "name": "Sarvam-1 (2B)",
+  "org": "Sarvam AI",
+  "family": "Sarvam",
+  "releaseDate": "2024-10-24",
+  "status": "released",
+  "openness": "open-weights",
+  "license": "Sarvam Non-Commercial License",
+  "paramsB": 2,
+  "activeParamsB": null,
+  "archClass": "dense",
+  "archDisplay": "2B dense transformer with custom Indic-optimized tokenizer",
+  "ctxK": 8,
+  "modalities": [
+    "text"
+  ],
+  "langCount": 11,
+  "capabilities": {
+    "reasoning": false,
+    "coding": false,
+    "vision": false,
+    "functionCalling": false,
+    "toolUse": false,
+    "agentic": false
+  },
+  "apiAvailable": false,
+  "price": null,
+  "links": {
+    "hf": "sarvamai/sarvam-1",
+    "docs": "sarvam.ai"
+  },
+  "note": "India's first from-scratch open foundation model; 2B params trained on 4T tokens with a low-fertility tokenizer for 10 Indic languages plus English; base text-completion model, not chat-tuned.",
+  "quants": [
+    "GGUF Q4"
+  ],
+  "vramQ4Gb": 2,
+  "vramFp16Gb": 5,
+  "tps4090": null,
+  "tpsNote": null,
+  "effortLabel": null,
+  "isDefaultConfig": true,
+  "isBestConfig": true,
+  "specSources": {
+    "paramsB": "https://huggingface.co/sarvamai/sarvam-1",
+    "ctxK": "https://huggingface.co/sarvamai/sarvam-1",
+    "releaseDate": "https://www.medianama.com/2024/10/223-indian-ai-startup-sarvam-launches-llm-trained-on-10-indic-languages/",
+    "openness": "https://huggingface.co/sarvamai/sarvam-1"
+  },
+  "results": [
+    {
+      "benchmarkSlug": "mmlu",
+      "score": 44.44,
+      "source": "self-reported",
+      "sourceUrl": "https://huggingface.co/sarvamai/sarvam-1",
+      "evaluatedAt": "2024-10-24",
+      "notes": "zero-shot"
+    },
+    {
+      "benchmarkSlug": "arc-challenge",
+      "score": 58.5,
+      "source": "self-reported",
+      "sourceUrl": "https://huggingface.co/sarvamai/sarvam-1",
+      "evaluatedAt": "2024-10-24",
+      "notes": "zero-shot"
+    },
+    {
+      "benchmarkSlug": "trivia-qa",
+      "score": 90.62,
+      "source": "self-reported",
+      "sourceUrl": "https://huggingface.co/sarvamai/sarvam-1",
+      "evaluatedAt": "2024-10-24",
+      "notes": "zero-shot"
+    }
+  ],
+  "verificationNotes": "Confirmed real release: Sarvam AI's official HF model card, Sarvam's own Oct 24 2024 X/Twitter launch announcement, and independent coverage (MediaNama) all corroborate a 2B-parameter model trained on 4T tokens for 10 Indic languages + English under a non-commercial license, built with NVIDIA H100s. All three result rows (MMLU 44.44, ARC-Challenge 58.50, TriviaQA 90.62) are literally present on https://huggingface.co/sarvamai/sarvam-1. Context length 8192 (8K) confirmed via model config (max_position_embeddings). No corrections made — record verified as accurate."
+}

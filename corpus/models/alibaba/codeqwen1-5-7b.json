@@ -1,0 +1,70 @@
+{
+  "name": "CodeQwen1.5-7B",
+  "org": "Alibaba",
+  "family": "Qwen1.5",
+  "releaseDate": "2024-04-16",
+  "status": "released",
+  "openness": "open-weights",
+  "license": "Tongyi Qianwen License Agreement",
+  "paramsB": 7,
+  "activeParamsB": null,
+  "archClass": "dense",
+  "archDisplay": "Dense decoder-only Transformer (GQA), code-specialized",
+  "ctxK": 64,
+  "modalities": [
+    "text"
+  ],
+  "langCount": null,
+  "capabilities": {
+    "reasoning": false,
+    "coding": true,
+    "vision": false,
+    "functionCalling": false,
+    "toolUse": false,
+    "agentic": false
+  },
+  "apiAvailable": false,
+  "price": null,
+  "links": {
+    "hf": "Qwen/CodeQwen1.5-7B-Chat",
+    "docs": "qwenlm.github.io/blog/codeqwen1.5"
+  },
+  "note": "First Qwen code specialist: 3T code tokens, 92 languages, 64K context, HumanEval 83.5 (Chat).",
+  "quants": [
+    "GGUF",
+    "AWQ",
+    "GPTQ"
+  ],
+  "vramFp16Gb": 16,
+  "vramQ4Gb": 5,
+  "tps4090": null,
+  "tpsNote": null,
+  "effortLabel": null,
+  "isDefaultConfig": true,
+  "isBestConfig": true,
+  "specSources": {
+    "paramsB": "https://huggingface.co/Qwen/CodeQwen1.5-7B",
+    "ctxK": "https://qwenlm.github.io/blog/codeqwen1.5/",
+    "releaseDate": "https://qwenlm.github.io/blog/codeqwen1.5/",
+    "openness": "https://huggingface.co/Qwen/CodeQwen1.5-7B/blob/main/LICENSE"
+  },
+  "results": [
+    {
+      "benchmarkSlug": "humaneval",
+      "score": 51.8,
+      "source": "self-reported",
+      "sourceUrl": "https://qwenlm.github.io/blog/codeqwen1.5/",
+      "evaluatedAt": "2024-04-16",
+      "notes": "Base model, 0-shot"
+    },
+    {
+      "benchmarkSlug": "mbpp",
+      "score": 72.2,
+      "source": "self-reported",
+      "sourceUrl": "https://qwenlm.github.io/blog/codeqwen1.5/",
+      "evaluatedAt": "2024-04-16",
+      "notes": "Base model, 0-shot"
+    }
+  ],
+  "verificationNotes": "Fetched qwenlm.github.io/blog/codeqwen1.5/ directly: confirms release 2024-04-16, 7B params, 64K context, ~3T code tokens, 92 programming languages, HumanEval-Chat 83.5. Both cited result rows (HumanEval 51.8, MBPP 72.2, base 0-shot) appear verbatim on the page. No changes made."
+}

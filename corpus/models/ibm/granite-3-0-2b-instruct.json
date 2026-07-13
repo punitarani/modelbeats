@@ -1,0 +1,104 @@
+{
+  "name": "Granite 3.0 2B Instruct",
+  "org": "IBM",
+  "family": "Granite 3.0",
+  "releaseDate": "2024-10-21",
+  "status": "released",
+  "openness": "open-weights",
+  "license": "Apache 2.0",
+  "paramsB": 2.53,
+  "activeParamsB": null,
+  "archClass": "dense",
+  "archDisplay": "Dense decoder-only transformer (GQA, RoPE, SwiGLU, RMSNorm)",
+  "ctxK": 4,
+  "modalities": [
+    "text"
+  ],
+  "langCount": 12,
+  "capabilities": {
+    "reasoning": false,
+    "coding": true,
+    "vision": false,
+    "functionCalling": true,
+    "toolUse": true,
+    "agentic": true
+  },
+  "apiAvailable": true,
+  "price": null,
+  "links": {
+    "hf": "ibm-granite/granite-3.0-2b-instruct",
+    "gh": "ibm-granite/granite-3.0-language-models",
+    "docs": "ibm.com/granite/docs"
+  },
+  "note": "Smaller dense Granite 3.0 model for cost-efficient enterprise inference; Apache 2.0, same 12T-token corpus, 12 languages.",
+  "quants": [
+    "GGUF"
+  ],
+  "vramQ4Gb": 1.6,
+  "vramFp16Gb": 5.27,
+  "tps4090": null,
+  "tpsNote": null,
+  "effortLabel": null,
+  "isDefaultConfig": true,
+  "isBestConfig": true,
+  "specSources": {
+    "paramsB": "https://huggingface.co/ibm-granite/granite-3.0-2b-instruct",
+    "ctxK": "https://huggingface.co/ibm-granite/granite-3.0-2b-instruct",
+    "releaseDate": "https://newsroom.ibm.com/2024-10-21-ibm-introduces-granite-3-0-high-performing-ai-models-built-for-business",
+    "openness": "https://huggingface.co/ibm-granite/granite-3.0-2b-instruct"
+  },
+  "results": [
+    {
+      "benchmarkSlug": "mmlu",
+      "score": 56.03,
+      "source": "self-reported",
+      "sourceUrl": "https://huggingface.co/ibm-granite/granite-3.0-2b-instruct"
+    },
+    {
+      "benchmarkSlug": "hellaswag",
+      "score": 76.79,
+      "source": "self-reported",
+      "sourceUrl": "https://huggingface.co/ibm-granite/granite-3.0-2b-instruct"
+    },
+    {
+      "benchmarkSlug": "ifeval",
+      "score": 46.07,
+      "source": "self-reported",
+      "sourceUrl": "https://huggingface.co/ibm-granite/granite-3.0-2b-instruct"
+    },
+    {
+      "benchmarkSlug": "mmlu-pro",
+      "score": 27.92,
+      "source": "self-reported",
+      "sourceUrl": "https://huggingface.co/ibm-granite/granite-3.0-2b-instruct"
+    },
+    {
+      "benchmarkSlug": "siqa",
+      "score": 66.36,
+      "source": "self-reported",
+      "sourceUrl": "https://huggingface.co/ibm-granite/granite-3.0-2b-instruct",
+      "notes": "Social IQa"
+    },
+    {
+      "benchmarkSlug": "openbookqa",
+      "score": 43.2,
+      "source": "self-reported",
+      "sourceUrl": "https://huggingface.co/ibm-granite/granite-3.0-2b-instruct",
+      "notes": "OBQA"
+    },
+    {
+      "benchmarkSlug": "agieval",
+      "score": 29.75,
+      "source": "self-reported",
+      "sourceUrl": "https://huggingface.co/ibm-granite/granite-3.0-2b-instruct",
+      "notes": "AGI-Eval"
+    },
+    {
+      "benchmarkSlug": "mt-bench",
+      "score": 7.66,
+      "source": "self-reported",
+      "sourceUrl": "https://huggingface.co/ibm-granite/granite-3.0-2b-instruct"
+    }
+  ],
+  "verificationNotes": "CORRECTED paramsB from 2.63 to 2.53: HF model card architecture table states '2.5B' active/total params (dense, no MoE); independently re-derived from config.json (hidden_size=2048, 40 layers, intermediate=8192, vocab=49155, tie_word_embeddings=true, GQA 32 heads/8 KV) giving ~2.53B, matching IBM's own figure and Granite 3.3 2B's published 2.53B for the same architecture family. All 8 benchmark rows (MMLU 56.03, HellaSwag 76.79, IFEval 46.07, MMLU-Pro 27.92, SIQA 66.36, OBQA 43.2, AGI-Eval 29.75, MT-Bench 7.66) confirmed literally present on the cited HF model card. Release date/license/12-language claim confirmed via HF card and IBM newsroom announcement."
+}

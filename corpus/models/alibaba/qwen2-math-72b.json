@@ -1,0 +1,95 @@
+{
+  "name": "Qwen2-Math-72B",
+  "org": "Alibaba",
+  "family": "Qwen2-Math",
+  "releaseDate": "2024-08-08",
+  "status": "released",
+  "openness": "open-weights",
+  "license": "Tongyi Qianwen License Agreement",
+  "paramsB": 72.7,
+  "activeParamsB": null,
+  "archClass": "dense",
+  "archDisplay": "Dense decoder-only Transformer (GQA), math-specialized fine-tune of Qwen2-72B",
+  "ctxK": 4,
+  "modalities": [
+    "text"
+  ],
+  "langCount": null,
+  "capabilities": {
+    "reasoning": false,
+    "coding": true,
+    "vision": false,
+    "functionCalling": false,
+    "toolUse": true,
+    "agentic": false
+  },
+  "apiAvailable": false,
+  "price": null,
+  "links": {
+    "hf": "Qwen/Qwen2-Math-72B-Instruct",
+    "gh": "QwenLM/Qwen2-Math",
+    "docs": "qwenlm.github.io/blog/qwen2-math"
+  },
+  "note": "First Qwen math specialist; Instruct variant beat GPT-4o and Claude-3.5-Sonnet on math benchmarks.",
+  "quants": [
+    "GGUF",
+    "AWQ",
+    "GPTQ"
+  ],
+  "vramFp16Gb": 145,
+  "vramQ4Gb": 42,
+  "tps4090": null,
+  "tpsNote": "72B dense weights exceed a single RTX 4090's 24GB VRAM even at Q4.",
+  "effortLabel": null,
+  "isDefaultConfig": true,
+  "isBestConfig": true,
+  "specSources": {
+    "paramsB": "https://huggingface.co/Qwen/Qwen2-Math-72B-Instruct",
+    "ctxK": "https://huggingface.co/Qwen/Qwen2-Math-72B-Instruct/blob/main/config.json",
+    "releaseDate": "https://qwenlm.github.io/blog/qwen2-math/",
+    "openness": "https://huggingface.co/Qwen/Qwen2-Math-72B-Instruct"
+  },
+  "results": [
+    {
+      "benchmarkSlug": "gsm8k",
+      "score": 96.7,
+      "source": "self-reported",
+      "sourceUrl": "https://arxiv.org/html/2409.12122v1",
+      "evaluatedAt": "2024-08-08",
+      "notes": "Instruct, greedy decoding (CoT)"
+    },
+    {
+      "benchmarkSlug": "math",
+      "score": 84,
+      "source": "self-reported",
+      "sourceUrl": "https://arxiv.org/html/2409.12122v1",
+      "evaluatedAt": "2024-08-08",
+      "notes": "Instruct, greedy decoding (CoT)"
+    },
+    {
+      "benchmarkSlug": "mmlu-stem",
+      "score": 79.9,
+      "source": "self-reported",
+      "sourceUrl": "https://arxiv.org/html/2409.12122v1",
+      "evaluatedAt": "2024-08-08",
+      "notes": "Instruct, 5-shot"
+    },
+    {
+      "benchmarkSlug": "aime",
+      "score": 20,
+      "source": "self-reported",
+      "sourceUrl": "https://arxiv.org/html/2409.12122v1",
+      "evaluatedAt": "2024-08-08",
+      "notes": "Instruct, AIME 2024, 6/30 greedy CoT"
+    },
+    {
+      "benchmarkSlug": "amc",
+      "score": 60,
+      "source": "self-reported",
+      "sourceUrl": "https://arxiv.org/html/2409.12122v1",
+      "evaluatedAt": "2024-08-08",
+      "notes": "Instruct, AMC 2023, 24/40 greedy CoT"
+    }
+  ],
+  "verificationNotes": "Real model, confirmed via qwenlm.github.io/blog/qwen2-math/ (published 2024-08-08, released 1.5B/7B/72B base+instruct) and HF model card (license 'Tongyi Qianwen', 73B rounded params). All 5 result rows independently re-derived from the actual Table 3/5 row for 'Qwen2-Math-72B-Instruct' in the Qwen2.5-Math technical report (arxiv 2409.12122, used there as a baseline comparison) — GSM8K 96.7, MATH 84.0, MMLU-STEM 79.9, AIME 6/30=20, AMC 24/40=60 all confirmed verbatim, including majority-voting variants not used here. Context length confirmed 4096 (4K) via live config.json fetch. Corrected paramsB from 72 to 72.7 to match the underlying Qwen2-72B architecture's official parameter count (72.71B per Qwen2 blog specs table, same hidden_size/layers as this fine-tune)."
+}

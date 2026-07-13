@@ -1,0 +1,92 @@
+{
+  "name": "Llama 3.2 90B Vision",
+  "org": "Meta",
+  "family": "Llama 3.2",
+  "releaseDate": "2024-09-25",
+  "status": "released",
+  "openness": "open-weights",
+  "license": "Llama 3.2 Community License Agreement",
+  "paramsB": 88.8,
+  "activeParamsB": null,
+  "archClass": "dense",
+  "archDisplay": "Dense Llama 3.1 text backbone + cross-attention vision adapter (late fusion)",
+  "ctxK": 128,
+  "modalities": [
+    "text",
+    "vision"
+  ],
+  "langCount": 8,
+  "capabilities": {
+    "reasoning": false,
+    "coding": true,
+    "vision": true,
+    "functionCalling": true,
+    "toolUse": true,
+    "agentic": true
+  },
+  "apiAvailable": true,
+  "price": null,
+  "links": {
+    "hf": "meta-llama/Llama-3.2-90B-Vision-Instruct",
+    "gh": "meta-llama/llama-models",
+    "docs": "llama.com/docs/model-cards-and-prompt-formats/llama3_2"
+  },
+  "note": "Multimodal 90B-class vision flagship (128K ctx) rivaling closed models like Claude 3 Haiku on image reasoning tasks.",
+  "quants": [
+    "GGUF",
+    "AWQ",
+    "GPTQ",
+    "MLX"
+  ],
+  "vramQ4Gb": 55,
+  "vramFp16Gb": 178,
+  "tps4090": null,
+  "tpsNote": "Even at Q4 (~55GB) it exceeds a single RTX 4090's 24GB VRAM; no verified single-4090 llama.cpp benchmark exists — needs multi-GPU or CPU offload.",
+  "effortLabel": null,
+  "isDefaultConfig": true,
+  "isBestConfig": true,
+  "specSources": {
+    "paramsB": "https://huggingface.co/meta-llama/Llama-3.2-90B-Vision-Instruct",
+    "ctxK": "https://huggingface.co/meta-llama/Llama-3.2-90B-Vision-Instruct",
+    "releaseDate": "https://ai.meta.com/blog/llama-3-2-connect-2024-vision-edge-mobile-devices/",
+    "openness": "https://huggingface.co/meta-llama/Llama-3.2-90B-Vision-Instruct"
+  },
+  "results": [
+    {
+      "benchmarkSlug": "mmmu",
+      "score": 60.3,
+      "source": "self-reported",
+      "sourceUrl": "https://huggingface.co/meta-llama/Llama-3.2-90B-Vision-Instruct",
+      "notes": "MMMU val, CoT, instruct model"
+    },
+    {
+      "benchmarkSlug": "vqav2",
+      "score": 78.1,
+      "source": "self-reported",
+      "sourceUrl": "https://huggingface.co/meta-llama/Llama-3.2-90B-Vision-Instruct",
+      "notes": "VQAv2 test accuracy"
+    },
+    {
+      "benchmarkSlug": "mathvista",
+      "score": 57.3,
+      "source": "self-reported",
+      "sourceUrl": "https://huggingface.co/meta-llama/Llama-3.2-90B-Vision-Instruct",
+      "notes": "MathVista testmini"
+    },
+    {
+      "benchmarkSlug": "chartqa",
+      "score": 85.5,
+      "source": "self-reported",
+      "sourceUrl": "https://huggingface.co/meta-llama/Llama-3.2-90B-Vision-Instruct",
+      "notes": "ChartQA test, CoT, relaxed accuracy"
+    },
+    {
+      "benchmarkSlug": "docvqa",
+      "score": 90.1,
+      "source": "self-reported",
+      "sourceUrl": "https://huggingface.co/meta-llama/Llama-3.2-90B-Vision-Instruct",
+      "notes": "DocVQA test, ANLS"
+    }
+  ],
+  "verificationNotes": "Confirmed real via HF model card fetch: release 2024-09-25 (matches ai.meta.com blog), license Llama 3.2 Community License Agreement. All 5 benchmark rows (MMMU 60.3, VQAv2 78.1, MathVista 57.3, ChartQA 85.5, DocVQA 90.1) literally confirmed on the cited HF page. CORRECTED paramsB from 90 to 88.8: the model card's own parameter table lists this variant as '90B (88.8)', matching the same precise-vs-marketing-name pattern already used for the 11B Vision record (10.6 actual vs '11B' name)."
+}

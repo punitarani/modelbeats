@@ -1,0 +1,109 @@
+{
+  "name": "Amazon Nova Pro",
+  "org": "Amazon",
+  "family": "Amazon Nova",
+  "releaseDate": "2024-12-03",
+  "status": "released",
+  "openness": "closed",
+  "license": "Proprietary (AWS Bedrock service terms)",
+  "paramsB": null,
+  "activeParamsB": null,
+  "archClass": "dense",
+  "archDisplay": "Transformer, architecture/size undisclosed",
+  "ctxK": 300,
+  "modalities": [
+    "text",
+    "vision",
+    "video"
+  ],
+  "langCount": 200,
+  "capabilities": {
+    "reasoning": false,
+    "coding": true,
+    "vision": true,
+    "functionCalling": true,
+    "toolUse": true,
+    "agentic": true
+  },
+  "apiAvailable": true,
+  "price": {
+    "input": 0.8,
+    "output": 3.2,
+    "provider": "AWS Bedrock"
+  },
+  "links": {
+    "docs": "docs.aws.amazon.com/nova/latest/userguide/what-is-nova.html"
+  },
+  "note": "Highest-accuracy multimodal Nova at launch; workhorse mid/high tier for complex text, image and video tasks before Premier arrived.",
+  "quants": [],
+  "vramQ4Gb": null,
+  "vramFp16Gb": null,
+  "tps4090": null,
+  "tpsNote": null,
+  "effortLabel": null,
+  "isDefaultConfig": true,
+  "isBestConfig": true,
+  "specSources": {
+    "releaseDate": "https://press.aboutamazon.com/2024/12/introducing-amazon-nova-a-new-generation-of-foundation-models",
+    "ctxK": "https://docs.aws.amazon.com/ai/responsible-ai/nova-micro-lite-pro/overview.html",
+    "openness": "https://docs.aws.amazon.com/ai/responsible-ai/nova-micro-lite-pro/overview.html"
+  },
+  "results": [
+    {
+      "benchmarkSlug": "mmlu",
+      "score": 85.9,
+      "source": "independent",
+      "sourceUrl": "https://deepranking.ai/llm-models/nova-pro",
+      "notes": "0-shot CoT; matches Amazon's Nova technical report"
+    },
+    {
+      "benchmarkSlug": "gpqa",
+      "score": 46.9,
+      "source": "independent",
+      "sourceUrl": "https://deepranking.ai/llm-models/nova-pro"
+    },
+    {
+      "benchmarkSlug": "math",
+      "score": 76.6,
+      "source": "independent",
+      "sourceUrl": "https://deepranking.ai/llm-models/nova-pro"
+    },
+    {
+      "benchmarkSlug": "humaneval",
+      "score": 89,
+      "source": "independent",
+      "sourceUrl": "https://deepranking.ai/llm-models/nova-pro"
+    },
+    {
+      "benchmarkSlug": "gsm8k",
+      "score": 94.8,
+      "source": "independent",
+      "sourceUrl": "https://deepranking.ai/llm-models/nova-pro"
+    },
+    {
+      "benchmarkSlug": "bbh",
+      "score": 86.9,
+      "source": "independent",
+      "sourceUrl": "https://deepranking.ai/llm-models/nova-pro"
+    },
+    {
+      "benchmarkSlug": "ifeval",
+      "score": 92.1,
+      "source": "independent",
+      "sourceUrl": "https://deepranking.ai/llm-models/nova-pro"
+    },
+    {
+      "benchmarkSlug": "drop",
+      "score": 85.4,
+      "source": "independent",
+      "sourceUrl": "https://deepranking.ai/llm-models/nova-pro"
+    },
+    {
+      "benchmarkSlug": "arc-challenge",
+      "score": 94.8,
+      "source": "independent",
+      "sourceUrl": "https://deepranking.ai/llm-models/nova-pro"
+    }
+  ],
+  "verificationNotes": "Confirmed real: Dec 3, 2024 re:Invent launch corroborated by multiple press sources. Confirmed 300K multimodal context, 200-language support, $0.80/$3.20 per M pricing (AWS Nova pricing/docs). All 9 benchmark rows (MMLU 85.9, GPQA 46.9, MATH 76.6, HumanEval 89.0, GSM8K 94.8, BBH 86.9, IFEval 92.1, DROP 85.4, ARC-Challenge 94.8) confirmed to literally appear on deepranking.ai/llm-models/nova-pro. No changes made."
+}

@@ -1,0 +1,57 @@
+{
+  "name": "Gemini 1.0 Nano",
+  "org": "Google",
+  "family": "Gemini 1.0",
+  "releaseDate": "2023-12-06",
+  "status": "deprecated",
+  "openness": "closed",
+  "license": "Proprietary (on-device, Android AICore)",
+  "paramsB": 3.25,
+  "activeParamsB": null,
+  "archClass": "dense",
+  "archDisplay": "Dense Transformer decoder (distilled, 4-bit quantized for on-device)",
+  "ctxK": 32,
+  "modalities": [
+    "text",
+    "vision"
+  ],
+  "langCount": null,
+  "capabilities": {
+    "reasoning": false,
+    "coding": false,
+    "vision": true,
+    "functionCalling": false,
+    "toolUse": false,
+    "agentic": false
+  },
+  "apiAvailable": false,
+  "price": null,
+  "links": {
+    "docs": "storage.googleapis.com/deepmind-media/gemini/gemini_1_report.pdf"
+  },
+  "note": "On-device model for Pixel 8 Pro (Nano-2, 3.25B variant); distilled and 4-bit quantized from larger Gemini models.",
+  "quants": [],
+  "vramQ4Gb": null,
+  "vramFp16Gb": null,
+  "tps4090": null,
+  "tpsNote": null,
+  "effortLabel": null,
+  "isDefaultConfig": true,
+  "isBestConfig": true,
+  "specSources": {
+    "releaseDate": "https://blog.google/products/pixel/pixel-feature-drop-december-2023/",
+    "paramsB": "https://arxiv.org/pdf/2312.11805",
+    "ctxK": "https://storage.googleapis.com/deepmind-media/gemini/gemini_1_report.pdf"
+  },
+  "results": [
+    {
+      "benchmarkSlug": "mmlu",
+      "score": 55.8,
+      "source": "self-reported",
+      "sourceUrl": "https://arxiv.org/pdf/2312.11805",
+      "evaluatedAt": "2023-12-06",
+      "notes": "Gemini Nano-2 (3.25B), 5-shot"
+    }
+  ],
+  "verificationNotes": "Confirmed real: Gemini Nano-2 is genuinely a 3.25B-parameter distilled on-device model per the Gemini 1.0 technical report (arXiv 2312.11805), corroborated independently by Microsoft's Phi-2 blog post which quotes the same report's comparison table listing 'Gemini Nano 2, 3.2B params, MMLU 55.8' -- exact score match confirmed via two independent citations of the same primary source. Pixel 8 Pro on-device launch in Dec 2023 confirmed."
+}

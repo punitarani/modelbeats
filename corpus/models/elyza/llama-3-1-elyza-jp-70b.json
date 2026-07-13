@@ -1,0 +1,48 @@
+{
+  "name": "Llama-3.1-ELYZA-JP-70B",
+  "org": "ELYZA",
+  "family": "ELYZA LLM for JP",
+  "releaseDate": "2024-10-25",
+  "status": "released",
+  "openness": "closed",
+  "license": "Proprietary — enterprise/partner access only (no public license terms published; not an open-weight release)",
+  "paramsB": 70,
+  "activeParamsB": null,
+  "archClass": "dense",
+  "archDisplay": "70B dense transformer (Llama-3.1 architecture, Japanese continual pretrain + instruction tuning)",
+  "ctxK": 128,
+  "modalities": [
+    "text"
+  ],
+  "langCount": 2,
+  "capabilities": {
+    "reasoning": false,
+    "coding": true,
+    "vision": false,
+    "functionCalling": true,
+    "toolUse": true,
+    "agentic": false
+  },
+  "apiAvailable": false,
+  "price": null,
+  "links": {
+    "docs": "elyza.ai"
+  },
+  "note": "Latest ELYZA LLM for JP flagship, built on Llama 3.1 for longer context and improved Japanese instruction-following vs. the earlier Llama-3-based 70B; distributed only via demo and enterprise API/joint-development deals, not as public open weights.",
+  "quants": [],
+  "vramQ4Gb": null,
+  "vramFp16Gb": null,
+  "tps4090": null,
+  "tpsNote": null,
+  "effortLabel": null,
+  "isDefaultConfig": true,
+  "isBestConfig": true,
+  "specSources": {
+    "paramsB": "https://prtimes.jp/main/html/rd/p/000000052.000047565.html",
+    "ctxK": "https://huggingface.co/blog/llama31",
+    "releaseDate": "https://prtimes.jp/main/html/rd/p/000000052.000047565.html",
+    "openness": "https://prtimes.jp/main/html/rd/p/000000052.000047565.html"
+  },
+  "results": [],
+  "verificationNotes": "Real, confirmed release: ELYZA's own news post and PR Times release (both 2024-10-25), plus corroborating JP tech press (Nikkei xTECH, Mynavi, CodeZine), confirm a 70B (700-oku-parameter) Llama-3.1-based Japanese model with improved long-context/instruction-following over the prior Llama-3 70B. CORRECTED openness from 'open-weights' to 'closed': ELYZA's press release explicitly states the model is 'provided to companies in various forms through secure API services and joint development projects' (enterprise-only), not released as public weights — only a hosted demo is public. Fetching https://huggingface.co/elyza/Llama-3.1-ELYZA-JP-70B returns HTTP 401 'Invalid username or password' (gated/private repo), unlike ELYZA's genuinely open 8B sibling models on HF. License field corrected accordingly since no public license text exists for this restricted-access model. ctxK=128 and langCount=2 are reasonable carry-overs from the Llama-3.1 base architecture but are not explicitly confirmed by ELYZA for this JP variant specifically."
+}

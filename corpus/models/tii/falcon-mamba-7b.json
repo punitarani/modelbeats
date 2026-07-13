@@ -1,0 +1,95 @@
+{
+  "name": "Falcon Mamba 7B",
+  "org": "TII",
+  "family": "Falcon Mamba",
+  "releaseDate": "2024-08-12",
+  "status": "released",
+  "openness": "open-weights",
+  "license": "TII Falcon-Mamba License 2.0",
+  "paramsB": 7,
+  "activeParamsB": null,
+  "archClass": "ssm",
+  "archDisplay": "Pure Mamba State-Space Model, 7B, attention-free with extra RMS norm layers",
+  "ctxK": 8,
+  "modalities": [
+    "text"
+  ],
+  "langCount": null,
+  "capabilities": {
+    "reasoning": false,
+    "coding": false,
+    "vision": false,
+    "functionCalling": false,
+    "toolUse": false,
+    "agentic": false
+  },
+  "apiAvailable": false,
+  "price": null,
+  "links": {
+    "hf": "tiiuae/falcon-mamba-7b",
+    "docs": "huggingface.co/blog/falconmamba"
+  },
+  "note": "First competitive attention-free State-Space (Mamba) open model; constant memory over sequence length, beats Llama 3.1 8B and Mistral 7B on Open LLM Leaderboard v1.",
+  "quants": [
+    "GGUF",
+    "bitsandbytes 4-bit"
+  ],
+  "vramQ4Gb": 5,
+  "vramFp16Gb": 15,
+  "tps4090": null,
+  "tpsNote": null,
+  "effortLabel": null,
+  "isDefaultConfig": true,
+  "isBestConfig": true,
+  "specSources": {
+    "paramsB": "https://huggingface.co/blog/falconmamba",
+    "ctxK": "https://arxiv.org/html/2410.05355v1",
+    "releaseDate": "https://www.tii.ae/news/uaes-technology-innovation-institute-revolutionizes-ai-language-models-new-architecture",
+    "openness": "https://huggingface.co/blog/falconmamba"
+  },
+  "results": [
+    {
+      "benchmarkSlug": "arc-challenge",
+      "score": 62.03,
+      "source": "independent",
+      "sourceUrl": "https://huggingface.co/blog/falconmamba",
+      "evaluatedAt": "2024-08-12"
+    },
+    {
+      "benchmarkSlug": "hellaswag",
+      "score": 80.82,
+      "source": "independent",
+      "sourceUrl": "https://huggingface.co/blog/falconmamba",
+      "evaluatedAt": "2024-08-12"
+    },
+    {
+      "benchmarkSlug": "mmlu",
+      "score": 62.11,
+      "source": "independent",
+      "sourceUrl": "https://huggingface.co/blog/falconmamba",
+      "evaluatedAt": "2024-08-12"
+    },
+    {
+      "benchmarkSlug": "winogrande",
+      "score": 73.64,
+      "source": "independent",
+      "sourceUrl": "https://huggingface.co/blog/falconmamba",
+      "evaluatedAt": "2024-08-12"
+    },
+    {
+      "benchmarkSlug": "truthfulqa",
+      "score": 53.42,
+      "source": "independent",
+      "sourceUrl": "https://huggingface.co/blog/falconmamba",
+      "evaluatedAt": "2024-08-12"
+    },
+    {
+      "benchmarkSlug": "gsm8k",
+      "score": 52.54,
+      "source": "independent",
+      "sourceUrl": "https://huggingface.co/blog/falconmamba",
+      "evaluatedAt": "2024-08-12"
+    }
+  ],
+  "verificationNotes": "Confirmed real model via HF blog (fetched): release date 2024-08-12, 7B params, Mamba SSM + extra RMS norm layers, 8192-token training sequence length (matches ctxK 8, confirmed on model card), and all 6 benchmark rows (arc-challenge 62.03, hellaswag 80.82, mmlu 62.11, winogrande 73.64, truthfulqa 53.42, gsm8k 52.54) appear verbatim. CORRECTED: license changed from 'TII Falcon Mamba 7B License 1.0' to 'TII Falcon-Mamba License 2.0' — confirmed via two independent searches/fetches of the tiiuae/falcon-mamba-7b model card and web search results; found no evidence of a '1.0'/differently-named license."
+}

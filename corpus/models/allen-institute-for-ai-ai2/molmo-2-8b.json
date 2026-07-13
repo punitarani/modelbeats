@@ -1,0 +1,54 @@
+{
+  "name": "Molmo 2 8B",
+  "org": "Allen Institute for AI (Ai2)",
+  "family": "Molmo 2",
+  "releaseDate": "2025-12-11",
+  "status": "released",
+  "openness": "open-weights",
+  "license": "Apache 2.0",
+  "paramsB": 8.66,
+  "activeParamsB": null,
+  "archClass": "dense",
+  "archDisplay": "Dense transformer (Qwen3-8B LLM decoder + SigLIP2 vision encoder)",
+  "ctxK": 36,
+  "modalities": [
+    "text",
+    "vision",
+    "video"
+  ],
+  "langCount": 1,
+  "capabilities": {
+    "reasoning": false,
+    "coding": false,
+    "vision": true,
+    "functionCalling": false,
+    "toolUse": false,
+    "agentic": false
+  },
+  "apiAvailable": true,
+  "price": null,
+  "links": {
+    "hf": "allenai/Molmo2-8B",
+    "gh": "allenai/molmo2",
+    "docs": "allenai.org/blog/molmo2"
+  },
+  "note": "Latest open multimodal flagship (Qwen3-based); extends Molmo's grounded pointing to video with frame-level spatial/temporal grounding and multi-object tracking. Note: weights are Apache 2.0 but some training datasets are restricted to academic/non-commercial research use per Ai2's own blog.",
+  "quants": [
+    "MLX"
+  ],
+  "vramQ4Gb": 5,
+  "vramFp16Gb": 18,
+  "tps4090": null,
+  "tpsNote": "No GGUF/llama.cpp support found (custom molmo2 architecture); MLX quants available for Apple Silicon.",
+  "effortLabel": null,
+  "isDefaultConfig": true,
+  "isBestConfig": true,
+  "specSources": {
+    "paramsB": "https://huggingface.co/allenai/Molmo2-8B/raw/main/model.safetensors.index.json",
+    "ctxK": "https://huggingface.co/allenai/Molmo2-8B/raw/main/config.json",
+    "releaseDate": "https://allenai.org/blog/molmo2",
+    "openness": "https://huggingface.co/allenai/Molmo2-8B/raw/main/README.md"
+  },
+  "results": [],
+  "verificationNotes": "Existence and Dec 11, 2025 release date confirmed via allenai.org/blog/molmo2. paramsB re-derived exactly from model.safetensors.index.json: 8,661,703,120 = 8.66B (exact match). config.json confirms text max_position_embeddings=36864 (=36K, exact match to ctxK) and architecture (Qwen3-8B decoder + SigLIP2-based ViT, 36 transformer blocks). License is Apache 2.0 per HF repo, though Ai2's blog notes some training data is restricted to academic/non-commercial use (added as a caveat in the note field). The single result row (63.1 avg, with GPT-5 70.6 / Gemini 2.5 Pro 71.2 / Qwen3-VL-8B 59.5 comparisons) was confirmed literally present on the cited HF model card."
+}

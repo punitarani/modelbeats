@@ -1,0 +1,108 @@
+{
+  "name": "GLM-4.5 (355B-A32B)",
+  "org": "Zhipu AI / Z.ai (Tsinghua)",
+  "family": "GLM-4.5",
+  "releaseDate": "2025-07-28",
+  "status": "released",
+  "openness": "open-weights",
+  "license": "MIT",
+  "paramsB": 355,
+  "activeParamsB": 32,
+  "archClass": "moe",
+  "archDisplay": "Mixture-of-Experts, 355B total / 32B active, hybrid thinking/non-thinking response modes",
+  "ctxK": 128,
+  "modalities": [
+    "text"
+  ],
+  "langCount": null,
+  "capabilities": {
+    "reasoning": true,
+    "coding": true,
+    "vision": false,
+    "functionCalling": true,
+    "toolUse": true,
+    "agentic": true
+  },
+  "apiAvailable": true,
+  "price": {
+    "input": 0.6,
+    "output": 2.2,
+    "provider": "Z.ai"
+  },
+  "links": {
+    "hf": "zai-org/GLM-4.5",
+    "gh": "zai-org/GLM-4.5",
+    "docs": "docs.z.ai/guides/overview/pricing"
+  },
+  "note": "MIT-licensed agentic/reasoning/coding (ARC) MoE flagship; ranked 3rd overall and 2nd on agentic benchmarks among evaluated models at launch.",
+  "quants": [
+    "GGUF",
+    "AWQ",
+    "FP8"
+  ],
+  "vramQ4Gb": 180,
+  "vramFp16Gb": 710,
+  "tps4090": null,
+  "tpsNote": "355B MoE needs multi-GPU (8x H100/H200-class) even at FP8; does not fit a single RTX 4090.",
+  "effortLabel": null,
+  "isDefaultConfig": true,
+  "isBestConfig": true,
+  "specSources": {
+    "paramsB": "https://huggingface.co/zai-org/GLM-4.5",
+    "ctxK": "https://llm-stats.com/models/compare/glm-4.5-vs-glm-4.5-air",
+    "releaseDate": "https://www.cometapi.com/zhipu-ai-releases-glm-4-5/",
+    "openness": "https://huggingface.co/zai-org/GLM-4.5"
+  },
+  "results": [
+    {
+      "benchmarkSlug": "tau-bench",
+      "score": 70.1,
+      "source": "self-reported",
+      "sourceUrl": "https://arxiv.org/abs/2508.06471",
+      "notes": "TAU-Bench, GLM-4.5 paper"
+    },
+    {
+      "benchmarkSlug": "aime",
+      "score": 91,
+      "source": "self-reported",
+      "sourceUrl": "https://arxiv.org/abs/2508.06471",
+      "notes": "AIME 2024, GLM-4.5 paper"
+    },
+    {
+      "benchmarkSlug": "swe-bench",
+      "score": 64.2,
+      "source": "self-reported",
+      "sourceUrl": "https://arxiv.org/abs/2508.06471",
+      "notes": "SWE-bench Verified, GLM-4.5 paper"
+    },
+    {
+      "benchmarkSlug": "mmlu-pro",
+      "score": 84.6,
+      "source": "independent",
+      "sourceUrl": "https://llm-stats.com/models/compare/glm-4.5-vs-glm-4.5-air",
+      "evaluatedAt": "2026-07-12"
+    },
+    {
+      "benchmarkSlug": "gpqa",
+      "score": 79.1,
+      "source": "independent",
+      "sourceUrl": "https://llm-stats.com/models/compare/glm-4.5-vs-glm-4.5-air",
+      "evaluatedAt": "2026-07-12"
+    },
+    {
+      "benchmarkSlug": "livecodebench",
+      "score": 72.9,
+      "source": "independent",
+      "sourceUrl": "https://llm-stats.com/models/compare/glm-4.5-vs-glm-4.5-air",
+      "evaluatedAt": "2026-07-12"
+    },
+    {
+      "benchmarkSlug": "hle",
+      "score": 14.4,
+      "source": "independent",
+      "sourceUrl": "https://llm-stats.com/models/compare/glm-4.5-vs-glm-4.5-air",
+      "evaluatedAt": "2026-07-12"
+    }
+  ],
+  "verificationNotes": "Existence and identity confirmed via official Z.ai blog (z.ai/blog/glm-4.5), Hugging Face model card (zai-org/GLM-4.5), and arXiv paper 2508.06471. paramsB=355, activeParamsB=32 confirmed on HF card ('355 billion total parameters with 32 billion active'). License MIT confirmed on HF card. Release date 2025-07-28 confirmed via cometapi article citing the WAIC-adjacent launch event. ctxK=128 confirmed via llm-stats comparison page. Self-reported rows (TAU-Bench 70.1, AIME 91.0, SWE-bench 64.2) verbatim-confirmed by fetching arXiv abs page which explicitly states these three numbers. Independent rows (MMLU-Pro 84.6, GPQA 79.1, LiveCodeBench 72.9, HLE 14.4) verbatim-confirmed on llm-stats.com/models/compare/glm-4.5-vs-glm-4.5-air. Pricing ($0.6/$2.2 per 1M tokens) confirmed on docs.z.ai/guides/overview/pricing. No changes made to the original record; all fields checked out."
+}

@@ -1,0 +1,79 @@
+{
+  "name": "ERNIE 4.5 300B-A47B",
+  "org": "Baidu",
+  "family": "ERNIE 4.5",
+  "releaseDate": "2025-06-30",
+  "status": "released",
+  "openness": "open-weights",
+  "license": "Apache-2.0",
+  "paramsB": 300,
+  "activeParamsB": 47,
+  "archClass": "moe",
+  "archDisplay": "Mixture-of-Experts, 64 text experts / 8 active per token, 54 layers, GQA 64Q/8KV",
+  "ctxK": 128,
+  "modalities": [
+    "text"
+  ],
+  "langCount": null,
+  "capabilities": {
+    "reasoning": false,
+    "coding": true,
+    "vision": false,
+    "functionCalling": true,
+    "toolUse": true,
+    "agentic": true
+  },
+  "apiAvailable": true,
+  "price": {
+    "input": 0.28,
+    "output": 1.1,
+    "provider": "Third-party hosts (e.g. via Baidu Qianfan-compatible API providers)"
+  },
+  "links": {
+    "hf": "baidu/ERNIE-4.5-300B-A47B-PT",
+    "gh": "PaddlePaddle/ERNIE"
+  },
+  "note": "Flagship open-weights text MoE anchoring the 0.3B-424B ERNIE 4.5 family; scores below the median of comparable open models on Artificial Analysis's Intelligence Index.",
+  "quants": [
+    "GGUF Q4",
+    "FP8",
+    "INT4 (W4A16)",
+    "2-bit"
+  ],
+  "vramQ4Gb": 151,
+  "vramFp16Gb": 603,
+  "tps4090": null,
+  "tpsNote": "300B total / 47B active MoE far exceeds a single RTX 4090's 24GB even at 4-bit; needs multi-GPU/datacenter hardware.",
+  "effortLabel": null,
+  "isDefaultConfig": true,
+  "isBestConfig": true,
+  "specSources": {
+    "paramsB": "https://huggingface.co/baidu/ERNIE-4.5-300B-A47B-PT",
+    "ctxK": "https://huggingface.co/baidu/ERNIE-4.5-300B-A47B-PT",
+    "releaseDate": "https://ernie.baidu.com/blog/posts/ernie4.5/",
+    "openness": "https://huggingface.co/baidu/ERNIE-4.5-300B-A47B-PT"
+  },
+  "results": [
+    {
+      "benchmarkSlug": "mmlu-pro",
+      "score": 78.4,
+      "source": "self-reported",
+      "sourceUrl": "https://huggingface.co/baidu/ERNIE-4.5-300B-A47B-PT"
+    },
+    {
+      "benchmarkSlug": "gpqa",
+      "score": 81,
+      "source": "independent",
+      "sourceUrl": "https://artificialanalysis.ai/models/ernie-4-5-300b-a47b",
+      "notes": "GPQA Diamond, non-reasoning variant, Artificial Analysis Intelligence Index v4.1 suite"
+    },
+    {
+      "benchmarkSlug": "hle",
+      "score": 4,
+      "source": "independent",
+      "sourceUrl": "https://artificialanalysis.ai/models/ernie-4-5-300b-a47b",
+      "notes": "Humanity's Last Exam"
+    }
+  ],
+  "verificationNotes": "Model, params (300B/47B), Apache-2.0 license, and release date (June 30 2025) confirmed via HF model card and the official ERNIE blog announcement. MMLU-Pro 78.4 literally confirmed on the HF page. However, the claimed GPQA Diamond=78 and HLE=8 do NOT literally appear on the cited artificialanalysis.ai page — that page currently lists ERNIE 4.5 300B A47B at GPQA Diamond=81 and HLE=4 (78 and 8 belong to a neighboring model, gpt-oss-120b/GLM-5.2, in the chart). Corrected both scores to the values actually shown on the page."
+}

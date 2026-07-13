@@ -1,0 +1,65 @@
+{
+  "name": "UL2 20B",
+  "org": "Google",
+  "family": "UL2",
+  "releaseDate": "2022-10-14",
+  "status": "released",
+  "openness": "open-source",
+  "license": "Apache 2.0",
+  "paramsB": 20,
+  "activeParamsB": null,
+  "archClass": "dense",
+  "archDisplay": "Dense encoder-decoder Transformer (20B, Mixture-of-Denoisers)",
+  "ctxK": 0.5,
+  "modalities": [
+    "text"
+  ],
+  "langCount": null,
+  "capabilities": {
+    "reasoning": true,
+    "coding": false,
+    "vision": false,
+    "functionCalling": false,
+    "toolUse": false,
+    "agentic": false
+  },
+  "apiAvailable": false,
+  "price": null,
+  "links": {
+    "docs": "arxiv.org/abs/2205.05131",
+    "hf": "google/ul2",
+    "gh": "google-research/google-research"
+  },
+  "note": "20B open encoder-decoder trained with Mixture-of-Denoisers; strong chain-of-thought despite small size.",
+  "quants": [],
+  "vramQ4Gb": null,
+  "vramFp16Gb": 40,
+  "tps4090": null,
+  "tpsNote": "No confirmed GGUF/quantized builds found; encoder-decoder architecture is not a standard llama.cpp target, so no measured RTX 4090 figures exist.",
+  "effortLabel": null,
+  "isDefaultConfig": true,
+  "isBestConfig": true,
+  "specSources": {
+    "paramsB": "https://research.google/blog/ul2-20b-an-open-source-unified-language-learner/",
+    "ctxK": "https://huggingface.co/docs/transformers/model_doc/flan-ul2",
+    "releaseDate": "https://research.google/blog/ul2-20b-an-open-source-unified-language-learner/",
+    "openness": "https://huggingface.co/google/ul2"
+  },
+  "results": [
+    {
+      "benchmarkSlug": "superglue",
+      "score": 90.7,
+      "source": "self-reported",
+      "sourceUrl": "https://arxiv.org/abs/2205.05131",
+      "notes": "SuperGLUE dev set average, finetuned"
+    },
+    {
+      "benchmarkSlug": "mmlu",
+      "score": 39.2,
+      "source": "self-reported",
+      "sourceUrl": "https://arxiv.org/abs/2205.05131",
+      "notes": "Zero-shot MMLU, base (non-Flan) UL2 20B"
+    }
+  ],
+  "verificationNotes": "Confirmed real and re-derived from primary sources: Google Research blog post (blog.research.google/2022/10/ul2-20b...) dated 2022-10-14 matches releaseDate exactly. Fetched the full paper text (ar5iv rendering of arxiv 2205.05131) and confirmed Table 9 shows SuperGLUE dev average finetuned = 90.7 and Table 14 shows zero-shot MMLU for base UL2 20B = 39.2 -- both literal matches, kept. Apache 2.0 license confirmed via Hugging Face google/ul2 model card. No changes to core fields."
+}

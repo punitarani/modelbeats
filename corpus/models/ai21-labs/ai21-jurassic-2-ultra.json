@@ -1,0 +1,52 @@
+{
+  "name": "AI21 Jurassic-2 (Ultra)",
+  "org": "AI21 Labs",
+  "family": "AI21 Jurassic",
+  "releaseDate": "2023-03-09",
+  "status": "deprecated",
+  "openness": "closed",
+  "license": "Proprietary",
+  "paramsB": null,
+  "activeParamsB": null,
+  "archClass": "dense",
+  "archDisplay": "Dense Transformer (architecture undisclosed)",
+  "ctxK": 8,
+  "modalities": [
+    "text"
+  ],
+  "langCount": 7,
+  "capabilities": {
+    "reasoning": false,
+    "coding": false,
+    "vision": false,
+    "functionCalling": false,
+    "toolUse": false,
+    "agentic": false
+  },
+  "apiAvailable": true,
+  "price": {
+    "input": 18.8,
+    "output": 18.8,
+    "provider": "AI21 Studio"
+  },
+  "links": {
+    "docs": "docs.ai21.com"
+  },
+  "note": "AI21's 2023 flagship API model (renamed from Jumbo) with zero-shot instruction-following and multilingual support; now Legacy on Bedrock.",
+  "quants": [],
+  "vramQ4Gb": null,
+  "vramFp16Gb": null,
+  "tps4090": null,
+  "tpsNote": null,
+  "effortLabel": null,
+  "isDefaultConfig": true,
+  "isBestConfig": true,
+  "specSources": {
+    "paramsB": "https://www.ai21.com/blog/introducing-j2/",
+    "ctxK": "https://docs.aws.amazon.com/bedrock/latest/userguide/model-parameters-jurassic2.html",
+    "releaseDate": "https://www.ai21.com/blog/introducing-j2/",
+    "openness": "https://www.ai21.com/blog/introducing-j2/"
+  },
+  "results": [],
+  "verificationNotes": "Confirmed via ai21.com/blog/introducing-j2/ (published 2023-03-09): announces J2 Large/Grande/Jumbo family, 6 non-English languages (Spanish, French, German, Portuguese, Italian, Dutch) plus English = 7 total, and literally states 'J2 Jumbo ... an 86.8% win-rate on HELM by our internal evaluations' confirming the result row. Jumbo->Ultra renaming and AWS Bedrock's 8,192-token limit and 'Legacy' lifecycle status confirmed via AWS Bedrock docs and secondary sources. Current $18.8/M input+output pricing corroborated by independent pricing trackers. All fields left unchanged."
+}

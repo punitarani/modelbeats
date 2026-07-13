@@ -1,0 +1,109 @@
+{
+  "name": "Grok-2",
+  "org": "xAI",
+  "family": "Grok 2",
+  "releaseDate": "2024-08-13",
+  "status": "deprecated",
+  "openness": "closed",
+  "license": "Proprietary",
+  "paramsB": null,
+  "activeParamsB": null,
+  "archClass": "moe",
+  "archDisplay": "Mixture-of-Experts (size undisclosed by xAI; third-party estimates unverified)",
+  "ctxK": 131,
+  "modalities": [
+    "text",
+    "vision"
+  ],
+  "langCount": null,
+  "capabilities": {
+    "reasoning": false,
+    "coding": true,
+    "vision": true,
+    "functionCalling": true,
+    "toolUse": true,
+    "agentic": false
+  },
+  "apiAvailable": true,
+  "price": {
+    "input": 2,
+    "output": 10,
+    "provider": "xAI (grok-2-1212)"
+  },
+  "links": {
+    "docs": "docs.x.ai"
+  },
+  "note": "Multimodal frontier beta with FLUX.1-powered image generation on X; an early build (\"sus-column-r\") ranked #2-3 on the LMSYS/Chatbot Arena leaderboard pre-release, matching GPT-4o (did not reach #1).",
+  "quants": [],
+  "vramQ4Gb": null,
+  "vramFp16Gb": null,
+  "tps4090": null,
+  "tpsNote": null,
+  "effortLabel": null,
+  "isDefaultConfig": true,
+  "isBestConfig": true,
+  "specSources": {
+    "releaseDate": "https://x.ai/news/grok-2",
+    "ctxK": "https://www.promptfoo.dev/docs/providers/xai/",
+    "openness": "https://x.ai/news/grok-2"
+  },
+  "results": [
+    {
+      "benchmarkSlug": "mmlu",
+      "score": 87.5,
+      "source": "self-reported",
+      "sourceUrl": "https://klu.ai/glossary/xai-grok-2",
+      "evaluatedAt": "2024-08-13"
+    },
+    {
+      "benchmarkSlug": "humaneval",
+      "score": 88.4,
+      "source": "self-reported",
+      "sourceUrl": "https://klu.ai/glossary/xai-grok-2",
+      "evaluatedAt": "2024-08-13"
+    },
+    {
+      "benchmarkSlug": "math",
+      "score": 76.1,
+      "source": "self-reported",
+      "sourceUrl": "https://klu.ai/glossary/xai-grok-2",
+      "evaluatedAt": "2024-08-13"
+    },
+    {
+      "benchmarkSlug": "gpqa",
+      "score": 56,
+      "source": "self-reported",
+      "sourceUrl": "https://klu.ai/glossary/xai-grok-2",
+      "evaluatedAt": "2024-08-13"
+    },
+    {
+      "benchmarkSlug": "mmlu-pro",
+      "score": 75.5,
+      "source": "self-reported",
+      "sourceUrl": "https://klu.ai/glossary/xai-grok-2",
+      "evaluatedAt": "2024-08-13"
+    },
+    {
+      "benchmarkSlug": "mmmu",
+      "score": 66.1,
+      "source": "self-reported",
+      "sourceUrl": "https://klu.ai/glossary/xai-grok-2",
+      "evaluatedAt": "2024-08-13"
+    },
+    {
+      "benchmarkSlug": "mathvista",
+      "score": 69,
+      "source": "self-reported",
+      "sourceUrl": "https://klu.ai/glossary/xai-grok-2",
+      "evaluatedAt": "2024-08-13"
+    },
+    {
+      "benchmarkSlug": "docvqa",
+      "score": 93.6,
+      "source": "self-reported",
+      "sourceUrl": "https://klu.ai/glossary/xai-grok-2",
+      "evaluatedAt": "2024-08-13"
+    }
+  ],
+  "verificationNotes": "Confirmed real via x.ai/news/grok-2 (release Aug 13-14, 2024). All 8 benchmark rows literally confirmed on klu.ai/glossary/xai-grok-2 (fetched directly, exact match to claimed scores). Context window 131,072 tokens and pricing $2/$10 per 1M tokens confirmed via independent pricing/context pages. Corrected the note: sus-column-r reached #2-3 on Arena, not #1 ('topped') — verified via lmarena_ai's own August 2024 announcement. paramsB/activeParamsB correctly left null (undisclosed)."
+}

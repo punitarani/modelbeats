@@ -1,0 +1,61 @@
+{
+  "name": "Hunyuan-TurboS",
+  "org": "Tencent",
+  "family": "Hunyuan",
+  "releaseDate": "2025-02-27",
+  "status": "released",
+  "openness": "closed",
+  "license": "Proprietary",
+  "paramsB": 560,
+  "activeParamsB": 56,
+  "archClass": "hybrid",
+  "archDisplay": "Hybrid Transformer-Mamba2 MoE, 128 layers with AMF/MF block pattern (560B total / 56B active)",
+  "ctxK": 256,
+  "modalities": [
+    "text"
+  ],
+  "langCount": null,
+  "capabilities": {
+    "reasoning": true,
+    "coding": true,
+    "vision": false,
+    "functionCalling": true,
+    "toolUse": true,
+    "agentic": false
+  },
+  "apiAvailable": true,
+  "price": {
+    "input": 0.12,
+    "output": 0.3,
+    "provider": "Tencent Cloud"
+  },
+  "links": {
+    "gh": "Tencent-Hunyuan/Hunyuan-TurboS",
+    "docs": "arxiv.org/abs/2505.15431"
+  },
+  "note": "First industry-deployed ultra-large Hybrid Transformer-Mamba MoE (560B/56B-active) fast-thinking model with adaptive CoT; ranked top-7 on LMSYS Chatbot Arena (1356).",
+  "quants": [],
+  "vramQ4Gb": null,
+  "vramFp16Gb": null,
+  "tps4090": null,
+  "tpsNote": null,
+  "effortLabel": null,
+  "isDefaultConfig": true,
+  "isBestConfig": true,
+  "specSources": {
+    "paramsB": "https://arxiv.org/abs/2505.15431",
+    "ctxK": "https://arxiv.org/abs/2505.15431",
+    "releaseDate": "https://www.bloomberg.com/news/articles/2025-02-27/tencent-releases-turbo-ai-model-it-says-is-faster-than-deepseek",
+    "openness": "https://arxiv.org/abs/2505.15431"
+  },
+  "results": [
+    {
+      "benchmarkSlug": "arena",
+      "score": 1356,
+      "source": "arena",
+      "sourceUrl": "https://arxiv.org/abs/2505.15431",
+      "notes": "LMSYS Chatbot Arena Elo, overall top-7 rank at evaluation time"
+    }
+  ],
+  "verificationNotes": "Confirmed via arxiv abstract (2505.15431) and press coverage: 560B total/56B active, hybrid Transformer-Mamba2 MoE, 128 layers with AMF/MF block pattern, 256K context, all confirmed exact. Arena Elo 1356 (top-7, beating Gemini-2.0-Flash-001's 1352) confirmed literally on the arxiv page. Release date Feb 27, 2025 confirmed via Bloomberg headline/dateline. Corrected ctxK's specSource to arxiv (previously an unrelated aibase.com news URL); ctxK value itself (256) was already correct. Pricing: found ¥0.8/¥2 per 1M tokens (input/output) from Chinese coverage, which converts to roughly $0.11/$0.28 at prevailing CNY/USD rates - close to but not an exact match for the record's $0.12/$0.30; kept as a reasonable currency-converted approximation, not corrected."
+}

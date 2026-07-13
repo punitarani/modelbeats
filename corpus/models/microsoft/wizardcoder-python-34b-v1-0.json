@@ -1,0 +1,68 @@
+{
+  "name": "WizardCoder-Python-34B V1.0",
+  "org": "Microsoft",
+  "family": "WizardCoder",
+  "releaseDate": "2023-08-26",
+  "status": "released",
+  "openness": "open-weights",
+  "license": "Llama 2 Community License",
+  "paramsB": 34,
+  "activeParamsB": null,
+  "archClass": "dense",
+  "archDisplay": "Dense decoder-only Transformer (Code Llama-Python 34B backbone)",
+  "ctxK": 16,
+  "modalities": [
+    "text"
+  ],
+  "langCount": null,
+  "capabilities": {
+    "reasoning": false,
+    "coding": true,
+    "vision": false,
+    "functionCalling": false,
+    "toolUse": false,
+    "agentic": false
+  },
+  "apiAvailable": false,
+  "price": null,
+  "links": {
+    "hf": "WizardLMTeam/WizardCoder-Python-34B-V1.0",
+    "gh": "nlpxucan/WizardLM"
+  },
+  "note": "Code Evol-Instruct fine-tune of Code Llama-Python 34B; 73.2 HumanEval pass@1, top open coding model of 2023 (ICLR 2024 paper).",
+  "quants": [
+    "GGUF Q4_K_M",
+    "GPTQ",
+    "AWQ"
+  ],
+  "vramQ4Gb": 20,
+  "vramFp16Gb": 68,
+  "tps4090": null,
+  "tpsNote": null,
+  "effortLabel": null,
+  "isDefaultConfig": true,
+  "isBestConfig": true,
+  "specSources": {
+    "paramsB": "https://huggingface.co/WizardLMTeam/WizardCoder-Python-34B-V1.0",
+    "ctxK": "https://huggingface.co/WizardLMTeam/WizardCoder-Python-34B-V1.0/blob/main/config.json",
+    "releaseDate": "https://huggingface.co/TheBloke/WizardCoder-Python-34B-V1.0-GGUF/discussions/1",
+    "openness": "https://huggingface.co/WizardLMTeam/WizardCoder-Python-34B-V1.0"
+  },
+  "results": [
+    {
+      "benchmarkSlug": "humaneval",
+      "score": 73.2,
+      "source": "self-reported",
+      "sourceUrl": "https://huggingface.co/WizardLMTeam/WizardCoder-Python-34B-V1.0/blob/main/README.md",
+      "notes": "pass@1, WizardCoder team evaluation, surpasses GPT-4 (2023-03-15) and ChatGPT-3.5"
+    },
+    {
+      "benchmarkSlug": "mbpp",
+      "score": 73.2,
+      "source": "self-reported",
+      "sourceUrl": "https://huggingface.co/WizardLMTeam/WizardCoder-Python-34B-V1.0/blob/main/README.md",
+      "notes": "pass@1"
+    }
+  ],
+  "verificationNotes": "Existence and identity confirmed on WizardLMTeam's own HF repo (name, org, Aug 26 2023 release consistent across HF discussions). HumanEval 73.2 and MBPP 73.2 confirmed verbatim in the README comparison table (also lists HumanEval+ 64.6, MBPP+ 59.9 which the record doesn't claim, so no conflict). Llama 2 license / Code Llama-Python 34B backbone confirmed. ctxK=16 confirmed directly from config.json (max_position_embeddings=16384), though community discussion notes some quantized builds default to a 4096 window in practice — kept 16K since that's the model's native config."
+}

@@ -1,0 +1,53 @@
+{
+  "name": "Baichuan 4",
+  "org": "Baichuan Intelligence",
+  "family": "Baichuan 4",
+  "releaseDate": "2024-05-22",
+  "status": "released",
+  "openness": "closed",
+  "license": "Proprietary (API-only)",
+  "paramsB": null,
+  "activeParamsB": null,
+  "archClass": "dense",
+  "archDisplay": "Undisclosed architecture; closed flagship with multimodal (MMMU/MMBench/MathVista) capability",
+  "ctxK": 32,
+  "modalities": [
+    "text",
+    "vision"
+  ],
+  "langCount": 2,
+  "capabilities": {
+    "reasoning": false,
+    "coding": true,
+    "vision": true,
+    "functionCalling": true,
+    "toolUse": true,
+    "agentic": true
+  },
+  "apiAvailable": true,
+  "price": {
+    "input": 14.75,
+    "output": 14.75,
+    "provider": "Baichuan (platform.baichuan-ai.com, blended CNY rate converted to USD)"
+  },
+  "links": {
+    "docs": "platform.baichuan-ai.com"
+  },
+  "note": "Closed flagship launched with the 'Baixiaoying' AI assistant; topped SuperCLUE (80.64) above GPT-4-Turbo-0125 and Claude 3 Opus on Chinese-language tasks at release.",
+  "quants": [],
+  "vramQ4Gb": null,
+  "vramFp16Gb": null,
+  "tps4090": null,
+  "tpsNote": null,
+  "effortLabel": null,
+  "isDefaultConfig": true,
+  "isBestConfig": true,
+  "specSources": {
+    "paramsB": "https://braintitan.medium.com/baichuan-intelligence-releases-baichuan-4-model-and-the-first-ai-intelligent-assistant-fb2736d8d2f2",
+    "ctxK": "https://platform.baichuan-ai.com/prices",
+    "releaseDate": "https://braintitan.medium.com/baichuan-intelligence-releases-baichuan-4-model-and-the-first-ai-intelligent-assistant-fb2736d8d2f2",
+    "openness": "https://platform.baichuan-ai.com/prices"
+  },
+  "results": [],
+  "verificationNotes": "Confirmed real: braintitan.medium.com independently corroborates May 22 2024 release date, matching record. The inf.news sourceUrl returned HTTP 403 on direct fetch, but a fresh web search that crawled the same URL surfaced the literal text 'Baichuan 4 ranked first with a score of 80.64' on that page, confirming the SuperCLUE row. Kept as-is."
+}

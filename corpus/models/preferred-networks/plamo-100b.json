@@ -1,0 +1,64 @@
+{
+  "name": "PLaMo-100B",
+  "org": "Preferred Networks",
+  "family": "PLaMo",
+  "releaseDate": "2024-10-10",
+  "status": "released",
+  "openness": "open-weights",
+  "license": "Preferred Elements dual license (separate commercial and non-commercial terms)",
+  "paramsB": 100,
+  "activeParamsB": null,
+  "archClass": "dense",
+  "archDisplay": "Ground-up dense causal decoder-only transformer with QK-normalization and Z-loss training stabilization",
+  "ctxK": 4,
+  "modalities": [
+    "text"
+  ],
+  "langCount": 2,
+  "capabilities": {
+    "reasoning": false,
+    "coding": false,
+    "vision": false,
+    "functionCalling": false,
+    "toolUse": false,
+    "agentic": false
+  },
+  "apiAvailable": true,
+  "price": null,
+  "links": {
+    "hf": "pfnet/plamo-100b",
+    "docs": "tech.preferred.jp"
+  },
+  "note": "Ground-up 100B trained from scratch by Preferred Elements (a PFN subsidiary) on 2T EN/JA tokens; base for the later PLaMo Prime line.",
+  "quants": [],
+  "vramQ4Gb": null,
+  "vramFp16Gb": 200,
+  "tps4090": null,
+  "tpsNote": null,
+  "effortLabel": null,
+  "isDefaultConfig": true,
+  "isBestConfig": true,
+  "specSources": {
+    "paramsB": "https://huggingface.co/pfnet/plamo-100b",
+    "ctxK": "https://arxiv.org/abs/2410.07563",
+    "releaseDate": "https://arxiv.org/abs/2410.07563",
+    "openness": "https://huggingface.co/pfnet/plamo-100b"
+  },
+  "results": [
+    {
+      "benchmarkSlug": "jaster",
+      "score": 77.5,
+      "source": "self-reported",
+      "sourceUrl": "https://arxiv.org/html/2410.07563",
+      "notes": "PLaMo-100B-Instruct, 4-shot; GPT-4-0125-Preview scored 77.2 for comparison"
+    },
+    {
+      "benchmarkSlug": "rakuda",
+      "score": 9.73,
+      "source": "self-reported",
+      "sourceUrl": "https://arxiv.org/html/2410.07563",
+      "notes": "PLaMo-100B-Instruct absolute eval, 0-10 scale; GPT-4-0125-Preview scored 9.55"
+    }
+  ],
+  "verificationNotes": "Confirmed real release via arxiv.org/abs/2410.07563 ('PLaMo-100B: A Ground-Up Language Model Designed for Japanese Proficiency', submitted 2024-10-10, revised 2024-10-22) and huggingface.co/pfnet/plamo-100b, which confirms the dual commercial/non-commercial license and that it was trained from scratch on 2T EN/JA tokens with QK-normalization and Z-loss. Fetched the arxiv HTML directly and confirmed exact scores: Jaster 4-shot PLaMo-100B-Instruct 0.775 (=77.5) vs GPT-4-0125-Preview 0.772 (=77.2); Rakuda PLaMo-100B-Instruct 9.73 vs GPT-4-0125-Preview 9.55 — both match the record exactly. Note: the HF model card's auto-computed parameter count shows ~102B, but Preferred Networks' own tech blog and the model name consistently use the rounded '100 billion parameters' figure, which was kept per official branding. Could not independently confirm the ctxK:4 (4K context) figure from a primary source (HF config.json is gated/unauthenticated-inaccessible, and the arxiv PDF text was not machine-readable for this detail); retained from input as unable to confirm or refute."
+}

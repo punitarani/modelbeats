@@ -1,0 +1,103 @@
+{
+  "name": "Gemini 2.5 Flash-Lite (Thinking)",
+  "org": "Google",
+  "family": "Gemini 2.5",
+  "releaseDate": "2025-06-17",
+  "status": "released",
+  "openness": "closed",
+  "license": "Proprietary (Google API Terms)",
+  "paramsB": null,
+  "activeParamsB": null,
+  "archClass": "moe",
+  "archDisplay": "Sparse Mixture-of-Experts Transformer (natively multimodal)",
+  "ctxK": 1000,
+  "modalities": [
+    "text",
+    "vision",
+    "audio",
+    "video"
+  ],
+  "langCount": null,
+  "capabilities": {
+    "reasoning": true,
+    "coding": true,
+    "vision": true,
+    "functionCalling": true,
+    "toolUse": true,
+    "agentic": true
+  },
+  "apiAvailable": true,
+  "price": {
+    "input": 0.1,
+    "output": 0.4,
+    "provider": "Google (Gemini API)"
+  },
+  "links": {
+    "docs": "ai.google.dev/gemini-api/docs/models/gemini-2.5-flash-lite"
+  },
+  "note": "Same Flash-Lite weights with thinking budget enabled for stronger reasoning at extra cost.",
+  "quants": [],
+  "vramQ4Gb": null,
+  "vramFp16Gb": null,
+  "tps4090": null,
+  "tpsNote": null,
+  "effortLabel": "Thinking",
+  "isDefaultConfig": false,
+  "isBestConfig": true,
+  "specSources": {
+    "ctxK": "https://storage.googleapis.com/deepmind-media/Model-Cards/Gemini-2-5-Flash-Lite-Model-Card.pdf",
+    "releaseDate": "https://storage.googleapis.com/deepmind-media/Model-Cards/Gemini-2-5-Flash-Lite-Model-Card.pdf",
+    "openness": "https://ai.google.dev/gemini-api/docs/pricing"
+  },
+  "results": [
+    {
+      "benchmarkSlug": "gpqa",
+      "score": 66.7,
+      "source": "self-reported",
+      "sourceUrl": "https://storage.googleapis.com/deepmind-media/Model-Cards/Gemini-2-5-Flash-Lite-Model-Card.pdf",
+      "evaluatedAt": "2025-06-01",
+      "notes": "GPQA diamond, (06-17) release, thinking on"
+    },
+    {
+      "benchmarkSlug": "aime",
+      "score": 63.1,
+      "source": "self-reported",
+      "sourceUrl": "https://storage.googleapis.com/deepmind-media/Model-Cards/Gemini-2-5-Flash-Lite-Model-Card.pdf",
+      "evaluatedAt": "2025-06-01",
+      "notes": "AIME 2025, (06-17) release, thinking on"
+    },
+    {
+      "benchmarkSlug": "livecodebench",
+      "score": 34.3,
+      "source": "self-reported",
+      "sourceUrl": "https://storage.googleapis.com/deepmind-media/Model-Cards/Gemini-2-5-Flash-Lite-Model-Card.pdf",
+      "evaluatedAt": "2025-06-01",
+      "notes": "LiveCodeBench v5, (06-17), thinking on"
+    },
+    {
+      "benchmarkSlug": "swe-bench",
+      "score": 27.6,
+      "source": "self-reported",
+      "sourceUrl": "https://storage.googleapis.com/deepmind-media/Model-Cards/Gemini-2-5-Flash-Lite-Model-Card.pdf",
+      "evaluatedAt": "2025-06-01",
+      "notes": "SWE-Bench Verified, single attempt, (06-17), thinking on (44.9% with multiple attempts)"
+    },
+    {
+      "benchmarkSlug": "hle",
+      "score": 6.9,
+      "source": "self-reported",
+      "sourceUrl": "https://storage.googleapis.com/deepmind-media/Model-Cards/Gemini-2-5-Flash-Lite-Model-Card.pdf",
+      "evaluatedAt": "2025-06-01",
+      "notes": "Humanity's Last Exam, no tools, (06-17), thinking on"
+    },
+    {
+      "benchmarkSlug": "mmlu",
+      "score": 84.5,
+      "source": "self-reported",
+      "sourceUrl": "https://storage.googleapis.com/deepmind-media/Model-Cards/Gemini-2-5-Flash-Lite-Model-Card.pdf",
+      "evaluatedAt": "2025-06-01",
+      "notes": "Global MMLU (Lite), thinking on"
+    }
+  ],
+  "verificationNotes": "Same verification path as the non-thinking variant: release date June 17, 2025 confirmed via Google Cloud blog; all 6 thinking-mode benchmark rows (GPQA 66.7, AIME 63.1, LiveCodeBench 34.3, SWE-Bench 27.6 incl. the 44.9% multi-attempt detail, HLE 6.9, MMLU 84.5) reproduced exactly by an independent secondary source citing the official model card. Pricing identical to non-thinking variant, confirmed on ai.google.dev/gemini-api/docs/pricing (same underlying model, thinking toggle only)."
+}

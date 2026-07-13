@@ -1,0 +1,76 @@
+{
+  "name": "Reka Edge (7B)",
+  "org": "Reka AI",
+  "family": "Reka",
+  "releaseDate": "2024-02-12",
+  "status": "released",
+  "openness": "closed",
+  "license": "Proprietary",
+  "paramsB": 7,
+  "activeParamsB": null,
+  "archClass": "dense",
+  "archDisplay": "Dense 7B transformer decoder + vision encoder (SwiGLU, Grouped Query Attention, RoPE, RMSNorm)",
+  "ctxK": 64,
+  "modalities": [
+    "text",
+    "vision",
+    "video"
+  ],
+  "langCount": null,
+  "capabilities": {
+    "reasoning": false,
+    "coding": true,
+    "vision": true,
+    "functionCalling": false,
+    "toolUse": false,
+    "agentic": false
+  },
+  "apiAvailable": true,
+  "price": {
+    "input": 0.1,
+    "output": 0.1,
+    "provider": "Reka"
+  },
+  "links": {
+    "docs": "docs.reka.ai"
+  },
+  "note": "Compact 7B multimodal model for on-device/local use, announced alongside Reka Flash on Feb 12, 2024 (documented together with Flash/Core in Reka's April 2024 technical report); beat Gemma 7B and Mistral 7B on Reka's reported benchmarks.",
+  "quants": [],
+  "vramQ4Gb": null,
+  "vramFp16Gb": null,
+  "tps4090": null,
+  "tpsNote": null,
+  "effortLabel": null,
+  "isDefaultConfig": true,
+  "isBestConfig": true,
+  "specSources": {
+    "paramsB": "https://arxiv.org/html/2404.12387v1",
+    "ctxK": "https://arxiv.org/html/2404.12387v1",
+    "releaseDate": "https://reka.ai/news/reka-flash-efficient-and-capable-multimodal-language-models",
+    "openness": "https://docs.reka.ai/pricing"
+  },
+  "results": [
+    {
+      "benchmarkSlug": "mmlu",
+      "score": 65.7,
+      "source": "self-reported",
+      "sourceUrl": "https://arxiv.org/html/2404.12387v1",
+      "notes": "vs Gemma-7B 64.3, Mistral-7B 62.5"
+    },
+    {
+      "benchmarkSlug": "gsm8k",
+      "score": 66.2,
+      "source": "self-reported",
+      "sourceUrl": "https://arxiv.org/html/2404.12387v1",
+      "notes": ""
+    },
+    {
+      "benchmarkSlug": "humaneval",
+      "score": 54.3,
+      "source": "self-reported",
+      "sourceUrl": "https://arxiv.org/html/2404.12387v1",
+      "notes": ""
+    }
+  ],
+  "verificationNotes": "CORRECTED releaseDate. Reka's own blog archive (reka.ai/news) lists only one Feb/Apr-2024-era post covering Edge: 'Reka Flash: Efficient and Capable Multimodal Language Models,' dated Feb 12, 2024, which explicitly introduces Reka Edge (7B) as a companion release; a Reka Twitter/X post ('we also launch Reka Edge') from the same window (~Feb 12-13, 2024) corroborates. The source record's date of 2024-04-15 conflated Edge's original release with Reka Core's separate April 15, 2024 launch date / the arxiv tech report's April 18 submission date. Changed releaseDate to 2024-02-12. All three benchmark rows confirmed exactly against arxiv 2404.12387v1 (MMLU 65.7 vs Gemma-7B 64.3/Mistral-7B 62.5, GSM8K 66.2, HumanEval 54.3). Current docs.reka.ai/pricing confirms $0.1/$0.1 pricing matches record exactly. Params (7B) and context (64K long-context variant) confirmed via arxiv report."
+}

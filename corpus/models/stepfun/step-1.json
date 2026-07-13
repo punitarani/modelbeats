@@ -1,0 +1,47 @@
+{
+  "name": "Step-1",
+  "org": "StepFun",
+  "family": "Step-1",
+  "releaseDate": "2024-03-01",
+  "status": "deprecated",
+  "openness": "closed",
+  "license": "Proprietary",
+  "paramsB": 100,
+  "activeParamsB": null,
+  "archClass": "dense",
+  "archDisplay": "Dense transformer, 100B+ params, bilingual (Chinese/English)",
+  "ctxK": 256,
+  "modalities": [
+    "text"
+  ],
+  "langCount": 2,
+  "capabilities": {
+    "reasoning": false,
+    "coding": true,
+    "vision": false,
+    "functionCalling": false,
+    "toolUse": false,
+    "agentic": false
+  },
+  "apiAvailable": false,
+  "price": null,
+  "links": {
+    "docs": "platform.stepfun.com"
+  },
+  "note": "StepFun's debut 100B+-parameter bilingual LLM, publicly launched March 2024; offered via API in 8K/32K/128K/256K context variants (step-1-8k/32k/128k/256k per StepFun's model list docs), since superseded by the Step-3.x series and dropped from current pricing.",
+  "quants": [],
+  "vramQ4Gb": null,
+  "vramFp16Gb": null,
+  "tps4090": null,
+  "tpsNote": null,
+  "effortLabel": null,
+  "isDefaultConfig": true,
+  "isBestConfig": true,
+  "specSources": {
+    "releaseDate": "https://en.wikipedia.org/wiki/StepFun",
+    "openness": "https://en.wikipedia.org/wiki/StepFun",
+    "ctxK": "https://platform.stepfun.com/docs/api-reference/models/list"
+  },
+  "results": [],
+  "verificationNotes": "Existence and March 2024 launch confirmed via Wikipedia/AI Wiki/nextomoro descriptions of StepFun's 100B+-parameter Step-1. Confirmed step-1-8k/32k/128k/256k context variants genuinely exist in StepFun's official API model-list docs. No result rows were provided to verify. paramsB/date/openness/license left unchanged as they matched independent descriptions."
+}

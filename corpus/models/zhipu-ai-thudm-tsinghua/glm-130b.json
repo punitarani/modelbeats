@@ -1,0 +1,67 @@
+{
+  "name": "GLM-130B",
+  "org": "Zhipu AI / THUDM (Tsinghua)",
+  "family": "GLM",
+  "releaseDate": "2022-08-01",
+  "status": "released",
+  "openness": "open-weights",
+  "license": "Custom GLM-130B Model License (non-commercial research; code Apache-2.0)",
+  "paramsB": 130,
+  "activeParamsB": null,
+  "archClass": "dense",
+  "archDisplay": "Dense bidirectional Transformer (GLM objective)",
+  "ctxK": 2,
+  "modalities": [
+    "text"
+  ],
+  "langCount": 2,
+  "capabilities": {
+    "reasoning": false,
+    "coding": false,
+    "vision": false,
+    "functionCalling": false,
+    "toolUse": false,
+    "agentic": false
+  },
+  "apiAvailable": false,
+  "price": null,
+  "links": {
+    "gh": "zai-org/GLM-130B",
+    "docs": "keg.cs.tsinghua.edu.cn/glm-130b/posts/glm-130b/"
+  },
+  "note": "GPT-3-scale 130B bilingual (EN/ZH) dense model; open code, weights and training logs (ICLR 2023).",
+  "quants": [
+    "INT4",
+    "INT8"
+  ],
+  "vramQ4Gb": 96,
+  "vramFp16Gb": null,
+  "tps4090": null,
+  "tpsNote": null,
+  "effortLabel": null,
+  "isDefaultConfig": true,
+  "isBestConfig": true,
+  "specSources": {
+    "paramsB": "https://arxiv.org/pdf/2210.02414",
+    "ctxK": "https://github.com/zai-org/GLM-130B",
+    "releaseDate": "https://aiwiki.ai/wiki/zhipu_ai",
+    "openness": "https://github.com/zai-org/GLM-130B/blob/main/MODEL_LICENSE"
+  },
+  "results": [
+    {
+      "benchmarkSlug": "lambada",
+      "score": 80.2,
+      "source": "self-reported",
+      "sourceUrl": "https://arxiv.org/pdf/2210.02414",
+      "notes": "Zero-shot accuracy; beats GPT-3 175B, OPT-175B, BLOOM-176B"
+    },
+    {
+      "benchmarkSlug": "mmlu",
+      "score": 44.8,
+      "source": "self-reported",
+      "sourceUrl": "https://arxiv.org/pdf/2210.02414",
+      "notes": "5-shot, after viewing 400B bilingual tokens"
+    }
+  ],
+  "verificationNotes": "Fully confirmed via arXiv:2210.02414 (ar5iv HTML). LAMBADA zero-shot 80.2 and MMLU 5-shot 44.8 both appear verbatim in the paper. MODEL_LICENSE on GitHub confirms non-commercial-research-only restriction plus China-specific clauses; code is Apache-2.0. Paper confirms 130B bilingual EN/ZH dense GLM-objective model, ICLR 2023 acceptance, training completed July 2022 with public release/report August 2022. No changes made."
+}

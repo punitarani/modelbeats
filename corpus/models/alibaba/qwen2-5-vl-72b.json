@@ -1,0 +1,89 @@
+{
+  "name": "Qwen2.5-VL-72B",
+  "org": "Alibaba",
+  "family": "Qwen2.5-VL",
+  "releaseDate": "2025-01-28",
+  "status": "released",
+  "openness": "open-weights",
+  "license": "Qwen (Tongyi Qianwen) License",
+  "paramsB": 73,
+  "activeParamsB": null,
+  "archClass": "dense",
+  "archDisplay": "Dense Vision-Language Transformer (window-attention ViT + Qwen2.5 LLM, mRoPE)",
+  "ctxK": 32,
+  "modalities": [
+    "text",
+    "vision",
+    "video"
+  ],
+  "langCount": null,
+  "capabilities": {
+    "reasoning": false,
+    "coding": false,
+    "vision": true,
+    "functionCalling": true,
+    "toolUse": true,
+    "agentic": true
+  },
+  "apiAvailable": true,
+  "price": null,
+  "links": {
+    "hf": "Qwen/Qwen2.5-VL-72B-Instruct",
+    "gh": "QwenLM/Qwen2.5-VL",
+    "docs": "qwenlm.github.io/blog/qwen2.5-vl"
+  },
+  "note": "Gen-2.5 vision flagship with agentic GUI/computer-use grounding and 1hr+ video understanding; 3B/7B/72B family.",
+  "quants": [
+    "GGUF",
+    "AWQ"
+  ],
+  "vramQ4Gb": 42,
+  "vramFp16Gb": 144,
+  "tps4090": null,
+  "tpsNote": null,
+  "effortLabel": null,
+  "isDefaultConfig": true,
+  "isBestConfig": true,
+  "specSources": {
+    "paramsB": "https://huggingface.co/Qwen/Qwen2.5-VL-72B-Instruct",
+    "ctxK": "https://huggingface.co/Qwen/Qwen2.5-VL-72B-Instruct",
+    "releaseDate": "https://qwenlm.github.io/blog/qwen2.5-vl/",
+    "openness": "https://huggingface.co/Qwen/Qwen2.5-VL-72B-Instruct"
+  },
+  "results": [
+    {
+      "benchmarkSlug": "mmmu",
+      "score": 70.2,
+      "source": "self-reported",
+      "sourceUrl": "https://huggingface.co/Qwen/Qwen2.5-VL-72B-Instruct",
+      "notes": "MMMU val"
+    },
+    {
+      "benchmarkSlug": "mathvista",
+      "score": 74.8,
+      "source": "self-reported",
+      "sourceUrl": "https://huggingface.co/Qwen/Qwen2.5-VL-72B-Instruct",
+      "notes": "MathVista mini"
+    },
+    {
+      "benchmarkSlug": "docvqa",
+      "score": 96.4,
+      "source": "self-reported",
+      "sourceUrl": "https://huggingface.co/Qwen/Qwen2.5-VL-72B-Instruct"
+    },
+    {
+      "benchmarkSlug": "chartqa",
+      "score": 89.5,
+      "source": "self-reported",
+      "sourceUrl": "https://huggingface.co/Qwen/Qwen2.5-VL-72B-Instruct"
+    },
+    {
+      "benchmarkSlug": "videomme",
+      "score": 79.1,
+      "source": "self-reported",
+      "sourceUrl": "https://huggingface.co/Qwen/Qwen2.5-VL-72B-Instruct",
+      "notes": "w/ subtitles"
+    }
+  ],
+  "verificationNotes": "Fetched HF model card directly: literally confirmed 73B total params, 'Qwen' (Tongyi Qianwen) license, 32,768-token native context, and all 5 benchmark rows (MMMU 70.2, MathVista 74.8, DocVQA 96.4, ChartQA 89.5, VideoMME-w/subs 79.1) appear verbatim on the page. Release date: qwenlm.github.io blog post itself is dated Jan 26 2025, while GitHub/weights repos show a 2025.01.28 release entry for the size family (both are legitimate; kept 2025-01-28 as in source record, minor 2-day spread between announcement and artifact release, not an error)."
+}

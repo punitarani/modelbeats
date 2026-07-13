@@ -1,0 +1,93 @@
+{
+  "name": "DeepSeek-Coder-V2 236B",
+  "org": "DeepSeek",
+  "family": "DeepSeek-Coder-V2",
+  "releaseDate": "2024-06-17",
+  "status": "released",
+  "openness": "open-weights",
+  "license": "DeepSeek Model License (code: MIT)",
+  "paramsB": 236,
+  "activeParamsB": 21,
+  "archClass": "moe",
+  "archDisplay": "MoE transformer, 236B total / 21B active — DeepSeekMoE + MLA, further pretrained from a DeepSeek-V2 checkpoint on 6T additional code/math tokens",
+  "ctxK": 128,
+  "modalities": [
+    "text"
+  ],
+  "langCount": null,
+  "capabilities": {
+    "reasoning": false,
+    "coding": true,
+    "vision": false,
+    "functionCalling": true,
+    "toolUse": true,
+    "agentic": false
+  },
+  "apiAvailable": true,
+  "price": {
+    "input": 0.14,
+    "output": 0.28,
+    "provider": "DeepSeek"
+  },
+  "links": {
+    "hf": "deepseek-ai/DeepSeek-Coder-V2-Instruct",
+    "gh": "deepseek-ai/DeepSeek-Coder-V2"
+  },
+  "note": "Reached GPT-4-Turbo-level coding (90.2 HumanEval) while expanding language support from 86 to 338 programming languages at 128K context.",
+  "quants": [
+    "GGUF"
+  ],
+  "vramQ4Gb": 118,
+  "vramFp16Gb": 472,
+  "tps4090": null,
+  "tpsNote": "236B total params exceed a single RTX 4090's 24GB even at 4-bit; requires multi-GPU or CPU/RAM offload",
+  "effortLabel": null,
+  "isDefaultConfig": true,
+  "isBestConfig": true,
+  "specSources": {
+    "paramsB": "https://huggingface.co/deepseek-ai/DeepSeek-Coder-V2-Instruct",
+    "ctxK": "https://huggingface.co/deepseek-ai/DeepSeek-Coder-V2-Instruct",
+    "releaseDate": "https://github.com/deepseek-ai/DeepSeek-Coder-V2",
+    "openness": "https://huggingface.co/deepseek-ai/DeepSeek-Coder-V2-Instruct"
+  },
+  "results": [
+    {
+      "benchmarkSlug": "humaneval",
+      "score": 90.2,
+      "source": "self-reported",
+      "sourceUrl": "https://github.com/deepseek-ai/DeepSeek-Coder-V2"
+    },
+    {
+      "benchmarkSlug": "mbpp",
+      "score": 76.2,
+      "source": "self-reported",
+      "sourceUrl": "https://github.com/deepseek-ai/DeepSeek-Coder-V2",
+      "notes": "MBPP+ (EvalPlus)"
+    },
+    {
+      "benchmarkSlug": "livecodebench",
+      "score": 43.4,
+      "source": "self-reported",
+      "sourceUrl": "https://github.com/deepseek-ai/DeepSeek-Coder-V2"
+    },
+    {
+      "benchmarkSlug": "gsm8k",
+      "score": 94.9,
+      "source": "self-reported",
+      "sourceUrl": "https://github.com/deepseek-ai/DeepSeek-Coder-V2"
+    },
+    {
+      "benchmarkSlug": "math",
+      "score": 75.7,
+      "source": "self-reported",
+      "sourceUrl": "https://github.com/deepseek-ai/DeepSeek-Coder-V2"
+    },
+    {
+      "benchmarkSlug": "mmlu-pro",
+      "score": 63.63,
+      "source": "self-reported",
+      "sourceUrl": "https://huggingface.co/deepseek-ai/DeepSeek-Coder-V2-Instruct"
+    }
+  ],
+  "verificationNotes": "Confirmed real via GitHub README and HF model card: 236B total/21B active MoE, 128K context (extended from 16K), DeepSeek Model License. Fetched GitHub README directly and confirmed GSM8K 94.9, MATH 75.7, HumanEval 90.2, MBPP+ 76.2, LiveCodeBench 43.4 all literally present. MMLU-Pro 63.63 confirmed on HF Instruct page. No changes needed."
+}

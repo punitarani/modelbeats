@@ -1,0 +1,56 @@
+{
+  "name": "OpenAI Codex",
+  "org": "OpenAI",
+  "family": "Codex",
+  "releaseDate": "2021-08-10",
+  "status": "deprecated",
+  "openness": "closed",
+  "license": "Proprietary",
+  "paramsB": 12,
+  "activeParamsB": null,
+  "archClass": "dense",
+  "archDisplay": "Dense decoder-only Transformer (GPT-3 fine-tuned on code)",
+  "ctxK": 4,
+  "modalities": [
+    "text"
+  ],
+  "langCount": null,
+  "capabilities": {
+    "reasoning": false,
+    "coding": true,
+    "vision": false,
+    "functionCalling": false,
+    "toolUse": false,
+    "agentic": false
+  },
+  "apiAvailable": false,
+  "price": null,
+  "links": {
+    "gh": "openai/human-eval"
+  },
+  "note": "GPT-3 fine-tuned on GitHub code; powered the original GitHub Copilot and introduced the HumanEval benchmark; Codex API discontinued 2023-03-23.",
+  "quants": [],
+  "vramQ4Gb": null,
+  "vramFp16Gb": null,
+  "tps4090": null,
+  "tpsNote": null,
+  "effortLabel": null,
+  "isDefaultConfig": true,
+  "isBestConfig": true,
+  "specSources": {
+    "paramsB": "https://en.wikipedia.org/wiki/OpenAI_Codex_(language_model)",
+    "ctxK": "https://community.openai.com/t/codex-context-length-of-4096-tokens/9780",
+    "releaseDate": "https://aiwiki.ai/wiki/openai_codex",
+    "openness": "https://aiwiki.ai/wiki/openai_codex"
+  },
+  "results": [
+    {
+      "benchmarkSlug": "humaneval",
+      "score": 28.8,
+      "source": "self-reported",
+      "sourceUrl": "https://arxiv.org/abs/2107.03374",
+      "notes": "pass@1, 12B code-davinci model"
+    }
+  ],
+  "verificationNotes": "Confirmed via arXiv 2107.03374: 12B-parameter model, HumanEval pass@1 28.8% matches the paper exactly. Codex API shutdown confirmed for 2023-03-23 (Simon Willison/HN coverage of OpenAI's 3-day-notice discontinuation), matching the record. Launch alongside GitHub Copilot in August 2021 confirmed. No changes made."
+}

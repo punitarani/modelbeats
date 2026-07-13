@@ -1,0 +1,78 @@
+{
+  "name": "Phi-4-multimodal (5.6B)",
+  "org": "Microsoft",
+  "family": "Phi-4",
+  "releaseDate": "2025-02-26",
+  "status": "released",
+  "openness": "open-weights",
+  "license": "MIT",
+  "paramsB": 5.6,
+  "activeParamsB": null,
+  "archClass": "dense",
+  "archDisplay": "Dense transformer (Phi-4-Mini backbone) + mixture-of-LoRAs vision/speech adapters (5.6B)",
+  "ctxK": 128,
+  "modalities": [
+    "text",
+    "vision",
+    "audio"
+  ],
+  "langCount": 23,
+  "capabilities": {
+    "reasoning": false,
+    "coding": true,
+    "vision": true,
+    "functionCalling": true,
+    "toolUse": true,
+    "agentic": false
+  },
+  "apiAvailable": true,
+  "price": {
+    "input": 0.08,
+    "output": 0.32,
+    "provider": "Azure AI Foundry"
+  },
+  "links": {
+    "hf": "microsoft/Phi-4-multimodal-instruct",
+    "docs": "azure.microsoft.com/en-us/blog/empowering-innovation-the-next-generation-of-the-phi-family"
+  },
+  "note": "5.6B unified text+vision+speech model on frozen Phi-4-Mini weights with LoRA adapters; ranked #1 on the HF OpenASR leaderboard (6.14% WER) at release.",
+  "quants": [
+    "GGUF Q4",
+    "ONNX INT4"
+  ],
+  "vramQ4Gb": 4,
+  "vramFp16Gb": 12,
+  "tps4090": null,
+  "tpsNote": "No independently verified RTX 4090 llama.cpp benchmark found; the 5.6B size runs comfortably above real-time on a single 4090.",
+  "effortLabel": null,
+  "isDefaultConfig": true,
+  "isBestConfig": true,
+  "specSources": {
+    "paramsB": "https://huggingface.co/microsoft/Phi-4-multimodal-instruct",
+    "ctxK": "https://huggingface.co/microsoft/Phi-4-multimodal-instruct",
+    "releaseDate": "https://azure.microsoft.com/en-us/blog/empowering-innovation-the-next-generation-of-the-phi-family/",
+    "openness": "https://huggingface.co/microsoft/Phi-4-multimodal-instruct"
+  },
+  "results": [
+    {
+      "benchmarkSlug": "mmmu",
+      "score": 55.1,
+      "source": "self-reported",
+      "sourceUrl": "https://huggingface.co/microsoft/Phi-4-multimodal-instruct",
+      "notes": "vision understanding"
+    },
+    {
+      "benchmarkSlug": "mathvista",
+      "score": 62.4,
+      "source": "self-reported",
+      "sourceUrl": "https://huggingface.co/microsoft/Phi-4-multimodal-instruct"
+    },
+    {
+      "benchmarkSlug": "docvqa",
+      "score": 93.2,
+      "source": "self-reported",
+      "sourceUrl": "https://huggingface.co/microsoft/Phi-4-multimodal-instruct"
+    }
+  ],
+  "verificationNotes": "Re-fetched HF model card: 5.6B params, MIT license, 128K context, 23 text languages, vision (English-only) + 8-language audio confirmed. MMMU 55.1, MathVista 62.4, DocVQA 93.2 confirmed literally on card; card also literally states '#1 on Huggingface OpenASR leaderboard with word error rate 6.14%' (an alternate 6.02 figure also appears on the page but 6.14 is the explicitly cited leaderboard number, kept as-is). Azure pricing $0.08/$0.32 confirmed exact via independent pricing sources. No changes made."
+}

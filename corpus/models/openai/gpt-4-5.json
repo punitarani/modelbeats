@@ -1,0 +1,101 @@
+{
+  "name": "GPT-4.5",
+  "org": "OpenAI",
+  "family": "GPT-4.5",
+  "releaseDate": "2025-02-27",
+  "status": "deprecated",
+  "openness": "closed",
+  "license": "Proprietary",
+  "paramsB": null,
+  "activeParamsB": null,
+  "archClass": "dense",
+  "archDisplay": "Dense pretrained transformer (size undisclosed; non-reasoning)",
+  "ctxK": 128,
+  "modalities": [
+    "text",
+    "vision"
+  ],
+  "langCount": null,
+  "capabilities": {
+    "reasoning": false,
+    "coding": true,
+    "vision": true,
+    "functionCalling": true,
+    "toolUse": true,
+    "agentic": true
+  },
+  "apiAvailable": false,
+  "price": {
+    "input": 75,
+    "output": 150,
+    "provider": "OpenAI"
+  },
+  "links": {
+    "docs": "developers.openai.com/api/docs/models/gpt-4.5-preview"
+  },
+  "note": "'Orion' — OpenAI's largest non-reasoning model; shipped as a costly research preview, removed from API 2025-07-14 and fully sunset from ChatGPT 2026-06-27.",
+  "quants": [],
+  "vramQ4Gb": null,
+  "vramFp16Gb": null,
+  "tps4090": null,
+  "tpsNote": null,
+  "effortLabel": null,
+  "isDefaultConfig": true,
+  "isBestConfig": true,
+  "specSources": {
+    "releaseDate": "https://en.wikipedia.org/wiki/GPT-4.5",
+    "ctxK": "https://en.wikipedia.org/wiki/GPT-4.5",
+    "openness": "https://developers.openai.com/api/docs/models/gpt-4.5-preview",
+    "paramsB": "https://developers.openai.com/api/docs/models/gpt-4.5-preview"
+  },
+  "results": [
+    {
+      "benchmarkSlug": "gpqa",
+      "score": 71.4,
+      "source": "independent",
+      "sourceUrl": "https://www.helicone.ai/blog/gpt-4.5-benchmarks",
+      "evaluatedAt": "2025-02-01",
+      "notes": "GPQA (science)"
+    },
+    {
+      "benchmarkSlug": "aime",
+      "score": 36.7,
+      "source": "independent",
+      "sourceUrl": "https://www.helicone.ai/blog/gpt-4.5-benchmarks",
+      "evaluatedAt": "2025-02-01",
+      "notes": "AIME 2024"
+    },
+    {
+      "benchmarkSlug": "mmmlu",
+      "score": 85.1,
+      "source": "independent",
+      "sourceUrl": "https://www.helicone.ai/blog/gpt-4.5-benchmarks",
+      "evaluatedAt": "2025-02-01",
+      "notes": "Multilingual MMLU (MMMLU)"
+    },
+    {
+      "benchmarkSlug": "mmmu",
+      "score": 74.4,
+      "source": "independent",
+      "sourceUrl": "https://www.helicone.ai/blog/gpt-4.5-benchmarks",
+      "evaluatedAt": "2025-02-01"
+    },
+    {
+      "benchmarkSlug": "swe-bench",
+      "score": 38,
+      "source": "independent",
+      "sourceUrl": "https://www.helicone.ai/blog/gpt-4.5-benchmarks",
+      "evaluatedAt": "2025-02-01",
+      "notes": "SWE-bench Verified"
+    },
+    {
+      "benchmarkSlug": "simpleqa",
+      "score": 62.5,
+      "source": "independent",
+      "sourceUrl": "https://www.helicone.ai/blog/gpt-4.5-benchmarks",
+      "evaluatedAt": "2025-02-01",
+      "notes": "SimpleQA accuracy"
+    }
+  ],
+  "verificationNotes": "Confirmed release as research preview on 2025-02-27; API deprecation 2025-07-14 and ChatGPT retirement 2026-06-27 both confirmed via OpenAI Help Center / news coverage. Launch pricing $75/$150 per 1M tokens confirmed independently. All 6 benchmark rows confirmed verbatim on the cited Helicone blog post. No changes made."
+}

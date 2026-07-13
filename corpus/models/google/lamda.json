@@ -1,0 +1,48 @@
+{
+  "name": "LaMDA",
+  "org": "Google",
+  "family": "LaMDA",
+  "releaseDate": "2021-05-18",
+  "status": "deprecated",
+  "openness": "closed",
+  "license": "Proprietary (Google; research model, weights never released)",
+  "paramsB": 137,
+  "activeParamsB": null,
+  "archClass": "dense",
+  "archDisplay": "Dense decoder-only Transformer (137B, dialogue-tuned)",
+  "ctxK": 2,
+  "modalities": [
+    "text"
+  ],
+  "langCount": null,
+  "capabilities": {
+    "reasoning": false,
+    "coding": false,
+    "vision": false,
+    "functionCalling": false,
+    "toolUse": false,
+    "agentic": false
+  },
+  "apiAvailable": false,
+  "price": null,
+  "links": {
+    "docs": "arxiv.org/abs/2201.08239"
+  },
+  "note": "137B dialogue-specialized decoder-only Transformer; predecessor behind Google's original Bard chatbot.",
+  "quants": [],
+  "vramQ4Gb": null,
+  "vramFp16Gb": null,
+  "tps4090": null,
+  "tpsNote": null,
+  "effortLabel": null,
+  "isDefaultConfig": true,
+  "isBestConfig": true,
+  "specSources": {
+    "paramsB": "https://arxiv.org/abs/2201.08239",
+    "ctxK": "https://arxiv.org/abs/2201.08239",
+    "releaseDate": "https://blog.google/technology/ai/lamda/",
+    "openness": "https://arxiv.org/abs/2201.08239"
+  },
+  "results": [],
+  "verificationNotes": "Confirmed real via arxiv.org/abs/2201.08239 (submitted 2022-01-20, the research writeup) which literally states LaMDA models have 'up to 137B parameters' -- matches paramsB. Confirmed public unveiling date 2021-05-18 at Google I/O via blog.google/technology/ai/lamda/ and corroborating press (9to5google, VentureBeat) all dated May 18, 2021. Closed/proprietary status and 'weights never released' are well-established and uncontested. Could not independently confirm the exact 2K context-length figure from a primary source in this pass (left as-is, low confidence); no results rows were present to check. No changes made to core fields."
+}

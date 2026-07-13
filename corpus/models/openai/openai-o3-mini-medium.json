@@ -1,0 +1,85 @@
+{
+  "name": "OpenAI o3-mini (Medium)",
+  "org": "OpenAI",
+  "family": "o3",
+  "releaseDate": "2025-01-31",
+  "status": "released",
+  "openness": "closed",
+  "license": "Proprietary",
+  "paramsB": null,
+  "activeParamsB": null,
+  "archClass": "dense",
+  "archDisplay": "Dense transformer reasoning model (size undisclosed)",
+  "ctxK": 200,
+  "modalities": [
+    "text"
+  ],
+  "langCount": null,
+  "capabilities": {
+    "reasoning": true,
+    "coding": true,
+    "vision": false,
+    "functionCalling": true,
+    "toolUse": true,
+    "agentic": true
+  },
+  "apiAvailable": true,
+  "price": {
+    "input": 1.1,
+    "output": 4.4,
+    "provider": "OpenAI"
+  },
+  "links": {
+    "docs": "developers.openai.com/api/docs/models/o3-mini"
+  },
+  "note": "Default reasoning-effort setting; roughly matches full o1 on AIME/GPQA at a fraction of the cost.",
+  "quants": [],
+  "vramQ4Gb": null,
+  "vramFp16Gb": null,
+  "tps4090": null,
+  "tpsNote": null,
+  "effortLabel": "Medium",
+  "isDefaultConfig": true,
+  "isBestConfig": false,
+  "specSources": {
+    "releaseDate": "https://www.prompthub.us/models/o3-mini",
+    "ctxK": "https://www.prompthub.us/models/o3-mini",
+    "openness": "https://www.prompthub.us/models/o3-mini",
+    "paramsB": "https://www.prompthub.us/models/o3-mini"
+  },
+  "results": [
+    {
+      "benchmarkSlug": "aime",
+      "score": 76.9,
+      "source": "independent",
+      "sourceUrl": "https://www.lesswrong.com/posts/srdxEAcdmetdAiGcz/o3-mini-early-days",
+      "evaluatedAt": "2025-01-01",
+      "notes": "AIME 2024, medium effort (default)"
+    },
+    {
+      "benchmarkSlug": "gpqa",
+      "score": 76.8,
+      "source": "independent",
+      "sourceUrl": "https://www.lesswrong.com/posts/srdxEAcdmetdAiGcz/o3-mini-early-days",
+      "evaluatedAt": "2025-01-01",
+      "notes": "GPQA Diamond, medium effort"
+    },
+    {
+      "benchmarkSlug": "codeforces",
+      "score": 2036,
+      "source": "independent",
+      "sourceUrl": "https://www.lesswrong.com/posts/srdxEAcdmetdAiGcz/o3-mini-early-days",
+      "evaluatedAt": "2025-01-01",
+      "notes": "Codeforces Elo, medium effort"
+    },
+    {
+      "benchmarkSlug": "swe-bench",
+      "score": 42.9,
+      "source": "independent",
+      "sourceUrl": "https://www.lesswrong.com/posts/srdxEAcdmetdAiGcz/o3-mini-early-days",
+      "evaluatedAt": "2025-01-01",
+      "notes": "SWE-bench Verified, medium effort"
+    }
+  ],
+  "verificationNotes": "Same model as o3-mini (Low) verification, different effort tier. AIME 76.9, GPQA 76.8, Codeforces 2036, SWE-bench 42.9 (medium effort) all confirmed by direct fetch of the lesswrong.com article, matching exactly. Release date, context window, and pricing confirmed identically to the Low-effort record. No changes made."
+}

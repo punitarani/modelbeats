@@ -1,0 +1,93 @@
+{
+  "name": "Phi-4-mini (3.8B)",
+  "org": "Microsoft",
+  "family": "Phi-4",
+  "releaseDate": "2025-02-26",
+  "status": "released",
+  "openness": "open-weights",
+  "license": "MIT",
+  "paramsB": 3.8,
+  "activeParamsB": null,
+  "archClass": "dense",
+  "archDisplay": "Dense decoder-only Transformer with grouped-query attention",
+  "ctxK": 128,
+  "modalities": [
+    "text"
+  ],
+  "langCount": 22,
+  "capabilities": {
+    "reasoning": false,
+    "coding": true,
+    "vision": false,
+    "functionCalling": true,
+    "toolUse": true,
+    "agentic": false
+  },
+  "apiAvailable": true,
+  "price": {
+    "input": 0.075,
+    "output": 0.3,
+    "provider": "Azure AI Foundry"
+  },
+  "links": {
+    "hf": "microsoft/Phi-4-mini-instruct",
+    "docs": "azure.microsoft.com/en-us/blog/empowering-innovation-the-next-generation-of-the-phi-family/"
+  },
+  "note": "Compact text-only Phi-4 (128K context) with built-in function calling and 22-language support; MIT-licensed, tops the 3-4B class.",
+  "quants": [
+    "GGUF",
+    "MLX",
+    "ONNX"
+  ],
+  "vramQ4Gb": 3,
+  "vramFp16Gb": 10,
+  "tps4090": null,
+  "tpsNote": null,
+  "effortLabel": null,
+  "isDefaultConfig": true,
+  "isBestConfig": true,
+  "specSources": {
+    "paramsB": "https://huggingface.co/microsoft/Phi-4-mini-instruct",
+    "ctxK": "https://huggingface.co/microsoft/Phi-4-mini-instruct",
+    "releaseDate": "https://azure.microsoft.com/en-us/blog/empowering-innovation-the-next-generation-of-the-phi-family/",
+    "openness": "https://huggingface.co/microsoft/Phi-4-mini-instruct"
+  },
+  "results": [
+    {
+      "benchmarkSlug": "mmlu",
+      "score": 67.3,
+      "source": "self-reported",
+      "sourceUrl": "https://huggingface.co/microsoft/Phi-4-mini-instruct",
+      "notes": "5-shot"
+    },
+    {
+      "benchmarkSlug": "gsm8k",
+      "score": 88.6,
+      "source": "self-reported",
+      "sourceUrl": "https://huggingface.co/microsoft/Phi-4-mini-instruct",
+      "notes": "8-shot CoT"
+    },
+    {
+      "benchmarkSlug": "math",
+      "score": 64,
+      "source": "self-reported",
+      "sourceUrl": "https://huggingface.co/microsoft/Phi-4-mini-instruct",
+      "notes": "0-shot CoT"
+    },
+    {
+      "benchmarkSlug": "bbh",
+      "score": 70.4,
+      "source": "self-reported",
+      "sourceUrl": "https://huggingface.co/microsoft/Phi-4-mini-instruct",
+      "notes": "0-shot CoT"
+    },
+    {
+      "benchmarkSlug": "arena-hard",
+      "score": 32.8,
+      "source": "self-reported",
+      "sourceUrl": "https://huggingface.co/microsoft/Phi-4-mini-instruct",
+      "notes": "Arena Hard"
+    }
+  ],
+  "verificationNotes": "Re-fetched HF model card: 3.8B params, MIT license, 128K context, 22 languages, function-calling all confirmed verbatim. All 5 benchmark rows (MMLU 67.3, GSM8K 88.6, MATH 64.0, BBH 70.4, Arena Hard 32.8) confirmed literally on the card. Azure AI Foundry pricing $0.075/$0.30 per 1M tokens confirmed exact via independent pricing page (cloudprice.net). No changes made."
+}

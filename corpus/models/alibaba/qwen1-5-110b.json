@@ -1,0 +1,143 @@
+{
+  "name": "Qwen1.5-110B",
+  "org": "Alibaba",
+  "family": "Qwen1.5",
+  "releaseDate": "2024-04-25",
+  "status": "released",
+  "openness": "open-weights",
+  "license": "Tongyi Qianwen License Agreement",
+  "paramsB": 111,
+  "activeParamsB": null,
+  "archClass": "dense",
+  "archDisplay": "Dense decoder-only Transformer (GQA)",
+  "ctxK": 32,
+  "modalities": [
+    "text"
+  ],
+  "langCount": null,
+  "capabilities": {
+    "reasoning": false,
+    "coding": true,
+    "vision": false,
+    "functionCalling": true,
+    "toolUse": true,
+    "agentic": true
+  },
+  "apiAvailable": false,
+  "price": null,
+  "links": {
+    "hf": "Qwen/Qwen1.5-110B-Chat",
+    "gh": "QwenLM/Qwen1.5",
+    "docs": "qwenlm.github.io/blog/qwen1.5-110b"
+  },
+  "note": "First 100B+ dense Qwen1.5, rivaled Llama-3-70B base; announced alongside the closed Qwen-Max-0428.",
+  "quants": [
+    "GGUF",
+    "AWQ",
+    "GPTQ"
+  ],
+  "vramFp16Gb": 222,
+  "vramQ4Gb": 65,
+  "tps4090": null,
+  "tpsNote": "Exceeds a single RTX 4090's 24GB VRAM even at Q4; requires multi-GPU or CPU offload.",
+  "effortLabel": null,
+  "isDefaultConfig": true,
+  "isBestConfig": true,
+  "specSources": {
+    "paramsB": "https://huggingface.co/Qwen/Qwen1.5-110B",
+    "ctxK": "https://qwenlm.github.io/blog/qwen1.5-110b/",
+    "releaseDate": "https://qwenlm.github.io/blog/qwen1.5-110b/",
+    "openness": "https://huggingface.co/Qwen/Qwen1.5-110B/blob/main/LICENSE"
+  },
+  "results": [
+    {
+      "benchmarkSlug": "mmlu",
+      "score": 80.4,
+      "source": "self-reported",
+      "sourceUrl": "https://qwenlm.github.io/blog/qwen1.5-110b/",
+      "evaluatedAt": "2024-04-25",
+      "notes": "Base model"
+    },
+    {
+      "benchmarkSlug": "humaneval",
+      "score": 52.4,
+      "source": "self-reported",
+      "sourceUrl": "https://qwenlm.github.io/blog/qwen1.5-110b/",
+      "evaluatedAt": "2024-04-25",
+      "notes": "Base model"
+    },
+    {
+      "benchmarkSlug": "gsm8k",
+      "score": 85.4,
+      "source": "self-reported",
+      "sourceUrl": "https://qwenlm.github.io/blog/qwen1.5-110b/",
+      "evaluatedAt": "2024-04-25",
+      "notes": "Base model"
+    },
+    {
+      "benchmarkSlug": "math",
+      "score": 49.6,
+      "source": "self-reported",
+      "sourceUrl": "https://qwenlm.github.io/blog/qwen1.5-110b/",
+      "evaluatedAt": "2024-04-25",
+      "notes": "Base model"
+    },
+    {
+      "benchmarkSlug": "bbh",
+      "score": 74.8,
+      "source": "self-reported",
+      "sourceUrl": "https://qwenlm.github.io/blog/qwen1.5-110b/",
+      "evaluatedAt": "2024-04-25",
+      "notes": "Base model"
+    },
+    {
+      "benchmarkSlug": "gpqa",
+      "score": 35.9,
+      "source": "self-reported",
+      "sourceUrl": "https://qwenlm.github.io/blog/qwen1.5-110b/",
+      "evaluatedAt": "2024-04-25",
+      "notes": "Base model"
+    },
+    {
+      "benchmarkSlug": "hellaswag",
+      "score": 87.5,
+      "source": "self-reported",
+      "sourceUrl": "https://qwenlm.github.io/blog/qwen1.5-110b/",
+      "evaluatedAt": "2024-04-25",
+      "notes": "Base model"
+    },
+    {
+      "benchmarkSlug": "arc-challenge",
+      "score": 69.6,
+      "source": "self-reported",
+      "sourceUrl": "https://qwenlm.github.io/blog/qwen1.5-110b/",
+      "evaluatedAt": "2024-04-25",
+      "notes": "Base model"
+    },
+    {
+      "benchmarkSlug": "mbpp",
+      "score": 58.1,
+      "source": "self-reported",
+      "sourceUrl": "https://qwenlm.github.io/blog/qwen1.5-110b/",
+      "evaluatedAt": "2024-04-25",
+      "notes": "Base model"
+    },
+    {
+      "benchmarkSlug": "mt-bench",
+      "score": 8.88,
+      "source": "self-reported",
+      "sourceUrl": "https://qwenlm.github.io/blog/qwen1.5-110b/",
+      "evaluatedAt": "2024-04-25",
+      "notes": "Chat model"
+    },
+    {
+      "benchmarkSlug": "alpacaeval",
+      "score": 43.9,
+      "source": "self-reported",
+      "sourceUrl": "https://qwenlm.github.io/blog/qwen1.5-110b/",
+      "evaluatedAt": "2024-04-25",
+      "notes": "Chat model, AlpacaEval 2.0 LC win rate %"
+    }
+  ],
+  "verificationNotes": "Fetched qwenlm.github.io/blog/qwen1.5-110b/ directly: confirms release 2024-04-25, 32K context, GQA dense transformer, positioned as rivaling Llama-3-70B base. All 11 cited result rows (MMLU 80.4, HumanEval 52.4, GSM8K 85.4, MATH 49.6, BBH 74.8, GPQA 35.9, HellaSwag 87.5, ARC-C 69.6, MBPP 58.1, MT-Bench 8.88, AlpacaEval-LC 43.9) appear verbatim on the page. Softened the note's phrasing from 'later powered the closed Qwen-Max-0428' to 'announced alongside' since the Qwen-Max-0428 post does not state it was built from/powered by Qwen1.5-110B weights, only that it was released as a separate, larger model in the same announcement window (see Qwen-Max-0428 notes)."
+}

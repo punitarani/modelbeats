@@ -1,0 +1,94 @@
+{
+  "name": "Ministral 8B",
+  "org": "Mistral AI",
+  "family": "Ministral",
+  "releaseDate": "2024-10-16",
+  "status": "deprecated",
+  "openness": "open-weights",
+  "license": "Mistral Research License (non-commercial; commercial license required for production)",
+  "paramsB": 8.02,
+  "activeParamsB": null,
+  "archClass": "dense",
+  "archDisplay": "Dense Transformer w/ interleaved sliding-window attention, 36 layers",
+  "ctxK": 128,
+  "modalities": [
+    "text"
+  ],
+  "langCount": null,
+  "capabilities": {
+    "reasoning": false,
+    "coding": true,
+    "vision": false,
+    "functionCalling": true,
+    "toolUse": true,
+    "agentic": true
+  },
+  "apiAvailable": false,
+  "price": {
+    "input": 0.1,
+    "output": 0.1,
+    "provider": "Mistral La Plateforme (launch pricing, now retired)"
+  },
+  "links": {
+    "hf": "mistralai/Ministral-8B-Instruct-2410",
+    "docs": "docs.mistral.ai/models/overview"
+  },
+  "note": "Open-weights 8B edge model with interleaved sliding-window attention (research license); instruct weights on HF.",
+  "quants": [
+    "GGUF Q4",
+    "AWQ",
+    "MLX"
+  ],
+  "vramQ4Gb": 5,
+  "vramFp16Gb": 16,
+  "tps4090": null,
+  "tpsNote": null,
+  "effortLabel": null,
+  "isDefaultConfig": true,
+  "isBestConfig": true,
+  "specSources": {
+    "paramsB": "https://huggingface.co/mistralai/Ministral-8B-Instruct-2410",
+    "ctxK": "https://huggingface.co/mistralai/Ministral-8B-Instruct-2410",
+    "releaseDate": "https://mistral.ai/news/ministraux/",
+    "openness": "https://huggingface.co/mistralai/Ministral-8B-Instruct-2410"
+  },
+  "results": [
+    {
+      "benchmarkSlug": "mmlu",
+      "score": 65,
+      "source": "self-reported",
+      "sourceUrl": "https://huggingface.co/mistralai/Ministral-8B-Instruct-2410",
+      "evaluatedAt": "2024-10-16",
+      "notes": "base model"
+    },
+    {
+      "benchmarkSlug": "humaneval",
+      "score": 76.8,
+      "source": "self-reported",
+      "sourceUrl": "https://huggingface.co/mistralai/Ministral-8B-Instruct-2410",
+      "notes": "pass@1"
+    },
+    {
+      "benchmarkSlug": "mbpp",
+      "score": 70,
+      "source": "self-reported",
+      "sourceUrl": "https://huggingface.co/mistralai/Ministral-8B-Instruct-2410",
+      "notes": "pass@1"
+    },
+    {
+      "benchmarkSlug": "gsm8k",
+      "score": 64.5,
+      "source": "self-reported",
+      "sourceUrl": "https://huggingface.co/mistralai/Ministral-8B-Instruct-2410",
+      "notes": "maj@8, base model"
+    },
+    {
+      "benchmarkSlug": "math",
+      "score": 54.5,
+      "source": "self-reported",
+      "sourceUrl": "https://huggingface.co/mistralai/Ministral-8B-Instruct-2410",
+      "notes": "maj@1"
+    }
+  ],
+  "verificationNotes": "Real release confirmed. HF model card (fetched) states exactly '8,019,808,256' parameters (=8.02B, matches), 'Released under the Mistral Research License,' 128k context window with interleaved sliding-window attention, 36 layers - all confirmed. Release date 2024-10-16 confirmed via mistral.ai/news/ministraux/. All 5 benchmark rows confirmed literally present on the HF card: MMLU 65.0, HumanEval pass@1 76.8, MBPP pass@1 70.0, GSM8K maj@8 64.5, MATH maj@1 54.5. No corrections needed."
+}

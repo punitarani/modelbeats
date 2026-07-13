@@ -1,0 +1,95 @@
+{
+  "name": "OLMo 2 13B",
+  "org": "Allen Institute for AI (Ai2)",
+  "family": "OLMo 2",
+  "releaseDate": "2024-11-26",
+  "status": "released",
+  "openness": "open-source",
+  "license": "Apache-2.0",
+  "paramsB": 13,
+  "activeParamsB": null,
+  "archClass": "dense",
+  "archDisplay": "Dense Transformer (Olmo2 arch: 40 layers, QK-norm, reordered post-norm)",
+  "ctxK": 4,
+  "modalities": [
+    "text"
+  ],
+  "langCount": null,
+  "capabilities": {
+    "reasoning": false,
+    "coding": false,
+    "vision": false,
+    "functionCalling": false,
+    "toolUse": false,
+    "agentic": false
+  },
+  "apiAvailable": false,
+  "price": null,
+  "links": {
+    "hf": "allenai/OLMo-2-1124-13B",
+    "gh": "allenai/OLMo",
+    "docs": "allenai.org/olmo"
+  },
+  "note": "Flagship of Ai2's fully-open Nov 2024 OLMo 2 launch; Instruct variant beats Qwen 2.5 14B Instruct on average score",
+  "quants": [
+    "GGUF"
+  ],
+  "vramQ4Gb": 8.4,
+  "vramFp16Gb": 27.4,
+  "tps4090": null,
+  "tpsNote": null,
+  "effortLabel": null,
+  "isDefaultConfig": true,
+  "isBestConfig": true,
+  "specSources": {
+    "paramsB": "https://huggingface.co/allenai/OLMo-2-1124-13B/raw/main/config.json",
+    "ctxK": "https://huggingface.co/allenai/OLMo-2-1124-13B/raw/main/config.json",
+    "releaseDate": "https://allenai.org/blog/olmo2",
+    "openness": "https://huggingface.co/allenai/OLMo-2-1124-13B-Instruct"
+  },
+  "results": [
+    {
+      "benchmarkSlug": "mmlu",
+      "score": 68.5,
+      "source": "self-reported",
+      "sourceUrl": "https://huggingface.co/allenai/OLMo-2-1124-13B-Instruct",
+      "notes": "OLMo-2-13B-1124-Instruct variant; beats Qwen-2.5-14B-Instruct's 60.8 average"
+    },
+    {
+      "benchmarkSlug": "ifeval",
+      "score": 82.6,
+      "source": "self-reported",
+      "sourceUrl": "https://huggingface.co/allenai/OLMo-2-1124-13B-Instruct",
+      "notes": "Instruct variant"
+    },
+    {
+      "benchmarkSlug": "gsm8k",
+      "score": 87.4,
+      "source": "self-reported",
+      "sourceUrl": "https://huggingface.co/allenai/OLMo-2-1124-13B-Instruct",
+      "notes": "Instruct variant"
+    },
+    {
+      "benchmarkSlug": "math",
+      "score": 39.2,
+      "source": "self-reported",
+      "sourceUrl": "https://huggingface.co/allenai/OLMo-2-1124-13B-Instruct",
+      "notes": "Instruct variant"
+    },
+    {
+      "benchmarkSlug": "bbh",
+      "score": 58.8,
+      "source": "self-reported",
+      "sourceUrl": "https://huggingface.co/allenai/OLMo-2-1124-13B-Instruct",
+      "notes": "Instruct variant"
+    },
+    {
+      "benchmarkSlug": "drop",
+      "score": 71.5,
+      "source": "self-reported",
+      "sourceUrl": "https://huggingface.co/allenai/OLMo-2-1124-13B-Instruct",
+      "notes": "Instruct variant"
+    }
+  ],
+  "verificationNotes": "Release date (Nov 26 2024) confirmed via live Ai2 blog fetch. All six benchmark rows literally confirmed on the live HF Instruct model card. paramsB=13 confirmed precisely: safetensors index total 54,864,793,600 bytes / 4 bytes (fp32) = ~13.72B, rounds to 13. ctxK=4 confirmed via config.json (max_position_embeddings=4096). No changes needed."
+}

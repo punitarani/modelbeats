@@ -1,0 +1,101 @@
+{
+  "name": "LG EXAONE 3.5 32B Instruct",
+  "org": "LG AI Research",
+  "family": "EXAONE 3.5",
+  "releaseDate": "2024-12-09",
+  "status": "released",
+  "openness": "open-weights",
+  "license": "EXAONE AI Model License Agreement 1.1 - NC",
+  "paramsB": 32,
+  "activeParamsB": null,
+  "archClass": "dense",
+  "archDisplay": "Dense Transformer, 64 layers, GQA (40 Q-heads / 8 KV-heads)",
+  "ctxK": 32,
+  "modalities": [
+    "text"
+  ],
+  "langCount": 2,
+  "capabilities": {
+    "reasoning": false,
+    "coding": true,
+    "vision": false,
+    "functionCalling": false,
+    "toolUse": false,
+    "agentic": false
+  },
+  "apiAvailable": false,
+  "price": null,
+  "links": {
+    "hf": "LGAI-EXAONE/EXAONE-3.5-32B-Instruct",
+    "gh": "LG-AI-EXAONE/EXAONE-3.5"
+  },
+  "note": "Flagship of the 2.4B/7.8B/32B EXAONE 3.5 family; 32K context, strong instruction-following.",
+  "quants": [
+    "GGUF Q4",
+    "AWQ"
+  ],
+  "vramQ4Gb": 20,
+  "vramFp16Gb": 62,
+  "tps4090": null,
+  "tpsNote": null,
+  "effortLabel": null,
+  "isDefaultConfig": true,
+  "isBestConfig": true,
+  "specSources": {
+    "paramsB": "https://huggingface.co/LGAI-EXAONE/EXAONE-3.5-32B-Instruct",
+    "ctxK": "https://github.com/LG-AI-EXAONE/EXAONE-3.5",
+    "releaseDate": "https://github.com/LG-AI-EXAONE/EXAONE-3.5",
+    "openness": "https://huggingface.co/LGAI-EXAONE/EXAONE-3.5-32B-Instruct"
+  },
+  "results": [
+    {
+      "benchmarkSlug": "mt-bench",
+      "score": 8.51,
+      "source": "self-reported",
+      "sourceUrl": "https://github.com/LG-AI-EXAONE/EXAONE-3.5",
+      "evaluatedAt": "2024-12-01",
+      "notes": "MT-Bench"
+    },
+    {
+      "benchmarkSlug": "arena-hard",
+      "score": 78.6,
+      "source": "self-reported",
+      "sourceUrl": "https://github.com/LG-AI-EXAONE/EXAONE-3.5",
+      "evaluatedAt": "2024-12-01",
+      "notes": "Arena-Hard"
+    },
+    {
+      "benchmarkSlug": "alpaca-eval",
+      "score": 60.6,
+      "source": "self-reported",
+      "sourceUrl": "https://github.com/LG-AI-EXAONE/EXAONE-3.5",
+      "evaluatedAt": "2024-12-01",
+      "notes": "AlpacaEval"
+    },
+    {
+      "benchmarkSlug": "ifeval",
+      "score": 81.7,
+      "source": "self-reported",
+      "sourceUrl": "https://github.com/LG-AI-EXAONE/EXAONE-3.5",
+      "evaluatedAt": "2024-12-01",
+      "notes": "IFEval"
+    },
+    {
+      "benchmarkSlug": "komt-bench",
+      "score": 8.05,
+      "source": "self-reported",
+      "sourceUrl": "https://github.com/LG-AI-EXAONE/EXAONE-3.5",
+      "evaluatedAt": "2024-12-01",
+      "notes": "Korean MT-Bench"
+    },
+    {
+      "benchmarkSlug": "logickor",
+      "score": 9.06,
+      "source": "self-reported",
+      "sourceUrl": "https://github.com/LG-AI-EXAONE/EXAONE-3.5",
+      "evaluatedAt": "2024-12-01",
+      "notes": "Korean LogicKor"
+    }
+  ],
+  "verificationNotes": "Existence and release date confirmed via GitHub README (states Dec 9, 2024; HF collection metadata shows Dec 6 as an alternate weight-upload date — kept 2024-12-09 per the cited primary GitHub source). Params (30.95B, rounded 32B), 32K context, NC license, and architecture (64 layers, GQA 40Q/8KV) confirmed on HF model card. All 6 benchmark rows (MT-Bench 8.51, Arena-Hard 78.6, AlpacaEval 60.6, IFEval 81.7, KoMT-Bench 8.05, LogicKor 9.06) verbatim-confirmed on the cited GitHub README — no changes."
+}

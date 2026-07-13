@@ -1,0 +1,70 @@
+{
+  "name": "PaLM (540B)",
+  "org": "Google",
+  "family": "PaLM",
+  "releaseDate": "2022-04-04",
+  "status": "deprecated",
+  "openness": "closed",
+  "license": "Proprietary (Google; limited later API access, no public weights)",
+  "paramsB": 540,
+  "activeParamsB": null,
+  "archClass": "dense",
+  "archDisplay": "Dense decoder-only Transformer (540B, Pathways)",
+  "ctxK": 2,
+  "modalities": [
+    "text"
+  ],
+  "langCount": 124,
+  "capabilities": {
+    "reasoning": true,
+    "coding": true,
+    "vision": false,
+    "functionCalling": false,
+    "toolUse": false,
+    "agentic": false
+  },
+  "apiAvailable": false,
+  "price": null,
+  "links": {
+    "docs": "arxiv.org/abs/2204.02311"
+  },
+  "note": "540B dense Pathways model; first to demonstrate strong chain-of-thought reasoning breakthroughs at scale.",
+  "quants": [],
+  "vramQ4Gb": null,
+  "vramFp16Gb": null,
+  "tps4090": null,
+  "tpsNote": null,
+  "effortLabel": null,
+  "isDefaultConfig": true,
+  "isBestConfig": true,
+  "specSources": {
+    "paramsB": "https://arxiv.org/abs/2204.02311",
+    "ctxK": "https://arxiv.org/abs/2204.02311",
+    "releaseDate": "https://research.google/blog/pathways-language-model-palm-scaling-to-540-billion-parameters-for-breakthrough-performance/",
+    "openness": "https://arxiv.org/abs/2204.02311"
+  },
+  "results": [
+    {
+      "benchmarkSlug": "mmlu",
+      "score": 69.3,
+      "source": "self-reported",
+      "sourceUrl": "https://arxiv.org/abs/2204.02311",
+      "notes": "5-shot average"
+    },
+    {
+      "benchmarkSlug": "gsm8k",
+      "score": 58,
+      "source": "self-reported",
+      "sourceUrl": "https://arxiv.org/abs/2204.02311",
+      "notes": "8-shot chain-of-thought + external calculator"
+    },
+    {
+      "benchmarkSlug": "trivia-qa",
+      "score": 81.4,
+      "source": "self-reported",
+      "sourceUrl": "https://arxiv.org/abs/2204.02311",
+      "notes": "Few-shot (1-shot) TriviaQA"
+    }
+  ],
+  "verificationNotes": "Confirmed real via research.google/blog and arxiv.org/abs/2204.02311, both dated/consistent with 2022-04-04 release -- 540.35B dense Pathways-trained decoder-only Transformer, matches paramsB/archDisplay. Fetched full paper text (ar5iv rendering) and confirmed literal scores: MMLU 5-shot 69.3, GSM8K 8-shot CoT+calculator 58, TriviaQA 1-shot 81.4 -- all three rows matched exactly, kept unchanged. Context length 2048 tokens confirmed via full-text fetch. langCount=124 corroborated by an independent citation of the PaLM paper's tokenizer/training corpus (paper itself says 'over 100 languages'; 124 is the more precise figure cited elsewhere) -- kept as a reasonable value. Closed/proprietary confirmed (no public weights; later restricted API access via PaLM API)."
+}

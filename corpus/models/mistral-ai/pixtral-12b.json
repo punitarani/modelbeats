@@ -1,0 +1,83 @@
+{
+  "name": "Pixtral 12B",
+  "org": "Mistral AI",
+  "family": "Pixtral",
+  "releaseDate": "2024-09-11",
+  "status": "deprecated",
+  "openness": "open-weights",
+  "license": "Apache 2.0",
+  "paramsB": 12.4,
+  "activeParamsB": null,
+  "archClass": "dense",
+  "archDisplay": "Dense decoder (12B) + vision encoder (0.4B)",
+  "ctxK": 128,
+  "modalities": [
+    "text",
+    "vision"
+  ],
+  "langCount": null,
+  "capabilities": {
+    "reasoning": false,
+    "coding": true,
+    "vision": true,
+    "functionCalling": false,
+    "toolUse": false,
+    "agentic": false
+  },
+  "apiAvailable": false,
+  "price": null,
+  "links": {
+    "hf": "mistralai/Pixtral-12B-2409",
+    "docs": "docs.mistral.ai/models/overview"
+  },
+  "note": "Mistral's first multimodal model; 12B decoder + 400M vision encoder, 128k context, Apache 2.0; now retired from API.",
+  "quants": [
+    "GGUF Q4",
+    "MLX"
+  ],
+  "vramQ4Gb": 7.5,
+  "vramFp16Gb": 25,
+  "tps4090": null,
+  "tpsNote": null,
+  "effortLabel": null,
+  "isDefaultConfig": true,
+  "isBestConfig": true,
+  "specSources": {
+    "paramsB": "https://huggingface.co/mistralai/Pixtral-12B-2409",
+    "ctxK": "https://mistral.ai/news/pixtral-12b/",
+    "releaseDate": "https://mistral.ai/news/pixtral-12b/",
+    "openness": "https://huggingface.co/mistralai/Pixtral-12B-2409"
+  },
+  "results": [
+    {
+      "benchmarkSlug": "mmmu",
+      "score": 52.5,
+      "source": "self-reported",
+      "sourceUrl": "https://mistral.ai/news/pixtral-12b/",
+      "evaluatedAt": "2024-09-11",
+      "notes": "CoT prompting"
+    },
+    {
+      "benchmarkSlug": "mathvista",
+      "score": 58,
+      "source": "self-reported",
+      "sourceUrl": "https://mistral.ai/news/pixtral-12b/",
+      "notes": "CoT prompting"
+    },
+    {
+      "benchmarkSlug": "chartqa",
+      "score": 81.8,
+      "source": "self-reported",
+      "sourceUrl": "https://mistral.ai/news/pixtral-12b/",
+      "notes": "CoT prompting"
+    },
+    {
+      "benchmarkSlug": "docvqa",
+      "score": 90.7,
+      "source": "self-reported",
+      "sourceUrl": "https://mistral.ai/news/pixtral-12b/",
+      "notes": "ANLS metric"
+    }
+  ],
+  "verificationNotes": "Real release confirmed. Release date 2024-09-11 corroborated by two independent sources (TechCrunch article dated 2024-09-11, Simon Willison blog dated 2024-Sep-11) plus Mistral's own (now-marked '[Deprecated]') blog post. 12B decoder + 400M vision encoder, 128k ctx, Apache 2.0 confirmed via mistral.ai/news/pixtral-12b/ (fetched). All 4 benchmark rows confirmed literally on that page: MMMU 52.5 (CoT), MathVista 58.0 (CoT), ChartQA 81.8 (CoT), DocVQA 90.7 (ANLS). No corrections needed."
+}

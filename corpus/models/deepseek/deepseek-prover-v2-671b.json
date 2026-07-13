@@ -1,0 +1,76 @@
+{
+  "name": "DeepSeek-Prover-V2 671B",
+  "org": "DeepSeek",
+  "family": "DeepSeek-Prover",
+  "releaseDate": "2025-04-30",
+  "status": "released",
+  "openness": "open-weights",
+  "license": "MIT",
+  "paramsB": 671,
+  "activeParamsB": 37,
+  "archClass": "moe",
+  "archDisplay": "DeepSeekMoE (same architecture as DeepSeek-V3): 256 routed + 1 shared expert, top-8 routing, MLA attention, initialized from DeepSeek-V3-Base",
+  "ctxK": 128,
+  "modalities": [
+    "text"
+  ],
+  "langCount": null,
+  "capabilities": {
+    "reasoning": true,
+    "coding": false,
+    "vision": false,
+    "functionCalling": false,
+    "toolUse": false,
+    "agentic": false
+  },
+  "apiAvailable": false,
+  "price": null,
+  "links": {
+    "hf": "deepseek-ai/DeepSeek-Prover-V2-671B",
+    "gh": "deepseek-ai/DeepSeek-Prover-V2"
+  },
+  "note": "Formal theorem-proving model for Lean 4 built on V3-Base via recursive proof search and subgoal decomposition; state-of-the-art neural theorem prover.",
+  "quants": [
+    "GGUF Q4_K_M (Unsloth Dynamic)"
+  ],
+  "vramQ4Gb": 404,
+  "vramFp16Gb": 1342,
+  "tps4090": null,
+  "tpsNote": "671B MoE far exceeds a single 24GB 4090; only Unsloth Dynamic GGUF quants for CPU/multi-GPU offload are available.",
+  "effortLabel": null,
+  "isDefaultConfig": true,
+  "isBestConfig": true,
+  "specSources": {
+    "paramsB": "https://huggingface.co/deepseek-ai/DeepSeek-Prover-V2-671B",
+    "ctxK": "https://huggingface.co/deepseek-ai/DeepSeek-Prover-V2-671B",
+    "releaseDate": "https://techcrunch.com/2025/04/30/deepseek-upgrades-its-ai-model-for-math-problem-solving/",
+    "openness": "https://huggingface.co/deepseek-ai/DeepSeek-Prover-V2-671B/blob/main/LICENSE"
+  },
+  "results": [
+    {
+      "benchmarkSlug": "minif2f-test",
+      "score": 88.9,
+      "source": "self-reported",
+      "sourceUrl": "https://huggingface.co/deepseek-ai/DeepSeek-Prover-V2-671B",
+      "evaluatedAt": "2025-04-30",
+      "notes": "MiniF2F-test pass ratio (Lean 4)"
+    },
+    {
+      "benchmarkSlug": "minif2f-valid",
+      "score": 91,
+      "source": "self-reported",
+      "sourceUrl": "https://arxiv.org/pdf/2504.21801",
+      "evaluatedAt": "2025-04-30",
+      "notes": "MiniF2F-valid pass ratio"
+    },
+    {
+      "benchmarkSlug": "putnam-bench",
+      "score": 7.45,
+      "source": "self-reported",
+      "sourceUrl": "https://huggingface.co/deepseek-ai/DeepSeek-Prover-V2-671B",
+      "evaluatedAt": "2025-04-30",
+      "notes": "PutnamBench: 49 of 658 problems solved (%)"
+    }
+  ],
+  "verificationNotes": "Release date April 30 2025 confirmed by multiple independent outlets (WinBuzzer, Synced, TechCrunch) plus the HF card. License confirmed MIT by fetching the actual LICENSE file on HF (not just the model card summary). MiniF2F-test (88.9%) and PutnamBench (49/658 = 7.45%) confirmed on the HF card; MiniF2F-valid (91.0%) confirmed by fetching the arXiv HTML paper's Table 2 directly (220(+2)/244 problems). 671B/37B params confirmed as same V3-Base MoE architecture, consistent across all sources despite the raw safetensors sum running slightly higher (~685B, same MTP-head nuance as V3/V3-0324)."
+}

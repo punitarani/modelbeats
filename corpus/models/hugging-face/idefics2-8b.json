@@ -1,0 +1,91 @@
+{
+  "name": "Idefics2 8B",
+  "org": "Hugging Face",
+  "family": "IDEFICS",
+  "releaseDate": "2024-04-15",
+  "status": "released",
+  "openness": "open-weights",
+  "license": "Apache-2.0",
+  "paramsB": 8,
+  "activeParamsB": null,
+  "archClass": "dense",
+  "archDisplay": "SigLIP-SO400M vision encoder + Mistral-7B-v0.1 decoder, connected via learned Perceiver resampler + MLP modality projection",
+  "ctxK": 32,
+  "modalities": [
+    "text",
+    "vision"
+  ],
+  "langCount": null,
+  "capabilities": {
+    "reasoning": false,
+    "coding": false,
+    "vision": true,
+    "functionCalling": false,
+    "toolUse": false,
+    "agentic": false
+  },
+  "apiAvailable": false,
+  "price": null,
+  "links": {
+    "hf": "HuggingFaceM4/idefics2-8b",
+    "docs": "huggingface.co/blog/idefics2"
+  },
+  "note": "Compact Apache-2.0 VLM roughly 10x smaller than IDEFICS-80B, with strong OCR/document QA via SigLIP + Mistral-7B.",
+  "quants": [
+    "AWQ"
+  ],
+  "vramQ4Gb": 6,
+  "vramFp16Gb": 17,
+  "tps4090": null,
+  "tpsNote": "llama.cpp only converts the Mistral-7B LLM portion (mmproj vision tower unsupported), so no verified end-to-end Q4 4090 throughput exists.",
+  "effortLabel": null,
+  "isDefaultConfig": true,
+  "isBestConfig": true,
+  "specSources": {
+    "paramsB": "https://huggingface.co/blog/idefics2",
+    "ctxK": "https://huggingface.co/blog/idefics2",
+    "releaseDate": "https://huggingface.co/blog/idefics2",
+    "openness": "https://huggingface.co/blog/idefics2"
+  },
+  "results": [
+    {
+      "benchmarkSlug": "mmmu",
+      "score": 43,
+      "source": "self-reported",
+      "sourceUrl": "https://huggingface.co/blog/idefics2",
+      "notes": "val split, with image splitting"
+    },
+    {
+      "benchmarkSlug": "mathvista",
+      "score": 51.4,
+      "source": "self-reported",
+      "sourceUrl": "https://huggingface.co/blog/idefics2",
+      "notes": "testmini, with image splitting"
+    },
+    {
+      "benchmarkSlug": "textvqa",
+      "score": 73,
+      "source": "self-reported",
+      "sourceUrl": "https://huggingface.co/blog/idefics2"
+    },
+    {
+      "benchmarkSlug": "docvqa",
+      "score": 74,
+      "source": "self-reported",
+      "sourceUrl": "https://huggingface.co/blog/idefics2"
+    },
+    {
+      "benchmarkSlug": "mmbench",
+      "score": 76.7,
+      "source": "self-reported",
+      "sourceUrl": "https://huggingface.co/blog/idefics2"
+    },
+    {
+      "benchmarkSlug": "vqav2",
+      "score": 81.2,
+      "source": "self-reported",
+      "sourceUrl": "https://huggingface.co/blog/idefics2"
+    }
+  ],
+  "verificationNotes": "Confirmed real April 15 2024 Hugging Face release, Apache-2.0, 8B params (SigLIP-SO400M + Mistral-7B-v0.1), 32K/8K-sliding-window context inherited from Mistral-7B-v0.1 — all verified against the official blog. CORRECTED: the source blog publishes two parallel rows ('w/o image splitting' vs 'w/ image splitting'); the original record's MMMU (43.5) and MathVista (51.6) values actually belonged to the 'w/o image splitting' row while TextVQA/DocVQA/MMBench/VQAv2 belonged to the 'w/ image splitting' row — an inconsistent mix. Corrected MMMU to 43.0 and MathVista to 51.4 to match the 'with image splitting' row consistently with the other 4 (already-correct) rows, since that configuration is also the one that matches the note's claim of 'strong OCR/document QA' (74.0 DocVQA vs. 67.3 without splitting)."
+}

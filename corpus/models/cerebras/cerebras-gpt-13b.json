@@ -1,0 +1,78 @@
+{
+  "name": "Cerebras-GPT 13B",
+  "org": "Cerebras",
+  "family": "Cerebras-GPT",
+  "releaseDate": "2023-03-28",
+  "status": "released",
+  "openness": "open-source",
+  "license": "Apache-2.0",
+  "paramsB": 13,
+  "activeParamsB": null,
+  "archClass": "dense",
+  "archDisplay": "Dense transformer, GPT-3 style (40 layers, d_model 5120, 40 heads)",
+  "ctxK": 2,
+  "modalities": [
+    "text"
+  ],
+  "langCount": 1,
+  "capabilities": {
+    "reasoning": false,
+    "coding": false,
+    "vision": false,
+    "functionCalling": false,
+    "toolUse": false,
+    "agentic": false
+  },
+  "apiAvailable": false,
+  "price": null,
+  "links": {
+    "hf": "cerebras/Cerebras-GPT-13B",
+    "docs": "arxiv.org/abs/2304.03208"
+  },
+  "note": "Largest of Cerebras' seven-model, Chinchilla-optimal, fully-open GPT family trained entirely on CS-2 wafer-scale hardware.",
+  "quants": [],
+  "vramQ4Gb": 7,
+  "vramFp16Gb": 26,
+  "tps4090": null,
+  "tpsNote": null,
+  "effortLabel": null,
+  "isDefaultConfig": true,
+  "isBestConfig": true,
+  "specSources": {
+    "paramsB": "https://huggingface.co/cerebras/Cerebras-GPT-13B",
+    "ctxK": "https://huggingface.co/cerebras/Cerebras-GPT-13B",
+    "releaseDate": "https://www.forbes.com/sites/karlfreund/2023/03/28/cerebras-publishes-7-trained-generative-ai-models-to-open-source/",
+    "openness": "https://huggingface.co/cerebras/Cerebras-GPT-13B"
+  },
+  "results": [
+    {
+      "benchmarkSlug": "hellaswag",
+      "score": 51.3,
+      "source": "self-reported",
+      "sourceUrl": "https://huggingface.co/cerebras/Cerebras-GPT-13B",
+      "notes": "0-shot"
+    },
+    {
+      "benchmarkSlug": "arc-challenge",
+      "score": 36.7,
+      "source": "self-reported",
+      "sourceUrl": "https://huggingface.co/cerebras/Cerebras-GPT-13B",
+      "notes": "0-shot"
+    },
+    {
+      "benchmarkSlug": "winogrande",
+      "score": 64.6,
+      "source": "self-reported",
+      "sourceUrl": "https://huggingface.co/cerebras/Cerebras-GPT-13B",
+      "notes": "0-shot"
+    },
+    {
+      "benchmarkSlug": "lambada",
+      "score": 69.6,
+      "source": "self-reported",
+      "sourceUrl": "https://huggingface.co/cerebras/Cerebras-GPT-13B",
+      "notes": "0-shot"
+    }
+  ],
+  "verificationNotes": "Fully confirmed: March 28, 2023 release date corroborated by Forbes, MarkTechPost, and Cerebras' own press release/X announcement (7-model family, 111M-13B, Chinchilla-optimal, trained on CS-2). Apache-2.0 and 13B params confirmed on HF model card. All 4 result rows (hellaswag 51.3, arc-challenge 36.7, winogrande 64.6, lambada 69.6) verified as literally present, matching exactly, in the HF model card's 0-shot results table (which also lists PIQA 76.6, not included in the input record)."
+}

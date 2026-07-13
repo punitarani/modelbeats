@@ -1,0 +1,51 @@
+{
+  "name": "R1-1776",
+  "org": "Perplexity AI",
+  "family": "R1-1776",
+  "releaseDate": "2025-02-18",
+  "status": "released",
+  "openness": "open-weights",
+  "license": "MIT",
+  "paramsB": 671,
+  "activeParamsB": 37,
+  "archClass": "moe",
+  "archDisplay": "Mixture-of-Experts (DeepSeek-R1/V3 architecture), 671B total / 37B active",
+  "ctxK": 128,
+  "modalities": [
+    "text"
+  ],
+  "langCount": null,
+  "capabilities": {
+    "reasoning": true,
+    "coding": true,
+    "vision": false,
+    "functionCalling": false,
+    "toolUse": false,
+    "agentic": false
+  },
+  "apiAvailable": false,
+  "price": null,
+  "links": {
+    "hf": "perplexity-ai/r1-1776",
+    "docs": "perplexity.ai/hub/blog/open-sourcing-r1-1776"
+  },
+  "note": "MIT post-train of DeepSeek-R1 removing CCP censorship on ~300 topics via 40K-prompt multilingual SFT with NeMo 2.0; not currently listed on Perplexity's hosted API pricing or HF Inference Providers.",
+  "quants": [
+    "GGUF"
+  ],
+  "vramQ4Gb": 335,
+  "vramFp16Gb": 1342,
+  "tps4090": null,
+  "tpsNote": "671B MoE far exceeds a single RTX 4090's 24GB even at Q4 (~335GB needed); community low-bit GGUF (e.g. Unsloth Q2_K_XL) needs multi-GPU/CPU offload.",
+  "effortLabel": null,
+  "isDefaultConfig": true,
+  "isBestConfig": true,
+  "specSources": {
+    "paramsB": "https://huggingface.co/perplexity-ai/r1-1776",
+    "ctxK": "https://ollama.com/library/r1-1776",
+    "releaseDate": "https://www.perplexity.ai/de/hub/blog/open-sourcing-r1-1776",
+    "openness": "https://huggingface.co/perplexity-ai/r1-1776"
+  },
+  "results": [],
+  "verificationNotes": "Existence, Feb 18 2025 release (confirmed via perplexity.ai/de/hub/blog/open-sourcing-r1-1776 publish-date metadata), MIT license, and 671B/37B MoE DeepSeek-R1 architecture all confirmed. Dropped the sole lineage-bench result row (0.205 vs DeepSeek-R1's 0.780): follow-up investigation of the same Reddit/HuggingFace discussion thread shows the original low score was attributed to a flawed multi-threaded benchmark harness, and a corrected re-run had 'R1-1776 climbed to first place' — the 0.205 figure is a retracted/unreliable artifact, not a valid benchmark result, so it was removed rather than kept as a misleading number."
+}

@@ -1,0 +1,1684 @@
+{
+  "summary": "Deep research + adversarial verification for P2 gap partition 8 (21 models)",
+  "agentCount": 7,
+  "logs": [
+    "gap-part8: 21 models",
+    "research: 21 models researched, 0 rejected as unconfirmable",
+    "verify: 21 models confirmed, 0 rejected by verification"
+  ],
+  "result": {
+    "inputCount": 21,
+    "researchedCount": 21,
+    "finalCount": 21,
+    "rejected": [],
+    "models": [
+      {
+        "name": "GPT-Neo 2.7B",
+        "org": "EleutherAI",
+        "family": "GPT-Neo",
+        "releaseDate": "2021-03-21",
+        "status": "released",
+        "openness": "open-source",
+        "license": "MIT",
+        "paramsB": 2.7,
+        "activeParamsB": null,
+        "archClass": "dense",
+        "archDisplay": "Decoder-only Transformer, alternating local (256-token window) and global sparse attention (GPT-3 replication)",
+        "ctxK": 2,
+        "modalities": [
+          "text"
+        ],
+        "langCount": 1,
+        "capabilities": {
+          "reasoning": false,
+          "coding": false,
+          "vision": false,
+          "functionCalling": false,
+          "toolUse": false,
+          "agentic": false
+        },
+        "apiAvailable": false,
+        "price": null,
+        "links": {
+          "hf": "EleutherAI/gpt-neo-2.7B",
+          "gh": "EleutherAI/gpt-neo",
+          "docs": "huggingface.co/docs/transformers/model_doc/gpt_neo"
+        },
+        "note": "First open GPT-3-style replication trained on The Pile; largest freely available autoregressive LM at its March 2021 launch",
+        "quants": [
+          "Int8"
+        ],
+        "vramQ4Gb": 2.2,
+        "vramFp16Gb": 6.4,
+        "tps4090": null,
+        "tpsNote": null,
+        "effortLabel": null,
+        "isDefaultConfig": true,
+        "isBestConfig": true,
+        "specSources": {
+          "paramsB": "https://huggingface.co/EleutherAI/gpt-neo-2.7B",
+          "ctxK": "https://huggingface.co/docs/transformers/model_doc/gpt_neo",
+          "releaseDate": "https://www.eleuther.ai/artifacts/gpt-neo",
+          "openness": "https://huggingface.co/EleutherAI/gpt-neo-2.7B"
+        },
+        "results": [
+          {
+            "benchmarkSlug": "lambada",
+            "score": 62.22,
+            "source": "self-reported",
+            "sourceUrl": "https://huggingface.co/EleutherAI/gpt-neo-2.7B",
+            "evaluatedAt": "2021-03-21",
+            "notes": "zero-shot accuracy, LM Eval Harness"
+          },
+          {
+            "benchmarkSlug": "winogrande",
+            "score": 56.5,
+            "source": "self-reported",
+            "sourceUrl": "https://huggingface.co/EleutherAI/gpt-neo-2.7B",
+            "evaluatedAt": "2021-03-21",
+            "notes": "zero-shot, LM Eval Harness"
+          },
+          {
+            "benchmarkSlug": "hellaswag",
+            "score": 42.73,
+            "source": "self-reported",
+            "sourceUrl": "https://huggingface.co/EleutherAI/gpt-neo-2.7B",
+            "evaluatedAt": "2021-03-21",
+            "notes": "zero-shot, LM Eval Harness"
+          },
+          {
+            "benchmarkSlug": "piqa",
+            "score": 72.14,
+            "source": "self-reported",
+            "sourceUrl": "https://huggingface.co/EleutherAI/gpt-neo-2.7B",
+            "evaluatedAt": "2021-03-21",
+            "notes": "zero-shot, LM Eval Harness"
+          }
+        ],
+        "verificationNotes": "Confirmed real: fetched huggingface.co/EleutherAI/gpt-neo-2.7B model card table verbatim-matches all 4 scores (LAMBADA 62.22, Winogrande 56.50, HellaSwag 42.73, PIQA 72.14). MIT license and 2021-03-21 release date (eleuther.ai/artifacts/gpt-neo shows '21 Mar') confirmed. No changes needed."
+      },
+      {
+        "name": "GPT-J-6B",
+        "org": "EleutherAI",
+        "family": "GPT-J",
+        "releaseDate": "2021-06-09",
+        "status": "released",
+        "openness": "open-source",
+        "license": "Apache-2.0",
+        "paramsB": 6.05,
+        "activeParamsB": null,
+        "archClass": "dense",
+        "archDisplay": "Decoder-only Transformer with Rotary Position Embeddings and parallel attention+FF blocks (mesh-transformer-jax)",
+        "ctxK": 2,
+        "modalities": [
+          "text"
+        ],
+        "langCount": 1,
+        "capabilities": {
+          "reasoning": false,
+          "coding": false,
+          "vision": false,
+          "functionCalling": false,
+          "toolUse": false,
+          "agentic": false
+        },
+        "apiAvailable": false,
+        "price": null,
+        "links": {
+          "hf": "EleutherAI/gpt-j-6b",
+          "gh": "kingoflolz/mesh-transformer-jax",
+          "docs": "huggingface.co/docs/transformers/model_doc/gptj"
+        },
+        "note": "6B Pile-trained model built with mesh-transformer-jax, Apache 2.0; the standard open GPT-3 alternative for roughly two years",
+        "quants": [
+          "GGUF",
+          "Int8"
+        ],
+        "vramQ4Gb": 4.2,
+        "vramFp16Gb": 13.4,
+        "tps4090": null,
+        "tpsNote": null,
+        "effortLabel": null,
+        "isDefaultConfig": true,
+        "isBestConfig": true,
+        "specSources": {
+          "paramsB": "https://huggingface.co/EleutherAI/gpt-j-6b",
+          "ctxK": "https://huggingface.co/EleutherAI/gpt-j-6b",
+          "releaseDate": "https://en.wikipedia.org/wiki/GPT-J",
+          "openness": "https://huggingface.co/EleutherAI/gpt-j-6b"
+        },
+        "results": [
+          {
+            "benchmarkSlug": "lambada",
+            "score": 69.7,
+            "source": "self-reported",
+            "sourceUrl": "https://huggingface.co/EleutherAI/gpt-j-6b",
+            "evaluatedAt": "2021-06-09",
+            "notes": "zero-shot accuracy, LM Eval Harness"
+          },
+          {
+            "benchmarkSlug": "winogrande",
+            "score": 65.3,
+            "source": "self-reported",
+            "sourceUrl": "https://huggingface.co/EleutherAI/gpt-j-6b",
+            "evaluatedAt": "2021-06-09",
+            "notes": "zero-shot, LM Eval Harness"
+          },
+          {
+            "benchmarkSlug": "hellaswag",
+            "score": 66.1,
+            "source": "self-reported",
+            "sourceUrl": "https://huggingface.co/EleutherAI/gpt-j-6b",
+            "evaluatedAt": "2021-06-09",
+            "notes": "zero-shot, LM Eval Harness"
+          },
+          {
+            "benchmarkSlug": "piqa",
+            "score": 76.5,
+            "source": "self-reported",
+            "sourceUrl": "https://huggingface.co/EleutherAI/gpt-j-6b",
+            "evaluatedAt": "2021-06-09",
+            "notes": "zero-shot, LM Eval Harness"
+          }
+        ],
+        "verificationNotes": "Confirmed real: fetched huggingface.co/EleutherAI/gpt-j-6b model card, exact param count 6,053,381,344 = 6.05B matches record; Apache-2.0 license and 2048 context confirmed; evaluation table verbatim-matches all 4 scores. Wikipedia confirms release date June 9, 2021. No changes needed."
+      },
+      {
+        "name": "GPT-NeoX-20B",
+        "org": "EleutherAI",
+        "family": "GPT-NeoX",
+        "releaseDate": "2022-02-09",
+        "status": "released",
+        "openness": "open-source",
+        "license": "Apache-2.0",
+        "paramsB": 20.6,
+        "activeParamsB": null,
+        "archClass": "dense",
+        "archDisplay": "Decoder-only Transformer with RoPE and parallel attention+FF blocks (GPT-NeoX library, 44 layers)",
+        "ctxK": 2,
+        "modalities": [
+          "text"
+        ],
+        "langCount": 1,
+        "capabilities": {
+          "reasoning": false,
+          "coding": false,
+          "vision": false,
+          "functionCalling": false,
+          "toolUse": false,
+          "agentic": false
+        },
+        "apiAvailable": false,
+        "price": null,
+        "links": {
+          "hf": "EleutherAI/gpt-neox-20b",
+          "gh": "EleutherAI/gpt-neox",
+          "docs": "blog.eleuther.ai/announcing-20b"
+        },
+        "note": "Largest publicly available dense LM at its Feb 2022 release; trained on The Pile with the GPT-NeoX framework, Apache 2.0",
+        "quants": [
+          "GGUF"
+        ],
+        "vramQ4Gb": 13.1,
+        "vramFp16Gb": 43,
+        "tps4090": null,
+        "tpsNote": null,
+        "effortLabel": null,
+        "isDefaultConfig": true,
+        "isBestConfig": true,
+        "specSources": {
+          "paramsB": "https://huggingface.co/EleutherAI/gpt-neox-20b",
+          "ctxK": "https://huggingface.co/EleutherAI/gpt-neox-20b",
+          "releaseDate": "https://blog.eleuther.ai/announcing-20b/",
+          "openness": "https://huggingface.co/EleutherAI/gpt-neox-20b"
+        },
+        "results": [
+          {
+            "benchmarkSlug": "lambada",
+            "score": 72,
+            "source": "self-reported",
+            "sourceUrl": "https://blog.eleuther.ai/announcing-20b/",
+            "evaluatedAt": "2022-02-09",
+            "notes": "zero-shot accuracy, LM Eval Harness"
+          },
+          {
+            "benchmarkSlug": "winogrande",
+            "score": 66.1,
+            "source": "self-reported",
+            "sourceUrl": "https://blog.eleuther.ai/announcing-20b/",
+            "evaluatedAt": "2022-02-09",
+            "notes": "zero-shot, LM Eval Harness"
+          },
+          {
+            "benchmarkSlug": "hellaswag",
+            "score": 53.5,
+            "source": "self-reported",
+            "sourceUrl": "https://blog.eleuther.ai/announcing-20b/",
+            "evaluatedAt": "2022-02-09",
+            "notes": "zero-shot, LM Eval Harness"
+          },
+          {
+            "benchmarkSlug": "mmlu",
+            "score": 28.98,
+            "source": "self-reported",
+            "sourceUrl": "https://blog.eleuther.ai/announcing-20b/",
+            "evaluatedAt": "2022-02-09",
+            "notes": "average across Humanities/Social Science/STEM subject clusters; one of the earliest models eval'd on then-new MMLU"
+          }
+        ],
+        "verificationNotes": "Confirmed real: fetched blog.eleuther.ai/announcing-20b/ - all 4 scores (LAMBADA 72.00, Winogrande 66.10, HellaSwag 53.50, MMLU avg 28.98) verbatim-match. HF model card gives exact param count 20,554,567,680 which rounds to 20.6B, matching record. Apache-2.0 and 2022-02-09 release date confirmed. No changes needed."
+      },
+      {
+        "name": "Pythia-1.4B",
+        "org": "EleutherAI",
+        "family": "Pythia",
+        "releaseDate": "2023-04-03",
+        "status": "released",
+        "openness": "open-source",
+        "license": "Apache-2.0",
+        "paramsB": 1.4,
+        "activeParamsB": null,
+        "archClass": "dense",
+        "archDisplay": "Decoder-only Transformer (GPT-NeoX architecture, RoPE, parallel attention+FF, 24 layers)",
+        "ctxK": 2,
+        "modalities": [
+          "text"
+        ],
+        "langCount": 1,
+        "capabilities": {
+          "reasoning": false,
+          "coding": false,
+          "vision": false,
+          "functionCalling": false,
+          "toolUse": false,
+          "agentic": false
+        },
+        "apiAvailable": false,
+        "price": null,
+        "links": {
+          "hf": "EleutherAI/pythia-1.4b",
+          "gh": "EleutherAI/pythia"
+        },
+        "note": "Smaller checkpoint in the 8-model Pythia interpretability suite, identical data/order across all scales",
+        "quants": [
+          "GGUF"
+        ],
+        "vramQ4Gb": 1.2,
+        "vramFp16Gb": 3.3,
+        "tps4090": null,
+        "tpsNote": null,
+        "effortLabel": null,
+        "isDefaultConfig": true,
+        "isBestConfig": true,
+        "specSources": {
+          "paramsB": "https://huggingface.co/EleutherAI/pythia-1.4b",
+          "ctxK": "https://github.com/EleutherAI/pythia",
+          "releaseDate": "https://arxiv.org/abs/2304.01373",
+          "openness": "https://huggingface.co/EleutherAI/pythia-1.4b"
+        },
+        "results": [],
+        "verificationNotes": "Confirmed real: fetched huggingface.co/EleutherAI/pythia-1.4b - exact param count 1,414,647,808 (=1.41B, rounds to 1.4 matching record), 24 layers, Apache-2.0 license confirmed. Training used 2048 sequence length (ctxK=2 confirmed via arxiv paper details). Paper submission date 2023-04-03 confirmed on arxiv. No results rows to verify (none were provided)."
+      },
+      {
+        "name": "Pythia-6.9B",
+        "org": "EleutherAI",
+        "family": "Pythia",
+        "releaseDate": "2023-04-03",
+        "status": "released",
+        "openness": "open-source",
+        "license": "Apache-2.0",
+        "paramsB": 6.9,
+        "activeParamsB": null,
+        "archClass": "dense",
+        "archDisplay": "Decoder-only Transformer (GPT-NeoX architecture, RoPE, parallel attention+FF, 32 layers)",
+        "ctxK": 2,
+        "modalities": [
+          "text"
+        ],
+        "langCount": 1,
+        "capabilities": {
+          "reasoning": false,
+          "coding": false,
+          "vision": false,
+          "functionCalling": false,
+          "toolUse": false,
+          "agentic": false
+        },
+        "apiAvailable": false,
+        "price": null,
+        "links": {
+          "hf": "EleutherAI/pythia-6.9b",
+          "gh": "EleutherAI/pythia"
+        },
+        "note": "Mid-large Pythia size widely used as a reproducible base for training-dynamics and scaling-law studies",
+        "quants": [
+          "GGUF"
+        ],
+        "vramQ4Gb": 4.7,
+        "vramFp16Gb": 15,
+        "tps4090": null,
+        "tpsNote": null,
+        "effortLabel": null,
+        "isDefaultConfig": true,
+        "isBestConfig": true,
+        "specSources": {
+          "paramsB": "https://huggingface.co/EleutherAI/pythia-6.9b",
+          "ctxK": "https://github.com/EleutherAI/pythia",
+          "releaseDate": "https://arxiv.org/abs/2304.01373",
+          "openness": "https://huggingface.co/EleutherAI/pythia-6.9b"
+        },
+        "results": [],
+        "verificationNotes": "Confirmed real: fetched huggingface.co/EleutherAI/pythia-6.9b - exact param count 6,857,302,016 (=6.857B, rounds to 6.9 matching record), 32 layers, Apache-2.0 license confirmed. 2048 sequence length confirmed. Paper date 2023-04-03 confirmed on arxiv. No results rows to verify (none were provided)."
+      },
+      {
+        "name": "Pythia-12B",
+        "org": "EleutherAI",
+        "family": "Pythia",
+        "releaseDate": "2023-04-03",
+        "status": "released",
+        "openness": "open-source",
+        "license": "Apache-2.0",
+        "paramsB": 11.8,
+        "activeParamsB": null,
+        "archClass": "dense",
+        "archDisplay": "Decoder-only Transformer (GPT-NeoX architecture, RoPE, parallel attention+FF, 36 layers)",
+        "ctxK": 2,
+        "modalities": [
+          "text"
+        ],
+        "langCount": 1,
+        "capabilities": {
+          "reasoning": false,
+          "coding": false,
+          "vision": false,
+          "functionCalling": false,
+          "toolUse": false,
+          "agentic": false
+        },
+        "apiAvailable": false,
+        "price": null,
+        "links": {
+          "hf": "EleutherAI/pythia-12b",
+          "gh": "EleutherAI/pythia"
+        },
+        "note": "Flagship of the 8-model Pythia suite; 154 released checkpoints per model for interpretability/training-dynamics research",
+        "quants": [
+          "GGUF"
+        ],
+        "vramQ4Gb": 7.9,
+        "vramFp16Gb": 25.7,
+        "tps4090": null,
+        "tpsNote": null,
+        "effortLabel": null,
+        "isDefaultConfig": true,
+        "isBestConfig": true,
+        "specSources": {
+          "paramsB": "https://huggingface.co/EleutherAI/pythia-12b",
+          "ctxK": "https://github.com/EleutherAI/pythia",
+          "releaseDate": "https://arxiv.org/abs/2304.01373",
+          "openness": "https://huggingface.co/EleutherAI/pythia-12b"
+        },
+        "results": [
+          {
+            "benchmarkSlug": "lambada",
+            "score": 70.5,
+            "source": "self-reported",
+            "sourceUrl": "https://github.com/EleutherAI/pythia/blob/main/evals/pythia-v1/pythia-12b/zero-shot/12b_step143000.json",
+            "evaluatedAt": "2023-04-03",
+            "notes": "zero-shot accuracy, LM Eval Harness, lambada_openai task, final checkpoint (step143000) — raw eval JSON acc=0.7046"
+          },
+          {
+            "benchmarkSlug": "piqa",
+            "score": 76,
+            "source": "self-reported",
+            "sourceUrl": "https://github.com/EleutherAI/pythia/blob/main/evals/pythia-v1/pythia-12b/zero-shot/12b_step143000.json",
+            "evaluatedAt": "2023-04-03",
+            "notes": "zero-shot, LM Eval Harness, final checkpoint (step143000) — raw eval JSON acc=0.7601"
+          },
+          {
+            "benchmarkSlug": "arc-easy",
+            "score": 70.2,
+            "source": "self-reported",
+            "sourceUrl": "https://github.com/EleutherAI/pythia/blob/main/evals/pythia-v1/pythia-12b/zero-shot/12b_step143000.json",
+            "evaluatedAt": "2023-04-03",
+            "notes": "zero-shot, LM Eval Harness, final checkpoint (step143000) — raw eval JSON acc=0.7024"
+          }
+        ],
+        "verificationNotes": "Confirmed real: exact param count 11,846,072,320 (=11.846B, rounds to 11.8 matching record), 36 layers, Apache-2.0. Original sourceUrl (arxiv abstract page) does not literally display these numbers, so I re-sourced them: fetched the official raw eval JSON from github.com/EleutherAI/pythia (evals/pythia-v1/pythia-12b/zero-shot/12b_step143000.json, the final-checkpoint zero-shot run) and confirmed lambada_openai acc=0.7046(→70.5), piqa acc=0.7601(→76.0), arc_easy acc=0.7024(→70.2) — all match the claimed scores essentially exactly. Updated each row's sourceUrl to this verifiable GitHub JSON."
+      },
+      {
+        "name": "MiniCPM-2B",
+        "org": "OpenBMB",
+        "family": "MiniCPM",
+        "releaseDate": "2024-02-01",
+        "status": "released",
+        "openness": "open-weights",
+        "license": "Custom (OpenBMB General Model License; free for research, free commercial use after registration)",
+        "paramsB": 2.7,
+        "activeParamsB": null,
+        "archClass": "dense",
+        "archDisplay": "Decoder-only Transformer, deep-and-thin design (40 layers, 2304 hidden dim, Mistral-derived tokenizer)",
+        "ctxK": 4,
+        "modalities": [
+          "text"
+        ],
+        "langCount": 2,
+        "capabilities": {
+          "reasoning": false,
+          "coding": true,
+          "vision": false,
+          "functionCalling": false,
+          "toolUse": false,
+          "agentic": false
+        },
+        "apiAvailable": false,
+        "price": null,
+        "links": {
+          "hf": "openbmb/MiniCPM-2B-sft-bf16",
+          "gh": "OpenBMB/MiniCPM"
+        },
+        "note": "Pioneering ~2.4B-non-embedding edge LLM matching Mistral-7B on many benchmarks; runs on-device including smartphones",
+        "quants": [
+          "GGUF",
+          "Int4"
+        ],
+        "vramQ4Gb": 2,
+        "vramFp16Gb": 6.2,
+        "tps4090": null,
+        "tpsNote": null,
+        "effortLabel": null,
+        "isDefaultConfig": true,
+        "isBestConfig": true,
+        "specSources": {
+          "paramsB": "https://huggingface.co/openbmb/MiniCPM-2B-sft-bf16",
+          "ctxK": "https://github.com/OpenBMB/MiniCPM",
+          "releaseDate": "https://huggingface.co/openbmb/MiniCPM-2B-sft-bf16",
+          "openness": "https://huggingface.co/openbmb/MiniCPM-2B-sft-bf16"
+        },
+        "results": [
+          {
+            "benchmarkSlug": "mmlu",
+            "score": 53.46,
+            "source": "self-reported",
+            "sourceUrl": "https://github.com/OpenBMB/MiniCPM/blob/main/README-en.md",
+            "evaluatedAt": "2024-02",
+            "notes": "MiniCPM GitHub README benchmark table"
+          },
+          {
+            "benchmarkSlug": "bbh",
+            "score": 36.87,
+            "source": "self-reported",
+            "sourceUrl": "https://github.com/OpenBMB/MiniCPM/blob/main/README-en.md",
+            "evaluatedAt": "2024-02",
+            "notes": "MiniCPM GitHub README benchmark table"
+          },
+          {
+            "benchmarkSlug": "gsm8k",
+            "score": 53.83,
+            "source": "self-reported",
+            "sourceUrl": "https://github.com/OpenBMB/MiniCPM/blob/main/README-en.md",
+            "evaluatedAt": "2024-02",
+            "notes": "MiniCPM GitHub README benchmark table"
+          },
+          {
+            "benchmarkSlug": "math",
+            "score": 10.24,
+            "source": "self-reported",
+            "sourceUrl": "https://github.com/OpenBMB/MiniCPM/blob/main/README-en.md",
+            "evaluatedAt": "2024-02",
+            "notes": "MiniCPM GitHub README benchmark table"
+          },
+          {
+            "benchmarkSlug": "humaneval",
+            "score": 50,
+            "source": "self-reported",
+            "sourceUrl": "https://github.com/OpenBMB/MiniCPM/blob/main/README-en.md",
+            "evaluatedAt": "2024-02",
+            "notes": "MiniCPM GitHub README benchmark table"
+          },
+          {
+            "benchmarkSlug": "mbpp",
+            "score": 47.31,
+            "source": "self-reported",
+            "sourceUrl": "https://github.com/OpenBMB/MiniCPM/blob/main/README-en.md",
+            "evaluatedAt": "2024-02",
+            "notes": "MiniCPM GitHub README benchmark table"
+          },
+          {
+            "benchmarkSlug": "hellaswag",
+            "score": 68.25,
+            "source": "self-reported",
+            "sourceUrl": "https://github.com/OpenBMB/MiniCPM/blob/main/README-en.md",
+            "evaluatedAt": "2024-02",
+            "notes": "MiniCPM GitHub README benchmark table"
+          },
+          {
+            "benchmarkSlug": "arc-challenge",
+            "score": 68,
+            "source": "self-reported",
+            "sourceUrl": "https://github.com/OpenBMB/MiniCPM/blob/main/README-en.md",
+            "evaluatedAt": "2024-02",
+            "notes": "MiniCPM GitHub README benchmark table (ARC-c)"
+          },
+          {
+            "benchmarkSlug": "arc-easy",
+            "score": 85.44,
+            "source": "self-reported",
+            "sourceUrl": "https://github.com/OpenBMB/MiniCPM/blob/main/README-en.md",
+            "evaluatedAt": "2024-02",
+            "notes": "MiniCPM GitHub README benchmark table (ARC-e)"
+          },
+          {
+            "benchmarkSlug": "c-eval",
+            "score": 51.13,
+            "source": "self-reported",
+            "sourceUrl": "https://github.com/OpenBMB/MiniCPM/blob/main/README-en.md",
+            "evaluatedAt": "2024-02",
+            "notes": "MiniCPM GitHub README benchmark table; Chinese exam benchmark"
+          },
+          {
+            "benchmarkSlug": "cmmlu",
+            "score": 51.07,
+            "source": "self-reported",
+            "sourceUrl": "https://github.com/OpenBMB/MiniCPM/blob/main/README-en.md",
+            "evaluatedAt": "2024-02",
+            "notes": "MiniCPM GitHub README benchmark table; Chinese MMLU analogue"
+          }
+        ],
+        "verificationNotes": "Confirmed real model via HF model card (huggingface.co/openbmb/MiniCPM-2B-sft-bf16, 2.4B non-embedding params, Apache-2.0 code / custom GML weights license, Feb 1 2024 release corroborated by multiple independent sources). All 11 benchmark scores independently re-fetched from the OpenBMB/MiniCPM GitHub README table and match the input exactly (MMLU 53.46, BBH 36.87, GSM8K 53.83, MATH 10.24, HumanEval 50.00, MBPP 47.31, HellaSwag 68.25, ARC-C 68.00, ARC-E 85.44, C-Eval 51.13, CMMLU 51.07); swapped sourceUrl from the arxiv abstract page (which does not display the table) to the GitHub README that actually contains it, since arxiv abstract pages don't literally show these numbers."
+      },
+      {
+        "name": "MiniCPM-Llama3-V 2.5",
+        "org": "OpenBMB",
+        "family": "MiniCPM-V",
+        "releaseDate": "2024-05-20",
+        "status": "released",
+        "openness": "open-weights",
+        "license": "MiniCPM Model License (custom; free for research and, after registration, commercial use) + Apache-2.0 code",
+        "paramsB": 8,
+        "activeParamsB": null,
+        "archClass": "dense",
+        "archDisplay": "SigLip-400M vision encoder + Llama3-8B-Instruct LLM",
+        "ctxK": 8,
+        "modalities": [
+          "text",
+          "vision"
+        ],
+        "langCount": 30,
+        "capabilities": {
+          "reasoning": false,
+          "coding": true,
+          "vision": true,
+          "functionCalling": false,
+          "toolUse": false,
+          "agentic": false
+        },
+        "apiAvailable": false,
+        "price": null,
+        "links": {
+          "hf": "openbmb/MiniCPM-Llama3-V-2_5",
+          "gh": "OpenBMB/MiniCPM-V"
+        },
+        "note": "First end-side 8B MLLM to reach GPT-4V level, surpassing Gemini Pro and Claude 3 on OpenCompass (65.1 avg).",
+        "quants": [
+          "GGUF Q4_K_M",
+          "GGUF Q5_K_S",
+          "GGUF Q2_K"
+        ],
+        "vramQ4Gb": 6,
+        "vramFp16Gb": 16,
+        "tps4090": null,
+        "tpsNote": null,
+        "effortLabel": null,
+        "isDefaultConfig": true,
+        "isBestConfig": true,
+        "specSources": {
+          "paramsB": "https://huggingface.co/openbmb/MiniCPM-Llama3-V-2_5",
+          "ctxK": "https://huggingface.co/openbmb/MiniCPM-Llama3-V-2_5/blob/main/config.json",
+          "releaseDate": "https://huggingface.co/openbmb/MiniCPM-Llama3-V-2_5",
+          "openness": "https://huggingface.co/openbmb/MiniCPM-Llama3-V-2_5"
+        },
+        "results": [
+          {
+            "benchmarkSlug": "opencompass",
+            "score": 65.1,
+            "source": "self-reported",
+            "sourceUrl": "https://huggingface.co/openbmb/MiniCPM-Llama3-V-2_5",
+            "evaluatedAt": "2024-05",
+            "notes": "OpenCompass average over 11 benchmarks; surpasses GPT-4V-1106, Gemini Pro, Claude 3"
+          }
+        ],
+        "verificationNotes": "Confirmed real, independently re-fetched HF model card (openbmb/MiniCPM-Llama3-V-2_5): 8B params (SigLip-400M + Llama3-8B-Instruct), MiniCPM Model License weights / Apache-2.0 code, released 2024-05-20 as stated on the model card. Context length confirmed as 8192 (8k) directly from config.json max_position_embeddings, correcting an unverified assumption to a directly-confirmed primary-source value. OpenCompass 65.1 average score confirmed present verbatim on the HF model card."
+      },
+      {
+        "name": "MiniCPM-V 2.6",
+        "org": "OpenBMB",
+        "family": "MiniCPM-V",
+        "releaseDate": "2024-08-06",
+        "status": "released",
+        "openness": "open-weights",
+        "license": "MiniCPM Model License (custom; free for research and, after registration, commercial use) + Apache-2.0 code",
+        "paramsB": 8,
+        "activeParamsB": null,
+        "archClass": "dense",
+        "archDisplay": "SigLip-400M vision encoder + Qwen2-7B LLM",
+        "ctxK": 32,
+        "modalities": [
+          "text",
+          "vision",
+          "video"
+        ],
+        "langCount": 30,
+        "capabilities": {
+          "reasoning": false,
+          "coding": true,
+          "vision": true,
+          "functionCalling": false,
+          "toolUse": false,
+          "agentic": false
+        },
+        "apiAvailable": false,
+        "price": null,
+        "links": {
+          "hf": "openbmb/MiniCPM-V-2_6",
+          "gh": "OpenBMB/MiniCPM-V"
+        },
+        "note": "8B MLLM adding multi-image and video understanding on-device, surpassing GPT-4V/Gemini 1.5 Pro on OpenCompass (65.2 avg).",
+        "quants": [
+          "GGUF Q4_K_M",
+          "GGUF Q5_K_M",
+          "GGUF Q8_0",
+          "BNB INT4"
+        ],
+        "vramQ4Gb": 6,
+        "vramFp16Gb": 16,
+        "tps4090": null,
+        "tpsNote": null,
+        "effortLabel": null,
+        "isDefaultConfig": true,
+        "isBestConfig": true,
+        "specSources": {
+          "paramsB": "https://huggingface.co/openbmb/MiniCPM-V-2_6",
+          "ctxK": "https://huggingface.co/openbmb/MiniCPM-V-2_6",
+          "releaseDate": "https://github.com/OpenBMB/MiniCPM-V",
+          "openness": "https://huggingface.co/openbmb/MiniCPM-V-2_6"
+        },
+        "results": [
+          {
+            "benchmarkSlug": "opencompass",
+            "score": 65.2,
+            "source": "self-reported",
+            "sourceUrl": "https://huggingface.co/openbmb/MiniCPM-V-2_6",
+            "evaluatedAt": "2024-08",
+            "notes": "OpenCompass average over 8 benchmarks; surpasses GPT-4o mini, GPT-4V, Gemini 1.5 Pro, Claude 3.5 Sonnet on single-image understanding"
+          }
+        ],
+        "verificationNotes": "Confirmed real, independently re-fetched HF model card (openbmb/MiniCPM-V-2_6): 8B params (SigLip-400M + Qwen2-7B), MiniCPM Model License weights / Apache-2.0 code. 32k context window independently confirmed via multiple sources (HF card, MarkTechPost coverage) as a first-class feature (multi-image + video understanding), not an unverified guess. Paper/GitHub dated August 2024 (arxiv paper timestamp Aug 3 2024; release announcements early August), consistent with the 2024-08-06 release date. OpenCompass 65.2 average confirmed present verbatim on the HF model card."
+      },
+      {
+        "name": "MiniCPM3-4B",
+        "org": "OpenBMB",
+        "family": "MiniCPM 3",
+        "releaseDate": "2024-09-05",
+        "status": "released",
+        "openness": "open-weights",
+        "license": "MiniCPM Model License (custom; free for research and, after registration, commercial use) + Apache-2.0 code",
+        "paramsB": 4,
+        "activeParamsB": null,
+        "archClass": "dense",
+        "archDisplay": "Dense causal transformer (third-gen MiniCPM)",
+        "ctxK": 32,
+        "modalities": [
+          "text"
+        ],
+        "langCount": 2,
+        "capabilities": {
+          "reasoning": false,
+          "coding": true,
+          "vision": false,
+          "functionCalling": true,
+          "toolUse": true,
+          "agentic": true
+        },
+        "apiAvailable": false,
+        "price": null,
+        "links": {
+          "hf": "openbmb/MiniCPM3-4B",
+          "gh": "OpenBMB/MiniCPM"
+        },
+        "note": "Third-gen 4B on-device LLM with function calling and code interpreter, outperforming GPT-3.5-Turbo-0125 and Phi-3.5-mini.",
+        "quants": [
+          "GGUF Q4_K_M",
+          "GGUF Q5_K_M",
+          "GGUF Q8_0"
+        ],
+        "vramQ4Gb": 3,
+        "vramFp16Gb": 8,
+        "tps4090": null,
+        "tpsNote": null,
+        "effortLabel": null,
+        "isDefaultConfig": true,
+        "isBestConfig": true,
+        "specSources": {
+          "paramsB": "https://huggingface.co/openbmb/MiniCPM3-4B",
+          "ctxK": "https://huggingface.co/openbmb/MiniCPM3-4B",
+          "releaseDate": "https://www.marktechpost.com/2024/09/11/minicpm3-4b-released-by-openbmb-a-versatile-and-efficient-language-model-with-advanced-functionality-extended-context-handling-and-code-generation-capabilities/",
+          "openness": "https://huggingface.co/openbmb/MiniCPM3-4B"
+        },
+        "results": [
+          {
+            "benchmarkSlug": "mmlu",
+            "score": 67.2,
+            "source": "self-reported",
+            "sourceUrl": "https://huggingface.co/openbmb/MiniCPM3-4B",
+            "evaluatedAt": "2024-09"
+          },
+          {
+            "benchmarkSlug": "gsm8k",
+            "score": 81.1,
+            "source": "self-reported",
+            "sourceUrl": "https://huggingface.co/openbmb/MiniCPM3-4B",
+            "evaluatedAt": "2024-09"
+          },
+          {
+            "benchmarkSlug": "humaneval",
+            "score": 68.3,
+            "source": "self-reported",
+            "sourceUrl": "https://huggingface.co/openbmb/MiniCPM3-4B",
+            "evaluatedAt": "2024-09",
+            "notes": "HumanEval+"
+          },
+          {
+            "benchmarkSlug": "bfcl",
+            "score": 76,
+            "source": "self-reported",
+            "sourceUrl": "https://huggingface.co/openbmb/MiniCPM3-4B",
+            "evaluatedAt": "2024-09",
+            "notes": "BFCL v2 function-calling benchmark"
+          },
+          {
+            "benchmarkSlug": "mt-bench",
+            "score": 8.41,
+            "source": "self-reported",
+            "sourceUrl": "https://huggingface.co/openbmb/MiniCPM3-4B",
+            "evaluatedAt": "2024-09"
+          }
+        ],
+        "verificationNotes": "Confirmed real, independently re-fetched HF model card: 4B params, 32k native context, MiniCPM Model License (weights) + Apache-2.0 (code), function calling + code interpreter support. Release date 2024-09-05 corroborated by MarkTechPost coverage (2024-09-11) and OpenBMB's own announcement tweet; all five benchmark numbers (MMLU 67.2, GSM8K 81.1, HumanEval+ 68.3, BFCL v2 76.0, MT-Bench 8.41) confirmed present on the HF model card."
+      },
+      {
+        "name": "MiniCPM-o 2.6",
+        "org": "OpenBMB",
+        "family": "MiniCPM-o",
+        "releaseDate": "2025-01-13",
+        "status": "released",
+        "openness": "open-weights",
+        "license": "MiniCPM Model License (custom; free for research and, after registration, commercial use) + Apache-2.0 code",
+        "paramsB": 8,
+        "activeParamsB": null,
+        "archClass": "dense",
+        "archDisplay": "SigLip-400M + Whisper-medium-300M + ChatTTS-200M + Qwen2.5-7B, end-to-end omni model",
+        "ctxK": 32,
+        "modalities": [
+          "text",
+          "vision",
+          "video",
+          "audio"
+        ],
+        "langCount": 2,
+        "capabilities": {
+          "reasoning": false,
+          "coding": true,
+          "vision": true,
+          "functionCalling": false,
+          "toolUse": false,
+          "agentic": false
+        },
+        "apiAvailable": false,
+        "price": null,
+        "links": {
+          "hf": "openbmb/MiniCPM-o-2_6",
+          "gh": "OpenBMB/MiniCPM-o"
+        },
+        "note": "8B any-to-any omni model (vision+speech+language) with real-time streaming, matching GPT-4o-202405 on OpenCompass (70.2 avg).",
+        "quants": [
+          "GGUF Q4_K_M",
+          "BNB INT4"
+        ],
+        "vramQ4Gb": 7,
+        "vramFp16Gb": 18,
+        "tps4090": null,
+        "tpsNote": null,
+        "effortLabel": null,
+        "isDefaultConfig": true,
+        "isBestConfig": true,
+        "specSources": {
+          "paramsB": "https://huggingface.co/openbmb/MiniCPM-o-2_6",
+          "ctxK": "https://huggingface.co/openbmb/MiniCPM-o-2_6",
+          "releaseDate": "https://www.marktechpost.com/2025/01/14/openbmb-just-released-minicpm-o-2-6-a-new-8b-parameters-any-to-any-multimodal-model-that-can-understand-vision-speech-and-language-and-runs-on-edge-devices/",
+          "openness": "https://huggingface.co/openbmb/MiniCPM-o-2_6"
+        },
+        "results": [
+          {
+            "benchmarkSlug": "opencompass",
+            "score": 70.2,
+            "source": "self-reported",
+            "sourceUrl": "https://huggingface.co/openbmb/MiniCPM-o-2_6",
+            "evaluatedAt": "2025-01",
+            "notes": "OpenCompass average over 8 benchmarks; surpasses GPT-4o-202405, Gemini 1.5 Pro, Claude 3.5 Sonnet on single-image understanding"
+          },
+          {
+            "benchmarkSlug": "ocrbench",
+            "score": 897,
+            "source": "self-reported",
+            "sourceUrl": "https://huggingface.co/openbmb/MiniCPM-o-2_6",
+            "evaluatedAt": "2025-01",
+            "notes": "State-of-the-art for models under 25B params"
+          },
+          {
+            "benchmarkSlug": "streamingbench",
+            "score": 66,
+            "source": "self-reported",
+            "sourceUrl": "https://huggingface.co/openbmb/MiniCPM-o-2_6",
+            "evaluatedAt": "2025-01",
+            "notes": "Outperforms GPT-4o-202408 (64.1) on multimodal live-streaming benchmark"
+          }
+        ],
+        "verificationNotes": "Confirmed real model via HF model card (8B total, SigLip-400M+Whisper-medium-300M+ChatTTS-200M+Qwen2.5-7B, MiniCPM Model License weights / Apache-2.0 code, max_position_embeddings=32768 -> 32k ctx, independently confirmed). Release corroborated: OpenBMB announced via X on Jan 13, 2025 with MarkTechPost/press covering it Jan 14, 2025 (1-day spread reflects announcement-vs-press-coverage timing, not a factual error) -- kept 2025-01-13 as the announcement date. OpenCompass 70.2, OCRBench 897, and StreamingBench 66.0 all confirmed present on the HF model card."
+      },
+      {
+        "name": "iFlytek Spark V1.0 (Xinghuo)",
+        "org": "iFlytek",
+        "family": "Spark (Xinghuo)",
+        "releaseDate": "2023-05-06",
+        "status": "released",
+        "openness": "closed",
+        "license": "Proprietary",
+        "paramsB": null,
+        "activeParamsB": null,
+        "archClass": "dense",
+        "archDisplay": "Proprietary transformer (undisclosed)",
+        "ctxK": 8,
+        "modalities": [
+          "text",
+          "audio"
+        ],
+        "langCount": null,
+        "capabilities": {
+          "reasoning": false,
+          "coding": true,
+          "vision": false,
+          "functionCalling": false,
+          "toolUse": false,
+          "agentic": false
+        },
+        "apiAvailable": false,
+        "price": null,
+        "links": {
+          "docs": "xinghuo.xfyun.cn"
+        },
+        "note": "iFlytek's first Spark cognitive model, one of China's earliest ChatGPT challengers; launched with speech I/O, image understanding added later in 2023.",
+        "quants": [],
+        "vramQ4Gb": null,
+        "vramFp16Gb": null,
+        "tps4090": null,
+        "tpsNote": null,
+        "effortLabel": null,
+        "isDefaultConfig": true,
+        "isBestConfig": true,
+        "specSources": {
+          "releaseDate": "https://www.chinaz.com/2023/0424/1518858.shtml",
+          "openness": "https://www.kr-europe.com/iflyteks-spark-cognitive-model-a-beacon-or-a-mirage-in-the-ai-landscape",
+          "ctxK": "https://www.xfyun.cn/doc/spark/%E6%8E%A5%E5%8F%A3%E8%AF%B4%E6%98%8E.html"
+        },
+        "results": [],
+        "verificationNotes": "Confirmed real launch event: multiple independent sources (Baidu Baike, chinaz.com announcement of the May 6 2023 release conference, and general web search corroboration) confirm iFlytek held its 'Xinghuo (Spark) Cognitive Large Model' achievement release conference on 2023-05-06, matching the record. The originally-cited news.cri.cn source could not be re-confirmed (it discusses a later SuperCLUE ranking, not the initial release), so it was replaced with a source that directly corroborates the release date; params/architecture remain correctly undisclosed (closed proprietary model), and no benchmark result rows were included, consistent with none being verifiable for this early proprietary release."
+      },
+      {
+        "name": "iFlytek Spark V3.0 (Xinghuo)",
+        "org": "iFlytek",
+        "family": "Spark (Xinghuo)",
+        "releaseDate": "2023-10-24",
+        "status": "released",
+        "openness": "closed",
+        "license": "Proprietary",
+        "paramsB": null,
+        "activeParamsB": null,
+        "archClass": "dense",
+        "archDisplay": "Proprietary transformer (undisclosed)",
+        "ctxK": 8,
+        "modalities": [
+          "text",
+          "vision",
+          "audio"
+        ],
+        "langCount": null,
+        "capabilities": {
+          "reasoning": false,
+          "coding": true,
+          "vision": true,
+          "functionCalling": true,
+          "toolUse": true,
+          "agentic": true
+        },
+        "apiAvailable": true,
+        "price": null,
+        "links": {
+          "docs": "xfyun.cn/doc/spark"
+        },
+        "note": "Third-gen Spark benchmarked against ChatGPT-3.5, unveiled at the 2023 iFlytek 1024 Developer Festival in Hefei; later rebranded as the API's 'Spark Pro' tier.",
+        "quants": [],
+        "vramQ4Gb": null,
+        "vramFp16Gb": null,
+        "tps4090": null,
+        "tpsNote": null,
+        "effortLabel": null,
+        "isDefaultConfig": true,
+        "isBestConfig": true,
+        "specSources": {
+          "releaseDate": "https://www.iflytek.com/en/news-events/news/43.html",
+          "openness": "https://www.chinadaily.com.cn/a/202310/25/WS6538737ea31090682a5ea8b8.html",
+          "ctxK": "https://www.xfyun.cn/doc/spark/%E6%8E%A5%E5%8F%A3%E8%AF%B4%E6%98%8E.html"
+        },
+        "results": [
+          {
+            "benchmarkSlug": "superclue",
+            "score": 59.33,
+            "source": "independent",
+            "sourceUrl": "https://github.com/CLUEbenchmark/SuperCLUE",
+            "evaluatedAt": "2023-12",
+            "notes": "SuperCLUE overall score for 讯飞星火V3.0 in the Dec 2023 leaderboard (also 51.74 on OPEN sub-task, 77.03 on OPT sub-task)"
+          }
+        ],
+        "verificationNotes": "Existence and Oct 24, 2023 Hefei release confirmed via chinadaily.com.cn, iflytek.com, and multiple press (PRNewswire, Pandaily). SuperCLUE score of 59.33 (plus 51.74 OPEN / 77.03 OPT sub-scores) for Dec 2023 confirmed by fetching github.com/CLUEbenchmark/SuperCLUE directly - numbers match exactly. 'Rebranded as Spark Pro' claim is plausible per Chinese AI ecosystem reporting but not independently pinned to a single primary source; left in note field (non-critical, unverified nuance) rather than a hard spec."
+      },
+      {
+        "name": "iFlytek Spark V4.0 (Xinghuo)",
+        "org": "iFlytek",
+        "family": "Spark (Xinghuo)",
+        "releaseDate": "2024-06-27",
+        "status": "released",
+        "openness": "closed",
+        "license": "Proprietary",
+        "paramsB": null,
+        "activeParamsB": null,
+        "archClass": "dense",
+        "archDisplay": "Proprietary transformer, trained fully on domestic (Huawei Ascend) compute",
+        "ctxK": 8,
+        "modalities": [
+          "text",
+          "vision",
+          "audio"
+        ],
+        "langCount": null,
+        "capabilities": {
+          "reasoning": false,
+          "coding": true,
+          "vision": true,
+          "functionCalling": true,
+          "toolUse": true,
+          "agentic": true
+        },
+        "apiAvailable": true,
+        "price": null,
+        "links": {
+          "docs": "xfyun.cn/doc/spark"
+        },
+        "note": "GPT-4-Turbo-class flagship trained on fully domestic compute; later refreshed as Spark 4.0 Turbo in October 2024.",
+        "quants": [],
+        "vramQ4Gb": null,
+        "vramFp16Gb": null,
+        "tps4090": null,
+        "tpsNote": null,
+        "effortLabel": null,
+        "isDefaultConfig": true,
+        "isBestConfig": true,
+        "specSources": {
+          "releaseDate": "https://technode.com/2024/06/28/iflytek-chairman-touts-latest-ai-spark-4-0-model-as-comparable-to-gpt-4-turbo-emphasizes-total-self-sufficiency/",
+          "openness": "https://technode.com/2024/06/28/iflytek-chairman-touts-latest-ai-spark-4-0-model-as-comparable-to-gpt-4-turbo-emphasizes-total-self-sufficiency/",
+          "ctxK": "https://www.xfyun.cn/doc/spark/%E6%8E%A5%E5%8F%A3%E8%AF%B4%E6%98%8E.html"
+        },
+        "results": [],
+        "verificationNotes": "Confirmed via TechNode, Caixin Global, ChinaDaily, and IoT Now: launched June 27, 2024 in Beijing, positioned as rivaling/surpassing GPT-4 Turbo on several benchmarks, trained exclusively on the Huawei-cobuilt domestic compute platform (no Nvidia dependency) due to US chip export restrictions. Spark 4.0 Turbo follow-up in Oct 2024 also confirmed. No results rows were present to verify."
+      },
+      {
+        "name": "iFlytek Spark X1 (Xinghuo X1)",
+        "org": "iFlytek",
+        "family": "Spark (Xinghuo)",
+        "releaseDate": "2025-01-15",
+        "status": "released",
+        "openness": "closed",
+        "license": "Proprietary (closed API access, no weight release)",
+        "paramsB": null,
+        "activeParamsB": null,
+        "archClass": "moe",
+        "archDisplay": "Mixture-of-Experts transformer (exact total/active params undisclosed)",
+        "ctxK": 128,
+        "modalities": [
+          "text"
+        ],
+        "langCount": null,
+        "capabilities": {
+          "reasoning": true,
+          "coding": true,
+          "vision": false,
+          "functionCalling": true,
+          "toolUse": true,
+          "agentic": false
+        },
+        "apiAvailable": true,
+        "price": null,
+        "links": {
+          "docs": "xinghuo.xfyun.cn/sparkapi"
+        },
+        "note": "iFlytek's first deep-reasoning model, co-developed with Huawei and trained entirely on domestic Ascend 910B compute with no Nvidia dependency.",
+        "quants": [],
+        "vramQ4Gb": null,
+        "vramFp16Gb": null,
+        "tps4090": null,
+        "tpsNote": null,
+        "effortLabel": null,
+        "isDefaultConfig": true,
+        "isBestConfig": true,
+        "specSources": {
+          "releaseDate": "https://news.cgtn.com/news/2025-01-15/China-releases-Spark-X1-deep-reasoning-model-that-packs-a-punch-1AbIq8PzzEI/index.html",
+          "openness": "https://www.scmp.com/tech/big-tech/article/3307493/no-need-nvidia-iflytek-touts-reasoning-model-trained-entirely-huaweis-ai-chips",
+          "paramsB": "https://www.huaweicentral.com/huawei-ai-chips-powered-new-iflytek-llms-can-rival-openai-deepseek/"
+        },
+        "results": [],
+        "verificationNotes": "Existence, Jan 15, 2025 release, and Huawei Ascend 910B domestic-compute training confirmed independently via CGTN, SCMP, and Huawei Central (910B efficiency raised from ~20% to ~80% of Nvidia). 128K context confirmed via a separate aibase.com report on the Spark Deep Reasoning X1. However, neither CGTN, SCMP, nor Huawei Central discloses architecture type or parameter count; one secondary source (TMTPost) claims '70 billion parameters' but this could not be corroborated by any primary source and conflicts with other undisclosed-params reporting, so paramsB is kept null and the MoE archClass claim should be treated as lower-confidence/unconfirmed rather than a hard fact."
+      },
+      {
+        "name": "Luminous Supreme (70B)",
+        "org": "Aleph Alpha",
+        "family": "Luminous",
+        "releaseDate": "2022-04-14",
+        "status": "deprecated",
+        "openness": "closed",
+        "license": "Proprietary (Aleph Alpha API Terms & Conditions, SaaS-only)",
+        "paramsB": 70,
+        "activeParamsB": null,
+        "archClass": "dense",
+        "archDisplay": "Dense decoder-only autoregressive transformer with rotary position embeddings",
+        "ctxK": 2,
+        "modalities": [
+          "text"
+        ],
+        "langCount": 5,
+        "capabilities": {
+          "reasoning": false,
+          "coding": false,
+          "vision": false,
+          "functionCalling": false,
+          "toolUse": false,
+          "agentic": false
+        },
+        "apiAvailable": true,
+        "price": {
+          "input": 175,
+          "output": 192.5,
+          "provider": "Aleph Alpha"
+        },
+        "links": {
+          "docs": "docs.aleph-alpha.com/docs/introduction/luminous"
+        },
+        "note": "Germany's first large-scale sovereign LLM; API-only 70B flagship of the original Luminous family, now a legacy offering behind PhariaAI.",
+        "quants": [],
+        "vramQ4Gb": null,
+        "vramFp16Gb": null,
+        "tps4090": null,
+        "tpsNote": null,
+        "effortLabel": null,
+        "isDefaultConfig": true,
+        "isBestConfig": true,
+        "specSources": {
+          "paramsB": "https://crfm.stanford.edu/fmti/May-2024/company-reports/Aleph%20Alpha_Luminous.html",
+          "releaseDate": "https://aleph-alpha.com/aleph-alpha-launches-its-luminous-series-for-users/",
+          "openness": "https://cloudprice.net/models/aleph-alpha-luminous-supreme",
+          "ctxK": "https://aleph-alpha-client.readthedocs.io/en/latest/aleph_alpha_client.html"
+        },
+        "results": [],
+        "verificationNotes": "Release date (Aleph Alpha press release, April 14, 2022, Heidelberg) and 70B parameter count for the Supreme tier of the 13B/30B/70B Luminous family confirmed via multiple independent sources (innFactory, CRFM Stanford FMTI report). Dense decoder-only transformer with rotary position embeddings architecture confirmed. 2048-token context length confirmed as the legacy Luminous spec. Pricing of $175 input / $192.5 output per 1M tokens confirmed by fetching cloudprice.net directly - matches exactly. Deprecated/legacy status is consistent with Aleph Alpha's late-2024 pivot away from marketing Luminous to new customers in favor of PhariaAI/Pharia-1."
+      },
+      {
+        "name": "Pharia-1-LLM-7B (control)",
+        "org": "Aleph Alpha",
+        "family": "Pharia-1",
+        "releaseDate": "2024-08-26",
+        "status": "released",
+        "openness": "open-weights",
+        "license": "Open Aleph License (non-commercial research/educational use)",
+        "paramsB": 7.04,
+        "activeParamsB": null,
+        "archClass": "dense",
+        "archDisplay": "Dense decoder-only transformer, 27 layers, 4-head grouped-query attention",
+        "ctxK": 8,
+        "modalities": [
+          "text"
+        ],
+        "langCount": 4,
+        "capabilities": {
+          "reasoning": false,
+          "coding": false,
+          "vision": false,
+          "functionCalling": false,
+          "toolUse": false,
+          "agentic": false
+        },
+        "apiAvailable": false,
+        "price": null,
+        "links": {
+          "hf": "Aleph-Alpha/Pharia-1-LLM-7B-control",
+          "docs": "docs.aleph-alpha.com/products/pharia-1-llm/overview"
+        },
+        "note": "Open, EU-compliance-focused 7B trained on lawfully sourced data; Aleph Alpha's strategic successor to Luminous.",
+        "quants": [],
+        "vramQ4Gb": 4.5,
+        "vramFp16Gb": 14.5,
+        "tps4090": null,
+        "tpsNote": null,
+        "effortLabel": null,
+        "isDefaultConfig": true,
+        "isBestConfig": true,
+        "specSources": {
+          "paramsB": "https://huggingface.co/Aleph-Alpha/Pharia-1-LLM-7B-control",
+          "openness": "https://huggingface.co/Aleph-Alpha/Pharia-1-LLM-7B-control",
+          "releaseDate": "https://aleph-alpha.com/introducing-pharia-1-llm-transparent-and-compliant/",
+          "ctxK": "https://huggingface.co/Aleph-Alpha/Pharia-1-LLM-7B-control"
+        },
+        "results": [
+          {
+            "benchmarkSlug": "mmlu",
+            "score": 48.4,
+            "source": "self-reported",
+            "sourceUrl": "https://huggingface.co/Aleph-Alpha/Pharia-1-LLM-7B-control"
+          },
+          {
+            "benchmarkSlug": "hellaswag",
+            "score": 64.6,
+            "source": "self-reported",
+            "sourceUrl": "https://huggingface.co/Aleph-Alpha/Pharia-1-LLM-7B-control"
+          },
+          {
+            "benchmarkSlug": "gsm8k",
+            "score": 1.4,
+            "source": "self-reported",
+            "sourceUrl": "https://huggingface.co/Aleph-Alpha/Pharia-1-LLM-7B-control"
+          }
+        ],
+        "verificationNotes": "Existence and Aug 26, 2024 release confirmed via aleph-alpha.com blog post and corroborating coverage (VentureBeat, Maginative, dataphoenix, and Aleph Alpha's own X/Twitter announcement). 7.04B params (7,041,544,704 exact) and Open Aleph License (non-commercial research/educational use) confirmed by fetching the HF model card directly. All three benchmark scores (MMLU 48.4, HellaSwag 64.6, GSM8K 1.4) confirmed to literally appear on huggingface.co/Aleph-Alpha/Pharia-1-LLM-7B-control - exact match, no changes needed."
+      },
+      {
+        "name": "H2O-Danube 1.8B",
+        "org": "H2O.ai",
+        "family": "H2O-Danube",
+        "releaseDate": "2024-01-30",
+        "status": "released",
+        "openness": "open-weights",
+        "license": "Apache 2.0",
+        "paramsB": 1.8,
+        "activeParamsB": null,
+        "archClass": "dense",
+        "archDisplay": "Dense Llama-2/Mistral-style transformer with sliding-window attention + GQA",
+        "ctxK": 16,
+        "modalities": [
+          "text"
+        ],
+        "langCount": 1,
+        "capabilities": {
+          "reasoning": false,
+          "coding": false,
+          "vision": false,
+          "functionCalling": false,
+          "toolUse": false,
+          "agentic": false
+        },
+        "apiAvailable": false,
+        "price": null,
+        "links": {
+          "hf": "h2oai/h2o-danube-1.8b-chat",
+          "docs": "arxiv.org/abs/2401.16818"
+        },
+        "note": "H2O.ai's debut small LLM, Llama-style architecture, tuned for efficient on-device/mobile inference.",
+        "quants": [
+          "GGUF Q4"
+        ],
+        "vramQ4Gb": 1.4,
+        "vramFp16Gb": 3.8,
+        "tps4090": null,
+        "tpsNote": null,
+        "effortLabel": null,
+        "isDefaultConfig": true,
+        "isBestConfig": true,
+        "specSources": {
+          "paramsB": "https://huggingface.co/h2oai/h2o-danube-1.8b-chat",
+          "ctxK": "https://arxiv.org/html/2401.16818v2",
+          "releaseDate": "https://arxiv.org/abs/2401.16818",
+          "openness": "https://venturebeat.com/ai/h2o-ai-releases-danube-a-super-tiny-llm-for-mobile-applications"
+        },
+        "results": [
+          {
+            "benchmarkSlug": "arc-challenge",
+            "score": 39.25,
+            "source": "self-reported",
+            "sourceUrl": "https://huggingface.co/h2oai/h2o-danube-1.8b-chat"
+          },
+          {
+            "benchmarkSlug": "hellaswag",
+            "score": 67.6,
+            "source": "self-reported",
+            "sourceUrl": "https://huggingface.co/h2oai/h2o-danube-1.8b-chat"
+          },
+          {
+            "benchmarkSlug": "winogrande",
+            "score": 65.35,
+            "source": "self-reported",
+            "sourceUrl": "https://huggingface.co/h2oai/h2o-danube-1.8b-chat"
+          },
+          {
+            "benchmarkSlug": "trivia-qa",
+            "score": 36.29,
+            "source": "self-reported",
+            "sourceUrl": "https://huggingface.co/h2oai/h2o-danube-1.8b-chat"
+          }
+        ],
+        "verificationNotes": "Existence and Jan 30, 2024 release confirmed via arxiv.org/abs/2401.16818 and VentureBeat coverage. 1.8B params, 16,384 context length, and Mistral-style sliding-window attention (4096) confirmed by fetching the HF model card directly. Apache 2.0 license confirmed. All four benchmark scores (ARC-Challenge 39.25, HellaSwag 67.6, Winogrande 65.35, TriviaQA 36.29) confirmed to literally appear on huggingface.co/h2oai/h2o-danube-1.8b-chat - exact match, no changes needed."
+      },
+      {
+        "name": "H2O-Danube3 4B",
+        "org": "H2O.ai",
+        "family": "H2O-Danube",
+        "releaseDate": "2024-07-12",
+        "status": "released",
+        "openness": "open-weights",
+        "license": "Apache 2.0",
+        "paramsB": 3.96,
+        "activeParamsB": null,
+        "archClass": "dense",
+        "archDisplay": "Dense Llama-2-style transformer, wide architecture, GQA (24 layers, 3840 hidden)",
+        "ctxK": 8,
+        "modalities": [
+          "text"
+        ],
+        "langCount": 1,
+        "capabilities": {
+          "reasoning": false,
+          "coding": false,
+          "vision": false,
+          "functionCalling": false,
+          "toolUse": false,
+          "agentic": false
+        },
+        "apiAvailable": false,
+        "price": null,
+        "links": {
+          "hf": "h2oai/h2o-danube3-4b-chat",
+          "docs": "h2o.ai/platform/danube"
+        },
+        "note": "Apache-2.0 small model trained on 6T tokens, compact enough to run locally on a modern smartphone.",
+        "quants": [
+          "GGUF Q4"
+        ],
+        "vramQ4Gb": 2.6,
+        "vramFp16Gb": 8.3,
+        "tps4090": null,
+        "tpsNote": null,
+        "effortLabel": null,
+        "isDefaultConfig": true,
+        "isBestConfig": true,
+        "specSources": {
+          "paramsB": "https://huggingface.co/h2oai/h2o-danube3-4b-chat",
+          "ctxK": "https://huggingface.co/h2oai/h2o-danube3-4b-chat",
+          "releaseDate": "https://arxiv.org/abs/2407.09276",
+          "openness": "https://huggingface.co/h2oai/h2o-danube3-4b-chat"
+        },
+        "results": [
+          {
+            "benchmarkSlug": "mmlu",
+            "score": 54.74,
+            "source": "independent",
+            "sourceUrl": "https://huggingface.co/h2oai/h2o-danube3-4b-chat",
+            "notes": "Open LLM Leaderboard v1"
+          },
+          {
+            "benchmarkSlug": "hellaswag",
+            "score": 80.36,
+            "source": "independent",
+            "sourceUrl": "https://huggingface.co/h2oai/h2o-danube3-4b-chat",
+            "notes": "Open LLM Leaderboard v1"
+          },
+          {
+            "benchmarkSlug": "arc-challenge",
+            "score": 58.96,
+            "source": "independent",
+            "sourceUrl": "https://huggingface.co/h2oai/h2o-danube3-4b-chat",
+            "notes": "Open LLM Leaderboard v1"
+          },
+          {
+            "benchmarkSlug": "gsm8k",
+            "score": 50.18,
+            "source": "self-reported",
+            "sourceUrl": "https://huggingface.co/h2oai/h2o-danube3-4b-chat",
+            "notes": "Open LLM Leaderboard v1"
+          },
+          {
+            "benchmarkSlug": "winogrande",
+            "score": 76.48,
+            "source": "independent",
+            "sourceUrl": "https://huggingface.co/h2oai/h2o-danube3-4b-chat",
+            "notes": "Open LLM Leaderboard v1"
+          }
+        ],
+        "verificationNotes": "Confirmed real via HF model card fetch (h2oai/h2o-danube3-4b-chat): 4B params (modified Llama-2 arch, 24 layers, 3840 hidden, GQA), Apache 2.0, 8192-token context (Mistral tokenizer, 32K vocab), release date matches arXiv 2407.09276 (submitted 2024-07-12). All 5 Open LLM Leaderboard v1 scores (MMLU 54.74, HellaSwag 80.36, ARC-C 58.96, GSM8K 50.18, Winogrande 76.48) literally verified present on the HF page. No changes needed."
+      },
+      {
+        "name": "WizardLM 7B",
+        "org": "Microsoft & Peking University",
+        "family": "WizardLM",
+        "releaseDate": "2023-04-24",
+        "status": "released",
+        "openness": "open-weights",
+        "license": "Non-commercial research license",
+        "paramsB": 7,
+        "activeParamsB": null,
+        "archClass": "dense",
+        "archDisplay": "Dense LLaMA-based decoder-only transformer",
+        "ctxK": 2,
+        "modalities": [
+          "text"
+        ],
+        "langCount": 1,
+        "capabilities": {
+          "reasoning": false,
+          "coding": true,
+          "vision": false,
+          "functionCalling": false,
+          "toolUse": false,
+          "agentic": false
+        },
+        "apiAvailable": false,
+        "price": null,
+        "links": {
+          "hf": "WizardLM/WizardLM-7B-V1.0",
+          "gh": "nlpxucan/WizardLM"
+        },
+        "note": "Original WizardLM: LLaMA fine-tuned on Evol-Instruct data, a method that seeded WizardCoder/WizardMath and much of the field.",
+        "quants": [
+          "GGUF Q4",
+          "GPTQ"
+        ],
+        "vramQ4Gb": 4.1,
+        "vramFp16Gb": 13.5,
+        "tps4090": null,
+        "tpsNote": null,
+        "effortLabel": null,
+        "isDefaultConfig": true,
+        "isBestConfig": true,
+        "specSources": {
+          "paramsB": "https://arxiv.org/pdf/2304.12244",
+          "releaseDate": "https://arxiv.org/abs/2304.12244",
+          "openness": "https://huggingface.co/TheBloke/wizardLM-7B-GGUF",
+          "ctxK": "https://arxiv.org/pdf/2304.12244"
+        },
+        "results": [
+          {
+            "benchmarkSlug": "humaneval",
+            "score": 19.1,
+            "source": "self-reported",
+            "sourceUrl": "https://huggingface.co/TheBloke/wizardLM-7B-GGUF",
+            "notes": "pass@1, per original WizardLM-7B-V1.0 model card"
+          },
+          {
+            "benchmarkSlug": "alpacaeval",
+            "score": 78,
+            "source": "self-reported",
+            "sourceUrl": "https://huggingface.co/TheBloke/wizardLM-7B-GGUF",
+            "notes": "AlpacaEval win rate (%) vs text-davinci-003 baseline, per original model card table"
+          }
+        ],
+        "verificationNotes": "Confirmed real: arXiv 2304.12244 (submitted 2023-04-24) lists authors Can Xu, Qingfeng Sun, Kai Zheng, Xiubo Geng, Pu Zhao, Jiazhan Feng, Chongyang Tao, Qingwei Lin, Daxin Jiang, affiliated 1=Microsoft, 2=Peking University — org confirmed. Corrected: the official HF repo is WizardLM/WizardLM-7B-V1.0 (input had non-existent 'WizardLMTeam/WizardLM-7B-V1.0'; that org handle exists for the 13B/Math models but not this 7B one, and it 401'd/does not resolve). Corrected: the '78' score is NOT a 'vicuna-eval win rate vs Vicuna-13B' as the input claimed — the TheBloke-mirrored model card literally labels it 'AlpacaEval' win rate against the text-davinci-003 baseline, so I relabeled benchmarkSlug to alpacaeval and fixed the notes; HumanEval 19.1 pass@1 confirmed verbatim on the same page. Context length 2K is consistent with the LLaMA-1 base (2048 tokens) used in April 2023. License is not machine-readable on HF (tagged 'other') but is widely documented as non-commercial/research-only, inherited from Meta's original LLaMA-1 research license — kept with lower confidence."
+      },
+      {
+        "name": "Krutrim-2 (12B)",
+        "org": "Ola Krutrim",
+        "family": "Krutrim",
+        "releaseDate": "2025-01-31",
+        "status": "released",
+        "openness": "open-weights",
+        "license": "Krutrim Community License Agreement v1.0",
+        "paramsB": 12,
+        "activeParamsB": null,
+        "archClass": "dense",
+        "archDisplay": "Dense Mistral-NeMo-based transformer, 40 layers, GQA (32 heads / 8 KV heads)",
+        "ctxK": 128,
+        "modalities": [
+          "text"
+        ],
+        "langCount": 23,
+        "capabilities": {
+          "reasoning": false,
+          "coding": true,
+          "vision": false,
+          "functionCalling": false,
+          "toolUse": false,
+          "agentic": false
+        },
+        "apiAvailable": true,
+        "price": null,
+        "links": {
+          "hf": "krutrim-ai-labs/Krutrim-2-instruct",
+          "gh": "ola-krutrim/Krutrim-2-12B"
+        },
+        "note": "12B Indic LLM built on Mistral-NeMo; 128K context spanning English plus 22 Indian languages.",
+        "quants": [
+          "GGUF Q4"
+        ],
+        "vramQ4Gb": 7.5,
+        "vramFp16Gb": 24.5,
+        "tps4090": null,
+        "tpsNote": null,
+        "effortLabel": null,
+        "isDefaultConfig": true,
+        "isBestConfig": true,
+        "specSources": {
+          "paramsB": "https://huggingface.co/krutrim-ai-labs/Krutrim-2-instruct",
+          "ctxK": "https://huggingface.co/krutrim-ai-labs/Krutrim-2-instruct",
+          "releaseDate": "https://huggingface.co/krutrim-ai-labs/Krutrim-2-instruct",
+          "openness": "https://huggingface.co/krutrim-ai-labs/Krutrim-2-instruct"
+        },
+        "results": [
+          {
+            "benchmarkSlug": "mmlu",
+            "score": 63,
+            "source": "self-reported",
+            "sourceUrl": "https://huggingface.co/krutrim-ai-labs/Krutrim-2-instruct",
+            "notes": "5-shot"
+          },
+          {
+            "benchmarkSlug": "humaneval",
+            "score": 80,
+            "source": "self-reported",
+            "sourceUrl": "https://huggingface.co/krutrim-ai-labs/Krutrim-2-instruct",
+            "notes": "Pass@10"
+          },
+          {
+            "benchmarkSlug": "gsm8k",
+            "score": 71,
+            "source": "self-reported",
+            "sourceUrl": "https://huggingface.co/krutrim-ai-labs/Krutrim-2-instruct",
+            "notes": "0-shot exact match"
+          },
+          {
+            "benchmarkSlug": "hellaswag",
+            "score": 83,
+            "source": "self-reported",
+            "sourceUrl": "https://huggingface.co/krutrim-ai-labs/Krutrim-2-instruct",
+            "notes": "0-shot"
+          },
+          {
+            "benchmarkSlug": "winogrande",
+            "score": 77,
+            "source": "self-reported",
+            "sourceUrl": "https://huggingface.co/krutrim-ai-labs/Krutrim-2-instruct",
+            "notes": "0-shot"
+          }
+        ],
+        "verificationNotes": "Confirmed real via HF model card fetch (krutrim-ai-labs/Krutrim-2-instruct): 12B dense Mistral-NeMo-based model, 40 layers, 5120 hidden dim, GQA 32 heads/8 KV heads, 128K context, 131,072 vocab, released 2025-01-31, license 'Krutrim Community License'. Natively supports English + 22 Indian languages (23 total), matching langCount. All 5 benchmark rows (MMLU 63, HumanEval Pass@10 80, GSM8K 71, HellaSwag 83, Winogrande 77) literally verified present on the HF page. apiAvailable=true confirmed via Krutrim Cloud platform (HF page itself notes no HF Inference Provider deployment, but model is served on Krutrim's own cloud/API). No changes needed."
+      }
+    ]
+  },
+  "workflowProgress": [
+    {
+      "type": "workflow_phase",
+      "index": 1,
+      "title": "Research"
+    },
+    {
+      "type": "workflow_phase",
+      "index": 2,
+      "title": "Verify"
+    },
+    {
+      "type": "workflow_agent",
+      "index": 1,
+      "label": "research:EleutherAI",
+      "phaseIndex": 1,
+      "phaseTitle": "Research",
+      "agentId": "aaabf368756e1532d",
+      "model": "claude-sonnet-5",
+      "state": "done",
+      "startedAt": 1783901882876,
+      "queuedAt": 1783901882865,
+      "attempt": 1,
+      "lastToolName": "StructuredOutput",
+      "promptPreview": "You have web research tools. FIRST load them: call ToolSearch with query \"select:mcp__4dbcbf51-5bb9-4f93-a61f-18044e1a3091__web_search,mcp__4dbcbf51-5bb9-4f93-a61f-18044e1a3091__web_fetch\" to load Parallel P0 web_search/web_fetch (pass a stable session_id + model_name on every call). Built-in WebSearch/WebFetch may also load via ToolSearch query \"web search fetch\". Use REAL searches — never answer…",
+      "lastProgressAt": 1783902632002,
+      "tokens": 175588,
+      "toolCalls": 84,
+      "durationMs": 749126,
+      "resultPreview": "{\"models\":[{\"name\":\"GPT-Neo 2.7B\",\"org\":\"EleutherAI\",\"family\":\"GPT-Neo\",\"releaseDate\":\"2021-03-21\",\"status\":\"released\",\"openness\":\"open-source\",\"license\":\"MIT\",\"paramsB\":2.7,\"activeParamsB\":null,\"archClass\":\"dense\",\"archDisplay\":\"Decoder-only Transformer, alternating local (256-token window) and global sparse attention (GPT-3 replication)\",\"ctxK\":2,\"modalities\":[\"text\"],\"langCount\":1,\"capabilities…"
+    },
+    {
+      "type": "workflow_agent",
+      "index": 2,
+      "label": "research:OpenBMB",
+      "phaseIndex": 1,
+      "phaseTitle": "Research",
+      "agentId": "ae2b79e8ef033554a",
+      "model": "claude-sonnet-5",
+      "state": "done",
+      "startedAt": 1783901882877,
+      "queuedAt": 1783901882865,
+      "attempt": 1,
+      "lastToolName": "StructuredOutput",
+      "promptPreview": "You have web research tools. FIRST load them: call ToolSearch with query \"select:mcp__4dbcbf51-5bb9-4f93-a61f-18044e1a3091__web_search,mcp__4dbcbf51-5bb9-4f93-a61f-18044e1a3091__web_fetch\" to load Parallel P0 web_search/web_fetch (pass a stable session_id + model_name on every call). Built-in WebSearch/WebFetch may also load via ToolSearch query \"web search fetch\". Use REAL searches — never answer…",
+      "lastProgressAt": 1783902451557,
+      "tokens": 138138,
+      "toolCalls": 55,
+      "durationMs": 568680,
+      "resultPreview": "{\"models\":[{\"name\":\"MiniCPM-Llama3-V 2.5\",\"org\":\"OpenBMB\",\"family\":\"MiniCPM-V\",\"releaseDate\":\"2024-05-20\",\"status\":\"released\",\"openness\":\"open-weights\",\"license\":\"MiniCPM Model License (custom; free for research and, after registration, commercial use) + Apache-2.0 code\",\"paramsB\":8,\"activeParamsB\":null,\"archClass\":\"dense\",\"archDisplay\":\"SigLip-400M vision encoder + Llama3-8B-Instruct LLM\",\"ctxK\":…"
+    },
+    {
+      "type": "workflow_agent",
+      "index": 3,
+      "label": "research:iFlytek",
+      "phaseIndex": 1,
+      "phaseTitle": "Research",
+      "agentId": "a9d9af199c14385e5",
+      "model": "claude-sonnet-5",
+      "state": "done",
+      "startedAt": 1783901882877,
+      "queuedAt": 1783901882865,
+      "attempt": 1,
+      "lastToolName": "StructuredOutput",
+      "promptPreview": "You have web research tools. FIRST load them: call ToolSearch with query \"select:mcp__4dbcbf51-5bb9-4f93-a61f-18044e1a3091__web_search,mcp__4dbcbf51-5bb9-4f93-a61f-18044e1a3091__web_fetch\" to load Parallel P0 web_search/web_fetch (pass a stable session_id + model_name on every call). Built-in WebSearch/WebFetch may also load via ToolSearch query \"web search fetch\". Use REAL searches — never answer…",
+      "lastProgressAt": 1783902411864,
+      "tokens": 127051,
+      "toolCalls": 60,
+      "durationMs": 528987,
+      "resultPreview": "{\"models\":[{\"name\":\"iFlytek Spark X1 (Xinghuo X1)\",\"org\":\"iFlytek\",\"family\":\"Spark (Xinghuo)\",\"releaseDate\":\"2025-01-15\",\"status\":\"released\",\"openness\":\"closed\",\"license\":\"Proprietary (closed API access, no weight release)\",\"paramsB\":null,\"activeParamsB\":null,\"archClass\":\"moe\",\"archDisplay\":\"Mixture-of-Experts transformer (exact total/active params undisclosed)\",\"ctxK\":128,\"modalities\":[\"text\"],\"l…"
+    },
+    {
+      "type": "workflow_agent",
+      "index": 4,
+      "label": "verify:EleutherAI",
+      "phaseIndex": 2,
+      "phaseTitle": "Verify",
+      "agentId": "a2256846ee3aede5b",
+      "model": "claude-sonnet-5",
+      "state": "done",
+      "startedAt": 1783902632018,
+      "queuedAt": 1783902632005,
+      "attempt": 1,
+      "lastToolName": "StructuredOutput",
+      "promptPreview": "You have web research tools. FIRST load them: call ToolSearch with query \"select:mcp__4dbcbf51-5bb9-4f93-a61f-18044e1a3091__web_search,mcp__4dbcbf51-5bb9-4f93-a61f-18044e1a3091__web_fetch\" to load Parallel P0 web_search/web_fetch (pass a stable session_id + model_name on every call). Built-in WebSearch/WebFetch may also load via ToolSearch query \"web search fetch\". Use REAL searches — never answer…",
+      "lastProgressAt": 1783902938496,
+      "tokens": 89095,
+      "toolCalls": 41,
+      "durationMs": 306478,
+      "resultPreview": "{\"models\":[{\"name\":\"GPT-Neo 2.7B\",\"org\":\"EleutherAI\",\"family\":\"GPT-Neo\",\"releaseDate\":\"2021-03-21\",\"status\":\"released\",\"openness\":\"open-source\",\"license\":\"MIT\",\"paramsB\":2.7,\"activeParamsB\":null,\"archClass\":\"dense\",\"archDisplay\":\"Decoder-only Transformer, alternating local (256-token window) and global sparse attention (GPT-3 replication)\",\"ctxK\":2,\"modalities\":[\"text\"],\"langCount\":1,\"capabilities…"
+    },
+    {
+      "type": "workflow_agent",
+      "index": 5,
+      "label": "verify:OpenBMB",
+      "phaseIndex": 2,
+      "phaseTitle": "Verify",
+      "agentId": "adeba8478af604b67",
+      "model": "claude-sonnet-5",
+      "state": "done",
+      "startedAt": 1783902632019,
+      "queuedAt": 1783902632005,
+      "attempt": 1,
+      "lastToolName": "StructuredOutput",
+      "promptPreview": "You have web research tools. FIRST load them: call ToolSearch with query \"select:mcp__4dbcbf51-5bb9-4f93-a61f-18044e1a3091__web_search,mcp__4dbcbf51-5bb9-4f93-a61f-18044e1a3091__web_fetch\" to load Parallel P0 web_search/web_fetch (pass a stable session_id + model_name on every call). Built-in WebSearch/WebFetch may also load via ToolSearch query \"web search fetch\". Use REAL searches — never answer…",
+      "lastProgressAt": 1783902917198,
+      "tokens": 91500,
+      "toolCalls": 38,
+      "durationMs": 285179,
+      "resultPreview": "{\"models\":[{\"name\":\"MiniCPM-2B\",\"org\":\"OpenBMB\",\"family\":\"MiniCPM\",\"releaseDate\":\"2024-02-01\",\"status\":\"released\",\"openness\":\"open-weights\",\"license\":\"Custom (OpenBMB General Model License; free for research, free commercial use after registration)\",\"paramsB\":2.7,\"activeParamsB\":null,\"archClass\":\"dense\",\"archDisplay\":\"Decoder-only Transformer, deep-and-thin design (40 layers, 2304 hidden dim, Mist…"
+    },
+    {
+      "type": "workflow_agent",
+      "index": 6,
+      "label": "verify:iFlytek",
+      "phaseIndex": 2,
+      "phaseTitle": "Verify",
+      "agentId": "a3152822382b184fd",
+      "model": "claude-sonnet-5",
+      "state": "done",
+      "startedAt": 1783902632019,
+      "queuedAt": 1783902632006,
+      "attempt": 1,
+      "lastToolName": "StructuredOutput",
+      "promptPreview": "You have web research tools. FIRST load them: call ToolSearch with query \"select:mcp__4dbcbf51-5bb9-4f93-a61f-18044e1a3091__web_search,mcp__4dbcbf51-5bb9-4f93-a61f-18044e1a3091__web_fetch\" to load Parallel P0 web_search/web_fetch (pass a stable session_id + model_name on every call). Built-in WebSearch/WebFetch may also load via ToolSearch query \"web search fetch\". Use REAL searches — never answer…",
+      "lastProgressAt": 1783902909967,
+      "tokens": 90275,
+      "toolCalls": 35,
+      "durationMs": 277948,
+      "resultPreview": "{\"models\":[{\"name\":\"iFlytek Spark V3.0 (Xinghuo)\",\"org\":\"iFlytek\",\"family\":\"Spark (Xinghuo)\",\"releaseDate\":\"2023-10-24\",\"status\":\"released\",\"openness\":\"closed\",\"license\":\"Proprietary\",\"paramsB\":null,\"activeParamsB\":null,\"archClass\":\"dense\",\"archDisplay\":\"Proprietary transformer (undisclosed)\",\"ctxK\":8,\"modalities\":[\"text\",\"vision\",\"audio\"],\"langCount\":null,\"capabilities\":{\"reasoning\":false,\"coding…"
+    },
+    {
+      "type": "workflow_agent",
+      "index": 7,
+      "label": "verify:H2O.ai",
+      "phaseIndex": 2,
+      "phaseTitle": "Verify",
+      "agentId": "a892fe92937ba42f5",
+      "model": "claude-sonnet-5",
+      "state": "done",
+      "startedAt": 1783902632020,
+      "queuedAt": 1783902632006,
+      "attempt": 1,
+      "lastToolName": "StructuredOutput",
+      "promptPreview": "You have web research tools. FIRST load them: call ToolSearch with query \"select:mcp__4dbcbf51-5bb9-4f93-a61f-18044e1a3091__web_search,mcp__4dbcbf51-5bb9-4f93-a61f-18044e1a3091__web_fetch\" to load Parallel P0 web_search/web_fetch (pass a stable session_id + model_name on every call). Built-in WebSearch/WebFetch may also load via ToolSearch query \"web search fetch\". Use REAL searches — never answer…",
+      "lastProgressAt": 1783902878820,
+      "tokens": 73532,
+      "toolCalls": 27,
+      "durationMs": 246800,
+      "resultPreview": "{\"models\":[{\"name\":\"H2O-Danube3 4B\",\"org\":\"H2O.ai\",\"family\":\"H2O-Danube\",\"releaseDate\":\"2024-07-12\",\"status\":\"released\",\"openness\":\"open-weights\",\"license\":\"Apache 2.0\",\"paramsB\":3.96,\"activeParamsB\":null,\"archClass\":\"dense\",\"archDisplay\":\"Dense Llama-2-style transformer, wide architecture, GQA (24 layers, 3840 hidden)\",\"ctxK\":8,\"modalities\":[\"text\"],\"langCount\":1,\"capabilities\":{\"reasoning\":false…"
+    }
+  ],
+  "totalTokens": 785179,
+  "totalToolCalls": 340
+}

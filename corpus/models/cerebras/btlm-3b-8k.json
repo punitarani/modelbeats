@@ -1,0 +1,85 @@
+{
+  "name": "BTLM-3B-8K",
+  "org": "Cerebras",
+  "family": "BTLM",
+  "releaseDate": "2023-07-01",
+  "status": "released",
+  "openness": "open-weights",
+  "license": "Apache-2.0",
+  "paramsB": 2.6,
+  "activeParamsB": null,
+  "archClass": "dense",
+  "archDisplay": "Dense transformer, GPT-2 style + SwiGLU + ALiBi + muP (32 layers, d_model 2560)",
+  "ctxK": 8,
+  "modalities": [
+    "text"
+  ],
+  "langCount": 1,
+  "capabilities": {
+    "reasoning": false,
+    "coding": true,
+    "vision": false,
+    "functionCalling": false,
+    "toolUse": false,
+    "agentic": false
+  },
+  "apiAvailable": false,
+  "price": null,
+  "links": {
+    "hf": "cerebras/btlm-3b-8k-base",
+    "docs": "arxiv.org/abs/2309.11568"
+  },
+  "note": "Bittensor Language Model: 2.6B (marketed as 3B) with 7B-class quality and 8K context, trained on 627B tokens of SlimPajama, trained on the Condor Galaxy 1 (CG-1) supercomputer (Cerebras/G42 partnership).",
+  "quants": [],
+  "vramQ4Gb": 2,
+  "vramFp16Gb": 5.5,
+  "tps4090": null,
+  "tpsNote": "Cerebras reports the model fits in under 3GB of memory at 4-bit precision for mobile/edge deployment.",
+  "effortLabel": null,
+  "isDefaultConfig": true,
+  "isBestConfig": true,
+  "specSources": {
+    "paramsB": "https://arxiv.org/abs/2309.11568",
+    "ctxK": "https://huggingface.co/cerebras/btlm-3b-8k-base",
+    "releaseDate": "https://www.cerebras.ai/blog/btlm-3b-8k-7b-performance-in-a-3-billion-parameter-model",
+    "openness": "https://huggingface.co/cerebras/btlm-3b-8k-base"
+  },
+  "results": [
+    {
+      "benchmarkSlug": "hellaswag",
+      "score": 69.8,
+      "source": "self-reported",
+      "sourceUrl": "https://arxiv.org/abs/2309.11568",
+      "notes": "0-shot"
+    },
+    {
+      "benchmarkSlug": "arc-challenge",
+      "score": 37.6,
+      "source": "self-reported",
+      "sourceUrl": "https://arxiv.org/abs/2309.11568",
+      "notes": "0-shot"
+    },
+    {
+      "benchmarkSlug": "winogrande",
+      "score": 65.8,
+      "source": "self-reported",
+      "sourceUrl": "https://arxiv.org/abs/2309.11568",
+      "notes": "0-shot"
+    },
+    {
+      "benchmarkSlug": "mmlu",
+      "score": 28.1,
+      "source": "self-reported",
+      "sourceUrl": "https://arxiv.org/abs/2309.11568",
+      "notes": "5-shot"
+    },
+    {
+      "benchmarkSlug": "humaneval",
+      "score": 9.9,
+      "source": "self-reported",
+      "sourceUrl": "https://arxiv.org/abs/2309.11568",
+      "notes": "pass@1"
+    }
+  ],
+  "verificationNotes": "CORRECTED releaseDate: input record cited 2023-09-20 (the arXiv paper's submission date), but the model was actually publicly released earlier -- HuggingFace commit history shows weights uploaded ~2023-07-24, and Cerebras/Opentensor's own announcement says BTLM 'went live on Bittensor' July 27, 2023; downgraded to month precision (2023-07) since sources disagree on the exact day. Confirmed exact param count is 2.6B (not marketed '3B') via the paper. All 5 result rows (hellaswag 69.8, arc-challenge 37.6, winogrande 65.8, mmlu 28.1, humaneval 9.9) verified as literally present in Table 2 of the paper via the ar5iv HTML rendering (a text-accurate mirror of the arXiv LaTeX source) -- notably an initial web-search-synthesized read of the same paper produced shuffled/wrong numbers (e.g. arc-challenge misread as 65.8), which the direct ar5iv HTML fetch corrected. Apache-2.0 and 8192 context confirmed via HF model card."
+}

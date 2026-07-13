@@ -1,0 +1,60 @@
+{
+  "name": "Magistral Medium",
+  "org": "Mistral AI",
+  "family": "Magistral",
+  "releaseDate": "2025-06-10",
+  "status": "released",
+  "openness": "closed",
+  "license": "Proprietary",
+  "paramsB": null,
+  "activeParamsB": null,
+  "archClass": "dense",
+  "archDisplay": "Dense transformer, reasoning RL fine-tune of Mistral Medium 3 (architecture undisclosed)",
+  "ctxK": 40,
+  "modalities": [
+    "text"
+  ],
+  "langCount": null,
+  "capabilities": {
+    "reasoning": true,
+    "coding": true,
+    "vision": false,
+    "functionCalling": true,
+    "toolUse": true,
+    "agentic": true
+  },
+  "apiAvailable": true,
+  "price": {
+    "input": 2,
+    "output": 5,
+    "provider": "Mistral La Plateforme"
+  },
+  "links": {
+    "docs": "docs.mistral.ai/models/model-cards/magistral-medium-1-0-25-06"
+  },
+  "note": "Closed enterprise reasoning model, RL-trained on Mistral Medium 3; 73.6% AIME2024 pass@1 (90% with maj@64), Flash Answers via Le Chat.",
+  "quants": [],
+  "vramQ4Gb": null,
+  "vramFp16Gb": null,
+  "tps4090": null,
+  "tpsNote": null,
+  "effortLabel": null,
+  "isDefaultConfig": true,
+  "isBestConfig": true,
+  "specSources": {
+    "releaseDate": "https://mistral.ai/news/magistral/",
+    "openness": "https://mistral.ai/news/magistral/",
+    "ctxK": "https://docs.mistral.ai/models/model-cards/magistral-medium-1-0-25-06"
+  },
+  "results": [
+    {
+      "benchmarkSlug": "aime",
+      "score": 73.6,
+      "source": "self-reported",
+      "sourceUrl": "https://mistral.ai/news/magistral/",
+      "evaluatedAt": "2025-06-10",
+      "notes": "AIME2024 pass@1; 90% with maj@64"
+    }
+  ],
+  "verificationNotes": "Release date, closed/proprietary status, and AIME2024 73.6% pass@1 confirmed on mistral.ai/news/magistral/. Pricing $2/$5 per 1M tokens confirmed independently via artificialanalysis.ai and other pricing trackers. CORRECTED ctxK from 128 to 40: the input record's 128K figure does not match Mistral's own model card (docs.mistral.ai/models/model-cards/magistral-medium-1-0-25-06), which lists the context window as 40k, corroborated by OpenRouter listing 'Context: 41K' for magistral-medium-2506. The 128K figure appears to have been conflated with Magistral Small's (different) context window."
+}

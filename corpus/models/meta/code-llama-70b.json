@@ -1,0 +1,55 @@
+{
+  "name": "Code Llama 70B",
+  "org": "Meta",
+  "family": "Code Llama",
+  "releaseDate": "2024-01-29",
+  "status": "released",
+  "openness": "open-weights",
+  "license": "Llama 2 Community License Agreement",
+  "paramsB": 70,
+  "activeParamsB": null,
+  "archClass": "dense",
+  "archDisplay": "Dense transformer decoder (Llama 2 base), trained on 1T tokens of code",
+  "ctxK": 16,
+  "modalities": [
+    "text"
+  ],
+  "langCount": null,
+  "capabilities": {
+    "reasoning": false,
+    "coding": true,
+    "vision": false,
+    "functionCalling": false,
+    "toolUse": false,
+    "agentic": false
+  },
+  "apiAvailable": true,
+  "price": null,
+  "links": {
+    "hf": "codellama/CodeLlama-70b-hf",
+    "gh": "meta-llama/codellama",
+    "docs": "ai.meta.com"
+  },
+  "note": "Largest Code Llama base model, released Jan 2024, trained on 1 trillion tokens of code (vs 500B for the 7B/13B/34B family).",
+  "quants": [
+    "GGUF Q4",
+    "AWQ",
+    "GPTQ",
+    "MLX"
+  ],
+  "vramQ4Gb": 40,
+  "vramFp16Gb": 140,
+  "tps4090": 18,
+  "tpsNote": "70B at Q4 (~40GB) exceeds the 4090's 24GB VRAM and requires partial CPU-layer offload; ~18 tok/s reported with most layers on GPU, dropping to 8-15 tok/s under heavier offload.",
+  "effortLabel": null,
+  "isDefaultConfig": true,
+  "isBestConfig": true,
+  "specSources": {
+    "paramsB": "https://huggingface.co/codellama/CodeLlama-70b-hf",
+    "ctxK": "https://huggingface.co/codellama/CodeLlama-70b-hf",
+    "releaseDate": "https://ai.meta.com/blog/code-llama-large-language-model-coding/",
+    "openness": "https://ai.meta.com/blog/code-llama-large-language-model-coding/"
+  },
+  "results": [],
+  "verificationNotes": "Confirmed real and unaltered. Meta's official blog (ai.meta.com/blog/code-llama-large-language-model-coding) shows the 'Update: Jan 29, 2024: Releasing Code Llama 70B' notice; independent press (CIO Dive, InfoQ, AI at Meta's own X announcement) corroborates the Jan 29 2024 date and the 1-trillion-token code training claim (vs 500B for earlier sizes). HF model card (codellama/CodeLlama-70b-hf) confirms 16K fine-tuned context (100K supported at inference) and the Llama 2 Community License Agreement governing the model. No numeric changes needed; paramsB kept at marketed '70B' though the HF card's raw config reports ~69B literal parameters."
+}

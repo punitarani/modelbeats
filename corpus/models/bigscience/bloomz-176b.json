@@ -1,0 +1,72 @@
+{
+  "name": "BLOOMZ (176B)",
+  "org": "BigScience",
+  "family": "BLOOMZ",
+  "releaseDate": "2022-11-03",
+  "status": "released",
+  "openness": "open-weights",
+  "license": "BigScience RAIL License v1.0",
+  "paramsB": 176.25,
+  "activeParamsB": null,
+  "archClass": "dense",
+  "archDisplay": "Dense decoder-only transformer (BLOOM architecture), instruction fine-tuned on xP3",
+  "ctxK": 2,
+  "modalities": [
+    "text"
+  ],
+  "langCount": 46,
+  "capabilities": {
+    "reasoning": false,
+    "coding": true,
+    "vision": false,
+    "functionCalling": false,
+    "toolUse": false,
+    "agentic": false
+  },
+  "apiAvailable": true,
+  "price": null,
+  "links": {
+    "hf": "bigscience/bloomz"
+  },
+  "note": "BLOOM 176B fine-tuned on the xP3 crosslingual task mixture for zero-shot multilingual instruction following.",
+  "quants": [
+    "INT8 (bitsandbytes)"
+  ],
+  "vramQ4Gb": 106,
+  "vramFp16Gb": 352,
+  "tps4090": null,
+  "tpsNote": null,
+  "effortLabel": null,
+  "isDefaultConfig": true,
+  "isBestConfig": true,
+  "specSources": {
+    "paramsB": "https://huggingface.co/bigscience/bloomz",
+    "ctxK": "https://huggingface.co/bigscience/bloom",
+    "releaseDate": "https://arxiv.org/pdf/2211.01786",
+    "openness": "https://huggingface.co/bigscience/bloomz"
+  },
+  "results": [
+    {
+      "benchmarkSlug": "winogrande",
+      "score": 59.27,
+      "source": "self-reported",
+      "sourceUrl": "https://huggingface.co/bigscience/bloomz",
+      "notes": "Winogrande XL, validation, zero-shot accuracy"
+    },
+    {
+      "benchmarkSlug": "xwinograd",
+      "score": 69.08,
+      "source": "self-reported",
+      "sourceUrl": "https://huggingface.co/bigscience/bloomz",
+      "notes": "XWinograd English, zero-shot accuracy"
+    },
+    {
+      "benchmarkSlug": "anli",
+      "score": 48.6,
+      "source": "self-reported",
+      "sourceUrl": "https://huggingface.co/bigscience/bloomz",
+      "notes": "ANLI round 1, validation, zero-shot accuracy"
+    }
+  ],
+  "verificationNotes": "Confirmed on HF model card: 176B params, RAIL v1.0 license, Winogrande XL 59.27, XWinograd-English 69.08, ANLI-r1 48.6 all literally present. arXiv 2211.01786 (Crosslingual Generalization through Multitask Finetuning) was submitted November 3, 2022, exactly matching the record's release date. No changes made."
+}

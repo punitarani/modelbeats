@@ -1,0 +1,110 @@
+{
+  "name": "GPT-5",
+  "org": "OpenAI",
+  "family": "GPT-5",
+  "releaseDate": "2025-08-07",
+  "status": "released",
+  "openness": "closed",
+  "license": "Proprietary (OpenAI API Terms)",
+  "paramsB": null,
+  "activeParamsB": null,
+  "archClass": "dense",
+  "archDisplay": "Unified reasoning/non-reasoning system behind a real-time auto-router; dense transformer, exact size undisclosed",
+  "ctxK": 400,
+  "modalities": [
+    "text",
+    "vision"
+  ],
+  "langCount": null,
+  "capabilities": {
+    "reasoning": true,
+    "coding": true,
+    "vision": true,
+    "functionCalling": true,
+    "toolUse": true,
+    "agentic": true
+  },
+  "apiAvailable": true,
+  "price": {
+    "input": 1.25,
+    "output": 10,
+    "provider": "OpenAI"
+  },
+  "links": {
+    "docs": "developers.openai.com/api/docs/models/gpt-5"
+  },
+  "note": "Unified model merging o-series reasoning with fast GPT responses via an auto-router.",
+  "quants": [],
+  "vramQ4Gb": null,
+  "vramFp16Gb": null,
+  "tps4090": null,
+  "tpsNote": null,
+  "effortLabel": null,
+  "isDefaultConfig": true,
+  "isBestConfig": true,
+  "specSources": {
+    "releaseDate": "https://techcrunch.com/2025/08/07/openais-gpt-5-is-here/",
+    "ctxK": "https://openai.com/index/introducing-gpt-5-for-developers/",
+    "openness": "https://developers.openai.com/api/docs/models/gpt-5",
+    "paramsB": "https://developers.openai.com/api/docs/models/gpt-5"
+  },
+  "results": [
+    {
+      "benchmarkSlug": "swe-bench",
+      "score": 74.9,
+      "source": "self-reported",
+      "sourceUrl": "https://openai.com/index/introducing-gpt-5-for-developers/",
+      "evaluatedAt": "2025-08-07",
+      "notes": "SWE-bench Verified, high reasoning effort (n=477)"
+    },
+    {
+      "benchmarkSlug": "aime",
+      "score": 94.6,
+      "source": "self-reported",
+      "sourceUrl": "https://openai.com/index/introducing-gpt-5-for-developers/",
+      "evaluatedAt": "2025-08-07",
+      "notes": "AIME 2025, no tools, high reasoning effort"
+    },
+    {
+      "benchmarkSlug": "gpqa",
+      "score": 85.7,
+      "source": "self-reported",
+      "sourceUrl": "https://openai.com/index/introducing-gpt-5-for-developers/",
+      "evaluatedAt": "2025-08-07",
+      "notes": "GPQA Diamond, no tools, high reasoning effort"
+    },
+    {
+      "benchmarkSlug": "hle",
+      "score": 24.8,
+      "source": "self-reported",
+      "sourceUrl": "https://openai.com/index/introducing-gpt-5-for-developers/",
+      "evaluatedAt": "2025-08-07",
+      "notes": "Humanity's Last Exam, no tools, high reasoning effort"
+    },
+    {
+      "benchmarkSlug": "mmmu",
+      "score": 84.2,
+      "source": "self-reported",
+      "sourceUrl": "https://openai.com/index/introducing-gpt-5-for-developers/",
+      "evaluatedAt": "2025-08-07",
+      "notes": "high reasoning effort"
+    },
+    {
+      "benchmarkSlug": "tau-bench",
+      "score": 96.7,
+      "source": "self-reported",
+      "sourceUrl": "https://openai.com/index/introducing-gpt-5-for-developers/",
+      "evaluatedAt": "2025-08-07",
+      "notes": "τ²-bench telecom, high reasoning effort"
+    },
+    {
+      "benchmarkSlug": "aider-polyglot",
+      "score": 88,
+      "source": "self-reported",
+      "sourceUrl": "https://openai.com/index/introducing-gpt-5-for-developers/",
+      "evaluatedAt": "2025-08-07",
+      "notes": "Aider polyglot (diff), high reasoning effort"
+    }
+  ],
+  "verificationNotes": "Existence, release date (Aug 7 2025, confirmed via TechCrunch) and pricing/context ($1.25/$10 per 1M, 400K context) confirmed by live-fetching developers.openai.com/api/docs/models/gpt-5. The primary blog (openai.com/index/introducing-gpt-5-for-developers/) itself returned HTTP 403 to direct fetch, so each of the 7 result rows was independently cross-checked via secondary sources (Vellum, digitalapplied.com, Runbear, and search-engine excerpts) that quote the OpenAI figures verbatim: SWE-bench 74.9, AIME 2025 94.6, GPQA(no tools) 85.7 (distinct from GPT-5 Pro's 88.4/89.4-with-tools figures, so no conflict), HLE 24.8 ('jumping from 6.3% to 24.8%' with thinking), MMMU 84.2, τ2-bench telecom 96.7, Aider polyglot 88 — all confirmed exactly, no changes."
+}

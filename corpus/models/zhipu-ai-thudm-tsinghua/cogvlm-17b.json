@@ -1,0 +1,68 @@
+{
+  "name": "CogVLM-17B",
+  "org": "Zhipu AI / THUDM (Tsinghua)",
+  "family": "CogVLM",
+  "releaseDate": "2023-10-01",
+  "status": "released",
+  "openness": "open-weights",
+  "license": "Apache-2.0 (code); CogVLM Model License for weights (non-commercial use / commercial by agreement)",
+  "paramsB": 17,
+  "activeParamsB": null,
+  "archClass": "dense",
+  "archDisplay": "Dense dual-tower vision-language Transformer (trainable visual expert modules)",
+  "ctxK": 4,
+  "modalities": [
+    "text",
+    "vision"
+  ],
+  "langCount": null,
+  "capabilities": {
+    "reasoning": false,
+    "coding": false,
+    "vision": true,
+    "functionCalling": false,
+    "toolUse": false,
+    "agentic": false
+  },
+  "apiAvailable": false,
+  "price": null,
+  "links": {
+    "hf": "THUDM/cogvlm-chat-hf",
+    "gh": "zai-org/CogVLM"
+  },
+  "note": "Open VLM (10B vision expert + 7B Vicuna-based LM) with SOTA-level results on 10 cross-modal benchmarks at 490x490 resolution.",
+  "quants": [
+    "INT4",
+    "INT8"
+  ],
+  "vramQ4Gb": 11,
+  "vramFp16Gb": null,
+  "tps4090": null,
+  "tpsNote": null,
+  "effortLabel": null,
+  "isDefaultConfig": true,
+  "isBestConfig": true,
+  "specSources": {
+    "paramsB": "https://github.com/zai-org/CogVLM/blob/main/README.md",
+    "ctxK": "https://github.com/ggml-org/ggml/discussions/431",
+    "releaseDate": "https://github.com/zai-org/CogVLM/commits",
+    "openness": "https://github.com/zai-org/CogVLM/blob/main/README.md"
+  },
+  "results": [
+    {
+      "benchmarkSlug": "vqav2",
+      "score": 84.38,
+      "source": "self-reported",
+      "sourceUrl": "https://arxiv.org/pdf/2311.03079",
+      "notes": "Ranked 2nd overall, surpassing/matching PaLI-X 55B"
+    },
+    {
+      "benchmarkSlug": "gqa",
+      "score": 82.87,
+      "source": "self-reported",
+      "sourceUrl": "https://arxiv.org/pdf/2311.03079",
+      "notes": "State-of-the-art at time of release"
+    }
+  ],
+  "verificationNotes": "Corrected releaseDate from the unconfirmed exact day 2023-10-05 to month-precision 2023-10: GitHub commit history (checked via API) shows the earliest real commits Sept 28-Oct 9, 2023 with no activity specifically on Oct 5; independent Chinese-language press coverage (Jiqizhixin, Tencent News) appeared Oct 12-15, 2023; the arXiv paper wasn't submitted until Nov 6, 2023 and HF weights uploaded Nov 16, 2023. Params (17B = ~10B vision expert + 7B Vicuna LM), Apache-2.0 code license + separate Model License, and INT4 VRAM ~11GB on RTX 3090 all confirmed verbatim in README. VQAv2 84.38 / GQA 82.87 corroborated by an independent web search but I could not directly open the full PDF (10MB size limit) to see the table myself, so treat with slightly lower confidence than other rows. Removed vramFp16Gb (record's 29GB) since README only gives system-level guidance (1xA100-80G or 2xRTX3090-24G) and I found no single verified per-model FP16 VRAM figure to corroborate 29GB specifically."
+}

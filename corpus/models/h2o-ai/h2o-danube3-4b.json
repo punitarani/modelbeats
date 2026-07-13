@@ -1,0 +1,87 @@
+{
+  "name": "H2O-Danube3 4B",
+  "org": "H2O.ai",
+  "family": "H2O-Danube",
+  "releaseDate": "2024-07-12",
+  "status": "released",
+  "openness": "open-weights",
+  "license": "Apache 2.0",
+  "paramsB": 3.96,
+  "activeParamsB": null,
+  "archClass": "dense",
+  "archDisplay": "Dense Llama-2-style transformer, wide architecture, GQA (24 layers, 3840 hidden)",
+  "ctxK": 8,
+  "modalities": [
+    "text"
+  ],
+  "langCount": 1,
+  "capabilities": {
+    "reasoning": false,
+    "coding": false,
+    "vision": false,
+    "functionCalling": false,
+    "toolUse": false,
+    "agentic": false
+  },
+  "apiAvailable": false,
+  "price": null,
+  "links": {
+    "hf": "h2oai/h2o-danube3-4b-chat",
+    "docs": "h2o.ai/platform/danube"
+  },
+  "note": "Apache-2.0 small model trained on 6T tokens, compact enough to run locally on a modern smartphone.",
+  "quants": [
+    "GGUF Q4"
+  ],
+  "vramQ4Gb": 2.6,
+  "vramFp16Gb": 8.3,
+  "tps4090": null,
+  "tpsNote": null,
+  "effortLabel": null,
+  "isDefaultConfig": true,
+  "isBestConfig": true,
+  "specSources": {
+    "paramsB": "https://huggingface.co/h2oai/h2o-danube3-4b-chat",
+    "ctxK": "https://huggingface.co/h2oai/h2o-danube3-4b-chat",
+    "releaseDate": "https://arxiv.org/abs/2407.09276",
+    "openness": "https://huggingface.co/h2oai/h2o-danube3-4b-chat"
+  },
+  "results": [
+    {
+      "benchmarkSlug": "mmlu",
+      "score": 54.74,
+      "source": "independent",
+      "sourceUrl": "https://huggingface.co/h2oai/h2o-danube3-4b-chat",
+      "notes": "Open LLM Leaderboard v1"
+    },
+    {
+      "benchmarkSlug": "hellaswag",
+      "score": 80.36,
+      "source": "independent",
+      "sourceUrl": "https://huggingface.co/h2oai/h2o-danube3-4b-chat",
+      "notes": "Open LLM Leaderboard v1"
+    },
+    {
+      "benchmarkSlug": "arc-challenge",
+      "score": 58.96,
+      "source": "independent",
+      "sourceUrl": "https://huggingface.co/h2oai/h2o-danube3-4b-chat",
+      "notes": "Open LLM Leaderboard v1"
+    },
+    {
+      "benchmarkSlug": "gsm8k",
+      "score": 50.18,
+      "source": "self-reported",
+      "sourceUrl": "https://huggingface.co/h2oai/h2o-danube3-4b-chat",
+      "notes": "Open LLM Leaderboard v1"
+    },
+    {
+      "benchmarkSlug": "winogrande",
+      "score": 76.48,
+      "source": "independent",
+      "sourceUrl": "https://huggingface.co/h2oai/h2o-danube3-4b-chat",
+      "notes": "Open LLM Leaderboard v1"
+    }
+  ],
+  "verificationNotes": "Confirmed real via HF model card fetch (h2oai/h2o-danube3-4b-chat): 4B params (modified Llama-2 arch, 24 layers, 3840 hidden, GQA), Apache 2.0, 8192-token context (Mistral tokenizer, 32K vocab), release date matches arXiv 2407.09276 (submitted 2024-07-12). All 5 Open LLM Leaderboard v1 scores (MMLU 54.74, HellaSwag 80.36, ARC-C 58.96, GSM8K 50.18, Winogrande 76.48) literally verified present on the HF page. No changes needed."
+}

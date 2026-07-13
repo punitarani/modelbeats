@@ -1,0 +1,97 @@
+{
+  "name": "Granite 3.2 8B Instruct",
+  "org": "IBM",
+  "family": "Granite 3.2",
+  "releaseDate": "2025-02-26",
+  "status": "released",
+  "openness": "open-weights",
+  "license": "Apache 2.0",
+  "paramsB": 8.1,
+  "activeParamsB": null,
+  "archClass": "dense",
+  "archDisplay": "Dense decoder-only transformer with toggleable chain-of-thought (thinking=True/False)",
+  "ctxK": 128,
+  "modalities": [
+    "text"
+  ],
+  "langCount": 12,
+  "capabilities": {
+    "reasoning": true,
+    "coding": true,
+    "vision": false,
+    "functionCalling": true,
+    "toolUse": true,
+    "agentic": false
+  },
+  "apiAvailable": true,
+  "price": null,
+  "links": {
+    "hf": "ibm-granite/granite-3.2-8b-instruct",
+    "docs": "ibm.com/granite/docs/models/granite"
+  },
+  "note": "Adds a toggleable 'thinking' chain-of-thought mode plus inference-scaling techniques that let it rival much larger models on math reasoning.",
+  "quants": [
+    "GGUF Q4_K_M",
+    "AWQ",
+    "GPTQ"
+  ],
+  "vramQ4Gb": 6,
+  "vramFp16Gb": 16.2,
+  "tps4090": null,
+  "tpsNote": null,
+  "effortLabel": null,
+  "isDefaultConfig": true,
+  "isBestConfig": true,
+  "specSources": {
+    "paramsB": "https://huggingface.co/ibm-granite/granite-3.2-8b-instruct",
+    "ctxK": "https://huggingface.co/ibm-granite/granite-3.2-8b-instruct",
+    "releaseDate": "https://huggingface.co/ibm-granite/granite-3.2-8b-instruct",
+    "openness": "https://huggingface.co/ibm-granite/granite-3.2-8b-instruct"
+  },
+  "results": [
+    {
+      "benchmarkSlug": "mmlu",
+      "score": 66.79,
+      "source": "self-reported",
+      "sourceUrl": "https://huggingface.co/ibm-granite/granite-3.2-8b-instruct"
+    },
+    {
+      "benchmarkSlug": "bbh",
+      "score": 64.77,
+      "source": "self-reported",
+      "sourceUrl": "https://huggingface.co/ibm-granite/granite-3.2-8b-instruct",
+      "notes": "BigBenchHard"
+    },
+    {
+      "benchmarkSlug": "gsm8k",
+      "score": 81.65,
+      "source": "self-reported",
+      "sourceUrl": "https://huggingface.co/ibm-granite/granite-3.2-8b-instruct"
+    },
+    {
+      "benchmarkSlug": "humaneval",
+      "score": 89.35,
+      "source": "self-reported",
+      "sourceUrl": "https://huggingface.co/ibm-granite/granite-3.2-8b-instruct"
+    },
+    {
+      "benchmarkSlug": "ifeval",
+      "score": 74.31,
+      "source": "self-reported",
+      "sourceUrl": "https://huggingface.co/ibm-granite/granite-3.2-8b-instruct"
+    },
+    {
+      "benchmarkSlug": "drop",
+      "score": 50.95,
+      "source": "self-reported",
+      "sourceUrl": "https://huggingface.co/ibm-granite/granite-3.2-8b-instruct"
+    },
+    {
+      "benchmarkSlug": "arena-hard",
+      "score": 55.25,
+      "source": "self-reported",
+      "sourceUrl": "https://huggingface.co/ibm-granite/granite-3.2-8b-instruct"
+    }
+  ],
+  "verificationNotes": "Fetched HF model card directly. Release date (Feb 26, 2025), params (8B), license (Apache 2.0), 12 languages, and all 7 benchmark scores (mmlu 66.79, bbh 64.77, gsm8k 81.65, humaneval 89.35, ifeval 74.31, drop 50.95, arena-hard 55.25) confirmed verbatim on the page. No changes made."
+}

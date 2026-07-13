@@ -1,0 +1,63 @@
+{
+  "name": "Qwen-Max-0428",
+  "org": "Alibaba",
+  "family": "Qwen-Max",
+  "releaseDate": "2024-05-11",
+  "status": "deprecated",
+  "openness": "closed",
+  "license": "Proprietary",
+  "paramsB": null,
+  "activeParamsB": null,
+  "archClass": "dense",
+  "archDisplay": "Proprietary Transformer; architecture and parameter count undisclosed. Announced (2024-05-11) as \"a larger model\" than Qwen1.5-110B, not stated to be built on it",
+  "ctxK": 32,
+  "modalities": [
+    "text"
+  ],
+  "langCount": null,
+  "capabilities": {
+    "reasoning": false,
+    "coding": true,
+    "vision": false,
+    "functionCalling": true,
+    "toolUse": true,
+    "agentic": true
+  },
+  "apiAvailable": true,
+  "price": null,
+  "links": {
+    "docs": "qwenlm.github.io/blog/qwen-max-0428"
+  },
+  "note": "Early proprietary Qwen-Max flagship, announced alongside Qwen1.5-110B as Alibaba's larger closed-weight model; entered Chatbot Arena top-10 at launch.",
+  "quants": [],
+  "vramFp16Gb": null,
+  "vramQ4Gb": null,
+  "tps4090": null,
+  "tpsNote": null,
+  "effortLabel": null,
+  "isDefaultConfig": true,
+  "isBestConfig": true,
+  "specSources": {
+    "releaseDate": "https://qwenlm.github.io/blog/qwen-max-0428/",
+    "openness": "https://qwenlm.github.io/blog/qwen-max-0428/",
+    "ctxK": "https://www.datastudios.org/post/qwen-context-window-token-limits-memory-policy-and-2025-rules"
+  },
+  "results": [
+    {
+      "benchmarkSlug": "mt-bench",
+      "score": 8.96,
+      "source": "self-reported",
+      "sourceUrl": "https://qwenlm.github.io/blog/qwen-max-0428/",
+      "evaluatedAt": "2024-05-11"
+    },
+    {
+      "benchmarkSlug": "arena",
+      "score": 1186,
+      "source": "self-reported",
+      "sourceUrl": "https://qwenlm.github.io/blog/qwen-max-0428/",
+      "evaluatedAt": "2024-05-11",
+      "notes": "Chatbot Arena Elo rating; top-10 on leaderboard at launch"
+    }
+  ],
+  "verificationNotes": "Fetched qwenlm.github.io/blog/qwen-max-0428/ ('Notes on Qwen-Max-0428') directly: confirms release 2024-05-11, MT-Bench 8.96, and Arena Elo 1186 (vs Qwen1.5-110B-Chat's 8.88/1172) both appear verbatim. Corrected an unconfirmed claim: the original record's archDisplay said Qwen-Max-0428 was 'built on the Qwen1.5-110B lineage' — the source only says Alibaba 'released a larger model' alongside Qwen1.5-110B; it never states Qwen-Max-0428 derives from or is built on Qwen1.5-110B's weights/architecture. Reworded archDisplay/note to remove that unsupported lineage claim while keeping params/architecture correctly marked undisclosed. ctxK (32) is not confirmed on any Qwen primary source (only a third-party site) and should be treated as low-confidence."
+}

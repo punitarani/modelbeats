@@ -1,0 +1,72 @@
+{
+  "name": "Jais-13B",
+  "org": "Inception (G42)",
+  "family": "Jais",
+  "releaseDate": "2023-08-30",
+  "status": "released",
+  "openness": "open-weights",
+  "license": "Apache 2.0",
+  "paramsB": 13,
+  "activeParamsB": null,
+  "archClass": "dense",
+  "archDisplay": "Dense GPT-3-style decoder-only transformer, trained from scratch with SwiGLU activations and ALiBi position encoding",
+  "ctxK": 2,
+  "modalities": [
+    "text"
+  ],
+  "langCount": 2,
+  "capabilities": {
+    "reasoning": false,
+    "coding": false,
+    "vision": false,
+    "functionCalling": false,
+    "toolUse": false,
+    "agentic": false
+  },
+  "apiAvailable": false,
+  "price": null,
+  "links": {
+    "hf": "inceptionai/jais-13b"
+  },
+  "note": "First flagship open Arabic-English bilingual LLM, built with MBZUAI and trained on Cerebras' Condor Galaxy supercomputer.",
+  "quants": [
+    "GGUF Q4",
+    "GPTQ"
+  ],
+  "vramQ4Gb": 9,
+  "vramFp16Gb": 27,
+  "tps4090": null,
+  "tpsNote": null,
+  "effortLabel": null,
+  "isDefaultConfig": true,
+  "isBestConfig": true,
+  "specSources": {
+    "paramsB": "https://huggingface.co/inceptionai/jais-13b",
+    "ctxK": "https://arxiv.org/abs/2308.16149",
+    "releaseDate": "https://www.cerebras.ai/press-release/meet-jais-the-worlds-most-advanced-arabic-large-language-model-open-sourced-by-g42s-inception",
+    "openness": "https://huggingface.co/inceptionai/jais-13b"
+  },
+  "results": [
+    {
+      "benchmarkSlug": "mmlu",
+      "score": 30,
+      "source": "self-reported",
+      "sourceUrl": "https://huggingface.co/inceptionai/jais-13b",
+      "notes": "Arabic-translated MMLU"
+    },
+    {
+      "benchmarkSlug": "hellaswag",
+      "score": 57.7,
+      "source": "self-reported",
+      "sourceUrl": "https://huggingface.co/inceptionai/jais-13b",
+      "notes": "Arabic Hellaswag"
+    },
+    {
+      "benchmarkSlug": "truthfulqa",
+      "score": 41.1,
+      "source": "self-reported",
+      "sourceUrl": "https://huggingface.co/inceptionai/jais-13b"
+    }
+  ],
+  "verificationNotes": "Confirmed real via the official HF model card plus independent press (Cerebras/MBZUAI press releases, HPCwire) — all dated 2023-08-30, exactly matching the record. Confirmed 13B params, Apache 2.0 license, bilingual Arabic-English decoder-only transformer built by Inception/MBZUAI/Cerebras and trained on the Condor Galaxy-1 supercomputer. All three benchmark rows (MMLU 30.0, HellaSwag 57.7, TruthfulQA 41.1, Arabic evals) confirmed verbatim on the official HF model card."
+}

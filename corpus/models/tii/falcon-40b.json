@@ -1,0 +1,62 @@
+{
+  "name": "Falcon-40B",
+  "org": "TII",
+  "family": "Falcon",
+  "releaseDate": "2023-05-25",
+  "status": "released",
+  "openness": "open-weights",
+  "license": "Apache 2.0",
+  "paramsB": 40,
+  "activeParamsB": null,
+  "archClass": "dense",
+  "archDisplay": "Causal decoder-only Transformer, 40B (60 layers, multiquery attention, RoPE, FlashAttention)",
+  "ctxK": 2,
+  "modalities": [
+    "text"
+  ],
+  "langCount": 11,
+  "capabilities": {
+    "reasoning": false,
+    "coding": false,
+    "vision": false,
+    "functionCalling": false,
+    "toolUse": false,
+    "agentic": false
+  },
+  "apiAvailable": false,
+  "price": null,
+  "links": {
+    "hf": "tiiuae/falcon-40b",
+    "docs": "falconllm.tii.ae/falcon-40b.html"
+  },
+  "note": "Topped the Hugging Face Open LLM Leaderboard in mid-2023, trained on 1T RefinedWeb tokens; first UAE-built model to lead open-source rankings.",
+  "quants": [
+    "GGUF",
+    "GPTQ",
+    "AWQ"
+  ],
+  "vramQ4Gb": 23,
+  "vramFp16Gb": 80,
+  "tps4090": null,
+  "tpsNote": null,
+  "effortLabel": null,
+  "isDefaultConfig": true,
+  "isBestConfig": true,
+  "specSources": {
+    "paramsB": "https://huggingface.co/tiiuae/falcon-40b",
+    "ctxK": "https://huggingface.co/tiiuae/falcon-40b",
+    "releaseDate": "https://www.tii.ae/news/uaes-technology-innovation-institute-launches-open-source-falcon-40b-large-language-model",
+    "openness": "https://huggingface.co/tiiuae/falcon-40b"
+  },
+  "results": [
+    {
+      "benchmarkSlug": "gsm8k",
+      "score": 21.5,
+      "source": "independent",
+      "sourceUrl": "https://huggingface.co/datasets/open-llm-leaderboard-old/details_tiiuae__falcon-40b",
+      "evaluatedAt": "2023-12-03",
+      "notes": "harness gsm8k 5-shot accuracy, later leaderboard run"
+    }
+  ],
+  "verificationNotes": "Confirmed real via HF model card (tiiuae/falcon-40b) and TII/ATRC press coverage: 40B params, Apache 2.0, 2048-token (2K) context, released May 25 2023 alongside Falcon-7B/1.3B. Language list (4 primary + 7 limited-capability = 11) matches langCount exactly. Both result rows confirmed: open-llm-leaderboard-avg 60.4 appears verbatim on huggingface.co/blog/falcon; gsm8k 21.5 confirmed on the leaderboard-details dataset (raw acc 0.21456 ≈ 21.5)."
+}

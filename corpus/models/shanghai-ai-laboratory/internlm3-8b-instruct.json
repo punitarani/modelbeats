@@ -1,0 +1,105 @@
+{
+  "name": "InternLM3-8B-Instruct",
+  "org": "Shanghai AI Laboratory",
+  "family": "InternLM3",
+  "releaseDate": "2025-01-15",
+  "status": "released",
+  "openness": "open-weights",
+  "license": "Apache-2.0",
+  "paramsB": 8,
+  "activeParamsB": null,
+  "archClass": "dense",
+  "archDisplay": "Dense transformer decoder; hybrid deep-thinking/normal response modes",
+  "ctxK": 128,
+  "modalities": [
+    "text"
+  ],
+  "langCount": null,
+  "capabilities": {
+    "reasoning": true,
+    "coding": true,
+    "vision": false,
+    "functionCalling": true,
+    "toolUse": true,
+    "agentic": true
+  },
+  "apiAvailable": false,
+  "price": null,
+  "links": {
+    "hf": "internlm/internlm3-8b-instruct",
+    "gh": "InternLM/InternLM",
+    "docs": "internlm.readthedocs.io"
+  },
+  "note": "Apache-2.0 hybrid deep-thinking/normal-mode model trained on only 4T tokens, saving over 75% of training cost vs peers.",
+  "quants": [
+    "GGUF Q4",
+    "GPTQ Int4"
+  ],
+  "vramQ4Gb": 5.5,
+  "vramFp16Gb": 16,
+  "tps4090": null,
+  "tpsNote": null,
+  "effortLabel": null,
+  "isDefaultConfig": true,
+  "isBestConfig": true,
+  "specSources": {
+    "paramsB": "https://huggingface.co/internlm/internlm3-8b-instruct",
+    "ctxK": "https://internlm.readthedocs.io/en/latest/model_card/InternLM3.html",
+    "releaseDate": "https://x.com/intern_lm/status/1879513004011896969",
+    "openness": "https://huggingface.co/internlm/internlm3-8b-instruct"
+  },
+  "results": [
+    {
+      "benchmarkSlug": "mmlu",
+      "score": 76.6,
+      "source": "self-reported",
+      "sourceUrl": "https://internlm.readthedocs.io/en/latest/model_card/InternLM3.html"
+    },
+    {
+      "benchmarkSlug": "mmlu-pro",
+      "score": 57.6,
+      "source": "self-reported",
+      "sourceUrl": "https://internlm.readthedocs.io/en/latest/model_card/InternLM3.html"
+    },
+    {
+      "benchmarkSlug": "gpqa",
+      "score": 37.4,
+      "source": "self-reported",
+      "sourceUrl": "https://internlm.readthedocs.io/en/latest/model_card/InternLM3.html",
+      "notes": "GPQA-Diamond"
+    },
+    {
+      "benchmarkSlug": "math",
+      "score": 83,
+      "source": "self-reported",
+      "sourceUrl": "https://internlm.readthedocs.io/en/latest/model_card/InternLM3.html",
+      "notes": "MATH-500, thinking mode"
+    },
+    {
+      "benchmarkSlug": "aime",
+      "score": 20,
+      "source": "self-reported",
+      "sourceUrl": "https://internlm.readthedocs.io/en/latest/model_card/InternLM3.html",
+      "notes": "AIME2024"
+    },
+    {
+      "benchmarkSlug": "livecodebench",
+      "score": 17.8,
+      "source": "self-reported",
+      "sourceUrl": "https://internlm.readthedocs.io/en/latest/model_card/InternLM3.html"
+    },
+    {
+      "benchmarkSlug": "humaneval",
+      "score": 82.3,
+      "source": "self-reported",
+      "sourceUrl": "https://huggingface.co/internlm/internlm3-8b-instruct"
+    },
+    {
+      "benchmarkSlug": "ifeval",
+      "score": 79.3,
+      "source": "self-reported",
+      "sourceUrl": "https://internlm.readthedocs.io/en/latest/model_card/InternLM3.html"
+    }
+  ],
+  "verificationNotes": "Confirmed real. Official announcement via Intern Large Models X post (2025-01-15) and OpenMMLab Medium post confirm release date, Apache-2.0 license, and the '4T tokens / 75% training-cost savings' claim verbatim. All eight benchmark rows re-confirmed verbatim on the readthedocs model card and HF page (HumanEval 82.3 on HF page). Minor note: HF safetensors metadata labels the checkpoint '9B params' though it is named/branded 8B (common rounding quirk, e.g. embeddings); kept paramsB=8 per model name/family convention."
+}

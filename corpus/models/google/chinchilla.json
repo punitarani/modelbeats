@@ -1,0 +1,77 @@
+{
+  "name": "Chinchilla",
+  "org": "Google",
+  "family": "Chinchilla",
+  "releaseDate": "2022-03-29",
+  "status": "deprecated",
+  "openness": "closed",
+  "license": "Proprietary (Google DeepMind; research model, weights never released)",
+  "paramsB": 70,
+  "activeParamsB": null,
+  "archClass": "dense",
+  "archDisplay": "Dense decoder-only Transformer (70B, compute-optimal)",
+  "ctxK": 2,
+  "modalities": [
+    "text"
+  ],
+  "langCount": null,
+  "capabilities": {
+    "reasoning": false,
+    "coding": false,
+    "vision": false,
+    "functionCalling": false,
+    "toolUse": false,
+    "agentic": false
+  },
+  "apiAvailable": false,
+  "price": null,
+  "links": {
+    "docs": "arxiv.org/abs/2203.15556"
+  },
+  "note": "70B model trained compute-optimally on 1.4T tokens; outperformed 280B Gopher, reshaping LLM scaling laws.",
+  "quants": [],
+  "vramQ4Gb": null,
+  "vramFp16Gb": null,
+  "tps4090": null,
+  "tpsNote": null,
+  "effortLabel": null,
+  "isDefaultConfig": true,
+  "isBestConfig": true,
+  "specSources": {
+    "paramsB": "https://arxiv.org/abs/2203.15556",
+    "ctxK": "https://arxiv.org/abs/2203.15556",
+    "releaseDate": "https://arxiv.org/abs/2203.15556",
+    "openness": "https://arxiv.org/abs/2203.15556"
+  },
+  "results": [
+    {
+      "benchmarkSlug": "mmlu",
+      "score": 67.6,
+      "source": "self-reported",
+      "sourceUrl": "https://arxiv.org/abs/2203.15556",
+      "notes": "5-shot average accuracy"
+    },
+    {
+      "benchmarkSlug": "bigbench",
+      "score": 65.1,
+      "source": "self-reported",
+      "sourceUrl": "https://arxiv.org/abs/2203.15556",
+      "notes": "Average accuracy across 62 BIG-bench tasks"
+    },
+    {
+      "benchmarkSlug": "trivia-qa",
+      "score": 73.2,
+      "source": "self-reported",
+      "sourceUrl": "https://arxiv.org/abs/2203.15556",
+      "notes": "TriviaQA unfiltered, 5-shot"
+    },
+    {
+      "benchmarkSlug": "lambada",
+      "score": 77.4,
+      "source": "self-reported",
+      "sourceUrl": "https://arxiv.org/abs/2203.15556",
+      "notes": "Zero-shot LAMBADA accuracy"
+    }
+  ],
+  "verificationNotes": "Confirmed real via arxiv.org/abs/2203.15556 (Training Compute-Optimal Large Language Models) -- confirmed Chinchilla is a 70B model trained on 1.4T tokens using the same compute budget as Gopher, matching paramsB and note. Abstract states MMLU='67.5%' (rounded) but the full paper's detailed comparison table (fetched via ar5iv full text) literally lists 67.6, 65.1 (BIG-bench), 73.2 (TriviaQA), 77.4 (LAMBADA) -- all four rows confirmed as literal table values, kept unchanged. releaseDate 2022-03-29 corresponds to the arxiv submission date and is standard for this paper; closed/proprietary status confirmed (DeepMind research model, no public weights)."
+}

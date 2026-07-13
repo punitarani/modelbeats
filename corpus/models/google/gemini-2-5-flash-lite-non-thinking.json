@@ -1,0 +1,103 @@
+{
+  "name": "Gemini 2.5 Flash-Lite (Non-thinking)",
+  "org": "Google",
+  "family": "Gemini 2.5",
+  "releaseDate": "2025-06-17",
+  "status": "released",
+  "openness": "closed",
+  "license": "Proprietary (Google API Terms)",
+  "paramsB": null,
+  "activeParamsB": null,
+  "archClass": "moe",
+  "archDisplay": "Sparse Mixture-of-Experts Transformer (natively multimodal)",
+  "ctxK": 1000,
+  "modalities": [
+    "text",
+    "vision",
+    "audio",
+    "video"
+  ],
+  "langCount": null,
+  "capabilities": {
+    "reasoning": true,
+    "coding": true,
+    "vision": true,
+    "functionCalling": true,
+    "toolUse": true,
+    "agentic": true
+  },
+  "apiAvailable": true,
+  "price": {
+    "input": 0.1,
+    "output": 0.4,
+    "provider": "Google (Gemini API)"
+  },
+  "links": {
+    "docs": "ai.google.dev/gemini-api/docs/models/gemini-2.5-flash-lite"
+  },
+  "note": "Cheapest, fastest 2.5-tier model; thinking is off by default for lowest cost/latency.",
+  "quants": [],
+  "vramQ4Gb": null,
+  "vramFp16Gb": null,
+  "tps4090": null,
+  "tpsNote": null,
+  "effortLabel": "Non-thinking",
+  "isDefaultConfig": true,
+  "isBestConfig": false,
+  "specSources": {
+    "ctxK": "https://storage.googleapis.com/deepmind-media/Model-Cards/Gemini-2-5-Flash-Lite-Model-Card.pdf",
+    "releaseDate": "https://storage.googleapis.com/deepmind-media/Model-Cards/Gemini-2-5-Flash-Lite-Model-Card.pdf",
+    "openness": "https://ai.google.dev/gemini-api/docs/pricing"
+  },
+  "results": [
+    {
+      "benchmarkSlug": "gpqa",
+      "score": 64.6,
+      "source": "self-reported",
+      "sourceUrl": "https://storage.googleapis.com/deepmind-media/Model-Cards/Gemini-2-5-Flash-Lite-Model-Card.pdf",
+      "evaluatedAt": "2025-06-01",
+      "notes": "GPQA diamond, (06-17) release, non-thinking"
+    },
+    {
+      "benchmarkSlug": "aime",
+      "score": 49.8,
+      "source": "self-reported",
+      "sourceUrl": "https://storage.googleapis.com/deepmind-media/Model-Cards/Gemini-2-5-Flash-Lite-Model-Card.pdf",
+      "evaluatedAt": "2025-06-01",
+      "notes": "AIME 2025, (06-17) release, non-thinking"
+    },
+    {
+      "benchmarkSlug": "livecodebench",
+      "score": 33.7,
+      "source": "self-reported",
+      "sourceUrl": "https://storage.googleapis.com/deepmind-media/Model-Cards/Gemini-2-5-Flash-Lite-Model-Card.pdf",
+      "evaluatedAt": "2025-06-01",
+      "notes": "LiveCodeBench v5, (06-17), non-thinking"
+    },
+    {
+      "benchmarkSlug": "swe-bench",
+      "score": 31.6,
+      "source": "self-reported",
+      "sourceUrl": "https://storage.googleapis.com/deepmind-media/Model-Cards/Gemini-2-5-Flash-Lite-Model-Card.pdf",
+      "evaluatedAt": "2025-06-01",
+      "notes": "SWE-Bench Verified, single attempt, (06-17), non-thinking"
+    },
+    {
+      "benchmarkSlug": "hle",
+      "score": 5.1,
+      "source": "self-reported",
+      "sourceUrl": "https://storage.googleapis.com/deepmind-media/Model-Cards/Gemini-2-5-Flash-Lite-Model-Card.pdf",
+      "evaluatedAt": "2025-06-01",
+      "notes": "Humanity's Last Exam, no tools, (06-17), non-thinking"
+    },
+    {
+      "benchmarkSlug": "mmlu",
+      "score": 81.1,
+      "source": "self-reported",
+      "sourceUrl": "https://storage.googleapis.com/deepmind-media/Model-Cards/Gemini-2-5-Flash-Lite-Model-Card.pdf",
+      "evaluatedAt": "2025-06-01",
+      "notes": "Global MMLU (Lite), non-thinking"
+    }
+  ],
+  "verificationNotes": "Confirmed release timeline via Google Cloud blog: Gemini 2.5 Flash-Lite preview rolled out June 17, 2025 (stable GA came July 22, 2025). Cross-checked all 6 benchmark rows against an independent secondary source (langbase.com model benchmarks page) which reproduced the official model card's non-thinking numbers exactly (GPQA 64.6, AIME 49.8, LiveCodeBench 33.7, SWE-Bench 31.6, HLE 5.1, MMLU 81.1) including the same 'multiple attempts 42.6%' SWE-bench detail that corroborates the thinking variant's note — strong signal this reflects the genuine model card table (direct PDF fetch was rate-limited/unparseable but WebSearch snippets independently corroborated GPQA/AIME directly from the card too). Pricing $0.10/$0.40 confirmed on ai.google.dev/gemini-api/docs/pricing."
+}

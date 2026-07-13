@@ -1,0 +1,89 @@
+{
+  "name": "DeepSeek LLM 67B",
+  "org": "DeepSeek",
+  "family": "DeepSeek LLM",
+  "releaseDate": "2023-11-29",
+  "status": "released",
+  "openness": "open-weights",
+  "license": "DeepSeek Model License (custom, commercial use permitted)",
+  "paramsB": 67,
+  "activeParamsB": null,
+  "archClass": "dense",
+  "archDisplay": "Dense auto-regressive transformer decoder with grouped-query attention, 4K context",
+  "ctxK": 4,
+  "modalities": [
+    "text"
+  ],
+  "langCount": 2,
+  "capabilities": {
+    "reasoning": false,
+    "coding": true,
+    "vision": false,
+    "functionCalling": false,
+    "toolUse": false,
+    "agentic": false
+  },
+  "apiAvailable": true,
+  "price": null,
+  "links": {
+    "hf": "deepseek-ai/deepseek-llm-67b-chat",
+    "gh": "deepseek-ai/DeepSeek-LLM"
+  },
+  "note": "First general-purpose DeepSeek foundation model (dense, 7B/67B); 67B surpassed Llama 2 70B on code, math and reasoning.",
+  "quants": [
+    "GGUF",
+    "AWQ",
+    "GPTQ"
+  ],
+  "vramQ4Gb": 39,
+  "vramFp16Gb": 135,
+  "tps4090": null,
+  "tpsNote": "67B exceeds a single RTX 4090's 24GB VRAM even at Q4 (~39GB); no verified single-4090 llama.cpp benchmark found.",
+  "effortLabel": null,
+  "isDefaultConfig": true,
+  "isBestConfig": true,
+  "specSources": {
+    "paramsB": "https://huggingface.co/deepseek-ai/deepseek-llm-67b-chat",
+    "ctxK": "https://ar5iv.labs.arxiv.org/html/2401.02954",
+    "releaseDate": "https://github.com/deepseek-ai/deepseek-LLM",
+    "openness": "https://huggingface.co/deepseek-ai/deepseek-llm-67b-chat"
+  },
+  "results": [
+    {
+      "benchmarkSlug": "humaneval",
+      "score": 73.8,
+      "source": "self-reported",
+      "sourceUrl": "https://ar5iv.labs.arxiv.org/html/2401.02954",
+      "notes": "Chat variant, paper Table 6"
+    },
+    {
+      "benchmarkSlug": "gsm8k",
+      "score": 84.1,
+      "source": "self-reported",
+      "sourceUrl": "https://ar5iv.labs.arxiv.org/html/2401.02954",
+      "notes": "Chat variant, paper Table 6"
+    },
+    {
+      "benchmarkSlug": "math",
+      "score": 32.6,
+      "source": "self-reported",
+      "sourceUrl": "https://ar5iv.labs.arxiv.org/html/2401.02954",
+      "notes": "Chat variant, paper Table 6"
+    },
+    {
+      "benchmarkSlug": "mmlu",
+      "score": 71.1,
+      "source": "self-reported",
+      "sourceUrl": "https://ar5iv.labs.arxiv.org/html/2401.02954",
+      "notes": "Chat variant, paper Table 6"
+    },
+    {
+      "benchmarkSlug": "bbh",
+      "score": 71.7,
+      "source": "self-reported",
+      "sourceUrl": "https://ar5iv.labs.arxiv.org/html/2401.02954",
+      "notes": "Chat variant, paper Table 6"
+    }
+  ],
+  "verificationNotes": "Confirmed release date 2023-11-29 via web search (multiple independent sources incl. MarkTechPost coverage dated 2023-12-04 referencing the late-Nov release). Confirmed via ar5iv/2401.02954: 67B dense model uses GQA (paper states 67B uses Grouped-Query Attention instead of MHA), 4096-token training context, and Table 6 literally shows Chat-67B scores HumanEval 73.8, GSM8K 84.1, MATH 32.6, MMLU 71.1, BBH 71.7 — all match exactly."
+}

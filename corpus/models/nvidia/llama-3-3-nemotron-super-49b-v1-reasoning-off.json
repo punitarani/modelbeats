@@ -1,0 +1,107 @@
+{
+  "name": "Llama-3.3-Nemotron-Super-49B v1 (Reasoning Off)",
+  "org": "NVIDIA",
+  "family": "Llama Nemotron",
+  "releaseDate": "2025-03-18",
+  "status": "released",
+  "openness": "open-weights",
+  "license": "NVIDIA Open Model License + Llama 3.3 Community License Agreement",
+  "paramsB": 49.9,
+  "activeParamsB": null,
+  "archClass": "dense",
+  "archDisplay": "Dense Transformer, NAS-compressed from Llama-3.3-70B-Instruct (variable FFN + skip-attention blocks)",
+  "ctxK": 128,
+  "modalities": [
+    "text"
+  ],
+  "langCount": 8,
+  "capabilities": {
+    "reasoning": true,
+    "coding": true,
+    "vision": false,
+    "functionCalling": true,
+    "toolUse": true,
+    "agentic": true
+  },
+  "apiAvailable": true,
+  "price": {
+    "input": 0.1,
+    "output": 0.5,
+    "provider": "DeepInfra"
+  },
+  "links": {
+    "hf": "nvidia/Llama-3_3-Nemotron-Super-49B-v1",
+    "docs": "docs.api.nvidia.com/nim/reference/nvidia-llama-3_3-nemotron-super-49b-v1"
+  },
+  "note": "Toggleable reasoning mode via system prompt; NAS-compressed to fit a single H100/H200 at high throughput.",
+  "quants": [
+    "GGUF",
+    "MLX",
+    "FP8"
+  ],
+  "vramQ4Gb": 30,
+  "vramFp16Gb": 99.7,
+  "tps4090": null,
+  "tpsNote": "~30GB at Q4 exceeds a single RTX 4090's 24GB; no verified 4090 figure found.",
+  "effortLabel": "Reasoning Off",
+  "isDefaultConfig": false,
+  "isBestConfig": false,
+  "specSources": {
+    "paramsB": "https://huggingface.co/nvidia/Llama-3_3-Nemotron-Super-49B-v1",
+    "ctxK": "https://huggingface.co/nvidia/Llama-3_3-Nemotron-Super-49B-v1",
+    "releaseDate": "https://huggingface.co/nvidia/Llama-3_3-Nemotron-Super-49B-v1",
+    "openness": "https://huggingface.co/nvidia/Llama-3_3-Nemotron-Super-49B-v1"
+  },
+  "results": [
+    {
+      "benchmarkSlug": "arena-hard",
+      "score": 88.3,
+      "source": "self-reported",
+      "sourceUrl": "https://huggingface.co/nvidia/Llama-3_3-Nemotron-Super-49B-v1",
+      "notes": "Reasoning Off"
+    },
+    {
+      "benchmarkSlug": "math",
+      "score": 74,
+      "source": "self-reported",
+      "sourceUrl": "https://huggingface.co/nvidia/Llama-3_3-Nemotron-Super-49B-v1",
+      "notes": "MATH500, Reasoning Off"
+    },
+    {
+      "benchmarkSlug": "aime",
+      "score": 13.33,
+      "source": "self-reported",
+      "sourceUrl": "https://huggingface.co/nvidia/Llama-3_3-Nemotron-Super-49B-v1",
+      "notes": "AIME25, Reasoning Off"
+    },
+    {
+      "benchmarkSlug": "gpqa",
+      "score": 50,
+      "source": "self-reported",
+      "sourceUrl": "https://huggingface.co/nvidia/Llama-3_3-Nemotron-Super-49B-v1",
+      "notes": "Reasoning Off"
+    },
+    {
+      "benchmarkSlug": "ifeval",
+      "score": 89.21,
+      "source": "self-reported",
+      "sourceUrl": "https://huggingface.co/nvidia/Llama-3_3-Nemotron-Super-49B-v1",
+      "notes": "Strict:Instruction, Reasoning Off"
+    },
+    {
+      "benchmarkSlug": "mbpp",
+      "score": 84.9,
+      "source": "self-reported",
+      "sourceUrl": "https://huggingface.co/nvidia/Llama-3_3-Nemotron-Super-49B-v1",
+      "notes": "Reasoning Off"
+    },
+    {
+      "benchmarkSlug": "mt-bench",
+      "score": 9.17,
+      "source": "self-reported",
+      "sourceUrl": "https://huggingface.co/nvidia/Llama-3_3-Nemotron-Super-49B-v1",
+      "notes": "Reasoning Off"
+    }
+  ],
+  "verificationNotes": "Confirmed via HF model card (fetched): release date 3/18/2025, ~50B params (49.9B precise figure independently corroborated by llm-stats.com and other trackers), 128K context, NVIDIA+Llama 3.3 license, and all seven Reasoning-Off benchmark scores match exactly (Arena-Hard 88.3, MATH500 74.0, AIME25 13.33, GPQA 50, IFEval 89.21, MBPP 84.9, MT-Bench 9.17)."
+}

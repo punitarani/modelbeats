@@ -1,0 +1,91 @@
+{
+  "name": "Mistral Small 3.1 (24B)",
+  "org": "Mistral AI",
+  "family": "Mistral Small",
+  "releaseDate": "2025-03-17",
+  "status": "deprecated",
+  "openness": "open-weights",
+  "license": "Apache 2.0",
+  "paramsB": 24,
+  "activeParamsB": null,
+  "archClass": "dense",
+  "archDisplay": "Dense transformer — 24B + Pixtral-style vision encoder, Tekken tokenizer",
+  "ctxK": 128,
+  "modalities": [
+    "text",
+    "vision"
+  ],
+  "langCount": null,
+  "capabilities": {
+    "reasoning": false,
+    "coding": true,
+    "vision": true,
+    "functionCalling": true,
+    "toolUse": true,
+    "agentic": false
+  },
+  "apiAvailable": false,
+  "price": {
+    "input": 0.1,
+    "output": 0.3,
+    "provider": "Mistral AI (mistral-small-2503, retired 2025-11-30)"
+  },
+  "links": {
+    "hf": "mistralai/Mistral-Small-3.1-24B-Instruct-2503",
+    "gh": "mistralai/mistral-inference",
+    "docs": "docs.mistral.ai/models/mistral-small-3-1-25-03"
+  },
+  "note": "First Mistral Small with native vision-language support; 128k context, Apache 2.0, fits a single RTX 4090 quantized.",
+  "quants": [
+    "GGUF Q4",
+    "AWQ",
+    "MLX"
+  ],
+  "vramQ4Gb": 15,
+  "vramFp16Gb": 55,
+  "tps4090": null,
+  "tpsNote": null,
+  "effortLabel": null,
+  "isDefaultConfig": true,
+  "isBestConfig": true,
+  "specSources": {
+    "paramsB": "https://huggingface.co/mistralai/Mistral-Small-3.1-24B-Instruct-2503",
+    "ctxK": "https://huggingface.co/mistralai/Mistral-Small-3.1-24B-Instruct-2503",
+    "releaseDate": "https://mistral.ai/news/mistral-small-3-1/",
+    "openness": "https://mistral.ai/news/mistral-small-3-1/"
+  },
+  "results": [
+    {
+      "benchmarkSlug": "mmlu",
+      "score": 80.62,
+      "source": "self-reported",
+      "sourceUrl": "https://huggingface.co/mistralai/Mistral-Small-3.1-24B-Instruct-2503"
+    },
+    {
+      "benchmarkSlug": "math",
+      "score": 69.3,
+      "source": "self-reported",
+      "sourceUrl": "https://huggingface.co/mistralai/Mistral-Small-3.1-24B-Instruct-2503"
+    },
+    {
+      "benchmarkSlug": "humaneval",
+      "score": 88.41,
+      "source": "self-reported",
+      "sourceUrl": "https://huggingface.co/mistralai/Mistral-Small-3.1-24B-Instruct-2503"
+    },
+    {
+      "benchmarkSlug": "gpqa",
+      "score": 44.42,
+      "source": "self-reported",
+      "sourceUrl": "https://huggingface.co/mistralai/Mistral-Small-3.1-24B-Instruct-2503",
+      "notes": "GPQA Main, 5-shot CoT"
+    },
+    {
+      "benchmarkSlug": "mmmu",
+      "score": 64,
+      "source": "self-reported",
+      "sourceUrl": "https://huggingface.co/mistralai/Mistral-Small-3.1-24B-Instruct-2503"
+    }
+  ],
+  "verificationNotes": "Confirmed via mistral.ai/news/mistral-small-3-1/ (dated 2025-03-17, 24B params, 128k context 'up to 128k tokens', Apache 2.0, native vision/image understanding) and HF mistralai/Mistral-Small-3.1-24B-Instruct-2503 card. All 5 benchmark rows confirmed exactly: MMLU 80.62, MATH 69.30, HumanEval 88.41, GPQA Main 44.42, MMMU 64.00. Pricing/retirement (same 2025-11-30 date) confirmed on docs.mistral.ai/models/overview legacy table."
+}

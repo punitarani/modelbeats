@@ -1,0 +1,85 @@
+{
+  "name": "OLMo 7B",
+  "org": "Allen Institute for AI (Ai2)",
+  "family": "OLMo",
+  "releaseDate": "2024-02-01",
+  "status": "released",
+  "openness": "open-source",
+  "license": "Apache-2.0",
+  "paramsB": 6.9,
+  "activeParamsB": null,
+  "archClass": "dense",
+  "archDisplay": "Dense Transformer (32 layers, non-parametric LayerNorm, RoPE, SwiGLU, full attention)",
+  "ctxK": 2,
+  "modalities": [
+    "text"
+  ],
+  "langCount": null,
+  "capabilities": {
+    "reasoning": false,
+    "coding": false,
+    "vision": false,
+    "functionCalling": false,
+    "toolUse": false,
+    "agentic": false
+  },
+  "apiAvailable": false,
+  "price": null,
+  "links": {
+    "hf": "allenai/OLMo-7B",
+    "gh": "allenai/OLMo",
+    "docs": "allenai.org/olmo"
+  },
+  "note": "Ai2's first truly open LLM: weights, Dolma pretraining data, training code and every-1000-step checkpoints all released",
+  "quants": [
+    "GGUF"
+  ],
+  "vramQ4Gb": 4.2,
+  "vramFp16Gb": 14,
+  "tps4090": null,
+  "tpsNote": null,
+  "effortLabel": null,
+  "isDefaultConfig": true,
+  "isBestConfig": true,
+  "specSources": {
+    "paramsB": "https://huggingface.co/allenai/OLMo-7B",
+    "ctxK": "https://huggingface.co/allenai/OLMo-7B/raw/main/config.json",
+    "releaseDate": "https://arxiv.org/abs/2402.00838",
+    "openness": "https://huggingface.co/allenai/OLMo-7B"
+  },
+  "results": [
+    {
+      "benchmarkSlug": "mmlu",
+      "score": 28.3,
+      "source": "self-reported",
+      "sourceUrl": "https://huggingface.co/allenai/OLMo-7B",
+      "notes": "5-shot MC"
+    },
+    {
+      "benchmarkSlug": "arc-challenge",
+      "score": 48.5,
+      "source": "self-reported",
+      "sourceUrl": "https://huggingface.co/allenai/OLMo-7B"
+    },
+    {
+      "benchmarkSlug": "hellaswag",
+      "score": 76.4,
+      "source": "self-reported",
+      "sourceUrl": "https://huggingface.co/allenai/OLMo-7B"
+    },
+    {
+      "benchmarkSlug": "winogrande",
+      "score": 67.9,
+      "source": "self-reported",
+      "sourceUrl": "https://huggingface.co/allenai/OLMo-7B"
+    },
+    {
+      "benchmarkSlug": "gsm8k",
+      "score": 8.5,
+      "source": "self-reported",
+      "sourceUrl": "https://huggingface.co/allenai/OLMo-7B",
+      "notes": "8-shot CoT, mixed eval"
+    }
+  ],
+  "verificationNotes": "Confirmed real via HF model card and arXiv paper (2402.00838, submitted 2024-02-01). Apache-2.0 license, 32-layer dense architecture, and max_sequence_length=2048 (ctxK=2) all confirmed directly from raw config.json. All 5 benchmark rows (MMLU 28.3, ARC-C 48.5, HellaSwag 76.4, WinoGrande 67.9, GSM8k 8.5) confirmed verbatim on the HF model card. ~6.9B total parameter figure cross-confirmed via the OLMoE paper's comparison table."
+}

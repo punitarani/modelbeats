@@ -1,0 +1,82 @@
+{
+  "name": "Upstage Solar Pro",
+  "org": "Upstage",
+  "family": "SOLAR",
+  "releaseDate": "2024-09-11",
+  "status": "released",
+  "openness": "open-weights",
+  "license": "MIT",
+  "paramsB": 22,
+  "activeParamsB": null,
+  "archClass": "dense",
+  "archDisplay": "Depth Up-Scaled (DUS) dense transformer built from Phi-3-medium (14B)",
+  "ctxK": 4,
+  "modalities": [
+    "text"
+  ],
+  "langCount": null,
+  "capabilities": {
+    "reasoning": false,
+    "coding": true,
+    "vision": false,
+    "functionCalling": false,
+    "toolUse": false,
+    "agentic": false
+  },
+  "apiAvailable": true,
+  "price": null,
+  "links": {
+    "hf": "upstage/solar-pro-preview-instruct",
+    "docs": "upstage.ai"
+  },
+  "note": "Sept 2024 MIT-licensed preview (4K ctx, English) topped the <70B Open LLM Leaderboard; a Nov 2024 official update added 32K context and multilingual support via API only.",
+  "quants": [
+    "GGUF Q4"
+  ],
+  "vramQ4Gb": 13,
+  "vramFp16Gb": 44,
+  "tps4090": null,
+  "tpsNote": null,
+  "effortLabel": null,
+  "isDefaultConfig": true,
+  "isBestConfig": true,
+  "specSources": {
+    "paramsB": "https://huggingface.co/upstage/solar-pro-preview-instruct",
+    "ctxK": "https://huggingface.co/upstage/solar-pro-preview-instruct",
+    "releaseDate": "https://www.prnewswire.com/news-releases/upstage-to-release-preview-of-next-generation-llm-solar-pro-302244866.html",
+    "openness": "https://huggingface.co/upstage/solar-pro-preview-instruct"
+  },
+  "results": [
+    {
+      "benchmarkSlug": "mmlu",
+      "score": 79.14,
+      "source": "self-reported",
+      "sourceUrl": "https://huggingface.co/upstage/solar-pro-preview-instruct"
+    },
+    {
+      "benchmarkSlug": "mmlu-pro",
+      "score": 52.11,
+      "source": "self-reported",
+      "sourceUrl": "https://huggingface.co/upstage/solar-pro-preview-instruct"
+    },
+    {
+      "benchmarkSlug": "ifeval",
+      "score": 84.37,
+      "source": "self-reported",
+      "sourceUrl": "https://huggingface.co/upstage/solar-pro-preview-instruct"
+    },
+    {
+      "benchmarkSlug": "gsm8k",
+      "score": 89.69,
+      "source": "self-reported",
+      "sourceUrl": "https://huggingface.co/upstage/solar-pro-preview-instruct"
+    },
+    {
+      "benchmarkSlug": "mbpp",
+      "score": 61.59,
+      "source": "self-reported",
+      "sourceUrl": "https://huggingface.co/upstage/solar-pro-preview-instruct"
+    }
+  ],
+  "verificationNotes": "Confirmed real: Upstage announced Solar Pro Preview on 2024-09-11 (PRNewswire, Upstage's own blog corroborate). Fetched the Hugging Face model card and confirmed 22B params scaled from Phi-3-medium (14B) via DUS, MIT license, 4K context, and all five benchmark numbers (MMLU 79.14, MMLU-Pro 52.11, IFEval 84.37, GSM8K 89.69, MBPP 61.59) literally appear there."
+}

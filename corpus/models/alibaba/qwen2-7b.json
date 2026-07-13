@@ -1,0 +1,128 @@
+{
+  "name": "Qwen2-7B",
+  "org": "Alibaba",
+  "family": "Qwen2",
+  "releaseDate": "2024-06-07",
+  "status": "released",
+  "openness": "open-weights",
+  "license": "Apache 2.0",
+  "paramsB": 7.07,
+  "activeParamsB": null,
+  "archClass": "dense",
+  "archDisplay": "Dense decoder-only Transformer (GQA)",
+  "ctxK": 128,
+  "modalities": [
+    "text"
+  ],
+  "langCount": 30,
+  "capabilities": {
+    "reasoning": false,
+    "coding": true,
+    "vision": false,
+    "functionCalling": true,
+    "toolUse": true,
+    "agentic": true
+  },
+  "apiAvailable": false,
+  "price": null,
+  "links": {
+    "hf": "Qwen/Qwen2-7B-Instruct",
+    "gh": "QwenLM/Qwen2",
+    "docs": "qwenlm.github.io/blog/qwen2"
+  },
+  "note": "Widely-used small Gen-2 dense model; Apache 2.0, 128K context on the Instruct variant.",
+  "quants": [
+    "GGUF",
+    "AWQ",
+    "GPTQ",
+    "MLX"
+  ],
+  "vramFp16Gb": 16,
+  "vramQ4Gb": 5,
+  "tps4090": null,
+  "tpsNote": null,
+  "effortLabel": null,
+  "isDefaultConfig": true,
+  "isBestConfig": true,
+  "specSources": {
+    "paramsB": "https://qwenlm.github.io/blog/qwen2/",
+    "ctxK": "https://huggingface.co/Qwen/Qwen2-7B/blob/main/config.json",
+    "releaseDate": "https://qwenlm.github.io/blog/qwen2/",
+    "openness": "https://huggingface.co/Qwen/Qwen2-7B"
+  },
+  "results": [
+    {
+      "benchmarkSlug": "mmlu",
+      "score": 70.3,
+      "source": "self-reported",
+      "sourceUrl": "https://qwenlm.github.io/blog/qwen2/",
+      "evaluatedAt": "2024-06-07",
+      "notes": "Base model"
+    },
+    {
+      "benchmarkSlug": "mmlu-pro",
+      "score": 40,
+      "source": "self-reported",
+      "sourceUrl": "https://qwenlm.github.io/blog/qwen2/",
+      "evaluatedAt": "2024-06-07",
+      "notes": "Base model"
+    },
+    {
+      "benchmarkSlug": "gpqa",
+      "score": 31.8,
+      "source": "self-reported",
+      "sourceUrl": "https://qwenlm.github.io/blog/qwen2/",
+      "evaluatedAt": "2024-06-07",
+      "notes": "Base model"
+    },
+    {
+      "benchmarkSlug": "humaneval",
+      "score": 51.2,
+      "source": "self-reported",
+      "sourceUrl": "https://qwenlm.github.io/blog/qwen2/",
+      "evaluatedAt": "2024-06-07",
+      "notes": "Base model"
+    },
+    {
+      "benchmarkSlug": "mbpp",
+      "score": 65.9,
+      "source": "self-reported",
+      "sourceUrl": "https://qwenlm.github.io/blog/qwen2/",
+      "evaluatedAt": "2024-06-07",
+      "notes": "Base model"
+    },
+    {
+      "benchmarkSlug": "gsm8k",
+      "score": 79.9,
+      "source": "self-reported",
+      "sourceUrl": "https://qwenlm.github.io/blog/qwen2/",
+      "evaluatedAt": "2024-06-07",
+      "notes": "Base model"
+    },
+    {
+      "benchmarkSlug": "math",
+      "score": 44.2,
+      "source": "self-reported",
+      "sourceUrl": "https://qwenlm.github.io/blog/qwen2/",
+      "evaluatedAt": "2024-06-07",
+      "notes": "Base model"
+    },
+    {
+      "benchmarkSlug": "bbh",
+      "score": 62.6,
+      "source": "self-reported",
+      "sourceUrl": "https://qwenlm.github.io/blog/qwen2/",
+      "evaluatedAt": "2024-06-07",
+      "notes": "Base model"
+    },
+    {
+      "benchmarkSlug": "hellaswag",
+      "score": 80.7,
+      "source": "self-reported",
+      "sourceUrl": "https://qwenlm.github.io/blog/qwen2/",
+      "evaluatedAt": "2024-06-07",
+      "notes": "Base model"
+    }
+  ],
+  "verificationNotes": "Fully confirmed via live fetch of qwenlm.github.io/blog/qwen2/: every one of the 9 benchmark scores (MMLU 70.3, MMLU-Pro 40.0, GPQA 31.8, HumanEval 51.2, MBPP 65.9, GSM8K 79.9, MATH 44.2, BBH 62.6, HellaSwag 80.7) matches the base-model table exactly. License Apache 2.0 and 72.71B-family precedent confirmed the params table lists Qwen2-7B at 7.07B total / 5.98B non-embedding params (corrected paramsB from 7 to 7.07 for precision); blog confirms Apache 2.0 license and notes instruct variant reaches 128K via YARN vs 32K pretraining. No changes needed to results."
+}

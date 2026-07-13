@@ -1,0 +1,86 @@
+{
+  "name": "QwQ-32B",
+  "org": "Alibaba",
+  "family": "QwQ",
+  "releaseDate": "2025-03-06",
+  "status": "released",
+  "openness": "open-weights",
+  "license": "Apache 2.0",
+  "paramsB": 32.5,
+  "activeParamsB": null,
+  "archClass": "dense",
+  "archDisplay": "Dense Transformer (GQA, RL-scaled reasoning)",
+  "ctxK": 128,
+  "modalities": [
+    "text"
+  ],
+  "langCount": null,
+  "capabilities": {
+    "reasoning": true,
+    "coding": true,
+    "vision": false,
+    "functionCalling": true,
+    "toolUse": true,
+    "agentic": false
+  },
+  "apiAvailable": true,
+  "price": null,
+  "links": {
+    "hf": "Qwen/QwQ-32B",
+    "gh": "QwenLM/QwQ",
+    "docs": "qwenlm.github.io/blog/qwq-32b"
+  },
+  "note": "RL-scaled reasoning flagship matching DeepSeek-R1 (671B) at 1/20th the size; Apache 2.0.",
+  "quants": [
+    "GGUF",
+    "AWQ"
+  ],
+  "vramQ4Gb": 19.85,
+  "vramFp16Gb": 65,
+  "tps4090": null,
+  "tpsNote": null,
+  "effortLabel": null,
+  "isDefaultConfig": true,
+  "isBestConfig": true,
+  "specSources": {
+    "paramsB": "https://huggingface.co/Qwen/QwQ-32B",
+    "ctxK": "https://huggingface.co/Qwen/QwQ-32B",
+    "releaseDate": "https://qwenlm.github.io/blog/qwq-32b/",
+    "openness": "https://huggingface.co/Qwen/QwQ-32B"
+  },
+  "results": [
+    {
+      "benchmarkSlug": "aime",
+      "score": 79.5,
+      "source": "self-reported",
+      "sourceUrl": "https://www.datacamp.com/blog/qwq-32b",
+      "notes": "AIME24; DeepSeek-R1 79.8, o1-mini 63.6"
+    },
+    {
+      "benchmarkSlug": "livecodebench",
+      "score": 63.4,
+      "source": "self-reported",
+      "sourceUrl": "https://www.datacamp.com/blog/qwq-32b"
+    },
+    {
+      "benchmarkSlug": "ifeval",
+      "score": 83.9,
+      "source": "self-reported",
+      "sourceUrl": "https://www.datacamp.com/blog/qwq-32b"
+    },
+    {
+      "benchmarkSlug": "bfcl",
+      "score": 66.4,
+      "source": "self-reported",
+      "sourceUrl": "https://www.datacamp.com/blog/qwq-32b",
+      "notes": "BFCL v3"
+    },
+    {
+      "benchmarkSlug": "mmlu-pro",
+      "score": 69.07,
+      "source": "self-reported",
+      "sourceUrl": "https://huggingface.co/Qwen/QwQ-32B"
+    }
+  ],
+  "verificationNotes": "Confirmed via HF model card (32.5B total/31.0B non-embedding params, apache-2.0 license, 131,072-token/128K context) and qwenlm.github.io/blog/qwq-32b (release date literally states March 6, 2025). datacamp.com/blog/qwq-32b page confirmed AIME24=79.5, LiveCodeBench=63.4, LiveBench=73.1, IFEval=83.9, BFCL=66.4 verbatim; HF page confirmed MMLU-Pro=69.07 verbatim. No changes needed."
+}

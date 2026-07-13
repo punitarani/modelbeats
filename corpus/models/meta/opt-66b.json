@@ -1,0 +1,85 @@
+{
+  "name": "OPT-66B",
+  "org": "Meta",
+  "family": "OPT",
+  "releaseDate": "2022-06-22",
+  "status": "deprecated",
+  "openness": "open-weights",
+  "license": "OPT-175B License Agreement (non-commercial research use)",
+  "paramsB": 66,
+  "activeParamsB": null,
+  "archClass": "dense",
+  "archDisplay": "Dense decoder-only Transformer (GPT-3-style architecture)",
+  "ctxK": 2.048,
+  "modalities": [
+    "text"
+  ],
+  "langCount": null,
+  "capabilities": {
+    "reasoning": false,
+    "coding": false,
+    "vision": false,
+    "functionCalling": false,
+    "toolUse": false,
+    "agentic": false
+  },
+  "apiAvailable": false,
+  "price": null,
+  "links": {
+    "hf": "facebook/opt-66b",
+    "gh": "facebookresearch/metaseq",
+    "docs": "arxiv.org/abs/2205.01068"
+  },
+  "note": "Largest freely downloadable OPT checkpoint, released without gating alongside Meta's day-by-day training logbook.",
+  "quants": [
+    "GPTQ"
+  ],
+  "vramQ4Gb": 35,
+  "vramFp16Gb": 132,
+  "tps4090": null,
+  "tpsNote": "llama.cpp does not support the OPT architecture, so no RTX 4090 llama.cpp benchmark exists; the FP16 checkpoint also exceeds a single 4090's VRAM.",
+  "effortLabel": null,
+  "isDefaultConfig": true,
+  "isBestConfig": true,
+  "specSources": {
+    "paramsB": "https://huggingface.co/facebook/opt-66b",
+    "ctxK": "https://huggingface.co/facebook/opt-66b",
+    "releaseDate": "https://github.com/facebookresearch/metaseq/pull/171",
+    "openness": "https://github.com/facebookresearch/metaseq/blob/main/projects/OPT/MODEL_LICENSE.md"
+  },
+  "results": [
+    {
+      "benchmarkSlug": "lambada",
+      "score": 74.93,
+      "source": "independent",
+      "sourceUrl": "https://ar5iv.labs.arxiv.org/html/2210.17323",
+      "notes": "FP16 baseline (zero-shot), GPTQ paper",
+      "evaluatedAt": "2022-10-01"
+    },
+    {
+      "benchmarkSlug": "arc-challenge",
+      "score": 40.02,
+      "source": "independent",
+      "sourceUrl": "https://ar5iv.labs.arxiv.org/html/2210.17323",
+      "notes": "FP16 baseline, GPTQ paper",
+      "evaluatedAt": "2022-10-01"
+    },
+    {
+      "benchmarkSlug": "piqa",
+      "score": 79.76,
+      "source": "independent",
+      "sourceUrl": "https://ar5iv.labs.arxiv.org/html/2210.17323",
+      "notes": "FP16 baseline, GPTQ paper",
+      "evaluatedAt": "2022-10-01"
+    },
+    {
+      "benchmarkSlug": "storycloze",
+      "score": 77.34,
+      "source": "independent",
+      "sourceUrl": "https://ar5iv.labs.arxiv.org/html/2210.17323",
+      "notes": "FP16 baseline, GPTQ paper",
+      "evaluatedAt": "2022-10-01"
+    }
+  ],
+  "verificationNotes": "Confirmed 66B params, freely downloadable (non-gated) checkpoint, and 2048 ctx via the live HF model card. Corrected/pinned release date to 2022-06-22, the exact merge date of metaseq PR #171 'OPT-66B Release' (fetched directly) — this matches and sharpens the input's '2022-06'; updated specSources.releaseDate to that PR (the previously cited PR #221 is a later, unrelated HF-mirror note dated July 2022, not the release). All 4 benchmark rows confirmed as literal FP16 baseline figures in the GPTQ paper (arxiv 2210.17323)."
+}

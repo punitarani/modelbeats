@@ -1,0 +1,46 @@
+{
+  "name": "Inflection-2.5",
+  "org": "Inflection AI",
+  "family": "Inflection",
+  "releaseDate": "2024-03-07",
+  "status": "deprecated",
+  "openness": "closed",
+  "license": "Proprietary",
+  "paramsB": null,
+  "activeParamsB": null,
+  "archClass": "dense",
+  "archDisplay": "Dense Transformer (architecture undisclosed)",
+  "ctxK": 8,
+  "modalities": [
+    "text"
+  ],
+  "langCount": null,
+  "capabilities": {
+    "reasoning": false,
+    "coding": true,
+    "vision": false,
+    "functionCalling": false,
+    "toolUse": false,
+    "agentic": false
+  },
+  "apiAvailable": false,
+  "price": null,
+  "links": {
+    "docs": "inflection.ai/inflection-2-5"
+  },
+  "note": "Reached ~94% of GPT-4's average IQ-benchmark performance using only 40% of GPT-4's training compute; Inflection's last flagship before the March 2024 Microsoft talent exodus.",
+  "quants": [],
+  "vramQ4Gb": null,
+  "vramFp16Gb": null,
+  "tps4090": null,
+  "tpsNote": null,
+  "effortLabel": null,
+  "isDefaultConfig": true,
+  "isBestConfig": true,
+  "specSources": {
+    "releaseDate": "https://inflection.ai/inflection-2-5",
+    "openness": "https://inflection.ai/inflection-2-5"
+  },
+  "results": [],
+  "verificationNotes": "Confirmed real via direct fetch of inflection.ai/inflection-2-5: page literally states 'Inflection-2.5, now powering Pi, achieves more than 94% the average performance of GPT-4 despite using only 40% the training FLOPs,' matching the record exactly, and confirms March 7 2024 publish date. No changes made."
+}

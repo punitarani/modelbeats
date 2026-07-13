@@ -1,0 +1,72 @@
+{
+  "name": "MiniCPM-o 2.6",
+  "org": "OpenBMB",
+  "family": "MiniCPM-o",
+  "releaseDate": "2025-01-13",
+  "status": "released",
+  "openness": "open-weights",
+  "license": "MiniCPM Model License (custom; free for research and, after registration, commercial use) + Apache-2.0 code",
+  "paramsB": 8,
+  "activeParamsB": null,
+  "archClass": "dense",
+  "archDisplay": "SigLip-400M + Whisper-medium-300M + ChatTTS-200M + Qwen2.5-7B, end-to-end omni model",
+  "ctxK": 32,
+  "modalities": [
+    "text",
+    "vision",
+    "video",
+    "audio"
+  ],
+  "langCount": 2,
+  "capabilities": {
+    "reasoning": false,
+    "coding": true,
+    "vision": true,
+    "functionCalling": false,
+    "toolUse": false,
+    "agentic": false
+  },
+  "apiAvailable": false,
+  "price": null,
+  "links": {
+    "hf": "openbmb/MiniCPM-o-2_6",
+    "gh": "OpenBMB/MiniCPM-o"
+  },
+  "note": "8B any-to-any omni model (vision+speech+language) with real-time streaming, matching GPT-4o-202405 on OpenCompass (70.2 avg).",
+  "quants": [
+    "GGUF Q4_K_M",
+    "BNB INT4"
+  ],
+  "vramQ4Gb": 7,
+  "vramFp16Gb": 18,
+  "tps4090": null,
+  "tpsNote": null,
+  "effortLabel": null,
+  "isDefaultConfig": true,
+  "isBestConfig": true,
+  "specSources": {
+    "paramsB": "https://huggingface.co/openbmb/MiniCPM-o-2_6",
+    "ctxK": "https://huggingface.co/openbmb/MiniCPM-o-2_6",
+    "releaseDate": "https://www.marktechpost.com/2025/01/14/openbmb-just-released-minicpm-o-2-6-a-new-8b-parameters-any-to-any-multimodal-model-that-can-understand-vision-speech-and-language-and-runs-on-edge-devices/",
+    "openness": "https://huggingface.co/openbmb/MiniCPM-o-2_6"
+  },
+  "results": [
+    {
+      "benchmarkSlug": "ocrbench",
+      "score": 897,
+      "source": "self-reported",
+      "sourceUrl": "https://huggingface.co/openbmb/MiniCPM-o-2_6",
+      "evaluatedAt": "2025-01-01",
+      "notes": "State-of-the-art for models under 25B params"
+    },
+    {
+      "benchmarkSlug": "streamingbench",
+      "score": 66,
+      "source": "self-reported",
+      "sourceUrl": "https://huggingface.co/openbmb/MiniCPM-o-2_6",
+      "evaluatedAt": "2025-01-01",
+      "notes": "Outperforms GPT-4o-202408 (64.1) on multimodal live-streaming benchmark"
+    }
+  ],
+  "verificationNotes": "Confirmed real model via HF model card (8B total, SigLip-400M+Whisper-medium-300M+ChatTTS-200M+Qwen2.5-7B, MiniCPM Model License weights / Apache-2.0 code, max_position_embeddings=32768 -> 32k ctx, independently confirmed). Release corroborated: OpenBMB announced via X on Jan 13, 2025 with MarkTechPost/press covering it Jan 14, 2025 (1-day spread reflects announcement-vs-press-coverage timing, not a factual error) -- kept 2025-01-13 as the announcement date. OpenCompass 70.2, OCRBench 897, and StreamingBench 66.0 all confirmed present on the HF model card."
+}

@@ -1,0 +1,95 @@
+{
+  "name": "Qwen3-30B-A3B (Thinking)",
+  "org": "Alibaba",
+  "family": "Qwen3",
+  "releaseDate": "2025-04-29",
+  "status": "released",
+  "openness": "open-weights",
+  "license": "Apache 2.0",
+  "paramsB": 30.5,
+  "activeParamsB": 3.3,
+  "archClass": "moe",
+  "archDisplay": "MoE, 128 experts / 8 active (fine-grained, no shared experts)",
+  "ctxK": 128,
+  "modalities": [
+    "text"
+  ],
+  "langCount": 119,
+  "capabilities": {
+    "reasoning": true,
+    "coding": true,
+    "vision": false,
+    "functionCalling": true,
+    "toolUse": true,
+    "agentic": true
+  },
+  "apiAvailable": true,
+  "price": {
+    "input": 0.108,
+    "output": 0.431,
+    "provider": "Alibaba Cloud Model Studio (DashScope)"
+  },
+  "links": {
+    "hf": "Qwen/Qwen3-30B-A3B",
+    "gh": "QwenLM/Qwen3",
+    "docs": "qwen.readthedocs.io"
+  },
+  "note": "Efficient MoE (3B active) hybrid-reasoning model; thinking mode matches QwQ-32B with 1/10th active params.",
+  "quants": [
+    "GGUF",
+    "AWQ",
+    "GPTQ",
+    "MLX"
+  ],
+  "vramQ4Gb": 18.6,
+  "vramFp16Gb": 61,
+  "tps4090": null,
+  "tpsNote": null,
+  "effortLabel": "Thinking",
+  "isDefaultConfig": true,
+  "isBestConfig": true,
+  "specSources": {
+    "paramsB": "https://huggingface.co/Qwen/Qwen3-30B-A3B",
+    "ctxK": "https://arxiv.org/abs/2505.09388",
+    "releaseDate": "https://github.com/QwenLM/Qwen3",
+    "openness": "https://huggingface.co/Qwen/Qwen3-30B-A3B"
+  },
+  "results": [
+    {
+      "benchmarkSlug": "aime",
+      "score": 80.4,
+      "source": "self-reported",
+      "sourceUrl": "https://arxiv.org/abs/2505.09388",
+      "notes": "AIME'24, thinking mode, Qwen3 Technical Report Table 15"
+    },
+    {
+      "benchmarkSlug": "gpqa",
+      "score": 65.8,
+      "source": "self-reported",
+      "sourceUrl": "https://arxiv.org/abs/2505.09388",
+      "notes": "GPQA-Diamond, thinking mode"
+    },
+    {
+      "benchmarkSlug": "livecodebench",
+      "score": 62.6,
+      "source": "self-reported",
+      "sourceUrl": "https://arxiv.org/abs/2505.09388",
+      "notes": "LiveCodeBench v5, thinking mode"
+    },
+    {
+      "benchmarkSlug": "arena-hard",
+      "score": 91,
+      "source": "self-reported",
+      "sourceUrl": "https://arxiv.org/abs/2505.09388",
+      "notes": "Arena-Hard, thinking mode"
+    },
+    {
+      "benchmarkSlug": "bfcl-v3",
+      "score": 69.1,
+      "source": "self-reported",
+      "sourceUrl": "https://arxiv.org/abs/2505.09388",
+      "notes": "BFCL v3 agent/tool-use, thinking mode"
+    }
+  ],
+  "verificationNotes": "Fully confirmed. Fetched full Qwen3 Technical Report PDF (arXiv:2505.09388, 14 May 2025) directly: Table 2 confirms MoE arch (48 layers, 32/4 heads, 128 total/8 activated experts, 128K context) and text confirms 'the Qwen3-MoE design excludes shared experts.' Table 15 confirms ALL 5 benchmark rows exactly (AIME'24 80.4, GPQA-Diamond 65.8, LiveCodeBench v5 62.6, Arena-Hard 91.0, BFCL v3 69.1). HF model card (huggingface.co/Qwen/Qwen3-30B-A3B) confirms '30.5B in total and 3.3B activated', 128/8 experts, Apache 2.0, native 32K/YaRN 131,072 context. Blog (qwenlm.github.io/blog/qwen3) and GitHub confirm April 29, 2025 release and 119 languages. DashScope official pricing page confirms $0.108/$0.431 (China region, non-thinking-output tier) matches exactly."
+}

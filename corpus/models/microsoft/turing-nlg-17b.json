@@ -1,0 +1,56 @@
+{
+  "name": "Turing-NLG (17B)",
+  "org": "Microsoft",
+  "family": "Turing-NLG",
+  "releaseDate": "2020-02-13",
+  "status": "deprecated",
+  "openness": "closed",
+  "license": "Proprietary (weights never released)",
+  "paramsB": 17,
+  "activeParamsB": null,
+  "archClass": "dense",
+  "archDisplay": "Dense Transformer decoder (78 layers, hidden size 4256, 28 attention heads)",
+  "ctxK": 1,
+  "modalities": [
+    "text"
+  ],
+  "langCount": null,
+  "capabilities": {
+    "reasoning": false,
+    "coding": false,
+    "vision": false,
+    "functionCalling": false,
+    "toolUse": false,
+    "agentic": false
+  },
+  "apiAvailable": false,
+  "price": null,
+  "links": {
+    "docs": "https://www.microsoft.com/en-us/research/blog/turing-nlg-a-17-billion-parameter-language-model-by-microsoft/"
+  },
+  "note": "At launch the largest Transformer LM (17B); showcased DeepSpeed/ZeRO; research-only, weights never released.",
+  "quants": [],
+  "vramQ4Gb": null,
+  "vramFp16Gb": null,
+  "tps4090": null,
+  "tpsNote": null,
+  "effortLabel": null,
+  "isDefaultConfig": true,
+  "isBestConfig": true,
+  "specSources": {
+    "releaseDate": "https://www.microsoft.com/en-us/research/blog/turing-nlg-a-17-billion-parameter-language-model-by-microsoft/",
+    "paramsB": "https://www.microsoft.com/en-us/research/blog/turing-nlg-a-17-billion-parameter-language-model-by-microsoft/",
+    "openness": "https://www.microsoft.com/en-us/research/blog/turing-nlg-a-17-billion-parameter-language-model-by-microsoft/"
+  },
+  "results": [
+    {
+      "benchmarkSlug": "lambada",
+      "score": 67.98,
+      "source": "self-reported",
+      "sourceUrl": "https://www.microsoft.com/en-us/research/blog/turing-nlg-a-17-billion-parameter-language-model-by-microsoft/",
+      "evaluatedAt": "2020-02-13",
+      "notes": "Next-word prediction accuracy; new SOTA at the time (prior best 66.51%)"
+    }
+  ],
+  "verificationNotes": "Confirmed real historical model via Microsoft Research blog (fetched directly): released 2020-02-13, 17B params, 78 Transformer layers / hidden size 4256 / 28 attention heads, LAMBADA 67.98% and WikiText-103 perplexity 10.21 both literally confirmed on the page. Weights confirmed never released publicly (only a private academic demo was offered). No changes to record."
+}

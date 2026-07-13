@@ -1,0 +1,50 @@
+{
+  "name": "Sarashina2-70B",
+  "org": "SB Intuitions",
+  "family": "Sarashina2",
+  "releaseDate": "2024-08-06",
+  "status": "released",
+  "openness": "open-weights",
+  "license": "MIT",
+  "paramsB": 70,
+  "activeParamsB": null,
+  "archClass": "dense",
+  "archDisplay": "Llama2-style dense decoder-only transformer",
+  "ctxK": 8,
+  "modalities": [
+    "text"
+  ],
+  "langCount": 2,
+  "capabilities": {
+    "reasoning": false,
+    "coding": true,
+    "vision": false,
+    "functionCalling": false,
+    "toolUse": false,
+    "agentic": false
+  },
+  "apiAvailable": false,
+  "price": null,
+  "links": {
+    "hf": "sbintuitions/sarashina2-70b"
+  },
+  "note": "MIT-licensed Japanese base model trained ground-up on ~2.1T tokens of Japanese, English, and code; not instruction-tuned.",
+  "quants": [
+    "GGUF Q4"
+  ],
+  "vramQ4Gb": 40,
+  "vramFp16Gb": 140,
+  "tps4090": null,
+  "tpsNote": "70B does not fit in a single RTX 4090's 24GB VRAM at Q4 (~40GB needed); no verified single-GPU measurement found.",
+  "effortLabel": null,
+  "isDefaultConfig": true,
+  "isBestConfig": true,
+  "specSources": {
+    "paramsB": "https://huggingface.co/sbintuitions/sarashina2-70b",
+    "ctxK": "https://huggingface.co/sbintuitions/sarashina2-70b/raw/main/config.json",
+    "releaseDate": "https://huggingface.co/sbintuitions/sarashina2-70b/commits/main",
+    "openness": "https://huggingface.co/sbintuitions/sarashina2-70b"
+  },
+  "results": [],
+  "verificationNotes": "Confirmed real model. HF config.json (fetched) shows LlamaForCausalLM architecture, max_position_embeddings=8192 (=ctxK 8), hidden_size 8192, 80 layers — consistent with a 70B-class dense Llama-style model. HF commit history (fetched) shows the initial commit was made 2024-08-06, exactly matching the claimed releaseDate (a separate SB Intuitions tech-blog post about the model was dated 2024-08-21, but the HF repo's own commit history is the more precise/primary source and is used here). MIT license and 'not instruction-tuned' base-model status confirmed via search of SB Intuitions' own materials. 2.1T token / Japanese-English-code training mix confirmed via search results describing the Sarashina2 series (Japanese:English:Code ratio 5:4:1, ~2.1T tokens total). No results rows were present to check. No changes needed."
+}

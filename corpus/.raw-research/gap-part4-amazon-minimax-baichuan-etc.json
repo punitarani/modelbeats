@@ -1,0 +1,2032 @@
+{
+  "summary": "Deep research + adversarial verification for P2 gap partition 4 (21 models)",
+  "agentCount": 7,
+  "logs": [
+    "gap-part4: 21 models",
+    "research: 23 models researched, 0 rejected as unconfirmable",
+    "verify: 23 models confirmed, 0 rejected by verification"
+  ],
+  "result": {
+    "inputCount": 21,
+    "researchedCount": 23,
+    "finalCount": 23,
+    "rejected": [],
+    "models": [
+      {
+        "name": "Amazon Titan Text (Express & Lite)",
+        "org": "Amazon",
+        "family": "Amazon Titan",
+        "releaseDate": "2023-11-29",
+        "status": "released",
+        "openness": "closed",
+        "license": "Proprietary (AWS Bedrock service terms)",
+        "paramsB": null,
+        "activeParamsB": null,
+        "archClass": "dense",
+        "archDisplay": "Dense transformer (parameter count undisclosed)",
+        "ctxK": 8,
+        "modalities": [
+          "text"
+        ],
+        "langCount": null,
+        "capabilities": {
+          "reasoning": false,
+          "coding": false,
+          "vision": false,
+          "functionCalling": false,
+          "toolUse": false,
+          "agentic": false
+        },
+        "apiAvailable": true,
+        "price": {
+          "input": 0.8,
+          "output": 1.6,
+          "provider": "AWS Bedrock (Titan Text Express; Titan Text Lite is $0.30/$0.40 per M tokens)"
+        },
+        "links": {
+          "docs": "docs.aws.amazon.com/bedrock/latest/userguide/titan-text-models.html"
+        },
+        "note": "Amazon's original Bedrock-native text duo predating Nova: Express (8K ctx, English + 100 languages in preview) and Lite (4K ctx, English-only, tuned for fine-tuning).",
+        "quants": [],
+        "vramQ4Gb": null,
+        "vramFp16Gb": null,
+        "tps4090": null,
+        "tpsNote": null,
+        "effortLabel": null,
+        "isDefaultConfig": true,
+        "isBestConfig": true,
+        "specSources": {
+          "releaseDate": "https://aws.amazon.com/about-aws/whats-new/2023/11/amazon-titan-models-express-lite-bedrock/",
+          "ctxK": "https://docs.aws.amazon.com/bedrock/latest/userguide/titan-text-models.html",
+          "openness": "https://docs.aws.amazon.com/bedrock/latest/userguide/titan-text-models.html"
+        },
+        "results": [],
+        "verificationNotes": "Confirmed real via AWS 'What's New' post (GA 2023-11-29, re:Invent 2023) and independently via SiliconANGLE coverage. Confirmed Express: 8K context, English + 100 languages in preview, $0.80/$1.60 per M tokens ($0.0008/$0.0016 per 1K). Confirmed Lite: 4K context, English-only, tuned for fine-tuning, $0.30/$0.40 per M tokens. All values match; no changes. Note: record intentionally combines two variants into one row using Express's spec as primary (ctxK=8); this is a simplification but not an error, and is disclosed in the note/price fields."
+      },
+      {
+        "name": "Amazon Nova Lite",
+        "org": "Amazon",
+        "family": "Amazon Nova",
+        "releaseDate": "2024-12-03",
+        "status": "released",
+        "openness": "closed",
+        "license": "Proprietary (AWS Bedrock service terms)",
+        "paramsB": null,
+        "activeParamsB": null,
+        "archClass": "dense",
+        "archDisplay": "Transformer, architecture/size undisclosed",
+        "ctxK": 300,
+        "modalities": [
+          "text",
+          "vision",
+          "video"
+        ],
+        "langCount": 200,
+        "capabilities": {
+          "reasoning": false,
+          "coding": true,
+          "vision": true,
+          "functionCalling": true,
+          "toolUse": true,
+          "agentic": true
+        },
+        "apiAvailable": true,
+        "price": {
+          "input": 0.06,
+          "output": 0.24,
+          "provider": "AWS Bedrock"
+        },
+        "links": {
+          "docs": "docs.aws.amazon.com/nova/latest/userguide/what-is-nova.html"
+        },
+        "note": "Low-cost multimodal (text/image/video-in) Nova tier tuned for speed; launched alongside Micro and Pro at re:Invent 2024.",
+        "quants": [],
+        "vramQ4Gb": null,
+        "vramFp16Gb": null,
+        "tps4090": null,
+        "tpsNote": null,
+        "effortLabel": null,
+        "isDefaultConfig": true,
+        "isBestConfig": true,
+        "specSources": {
+          "releaseDate": "https://press.aboutamazon.com/2024/12/introducing-amazon-nova-a-new-generation-of-foundation-models",
+          "ctxK": "https://docs.aws.amazon.com/ai/responsible-ai/nova-micro-lite-pro/overview.html",
+          "openness": "https://docs.aws.amazon.com/ai/responsible-ai/nova-micro-lite-pro/overview.html"
+        },
+        "results": [
+          {
+            "benchmarkSlug": "mmlu",
+            "score": 80.5,
+            "source": "independent",
+            "sourceUrl": "https://deepranking.ai/llm-models/nova-lite",
+            "notes": "0-shot CoT; figure traces to Amazon's Nova technical report"
+          },
+          {
+            "benchmarkSlug": "gpqa",
+            "score": 42,
+            "source": "independent",
+            "sourceUrl": "https://deepranking.ai/llm-models/nova-lite"
+          },
+          {
+            "benchmarkSlug": "math",
+            "score": 73.3,
+            "source": "independent",
+            "sourceUrl": "https://deepranking.ai/llm-models/nova-lite"
+          },
+          {
+            "benchmarkSlug": "humaneval",
+            "score": 85.4,
+            "source": "independent",
+            "sourceUrl": "https://deepranking.ai/llm-models/nova-lite"
+          },
+          {
+            "benchmarkSlug": "gsm8k",
+            "score": 94.5,
+            "source": "independent",
+            "sourceUrl": "https://deepranking.ai/llm-models/nova-lite"
+          },
+          {
+            "benchmarkSlug": "bbh",
+            "score": 82.4,
+            "source": "independent",
+            "sourceUrl": "https://deepranking.ai/llm-models/nova-lite"
+          },
+          {
+            "benchmarkSlug": "ifeval",
+            "score": 89.7,
+            "source": "independent",
+            "sourceUrl": "https://deepranking.ai/llm-models/nova-lite"
+          },
+          {
+            "benchmarkSlug": "drop",
+            "score": 80.2,
+            "source": "independent",
+            "sourceUrl": "https://deepranking.ai/llm-models/nova-lite"
+          }
+        ],
+        "verificationNotes": "Confirmed real: Dec 3, 2024 re:Invent launch (Amazon Press Center, TechCrunch, Businesswire all corroborate). Confirmed 300K context, multimodal text/image/video (AWS Nova docs), 200-language support (AWS re:Post + Nova language docs), $0.06/$0.24 per M pricing (matches $0.00006/$0.00024 per 1K on AWS Nova pricing page). All 8 benchmark rows (MMLU 80.5, GPQA 42, MATH 73.3, HumanEval 85.4, GSM8K 94.5, BBH 82.4, IFEval 89.7, DROP 80.2) confirmed to literally appear on deepranking.ai/llm-models/nova-lite. Minor note: deepranking.ai's own page lists a Nov 19, 2024 date for Nova Lite, but all official Amazon sources confirm Dec 3, 2024 — kept the Amazon-sourced date."
+      },
+      {
+        "name": "Amazon Nova Micro",
+        "org": "Amazon",
+        "family": "Amazon Nova",
+        "releaseDate": "2024-12-03",
+        "status": "released",
+        "openness": "closed",
+        "license": "Proprietary (AWS Bedrock service terms)",
+        "paramsB": null,
+        "activeParamsB": null,
+        "archClass": "dense",
+        "archDisplay": "Transformer, architecture/size undisclosed",
+        "ctxK": 128,
+        "modalities": [
+          "text"
+        ],
+        "langCount": 200,
+        "capabilities": {
+          "reasoning": false,
+          "coding": true,
+          "vision": false,
+          "functionCalling": true,
+          "toolUse": true,
+          "agentic": true
+        },
+        "apiAvailable": true,
+        "price": {
+          "input": 0.035,
+          "output": 0.14,
+          "provider": "AWS Bedrock"
+        },
+        "links": {
+          "docs": "docs.aws.amazon.com/nova/latest/userguide/what-is-nova.html"
+        },
+        "note": "Text-only, lowest-latency/lowest-cost Nova tier; suited to simple tasks and high-throughput agent orchestration.",
+        "quants": [],
+        "vramQ4Gb": null,
+        "vramFp16Gb": null,
+        "tps4090": null,
+        "tpsNote": null,
+        "effortLabel": null,
+        "isDefaultConfig": true,
+        "isBestConfig": true,
+        "specSources": {
+          "releaseDate": "https://press.aboutamazon.com/2024/12/introducing-amazon-nova-a-new-generation-of-foundation-models",
+          "ctxK": "https://docs.aws.amazon.com/ai/responsible-ai/nova-micro-lite-pro/overview.html",
+          "openness": "https://docs.aws.amazon.com/ai/responsible-ai/nova-micro-lite-pro/overview.html"
+        },
+        "results": [
+          {
+            "benchmarkSlug": "mmlu",
+            "score": 77.6,
+            "source": "independent",
+            "sourceUrl": "https://deepranking.ai/llm-models/nova-micro"
+          },
+          {
+            "benchmarkSlug": "gpqa",
+            "score": 40,
+            "source": "independent",
+            "sourceUrl": "https://deepranking.ai/llm-models/nova-micro"
+          },
+          {
+            "benchmarkSlug": "math",
+            "score": 69.3,
+            "source": "independent",
+            "sourceUrl": "https://deepranking.ai/llm-models/nova-micro"
+          },
+          {
+            "benchmarkSlug": "humaneval",
+            "score": 81.1,
+            "source": "independent",
+            "sourceUrl": "https://deepranking.ai/llm-models/nova-micro"
+          },
+          {
+            "benchmarkSlug": "gsm8k",
+            "score": 92.3,
+            "source": "independent",
+            "sourceUrl": "https://deepranking.ai/llm-models/nova-micro"
+          },
+          {
+            "benchmarkSlug": "bbh",
+            "score": 79.5,
+            "source": "independent",
+            "sourceUrl": "https://deepranking.ai/llm-models/nova-micro"
+          },
+          {
+            "benchmarkSlug": "ifeval",
+            "score": 87.2,
+            "source": "independent",
+            "sourceUrl": "https://deepranking.ai/llm-models/nova-micro"
+          },
+          {
+            "benchmarkSlug": "drop",
+            "score": 79.3,
+            "source": "independent",
+            "sourceUrl": "https://deepranking.ai/llm-models/nova-micro"
+          },
+          {
+            "benchmarkSlug": "arc-challenge",
+            "score": 90.2,
+            "source": "independent",
+            "sourceUrl": "https://deepranking.ai/llm-models/nova-micro"
+          }
+        ],
+        "verificationNotes": "Confirmed real: Dec 3, 2024 re:Invent launch corroborated by multiple press sources. Confirmed 128K text-only context (AWS Nova docs — Micro is text-to-text only, unlike Lite/Pro/Premier). 200-language support and $0.035/$0.14 per M pricing confirmed against AWS Nova pricing/docs. All 9 benchmark rows (MMLU 77.6, GPQA 40, MATH 69.3, HumanEval 81.1, GSM8K 92.3, BBH 79.5, IFEval 87.2, DROP 79.3, ARC-Challenge 90.2) confirmed to literally appear on deepranking.ai/llm-models/nova-micro. No changes made."
+      },
+      {
+        "name": "Amazon Nova Pro",
+        "org": "Amazon",
+        "family": "Amazon Nova",
+        "releaseDate": "2024-12-03",
+        "status": "released",
+        "openness": "closed",
+        "license": "Proprietary (AWS Bedrock service terms)",
+        "paramsB": null,
+        "activeParamsB": null,
+        "archClass": "dense",
+        "archDisplay": "Transformer, architecture/size undisclosed",
+        "ctxK": 300,
+        "modalities": [
+          "text",
+          "vision",
+          "video"
+        ],
+        "langCount": 200,
+        "capabilities": {
+          "reasoning": false,
+          "coding": true,
+          "vision": true,
+          "functionCalling": true,
+          "toolUse": true,
+          "agentic": true
+        },
+        "apiAvailable": true,
+        "price": {
+          "input": 0.8,
+          "output": 3.2,
+          "provider": "AWS Bedrock"
+        },
+        "links": {
+          "docs": "docs.aws.amazon.com/nova/latest/userguide/what-is-nova.html"
+        },
+        "note": "Highest-accuracy multimodal Nova at launch; workhorse mid/high tier for complex text, image and video tasks before Premier arrived.",
+        "quants": [],
+        "vramQ4Gb": null,
+        "vramFp16Gb": null,
+        "tps4090": null,
+        "tpsNote": null,
+        "effortLabel": null,
+        "isDefaultConfig": true,
+        "isBestConfig": true,
+        "specSources": {
+          "releaseDate": "https://press.aboutamazon.com/2024/12/introducing-amazon-nova-a-new-generation-of-foundation-models",
+          "ctxK": "https://docs.aws.amazon.com/ai/responsible-ai/nova-micro-lite-pro/overview.html",
+          "openness": "https://docs.aws.amazon.com/ai/responsible-ai/nova-micro-lite-pro/overview.html"
+        },
+        "results": [
+          {
+            "benchmarkSlug": "mmlu",
+            "score": 85.9,
+            "source": "independent",
+            "sourceUrl": "https://deepranking.ai/llm-models/nova-pro",
+            "notes": "0-shot CoT; matches Amazon's Nova technical report"
+          },
+          {
+            "benchmarkSlug": "gpqa",
+            "score": 46.9,
+            "source": "independent",
+            "sourceUrl": "https://deepranking.ai/llm-models/nova-pro"
+          },
+          {
+            "benchmarkSlug": "math",
+            "score": 76.6,
+            "source": "independent",
+            "sourceUrl": "https://deepranking.ai/llm-models/nova-pro"
+          },
+          {
+            "benchmarkSlug": "humaneval",
+            "score": 89,
+            "source": "independent",
+            "sourceUrl": "https://deepranking.ai/llm-models/nova-pro"
+          },
+          {
+            "benchmarkSlug": "gsm8k",
+            "score": 94.8,
+            "source": "independent",
+            "sourceUrl": "https://deepranking.ai/llm-models/nova-pro"
+          },
+          {
+            "benchmarkSlug": "bbh",
+            "score": 86.9,
+            "source": "independent",
+            "sourceUrl": "https://deepranking.ai/llm-models/nova-pro"
+          },
+          {
+            "benchmarkSlug": "ifeval",
+            "score": 92.1,
+            "source": "independent",
+            "sourceUrl": "https://deepranking.ai/llm-models/nova-pro"
+          },
+          {
+            "benchmarkSlug": "drop",
+            "score": 85.4,
+            "source": "independent",
+            "sourceUrl": "https://deepranking.ai/llm-models/nova-pro"
+          },
+          {
+            "benchmarkSlug": "arc-challenge",
+            "score": 94.8,
+            "source": "independent",
+            "sourceUrl": "https://deepranking.ai/llm-models/nova-pro"
+          }
+        ],
+        "verificationNotes": "Confirmed real: Dec 3, 2024 re:Invent launch corroborated by multiple press sources. Confirmed 300K multimodal context, 200-language support, $0.80/$3.20 per M pricing (AWS Nova pricing/docs). All 9 benchmark rows (MMLU 85.9, GPQA 46.9, MATH 76.6, HumanEval 89.0, GSM8K 94.8, BBH 86.9, IFEval 92.1, DROP 85.4, ARC-Challenge 94.8) confirmed to literally appear on deepranking.ai/llm-models/nova-pro. No changes made."
+      },
+      {
+        "name": "Amazon Nova Premier",
+        "org": "Amazon",
+        "family": "Amazon Nova",
+        "releaseDate": "2025-04-30",
+        "status": "released",
+        "openness": "closed",
+        "license": "Proprietary (AWS Bedrock service terms)",
+        "paramsB": null,
+        "activeParamsB": null,
+        "archClass": "dense",
+        "archDisplay": "Transformer, architecture/size undisclosed",
+        "ctxK": 1000,
+        "modalities": [
+          "text",
+          "vision",
+          "video"
+        ],
+        "langCount": 200,
+        "capabilities": {
+          "reasoning": false,
+          "coding": true,
+          "vision": true,
+          "functionCalling": true,
+          "toolUse": true,
+          "agentic": true
+        },
+        "apiAvailable": true,
+        "price": {
+          "input": 2.5,
+          "output": 12.5,
+          "provider": "AWS Bedrock"
+        },
+        "links": {
+          "docs": "docs.aws.amazon.com/bedrock/latest/userguide/model-card-amazon-nova-premier.html"
+        },
+        "note": "Amazon's most capable Nova: 1M-token context for complex agentic/long-document tasks; explicitly not a reasoning model, positioned mainly as a distillation teacher for smaller Nova models.",
+        "quants": [],
+        "vramQ4Gb": null,
+        "vramFp16Gb": null,
+        "tps4090": null,
+        "tpsNote": null,
+        "effortLabel": null,
+        "isDefaultConfig": true,
+        "isBestConfig": true,
+        "specSources": {
+          "releaseDate": "https://techcrunch.com/2025/04/30/amazon-launches-nova-premier-its-largest-ai-model-yet/",
+          "ctxK": "https://techcrunch.com/2025/04/30/amazon-launches-nova-premier-its-largest-ai-model-yet/",
+          "openness": "https://docs.aws.amazon.com/bedrock/latest/userguide/model-card-amazon-nova-premier.html"
+        },
+        "results": [
+          {
+            "benchmarkSlug": "mmlu-pro",
+            "score": 73.3,
+            "source": "independent",
+            "sourceUrl": "https://artificialanalysis.ai/models/nova-premier"
+          },
+          {
+            "benchmarkSlug": "gpqa",
+            "score": 56.9,
+            "source": "independent",
+            "sourceUrl": "https://artificialanalysis.ai/models/nova-premier",
+            "notes": "GPQA Diamond, 0-shot CoT"
+          }
+        ],
+        "verificationNotes": "Confirmed real: April 30, 2025 launch corroborated by TechCrunch, Computerworld, AWS blog, Amazon Science technical report. Confirmed 1M-token multimodal context, $2.50/$12.50 per M pricing, explicitly described as 'not a reasoning model' and positioned as a distillation teacher (TechCrunch, AWS blog). MMLU-Pro 73.3 and GPQA Diamond 56.9 could not be directly rendered from artificialanalysis.ai/models/nova-premier via automated fetch (client-side rendered page), but both figures were independently corroborated verbatim (73.3% MMLU-Pro, 56.9% GPQA Diamond) on a mirror site (designforonline.com) that sources Artificial Analysis benchmark data. Kept both rows given this independent corroboration."
+      },
+      {
+        "name": "abab6.5",
+        "org": "MiniMax",
+        "family": "abab",
+        "releaseDate": "2024-04-17",
+        "status": "released",
+        "openness": "closed",
+        "license": "Proprietary (MiniMax API terms)",
+        "paramsB": null,
+        "activeParamsB": null,
+        "archClass": "moe",
+        "archDisplay": "Mixture-of-Experts, trillion-scale total params (exact count/expert configuration undisclosed)",
+        "ctxK": 200,
+        "modalities": [
+          "text"
+        ],
+        "langCount": null,
+        "capabilities": {
+          "reasoning": false,
+          "coding": false,
+          "vision": false,
+          "functionCalling": true,
+          "toolUse": true,
+          "agentic": false
+        },
+        "apiAvailable": true,
+        "price": null,
+        "links": {
+          "docs": "platform.minimax.io/docs"
+        },
+        "note": "MiniMax's first trillion-parameter MoE LLM, targeting GPT-4/Claude-3-class performance at launch; the abab6.5s variant trades some quality for much higher throughput at the same 200K context.",
+        "quants": [],
+        "vramQ4Gb": null,
+        "vramFp16Gb": null,
+        "tps4090": null,
+        "tpsNote": null,
+        "effortLabel": null,
+        "isDefaultConfig": true,
+        "isBestConfig": true,
+        "specSources": {
+          "releaseDate": "https://www.minimax.io/news/abab65-series",
+          "ctxK": "https://www.minimax.io/news/abab65-series",
+          "openness": "https://www.minimax.io/news/abab65-series"
+        },
+        "results": [],
+        "verificationNotes": "Confirmed real via MiniMax's own news post (minimax.io/news/abab65-series, dated 2024-04-17): 'Abab6.5 features a trillion parameters and supports a context length of 200k tokens; abab6.5s uses the same training techniques and data as abab6.5 but is more efficient.' Confirms MoE architecture, trillion-scale params (undisclosed exact count), 200K context, and the abab6.5/abab6.5s two-variant structure. Function calling/tool use confirmed generally supported by the MiniMax API (parallel function calling, tool selection) per MiniMax API docs. No results rows were present to verify. No changes made."
+      },
+      {
+        "name": "MiniMax-Text-01",
+        "org": "MiniMax",
+        "family": "MiniMax-01",
+        "releaseDate": "2025-01-15",
+        "status": "released",
+        "openness": "open-weights",
+        "license": "MiniMax Model License Agreement (custom, source-available; code under MIT)",
+        "paramsB": 456,
+        "activeParamsB": 45.9,
+        "archClass": "hybrid",
+        "archDisplay": "Hybrid Lightning Attention + Softmax Attention, MoE (32 experts, top-2 routing, 80 layers)",
+        "ctxK": 1000,
+        "modalities": [
+          "text"
+        ],
+        "langCount": null,
+        "capabilities": {
+          "reasoning": false,
+          "coding": true,
+          "vision": false,
+          "functionCalling": true,
+          "toolUse": true,
+          "agentic": true
+        },
+        "apiAvailable": true,
+        "price": null,
+        "links": {
+          "hf": "MiniMaxAI/MiniMax-Text-01",
+          "gh": "MiniMax-AI/MiniMax-01",
+          "docs": "platform.minimax.io/docs"
+        },
+        "note": "456B-param MoE (45.9B active) using Lightning Attention; trained to 1M-token context and extrapolates to 4M at inference; released open-weight alongside vision variant MiniMax-VL-01.",
+        "quants": [
+          "INT8 (Quanto)"
+        ],
+        "vramQ4Gb": null,
+        "vramFp16Gb": null,
+        "tps4090": null,
+        "tpsNote": "MiniMax's own report targets ~640GB memory across 8 GPUs at 8-bit quantization for 1M-token inference; far beyond a single RTX 4090's 24GB, so no consumer-GPU throughput figures exist.",
+        "effortLabel": null,
+        "isDefaultConfig": true,
+        "isBestConfig": true,
+        "specSources": {
+          "releaseDate": "https://www.marktechpost.com/2025/01/15/minimax-text-01-and-minimax-vl-01-released-scalable-models-with-lightning-attention-456b-parameters-4b-token-contexts-and-state-of-the-art-accuracy/",
+          "paramsB": "https://arxiv.org/abs/2501.08313",
+          "ctxK": "https://arxiv.org/abs/2501.08313",
+          "openness": "https://huggingface.co/MiniMaxAI/MiniMax-Text-01"
+        },
+        "results": [
+          {
+            "benchmarkSlug": "mmlu",
+            "score": 88.5,
+            "source": "self-reported",
+            "sourceUrl": "https://huggingface.co/MiniMaxAI/MiniMax-Text-01",
+            "notes": "0-shot CoT"
+          },
+          {
+            "benchmarkSlug": "mmlu-pro",
+            "score": 75.7,
+            "source": "self-reported",
+            "sourceUrl": "https://huggingface.co/MiniMaxAI/MiniMax-Text-01"
+          },
+          {
+            "benchmarkSlug": "gpqa",
+            "score": 54.4,
+            "source": "self-reported",
+            "sourceUrl": "https://huggingface.co/MiniMaxAI/MiniMax-Text-01",
+            "notes": "GPQA Diamond, 0-shot CoT"
+          },
+          {
+            "benchmarkSlug": "drop",
+            "score": 87.8,
+            "source": "self-reported",
+            "sourceUrl": "https://huggingface.co/MiniMaxAI/MiniMax-Text-01",
+            "notes": "F1"
+          },
+          {
+            "benchmarkSlug": "gsm8k",
+            "score": 94.8,
+            "source": "self-reported",
+            "sourceUrl": "https://huggingface.co/MiniMaxAI/MiniMax-Text-01"
+          },
+          {
+            "benchmarkSlug": "math",
+            "score": 77.4,
+            "source": "self-reported",
+            "sourceUrl": "https://huggingface.co/MiniMaxAI/MiniMax-Text-01"
+          },
+          {
+            "benchmarkSlug": "mbpp",
+            "score": 71.7,
+            "source": "self-reported",
+            "sourceUrl": "https://huggingface.co/MiniMaxAI/MiniMax-Text-01",
+            "notes": "MBPP+ variant"
+          },
+          {
+            "benchmarkSlug": "humaneval",
+            "score": 86.9,
+            "source": "self-reported",
+            "sourceUrl": "https://huggingface.co/MiniMaxAI/MiniMax-Text-01"
+          },
+          {
+            "benchmarkSlug": "ifeval",
+            "score": 89.1,
+            "source": "self-reported",
+            "sourceUrl": "https://huggingface.co/MiniMaxAI/MiniMax-Text-01",
+            "notes": "average"
+          },
+          {
+            "benchmarkSlug": "arena-hard",
+            "score": 89.1,
+            "source": "self-reported",
+            "sourceUrl": "https://huggingface.co/MiniMaxAI/MiniMax-Text-01",
+            "notes": "Arena-Hard-Auto"
+          }
+        ],
+        "verificationNotes": "Confirmed real via MarkTechPost (release 2025-01-15), arXiv 2501.08313, GitHub MiniMax-AI/MiniMax-01, and HF model card. 456B total/45.9B active MoE with Lightning Attention, 1M train / 4M inference context all confirmed. All 10 benchmark scores (MMLU 88.5, MMLU-Pro 75.7, GPQA 54.4, DROP 87.8, GSM8K 94.8, MATH 77.4, MBPP+ 71.7, HumanEval 86.9, IFEval 89.1, Arena-Hard 89.1) verified to literally appear on the HF model card (retargeted sourceUrl from arXiv abstract page, which did not render the table, to the HF card which does); no numbers changed."
+      },
+      {
+        "name": "MiniMax-VL-01",
+        "org": "MiniMax",
+        "family": "MiniMax-01",
+        "releaseDate": "2025-01-14",
+        "status": "released",
+        "openness": "open-weights",
+        "license": "Custom MiniMax Model License (free for most use; platforms with >100M MAU must request a separate license; code under MIT)",
+        "paramsB": 456,
+        "activeParamsB": 45.9,
+        "archClass": "hybrid",
+        "archDisplay": "Hybrid Lightning+Softmax Attention MoE (80 layers, 32 experts top-2) + 303M-param ViT/MLP vision encoder",
+        "ctxK": 1000,
+        "modalities": [
+          "text",
+          "vision"
+        ],
+        "langCount": null,
+        "capabilities": {
+          "reasoning": false,
+          "coding": false,
+          "vision": true,
+          "functionCalling": true,
+          "toolUse": true,
+          "agentic": false
+        },
+        "apiAvailable": true,
+        "price": {
+          "input": 0.2,
+          "output": 1.1,
+          "provider": "MiniMax (platform.minimax.io)"
+        },
+        "links": {
+          "hf": "MiniMaxAI/MiniMax-VL-01",
+          "gh": "MiniMax-AI/MiniMax-01",
+          "docs": "platform.minimax.io"
+        },
+        "note": "Vision-language sibling of MiniMax-Text-01, adding a dynamic-resolution (336px-2016px) ViT+MLP encoder atop the same 456B hybrid-attention MoE backbone.",
+        "quants": [],
+        "vramQ4Gb": null,
+        "vramFp16Gb": 912,
+        "tps4090": null,
+        "tpsNote": null,
+        "effortLabel": null,
+        "isDefaultConfig": true,
+        "isBestConfig": true,
+        "specSources": {
+          "paramsB": "https://huggingface.co/MiniMaxAI/MiniMax-VL-01",
+          "ctxK": "https://huggingface.co/MiniMaxAI/MiniMax-Text-01",
+          "releaseDate": "https://huggingface.co/MiniMaxAI/MiniMax-VL-01",
+          "openness": "https://huggingface.co/MiniMaxAI/MiniMax-VL-01"
+        },
+        "results": [
+          {
+            "benchmarkSlug": "mmmu",
+            "score": 68.5,
+            "source": "self-reported",
+            "sourceUrl": "https://huggingface.co/MiniMaxAI/MiniMax-VL-01"
+          },
+          {
+            "benchmarkSlug": "mathvista",
+            "score": 68.6,
+            "source": "self-reported",
+            "sourceUrl": "https://huggingface.co/MiniMaxAI/MiniMax-VL-01"
+          },
+          {
+            "benchmarkSlug": "docvqa",
+            "score": 96.4,
+            "source": "self-reported",
+            "sourceUrl": "https://huggingface.co/MiniMaxAI/MiniMax-VL-01"
+          },
+          {
+            "benchmarkSlug": "chartqa",
+            "score": 91.7,
+            "source": "self-reported",
+            "sourceUrl": "https://huggingface.co/MiniMaxAI/MiniMax-VL-01",
+            "notes": "relaxed accuracy"
+          }
+        ],
+        "verificationNotes": "Confirmed real via HF model card (MiniMaxAI/MiniMax-VL-01) and GitHub MiniMax-AI/MiniMax-01. 456B/45.9B MoE backbone + 303M ViT-MLP vision encoder, dynamic resolution 336-2016px all confirmed. All 4 benchmark scores (MMMU 68.5, MathVista 68.6, DocVQA 96.4, ChartQA 91.7) confirmed literally on the HF card. Price ($0.2 input / $1.1 output per 1M tokens) independently confirmed via current MiniMax pricing pages. No changes needed."
+      },
+      {
+        "name": "MiniMax-M1",
+        "org": "MiniMax",
+        "family": "MiniMax-M1",
+        "releaseDate": "2025-06-16",
+        "status": "released",
+        "openness": "open-weights",
+        "license": "Apache-2.0",
+        "paramsB": 456,
+        "activeParamsB": 45.9,
+        "archClass": "hybrid",
+        "archDisplay": "Hybrid Lightning+Softmax Attention MoE (80 layers, 32 experts top-2) reasoning model, trained with CISPO RL",
+        "ctxK": 1000,
+        "modalities": [
+          "text"
+        ],
+        "langCount": null,
+        "capabilities": {
+          "reasoning": true,
+          "coding": true,
+          "vision": false,
+          "functionCalling": true,
+          "toolUse": true,
+          "agentic": true
+        },
+        "apiAvailable": true,
+        "price": {
+          "input": 0.4,
+          "output": 2.2,
+          "provider": "MiniMax (platform.minimax.io, 0-200K token input tier; 200K-1M tier is $1.3/$2.2)"
+        },
+        "links": {
+          "hf": "MiniMaxAI/MiniMax-M1-80k",
+          "gh": "MiniMax-AI/MiniMax-M1",
+          "docs": "platform.minimax.io"
+        },
+        "note": "World's first open-weight large-scale hybrid-attention reasoning model; shipped as two checkpoints (40K/80K thinking budget) - this entry reflects the flagship 80K checkpoint.",
+        "quants": [],
+        "vramQ4Gb": null,
+        "vramFp16Gb": 912,
+        "tps4090": null,
+        "tpsNote": "llama.cpp did not support the MiniMaxM1ForCausalLM architecture at release, so no GGUF/Q4 quant or RTX 4090 figure exists.",
+        "effortLabel": null,
+        "isDefaultConfig": true,
+        "isBestConfig": true,
+        "specSources": {
+          "paramsB": "https://huggingface.co/MiniMaxAI/MiniMax-M1-80k",
+          "ctxK": "https://github.com/MiniMax-AI/MiniMax-M1",
+          "releaseDate": "https://arxiv.org/abs/2506.13585",
+          "openness": "https://github.com/MiniMax-AI/MiniMax-M1"
+        },
+        "results": [
+          {
+            "benchmarkSlug": "aime",
+            "score": 86,
+            "source": "self-reported",
+            "sourceUrl": "https://huggingface.co/MiniMaxAI/MiniMax-M1-80k",
+            "notes": "AIME 2024, M1-80K"
+          },
+          {
+            "benchmarkSlug": "livecodebench",
+            "score": 65,
+            "source": "self-reported",
+            "sourceUrl": "https://huggingface.co/MiniMaxAI/MiniMax-M1-80k",
+            "notes": "M1-80K"
+          },
+          {
+            "benchmarkSlug": "swe-bench",
+            "score": 56,
+            "source": "self-reported",
+            "sourceUrl": "https://huggingface.co/MiniMaxAI/MiniMax-M1-80k",
+            "notes": "SWE-bench Verified, M1-80K"
+          },
+          {
+            "benchmarkSlug": "gpqa",
+            "score": 69.2,
+            "source": "self-reported",
+            "sourceUrl": "https://huggingface.co/MiniMaxAI/MiniMax-M1-80k",
+            "notes": "GPQA Diamond, M1-40K"
+          },
+          {
+            "benchmarkSlug": "mmlu-pro",
+            "score": 80.6,
+            "source": "self-reported",
+            "sourceUrl": "https://huggingface.co/MiniMaxAI/MiniMax-M1-80k",
+            "notes": "M1-40K"
+          }
+        ],
+        "verificationNotes": "Confirmed real via VentureBeat, Computerworld, arXiv 2506.13585, and HF model card MiniMaxAI/MiniMax-M1-80k. 456B/45.9B hybrid MoE, Apache-2.0, 1M context confirmed by multiple independent sources. All 5 result rows confirmed literally on the HF card, including the M1-80K vs M1-40K split (AIME 86.0, LCB 65.0, SWE-bench 56.0 for 80K; GPQA 69.2, MMLU-Pro 80.6 for 40K) — exact match, no changes. Pricing $0.4/$2.2 for 0-200K tier independently confirmed."
+      },
+      {
+        "name": "MiniMax-M2",
+        "org": "MiniMax",
+        "family": "MiniMax-M2",
+        "releaseDate": "2025-10-27",
+        "status": "released",
+        "openness": "open-weights",
+        "license": "MIT",
+        "paramsB": 229.9,
+        "activeParamsB": 9.8,
+        "archClass": "moe",
+        "archDisplay": "62-layer decoder-only Transformer, 256 experts (top-8, sigmoid gating) + Multi-Token Prediction module, full GQA attention",
+        "ctxK": 192,
+        "modalities": [
+          "text"
+        ],
+        "langCount": null,
+        "capabilities": {
+          "reasoning": true,
+          "coding": true,
+          "vision": false,
+          "functionCalling": true,
+          "toolUse": true,
+          "agentic": true
+        },
+        "apiAvailable": true,
+        "price": {
+          "input": 0.3,
+          "output": 1.2,
+          "provider": "MiniMax (platform.minimax.io)"
+        },
+        "links": {
+          "hf": "MiniMaxAI/MiniMax-M2",
+          "gh": "MiniMax-AI/MiniMax-M2",
+          "docs": "platform.minimax.io"
+        },
+        "note": "Compact 229.9B-total/9.8B-active MoE tuned for coding and agentic workflows with interleaved <think> reasoning; original M2 release is MIT-licensed (later M2.x point releases, e.g. M2.1/M2.7, moved to a restrictive 'Modified-MIT').",
+        "quants": [
+          "GGUF",
+          "AWQ"
+        ],
+        "vramQ4Gb": 130,
+        "vramFp16Gb": 460,
+        "tps4090": null,
+        "tpsNote": "Unsloth's UD-IQ4_XS dynamic GGUF (~108GB) is reported at ~15-25 tok/s on a single 16GB GPU + 96GB system RAM or Mac unified memory - no RTX-4090-specific figure found.",
+        "effortLabel": null,
+        "isDefaultConfig": true,
+        "isBestConfig": true,
+        "specSources": {
+          "paramsB": "https://github.com/MiniMax-AI/MiniMax-M2",
+          "ctxK": "https://huggingface.co/MiniMaxAI/MiniMax-M2/raw/main/config.json",
+          "releaseDate": "https://www.minimax.io/news/minimax-m2",
+          "openness": "https://github.com/MiniMax-AI/MiniMax-M2"
+        },
+        "results": [
+          {
+            "benchmarkSlug": "swe-bench",
+            "score": 69.4,
+            "source": "self-reported",
+            "sourceUrl": "https://github.com/MiniMax-AI/MiniMax-M2",
+            "notes": "SWE-bench Verified"
+          },
+          {
+            "benchmarkSlug": "livecodebench",
+            "score": 83,
+            "source": "self-reported",
+            "sourceUrl": "https://github.com/MiniMax-AI/MiniMax-M2"
+          },
+          {
+            "benchmarkSlug": "mmlu-pro",
+            "score": 82,
+            "source": "self-reported",
+            "sourceUrl": "https://github.com/MiniMax-AI/MiniMax-M2"
+          },
+          {
+            "benchmarkSlug": "aime",
+            "score": 78,
+            "source": "self-reported",
+            "sourceUrl": "https://github.com/MiniMax-AI/MiniMax-M2",
+            "notes": "AIME25"
+          },
+          {
+            "benchmarkSlug": "terminal-bench",
+            "score": 46.3,
+            "source": "self-reported",
+            "sourceUrl": "https://github.com/MiniMax-AI/MiniMax-M2"
+          },
+          {
+            "benchmarkSlug": "gaia",
+            "score": 75.7,
+            "source": "self-reported",
+            "sourceUrl": "https://github.com/MiniMax-AI/MiniMax-M2",
+            "notes": "text only"
+          },
+          {
+            "benchmarkSlug": "hle",
+            "score": 31.8,
+            "source": "self-reported",
+            "sourceUrl": "https://github.com/MiniMax-AI/MiniMax-M2",
+            "notes": "with tools"
+          }
+        ],
+        "verificationNotes": "Confirmed real; official minimax.io/news/minimax-m2 post is literally dated 2025.10.27, matching releaseDate exactly (MarkTechPost/Simon Willison coverage followed a day or two later). 229.9B total/9.8B active MIT-licensed MoE confirmed via GitHub repo and MarkTechPost. All 7 benchmark rows (SWE-bench 69.4, LiveCodeBench 83, MMLU-Pro 82, AIME25 78, Terminal-Bench 46.3, GAIA 75.7, HLE 31.8) confirmed literally on the GitHub README. Independently confirmed the note's claim that later M2.x point releases (M2.1, M2.7) carry a distinct 'Modified-MIT' license requiring UI attribution, unlike the base M2's plain MIT."
+      },
+      {
+        "name": "Baichuan2-13B",
+        "org": "Baichuan Intelligence",
+        "family": "Baichuan 2",
+        "releaseDate": "2023-09-06",
+        "status": "released",
+        "openness": "open-weights",
+        "license": "Apache-2.0 (code) + Baichuan2 Community License for weights (free commercial use if DAU<1M, non-cloud-provider, no sublicensing)",
+        "paramsB": 13,
+        "activeParamsB": null,
+        "archClass": "dense",
+        "archDisplay": "Dense decoder-only Transformer with ALiBi positional bias, 40 layers",
+        "ctxK": 4,
+        "modalities": [
+          "text"
+        ],
+        "langCount": 2,
+        "capabilities": {
+          "reasoning": false,
+          "coding": true,
+          "vision": false,
+          "functionCalling": false,
+          "toolUse": false,
+          "agentic": false
+        },
+        "apiAvailable": false,
+        "price": null,
+        "links": {
+          "hf": "baichuan-inc/Baichuan2-13B-Chat",
+          "gh": "baichuan-inc/Baichuan2"
+        },
+        "note": "Flagship of the Baichuan 2 open bilingual (zh/en) series, trained on 2.6T tokens with ALiBi attention; released as Base+Chat+4bit with a full technical report.",
+        "quants": [
+          "GGUF",
+          "GPTQ",
+          "INT4 (bitsandbytes NF4)"
+        ],
+        "vramQ4Gb": 7,
+        "vramFp16Gb": 26,
+        "tps4090": null,
+        "tpsNote": null,
+        "effortLabel": null,
+        "isDefaultConfig": true,
+        "isBestConfig": true,
+        "specSources": {
+          "paramsB": "https://github.com/baichuan-inc/Baichuan2/blob/main/README_EN.md",
+          "ctxK": "https://ollama.com/maxkb/baichuan2:13b-chat/blobs/ebc06d986445",
+          "releaseDate": "https://www.marktechpost.com/2023/09/19/meet-baichuan-2-a-series-of-large-scale-multilingual-language-models-containing-7b-and-13b-parameters-trained-from-scratch-on-2-6t-tokens/",
+          "openness": "https://huggingface.co/baichuan-inc/Baichuan2-13B-Base"
+        },
+        "results": [
+          {
+            "benchmarkSlug": "c-eval",
+            "score": 58.1,
+            "source": "self-reported",
+            "sourceUrl": "https://github.com/baichuan-inc/Baichuan2/blob/main/README_EN.md",
+            "notes": "5-shot"
+          },
+          {
+            "benchmarkSlug": "mmlu",
+            "score": 59.17,
+            "source": "self-reported",
+            "sourceUrl": "https://github.com/baichuan-inc/Baichuan2/blob/main/README_EN.md",
+            "notes": "5-shot"
+          },
+          {
+            "benchmarkSlug": "cmmlu",
+            "score": 61.97,
+            "source": "self-reported",
+            "sourceUrl": "https://github.com/baichuan-inc/Baichuan2/blob/main/README_EN.md",
+            "notes": "5-shot"
+          },
+          {
+            "benchmarkSlug": "gsm8k",
+            "score": 52.77,
+            "source": "self-reported",
+            "sourceUrl": "https://github.com/baichuan-inc/Baichuan2/blob/main/README_EN.md",
+            "notes": "4-shot"
+          },
+          {
+            "benchmarkSlug": "humaneval",
+            "score": 17.07,
+            "source": "self-reported",
+            "sourceUrl": "https://github.com/baichuan-inc/Baichuan2/blob/main/README_EN.md",
+            "notes": "0-shot"
+          },
+          {
+            "benchmarkSlug": "bbh",
+            "score": 48.78,
+            "source": "self-reported",
+            "sourceUrl": "https://github.com/baichuan-inc/Baichuan2/blob/main/README_EN.md",
+            "notes": "3-shot"
+          }
+        ],
+        "verificationNotes": "Confirmed real via arXiv 2309.10305, MarkTechPost (2023-09-19), and the official GitHub README_EN.md. All 6 benchmark scores (C-Eval 58.1, MMLU 59.17, CMMLU 61.97, GSM8K 52.77, HumanEval 17.07, BBH 48.78) confirmed to literally appear in the README table for the 13B-Base model. License (Apache-2.0 code + custom community license with DAU<1M free-commercial-use clause) confirmed. Context length 4096 (4K) confirmed via Ollama model metadata; retargeted ctxK sourceUrl from an unrelated HF text-generation-inference PR to a source that actually states the figure. Corrected hf link from Baichuan2-13B-Chat (was mistakenly Base in original links.hf field is now Chat, matching the Chat/4bit release most commonly used)."
+      },
+      {
+        "name": "Baichuan2-7B",
+        "org": "Baichuan Intelligence",
+        "family": "Baichuan 2",
+        "releaseDate": "2023-09-06",
+        "status": "released",
+        "openness": "open-weights",
+        "license": "Apache-2.0 (code) + Baichuan2 Community License for weights (free commercial use if DAU<1M, non-cloud-provider, no sublicensing)",
+        "paramsB": 7,
+        "activeParamsB": null,
+        "archClass": "dense",
+        "archDisplay": "Dense decoder-only Transformer with RoPE, 32 layers",
+        "ctxK": 4,
+        "modalities": [
+          "text"
+        ],
+        "langCount": 2,
+        "capabilities": {
+          "reasoning": false,
+          "coding": true,
+          "vision": false,
+          "functionCalling": false,
+          "toolUse": false,
+          "agentic": false
+        },
+        "apiAvailable": false,
+        "price": null,
+        "links": {
+          "hf": "baichuan-inc/Baichuan2-7B-Chat",
+          "gh": "baichuan-inc/Baichuan2"
+        },
+        "note": "Early strong bilingual (zh/en) open LLM trained on 2.6T tokens; released as Base+Chat with a full technical report and 4bit quantized variant.",
+        "quants": [
+          "GGUF",
+          "GPTQ",
+          "INT4 (bitsandbytes NF4)"
+        ],
+        "vramQ4Gb": 4.5,
+        "vramFp16Gb": 14,
+        "tps4090": null,
+        "tpsNote": null,
+        "effortLabel": null,
+        "isDefaultConfig": true,
+        "isBestConfig": true,
+        "specSources": {
+          "paramsB": "https://github.com/baichuan-inc/Baichuan2/blob/main/README_EN.md",
+          "ctxK": "https://ollama.com/maxkb/baichuan2:13b-chat/blobs/ebc06d986445",
+          "releaseDate": "https://www.marktechpost.com/2023/09/19/meet-baichuan-2-a-series-of-large-scale-multilingual-language-models-containing-7b-and-13b-parameters-trained-from-scratch-on-2-6t-tokens/",
+          "openness": "https://huggingface.co/baichuan-inc/Baichuan2-7B-Base"
+        },
+        "results": [
+          {
+            "benchmarkSlug": "c-eval",
+            "score": 54,
+            "source": "self-reported",
+            "sourceUrl": "https://github.com/baichuan-inc/Baichuan2/blob/main/README_EN.md",
+            "notes": "5-shot"
+          },
+          {
+            "benchmarkSlug": "mmlu",
+            "score": 54.16,
+            "source": "self-reported",
+            "sourceUrl": "https://github.com/baichuan-inc/Baichuan2/blob/main/README_EN.md",
+            "notes": "5-shot"
+          },
+          {
+            "benchmarkSlug": "cmmlu",
+            "score": 57.07,
+            "source": "self-reported",
+            "sourceUrl": "https://github.com/baichuan-inc/Baichuan2/blob/main/README_EN.md",
+            "notes": "5-shot"
+          },
+          {
+            "benchmarkSlug": "gsm8k",
+            "score": 24.49,
+            "source": "self-reported",
+            "sourceUrl": "https://github.com/baichuan-inc/Baichuan2/blob/main/README_EN.md",
+            "notes": "4-shot"
+          },
+          {
+            "benchmarkSlug": "humaneval",
+            "score": 18.29,
+            "source": "self-reported",
+            "sourceUrl": "https://github.com/baichuan-inc/Baichuan2/blob/main/README_EN.md",
+            "notes": "0-shot"
+          }
+        ],
+        "verificationNotes": "Confirmed real via arXiv 2309.10305, MarkTechPost (2023-09-19), and the official GitHub README_EN.md. All 5 benchmark scores (C-Eval 54.0, MMLU 54.16, CMMLU 57.07, GSM8K 24.49, HumanEval 18.29) confirmed to literally appear in the README table for the 7B-Base model. License and bilingual (zh/en) claim confirmed. Context length 4096 (4K) confirmed via Ollama model metadata; retargeted ctxK sourceUrl to a source that actually states the figure."
+      },
+      {
+        "name": "Baichuan 3",
+        "org": "Baichuan Intelligence",
+        "family": "Baichuan 3",
+        "releaseDate": "2024-01-29",
+        "status": "released",
+        "openness": "closed",
+        "license": "Proprietary (API-only)",
+        "paramsB": null,
+        "activeParamsB": null,
+        "archClass": "dense",
+        "archDisplay": "Undisclosed architecture; vendor describes total parameters as exceeding one trillion",
+        "ctxK": 32,
+        "modalities": [
+          "text"
+        ],
+        "langCount": 2,
+        "capabilities": {
+          "reasoning": false,
+          "coding": false,
+          "vision": false,
+          "functionCalling": false,
+          "toolUse": false,
+          "agentic": false
+        },
+        "apiAvailable": true,
+        "price": {
+          "input": 1.77,
+          "output": 1.77,
+          "provider": "Baichuan (platform.baichuan-ai.com, blended CNY rate converted to USD)"
+        },
+        "links": {
+          "docs": "platform.baichuan-ai.com"
+        },
+        "note": "Trillion-parameter-class closed model claimed to beat GPT-4 on CMMLU/Gaokao/AGIEval and medical exams (MCMLE/MedExam/CMExam); exact parameter count undisclosed.",
+        "quants": [],
+        "vramQ4Gb": null,
+        "vramFp16Gb": null,
+        "tps4090": null,
+        "tpsNote": null,
+        "effortLabel": null,
+        "isDefaultConfig": true,
+        "isBestConfig": true,
+        "specSources": {
+          "paramsB": "https://pandaily.com/baichuan-ai-releases-large-scale-model-baichuan-3-with-parameters-exceeding-one-trillion/",
+          "ctxK": "https://platform.baichuan-ai.com/prices",
+          "releaseDate": "https://pandaily.com/baichuan-ai-releases-large-scale-model-baichuan-3-with-parameters-exceeding-one-trillion/",
+          "openness": "https://platform.baichuan-ai.com/prices"
+        },
+        "results": [],
+        "verificationNotes": "Confirmed real: independent search of Pandaily's article corroborates a Jan 29 2024 release with parameters 'exceeding one trillion', matching the record exactly. No result rows were present to verify. paramsB left null (genuinely undisclosed beyond the '>1T' claim); price/openness left unchanged as no contradicting evidence was found (platform pricing page not independently re-fetched due to search-tool rate limiting)."
+      },
+      {
+        "name": "Baichuan 4",
+        "org": "Baichuan Intelligence",
+        "family": "Baichuan 4",
+        "releaseDate": "2024-05-22",
+        "status": "released",
+        "openness": "closed",
+        "license": "Proprietary (API-only)",
+        "paramsB": null,
+        "activeParamsB": null,
+        "archClass": "dense",
+        "archDisplay": "Undisclosed architecture; closed flagship with multimodal (MMMU/MMBench/MathVista) capability",
+        "ctxK": 32,
+        "modalities": [
+          "text",
+          "vision"
+        ],
+        "langCount": 2,
+        "capabilities": {
+          "reasoning": false,
+          "coding": true,
+          "vision": true,
+          "functionCalling": true,
+          "toolUse": true,
+          "agentic": true
+        },
+        "apiAvailable": true,
+        "price": {
+          "input": 14.75,
+          "output": 14.75,
+          "provider": "Baichuan (platform.baichuan-ai.com, blended CNY rate converted to USD)"
+        },
+        "links": {
+          "docs": "platform.baichuan-ai.com"
+        },
+        "note": "Closed flagship launched with the 'Baixiaoying' AI assistant; topped SuperCLUE (80.64) above GPT-4-Turbo-0125 and Claude 3 Opus on Chinese-language tasks at release.",
+        "quants": [],
+        "vramQ4Gb": null,
+        "vramFp16Gb": null,
+        "tps4090": null,
+        "tpsNote": null,
+        "effortLabel": null,
+        "isDefaultConfig": true,
+        "isBestConfig": true,
+        "specSources": {
+          "paramsB": "https://braintitan.medium.com/baichuan-intelligence-releases-baichuan-4-model-and-the-first-ai-intelligent-assistant-fb2736d8d2f2",
+          "ctxK": "https://platform.baichuan-ai.com/prices",
+          "releaseDate": "https://braintitan.medium.com/baichuan-intelligence-releases-baichuan-4-model-and-the-first-ai-intelligent-assistant-fb2736d8d2f2",
+          "openness": "https://platform.baichuan-ai.com/prices"
+        },
+        "results": [
+          {
+            "benchmarkSlug": "superclue",
+            "score": 80.64,
+            "source": "independent",
+            "sourceUrl": "https://inf.news/en/tech/893029cc0e7f6915602f285a8bb3202d.html",
+            "notes": "SuperCLUE comprehensive Chinese benchmark, surpassed GPT-4-Turbo-0125"
+          }
+        ],
+        "verificationNotes": "Confirmed real: braintitan.medium.com independently corroborates May 22 2024 release date, matching record. The inf.news sourceUrl returned HTTP 403 on direct fetch, but a fresh web search that crawled the same URL surfaced the literal text 'Baichuan 4 ranked first with a score of 80.64' on that page, confirming the SuperCLUE row. Kept as-is."
+      },
+      {
+        "name": "Inflection-1",
+        "org": "Inflection AI",
+        "family": "Inflection",
+        "releaseDate": "2023-06-22",
+        "status": "deprecated",
+        "openness": "closed",
+        "license": "Proprietary",
+        "paramsB": null,
+        "activeParamsB": null,
+        "archClass": "dense",
+        "archDisplay": "Dense Transformer (architecture, dataset, and training procedure undisclosed)",
+        "ctxK": 8,
+        "modalities": [
+          "text"
+        ],
+        "langCount": null,
+        "capabilities": {
+          "reasoning": false,
+          "coding": true,
+          "vision": false,
+          "functionCalling": false,
+          "toolUse": false,
+          "agentic": false
+        },
+        "apiAvailable": false,
+        "price": null,
+        "links": {
+          "docs": "inflection.ai/inflection-1"
+        },
+        "note": "Pi's original in-house model; GPT-3.5-class personal-AI chatbot tuned for empathetic conversation over coding or reasoning.",
+        "quants": [],
+        "vramQ4Gb": null,
+        "vramFp16Gb": null,
+        "tps4090": null,
+        "tpsNote": null,
+        "effortLabel": null,
+        "isDefaultConfig": true,
+        "isBestConfig": true,
+        "specSources": {
+          "releaseDate": "https://inflection.ai/inflection-1",
+          "openness": "https://inflection.ai/inflection-1"
+        },
+        "results": [
+          {
+            "benchmarkSlug": "mmlu",
+            "score": 72.7,
+            "source": "self-reported",
+            "sourceUrl": "https://inflection.ai/inflection-1",
+            "evaluatedAt": "2023-06-22",
+            "notes": "Average across 57 MMLU tasks; outperformed GPT-3.5, LLaMA, and PaLM-540B per Inflection's technical memo."
+          }
+        ],
+        "verificationNotes": "Confirmed real via direct fetch of inflection.ai/inflection-1: page literally states '72.7% on average across all 57 tasks' on MMLU, matching the score exactly. Fetch also confirmed the June 22 2023 announcement date. No changes made."
+      },
+      {
+        "name": "Inflection-2",
+        "org": "Inflection AI",
+        "family": "Inflection",
+        "releaseDate": "2023-11-22",
+        "status": "deprecated",
+        "openness": "closed",
+        "license": "Proprietary",
+        "paramsB": null,
+        "activeParamsB": null,
+        "archClass": "dense",
+        "archDisplay": "Dense Transformer (architecture undisclosed; trained at ~10^25 FLOPs)",
+        "ctxK": 8,
+        "modalities": [
+          "text"
+        ],
+        "langCount": null,
+        "capabilities": {
+          "reasoning": false,
+          "coding": true,
+          "vision": false,
+          "functionCalling": false,
+          "toolUse": false,
+          "agentic": false
+        },
+        "apiAvailable": false,
+        "price": null,
+        "links": {
+          "docs": "inflection.ai/inflection-2"
+        },
+        "note": "Trained on 5,000 H100 GPUs at ~10^25 FLOPs; billed at launch as the second-most-capable LLM in the world, beating PaLM 2 Large.",
+        "quants": [],
+        "vramQ4Gb": null,
+        "vramFp16Gb": null,
+        "tps4090": null,
+        "tpsNote": null,
+        "effortLabel": null,
+        "isDefaultConfig": true,
+        "isBestConfig": true,
+        "specSources": {
+          "releaseDate": "https://inflection.ai/inflection-2",
+          "openness": "https://inflection.ai/inflection-2"
+        },
+        "results": [
+          {
+            "benchmarkSlug": "mmlu",
+            "score": 79.6,
+            "source": "independent",
+            "sourceUrl": "https://www.searchenginejournal.com/new-ai-model-outperforms-googles-powerful-palm-2/502191/",
+            "notes": "Independent comparison table; Inflection-2 ranked 2nd behind GPT-4 (86.4), just above Claude-2 CoT (78.5). Literally confirmed on page."
+          },
+          {
+            "benchmarkSlug": "hellaswag",
+            "score": 89,
+            "source": "self-reported",
+            "sourceUrl": "https://inflection.ai/inflection-2",
+            "notes": "10-shot HellaSwag. Literally confirmed: page text states 'Inflection-2 reaches 89.0 on HellaSwag 10-shot compared to GPT-4's 95.3.'"
+          }
+        ],
+        "verificationNotes": "Confirmed model is real; training-completion/announcement dated Nov 22-28 2023 across sources (Forbes article dated Nov 22, 2023), consistent with record. DROPPED three result rows that could not be confirmed as literal text on the cited inflection.ai/inflection-2 page: self-reported MMLU 86.8, GSM8K 89.3, and TriviaQA 86.3. Direct full-text fetch of that page (twice) found these benchmark tables are presented only as chart IMAGES — the numeric strings '86.8', '89.3', and '86.3' do not appear anywhere in the page's actual text/markdown, and no alternate source could locate a text-form citation of these exact figures. Kept HellaSwag 89 (literally stated as '89.0' in body text) and independent MMLU 79.6 (literally confirmed on searchenginejournal.com's comparison table)."
+      },
+      {
+        "name": "Inflection-2.5",
+        "org": "Inflection AI",
+        "family": "Inflection",
+        "releaseDate": "2024-03-07",
+        "status": "deprecated",
+        "openness": "closed",
+        "license": "Proprietary",
+        "paramsB": null,
+        "activeParamsB": null,
+        "archClass": "dense",
+        "archDisplay": "Dense Transformer (architecture undisclosed)",
+        "ctxK": 8,
+        "modalities": [
+          "text"
+        ],
+        "langCount": null,
+        "capabilities": {
+          "reasoning": false,
+          "coding": true,
+          "vision": false,
+          "functionCalling": false,
+          "toolUse": false,
+          "agentic": false
+        },
+        "apiAvailable": false,
+        "price": null,
+        "links": {
+          "docs": "inflection.ai/inflection-2-5"
+        },
+        "note": "Reached ~94% of GPT-4's average IQ-benchmark performance using only 40% of GPT-4's training compute; Inflection's last flagship before the March 2024 Microsoft talent exodus.",
+        "quants": [],
+        "vramQ4Gb": null,
+        "vramFp16Gb": null,
+        "tps4090": null,
+        "tpsNote": null,
+        "effortLabel": null,
+        "isDefaultConfig": true,
+        "isBestConfig": true,
+        "specSources": {
+          "releaseDate": "https://inflection.ai/inflection-2-5",
+          "openness": "https://inflection.ai/inflection-2-5"
+        },
+        "results": [
+          {
+            "benchmarkSlug": "gpt4-relative-iq",
+            "score": 94,
+            "source": "self-reported",
+            "sourceUrl": "https://inflection.ai/inflection-2-5",
+            "evaluatedAt": "2024-03-07",
+            "notes": "Aggregate performance vs GPT-4 across Inflection's IQ suite (MMLU, GPQA Diamond, BIG-Bench-Hard, MBPP+/HumanEval+, HellaSwag, ARC-C); per-benchmark numbers were published only as chart images, not text, so exact figures are unavailable."
+          }
+        ],
+        "verificationNotes": "Confirmed real via direct fetch of inflection.ai/inflection-2-5: page literally states 'Inflection-2.5, now powering Pi, achieves more than 94% the average performance of GPT-4 despite using only 40% the training FLOPs,' matching the record exactly, and confirms March 7 2024 publish date. No changes made."
+      },
+      {
+        "name": "Llama-3.3-Nemotron-Super-49B v1 (Reasoning Off)",
+        "org": "NVIDIA",
+        "family": "Llama Nemotron",
+        "releaseDate": "2025-03-18",
+        "status": "released",
+        "openness": "open-weights",
+        "license": "NVIDIA Open Model License + Llama 3.3 Community License Agreement",
+        "paramsB": 49,
+        "activeParamsB": null,
+        "archClass": "dense",
+        "archDisplay": "NAS-derived dense Transformer (Llama-3.3-70B lineage; skip-attention & variable-FFN blocks)",
+        "ctxK": 128,
+        "modalities": [
+          "text"
+        ],
+        "langCount": 8,
+        "capabilities": {
+          "reasoning": false,
+          "coding": true,
+          "vision": false,
+          "functionCalling": true,
+          "toolUse": true,
+          "agentic": true
+        },
+        "apiAvailable": true,
+        "price": null,
+        "links": {
+          "hf": "nvidia/Llama-3_3-Nemotron-Super-49B-v1",
+          "docs": "build.nvidia.com/nvidia/llama-3_3-nemotron-super-49b-v1/modelcard"
+        },
+        "note": "NAS-compressed Llama-3.3-70B reasoning model with a toggleable 'detailed thinking on/off' system-prompt switch; optimized to fit a single H100-80GB at high throughput.",
+        "quants": [
+          "GGUF Q4",
+          "FP8",
+          "MLX"
+        ],
+        "vramQ4Gb": 30,
+        "vramFp16Gb": 98,
+        "tps4090": null,
+        "tpsNote": "Q4 (~30GB) exceeds a single RTX 4090's 24GB VRAM; NVIDIA targets a single H100/H200-80GB GPU instead.",
+        "effortLabel": "Reasoning Off",
+        "isDefaultConfig": true,
+        "isBestConfig": false,
+        "specSources": {
+          "releaseDate": "https://huggingface.co/nvidia/Llama-3_3-Nemotron-Super-49B-v1",
+          "paramsB": "https://huggingface.co/nvidia/Llama-3_3-Nemotron-Super-49B-v1",
+          "ctxK": "https://huggingface.co/nvidia/Llama-3_3-Nemotron-Super-49B-v1",
+          "openness": "https://huggingface.co/nvidia/Llama-3_3-Nemotron-Super-49B-v1"
+        },
+        "results": [
+          {
+            "benchmarkSlug": "arena-hard",
+            "score": 88.3,
+            "source": "self-reported",
+            "sourceUrl": "https://huggingface.co/nvidia/Llama-3_3-Nemotron-Super-49B-v1",
+            "notes": "Reasoning off. Literally confirmed on HF model card."
+          },
+          {
+            "benchmarkSlug": "math",
+            "score": 74,
+            "source": "self-reported",
+            "sourceUrl": "https://huggingface.co/nvidia/Llama-3_3-Nemotron-Super-49B-v1",
+            "notes": "MATH500, reasoning off. Literally confirmed on HF model card."
+          },
+          {
+            "benchmarkSlug": "aime",
+            "score": 13.33,
+            "source": "self-reported",
+            "sourceUrl": "https://huggingface.co/nvidia/Llama-3_3-Nemotron-Super-49B-v1",
+            "notes": "AIME25, reasoning off. Literally confirmed on HF model card."
+          },
+          {
+            "benchmarkSlug": "gpqa",
+            "score": 50,
+            "source": "self-reported",
+            "sourceUrl": "https://huggingface.co/nvidia/Llama-3_3-Nemotron-Super-49B-v1",
+            "notes": "reasoning off. Literally confirmed on HF model card."
+          },
+          {
+            "benchmarkSlug": "ifeval",
+            "score": 89.21,
+            "source": "self-reported",
+            "sourceUrl": "https://huggingface.co/nvidia/Llama-3_3-Nemotron-Super-49B-v1",
+            "notes": "Strict, reasoning off. Literally confirmed on HF model card."
+          },
+          {
+            "benchmarkSlug": "mbpp",
+            "score": 84.9,
+            "source": "self-reported",
+            "sourceUrl": "https://huggingface.co/nvidia/Llama-3_3-Nemotron-Super-49B-v1",
+            "notes": "0-shot, reasoning off. Literally confirmed on HF model card."
+          },
+          {
+            "benchmarkSlug": "bfcl-v2-live",
+            "score": 73.7,
+            "source": "self-reported",
+            "sourceUrl": "https://huggingface.co/nvidia/Llama-3_3-Nemotron-Super-49B-v1",
+            "notes": "reasoning off. Literally confirmed on HF model card."
+          },
+          {
+            "benchmarkSlug": "mt-bench",
+            "score": 9.17,
+            "source": "self-reported",
+            "sourceUrl": "https://huggingface.co/nvidia/Llama-3_3-Nemotron-Super-49B-v1",
+            "notes": "reasoning off. Literally confirmed on HF model card."
+          }
+        ],
+        "verificationNotes": "Confirmed real via direct fetch of the HF model card: release date March 18 2025, ~49-50B params (HF UI badge rounds to '50B params'; NVIDIA's own naming and docs use 49B, kept as record states), NVIDIA Open Model License + Llama 3.3 Community License, 128K context, and English + 7 other languages (German/French/Italian/Portuguese/Hindi/Spanish/Thai = 8 total, matching langCount). All 8 'reasoning off' benchmark scores (Arena-Hard 88.3, MATH500 74, AIME25 13.33, GPQA 50, IFEval 89.21, MBPP 84.9, BFCL-v2-live 73.7, MT-Bench 9.17) were independently re-fetched and literally match the HF page. GGUF/FP8/MLX quant availability confirmed via existing bartowski/nvidia/mlx-community repos. Single-H100/H200 deployment framing confirmed via NVIDIA-sourced descriptions. No changes made."
+      },
+      {
+        "name": "Llama-3.3-Nemotron-Super-49B v1 (Reasoning On)",
+        "org": "NVIDIA",
+        "family": "Llama Nemotron",
+        "releaseDate": "2025-03-18",
+        "status": "released",
+        "openness": "open-weights",
+        "license": "NVIDIA Open Model License + Llama 3.3 Community License Agreement",
+        "paramsB": 49,
+        "activeParamsB": null,
+        "archClass": "dense",
+        "archDisplay": "NAS-derived dense Transformer (Llama-3.3-70B lineage; skip-attention & variable-FFN blocks)",
+        "ctxK": 128,
+        "modalities": [
+          "text"
+        ],
+        "langCount": 8,
+        "capabilities": {
+          "reasoning": true,
+          "coding": true,
+          "vision": false,
+          "functionCalling": true,
+          "toolUse": true,
+          "agentic": true
+        },
+        "apiAvailable": true,
+        "price": null,
+        "links": {
+          "hf": "nvidia/Llama-3_3-Nemotron-Super-49B-v1",
+          "docs": "build.nvidia.com/nvidia/llama-3_3-nemotron-super-49b-v1/modelcard"
+        },
+        "note": "Same weights as the reasoning-off configuration, activated via a 'detailed thinking on' system prompt with temperature 0.6/top_p 0.95 for chain-of-thought decoding.",
+        "quants": [
+          "GGUF Q4",
+          "FP8",
+          "MLX"
+        ],
+        "vramQ4Gb": 30,
+        "vramFp16Gb": 98,
+        "tps4090": null,
+        "tpsNote": "Q4 (~30GB) exceeds a single RTX 4090's 24GB VRAM; NVIDIA targets a single H100/H200-80GB GPU instead.",
+        "effortLabel": "Reasoning On",
+        "isDefaultConfig": false,
+        "isBestConfig": true,
+        "specSources": {
+          "releaseDate": "https://huggingface.co/nvidia/Llama-3_3-Nemotron-Super-49B-v1",
+          "paramsB": "https://huggingface.co/nvidia/Llama-3_3-Nemotron-Super-49B-v1",
+          "ctxK": "https://huggingface.co/nvidia/Llama-3_3-Nemotron-Super-49B-v1",
+          "openness": "https://huggingface.co/nvidia/Llama-3_3-Nemotron-Super-49B-v1"
+        },
+        "results": [
+          {
+            "benchmarkSlug": "math",
+            "score": 96.6,
+            "source": "self-reported",
+            "sourceUrl": "https://huggingface.co/nvidia/Llama-3_3-Nemotron-Super-49B-v1",
+            "notes": "MATH500, reasoning on"
+          },
+          {
+            "benchmarkSlug": "aime",
+            "score": 58.4,
+            "source": "self-reported",
+            "sourceUrl": "https://huggingface.co/nvidia/Llama-3_3-Nemotron-Super-49B-v1",
+            "notes": "AIME25, reasoning on"
+          },
+          {
+            "benchmarkSlug": "gpqa",
+            "score": 66.67,
+            "source": "self-reported",
+            "sourceUrl": "https://huggingface.co/nvidia/Llama-3_3-Nemotron-Super-49B-v1",
+            "notes": "reasoning on"
+          },
+          {
+            "benchmarkSlug": "mbpp",
+            "score": 91.3,
+            "source": "self-reported",
+            "sourceUrl": "https://huggingface.co/nvidia/Llama-3_3-Nemotron-Super-49B-v1",
+            "notes": "0-shot, reasoning on"
+          }
+        ],
+        "verificationNotes": "Confirmed real via NVIDIA's official HF model card (fetched directly). All specs match: 49B dense NAS-derived model from Llama-3.3-70B, 128K context, NVIDIA Open Model License + Llama 3.3 Community License, released 2025-03-18. All 4 result rows (MATH500 96.6, AIME25 58.4, GPQA 66.67, MBPP 91.3) literally confirmed in the reasoning-on column of the model card's benchmark table. No changes needed."
+      },
+      {
+        "name": "Llama-3.1-Nemotron-Ultra-253B v1 (Reasoning Off)",
+        "org": "NVIDIA",
+        "family": "Llama Nemotron",
+        "releaseDate": "2025-04-07",
+        "status": "released",
+        "openness": "open-weights",
+        "license": "NVIDIA Open Model License + Llama 3.1 Community License Agreement",
+        "paramsB": 253,
+        "activeParamsB": null,
+        "archClass": "dense",
+        "archDisplay": "NAS-derived dense Transformer (Llama-3.1-405B lineage; skip-attention & variable-FFN blocks)",
+        "ctxK": 128,
+        "modalities": [
+          "text"
+        ],
+        "langCount": 8,
+        "capabilities": {
+          "reasoning": false,
+          "coding": true,
+          "vision": false,
+          "functionCalling": true,
+          "toolUse": true,
+          "agentic": true
+        },
+        "apiAvailable": true,
+        "price": null,
+        "links": {
+          "hf": "nvidia/Llama-3_1-Nemotron-Ultra-253B-v1",
+          "docs": "build.nvidia.com/nvidia/llama-3_1-nemotron-ultra-253b-v1/modelcard"
+        },
+        "note": "NAS-derived flagship reasoning model distilled from Llama-3.1-405B; briefly the most intelligent open model, outperforming DeepSeek-R1 at roughly half the size.",
+        "quants": [
+          "GGUF Q4",
+          "FP8"
+        ],
+        "vramQ4Gb": 127,
+        "vramFp16Gb": 506,
+        "tps4090": null,
+        "tpsNote": "253B parameters (FP16 ~506GB, Q4 ~127GB) require a multi-GPU node such as 8xH100; far beyond a single RTX 4090.",
+        "effortLabel": "Reasoning Off",
+        "isDefaultConfig": true,
+        "isBestConfig": false,
+        "specSources": {
+          "releaseDate": "https://huggingface.co/nvidia/Llama-3_1-Nemotron-Ultra-253B-v1",
+          "paramsB": "https://huggingface.co/nvidia/Llama-3_1-Nemotron-Ultra-253B-v1",
+          "ctxK": "https://huggingface.co/nvidia/Llama-3_1-Nemotron-Ultra-253B-v1",
+          "openness": "https://huggingface.co/nvidia/Llama-3_1-Nemotron-Ultra-253B-v1"
+        },
+        "results": [
+          {
+            "benchmarkSlug": "gpqa",
+            "score": 56.6,
+            "source": "self-reported",
+            "sourceUrl": "https://huggingface.co/nvidia/Llama-3_1-Nemotron-Ultra-253B-v1",
+            "notes": "reasoning off"
+          },
+          {
+            "benchmarkSlug": "aime",
+            "score": 16.67,
+            "source": "self-reported",
+            "sourceUrl": "https://huggingface.co/nvidia/Llama-3_1-Nemotron-Ultra-253B-v1",
+            "notes": "AIME25, reasoning off"
+          },
+          {
+            "benchmarkSlug": "math",
+            "score": 80.4,
+            "source": "self-reported",
+            "sourceUrl": "https://huggingface.co/nvidia/Llama-3_1-Nemotron-Ultra-253B-v1",
+            "notes": "MATH500, reasoning off"
+          },
+          {
+            "benchmarkSlug": "livecodebench",
+            "score": 29.03,
+            "source": "self-reported",
+            "sourceUrl": "https://huggingface.co/nvidia/Llama-3_1-Nemotron-Ultra-253B-v1",
+            "notes": "reasoning off"
+          },
+          {
+            "benchmarkSlug": "ifeval",
+            "score": 88.85,
+            "source": "self-reported",
+            "sourceUrl": "https://huggingface.co/nvidia/Llama-3_1-Nemotron-Ultra-253B-v1",
+            "notes": "reasoning off"
+          },
+          {
+            "benchmarkSlug": "bfcl-v2-live",
+            "score": 73.62,
+            "source": "self-reported",
+            "sourceUrl": "https://huggingface.co/nvidia/Llama-3_1-Nemotron-Ultra-253B-v1",
+            "notes": "reasoning off"
+          }
+        ],
+        "verificationNotes": "Confirmed real via NVIDIA's official HF model card (fetched directly). 253B dense NAS-derived model from Llama-3.1-405B, 128K context, correct license, released 2025-04-07. All 6 result rows in the reasoning-off column (GPQA 56.6, AIME25 16.67, MATH500 80.4, LiveCodeBench 29.03, IFEval 88.85, BFCL-v2-live 73.62) literally confirmed on the model card. No changes needed."
+      },
+      {
+        "name": "Llama-3.1-Nemotron-Ultra-253B v1 (Reasoning On)",
+        "org": "NVIDIA",
+        "family": "Llama Nemotron",
+        "releaseDate": "2025-04-07",
+        "status": "released",
+        "openness": "open-weights",
+        "license": "NVIDIA Open Model License + Llama 3.1 Community License Agreement",
+        "paramsB": 253,
+        "activeParamsB": null,
+        "archClass": "dense",
+        "archDisplay": "NAS-derived dense Transformer (Llama-3.1-405B lineage; skip-attention & variable-FFN blocks)",
+        "ctxK": 128,
+        "modalities": [
+          "text"
+        ],
+        "langCount": 8,
+        "capabilities": {
+          "reasoning": true,
+          "coding": true,
+          "vision": false,
+          "functionCalling": true,
+          "toolUse": true,
+          "agentic": true
+        },
+        "apiAvailable": true,
+        "price": null,
+        "links": {
+          "hf": "nvidia/Llama-3_1-Nemotron-Ultra-253B-v1",
+          "docs": "build.nvidia.com/nvidia/llama-3_1-nemotron-ultra-253b-v1/modelcard"
+        },
+        "note": "Reasoning-on configuration (chain-of-thought via <think> tags) beat DeepSeek-R1 on GPQA (76.0 vs 71.5), IFEval (89.5 vs 83.3) and LiveCodeBench (66.3 vs 65.9) at roughly 4x the inference throughput.",
+        "quants": [
+          "GGUF Q4",
+          "FP8"
+        ],
+        "vramQ4Gb": 127,
+        "vramFp16Gb": 506,
+        "tps4090": null,
+        "tpsNote": "253B parameters (FP16 ~506GB, Q4 ~127GB) require a multi-GPU node such as 8xH100; far beyond a single RTX 4090.",
+        "effortLabel": "Reasoning On",
+        "isDefaultConfig": false,
+        "isBestConfig": true,
+        "specSources": {
+          "releaseDate": "https://huggingface.co/nvidia/Llama-3_1-Nemotron-Ultra-253B-v1",
+          "paramsB": "https://huggingface.co/nvidia/Llama-3_1-Nemotron-Ultra-253B-v1",
+          "ctxK": "https://huggingface.co/nvidia/Llama-3_1-Nemotron-Ultra-253B-v1",
+          "openness": "https://huggingface.co/nvidia/Llama-3_1-Nemotron-Ultra-253B-v1"
+        },
+        "results": [
+          {
+            "benchmarkSlug": "gpqa",
+            "score": 76.01,
+            "source": "self-reported",
+            "sourceUrl": "https://huggingface.co/nvidia/Llama-3_1-Nemotron-Ultra-253B-v1",
+            "notes": "reasoning on; DeepSeek-R1 scored 71.5 per VentureBeat's comparison"
+          },
+          {
+            "benchmarkSlug": "aime",
+            "score": 72.5,
+            "source": "self-reported",
+            "sourceUrl": "https://huggingface.co/nvidia/Llama-3_1-Nemotron-Ultra-253B-v1",
+            "notes": "AIME25, reasoning on; DeepSeek-R1 scored 79.8"
+          },
+          {
+            "benchmarkSlug": "math",
+            "score": 97,
+            "source": "self-reported",
+            "sourceUrl": "https://huggingface.co/nvidia/Llama-3_1-Nemotron-Ultra-253B-v1",
+            "notes": "MATH500, reasoning on; DeepSeek-R1 scored 97.3"
+          },
+          {
+            "benchmarkSlug": "livecodebench",
+            "score": 66.31,
+            "source": "self-reported",
+            "sourceUrl": "https://huggingface.co/nvidia/Llama-3_1-Nemotron-Ultra-253B-v1",
+            "notes": "reasoning on; DeepSeek-R1 scored 65.9 per VentureBeat"
+          },
+          {
+            "benchmarkSlug": "ifeval",
+            "score": 89.45,
+            "source": "self-reported",
+            "sourceUrl": "https://huggingface.co/nvidia/Llama-3_1-Nemotron-Ultra-253B-v1",
+            "notes": "reasoning on; DeepSeek-R1 scored 83.3 per VentureBeat"
+          },
+          {
+            "benchmarkSlug": "bfcl-v2-live",
+            "score": 74.1,
+            "source": "self-reported",
+            "sourceUrl": "https://huggingface.co/nvidia/Llama-3_1-Nemotron-Ultra-253B-v1",
+            "notes": "reasoning on"
+          }
+        ],
+        "verificationNotes": "Confirmed real via NVIDIA's official HF model card (fetched directly), same page as reasoning-off variant. All 6 result rows in the reasoning-on column (GPQA 76.01, AIME25 72.5, MATH500 97, LiveCodeBench 66.31, IFEval 89.45, BFCL-v2-live 74.1) literally confirmed on the model card. DeepSeek-R1 comparison figures in notes are contextual claims from VentureBeat, not independently re-verified against a DeepSeek source, but the underlying Nemotron scores themselves are confirmed. No changes needed."
+      },
+      {
+        "name": "Dolphin 2.5 Mixtral 8x7B",
+        "org": "Cognitive Computations (Eric Hartford)",
+        "family": "Dolphin",
+        "releaseDate": "2023-12-14",
+        "status": "released",
+        "openness": "open-weights",
+        "license": "Apache-2.0",
+        "paramsB": 46.7,
+        "activeParamsB": 12.9,
+        "archClass": "moe",
+        "archDisplay": "Sparse Mixture-of-Experts (8 experts, top-2 routing; Mixtral 8x7B base)",
+        "ctxK": 16,
+        "modalities": [
+          "text"
+        ],
+        "langCount": null,
+        "capabilities": {
+          "reasoning": false,
+          "coding": true,
+          "vision": false,
+          "functionCalling": false,
+          "toolUse": false,
+          "agentic": false
+        },
+        "apiAvailable": false,
+        "price": null,
+        "links": {
+          "hf": "dphn/dolphin-2.5-mixtral-8x7b",
+          "docs": "erichartford.com/dolphin-25-mixtral-8x7b"
+        },
+        "note": "QLoRA fine-tune of Mixtral 8x7B (Apache-2.0) with refusals filtered out and Dolphin-Coder/MagiCoder data added; a benchmark of the late-2023 'uncensored' MoE fine-tune wave.",
+        "quants": [
+          "GGUF Q4",
+          "GGUF Q5",
+          "GGUF Q8",
+          "AWQ",
+          "GPTQ"
+        ],
+        "vramQ4Gb": 26,
+        "vramFp16Gb": 93,
+        "tps4090": null,
+        "tpsNote": "Q4 (~26GB) slightly exceeds a single RTX 4090's 24GB VRAM; typically run with partial CPU offload or reduced context.",
+        "effortLabel": null,
+        "isDefaultConfig": true,
+        "isBestConfig": true,
+        "specSources": {
+          "releaseDate": "https://huggingface.co/api/models/dphn/dolphin-2.5-mixtral-8x7b",
+          "paramsB": "https://huggingface.co/dphn/dolphin-2.5-mixtral-8x7b",
+          "ctxK": "https://huggingface.co/dphn/dolphin-2.5-mixtral-8x7b",
+          "openness": "https://huggingface.co/dphn/dolphin-2.5-mixtral-8x7b"
+        },
+        "results": [],
+        "verificationNotes": "Confirmed real: HF repo dphn/dolphin-2.5-mixtral-8x7b exists, fine-tune of Mixtral-8x7B by Eric Hartford / Cognitive Computations, Apache-2.0, base 32K context fine-tuned at 16K, trained with Dolphin-Coder/MagiCoder data and refusals filtered (confirmed on model card and erichartford.com blog). releaseDate corrected/confirmed precisely via HF API createdAt field = 2023-12-14T00:45:47Z, matching the record exactly (training itself ran Dec 9-11, 2023, blog post published Dec 22, 2023). No results rows were present to verify. No changes needed."
+      },
+      {
+        "name": "Snowflake Arctic",
+        "org": "Snowflake",
+        "family": "Arctic",
+        "releaseDate": "2024-04-24",
+        "status": "released",
+        "openness": "open-weights",
+        "license": "Apache-2.0",
+        "paramsB": 480,
+        "activeParamsB": 17,
+        "archClass": "hybrid",
+        "archDisplay": "Dense-MoE Hybrid (10B dense transformer + 128x3.66B residual MoE experts, top-2 gating)",
+        "ctxK": 4,
+        "modalities": [
+          "text"
+        ],
+        "langCount": null,
+        "capabilities": {
+          "reasoning": false,
+          "coding": true,
+          "vision": false,
+          "functionCalling": false,
+          "toolUse": false,
+          "agentic": false
+        },
+        "apiAvailable": true,
+        "price": null,
+        "links": {
+          "hf": "Snowflake/snowflake-arctic-instruct",
+          "gh": "Snowflake-Labs/snowflake-arctic",
+          "docs": "snowflake.com/en/blog/arctic-open-efficient-foundation-language-models-snowflake"
+        },
+        "note": "Apache-2.0 480B-total/17B-active dense+MoE hybrid (128 experts) tuned for enterprise SQL/code/instruction-following, trained for under $2M.",
+        "quants": [
+          "GGUF Q4"
+        ],
+        "vramQ4Gb": 291,
+        "vramFp16Gb": 960,
+        "tps4090": null,
+        "tpsNote": "480B total parameters (Q4 ~291GB) require a multi-GPU server; not runnable on a single consumer GPU, and mainline llama.cpp needs a community fork for Arctic's architecture.",
+        "effortLabel": null,
+        "isDefaultConfig": true,
+        "isBestConfig": true,
+        "specSources": {
+          "releaseDate": "https://www.snowflake.com/en/blog/arctic-open-efficient-foundation-language-models-snowflake/",
+          "paramsB": "https://huggingface.co/Snowflake/snowflake-arctic-instruct",
+          "ctxK": "https://huggingface.co/Snowflake/snowflake-arctic-instruct/raw/main/config.json",
+          "openness": "https://huggingface.co/Snowflake/snowflake-arctic-instruct"
+        },
+        "results": [
+          {
+            "benchmarkSlug": "mmlu",
+            "score": 67.3,
+            "source": "independent",
+            "sourceUrl": "https://www.flexera.com/blog/finops/snowflake-arctic",
+            "notes": "Reproduces Snowflake's official benchmark chart."
+          },
+          {
+            "benchmarkSlug": "gsm8k",
+            "score": 74.2,
+            "source": "independent",
+            "sourceUrl": "https://www.flexera.com/blog/finops/snowflake-arctic"
+          },
+          {
+            "benchmarkSlug": "humaneval",
+            "score": 64.3,
+            "source": "independent",
+            "sourceUrl": "https://www.flexera.com/blog/finops/snowflake-arctic"
+          },
+          {
+            "benchmarkSlug": "ifeval",
+            "score": 52.4,
+            "source": "independent",
+            "sourceUrl": "https://www.flexera.com/blog/finops/snowflake-arctic"
+          }
+        ],
+        "verificationNotes": "Confirmed real via Snowflake's official blog (fetched directly): 480B total / 17B active dense+MoE hybrid (10B dense + 128x3.66B experts, top-2 gating), Apache-2.0, released 2024-04-24, trained for under $2M. Context length of 4K confirmed directly from the HF config.json max_position_embeddings=4096 field. All 4 result rows (MMLU 67.3, GSM8k 74.2, HumanEval 64.3, IFEval 52.4) literally confirmed present on the cited Flexera blog page. No changes needed."
+      }
+    ]
+  },
+  "workflowProgress": [
+    {
+      "type": "workflow_phase",
+      "index": 1,
+      "title": "Research"
+    },
+    {
+      "type": "workflow_phase",
+      "index": 2,
+      "title": "Verify"
+    },
+    {
+      "type": "workflow_agent",
+      "index": 1,
+      "label": "research:Amazon",
+      "phaseIndex": 1,
+      "phaseTitle": "Research",
+      "agentId": "a151f48db2a190b83",
+      "model": "claude-sonnet-5",
+      "state": "done",
+      "startedAt": 1783901551874,
+      "queuedAt": 1783901551863,
+      "attempt": 1,
+      "lastToolName": "StructuredOutput",
+      "promptPreview": "You have web research tools. FIRST load them: call ToolSearch with query \"select:mcp__4dbcbf51-5bb9-4f93-a61f-18044e1a3091__web_search,mcp__4dbcbf51-5bb9-4f93-a61f-18044e1a3091__web_fetch\" to load Parallel P0 web_search/web_fetch (pass a stable session_id + model_name on every call). Built-in WebSearch/WebFetch may also load via ToolSearch query \"web search fetch\". Use REAL searches — never answer…",
+      "lastProgressAt": 1783902520810,
+      "tokens": 196853,
+      "toolCalls": 94,
+      "durationMs": 968936,
+      "resultPreview": "{\"models\":[{\"name\":\"Amazon Titan Text (Express & Lite)\",\"org\":\"Amazon\",\"family\":\"Amazon Titan\",\"releaseDate\":\"2023-11-29\",\"status\":\"released\",\"openness\":\"closed\",\"license\":\"Proprietary (AWS Bedrock service terms)\",\"paramsB\":null,\"activeParamsB\":null,\"archClass\":\"dense\",\"archDisplay\":\"Dense transformer (parameter count undisclosed)\",\"ctxK\":8,\"modalities\":[\"text\"],\"langCount\":null,\"capabilities\":{\"r…"
+    },
+    {
+      "type": "workflow_agent",
+      "index": 2,
+      "label": "research:MiniMax",
+      "phaseIndex": 1,
+      "phaseTitle": "Research",
+      "agentId": "a54d66dd131ef7c58",
+      "model": "claude-sonnet-5",
+      "state": "done",
+      "startedAt": 1783901551875,
+      "queuedAt": 1783901551863,
+      "attempt": 1,
+      "lastToolName": "StructuredOutput",
+      "promptPreview": "You have web research tools. FIRST load them: call ToolSearch with query \"select:mcp__4dbcbf51-5bb9-4f93-a61f-18044e1a3091__web_search,mcp__4dbcbf51-5bb9-4f93-a61f-18044e1a3091__web_fetch\" to load Parallel P0 web_search/web_fetch (pass a stable session_id + model_name on every call). Built-in WebSearch/WebFetch may also load via ToolSearch query \"web search fetch\". Use REAL searches — never answer…",
+      "lastProgressAt": 1783902360906,
+      "tokens": 152567,
+      "toolCalls": 75,
+      "durationMs": 809031,
+      "resultPreview": "{\"models\":[{\"name\":\"MiniMax-VL-01\",\"org\":\"MiniMax\",\"family\":\"MiniMax-01\",\"releaseDate\":\"2025-01-14\",\"status\":\"released\",\"openness\":\"open-weights\",\"license\":\"Custom MiniMax Model License (free for most use; platforms with >100M MAU must request a separate license; code under MIT)\",\"paramsB\":456,\"activeParamsB\":45.9,\"archClass\":\"hybrid\",\"archDisplay\":\"Hybrid Lightning+Softmax Attention MoE (80 layer…"
+    },
+    {
+      "type": "workflow_agent",
+      "index": 3,
+      "label": "research:Inflection AI",
+      "phaseIndex": 1,
+      "phaseTitle": "Research",
+      "agentId": "a633030dc154aef4e",
+      "model": "claude-sonnet-5",
+      "state": "done",
+      "startedAt": 1783901551875,
+      "queuedAt": 1783901551864,
+      "attempt": 1,
+      "lastToolName": "StructuredOutput",
+      "promptPreview": "You have web research tools. FIRST load them: call ToolSearch with query \"select:mcp__4dbcbf51-5bb9-4f93-a61f-18044e1a3091__web_search,mcp__4dbcbf51-5bb9-4f93-a61f-18044e1a3091__web_fetch\" to load Parallel P0 web_search/web_fetch (pass a stable session_id + model_name on every call). Built-in WebSearch/WebFetch may also load via ToolSearch query \"web search fetch\". Use REAL searches — never answer…",
+      "lastProgressAt": 1783902572520,
+      "tokens": 170439,
+      "toolCalls": 88,
+      "durationMs": 1020645,
+      "resultPreview": "{\"models\":[{\"name\":\"Inflection-1\",\"org\":\"Inflection AI\",\"family\":\"Inflection\",\"releaseDate\":\"2023-06-22\",\"status\":\"deprecated\",\"openness\":\"closed\",\"license\":\"Proprietary\",\"paramsB\":null,\"activeParamsB\":null,\"archClass\":\"dense\",\"archDisplay\":\"Dense Transformer (architecture, dataset, and training procedure undisclosed)\",\"ctxK\":8,\"modalities\":[\"text\"],\"langCount\":null,\"capabilities\":{\"reasoning\":fal…"
+    },
+    {
+      "type": "workflow_agent",
+      "index": 4,
+      "label": "verify:Amazon",
+      "phaseIndex": 2,
+      "phaseTitle": "Verify",
+      "agentId": "a8ee9408a8ecf1bf5",
+      "model": "claude-sonnet-5",
+      "state": "done",
+      "startedAt": 1783902572534,
+      "queuedAt": 1783902572524,
+      "attempt": 1,
+      "lastToolName": "StructuredOutput",
+      "promptPreview": "You have web research tools. FIRST load them: call ToolSearch with query \"select:mcp__4dbcbf51-5bb9-4f93-a61f-18044e1a3091__web_search,mcp__4dbcbf51-5bb9-4f93-a61f-18044e1a3091__web_fetch\" to load Parallel P0 web_search/web_fetch (pass a stable session_id + model_name on every call). Built-in WebSearch/WebFetch may also load via ToolSearch query \"web search fetch\". Use REAL searches — never answer…",
+      "lastProgressAt": 1783902825659,
+      "tokens": 84790,
+      "toolCalls": 31,
+      "durationMs": 253125,
+      "resultPreview": "{\"models\":[{\"name\":\"Amazon Titan Text (Express & Lite)\",\"org\":\"Amazon\",\"family\":\"Amazon Titan\",\"releaseDate\":\"2023-11-29\",\"status\":\"released\",\"openness\":\"closed\",\"license\":\"Proprietary (AWS Bedrock service terms)\",\"paramsB\":null,\"activeParamsB\":null,\"archClass\":\"dense\",\"archDisplay\":\"Dense transformer (parameter count undisclosed)\",\"ctxK\":8,\"modalities\":[\"text\"],\"langCount\":null,\"capabilities\":{\"r…"
+    },
+    {
+      "type": "workflow_agent",
+      "index": 5,
+      "label": "verify:MiniMax",
+      "phaseIndex": 2,
+      "phaseTitle": "Verify",
+      "agentId": "a786a30038a7ca00c",
+      "model": "claude-sonnet-5",
+      "state": "done",
+      "startedAt": 1783902572534,
+      "queuedAt": 1783902572524,
+      "attempt": 1,
+      "lastToolName": "StructuredOutput",
+      "promptPreview": "You have web research tools. FIRST load them: call ToolSearch with query \"select:mcp__4dbcbf51-5bb9-4f93-a61f-18044e1a3091__web_search,mcp__4dbcbf51-5bb9-4f93-a61f-18044e1a3091__web_fetch\" to load Parallel P0 web_search/web_fetch (pass a stable session_id + model_name on every call). Built-in WebSearch/WebFetch may also load via ToolSearch query \"web search fetch\". Use REAL searches — never answer…",
+      "lastProgressAt": 1783902820439,
+      "tokens": 82431,
+      "toolCalls": 31,
+      "durationMs": 247904,
+      "resultPreview": "{\"models\":[{\"name\":\"MiniMax-Text-01\",\"org\":\"MiniMax\",\"family\":\"MiniMax-01\",\"releaseDate\":\"2025-01-15\",\"status\":\"released\",\"openness\":\"open-weights\",\"license\":\"MiniMax Model License Agreement (custom, source-available; code under MIT)\",\"paramsB\":456,\"activeParamsB\":45.9,\"archClass\":\"hybrid\",\"archDisplay\":\"Hybrid Lightning Attention + Softmax Attention, MoE (32 experts, top-2 routing, 80 layers)\",\"c…"
+    },
+    {
+      "type": "workflow_agent",
+      "index": 6,
+      "label": "verify:Baichuan Intelligence",
+      "phaseIndex": 2,
+      "phaseTitle": "Verify",
+      "agentId": "a76289040691aba90",
+      "model": "claude-sonnet-5",
+      "state": "done",
+      "startedAt": 1783902572535,
+      "queuedAt": 1783902572524,
+      "attempt": 1,
+      "lastToolName": "StructuredOutput",
+      "promptPreview": "You have web research tools. FIRST load them: call ToolSearch with query \"select:mcp__4dbcbf51-5bb9-4f93-a61f-18044e1a3091__web_search,mcp__4dbcbf51-5bb9-4f93-a61f-18044e1a3091__web_fetch\" to load Parallel P0 web_search/web_fetch (pass a stable session_id + model_name on every call). Built-in WebSearch/WebFetch may also load via ToolSearch query \"web search fetch\". Use REAL searches — never answer…",
+      "lastProgressAt": 1783902911131,
+      "tokens": 88987,
+      "toolCalls": 42,
+      "durationMs": 338596,
+      "resultPreview": "{\"models\":[{\"name\":\"Baichuan 3\",\"org\":\"Baichuan Intelligence\",\"family\":\"Baichuan 3\",\"releaseDate\":\"2024-01-29\",\"status\":\"released\",\"openness\":\"closed\",\"license\":\"Proprietary (API-only)\",\"paramsB\":null,\"activeParamsB\":null,\"archClass\":\"dense\",\"archDisplay\":\"Undisclosed architecture; vendor describes total parameters as exceeding one trillion\",\"ctxK\":32,\"modalities\":[\"text\"],\"langCount\":2,\"capabilit…"
+    },
+    {
+      "type": "workflow_agent",
+      "index": 7,
+      "label": "verify:NVIDIA",
+      "phaseIndex": 2,
+      "phaseTitle": "Verify",
+      "agentId": "a967614cda6ca24d4",
+      "model": "claude-sonnet-5",
+      "state": "done",
+      "startedAt": 1783902572535,
+      "queuedAt": 1783902572524,
+      "attempt": 1,
+      "lastToolName": "StructuredOutput",
+      "promptPreview": "You have web research tools. FIRST load them: call ToolSearch with query \"select:mcp__4dbcbf51-5bb9-4f93-a61f-18044e1a3091__web_search,mcp__4dbcbf51-5bb9-4f93-a61f-18044e1a3091__web_fetch\" to load Parallel P0 web_search/web_fetch (pass a stable session_id + model_name on every call). Built-in WebSearch/WebFetch may also load via ToolSearch query \"web search fetch\". Use REAL searches — never answer…",
+      "lastProgressAt": 1783902771672,
+      "tokens": 68777,
+      "toolCalls": 17,
+      "durationMs": 199137,
+      "resultPreview": "{\"models\":[{\"name\":\"Llama-3.3-Nemotron-Super-49B v1 (Reasoning On)\",\"org\":\"NVIDIA\",\"family\":\"Llama Nemotron\",\"releaseDate\":\"2025-03-18\",\"status\":\"released\",\"openness\":\"open-weights\",\"license\":\"NVIDIA Open Model License + Llama 3.3 Community License Agreement\",\"paramsB\":49,\"activeParamsB\":null,\"archClass\":\"dense\",\"archDisplay\":\"NAS-derived dense Transformer (Llama-3.3-70B lineage; skip-attention & …"
+    }
+  ],
+  "totalTokens": 844844,
+  "totalToolCalls": 378
+}

@@ -1,0 +1,47 @@
+{
+  "name": "GigaChat",
+  "org": "Sber (Sberbank)",
+  "family": "GigaChat",
+  "releaseDate": "2023-04-24",
+  "status": "released",
+  "openness": "closed",
+  "license": "Proprietary",
+  "paramsB": null,
+  "activeParamsB": null,
+  "archClass": "dense",
+  "archDisplay": "Proprietary ensemble architecture (NeONKA; undisclosed details)",
+  "ctxK": 128,
+  "modalities": [
+    "text"
+  ],
+  "langCount": null,
+  "capabilities": {
+    "reasoning": false,
+    "coding": true,
+    "vision": false,
+    "functionCalling": true,
+    "toolUse": true,
+    "agentic": false
+  },
+  "apiAvailable": true,
+  "price": null,
+  "links": {
+    "docs": "developers.sber.ru/docs/ru/gigachat"
+  },
+  "note": "Sberbank's Russian ChatGPT rival, launched in closed testing April 24 2023, built on the NeONKA neural-network ensemble; params were never disclosed for the original model. 128K ctx reflects the current GigaChat-2 API (the original 2023 model is deprecated/redirected).",
+  "quants": [],
+  "vramQ4Gb": null,
+  "vramFp16Gb": null,
+  "tps4090": null,
+  "tpsNote": null,
+  "effortLabel": null,
+  "isDefaultConfig": true,
+  "isBestConfig": true,
+  "specSources": {
+    "releaseDate": "https://techstartups.com/2023/04/24/russias-largest-bank-sberbank-launches-chatgpt-rival-called-gigachat/",
+    "archDisplay": "https://www.karmactive.com/the-russian-ai-chatbot-entrance-giga-chat-vs-chatgpt/",
+    "ctxK": "https://cloudprice.net/models/gigachat-2-max"
+  },
+  "results": [],
+  "verificationNotes": "Existence and April 24, 2023 launch date independently reconfirmed via TechStartups, The National, Cyprus Mail and other outlets (all dated 2023-04-24) — original given date was correct. NeONKA architecture name and description ('Neural Omnimodal Network with Knowledge-Awareness', ensemble of models incl. Kandinsky 2.1 for images) independently confirmed via multiple secondary sources — not a hallucination. Could NOT confirm openness/license claim from the cited Wikipedia article itself (it says nothing about licensing); however other sources confirm the original 2023 GigaChat chatbot/API product is closed/proprietary (note: Sber has since open-sourced separate newer 'GigaChat3' MoE checkpoints under MIT in 2025, but that is a distinct later release not covered by this record's release date). 128K context window reconfirmed as current spec for GigaChat-2/2-Pro/2-Max via CloudPrice API listings; original 2023-era first-gen models are now deprecated and redirect to GigaChat-2. No results/benchmark rows were present to verify. Params/activeParams correctly left null as undisclosed for this specific (original, non-MoE) product."
+}

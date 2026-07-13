@@ -1,0 +1,95 @@
+{
+  "name": "Qwen3-32B (Thinking)",
+  "org": "Alibaba",
+  "family": "Qwen3",
+  "releaseDate": "2025-04-29",
+  "status": "released",
+  "openness": "open-weights",
+  "license": "Apache 2.0",
+  "paramsB": 32.8,
+  "activeParamsB": null,
+  "archClass": "dense",
+  "archDisplay": "Dense transformer, GQA + SwiGLU + QK-Norm",
+  "ctxK": 128,
+  "modalities": [
+    "text"
+  ],
+  "langCount": 119,
+  "capabilities": {
+    "reasoning": true,
+    "coding": true,
+    "vision": false,
+    "functionCalling": true,
+    "toolUse": true,
+    "agentic": true
+  },
+  "apiAvailable": true,
+  "price": {
+    "input": 0.287,
+    "output": 1.147,
+    "provider": "Alibaba Cloud Model Studio (DashScope)"
+  },
+  "links": {
+    "hf": "Qwen/Qwen3-32B",
+    "gh": "QwenLM/Qwen3",
+    "docs": "qwen.readthedocs.io"
+  },
+  "note": "Largest Qwen3 dense model; thinking mode rivals OpenAI o3-mini (medium) on reasoning benchmarks.",
+  "quants": [
+    "GGUF",
+    "AWQ",
+    "GPTQ",
+    "MLX"
+  ],
+  "vramQ4Gb": 19.9,
+  "vramFp16Gb": 65.6,
+  "tps4090": null,
+  "tpsNote": null,
+  "effortLabel": "Thinking",
+  "isDefaultConfig": true,
+  "isBestConfig": true,
+  "specSources": {
+    "paramsB": "https://huggingface.co/Qwen/Qwen3-32B",
+    "ctxK": "https://arxiv.org/abs/2505.09388",
+    "releaseDate": "https://github.com/QwenLM/Qwen3",
+    "openness": "https://huggingface.co/Qwen/Qwen3-32B"
+  },
+  "results": [
+    {
+      "benchmarkSlug": "aime",
+      "score": 81.4,
+      "source": "self-reported",
+      "sourceUrl": "https://arxiv.org/abs/2505.09388",
+      "notes": "AIME'24, thinking mode, Table 13"
+    },
+    {
+      "benchmarkSlug": "gpqa",
+      "score": 68.4,
+      "source": "self-reported",
+      "sourceUrl": "https://arxiv.org/abs/2505.09388",
+      "notes": "GPQA-Diamond, thinking mode"
+    },
+    {
+      "benchmarkSlug": "livecodebench",
+      "score": 65.7,
+      "source": "self-reported",
+      "sourceUrl": "https://arxiv.org/abs/2505.09388",
+      "notes": "LiveCodeBench v5, thinking mode"
+    },
+    {
+      "benchmarkSlug": "arena-hard",
+      "score": 93.8,
+      "source": "self-reported",
+      "sourceUrl": "https://arxiv.org/abs/2505.09388",
+      "notes": "Arena-Hard, thinking mode"
+    },
+    {
+      "benchmarkSlug": "bfcl-v3",
+      "score": 70.3,
+      "source": "self-reported",
+      "sourceUrl": "https://arxiv.org/abs/2505.09388",
+      "notes": "BFCL v3, thinking mode"
+    }
+  ],
+  "verificationNotes": "Fully confirmed. HF model card confirms 32.8B total params, dense (GQA+SwiGLU+QK-Norm per report Sec.2), 128K context (native 32K + YaRN), Apache 2.0. Table 13 of fetched Qwen3 Technical Report PDF confirms all 5 benchmark rows exactly (AIME'24 81.4, GPQA-Diamond 68.4, LiveCodeBench v5 65.7, Arena-Hard 93.8, BFCL v3 70.3) and report text explicitly states Qwen3-32B (Thinking) 'competes with the closed-source OpenAI-o3-mini (medium)'. DashScope pricing page: China-region non-thinking rate is exactly $0.287 input / $1.147 output (confirmed after checking region+mode breakdown; international/Singapore tier differs at $0.16/$0.64, and China thinking-output tier is $2.868 — record uses the China non-thinking tier, consistent with sibling records)."
+}

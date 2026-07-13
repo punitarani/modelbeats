@@ -1,0 +1,49 @@
+{
+  "name": "iFlytek Spark V4.0 (Xinghuo)",
+  "org": "iFlytek",
+  "family": "Spark (Xinghuo)",
+  "releaseDate": "2024-06-27",
+  "status": "released",
+  "openness": "closed",
+  "license": "Proprietary",
+  "paramsB": null,
+  "activeParamsB": null,
+  "archClass": "dense",
+  "archDisplay": "Proprietary transformer, trained fully on domestic (Huawei Ascend) compute",
+  "ctxK": 8,
+  "modalities": [
+    "text",
+    "vision",
+    "audio"
+  ],
+  "langCount": null,
+  "capabilities": {
+    "reasoning": false,
+    "coding": true,
+    "vision": true,
+    "functionCalling": true,
+    "toolUse": true,
+    "agentic": true
+  },
+  "apiAvailable": true,
+  "price": null,
+  "links": {
+    "docs": "xfyun.cn/doc/spark"
+  },
+  "note": "GPT-4-Turbo-class flagship trained on fully domestic compute; later refreshed as Spark 4.0 Turbo in October 2024.",
+  "quants": [],
+  "vramQ4Gb": null,
+  "vramFp16Gb": null,
+  "tps4090": null,
+  "tpsNote": null,
+  "effortLabel": null,
+  "isDefaultConfig": true,
+  "isBestConfig": true,
+  "specSources": {
+    "releaseDate": "https://technode.com/2024/06/28/iflytek-chairman-touts-latest-ai-spark-4-0-model-as-comparable-to-gpt-4-turbo-emphasizes-total-self-sufficiency/",
+    "openness": "https://technode.com/2024/06/28/iflytek-chairman-touts-latest-ai-spark-4-0-model-as-comparable-to-gpt-4-turbo-emphasizes-total-self-sufficiency/",
+    "ctxK": "https://www.xfyun.cn/doc/spark/%E6%8E%A5%E5%8F%A3%E8%AF%B4%E6%98%8E.html"
+  },
+  "results": [],
+  "verificationNotes": "Confirmed via TechNode, Caixin Global, ChinaDaily, and IoT Now: launched June 27, 2024 in Beijing, positioned as rivaling/surpassing GPT-4 Turbo on several benchmarks, trained exclusively on the Huawei-cobuilt domestic compute platform (no Nvidia dependency) due to US chip export restrictions. Spark 4.0 Turbo follow-up in Oct 2024 also confirmed. No results rows were present to verify."
+}

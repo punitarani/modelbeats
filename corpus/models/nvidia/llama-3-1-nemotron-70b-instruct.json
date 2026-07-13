@@ -1,0 +1,78 @@
+{
+  "name": "Llama-3.1-Nemotron-70B Instruct",
+  "org": "NVIDIA",
+  "family": "Llama Nemotron",
+  "releaseDate": "2024-10-15",
+  "status": "released",
+  "openness": "open-weights",
+  "license": "NVIDIA Open Model License + Llama 3.1 Community License Agreement",
+  "paramsB": 70.6,
+  "activeParamsB": null,
+  "archClass": "dense",
+  "archDisplay": "Dense Transformer (Llama-3.1-70B base, REINFORCE/RLHF-tuned)",
+  "ctxK": 128,
+  "modalities": [
+    "text"
+  ],
+  "langCount": null,
+  "capabilities": {
+    "reasoning": false,
+    "coding": true,
+    "vision": false,
+    "functionCalling": true,
+    "toolUse": true,
+    "agentic": false
+  },
+  "apiAvailable": true,
+  "price": {
+    "input": 1.2,
+    "output": 1.2,
+    "provider": "DeepInfra"
+  },
+  "links": {
+    "hf": "nvidia/Llama-3.1-Nemotron-70B-Instruct-HF",
+    "docs": "docs.api.nvidia.com/nim/reference/nvidia-llama-3_1-nemotron-70b-instruct"
+  },
+  "note": "RLHF (REINFORCE)-tuned Llama-3.1-70B that led Arena Hard/AlpacaEval/MT-Bench in Oct 2024, edging GPT-4o and Claude 3.5 Sonnet.",
+  "quants": [
+    "GGUF",
+    "AWQ"
+  ],
+  "vramQ4Gb": 42,
+  "vramFp16Gb": 145,
+  "tps4090": null,
+  "tpsNote": "Needs ~42GB at Q4 — doesn't fit a single 24GB RTX 4090; no verified 4090 benchmark found.",
+  "effortLabel": null,
+  "isDefaultConfig": true,
+  "isBestConfig": true,
+  "specSources": {
+    "paramsB": "https://huggingface.co/nvidia/Llama-3.1-Nemotron-70B-Instruct-HF",
+    "ctxK": "https://huggingface.co/nvidia/Llama-3.1-Nemotron-70B-Instruct-HF",
+    "releaseDate": "https://huggingface.co/nvidia/Llama-3.1-Nemotron-70B-Instruct-HF",
+    "openness": "https://huggingface.co/nvidia/Llama-3.1-Nemotron-70B-Instruct-HF"
+  },
+  "results": [
+    {
+      "benchmarkSlug": "arena-hard",
+      "score": 85,
+      "source": "self-reported",
+      "sourceUrl": "https://huggingface.co/nvidia/Llama-3.1-Nemotron-70B-Instruct-HF",
+      "notes": "#1 on Arena Hard as of Oct 1 2024"
+    },
+    {
+      "benchmarkSlug": "alpaca-eval",
+      "score": 57.6,
+      "source": "self-reported",
+      "sourceUrl": "https://huggingface.co/nvidia/Llama-3.1-Nemotron-70B-Instruct-HF",
+      "notes": "AlpacaEval 2 LC"
+    },
+    {
+      "benchmarkSlug": "mt-bench",
+      "score": 8.98,
+      "source": "self-reported",
+      "sourceUrl": "https://huggingface.co/nvidia/Llama-3.1-Nemotron-70B-Instruct-HF",
+      "notes": "GPT-4-Turbo judge"
+    }
+  ],
+  "verificationNotes": "Confirmed via HF model card (fetched): 128K max input context, dual NVIDIA/Llama 3.1 license, and all three benchmark scores (Arena Hard 85.0, AlpacaEval 2 LC 57.6, MT-Bench 8.98) match exactly. Release date corrected to 2024-10-15 (independently confirmed via multiple secondary sources, e.g. NGC catalog coverage) — note the HF card/arXiv paper is dated Oct 1-2 2024 for the underlying technical report, while the public HF model release date is Oct 15, 2024; paramsB 70.6B is the standard precise figure for the Llama-3-70B architecture (70,553,706,496 params) that this model is built on, consistent with NVIDIA's usage."
+}

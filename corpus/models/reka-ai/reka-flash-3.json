@@ -1,0 +1,63 @@
+{
+  "name": "Reka Flash 3",
+  "org": "Reka AI",
+  "family": "Reka",
+  "releaseDate": "2025-03-10",
+  "status": "released",
+  "openness": "open-weights",
+  "license": "Apache 2.0",
+  "paramsB": 21,
+  "activeParamsB": null,
+  "archClass": "dense",
+  "archDisplay": "21B dense transformer, reasoning model with 'budget forcing' CoT control, Llama-compatible",
+  "ctxK": 32,
+  "modalities": [
+    "text"
+  ],
+  "langCount": null,
+  "capabilities": {
+    "reasoning": true,
+    "coding": true,
+    "vision": false,
+    "functionCalling": true,
+    "toolUse": true,
+    "agentic": true
+  },
+  "apiAvailable": true,
+  "price": {
+    "input": 0.2,
+    "output": 0.8,
+    "provider": "Reka AI"
+  },
+  "links": {
+    "hf": "RekaAI/reka-flash-3",
+    "docs": "docs.reka.ai"
+  },
+  "note": "21B from-scratch reasoning model with a novel budget-forcing mechanism; text-only despite the Reka name's multimodal history; rivals OpenAI o1-mini.",
+  "quants": [
+    "GGUF Q4"
+  ],
+  "vramQ4Gb": 14,
+  "vramFp16Gb": 42,
+  "tps4090": null,
+  "tpsNote": null,
+  "effortLabel": null,
+  "isDefaultConfig": true,
+  "isBestConfig": true,
+  "specSources": {
+    "paramsB": "https://huggingface.co/RekaAI/reka-flash-3",
+    "ctxK": "https://huggingface.co/RekaAI/reka-flash-3/raw/main/config.json",
+    "releaseDate": "https://www.marktechpost.com/2025/03/11/reka-ai-open-sourced-reka-flash-3-a-21b-general-purpose-reasoning-model-that-was-trained-from-scratch/",
+    "openness": "https://huggingface.co/RekaAI/reka-flash-3"
+  },
+  "results": [
+    {
+      "benchmarkSlug": "mmlu-pro",
+      "score": 65,
+      "source": "self-reported",
+      "sourceUrl": "https://reka.ai/news/introducing-reka-flash",
+      "evaluatedAt": "2025-03-10"
+    }
+  ],
+  "verificationNotes": "CONFIRMED. reka.ai's official 'Reasoning with Reka Flash 3' post explicitly states release date March 10, 2025, 21B params, 32k context, Apache 2.0 license, and MMLU-Pro score of 'only 65.0' — matches record exactly. HF config.json confirms max_position_embeddings=32768 (32K), matching ctxK 32 (a separate secondary source's claim of 65,536 tokens was found to be inconsistent with the primary config.json and was disregarded). Current docs.reka.ai pricing confirms $0.20 input / $0.80 output exactly. No corrections required."
+}

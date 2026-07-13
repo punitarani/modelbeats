@@ -1,0 +1,70 @@
+{
+  "name": "Llama 2 7B Chat",
+  "org": "Meta",
+  "family": "Llama 2",
+  "releaseDate": "2023-07-18",
+  "status": "released",
+  "openness": "open-weights",
+  "license": "Llama 2 Community License",
+  "paramsB": 7,
+  "activeParamsB": null,
+  "archClass": "dense",
+  "archDisplay": "Dense transformer (decoder-only), RLHF-tuned",
+  "ctxK": 4,
+  "modalities": [
+    "text"
+  ],
+  "langCount": null,
+  "capabilities": {
+    "reasoning": false,
+    "coding": false,
+    "vision": false,
+    "functionCalling": false,
+    "toolUse": false,
+    "agentic": false
+  },
+  "apiAvailable": true,
+  "price": null,
+  "links": {
+    "hf": "meta-llama/Llama-2-7b-chat-hf",
+    "gh": "facebookresearch/llama",
+    "docs": "llama.com/llama2"
+  },
+  "note": "RLHF dialogue-tuned Llama 2 7B; 4K context; MMLU 45.3, far behind later Llama generations.",
+  "quants": [
+    "GGUF Q4",
+    "GPTQ",
+    "AWQ",
+    "MLX"
+  ],
+  "vramQ4Gb": 4.1,
+  "vramFp16Gb": 13.5,
+  "tps4090": null,
+  "tpsNote": null,
+  "effortLabel": null,
+  "isDefaultConfig": true,
+  "isBestConfig": true,
+  "specSources": {
+    "paramsB": "https://huggingface.co/meta-llama/Llama-2-7b-chat-hf",
+    "ctxK": "https://huggingface.co/meta-llama/Llama-2-7b-chat-hf",
+    "releaseDate": "https://huggingface.co/meta-llama/Llama-2-7b-chat-hf",
+    "openness": "https://huggingface.co/meta-llama/Llama-2-7b-chat-hf"
+  },
+  "results": [
+    {
+      "benchmarkSlug": "mmlu",
+      "score": 45.3,
+      "source": "independent",
+      "sourceUrl": "https://telnyx.com/llm-library/llama-2-7b-chat-hf",
+      "notes": "5-shot, reported for Llama-2-7b-chat-hf"
+    },
+    {
+      "benchmarkSlug": "arena",
+      "score": 1037,
+      "source": "arena",
+      "sourceUrl": "https://telnyx.com/llm-library/llama-2-7b-chat-hf",
+      "notes": "Chatbot Arena Elo (historical, 2023-era leaderboard)"
+    }
+  ],
+  "verificationNotes": "Confirmed existence and 2023-07-18 release via Meta/HF. Directly fetched telnyx.com/llm-library/llama-2-7b-chat-hf: both cited numbers (MMLU 45.3, Arena Elo 1037) literally appear on the page as text ('scores 45.3% on MMLU (5-shot)' and Arena Elo 1037), so both rows kept. Note: the same page also shows a separate spec-table MMLU figure of 45.8 elsewhere, an internal inconsistency on telnyx's own page, but the 45.3 figure is literally present and matches Meta's own reported base-model number, so it was not dropped."
+}

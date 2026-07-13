@@ -1,0 +1,47 @@
+{
+  "name": "iFlytek Spark X1 (Xinghuo X1)",
+  "org": "iFlytek",
+  "family": "Spark (Xinghuo)",
+  "releaseDate": "2025-01-15",
+  "status": "released",
+  "openness": "closed",
+  "license": "Proprietary (closed API access, no weight release)",
+  "paramsB": null,
+  "activeParamsB": null,
+  "archClass": "moe",
+  "archDisplay": "Mixture-of-Experts transformer (exact total/active params undisclosed)",
+  "ctxK": 128,
+  "modalities": [
+    "text"
+  ],
+  "langCount": null,
+  "capabilities": {
+    "reasoning": true,
+    "coding": true,
+    "vision": false,
+    "functionCalling": true,
+    "toolUse": true,
+    "agentic": false
+  },
+  "apiAvailable": true,
+  "price": null,
+  "links": {
+    "docs": "xinghuo.xfyun.cn/sparkapi"
+  },
+  "note": "iFlytek's first deep-reasoning model, co-developed with Huawei and trained entirely on domestic Ascend 910B compute with no Nvidia dependency.",
+  "quants": [],
+  "vramQ4Gb": null,
+  "vramFp16Gb": null,
+  "tps4090": null,
+  "tpsNote": null,
+  "effortLabel": null,
+  "isDefaultConfig": true,
+  "isBestConfig": true,
+  "specSources": {
+    "releaseDate": "https://news.cgtn.com/news/2025-01-15/China-releases-Spark-X1-deep-reasoning-model-that-packs-a-punch-1AbIq8PzzEI/index.html",
+    "openness": "https://www.scmp.com/tech/big-tech/article/3307493/no-need-nvidia-iflytek-touts-reasoning-model-trained-entirely-huaweis-ai-chips",
+    "paramsB": "https://www.huaweicentral.com/huawei-ai-chips-powered-new-iflytek-llms-can-rival-openai-deepseek/"
+  },
+  "results": [],
+  "verificationNotes": "Existence, Jan 15, 2025 release, and Huawei Ascend 910B domestic-compute training confirmed independently via CGTN, SCMP, and Huawei Central (910B efficiency raised from ~20% to ~80% of Nvidia). 128K context confirmed via a separate aibase.com report on the Spark Deep Reasoning X1. However, neither CGTN, SCMP, nor Huawei Central discloses architecture type or parameter count; one secondary source (TMTPost) claims '70 billion parameters' but this could not be corroborated by any primary source and conflicts with other undisclosed-params reporting, so paramsB is kept null and the MoE archClass claim should be treated as lower-confidence/unconfirmed rather than a hard fact."
+}

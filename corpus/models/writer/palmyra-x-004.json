@@ -1,0 +1,66 @@
+{
+  "name": "Palmyra X 004",
+  "org": "Writer",
+  "family": "Palmyra X",
+  "releaseDate": "2024-10-09",
+  "status": "released",
+  "openness": "closed",
+  "license": "Proprietary (API-only, no released weights)",
+  "paramsB": null,
+  "activeParamsB": null,
+  "archClass": "dense",
+  "archDisplay": "Dense Transformer, enterprise frontier model (~150B, architecture undisclosed)",
+  "ctxK": 128,
+  "modalities": [
+    "text"
+  ],
+  "langCount": null,
+  "capabilities": {
+    "reasoning": true,
+    "coding": true,
+    "vision": false,
+    "functionCalling": true,
+    "toolUse": true,
+    "agentic": true
+  },
+  "apiAvailable": true,
+  "price": {
+    "input": 2.5,
+    "output": 10,
+    "provider": "Writer"
+  },
+  "links": {
+    "docs": "dev.writer.com"
+  },
+  "note": "Topped Berkeley's Tool-Calling Leaderboard (78.76% ACC) at launch; priced $5/$15 per M tokens at launch, now $2.50/$10.",
+  "quants": [],
+  "vramQ4Gb": null,
+  "vramFp16Gb": null,
+  "tps4090": null,
+  "tpsNote": null,
+  "effortLabel": null,
+  "isDefaultConfig": true,
+  "isBestConfig": true,
+  "specSources": {
+    "ctxK": "https://www.businesswire.com/news/home/20241009659164/en/Writer-Releases-New-Frontier-Model-Palmyra-X-004-to-Add-Intelligent-Action-to-Enterprise-AI-Applications",
+    "releaseDate": "https://www.businesswire.com/news/home/20241009659164/en/Writer-Releases-New-Frontier-Model-Palmyra-X-004-to-Add-Intelligent-Action-to-Enterprise-AI-Applications",
+    "openness": "https://www.businesswire.com/news/home/20241009659164/en/Writer-Releases-New-Frontier-Model-Palmyra-X-004-to-Add-Intelligent-Action-to-Enterprise-AI-Applications"
+  },
+  "results": [
+    {
+      "benchmarkSlug": "bfcl",
+      "score": 78.76,
+      "source": "self-reported",
+      "sourceUrl": "https://www.businesswire.com/news/home/20241009659164/en/Writer-Releases-New-Frontier-Model-Palmyra-X-004-to-Add-Intelligent-Action-to-Enterprise-AI-Applications",
+      "notes": "Berkeley Function-Calling Leaderboard overall accuracy"
+    },
+    {
+      "benchmarkSlug": "mmlu",
+      "score": 81.3,
+      "source": "self-reported",
+      "sourceUrl": "https://dev.writer.com/home/models",
+      "notes": "HELM MMLU"
+    }
+  ],
+  "verificationNotes": "Confirmed real release, Oct 9, 2024, via BusinessWire/SiliconAngle/VentureBeat coverage: Palmyra X-004 topped Berkeley's Tool-Calling (BFCL) leaderboard with 78.76% accuracy, confirmed by multiple independent outlets. dev.writer.com/home/models (fetched) confirms exactly: 128K context window, current pricing $2.50 input / $10.00 output per M tokens, HELM MMLU 81.3, HELM-Lite 86.1 — all three result rows and price match exactly."
+}

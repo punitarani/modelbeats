@@ -1,0 +1,77 @@
+{
+  "name": "XGen-7B 8K",
+  "org": "Salesforce",
+  "family": "XGen",
+  "releaseDate": "2023-07-03",
+  "status": "released",
+  "openness": "open-weights",
+  "license": "Apache-2.0",
+  "paramsB": 7,
+  "activeParamsB": null,
+  "archClass": "dense",
+  "archDisplay": "Dense transformer, trained with staged 2K to 4K to 8K sequence-length curriculum, OpenAI Tiktoken tokenizer",
+  "ctxK": 8,
+  "modalities": [
+    "text"
+  ],
+  "langCount": null,
+  "capabilities": {
+    "reasoning": false,
+    "coding": true,
+    "vision": false,
+    "functionCalling": false,
+    "toolUse": false,
+    "agentic": false
+  },
+  "apiAvailable": false,
+  "price": null,
+  "links": {
+    "hf": "Salesforce/xgen-7b-8k-base",
+    "gh": "salesforce/xgen"
+  },
+  "note": "General-purpose 7B LLM trained on 1.5T tokens with an 8K context window under Apache-2.0; Salesforce's long-context entry",
+  "quants": [
+    "SqueezeLLM 3-bit"
+  ],
+  "vramQ4Gb": null,
+  "vramFp16Gb": 14,
+  "tps4090": null,
+  "tpsNote": null,
+  "effortLabel": null,
+  "isDefaultConfig": true,
+  "isBestConfig": true,
+  "specSources": {
+    "paramsB": "https://arxiv.org/abs/2309.03450",
+    "ctxK": "https://huggingface.co/Salesforce/xgen-7b-8k-base/raw/main/config.json",
+    "releaseDate": "https://www.forbes.com/sites/janakirammsv/2023/07/03/salesforce-introduces-xgen-7b-a-large-language-model-with-longer-context-support/",
+    "openness": "https://huggingface.co/Salesforce/xgen-7b-8k-base"
+  },
+  "results": [
+    {
+      "benchmarkSlug": "mmlu",
+      "score": 32.1,
+      "source": "self-reported",
+      "sourceUrl": "https://ar5iv.labs.arxiv.org/html/2309.03450",
+      "notes": "0-shot weighted average"
+    },
+    {
+      "benchmarkSlug": "hellaswag",
+      "score": 74.2,
+      "source": "self-reported",
+      "sourceUrl": "https://ar5iv.labs.arxiv.org/html/2309.03450"
+    },
+    {
+      "benchmarkSlug": "arc-challenge",
+      "score": 41.2,
+      "source": "self-reported",
+      "sourceUrl": "https://ar5iv.labs.arxiv.org/html/2309.03450"
+    },
+    {
+      "benchmarkSlug": "winogrande",
+      "score": 64.9,
+      "source": "self-reported",
+      "sourceUrl": "https://ar5iv.labs.arxiv.org/html/2309.03450"
+    }
+  ],
+  "verificationNotes": "Confirmed real: arxiv 2309.03450 and HF repo Salesforce/xgen-7b-8k-base exist; Salesforce blog, Forbes, MarkTechPost all confirm late-June/July 2023 announcement (release date 2023-07-03 retained). Fetched ar5iv paper directly and confirmed Table 6 literally shows MMLU 32.1, HellaSwag 74.2, ARC-Challenge 41.2, Winogrande 64.9 — all 4 result rows confirmed verbatim. License Apache-2.0 confirmed."
+}

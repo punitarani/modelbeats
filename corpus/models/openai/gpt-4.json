@@ -1,0 +1,97 @@
+{
+  "name": "GPT-4",
+  "org": "OpenAI",
+  "family": "GPT-4",
+  "releaseDate": "2023-03-14",
+  "status": "released",
+  "openness": "closed",
+  "license": "Proprietary",
+  "paramsB": null,
+  "activeParamsB": null,
+  "archClass": "moe",
+  "archDisplay": "Transformer; widely reported (unconfirmed by OpenAI) as an ~8x220B mixture-of-experts",
+  "ctxK": 8,
+  "modalities": [
+    "text",
+    "vision"
+  ],
+  "langCount": null,
+  "capabilities": {
+    "reasoning": false,
+    "coding": true,
+    "vision": true,
+    "functionCalling": true,
+    "toolUse": true,
+    "agentic": false
+  },
+  "apiAvailable": true,
+  "price": {
+    "input": 30,
+    "output": 60,
+    "provider": "OpenAI"
+  },
+  "links": {
+    "docs": "developers.openai.com/api/docs/models/gpt-4"
+  },
+  "note": "First GPT-4; multimodal text+image input, 8K default context (32K gpt-4-32k variant, since deprecated); large reasoning jump over GPT-3.5.",
+  "quants": [],
+  "vramQ4Gb": null,
+  "vramFp16Gb": null,
+  "tps4090": null,
+  "tpsNote": null,
+  "effortLabel": null,
+  "isDefaultConfig": true,
+  "isBestConfig": true,
+  "specSources": {
+    "releaseDate": "https://openai.com/index/gpt-4-research/",
+    "ctxK": "https://developers.openai.com/api/docs/models/gpt-4",
+    "openness": "https://openai.com/index/gpt-4-research/"
+  },
+  "results": [
+    {
+      "benchmarkSlug": "mmlu",
+      "score": 86.4,
+      "source": "self-reported",
+      "sourceUrl": "https://arxiv.org/abs/2303.08774"
+    },
+    {
+      "benchmarkSlug": "hellaswag",
+      "score": 95.3,
+      "source": "self-reported",
+      "sourceUrl": "https://arxiv.org/abs/2303.08774"
+    },
+    {
+      "benchmarkSlug": "arc-challenge",
+      "score": 96.3,
+      "source": "self-reported",
+      "sourceUrl": "https://arxiv.org/abs/2303.08774"
+    },
+    {
+      "benchmarkSlug": "winogrande",
+      "score": 87.5,
+      "source": "self-reported",
+      "sourceUrl": "https://arxiv.org/abs/2303.08774"
+    },
+    {
+      "benchmarkSlug": "humaneval",
+      "score": 67,
+      "source": "self-reported",
+      "sourceUrl": "https://arxiv.org/abs/2303.08774"
+    },
+    {
+      "benchmarkSlug": "drop",
+      "score": 80.9,
+      "source": "self-reported",
+      "sourceUrl": "https://arxiv.org/abs/2303.08774",
+      "notes": "F1 score"
+    },
+    {
+      "benchmarkSlug": "gsm8k",
+      "score": 92,
+      "source": "self-reported",
+      "sourceUrl": "https://arxiv.org/abs/2303.08774",
+      "notes": "training set partially contaminated per OpenAI's own footnote"
+    }
+  ],
+  "verificationNotes": "Release March 14, 2023 confirmed (TechCrunch/Wikipedia); 8K default / 32K variant context and $30/$60 per-million pricing confirmed via multiple independent sources. All 7 benchmark rows (MMLU 86.4, HellaSwag 95.3, ARC 96.3, Winogrande 87.5, HumanEval 67.0, DROP 80.9 F1, GSM8K 92.0) verified literally in arXiv 2303.08774 Table 2 (fetched directly). No changes made."
+}

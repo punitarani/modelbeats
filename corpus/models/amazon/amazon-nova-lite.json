@@ -1,0 +1,103 @@
+{
+  "name": "Amazon Nova Lite",
+  "org": "Amazon",
+  "family": "Amazon Nova",
+  "releaseDate": "2024-12-03",
+  "status": "released",
+  "openness": "closed",
+  "license": "Proprietary (AWS Bedrock service terms)",
+  "paramsB": null,
+  "activeParamsB": null,
+  "archClass": "dense",
+  "archDisplay": "Transformer, architecture/size undisclosed",
+  "ctxK": 300,
+  "modalities": [
+    "text",
+    "vision",
+    "video"
+  ],
+  "langCount": 200,
+  "capabilities": {
+    "reasoning": false,
+    "coding": true,
+    "vision": true,
+    "functionCalling": true,
+    "toolUse": true,
+    "agentic": true
+  },
+  "apiAvailable": true,
+  "price": {
+    "input": 0.06,
+    "output": 0.24,
+    "provider": "AWS Bedrock"
+  },
+  "links": {
+    "docs": "docs.aws.amazon.com/nova/latest/userguide/what-is-nova.html"
+  },
+  "note": "Low-cost multimodal (text/image/video-in) Nova tier tuned for speed; launched alongside Micro and Pro at re:Invent 2024.",
+  "quants": [],
+  "vramQ4Gb": null,
+  "vramFp16Gb": null,
+  "tps4090": null,
+  "tpsNote": null,
+  "effortLabel": null,
+  "isDefaultConfig": true,
+  "isBestConfig": true,
+  "specSources": {
+    "releaseDate": "https://press.aboutamazon.com/2024/12/introducing-amazon-nova-a-new-generation-of-foundation-models",
+    "ctxK": "https://docs.aws.amazon.com/ai/responsible-ai/nova-micro-lite-pro/overview.html",
+    "openness": "https://docs.aws.amazon.com/ai/responsible-ai/nova-micro-lite-pro/overview.html"
+  },
+  "results": [
+    {
+      "benchmarkSlug": "mmlu",
+      "score": 80.5,
+      "source": "independent",
+      "sourceUrl": "https://deepranking.ai/llm-models/nova-lite",
+      "notes": "0-shot CoT; figure traces to Amazon's Nova technical report"
+    },
+    {
+      "benchmarkSlug": "gpqa",
+      "score": 42,
+      "source": "independent",
+      "sourceUrl": "https://deepranking.ai/llm-models/nova-lite"
+    },
+    {
+      "benchmarkSlug": "math",
+      "score": 73.3,
+      "source": "independent",
+      "sourceUrl": "https://deepranking.ai/llm-models/nova-lite"
+    },
+    {
+      "benchmarkSlug": "humaneval",
+      "score": 85.4,
+      "source": "independent",
+      "sourceUrl": "https://deepranking.ai/llm-models/nova-lite"
+    },
+    {
+      "benchmarkSlug": "gsm8k",
+      "score": 94.5,
+      "source": "independent",
+      "sourceUrl": "https://deepranking.ai/llm-models/nova-lite"
+    },
+    {
+      "benchmarkSlug": "bbh",
+      "score": 82.4,
+      "source": "independent",
+      "sourceUrl": "https://deepranking.ai/llm-models/nova-lite"
+    },
+    {
+      "benchmarkSlug": "ifeval",
+      "score": 89.7,
+      "source": "independent",
+      "sourceUrl": "https://deepranking.ai/llm-models/nova-lite"
+    },
+    {
+      "benchmarkSlug": "drop",
+      "score": 80.2,
+      "source": "independent",
+      "sourceUrl": "https://deepranking.ai/llm-models/nova-lite"
+    }
+  ],
+  "verificationNotes": "Confirmed real: Dec 3, 2024 re:Invent launch (Amazon Press Center, TechCrunch, Businesswire all corroborate). Confirmed 300K context, multimodal text/image/video (AWS Nova docs), 200-language support (AWS re:Post + Nova language docs), $0.06/$0.24 per M pricing (matches $0.00006/$0.00024 per 1K on AWS Nova pricing page). All 8 benchmark rows (MMLU 80.5, GPQA 42, MATH 73.3, HumanEval 85.4, GSM8K 94.5, BBH 82.4, IFEval 89.7, DROP 80.2) confirmed to literally appear on deepranking.ai/llm-models/nova-lite. Minor note: deepranking.ai's own page lists a Nov 19, 2024 date for Nova Lite, but all official Amazon sources confirm Dec 3, 2024 — kept the Amazon-sourced date."
+}

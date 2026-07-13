@@ -1,0 +1,112 @@
+{
+  "name": "Llama 3.1 8B",
+  "org": "Meta",
+  "family": "Llama 3.1",
+  "releaseDate": "2024-07-23",
+  "status": "released",
+  "openness": "open-weights",
+  "license": "Llama 3.1 Community License Agreement",
+  "paramsB": 8.03,
+  "activeParamsB": null,
+  "archClass": "dense",
+  "archDisplay": "Dense decoder-only Transformer (GQA)",
+  "ctxK": 128,
+  "modalities": [
+    "text"
+  ],
+  "langCount": 8,
+  "capabilities": {
+    "reasoning": false,
+    "coding": true,
+    "vision": false,
+    "functionCalling": true,
+    "toolUse": true,
+    "agentic": true
+  },
+  "apiAvailable": true,
+  "price": null,
+  "links": {
+    "hf": "meta-llama/Meta-Llama-3.1-8B",
+    "gh": "meta-llama/llama-models",
+    "docs": "llama.com/docs/model-cards-and-prompt-formats/llama3_1"
+  },
+  "note": "Upgraded 8B with 128K context, native tool calling, and eight-language multilingual support.",
+  "quants": [
+    "GGUF Q4",
+    "AWQ",
+    "GPTQ",
+    "MLX"
+  ],
+  "vramQ4Gb": 5.5,
+  "vramFp16Gb": 16,
+  "tps4090": 100,
+  "tpsNote": "GGUF Q4_K_M fits fully in 24GB VRAM; ~95-110 tok/s widely reported via llama.cpp/Ollama",
+  "effortLabel": null,
+  "isDefaultConfig": true,
+  "isBestConfig": true,
+  "specSources": {
+    "paramsB": "https://huggingface.co/meta-llama/Meta-Llama-3.1-8B",
+    "ctxK": "https://ai.meta.com/blog/meta-llama-3-1/",
+    "releaseDate": "https://ai.meta.com/blog/meta-llama-3-1/",
+    "openness": "https://github.com/meta-llama/llama-models/blob/main/models/llama3_1/MODEL_CARD.md"
+  },
+  "results": [
+    {
+      "benchmarkSlug": "mmlu",
+      "score": 69.4,
+      "source": "self-reported",
+      "sourceUrl": "https://huggingface.co/meta-llama/Meta-Llama-3.1-8B",
+      "evaluatedAt": "2024-07-01",
+      "notes": "Instruct"
+    },
+    {
+      "benchmarkSlug": "mmlu-pro",
+      "score": 48.3,
+      "source": "self-reported",
+      "sourceUrl": "https://huggingface.co/meta-llama/Meta-Llama-3.1-8B",
+      "evaluatedAt": "2024-07-01",
+      "notes": "Instruct, CoT"
+    },
+    {
+      "benchmarkSlug": "gpqa",
+      "score": 30.4,
+      "source": "self-reported",
+      "sourceUrl": "https://huggingface.co/meta-llama/Meta-Llama-3.1-8B",
+      "evaluatedAt": "2024-07-01",
+      "notes": "Instruct, exact match (em) — corrected from mislabeled 'base pretrained model'"
+    },
+    {
+      "benchmarkSlug": "ifeval",
+      "score": 80.4,
+      "source": "self-reported",
+      "sourceUrl": "https://huggingface.co/meta-llama/Meta-Llama-3.1-8B",
+      "evaluatedAt": "2024-07-01",
+      "notes": "Instruct"
+    },
+    {
+      "benchmarkSlug": "humaneval",
+      "score": 72.6,
+      "source": "self-reported",
+      "sourceUrl": "https://huggingface.co/meta-llama/Meta-Llama-3.1-8B",
+      "evaluatedAt": "2024-07-01",
+      "notes": "Instruct, pass@1"
+    },
+    {
+      "benchmarkSlug": "gsm8k",
+      "score": 84.5,
+      "source": "self-reported",
+      "sourceUrl": "https://huggingface.co/meta-llama/Meta-Llama-3.1-8B",
+      "evaluatedAt": "2024-07-01",
+      "notes": "Instruct, CoT"
+    },
+    {
+      "benchmarkSlug": "math",
+      "score": 51.9,
+      "source": "self-reported",
+      "sourceUrl": "https://huggingface.co/meta-llama/Meta-Llama-3.1-8B",
+      "evaluatedAt": "2024-07-01",
+      "notes": "Instruct, CoT"
+    }
+  ],
+  "verificationNotes": "Confirmed real via HF model card fetch: params 8.03B, release 2024-07-23 (matches ai.meta.com blog), license Llama 3.1 Community License Agreement. All 7 benchmark rows (MMLU 69.4, MMLU-Pro 48.3, GPQA 30.4, IFEval 80.4, HumanEval 72.6, GSM8K 84.5, MATH 51.9) literally confirmed on the cited HF page. Corrected the GPQA row's notes field: it was mislabeled 'Base pretrained model' but 30.4 is actually the Instruct model's em score per the card."
+}

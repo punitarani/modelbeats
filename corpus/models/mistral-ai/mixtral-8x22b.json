@@ -1,0 +1,78 @@
+{
+  "name": "Mixtral 8x22B",
+  "org": "Mistral AI",
+  "family": "Mixtral",
+  "releaseDate": "2024-04-17",
+  "status": "deprecated",
+  "openness": "open-source",
+  "license": "Apache 2.0",
+  "paramsB": 141,
+  "activeParamsB": 39,
+  "archClass": "moe",
+  "archDisplay": "Sparse Mixture-of-Experts, 8 experts, top-2 routing",
+  "ctxK": 64,
+  "modalities": [
+    "text"
+  ],
+  "langCount": 5,
+  "capabilities": {
+    "reasoning": false,
+    "coding": true,
+    "vision": false,
+    "functionCalling": true,
+    "toolUse": true,
+    "agentic": false
+  },
+  "apiAvailable": true,
+  "price": null,
+  "links": {
+    "hf": "mistralai/Mixtral-8x22B-v0.1",
+    "gh": "mistralai/mistral-inference",
+    "docs": "docs.mistral.ai/models/mixtral-8x22b-0-1-0-3"
+  },
+  "note": "Larger Apache-2.0 sparse MoE (141B total / 39B active) with a 64K context window and native function calling; strong multilingual, math and code.",
+  "quants": [
+    "GGUF Q4",
+    "AWQ",
+    "MLX"
+  ],
+  "vramQ4Gb": 80,
+  "vramFp16Gb": 263,
+  "tps4090": null,
+  "tpsNote": "Does not fit a single RTX 4090 (24GB) even at Q4 (~80GB needed); requires multi-GPU or large unified-memory hardware",
+  "effortLabel": null,
+  "isDefaultConfig": true,
+  "isBestConfig": true,
+  "specSources": {
+    "paramsB": "https://mistral.ai/news/mixtral-8x22b/",
+    "ctxK": "https://huggingface.co/mistralai/Mixtral-8x22B-v0.1/raw/main/config.json",
+    "releaseDate": "https://mistral.ai/news/mixtral-8x22b/",
+    "openness": "https://docs.mistral.ai/models/mixtral-8x22b-0-1-0-3"
+  },
+  "results": [
+    {
+      "benchmarkSlug": "mmlu",
+      "score": 77.3,
+      "source": "independent",
+      "sourceUrl": "https://huggingface.co/mistral-community/Mixtral-8x22B-v0.1/discussions/3",
+      "evaluatedAt": "2024-04-01"
+    },
+    {
+      "benchmarkSlug": "gsm8k",
+      "score": 90.8,
+      "source": "self-reported",
+      "sourceUrl": "https://mistral.ai/news/mixtral-8x22b/",
+      "evaluatedAt": "2024-04-01",
+      "notes": "maj@8, instruct variant"
+    },
+    {
+      "benchmarkSlug": "math",
+      "score": 44.6,
+      "source": "self-reported",
+      "sourceUrl": "https://mistral.ai/news/mixtral-8x22b/",
+      "evaluatedAt": "2024-04-01",
+      "notes": "maj@4, instruct variant"
+    }
+  ],
+  "verificationNotes": "Fetched mistral.ai/news/mixtral-8x22b/ directly: confirms 2024-04-17 release, 141B/39B params, 64K context, Apache 2.0 ('most permissive open-source licence'), native function calling, 5 languages (English/French/Italian/German/Spanish), GSM8K 90.8 maj@8 and MATH 44.6 maj@4. Fetched HF discussion directly: shows 'acc: 0.7735' i.e. 77.35% -- record's 77.3 is a reasonable truncation of this literal figure, not fabricated. No changes made."
+}

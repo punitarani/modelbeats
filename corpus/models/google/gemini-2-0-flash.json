@@ -1,0 +1,95 @@
+{
+  "name": "Gemini 2.0 Flash",
+  "org": "Google",
+  "family": "Gemini 2.0",
+  "releaseDate": "2024-12-11",
+  "status": "deprecated",
+  "openness": "closed",
+  "license": "Proprietary",
+  "paramsB": null,
+  "activeParamsB": null,
+  "archClass": "moe",
+  "archDisplay": "Sparse Mixture-of-Experts Transformer (params undisclosed), refined architecture over Gemini 1.5",
+  "ctxK": 1000,
+  "modalities": [
+    "text",
+    "vision",
+    "audio",
+    "video"
+  ],
+  "langCount": null,
+  "capabilities": {
+    "reasoning": false,
+    "coding": true,
+    "vision": true,
+    "functionCalling": true,
+    "toolUse": true,
+    "agentic": true
+  },
+  "apiAvailable": true,
+  "price": {
+    "input": 0.1,
+    "output": 0.4,
+    "provider": "Google (Gemini API, GA)"
+  },
+  "links": {
+    "docs": "ai.google.dev/gemini-api/docs/models"
+  },
+  "note": "Agentic, multimodal workhorse with native tool use and real-time streaming; twice the speed of 1.5 Pro.",
+  "quants": [],
+  "vramQ4Gb": null,
+  "vramFp16Gb": null,
+  "tps4090": null,
+  "tpsNote": null,
+  "effortLabel": null,
+  "isDefaultConfig": true,
+  "isBestConfig": true,
+  "specSources": {
+    "releaseDate": "https://blog.google/technology/google-deepmind/google-gemini-ai-update-december-2024/",
+    "ctxK": "https://storage.googleapis.com/deepmind-media/Model-Cards/Gemini-2-0-Flash-Model-Card.pdf",
+    "openness": "https://ai.google.dev/gemini-api/docs/models"
+  },
+  "results": [
+    {
+      "benchmarkSlug": "mmlu-pro",
+      "score": 77.6,
+      "source": "self-reported",
+      "sourceUrl": "https://storage.googleapis.com/deepmind-media/Model-Cards/Gemini-2-0-Flash-Model-Card.pdf",
+      "evaluatedAt": "2025-02-01",
+      "notes": "GA version"
+    },
+    {
+      "benchmarkSlug": "gpqa",
+      "score": 60.1,
+      "source": "self-reported",
+      "sourceUrl": "https://storage.googleapis.com/deepmind-media/Model-Cards/Gemini-2-0-Flash-Model-Card.pdf",
+      "evaluatedAt": "2025-02-01",
+      "notes": "diamond, GA version"
+    },
+    {
+      "benchmarkSlug": "math",
+      "score": 90.9,
+      "source": "self-reported",
+      "sourceUrl": "https://storage.googleapis.com/deepmind-media/Model-Cards/Gemini-2-0-Flash-Model-Card.pdf",
+      "evaluatedAt": "2025-02-01",
+      "notes": "GA version"
+    },
+    {
+      "benchmarkSlug": "mmmu",
+      "score": 71.7,
+      "source": "self-reported",
+      "sourceUrl": "https://storage.googleapis.com/deepmind-media/Model-Cards/Gemini-2-0-Flash-Model-Card.pdf",
+      "evaluatedAt": "2025-02-01",
+      "notes": "GA version"
+    },
+    {
+      "benchmarkSlug": "livecodebench",
+      "score": 34.5,
+      "source": "self-reported",
+      "sourceUrl": "https://storage.googleapis.com/deepmind-media/Model-Cards/Gemini-2-0-Flash-Model-Card.pdf",
+      "evaluatedAt": "2025-02-01",
+      "notes": "v5, GA version"
+    }
+  ],
+  "verificationNotes": "Existence and Dec 11 2024 initial (experimental) announcement confirmed via blog.google; GA followed Feb 5 2025 (also confirmed). Fetched the actual Gemini-2.0-Flash-Model-Card.pdf (published Apr 15 2025) and confirmed all 5 benchmark rows match the GA column verbatim: MMLU-Pro 77.6%, GPQA diamond 60.1%, MATH 90.9%, MMMU 71.7%, LiveCodeBench v5 34.5%. Pricing $0.10/$0.40 per 1M tokens confirmed via ai.google.dev pricing coverage. Architecture description (sparse MoE, refined over 1.5) matches model card text verbatim. No changes made."
+}

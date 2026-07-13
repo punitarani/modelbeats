@@ -1,0 +1,69 @@
+{
+  "name": "Tülu 2+DPO 70B",
+  "org": "Allen Institute for AI (Ai2)",
+  "family": "Tülu 2",
+  "releaseDate": "2023-11-17",
+  "status": "released",
+  "openness": "open-weights",
+  "license": "AI2 ImpACT Low-risk License (built on Llama 2 Community License)",
+  "paramsB": 69,
+  "activeParamsB": null,
+  "archClass": "dense",
+  "archDisplay": "Dense Transformer (Llama 2 70B architecture, GQA, RoPE, RMSNorm)",
+  "ctxK": 8,
+  "modalities": [
+    "text"
+  ],
+  "langCount": null,
+  "capabilities": {
+    "reasoning": false,
+    "coding": false,
+    "vision": false,
+    "functionCalling": false,
+    "toolUse": false,
+    "agentic": false
+  },
+  "apiAvailable": false,
+  "price": null,
+  "links": {
+    "hf": "allenai/tulu-2-dpo-70b",
+    "gh": "allenai/open-instruct",
+    "docs": "allenai.org/impact-license"
+  },
+  "note": "Zephyr-style DPO recipe applied to Llama-2-70B SFT; largest publicly released DPO-trained model at the time",
+  "quants": [
+    "GGUF",
+    "AWQ",
+    "GPTQ"
+  ],
+  "vramQ4Gb": 41.4,
+  "vramFp16Gb": 138,
+  "tps4090": null,
+  "tpsNote": "70B model needs ~41GB even at Q4_K_M — exceeds a single RTX 4090's 24GB VRAM",
+  "effortLabel": null,
+  "isDefaultConfig": true,
+  "isBestConfig": true,
+  "specSources": {
+    "paramsB": "https://huggingface.co/allenai/tulu-2-dpo-70b",
+    "ctxK": "https://huggingface.co/allenai/tulu-2-dpo-70b/raw/main/config.json",
+    "releaseDate": "https://arxiv.org/abs/2311.10702",
+    "openness": "https://huggingface.co/allenai/tulu-2-dpo-70b/raw/main/README.md"
+  },
+  "results": [
+    {
+      "benchmarkSlug": "alpaca-eval",
+      "score": 95.1,
+      "source": "self-reported",
+      "sourceUrl": "https://huggingface.co/allenai/tulu-2-dpo-70b",
+      "notes": "AlpacaEval win rate %"
+    },
+    {
+      "benchmarkSlug": "mt-bench",
+      "score": 7.89,
+      "source": "self-reported",
+      "sourceUrl": "https://huggingface.co/allenai/tulu-2-dpo-70b",
+      "notes": "MT-Bench score (0-10)"
+    }
+  ],
+  "verificationNotes": "Confirmed real via arXiv paper (2311.10702, submitted 2023-11-17) and HF model card. AI2 ImpACT Low-risk license confirmed via search. Context length 8192 (ctxK=8) confirmed directly from the model's raw config.json (max_position_embeddings=8192). AlpacaEval 95.1% win rate and MT-Bench 7.89 both confirmed via independent secondary sources quoting the HF card."
+}

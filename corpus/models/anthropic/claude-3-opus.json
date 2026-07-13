@@ -1,0 +1,157 @@
+{
+  "name": "Claude 3 Opus",
+  "org": "Anthropic",
+  "family": "Claude 3",
+  "releaseDate": "2024-03-04",
+  "status": "deprecated",
+  "openness": "closed",
+  "license": "Proprietary (Anthropic Commercial Terms of Service)",
+  "paramsB": null,
+  "activeParamsB": null,
+  "archClass": "dense",
+  "archDisplay": "Dense multimodal Transformer (parameter count undisclosed)",
+  "ctxK": 200,
+  "modalities": [
+    "text",
+    "vision"
+  ],
+  "langCount": null,
+  "capabilities": {
+    "reasoning": true,
+    "coding": true,
+    "vision": true,
+    "functionCalling": true,
+    "toolUse": true,
+    "agentic": true
+  },
+  "apiAvailable": false,
+  "price": {
+    "input": 15,
+    "output": 75,
+    "provider": "Anthropic"
+  },
+  "links": {
+    "docs": "docs.claude.com"
+  },
+  "note": "Claude 3 flagship; first Claude to top GPT-4 on major public benchmarks, with vision and 200K context.",
+  "quants": [],
+  "vramQ4Gb": null,
+  "vramFp16Gb": null,
+  "tps4090": null,
+  "tpsNote": null,
+  "effortLabel": null,
+  "isDefaultConfig": true,
+  "isBestConfig": true,
+  "specSources": {
+    "releaseDate": "https://www.anthropic.com/news/claude-3-family",
+    "ctxK": "https://www.anthropic.com/news/claude-3-family",
+    "openness": "https://www.anthropic.com/news/claude-3-family"
+  },
+  "results": [
+    {
+      "benchmarkSlug": "mmlu",
+      "score": 86.8,
+      "source": "self-reported",
+      "sourceUrl": "https://www-cdn.anthropic.com/de8ba9b01c9ab7cbabf5c33b80b7bbc618857627/Model_Card_Claude_3.pdf",
+      "evaluatedAt": "2024-03-04",
+      "notes": "5-shot"
+    },
+    {
+      "benchmarkSlug": "math",
+      "score": 60.1,
+      "source": "self-reported",
+      "sourceUrl": "https://www-cdn.anthropic.com/de8ba9b01c9ab7cbabf5c33b80b7bbc618857627/Model_Card_Claude_3.pdf",
+      "evaluatedAt": "2024-03-04",
+      "notes": "0-shot CoT"
+    },
+    {
+      "benchmarkSlug": "gsm8k",
+      "score": 95,
+      "source": "self-reported",
+      "sourceUrl": "https://www-cdn.anthropic.com/de8ba9b01c9ab7cbabf5c33b80b7bbc618857627/Model_Card_Claude_3.pdf",
+      "evaluatedAt": "2024-03-04",
+      "notes": "0-shot CoT"
+    },
+    {
+      "benchmarkSlug": "humaneval",
+      "score": 84.9,
+      "source": "self-reported",
+      "sourceUrl": "https://www-cdn.anthropic.com/de8ba9b01c9ab7cbabf5c33b80b7bbc618857627/Model_Card_Claude_3.pdf",
+      "evaluatedAt": "2024-03-04",
+      "notes": "0-shot"
+    },
+    {
+      "benchmarkSlug": "gpqa",
+      "score": 50.4,
+      "source": "self-reported",
+      "sourceUrl": "https://www-cdn.anthropic.com/de8ba9b01c9ab7cbabf5c33b80b7bbc618857627/Model_Card_Claude_3.pdf",
+      "evaluatedAt": "2024-03-04",
+      "notes": "GPQA Diamond, 0-shot CoT"
+    },
+    {
+      "benchmarkSlug": "bbh",
+      "score": 86.8,
+      "source": "self-reported",
+      "sourceUrl": "https://www-cdn.anthropic.com/de8ba9b01c9ab7cbabf5c33b80b7bbc618857627/Model_Card_Claude_3.pdf",
+      "evaluatedAt": "2024-03-04",
+      "notes": "3-shot CoT"
+    },
+    {
+      "benchmarkSlug": "arc-challenge",
+      "score": 96.4,
+      "source": "self-reported",
+      "sourceUrl": "https://www-cdn.anthropic.com/de8ba9b01c9ab7cbabf5c33b80b7bbc618857627/Model_Card_Claude_3.pdf",
+      "evaluatedAt": "2024-03-04",
+      "notes": "25-shot"
+    },
+    {
+      "benchmarkSlug": "hellaswag",
+      "score": 95.4,
+      "source": "self-reported",
+      "sourceUrl": "https://www-cdn.anthropic.com/de8ba9b01c9ab7cbabf5c33b80b7bbc618857627/Model_Card_Claude_3.pdf",
+      "evaluatedAt": "2024-03-04",
+      "notes": "10-shot"
+    },
+    {
+      "benchmarkSlug": "winogrande",
+      "score": 88.5,
+      "source": "self-reported",
+      "sourceUrl": "https://www-cdn.anthropic.com/de8ba9b01c9ab7cbabf5c33b80b7bbc618857627/Model_Card_Claude_3.pdf",
+      "evaluatedAt": "2024-03-04",
+      "notes": "5-shot"
+    },
+    {
+      "benchmarkSlug": "drop",
+      "score": 83.1,
+      "source": "self-reported",
+      "sourceUrl": "https://www-cdn.anthropic.com/de8ba9b01c9ab7cbabf5c33b80b7bbc618857627/Model_Card_Claude_3.pdf",
+      "evaluatedAt": "2024-03-04",
+      "notes": "F1 score, 3-shot"
+    },
+    {
+      "benchmarkSlug": "mbpp",
+      "score": 86.4,
+      "source": "self-reported",
+      "sourceUrl": "https://www-cdn.anthropic.com/de8ba9b01c9ab7cbabf5c33b80b7bbc618857627/Model_Card_Claude_3.pdf",
+      "evaluatedAt": "2024-03-04",
+      "notes": "Pass@1"
+    },
+    {
+      "benchmarkSlug": "mmmu",
+      "score": 59.4,
+      "source": "self-reported",
+      "sourceUrl": "https://www-cdn.anthropic.com/de8ba9b01c9ab7cbabf5c33b80b7bbc618857627/Model_Card_Claude_3.pdf",
+      "evaluatedAt": "2024-03-04",
+      "notes": "Validation set, overall"
+    },
+    {
+      "benchmarkSlug": "swe-bench",
+      "score": 22,
+      "source": "self-reported",
+      "sourceUrl": "https://www.anthropic.com/research/swe-bench-sonnet",
+      "evaluatedAt": "2025-01-06",
+      "notes": "SWE-bench Verified, evaluated retrospectively by Anthropic with their agent scaffold"
+    }
+  ],
+  "verificationNotes": "Confirmed real via anthropic.com/news/claude-3-family (release date 2024-03-04, pricing $15/$75, 200K ctx, vision). Downloaded and read the actual 42-page Model_Card_Claude_3.pdf Table 1/Table 3: every one of the 12 self-reported benchmark numbers (MMLU 86.8, MATH 60.1, GSM8K 95.0, HumanEval 84.9, GPQA 50.4, BBH 86.8, ARC-Challenge 96.4, HellaSwag 95.4, WinoGrande 88.5, DROP 83.1, MBPP 86.4, MMMU 59.4) matches the PDF verbatim. SWE-bench 22% confirmed on anthropic.com/research/swe-bench-sonnet. apiAvailable=false confirmed: claude-3-opus-20240229 retired from API January 5, 2026. No changes made."
+}

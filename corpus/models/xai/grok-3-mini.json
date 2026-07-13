@@ -1,0 +1,79 @@
+{
+  "name": "Grok-3 mini",
+  "org": "xAI",
+  "family": "Grok 3",
+  "releaseDate": "2025-02-17",
+  "status": "deprecated",
+  "openness": "closed",
+  "license": "Proprietary",
+  "paramsB": null,
+  "activeParamsB": null,
+  "archClass": "moe",
+  "archDisplay": "Mixture-of-Experts (size undisclosed; cost-efficient Grok 3 sibling)",
+  "ctxK": 131,
+  "modalities": [
+    "text"
+  ],
+  "langCount": null,
+  "capabilities": {
+    "reasoning": true,
+    "coding": true,
+    "vision": false,
+    "functionCalling": true,
+    "toolUse": true,
+    "agentic": true
+  },
+  "apiAvailable": true,
+  "price": {
+    "input": 0.3,
+    "output": 0.5,
+    "provider": "xAI"
+  },
+  "links": {
+    "docs": "docs.x.ai"
+  },
+  "note": "Cost-efficient reasoning model, ~90% cheaper than Grok 3; exposes a low/high reasoning_effort API parameter. Deprecated Feb 28, 2026 and again in the May 15, 2026 retirement wave.",
+  "quants": [],
+  "vramQ4Gb": null,
+  "vramFp16Gb": null,
+  "tps4090": null,
+  "tpsNote": null,
+  "effortLabel": null,
+  "isDefaultConfig": true,
+  "isBestConfig": true,
+  "specSources": {
+    "releaseDate": "https://x.ai/news/grok-3",
+    "ctxK": "https://docs.oracle.com/en-us/iaas/Content/generative-ai/xai-grok-3-mini.htm",
+    "openness": "https://docs.oracle.com/en-us/iaas/Content/generative-ai/xai-grok-3-mini.htm"
+  },
+  "results": [
+    {
+      "benchmarkSlug": "aime",
+      "score": 84.7,
+      "source": "independent",
+      "sourceUrl": "https://designforonline.com/ai-models/xai-grok-3-mini/",
+      "notes": "AIME 2025"
+    },
+    {
+      "benchmarkSlug": "gpqa",
+      "score": 79.1,
+      "source": "independent",
+      "sourceUrl": "https://designforonline.com/ai-models/xai-grok-3-mini/",
+      "notes": "GPQA Diamond"
+    },
+    {
+      "benchmarkSlug": "math",
+      "score": 99.2,
+      "source": "independent",
+      "sourceUrl": "https://designforonline.com/ai-models/xai-grok-3-mini/",
+      "notes": "MATH-500"
+    },
+    {
+      "benchmarkSlug": "livecodebench",
+      "score": 69.6,
+      "source": "independent",
+      "sourceUrl": "https://designforonline.com/ai-models/xai-grok-3-mini/"
+    }
+  ],
+  "verificationNotes": "Confirmed real, launched same Feb 17, 2025 event as Grok 3. All 4 result rows literally confirmed on designforonline.com via direct fetch ('GPQA Diamond 79.1%', 'MATH 500 99.2%', 'AIME 2025 84.7%', 'LiveCodeBench 69.6%'). Pricing $0.30/$0.50 per 1M tokens confirmed independently. Noted that xAI's own launch-day announcement separately advertised a higher AIME-2024/cons@64 figure (95.8%) not present in this record — left as-is since only the cited row's number needed literal confirmation, which it has."
+}

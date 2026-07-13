@@ -1,0 +1,97 @@
+{
+  "name": "Gemini 1.5 Flash-8B",
+  "org": "Google",
+  "family": "Gemini 1.5",
+  "releaseDate": "2024-10-03",
+  "status": "deprecated",
+  "openness": "closed",
+  "license": "Proprietary",
+  "paramsB": 8,
+  "activeParamsB": null,
+  "archClass": "dense",
+  "archDisplay": "Dense Transformer decoder model (single-digit-billion params per Google), inherits Gemini 1.5 Flash's architecture and optimizations",
+  "ctxK": 1000,
+  "modalities": [
+    "text",
+    "vision",
+    "audio",
+    "video"
+  ],
+  "langCount": null,
+  "capabilities": {
+    "reasoning": false,
+    "coding": true,
+    "vision": true,
+    "functionCalling": true,
+    "toolUse": true,
+    "agentic": false
+  },
+  "apiAvailable": true,
+  "price": {
+    "input": 0.0375,
+    "output": 0.15,
+    "provider": "Google (Gemini API, <=128K prompts)"
+  },
+  "links": {
+    "docs": "ai.google.dev/gemini-api/docs/models"
+  },
+  "note": "Smallest, cheapest 1.5 Flash tier for high-volume tasks; ~80-90% of Flash's quality at a fraction of the cost.",
+  "quants": [],
+  "vramQ4Gb": null,
+  "vramFp16Gb": null,
+  "tps4090": null,
+  "tpsNote": null,
+  "effortLabel": null,
+  "isDefaultConfig": true,
+  "isBestConfig": true,
+  "specSources": {
+    "releaseDate": "https://developers.googleblog.com/en/gemini-15-flash-8b-is-now-generally-available-for-use/",
+    "paramsB": "https://storage.googleapis.com/deepmind-media/gemini/gemini_v1_5_report.pdf",
+    "ctxK": "https://storage.googleapis.com/deepmind-media/gemini/gemini_v1_5_report.pdf",
+    "openness": "https://ai.google.dev/gemini-api/docs/models",
+    "archClass": "https://storage.googleapis.com/deepmind-media/gemini/gemini_v1_5_report.pdf"
+  },
+  "results": [
+    {
+      "benchmarkSlug": "mmlu",
+      "score": 68.1,
+      "source": "self-reported",
+      "sourceUrl": "https://storage.googleapis.com/deepmind-media/gemini/gemini_v1_5_report.pdf",
+      "evaluatedAt": "2024-10-01",
+      "notes": "5-shot, Table 22"
+    },
+    {
+      "benchmarkSlug": "gpqa",
+      "score": 30.8,
+      "source": "self-reported",
+      "sourceUrl": "https://storage.googleapis.com/deepmind-media/gemini/gemini_v1_5_report.pdf",
+      "evaluatedAt": "2024-10-01",
+      "notes": "0-shot, Table 22"
+    },
+    {
+      "benchmarkSlug": "math",
+      "score": 35.9,
+      "source": "self-reported",
+      "sourceUrl": "https://storage.googleapis.com/deepmind-media/gemini/gemini_v1_5_report.pdf",
+      "evaluatedAt": "2024-10-01",
+      "notes": "4-shot Minerva prompt, Table 22"
+    },
+    {
+      "benchmarkSlug": "bbh",
+      "score": 69.5,
+      "source": "self-reported",
+      "sourceUrl": "https://storage.googleapis.com/deepmind-media/gemini/gemini_v1_5_report.pdf",
+      "evaluatedAt": "2024-10-01",
+      "notes": "3-shot, Table 22"
+    },
+    {
+      "benchmarkSlug": "mmmu",
+      "score": 50.3,
+      "source": "self-reported",
+      "sourceUrl": "https://storage.googleapis.com/deepmind-media/gemini/gemini_v1_5_report.pdf",
+      "evaluatedAt": "2024-10-01",
+      "notes": "val, 4-shot, Table 22"
+    }
+  ],
+  "verificationNotes": "CORRECTED: archClass changed from 'moe' to 'dense' and archDisplay rewritten — the technical report states Flash-8B 'is a transformer decoder model derived from the architectural innovations ... employed in the development of Flash' (which is itself confirmed dense, not MoE), and describes it as a 'single-digit billion parameter' model. paramsB=8 is corroborated by the product name and this 'single-digit billion' phrasing plus third-party estimates (artificialanalysis.ai), but Google has not disclosed an exact parameter count ('Flash-8B remains under active development'); flagged as an approximation, not an exact official figure. Release date (GA Oct 3 2024) confirmed via Google Developers Blog. All 5 result rows verbatim-confirmed against Table 22 of the fetched technical report. Pricing ($0.0375/$0.15 per 1M tokens) confirmed via the same GA announcement."
+}

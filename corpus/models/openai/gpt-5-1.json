@@ -1,0 +1,70 @@
+{
+  "name": "GPT-5.1",
+  "org": "OpenAI",
+  "family": "GPT-5.1",
+  "releaseDate": "2025-11-12",
+  "status": "released",
+  "openness": "closed",
+  "license": "Proprietary (OpenAI API Terms)",
+  "paramsB": null,
+  "activeParamsB": null,
+  "archClass": "dense",
+  "archDisplay": "GPT-5 upgrade with adaptive reasoning spanning Instant and Thinking behavior in one model; dense transformer, exact size undisclosed",
+  "ctxK": 400,
+  "modalities": [
+    "text",
+    "vision"
+  ],
+  "langCount": null,
+  "capabilities": {
+    "reasoning": true,
+    "coding": true,
+    "vision": true,
+    "functionCalling": true,
+    "toolUse": true,
+    "agentic": true
+  },
+  "apiAvailable": true,
+  "price": {
+    "input": 1.25,
+    "output": 10,
+    "provider": "OpenAI"
+  },
+  "links": {
+    "docs": "developers.openai.com/api/docs/models/gpt-5.1"
+  },
+  "note": "Warmer, more conversational refresh with adaptive reasoning; Instant and Thinking modes.",
+  "quants": [],
+  "vramQ4Gb": null,
+  "vramFp16Gb": null,
+  "tps4090": null,
+  "tpsNote": null,
+  "effortLabel": "High",
+  "isDefaultConfig": true,
+  "isBestConfig": true,
+  "specSources": {
+    "releaseDate": "https://openai.com/index/gpt-5-1/",
+    "ctxK": "https://developers.openai.com/api/docs/models/gpt-5.1",
+    "openness": "https://developers.openai.com/api/docs/models/gpt-5.1",
+    "paramsB": "https://developers.openai.com/api/docs/models/gpt-5.1"
+  },
+  "results": [
+    {
+      "benchmarkSlug": "swe-bench",
+      "score": 76.3,
+      "source": "independent",
+      "sourceUrl": "https://claude5.com/news/gpt-5-1-performance-review-benchmarks-november-2025",
+      "evaluatedAt": "2025-11-19",
+      "notes": "SWE-bench Verified, Thinking mode; literally confirmed on cited page"
+    },
+    {
+      "benchmarkSlug": "aime",
+      "score": 94,
+      "source": "independent",
+      "sourceUrl": "https://claude5.com/news/gpt-5-1-performance-review-benchmarks-november-2025",
+      "evaluatedAt": "2025-11-19",
+      "notes": "AIME 2025, Thinking mode; literally confirmed on cited page"
+    }
+  ],
+  "verificationNotes": "Existence, Nov 12 2025 release, 400K context, and $1.25/$10 pricing all confirmed directly via developers.openai.com/api/docs/models/gpt-5.1 and openai.com/index/gpt-5-1/. SWE-bench (76.3) and AIME (94) confirmed literally on the cited claude5.com page. Dropped the GPQA-Diamond row (86.6, sourced to artificialanalysis.ai/evaluations/gpqa-diamond): that live leaderboard page no longer lists GPT-5.1 (superseded), and a different tracker (aireleasetracker.com) reports 88.1 for the same metric — could not confirm 86.6 on the cited page and found a conflicting number elsewhere, so removed per instructions."
+}

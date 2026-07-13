@@ -1,0 +1,102 @@
+{
+  "name": "AI21 Jamba",
+  "org": "AI21 Labs",
+  "family": "AI21 Jamba",
+  "releaseDate": "2024-03-28",
+  "status": "released",
+  "openness": "open-weights",
+  "license": "Apache-2.0",
+  "paramsB": 52,
+  "activeParamsB": 12,
+  "archClass": "hybrid",
+  "archDisplay": "Hybrid Mamba-Transformer MoE (Jamba)",
+  "ctxK": 256,
+  "modalities": [
+    "text"
+  ],
+  "langCount": null,
+  "capabilities": {
+    "reasoning": false,
+    "coding": false,
+    "vision": false,
+    "functionCalling": false,
+    "toolUse": false,
+    "agentic": false
+  },
+  "apiAvailable": false,
+  "price": null,
+  "links": {
+    "hf": "ai21labs/Jamba-v0.1",
+    "docs": "docs.ai21.com"
+  },
+  "note": "First production-grade hybrid Mamba-Transformer MoE base model, 12B/52B active/total, 256K context fitting 140K tokens on one 80GB GPU.",
+  "quants": [
+    "GGUF Q4",
+    "GPTQ"
+  ],
+  "vramQ4Gb": 29.5,
+  "vramFp16Gb": 104,
+  "tps4090": null,
+  "tpsNote": null,
+  "effortLabel": null,
+  "isDefaultConfig": true,
+  "isBestConfig": true,
+  "specSources": {
+    "paramsB": "https://huggingface.co/ai21labs/Jamba-v0.1",
+    "ctxK": "https://huggingface.co/ai21labs/Jamba-v0.1",
+    "releaseDate": "https://huggingface.co/ai21labs/Jamba-v0.1",
+    "openness": "https://www.ai21.com/blog/announcing-jamba/"
+  },
+  "results": [
+    {
+      "benchmarkSlug": "mmlu",
+      "score": 67.4,
+      "source": "self-reported",
+      "sourceUrl": "https://huggingface.co/ai21labs/Jamba-v0.1"
+    },
+    {
+      "benchmarkSlug": "hellaswag",
+      "score": 87.1,
+      "source": "self-reported",
+      "sourceUrl": "https://huggingface.co/ai21labs/Jamba-v0.1"
+    },
+    {
+      "benchmarkSlug": "arc-challenge",
+      "score": 64.4,
+      "source": "self-reported",
+      "sourceUrl": "https://huggingface.co/ai21labs/Jamba-v0.1"
+    },
+    {
+      "benchmarkSlug": "gsm8k",
+      "score": 59.9,
+      "source": "self-reported",
+      "sourceUrl": "https://huggingface.co/ai21labs/Jamba-v0.1",
+      "notes": "CoT"
+    },
+    {
+      "benchmarkSlug": "winogrande",
+      "score": 82.5,
+      "source": "self-reported",
+      "sourceUrl": "https://huggingface.co/ai21labs/Jamba-v0.1"
+    },
+    {
+      "benchmarkSlug": "bbh",
+      "score": 45.4,
+      "source": "self-reported",
+      "sourceUrl": "https://huggingface.co/ai21labs/Jamba-v0.1"
+    },
+    {
+      "benchmarkSlug": "piqa",
+      "score": 83.2,
+      "source": "self-reported",
+      "sourceUrl": "https://huggingface.co/ai21labs/Jamba-v0.1"
+    },
+    {
+      "benchmarkSlug": "truthfulqa",
+      "score": 46.4,
+      "source": "self-reported",
+      "sourceUrl": "https://huggingface.co/ai21labs/Jamba-v0.1"
+    }
+  ],
+  "verificationNotes": "Confirmed via ai21.com/blog/announcing-jamba/ (published 2024-03-28: Apache-2.0 open weights, 256K context window, 140K tokens on a single 80GB GPU) and HF model card ai21labs/Jamba-v0.1 (12B active/52B total MoE, hybrid Mamba-Transformer-MoE). All 8 benchmark rows (MMLU 67.4, HellaSwag 87.1, ARC-Challenge 64.4, GSM8K/CoT 59.9, WinoGrande 82.5, BBH 45.4, PIQA 83.2, TruthfulQA 46.4) were fetched directly from the HF model card's academic benchmarks table and match exactly. All fields left unchanged."
+}

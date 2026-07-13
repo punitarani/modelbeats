@@ -1,0 +1,60 @@
+{
+  "name": "CodeGen2.5 7B",
+  "org": "Salesforce",
+  "family": "CodeGen",
+  "releaseDate": "2023-07-06",
+  "status": "released",
+  "openness": "open-weights",
+  "license": "Apache-2.0 (mono/multi variants; instruct variant is research-purposes-only)",
+  "paramsB": 7,
+  "activeParamsB": null,
+  "archClass": "dense",
+  "archDisplay": "Dense autoregressive transformer decoder (GPT-style, causal + infill objective)",
+  "ctxK": 2,
+  "modalities": [
+    "text"
+  ],
+  "langCount": null,
+  "capabilities": {
+    "reasoning": false,
+    "coding": true,
+    "vision": false,
+    "functionCalling": false,
+    "toolUse": false,
+    "agentic": false
+  },
+  "apiAvailable": false,
+  "price": null,
+  "links": {
+    "hf": "Salesforce/codegen25-7b-mono_P",
+    "gh": "salesforce/CodeGen"
+  },
+  "note": "7B code model matching 15B-16B peers (StarCoder-15B, CodeGen1/2-16B) via infill sampling and Flash-attention serving.",
+  "quants": [
+    "GPTQ",
+    "GGUF"
+  ],
+  "vramQ4Gb": 5,
+  "vramFp16Gb": 14,
+  "tps4090": null,
+  "tpsNote": null,
+  "effortLabel": null,
+  "isDefaultConfig": true,
+  "isBestConfig": true,
+  "specSources": {
+    "paramsB": "https://huggingface.co/Salesforce/codegen25-7b-multi_P",
+    "ctxK": "https://huggingface.co/Salesforce/codegen25-7b-mono_P/raw/main/config.json",
+    "releaseDate": "https://www.salesforce.com/blog/codegen25/",
+    "openness": "https://huggingface.co/Salesforce/codegen25-7b-multi_P"
+  },
+  "results": [
+    {
+      "benchmarkSlug": "humaneval",
+      "score": 33.4,
+      "source": "independent",
+      "sourceUrl": "https://github.com/zai-org/CodeGeeX2/blob/main/README.md",
+      "notes": "CodeGen2.5-7B-mono, pass@1"
+    }
+  ],
+  "verificationNotes": "Confirmed real: Salesforce blog post 'CodeGen2.5: Small, but mighty' published 2023-07-06, and HF repos codegen25-7b-mono_P/multi_P/instruct_P exist. Fetched CodeGeeX2 README directly and confirmed it literally lists CodeGen2.5-7B-mono pass@1 = 33.4 (also pass@10 58.4, pass@100 82.7). Config.json confirms max_position_embeddings=2048 (2K ctx) and ~7B-scale Llama-like dense decoder architecture. License split (Apache-2.0 mono/multi, research-only instruct) confirmed via search of HF model cards."
+}

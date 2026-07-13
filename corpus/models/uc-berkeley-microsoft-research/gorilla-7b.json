@@ -1,0 +1,74 @@
+{
+  "name": "Gorilla 7B",
+  "org": "UC Berkeley & Microsoft Research",
+  "family": "Gorilla",
+  "releaseDate": "2023-05-24",
+  "status": "released",
+  "openness": "open-weights",
+  "license": "Apache 2.0 (delta weights; base requires Meta LLaMA research license)",
+  "paramsB": 7,
+  "activeParamsB": null,
+  "archClass": "dense",
+  "archDisplay": "LLaMA-7B dense Transformer, retrieval-aware instruction fine-tune for API calls",
+  "ctxK": 2,
+  "modalities": [
+    "text"
+  ],
+  "langCount": null,
+  "capabilities": {
+    "reasoning": false,
+    "coding": false,
+    "vision": false,
+    "functionCalling": true,
+    "toolUse": true,
+    "agentic": false
+  },
+  "apiAvailable": false,
+  "price": null,
+  "links": {
+    "hf": "gorilla-llm/gorilla-7b-hf-delta-v1",
+    "gh": "ShishirPatil/gorilla"
+  },
+  "note": "Zero-shot beats GPT-4 by 20.4pp and ChatGPT by 10.75pp on APIBench across TorchHub/HuggingFace/TensorHub.",
+  "quants": [
+    "GGML",
+    "GGUF"
+  ],
+  "vramQ4Gb": 5,
+  "vramFp16Gb": 14,
+  "tps4090": null,
+  "tpsNote": null,
+  "effortLabel": null,
+  "isDefaultConfig": true,
+  "isBestConfig": true,
+  "specSources": {
+    "paramsB": "https://arxiv.org/abs/2305.15334",
+    "ctxK": "https://arxiv.org/abs/2305.15334",
+    "releaseDate": "https://arxiv.org/abs/2305.15334",
+    "openness": "https://huggingface.co/gorilla-llm/gorilla-7b-hf-delta-v1"
+  },
+  "results": [
+    {
+      "benchmarkSlug": "torchhub-apibench",
+      "score": 59.13,
+      "source": "self-reported",
+      "sourceUrl": "https://ar5iv.labs.arxiv.org/html/2305.15334",
+      "notes": "zero-shot, no retriever, overall accuracy — Table 1"
+    },
+    {
+      "benchmarkSlug": "huggingface-apibench",
+      "score": 71.68,
+      "source": "self-reported",
+      "sourceUrl": "https://ar5iv.labs.arxiv.org/html/2305.15334",
+      "notes": "zero-shot, no retriever, overall accuracy — Table 1"
+    },
+    {
+      "benchmarkSlug": "tensorhub-apibench",
+      "score": 83.79,
+      "source": "self-reported",
+      "sourceUrl": "https://ar5iv.labs.arxiv.org/html/2305.15334",
+      "notes": "zero-shot, no retriever, overall accuracy — Table 1"
+    }
+  ],
+  "verificationNotes": "CONFIRMED real: arXiv 2305.15334 (submitted 24 May 2023 — matches releaseDate exactly; authors Shishir G. Patil, Tianjun Zhang, Xin Wang, Joseph E. Gonzalez, UC Berkeley & Microsoft Research). HF repo gorilla-llm/gorilla-7b-hf-delta-v1 confirms Apache-2.0 delta weights over LLaMA-7B, matching license/paramsB. All three APIBench zero-shot/no-retriever scores (TorchHub 59.13, HuggingFace 71.68, TensorHub 83.79) CONFIRMED verbatim in the paper's Table 1. The paper text also literally states Gorilla is '20.43% better than GPT-4 and 10.75% better than ChatGPT' zero-shot — matches the note's 20.4pp/10.75pp. CORRECTED sourceUrl on all three result rows: the plain arxiv.org/abs/2305.15334 abstract page does not display the table/numbers (confirmed by direct fetch), so pointed instead to the full-text render at ar5iv.labs.arxiv.org/html/2305.15334 where the figures are literally visible."
+}

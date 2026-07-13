@@ -1,0 +1,53 @@
+{
+  "name": "MPT-30B",
+  "org": "MosaicML",
+  "family": "MPT",
+  "releaseDate": "2023-06-22",
+  "status": "released",
+  "openness": "open-source",
+  "license": "Apache-2.0",
+  "paramsB": 30,
+  "activeParamsB": null,
+  "archClass": "dense",
+  "archDisplay": "Decoder-only Transformer w/ ALiBi + FlashAttention",
+  "ctxK": 8,
+  "modalities": [
+    "text"
+  ],
+  "langCount": null,
+  "capabilities": {
+    "reasoning": false,
+    "coding": true,
+    "vision": false,
+    "functionCalling": false,
+    "toolUse": false,
+    "agentic": false
+  },
+  "apiAvailable": false,
+  "price": null,
+  "links": {
+    "hf": "mosaicml/mpt-30b",
+    "gh": "mosaicml/llm-foundry",
+    "docs": "databricks.com"
+  },
+  "note": "Base 30B decoder pretrained on 1T tokens of English text and code, 8k context via ALiBi, sized to run on a single 80GB GPU.",
+  "quants": [
+    "GGUF Q4",
+    "AWQ"
+  ],
+  "vramQ4Gb": 19.1,
+  "vramFp16Gb": 60,
+  "tps4090": null,
+  "tpsNote": null,
+  "effortLabel": null,
+  "isDefaultConfig": true,
+  "isBestConfig": true,
+  "specSources": {
+    "paramsB": "https://huggingface.co/mosaicml/mpt-30b",
+    "ctxK": "https://www.databricks.com/blog/mpt-30b",
+    "releaseDate": "https://www.businesswire.com/news/home/20230622195151/en/MosaicML-Releases-Open-Source-MPT-30B-LLMs-Trained-on-H100s-to-Power-Generative-AI-Applications",
+    "openness": "https://huggingface.co/mosaicml/mpt-30b"
+  },
+  "results": [],
+  "verificationNotes": "Confirmed via Databricks MPT-30B blog (published 2023-06-22): 30B params, 1T tokens total (1T at 2k context + 50B extension tokens for 8k context), 8k context window, Apache-2.0, trained on H100s, sized for single 80GB GPU deployment. No result rows to verify. All fields left unchanged."
+}

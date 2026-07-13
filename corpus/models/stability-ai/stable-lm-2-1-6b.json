@@ -1,0 +1,94 @@
+{
+  "name": "Stable LM 2 1.6B",
+  "org": "Stability AI",
+  "family": "StableLM 2",
+  "releaseDate": "2024-01-19",
+  "status": "released",
+  "openness": "open-weights",
+  "license": "Stability AI Community License (non-commercial by default; commercial use requires Stability AI membership)",
+  "paramsB": 1.64,
+  "activeParamsB": null,
+  "archClass": "dense",
+  "archDisplay": "Dense decoder-only transformer (24 layers, LLaMA-style partial RoPE + LayerNorm, Arcade100k tokenizer)",
+  "ctxK": 4,
+  "modalities": [
+    "text"
+  ],
+  "langCount": 7,
+  "capabilities": {
+    "reasoning": false,
+    "coding": false,
+    "vision": false,
+    "functionCalling": false,
+    "toolUse": false,
+    "agentic": false
+  },
+  "apiAvailable": false,
+  "price": null,
+  "links": {
+    "hf": "stabilityai/stablelm-2-1_6b",
+    "gh": "Stability-AI/StableLM"
+  },
+  "note": "Compact 7-language multilingual model (English, Spanish, German, Italian, French, Portuguese, Dutch) trained on 2T tokens over 2 epochs; smallest member of the StableLM 2 line.",
+  "quants": [
+    "GGUF"
+  ],
+  "vramQ4Gb": 1.1,
+  "vramFp16Gb": 3.3,
+  "tps4090": null,
+  "tpsNote": null,
+  "effortLabel": null,
+  "isDefaultConfig": true,
+  "isBestConfig": true,
+  "specSources": {
+    "paramsB": "https://huggingface.co/stabilityai/stablelm-2-1_6b",
+    "ctxK": "https://huggingface.co/stabilityai/stablelm-2-1_6b",
+    "releaseDate": "https://stability.ai/news-updates/introducing-stable-lm-2",
+    "openness": "https://huggingface.co/stabilityai/stablelm-2-1_6b"
+  },
+  "results": [
+    {
+      "benchmarkSlug": "mt-bench",
+      "score": 5.42,
+      "source": "self-reported",
+      "sourceUrl": "https://huggingface.co/stabilityai/stablelm-2-zephyr-1_6b",
+      "notes": "DPO/instruct (Zephyr) variant"
+    },
+    {
+      "benchmarkSlug": "mmlu",
+      "score": 41.85,
+      "source": "independent",
+      "sourceUrl": "https://huggingface.co/stabilityai/stablelm-2-zephyr-1_6b",
+      "notes": "Open LLM Leaderboard, instruct variant, 5-shot"
+    },
+    {
+      "benchmarkSlug": "hellaswag",
+      "score": 69.34,
+      "source": "independent",
+      "sourceUrl": "https://huggingface.co/stabilityai/stablelm-2-zephyr-1_6b",
+      "notes": "instruct variant, 10-shot"
+    },
+    {
+      "benchmarkSlug": "gsm8k",
+      "score": 35.18,
+      "source": "independent",
+      "sourceUrl": "https://huggingface.co/stabilityai/stablelm-2-zephyr-1_6b",
+      "notes": "instruct variant, 5-shot"
+    },
+    {
+      "benchmarkSlug": "arc-challenge",
+      "score": 43.69,
+      "source": "independent",
+      "sourceUrl": "https://huggingface.co/stabilityai/stablelm-2-zephyr-1_6b",
+      "notes": "instruct variant, 25-shot"
+    },
+    {
+      "benchmarkSlug": "winogrande",
+      "score": 64.09,
+      "source": "independent",
+      "sourceUrl": "https://huggingface.co/stabilityai/stablelm-2-zephyr-1_6b",
+      "notes": "instruct variant, 5-shot"
+    }
+  ],
+  "verificationNotes": "Confirmed real via direct fetch of huggingface.co/stabilityai/stablelm-2-1_6b (1,644,417,024 params = 1.64B, 4096 context, 2T tokens / 2 epochs) and Stability AI's own announcement blog (stability.ai/news-updates/introducing-stable-lm-2), which is dated Jan 19, 2024 and names the 7 languages (English, Spanish, German, Italian, French, Portuguese, Dutch) verbatim, plus Community License terms verbatim. Note: the base-model HF card's own metadata field shows Feb 27, 2024 in one rendering, but the primary announcement and all contemporaneous press (InfoQ, VentureBeat, Maginative, Thurrott) date the release to Jan 19, 2024, so the input's date was kept. All 6 benchmark rows verified literally on the linked instruct/Zephyr variant's HF page (MT-Bench 5.42, MMLU 41.85, HellaSwag 69.34, GSM8K 35.18, ARC-Challenge 43.69, WinoGrande 64.09). No changes made to input values."
+}

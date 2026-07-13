@@ -1,0 +1,88 @@
+{
+  "name": "Grok-1.5",
+  "org": "xAI",
+  "family": "Grok 1.5",
+  "releaseDate": "2024-03-29",
+  "status": "deprecated",
+  "openness": "closed",
+  "license": "Proprietary",
+  "paramsB": null,
+  "activeParamsB": null,
+  "archClass": "moe",
+  "archDisplay": "Mixture-of-Experts (exact configuration undisclosed by xAI)",
+  "ctxK": 128,
+  "modalities": [
+    "text"
+  ],
+  "langCount": null,
+  "capabilities": {
+    "reasoning": false,
+    "coding": true,
+    "vision": false,
+    "functionCalling": false,
+    "toolUse": false,
+    "agentic": false
+  },
+  "apiAvailable": false,
+  "price": null,
+  "links": {},
+  "note": "First major closed xAI iteration with 128K context; never exposed via a public developer API (xAI's API launched later, atop Grok-2).",
+  "quants": [],
+  "vramQ4Gb": null,
+  "vramFp16Gb": null,
+  "tps4090": null,
+  "tpsNote": null,
+  "effortLabel": null,
+  "isDefaultConfig": true,
+  "isBestConfig": true,
+  "specSources": {
+    "releaseDate": "https://x.ai/news/grok-1.5",
+    "ctxK": "https://x.ai/news/grok-1.5",
+    "openness": "https://x.ai/news/grok-1.5"
+  },
+  "results": [
+    {
+      "benchmarkSlug": "math",
+      "score": 50.6,
+      "source": "self-reported",
+      "sourceUrl": "https://x.ai/news/grok-1.5",
+      "evaluatedAt": "2024-03-29"
+    },
+    {
+      "benchmarkSlug": "gsm8k",
+      "score": 90,
+      "source": "self-reported",
+      "sourceUrl": "https://x.ai/news/grok-1.5",
+      "evaluatedAt": "2024-03-29"
+    },
+    {
+      "benchmarkSlug": "humaneval",
+      "score": 74.1,
+      "source": "self-reported",
+      "sourceUrl": "https://x.ai/news/grok-1.5",
+      "evaluatedAt": "2024-03-29"
+    },
+    {
+      "benchmarkSlug": "gpqa",
+      "score": 35.9,
+      "source": "self-reported",
+      "sourceUrl": "https://klu.ai/glossary/xai-grok-2",
+      "notes": "As reported in xAI's later Grok-2 comparison table"
+    },
+    {
+      "benchmarkSlug": "mmlu",
+      "score": 81.3,
+      "source": "self-reported",
+      "sourceUrl": "https://klu.ai/glossary/xai-grok-2",
+      "notes": "As reported in xAI's later Grok-2 comparison table"
+    },
+    {
+      "benchmarkSlug": "mmlu-pro",
+      "score": 51,
+      "source": "self-reported",
+      "sourceUrl": "https://klu.ai/glossary/xai-grok-2",
+      "notes": "As reported in xAI's later Grok-2 comparison table"
+    }
+  ],
+  "verificationNotes": "Confirmed real (announced 2024-03-29 per x.ai/news/grok-1.5, corroborated by Engadget/Dataconomy/technews180 coverage). MATH 50.6, GSM8K 90, HumanEval 74.1 confirmed via web search excerpts of the x.ai announcement (direct fetch 403'd but content corroborated by multiple secondary sources quoting it verbatim). GPQA 35.9, MMLU 81.3, MMLU-Pro 51.0 confirmed by directly fetching klu.ai/glossary/xai-grok-2, which literally lists all three numbers for Grok-1.5 in its Grok-2 comparison table. 'Deprecated' status reasonable given xAI has since shipped Grok-2/3/4/5 and Grok-1.5 was never exposed via public API."
+}

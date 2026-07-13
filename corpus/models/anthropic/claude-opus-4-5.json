@@ -1,0 +1,94 @@
+{
+  "name": "Claude Opus 4.5",
+  "org": "Anthropic",
+  "family": "Claude 4",
+  "releaseDate": "2025-11-24",
+  "status": "released",
+  "openness": "closed",
+  "license": "Proprietary",
+  "paramsB": null,
+  "activeParamsB": null,
+  "archClass": "dense",
+  "archDisplay": "Transformer (architecture undisclosed)",
+  "ctxK": 200,
+  "modalities": [
+    "text",
+    "vision"
+  ],
+  "langCount": null,
+  "capabilities": {
+    "reasoning": true,
+    "coding": true,
+    "vision": true,
+    "functionCalling": true,
+    "toolUse": true,
+    "agentic": true
+  },
+  "apiAvailable": true,
+  "price": {
+    "input": 5,
+    "output": 25,
+    "provider": "Anthropic"
+  },
+  "links": {
+    "docs": "anthropic.com/news/claude-opus-4-5"
+  },
+  "note": "Efficiency-focused flagship: 67% price cut vs Opus 4.1 and state-of-the-art 80.9% SWE-bench Verified at launch.",
+  "quants": [],
+  "vramQ4Gb": null,
+  "vramFp16Gb": null,
+  "tps4090": null,
+  "tpsNote": null,
+  "effortLabel": null,
+  "isDefaultConfig": true,
+  "isBestConfig": true,
+  "specSources": {
+    "paramsB": "https://www.anthropic.com/news/claude-opus-4-5",
+    "ctxK": "https://www.anthropic.com/news/claude-opus-4-5",
+    "releaseDate": "https://www.anthropic.com/news/claude-opus-4-5",
+    "openness": "https://www.anthropic.com/news/claude-opus-4-5"
+  },
+  "results": [
+    {
+      "benchmarkSlug": "swe-bench",
+      "score": 80.9,
+      "source": "self-reported",
+      "sourceUrl": "https://www.anthropic.com/news/claude-opus-4-5",
+      "notes": "SWE-bench Verified"
+    },
+    {
+      "benchmarkSlug": "gpqa",
+      "score": 87,
+      "source": "self-reported",
+      "sourceUrl": "https://www.vellum.ai/blog/claude-opus-4-5-benchmarks",
+      "notes": "GPQA Diamond"
+    },
+    {
+      "benchmarkSlug": "mmlu",
+      "score": 90.8,
+      "source": "self-reported",
+      "sourceUrl": "https://www.vellum.ai/blog/claude-opus-4-5-benchmarks"
+    },
+    {
+      "benchmarkSlug": "mmmu",
+      "score": 80.7,
+      "source": "self-reported",
+      "sourceUrl": "https://www.vellum.ai/blog/claude-opus-4-5-benchmarks"
+    },
+    {
+      "benchmarkSlug": "hle",
+      "score": 43.2,
+      "source": "self-reported",
+      "sourceUrl": "https://www.vellum.ai/blog/claude-opus-4-5-benchmarks",
+      "notes": "Humanity's Last Exam, with search/tools"
+    },
+    {
+      "benchmarkSlug": "aime",
+      "score": 93,
+      "source": "self-reported",
+      "sourceUrl": "https://www.lesswrong.com/posts/HtdrtF5kcpLtWe5dW/claude-opus-4-5-is-the-best-model-available",
+      "notes": "AIME 2025 without code tools; Anthropic flagged that decontamination efforts for AIME were not fully successful"
+    }
+  ],
+  "verificationNotes": "Confirmed real, released model via anthropic.com/news/claude-opus-4-5: release date 2025-11-24, pricing $5/$25 per million input/output tokens (67% cut vs Opus 4.1), 200K context, SWE-bench Verified 80.9% all literally appear on the official page. Cross-checked all vellum.ai-sourced rows by re-fetching that page directly: GPQA Diamond 87.0%, MMLU 90.8%, MMMU 80.7%, HLE (with search) ~43.2% all literally present. Confirmed AIME 93% (without code tools) and the AIME decontamination caveat by fetching the LessWrong post directly ('93% without code and 100% with Python'; Anthropic disclosed 'rephrased versions of at least some AIME questions... persisted in the training corpus'). Confirmed Artificial Analysis Intelligence Index score of 70 and #2 rank (behind Gemini 3 Pro at 73, tied GPT-5.1) by fetching artificialanalysis.ai directly. No changes to values were needed; architecture/params remain correctly marked null/undisclosed since Anthropic does not publish these."
+}

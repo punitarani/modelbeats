@@ -1,0 +1,77 @@
+{
+  "name": "Qwen2.5-Coder-32B",
+  "org": "Alibaba",
+  "family": "Qwen2.5-Coder",
+  "releaseDate": "2024-11-12",
+  "status": "released",
+  "openness": "open-weights",
+  "license": "Apache-2.0",
+  "paramsB": 32.5,
+  "activeParamsB": null,
+  "archClass": "dense",
+  "archDisplay": "Dense transformer, 64 layers (GQA 40Q/8KV)",
+  "ctxK": 128,
+  "modalities": [
+    "text"
+  ],
+  "langCount": null,
+  "capabilities": {
+    "reasoning": true,
+    "coding": true,
+    "vision": false,
+    "functionCalling": true,
+    "toolUse": true,
+    "agentic": true
+  },
+  "apiAvailable": false,
+  "price": null,
+  "links": {
+    "hf": "Qwen/Qwen2.5-Coder-32B",
+    "gh": "QwenLM/Qwen2.5-Coder",
+    "docs": "qwenlm.github.io/blog/qwen2.5-coder-family"
+  },
+  "note": "Apache-2.0 coding flagship; Instruct sibling rivals GPT-4o on EvalPlus/LiveCodeBench/BigCodeBench and Aider code-repair.",
+  "quants": [
+    "GGUF",
+    "AWQ",
+    "GPTQ Int4",
+    "MLX"
+  ],
+  "vramQ4Gb": 19.9,
+  "vramFp16Gb": 65,
+  "tps4090": null,
+  "tpsNote": "~20GB Q4 fits within 24GB with limited headroom for context/KV cache; no single independently verified 4090 tok/s figure found.",
+  "effortLabel": null,
+  "isDefaultConfig": true,
+  "isBestConfig": true,
+  "specSources": {
+    "paramsB": "https://huggingface.co/Qwen/Qwen2.5-Coder-32B",
+    "ctxK": "https://huggingface.co/Qwen/Qwen2.5-Coder-32B",
+    "releaseDate": "https://qwenlm.github.io/blog/qwen2.5-coder-family/",
+    "openness": "https://huggingface.co/Qwen/Qwen2.5-Coder-32B"
+  },
+  "results": [
+    {
+      "benchmarkSlug": "humaneval",
+      "score": 65.9,
+      "source": "self-reported",
+      "sourceUrl": "https://arxiv.org/abs/2409.12186",
+      "notes": "Base model"
+    },
+    {
+      "benchmarkSlug": "mbpp",
+      "score": 76.4,
+      "source": "self-reported",
+      "sourceUrl": "https://arxiv.org/abs/2409.12186",
+      "notes": "Base model"
+    },
+    {
+      "benchmarkSlug": "bigcodebench",
+      "score": 83,
+      "source": "self-reported",
+      "sourceUrl": "https://arxiv.org/abs/2409.12186",
+      "notes": "Base model, BigCodeBench-Full"
+    }
+  ],
+  "verificationNotes": "Confirmed real; blog qwenlm.github.io/blog/qwen2.5-coder-family/ byline gives Nov 12 2024 and Apache-2.0 for 32B. HF card (huggingface.co/Qwen/Qwen2.5-Coder-32B) confirms 32.5B total/31.0B non-embedding params, 64 layers, GQA 40Q/8KV, 131,072 ctx. Qwen2.5-Coder Technical Report (arxiv 2409.12186, updated v3 Nov 12 2024 to add the 32B size) Table 5 confirms base-model HumanEval 65.9, MBPP 76.4 (MBPP+ is a separate 53.6), BigCodeBench-Complete-Full 83.0 -- all three result rows verified verbatim (an initial fetch pass mis-transposed columns; a second, targeted fetch separating base vs instruct rows corrected this and matched the input exactly). No changes made."
+}

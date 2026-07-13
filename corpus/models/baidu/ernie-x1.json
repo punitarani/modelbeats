@@ -1,0 +1,52 @@
+{
+  "name": "ERNIE X1",
+  "org": "Baidu",
+  "family": "ERNIE",
+  "releaseDate": "2025-03-16",
+  "status": "released",
+  "openness": "closed",
+  "license": "Proprietary",
+  "paramsB": null,
+  "activeParamsB": null,
+  "archClass": "moe",
+  "archDisplay": "Heterogeneous multimodal Mixture-of-Experts (deep-thinking reasoner)",
+  "ctxK": 8,
+  "modalities": [
+    "text",
+    "vision"
+  ],
+  "langCount": null,
+  "capabilities": {
+    "reasoning": true,
+    "coding": true,
+    "vision": true,
+    "functionCalling": true,
+    "toolUse": true,
+    "agentic": true
+  },
+  "apiAvailable": true,
+  "price": {
+    "input": 0.28,
+    "output": 1.1,
+    "provider": "Baidu Qianfan"
+  },
+  "links": {
+    "docs": "qianfan.baidubce.com"
+  },
+  "note": "Deep-thinking reasoner pitched against DeepSeek R1 at about half the price, but only an 8K context vs R1's 128K.",
+  "quants": [],
+  "vramQ4Gb": null,
+  "vramFp16Gb": null,
+  "tps4090": null,
+  "tpsNote": null,
+  "effortLabel": null,
+  "isDefaultConfig": true,
+  "isBestConfig": true,
+  "specSources": {
+    "releaseDate": "https://fortune.com/2025/03/16/baidu-erniex1-reasoning-ai-model-deepseek-r1-chatbot/",
+    "ctxK": "https://the-decoder.com/baidu-claims-its-ernie-x1-reasoning-model-matches-deepseek-r1-performance-at-half-the-price/",
+    "openness": "https://venturebeat.com/ai/baidu-delivers-new-llms-ernie-4-5-and-ernie-x1-undercutting-deepseek-openai-on-cost-but-theyre-not-open-source-yet"
+  },
+  "results": [],
+  "verificationNotes": "Confirmed real via Fortune, the-decoder and VentureBeat coverage of the March 16 2025 launch. Pricing (2 yuan/8 yuan per million tokens ≈ $0.28/$1.10-1.12) and the 8K-vs-128K context gap vs DeepSeek R1 both confirmed on the-decoder article. No corrections needed."
+}

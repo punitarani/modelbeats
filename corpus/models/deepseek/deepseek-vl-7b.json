@@ -1,0 +1,74 @@
+{
+  "name": "DeepSeek-VL 7B",
+  "org": "DeepSeek",
+  "family": "DeepSeek-VL",
+  "releaseDate": "2024-03-08",
+  "status": "released",
+  "openness": "open-weights",
+  "license": "DeepSeek Model License (code: MIT)",
+  "paramsB": 7,
+  "activeParamsB": null,
+  "archClass": "dense",
+  "archDisplay": "Dense 7B transformer (DeepSeek-LLM-7B base) + SigLIP-L/SAM-B hybrid vision encoder (up to 1024x1024)",
+  "ctxK": 4,
+  "modalities": [
+    "text",
+    "vision"
+  ],
+  "langCount": 2,
+  "capabilities": {
+    "reasoning": false,
+    "coding": false,
+    "vision": true,
+    "functionCalling": false,
+    "toolUse": false,
+    "agentic": false
+  },
+  "apiAvailable": false,
+  "price": null,
+  "links": {
+    "hf": "deepseek-ai/deepseek-vl-7b-chat",
+    "gh": "deepseek-ai/DeepSeek-VL"
+  },
+  "note": "First DeepSeek VLM (1.3B/7B); hybrid SigLIP+SAM vision encoder trained jointly with the LLM to preserve language ability.",
+  "quants": [
+    "MLX"
+  ],
+  "vramQ4Gb": 5,
+  "vramFp16Gb": 14,
+  "tps4090": null,
+  "tpsNote": "No public RTX 4090 llama.cpp benchmark found for the full vision-language model",
+  "effortLabel": null,
+  "isDefaultConfig": true,
+  "isBestConfig": true,
+  "specSources": {
+    "paramsB": "https://huggingface.co/deepseek-ai/deepseek-vl-7b-chat",
+    "ctxK": "https://github.com/deepseek-ai/DeepSeek-VL",
+    "releaseDate": "https://arxiv.org/abs/2403.05525",
+    "openness": "https://huggingface.co/deepseek-ai/deepseek-vl-7b-chat"
+  },
+  "results": [
+    {
+      "benchmarkSlug": "mmmu",
+      "score": 36.6,
+      "source": "self-reported",
+      "sourceUrl": "https://arxiv.org/html/2403.05525v2",
+      "notes": "7B-chat variant"
+    },
+    {
+      "benchmarkSlug": "mmbench",
+      "score": 73.2,
+      "source": "self-reported",
+      "sourceUrl": "https://arxiv.org/html/2403.05525v2",
+      "notes": "7B variant, Table 5"
+    },
+    {
+      "benchmarkSlug": "seedbench",
+      "score": 70.4,
+      "source": "self-reported",
+      "sourceUrl": "https://arxiv.org/html/2403.05525v2",
+      "notes": "7B variant, Table 5"
+    }
+  ],
+  "verificationNotes": "Confirmed real via arxiv 2403.05525 (submitted 2024-03-08) and HF model card: 7B params, DeepSeek Model License + MIT code, SigLIP-L/SAM-B hybrid vision encoder on DeepSeek-LLM-7B base, 1024x1024 input. All three benchmark scores (MMMU 36.6, MMBench 73.2, SEEDBench 70.4) literally confirmed in arxiv HTML Table 5. MLX quant (mlx-community/deepseek-vl-7b-chat-4bit) confirmed to exist. No changes needed."
+}

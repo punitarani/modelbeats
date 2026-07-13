@@ -1,0 +1,48 @@
+{
+  "name": "Stable Beluga 1 (FreeWilly 1) 65B",
+  "org": "Stability AI (CarperAI)",
+  "family": "Stable Beluga (FreeWilly)",
+  "releaseDate": "2023-07-21",
+  "status": "released",
+  "openness": "open-weights",
+  "license": "CC BY-NC-4.0 (Non-Commercial Creative Commons License) — released as delta weights over Meta's LLaMA 65B",
+  "paramsB": 65,
+  "activeParamsB": null,
+  "archClass": "dense",
+  "archDisplay": "LLaMA 65B dense Transformer, Orca-style supervised fine-tune",
+  "ctxK": 2,
+  "modalities": [
+    "text"
+  ],
+  "langCount": null,
+  "capabilities": {
+    "reasoning": true,
+    "coding": false,
+    "vision": false,
+    "functionCalling": false,
+    "toolUse": false,
+    "agentic": false
+  },
+  "apiAvailable": false,
+  "price": null,
+  "links": {
+    "hf": "stabilityai/StableBeluga1-Delta"
+  },
+  "note": "Ranked #4 on the HF Open LLM Leaderboard at launch (Jul 27 2023); released as delta weights over Meta's LLaMA 65B.",
+  "quants": [],
+  "vramQ4Gb": null,
+  "vramFp16Gb": 130,
+  "tps4090": null,
+  "tpsNote": null,
+  "effortLabel": null,
+  "isDefaultConfig": true,
+  "isBestConfig": true,
+  "specSources": {
+    "paramsB": "https://huggingface.co/stabilityai/StableBeluga1-Delta",
+    "ctxK": "https://huggingface.co/stabilityai/StableBeluga1-Delta",
+    "releaseDate": "https://stability.ai/news/stable-beluga-large-instruction-fine-tuned-models",
+    "openness": "https://huggingface.co/stabilityai/StableBeluga1-Delta"
+  },
+  "results": [],
+  "verificationNotes": "CONFIRMED real via HF model card raw README (stabilityai/StableBeluga1-Delta) and Stability AI's blog post (published Jul 21 2023, updated Jul 28): LLaMA-65B base, Orca-style SFT, delta-weight release, ranked #4 on HF Open LLM Leaderboard as of Jul 27 2023 — matches the note. CORRECTED license: the HF README literally states 'Fine-tuned checkpoints (StableBeluga1) is licensed under the Non-Commercial Creative Commons license (CC BY-NC-4.0)' — this is NOT the 'Stable Beluga Non-Commercial Community License' (that named license applies only to Beluga 2). Context length (2048) is the standard LLaMA-1 architecture value; the HF card itself states no explicit max-sequence-length. DROPPED the sole result row (MMLU 64.83, sourceUrl llm.extractum.io): that URL fails TLS certificate validation (hostname mismatch — the domain now resolves to an unrelated site, ag3ntum.com) and no alternate source could be found confirming this exact figure, so it was removed per the no-unconfirmed-numbers rule."
+}

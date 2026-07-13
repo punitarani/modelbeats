@@ -1,0 +1,69 @@
+{
+  "name": "Codestral 22B",
+  "org": "Mistral AI",
+  "family": "Codestral",
+  "releaseDate": "2024-05-29",
+  "status": "deprecated",
+  "openness": "open-weights",
+  "license": "Mistral AI Non-Production License (MNPL-0.1)",
+  "paramsB": 22.2,
+  "activeParamsB": null,
+  "archClass": "dense",
+  "archDisplay": "Dense transformer (code-specialized, fill-in-the-middle)",
+  "ctxK": 32,
+  "modalities": [
+    "text"
+  ],
+  "langCount": null,
+  "capabilities": {
+    "reasoning": false,
+    "coding": true,
+    "vision": false,
+    "functionCalling": false,
+    "toolUse": false,
+    "agentic": false
+  },
+  "apiAvailable": true,
+  "price": null,
+  "links": {
+    "hf": "mistralai/Codestral-22B-v0.1",
+    "gh": "mistralai/mistral-inference",
+    "docs": "legal.mistral.ai/ai-governance/models/codestral"
+  },
+  "note": "Mistral's first dedicated code model; fill-in-the-middle across 80+ programming languages, 32K context, non-commercial MNPL license.",
+  "quants": [
+    "GGUF Q4",
+    "AWQ",
+    "GPTQ"
+  ],
+  "vramQ4Gb": 18,
+  "vramFp16Gb": 44,
+  "tps4090": null,
+  "tpsNote": "Fits a single RTX 4090 at Q4_K_M (~18GB); no single authoritative tok/s benchmark found",
+  "effortLabel": null,
+  "isDefaultConfig": true,
+  "isBestConfig": true,
+  "specSources": {
+    "paramsB": "https://huggingface.co/mistralai/Codestral-22B-v0.1",
+    "ctxK": "https://huggingface.co/mistralai/Codestral-22B-v0.1/raw/main/config.json",
+    "releaseDate": "https://mistral.ai/news/codestral/",
+    "openness": "https://huggingface.co/mistralai/Codestral-22B-v0.1"
+  },
+  "results": [
+    {
+      "benchmarkSlug": "humaneval",
+      "score": 81.1,
+      "source": "independent",
+      "sourceUrl": "https://www.analyticsvidhya.com/blog/2024/06/codestral-22b/",
+      "evaluatedAt": "2024-05-01"
+    },
+    {
+      "benchmarkSlug": "mbpp",
+      "score": 78.2,
+      "source": "independent",
+      "sourceUrl": "https://www.analyticsvidhya.com/blog/2024/06/codestral-22b/",
+      "evaluatedAt": "2024-05-01"
+    }
+  ],
+  "verificationNotes": "Confirmed via HF model page and config.json: 22.2B params, MNPL-0.1 license, 32K context (max_position_embeddings). Fetched analyticsvidhya.com directly: literally confirms '81.1% pass rate on HumanEval' and '78.2% success rate in MBPP'. No changes made."
+}

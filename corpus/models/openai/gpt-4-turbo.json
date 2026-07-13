@@ -1,0 +1,67 @@
+{
+  "name": "GPT-4 Turbo",
+  "org": "OpenAI",
+  "family": "GPT-4",
+  "releaseDate": "2023-11-06",
+  "status": "released",
+  "openness": "closed",
+  "license": "Proprietary",
+  "paramsB": null,
+  "activeParamsB": null,
+  "archClass": "moe",
+  "archDisplay": "Transformer; widely reported (unconfirmed) GPT-4-generation mixture-of-experts",
+  "ctxK": 128,
+  "modalities": [
+    "text",
+    "vision"
+  ],
+  "langCount": null,
+  "capabilities": {
+    "reasoning": false,
+    "coding": true,
+    "vision": true,
+    "functionCalling": true,
+    "toolUse": true,
+    "agentic": false
+  },
+  "apiAvailable": true,
+  "price": {
+    "input": 10,
+    "output": 30,
+    "provider": "OpenAI"
+  },
+  "links": {
+    "docs": "developers.openai.com/api/docs/models/gpt-4-turbo"
+  },
+  "note": "128K-context, cheaper GPT-4 announced at OpenAI's first DevDay; current default snapshot gpt-4-turbo-2024-04-09 carries a Dec 2023 knowledge cutoff.",
+  "quants": [],
+  "vramQ4Gb": null,
+  "vramFp16Gb": null,
+  "tps4090": null,
+  "tpsNote": null,
+  "effortLabel": null,
+  "isDefaultConfig": true,
+  "isBestConfig": true,
+  "specSources": {
+    "releaseDate": "https://hidekazu-konishi.com/entry/openai_gpt_model_release_timeline.html",
+    "ctxK": "https://developers.openai.com/api/docs/models/gpt-4-turbo",
+    "openness": "https://developers.openai.com/api/docs/models/gpt-4-turbo"
+  },
+  "results": [
+    {
+      "benchmarkSlug": "mmlu",
+      "score": 86.5,
+      "source": "independent",
+      "sourceUrl": "https://telnyx.com/llm-library/gpt-4-1106-preview",
+      "notes": "gpt-4-1106-preview, 5-shot"
+    },
+    {
+      "benchmarkSlug": "arena",
+      "score": 1251,
+      "source": "arena",
+      "sourceUrl": "https://telnyx.com/llm-library/gpt-4-1106-preview",
+      "notes": "LMSYS Chatbot Arena Elo (historical), gpt-4-1106-preview"
+    }
+  ],
+  "verificationNotes": "DevDay announcement Nov 6, 2023 confirmed (OpenAI/CNBC); 128K context and $10/$30 per-million pricing confirmed via OpenAI's own DevDay post and current docs. Both result rows (MMLU 86.5 5-shot; Arena Elo 1251) verified literally on the cited Telnyx page (fetched directly, confirmed exact text). No changes made."
+}

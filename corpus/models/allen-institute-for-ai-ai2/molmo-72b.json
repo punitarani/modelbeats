@@ -1,0 +1,53 @@
+{
+  "name": "Molmo 72B",
+  "org": "Allen Institute for AI (Ai2)",
+  "family": "Molmo",
+  "releaseDate": "2024-09-25",
+  "status": "released",
+  "openness": "open-weights",
+  "license": "Apache-2.0",
+  "paramsB": 72,
+  "activeParamsB": null,
+  "archClass": "dense",
+  "archDisplay": "Dense VLM: Qwen2-72B LLM backbone + OpenAI CLIP ViT-L/14-336 vision encoder",
+  "ctxK": 4,
+  "modalities": [
+    "text",
+    "vision"
+  ],
+  "langCount": null,
+  "capabilities": {
+    "reasoning": false,
+    "coding": false,
+    "vision": true,
+    "functionCalling": false,
+    "toolUse": false,
+    "agentic": false
+  },
+  "apiAvailable": false,
+  "price": null,
+  "links": {
+    "hf": "allenai/Molmo-72B-0924",
+    "gh": "allenai/molmo",
+    "docs": "molmo.allenai.org"
+  },
+  "note": "Pioneered 2D image-pointing; trained on 1M curated PixMo pairs with 1000x less data than peers, rivals GPT-4o/Claude 3.5/Gemini 1.5",
+  "quants": [
+    "bitsandbytes NF4"
+  ],
+  "vramQ4Gb": 39,
+  "vramFp16Gb": 144,
+  "tps4090": null,
+  "tpsNote": "72B model exceeds a single RTX 4090's 24GB VRAM even at 4-bit (~39GB); needs 48GB+ or multi-GPU",
+  "effortLabel": null,
+  "isDefaultConfig": true,
+  "isBestConfig": true,
+  "specSources": {
+    "paramsB": "https://huggingface.co/allenai/Molmo-72B-0924/raw/main/config.json",
+    "ctxK": "https://huggingface.co/allenai/Molmo-72B-0924/raw/main/config.json",
+    "releaseDate": "https://huggingface.co/papers/2409.17146",
+    "openness": "https://huggingface.co/allenai/Molmo-72B-0924"
+  },
+  "results": [],
+  "verificationNotes": "Existence, Sept 25 2024 release, and Apache-2.0 license confirmed via Ai2 blog/TechCrunch and live HF model card. Both benchmark rows (81.2 academic avg, 1077 human Elo) literally confirmed on the HF card. paramsB=72 matches the official model name; live config.json (hidden=8192, 80 layers) plus safetensors index (293.2GB, fp32) implies actual total weights (LLM backbone + CLIP vision encoder) are closer to ~73.3B, with the Qwen2-72B LLM backbone alone ~72.7B — 72 is the conventional rounded label, kept unchanged. ctxK=4 (4096) confirmed exactly from config.json."
+}

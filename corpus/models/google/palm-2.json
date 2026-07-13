@@ -1,0 +1,55 @@
+{
+  "name": "PaLM 2",
+  "org": "Google",
+  "family": "PaLM 2",
+  "releaseDate": "2023-05-10",
+  "status": "deprecated",
+  "openness": "closed",
+  "license": "Proprietary (Google Cloud Vertex AI)",
+  "paramsB": null,
+  "activeParamsB": null,
+  "archClass": "dense",
+  "archDisplay": "Dense Transformer (decoder, mixture-of-objectives pretraining)",
+  "ctxK": 8,
+  "modalities": [
+    "text"
+  ],
+  "langCount": null,
+  "capabilities": {
+    "reasoning": false,
+    "coding": true,
+    "vision": false,
+    "functionCalling": false,
+    "toolUse": false,
+    "agentic": false
+  },
+  "apiAvailable": false,
+  "price": null,
+  "links": {
+    "docs": "ai.google/discover/palm2"
+  },
+  "note": "Powered Bard in 2023; basis for Med-PaLM 2 and Codey; PaLM API decommissioned Aug 15 2024.",
+  "quants": [],
+  "vramQ4Gb": null,
+  "vramFp16Gb": null,
+  "tps4090": null,
+  "tpsNote": null,
+  "effortLabel": null,
+  "isDefaultConfig": true,
+  "isBestConfig": true,
+  "specSources": {
+    "releaseDate": "https://blog.google/technology/ai/google-palm-2-ai-large-language-model/",
+    "openness": "https://ai.google/discover/palm2/"
+  },
+  "results": [
+    {
+      "benchmarkSlug": "bbh",
+      "score": 78.1,
+      "source": "self-reported",
+      "sourceUrl": "https://arxiv.org/abs/2305.10403",
+      "evaluatedAt": "2023-05-17",
+      "notes": "PaLM 2-L on BIG-Bench Hard, as reported in PaLM 2 Technical Report (Table 6), 3-shot CoT"
+    }
+  ],
+  "verificationNotes": "Confirmed real: announced by Sundar Pichai at Google I/O on 2023-05-10 (blog.google, TechCrunch, Axios all corroborate). Technical report (arXiv 2305.10403) submitted 2023-05-17, matching evaluatedAt. Fetched full-text (ar5iv) Table 6: PaLM 2-L scores exactly 78.1 on BBH 3-shot CoT vs PaLM's 65.2 -- score confirmed verbatim. PaLM API decommission date of Aug 15 2024 corroborated independently. Params were never disclosed by Google (kept null, correctly)."
+}

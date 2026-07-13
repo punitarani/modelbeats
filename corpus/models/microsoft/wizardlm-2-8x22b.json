@@ -1,0 +1,90 @@
+{
+  "name": "WizardLM-2 8x22B",
+  "org": "Microsoft",
+  "family": "WizardLM",
+  "releaseDate": "2024-04-15",
+  "status": "deprecated",
+  "openness": "open-weights",
+  "license": "Apache 2.0",
+  "paramsB": 141,
+  "activeParamsB": 39,
+  "archClass": "moe",
+  "archDisplay": "Sparse Mixture-of-Experts, 8 experts x22B (Mixtral 8x22B backbone)",
+  "ctxK": 64,
+  "modalities": [
+    "text"
+  ],
+  "langCount": null,
+  "capabilities": {
+    "reasoning": false,
+    "coding": true,
+    "vision": false,
+    "functionCalling": false,
+    "toolUse": false,
+    "agentic": false
+  },
+  "apiAvailable": false,
+  "price": null,
+  "links": {
+    "hf": "alpindale/WizardLM-2-8x22B",
+    "gh": "nlpxucan/WizardLM"
+  },
+  "note": "Evol-Instruct fine-tune of Mixtral 8x22B (141B/~39B active); first open LLM to top 9.0 MT-Bench, pulled by Microsoft ~1 day after release for missing toxicity testing.",
+  "quants": [
+    "GGUF",
+    "AWQ",
+    "GPTQ",
+    "EXL2"
+  ],
+  "vramQ4Gb": 80,
+  "vramFp16Gb": 282,
+  "tps4090": null,
+  "tpsNote": null,
+  "effortLabel": null,
+  "isDefaultConfig": true,
+  "isBestConfig": true,
+  "specSources": {
+    "paramsB": "https://huggingface.co/alpindale/WizardLM-2-8x22B",
+    "ctxK": "https://huggingface.co/alpindale/WizardLM-2-8x22B",
+    "releaseDate": "https://wizardlm.github.io/WizardLM2/",
+    "openness": "https://huggingface.co/alpindale/WizardLM-2-8x22B/blob/main/README.md"
+  },
+  "results": [
+    {
+      "benchmarkSlug": "ifeval",
+      "score": 52.72,
+      "source": "independent",
+      "sourceUrl": "https://huggingface.co/alpindale/WizardLM-2-8x22B",
+      "notes": "Open LLM Leaderboard v2, 0-shot"
+    },
+    {
+      "benchmarkSlug": "bbh",
+      "score": 48.58,
+      "source": "independent",
+      "sourceUrl": "https://huggingface.co/alpindale/WizardLM-2-8x22B",
+      "notes": "Open LLM Leaderboard v2, 3-shot"
+    },
+    {
+      "benchmarkSlug": "math",
+      "score": 22.28,
+      "source": "independent",
+      "sourceUrl": "https://huggingface.co/alpindale/WizardLM-2-8x22B",
+      "notes": "Open LLM Leaderboard v2, MATH Level 5"
+    },
+    {
+      "benchmarkSlug": "gpqa",
+      "score": 17.56,
+      "source": "independent",
+      "sourceUrl": "https://huggingface.co/alpindale/WizardLM-2-8x22B",
+      "notes": "Open LLM Leaderboard v2, 0-shot"
+    },
+    {
+      "benchmarkSlug": "mmlu-pro",
+      "score": 39.96,
+      "source": "independent",
+      "sourceUrl": "https://huggingface.co/alpindale/WizardLM-2-8x22B",
+      "notes": "Open LLM Leaderboard v2, 5-shot"
+    }
+  ],
+  "verificationNotes": "Existence confirmed via alpindale community mirror (official microsoft/WizardLM-2-8x22B and GitHub repo were pulled by Microsoft ~1 day after the April 15 2024 announcement, officially attributed to a missed toxicity-testing step — confirmed via MarkTechPost article); mirrors still circulate on HF/OpenRouter/DeepInfra, so 'deprecated' + community hf link is accurate. 141B total / 39B active MoE and Apache 2.0 confirmed. Fetched the HF page directly and confirmed all 5 benchmark rows verbatim: IFEval 52.72, BBH 48.58, MATH 22.28, GPQA 17.56, MMLU-Pro 39.96. No discrepancies found."
+}

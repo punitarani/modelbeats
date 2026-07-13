@@ -1,0 +1,88 @@
+{
+  "name": "Aya Vision 32B",
+  "org": "Cohere Labs",
+  "family": "Aya Vision",
+  "releaseDate": "2025-03-04",
+  "status": "released",
+  "openness": "open-weights",
+  "license": "CC-BY-NC",
+  "paramsB": 32,
+  "activeParamsB": null,
+  "archClass": "dense",
+  "archDisplay": "Aya Expanse 32B decoder + SigLIP2-patch14-384 vision encoder",
+  "ctxK": 16,
+  "modalities": [
+    "text",
+    "vision"
+  ],
+  "langCount": 23,
+  "capabilities": {
+    "reasoning": false,
+    "coding": true,
+    "vision": true,
+    "functionCalling": false,
+    "toolUse": false,
+    "agentic": false
+  },
+  "apiAvailable": true,
+  "price": null,
+  "links": {
+    "hf": "CohereLabs/aya-vision-32b",
+    "docs": "docs.cohere.com/docs/aya-vision"
+  },
+  "note": "Cohere's first vision-language model, pairing an Aya Expanse 32B backbone with a SigLIP2 encoder for multilingual multimodal tasks.",
+  "quants": [],
+  "vramQ4Gb": null,
+  "vramFp16Gb": 66,
+  "tps4090": null,
+  "tpsNote": null,
+  "effortLabel": null,
+  "isDefaultConfig": true,
+  "isBestConfig": true,
+  "specSources": {
+    "paramsB": "https://huggingface.co/CohereLabs/aya-vision-32b",
+    "ctxK": "https://docs.cohere.com/docs/aya-vision",
+    "releaseDate": "https://techcrunch.com/2025/03/04/cohere-claims-its-new-aya-vision-ai-model-is-best-in-class/",
+    "openness": "https://huggingface.co/CohereLabs/aya-vision-32b"
+  },
+  "results": [
+    {
+      "benchmarkSlug": "mmlu",
+      "score": 72.14,
+      "source": "independent",
+      "sourceUrl": "https://www.datalearner.com/en/ai-models/pretrained-models/aya-vision-32b",
+      "notes": "Independent eval, text-only mode"
+    },
+    {
+      "benchmarkSlug": "mmlu-pro",
+      "score": 47.16,
+      "source": "independent",
+      "sourceUrl": "https://www.datalearner.com/en/ai-models/pretrained-models/aya-vision-32b"
+    },
+    {
+      "benchmarkSlug": "gpqa",
+      "score": 34.38,
+      "source": "independent",
+      "sourceUrl": "https://www.datalearner.com/en/ai-models/pretrained-models/aya-vision-32b"
+    },
+    {
+      "benchmarkSlug": "math",
+      "score": 69.3,
+      "source": "independent",
+      "sourceUrl": "https://www.datalearner.com/en/ai-models/pretrained-models/aya-vision-32b"
+    },
+    {
+      "benchmarkSlug": "humaneval",
+      "score": 62.2,
+      "source": "independent",
+      "sourceUrl": "https://www.datalearner.com/en/ai-models/pretrained-models/aya-vision-32b"
+    },
+    {
+      "benchmarkSlug": "mbpp",
+      "score": 70.43,
+      "source": "independent",
+      "sourceUrl": "https://www.datalearner.com/en/ai-models/pretrained-models/aya-vision-32b"
+    }
+  ],
+  "verificationNotes": "Confirmed genuine via Cohere's official blog, TechCrunch (2025-03-04), and Cohere Labs' X announcement — release date corrected/confirmed to 2025-03-04 (a WebFetch misattribution briefly suggested Dec 2024 by confusing it with the separate Aya Expanse paper arXiv:2412.04261; independently verified this was wrong and 2025-03-04 is correct). HF model card confirms 32B decoder + SigLIP2 vision encoder, CC-BY-NC. All six benchmark rows (MMLU 72.14, MMLU-Pro 47.16, GPQA 34.38, MATH 69.3, HumanEval 62.2, MBPP 70.43) independently re-fetched from datalearner.com and confirmed to literally match. No changes needed."
+}

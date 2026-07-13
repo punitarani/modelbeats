@@ -1,0 +1,149 @@
+{
+  "name": "Claude 3 Haiku",
+  "org": "Anthropic",
+  "family": "Claude 3",
+  "releaseDate": "2024-03-13",
+  "status": "deprecated",
+  "openness": "closed",
+  "license": "Proprietary (Anthropic Commercial Terms of Service)",
+  "paramsB": null,
+  "activeParamsB": null,
+  "archClass": "dense",
+  "archDisplay": "Dense multimodal Transformer (parameter count undisclosed)",
+  "ctxK": 200,
+  "modalities": [
+    "text",
+    "vision"
+  ],
+  "langCount": null,
+  "capabilities": {
+    "reasoning": true,
+    "coding": true,
+    "vision": true,
+    "functionCalling": true,
+    "toolUse": true,
+    "agentic": true
+  },
+  "apiAvailable": false,
+  "price": {
+    "input": 0.25,
+    "output": 1.25,
+    "provider": "Anthropic"
+  },
+  "links": {
+    "docs": "docs.claude.com"
+  },
+  "note": "Fastest, cheapest Claude 3; vision-capable with near-instant responses for its intelligence class.",
+  "quants": [],
+  "vramQ4Gb": null,
+  "vramFp16Gb": null,
+  "tps4090": null,
+  "tpsNote": null,
+  "effortLabel": null,
+  "isDefaultConfig": true,
+  "isBestConfig": true,
+  "specSources": {
+    "releaseDate": "https://www.anthropic.com/news/claude-3-haiku",
+    "ctxK": "https://www.anthropic.com/news/claude-3-family",
+    "openness": "https://www.anthropic.com/news/claude-3-family"
+  },
+  "results": [
+    {
+      "benchmarkSlug": "mmlu",
+      "score": 75.2,
+      "source": "self-reported",
+      "sourceUrl": "https://www-cdn.anthropic.com/de8ba9b01c9ab7cbabf5c33b80b7bbc618857627/Model_Card_Claude_3.pdf",
+      "evaluatedAt": "2024-03-13",
+      "notes": "5-shot"
+    },
+    {
+      "benchmarkSlug": "math",
+      "score": 38.9,
+      "source": "self-reported",
+      "sourceUrl": "https://www-cdn.anthropic.com/de8ba9b01c9ab7cbabf5c33b80b7bbc618857627/Model_Card_Claude_3.pdf",
+      "evaluatedAt": "2024-03-13",
+      "notes": "0-shot CoT"
+    },
+    {
+      "benchmarkSlug": "gsm8k",
+      "score": 88.9,
+      "source": "self-reported",
+      "sourceUrl": "https://www-cdn.anthropic.com/de8ba9b01c9ab7cbabf5c33b80b7bbc618857627/Model_Card_Claude_3.pdf",
+      "evaluatedAt": "2024-03-13",
+      "notes": "0-shot CoT"
+    },
+    {
+      "benchmarkSlug": "humaneval",
+      "score": 75.9,
+      "source": "self-reported",
+      "sourceUrl": "https://www-cdn.anthropic.com/de8ba9b01c9ab7cbabf5c33b80b7bbc618857627/Model_Card_Claude_3.pdf",
+      "evaluatedAt": "2024-03-13",
+      "notes": "0-shot"
+    },
+    {
+      "benchmarkSlug": "gpqa",
+      "score": 33.3,
+      "source": "self-reported",
+      "sourceUrl": "https://www-cdn.anthropic.com/de8ba9b01c9ab7cbabf5c33b80b7bbc618857627/Model_Card_Claude_3.pdf",
+      "evaluatedAt": "2024-03-13",
+      "notes": "GPQA Diamond, 0-shot CoT"
+    },
+    {
+      "benchmarkSlug": "bbh",
+      "score": 73.7,
+      "source": "self-reported",
+      "sourceUrl": "https://www-cdn.anthropic.com/de8ba9b01c9ab7cbabf5c33b80b7bbc618857627/Model_Card_Claude_3.pdf",
+      "evaluatedAt": "2024-03-13",
+      "notes": "3-shot CoT"
+    },
+    {
+      "benchmarkSlug": "arc-challenge",
+      "score": 89.2,
+      "source": "self-reported",
+      "sourceUrl": "https://www-cdn.anthropic.com/de8ba9b01c9ab7cbabf5c33b80b7bbc618857627/Model_Card_Claude_3.pdf",
+      "evaluatedAt": "2024-03-13",
+      "notes": "25-shot"
+    },
+    {
+      "benchmarkSlug": "hellaswag",
+      "score": 85.9,
+      "source": "self-reported",
+      "sourceUrl": "https://www-cdn.anthropic.com/de8ba9b01c9ab7cbabf5c33b80b7bbc618857627/Model_Card_Claude_3.pdf",
+      "evaluatedAt": "2024-03-13",
+      "notes": "10-shot"
+    },
+    {
+      "benchmarkSlug": "winogrande",
+      "score": 74.2,
+      "source": "self-reported",
+      "sourceUrl": "https://www-cdn.anthropic.com/de8ba9b01c9ab7cbabf5c33b80b7bbc618857627/Model_Card_Claude_3.pdf",
+      "evaluatedAt": "2024-03-13",
+      "notes": "5-shot"
+    },
+    {
+      "benchmarkSlug": "drop",
+      "score": 78.4,
+      "source": "self-reported",
+      "sourceUrl": "https://www-cdn.anthropic.com/de8ba9b01c9ab7cbabf5c33b80b7bbc618857627/Model_Card_Claude_3.pdf",
+      "evaluatedAt": "2024-03-13",
+      "notes": "F1 score, 3-shot"
+    },
+    {
+      "benchmarkSlug": "mbpp",
+      "score": 80.4,
+      "source": "self-reported",
+      "sourceUrl": "https://www-cdn.anthropic.com/de8ba9b01c9ab7cbabf5c33b80b7bbc618857627/Model_Card_Claude_3.pdf",
+      "evaluatedAt": "2024-03-13",
+      "notes": "Pass@1"
+    },
+    {
+      "benchmarkSlug": "mmmu",
+      "score": 50.2,
+      "source": "self-reported",
+      "sourceUrl": "https://www-cdn.anthropic.com/de8ba9b01c9ab7cbabf5c33b80b7bbc618857627/Model_Card_Claude_3.pdf",
+      "evaluatedAt": "2024-03-13",
+      "notes": "Validation set, overall"
+    }
+  ],
+  "verificationNotes": "Confirmed real via anthropic.com/news/claude-3-haiku (release date 2024-03-13). Pricing $0.25/$1.25 confirmed via independent pricing trackers citing Anthropic's official rate. Downloaded and read the actual Model_Card_Claude_3.pdf Table 1/Table 3: all 12 self-reported benchmark numbers for Claude 3 Haiku (MMLU 75.2, MATH 38.9, GSM8K 88.9, HumanEval 75.9, GPQA 33.3, BBH 73.7, ARC-Challenge 89.2, HellaSwag 85.9, WinoGrande 74.2, DROP 78.4, MBPP 80.4, MMMU 50.2) match the PDF verbatim. apiAvailable=false confirmed: claude-3-haiku-20240307 retired from API April 20, 2026 (most recently retired of this batch). No changes made."
+}

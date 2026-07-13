@@ -1,0 +1,109 @@
+{
+  "name": "Claude Opus 4",
+  "org": "Anthropic",
+  "family": "Claude 4",
+  "releaseDate": "2025-05-22",
+  "status": "deprecated",
+  "openness": "closed",
+  "license": "Proprietary",
+  "paramsB": null,
+  "activeParamsB": null,
+  "archClass": "dense",
+  "archDisplay": "Dense transformer, hybrid-reasoning (parameter count undisclosed)",
+  "ctxK": 200,
+  "modalities": [
+    "text",
+    "vision"
+  ],
+  "langCount": null,
+  "capabilities": {
+    "reasoning": true,
+    "coding": true,
+    "vision": true,
+    "functionCalling": true,
+    "toolUse": true,
+    "agentic": true
+  },
+  "apiAvailable": false,
+  "price": {
+    "input": 15,
+    "output": 75,
+    "provider": "Anthropic"
+  },
+  "links": {
+    "docs": "platform.claude.com"
+  },
+  "note": "Opened the Claude 4 generation and took the SWE-bench Verified coding lead at launch.",
+  "quants": [],
+  "vramFp16Gb": null,
+  "vramQ4Gb": null,
+  "tps4090": null,
+  "tpsNote": null,
+  "effortLabel": null,
+  "isDefaultConfig": true,
+  "isBestConfig": true,
+  "specSources": {
+    "releaseDate": "https://www.anthropic.com/news/claude-4",
+    "ctxK": "https://www.prompthub.us/models/claude-opus-4",
+    "openness": "https://www.anthropic.com/news/claude-4"
+  },
+  "results": [
+    {
+      "benchmarkSlug": "swe-bench",
+      "score": 72.5,
+      "source": "self-reported",
+      "sourceUrl": "https://www.datacamp.com/blog/claude-4",
+      "evaluatedAt": "2025-05-22",
+      "notes": "SWE-bench Verified, standard; confirmed via direct fetch of DataCamp article"
+    },
+    {
+      "benchmarkSlug": "terminal-bench",
+      "score": 43.2,
+      "source": "self-reported",
+      "sourceUrl": "https://www.datacamp.com/blog/claude-4",
+      "evaluatedAt": "2025-05-22",
+      "notes": "Terminal-bench, standard; confirmed via direct fetch"
+    },
+    {
+      "benchmarkSlug": "gpqa",
+      "score": 79.6,
+      "source": "self-reported",
+      "sourceUrl": "https://www.datacamp.com/blog/claude-4",
+      "evaluatedAt": "2025-05-22",
+      "notes": "GPQA Diamond, with extended thinking; confirmed via direct fetch"
+    },
+    {
+      "benchmarkSlug": "aime",
+      "score": 75.5,
+      "source": "self-reported",
+      "sourceUrl": "https://www.datacamp.com/blog/claude-4",
+      "evaluatedAt": "2025-05-22",
+      "notes": "AIME 2025, with extended thinking, no tools; confirmed via direct fetch"
+    },
+    {
+      "benchmarkSlug": "mmlu",
+      "score": 88.8,
+      "source": "self-reported",
+      "sourceUrl": "https://www.datacamp.com/blog/claude-4",
+      "evaluatedAt": "2025-05-22",
+      "notes": "with extended thinking; confirmed via direct fetch"
+    },
+    {
+      "benchmarkSlug": "tau-bench",
+      "score": 81.4,
+      "source": "self-reported",
+      "sourceUrl": "https://www.datacamp.com/blog/claude-4",
+      "evaluatedAt": "2025-05-22",
+      "notes": "tau-bench retail; confirmed via direct fetch"
+    },
+    {
+      "benchmarkSlug": "mmmu",
+      "score": 76.5,
+      "source": "self-reported",
+      "sourceUrl": "https://www.datacamp.com/blog/claude-4",
+      "evaluatedAt": "2025-05-22",
+      "notes": "multimodal understanding; confirmed via direct fetch"
+    }
+  ],
+  "verificationNotes": "Real model, confirmed via anthropic.com/news/claude-4 and Google Cloud Vertex AI blog (release 2025-05-22, $15/$75 pricing, 200K context). All 7 result rows confirmed verbatim via direct fetch of datacamp.com/blog/claude-4. Per Anthropic's official model-deprecations page (fetched 2026-07-12), claude-opus-4-20250514 was deprecated 2026-04-14 and RETIRED 2026-06-15 — already past as of today (2026-07-12), so apiAvailable corrected to false (status kept as 'deprecated', closest available enum value; true current state is 'retired')."
+}

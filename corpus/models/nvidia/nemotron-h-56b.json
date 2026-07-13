@@ -1,0 +1,96 @@
+{
+  "name": "Nemotron-H 56B",
+  "org": "NVIDIA",
+  "family": "Nemotron-H",
+  "releaseDate": "2025-04-14",
+  "status": "released",
+  "openness": "open-weights",
+  "license": "NVIDIA Internal Scientific Research and Development Model License (non-commercial, internal R&D only)",
+  "paramsB": 56,
+  "activeParamsB": null,
+  "archClass": "hybrid",
+  "archDisplay": "Hybrid Mamba-2 + Transformer (54 Mamba-2 layers, 54 MLP layers, 10 self-attention layers of 118 total)",
+  "ctxK": 8,
+  "modalities": [
+    "text"
+  ],
+  "langCount": 10,
+  "capabilities": {
+    "reasoning": false,
+    "coding": true,
+    "vision": false,
+    "functionCalling": false,
+    "toolUse": false,
+    "agentic": false
+  },
+  "apiAvailable": false,
+  "price": null,
+  "links": {
+    "hf": "nvidia/Nemotron-H-56B-Base-8K",
+    "gh": "NVIDIA-NeMo/Nemotron",
+    "docs": "research.nvidia.com/labs/adlr/nemotronh"
+  },
+  "note": "Hybrid Mamba-2/Transformer base model, up to 3x faster inference than similarly-sized pure Transformers; non-commercial research license only.",
+  "quants": [],
+  "vramQ4Gb": null,
+  "vramFp16Gb": null,
+  "tps4090": null,
+  "tpsNote": "Non-commercial research-only license; no consumer-GPU quantization confirmed.",
+  "effortLabel": null,
+  "isDefaultConfig": true,
+  "isBestConfig": true,
+  "specSources": {
+    "paramsB": "https://huggingface.co/nvidia/Nemotron-H-56B-Base-8K",
+    "ctxK": "https://huggingface.co/nvidia/Nemotron-H-56B-Base-8K",
+    "releaseDate": "https://huggingface.co/nvidia/Nemotron-H-56B-Base-8K",
+    "openness": "https://huggingface.co/nvidia/Nemotron-H-56B-Base-8K"
+  },
+  "results": [
+    {
+      "benchmarkSlug": "mmlu",
+      "score": 84.21,
+      "source": "self-reported",
+      "sourceUrl": "https://huggingface.co/nvidia/Nemotron-H-56B-Base-8K"
+    },
+    {
+      "benchmarkSlug": "mmlu-pro",
+      "score": 60.51,
+      "source": "self-reported",
+      "sourceUrl": "https://huggingface.co/nvidia/Nemotron-H-56B-Base-8K"
+    },
+    {
+      "benchmarkSlug": "gsm8k",
+      "score": 93.71,
+      "source": "self-reported",
+      "sourceUrl": "https://huggingface.co/nvidia/Nemotron-H-56B-Base-8K",
+      "notes": "8-shot CoT"
+    },
+    {
+      "benchmarkSlug": "math",
+      "score": 59.42,
+      "source": "self-reported",
+      "sourceUrl": "https://huggingface.co/nvidia/Nemotron-H-56B-Base-8K",
+      "notes": "4-shot CoT"
+    },
+    {
+      "benchmarkSlug": "humaneval",
+      "score": 60.37,
+      "source": "self-reported",
+      "sourceUrl": "https://huggingface.co/nvidia/Nemotron-H-56B-Base-8K"
+    },
+    {
+      "benchmarkSlug": "arc-challenge",
+      "score": 94.97,
+      "source": "self-reported",
+      "sourceUrl": "https://huggingface.co/nvidia/Nemotron-H-56B-Base-8K",
+      "notes": "25-shot"
+    },
+    {
+      "benchmarkSlug": "hellaswag",
+      "score": 89,
+      "source": "self-reported",
+      "sourceUrl": "https://huggingface.co/nvidia/Nemotron-H-56B-Base-8K"
+    }
+  ],
+  "verificationNotes": "Confirmed via HF model card (fetched): release date 2025-04-14, 56B params, 8K (8000-token) context, NVIDIA Internal Scientific R&D License, and all seven benchmark scores match exactly (MMLU 84.21, MMLU-Pro 60.51, GSM8K 93.71, MATH 59.42, HumanEval 60.37, ARC-C 94.97, HellaSwag 89.0)."
+}

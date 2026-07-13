@@ -1,0 +1,95 @@
+{
+  "name": "GPT-5.6",
+  "org": "OpenAI",
+  "family": "GPT-5.6",
+  "releaseDate": "2026-07-09",
+  "status": "released",
+  "openness": "closed",
+  "license": "Proprietary",
+  "paramsB": null,
+  "activeParamsB": null,
+  "archClass": "dense",
+  "archDisplay": "Undisclosed architecture (presumed dense transformer); three durable capability tiers Sol/Terra/Luna (this entry reflects flagship Sol)",
+  "ctxK": 1050,
+  "modalities": [
+    "text",
+    "vision"
+  ],
+  "langCount": null,
+  "capabilities": {
+    "reasoning": true,
+    "coding": true,
+    "vision": true,
+    "functionCalling": true,
+    "toolUse": true,
+    "agentic": true
+  },
+  "apiAvailable": true,
+  "price": {
+    "input": 5,
+    "output": 30,
+    "provider": "OpenAI"
+  },
+  "links": {
+    "docs": "developers.openai.com/api/docs/models/gpt-5.6-sol"
+  },
+  "note": "Sol tier billed as OpenAI's best coding model yet (Terminal-Bench 2.1 SOTA); limited-preview June 26 under US govt review, GA July 9, 2026.",
+  "quants": [],
+  "vramQ4Gb": null,
+  "vramFp16Gb": null,
+  "tps4090": null,
+  "tpsNote": null,
+  "effortLabel": null,
+  "isDefaultConfig": true,
+  "isBestConfig": true,
+  "specSources": {
+    "ctxK": "https://developers.openai.com/api/docs/models/gpt-5.6-sol",
+    "releaseDate": "https://openai.com/index/gpt-5-6/",
+    "openness": "https://openai.com/index/gpt-5-6/"
+  },
+  "results": [
+    {
+      "benchmarkSlug": "swe-bench",
+      "score": 64.6,
+      "source": "self-reported",
+      "sourceUrl": "https://openai.com/index/gpt-5-6/",
+      "notes": "SWE-Bench Pro, GPT-5.6 Sol; confirmed via marktechpost.com direct report of launch page"
+    },
+    {
+      "benchmarkSlug": "terminal-bench",
+      "score": 88.8,
+      "source": "self-reported",
+      "sourceUrl": "https://openai.com/index/gpt-5-6/",
+      "notes": "Terminal-Bench 2.1, GPT-5.6 Sol standard (91.9 with Ultra), new SOTA; confirmed"
+    },
+    {
+      "benchmarkSlug": "browsecomp",
+      "score": 90.4,
+      "source": "self-reported",
+      "sourceUrl": "https://openai.com/index/gpt-5-6/",
+      "notes": "BrowseComp, GPT-5.6 Sol standard (92.2 with Ultra); confirmed"
+    },
+    {
+      "benchmarkSlug": "agents-last-exam",
+      "score": 52.7,
+      "source": "self-reported",
+      "sourceUrl": "https://openai.com/index/gpt-5-6/",
+      "notes": "Agents' Last Exam, GPT-5.6 Sol; confirmed"
+    },
+    {
+      "benchmarkSlug": "frontiermath-tier1-3",
+      "score": 89,
+      "source": "self-reported",
+      "sourceUrl": "https://openai.com/index/gpt-5-6/",
+      "notes": "FrontierMath Tier 1-3 v2, GPT-5.6 Sol; confirmed"
+    },
+    {
+      "benchmarkSlug": "frontiermath-tier4",
+      "score": 83,
+      "source": "self-reported",
+      "sourceUrl": "https://openai.com/index/gpt-5-6/",
+      "notes": "FrontierMath Tier 4 v2, GPT-5.6 Sol; confirmed"
+    }
+  ],
+  "verificationNotes": "Existence, July 9 2026 GA (June 26 limited govt preview), 1.05M context, and $5/$30 Sol pricing all confirmed directly via developers.openai.com/api/docs/models/gpt-5.6-sol and multiple outlets (Simon Willison, VentureBeat, MarkTechPost). All six benchmark scores independently corroborated via MarkTechPost's direct report of the OpenAI launch page."
+}

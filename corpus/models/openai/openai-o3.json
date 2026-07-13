@@ -1,0 +1,100 @@
+{
+  "name": "OpenAI o3",
+  "org": "OpenAI",
+  "family": "o3",
+  "releaseDate": "2025-04-16",
+  "status": "released",
+  "openness": "closed",
+  "license": "Proprietary (OpenAI API Terms)",
+  "paramsB": null,
+  "activeParamsB": null,
+  "archClass": "dense",
+  "archDisplay": "Dense transformer reasoning model (exact size undisclosed)",
+  "ctxK": 200,
+  "modalities": [
+    "text",
+    "vision"
+  ],
+  "langCount": null,
+  "capabilities": {
+    "reasoning": true,
+    "coding": true,
+    "vision": true,
+    "functionCalling": true,
+    "toolUse": true,
+    "agentic": true
+  },
+  "apiAvailable": true,
+  "price": {
+    "input": 2,
+    "output": 8,
+    "provider": "OpenAI"
+  },
+  "links": {
+    "docs": "developers.openai.com"
+  },
+  "note": "Flagship reasoning model with native tool use; major gains on math, coding, and ARC-AGI. Price reflects OpenAI's June 2025 80% cut from the original $10/$40 launch price.",
+  "quants": [],
+  "vramQ4Gb": null,
+  "vramFp16Gb": null,
+  "tps4090": null,
+  "tpsNote": null,
+  "effortLabel": null,
+  "isDefaultConfig": true,
+  "isBestConfig": true,
+  "specSources": {
+    "ctxK": "https://developers.openai.com/api/docs/models/o3",
+    "releaseDate": "https://openai.com/index/introducing-o3-and-o4-mini/",
+    "openness": "https://developers.openai.com/api/docs/models/o3"
+  },
+  "results": [
+    {
+      "benchmarkSlug": "aime",
+      "score": 91.6,
+      "source": "self-reported",
+      "sourceUrl": "https://openai.com/index/introducing-o3-and-o4-mini/",
+      "evaluatedAt": "2025-04-16",
+      "notes": "AIME 2024"
+    },
+    {
+      "benchmarkSlug": "gpqa",
+      "score": 83.3,
+      "source": "self-reported",
+      "sourceUrl": "https://openai.com/index/introducing-o3-and-o4-mini/",
+      "evaluatedAt": "2025-04-16",
+      "notes": "GPQA Diamond"
+    },
+    {
+      "benchmarkSlug": "swe-bench",
+      "score": 69.1,
+      "source": "self-reported",
+      "sourceUrl": "https://openai.com/index/introducing-o3-and-o4-mini/",
+      "evaluatedAt": "2025-04-16",
+      "notes": "SWE-bench Verified"
+    },
+    {
+      "benchmarkSlug": "mmmu",
+      "score": 82.9,
+      "source": "self-reported",
+      "sourceUrl": "https://openai.com/index/introducing-o3-and-o4-mini/",
+      "evaluatedAt": "2025-04-16"
+    },
+    {
+      "benchmarkSlug": "hle",
+      "score": 24.9,
+      "source": "self-reported",
+      "sourceUrl": "https://openai.com/index/introducing-o3-and-o4-mini/",
+      "evaluatedAt": "2025-04-16",
+      "notes": "Humanity's Last Exam, with tools"
+    },
+    {
+      "benchmarkSlug": "codeforces",
+      "score": 2706,
+      "source": "self-reported",
+      "sourceUrl": "https://openai.com/index/introducing-o3-and-o4-mini/",
+      "evaluatedAt": "2025-04-16",
+      "notes": "Elo rating"
+    }
+  ],
+  "verificationNotes": "Confirmed release 2025-04-16 via OpenAI/TechCrunch. Pricing $2/$8 verified as OpenAI's current price after an 80% cut on 2025-06-10 from the original $10/$40 launch price (confirmed via OpenAI Devs official X post and VentureBeat) — note added to clarify this isn't the launch price. Direct fetch of openai.com/index/introducing-o3-and-o4-mini/ returned 403, but all 6 benchmark rows (AIME 91.6, GPQA 83.3, SWE-bench 69.1, MMMU 82.9, HLE 24.9-with-tools, Codeforces 2706) were independently corroborated verbatim by multiple secondary sources quoting OpenAI's official launch figures — distinct from the earlier Dec-2024 o3 preview-announcement numbers (e.g. 96.7% AIME), confirming these are the correct April-2025 released-model figures."
+}

@@ -1,0 +1,61 @@
+{
+  "name": "Inflection-2",
+  "org": "Inflection AI",
+  "family": "Inflection",
+  "releaseDate": "2023-11-22",
+  "status": "deprecated",
+  "openness": "closed",
+  "license": "Proprietary",
+  "paramsB": null,
+  "activeParamsB": null,
+  "archClass": "dense",
+  "archDisplay": "Dense Transformer (architecture undisclosed; trained at ~10^25 FLOPs)",
+  "ctxK": 8,
+  "modalities": [
+    "text"
+  ],
+  "langCount": null,
+  "capabilities": {
+    "reasoning": false,
+    "coding": true,
+    "vision": false,
+    "functionCalling": false,
+    "toolUse": false,
+    "agentic": false
+  },
+  "apiAvailable": false,
+  "price": null,
+  "links": {
+    "docs": "inflection.ai/inflection-2"
+  },
+  "note": "Trained on 5,000 H100 GPUs at ~10^25 FLOPs; billed at launch as the second-most-capable LLM in the world, beating PaLM 2 Large.",
+  "quants": [],
+  "vramQ4Gb": null,
+  "vramFp16Gb": null,
+  "tps4090": null,
+  "tpsNote": null,
+  "effortLabel": null,
+  "isDefaultConfig": true,
+  "isBestConfig": true,
+  "specSources": {
+    "releaseDate": "https://inflection.ai/inflection-2",
+    "openness": "https://inflection.ai/inflection-2"
+  },
+  "results": [
+    {
+      "benchmarkSlug": "mmlu",
+      "score": 79.6,
+      "source": "independent",
+      "sourceUrl": "https://www.searchenginejournal.com/new-ai-model-outperforms-googles-powerful-palm-2/502191/",
+      "notes": "Independent comparison table; Inflection-2 ranked 2nd behind GPT-4 (86.4), just above Claude-2 CoT (78.5). Literally confirmed on page."
+    },
+    {
+      "benchmarkSlug": "hellaswag",
+      "score": 89,
+      "source": "self-reported",
+      "sourceUrl": "https://inflection.ai/inflection-2",
+      "notes": "10-shot HellaSwag. Literally confirmed: page text states 'Inflection-2 reaches 89.0 on HellaSwag 10-shot compared to GPT-4's 95.3.'"
+    }
+  ],
+  "verificationNotes": "Confirmed model is real; training-completion/announcement dated Nov 22-28 2023 across sources (Forbes article dated Nov 22, 2023), consistent with record. DROPPED three result rows that could not be confirmed as literal text on the cited inflection.ai/inflection-2 page: self-reported MMLU 86.8, GSM8K 89.3, and TriviaQA 86.3. Direct full-text fetch of that page (twice) found these benchmark tables are presented only as chart IMAGES — the numeric strings '86.8', '89.3', and '86.3' do not appear anywhere in the page's actual text/markdown, and no alternate source could locate a text-form citation of these exact figures. Kept HellaSwag 89 (literally stated as '89.0' in body text) and independent MMLU 79.6 (literally confirmed on searchenginejournal.com's comparison table)."
+}

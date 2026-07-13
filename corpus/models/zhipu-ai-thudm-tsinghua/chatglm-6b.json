@@ -1,0 +1,60 @@
+{
+  "name": "ChatGLM-6B",
+  "org": "Zhipu AI / THUDM (Tsinghua)",
+  "family": "ChatGLM",
+  "releaseDate": "2023-03-14",
+  "status": "released",
+  "openness": "open-weights",
+  "license": "Apache-2.0 (code); ChatGLM-6B Model License for weights (free for research; free commercial use after registration)",
+  "paramsB": 6.2,
+  "activeParamsB": null,
+  "archClass": "dense",
+  "archDisplay": "Dense Transformer (GLM, prefix-LM decoder)",
+  "ctxK": 2,
+  "modalities": [
+    "text"
+  ],
+  "langCount": 2,
+  "capabilities": {
+    "reasoning": false,
+    "coding": false,
+    "vision": false,
+    "functionCalling": false,
+    "toolUse": false,
+    "agentic": false
+  },
+  "apiAvailable": false,
+  "price": null,
+  "links": {
+    "hf": "THUDM/chatglm-6b",
+    "gh": "zai-org/ChatGLM-6B"
+  },
+  "note": "Pivotal open bilingual (EN/ZH) dialogue model runnable on consumer GPUs via INT4 (6GB); China's early open ChatGPT-style release.",
+  "quants": [
+    "INT4",
+    "INT8"
+  ],
+  "vramQ4Gb": 6,
+  "vramFp16Gb": 13,
+  "tps4090": null,
+  "tpsNote": null,
+  "effortLabel": null,
+  "isDefaultConfig": true,
+  "isBestConfig": true,
+  "specSources": {
+    "paramsB": "https://huggingface.co/THUDM/chatglm-6b",
+    "ctxK": "https://github.com/zai-org/ChatGLM-6B/blob/main/README_en.md",
+    "releaseDate": "https://arxiv.org/html/2406.12793v1",
+    "openness": "https://huggingface.co/THUDM/chatglm-6b/blob/main/MODEL_LICENSE"
+  },
+  "results": [
+    {
+      "benchmarkSlug": "c-eval",
+      "score": 38.9,
+      "source": "independent",
+      "sourceUrl": "https://ar5iv.labs.arxiv.org/html/2305.08322",
+      "notes": "Zero-shot, answer-only (C-Eval paper's own evaluation)"
+    }
+  ],
+  "verificationNotes": "Confirmed exactly: release date March 14, 2023 per the official ChatGLM technical report arXiv:2406.12793 (\"went live on chatglm.cn\" that date). GitHub README confirms VRAM table FP16=13GB / INT4=6GB verbatim, and ~2048 token effective context. License wording (\"completely open for academic research, free commercial use after questionnaire\") confirmed verbatim in README, refining the raw MODEL_LICENSE text which itself doesn't mention registration. C-Eval score 38.9 confirmed verbatim in Table 3 of arXiv:2305.08322 (ar5iv). No changes made."
+}

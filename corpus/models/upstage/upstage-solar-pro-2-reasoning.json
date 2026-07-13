@@ -1,0 +1,52 @@
+{
+  "name": "Upstage Solar Pro 2 (Reasoning)",
+  "org": "Upstage",
+  "family": "SOLAR",
+  "releaseDate": "2025-07-10",
+  "status": "released",
+  "openness": "closed",
+  "license": "Proprietary",
+  "paramsB": 31,
+  "activeParamsB": null,
+  "archClass": "dense",
+  "archDisplay": "Dense transformer with switchable Chat / Reasoning (chain-of-thought) inference modes",
+  "ctxK": 64,
+  "modalities": [
+    "text"
+  ],
+  "langCount": null,
+  "capabilities": {
+    "reasoning": true,
+    "coding": true,
+    "vision": false,
+    "functionCalling": true,
+    "toolUse": true,
+    "agentic": true
+  },
+  "apiAvailable": true,
+  "price": {
+    "input": 0.15,
+    "output": 0.6,
+    "provider": "Upstage"
+  },
+  "links": {
+    "docs": "upstage.ai"
+  },
+  "note": "Reasoning-mode CoT variant; Korea's first frontier-ranked model per Upstage/press coverage at July 2025 launch.",
+  "quants": [],
+  "vramQ4Gb": null,
+  "vramFp16Gb": null,
+  "tps4090": null,
+  "tpsNote": null,
+  "effortLabel": "Reasoning",
+  "isDefaultConfig": false,
+  "isBestConfig": true,
+  "specSources": {
+    "paramsB": "https://koreatechdesk.com/upstage-solar-pro-2-korean-global-ai-frontier-model",
+    "ctxK": "https://artificialanalysis.ai/models/solar-pro-2-reasoning",
+    "releaseDate": "https://www.upstage.ai/news/solar-pro-2",
+    "openness": "https://www.upstage.ai/pricing/api"
+  },
+  "results": [],
+  "verificationNotes": "Confirmed the model itself is real (2025-07-10 release, 31B params, Reasoning mode confirmed via Upstage's own launch blog and independent press). However the claimed AA Intelligence Index result (score=15, sourceUrl .../solar-pro-2-reasoning/providers) could NOT be confirmed: the cited /providers sub-page shows no Intelligence Index score at all ('No API providers are currently available'), and the main solar-pro-2-reasoning model page currently shows a score of 9, not 15 (Artificial Analysis Intelligence Index is a live, frequently-recalculated metric, and an earlier press cycle cited 58 under an older methodology — none of these match the claimed 15). Per instructions, dropped this unconfirmed result row rather than keep or silently correct the number; removed the launch-quote 'scored 58... 5 points above GPT-4.1' claim from the note since it could not be tied to a verifiable current source and conflicts with the current index value."
+}

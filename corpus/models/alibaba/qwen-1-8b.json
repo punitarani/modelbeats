@@ -1,0 +1,86 @@
+{
+  "name": "Qwen-1.8B",
+  "org": "Alibaba",
+  "family": "Qwen",
+  "releaseDate": "2023-11-30",
+  "status": "deprecated",
+  "openness": "open-weights",
+  "license": "Tongyi Qianwen RESEARCH LICENSE AGREEMENT (non-commercial by default; commercial use requires requesting a separate license from Alibaba)",
+  "paramsB": 1.8,
+  "activeParamsB": null,
+  "archClass": "dense",
+  "archDisplay": "Dense decoder-only transformer (RoPE, SwiGLU, RMSNorm), tied embeddings",
+  "ctxK": 32,
+  "modalities": [
+    "text"
+  ],
+  "langCount": null,
+  "capabilities": {
+    "reasoning": false,
+    "coding": true,
+    "vision": false,
+    "functionCalling": false,
+    "toolUse": false,
+    "agentic": false
+  },
+  "apiAvailable": false,
+  "price": null,
+  "links": {
+    "hf": "Qwen/Qwen-1_8B",
+    "gh": "QwenLM/Qwen"
+  },
+  "note": "Smallest Gen-1 model (2.2T tokens) aimed at edge/low-latency deployment; research-only license unless commercial terms are separately granted.",
+  "quants": [
+    "GPTQ Int4",
+    "GPTQ Int8",
+    "GGUF"
+  ],
+  "vramQ4Gb": 1.2,
+  "vramFp16Gb": 3.6,
+  "tps4090": null,
+  "tpsNote": null,
+  "effortLabel": null,
+  "isDefaultConfig": true,
+  "isBestConfig": true,
+  "specSources": {
+    "paramsB": "https://github.com/QwenLM/Qwen/blob/main/README.md",
+    "ctxK": "https://github.com/QwenLM/Qwen/blob/main/README.md",
+    "releaseDate": "https://github.com/QwenLM/Qwen/blob/main/README.md",
+    "openness": "https://huggingface.co/Qwen/Qwen-1_8B/blob/main/LICENSE"
+  },
+  "results": [
+    {
+      "benchmarkSlug": "c-eval",
+      "score": 56.2,
+      "source": "self-reported",
+      "sourceUrl": "https://huggingface.co/Qwen/Qwen-1_8B",
+      "evaluatedAt": "2023-11-30",
+      "notes": "test set"
+    },
+    {
+      "benchmarkSlug": "mmlu",
+      "score": 45.3,
+      "source": "self-reported",
+      "sourceUrl": "https://huggingface.co/Qwen/Qwen-1_8B",
+      "evaluatedAt": "2023-11-30",
+      "notes": "5-shot"
+    },
+    {
+      "benchmarkSlug": "humaneval",
+      "score": 15.2,
+      "source": "self-reported",
+      "sourceUrl": "https://huggingface.co/Qwen/Qwen-1_8B",
+      "evaluatedAt": "2023-11-30",
+      "notes": "0-shot pass@1"
+    },
+    {
+      "benchmarkSlug": "gsm8k",
+      "score": 32.3,
+      "source": "self-reported",
+      "sourceUrl": "https://huggingface.co/Qwen/Qwen-1_8B",
+      "evaluatedAt": "2023-11-30",
+      "notes": "8-shot"
+    }
+  ],
+  "verificationNotes": "Confirmed real, released 2023-11-30 per GitHub README (same day as Qwen-72B). 1.8B params, research-only license (commercial requires separate contact) confirmed on HF model card. Native 8K/max 32K context confirmed. c-eval score of 56.2 specifically confirmed as the 'Test Set' figure on the HF card (Val set = 56.1, a different number) — the record's 'test set' note is correct and the number is not a typo of the val figure. mmlu 45.3, humaneval 15.2, gsm8k 32.3 all confirmed verbatim."
+}

@@ -1,0 +1,84 @@
+{
+  "name": "Qwen3-235B-A22B (Non-Thinking)",
+  "org": "Alibaba",
+  "family": "Qwen3",
+  "releaseDate": "2025-04-29",
+  "status": "released",
+  "openness": "open-weights",
+  "license": "Apache 2.0",
+  "paramsB": 235,
+  "activeParamsB": 22,
+  "archClass": "moe",
+  "archDisplay": "MoE Transformer (128 experts, 8 active, hybrid thinking mode)",
+  "ctxK": 128,
+  "modalities": [
+    "text"
+  ],
+  "langCount": 119,
+  "capabilities": {
+    "reasoning": false,
+    "coding": true,
+    "vision": false,
+    "functionCalling": true,
+    "toolUse": true,
+    "agentic": true
+  },
+  "apiAvailable": true,
+  "price": null,
+  "links": {
+    "hf": "Qwen/Qwen3-235B-A22B",
+    "gh": "QwenLM/Qwen3",
+    "docs": "qwen.readthedocs.io"
+  },
+  "note": "Gen-3 flagship MoE, non-thinking (fast dialogue) mode setting.",
+  "quants": [
+    "GGUF",
+    "MLX",
+    "FP8",
+    "NVFP4"
+  ],
+  "vramQ4Gb": 132,
+  "vramFp16Gb": 470,
+  "tps4090": null,
+  "tpsNote": "Exceeds single RTX 4090 24GB VRAM even at Q4 (~132GB); requires multi-GPU or CPU offload.",
+  "effortLabel": "Non-Thinking",
+  "isDefaultConfig": false,
+  "isBestConfig": false,
+  "specSources": {
+    "paramsB": "https://arxiv.org/pdf/2505.09388",
+    "ctxK": "https://arxiv.org/pdf/2505.09388",
+    "releaseDate": "https://qwenlm.github.io/blog/qwen3/",
+    "openness": "https://huggingface.co/Qwen/Qwen3-235B-A22B"
+  },
+  "results": [
+    {
+      "benchmarkSlug": "aime",
+      "score": 40.1,
+      "source": "self-reported",
+      "sourceUrl": "https://arxiv.org/pdf/2505.09388",
+      "notes": "AIME'24, Non-thinking mode, Table 12"
+    },
+    {
+      "benchmarkSlug": "livecodebench",
+      "score": 35.3,
+      "source": "self-reported",
+      "sourceUrl": "https://arxiv.org/pdf/2505.09388",
+      "notes": "LiveCodeBench v5, Non-thinking mode"
+    },
+    {
+      "benchmarkSlug": "gpqa",
+      "score": 62.9,
+      "source": "self-reported",
+      "sourceUrl": "https://arxiv.org/pdf/2505.09388",
+      "notes": "GPQA-Diamond, Non-thinking mode"
+    },
+    {
+      "benchmarkSlug": "bfcl",
+      "score": 68,
+      "source": "self-reported",
+      "sourceUrl": "https://arxiv.org/pdf/2505.09388",
+      "notes": "BFCL v3, Non-thinking mode"
+    }
+  ],
+  "verificationNotes": "Same model/spec sourcing as Thinking variant (verified). Read Table 12 of arxiv.org/pdf/2505.09388 directly: Qwen3-235B-A22B (Non-thinking) row shows AIME'24=40.1, LiveCodeBench v5=35.3, GPQA-Diamond=62.9, BFCL v3=68.0 — every value matches exactly. No changes."
+}

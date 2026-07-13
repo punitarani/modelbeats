@@ -1,0 +1,82 @@
+{
+  "name": "Megatron-Turing NLG 530B",
+  "org": "NVIDIA",
+  "family": "Megatron-Turing NLG",
+  "releaseDate": "2021-10-11",
+  "status": "released",
+  "openness": "closed",
+  "license": "None (research paper/blog only; weights never publicly released)",
+  "paramsB": 530,
+  "activeParamsB": null,
+  "archClass": "dense",
+  "archDisplay": "Dense Transformer (105 layers, 20480 hidden dim, 128 attention heads)",
+  "ctxK": 2,
+  "modalities": [
+    "text"
+  ],
+  "langCount": null,
+  "capabilities": {
+    "reasoning": false,
+    "coding": false,
+    "vision": false,
+    "functionCalling": false,
+    "toolUse": false,
+    "agentic": false
+  },
+  "apiAvailable": false,
+  "price": null,
+  "links": {
+    "gh": "deepspeedai/Megatron-DeepSpeed",
+    "docs": "developer.nvidia.com"
+  },
+  "note": "Joint NVIDIA-Microsoft dense transformer; largest monolithic LLM at launch, a scaling landmark; weights never released.",
+  "quants": [],
+  "vramQ4Gb": null,
+  "vramFp16Gb": null,
+  "tps4090": null,
+  "tpsNote": null,
+  "effortLabel": null,
+  "isDefaultConfig": true,
+  "isBestConfig": true,
+  "specSources": {
+    "paramsB": "https://developer.nvidia.com/blog/using-deepspeed-and-megatron-to-train-megatron-turing-nlg-530b-the-worlds-largest-and-most-powerful-generative-language-model/",
+    "ctxK": "https://developer.nvidia.com/blog/using-deepspeed-and-megatron-to-train-megatron-turing-nlg-530b-the-worlds-largest-and-most-powerful-generative-language-model/",
+    "releaseDate": "https://www.theregister.com/2021/10/12/nvidia_microsoft_mtnlg/",
+    "openness": "https://developer.nvidia.com/blog/using-deepspeed-and-megatron-to-train-megatron-turing-nlg-530b-the-worlds-largest-and-most-powerful-generative-language-model/"
+  },
+  "results": [
+    {
+      "benchmarkSlug": "lambada",
+      "score": 76.6,
+      "source": "self-reported",
+      "sourceUrl": "https://developer.nvidia.com/blog/using-deepspeed-and-megatron-to-train-megatron-turing-nlg-530b-the-worlds-largest-and-most-powerful-generative-language-model/",
+      "evaluatedAt": "2021-10-11",
+      "notes": "zero-shot"
+    },
+    {
+      "benchmarkSlug": "hellaswag",
+      "score": 80.2,
+      "source": "self-reported",
+      "sourceUrl": "https://developer.nvidia.com/blog/using-deepspeed-and-megatron-to-train-megatron-turing-nlg-530b-the-worlds-largest-and-most-powerful-generative-language-model/",
+      "evaluatedAt": "2021-10-11",
+      "notes": "zero-shot"
+    },
+    {
+      "benchmarkSlug": "winogrande",
+      "score": 73,
+      "source": "self-reported",
+      "sourceUrl": "https://developer.nvidia.com/blog/using-deepspeed-and-megatron-to-train-megatron-turing-nlg-530b-the-worlds-largest-and-most-powerful-generative-language-model/",
+      "evaluatedAt": "2021-10-11",
+      "notes": "zero-shot"
+    },
+    {
+      "benchmarkSlug": "piqa",
+      "score": 82,
+      "source": "self-reported",
+      "sourceUrl": "https://developer.nvidia.com/blog/using-deepspeed-and-megatron-to-train-megatron-turing-nlg-530b-the-worlds-largest-and-most-powerful-generative-language-model/",
+      "evaluatedAt": "2021-10-11",
+      "notes": "zero-shot, physical commonsense reasoning"
+    }
+  ],
+  "verificationNotes": "Fully confirmed on the primary NVIDIA developer blog: 530B parameters, 105-layer transformer, 20480 hidden dim, 128 attention heads, and 2048-token sequence length all appear as literal text, as do all four zero-shot scores (LAMBADA 0.766, HellaSwag 0.802, WinoGrande 0.730, PIQA 0.820 = 76.6/80.2/73.0/82.0). Release date Oct 11, 2021 corroborated by The Register. Confirmed via independent search that no public weights/checkpoint were ever released — record's openness/license fields are accurate. No changes made."
+}

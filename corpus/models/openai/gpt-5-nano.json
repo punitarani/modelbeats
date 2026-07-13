@@ -1,0 +1,62 @@
+{
+  "name": "GPT-5 nano",
+  "org": "OpenAI",
+  "family": "GPT-5",
+  "releaseDate": "2025-08-07",
+  "status": "released",
+  "openness": "closed",
+  "license": "Proprietary (OpenAI API Terms)",
+  "paramsB": null,
+  "activeParamsB": null,
+  "archClass": "dense",
+  "archDisplay": "Smallest, fastest sibling of GPT-5's unified architecture; dense transformer, exact size undisclosed",
+  "ctxK": 400,
+  "modalities": [
+    "text",
+    "vision"
+  ],
+  "langCount": null,
+  "capabilities": {
+    "reasoning": true,
+    "coding": true,
+    "vision": true,
+    "functionCalling": true,
+    "toolUse": true,
+    "agentic": true
+  },
+  "apiAvailable": true,
+  "price": {
+    "input": 0.05,
+    "output": 0.4,
+    "provider": "OpenAI"
+  },
+  "links": {
+    "docs": "developers.openai.com/api/docs/models/gpt-5-nano"
+  },
+  "note": "Smallest, fastest GPT-5 variant for high-volume, latency-sensitive workloads.",
+  "quants": [],
+  "vramQ4Gb": null,
+  "vramFp16Gb": null,
+  "tps4090": null,
+  "tpsNote": null,
+  "effortLabel": null,
+  "isDefaultConfig": true,
+  "isBestConfig": true,
+  "specSources": {
+    "releaseDate": "https://techcrunch.com/2025/08/07/openais-gpt-5-is-here/",
+    "ctxK": "https://developers.openai.com/api/docs/models/gpt-5-nano",
+    "openness": "https://developers.openai.com/api/docs/models/gpt-5-nano",
+    "paramsB": "https://developers.openai.com/api/docs/models/gpt-5-nano"
+  },
+  "results": [
+    {
+      "benchmarkSlug": "gpqa",
+      "score": 71.2,
+      "source": "self-reported",
+      "sourceUrl": "https://openai.com/index/introducing-gpt-5-for-developers/",
+      "evaluatedAt": "2025-08-07",
+      "notes": "GPQA Diamond, no tools, high reasoning effort"
+    }
+  ],
+  "verificationNotes": "Existence, release date and pricing/context ($0.05/$0.40 per 1M, 400K context) confirmed by live-fetching developers.openai.com/api/docs/models/gpt-5-nano (also cites snapshot gpt-5-nano-2025-08-07). Primary blog page inaccessible (403/rate-limited) for direct row-by-row confirmation. Only gpqa (71.2) could be independently corroborated verbatim via secondary sources. AIME claim (85.2) conflicts with an independent Artificial Analysis re-eval (83.7, different methodology, not the cited self-reported source) and could not be confirmed on the primary source; swe-bench (54.7), hle (8.7), mmmu (75.6) and tau-bench (35.5) could not be found on any accessible source. Dropped all 5 unconfirmed rows per verification policy, kept only gpqa."
+}

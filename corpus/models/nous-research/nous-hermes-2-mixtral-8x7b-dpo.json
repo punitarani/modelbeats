@@ -1,0 +1,88 @@
+{
+  "name": "Nous Hermes 2 Mixtral 8x7B DPO",
+  "org": "Nous Research",
+  "family": "Hermes",
+  "releaseDate": "2024-01-15",
+  "status": "released",
+  "openness": "open-weights",
+  "license": "Apache-2.0",
+  "paramsB": 46.7,
+  "activeParamsB": 12.9,
+  "archClass": "moe",
+  "archDisplay": "Sparse Mixture-of-Experts transformer (8 experts, top-2 routing, Mixtral architecture)",
+  "ctxK": 32,
+  "modalities": [
+    "text"
+  ],
+  "langCount": null,
+  "capabilities": {
+    "reasoning": false,
+    "coding": true,
+    "vision": false,
+    "functionCalling": true,
+    "toolUse": true,
+    "agentic": true
+  },
+  "apiAvailable": true,
+  "price": null,
+  "links": {
+    "hf": "NousResearch/Nous-Hermes-2-Mixtral-8x7B-DPO"
+  },
+  "note": "Flagship MoE fine-tune of Mixtral 8x7B, SFT+DPO on 1M+ mostly GPT-4-generated samples; first community model to beat Mixtral Instruct broadly.",
+  "quants": [
+    "GGUF Q4_K_M",
+    "GPTQ",
+    "AWQ"
+  ],
+  "vramQ4Gb": 30,
+  "vramFp16Gb": 93,
+  "tps4090": null,
+  "tpsNote": null,
+  "effortLabel": null,
+  "isDefaultConfig": true,
+  "isBestConfig": true,
+  "specSources": {
+    "paramsB": "https://mistral.ai/news/mixtral-of-experts/",
+    "ctxK": "https://mistral.ai/news/mixtral-of-experts/",
+    "releaseDate": "https://x.com/NousResearch/status/1746988416779309143",
+    "openness": "https://huggingface.co/NousResearch/Nous-Hermes-2-Mixtral-8x7B-DPO"
+  },
+  "results": [
+    {
+      "benchmarkSlug": "arc-challenge",
+      "score": 64.25,
+      "source": "self-reported",
+      "sourceUrl": "https://huggingface.co/NousResearch/Nous-Hermes-2-Mixtral-8x7B-DPO",
+      "notes": "acc_norm, part of GPT4All suite"
+    },
+    {
+      "benchmarkSlug": "hellaswag",
+      "score": 84.89,
+      "source": "self-reported",
+      "sourceUrl": "https://huggingface.co/NousResearch/Nous-Hermes-2-Mixtral-8x7B-DPO",
+      "notes": "acc_norm, part of GPT4All suite"
+    },
+    {
+      "benchmarkSlug": "winogrande",
+      "score": 76.16,
+      "source": "self-reported",
+      "sourceUrl": "https://huggingface.co/NousResearch/Nous-Hermes-2-Mixtral-8x7B-DPO",
+      "notes": "part of GPT4All suite"
+    },
+    {
+      "benchmarkSlug": "agieval",
+      "score": 46.05,
+      "source": "self-reported",
+      "sourceUrl": "https://huggingface.co/NousResearch/Nous-Hermes-2-Mixtral-8x7B-DPO",
+      "notes": "AGIEval average"
+    },
+    {
+      "benchmarkSlug": "bigbench",
+      "score": 49.7,
+      "source": "self-reported",
+      "sourceUrl": "https://huggingface.co/NousResearch/Nous-Hermes-2-Mixtral-8x7B-DPO",
+      "notes": "BigBench average (custom subset used by Nous)"
+    }
+  ],
+  "verificationNotes": "Confirmed on HF model card: Apache-2.0 license, ARC-C norm 64.25, HellaSwag norm 84.89, Winogrande 76.16, AGIEval 46.05, BigBench 49.70 all literally present. Mixtral base spec (46.7B total / 12.9B active / 32K context) confirmed verbatim on Mistral AI's official 'Mixtral of experts' blog post. Decoded the cited tweet's Twitter snowflake ID (1746988416779309143) to 2024-01-15 20:11 UTC, exactly matching the record's release date, and confirmed via search that the tweet text matches the quoted 'first model to beat Mixtral Instruct' claim. No changes made."
+}
