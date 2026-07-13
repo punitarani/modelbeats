@@ -64,10 +64,12 @@ worked example — a model with MMLU 70 and HLE 25, nothing else:
         Every stored result carries a source: independent, arena, admin-run, curated, or
         self-reported. When a model×benchmark has rows from several sources, the headline score is
         picked in that order of precedence — independent measurements always beat a vendor's own
-        numbers. The current dataset ({data.models.length} models, as of {data.asOf}) is entirely{' '}
-        <span className="font-mono text-[11px]">curated</span>: point-in-time approximations
-        assembled from public reporting, not live feeds or our own eval runs. Leaderboards show a
-        per-row provenance badge so this is never hidden.
+        numbers. The current dataset ({data.models.length} models, as of {data.asOf}) draws on a mix
+        of <span className="font-mono text-[11px]">self-reported</span>,{' '}
+        <span className="font-mono text-[11px]">independent</span>, and{' '}
+        <span className="font-mono text-[11px]">arena</span> sources — each stored and displayed
+        separately, never collapsed into a single number. Leaderboards show a per-row provenance
+        badge so this is never hidden.
       </P>
 
       <H2>Movers & lineage</H2>

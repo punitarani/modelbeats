@@ -1,7 +1,7 @@
 import type * as React from 'react'
 import { useState } from 'react'
 import { ChartTipBox, useChartTip } from './chart-tip'
-import { SCATTER, scatterX, scatterY } from './scales'
+import { type EloWindow, SCATTER, scatterX, scatterY } from './scales'
 
 export interface ScatterPoint {
   slug: string
@@ -20,15 +20,21 @@ const NEAR = 24
 /** Quality-vs-price scatter (design dashboard, viewBox 720×320, log-x). */
 export function QualityPriceScatter({
   points,
+  eloWindow,
   onSelect,
 }: {
   points: ScatterPoint[]
+  eloWindow: EloWindow
   onSelect?: (slug: string) => void
 }) {
   const { containerRef, tip, show, showAt, hide } = useChartTip()
   const [hovered, setHovered] = useState<string | null>(null)
 
-  const positions = points.map((p) => ({ p, x: scatterX(p.outputPrice), y: scatterY(p.elo) }))
+  const positions = points.map((p) => ({
+    p,
+    x: scatterX(p.outputPrice),
+    y: scatterY(p.elo, eloWindow),
+  }))
 
   const tipContent = (p: ScatterPoint) => (
     <>
@@ -98,8 +104,8 @@ export function QualityPriceScatter({
           if (hit) onSelect(hit.p.slug)
         }}
       >
-        {SCATTER.yTicks.map((elo) => {
-          const y = scatterY(elo)
+        {eloWindow.yTicks.map((elo) => {
+          const y = scatterY(elo, eloWindow)
           return (
             <g key={elo}>
               <line
@@ -180,7 +186,7 @@ export function QualityPriceScatter({
             <text
               key={`label-${p.slug}`}
               x={(scatterX(p.outputPrice) + 8).toFixed(1)}
-              y={(scatterY(p.elo) + 3).toFixed(1)}
+              y={(scatterY(p.elo, eloWindow) + 3).toFixed(1)}
               fontSize="10"
               fill="var(--mut)"
               pointerEvents="none"

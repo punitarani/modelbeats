@@ -12,18 +12,12 @@ import { Segmented } from '#/components/segmented'
 import { catalogQueryOptions } from '#/lib/catalog'
 import { RankingsTable } from './rankings-table'
 
-const SORT_LABELS: Record<string, string> = {
+/** Fixed (non-benchmark) sort keys; any other key is looked up in the live benchmark catalog. */
+const FIXED_SORT_LABELS: Record<string, string> = {
   index: 'Index',
   name: 'name',
   params: 'parameters',
   ctx: 'context',
-  arena: 'Arena Elo',
-  gpqa: 'GPQA',
-  hle: 'HLE',
-  swe: 'SWE-bench',
-  lcb: 'LiveCodeBench',
-  aime: 'AIME',
-  mmlu: 'MMLU',
 }
 
 export interface RankingsSearch {
@@ -47,6 +41,8 @@ export function RankingsScreen({
   const rows = selectRankings(data.models, search)
   const orgs = selectOrgs(data.models)
   const sortKey = parseSort(search.sort).key
+  const benchLabel = data.benchmarks.find((b) => b.slug === sortKey)?.name
+  const sortLabel = FIXED_SORT_LABELS[sortKey] ?? benchLabel ?? sortKey
 
   return (
     <div className="animate-fadeup px-6 py-5 pb-10">
@@ -56,8 +52,7 @@ export function RankingsScreen({
             {category ? `${CATEGORY_LABELS[category]} rankings` : 'Global rankings'}
           </h1>
           <div className="mt-0.5 text-xs text-mut" data-testid="rankings-meta">
-            {rows.length} models · sorted by {SORT_LABELS[sortKey] ?? sortKey} · click any column to
-            re-sort
+            {rows.length} models · sorted by {sortLabel} · click any column to re-sort
           </div>
         </div>
         <div className="ml-auto flex flex-wrap items-center gap-2">

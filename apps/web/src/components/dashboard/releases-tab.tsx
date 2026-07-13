@@ -7,6 +7,9 @@ import { dashboardStats } from './dashboard-data'
 /** Design's Releases variant: month-grouped feed + cadence + open-vs-closed frontier. */
 export function ReleasesTab({ catalog }: { catalog: CatalogSnapshot }) {
   const stats = dashboardStats(catalog)
+  const arenaBounds = catalog.benchmarks.find((b) => b.slug === 'arena')
+  const arenaMin = arenaBounds?.normMin ?? 1000
+  const arenaMax = arenaBounds?.normMax ?? 1500
 
   // month-grouped feed: 22 most recent (design)
   const feed: { month: string; items: typeof catalog.models }[] = []
@@ -110,7 +113,7 @@ export function ReleasesTab({ catalog }: { catalog: CatalogSnapshot }) {
                   <div
                     className="h-full"
                     style={{
-                      width: `${arenaPct(f.m?.bench.arena as number)}%`,
+                      width: `${arenaPct(f.m?.bench.arena as number, arenaMin, arenaMax)}%`,
                       background: f.color,
                     }}
                   />

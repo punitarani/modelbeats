@@ -20,30 +20,28 @@ export function sortParam(keys: readonly string[], def: string) {
   return z.string().regex(re).default(def).catch(def)
 }
 
-/** The rankings table's sortable columns (design: name/params/ctx/index + 7 benchmarks). */
-export const RANKINGS_SORT_KEYS = [
-  'name',
-  'params',
-  'ctx',
-  'index',
-  'arena',
-  'gpqa',
-  'hle',
-  'swe',
-  'lcb',
-  'aime',
-  'mmlu',
-] as const
+/**
+ * Rankings sort keys: the fixed columns (name/params/ctx/index) plus ANY kebab-case
+ * benchmark slug — the catalog is data-driven and count-varying (D18), so this can't be a
+ * static enum. `selectRankings`'s sort switch already degrades an unrecognized key via
+ * `m.bench[key] ?? -1e9`, so accepting any slug-shaped string here is safe; a slug that
+ * doesn't exist in the current catalog just sorts everything to the bottom.
+ */
+export const RANKINGS_SORT_KEYS = ['name', 'params', 'ctx', 'index', '[a-z][a-z0-9-]*'] as const
 
-/** The design's seven rankings benchmark columns, in order. */
-export const RANKINGS_BENCH_COLUMNS = [
-  { slug: 'arena', label: 'Arena' },
-  { slug: 'gpqa', label: 'GPQA' },
-  { slug: 'hle', label: 'HLE' },
-  { slug: 'swe', label: 'SWE' },
-  { slug: 'lcb', label: 'LCB' },
-  { slug: 'aime', label: 'AIME' },
-  { slug: 'mmlu', label: 'MMLU' },
+/**
+ * One flagship benchmark per category (arena + 6), in category order — the rankings
+ * table's default CORE column set. Category subpages (`/rankings/$category`) instead show
+ * every benchmark in that category, sourced live from the snapshot's benchmark catalog.
+ */
+export const CORE_RANKINGS_SLUGS = [
+  'arena', // human-preference
+  'mmlu', // knowledge
+  'gpqa', // reasoning
+  'swe-bench', // coding
+  'aime', // math
+  'mmmu', // vision
+  'tau-bench', // agents
 ] as const
 
 /** Compact capability codes in URLs (C4 `?caps=fc,tools`) → shared CapabilityKey. */

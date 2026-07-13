@@ -53,7 +53,13 @@ export function ModelDetailScreen({
     model.vramQ4 == null
       ? []
       : catalog.gpus.filter((g) => g.vramGb >= (model.vramQ4 as number) * 1.08)
-  const compareB = model.slug === 'deepseek-v4-5' ? 'claude-opus-4-8' : 'deepseek-v4-5'
+  // Compare-against default: the top model by index, preferring one on the OTHER side of
+  // the open/closed line for a meaningful contrast — falls back to the runner-up if this
+  // model itself is the #1 (catalog-derived, never a fixed slug).
+  const byIndex = [...catalog.models]
+    .filter((x) => x.slug !== model.slug)
+    .sort((a, b) => b.index - a.index)
+  const compareB = (byIndex.find((x) => x.open !== model.open) ?? byIndex[0])?.slug ?? model.slug
 
   const meta = [
     { label: 'Parameters', value: model.params == null ? 'Undisclosed' : `${model.params}B` },

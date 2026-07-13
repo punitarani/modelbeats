@@ -8,15 +8,31 @@ export const SCATTER = {
   viewBox: '0 0 720 320',
   xMin: 0.06,
   xMax: 200,
-  yMinElo: 1140,
-  yMaxElo: 1520,
   left: 46,
   right: 712,
   top: 12,
   bottom: 296,
-  yTicks: [1200, 1300, 1400, 1500],
   xTicks: [0.1, 1, 10, 100],
 } as const
+
+export interface EloWindow {
+  yMinElo: number
+  yMaxElo: number
+  yTicks: number[]
+}
+
+/**
+ * Derive the scatter's Elo y-axis window from the arena benchmark's live curated bounds
+ * (`normMin`/`normMax` from the snapshot catalog) instead of a hardcoded range — the real
+ * Arena Elo spread is data-driven and shifts as new models are added. Ticks are 4 evenly
+ * spaced round-to-10 values strictly inside the window.
+ */
+export function eloWindow(normMin: number, normMax: number): EloWindow {
+  const span = normMax - normMin
+  const step = span / 5
+  const yTicks = [1, 2, 3, 4].map((i) => Math.round((normMin + i * step) / 10) * 10)
+  return { yMinElo: normMin, yMaxElo: normMax, yTicks }
+}
 
 export function scatterX(outputPrice: number): number {
   const { xMin, xMax, left, right } = SCATTER
@@ -27,14 +43,15 @@ export function scatterX(outputPrice: number): number {
   )
 }
 
-export function scatterY(elo: number): number {
-  const { yMinElo, yMaxElo, top, bottom } = SCATTER
+export function scatterY(elo: number, window: EloWindow): number {
+  const { yMinElo, yMaxElo } = window
+  const { top, bottom } = SCATTER
   return bottom - ((elo - yMinElo) / (yMaxElo - yMinElo)) * (bottom - top)
 }
 
-/** Arena leaderboard rail bars: pct of the 1250–1520 window. */
-export function arenaPct(elo: number): number {
-  return Math.round(((elo - 1250) / (1520 - 1250)) * 100)
+/** Arena leaderboard rail bars: pct of the given Elo window (from live curated bounds). */
+export function arenaPct(elo: number, normMin: number, normMax: number): number {
+  return Math.round(((elo - normMin) / (normMax - normMin)) * 100)
 }
 
 /** Radar geometry (viewBox 280×260): center (140,126), r 92, six axes from −π/2. */

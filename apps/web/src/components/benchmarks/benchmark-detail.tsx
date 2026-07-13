@@ -13,6 +13,14 @@ import { InlineBar } from '#/components/charts/inline-bar'
 import { histogramBins, logPos, normPct } from '#/components/charts/scales'
 import { ModelTag } from '#/components/model-tag'
 
+/**
+ * Params-axis (log) domain: widened from the design's 1–1100B to fit the real corpus range
+ * (sub-1B SmolLM-class models up to >2T-param frontier MoEs), with headroom on both ends so
+ * no real point sits exactly on the chart edge.
+ */
+const PARAMS_AXIS_MIN = 0.5
+const PARAMS_AXIS_MAX = 3000
+
 /** Benchmark detail: full leaderboard + distribution + score-vs-params (open models). */
 export function BenchmarkDetail({
   benchmark,
@@ -40,10 +48,11 @@ export function BenchmarkDetail({
   const paramsPoints = openWithParams.map((m) => {
     const v = m.bench[benchmark.slug] as number
     const rawY = 8 + (1 - (v - benchmark.normMin) / (benchmark.normMax - benchmark.normMin)) * 140
+    const rawX = 12 + logPos(m.params as number, PARAMS_AXIS_MIN, PARAMS_AXIS_MAX) * 256
     return {
       m,
       v,
-      x: 12 + logPos(m.params as number, 1, 1100) * 256,
+      x: Math.max(12, Math.min(268, rawX)),
       y: Math.max(8, Math.min(148, rawY)),
     }
   })
@@ -225,7 +234,7 @@ export function BenchmarkDetail({
                 {[1, 10, 100, 1000].map((p) => (
                   <text
                     key={p}
-                    x={(12 + logPos(p, 1, 1100) * 256).toFixed(1)}
+                    x={(12 + logPos(p, PARAMS_AXIS_MIN, PARAMS_AXIS_MAX) * 256).toFixed(1)}
                     y="166"
                     textAnchor="middle"
                     fontSize="8.5"

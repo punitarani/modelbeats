@@ -1,16 +1,21 @@
 import { type CatalogSnapshot, fmtDate } from '@rankedmodel/shared'
 import { Link, useNavigate } from '@tanstack/react-router'
 import { useState } from 'react'
-import { arenaPct } from '#/components/charts/scales'
+import { arenaPct, eloWindow } from '#/components/charts/scales'
 import { QualityPriceScatter } from '#/components/charts/scatter'
 import { ModelTag } from '#/components/model-tag'
 import { SearchSelect } from '#/components/search-select'
-import { arenaTop, dashboardMovers, latestReleases, SCATTER_LABELED } from './dashboard-data'
+import { arenaTop, dashboardMovers, latestReleases, scatterLabeled } from './dashboard-data'
 
 export function OverviewTab({ catalog }: { catalog: CatalogSnapshot }) {
   const navigate = useNavigate()
-  const [qcA, setQcA] = useState('claude-opus-4-8')
-  const [qcB, setQcB] = useState('deepseek-v4-5')
+  const sortedByIndex = [...catalog.models].sort((a, b) => b.index - a.index)
+  const defaultOpen = sortedByIndex.find((m) => m.open)
+  const [qcA, setQcA] = useState(sortedByIndex[0]?.slug ?? '')
+  const [qcB, setQcB] = useState(defaultOpen?.slug ?? sortedByIndex[1]?.slug ?? '')
+  const arenaBounds = catalog.benchmarks.find((b) => b.slug === 'arena')
+  const window = eloWindow(arenaBounds?.normMin ?? 1000, arenaBounds?.normMax ?? 1500)
+  const labeledSlugs = scatterLabeled(catalog)
   const scatterPoints = catalog.models
     .filter((m) => m.price && m.bench.arena != null)
     .map((m) => ({
@@ -19,7 +24,7 @@ export function OverviewTab({ catalog }: { catalog: CatalogSnapshot }) {
       outputPrice: (m.price as { output: number }).output,
       elo: m.bench.arena as number,
       open: m.open,
-      labeled: SCATTER_LABELED.has(m.slug),
+      labeled: labeledSlugs.has(m.slug),
     }))
   const qcOptions = [...catalog.models]
     .sort((a, b) => a.name.localeCompare(b.name))
@@ -46,6 +51,7 @@ export function OverviewTab({ catalog }: { catalog: CatalogSnapshot }) {
           </div>
           <QualityPriceScatter
             points={scatterPoints}
+            eloWindow={window}
             onSelect={(slug) => navigate({ to: '/models/$slug', params: { slug } })}
           />
         </div>
@@ -106,7 +112,7 @@ export function OverviewTab({ catalog }: { catalog: CatalogSnapshot }) {
                   <div
                     className="h-full rounded-sm"
                     style={{
-                      width: `${arenaPct(m.bench.arena as number)}%`,
+                      width: `${arenaPct(m.bench.arena as number, window.yMinElo, window.yMaxElo)}%`,
                       background: m.open ? 'var(--open)' : 'var(--closed)',
                     }}
                   />

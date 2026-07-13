@@ -83,8 +83,11 @@ export function HardwareScreen({
         a.fit.requiredGb - b.fit.requiredGb,
     )
 
-  // inverse mode: one model × every GPU
-  const inverseModel = catalog.models.find((x) => x.slug === search.model)
+  // inverse mode: one model × every GPU. Falls back to a catalog-derived open model with
+  // known Q4 VRAM if the URL's slug isn't in the current dataset — never an empty slot.
+  const inverseModel =
+    catalog.models.find((x) => x.slug === search.model) ??
+    catalog.models.find((x) => x.open && x.vramQ4 != null)
 
   return (
     <div className="max-w-[1060px] animate-fadeup px-6 py-5 pb-12">

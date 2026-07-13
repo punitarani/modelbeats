@@ -7,11 +7,14 @@ import {
   fmtParams,
   fmtPrice,
   SIZE_CLASS_LABELS,
+  type SnapshotModel,
   selectExplorer,
   selectOrgs,
 } from '@rankedmodel/shared'
 import { useSuspenseQuery } from '@tanstack/react-query'
 import { Link } from '@tanstack/react-router'
+import { useWindowVirtualizer } from '@tanstack/react-virtual'
+import { useEffect, useRef, useState } from 'react'
 import { InlineBar } from '#/components/charts/inline-bar'
 import { FilterSelect } from '#/components/filter-select'
 import { ModelTag } from '#/components/model-tag'
@@ -19,6 +22,24 @@ import { SearchSelect } from '#/components/search-select'
 import { Segmented } from '#/components/segmented'
 import { catalogQueryOptions } from '#/lib/catalog'
 import { CAP_CODES, type ExplorerSearch } from '#/lib/search'
+
+/** Estimated card height (px), incl. row gap — every card shares the same visual structure. */
+const CARD_HEIGHT = 148
+
+/**
+ * Lane count for the virtualized grid, approximating the CSS `auto-fill, minmax(270px,1fr)`
+ * behavior at common viewport widths. Virtualizing a responsive auto-fill grid needs a
+ * DETERMINISTIC lane count (a virtual "row" = one grid row of N cards), so this trades
+ * perfect fluid responsiveness for a small fixed set of breakpoints.
+ */
+function laneCountFor(width: number): number {
+  const contentWidth = width - 228 - 48 // minus filter rail + page padding
+  if (contentWidth < 560) return 1
+  if (contentWidth < 850) return 2
+  if (contentWidth < 1140) return 3
+  if (contentWidth < 1430) return 4
+  return 5
+}
 
 /** The 5 filter chips exactly as the design's rail lists them. */
 const CAP_CHIPS: { code: keyof typeof CAP_CODES; label: string }[] = [
@@ -61,6 +82,28 @@ export function ExplorerScreen({
   }
   const rows = selectExplorer(data.models, query, data.gpus)
 
+  // Virtualize only after mount (same SSR-safety pattern as the rankings table): the first
+  // paint renders the full, non-virtualized grid so there's no client/server size mismatch
+  // and the page stays fully crawlable; the client then switches to a lane-virtualized
+  // render for smooth scrolling over what can be several hundred cards.
+  const [mounted, setMounted] = useState(false)
+  const [lanes, setLanes] = useState(1)
+  useEffect(() => {
+    setMounted(true)
+    const update = () => setLanes(laneCountFor(window.innerWidth))
+    update()
+    window.addEventListener('resize', update)
+    return () => window.removeEventListener('resize', update)
+  }, [])
+  const listRef = useRef<HTMLDivElement>(null)
+  const laneRows = Math.ceil(rows.length / lanes)
+  const rowVirtualizer = useWindowVirtualizer({
+    count: laneRows,
+    estimateSize: () => CARD_HEIGHT,
+    overscan: 3,
+    scrollMargin: listRef.current?.offsetTop ?? 0,
+  })
+
   const toggleCap = (code: keyof typeof CAP_CODES) => {
     const next = activeCaps.includes(code)
       ? activeCaps.filter((c) => c !== code)
@@ -72,6 +115,50 @@ export function ExplorerScreen({
     <div className="mb-[7px] font-mono text-[9.5px] uppercase tracking-[0.07em] text-dim">
       {children}
     </div>
+  )
+
+  const renderCard = (m: SnapshotModel) => (
+    <Link
+      key={m.slug}
+      to="/models/$slug"
+      params={{ slug: m.slug }}
+      className="flex cursor-pointer flex-col gap-2 rounded-[10px] border border-border bg-card p-[13px] px-[15px] text-text no-underline hover:border-border2 hover:bg-hover hover:no-underline"
+      data-testid="explorer-card"
+    >
+      <div className="flex items-baseline gap-2">
+        <div className="overflow-hidden text-ellipsis whitespace-nowrap text-[13.5px] font-semibold">
+          {m.name}
+        </div>
+        <span className="ml-auto">
+          <ModelTag open={m.open} />
+        </span>
+      </div>
+      <div className="text-[11.5px] text-mut">
+        {m.org} · {fmtDate(m.date)}
+      </div>
+      <div className="flex gap-3 font-mono text-[10.5px] text-mut">
+        <span>{fmtParams(m.params, m.active)}</span>
+        <span>{fmtCtx(m.ctxK)} ctx</span>
+        <span>{fmtPrice(m.price, m.open)}</span>
+      </div>
+      <div className="mt-0.5 flex items-center gap-2">
+        <InlineBar pct={Math.round(m.index)} height={4} className="flex-1" />
+        <span className="font-mono text-[11px] font-semibold">{m.index.toFixed(1)}</span>
+      </div>
+      <div className="flex flex-wrap gap-1">
+        {(Object.keys(m.caps) as CapabilityKey[])
+          .filter((k) => m.caps[k] && k !== 'coding')
+          .slice(0, 4)
+          .map((k) => (
+            <span
+              key={k}
+              className="rounded border border-border px-1.5 py-px text-[10px] text-mut"
+            >
+              {CAP_LABELS[k]}
+            </span>
+          ))}
+      </div>
+    </Link>
   )
 
   return (
@@ -207,51 +294,36 @@ export function ExplorerScreen({
             />
           </div>
         </div>
-        <div className="grid grid-cols-[repeat(auto-fill,minmax(270px,1fr))] gap-[11px]">
-          {rows.map((m) => (
-            <Link
-              key={m.slug}
-              to="/models/$slug"
-              params={{ slug: m.slug }}
-              className="flex cursor-pointer flex-col gap-2 rounded-[10px] border border-border bg-card p-[13px] px-[15px] text-text no-underline hover:border-border2 hover:bg-hover hover:no-underline"
-              data-testid="explorer-card"
-            >
-              <div className="flex items-baseline gap-2">
-                <div className="overflow-hidden text-ellipsis whitespace-nowrap text-[13.5px] font-semibold">
-                  {m.name}
+        {mounted ? (
+          <div
+            ref={listRef}
+            style={{ position: 'relative', height: rowVirtualizer.getTotalSize() }}
+          >
+            {rowVirtualizer.getVirtualItems().map((vi) => (
+              <div
+                key={vi.key}
+                style={{
+                  position: 'absolute',
+                  top: 0,
+                  left: 0,
+                  right: 0,
+                  transform: `translateY(${vi.start - rowVirtualizer.options.scrollMargin}px)`,
+                }}
+              >
+                <div
+                  className="grid gap-[11px]"
+                  style={{ gridTemplateColumns: `repeat(${lanes}, 1fr)` }}
+                >
+                  {rows.slice(vi.index * lanes, vi.index * lanes + lanes).map(renderCard)}
                 </div>
-                <span className="ml-auto">
-                  <ModelTag open={m.open} />
-                </span>
               </div>
-              <div className="text-[11.5px] text-mut">
-                {m.org} · {fmtDate(m.date)}
-              </div>
-              <div className="flex gap-3 font-mono text-[10.5px] text-mut">
-                <span>{fmtParams(m.params, m.active)}</span>
-                <span>{fmtCtx(m.ctxK)} ctx</span>
-                <span>{fmtPrice(m.price, m.open)}</span>
-              </div>
-              <div className="mt-0.5 flex items-center gap-2">
-                <InlineBar pct={Math.round(m.index)} height={4} className="flex-1" />
-                <span className="font-mono text-[11px] font-semibold">{m.index.toFixed(1)}</span>
-              </div>
-              <div className="flex flex-wrap gap-1">
-                {(Object.keys(m.caps) as CapabilityKey[])
-                  .filter((k) => m.caps[k] && k !== 'coding')
-                  .slice(0, 4)
-                  .map((k) => (
-                    <span
-                      key={k}
-                      className="rounded border border-border px-1.5 py-px text-[10px] text-mut"
-                    >
-                      {CAP_LABELS[k]}
-                    </span>
-                  ))}
-              </div>
-            </Link>
-          ))}
-        </div>
+            ))}
+          </div>
+        ) : (
+          <div className="grid grid-cols-[repeat(auto-fill,minmax(270px,1fr))] gap-[11px]">
+            {rows.map(renderCard)}
+          </div>
+        )}
       </div>
     </div>
   )

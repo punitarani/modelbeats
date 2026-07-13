@@ -34,6 +34,7 @@ function ChartsGallery() {
             { slug: 'b', name: 'Open B', outputPrice: 1.3, elo: 1483, open: true, labeled: true },
             { slug: 'c', name: 'Small C', outputPrice: 0.08, elo: 1176, open: true },
           ]}
+          eloWindow={{ yMinElo: 1150, yMaxElo: 1520, yTicks: [1200, 1300, 1400, 1500] }}
         />
       </Card>
       <Card title="Capability radar">

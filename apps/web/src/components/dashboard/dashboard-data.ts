@@ -50,13 +50,16 @@ export function dashboardMovers(catalog: CatalogSnapshot) {
   )
 }
 
-/** Design's labeled scatter points. */
-export const SCATTER_LABELED = new Set([
-  'claude-opus-4-8',
-  'gpt-5-5-pro',
-  'deepseek-v3-2',
-  'deepseek-v4-5',
-  'llama-3-1-8b',
-  'gemini-3-1-pro',
-  'kimi-k2-5',
-])
+/**
+ * Scatter points worth labeling directly on the chart: the top few models by index (the
+ * frontier, regardless of openness) plus the top open-weights model if it didn't already
+ * make that cut — derived from live data instead of a fixed slug list (D-real).
+ */
+export function scatterLabeled(catalog: CatalogSnapshot, topN = 5): Set<string> {
+  const priced = catalog.models.filter((m) => m.price && m.bench.arena != null)
+  const byIndex = [...priced].sort((a, b) => b.index - a.index)
+  const labeled = new Set(byIndex.slice(0, topN).map((m) => m.slug))
+  const topOpen = byIndex.find((m) => m.open)
+  if (topOpen) labeled.add(topOpen.slug)
+  return labeled
+}
