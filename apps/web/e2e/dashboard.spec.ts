@@ -30,6 +30,37 @@ test.describe('dashboard overview', () => {
     await expect(movers).toContainText('+42.6')
   })
 
+  test('y-axis auto-zooms to the data instead of the fixed 0–100 axis', async ({ page }) => {
+    await gotoHydrated(page, '/')
+    // The old axis was a fixed 0–100 with ticks {20,40,60,80}. Fitted to the priced+ranked index
+    // range, the dead low band is gone: the axis lifts off the floor (min tick ≥ 30) while still
+    // reaching the frontier (max tick ≥ 80), with round, evenly-spaced interior ticks that frame it.
+    const ticks = (await page.getByTestId('y-tick').allTextContents()).map(Number)
+    expect(ticks.length).toBeGreaterThanOrEqual(3)
+    expect(Math.min(...ticks)).toBeGreaterThanOrEqual(30)
+    expect(Math.max(...ticks)).toBeGreaterThanOrEqual(80)
+    for (const t of ticks) expect(t % 5).toBe(0)
+  })
+
+  test('legend toggles filter the scatter camps and never empty the plot', async ({ page }) => {
+    await gotoHydrated(page, '/')
+    const points = page.getByTestId('scatter-point')
+    const total = await points.count()
+    expect(total).toBeGreaterThan(50)
+
+    // Hide the closed camp → fewer points remain, and the y-axis stays fitted to them.
+    await page.getByTestId('legend-closed').click()
+    await expect(page.getByTestId('legend-closed')).toHaveAttribute('aria-pressed', 'false')
+    await expect.poll(async () => points.count()).toBeLessThan(total)
+    expect(await points.count()).toBeGreaterThan(0)
+    expect((await page.getByTestId('y-tick').allTextContents()).length).toBeGreaterThan(0)
+
+    // Clicking the last visible camp restores both (the plot never goes empty).
+    await page.getByTestId('legend-open').click()
+    await expect(page.getByTestId('legend-closed')).toHaveAttribute('aria-pressed', 'true')
+    await expect.poll(async () => points.count()).toBe(total)
+  })
+
   test('scatter tooltip appears on hover and on keyboard focus', async ({ page }) => {
     await gotoHydrated(page, '/')
     // Gemini 3.1 Pro is priced + rank-eligible, so it's a labeled scatter point

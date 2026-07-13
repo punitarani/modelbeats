@@ -1,7 +1,7 @@
 import { type CatalogSnapshot, fmtDate } from '@rankedmodel/shared'
 import { Link, useNavigate } from '@tanstack/react-router'
-import { useState } from 'react'
-import { INDEX_Y_WINDOW } from '#/components/charts/scales'
+import { useMemo, useState } from 'react'
+import { fitYWindow } from '#/components/charts/scales'
 import { QualityPriceScatter } from '#/components/charts/scatter'
 import { ModelTag } from '#/components/model-tag'
 import { SearchSelect } from '#/components/search-select'
@@ -20,15 +20,33 @@ export function OverviewTab({ catalog }: { catalog: CatalogSnapshot }) {
   const defaultOpen = ranked.find((m) => m.open)
   const [qcA, setQcA] = useState(ranked[0]?.slug ?? '')
   const [qcB, setQcB] = useState(defaultOpen?.slug ?? ranked[1]?.slug ?? '')
-  const labeledSlugs = scatterLabeled(catalog)
-  const scatterPoints = scatterModels(catalog).map((m) => ({
-    slug: m.slug,
-    name: m.name,
-    outputPrice: (m.price as { output: number }).output,
-    index: m.index,
-    open: m.open,
-    labeled: labeledSlugs.has(m.slug),
-  }))
+
+  // Quality-vs-price scatter: all priced+ranked points, plus a legend that filters the two
+  // weight camps. Filtering re-derives the fitted y-window, so hiding a camp auto-zooms the plot.
+  const allPoints = useMemo(() => {
+    const labeledSlugs = scatterLabeled(catalog)
+    return scatterModels(catalog).map((m) => ({
+      slug: m.slug,
+      name: m.name,
+      outputPrice: (m.price as { output: number }).output,
+      index: m.index,
+      open: m.open,
+      labeled: labeledSlugs.has(m.slug),
+    }))
+  }, [catalog])
+  const [showCamp, setShowCamp] = useState({ open: true, closed: true })
+  const toggleCamp = (key: 'open' | 'closed') =>
+    setShowCamp((s) => {
+      const next = { ...s, [key]: !s[key] }
+      // Never leave the plot empty — hiding the last visible camp resets to showing both.
+      return next.open || next.closed ? next : { open: true, closed: true }
+    })
+  const scatterPoints = useMemo(
+    () => allPoints.filter((p) => (p.open ? showCamp.open : showCamp.closed)),
+    [allPoints, showCamp],
+  )
+  const yWindow = useMemo(() => fitYWindow(scatterPoints.map((p) => p.index)), [scatterPoints])
+
   const qcOptions = [...catalog.models]
     .sort((a, b) => a.name.localeCompare(b.name))
     .map((o) => ({ value: o.slug, label: `${o.name} — ${o.org}` }))
@@ -43,20 +61,26 @@ export function OverviewTab({ catalog }: { catalog: CatalogSnapshot }) {
             <div className="text-[11px] text-mut">
               Overall index against output price, log scale
             </div>
-            <div className="ml-auto flex gap-3 text-[11px] text-mut">
-              <span className="flex items-center gap-[5px]">
-                <span className="size-2 rounded-full bg-open" />
-                Open weights
-              </span>
-              <span className="flex items-center gap-[5px]">
-                <span className="size-2 rounded-full bg-closed" />
-                Closed
-              </span>
+            <div className="ml-auto flex gap-1.5 text-[11px]">
+              <LegendToggle
+                label="Open weights"
+                color="var(--open)"
+                active={showCamp.open}
+                onClick={() => toggleCamp('open')}
+                testid="legend-open"
+              />
+              <LegendToggle
+                label="Closed"
+                color="var(--closed)"
+                active={showCamp.closed}
+                onClick={() => toggleCamp('closed')}
+                testid="legend-closed"
+              />
             </div>
           </div>
           <QualityPriceScatter
             points={scatterPoints}
-            yWindow={INDEX_Y_WINDOW}
+            yWindow={yWindow}
             onSelect={(slug) => navigate({ to: '/models/$slug', params: { slug } })}
           />
         </div>
@@ -181,5 +205,39 @@ export function OverviewTab({ catalog }: { catalog: CatalogSnapshot }) {
         </div>
       </div>
     </div>
+  )
+}
+
+/** A legend swatch that doubles as a filter: click toggles its weight camp on the scatter, and
+ *  an inactive camp reads as a hollow dot + dimmed label (aria-pressed carries the state). */
+function LegendToggle({
+  label,
+  color,
+  active,
+  onClick,
+  testid,
+}: {
+  label: string
+  color: string
+  active: boolean
+  onClick: () => void
+  testid: string
+}) {
+  return (
+    <button
+      type="button"
+      onClick={onClick}
+      aria-pressed={active}
+      data-testid={testid}
+      className={`flex cursor-pointer items-center gap-[5px] rounded px-1.5 py-0.5 transition-colors hover:bg-hover ${
+        active ? 'text-mut' : 'text-dim'
+      }`}
+    >
+      <span
+        className="size-2 rounded-full"
+        style={active ? { background: color } : { boxShadow: `inset 0 0 0 1.5px ${color}` }}
+      />
+      {label}
+    </button>
   )
 }

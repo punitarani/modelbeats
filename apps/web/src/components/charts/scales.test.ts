@@ -1,7 +1,9 @@
 import { describe, expect, it } from 'vitest'
 import {
   cadenceHeight,
+  fitYWindow,
   histogramBins,
+  INDEX_Y_WINDOW,
   logPos,
   normPct,
   radarAxisMeta,
@@ -19,15 +21,65 @@ describe('scatter scales (C6)', () => {
     expect(scatterX(0.06)).toBeCloseTo(46, 6)
     expect(scatterX(200)).toBeCloseTo(712, 6)
   })
-  it('maps the index y-window edges: yMin → 296 (bottom), yMax → 12 (top)', () => {
+  it('maps the index y-window edges: yMin → 296 (bottom), yMax → 26 (top label margin)', () => {
     const w = { yMin: 0, yMax: 100, yTicks: [] }
     expect(scatterY(0, w)).toBeCloseTo(296, 6)
-    expect(scatterY(100, w)).toBeCloseTo(12, 6)
+    expect(scatterY(100, w)).toBeCloseTo(26, 6)
   })
   it('log placement: $1 sits left of the midpoint between $0.06 and $200', () => {
     const mid = (46 + 712) / 2
     expect(scatterX(1)).toBeLessThan(mid)
     expect(scatterX(10)).toBeGreaterThan(mid)
+  })
+})
+
+describe('fitYWindow — auto-zoom the index axis (D22)', () => {
+  it('zooms to the live range instead of the fixed 0–100 axis', () => {
+    // The real priced+ranked scatter spans index 37.3 → 93.3.
+    const w = fitYWindow([37.3, 93.3, 70.9, 52.9])
+    expect(w.yMin).toBeGreaterThan(0) // lifted off the floor — the dead 0–37 band is gone
+    expect(w.yMin).toBeLessThanOrEqual(37.3) // still contains the lowest point
+    expect(w.yMax).toBeGreaterThanOrEqual(93.3) // still contains the highest point
+    expect(w.yMax).toBeLessThanOrEqual(100)
+  })
+  it('places round, strictly-interior ticks', () => {
+    const w = fitYWindow([37.3, 93.3])
+    expect(w.yTicks).toEqual([40, 50, 60, 70, 80, 90])
+    for (const t of w.yTicks) {
+      expect(t).toBeGreaterThan(w.yMin)
+      expect(t).toBeLessThan(w.yMax)
+    }
+  })
+  it('frames a wide range with a near-frontier gridline (no floating top cluster)', () => {
+    // A wide index span (≈31 → 94) must not collapse to only [40,60,80]: the ~6-interval target
+    // keeps a 90 line so the 88–94 cluster stays gridded instead of hovering above the top edge.
+    const w = fitYWindow([31.3, 94.4])
+    expect(w.yTicks).toContain(90)
+    expect(Math.max(...w.yTicks)).toBeGreaterThanOrEqual(w.yMax - 10) // a tick sits near the frontier
+  })
+  it('every plotted value maps inside the drawable band [top, bottom]', () => {
+    const values = [37.3, 44.6, 70.9, 88.2, 93.3]
+    const w = fitYWindow(values)
+    for (const v of values) {
+      const y = scatterY(v, w)
+      expect(y).toBeGreaterThanOrEqual(26) // SCATTER.top (label margin)
+      expect(y).toBeLessThanOrEqual(296) // SCATTER.bottom
+    }
+  })
+  it('clamps to the 0–100 index domain near the ceiling', () => {
+    const w = fitYWindow([88, 99.5])
+    expect(w.yMax).toBeLessThanOrEqual(100)
+    expect(w.yMin).toBeGreaterThanOrEqual(0)
+    expect(w.yMax).toBeGreaterThanOrEqual(99.5)
+  })
+  it('handles a single point without collapsing the axis', () => {
+    const w = fitYWindow([70])
+    expect(w.yMin).toBeLessThan(70)
+    expect(w.yMax).toBeGreaterThan(70)
+    expect(w.yTicks.length).toBeGreaterThan(0)
+  })
+  it('falls back to the full window when there is nothing to plot', () => {
+    expect(fitYWindow([])).toBe(INDEX_Y_WINDOW)
   })
 })
 

@@ -124,6 +124,7 @@ export function QualityPriceScatter({
                 fontSize="10"
                 fill="var(--dim)"
                 fontFamily="var(--font-mono)"
+                data-testid="y-tick"
               >
                 {tick}
               </text>
@@ -154,6 +155,9 @@ export function QualityPriceScatter({
             fillOpacity: active ? 1 : 0.75,
             stroke: active ? 'var(--text)' : 'var(--bg)',
             strokeWidth: 1,
+            // Glide points to their new coordinates when the y-window auto-refits (zoom / legend filter).
+            className:
+              'motion-safe:transition-[cx,cy,r] motion-safe:duration-200 motion-safe:ease-out',
             'data-testid': 'scatter-point',
           }
           return onSelect ? (
@@ -191,6 +195,7 @@ export function QualityPriceScatter({
               fontSize="10"
               fill="var(--mut)"
               pointerEvents="none"
+              className="motion-safe:transition-[x,y] motion-safe:duration-200 motion-safe:ease-out"
             >
               {p.name}
             </text>

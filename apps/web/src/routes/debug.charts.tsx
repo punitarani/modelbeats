@@ -2,7 +2,7 @@ import { createFileRoute } from '@tanstack/react-router'
 import { CadenceBars } from '#/components/charts/cadence-bars'
 import { InlineBar } from '#/components/charts/inline-bar'
 import { Radar } from '#/components/charts/radar'
-import { INDEX_Y_WINDOW } from '#/components/charts/scales'
+import { fitYWindow } from '#/components/charts/scales'
 import { QualityPriceScatter } from '#/components/charts/scatter'
 import { Sparkline } from '#/components/charts/sparkline'
 
@@ -35,7 +35,7 @@ function ChartsGallery() {
             { slug: 'b', name: 'Open B', outputPrice: 1.3, index: 84, open: true, labeled: true },
             { slug: 'c', name: 'Small C', outputPrice: 0.08, index: 46, open: true },
           ]}
-          yWindow={INDEX_Y_WINDOW}
+          yWindow={fitYWindow([92, 84, 46])}
         />
       </Card>
       <Card title="Capability radar">

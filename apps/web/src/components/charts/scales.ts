@@ -3,14 +3,17 @@
  * prototype so rendered charts are pixel-identical. All pure; unit-tested.
  */
 
-/** Quality-vs-price scatter (viewBox 720×320): x = log₁₀(output $/Mtok) over [0.06, 200]. */
+/** Quality-vs-price scatter (viewBox 720×320): x = log₁₀(output $/Mtok) over [0.06, 200].
+ *  `top` carries a margin (not the prototype's 12) so the frontier cluster and its direct
+ *  labels clear the card edge — the index caps at 100, so headroom must come from the plot
+ *  band, not a taller window (D22). Bottom stays anchored, so only the labelled top gains air. */
 export const SCATTER = {
   viewBox: '0 0 720 320',
   xMin: 0.06,
   xMax: 200,
   left: 46,
   right: 712,
-  top: 12,
+  top: 26,
   bottom: 296,
   xTicks: [0.1, 1, 10, 100],
 } as const
@@ -38,6 +41,47 @@ export function scatterY(value: number, window: ScatterYWindow): number {
   const { yMin, yMax } = window
   const { top, bottom } = SCATTER
   return bottom - ((value - yMin) / (yMax - yMin)) * (bottom - top)
+}
+
+/** d3-style "nice" increment: the roundest step (…1,2,5,10…) giving ~`count` intervals over `span`. */
+function niceStep(span: number, count: number): number {
+  const step0 = span / Math.max(1, count)
+  const pow = 10 ** Math.floor(Math.log10(step0))
+  const err = step0 / pow
+  const factor = err >= Math.sqrt(50) ? 10 : err >= Math.sqrt(10) ? 5 : err >= Math.sqrt(2) ? 2 : 1
+  return factor * pow
+}
+
+/**
+ * Auto-fit the index y-window to the data it must show (D22): pad the observed [min,max]
+ * slightly, clamp to the index's [0,100] domain, and lay down ~6 round interior ticks. Zooming
+ * to the live range fills the plot instead of stranding every point in the upper band of a fixed
+ * 0–100 axis — and because it is derived from whatever points are passed, it re-fits when the
+ * open/closed legend filters the set. A ~6-interval target keeps a gridline near the frontier
+ * (e.g. a 90 line for a wide range) so the top cluster stays framed rather than floating above the
+ * highest tick. Falls back to the full 0–100 window when nothing is plotted.
+ */
+export function fitYWindow(values: number[], domainMin = 0, domainMax = 100): ScatterYWindow {
+  if (values.length === 0) return INDEX_Y_WINDOW
+  let min = Math.min(...values)
+  let max = Math.max(...values)
+  if (min === max) {
+    min -= 1
+    max += 1
+  }
+  const pad = Math.max((max - min) * 0.06, 1)
+  const lo = Math.max(domainMin, Math.floor(min - pad))
+  const hi = Math.min(domainMax, Math.ceil(max + pad))
+  if (hi <= lo) return { yMin: lo, yMax: lo + 1, yTicks: [] }
+  const step = niceStep(hi - lo, 6)
+  const ticks: number[] = []
+  const first = Math.ceil((lo + 1e-9) / step)
+  const last = Math.floor((hi - 1e-9) / step)
+  for (let k = first; k <= last; k++) {
+    const v = Math.round(k * step * 1000) / 1000
+    if (v > lo && v < hi) ticks.push(v)
+  }
+  return { yMin: lo, yMax: hi, yTicks: ticks }
 }
 
 /** Radar geometry (viewBox 280×260): center (140,126), r 92, six axes from −π/2. */
