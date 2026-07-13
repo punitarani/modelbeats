@@ -53,6 +53,9 @@ export function selectRankings(models: SnapshotModel[], query: RankingsQuery): S
         return { has: m.params != null, val: m.params ?? 0 }
       case 'ctx':
         return { has: true, val: m.ctxK }
+      case 'open':
+        // Access column: open-weights ahead of closed on a descending sort (design default).
+        return { has: true, val: m.open ? 1 : 0 }
       case 'index':
         return { has: true, val: m.index }
       default: {

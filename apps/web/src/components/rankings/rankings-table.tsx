@@ -48,9 +48,25 @@ export function RankingsTable({
 
   const benchCols = columns
 
-  const gridTemplate = `34px minmax(190px,1.6fr) 74px 62px 84px repeat(${benchCols.length || 1}, ${FIXED_COL_WIDTH}px)`
+  // Column tracks: rank, model (wide so long names aren't clipped), the open/closed access chip,
+  // params, ctx, index (100px fits the index header at 9.5px mono), then the benchmark columns.
+  const MODEL_MIN = 240
+  const ACCESS_COL = 72
+  const FIXED_COLS = 6 // #, model, access, params, ctx, index
+  const gridTemplate = `34px minmax(${MODEL_MIN}px,1.8fr) ${ACCESS_COL}px 74px 62px 100px repeat(${benchCols.length || 1}, ${FIXED_COL_WIDTH}px)`
+  // Fixed tracks + inter-column gaps (gap-2) + the row's own horizontal padding (px-3.5 ×2), so
+  // the last benchmark column keeps its right padding instead of being cropped at the scroll edge.
+  const colCount = FIXED_COLS + benchCols.length
   const minWidth =
-    34 + 190 + 74 + 62 + 84 + benchCols.length * FIXED_COL_WIDTH + 8 * (4 + benchCols.length)
+    28 +
+    34 +
+    MODEL_MIN +
+    ACCESS_COL +
+    74 +
+    62 +
+    100 +
+    benchCols.length * FIXED_COL_WIDTH +
+    8 * (colCount - 1)
 
   const table = useReactTable({
     data: rows,
@@ -116,7 +132,6 @@ export function RankingsTable({
             {m.name}
           </span>
           <span className="flex-none text-[11px] text-mut">{m.org}</span>
-          <ModelTag open={m.open} />
           {!m.ranked && (
             <span
               className="flex-none rounded border border-border px-1 py-px font-mono text-[8.5px] uppercase text-dim"
@@ -125,6 +140,9 @@ export function RankingsTable({
               unrated
             </span>
           )}
+        </span>
+        <span className="flex items-center">
+          <ModelTag open={m.open} />
         </span>
         <span className="text-right font-mono text-[11px] text-mut">
           {fmtParams(m.params, m.active)}
@@ -172,6 +190,7 @@ export function RankingsTable({
         >
           <span className="font-mono text-[9.5px] text-dim">#</span>
           <HeadBtn id="name" label="Model" />
+          <HeadBtn id="open" label="Access" />
           <HeadBtn id="params" label="Params" className="text-right" />
           <HeadBtn id="ctx" label="Ctx" className="text-right" />
           <HeadBtn id="index" label="Index" className="text-right" />

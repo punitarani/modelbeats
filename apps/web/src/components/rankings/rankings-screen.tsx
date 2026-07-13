@@ -22,6 +22,7 @@ import { RankingsTable } from './rankings-table'
 const FIXED_SORT_LABELS: Record<string, string> = {
   index: 'Index',
   name: 'name',
+  open: 'access',
   params: 'parameters',
   ctx: 'context',
 }
