@@ -23,13 +23,17 @@ import { Segmented } from '#/components/segmented'
 import { catalogQueryOptions } from '#/lib/catalog'
 import { CAP_CODES, type ExplorerSearch } from '#/lib/search'
 
-/** Estimated card height (px), incl. row gap — every card shares the same visual structure. */
-const CARD_HEIGHT = 148
-
 /** Card min-width (px) and grid gap (px) — must match the CSS `minmax(270px,1fr)` + `gap-[11px]`
  *  below, so the virtualized lane count matches the SSR auto-fill grid exactly (no reflow on mount). */
 const CARD_MIN_WIDTH = 270
 const GRID_GAP = 11
+
+/** Uniform card height (px, matches the `h-[176px]` on every card). Cards are forced to one fixed
+ *  height with overflow-hidden, so all cards are identical AND the fixed-height virtualizer's row
+ *  stride is exact — it can never under-measure and draw the next row over a taller one (the
+ *  original collision bug, where a 148px estimate lost to cards that wrapped to two tag rows). */
+const CARD_H = 176
+const CARD_HEIGHT = CARD_H + GRID_GAP
 
 /**
  * Lane count for the virtualized grid, computed to exactly match the CSS
@@ -142,21 +146,19 @@ export function ExplorerScreen({
       key={m.slug}
       to="/models/$slug"
       params={{ slug: m.slug }}
-      className="flex cursor-pointer flex-col gap-2 rounded-[10px] border border-border bg-card p-[13px] px-[15px] text-text no-underline hover:border-border2 hover:bg-hover hover:no-underline"
+      className="flex h-[176px] cursor-pointer flex-col gap-2 overflow-hidden rounded-[10px] border border-border bg-card p-[13px] px-[15px] text-text no-underline hover:border-border2 hover:bg-hover hover:no-underline"
       data-testid="explorer-card"
     >
       <div className="flex items-baseline gap-2">
-        <div className="overflow-hidden text-ellipsis whitespace-nowrap text-[13.5px] font-semibold">
+        <div className="min-w-0 flex-1 overflow-hidden text-ellipsis whitespace-nowrap text-[13.5px] font-semibold">
           {m.name}
         </div>
-        <span className="ml-auto">
-          <ModelTag open={m.open} />
-        </span>
+        <ModelTag open={m.open} />
       </div>
-      <div className="text-[11.5px] text-mut">
+      <div className="truncate text-[11.5px] text-mut">
         {m.org} · {fmtDate(m.date)}
       </div>
-      <div className="flex gap-3 font-mono text-[10.5px] text-mut">
+      <div className="flex gap-3 overflow-hidden whitespace-nowrap font-mono text-[10.5px] text-mut">
         <span>{fmtParams(m.params, m.active)}</span>
         <span>{fmtCtx(m.ctxK)} ctx</span>
         <span>{fmtPrice(m.price, m.open)}</span>
@@ -176,14 +178,16 @@ export function ExplorerScreen({
           {Object.keys(m.bench).length > 0 ? m.index.toFixed(1) : '—'}
         </span>
       </div>
-      <div className="flex flex-wrap gap-1">
+      {/* Tag area fills the remaining card height (content-start keeps rows top-aligned); the card's
+          fixed height + overflow-hidden guarantees a uniform card even when caps wrap to two rows. */}
+      <div className="flex flex-1 flex-wrap content-start gap-1 overflow-hidden">
         {(Object.keys(m.caps) as CapabilityKey[])
           .filter((k) => m.caps[k] && k !== 'coding')
           .slice(0, 5)
           .map((k) => (
             <span
               key={k}
-              className="rounded border border-border px-1.5 py-px text-[10px] text-mut"
+              className="h-fit rounded border border-border px-1.5 py-px text-[10px] text-mut"
             >
               {CAP_LABELS[k]}
             </span>
