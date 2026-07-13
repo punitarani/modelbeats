@@ -5,6 +5,7 @@ import {
   type BenchmarkCategory,
   categoryFractions,
   computeMovers,
+  isRankEligible,
   type Mover,
   overallIndex,
   type ResultSource,
@@ -31,7 +32,10 @@ const HEADLINE_SOURCE_PRECEDENCE: ResultSource[] = [
 export interface DerivedModelScore {
   slug: string
   overallIndex: number
-  rankOverall: number
+  /** Overall rank among rank-eligible models (D20); null when the model is unrated. */
+  rankOverall: number | null
+  /** Has enough benchmark coverage to earn a rank (D20). */
+  ranked: boolean
   arenaElo: number | null
   categoryIdx: Record<BenchmarkCategory, number | null>
 }
@@ -78,13 +82,17 @@ export async function deriveScores(root: string): Promise<DerivedScores> {
       model: m,
       scores,
       index: overallIndex(scores, bounds),
+      ranked: isRankEligible(scores, bounds),
     }
   })
 
-  const ranks = rankByIndex(indexed.map((x) => ({ slug: x.model.slug, index: x.index })))
+  // Rank only rank-eligible models (D20); unrated models get no rank.
+  const ranks = rankByIndex(
+    indexed.filter((x) => x.ranked).map((x) => ({ slug: x.model.slug, index: x.index })),
+  )
 
   const models: DerivedModelScore[] = indexed
-    .map(({ model, scores, index }) => {
+    .map(({ model, scores, index, ranked }) => {
       const fractions = categoryFractions(scores, bounds)
       const categoryIdx = Object.fromEntries(
         Object.entries(fractions).map(([cat, f]) => [cat, toIndexScale(f)]),
@@ -92,7 +100,8 @@ export async function deriveScores(root: string): Promise<DerivedScores> {
       return {
         slug: model.slug,
         overallIndex: index,
-        rankOverall: ranks.get(model.slug) ?? 0,
+        rankOverall: ranked ? (ranks.get(model.slug) ?? null) : null,
+        ranked,
         arenaElo: scores.arena ?? null,
         categoryIdx,
       }
@@ -100,12 +109,14 @@ export async function deriveScores(root: string): Promise<DerivedScores> {
     .sort((a, b) => a.slug.localeCompare(b.slug))
 
   const indexBySlug = new Map(indexed.map((x) => [x.model.slug, x.index]))
+  const rankedBySlug = new Map(indexed.map((x) => [x.model.slug, x.ranked]))
   const movers = computeMovers(
     ds.models.map((m) => ({
       slug: m.slug,
       name: m.name,
       predecessor: m.predecessor,
       index: indexBySlug.get(m.slug) ?? 0,
+      ranked: rankedBySlug.get(m.slug) ?? false,
     })),
   )
 

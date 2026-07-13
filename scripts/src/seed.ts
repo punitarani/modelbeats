@@ -374,7 +374,9 @@ export function generateSeedSql(ds: Dataset, derived: DerivedScores): string[] {
   const scoreRows = derived.models.map((d) => [
     String(modelId.get(d.slug)),
     n(d.overallIndex),
-    String(d.rankOverall),
+    // rank_overall is NOT NULL; unrated models (D20) store 0 with ranked=0 as the signal.
+    String(d.rankOverall ?? 0),
+    b(d.ranked),
     'NULL',
     n(d.categoryIdx['human-preference']),
     n(d.categoryIdx.knowledge),
@@ -393,6 +395,7 @@ export function generateSeedSql(ds: Dataset, derived: DerivedScores): string[] {
         'model_id',
         'overall_index',
         'rank_overall',
+        'ranked',
         'rank_delta_30d',
         'human_preference_index',
         'knowledge_index',

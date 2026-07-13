@@ -43,6 +43,38 @@ export function overallIndex(scores: BenchScores, benchmarks: BenchmarkBounds[])
   return toIndexScale(mean(norms)) ?? 0
 }
 
+/**
+ * Ranking-eligibility floor (contract C1, D20). A model earns an overall rank only when it
+ * has been measured on enough of the field to make the mean-of-normalized-scores index a
+ * fair comparison — otherwise a model with a single cherry-picked high score would outrank a
+ * broadly-benchmarked frontier model. The index VALUE is still computed and shown for every
+ * model; this only gates the RANK, so sub-floor models are surfaced as "unrated", never
+ * erased. Breadth (≥2 categories) + depth (≥3 benchmarks) defeats single-category cherry-picking.
+ */
+export const RANKING_MIN_BENCHMARKS = 3
+export const RANKING_MIN_CATEGORIES = 2
+
+/** Distinct benchmarks scored + distinct categories they span, for a model's scores. */
+export function benchmarkCoverage(
+  scores: BenchScores,
+  benchmarks: BenchmarkBounds[],
+): { count: number; categories: number } {
+  const cats = new Set<BenchmarkCategory>()
+  let count = 0
+  for (const b of benchmarks) {
+    if (scores[b.slug] == null) continue
+    count++
+    cats.add(b.category)
+  }
+  return { count, categories: cats.size }
+}
+
+/** True when a model has enough coverage to receive an overall rank (D20). */
+export function isRankEligible(scores: BenchScores, benchmarks: BenchmarkBounds[]): boolean {
+  const { count, categories } = benchmarkCoverage(scores, benchmarks)
+  return count >= RANKING_MIN_BENCHMARKS && categories >= RANKING_MIN_CATEGORIES
+}
+
 /** Per-category mean of normalized scores as fractions (0–1); null = no scores in category. */
 export function categoryFractions(
   scores: BenchScores,
@@ -91,6 +123,9 @@ export interface MoverInput {
   name: string
   predecessor: string | null
   index: number
+  /** Rank-eligible (D20). Movers are only computed between two ranked models so an
+   *  unbenchmarked config (index 0) can't manufacture a huge phantom gain/loss. */
+  ranked: boolean
 }
 export interface Mover {
   slug: string
@@ -111,9 +146,9 @@ export function computeMovers(models: MoverInput[], limit = 5): Mover[] {
   const bySlug = new Map(models.map((m) => [m.slug, m]))
   const movers: Mover[] = []
   for (const m of models) {
-    if (!m.predecessor) continue
+    if (!m.predecessor || !m.ranked) continue
     const prev = bySlug.get(m.predecessor)
-    if (!prev) continue
+    if (!prev?.ranked) continue
     const delta = Math.round((m.index - prev.index) * 10) / 10
     if (delta > 0) {
       movers.push({ slug: m.slug, name: m.name, prevSlug: prev.slug, prevName: prev.name, delta })

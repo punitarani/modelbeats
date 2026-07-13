@@ -28,17 +28,22 @@ const CATEGORIES = [
 
 const SOURCE_PRECEDENCE = ['independent', 'arena', 'admin-run', 'curated', 'self-reported']
 
+const RANKING_MIN_BENCHMARKS = 3
+const RANKING_MIN_CATEGORIES = 2
+
 interface RefModel {
   slug: string
   predecessor: string | null
   index: number
+  ranked: boolean
   categoryIdx: Record<string, number | null>
   arenaElo: number | null
 }
 
-/** Reimplements C1 from scratch: per-benchmark headline pick by source precedence, min-max
- *  normalize clamped to [0,1], mean × 100 rounded to 0.1 steps; missing scores are excluded
- *  from the mean (never penalized as 0). */
+/** Reimplements C1 + the D20 coverage gate from scratch: per-benchmark headline pick by
+ *  source precedence, min-max normalize clamped to [0,1], mean × 100 rounded to 0.1 (missing
+ *  scores excluded, never penalized as 0); a model is rank-eligible only with ≥3 benchmarks
+ *  across ≥2 categories; ranks + movers cover eligible models only. */
 async function computeReference(root: string) {
   const ds = await loadDataset(root)
   const boundsBySlug = new Map(ds.benchmarks.map((b) => [b.slug, b]))
@@ -65,9 +70,13 @@ async function computeReference(root: string) {
     const scores = headline.get(m.slug) ?? new Map()
     const fractionsByCategory = new Map<string, number[]>()
     const allFractions: number[] = []
+    const cats = new Set<string>()
+    let count = 0
     for (const [benchSlug, { score }] of scores) {
       const bounds = boundsBySlug.get(benchSlug)
       if (!bounds) continue
+      count++
+      cats.add(bounds.category)
       const frac = Math.max(
         0,
         Math.min(1, (score - bounds.normMin) / (bounds.normMax - bounds.normMin)),
@@ -92,19 +101,25 @@ async function computeReference(root: string) {
       slug: m.slug,
       predecessor: m.predecessor,
       index,
+      ranked: count >= RANKING_MIN_BENCHMARKS && cats.size >= RANKING_MIN_CATEGORIES,
       categoryIdx,
       arenaElo: scores.get('arena')?.score ?? null,
     }
   })
 
-  const ranked = [...models].sort((a, b) => b.index - a.index || a.slug.localeCompare(b.slug))
-  const rank = new Map(ranked.map((m, i) => [m.slug, i + 1]))
+  // Rank eligible models only; unrated models get no rank.
+  const ranked = models
+    .filter((m) => m.ranked)
+    .sort((a, b) => b.index - a.index || a.slug.localeCompare(b.slug))
+  const rank = new Map<string, number | null>(ranked.map((m, i) => [m.slug, i + 1]))
+  for (const m of models) if (!rank.has(m.slug)) rank.set(m.slug, null)
 
   const bySlug = new Map(models.map((m) => [m.slug, m]))
   const movers = models
-    .filter(
-      (m): m is RefModel & { predecessor: string } => !!m.predecessor && bySlug.has(m.predecessor),
-    )
+    .filter((m): m is RefModel & { predecessor: string } => {
+      const prev = m.predecessor ? bySlug.get(m.predecessor) : undefined
+      return m.ranked && !!prev && prev.ranked
+    })
     .map((m) => {
       const prev = bySlug.get(m.predecessor) as RefModel
       return {
@@ -129,6 +144,7 @@ describe('derived scores match the design formula (goldens)', () => {
       const r = ref.models.find((x) => x.slug === m.slug)
       expect(r, `no reference model for ${m.slug}`).toBeDefined()
       expect(m.overallIndex).toBe(r?.index)
+      expect(m.ranked).toBe(r?.ranked)
       expect(m.rankOverall).toBe(ref.rank.get(m.slug))
       expect(m.categoryIdx).toEqual(r?.categoryIdx)
       expect(m.arenaElo).toBe(r?.arenaElo)
@@ -146,26 +162,28 @@ describe('derived scores match the design formula (goldens)', () => {
     expect(models.length).toBeGreaterThan(400)
   })
 
-  it('pins the real #1 model — a documented sparse-coverage case (C1: missing scores excluded, not penalized)', async () => {
+  it('gates a single-benchmark model out of the ranking (D20 coverage floor)', async () => {
     const { models } = await deriveScores(DATA)
-    const top = models.find((m) => m.slug === 'doubao-seed-1-6')
-    expect(top?.rankOverall).toBe(1)
-    expect(top?.overallIndex).toBe(96)
-    // its only tracked result is a single math-category benchmark — every other axis is null
-    // (excluded), not zero (penalized), and it still ranks #1: intended C1 behavior, not a bug.
-    expect(top?.categoryIdx.math).toBe(96)
-    expect(Object.values(top?.categoryIdx ?? {}).filter((v) => v != null)).toHaveLength(1)
+    // Doubao-Seed-1.6 has exactly one tracked result (a math benchmark), so its index is high
+    // but it is UNRATED — it must not receive a rank and must not top the leaderboard.
+    const doubao = models.find((m) => m.slug === 'doubao-seed-1-6')
+    expect(doubao?.ranked).toBe(false)
+    expect(doubao?.rankOverall).toBeNull()
+    // the real #1 rank goes to a broadly-benchmarked frontier model
+    const top = models.find((m) => m.rankOverall === 1)
+    expect(top?.slug).toBe('gemini-3-1-pro')
   })
 
   it('pins a real, broadly-covered model — Llama 3.1 405B — category by category', async () => {
     const { models } = await deriveScores(DATA)
     const llama = models.find((m) => m.slug === 'llama-3-1-405b')
+    expect(llama?.ranked).toBe(true)
     expect(llama?.categoryIdx).toEqual({
-      'human-preference': 21.4,
-      knowledge: 78.3,
-      reasoning: 66.8,
-      coding: 89.8,
-      math: 83,
+      'human-preference': 49.8,
+      knowledge: 79.8,
+      reasoning: 64.6,
+      coding: 87.8,
+      math: 81.9,
       vision: null,
       agents: null,
     })
@@ -181,14 +199,14 @@ describe('derived scores match the design formula (goldens)', () => {
     expect(leaders).toContain('claude-opus-4-5')
   })
 
-  it('pins the real top-5 movers', async () => {
+  it('pins the real top-5 movers (rank-eligible lineage edges only)', async () => {
     const { movers } = await deriveScores(DATA)
     expect(movers.map((m) => [m.slug, m.prevSlug, m.delta])).toEqual([
-      ['doubao-seed-1-6', 'doubao-1-5-pro', 96],
-      ['hunyuan-large-a52b', 'hunyuan-1st-gen', 76.8],
-      ['upstage-solar-pro', 'upstage-solar-10-7b', 70.8],
-      ['claude-opus-4-6', 'claude-opus-4-5-medium', 70.6],
-      ['command-r7b', 'command-r', 48.3],
+      ['nemotron-4-340b', 'nemotron-4-15b', 42.6],
+      ['stable-lm-2-12b', 'stable-lm-2-1-6b', 32.2],
+      ['chatglm3-6b', 'chatglm2-6b', 29],
+      ['sarvam-105b', 'sarvam-1-2b', 28.1],
+      ['seed-oss-36b', 'seed1-5-thinking', 26.7],
     ])
   })
 

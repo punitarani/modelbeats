@@ -216,7 +216,10 @@ export const modelScores = sqliteTable('model_scores', {
     .primaryKey()
     .references(() => models.id),
   overallIndex: real('overall_index').notNull(),
+  /** Rank among rank-eligible models (D20); 0 for unrated models (see `ranked`). */
   rankOverall: integer('rank_overall').notNull(),
+  /** Enough benchmark coverage to earn a rank (D20); when 0, rankOverall is a placeholder. */
+  ranked: integer('ranked', { mode: 'boolean' }).notNull().default(true),
   /** Populates from the 2nd publish onward (D9). */
   rankDelta30d: integer('rank_delta_30d'),
   humanPreferenceIndex: real('human_preference_index'),

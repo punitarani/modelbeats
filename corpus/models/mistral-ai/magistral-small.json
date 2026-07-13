@@ -60,13 +60,6 @@
       "notes": "AIME2024 pass@1; 83.3% with maj@64 per Mistral's launch post"
     },
     {
-      "benchmarkSlug": "aime-2025",
-      "score": 62.76,
-      "source": "self-reported",
-      "sourceUrl": "https://huggingface.co/mistralai/Magistral-Small-2506",
-      "notes": "AIME2025 pass@1"
-    },
-    {
       "benchmarkSlug": "gpqa",
       "score": 68.18,
       "source": "self-reported",

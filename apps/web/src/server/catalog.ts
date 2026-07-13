@@ -150,7 +150,8 @@ async function rebuildFromD1(version: number): Promise<CatalogSnapshot> {
           links: m.links,
           note: m.note,
           index: score?.overallIndex ?? 0,
-          rank: score?.rankOverall ?? 0,
+          rank: score?.ranked ? (score.rankOverall ?? null) : null,
+          ranked: score?.ranked ?? false,
           categoryIdx,
         }
       }),

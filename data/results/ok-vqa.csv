@@ -1,2 +1,3 @@
 model_slug,score,source,source_url,evaluated_at,notes
+idefics-80b,45.2,self-reported,https://huggingface.co/HuggingFaceM4/idefics-80b,,0-shot
 qwen-vl,58.6,self-reported,https://huggingface.co/Qwen/Qwen-VL,,Zero-shot OK-VQA

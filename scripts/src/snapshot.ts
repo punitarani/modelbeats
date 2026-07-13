@@ -137,6 +137,7 @@ export async function buildSnapshot(root: string, version: number): Promise<Cata
           note: m.note,
           index: score.overallIndex,
           rank: score.rankOverall,
+          ranked: score.ranked,
           categoryIdx: score.categoryIdx,
         }
       }),

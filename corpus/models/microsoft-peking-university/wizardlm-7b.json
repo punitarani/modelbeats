@@ -56,7 +56,7 @@
       "notes": "pass@1, per original WizardLM-7B-V1.0 model card"
     },
     {
-      "benchmarkSlug": "alpacaeval",
+      "benchmarkSlug": "alpaca-eval",
       "score": 78,
       "source": "self-reported",
       "sourceUrl": "https://huggingface.co/TheBloke/wizardLM-7B-GGUF",

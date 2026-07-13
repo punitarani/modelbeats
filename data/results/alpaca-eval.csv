@@ -2,6 +2,8 @@ model_slug,score,source,source_url,evaluated_at,notes
 lg-exaone-3-0-7-8b-instruct,45,self-reported,https://huggingface.co/LGAI-EXAONE/EXAONE-3.0-7.8B-Instruct,2024-08-01,AlpacaEval 2.0 LC
 lg-exaone-3-5-32b-instruct,60.6,self-reported,https://github.com/LG-AI-EXAONE/EXAONE-3.5,2024-12-01,AlpacaEval
 llama-3-1-nemotron-70b-instruct,57.6,self-reported,https://huggingface.co/nvidia/Llama-3.1-Nemotron-70B-Instruct-HF,,AlpacaEval 2 LC
+qwen1-5-110b,43.9,self-reported,https://qwenlm.github.io/blog/qwen1.5-110b/,2024-04-25,"Chat model, AlpacaEval 2.0 LC win rate %"
 starling-7b-alpha,91.99,self-reported,https://huggingface.co/berkeley-nest/Starling-LM-7B-alpha,,Self-reported AlpacaEval score listed on the official model card
 t-lu-2-dpo-70b,95.1,self-reported,https://huggingface.co/allenai/tulu-2-dpo-70b,,AlpacaEval win rate %
+wizardlm-7b,78,self-reported,https://huggingface.co/TheBloke/wizardLM-7B-GGUF,,"AlpacaEval win rate (%) vs text-davinci-003 baseline, per original model card table"
 zephyr-7b-beta,90.6,self-reported,https://huggingface.co/HuggingFaceH4/zephyr-7b-beta,,win rate %

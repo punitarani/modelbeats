@@ -6,7 +6,7 @@
     "unit": "%",
     "description": "Frontier agentic-capability exam across long-horizon tool-use tasks.",
     "normMin": 0,
-    "normMax": 100,
+    "normMax": 56,
     "higherIsBetter": true
   },
   {
@@ -16,7 +16,7 @@
     "unit": "%",
     "description": "Human standardized exams (SAT/LSAT/Gaokao) repurposed as an LLM benchmark.",
     "normMin": 20,
-    "normMax": 95,
+    "normMax": 48,
     "higherIsBetter": true
   },
   {
@@ -26,7 +26,7 @@
     "unit": "%",
     "description": "Diagram question answering (science-textbook diagrams).",
     "normMin": 40,
-    "normMax": 98,
+    "normMax": 84,
     "higherIsBetter": true
   },
   {
@@ -36,7 +36,7 @@
     "unit": "%",
     "description": "Real-world multi-language code-editing benchmark used by the Aider tool.",
     "normMin": 0,
-    "normMax": 90,
+    "normMax": 93,
     "higherIsBetter": true
   },
   {
@@ -45,16 +45,6 @@
     "category": "math",
     "unit": "%",
     "description": "American Invitational Mathematics Examination, pass@1.",
-    "normMin": 0,
-    "normMax": 100,
-    "higherIsBetter": true
-  },
-  {
-    "slug": "aime-2025",
-    "name": "AIME 2025",
-    "category": "math",
-    "unit": "%",
-    "description": "AIME 2025 sitting, pass@1.",
     "normMin": 0,
     "normMax": 100,
     "higherIsBetter": true
@@ -70,23 +60,13 @@
     "higherIsBetter": true
   },
   {
-    "slug": "alpacaeval",
-    "name": "AlpacaEval",
-    "category": "human-preference",
-    "unit": "%",
-    "description": "LLM-judged length-controlled win rate vs a reference model.",
-    "normMin": 0,
-    "normMax": 100,
-    "higherIsBetter": true
-  },
-  {
     "slug": "amc",
     "name": "AMC",
     "category": "math",
     "unit": "%",
     "description": "American Mathematics Competitions problem set.",
     "normMin": 0,
-    "normMax": 100,
+    "normMax": 64,
     "higherIsBetter": true
   },
   {
@@ -96,7 +76,7 @@
     "unit": "%",
     "description": "Adversarial natural-language-inference benchmark.",
     "normMin": 30,
-    "normMax": 95,
+    "normMax": 50,
     "higherIsBetter": true
   },
   {
@@ -106,7 +86,7 @@
     "unit": "%",
     "description": "Abstraction-and-reasoning visual puzzle grid tasks, v1.",
     "normMin": 0,
-    "normMax": 100,
+    "normMax": 91,
     "higherIsBetter": true
   },
   {
@@ -116,7 +96,7 @@
     "unit": "%",
     "description": "Harder abstraction-and-reasoning puzzle grid tasks, v2.",
     "normMin": 0,
-    "normMax": 100,
+    "normMax": 82,
     "higherIsBetter": true
   },
   {
@@ -126,7 +106,7 @@
     "unit": "%",
     "description": "Grade-school science questions, challenge split.",
     "normMin": 25,
-    "normMax": 98,
+    "normMax": 100,
     "higherIsBetter": true
   },
   {
@@ -136,7 +116,7 @@
     "unit": "%",
     "description": "Grade-school science questions, easy split.",
     "normMin": 40,
-    "normMax": 99,
+    "normMax": 88,
     "higherIsBetter": true
   },
   {
@@ -145,8 +125,8 @@
     "category": "human-preference",
     "unit": "Elo",
     "description": "Blind pairwise human votes (arena.ai). The gold standard for conversational preference.",
-    "normMin": 1150,
-    "normMax": 1520,
+    "normMin": 1000,
+    "normMax": 1460,
     "higherIsBetter": true
   },
   {
@@ -156,7 +136,7 @@
     "unit": "%",
     "description": "LLM-judged win rate on hard, real-world Arena-style prompts.",
     "normMin": 0,
-    "normMax": 100,
+    "normMax": 99,
     "higherIsBetter": true
   },
   {
@@ -166,7 +146,7 @@
     "unit": "%",
     "description": "Second-generation Arena-Hard, harder prompt set.",
     "normMin": 0,
-    "normMax": 100,
+    "normMax": 84,
     "higherIsBetter": true
   },
   {
@@ -176,7 +156,7 @@
     "unit": "%",
     "description": "23 of the hardest BIG-bench tasks, chain-of-thought.",
     "normMin": 30,
-    "normMax": 95,
+    "normMax": 97,
     "higherIsBetter": true
   },
   {
@@ -186,7 +166,7 @@
     "unit": "%",
     "description": "Berkeley Function-Calling Leaderboard, tool/API call accuracy.",
     "normMin": 20,
-    "normMax": 100,
+    "normMax": 89,
     "higherIsBetter": true
   },
   {
@@ -196,7 +176,7 @@
     "unit": "%",
     "description": "Third-generation Berkeley Function-Calling Leaderboard.",
     "normMin": 20,
-    "normMax": 100,
+    "normMax": 82,
     "higherIsBetter": true
   },
   {
@@ -206,17 +186,7 @@
     "unit": "%",
     "description": "Broad collaborative benchmark of 200+ diverse reasoning tasks.",
     "normMin": 20,
-    "normMax": 95,
-    "higherIsBetter": true
-  },
-  {
-    "slug": "bigbench",
-    "name": "BIG-bench",
-    "category": "reasoning",
-    "unit": "%",
-    "description": "Broad collaborative benchmark of 200+ diverse reasoning tasks.",
-    "normMin": 20,
-    "normMax": 95,
+    "normMax": 68,
     "higherIsBetter": true
   },
   {
@@ -226,7 +196,7 @@
     "unit": "%",
     "description": "Practical, tool-using code generation with complex instructions.",
     "normMin": 0,
-    "normMax": 90,
+    "normMax": 88,
     "higherIsBetter": true
   },
   {
@@ -236,7 +206,7 @@
     "unit": "%",
     "description": "Text-to-SQL generation over large, real-world databases.",
     "normMin": 0,
-    "normMax": 90,
+    "normMax": 58,
     "higherIsBetter": true
   },
   {
@@ -246,7 +216,7 @@
     "unit": "%",
     "description": "Hard-to-find-information web-browsing agent benchmark.",
     "normMin": 0,
-    "normMax": 100,
+    "normMax": 96,
     "higherIsBetter": true
   },
   {
@@ -256,7 +226,7 @@
     "unit": "%",
     "description": "Comprehensive Chinese-language academic/professional knowledge exam.",
     "normMin": 20,
-    "normMax": 95,
+    "normMax": 88,
     "higherIsBetter": true
   },
   {
@@ -276,7 +246,7 @@
     "unit": "%",
     "description": "Chart understanding drawn from real arXiv papers.",
     "normMin": 10,
-    "normMax": 90,
+    "normMax": 89,
     "higherIsBetter": true
   },
   {
@@ -286,7 +256,7 @@
     "unit": "%",
     "description": "Chinese-culture-aware multi-subject knowledge benchmark.",
     "normMin": 20,
-    "normMax": 95,
+    "normMax": 87,
     "higherIsBetter": true
   },
   {
@@ -296,7 +266,7 @@
     "unit": "CIDEr",
     "description": "Zero-shot COCO image-captioning quality (CIDEr).",
     "normMin": 0,
-    "normMax": 140,
+    "normMax": 97,
     "higherIsBetter": true
   },
   {
@@ -306,7 +276,7 @@
     "unit": "Elo",
     "description": "Competitive-programming rating estimated from Codeforces-style problems.",
     "normMin": 800,
-    "normMax": 3000,
+    "normMax": 2860,
     "higherIsBetter": true
   },
   {
@@ -316,7 +286,7 @@
     "unit": "%",
     "description": "Real-world cybersecurity vulnerability discovery and exploitation tasks.",
     "normMin": 0,
-    "normMax": 90,
+    "normMax": 87,
     "higherIsBetter": true
   },
   {
@@ -326,7 +296,7 @@
     "unit": "%",
     "description": "Question answering over scanned document images.",
     "normMin": 50,
-    "normMax": 100,
+    "normMax": 99,
     "higherIsBetter": true
   },
   {
@@ -336,7 +306,7 @@
     "unit": "F1",
     "description": "Discrete reasoning over paragraphs requiring numerical/set operations.",
     "normMin": 20,
-    "normMax": 95,
+    "normMax": 92,
     "higherIsBetter": true
   },
   {
@@ -346,7 +316,7 @@
     "unit": "%",
     "description": "Realistic data-science coding problems across 7 Python libraries.",
     "normMin": 0,
-    "normMax": 100,
+    "normMax": 36,
     "higherIsBetter": true
   },
   {
@@ -356,7 +326,7 @@
     "unit": "%",
     "description": "Faithfulness of a model's response to a long provided context document.",
     "normMin": 40,
-    "normMax": 95,
+    "normMax": 78,
     "higherIsBetter": true
   },
   {
@@ -366,7 +336,7 @@
     "unit": "%",
     "description": "Finnish-language knowledge and reasoning benchmark suite.",
     "normMin": 20,
-    "normMax": 95,
+    "normMax": 69,
     "higherIsBetter": true
   },
   {
@@ -376,7 +346,7 @@
     "unit": "CIDEr",
     "description": "Zero-shot image-captioning quality (CIDEr).",
     "normMin": 0,
-    "normMax": 140,
+    "normMax": 91,
     "higherIsBetter": true
   },
   {
@@ -386,7 +356,7 @@
     "unit": "%",
     "description": "Novel unpublished research-level math problems, easier tiers.",
     "normMin": 0,
-    "normMax": 95,
+    "normMax": 94,
     "higherIsBetter": true
   },
   {
@@ -396,7 +366,7 @@
     "unit": "%",
     "description": "FrontierMath hardest tier — IMO/research-adjacent difficulty.",
     "normMin": 0,
-    "normMax": 90,
+    "normMax": 88,
     "higherIsBetter": true
   },
   {
@@ -406,7 +376,7 @@
     "unit": "%",
     "description": "General-assistant tasks requiring reasoning, tool use and web browsing.",
     "normMin": 0,
-    "normMax": 90,
+    "normMax": 80,
     "higherIsBetter": true
   },
   {
@@ -426,7 +396,7 @@
     "unit": "%",
     "description": "Economically valuable real-world professional task completion, wins-or-ties.",
     "normMin": 0,
-    "normMax": 100,
+    "normMax": 90,
     "higherIsBetter": true
   },
   {
@@ -436,7 +406,7 @@
     "unit": "%",
     "description": "Graduate-level science questions that resist memorization.",
     "normMin": 20,
-    "normMax": 100,
+    "normMax": 99,
     "higherIsBetter": true
   },
   {
@@ -446,17 +416,7 @@
     "unit": "%",
     "description": "Compositional visual reasoning question answering.",
     "normMin": 40,
-    "normMax": 90,
-    "higherIsBetter": true
-  },
-  {
-    "slug": "gqa-vqa",
-    "name": "GQA",
-    "category": "vision",
-    "unit": "%",
-    "description": "Compositional visual reasoning question answering.",
-    "normMin": 40,
-    "normMax": 90,
+    "normMax": 86,
     "higherIsBetter": true
   },
   {
@@ -466,7 +426,7 @@
     "unit": "%",
     "description": "Grade-school math word problems, 8-shot pass@1. Saturated at the frontier.",
     "normMin": 5,
-    "normMax": 98,
+    "normMax": 100,
     "higherIsBetter": true
   },
   {
@@ -476,7 +436,7 @@
     "unit": "%",
     "description": "Commonsense sentence-completion, adversarially filtered.",
     "normMin": 25,
-    "normMax": 98,
+    "normMax": 100,
     "higherIsBetter": true
   },
   {
@@ -486,7 +446,7 @@
     "unit": "%",
     "description": "2,500 expert-written frontier questions across 100+ subjects.",
     "normMin": 0,
-    "normMax": 100,
+    "normMax": 48,
     "higherIsBetter": true
   },
   {
@@ -496,7 +456,7 @@
     "unit": "%",
     "description": "Zero-shot, no-retriever API-call generation over HuggingFace APIs.",
     "normMin": 0,
-    "normMax": 100,
+    "normMax": 76,
     "higherIsBetter": true
   },
   {
@@ -506,7 +466,7 @@
     "unit": "%",
     "description": "Hand-written Python programming problems, pass@1. Long-saturated at the frontier.",
     "normMin": 10,
-    "normMax": 98,
+    "normMax": 100,
     "higherIsBetter": true
   },
   {
@@ -516,7 +476,7 @@
     "unit": "%",
     "description": "Fill-in-the-middle code completion variant of HumanEval.",
     "normMin": 0,
-    "normMax": 100,
+    "normMax": 91,
     "higherIsBetter": true
   },
   {
@@ -526,7 +486,7 @@
     "unit": "%",
     "description": "Extended verifiable instruction-following benchmark.",
     "normMin": 20,
-    "normMax": 92,
+    "normMax": 86,
     "higherIsBetter": true
   },
   {
@@ -536,7 +496,7 @@
     "unit": "%",
     "description": "Verifiable instruction-following (format/length/content constraints).",
     "normMin": 20,
-    "normMax": 92,
+    "normMax": 96,
     "higherIsBetter": true
   },
   {
@@ -546,7 +506,7 @@
     "unit": "%",
     "description": "Japanese-language academic/professional knowledge benchmark suite.",
     "normMin": 20,
-    "normMax": 95,
+    "normMax": 81,
     "higherIsBetter": true
   },
   {
@@ -556,7 +516,7 @@
     "unit": "/10",
     "description": "Korean-language multi-turn conversation quality, judged 1-10.",
     "normMin": 3,
-    "normMax": 10,
+    "normMax": 9.5,
     "higherIsBetter": true
   },
   {
@@ -566,7 +526,7 @@
     "unit": "%",
     "description": "Broad-context last-word prediction requiring long-range coherence.",
     "normMin": 40,
-    "normMax": 95,
+    "normMax": 89,
     "higherIsBetter": true
   },
   {
@@ -576,7 +536,7 @@
     "unit": "%",
     "description": "Contamination-free competitive programming, rolling problem set.",
     "normMin": 0,
-    "normMax": 100,
+    "normMax": 94,
     "higherIsBetter": true
   },
   {
@@ -586,7 +546,7 @@
     "unit": "Elo",
     "description": "Elo-rated variant of LiveCodeBench judged against competitive-programmer ratings.",
     "normMin": 1000,
-    "normMax": 3000,
+    "normMax": 2990,
     "higherIsBetter": true
   },
   {
@@ -596,7 +556,7 @@
     "unit": "/10",
     "description": "Korean-language logical/reasoning chat-quality judge benchmark.",
     "normMin": 3,
-    "normMax": 10,
+    "normMax": 9.5,
     "higherIsBetter": true
   },
   {
@@ -616,7 +576,7 @@
     "unit": "%",
     "description": "Harder visual math-competition problem set.",
     "normMin": 0,
-    "normMax": 90,
+    "normMax": 38,
     "higherIsBetter": true
   },
   {
@@ -626,7 +586,7 @@
     "unit": "%",
     "description": "Visual mathematical reasoning over charts, diagrams and figures.",
     "normMin": 10,
-    "normMax": 90,
+    "normMax": 83,
     "higherIsBetter": true
   },
   {
@@ -636,7 +596,7 @@
     "unit": "%",
     "description": "Mostly Basic Python Problems, pass@1.",
     "normMin": 10,
-    "normMax": 98,
+    "normMax": 96,
     "higherIsBetter": true
   },
   {
@@ -646,7 +606,7 @@
     "unit": "%",
     "description": "Multilingual grade-school math word problems.",
     "normMin": 10,
-    "normMax": 98,
+    "normMax": 95,
     "higherIsBetter": true
   },
   {
@@ -656,7 +616,7 @@
     "unit": "%",
     "description": "Formal (Lean 4) theorem-proving benchmark, test split.",
     "normMin": 0,
-    "normMax": 100,
+    "normMax": 94,
     "higherIsBetter": true
   },
   {
@@ -666,7 +626,7 @@
     "unit": "%",
     "description": "Formal (Lean 4) theorem-proving benchmark, validation split.",
     "normMin": 0,
-    "normMax": 100,
+    "normMax": 96,
     "higherIsBetter": true
   },
   {
@@ -676,7 +636,7 @@
     "unit": "%",
     "description": "Broad multimodal ability benchmark with circular-eval robustness check.",
     "normMin": 40,
-    "normMax": 95,
+    "normMax": 85,
     "higherIsBetter": true
   },
   {
@@ -686,7 +646,7 @@
     "unit": "%",
     "description": "Chinese split of MMBench.",
     "normMin": 40,
-    "normMax": 95,
+    "normMax": 82,
     "higherIsBetter": true
   },
   {
@@ -696,7 +656,7 @@
     "unit": "%",
     "description": "English split of MMBench.",
     "normMin": 40,
-    "normMax": 95,
+    "normMax": 84,
     "higherIsBetter": true
   },
   {
@@ -706,7 +666,7 @@
     "unit": "%",
     "description": "57-subject multiple-choice knowledge. Largely saturated at the frontier.",
     "normMin": 40,
-    "normMax": 100,
+    "normMax": 97,
     "higherIsBetter": true
   },
   {
@@ -716,7 +676,7 @@
     "unit": "%",
     "description": "Anatomy subject slice of MMLU.",
     "normMin": 40,
-    "normMax": 100,
+    "normMax": 86,
     "higherIsBetter": true
   },
   {
@@ -726,7 +686,7 @@
     "unit": "%",
     "description": "Clinical-knowledge subject slice of MMLU.",
     "normMin": 40,
-    "normMax": 100,
+    "normMax": 94,
     "higherIsBetter": true
   },
   {
@@ -736,7 +696,7 @@
     "unit": "%",
     "description": "MMLU translated and averaged across 21 official EU languages.",
     "normMin": 20,
-    "normMax": 90,
+    "normMax": 45,
     "higherIsBetter": true
   },
   {
@@ -746,7 +706,7 @@
     "unit": "%",
     "description": "Medical-genetics subject slice of MMLU.",
     "normMin": 40,
-    "normMax": 100,
+    "normMax": 97,
     "higherIsBetter": true
   },
   {
@@ -756,7 +716,7 @@
     "unit": "%",
     "description": "Harder, 10-option MMLU successor with less shortcut-guessing.",
     "normMin": 15,
-    "normMax": 90,
+    "normMax": 91,
     "higherIsBetter": true
   },
   {
@@ -766,7 +726,7 @@
     "unit": "%",
     "description": "Manually re-annotated, error-corrected subset of MMLU.",
     "normMin": 40,
-    "normMax": 100,
+    "normMax": 96,
     "higherIsBetter": true
   },
   {
@@ -776,7 +736,7 @@
     "unit": "%",
     "description": "STEM-subject slice of MMLU.",
     "normMin": 30,
-    "normMax": 100,
+    "normMax": 83,
     "higherIsBetter": true
   },
   {
@@ -786,7 +746,7 @@
     "unit": "%",
     "description": "Multilingual MMLU across 14 languages.",
     "normMin": 30,
-    "normMax": 95,
+    "normMax": 88,
     "higherIsBetter": true
   },
   {
@@ -796,7 +756,7 @@
     "unit": "%",
     "description": "College-level multimodal understanding across 30 disciplines.",
     "normMin": 20,
-    "normMax": 100,
+    "normMax": 88,
     "higherIsBetter": true
   },
   {
@@ -806,7 +766,7 @@
     "unit": "%",
     "description": "Harder, vision-only-input variant of MMMU.",
     "normMin": 15,
-    "normMax": 85,
+    "normMax": 88,
     "higherIsBetter": true
   },
   {
@@ -816,7 +776,7 @@
     "unit": "/10",
     "description": "Multi-turn conversation quality, GPT-4-judged 1-10 scale.",
     "normMin": 4,
-    "normMax": 10,
+    "normMax": 9.5,
     "higherIsBetter": true
   },
   {
@@ -826,7 +786,7 @@
     "unit": "/1000",
     "description": "Text-recognition-in-images benchmark across 5 OCR task types.",
     "normMin": 300,
-    "normMax": 900,
+    "normMax": 938,
     "higherIsBetter": true
   },
   {
@@ -836,17 +796,7 @@
     "unit": "%",
     "description": "VQA requiring outside/commonsense knowledge beyond the image.",
     "normMin": 30,
-    "normMax": 90,
-    "higherIsBetter": true
-  },
-  {
-    "slug": "okvqa",
-    "name": "OK-VQA",
-    "category": "vision",
-    "unit": "%",
-    "description": "VQA requiring outside/commonsense knowledge beyond the image.",
-    "normMin": 30,
-    "normMax": 90,
+    "normMax": 61,
     "higherIsBetter": true
   },
   {
@@ -856,7 +806,7 @@
     "unit": "%",
     "description": "Olympiad-level bilingual multimodal science/math problems.",
     "normMin": 0,
-    "normMax": 100,
+    "normMax": 22,
     "higherIsBetter": true
   },
   {
@@ -866,7 +816,7 @@
     "unit": "%",
     "description": "Broad olympiad-level mathematics problem set.",
     "normMin": 0,
-    "normMax": 100,
+    "normMax": 81,
     "higherIsBetter": true
   },
   {
@@ -876,7 +826,7 @@
     "unit": "Elo",
     "description": "Early open community Elo ranking, GPT-4-judged.",
     "normMin": 800,
-    "normMax": 1200,
+    "normMax": 1020,
     "higherIsBetter": true
   },
   {
@@ -886,7 +836,7 @@
     "unit": "%",
     "description": "Elementary science QA requiring open-book fact combination.",
     "normMin": 40,
-    "normMax": 98,
+    "normMax": 44,
     "higherIsBetter": true
   },
   {
@@ -896,7 +846,7 @@
     "unit": "%",
     "description": "Agent productivity benchmark for long-running task completion.",
     "normMin": 0,
-    "normMax": 100,
+    "normMax": 96,
     "higherIsBetter": true
   },
   {
@@ -906,7 +856,7 @@
     "unit": "%",
     "description": "Physical-interaction commonsense QA.",
     "normMin": 50,
-    "normMax": 95,
+    "normMax": 85,
     "higherIsBetter": true
   },
   {
@@ -916,7 +866,7 @@
     "unit": "%",
     "description": "Biomedical-literature yes/no/maybe question answering.",
     "normMin": 50,
-    "normMax": 92,
+    "normMax": 80,
     "higherIsBetter": true
   },
   {
@@ -926,7 +876,7 @@
     "unit": "%",
     "description": "Formal (Lean 4) proofs of William Lowell Putnam Competition problems.",
     "normMin": 0,
-    "normMax": 50,
+    "normMax": 8,
     "higherIsBetter": true
   },
   {
@@ -936,7 +886,7 @@
     "unit": "%",
     "description": "High-school-level reading-comprehension multiple choice.",
     "normMin": 30,
-    "normMax": 95,
+    "normMax": 74,
     "higherIsBetter": true
   },
   {
@@ -956,7 +906,7 @@
     "unit": "%",
     "description": "Referring-expression visual grounding accuracy.",
     "normMin": 50,
-    "normMax": 96,
+    "normMax": 92,
     "higherIsBetter": true
   },
   {
@@ -966,7 +916,7 @@
     "unit": "%",
     "description": "RefCOCO variant excluding absolute-location expressions.",
     "normMin": 50,
-    "normMax": 96,
+    "normMax": 85,
     "higherIsBetter": true
   },
   {
@@ -976,7 +926,7 @@
     "unit": "%",
     "description": "Repository-level code auto-completion benchmark.",
     "normMin": 0,
-    "normMax": 100,
+    "normMax": 40,
     "higherIsBetter": true
   },
   {
@@ -986,7 +936,7 @@
     "unit": "%",
     "description": "Broad generative multimodal comprehension benchmark.",
     "normMin": 40,
-    "normMax": 95,
+    "normMax": 72,
     "higherIsBetter": true
   },
   {
@@ -996,7 +946,7 @@
     "unit": "%",
     "description": "Short factual questions with a single verifiable answer; notoriously low scores.",
     "normMin": 0,
-    "normMax": 70,
+    "normMax": 66,
     "higherIsBetter": true
   },
   {
@@ -1006,7 +956,7 @@
     "unit": "%",
     "description": "Social/emotional commonsense reasoning about everyday situations.",
     "normMin": 40,
-    "normMax": 95,
+    "normMax": 68,
     "higherIsBetter": true
   },
   {
@@ -1016,7 +966,7 @@
     "unit": "%",
     "description": "Commonsense story-ending selection.",
     "normMin": 50,
-    "normMax": 95,
+    "normMax": 82,
     "higherIsBetter": true
   },
   {
@@ -1026,7 +976,7 @@
     "unit": "%",
     "description": "Real-time, live-streaming video comprehension benchmark.",
     "normMin": 30,
-    "normMax": 90,
+    "normMax": 68,
     "higherIsBetter": true
   },
   {
@@ -1036,7 +986,7 @@
     "unit": "%",
     "description": "Expanded graduate-level science reasoning across 285 disciplines.",
     "normMin": 10,
-    "normMax": 90,
+    "normMax": 86,
     "higherIsBetter": true
   },
   {
@@ -1046,7 +996,7 @@
     "unit": "%",
     "description": "Harder successor to GLUE spanning 8 diverse language-understanding tasks.",
     "normMin": 50,
-    "normMax": 99,
+    "normMax": 93,
     "higherIsBetter": true
   },
   {
@@ -1056,7 +1006,7 @@
     "unit": "%",
     "description": "Resolving real GitHub issues in real repositories, verified subset.",
     "normMin": 0,
-    "normMax": 100,
+    "normMax": 86,
     "higherIsBetter": true
   },
   {
@@ -1066,7 +1016,7 @@
     "unit": "%",
     "description": "Harder, held-out variant of SWE-bench Verified.",
     "normMin": 0,
-    "normMax": 90,
+    "normMax": 41,
     "higherIsBetter": true
   },
   {
@@ -1086,7 +1036,7 @@
     "unit": "%",
     "description": "Zero-shot, no-retriever API-call generation over TensorHub APIs.",
     "normMin": 0,
-    "normMax": 100,
+    "normMax": 89,
     "higherIsBetter": true
   },
   {
@@ -1096,7 +1046,7 @@
     "unit": "%",
     "description": "Autonomous shell/terminal task completion in realistic environments.",
     "normMin": 0,
-    "normMax": 90,
+    "normMax": 94,
     "higherIsBetter": true
   },
   {
@@ -1106,7 +1056,7 @@
     "unit": "%",
     "description": "Second-generation Terminal-Bench, harder task suite.",
     "normMin": 0,
-    "normMax": 90,
+    "normMax": 69,
     "higherIsBetter": true
   },
   {
@@ -1116,7 +1066,7 @@
     "unit": "%",
     "description": "VQA requiring reading text embedded in images.",
     "normMin": 40,
-    "normMax": 90,
+    "normMax": 75,
     "higherIsBetter": true
   },
   {
@@ -1126,7 +1076,7 @@
     "unit": "%",
     "description": "Zero-shot, no-retriever API-call generation over TorchHub APIs.",
     "normMin": 0,
-    "normMax": 100,
+    "normMax": 63,
     "higherIsBetter": true
   },
   {
@@ -1136,7 +1086,7 @@
     "unit": "%",
     "description": "Closed-book trivia question answering.",
     "normMin": 30,
-    "normMax": 95,
+    "normMax": 94,
     "higherIsBetter": true
   },
   {
@@ -1146,7 +1096,7 @@
     "unit": "%",
     "description": "Questions designed to elicit common human misconceptions.",
     "normMin": 20,
-    "normMax": 95,
+    "normMax": 68,
     "higherIsBetter": true
   },
   {
@@ -1156,7 +1106,7 @@
     "unit": "%",
     "description": "USA Mathematical Olympiad problem set.",
     "normMin": 0,
-    "normMax": 100,
+    "normMax": 66,
     "higherIsBetter": true
   },
   {
@@ -1166,7 +1116,7 @@
     "unit": "Elo",
     "description": "Early human/LLM-judged Elo ranking on 80 diverse questions.",
     "normMin": 800,
-    "normMax": 1200,
+    "normMax": 1040,
     "higherIsBetter": true
   },
   {
@@ -1176,7 +1126,7 @@
     "unit": "%",
     "description": "Broad video understanding across short/medium/long clips.",
     "normMin": 30,
-    "normMax": 90,
+    "normMax": 82,
     "higherIsBetter": true
   },
   {
@@ -1186,7 +1136,7 @@
     "unit": "%",
     "description": "Open-ended visual question answering.",
     "normMin": 40,
-    "normMax": 90,
+    "normMax": 87,
     "higherIsBetter": true
   },
   {
@@ -1196,7 +1146,7 @@
     "unit": "%",
     "description": "LLM-judged win rate on real, in-the-wild user queries.",
     "normMin": 0,
-    "normMax": 100,
+    "normMax": 51,
     "higherIsBetter": true
   },
   {
@@ -1216,7 +1166,7 @@
     "unit": "%",
     "description": "Cross-lingual Winograd-schema commonsense resolution.",
     "normMin": 50,
-    "normMax": 95,
+    "normMax": 71,
     "higherIsBetter": true
   }
 ]

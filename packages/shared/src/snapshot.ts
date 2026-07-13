@@ -69,7 +69,10 @@ export const snapshotModelSchema = z.object({
   note: z.string(),
   // publish-time derived (C1)
   index: z.number(),
-  rank: z.number().int().positive(),
+  /** Overall rank among rank-eligible models (D20); null when the model is unrated. */
+  rank: z.number().int().positive().nullable(),
+  /** Has enough benchmark coverage to earn a rank (D20). */
+  ranked: z.boolean().default(true),
   categoryIdx: z.record(z.enum(BENCHMARK_CATEGORIES), z.number().nullable()),
 })
 

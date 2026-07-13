@@ -172,20 +172,26 @@ export function generate(corpus: Corpus): Generated {
     if (!byFamily.has(r.familySlug)) byFamily.set(r.familySlug, [])
     byFamily.get(r.familySlug)?.push(r)
   }
+  // Among several strictly-older members sharing the SAME (nearest) release date, prefer the
+  // canonical config — default tier, then best tier, then a plain (no-effort) checkpoint — over
+  // an effort/compute variant, so lineage reads "Opus 4.6 succeeds Opus 4.5", never "…succeeds
+  // Opus 4.5 (Medium)". Deterministic, slug-tiebroken.
+  const configRank = (r: Resolved) =>
+    r.m.isDefaultConfig ? 0 : r.m.isBestConfig ? 1 : r.m.effortLabel == null ? 2 : 3
   const predecessorOf = new Map<string, string | null>()
   for (const group of byFamily.values()) {
-    const sorted = [...group].sort((a, b) => a.m.releaseDate.localeCompare(b.m.releaseDate))
-    sorted.forEach((r, i) => {
-      let pred: string | null = null
-      for (let j = i - 1; j >= 0; j--) {
-        const cand = sorted[j] as Resolved
-        if (cand.m.releaseDate < r.m.releaseDate) {
-          pred = cand.slug
-          break
-        }
+    for (const r of group) {
+      const older = group.filter((c) => c.m.releaseDate < r.m.releaseDate)
+      if (older.length === 0) {
+        predecessorOf.set(r.slug, null)
+        continue
       }
-      predecessorOf.set(r.slug, pred)
-    })
+      const nearestDate = older.reduce((mx, c) => (c.m.releaseDate > mx ? c.m.releaseDate : mx), '')
+      const nearest = older
+        .filter((c) => c.m.releaseDate === nearestDate)
+        .sort((a, b) => configRank(a) - configRank(b) || a.slug.localeCompare(b.slug))
+      predecessorOf.set(r.slug, nearest[0]?.slug ?? null)
+    }
   }
 
   // ---- Models ----

@@ -52,7 +52,7 @@
       "notes": "5-shot average accuracy, reported in the Chinchilla paper's comparison table"
     },
     {
-      "benchmarkSlug": "bigbench",
+      "benchmarkSlug": "big-bench",
       "score": 54.4,
       "source": "self-reported",
       "sourceUrl": "https://arxiv.org/abs/2203.15556",

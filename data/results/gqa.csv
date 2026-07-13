@@ -1,2 +1,3 @@
 model_slug,score,source,source_url,evaluated_at,notes
 cogvlm-17b,82.87,self-reported,https://arxiv.org/pdf/2311.03079,,State-of-the-art at time of release
+qwen-vl,59.3,self-reported,https://huggingface.co/Qwen/Qwen-VL,,GQA visual-reasoning benchmark (unrelated to Grouped Query Attention)

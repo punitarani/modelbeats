@@ -72,11 +72,12 @@ describe('categoryFractions + radar', () => {
 })
 
 describe('computeMovers', () => {
-  const m = (slug: string, predecessor: string | null, index: number) => ({
+  const m = (slug: string, predecessor: string | null, index: number, ranked = true) => ({
     slug,
     name: slug,
     predecessor,
     index,
+    ranked,
   })
   it('keeps only positive lineage deltas, sorted desc, top N', () => {
     const movers = computeMovers(
@@ -97,6 +98,15 @@ describe('computeMovers', () => {
   })
   it('same-day releases (no predecessor) produce no mover', () => {
     expect(computeMovers([m('x', null, 90), m('y', null, 80)])).toEqual([])
+  })
+  it('excludes edges touching an unrated model (D20)', () => {
+    // an unbenchmarked config sitting at index 0 must not manufacture a phantom mover
+    const movers = computeMovers([
+      m('base', null, 60),
+      m('cfg-medium', 'base', 0, false), // unrated 0-index config
+      m('next', 'cfg-medium', 71), // would be +71 vs the 0-index config, but the edge is gated
+    ])
+    expect(movers).toEqual([])
   })
 })
 

@@ -5,6 +5,6 @@
   "unit": "/10",
   "description": "Multi-turn conversation quality, GPT-4-judged 1-10 scale.",
   "normMin": 4,
-  "normMax": 10,
+  "normMax": 9.5,
   "higherIsBetter": true
 }

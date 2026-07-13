@@ -64,6 +64,7 @@ const kvSnapshot: CatalogSnapshot = {
       note: 'test model',
       index: 80.2,
       rank: 1,
+      ranked: true,
       categoryIdx: {
         'human-preference': null,
         knowledge: 80.2,

@@ -24,13 +24,14 @@ describe('catalog snapshot (C3 golden shape)', () => {
       org: 'Meta',
       family: 'Llama 3.1',
       open: true,
-      index: 70.9,
-      rank: 109,
+      index: 73.8,
+      rank: 70,
+      ranked: true,
       ctxK: 128,
     })
     expect(llama?.bench.arena).toBe(1229)
     expect(llama?.price).toBeNull()
-    expect(llama?.categoryIdx.coding).toBe(89.8)
+    expect(llama?.categoryIdx.coding).toBe(87.8)
   })
 
   it('stays far under the 1.5 MB gzip budget at real scale', async () => {
