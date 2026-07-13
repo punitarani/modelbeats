@@ -10,7 +10,7 @@ const ROUTES = [
   '/models',
   '/models/gpt-5-6',
   '/models/gpt-oss-20b-medium',
-  '/compare?m=gpt-5-6,deepseek-v3-1-thinking',
+  '/compare?m=gpt-5-2,deepseek-v3-1-thinking',
   '/hardware',
   '/benchmarks',
   '/benchmarks/swe-bench',

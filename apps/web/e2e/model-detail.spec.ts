@@ -28,30 +28,30 @@ test.describe('model detail', () => {
   })
 
   test('closed model shows the API-only pricing card + index rank', async ({ page }) => {
-    // Gemini 3.1 Flash-Lite: the real global Arena Elo leader, and also the anchor for the
-    // "field best = this model" provenance check below.
-    await gotoHydrated(page, '/models/gemini-3-1-flash-lite')
-    await expect(page.getByTestId('model-index')).toHaveText('82.7')
-    await expect(page.getByText('Index · rank #17')).toBeVisible()
-    await expect(page.getByTestId('price-in')).toHaveText('$0.25')
-    await expect(page.getByTestId('price-out')).toHaveText('$1.5')
-    // benchmark row: arena 1432, field best = this model
-    await expect(page.getByTestId('bench-arena')).toContainText('1432')
-    await expect(page.getByTestId('bench-arena')).toContainText('best: this model')
+    // Gemini 3.1 Pro: the #1 overall model and the field leader on GPQA Diamond (the anchor for
+    // the "field best = this model" provenance check below).
+    await gotoHydrated(page, '/models/gemini-3-1-pro')
+    await expect(page.getByTestId('model-index')).toHaveText('93.3')
+    await expect(page.getByText('Index · rank #1')).toBeVisible()
+    await expect(page.getByTestId('price-in')).toHaveText('$2')
+    await expect(page.getByTestId('price-out')).toHaveText('$12')
+    // benchmark row: GPQA 94.3, field best = this model
+    await expect(page.getByTestId('bench-gpqa')).toContainText('94.3')
+    await expect(page.getByTestId('bench-gpqa')).toContainText('best: this model')
     // family card lists the Gemini 3.1 members (Pro + Flash-Lite)
     await expect(page.getByTestId('family-list').getByRole('link')).toHaveCount(2)
   })
 
   test('compare button lands on compare with both models loaded', async ({ page }) => {
-    await gotoHydrated(page, '/models/gemini-3-1-flash-lite')
+    await gotoHydrated(page, '/models/gemini-3-1-pro')
     await page.getByTestId('compare-this').click()
-    // compareB picks the top-index model on the OTHER side of the open/closed line —
-    // OLMo 3-Think 32B, the top open model by index — which isn't the static compare
-    // default pair, so the URL carries an explicit ?m=
-    await expect(page).toHaveURL(/m=gemini-3-1-flash-lite(%2C|,)olmo-3-think-32b/)
+    // compareB picks the top rank-eligible model on the OTHER side of the open/closed line —
+    // Nemotron 3 Ultra 550B A55B, the top open model — which isn't the static compare default
+    // pair, so the URL carries an explicit ?m=
+    await expect(page).toHaveURL(/m=gemini-3-1-pro(%2C|,)nemotron-3-ultra-550b-a55b/)
     const legend = page.getByTestId('compare-legend')
-    await expect(legend).toContainText('Gemini 3.1 Flash-Lite')
-    await expect(legend).toContainText('OLMo 3-Think 32B')
+    await expect(legend).toContainText('Gemini 3.1 Pro')
+    await expect(legend).toContainText('Nemotron 3 Ultra 550B A55B')
   })
 
   test('unknown model slug 404s with the designed copy', async ({ page }) => {

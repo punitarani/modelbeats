@@ -7,8 +7,10 @@ test.describe('model explorer', () => {
     await gotoHydrated(page, '/models')
     await expect(page.getByTestId('explorer-count')).toHaveText(`${models} models`)
     // the grid is virtualized (B4) — only a windowed subset is ever in the DOM, so assert the
-    // JS-computed summary count above plus the always-rendered top row, not a raw card count
-    await expect(page.getByTestId('explorer-card').first()).toContainText('Doubao-Seed-1.6')
+    // JS-computed summary count above plus the always-rendered top row, not a raw card count.
+    // Rank-eligible models sort first (D20), so the #1 card is the frontier leader, not a
+    // single-benchmark curiosity.
+    await expect(page.getByTestId('explorer-card').first()).toContainText('Gemini 3.1 Pro')
   })
 
   test('runs-on-my-hardware facet applies the curated 1.08× rule', async ({ page }) => {
@@ -32,8 +34,8 @@ test.describe('model explorer', () => {
     // real corpus: 19 open, <15B-param models with the reasoning capability
     await expect(page.getByTestId('explorer-count')).toHaveText('19 models')
     await expect(page.getByTestId('cap-reason')).toHaveAttribute('aria-pressed', 'true')
-    // default sort is by index — Phi-3-medium (14B) leads this facet combination
-    await expect(page.getByTestId('explorer-card').first()).toContainText('Phi-3-medium (14B)')
+    // default sort is by index (rank-eligible first) — Phi-4-reasoning leads this facet combo
+    await expect(page.getByTestId('explorer-card').first()).toContainText('Phi-4-reasoning')
   })
 
   test('cheapest-API sort puts Ministral 3B first ($0.04/M out)', async ({ page }) => {

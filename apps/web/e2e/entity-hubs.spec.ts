@@ -14,9 +14,11 @@ test.describe('organization + family hubs', () => {
     await gotoHydrated(page, '/families/claude-4')
     await expect(page.getByTestId('family-member')).toHaveCount(9)
     await expect(page.getByTestId('family-sparkline').getByTestId('spark-dot')).toHaveCount(9)
+    // lineage now prefers the canonical config over effort variants: 4.6 succeeds Opus 4.5
+    // (the default tier), not the unbenchmarked "(Medium)" config that produced a phantom delta
     const opus46 = page.getByTestId('family-member').filter({ hasText: 'Claude Opus 4.6' })
-    await expect(opus46).toContainText('succeeds Claude Opus 4.5 (Medium)')
-    await expect(opus46).toContainText('+70.6')
+    await expect(opus46).toContainText('succeeds Claude Opus 4.5')
+    await expect(opus46).toContainText('+0.6')
   })
 
   test('model → family: the back affordance returns to the model, not the parent', async ({

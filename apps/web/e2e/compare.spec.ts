@@ -3,28 +3,31 @@ import { gotoHydrated, pickOption } from './helpers'
 
 test.describe('compare', () => {
   test('deep link renders two columns, radar polygons and legend', async ({ page }) => {
-    await gotoHydrated(page, '/compare?m=gpt-5-6,deepseek-v3-1-thinking')
+    // default pair now shares well-covered benchmarks (AIME/GPQA/HLE), so the table is populated
+    await gotoHydrated(page, '/compare?m=gpt-5-2,deepseek-v3-1-thinking')
     const legend = page.getByTestId('compare-legend')
-    await expect(legend).toContainText('GPT-5.6')
-    await expect(legend).toContainText('82.0')
+    await expect(legend).toContainText('GPT-5.2')
+    await expect(legend).toContainText('87.8')
     await expect(legend).toContainText('DeepSeek-V3.1 (Thinking)')
-    await expect(legend).toContainText('73.6')
+    await expect(legend).toContainText('78.0')
     // 4 rings + 2 series polygons
     await expect(page.getByTestId('compare-radar').locator('polygon')).toHaveCount(6)
+    // the benchmarks card only shows rows a compared model actually scored — no wall of dashes
+    await expect(page.getByText('No shared benchmark results')).toHaveCount(0)
   })
 
   test('best-value highlighting favors the right cells', async ({ page }) => {
-    await gotoHydrated(page, '/compare?m=gpt-5-6,deepseek-v3-1-thinking')
+    await gotoHydrated(page, '/compare?m=gpt-5-2,deepseek-v3-1-thinking')
     const idxRow = page.getByTestId('spec-index-score')
-    await expect(idxRow.locator('span').nth(1)).toHaveCSS('font-weight', '600') // GPT-5.6 82.0
+    await expect(idxRow.locator('span').nth(1)).toHaveCSS('font-weight', '600') // GPT-5.2 87.8
     const priceRow = page.getByTestId('spec-price-out-m')
     await expect(priceRow.locator('span').nth(2)).toHaveCSS('font-weight', '600') // DeepSeek $1.68
   })
 
   test('changing slot C updates the URL', async ({ page }) => {
-    await gotoHydrated(page, '/compare?m=gpt-5-6,deepseek-v3-1-thinking')
+    await gotoHydrated(page, '/compare?m=gpt-5-2,deepseek-v3-1-thinking')
     await pickOption(page, 'compare-slot-2', 'Llama 3.1 405B — Meta')
-    await expect(page).toHaveURL(/m=gpt-5-6(%2C|,)deepseek-v3-1-thinking(%2C|,)llama-3-1-405b/)
+    await expect(page).toHaveURL(/m=gpt-5-2(%2C|,)deepseek-v3-1-thinking(%2C|,)llama-3-1-405b/)
     await expect(page.getByTestId('compare-radar').locator('polygon')).toHaveCount(7)
   })
 

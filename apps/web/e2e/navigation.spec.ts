@@ -6,17 +6,17 @@ import { gotoHydrated } from './helpers'
 test.describe('history-aware back links', () => {
   test('filtered rankings → model → back restores the filtered URL', async ({ page }) => {
     await gotoHydrated(page, '/rankings?org=anthropic')
-    // Claude 2 ties Claude Sonnet 4.5 at 79.4 index but sorts first (stable tiebreak by slug)
+    // rank-eligible first, by index: Claude Opus 4.6 is Anthropic's top-ranked model
     await page.getByTestId('ranking-row').first().click()
-    await expect(page).toHaveURL(/\/models\/claude-2$/)
+    await expect(page).toHaveURL(/\/models\/claude-opus-4-6$/)
     await page.getByRole('link', { name: 'Back', exact: true }).click()
     await expect(page).toHaveURL(/\/rankings\?org=anthropic$/)
   })
 
   test('dashboard scatter point → model → back lands on the dashboard', async ({ page }) => {
     await gotoHydrated(page, '/')
-    await page.locator('a[aria-label^="Gemini 3.1 Flash-Lite —"]').click()
-    await expect(page).toHaveURL(/\/models\/gemini-3-1-flash-lite$/)
+    await page.locator('a[aria-label^="Gemini 3.1 Pro —"]').click()
+    await expect(page).toHaveURL(/\/models\/gemini-3-1-pro$/)
     await page.getByRole('link', { name: 'Back', exact: true }).click()
     await expect(page).toHaveURL(/\/$/)
   })

@@ -9,53 +9,58 @@ test.describe('dashboard overview', () => {
     await expect(cards).toHaveCount(4)
     await expect(cards.nth(0)).toContainText(String(models))
     await expect(cards.nth(0)).toContainText(`${organizations} organizations`)
-    // real data quirk: the top-by-index closed AND open models both happen to lack an Arena
-    // score, so the open-closed Elo gap is undefined ('—'), not a number — this is the
-    // documented C1 behavior (sparse coverage), not a bug.
-    await expect(cards.nth(3)).toContainText('—')
-    await expect(cards.nth(3)).toContainText('OLMo 3-Think 32B leads open')
+    // Open–closed gap is computed on the universal index (arena covers only a sliver), so it's
+    // always a real number, and the leader is the top-ranked open model.
+    await expect(cards.nth(3)).toContainText('idx')
+    await expect(cards.nth(3)).toContainText('Nemotron 3 Ultra 550B A55B leads open')
   })
 
-  test('scatter plots every priced+arena model, movers show lineage gains', async ({ page }) => {
+  test('scatter plots every priced+ranked model; movers show real lineage gains', async ({
+    page,
+  }) => {
     await gotoHydrated(page, '/')
-    // only 6 of the 463 models carry both a price and an Arena score in the real corpus
-    await expect(page.getByTestId('scatter-point')).toHaveCount(6)
+    // scatter is now index-vs-price over every priced, rank-eligible model (114 in the real
+    // corpus) — not the 6-point arena intersection.
+    const points = page.getByTestId('scatter-point')
+    await expect(points.first()).toBeVisible()
+    expect(await points.count()).toBeGreaterThan(50)
     const movers = page.getByTestId('movers')
-    await expect(movers).toContainText('Doubao-Seed-1.6')
-    await expect(movers).toContainText('+96')
+    // real top mover is a rank-eligible family edge; the old 0-index-config phantoms are gone
+    await expect(movers).toContainText('Nemotron-4 340B')
+    await expect(movers).toContainText('+42.6')
   })
 
   test('scatter tooltip appears on hover and on keyboard focus', async ({ page }) => {
     await gotoHydrated(page, '/')
-    const point = page.locator('a[aria-label^="Gemini 3.1 Flash-Lite —"]')
+    // Gemini 3.1 Pro is priced + rank-eligible, so it's a labeled scatter point
+    const point = page.locator('a[aria-label^="Gemini 3.1 Pro —"]')
     await point.hover()
     const tip = page.getByTestId('chart-tip')
     await expect(tip).toBeVisible()
-    await expect(tip).toContainText('Gemini 3.1 Flash-Lite')
-    await expect(tip).toContainText('Elo')
+    await expect(tip).toContainText('Gemini 3.1 Pro')
+    await expect(tip).toContainText('index')
     await page.mouse.move(0, 0)
     await expect(tip).toHaveCount(0)
     // keyboard parity: the same details on focus (dataviz interaction rule)
     await point.focus()
-    await expect(page.getByTestId('chart-tip')).toContainText('Gemini 3.1 Flash-Lite')
+    await expect(page.getByTestId('chart-tip')).toContainText('Gemini 3.1 Pro')
   })
 
-  test('arena rail is ordered and quick compare navigates', async ({ page }) => {
+  test('top-ranked rail is ordered by index and quick compare navigates', async ({ page }) => {
     await gotoHydrated(page, '/')
     const rail = page.getByTestId('arena-rail')
-    // real global Arena Elo leader across all 463 models
-    await expect(rail).toContainText('Gemini 3.1 Flash-Lite')
-    await expect(rail).toContainText('1432')
+    // rail now leads with the #1 overall model by index
+    await expect(rail).toContainText('Gemini 3.1 Pro')
+    await expect(rail).toContainText('93.3')
     await pickOption(page, 'qc-b', 'Llama 3.1 405B — Meta')
     await page.getByTestId('qc-go').click()
-    // quick-compare slot A defaults to the #1-by-index model (Doubao-Seed-1.6)
-    await expect(page).toHaveURL(/m=doubao-seed-1-6(%2C|,)llama-3-1-405b/)
+    // quick-compare slot A defaults to the #1 rank-eligible model (Gemini 3.1 Pro)
+    await expect(page).toHaveURL(/m=gemini-3-1-pro(%2C|,)llama-3-1-405b/)
   })
 })
 
 test.describe('dashboard releases + bench tabs', () => {
   test('tab switch mutates the URL without a reload', async ({ page }) => {
-    const { benchmarks } = datasetCounts()
     await gotoHydrated(page, '/')
     await page.getByRole('button', { name: 'Releases' }).click()
     await expect(page).toHaveURL(/\?tab=releases/)
@@ -64,19 +69,20 @@ test.describe('dashboard releases + bench tabs', () => {
     await expect(page.getByTestId('release-feed')).toContainText('INDEX')
     await page.getByRole('button', { name: 'Benchmarks' }).click()
     await expect(page).toHaveURL(/\?tab=bench/)
-    await expect(page.getByTestId('bench-card')).toHaveCount(benchmarks)
+    // bench-tab is gated to benchmarks with a real field (≥5 models), so it shows a curated
+    // subset of the full catalog rather than a card per single-model benchmark.
+    const cards = page.getByTestId('bench-card')
+    await expect(cards.first()).toBeVisible()
+    expect(await cards.count()).toBeGreaterThan(20)
   })
 
-  test('open-vs-closed frontier degrades gracefully when neither leader has an Arena score', async ({
-    page,
-  }) => {
-    // Same real-data quirk as the stat strip: the top-by-index closed (Doubao-Seed-1.6) and
-    // open (OLMo 3-Think 32B) models are both sparse-coverage models with no Arena result, so
-    // the frontier widget has nothing to plot and the gap sentence is empty — verifying this
-    // renders as an empty, not broken, state.
+  test('open-vs-closed frontier renders index-based bars for both camps', async ({ page }) => {
     await gotoHydrated(page, '/?tab=releases')
-    await expect(page.getByTestId('frontier')).toHaveText('')
-    await expect(page.getByTestId('gap-note')).toHaveText('')
+    const frontier = page.getByTestId('frontier')
+    // regrounded on the universal index, so both camps' leaders always plot
+    await expect(frontier).toContainText('Gemini 3.1 Pro')
+    await expect(frontier).toContainText('Nemotron 3 Ultra 550B A55B')
+    await expect(page.getByTestId('gap-note')).not.toHaveText('')
   })
 
   test('/timeline folds into the releases tab (D6)', async ({ page }) => {
