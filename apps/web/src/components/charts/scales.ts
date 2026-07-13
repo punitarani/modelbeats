@@ -84,6 +84,61 @@ export function fitYWindow(values: number[], domainMin = 0, domainMax = 100): Sc
   return { yMin: lo, yMax: hi, yTicks: ticks }
 }
 
+export interface ScatterLabelInput {
+  x: number
+  y: number
+  text: string
+}
+
+export interface ScatterLabelPlaced {
+  x: number
+  y: number
+  text: string
+  anchor: 'start' | 'end'
+}
+
+// Calibrated against real getBBox() measurements of the 10px label font (avg 4.97 px/char,
+// bbox height 12.92px) — not a guess, so the collision math below matches what actually renders.
+const LABEL_CHAR_W = 5.0
+const LABEL_LINE_GAP = 13
+const LABEL_OFFSET = 8
+
+/**
+ * Declutter directly-on-chart scatter labels (D23): the handful of labeled frontier points can
+ * have index scores within a fraction of a point of each other (e.g. a model and its "(High)"
+ * reasoning-effort sibling), so their natural label position — the dot's own (x, y) — collides.
+ * No y-axis rescaling can fix this: separating two such labels by even one text-line's height
+ * would require compressing the whole window down to the width of that one cluster, stranding
+ * every other point off-window. So this nudges labels apart in screen space only (dots don't
+ * move): flip a label to the left of its dot if it would run past the plot's right edge, then
+ * greedily push a label down whenever its estimated bounding box would overlap an already-placed
+ * one — processing top-to-bottom so a label only ever gets pushed by something already above it.
+ */
+export function layoutScatterLabels(inputs: ScatterLabelInput[]): ScatterLabelPlaced[] {
+  const anchored = inputs.map((p) => {
+    const width = p.text.length * LABEL_CHAR_W
+    const overflowsRight = p.x + LABEL_OFFSET + width > SCATTER.right - 4
+    return overflowsRight
+      ? { ...p, x: p.x - LABEL_OFFSET, width, anchor: 'end' as const }
+      : { ...p, x: p.x + LABEL_OFFSET, width, anchor: 'start' as const }
+  })
+  const order = anchored.map((_, i) => i).sort((a, b) => anchored[a].y - anchored[b].y)
+  const placed: { x0: number; x1: number; y: number }[] = []
+  const out: ScatterLabelPlaced[] = new Array(inputs.length)
+  for (const i of order) {
+    const lbl = anchored[i]
+    const x0 = lbl.anchor === 'end' ? lbl.x - lbl.width : lbl.x
+    const x1 = lbl.anchor === 'end' ? lbl.x : lbl.x + lbl.width
+    let y = lbl.y
+    for (const p of placed) {
+      if (x0 < p.x1 && x1 > p.x0 && y < p.y + LABEL_LINE_GAP) y = p.y + LABEL_LINE_GAP
+    }
+    placed.push({ x0, x1, y })
+    out[i] = { x: lbl.x, y, text: lbl.text, anchor: lbl.anchor }
+  }
+  return out
+}
+
 /** Radar geometry (viewBox 280×260): center (140,126), r 92, six axes from −π/2. */
 export const RADAR = { cx: 140, cy: 126, r: 92, axes: 6, rings: [0.25, 0.5, 0.75, 1] } as const
 

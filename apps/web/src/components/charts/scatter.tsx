@@ -1,7 +1,7 @@
 import type * as React from 'react'
 import { useState } from 'react'
 import { ChartTipBox, useChartTip } from './chart-tip'
-import { SCATTER, type ScatterYWindow, scatterX, scatterY } from './scales'
+import { layoutScatterLabels, SCATTER, type ScatterYWindow, scatterX, scatterY } from './scales'
 
 export interface ScatterPoint {
   slug: string
@@ -185,21 +185,33 @@ export function QualityPriceScatter({
             </g>
           )
         })}
-        {points
-          .filter((p) => p.labeled)
-          .map((p) => (
-            <text
-              key={`label-${p.slug}`}
-              x={(scatterX(p.outputPrice) + 8).toFixed(1)}
-              y={(scatterY(p.index, yWindow) + 3).toFixed(1)}
-              fontSize="10"
-              fill="var(--mut)"
-              pointerEvents="none"
-              className="motion-safe:transition-[x,y] motion-safe:duration-200 motion-safe:ease-out"
-            >
-              {p.name}
-            </text>
-          ))}
+        {(() => {
+          const labeled = points.filter((p) => p.labeled)
+          const laidOut = layoutScatterLabels(
+            labeled.map((p) => ({
+              x: scatterX(p.outputPrice),
+              y: scatterY(p.index, yWindow) + 3,
+              text: p.name,
+            })),
+          )
+          return labeled.map((p, i) => {
+            const lbl = laidOut[i]
+            return (
+              <text
+                key={`label-${p.slug}`}
+                x={lbl.x.toFixed(1)}
+                y={lbl.y.toFixed(1)}
+                textAnchor={lbl.anchor}
+                fontSize="10"
+                fill="var(--mut)"
+                pointerEvents="none"
+                className="motion-safe:transition-[x,y] motion-safe:duration-200 motion-safe:ease-out"
+              >
+                {p.name}
+              </text>
+            )
+          })
+        })()}
       </svg>
       <ChartTipBox tip={tip} />
     </div>

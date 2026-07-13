@@ -4,11 +4,13 @@ import {
   fitYWindow,
   histogramBins,
   INDEX_Y_WINDOW,
+  layoutScatterLabels,
   logPos,
   normPct,
   radarAxisMeta,
   radarPolygonPoints,
   radarRings,
+  SCATTER,
   scatterX,
   scatterY,
   sparklinePoints,
@@ -80,6 +82,67 @@ describe('fitYWindow — auto-zoom the index axis (D22)', () => {
   })
   it('falls back to the full window when there is nothing to plot', () => {
     expect(fitYWindow([])).toBe(INDEX_Y_WINDOW)
+  })
+})
+
+describe('layoutScatterLabels — declutter overlapping labels (D23)', () => {
+  const box = (l: { x: number; y: number; text: string; anchor: 'start' | 'end' }) => {
+    const width = l.text.length * 5.0
+    const x0 = l.anchor === 'end' ? l.x - width : l.x
+    const x1 = l.anchor === 'end' ? l.x : l.x + width
+    return { x0, x1, y0: l.y - 9.94, y1: l.y + 2.98 }
+  }
+  const overlaps = (a: ReturnType<typeof box>, b: ReturnType<typeof box>) =>
+    a.x0 < b.x1 && a.x1 > b.x0 && a.y0 < b.y1 && a.y1 > b.y0
+
+  it('leaves a lone label at its natural offset position', () => {
+    const [out] = layoutScatterLabels([{ x: 100, y: 50, text: 'Solo Model' }])
+    expect(out.anchor).toBe('start')
+    expect(out.x).toBeCloseTo(108, 6) // dot x + the 8-unit offset
+    expect(out.y).toBeCloseTo(50, 6) // unchanged — nothing to collide with
+  })
+
+  it('resolves a real 3-way pileup (near-identical index scores, same price)', () => {
+    // Mirrors the live bug: Claude Opus 4.5 / its "(High)" sibling / GPT-5.6 all land within a
+    // couple of index points and two of them share a price, so labels start on top of each other.
+    const out = layoutScatterLabels([
+      { x: 481, y: 43.2, text: 'Gemini 3.1 Pro' },
+      { x: 341.7, y: 57.9, text: 'Nemotron 3 Ultra 550B A55B' },
+      { x: 541.3, y: 59, text: 'Claude Opus 4.5' },
+      { x: 541.3, y: 61.6, text: 'Claude Opus 4.5 (High)' },
+      { x: 556.2, y: 62.4, text: 'GPT-5.6' },
+    ])
+    for (let i = 0; i < out.length; i++) {
+      for (let j = i + 1; j < out.length; j++) {
+        expect(overlaps(box(out[i]), box(out[j]))).toBe(false)
+      }
+    }
+  })
+
+  it('does not perturb labels that are nowhere near each other', () => {
+    const out = layoutScatterLabels([
+      { x: 60, y: 280, text: 'Cheap Model' },
+      { x: 650, y: 40, text: 'Priciest Model' },
+    ])
+    expect(out[0].y).toBeCloseTo(280, 6)
+    expect(out[1].y).toBeCloseTo(40, 6)
+  })
+
+  it('flips to the left of the dot when the right offset would overflow the plot', () => {
+    const [out] = layoutScatterLabels([
+      { x: SCATTER.right - 10, y: 100, text: 'Long Model Name Here' },
+    ])
+    expect(out.anchor).toBe('end')
+    expect(out.x).toBeCloseTo(SCATTER.right - 18, 6) // dot x − offset, text ends AT the dot
+  })
+
+  it('pushes down (never up) so a higher-scoring point never loses its natural position', () => {
+    const out = layoutScatterLabels([
+      { x: 500, y: 50, text: 'Top Scorer' },
+      { x: 500, y: 51, text: 'Near-Tie' },
+    ])
+    expect(out[0].y).toBeCloseTo(50, 6)
+    expect(out[1].y).toBeGreaterThanOrEqual(out[0].y + 13)
   })
 })
 
