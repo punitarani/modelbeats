@@ -8,12 +8,12 @@ const ROUTES = [
   '/?tab=bench',
   '/rankings',
   '/models',
-  '/models/claude-opus-4-8',
-  '/models/gpt-oss-20b',
-  '/compare?m=claude-opus-4-8,deepseek-v4-5',
+  '/models/gpt-5-6',
+  '/models/gpt-oss-20b-medium',
+  '/compare?m=gpt-5-6,deepseek-v3-1-thinking',
   '/hardware',
   '/benchmarks',
-  '/benchmarks/swe',
+  '/benchmarks/swe-bench',
   '/organizations/anthropic',
   '/families/claude-4',
   '/methodology',
@@ -36,7 +36,7 @@ for (const route of ROUTES) {
 
 test('keyboard: rankings sort buttons are tabbable and Enter-operable', async ({ page }) => {
   await gotoHydrated(page, '/rankings')
-  await page.getByTestId('sort-swe').focus()
+  await page.getByTestId('sort-gpqa').focus()
   await page.keyboard.press('Enter')
-  await expect(page).toHaveURL(/sort=-swe/)
+  await expect(page).toHaveURL(/sort=-gpqa/)
 })

@@ -1,15 +1,17 @@
 import { expect, test } from '@playwright/test'
+import { datasetCounts } from './helpers'
 
 test.describe('seo surface', () => {
   test('sitemap covers every entity route from the live catalog', async ({ request }) => {
+    const { models, organizations, families, benchmarks } = datasetCounts()
     const res = await request.get('/sitemap.xml')
     expect(res.status()).toBe(200)
     expect(res.headers()['content-type']).toContain('application/xml')
     const body = await res.text()
     const locs = body.match(/<loc>/g)?.length ?? 0
-    // 9 static + 7 categories + 55 models + 19 orgs + 32 families + 10 benchmarks
-    expect(locs).toBe(132)
-    expect(body).toContain('https://rankedmodel.com/models/claude-opus-4-8')
+    // 9 static + 7 categories + every model + every org + every family + every benchmark
+    expect(locs).toBe(9 + 7 + models + organizations + families + benchmarks)
+    expect(body).toContain('https://rankedmodel.com/models/gpt-5-6')
   })
 
   test('robots allows crawling, hides /debug, points at the sitemap', async ({ request }) => {
@@ -19,15 +21,15 @@ test.describe('seo surface', () => {
   })
 
   test('model pages ship parseable JSON-LD + canonical', async ({ request }) => {
-    const html = await (await request.get('/models/claude-opus-4-8')).text()
+    const html = await (await request.get('/models/gpt-5-6')).text()
     const m = html.match(/<script[^>]*application\/ld\+json[^>]*>(.*?)<\/script>/s)
     expect(m).not.toBeNull()
     const ld = JSON.parse((m as RegExpMatchArray)[1] as string)
     expect(ld['@type']).toBe('SoftwareApplication')
-    expect(ld.name).toBe('Claude Opus 4.8')
-    expect(ld.creator.name).toBe('Anthropic')
+    expect(ld.name).toBe('GPT-5.6')
+    expect(ld.creator.name).toBe('OpenAI')
     expect(html).toContain('rel="canonical"')
-    expect(html).toContain('https://rankedmodel.com/models/claude-opus-4-8')
+    expect(html).toContain('https://rankedmodel.com/models/gpt-5-6')
   })
 })
 

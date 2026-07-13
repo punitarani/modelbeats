@@ -29,19 +29,21 @@ describe('generateSeedSql (against the real curated dataset)', () => {
     expect(deletes.at(-1)).toContain('organizations')
   })
 
-  it('escapes single quotes in curated text (llama-5 note contains an apostrophe)', async () => {
+  it("escapes single quotes in curated text (01.AI's Yi-6B note contains an apostrophe)", async () => {
     const ds = await loadDataset(DATA)
     const derived = await deriveScores(DATA)
     const sql = generateSeedSql(ds, derived).join('\n')
-    expect(sql).toContain("Meta''s comeback release")
+    expect(sql).toContain("01.AI''s debut Yi series")
   })
 
-  it('seeds model_scores for all 55 models and converts ctx to absolute tokens (D15)', async () => {
+  it('seeds model_scores for every real model and converts ctx to absolute tokens (D15)', async () => {
     const ds = await loadDataset(DATA)
     const derived = await deriveScores(DATA)
     const sql = generateSeedSql(ds, derived).join('\n')
-    expect(derived.models).toHaveLength(55)
-    // grok-4-2 has ctxK 2000 → 2_000_000 absolute tokens somewhere in the models insert
-    expect(sql).toContain('2000000')
+    expect(derived.models).toHaveLength(ds.models.length)
+    expect(derived.models.length).toBeGreaterThan(400) // real ~463-model corpus, not the old seed
+    // llama-4-scout has ctxK 10000 (10M-token context) → 10_000_000 absolute tokens somewhere
+    // in the models insert
+    expect(sql).toContain('10000000')
   })
 })

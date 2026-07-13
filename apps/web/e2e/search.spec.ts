@@ -6,10 +6,10 @@ test.describe('search', () => {
     await gotoHydrated(page, '/rankings')
     await page.keyboard.press('/')
     await expect(page.getByTestId('topbar-search')).toBeFocused()
-    await page.keyboard.type('deepseek v4.5')
-    await expect(page.getByTestId('search-dropdown')).toContainText('DeepSeek V4.5')
+    await page.keyboard.type('llama 3.1 405b')
+    await expect(page.getByTestId('search-dropdown')).toContainText('Llama 3.1 405B')
     await page.keyboard.press('Enter')
-    await expect(page).toHaveURL(/\/models\/deepseek-v4-5$/)
+    await expect(page).toHaveURL(/\/models\/llama-3-1-405b$/)
   })
 
   test('Escape closes the dropdown', async ({ page }) => {
@@ -22,7 +22,8 @@ test.describe('search', () => {
 
   test('/search?q= SSRs grouped results', async ({ page }) => {
     await gotoHydrated(page, '/search?q=qwen')
-    await expect(page.getByTestId('search-summary')).toContainText('5 models')
-    await expect(page.getByTestId('search-model')).toHaveCount(5) // 4×Qwen3 + QwQ (family match)
+    // real corpus: 37 models across the Qwen 1/1.5/2/2.5/3 series match "qwen" (name/org/family)
+    await expect(page.getByTestId('search-summary')).toContainText('37 models')
+    await expect(page.getByTestId('search-model')).toHaveCount(37)
   })
 })

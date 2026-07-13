@@ -21,8 +21,9 @@ describe('scatter scales (C6)', () => {
     expect(scatterX(200)).toBeCloseTo(712, 6)
   })
   it('maps Elo edges: 1140 → 296 (bottom), 1520 → 12 (top)', () => {
-    expect(scatterY(1140)).toBeCloseTo(296, 6)
-    expect(scatterY(1520)).toBeCloseTo(12, 6)
+    const w = { yMinElo: 1140, yMaxElo: 1520, yTicks: [] }
+    expect(scatterY(1140, w)).toBeCloseTo(296, 6)
+    expect(scatterY(1520, w)).toBeCloseTo(12, 6)
   })
   it('log placement: $1 sits left of the midpoint between $0.06 and $200', () => {
     const mid = (46 + 712) / 2
@@ -69,8 +70,8 @@ describe('sparkline (C6)', () => {
 
 describe('bars', () => {
   it('arena rail pct over the 1250–1520 window', () => {
-    expect(arenaPct(1520)).toBe(100)
-    expect(arenaPct(1385)).toBe(50)
+    expect(arenaPct(1520, 1250, 1520)).toBe(100)
+    expect(arenaPct(1385, 1250, 1520)).toBe(50)
   })
   it('cadence bars: proportional with a 4px floor', () => {
     expect(cadenceHeight(10, 10)).toBe(62)

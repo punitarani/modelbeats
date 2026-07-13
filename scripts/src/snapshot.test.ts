@@ -6,32 +6,34 @@ import { buildSnapshot } from './snapshot'
 const DATA = join(import.meta.dirname, '..', '..', 'data')
 
 describe('catalog snapshot (C3 golden shape)', () => {
-  it('builds a schema-valid snapshot with the full catalog', async () => {
+  it('builds a schema-valid snapshot over the real dataset', async () => {
     const snap = await buildSnapshot(DATA, 1)
     expect(snap.version).toBe(1)
-    expect(snap.asOfIso).toBe('2026-07-11')
-    expect(snap.models).toHaveLength(55)
-    expect(snap.benchmarks).toHaveLength(10)
+    expect(snap.asOfIso).toBe('2026-07-01')
+    // relative, not hardcoded: the real corpus's size is ~463 models / 78 orgs / 122
+    // benchmarks, not the old 55-model synthetic seed's fixed counts.
+    expect(snap.models.length).toBeGreaterThan(400)
+    expect(snap.benchmarks.length).toBeGreaterThan(100)
     expect(snap.gpus).toHaveLength(12)
   })
 
-  it('carries precomputed index/rank and design-parity fields for opus', async () => {
+  it('carries precomputed index/rank and design-parity fields for a real, broadly-covered model', async () => {
     const snap = await buildSnapshot(DATA, 1)
-    const opus = snap.models.find((m) => m.slug === 'claude-opus-4-8')
-    expect(opus).toMatchObject({
-      org: 'Anthropic',
-      family: 'Claude 4',
-      open: false,
-      index: 87.9,
-      rank: 1,
-      ctxK: 500,
+    const llama = snap.models.find((m) => m.slug === 'llama-3-1-405b')
+    expect(llama).toMatchObject({
+      org: 'Meta',
+      family: 'Llama 3.1',
+      open: true,
+      index: 70.9,
+      rank: 109,
+      ctxK: 128,
     })
-    expect(opus?.bench.arena).toBe(1510)
-    expect(opus?.price).toEqual({ input: 15, output: 75 })
-    expect(opus?.categoryIdx.coding).toBe(84.2)
+    expect(llama?.bench.arena).toBe(1229)
+    expect(llama?.price).toBeNull()
+    expect(llama?.categoryIdx.coding).toBe(89.8)
   })
 
-  it('stays far under the 1.5 MB gzip budget at current scale', async () => {
+  it('stays far under the 1.5 MB gzip budget at real scale', async () => {
     const snap = await buildSnapshot(DATA, 1)
     const gz = gzipSync(JSON.stringify(snap)).length
     expect(gz).toBeLessThan(1.5 * 1024 * 1024)

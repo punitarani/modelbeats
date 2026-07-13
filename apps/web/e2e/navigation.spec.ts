@@ -6,22 +6,23 @@ import { gotoHydrated } from './helpers'
 test.describe('history-aware back links', () => {
   test('filtered rankings → model → back restores the filtered URL', async ({ page }) => {
     await gotoHydrated(page, '/rankings?org=anthropic')
+    // Claude 2 ties Claude Sonnet 4.5 at 79.4 index but sorts first (stable tiebreak by slug)
     await page.getByTestId('ranking-row').first().click()
-    await expect(page).toHaveURL(/\/models\/claude-opus-4-8$/)
+    await expect(page).toHaveURL(/\/models\/claude-2$/)
     await page.getByRole('link', { name: 'Back', exact: true }).click()
     await expect(page).toHaveURL(/\/rankings\?org=anthropic$/)
   })
 
   test('dashboard scatter point → model → back lands on the dashboard', async ({ page }) => {
     await gotoHydrated(page, '/')
-    await page.locator('a[aria-label^="DeepSeek V4.5 —"]').click()
-    await expect(page).toHaveURL(/\/models\/deepseek-v4-5$/)
+    await page.locator('a[aria-label^="Gemini 3.1 Flash-Lite —"]').click()
+    await expect(page).toHaveURL(/\/models\/gemini-3-1-flash-lite$/)
     await page.getByRole('link', { name: 'Back', exact: true }).click()
     await expect(page).toHaveURL(/\/$/)
   })
 
   test('direct model load falls back to a plain parent link', async ({ page }) => {
-    await gotoHydrated(page, '/models/claude-opus-4-8')
+    await gotoHydrated(page, '/models/gemini-3-1-flash-lite')
     const back = page.getByRole('link', { name: 'Model explorer', exact: true })
     await expect(back).toBeVisible()
     await back.click()
@@ -29,10 +30,10 @@ test.describe('history-aware back links', () => {
   })
 
   test('model → benchmark detail → back returns to the model', async ({ page }) => {
-    await gotoHydrated(page, '/models/deepseek-v4-5')
+    await gotoHydrated(page, '/models/llama-3-1-405b')
     await page.getByRole('link', { name: 'GPQA Diamond' }).first().click()
     await expect(page).toHaveURL(/\/benchmarks\/gpqa$/)
     await page.getByRole('link', { name: 'Back', exact: true }).click()
-    await expect(page).toHaveURL(/\/models\/deepseek-v4-5$/)
+    await expect(page).toHaveURL(/\/models\/llama-3-1-405b$/)
   })
 })

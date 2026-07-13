@@ -1,43 +1,53 @@
 import { expect, test } from '@playwright/test'
-import { gotoHydrated, pickOption } from './helpers'
+import { datasetCounts, gotoHydrated, pickOption } from './helpers'
 
 test.describe('model explorer', () => {
-  test('default grid shows all 55 models', async ({ page }) => {
+  test('default grid shows every real model, sorted by index', async ({ page }) => {
+    const { models } = datasetCounts()
     await gotoHydrated(page, '/models')
-    await expect(page.getByTestId('explorer-count')).toHaveText('55 models')
-    await expect(page.getByTestId('explorer-card')).toHaveCount(55)
+    await expect(page.getByTestId('explorer-count')).toHaveText(`${models} models`)
+    // the grid is virtualized (B4) — only a windowed subset is ever in the DOM, so assert the
+    // JS-computed summary count above plus the always-rendered top row, not a raw card count
+    await expect(page.getByTestId('explorer-card').first()).toContainText('Doubao-Seed-1.6')
   })
 
   test('runs-on-my-hardware facet applies the curated 1.08× rule', async ({ page }) => {
     await gotoHydrated(page, '/models')
+    // narrow with the text filter first so the whole (small) result set renders without
+    // relying on virtualized scroll position
+    await page.getByTestId('explorer-filter').fill('gpt-oss')
     await pickOption(page, 'explorer-gpu', 'RTX 4090 24GB')
     await expect(page).toHaveURL(/gpu=rtx4090/)
-    // 13×1.08 = 14.04 ≤ 24 keeps GPT-OSS-20B; 66×1.08 > 24 drops GPT-OSS-120B
-    await expect(page.getByTestId('explorer-card').filter({ hasText: 'GPT-OSS-20B' })).toHaveCount(
-      1,
-    )
-    await expect(page.getByTestId('explorer-card').filter({ hasText: 'GPT-OSS-120B' })).toHaveCount(
-      0,
-    )
+    // 13×1.08 = 14.04 ≤ 24 keeps the 20B tiers; 73×1.08 = 78.84 > 24 drops the 120B tiers
+    await expect(
+      page.getByTestId('explorer-card').filter({ hasText: 'gpt-oss-20b (Medium)' }),
+    ).toHaveCount(1)
+    await expect(
+      page.getByTestId('explorer-card').filter({ hasText: 'gpt-oss-120b (Medium)' }),
+    ).toHaveCount(0)
   })
 
   test('deep-linked facets restore on load (URL round-trip)', async ({ page }) => {
     await gotoHydrated(page, '/models?open=open&size=s&caps=reason')
-    await expect(page.getByTestId('explorer-count')).toHaveText('3 models') // qwen3-8b, smollm3-3b, phi-4-reasoning
+    // real corpus: 19 open, <15B-param models with the reasoning capability
+    await expect(page.getByTestId('explorer-count')).toHaveText('19 models')
     await expect(page.getByTestId('cap-reason')).toHaveAttribute('aria-pressed', 'true')
+    // default sort is by index — Phi-3-medium (14B) leads this facet combination
+    await expect(page.getByTestId('explorer-card').first()).toContainText('Phi-3-medium (14B)')
   })
 
-  test('cheapest-API sort puts Llama 3.1 8B first ($0.08/M out)', async ({ page }) => {
+  test('cheapest-API sort puts Ministral 3B first ($0.04/M out)', async ({ page }) => {
     await gotoHydrated(page, '/models')
     await pickOption(page, 'explorer-sort', 'Cheapest API')
     await expect(page).toHaveURL(/sort=cheap/)
-    await expect(page.getByTestId('explorer-card').first()).toContainText('Llama 3.1 8B')
+    await expect(page.getByTestId('explorer-card').first()).toContainText('Ministral 3B')
   })
 
   test('reset clears facets back to clean URL', async ({ page }) => {
+    const { models } = datasetCounts()
     await gotoHydrated(page, '/models?open=open&size=s&caps=reason')
     await page.getByRole('button', { name: 'Reset filters' }).click()
     await expect(page).toHaveURL(/\/models$/)
-    await expect(page.getByTestId('explorer-count')).toHaveText('55 models')
+    await expect(page.getByTestId('explorer-count')).toHaveText(`${models} models`)
   })
 })

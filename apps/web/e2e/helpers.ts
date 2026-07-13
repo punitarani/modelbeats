@@ -1,4 +1,32 @@
+import { readdirSync, readFileSync } from 'node:fs'
+import { join } from 'node:path'
 import type { Page, Response } from '@playwright/test'
+
+const DATA_ROOT = join(import.meta.dirname, '..', '..', '..', 'data')
+
+/**
+ * Real dataset counts, read straight off the generated `/data` tree (not the design's old
+ * fixed numbers) so count-relative assertions track whatever corpus is currently generated
+ * instead of a hardcoded snapshot size.
+ */
+export function datasetCounts() {
+  const countJsonFiles = (dir: string) => {
+    let n = 0
+    for (const entry of readdirSync(join(DATA_ROOT, dir), { withFileTypes: true })) {
+      if (entry.isDirectory()) n += countJsonFiles(join(dir, entry.name))
+      else if (entry.name.endsWith('.json')) n += 1
+    }
+    return n
+  }
+  const meta = JSON.parse(readFileSync(join(DATA_ROOT, 'meta.json'), 'utf8'))
+  return {
+    models: countJsonFiles('models'),
+    organizations: countJsonFiles('organizations'),
+    families: countJsonFiles('families'),
+    benchmarks: countJsonFiles('benchmarks'),
+    asOf: meta.asOf as string,
+  }
+}
 
 /**
  * goto + wait for the app's hydration marker. Under parallel load, interacting with

@@ -1,5 +1,5 @@
 import { expect, test } from '@playwright/test'
-import { gotoHydrated } from './helpers'
+import { datasetCounts, gotoHydrated } from './helpers'
 
 test.describe('app shell', () => {
   test('renders the brand mark and nav; favicon wired', async ({ page }) => {
@@ -55,7 +55,7 @@ test.describe('app shell', () => {
   })
 
   test('theme toggle and direct model BackLink use Lucide icons', async ({ page }) => {
-    await gotoHydrated(page, '/models/gpt-oss-20b')
+    await gotoHydrated(page, '/models/gpt-oss-20b-medium')
 
     const themeToggle = page.getByTestId('theme-toggle')
     await expect.soft(themeToggle.locator('svg')).toHaveClass(/\blucide-moon\b/)
@@ -75,11 +75,12 @@ test.describe('app shell', () => {
   test('SSR delivers content before hydration (catalog visible in raw HTML)', async ({
     request,
   }) => {
+    const { models } = datasetCounts()
     const res = await request.get('/debug/catalog')
     expect(res.status()).toBe(200)
     const html = await res.text()
     // React SSR splits interpolations with comment nodes — strip tags/comments first.
     const text = html.replaceAll(/<[^>]+>/g, '')
-    expect(text).toContain('55 models')
+    expect(text).toContain(`${models} models`)
   })
 })
