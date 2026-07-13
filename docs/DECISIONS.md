@@ -4,7 +4,7 @@
 > the competitive analysis (kept private, not tracked in this repo). Code cites these IDs. Change a
 > decision here first, then in code.
 
-## Part 1 — Decisions (D1–D18)
+## Part 1 — Decisions (D1–D19)
 
 | # | Decision |
 |---|---|
@@ -15,7 +15,7 @@
 | **D5** | Compare = **3 slots** (A/B/C, fixed colors `--acc/--open/--closed`), URL `?m=a,b,c`. Architecture's ≤6 relaxed to the designed 3. |
 | **D6** | Route folds: `/leaderboards/$category` → `/rankings/$category`; `/quantizations` → model detail + `/hardware`; `/timeline` → redirect `/?tab=releases` (zoomable swim-lane timeline is post-v1). All other architecture routes ship. |
 | **D7** | Capabilities: flat facet booleans (`is_reasoning`, `supports_function_calling`, `supports_tool_use`, `agent_optimized`; vision via modalities) **plus** full `capabilities` JSON incl. `coding` for the design's 6-chip detail view. |
-| **D8** | Provenance: `source` enum gains **`curated`**; all v1 seed rows use it; the methodology page discloses it. Multi-source schema support retained — provenance is the brand feature. |
+| **D8** | Provenance: `source` enum gains **`curated`**; all v1 seed rows use it; the methodology page discloses it. Multi-source schema support retained — provenance is the brand feature. *(Superseded by D19: the real corpus's rows are tagged `self-reported \| independent \| arena`, not `curated` — the enum and the multi-source schema this decision established are unchanged, only which values ship.)* |
 | **D9** | Movers = **family-succession index delta** (design; computable from a single snapshot). `model_scores.rank_delta_30d` stays nullable; the publish pipeline persists each version's scores so 30-day deltas populate from the 2nd publish onward. |
 | **D10** | Prototype's component-state + hash routes become **typed URL search params** (Zod via `@tanstack/zod-adapter`) on real paths. localStorage only for: theme, hardware profile, saved comparisons. |
 | **D11** | Fonts self-hosted via `@fontsource-variable/geist` + `@fontsource-variable/geist-mono` — no Google Fonts request. |
@@ -26,6 +26,7 @@
 | **D16** | Sidebar nav = Dashboard, Rankings, Model Explorer, Compare, **Hardware, Benchmarks, Methodology** (design's 4 + 3 additions, same item styling). The design's footer stats block (counts · snapshot version · disclaimer) was removed per user direction (2026-07-12); snapshot counts/version stay visible on `/debug/catalog`, and curation/freshness is disclosed on `/methodology`. |
 | **D17** | Server surface = **two functions**: `getCatalog` (KV snapshot, D1 fallback) and `getModel(slug)` (deep detail: multi-source results, quantizations, throughput, pricing, lineage). Everything else is pure **selectors in `packages/shared`** over the snapshot — unit-testable, identical on server and client. Preserves the architecture's two-read-path split without per-screen server functions. |
 | **D18** | **No native `<select>` anywhere** — all dropdowns are shadcn on Base UI, via two app wrappers: `FilterSelect` (plain `Select`; short static lists — size class, GPU facet, sort, hardware profile) and `SearchSelect` (`Combobox` with a select-look trigger and an in-popup search input; long lists — model pickers and org filters). Both keep the compact design-token field look, `aria-label`s, `data-testid`s, and URL-state `onValueChange` semantics; triggers render the selected label as SSR text (e2e asserts text, not form values). |
+| **D19** | **Real dataset (2026-07-12)**: the synthetic 55-model design-parity seed (`convert-design-data.ts`, all `source=curated`) was fully replaced by a real, provenance-honest corpus — every major LLM release from GPT-3 (2020-06) through mid-2026 (**463 models · 78 orgs · 255 families · 122 benchmarks · 1785 results · 12 GPUs**), researched and adversarially verified, committed as an auditable `corpus/` tree and compiled to `/data` by a deterministic generator (`scripts/src/generate-dataset.ts`, successor to `convert-design-data.ts`). Consequences: (a) **D8 is superseded** — the real `source` values are `self-reported \| independent \| arena` (no `curated`/`admin-run` rows exist yet), each shown via a per-row provenance badge, never collapsed; (b) the 7-category enum and C1 scoring formula are **unchanged** — this was a data change, not an engine change; (c) rankings columns became a curated **CORE** subset (`arena` + one flagship per category) on the default view, with category subpages (`/rankings/$category`) showing every benchmark actually in that category (`apps/web/src/lib/search.ts` `CORE_RANKINGS_SLUGS`) — see the updated C1/C6 notes below; (d) `/rankings` and `/models` gained **TanStack Virtual** (mounted-gate SSR pattern: first paint renders the full list/grid unvirtualized so there's no hydration size mismatch, then the client swaps to a windowed render) since the real catalog no longer fits comfortably unvirtualized; (e) default/comparison slugs (`compare.tsx`, `overview-tab.tsx`, `model-detail-screen.tsx`, `hardware-screen.tsx`) are now catalog-derived (top-by-index, top-open) with a corpus-guaranteed literal only as the static schema fallback — no fictional slugs remain anywhere in app code; (f) a real, sparse-coverage model can legitimately rank #1 overall or leave a dashboard widget (e.g. the open/closed Arena frontier) empty — C1's "missing scores excluded, not penalized" is unchanged, real data just makes the edge case visible. |
 
 ## Part 2 — Contracts (C1–C7)
 
@@ -39,7 +40,9 @@ Must reproduce the design prototype exactly (golden-tested against `docs/design-
 norm(b, v)   = v == null ? null : clamp((v − b.norm_min) / (b.norm_max − b.norm_min), 0, 1)
 index(m)     = round(mean(norm over benchmarks with a score) × 1000) / 10   # 0–100, 0.1 step; missing excluded, no coverage penalty
 categoryIdx  = same mean restricted to the category's benchmarks
-radar axes   = PREF:[arena] · KNOW:[mmlu] · REASON:[gpqa,hle] · CODE:[swe,lcb] · MATH:[aime,math] · AGENT:[tau]
+radar axes   = PREF/KNOW/REASON/CODE/MATH/AGENT = categoryIdx for human-preference/knowledge/
+               reasoning/coding/math/agents — each category's mean is over EVERY benchmark
+               tagged with that category (data-driven, not a fixed 1–2 slug list; D19)
 movers       = per lineage edge (model vs its predecessor): Δindex where Δ>0, sorted desc, top 5
                — reproduces the design's family-list adjacency for the curated dataset (golden-tested);
                same-day releases are size variants with no predecessor and produce no mover
@@ -102,11 +105,12 @@ Geist (400–700) body · Geist Mono (400–600) for numerals/labels/uppercase m
 
 ### C6 — Chart math (`apps/web/src/components/charts/`)
 
-- **Scatter** (quality vs price, viewBox 720×320): `x = 46 + (log10(p) − log10(0.06)) / (log10(200) − log10(0.06)) × (712 − 46)`; `y = 296 − (elo − 1140) / (1520 − 1140) × (296 − 12)`; ticks y `{1200,1300,1400,1500}`, x `{$0.1,$1,$10,$100}`.
+- **Scatter** (quality vs price, viewBox 720×320): `x = 46 + (log10(p) − log10(0.06)) / (log10(200) − log10(0.06)) × (712 − 46)`; y-axis is **data-driven since D19** — `eloWindow(arenaBounds.normMin, arenaBounds.normMax)` computes 4 evenly-spaced round-to-10 ticks and the elo↔y mapping from the live `arena` benchmark's curated bounds (currently 1150–1520), not a hardcoded literal; x ticks `{$0.1,$1,$10,$100}`.
 - **Radar** (viewBox 280×260): center (140,126), r 92, 6 axes starting −π/2 stepping π/3, rings at .25/.5/.75/1, floor value 0.03.
 - **Family sparkline** (viewBox 280×64): x 12→268 evenly (single point → x 140), y 54→10 min-max scaled (flat series → y 32).
-- **Cadence bars**: height = count/max × 62px, min 4px; latest quarter colored `--acc`, rest `--border2`.
-- **Arena rail bars**: pct = (elo − 1250)/(1520 − 1250) × 100.
+- **Cadence bars**: height = count/max × 62px, min 4px; latest quarter colored `--acc`, rest `--border2`; bars have a fixed 30px minimum width inside a horizontally-scrollable row since D19 (25+ real quarters vs. the design's handful), auto-scrolled to the latest quarter on mount.
+- **Arena rail bars**: `arenaPct(elo, arenaBounds.normMin, arenaBounds.normMax)` — same live-bounds derivation as the scatter, not a hardcoded `1250` floor (D19).
+- **Params-vs-score scatter** (`benchmark-detail.tsx`): log-x domain widened to `[0.5, 3000]` (D19) to fit the real corpus range (1.1B–2400B) with headroom on both ends; x is clamped to the chart's plot area exactly like the existing y-clamp.
 - **Formatters** (`packages/shared/src/format.ts`): `fmtParams` → `70B` / `400B·17Ba` (MoE) / `—`; `fmtCtx` → `128K` / `2M` (≥1000K); `fmtPrice` → `$2.5/$20` / `weights` (open, no API) / `—`; `fmtDate` → `May 2026` / `May 14, 2026` (long).
 
 ### C7 — Caching

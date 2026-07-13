@@ -4,9 +4,10 @@
 > the only one that also answers *“can my hardware run it, at which quant, how fast?”*
 
 RankedModel collapses the four-tab workflow — **rank it, verify it, size it, run it** —
-into one provenance-honest, deep-linkable tool: 55 curated models across 19 orgs, 10
-benchmarks with published normalization bounds, version lineage, API pricing,
-quantizations, and a graded hardware-fit engine. System design in
+into one provenance-honest, deep-linkable tool: every major LLM release from GPT-3
+(2020) to today — 463 models across 78 orgs, 122 benchmarks with published
+normalization bounds, version lineage, API pricing, quantizations, and a graded
+hardware-fit engine. System design in
 [ARCHITECTURE.md](ARCHITECTURE.md) (§13 reconciles it with the committed design
 handoff); every locked decision and contract in [docs/DECISIONS.md](docs/DECISIONS.md).
 
