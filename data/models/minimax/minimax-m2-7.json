@@ -1,0 +1,46 @@
+{
+  "slug": "minimax-m2-7",
+  "name": "MiniMax M2.7",
+  "orgSlug": "minimax",
+  "familySlug": "minimax-m2-7",
+  "releaseDate": "2026-03-18",
+  "status": "released",
+  "predecessor": null,
+  "openness": "open-weights",
+  "license": "MiniMax Model Community License (non-commercial use restrictions; commercial use requires separate agreement) — verify exact license text at https://huggingface.co/MiniMaxAI/MiniMax-M2.7/blob/main/LICENSE",
+  "paramsB": 230,
+  "activeParamsB": 10,
+  "archClass": "moe",
+  "archDisplay": "Sparse Mixture-of-Experts, 256 local experts (8 active/token), 62 layers, RoPE + QK-RMSNorm attention; 230B total / 10B active params (~4.3% activation)",
+  "ctxK": 200,
+  "modalities": [
+    "text"
+  ],
+  "langCount": null,
+  "capabilities": {
+    "reasoning": true,
+    "coding": true,
+    "vision": false,
+    "functionCalling": true,
+    "toolUse": true,
+    "agentic": true
+  },
+  "apiAvailable": true,
+  "price": {
+    "input": 0.3,
+    "output": 1.2
+  },
+  "links": {
+    "hf": "MiniMaxAI/MiniMax-M2.7",
+    "docs": "https://platform.minimax.io/docs/release-notes/models"
+  },
+  "note": "Agentic coding/reasoning model billed by MiniMax as its first model to autonomously drive a meaningful share of its own RL research/development workflow (\"self-evolution\"). Open weights on Hugging Face; also served via a 2x-priced 'M2.7-highspeed' deployment tier (same weights, faster serving) which is not modeled as a separate entry here.",
+  "quants": [],
+  "vramQ4Gb": null,
+  "vramFp16Gb": null,
+  "tps4090": null,
+  "tpsNote": null,
+  "effortLabel": null,
+  "isDefaultConfig": true,
+  "isBestConfig": true
+}

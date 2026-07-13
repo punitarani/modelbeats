@@ -3,14 +3,15 @@ ai21-jamba,64.4,self-reported,https://huggingface.co/ai21labs/Jamba-v0.1,,
 ai21-jamba-1-5-large,93,self-reported,https://arxiv.org/html/2408.12570v1,,
 ai21-jamba-1-5-mini,85.7,self-reported,https://arxiv.org/html/2408.12570v1,,
 airoboros-70b-l2,68.5,independent,https://raw.githubusercontent.com/dsdanielpark/Open-LLM-Leaderboard-Report/main/assets/20230904/20230904.csv,2023-09-04,"HF Open LLM Leaderboard snapshot, 25-shot"
-amazon-nova-micro,90.2,independent,https://deepranking.ai/llm-models/nova-micro,,
-amazon-nova-pro,94.8,independent,https://deepranking.ai/llm-models/nova-pro,,
+amazon-nova-micro,90.2,self-reported,https://deepranking.ai/llm-models/nova-micro,,"[relabeled self-reported: aggregator/press relay of a vendor figure, not an independent re-measurement]"
+amazon-nova-pro,94.8,self-reported,https://deepranking.ai/llm-models/nova-pro,,"[relabeled self-reported: aggregator/press relay of a vendor figure, not an independent re-measurement]"
 apple-openelm-270m-3b,35.58,self-reported,https://huggingface.co/apple/OpenELM,2024-04-01,"OpenELM-3B (pretrained), ARC-Challenge, zero-shot"
 btlm-3b-8k,37.6,self-reported,https://arxiv.org/abs/2309.11568,,0-shot
 cerebras-gpt-13b,36.7,self-reported,https://huggingface.co/cerebras/Cerebras-GPT-13B,,0-shot
 claude-3-haiku,89.2,self-reported,https://www-cdn.anthropic.com/de8ba9b01c9ab7cbabf5c33b80b7bbc618857627/Model_Card_Claude_3.pdf,2024-03-13,25-shot
 claude-3-opus,96.4,self-reported,https://www-cdn.anthropic.com/de8ba9b01c9ab7cbabf5c33b80b7bbc618857627/Model_Card_Claude_3.pdf,2024-03-04,25-shot
 claude-3-sonnet,93.2,self-reported,https://www-cdn.anthropic.com/de8ba9b01c9ab7cbabf5c33b80b7bbc618857627/Model_Card_Claude_3.pdf,2024-03-04,25-shot
+comma-v0-1-2t,45.8,self-reported,https://huggingface.co/common-pile/comma-v0.1-2t,,
 decilm-7b,59.39,self-reported,https://huggingface.co/Deci/DeciLM-7B,,
 falcon-2-11b,59.73,independent,https://huggingface.co/blog/falcon2-11b,2024-05-13,25-shot
 falcon-h1-34b,61.01,self-reported,https://huggingface.co/tiiuae/Falcon-H1-34B-Instruct,,

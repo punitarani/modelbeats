@@ -1,9 +1,9 @@
 model_slug,score,source,source_url,evaluated_at,notes
 ai21-jamba-1-5-large,81.5,self-reported,https://arxiv.org/html/2408.12570v1,,
 ai21-jamba-1-5-mini,75.8,self-reported,https://arxiv.org/html/2408.12570v1,,
-amazon-nova-lite,89.7,independent,https://deepranking.ai/llm-models/nova-lite,,
-amazon-nova-micro,87.2,independent,https://deepranking.ai/llm-models/nova-micro,,
-amazon-nova-pro,92.1,independent,https://deepranking.ai/llm-models/nova-pro,,
+amazon-nova-lite,89.7,self-reported,https://deepranking.ai/llm-models/nova-lite,,"[relabeled self-reported: aggregator/press relay of a vendor figure, not an independent re-measurement]"
+amazon-nova-micro,87.2,self-reported,https://deepranking.ai/llm-models/nova-micro,,"[relabeled self-reported: aggregator/press relay of a vendor figure, not an independent re-measurement]"
+amazon-nova-pro,92.1,self-reported,https://deepranking.ai/llm-models/nova-pro,,"[relabeled self-reported: aggregator/press relay of a vendor figure, not an independent re-measurement]"
 command-a,90.9,self-reported,https://arxiv.org/abs/2504.00698,,
 command-r7b,77.9,self-reported,https://arxiv.org/abs/2504.00698,,
 falcon-h1-34b,89.37,self-reported,https://huggingface.co/tiiuae/Falcon-H1-34B-Instruct,,
@@ -11,7 +11,7 @@ falcon3-10b,78.17,self-reported,https://huggingface.co/tiiuae/Falcon3-10B-Instru
 falcon3-7b,76.5,self-reported,https://huggingface.co/tiiuae/Falcon3-7B-Instruct,,
 glm-4-32b-0414,87.6,self-reported,https://huggingface.co/zai-org/GLM-4-32B-0414,,IFEval
 glm-4-9b-chat,69,self-reported,https://huggingface.co/THUDM/glm-4-9b-chat,,
-gpt-4-1-mini,84.1,independent,https://docsbot.ai/models/gpt-4-1-mini,2025-04-01,
+gpt-4-1-mini,84.1,self-reported,https://docsbot.ai/models/gpt-4-1-mini,2025-04-01,"[relabeled self-reported: aggregator/mirror relay of a vendor figure, not an independent re-measurement]"
 granite-3-0-2b-instruct,46.07,self-reported,https://huggingface.co/ibm-granite/granite-3.0-2b-instruct,,
 granite-3-0-8b-instruct,52.27,self-reported,https://huggingface.co/ibm-granite/granite-3.0-8b-instruct,,
 granite-3-1-8b-instruct,72.08,independent,https://huggingface.co/ibm-granite/granite-3.1-8b-instruct,,HF Open LLM Leaderboard V2
@@ -36,6 +36,9 @@ olmo-2-13b,82.6,self-reported,https://huggingface.co/allenai/OLMo-2-1124-13B-Ins
 olmo-2-32b,85.6,self-reported,https://huggingface.co/allenai/OLMo-2-0325-32B-Instruct,,"GPT-3.5 Turbo 66.9, GPT-4o mini 83.5"
 olmo-3-7b,85.6,self-reported,https://huggingface.co/allenai/Olmo-3-7B-Instruct,,
 olmo-3-think-32b,89,self-reported,https://huggingface.co/allenai/Olmo-3-32B-Think,,Qwen 3 32B 86.5
+openpangu-2-0-flash-non-thinking,89.3,self-reported,https://huggingface.co/openpangu/openPangu-2.0-Flash/blob/main/README_EN.md,,"Prompt-level strict accuracy, Non-Thinking mode"
+openpangu-2-0-flash-thinking,95.9,self-reported,https://huggingface.co/openpangu/openPangu-2.0-Flash/blob/main/README_EN.md,,"Prompt-level strict accuracy, Thinking mode"
+qwen3-235b-a22b-thinking-2507,87.8,self-reported,https://huggingface.co/Qwen/Qwen3-235B-A22B-Thinking-2507,,IFEval
 qwq-32b,83.9,self-reported,https://www.datacamp.com/blog/qwq-32b,,
 smollm3-3b-no-thinking,76.7,self-reported,https://huggingface.co/HuggingFaceTB/SmolLM3-3B,,No extended thinking
 snowflake-arctic,52.4,independent,https://www.flexera.com/blog/finops/snowflake-arctic,,

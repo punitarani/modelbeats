@@ -1,2 +1,4 @@
 model_slug,score,source,source_url,evaluated_at,notes
+mimo-v2-5,87.7,self-reported,https://mimo.xiaomi.com/mimo-v2-5/,,Video-MME ('General Video QA'); from the embedded multimodalData chart array.
+minimax-m3,85.4,self-reported,https://huggingface.co/MiniMaxAI/MiniMax-M3,,"Reported on the official model card as 'Video-MME v2'; mapped to the base videomme slug — flagging that this may be a newer/harder variant of the benchmark rather than the original Video-MME, so treat as approximate."
 qwen2-5-vl-72b,79.1,self-reported,https://huggingface.co/Qwen/Qwen2.5-VL-72B-Instruct,,w/ subtitles

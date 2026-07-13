@@ -1,0 +1,5 @@
+model_slug,score,source,source_url,evaluated_at,notes
+command-a,86.2,self-reported,https://arxiv.org/abs/2504.00698,,MBPP+
+command-r7b,72,self-reported,https://arxiv.org/abs/2504.00698,,MBPP+
+deepseek-coder-v2-236b,76.2,self-reported,https://github.com/deepseek-ai/DeepSeek-Coder-V2,,MBPP+ (EvalPlus)
+minimax-text-01,71.7,self-reported,https://huggingface.co/MiniMaxAI/MiniMax-Text-01,,MBPP+ variant

@@ -1,0 +1,46 @@
+{
+  "slug": "claude-opus-4-7",
+  "name": "Claude Opus 4.7",
+  "orgSlug": "anthropic",
+  "familySlug": "claude-4",
+  "releaseDate": "2026-04-16",
+  "status": "released",
+  "predecessor": "claude-sonnet-4-6",
+  "openness": "closed",
+  "license": "Proprietary",
+  "paramsB": null,
+  "activeParamsB": null,
+  "archClass": "dense",
+  "archDisplay": "Dense transformer, architecture undisclosed; adaptive thinking controlled by a runtime effort parameter (low/medium/high/xhigh/max)",
+  "ctxK": 1000,
+  "modalities": [
+    "text",
+    "vision"
+  ],
+  "langCount": null,
+  "capabilities": {
+    "reasoning": true,
+    "coding": true,
+    "vision": true,
+    "functionCalling": true,
+    "toolUse": true,
+    "agentic": true
+  },
+  "apiAvailable": true,
+  "price": {
+    "input": 5,
+    "output": 25
+  },
+  "links": {
+    "docs": "https://platform.claude.com/docs/en/about-claude/models/overview"
+  },
+  "note": "Predecessor to Opus 4.8, released 41 days earlier. Model id claude-opus-4-7. Introduced the xhigh effort tier and 3.75-megapixel high-resolution vision. No separate '(Thinking)' SKU exists: manual extended-thinking budgets were removed on this model in favor of always-on adaptive thinking whose depth is set by the runtime effort parameter (low/medium/high/xhigh/max), not a distinct marketed product.",
+  "quants": [],
+  "vramQ4Gb": null,
+  "vramFp16Gb": null,
+  "tps4090": null,
+  "tpsNote": null,
+  "effortLabel": null,
+  "isDefaultConfig": true,
+  "isBestConfig": true
+}

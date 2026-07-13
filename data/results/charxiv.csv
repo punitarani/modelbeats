@@ -1,2 +1,5 @@
 model_slug,score,source,source_url,evaluated_at,notes
+claude-opus-4-7,82.1,self-reported,https://www.vellum.ai/blog/claude-opus-4-7-benchmarks-explained,,No-tools configuration; with-tools scored 91.0%.
+command-a-218b,52.7,self-reported,https://cohere.com/blog/command-a-plus,,reasoning subset
 gemini-3-5-flash,84.2,self-reported,https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-3-5/,2026-05-19,CharXiv multimodal reasoning
+mimo-v2-5,81,self-reported,https://mimo.xiaomi.com/mimo-v2-5/,,"CharXiv 'RQ' (reasoning-question) subset, chart-understanding benchmark; from the embedded multimodalData chart array."

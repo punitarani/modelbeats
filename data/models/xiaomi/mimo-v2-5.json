@@ -1,0 +1,49 @@
+{
+  "slug": "mimo-v2-5",
+  "name": "MiMo-V2.5",
+  "orgSlug": "xiaomi",
+  "familySlug": "mimo",
+  "releaseDate": "2026-04-22",
+  "status": "released",
+  "predecessor": null,
+  "openness": "open-weights",
+  "license": "MIT",
+  "paramsB": 310,
+  "activeParamsB": 15,
+  "archClass": "moe",
+  "archDisplay": "Sparse MoE (256 routed experts, 8/token), hybrid Sliding-Window+Global attention 5:1, native 729M-param ViT + 261M-param audio encoder, 3x MTP modules",
+  "ctxK": 1000,
+  "modalities": [
+    "text",
+    "vision",
+    "audio",
+    "video"
+  ],
+  "langCount": null,
+  "capabilities": {
+    "reasoning": true,
+    "coding": true,
+    "vision": true,
+    "functionCalling": true,
+    "toolUse": true,
+    "agentic": true
+  },
+  "apiAvailable": true,
+  "price": {
+    "input": 0.14,
+    "output": 0.28
+  },
+  "links": {
+    "hf": "XiaomiMiMo/MiMo-V2.5",
+    "docs": "https://mimo.xiaomi.com/mimo-v2-5/"
+  },
+  "note": "Xiaomi's native omnimodal flagship-tier model (text/image/video/audio), 310B total / 15B active MoE, 1M context, fully open-sourced under MIT. Consolidates the prior separate MiMo-V2-Pro (reasoning) and MiMo-V2-Omni (multimodal) lines into one architecture built on the MiMo-V2-Flash backbone.",
+  "quants": [],
+  "vramQ4Gb": null,
+  "vramFp16Gb": null,
+  "tps4090": null,
+  "tpsNote": null,
+  "effortLabel": null,
+  "isDefaultConfig": true,
+  "isBestConfig": true
+}

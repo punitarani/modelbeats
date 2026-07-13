@@ -1,0 +1,46 @@
+{
+  "slug": "claude-sonnet-5",
+  "name": "Claude Sonnet 5",
+  "orgSlug": "anthropic",
+  "familySlug": "claude-5",
+  "releaseDate": "2026-06-30",
+  "status": "released",
+  "predecessor": "claude-fable-5",
+  "openness": "closed",
+  "license": "Proprietary",
+  "paramsB": null,
+  "activeParamsB": null,
+  "archClass": "dense",
+  "archDisplay": "Dense transformer, architecture undisclosed; adaptive thinking on by default, controlled by a runtime effort parameter (low/medium/high/xhigh/max)",
+  "ctxK": 1000,
+  "modalities": [
+    "text",
+    "vision"
+  ],
+  "langCount": null,
+  "capabilities": {
+    "reasoning": true,
+    "coding": true,
+    "vision": true,
+    "functionCalling": true,
+    "toolUse": true,
+    "agentic": true
+  },
+  "apiAvailable": true,
+  "price": {
+    "input": 3,
+    "output": 15
+  },
+  "links": {
+    "docs": "https://platform.claude.com/docs/en/about-claude/models/whats-new-sonnet-5"
+  },
+  "note": "Model id claude-sonnet-5. Drop-in upgrade for Sonnet 4.6: adaptive thinking on by default, manual extended-thinking removed (400 error), new tokenizer (~30% more tokens for same text vs Sonnet 4.6), non-default sampling params rejected. Introductory pricing $2/$10 per MTok through 2026-08-31, standard pricing $3/$15 thereafter (used here). On Terminal-Bench 2.1 and GDPval-AA v2 it narrowly beats Opus 4.8 despite Sonnet-tier pricing. NO SEPARATE '(High)' PRODUCT: Anthropic's docs state explicitly that setting effort to 'high' 'produces exactly the same behavior as omitting the effort parameter entirely,' and high is the documented default — there is no distinct marketed 'Sonnet 5 (High)' SKU to add as a sibling entry.",
+  "quants": [],
+  "vramQ4Gb": null,
+  "vramFp16Gb": null,
+  "tps4090": null,
+  "tpsNote": null,
+  "effortLabel": null,
+  "isDefaultConfig": true,
+  "isBestConfig": true
+}

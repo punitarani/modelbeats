@@ -1,0 +1,47 @@
+{
+  "slug": "grok-4-3-high",
+  "name": "Grok 4.3 (High)",
+  "orgSlug": "spacexai",
+  "familySlug": "grok-4-3",
+  "releaseDate": "2026-04-30",
+  "status": "released",
+  "predecessor": null,
+  "openness": "closed",
+  "license": "Proprietary",
+  "paramsB": null,
+  "activeParamsB": null,
+  "archClass": "moe",
+  "archDisplay": "Mixture-of-Experts (size undisclosed); high reasoning-effort configuration of the same served weights as Grok 4.3",
+  "ctxK": 1000,
+  "modalities": [
+    "text",
+    "vision",
+    "video"
+  ],
+  "langCount": null,
+  "capabilities": {
+    "reasoning": true,
+    "coding": true,
+    "vision": true,
+    "functionCalling": true,
+    "toolUse": true,
+    "agentic": true
+  },
+  "apiAvailable": true,
+  "price": {
+    "input": 1.25,
+    "output": 2.5
+  },
+  "links": {
+    "docs": "https://docs.x.ai"
+  },
+  "note": "High reasoning-effort tier of Grok 4.3, same underlying weights as the default/low-effort configuration, opted into via the API's reasoning_effort parameter. This is the configuration Artificial Analysis benchmarks by default for Grok 4.3.",
+  "quants": [],
+  "vramQ4Gb": null,
+  "vramFp16Gb": null,
+  "tps4090": null,
+  "tpsNote": null,
+  "effortLabel": "high",
+  "isDefaultConfig": false,
+  "isBestConfig": true
+}

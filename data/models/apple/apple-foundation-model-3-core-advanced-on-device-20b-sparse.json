@@ -1,0 +1,43 @@
+{
+  "slug": "apple-foundation-model-3-core-advanced-on-device-20b-sparse",
+  "name": "Apple Foundation Model 3 Core Advanced (on-device, 20B sparse)",
+  "orgSlug": "apple",
+  "familySlug": "apple-foundation-models",
+  "releaseDate": "2026-06-08",
+  "status": "released",
+  "predecessor": "apple-foundation-model-on-device-3b",
+  "openness": "closed",
+  "license": "Proprietary",
+  "paramsB": 20,
+  "activeParamsB": 4,
+  "archClass": "moe",
+  "archDisplay": "Sparse on-device model (20B total, 1-4B active per request) using Apple's 'Instruction-Following Pruning' with shared + input-routed experts stored in flash and loaded into DRAM on demand",
+  "ctxK": 32,
+  "modalities": [
+    "text",
+    "vision"
+  ],
+  "langCount": null,
+  "capabilities": {
+    "reasoning": true,
+    "coding": false,
+    "vision": true,
+    "functionCalling": true,
+    "toolUse": true,
+    "agentic": true
+  },
+  "apiAvailable": true,
+  "price": null,
+  "links": {
+    "docs": "https://machinelearning.apple.com/research/introducing-third-generation-of-apple-foundation-models"
+  },
+  "note": "Apple's most capable on-device model as of mid-2026, the headline of the WWDC26 third-generation Foundation Models family; natively multimodal (image understanding, expressive voices, higher-accuracy dictation).",
+  "quants": [],
+  "vramQ4Gb": null,
+  "vramFp16Gb": null,
+  "tps4090": null,
+  "tpsNote": null,
+  "effortLabel": null,
+  "isDefaultConfig": false,
+  "isBestConfig": true
+}

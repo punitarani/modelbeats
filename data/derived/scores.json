@@ -20,7 +20,7 @@
     {
       "slug": "ai21-jamba",
       "overallIndex": 61.4,
-      "rankOverall": 162,
+      "rankOverall": 189,
       "ranked": true,
       "arenaElo": null,
       "categoryIdx": {
@@ -36,7 +36,7 @@
     {
       "slug": "ai21-jamba-1-5-large",
       "overallIndex": 67.5,
-      "rankOverall": 119,
+      "rankOverall": 140,
       "ranked": true,
       "arenaElo": null,
       "categoryIdx": {
@@ -52,7 +52,7 @@
     {
       "slug": "ai21-jamba-1-5-mini",
       "overallIndex": 55.7,
-      "rankOverall": 189,
+      "rankOverall": 217,
       "ranked": true,
       "arenaElo": null,
       "categoryIdx": {
@@ -84,7 +84,7 @@
     {
       "slug": "airoboros-70b-l2",
       "overallIndex": 64.3,
-      "rankOverall": 142,
+      "rankOverall": 168,
       "ranked": true,
       "arenaElo": null,
       "categoryIdx": {
@@ -116,7 +116,7 @@
     {
       "slug": "amazon-nova-lite",
       "overallIndex": 74.6,
-      "rankOverall": 66,
+      "rankOverall": 84,
       "ranked": true,
       "arenaElo": null,
       "categoryIdx": {
@@ -132,7 +132,7 @@
     {
       "slug": "amazon-nova-micro",
       "overallIndex": 72.8,
-      "rankOverall": 80,
+      "rankOverall": 98,
       "ranked": true,
       "arenaElo": null,
       "categoryIdx": {
@@ -164,7 +164,7 @@
     {
       "slug": "amazon-nova-pro",
       "overallIndex": 81.3,
-      "rankOverall": 31,
+      "rankOverall": 32,
       "ranked": true,
       "arenaElo": null,
       "categoryIdx": {
@@ -196,7 +196,7 @@
     {
       "slug": "apple-dclm-baseline-7b",
       "overallIndex": 51.5,
-      "rankOverall": 208,
+      "rankOverall": 236,
       "ranked": true,
       "arenaElo": null,
       "categoryIdx": {
@@ -205,6 +205,38 @@
         "reasoning": 71.9,
         "coding": null,
         "math": 0,
+        "vision": null,
+        "agents": null
+      }
+    },
+    {
+      "slug": "apple-foundation-model-3-core-advanced-on-device-20b-sparse",
+      "overallIndex": 0,
+      "rankOverall": null,
+      "ranked": false,
+      "arenaElo": null,
+      "categoryIdx": {
+        "human-preference": null,
+        "knowledge": null,
+        "reasoning": null,
+        "coding": null,
+        "math": null,
+        "vision": null,
+        "agents": null
+      }
+    },
+    {
+      "slug": "apple-foundation-model-3-core-on-device-3b",
+      "overallIndex": 0,
+      "rankOverall": null,
+      "ranked": false,
+      "arenaElo": null,
+      "categoryIdx": {
+        "human-preference": null,
+        "knowledge": null,
+        "reasoning": null,
+        "coding": null,
+        "math": null,
         "vision": null,
         "agents": null
       }
@@ -292,7 +324,7 @@
     {
       "slug": "aya-vision-32b",
       "overallIndex": 51.1,
-      "rankOverall": 209,
+      "rankOverall": 237,
       "ranked": true,
       "arenaElo": null,
       "categoryIdx": {
@@ -340,7 +372,7 @@
     {
       "slug": "baichuan2-13b",
       "overallIndex": 39.7,
-      "rankOverall": 239,
+      "rankOverall": 270,
       "ranked": true,
       "arenaElo": null,
       "categoryIdx": {
@@ -356,7 +388,7 @@
     {
       "slug": "baichuan2-7b",
       "overallIndex": 32,
-      "rankOverall": 253,
+      "rankOverall": 284,
       "ranked": true,
       "arenaElo": null,
       "categoryIdx": {
@@ -420,7 +452,7 @@
     {
       "slug": "btlm-3b-8k",
       "overallIndex": 22.8,
-      "rankOverall": 267,
+      "rankOverall": 298,
       "ranked": true,
       "arenaElo": null,
       "categoryIdx": {
@@ -468,7 +500,7 @@
     {
       "slug": "chatglm2-6b",
       "overallIndex": 19.5,
-      "rankOverall": 270,
+      "rankOverall": 301,
       "ranked": true,
       "arenaElo": null,
       "categoryIdx": {
@@ -484,7 +516,7 @@
     {
       "slug": "chatglm3-6b",
       "overallIndex": 48.5,
-      "rankOverall": 220,
+      "rankOverall": 248,
       "ranked": true,
       "arenaElo": null,
       "categoryIdx": {
@@ -500,7 +532,7 @@
     {
       "slug": "chinchilla",
       "overallIndex": 71.6,
-      "rankOverall": 89,
+      "rankOverall": 107,
       "ranked": true,
       "arenaElo": null,
       "categoryIdx": {
@@ -563,15 +595,15 @@
     },
     {
       "slug": "claude-3-5-haiku",
-      "overallIndex": 58.7,
-      "rankOverall": 172,
+      "overallIndex": 57.6,
+      "rankOverall": 205,
       "ranked": true,
       "arenaElo": null,
       "categoryIdx": {
         "human-preference": null,
         "knowledge": 70.7,
         "reasoning": 27.3,
-        "coding": 67,
+        "coding": 64.3,
         "math": 61.5,
         "vision": null,
         "agents": null
@@ -579,31 +611,47 @@
     },
     {
       "slug": "claude-3-5-sonnet",
-      "overallIndex": 75.9,
-      "rankOverall": 55,
+      "overallIndex": 75.4,
+      "rankOverall": 73,
       "ranked": true,
       "arenaElo": null,
       "categoryIdx": {
         "human-preference": null,
         "knowledge": 85.4,
         "reasoning": 79.1,
-        "coding": 64.7,
+        "coding": 62.6,
         "math": 80,
         "vision": 71,
         "agents": null
       }
     },
     {
+      "slug": "claude-3-5-sonnet-new",
+      "overallIndex": 52.3,
+      "rankOverall": 230,
+      "ranked": true,
+      "arenaElo": null,
+      "categoryIdx": {
+        "human-preference": null,
+        "knowledge": null,
+        "reasoning": null,
+        "coding": 50.5,
+        "math": null,
+        "vision": null,
+        "agents": 53.2
+      }
+    },
+    {
       "slug": "claude-3-7-sonnet",
-      "overallIndex": 52.7,
-      "rankOverall": 203,
+      "overallIndex": 49.9,
+      "rankOverall": 242,
       "ranked": true,
       "arenaElo": null,
       "categoryIdx": {
         "human-preference": null,
         "knowledge": null,
         "reasoning": 60.8,
-        "coding": 74.1,
+        "coding": 65.7,
         "math": 23.3,
         "vision": null,
         "agents": null
@@ -612,7 +660,7 @@
     {
       "slug": "claude-3-haiku",
       "overallIndex": 63.4,
-      "rankOverall": 150,
+      "rankOverall": 176,
       "ranked": true,
       "arenaElo": null,
       "categoryIdx": {
@@ -627,15 +675,15 @@
     },
     {
       "slug": "claude-3-opus",
-      "overallIndex": 74.9,
-      "rankOverall": 65,
+      "overallIndex": 74.7,
+      "rankOverall": 82,
       "ranked": true,
       "arenaElo": null,
       "categoryIdx": {
         "human-preference": null,
         "knowledge": 82.1,
         "reasoning": 81.9,
-        "coding": 65.9,
+        "coding": 64.9,
         "math": 72.4,
         "vision": 57.9,
         "agents": null
@@ -644,7 +692,7 @@
     {
       "slug": "claude-3-sonnet",
       "overallIndex": 67.6,
-      "rankOverall": 118,
+      "rankOverall": 138,
       "ranked": true,
       "arenaElo": null,
       "categoryIdx": {
@@ -658,16 +706,32 @@
       }
     },
     {
+      "slug": "claude-fable-5",
+      "overallIndex": 96.2,
+      "rankOverall": null,
+      "ranked": false,
+      "arenaElo": null,
+      "categoryIdx": {
+        "human-preference": null,
+        "knowledge": null,
+        "reasoning": null,
+        "coding": 96.2,
+        "math": null,
+        "vision": null,
+        "agents": null
+      }
+    },
+    {
       "slug": "claude-haiku-4-5",
-      "overallIndex": 75.7,
-      "rankOverall": 58,
+      "overallIndex": 72.5,
+      "rankOverall": 99,
       "ranked": true,
       "arenaElo": null,
       "categoryIdx": {
         "human-preference": null,
         "knowledge": 85.5,
         "reasoning": 56.5,
-        "coding": 85.2,
+        "coding": 75.6,
         "math": null,
         "vision": null,
         "agents": null
@@ -691,15 +755,15 @@
     },
     {
       "slug": "claude-opus-4",
-      "overallIndex": 75.9,
-      "rankOverall": 56,
+      "overallIndex": 74.5,
+      "rankOverall": 85,
       "ranked": true,
       "arenaElo": null,
       "categoryIdx": {
         "human-preference": null,
         "knowledge": 85.6,
         "reasoning": 75.4,
-        "coding": 65.1,
+        "coding": 60.3,
         "math": 75.5,
         "vision": 83.1,
         "agents": 81.4
@@ -707,15 +771,15 @@
     },
     {
       "slug": "claude-opus-4-1",
-      "overallIndex": 71.9,
-      "rankOverall": 87,
+      "overallIndex": 69.5,
+      "rankOverall": 122,
       "ranked": true,
       "arenaElo": null,
       "categoryIdx": {
         "human-preference": null,
         "knowledge": null,
         "reasoning": 77.1,
-        "coding": 66.3,
+        "coding": 61.4,
         "math": 78,
         "vision": null,
         "agents": null
@@ -723,15 +787,15 @@
     },
     {
       "slug": "claude-opus-4-5",
-      "overallIndex": 90,
-      "rankOverall": 6,
+      "overallIndex": 84.3,
+      "rankOverall": 16,
       "ranked": true,
       "arenaElo": null,
       "categoryIdx": {
         "human-preference": null,
         "knowledge": 89.1,
-        "reasoning": 87.4,
-        "coding": 94.1,
+        "reasoning": 75.6,
+        "coding": 83.4,
         "math": 93,
         "vision": 89.3,
         "agents": null
@@ -739,15 +803,15 @@
     },
     {
       "slug": "claude-opus-4-5-high",
-      "overallIndex": 85.1,
-      "rankOverall": 19,
+      "overallIndex": 79.4,
+      "rankOverall": 41,
       "ranked": true,
       "arenaElo": null,
       "categoryIdx": {
         "human-preference": null,
         "knowledge": 89.1,
-        "reasoning": 87.4,
-        "coding": 78.6,
+        "reasoning": 75.6,
+        "coding": 73.2,
         "math": null,
         "vision": 89.3,
         "agents": null
@@ -771,31 +835,63 @@
     },
     {
       "slug": "claude-opus-4-6",
-      "overallIndex": 90.6,
-      "rankOverall": 5,
+      "overallIndex": 77.1,
+      "rankOverall": 55,
       "ranked": true,
       "arenaElo": null,
       "categoryIdx": {
         "human-preference": null,
         "knowledge": null,
-        "reasoning": 86.8,
-        "coding": 94.4,
+        "reasoning": 75.9,
+        "coding": 78.4,
         "math": null,
         "vision": null,
         "agents": null
       }
     },
     {
+      "slug": "claude-opus-4-7",
+      "overallIndex": 85.5,
+      "rankOverall": 13,
+      "ranked": true,
+      "arenaElo": null,
+      "categoryIdx": {
+        "human-preference": null,
+        "knowledge": 100,
+        "reasoning": 83,
+        "coding": 81.3,
+        "math": null,
+        "vision": 91.3,
+        "agents": 82.6
+      }
+    },
+    {
+      "slug": "claude-opus-4-8",
+      "overallIndex": 87.6,
+      "rankOverall": 6,
+      "ranked": true,
+      "arenaElo": null,
+      "categoryIdx": {
+        "human-preference": null,
+        "knowledge": null,
+        "reasoning": 84.9,
+        "coding": 85.5,
+        "math": null,
+        "vision": null,
+        "agents": 93.6
+      }
+    },
+    {
       "slug": "claude-sonnet-4",
-      "overallIndex": 72.1,
-      "rankOverall": 84,
+      "overallIndex": 70.8,
+      "rankOverall": 115,
       "ranked": true,
       "arenaElo": null,
       "categoryIdx": {
         "human-preference": null,
         "knowledge": 81.6,
         "reasoning": 70.1,
-        "coding": 61.2,
+        "coding": 56.4,
         "math": 70.5,
         "vision": 80,
         "agents": 80.5
@@ -803,18 +899,50 @@
     },
     {
       "slug": "claude-sonnet-4-5",
-      "overallIndex": 85.4,
-      "rankOverall": 18,
+      "overallIndex": 82,
+      "rankOverall": 31,
       "ranked": true,
       "arenaElo": null,
       "categoryIdx": {
         "human-preference": null,
         "knowledge": 86.1,
         "reasoning": 80.3,
-        "coding": 89.8,
+        "coding": 79.6,
         "math": null,
         "vision": null,
         "agents": null
+      }
+    },
+    {
+      "slug": "claude-sonnet-4-6",
+      "overallIndex": 76,
+      "rankOverall": 66,
+      "ranked": true,
+      "arenaElo": null,
+      "categoryIdx": {
+        "human-preference": null,
+        "knowledge": null,
+        "reasoning": 74.7,
+        "coding": 75.2,
+        "math": null,
+        "vision": null,
+        "agents": 80.6
+      }
+    },
+    {
+      "slug": "claude-sonnet-5",
+      "overallIndex": 86.9,
+      "rankOverall": 7,
+      "ranked": true,
+      "arenaElo": null,
+      "categoryIdx": {
+        "human-preference": null,
+        "knowledge": null,
+        "reasoning": 92.4,
+        "coding": 84.2,
+        "math": null,
+        "vision": null,
+        "agents": 85.6
       }
     },
     {
@@ -1074,6 +1202,22 @@
       }
     },
     {
+      "slug": "comma-v0-1-2t",
+      "overallIndex": 45.4,
+      "rankOverall": 256,
+      "ranked": true,
+      "arenaElo": null,
+      "categoryIdx": {
+        "human-preference": null,
+        "knowledge": 17.2,
+        "reasoning": 52.8,
+        "coding": 37.3,
+        "math": null,
+        "vision": null,
+        "agents": null
+      }
+    },
+    {
       "slug": "command",
       "overallIndex": 0,
       "rankOverall": null,
@@ -1091,18 +1235,34 @@
     },
     {
       "slug": "command-a",
-      "overallIndex": 70.1,
-      "rankOverall": 97,
+      "overallIndex": 71.1,
+      "rankOverall": 109,
       "ranked": true,
       "arenaElo": null,
       "categoryIdx": {
         "human-preference": null,
         "knowledge": 79.8,
         "reasoning": 66.1,
-        "coding": 88.6,
+        "coding": 95.3,
         "math": 75,
         "vision": null,
         "agents": 57.6
+      }
+    },
+    {
+      "slug": "command-a-218b",
+      "overallIndex": 75.5,
+      "rankOverall": 70,
+      "ranked": true,
+      "arenaElo": null,
+      "categoryIdx": {
+        "human-preference": null,
+        "knowledge": null,
+        "reasoning": null,
+        "coding": null,
+        "math": null,
+        "vision": 74.4,
+        "agents": 79.7
       }
     },
     {
@@ -1123,15 +1283,15 @@
     },
     {
       "slug": "command-r7b",
-      "overallIndex": 49.3,
-      "rankOverall": 216,
+      "overallIndex": 50.2,
+      "rankOverall": 241,
       "ranked": true,
       "arenaElo": null,
       "categoryIdx": {
         "human-preference": null,
         "knowledge": 44.2,
         "reasoning": 42.1,
-        "coding": 72.1,
+        "coding": 77.5,
         "math": 48.9,
         "vision": null,
         "agents": 46.7
@@ -1140,7 +1300,7 @@
     {
       "slug": "dbrx",
       "overallIndex": 69.1,
-      "rankOverall": 107,
+      "rankOverall": 127,
       "ranked": true,
       "arenaElo": null,
       "categoryIdx": {
@@ -1156,7 +1316,7 @@
     {
       "slug": "decilm-7b",
       "overallIndex": 54.6,
-      "rankOverall": 193,
+      "rankOverall": 220,
       "ranked": true,
       "arenaElo": null,
       "categoryIdx": {
@@ -1187,15 +1347,15 @@
     },
     {
       "slug": "deepseek-coder-v2-236b",
-      "overallIndex": 73.4,
-      "rankOverall": 77,
+      "overallIndex": 74.4,
+      "rankOverall": 89,
       "ranked": true,
       "arenaElo": null,
       "categoryIdx": {
         "human-preference": null,
         "knowledge": 64,
         "reasoning": null,
-        "coding": 70.8,
+        "coding": 72.7,
         "math": 82.1,
         "vision": null,
         "agents": null
@@ -1204,7 +1364,7 @@
     {
       "slug": "deepseek-llm-67b",
       "overallIndex": 57.3,
-      "rankOverall": 178,
+      "rankOverall": 207,
       "ranked": true,
       "arenaElo": null,
       "categoryIdx": {
@@ -1235,15 +1395,15 @@
     },
     {
       "slug": "deepseek-r1-0528",
-      "overallIndex": 73.8,
-      "rankOverall": 69,
+      "overallIndex": 70.9,
+      "rankOverall": 112,
       "ranked": true,
       "arenaElo": null,
       "categoryIdx": {
         "human-preference": null,
         "knowledge": 92.1,
-        "reasoning": 57,
-        "coding": 72.5,
+        "reasoning": 52.2,
+        "coding": 68.7,
         "math": 91.4,
         "vision": null,
         "agents": null
@@ -1251,15 +1411,15 @@
     },
     {
       "slug": "deepseek-r1-671b",
-      "overallIndex": 74,
-      "rankOverall": 67,
+      "overallIndex": 72.5,
+      "rankOverall": 100,
       "ranked": true,
       "arenaElo": null,
       "categoryIdx": {
         "human-preference": null,
         "knowledge": 89.1,
         "reasoning": 65.2,
-        "coding": 62.3,
+        "coding": 59,
         "math": 88.2,
         "vision": null,
         "agents": null
@@ -1267,15 +1427,15 @@
     },
     {
       "slug": "deepseek-r1-distill-llama-70b",
-      "overallIndex": 64.4,
-      "rankOverall": 140,
+      "overallIndex": 64.8,
+      "rankOverall": 160,
       "ranked": true,
       "arenaElo": null,
       "categoryIdx": {
         "human-preference": null,
         "knowledge": null,
         "reasoning": 57.2,
-        "coding": 50.8,
+        "coding": 51.8,
         "math": 81.6,
         "vision": null,
         "agents": null
@@ -1283,15 +1443,15 @@
     },
     {
       "slug": "deepseek-r1-distill-qwen-32b",
-      "overallIndex": 64.6,
-      "rankOverall": 138,
+      "overallIndex": 64.8,
+      "rankOverall": 161,
       "ranked": true,
       "arenaElo": null,
       "categoryIdx": {
         "human-preference": null,
         "knowledge": null,
         "reasoning": 53.3,
-        "coding": 52.1,
+        "coding": 52.7,
         "math": 82.7,
         "vision": null,
         "agents": null
@@ -1299,15 +1459,15 @@
     },
     {
       "slug": "deepseek-r1-zero",
-      "overallIndex": 63.6,
-      "rankOverall": 147,
+      "overallIndex": 64.5,
+      "rankOverall": 165,
       "ranked": true,
       "arenaElo": null,
       "categoryIdx": {
         "human-preference": null,
         "knowledge": null,
         "reasoning": 67.5,
-        "coding": 42.2,
+        "coding": 44.6,
         "math": 82.9,
         "vision": null,
         "agents": null
@@ -1316,7 +1476,7 @@
     {
       "slug": "deepseek-v2-236b",
       "overallIndex": 71,
-      "rankOverall": 91,
+      "rankOverall": 110,
       "ranked": true,
       "arenaElo": null,
       "categoryIdx": {
@@ -1332,7 +1492,7 @@
     {
       "slug": "deepseek-v2-5",
       "overallIndex": 69,
-      "rankOverall": 108,
+      "rankOverall": 128,
       "ranked": true,
       "arenaElo": null,
       "categoryIdx": {
@@ -1348,7 +1508,7 @@
     {
       "slug": "deepseek-v3-0324",
       "overallIndex": 65,
-      "rankOverall": 133,
+      "rankOverall": 159,
       "ranked": true,
       "arenaElo": null,
       "categoryIdx": {
@@ -1363,15 +1523,15 @@
     },
     {
       "slug": "deepseek-v3-1-non-thinking",
-      "overallIndex": 75.6,
-      "rankOverall": 60,
+      "overallIndex": 74.5,
+      "rankOverall": 86,
       "ranked": true,
       "arenaElo": null,
       "categoryIdx": {
         "human-preference": null,
-        "knowledge": 90.6,
+        "knowledge": 91.4,
         "reasoning": 69.5,
-        "coding": 68.4,
+        "coding": 64,
         "math": 66.3,
         "vision": null,
         "agents": null
@@ -1379,14 +1539,14 @@
     },
     {
       "slug": "deepseek-v3-1-thinking",
-      "overallIndex": 78,
-      "rankOverall": 40,
+      "overallIndex": 76.8,
+      "rankOverall": 61,
       "ranked": true,
       "arenaElo": null,
       "categoryIdx": {
         "human-preference": null,
-        "knowledge": 93,
-        "reasoning": 54.6,
+        "knowledge": 93.9,
+        "reasoning": 50.3,
         "coding": 79.6,
         "math": 93.1,
         "vision": null,
@@ -1394,17 +1554,129 @@
       }
     },
     {
+      "slug": "deepseek-v3-2-exp",
+      "overallIndex": 65.8,
+      "rankOverall": 153,
+      "ranked": true,
+      "arenaElo": null,
+      "categoryIdx": {
+        "human-preference": null,
+        "knowledge": 92.1,
+        "reasoning": 53.1,
+        "coding": 65.7,
+        "math": 89.3,
+        "vision": null,
+        "agents": 41.8
+      }
+    },
+    {
       "slug": "deepseek-v3-671b",
-      "overallIndex": 67.4,
-      "rankOverall": 120,
+      "overallIndex": 66.6,
+      "rankOverall": 150,
       "ranked": true,
       "arenaElo": null,
       "categoryIdx": {
         "human-preference": null,
         "knowledge": 82.6,
         "reasoning": 49.5,
-        "coding": 56.5,
+        "coding": 54.7,
         "math": 87.8,
+        "vision": null,
+        "agents": null
+      }
+    },
+    {
+      "slug": "deepseek-v4-flash-non-think",
+      "overallIndex": 60.3,
+      "rankOverall": 193,
+      "ranked": true,
+      "arenaElo": null,
+      "categoryIdx": {
+        "human-preference": null,
+        "knowledge": 89.5,
+        "reasoning": 38.6,
+        "coding": 67.4,
+        "math": null,
+        "vision": null,
+        "agents": null
+      }
+    },
+    {
+      "slug": "deepseek-v4-flash-think-high",
+      "overallIndex": 76.3,
+      "rankOverall": 64,
+      "ranked": true,
+      "arenaElo": null,
+      "categoryIdx": {
+        "human-preference": null,
+        "knowledge": 93.9,
+        "reasoning": 65.3,
+        "coding": 77.2,
+        "math": null,
+        "vision": null,
+        "agents": null
+      }
+    },
+    {
+      "slug": "deepseek-v4-flash-think-max",
+      "overallIndex": 80.8,
+      "rankOverall": 35,
+      "ranked": true,
+      "arenaElo": null,
+      "categoryIdx": {
+        "human-preference": null,
+        "knowledge": 93.7,
+        "reasoning": 69.9,
+        "coding": 83.1,
+        "math": null,
+        "vision": null,
+        "agents": null
+      }
+    },
+    {
+      "slug": "deepseek-v4-pro-non-think",
+      "overallIndex": 60.9,
+      "rankOverall": 191,
+      "ranked": true,
+      "arenaElo": null,
+      "categoryIdx": {
+        "human-preference": null,
+        "knowledge": 89.3,
+        "reasoning": 39.4,
+        "coding": 68.2,
+        "math": null,
+        "vision": null,
+        "agents": null
+      }
+    },
+    {
+      "slug": "deepseek-v4-pro-think-high",
+      "overallIndex": 80.5,
+      "rankOverall": 37,
+      "ranked": true,
+      "arenaElo": null,
+      "categoryIdx": {
+        "human-preference": null,
+        "knowledge": 94.9,
+        "reasoning": 70.3,
+        "coding": 82.1,
+        "math": null,
+        "vision": null,
+        "agents": null
+      }
+    },
+    {
+      "slug": "deepseek-v4-pro-think-max",
+      "overallIndex": 83.4,
+      "rankOverall": 20,
+      "ranked": true,
+      "arenaElo": null,
+      "categoryIdx": {
+        "human-preference": null,
+        "knowledge": 95.4,
+        "reasoning": 73.4,
+        "coding": 84.2,
+        "math": 87.5,
         "vision": null,
         "agents": null
       }
@@ -1460,7 +1732,7 @@
     {
       "slug": "deepseekmoe-16b",
       "overallIndex": 27.9,
-      "rankOverall": 263,
+      "rankOverall": 294,
       "ranked": true,
       "arenaElo": null,
       "categoryIdx": {
@@ -1475,7 +1747,7 @@
     },
     {
       "slug": "devstral-small",
-      "overallIndex": 54.4,
+      "overallIndex": 48.2,
       "rankOverall": null,
       "ranked": false,
       "arenaElo": null,
@@ -1483,7 +1755,7 @@
         "human-preference": null,
         "knowledge": null,
         "reasoning": null,
-        "coding": 54.4,
+        "coding": 48.2,
         "math": null,
         "vision": null,
         "agents": null
@@ -1587,14 +1859,14 @@
     },
     {
       "slug": "ernie-4-5-300b-a47b",
-      "overallIndex": 56.3,
-      "rankOverall": 185,
+      "overallIndex": 45.5,
+      "rankOverall": 254,
       "ranked": true,
       "arenaElo": null,
       "categoryIdx": {
         "human-preference": null,
         "knowledge": 83.4,
-        "reasoning": 42.8,
+        "reasoning": 26.5,
         "coding": null,
         "math": null,
         "vision": null,
@@ -1619,14 +1891,14 @@
     },
     {
       "slug": "ernie-5-0-preview",
-      "overallIndex": 50.3,
+      "overallIndex": 46.7,
       "rankOverall": null,
       "ranked": false,
       "arenaElo": null,
       "categoryIdx": {
         "human-preference": null,
         "knowledge": null,
-        "reasoning": 50.3,
+        "reasoning": 46.7,
         "coding": null,
         "math": null,
         "vision": null,
@@ -1666,6 +1938,22 @@
       }
     },
     {
+      "slug": "exaone-4-5",
+      "overallIndex": 86.6,
+      "rankOverall": null,
+      "ranked": false,
+      "arenaElo": null,
+      "categoryIdx": {
+        "human-preference": null,
+        "knowledge": null,
+        "reasoning": null,
+        "coding": 86.6,
+        "math": null,
+        "vision": null,
+        "agents": null
+      }
+    },
+    {
       "slug": "falcon-180b",
       "overallIndex": 0,
       "rankOverall": null,
@@ -1684,7 +1972,7 @@
     {
       "slug": "falcon-2-11b",
       "overallIndex": 57.1,
-      "rankOverall": 179,
+      "rankOverall": 208,
       "ranked": true,
       "arenaElo": null,
       "categoryIdx": {
@@ -1732,7 +2020,7 @@
     {
       "slug": "falcon-h1-34b",
       "overallIndex": 68.6,
-      "rankOverall": 110,
+      "rankOverall": 130,
       "ranked": true,
       "arenaElo": null,
       "categoryIdx": {
@@ -1747,14 +2035,14 @@
     },
     {
       "slug": "falcon-h1r-7b",
-      "overallIndex": 68.1,
-      "rankOverall": 114,
+      "overallIndex": 67.1,
+      "rankOverall": 146,
       "ranked": true,
       "arenaElo": null,
       "categoryIdx": {
         "human-preference": null,
         "knowledge": 75.1,
-        "reasoning": 37.7,
+        "reasoning": 34.7,
         "coding": 73,
         "math": 92.4,
         "vision": null,
@@ -1764,7 +2052,7 @@
     {
       "slug": "falcon-mamba-7b",
       "overallIndex": 56.4,
-      "rankOverall": 184,
+      "rankOverall": 213,
       "ranked": true,
       "arenaElo": null,
       "categoryIdx": {
@@ -1780,7 +2068,7 @@
     {
       "slug": "falcon3-10b",
       "overallIndex": 45.9,
-      "rankOverall": 224,
+      "rankOverall": 253,
       "ranked": true,
       "arenaElo": null,
       "categoryIdx": {
@@ -1796,7 +2084,7 @@
     {
       "slug": "falcon3-7b",
       "overallIndex": 45.5,
-      "rankOverall": 225,
+      "rankOverall": 255,
       "ranked": true,
       "arenaElo": null,
       "categoryIdx": {
@@ -1828,7 +2116,7 @@
     {
       "slug": "galactica-120b",
       "overallIndex": 38.6,
-      "rankOverall": 244,
+      "rankOverall": 275,
       "ranked": true,
       "arenaElo": null,
       "categoryIdx": {
@@ -1892,7 +2180,7 @@
     {
       "slug": "gemini-1-5-flash",
       "overallIndex": 65.8,
-      "rankOverall": 128,
+      "rankOverall": 154,
       "ranked": true,
       "arenaElo": null,
       "categoryIdx": {
@@ -1908,7 +2196,7 @@
     {
       "slug": "gemini-1-5-flash-8b",
       "overallIndex": 37.3,
-      "rankOverall": 246,
+      "rankOverall": 277,
       "ranked": true,
       "arenaElo": null,
       "categoryIdx": {
@@ -1940,7 +2228,7 @@
     {
       "slug": "gemini-2-0-flash",
       "overallIndex": 66.9,
-      "rankOverall": 124,
+      "rankOverall": 148,
       "ranked": true,
       "arenaElo": null,
       "categoryIdx": {
@@ -1956,7 +2244,7 @@
     {
       "slug": "gemini-2-0-flash-lite",
       "overallIndex": 59.8,
-      "rankOverall": 169,
+      "rankOverall": 197,
       "ranked": true,
       "arenaElo": null,
       "categoryIdx": {
@@ -1966,6 +2254,22 @@
         "coding": 30.7,
         "math": 83.5,
         "vision": 70.6,
+        "agents": null
+      }
+    },
+    {
+      "slug": "gemini-2-0-flash-thinking-experimental",
+      "overallIndex": 74.5,
+      "rankOverall": 87,
+      "ranked": true,
+      "arenaElo": null,
+      "categoryIdx": {
+        "human-preference": null,
+        "knowledge": null,
+        "reasoning": 68.6,
+        "coding": null,
+        "math": 73.3,
+        "vision": 81.5,
         "agents": null
       }
     },
@@ -1987,15 +2291,15 @@
     },
     {
       "slug": "gemini-2-5-flash",
-      "overallIndex": 69.3,
-      "rankOverall": 104,
+      "overallIndex": 67.3,
+      "rankOverall": 143,
       "ranked": true,
       "arenaElo": null,
       "categoryIdx": {
         "human-preference": null,
         "knowledge": 84.9,
-        "reasoning": 51.2,
-        "coding": 69.1,
+        "reasoning": 48.2,
+        "coding": 65.1,
         "math": 72,
         "vision": 87.8,
         "agents": null
@@ -2003,15 +2307,15 @@
     },
     {
       "slug": "gemini-2-5-flash-lite-non-thinking",
-      "overallIndex": 43.6,
-      "rankOverall": 230,
+      "overallIndex": 42.4,
+      "rankOverall": 264,
       "ranked": true,
       "arenaElo": null,
       "categoryIdx": {
         "human-preference": null,
         "knowledge": 72.1,
-        "reasoning": 33.5,
-        "coding": 36.3,
+        "reasoning": 32.2,
+        "coding": 34.2,
         "math": 49.8,
         "vision": null,
         "agents": null
@@ -2019,15 +2323,15 @@
     },
     {
       "slug": "gemini-2-5-flash-lite-thinking",
-      "overallIndex": 47.2,
-      "rankOverall": 222,
+      "overallIndex": 46,
+      "rankOverall": 252,
       "ranked": true,
       "arenaElo": null,
       "categoryIdx": {
         "human-preference": null,
         "knowledge": 78.1,
-        "reasoning": 36.7,
-        "coding": 34.3,
+        "reasoning": 34.9,
+        "coding": 32.5,
         "math": 63.1,
         "vision": null,
         "agents": null
@@ -2035,15 +2339,15 @@
     },
     {
       "slug": "gemini-2-5-pro",
-      "overallIndex": 56.7,
+      "overallIndex": 47.3,
       "rankOverall": null,
       "ranked": false,
       "arenaElo": null,
       "categoryIdx": {
         "human-preference": null,
         "knowledge": null,
-        "reasoning": 39.2,
-        "coding": 74.2,
+        "reasoning": 28.9,
+        "coding": 65.8,
         "math": null,
         "vision": null,
         "agents": null
@@ -2052,7 +2356,7 @@
     {
       "slug": "gemini-3-1-flash-lite",
       "overallIndex": 87.8,
-      "rankOverall": 9,
+      "rankOverall": 4,
       "ranked": true,
       "arenaElo": 1432,
       "categoryIdx": {
@@ -2067,7 +2371,7 @@
     },
     {
       "slug": "gemini-3-1-pro",
-      "overallIndex": 93.3,
+      "overallIndex": 91.1,
       "rankOverall": 1,
       "ranked": true,
       "arenaElo": null,
@@ -2075,7 +2379,7 @@
         "human-preference": null,
         "knowledge": null,
         "reasoning": 94,
-        "coding": 94.3,
+        "coding": 89,
         "math": null,
         "vision": 89.7,
         "agents": null
@@ -2083,56 +2387,56 @@
     },
     {
       "slug": "gemini-3-5-flash",
-      "overallIndex": 83.3,
-      "rankOverall": 24,
+      "overallIndex": 83.5,
+      "rankOverall": 19,
       "ranked": true,
       "arenaElo": null,
       "categoryIdx": {
         "human-preference": null,
         "knowledge": null,
-        "reasoning": null,
-        "coding": 72.6,
+        "reasoning": 76.6,
+        "coding": 75.2,
         "math": null,
-        "vision": 93.9,
+        "vision": 93.5,
         "agents": null
       }
     },
     {
       "slug": "gemini-3-flash",
-      "overallIndex": 84.6,
-      "rankOverall": 20,
+      "overallIndex": 80.6,
+      "rankOverall": 36,
       "ranked": true,
       "arenaElo": null,
       "categoryIdx": {
         "human-preference": null,
         "knowledge": 90.9,
-        "reasoning": 79.7,
-        "coding": 78.4,
+        "reasoning": 70.5,
+        "coding": 73.3,
         "math": 95.2,
-        "vision": 90,
+        "vision": 90.7,
         "agents": null
       }
     },
     {
       "slug": "gemini-3-pro",
-      "overallIndex": 86.5,
-      "rankOverall": 12,
+      "overallIndex": 82.3,
+      "rankOverall": 30,
       "ranked": true,
       "arenaElo": null,
       "categoryIdx": {
         "human-preference": null,
         "knowledge": 90.9,
-        "reasoning": 84.6,
-        "coding": 80.5,
+        "reasoning": 74.4,
+        "coding": 75.4,
         "math": 95,
-        "vision": 89.7,
+        "vision": 90.4,
         "agents": null
       }
     },
     {
       "slug": "gemma-2-27b",
       "overallIndex": 67.4,
-      "rankOverall": 121,
+      "rankOverall": 141,
       "ranked": true,
       "arenaElo": null,
       "categoryIdx": {
@@ -2148,7 +2452,7 @@
     {
       "slug": "gemma-2-9b",
       "overallIndex": 59.9,
-      "rankOverall": 168,
+      "rankOverall": 196,
       "ranked": true,
       "arenaElo": null,
       "categoryIdx": {
@@ -2164,7 +2468,7 @@
     {
       "slug": "gemma-2b",
       "overallIndex": 23.1,
-      "rankOverall": 265,
+      "rankOverall": 296,
       "ranked": true,
       "arenaElo": null,
       "categoryIdx": {
@@ -2180,7 +2484,7 @@
     {
       "slug": "gemma-3-12b",
       "overallIndex": 54.3,
-      "rankOverall": 195,
+      "rankOverall": 222,
       "ranked": true,
       "arenaElo": null,
       "categoryIdx": {
@@ -2196,7 +2500,7 @@
     {
       "slug": "gemma-3-27b",
       "overallIndex": 61.7,
-      "rankOverall": 161,
+      "rankOverall": 187,
       "ranked": true,
       "arenaElo": 1338,
       "categoryIdx": {
@@ -2212,7 +2516,7 @@
     {
       "slug": "gemma-3-4b",
       "overallIndex": 38.9,
-      "rankOverall": 243,
+      "rankOverall": 274,
       "ranked": true,
       "arenaElo": null,
       "categoryIdx": {
@@ -2228,7 +2532,7 @@
     {
       "slug": "gemma-4",
       "overallIndex": 87.7,
-      "rankOverall": 11,
+      "rankOverall": 5,
       "ranked": true,
       "arenaElo": null,
       "categoryIdx": {
@@ -2244,7 +2548,7 @@
     {
       "slug": "gemma-7b",
       "overallIndex": 46.1,
-      "rankOverall": 223,
+      "rankOverall": 251,
       "ranked": true,
       "arenaElo": null,
       "categoryIdx": {
@@ -2292,7 +2596,7 @@
     {
       "slug": "glm-4",
       "overallIndex": 75.7,
-      "rankOverall": 59,
+      "rankOverall": 68,
       "ranked": true,
       "arenaElo": null,
       "categoryIdx": {
@@ -2308,7 +2612,7 @@
     {
       "slug": "glm-4-32b-0414",
       "overallIndex": 79.2,
-      "rankOverall": 34,
+      "rankOverall": 42,
       "ranked": true,
       "arenaElo": null,
       "categoryIdx": {
@@ -2323,15 +2627,15 @@
     },
     {
       "slug": "glm-4-5-355b-a32b",
-      "overallIndex": 72.8,
-      "rankOverall": 81,
+      "overallIndex": 70.5,
+      "rankOverall": 117,
       "ranked": true,
       "arenaElo": null,
       "categoryIdx": {
         "human-preference": null,
         "knowledge": 91.6,
-        "reasoning": 52.4,
-        "coding": 76.1,
+        "reasoning": 48.5,
+        "coding": 71.9,
         "math": 91,
         "vision": null,
         "agents": 70.1
@@ -2339,24 +2643,40 @@
     },
     {
       "slug": "glm-4-5-air-106b-a12b",
-      "overallIndex": 68.4,
-      "rankOverall": 112,
+      "overallIndex": 66.2,
+      "rankOverall": 151,
       "ranked": true,
       "arenaElo": null,
       "categoryIdx": {
         "human-preference": null,
         "knowledge": 87.4,
-        "reasoning": 45.9,
-        "coding": 71.1,
+        "reasoning": 43,
+        "coding": 67.3,
         "math": 89.4,
         "vision": null,
         "agents": null
       }
     },
     {
+      "slug": "glm-4-6",
+      "overallIndex": 69.4,
+      "rankOverall": 124,
+      "ranked": true,
+      "arenaElo": null,
+      "categoryIdx": {
+        "human-preference": null,
+        "knowledge": null,
+        "reasoning": 77.2,
+        "coding": 67.1,
+        "math": 93.9,
+        "vision": null,
+        "agents": 56.8
+      }
+    },
+    {
       "slug": "glm-4-9b-chat",
       "overallIndex": 64.8,
-      "rankOverall": 134,
+      "rankOverall": 162,
       "ranked": true,
       "arenaElo": null,
       "categoryIdx": {
@@ -2402,6 +2722,70 @@
       }
     },
     {
+      "slug": "glm-5",
+      "overallIndex": 70.9,
+      "rankOverall": 113,
+      "ranked": true,
+      "arenaElo": null,
+      "categoryIdx": {
+        "human-preference": null,
+        "knowledge": null,
+        "reasoning": 65.2,
+        "coding": 64.3,
+        "math": 92.7,
+        "vision": null,
+        "agents": 75.6
+      }
+    },
+    {
+      "slug": "glm-5-1",
+      "overallIndex": 78.2,
+      "rankOverall": 49,
+      "ranked": true,
+      "arenaElo": null,
+      "categoryIdx": {
+        "human-preference": null,
+        "knowledge": null,
+        "reasoning": 83.8,
+        "coding": 73,
+        "math": 95.3,
+        "vision": null,
+        "agents": 70.8
+      }
+    },
+    {
+      "slug": "glm-5-2-high",
+      "overallIndex": 0,
+      "rankOverall": null,
+      "ranked": false,
+      "arenaElo": null,
+      "categoryIdx": {
+        "human-preference": null,
+        "knowledge": null,
+        "reasoning": null,
+        "coding": null,
+        "math": null,
+        "vision": null,
+        "agents": null
+      }
+    },
+    {
+      "slug": "glm-5-2-max",
+      "overallIndex": 83.1,
+      "rankOverall": 21,
+      "ranked": true,
+      "arenaElo": null,
+      "categoryIdx": {
+        "human-preference": null,
+        "knowledge": null,
+        "reasoning": 76.2,
+        "coding": 82,
+        "math": 99.2,
+        "vision": null,
+        "agents": null
+      }
+    },
+    {
       "slug": "glm-z1-32b-0414",
       "overallIndex": 0,
       "rankOverall": null,
@@ -2420,7 +2804,7 @@
     {
       "slug": "gopher",
       "overallIndex": 64.8,
-      "rankOverall": 135,
+      "rankOverall": 163,
       "ranked": true,
       "arenaElo": null,
       "categoryIdx": {
@@ -2452,7 +2836,7 @@
     {
       "slug": "gpt-3-175b",
       "overallIndex": 77.2,
-      "rankOverall": 46,
+      "rankOverall": 53,
       "ranked": true,
       "arenaElo": null,
       "categoryIdx": {
@@ -2468,7 +2852,7 @@
     {
       "slug": "gpt-3-5-turbo",
       "overallIndex": 63.9,
-      "rankOverall": 144,
+      "rankOverall": 170,
       "ranked": true,
       "arenaElo": null,
       "categoryIdx": {
@@ -2484,7 +2868,7 @@
     {
       "slug": "gpt-4",
       "overallIndex": 85.6,
-      "rankOverall": 16,
+      "rankOverall": 11,
       "ranked": true,
       "arenaElo": null,
       "categoryIdx": {
@@ -2499,15 +2883,15 @@
     },
     {
       "slug": "gpt-4-1",
-      "overallIndex": 70.2,
-      "rankOverall": 96,
+      "overallIndex": 67.8,
+      "rankOverall": 137,
       "ranked": true,
       "arenaElo": null,
       "categoryIdx": {
         "human-preference": null,
         "knowledge": 88.1,
         "reasoning": 58.6,
-        "coding": 64,
+        "coding": 56.7,
         "math": null,
         "vision": null,
         "agents": null
@@ -2515,15 +2899,15 @@
     },
     {
       "slug": "gpt-4-1-mini",
-      "overallIndex": 60.3,
-      "rankOverall": 165,
+      "overallIndex": 59.7,
+      "rankOverall": 199,
       "ranked": true,
       "arenaElo": null,
       "categoryIdx": {
         "human-preference": null,
         "knowledge": 83.3,
         "reasoning": 70.7,
-        "coding": 27.4,
+        "coding": 24.3,
         "math": 49.6,
         "vision": null,
         "agents": null
@@ -2532,7 +2916,7 @@
     {
       "slug": "gpt-4-1-nano",
       "overallIndex": 39.7,
-      "rankOverall": 240,
+      "rankOverall": 271,
       "ranked": true,
       "arenaElo": null,
       "categoryIdx": {
@@ -2547,15 +2931,15 @@
     },
     {
       "slug": "gpt-4-5",
-      "overallIndex": 69.3,
-      "rankOverall": 105,
+      "overallIndex": 68.4,
+      "rankOverall": 132,
       "ranked": true,
       "arenaElo": null,
       "categoryIdx": {
         "human-preference": null,
         "knowledge": 94.8,
         "reasoning": 65.1,
-        "coding": 44.2,
+        "coding": 39.2,
         "math": 36.7,
         "vision": 80,
         "agents": null
@@ -2580,7 +2964,7 @@
     {
       "slug": "gpt-4o",
       "overallIndex": 76.5,
-      "rankOverall": 54,
+      "rankOverall": 62,
       "ranked": true,
       "arenaElo": null,
       "categoryIdx": {
@@ -2596,7 +2980,7 @@
     {
       "slug": "gpt-4o-mini",
       "overallIndex": 77,
-      "rankOverall": 48,
+      "rankOverall": 56,
       "ranked": true,
       "arenaElo": null,
       "categoryIdx": {
@@ -2611,15 +2995,15 @@
     },
     {
       "slug": "gpt-5",
-      "overallIndex": 86,
-      "rankOverall": 15,
+      "overallIndex": 82.7,
+      "rankOverall": 27,
       "ranked": true,
       "arenaElo": null,
       "categoryIdx": {
         "human-preference": null,
         "knowledge": null,
-        "reasoning": 67.4,
-        "coding": 90.9,
+        "reasoning": 60.7,
+        "coding": 85.9,
         "math": 94.6,
         "vision": 94.4,
         "agents": 96.7
@@ -2627,7 +3011,7 @@
     },
     {
       "slug": "gpt-5-1",
-      "overallIndex": 91.4,
+      "overallIndex": 86.3,
       "rankOverall": null,
       "ranked": false,
       "arenaElo": null,
@@ -2635,7 +3019,7 @@
         "human-preference": null,
         "knowledge": null,
         "reasoning": null,
-        "coding": 88.7,
+        "coding": 78.7,
         "math": 94,
         "vision": null,
         "agents": null
@@ -2643,55 +3027,55 @@
     },
     {
       "slug": "gpt-5-2",
-      "overallIndex": 87.8,
-      "rankOverall": 10,
+      "overallIndex": 83.7,
+      "rankOverall": 18,
       "ranked": true,
       "arenaElo": null,
       "categoryIdx": {
         "human-preference": null,
         "knowledge": null,
-        "reasoning": 80.7,
-        "coding": 93,
+        "reasoning": 76,
+        "coding": 82.5,
         "math": 100,
         "vision": null,
-        "agents": 98.7
+        "agents": 99.6
+      }
+    },
+    {
+      "slug": "gpt-5-4",
+      "overallIndex": 74.5,
+      "rankOverall": 88,
+      "ranked": true,
+      "arenaElo": null,
+      "categoryIdx": {
+        "human-preference": null,
+        "knowledge": null,
+        "reasoning": 85.7,
+        "coding": 67.9,
+        "math": 40.7,
+        "vision": null,
+        "agents": 89.2
       }
     },
     {
       "slug": "gpt-5-5",
-      "overallIndex": 75.4,
-      "rankOverall": 61,
+      "overallIndex": 76.2,
+      "rankOverall": 65,
       "ranked": true,
       "arenaElo": null,
       "categoryIdx": {
         "human-preference": null,
         "knowledge": null,
         "reasoning": null,
-        "coding": 83.4,
+        "coding": 85.3,
         "math": 47.6,
         "vision": null,
         "agents": 91.1
       }
     },
     {
-      "slug": "gpt-5-6",
-      "overallIndex": 91.1,
-      "rankOverall": 4,
-      "ranked": true,
-      "arenaElo": null,
-      "categoryIdx": {
-        "human-preference": null,
-        "knowledge": null,
-        "reasoning": null,
-        "coding": 84.8,
-        "math": 94.5,
-        "vision": null,
-        "agents": 94.1
-      }
-    },
-    {
-      "slug": "gpt-5-codex",
-      "overallIndex": 86.6,
+      "slug": "gpt-5-5-high",
+      "overallIndex": 0,
       "rankOverall": null,
       "ranked": false,
       "arenaElo": null,
@@ -2699,7 +3083,55 @@
         "human-preference": null,
         "knowledge": null,
         "reasoning": null,
-        "coding": 86.6,
+        "coding": null,
+        "math": null,
+        "vision": null,
+        "agents": null
+      }
+    },
+    {
+      "slug": "gpt-5-5-xhigh",
+      "overallIndex": 47.6,
+      "rankOverall": null,
+      "ranked": false,
+      "arenaElo": null,
+      "categoryIdx": {
+        "human-preference": null,
+        "knowledge": null,
+        "reasoning": null,
+        "coding": null,
+        "math": 47.6,
+        "vision": null,
+        "agents": null
+      }
+    },
+    {
+      "slug": "gpt-5-6",
+      "overallIndex": 90,
+      "rankOverall": 3,
+      "ranked": true,
+      "arenaElo": null,
+      "categoryIdx": {
+        "human-preference": null,
+        "knowledge": null,
+        "reasoning": 83.5,
+        "coding": 87.9,
+        "math": 94.5,
+        "vision": null,
+        "agents": 94.1
+      }
+    },
+    {
+      "slug": "gpt-5-codex",
+      "overallIndex": 76.8,
+      "rankOverall": null,
+      "ranked": false,
+      "arenaElo": null,
+      "categoryIdx": {
+        "human-preference": null,
+        "knowledge": null,
+        "reasoning": null,
+        "coding": 76.8,
         "math": null,
         "vision": null,
         "agents": null
@@ -2707,14 +3139,14 @@
     },
     {
       "slug": "gpt-5-mini",
-      "overallIndex": 70.4,
-      "rankOverall": 94,
+      "overallIndex": 68.2,
+      "rankOverall": 134,
       "ranked": true,
       "arenaElo": null,
       "categoryIdx": {
         "human-preference": null,
         "knowledge": null,
-        "reasoning": 56.8,
+        "reasoning": 52.3,
         "coding": 77,
         "math": 91.1,
         "vision": null,
@@ -2733,6 +3165,22 @@
         "reasoning": 64.8,
         "coding": null,
         "math": null,
+        "vision": null,
+        "agents": null
+      }
+    },
+    {
+      "slug": "gpt-5-pro",
+      "overallIndex": 93.3,
+      "rankOverall": null,
+      "ranked": false,
+      "arenaElo": null,
+      "categoryIdx": {
+        "human-preference": null,
+        "knowledge": null,
+        "reasoning": 86.6,
+        "coding": null,
+        "math": 100,
         "vision": null,
         "agents": null
       }
@@ -2772,7 +3220,7 @@
     {
       "slug": "gpt-neox-20b",
       "overallIndex": 35.4,
-      "rankOverall": 248,
+      "rankOverall": 279,
       "ranked": true,
       "arenaElo": null,
       "categoryIdx": {
@@ -2787,15 +3235,15 @@
     },
     {
       "slug": "gpt-oss-120b-high",
-      "overallIndex": 83,
-      "rankOverall": 27,
+      "overallIndex": 81,
+      "rankOverall": 34,
       "ranked": true,
       "arenaElo": null,
       "categoryIdx": {
         "human-preference": null,
         "knowledge": 87.7,
         "reasoning": 76.1,
-        "coding": 72.6,
+        "coding": 64.3,
         "math": 95.8,
         "vision": null,
         "agents": null
@@ -2803,15 +3251,15 @@
     },
     {
       "slug": "gpt-oss-120b-low",
-      "overallIndex": 63,
-      "rankOverall": 153,
+      "overallIndex": 61.5,
+      "rankOverall": 188,
       "ranked": true,
       "arenaElo": null,
       "categoryIdx": {
         "human-preference": null,
         "knowledge": 80.5,
         "reasoning": 59.6,
-        "coding": 55.7,
+        "coding": 49.4,
         "math": 56.3,
         "vision": null,
         "agents": null
@@ -2819,15 +3267,15 @@
     },
     {
       "slug": "gpt-oss-120b-medium",
-      "overallIndex": 73.2,
-      "rankOverall": 78,
+      "overallIndex": 71.5,
+      "rankOverall": 108,
       "ranked": true,
       "arenaElo": null,
       "categoryIdx": {
         "human-preference": null,
         "knowledge": 84.2,
         "reasoning": 67.2,
-        "coding": 61.2,
+        "coding": 54.2,
         "math": 80.4,
         "vision": null,
         "agents": null
@@ -2835,15 +3283,15 @@
     },
     {
       "slug": "gpt-oss-20b-high",
-      "overallIndex": 76.8,
-      "rankOverall": 53,
+      "overallIndex": 74.8,
+      "rankOverall": 80,
       "ranked": true,
       "arenaElo": null,
       "categoryIdx": {
         "human-preference": null,
         "knowledge": 79.5,
         "reasoning": 65.2,
-        "coding": 70.6,
+        "coding": 62.6,
         "math": 92.1,
         "vision": null,
         "agents": null
@@ -2851,15 +3299,15 @@
     },
     {
       "slug": "gpt-oss-20b-low",
-      "overallIndex": 50.8,
-      "rankOverall": 211,
+      "overallIndex": 49.5,
+      "rankOverall": 244,
       "ranked": true,
       "arenaElo": null,
       "categoryIdx": {
         "human-preference": null,
         "knowledge": 70.9,
         "reasoning": 46.6,
-        "coding": 43.5,
+        "coding": 38.6,
         "math": 42.1,
         "vision": null,
         "agents": null
@@ -2867,15 +3315,15 @@
     },
     {
       "slug": "gpt-oss-20b-medium",
-      "overallIndex": 69.3,
-      "rankOverall": 106,
+      "overallIndex": 67.6,
+      "rankOverall": 139,
       "ranked": true,
       "arenaElo": null,
       "categoryIdx": {
         "human-preference": null,
         "knowledge": 77.2,
         "reasoning": 58.2,
-        "coding": 61.9,
+        "coding": 54.8,
         "math": 80,
         "vision": null,
         "agents": null
@@ -2883,14 +3331,14 @@
     },
     {
       "slug": "granite-3-0-2b-instruct",
-      "overallIndex": 53,
-      "rankOverall": 201,
+      "overallIndex": 47,
+      "rankOverall": 250,
       "ranked": true,
       "arenaElo": null,
       "categoryIdx": {
         "human-preference": 66.5,
         "knowledge": 22.6,
-        "reasoning": 62.5,
+        "reasoning": 52.9,
         "coding": null,
         "math": null,
         "vision": null,
@@ -2900,7 +3348,7 @@
     {
       "slug": "granite-3-0-8b-instruct",
       "overallIndex": 53.4,
-      "rankOverall": 200,
+      "rankOverall": 228,
       "ranked": true,
       "arenaElo": null,
       "categoryIdx": {
@@ -2916,7 +3364,7 @@
     {
       "slug": "granite-3-1-8b-instruct",
       "overallIndex": 40.1,
-      "rankOverall": 237,
+      "rankOverall": 268,
       "ranked": true,
       "arenaElo": null,
       "categoryIdx": {
@@ -2932,7 +3380,7 @@
     {
       "slug": "granite-3-2-8b-instruct",
       "overallIndex": 62.6,
-      "rankOverall": 154,
+      "rankOverall": 179,
       "ranked": true,
       "arenaElo": null,
       "categoryIdx": {
@@ -2948,7 +3396,7 @@
     {
       "slug": "granite-3-3-8b-instruct",
       "overallIndex": 58.4,
-      "rankOverall": 175,
+      "rankOverall": 203,
       "ranked": true,
       "arenaElo": null,
       "categoryIdx": {
@@ -2980,7 +3428,7 @@
     {
       "slug": "granite-4-0-h-small",
       "overallIndex": 69.4,
-      "rankOverall": 102,
+      "rankOverall": 125,
       "ranked": true,
       "arenaElo": null,
       "categoryIdx": {
@@ -2989,6 +3437,22 @@
         "reasoning": 64,
         "coding": 75.1,
         "math": 86.6,
+        "vision": null,
+        "agents": null
+      }
+    },
+    {
+      "slug": "granite-4-1-8b-instruct",
+      "overallIndex": 0,
+      "rankOverall": null,
+      "ranked": false,
+      "arenaElo": null,
+      "categoryIdx": {
+        "human-preference": null,
+        "knowledge": null,
+        "reasoning": null,
+        "coding": null,
+        "math": null,
         "vision": null,
         "agents": null
       }
@@ -3028,7 +3492,7 @@
     {
       "slug": "grok-1-5",
       "overallIndex": 56.5,
-      "rankOverall": 182,
+      "rankOverall": 211,
       "ranked": true,
       "arenaElo": null,
       "categoryIdx": {
@@ -3044,7 +3508,7 @@
     {
       "slug": "grok-2",
       "overallIndex": 75.4,
-      "rankOverall": 62,
+      "rankOverall": 74,
       "ranked": true,
       "arenaElo": null,
       "categoryIdx": {
@@ -3060,7 +3524,7 @@
     {
       "slug": "grok-2-mini",
       "overallIndex": 72.1,
-      "rankOverall": 85,
+      "rankOverall": 104,
       "ranked": true,
       "arenaElo": null,
       "categoryIdx": {
@@ -3076,7 +3540,7 @@
     {
       "slug": "grok-3-mini",
       "overallIndex": 83.1,
-      "rankOverall": 26,
+      "rankOverall": 22,
       "ranked": true,
       "arenaElo": null,
       "categoryIdx": {
@@ -3108,7 +3572,7 @@
     {
       "slug": "grok-3-think",
       "overallIndex": 86.4,
-      "rankOverall": 13,
+      "rankOverall": 9,
       "ranked": true,
       "arenaElo": 1400,
       "categoryIdx": {
@@ -3123,14 +3587,14 @@
     },
     {
       "slug": "grok-4",
-      "overallIndex": 66.7,
-      "rankOverall": 125,
+      "overallIndex": 63.9,
+      "rankOverall": 171,
       "ranked": true,
       "arenaElo": null,
       "categoryIdx": {
         "human-preference": null,
         "knowledge": null,
-        "reasoning": 52.6,
+        "reasoning": 48,
         "coding": 84,
         "math": 91.7,
         "vision": null,
@@ -3138,15 +3602,63 @@
       }
     },
     {
+      "slug": "grok-4-3",
+      "overallIndex": 0,
+      "rankOverall": null,
+      "ranked": false,
+      "arenaElo": null,
+      "categoryIdx": {
+        "human-preference": null,
+        "knowledge": null,
+        "reasoning": null,
+        "coding": null,
+        "math": null,
+        "vision": null,
+        "agents": null
+      }
+    },
+    {
+      "slug": "grok-4-3-high",
+      "overallIndex": 93.4,
+      "rankOverall": null,
+      "ranked": false,
+      "arenaElo": null,
+      "categoryIdx": {
+        "human-preference": null,
+        "knowledge": null,
+        "reasoning": 88.7,
+        "coding": null,
+        "math": null,
+        "vision": null,
+        "agents": 98.1
+      }
+    },
+    {
+      "slug": "grok-4-5",
+      "overallIndex": 84.9,
+      "rankOverall": null,
+      "ranked": false,
+      "arenaElo": null,
+      "categoryIdx": {
+        "human-preference": null,
+        "knowledge": null,
+        "reasoning": null,
+        "coding": 84.9,
+        "math": null,
+        "vision": null,
+        "agents": null
+      }
+    },
+    {
       "slug": "grok-4-heavy",
-      "overallIndex": 91.6,
-      "rankOverall": 3,
+      "overallIndex": 86.8,
+      "rankOverall": 8,
       "ranked": true,
       "arenaElo": null,
       "categoryIdx": {
         "human-preference": null,
         "knowledge": null,
-        "reasoning": 89.9,
+        "reasoning": 77.8,
         "coding": 84.5,
         "math": 96.9,
         "vision": null,
@@ -3154,9 +3666,25 @@
       }
     },
     {
+      "slug": "grok-build-0-1",
+      "overallIndex": 0,
+      "rankOverall": null,
+      "ranked": false,
+      "arenaElo": null,
+      "categoryIdx": {
+        "human-preference": null,
+        "knowledge": null,
+        "reasoning": null,
+        "coding": null,
+        "math": null,
+        "vision": null,
+        "agents": null
+      }
+    },
+    {
       "slug": "guanaco-33b",
       "overallIndex": 69.6,
-      "rankOverall": 100,
+      "rankOverall": 121,
       "ranked": true,
       "arenaElo": null,
       "categoryIdx": {
@@ -3188,7 +3716,7 @@
     {
       "slug": "h2o-danube-1-8b",
       "overallIndex": 30.5,
-      "rankOverall": 258,
+      "rankOverall": 289,
       "ranked": true,
       "arenaElo": null,
       "categoryIdx": {
@@ -3204,7 +3732,7 @@
     {
       "slug": "h2o-danube3-4b",
       "overallIndex": 51.1,
-      "rankOverall": 210,
+      "rankOverall": 238,
       "ranked": true,
       "arenaElo": null,
       "categoryIdx": {
@@ -3220,7 +3748,7 @@
     {
       "slug": "hermes-3-405b",
       "overallIndex": 67.3,
-      "rankOverall": 122,
+      "rankOverall": 144,
       "ranked": true,
       "arenaElo": null,
       "categoryIdx": {
@@ -3252,7 +3780,7 @@
     {
       "slug": "hunyuan-a13b",
       "overallIndex": 79.1,
-      "rankOverall": 36,
+      "rankOverall": 44,
       "ranked": true,
       "arenaElo": null,
       "categoryIdx": {
@@ -3268,7 +3796,7 @@
     {
       "slug": "hunyuan-large-a52b",
       "overallIndex": 77,
-      "rankOverall": 49,
+      "rankOverall": 57,
       "ranked": true,
       "arenaElo": null,
       "categoryIdx": {
@@ -3284,7 +3812,7 @@
     {
       "slug": "hunyuan-t1",
       "overallIndex": 82.9,
-      "rankOverall": 29,
+      "rankOverall": 25,
       "ranked": true,
       "arenaElo": null,
       "categoryIdx": {
@@ -3307,6 +3835,22 @@
         "human-preference": 77.4,
         "knowledge": null,
         "reasoning": null,
+        "coding": null,
+        "math": null,
+        "vision": null,
+        "agents": null
+      }
+    },
+    {
+      "slug": "hy3",
+      "overallIndex": 75.9,
+      "rankOverall": null,
+      "ranked": false,
+      "arenaElo": null,
+      "categoryIdx": {
+        "human-preference": null,
+        "knowledge": 66.8,
+        "reasoning": 85.1,
         "coding": null,
         "math": null,
         "vision": null,
@@ -3458,9 +4002,25 @@
       }
     },
     {
+      "slug": "intellect-3",
+      "overallIndex": 78.5,
+      "rankOverall": 48,
+      "ranked": true,
+      "arenaElo": null,
+      "categoryIdx": {
+        "human-preference": null,
+        "knowledge": null,
+        "reasoning": 71,
+        "coding": 73.7,
+        "math": 90.8,
+        "vision": null,
+        "agents": null
+      }
+    },
+    {
       "slug": "internlm2-20b",
       "overallIndex": 54.2,
-      "rankOverall": 196,
+      "rankOverall": 223,
       "ranked": true,
       "arenaElo": null,
       "categoryIdx": {
@@ -3476,7 +4036,7 @@
     {
       "slug": "internlm2-5-7b",
       "overallIndex": 63.8,
-      "rankOverall": 145,
+      "rankOverall": 172,
       "ranked": true,
       "arenaElo": null,
       "categoryIdx": {
@@ -3492,7 +4052,7 @@
     {
       "slug": "internlm3-8b-instruct",
       "overallIndex": 52.3,
-      "rankOverall": 204,
+      "rankOverall": 231,
       "ranked": true,
       "arenaElo": null,
       "categoryIdx": {
@@ -3540,7 +4100,7 @@
     {
       "slug": "jais-13b",
       "overallIndex": 29.2,
-      "rankOverall": 261,
+      "rankOverall": 292,
       "ranked": true,
       "arenaElo": null,
       "categoryIdx": {
@@ -3556,13 +4116,29 @@
     {
       "slug": "jais-70b",
       "overallIndex": 44.5,
-      "rankOverall": 227,
+      "rankOverall": 258,
       "ranked": true,
       "arenaElo": null,
       "categoryIdx": {
         "human-preference": null,
         "knowledge": 0,
         "reasoning": 59.3,
+        "coding": null,
+        "math": null,
+        "vision": null,
+        "agents": null
+      }
+    },
+    {
+      "slug": "jamba2-mini",
+      "overallIndex": 0,
+      "rankOverall": null,
+      "ranked": false,
+      "arenaElo": null,
+      "categoryIdx": {
+        "human-preference": null,
+        "knowledge": null,
+        "reasoning": null,
         "coding": null,
         "math": null,
         "vision": null,
@@ -3588,7 +4164,7 @@
     {
       "slug": "kimi-k1-5",
       "overallIndex": 78,
-      "rankOverall": 41,
+      "rankOverall": 50,
       "ranked": true,
       "arenaElo": null,
       "categoryIdx": {
@@ -3603,31 +4179,63 @@
     },
     {
       "slug": "kimi-k2",
-      "overallIndex": 77.4,
-      "rankOverall": 44,
+      "overallIndex": 75.6,
+      "rankOverall": 69,
       "ranked": true,
       "arenaElo": null,
       "categoryIdx": {
         "human-preference": null,
         "knowledge": 86.8,
         "reasoning": null,
-        "coding": 66.8,
+        "coding": 62.5,
         "math": 83.2,
         "vision": null,
         "agents": null
       }
     },
     {
-      "slug": "kimi-k2-thinking",
-      "overallIndex": 84,
-      "rankOverall": 22,
+      "slug": "kimi-k2-6",
+      "overallIndex": 85.1,
+      "rankOverall": 14,
       "ranked": true,
       "arenaElo": null,
       "categoryIdx": {
         "human-preference": null,
         "knowledge": null,
-        "reasoning": 87.6,
-        "coding": 82.9,
+        "reasoning": 86.2,
+        "coding": 80.5,
+        "math": 96.4,
+        "vision": 88.2,
+        "agents": 86.7
+      }
+    },
+    {
+      "slug": "kimi-k2-7-code",
+      "overallIndex": 0,
+      "rankOverall": null,
+      "ranked": false,
+      "arenaElo": null,
+      "categoryIdx": {
+        "human-preference": null,
+        "knowledge": null,
+        "reasoning": null,
+        "coding": null,
+        "math": null,
+        "vision": null,
+        "agents": null
+      }
+    },
+    {
+      "slug": "kimi-k2-thinking",
+      "overallIndex": 77.2,
+      "rankOverall": 54,
+      "ranked": true,
+      "arenaElo": null,
+      "categoryIdx": {
+        "human-preference": null,
+        "knowledge": null,
+        "reasoning": 75.4,
+        "coding": 73.5,
         "math": 99.1,
         "vision": null,
         "agents": 62.7
@@ -3636,7 +4244,7 @@
     {
       "slug": "koala-13b",
       "overallIndex": 12.5,
-      "rankOverall": 273,
+      "rankOverall": 304,
       "ranked": true,
       "arenaElo": 1022,
       "categoryIdx": {
@@ -3652,7 +4260,7 @@
     {
       "slug": "krutrim-2-12b",
       "overallIndex": 65.8,
-      "rankOverall": 129,
+      "rankOverall": 155,
       "ranked": true,
       "arenaElo": null,
       "categoryIdx": {
@@ -3700,7 +4308,7 @@
     {
       "slug": "lg-exaone-3-5-32b-instruct",
       "overallIndex": 79,
-      "rankOverall": 38,
+      "rankOverall": 46,
       "ranked": true,
       "arenaElo": null,
       "categoryIdx": {
@@ -3716,7 +4324,7 @@
     {
       "slug": "lg-exaone-4-0-32b-non-reasoning",
       "overallIndex": 65.6,
-      "rankOverall": 132,
+      "rankOverall": 158,
       "ranked": true,
       "arenaElo": null,
       "categoryIdx": {
@@ -3732,7 +4340,7 @@
     {
       "slug": "lg-exaone-4-0-32b-reasoning",
       "overallIndex": 83,
-      "rankOverall": 28,
+      "rankOverall": 24,
       "ranked": true,
       "arenaElo": null,
       "categoryIdx": {
@@ -3748,7 +4356,7 @@
     {
       "slug": "lg-exaone-deep-32b",
       "overallIndex": 72.1,
-      "rankOverall": 86,
+      "rankOverall": 105,
       "ranked": true,
       "arenaElo": null,
       "categoryIdx": {
@@ -3764,7 +4372,7 @@
     {
       "slug": "llama-13b",
       "overallIndex": 31.4,
-      "rankOverall": 254,
+      "rankOverall": 285,
       "ranked": true,
       "arenaElo": null,
       "categoryIdx": {
@@ -3876,7 +4484,7 @@
     {
       "slug": "llama-3-1-405b",
       "overallIndex": 73.8,
-      "rankOverall": 70,
+      "rankOverall": 91,
       "ranked": true,
       "arenaElo": 1229,
       "categoryIdx": {
@@ -3892,7 +4500,7 @@
     {
       "slug": "llama-3-1-70b",
       "overallIndex": 67.9,
-      "rankOverall": 116,
+      "rankOverall": 136,
       "ranked": true,
       "arenaElo": 1198,
       "categoryIdx": {
@@ -3908,7 +4516,7 @@
     {
       "slug": "llama-3-1-8b",
       "overallIndex": 54.4,
-      "rankOverall": 194,
+      "rankOverall": 221,
       "ranked": true,
       "arenaElo": null,
       "categoryIdx": {
@@ -3940,7 +4548,7 @@
     {
       "slug": "llama-3-1-minitron-4b",
       "overallIndex": 44.2,
-      "rankOverall": 229,
+      "rankOverall": 259,
       "ranked": true,
       "arenaElo": null,
       "categoryIdx": {
@@ -3972,7 +4580,7 @@
     {
       "slug": "llama-3-1-nemotron-ultra-253b-v1-reasoning-off",
       "overallIndex": 52,
-      "rankOverall": 205,
+      "rankOverall": 233,
       "ranked": true,
       "arenaElo": null,
       "categoryIdx": {
@@ -3988,7 +4596,7 @@
     {
       "slug": "llama-3-1-nemotron-ultra-253b-v1-reasoning-on",
       "overallIndex": 79.2,
-      "rankOverall": 35,
+      "rankOverall": 43,
       "ranked": true,
       "arenaElo": null,
       "categoryIdx": {
@@ -4004,7 +4612,7 @@
     {
       "slug": "llama-3-2-11b-vision",
       "overallIndex": 64.1,
-      "rankOverall": 143,
+      "rankOverall": 169,
       "ranked": true,
       "arenaElo": null,
       "categoryIdx": {
@@ -4020,7 +4628,7 @@
     {
       "slug": "llama-3-2-1b",
       "overallIndex": 31.3,
-      "rankOverall": 255,
+      "rankOverall": 286,
       "ranked": true,
       "arenaElo": null,
       "categoryIdx": {
@@ -4036,7 +4644,7 @@
     {
       "slug": "llama-3-2-3b",
       "overallIndex": 62.2,
-      "rankOverall": 156,
+      "rankOverall": 182,
       "ranked": true,
       "arenaElo": null,
       "categoryIdx": {
@@ -4068,7 +4676,7 @@
     {
       "slug": "llama-3-3-70b",
       "overallIndex": 76.9,
-      "rankOverall": 50,
+      "rankOverall": 58,
       "ranked": true,
       "arenaElo": null,
       "categoryIdx": {
@@ -4084,7 +4692,7 @@
     {
       "slug": "llama-3-3-nemotron-super-49b-v1-reasoning-off",
       "overallIndex": 68.6,
-      "rankOverall": 111,
+      "rankOverall": 131,
       "ranked": true,
       "arenaElo": null,
       "categoryIdx": {
@@ -4100,7 +4708,7 @@
     {
       "slug": "llama-3-3-nemotron-super-49b-v1-reasoning-on",
       "overallIndex": 76.9,
-      "rankOverall": 51,
+      "rankOverall": 59,
       "ranked": true,
       "arenaElo": null,
       "categoryIdx": {
@@ -4116,7 +4724,7 @@
     {
       "slug": "llama-3-70b",
       "overallIndex": 60.9,
-      "rankOverall": 164,
+      "rankOverall": 192,
       "ranked": true,
       "arenaElo": null,
       "categoryIdx": {
@@ -4132,7 +4740,7 @@
     {
       "slug": "llama-3-8b",
       "overallIndex": 43.4,
-      "rankOverall": 231,
+      "rankOverall": 261,
       "ranked": true,
       "arenaElo": null,
       "categoryIdx": {
@@ -4164,7 +4772,7 @@
     {
       "slug": "llama-33b",
       "overallIndex": 42.2,
-      "rankOverall": 233,
+      "rankOverall": 265,
       "ranked": true,
       "arenaElo": null,
       "categoryIdx": {
@@ -4180,7 +4788,7 @@
     {
       "slug": "llama-4-maverick",
       "overallIndex": 69.8,
-      "rankOverall": 99,
+      "rankOverall": 120,
       "ranked": true,
       "arenaElo": null,
       "categoryIdx": {
@@ -4196,7 +4804,7 @@
     {
       "slug": "llama-4-scout",
       "overallIndex": 57.5,
-      "rankOverall": 177,
+      "rankOverall": 206,
       "ranked": true,
       "arenaElo": null,
       "categoryIdx": {
@@ -4276,7 +4884,7 @@
     {
       "slug": "magistral-small",
       "overallIndex": 63.7,
-      "rankOverall": 146,
+      "rankOverall": 173,
       "ranked": true,
       "arenaElo": null,
       "categoryIdx": {
@@ -4322,9 +4930,41 @@
       }
     },
     {
+      "slug": "mimo-v2-5",
+      "overallIndex": 82.4,
+      "rankOverall": 29,
+      "ranked": true,
+      "arenaElo": null,
+      "categoryIdx": {
+        "human-preference": null,
+        "knowledge": null,
+        "reasoning": null,
+        "coding": 70,
+        "math": null,
+        "vision": 90.7,
+        "agents": null
+      }
+    },
+    {
+      "slug": "mimo-v2-5-pro",
+      "overallIndex": 74.8,
+      "rankOverall": 81,
+      "ranked": true,
+      "arenaElo": null,
+      "categoryIdx": {
+        "human-preference": null,
+        "knowledge": null,
+        "reasoning": 73.8,
+        "coding": 75.2,
+        "math": null,
+        "vision": null,
+        "agents": null
+      }
+    },
+    {
       "slug": "minicpm-2b",
       "overallIndex": 43.2,
-      "rankOverall": 232,
+      "rankOverall": 263,
       "ranked": true,
       "arenaElo": null,
       "categoryIdx": {
@@ -4388,7 +5028,7 @@
     {
       "slug": "minicpm3-4b",
       "overallIndex": 70.8,
-      "rankOverall": 93,
+      "rankOverall": 116,
       "ranked": true,
       "arenaElo": null,
       "categoryIdx": {
@@ -4403,15 +5043,15 @@
     },
     {
       "slug": "minimax-m1",
-      "overallIndex": 73.8,
-      "rankOverall": 71,
+      "overallIndex": 72.3,
+      "rankOverall": 102,
       "ranked": true,
       "arenaElo": null,
       "categoryIdx": {
         "human-preference": null,
         "knowledge": 86.3,
         "reasoning": 62.3,
-        "coding": 67.1,
+        "coding": 63.4,
         "math": 86,
         "vision": null,
         "agents": null
@@ -4419,31 +5059,63 @@
     },
     {
       "slug": "minimax-m2",
-      "overallIndex": 77.9,
-      "rankOverall": 42,
+      "overallIndex": 74.1,
+      "rankOverall": 90,
       "ranked": true,
       "arenaElo": null,
       "categoryIdx": {
         "human-preference": null,
         "knowledge": 88.2,
-        "reasoning": 66.3,
-        "coding": 72.8,
+        "reasoning": 48.9,
+        "coding": 69.7,
         "math": 78,
         "vision": null,
         "agents": 94.6
       }
     },
     {
+      "slug": "minimax-m2-7",
+      "overallIndex": 65.1,
+      "rankOverall": null,
+      "ranked": false,
+      "arenaElo": null,
+      "categoryIdx": {
+        "human-preference": null,
+        "knowledge": null,
+        "reasoning": null,
+        "coding": 65.1,
+        "math": null,
+        "vision": null,
+        "agents": null
+      }
+    },
+    {
+      "slug": "minimax-m3",
+      "overallIndex": 82.8,
+      "rankOverall": 26,
+      "ranked": true,
+      "arenaElo": null,
+      "categoryIdx": {
+        "human-preference": null,
+        "knowledge": null,
+        "reasoning": null,
+        "coding": 76.2,
+        "math": null,
+        "vision": 89.4,
+        "agents": null
+      }
+    },
+    {
       "slug": "minimax-text-01",
-      "overallIndex": 80.7,
-      "rankOverall": 32,
+      "overallIndex": 81.2,
+      "rankOverall": 33,
       "ranked": true,
       "arenaElo": null,
       "categoryIdx": {
         "human-preference": 90,
         "knowledge": 82.5,
         "reasoning": 76.2,
-        "coding": 78.6,
+        "coding": 81.3,
         "math": 83.1,
         "vision": null,
         "agents": null
@@ -4468,7 +5140,7 @@
     {
       "slug": "ministral-3b",
       "overallIndex": 49.9,
-      "rankOverall": 215,
+      "rankOverall": 243,
       "ranked": true,
       "arenaElo": null,
       "categoryIdx": {
@@ -4484,7 +5156,7 @@
     {
       "slug": "ministral-8b",
       "overallIndex": 58.7,
-      "rankOverall": 173,
+      "rankOverall": 201,
       "ranked": true,
       "arenaElo": null,
       "categoryIdx": {
@@ -4500,7 +5172,7 @@
     {
       "slug": "mistral-7b",
       "overallIndex": 40.9,
-      "rankOverall": 236,
+      "rankOverall": 267,
       "ranked": true,
       "arenaElo": null,
       "categoryIdx": {
@@ -4532,7 +5204,7 @@
     {
       "slug": "mistral-large-2-24-07",
       "overallIndex": 85.6,
-      "rankOverall": 17,
+      "rankOverall": 12,
       "ranked": true,
       "arenaElo": null,
       "categoryIdx": {
@@ -4554,6 +5226,22 @@
       "categoryIdx": {
         "human-preference": null,
         "knowledge": null,
+        "reasoning": null,
+        "coding": null,
+        "math": null,
+        "vision": null,
+        "agents": null
+      }
+    },
+    {
+      "slug": "mistral-large-3",
+      "overallIndex": 76.5,
+      "rankOverall": null,
+      "ranked": false,
+      "arenaElo": null,
+      "categoryIdx": {
+        "human-preference": null,
+        "knowledge": 76.5,
         "reasoning": null,
         "coding": null,
         "math": null,
@@ -4596,7 +5284,7 @@
     {
       "slug": "mistral-nemo-12b",
       "overallIndex": 64.8,
-      "rankOverall": 136,
+      "rankOverall": 164,
       "ranked": true,
       "arenaElo": null,
       "categoryIdx": {
@@ -4612,7 +5300,7 @@
     {
       "slug": "mistral-small-3-1-24b",
       "overallIndex": 63.1,
-      "rankOverall": 152,
+      "rankOverall": 178,
       "ranked": true,
       "arenaElo": null,
       "categoryIdx": {
@@ -4628,7 +5316,7 @@
     {
       "slug": "mistral-small-3-2-24b",
       "overallIndex": 71.9,
-      "rankOverall": 88,
+      "rankOverall": 106,
       "ranked": true,
       "arenaElo": null,
       "categoryIdx": {
@@ -4644,7 +5332,7 @@
     {
       "slug": "mistral-small-3-24b",
       "overallIndex": 73.7,
-      "rankOverall": 74,
+      "rankOverall": 93,
       "ranked": true,
       "arenaElo": null,
       "categoryIdx": {
@@ -4660,7 +5348,7 @@
     {
       "slug": "mixtral-8x22b",
       "overallIndex": 62.2,
-      "rankOverall": 157,
+      "rankOverall": 183,
       "ranked": true,
       "arenaElo": null,
       "categoryIdx": {
@@ -4676,7 +5364,7 @@
     {
       "slug": "mixtral-8x7b",
       "overallIndex": 55.4,
-      "rankOverall": 190,
+      "rankOverall": 218,
       "ranked": true,
       "arenaElo": null,
       "categoryIdx": {
@@ -4756,7 +5444,7 @@
     {
       "slug": "mpt-7b",
       "overallIndex": 15.6,
-      "rankOverall": 272,
+      "rankOverall": 303,
       "ranked": true,
       "arenaElo": null,
       "categoryIdx": {
@@ -4802,9 +5490,25 @@
       }
     },
     {
+      "slug": "muse-spark-1-1-xhigh",
+      "overallIndex": 69.2,
+      "rankOverall": null,
+      "ranked": false,
+      "arenaElo": null,
+      "categoryIdx": {
+        "human-preference": null,
+        "knowledge": null,
+        "reasoning": 69.2,
+        "coding": null,
+        "math": null,
+        "vision": null,
+        "agents": null
+      }
+    },
+    {
       "slug": "naver-hyperclova-x",
       "overallIndex": 60.1,
-      "rankOverall": 166,
+      "rankOverall": 194,
       "ranked": true,
       "arenaElo": null,
       "categoryIdx": {
@@ -4819,7 +5523,7 @@
     },
     {
       "slug": "naver-hyperclova-x-seed-think-32b",
-      "overallIndex": 87,
+      "overallIndex": 82.6,
       "rankOverall": null,
       "ranked": false,
       "arenaElo": null,
@@ -4830,13 +5534,13 @@
         "coding": null,
         "math": null,
         "vision": null,
-        "agents": 87
+        "agents": 82.6
       }
     },
     {
       "slug": "nemotron-3-8b",
       "overallIndex": 48.4,
-      "rankOverall": 221,
+      "rankOverall": 249,
       "ranked": true,
       "arenaElo": null,
       "categoryIdx": {
@@ -4850,8 +5554,40 @@
       }
     },
     {
+      "slug": "nemotron-3-nano-omni",
+      "overallIndex": 0,
+      "rankOverall": null,
+      "ranked": false,
+      "arenaElo": null,
+      "categoryIdx": {
+        "human-preference": null,
+        "knowledge": null,
+        "reasoning": 0,
+        "coding": null,
+        "math": null,
+        "vision": null,
+        "agents": null
+      }
+    },
+    {
+      "slug": "nemotron-3-super",
+      "overallIndex": 0,
+      "rankOverall": null,
+      "ranked": false,
+      "arenaElo": null,
+      "categoryIdx": {
+        "human-preference": null,
+        "knowledge": null,
+        "reasoning": null,
+        "coding": null,
+        "math": null,
+        "vision": null,
+        "agents": null
+      }
+    },
+    {
       "slug": "nemotron-3-ultra-550b-a55b",
-      "overallIndex": 92,
+      "overallIndex": 90.2,
       "rankOverall": 2,
       "ranked": true,
       "arenaElo": null,
@@ -4859,7 +5595,7 @@
         "human-preference": null,
         "knowledge": 94.5,
         "reasoning": 93.9,
-        "coding": 88.4,
+        "coding": 83.8,
         "math": null,
         "vision": null,
         "agents": 94.8
@@ -4868,7 +5604,7 @@
     {
       "slug": "nemotron-4-15b",
       "overallIndex": 37.6,
-      "rankOverall": 245,
+      "rankOverall": 276,
       "ranked": true,
       "arenaElo": null,
       "categoryIdx": {
@@ -4884,7 +5620,7 @@
     {
       "slug": "nemotron-4-340b",
       "overallIndex": 80.2,
-      "rankOverall": 33,
+      "rankOverall": 39,
       "ranked": true,
       "arenaElo": null,
       "categoryIdx": {
@@ -4900,7 +5636,7 @@
     {
       "slug": "nemotron-h-56b",
       "overallIndex": 73.5,
-      "rankOverall": 76,
+      "rankOverall": 95,
       "ranked": true,
       "arenaElo": null,
       "categoryIdx": {
@@ -4915,14 +5651,14 @@
     },
     {
       "slug": "nemotron-nano-2-nemotron-nano-9b-v2",
-      "overallIndex": 67.8,
-      "rankOverall": 117,
+      "overallIndex": 67.2,
+      "rankOverall": 145,
       "ranked": true,
       "arenaElo": null,
       "categoryIdx": {
         "human-preference": null,
         "knowledge": null,
-        "reasoning": 53.9,
+        "reasoning": 52.7,
         "coding": 75.6,
         "math": 84.7,
         "vision": null,
@@ -4948,7 +5684,7 @@
     {
       "slug": "olmo-2-13b",
       "overallIndex": 59.6,
-      "rankOverall": 171,
+      "rankOverall": 200,
       "ranked": true,
       "arenaElo": null,
       "categoryIdx": {
@@ -4964,7 +5700,7 @@
     {
       "slug": "olmo-2-32b",
       "overallIndex": 69.5,
-      "rankOverall": 101,
+      "rankOverall": 123,
       "ranked": true,
       "arenaElo": null,
       "categoryIdx": {
@@ -4980,7 +5716,7 @@
     {
       "slug": "olmo-2-7b",
       "overallIndex": 56.1,
-      "rankOverall": 187,
+      "rankOverall": 215,
       "ranked": true,
       "arenaElo": null,
       "categoryIdx": {
@@ -4996,7 +5732,7 @@
     {
       "slug": "olmo-3-7b",
       "overallIndex": 61.9,
-      "rankOverall": 159,
+      "rankOverall": 185,
       "ranked": true,
       "arenaElo": null,
       "categoryIdx": {
@@ -5011,14 +5747,14 @@
     },
     {
       "slug": "olmo-3-think-32b",
-      "overallIndex": 88.5,
-      "rankOverall": 8,
+      "overallIndex": 74.7,
+      "rankOverall": 83,
       "ranked": true,
       "arenaElo": null,
       "categoryIdx": {
         "human-preference": null,
-        "knowledge": null,
-        "reasoning": 90,
+        "knowledge": 80.1,
+        "reasoning": 60.3,
         "coding": 89.6,
         "math": 86,
         "vision": null,
@@ -5028,7 +5764,7 @@
     {
       "slug": "olmo-7b",
       "overallIndex": 29.2,
-      "rankOverall": 262,
+      "rankOverall": 293,
       "ranked": true,
       "arenaElo": null,
       "categoryIdx": {
@@ -5044,7 +5780,7 @@
     {
       "slug": "olmoe-1b-7b-0924",
       "overallIndex": 48.9,
-      "rankOverall": 219,
+      "rankOverall": 247,
       "ranked": true,
       "arenaElo": null,
       "categoryIdx": {
@@ -5075,15 +5811,15 @@
     },
     {
       "slug": "openai-o1",
-      "overallIndex": 68.4,
-      "rankOverall": 113,
+      "overallIndex": 66.8,
+      "rankOverall": 149,
       "ranked": true,
       "arenaElo": null,
       "categoryIdx": {
         "human-preference": null,
         "knowledge": null,
         "reasoning": 73.4,
-        "coding": 54.9,
+        "coding": 50.9,
         "math": 74.3,
         "vision": 84.7,
         "agents": null
@@ -5091,7 +5827,7 @@
     },
     {
       "slug": "openai-o1-mini",
-      "overallIndex": 55.6,
+      "overallIndex": 56.6,
       "rankOverall": null,
       "ranked": false,
       "arenaElo": null,
@@ -5099,7 +5835,7 @@
         "human-preference": null,
         "knowledge": null,
         "reasoning": null,
-        "coding": 41.3,
+        "coding": 43.1,
         "math": 70,
         "vision": null,
         "agents": null
@@ -5107,31 +5843,47 @@
     },
     {
       "slug": "openai-o1-preview",
-      "overallIndex": 66.1,
-      "rankOverall": 127,
+      "overallIndex": 67.4,
+      "rankOverall": 142,
       "ranked": true,
       "arenaElo": null,
       "categoryIdx": {
         "human-preference": null,
         "knowledge": 89.1,
         "reasoning": 67.5,
-        "coding": 56.9,
+        "coding": 60.6,
         "math": 63.2,
         "vision": null,
         "agents": null
       }
     },
     {
+      "slug": "openai-o1-pro",
+      "overallIndex": 86,
+      "rankOverall": null,
+      "ranked": false,
+      "arenaElo": null,
+      "categoryIdx": {
+        "human-preference": null,
+        "knowledge": null,
+        "reasoning": null,
+        "coding": null,
+        "math": 86,
+        "vision": null,
+        "agents": null
+      }
+    },
+    {
       "slug": "openai-o3",
-      "overallIndex": 81.5,
-      "rankOverall": 30,
+      "overallIndex": 75.5,
+      "rankOverall": 71,
       "ranked": true,
       "arenaElo": null,
       "categoryIdx": {
         "human-preference": null,
         "knowledge": null,
-        "reasoning": 66,
-        "coding": 86.4,
+        "reasoning": 59.2,
+        "coding": 75.4,
         "math": 91.6,
         "vision": 92.5,
         "agents": null
@@ -5139,15 +5891,15 @@
     },
     {
       "slug": "openai-o3-mini-high",
-      "overallIndex": 71.2,
-      "rankOverall": 90,
+      "overallIndex": 68.3,
+      "rankOverall": 133,
       "ranked": true,
       "arenaElo": null,
       "categoryIdx": {
         "human-preference": null,
         "knowledge": null,
         "reasoning": 75.6,
-        "coding": 60.9,
+        "coding": 55.2,
         "math": 87.3,
         "vision": null,
         "agents": null
@@ -5155,15 +5907,15 @@
     },
     {
       "slug": "openai-o3-mini-low",
-      "overallIndex": 55.4,
-      "rankOverall": 191,
+      "overallIndex": 53.9,
+      "rankOverall": 226,
       "ranked": true,
       "arenaElo": null,
       "categoryIdx": {
         "human-preference": null,
         "knowledge": null,
         "reasoning": 64.1,
-        "coding": 48.7,
+        "coding": 45.7,
         "math": 60,
         "vision": null,
         "agents": null
@@ -5171,15 +5923,15 @@
     },
     {
       "slug": "openai-o3-mini-medium",
-      "overallIndex": 64.7,
-      "rankOverall": 137,
+      "overallIndex": 62.4,
+      "rankOverall": 181,
       "ranked": true,
       "arenaElo": null,
       "categoryIdx": {
         "human-preference": null,
         "knowledge": null,
         "reasoning": 71.9,
-        "coding": 54.9,
+        "coding": 50.3,
         "math": 76.9,
         "vision": null,
         "agents": null
@@ -5187,15 +5939,15 @@
     },
     {
       "slug": "openai-o3-pro",
-      "overallIndex": 89.5,
-      "rankOverall": 7,
+      "overallIndex": 83.1,
+      "rankOverall": 23,
       "ranked": true,
       "arenaElo": null,
       "categoryIdx": {
         "human-preference": null,
         "knowledge": null,
         "reasoning": 81,
-        "coding": 94.6,
+        "coding": 79.1,
         "math": 93,
         "vision": null,
         "agents": null
@@ -5203,15 +5955,15 @@
     },
     {
       "slug": "openai-o4-mini",
-      "overallIndex": 78.5,
-      "rankOverall": 39,
+      "overallIndex": 73.2,
+      "rankOverall": 96,
       "ranked": true,
       "arenaElo": null,
       "categoryIdx": {
         "human-preference": null,
         "knowledge": null,
-        "reasoning": 57.3,
-        "coding": 86.2,
+        "reasoning": 52.5,
+        "coding": 75.1,
         "math": 93.4,
         "vision": 90.6,
         "agents": null
@@ -5220,7 +5972,7 @@
     {
       "slug": "openhermes-2-5-mistral-7b",
       "overallIndex": 60,
-      "rankOverall": 167,
+      "rankOverall": 195,
       "ranked": true,
       "arenaElo": null,
       "categoryIdx": {
@@ -5247,6 +5999,38 @@
         "math": null,
         "vision": null,
         "agents": null
+      }
+    },
+    {
+      "slug": "openpangu-2-0-flash-non-thinking",
+      "overallIndex": 68.7,
+      "rankOverall": 129,
+      "ranked": true,
+      "arenaElo": null,
+      "categoryIdx": {
+        "human-preference": null,
+        "knowledge": null,
+        "reasoning": 71.7,
+        "coding": 56.8,
+        "math": 86.5,
+        "vision": null,
+        "agents": null
+      }
+    },
+    {
+      "slug": "openpangu-2-0-flash-thinking",
+      "overallIndex": 82.7,
+      "rankOverall": 28,
+      "ranked": true,
+      "arenaElo": null,
+      "categoryIdx": {
+        "human-preference": null,
+        "knowledge": null,
+        "reasoning": 90.3,
+        "coding": 77.8,
+        "math": 93.3,
+        "vision": null,
+        "agents": 59.4
       }
     },
     {
@@ -5300,7 +6084,7 @@
     {
       "slug": "orca-2-13b",
       "overallIndex": 39.4,
-      "rankOverall": 241,
+      "rankOverall": 272,
       "ranked": true,
       "arenaElo": null,
       "categoryIdx": {
@@ -5332,7 +6116,7 @@
     {
       "slug": "palm-540b",
       "overallIndex": 62.5,
-      "rankOverall": 155,
+      "rankOverall": 180,
       "ranked": true,
       "arenaElo": null,
       "categoryIdx": {
@@ -5380,7 +6164,7 @@
     {
       "slug": "palmyra-x5",
       "overallIndex": 56.5,
-      "rankOverall": 183,
+      "rankOverall": 212,
       "ranked": true,
       "arenaElo": null,
       "categoryIdx": {
@@ -5396,7 +6180,7 @@
     {
       "slug": "pharia-1-llm-7b-control",
       "overallIndex": 22.5,
-      "rankOverall": 268,
+      "rankOverall": 299,
       "ranked": true,
       "arenaElo": null,
       "categoryIdx": {
@@ -5428,7 +6212,7 @@
     {
       "slug": "phi-1-5-1-3b",
       "overallIndex": 35.1,
-      "rankOverall": 249,
+      "rankOverall": 280,
       "ranked": true,
       "arenaElo": null,
       "categoryIdx": {
@@ -5444,7 +6228,7 @@
     {
       "slug": "phi-2-2-7b",
       "overallIndex": 50.8,
-      "rankOverall": 212,
+      "rankOverall": 239,
       "ranked": true,
       "arenaElo": null,
       "categoryIdx": {
@@ -5460,7 +6244,7 @@
     {
       "slug": "phi-3-5-mini-3-8b",
       "overallIndex": 55.4,
-      "rankOverall": 192,
+      "rankOverall": 219,
       "ranked": true,
       "arenaElo": null,
       "categoryIdx": {
@@ -5476,7 +6260,7 @@
     {
       "slug": "phi-3-5-moe-16x3-8b-6-6b-active",
       "overallIndex": 64.4,
-      "rankOverall": 141,
+      "rankOverall": 167,
       "ranked": true,
       "arenaElo": null,
       "categoryIdx": {
@@ -5508,7 +6292,7 @@
     {
       "slug": "phi-3-medium-14b",
       "overallIndex": 73,
-      "rankOverall": 79,
+      "rankOverall": 97,
       "ranked": true,
       "arenaElo": null,
       "categoryIdx": {
@@ -5524,7 +6308,7 @@
     {
       "slug": "phi-3-mini-3-8b",
       "overallIndex": 54,
-      "rankOverall": 198,
+      "rankOverall": 225,
       "ranked": true,
       "arenaElo": null,
       "categoryIdx": {
@@ -5540,7 +6324,7 @@
     {
       "slug": "phi-3-small-7b",
       "overallIndex": 69.4,
-      "rankOverall": 103,
+      "rankOverall": 126,
       "ranked": true,
       "arenaElo": null,
       "categoryIdx": {
@@ -5556,7 +6340,7 @@
     {
       "slug": "phi-4-14b",
       "overallIndex": 63.6,
-      "rankOverall": 148,
+      "rankOverall": 174,
       "ranked": true,
       "arenaElo": null,
       "categoryIdx": {
@@ -5572,7 +6356,7 @@
     {
       "slug": "phi-4-mini-3-8b",
       "overallIndex": 56.9,
-      "rankOverall": 181,
+      "rankOverall": 210,
       "ranked": true,
       "arenaElo": null,
       "categoryIdx": {
@@ -5588,7 +6372,7 @@
     {
       "slug": "phi-4-mini-instruct",
       "overallIndex": 56.3,
-      "rankOverall": 186,
+      "rankOverall": 214,
       "ranked": true,
       "arenaElo": null,
       "categoryIdx": {
@@ -5636,7 +6420,7 @@
     {
       "slug": "phi-4-reasoning",
       "overallIndex": 75.9,
-      "rankOverall": 57,
+      "rankOverall": 67,
       "ranked": true,
       "arenaElo": null,
       "categoryIdx": {
@@ -5652,7 +6436,7 @@
     {
       "slug": "phi-4-reasoning-14b",
       "overallIndex": 75.4,
-      "rankOverall": 63,
+      "rankOverall": 75,
       "ranked": true,
       "arenaElo": null,
       "categoryIdx": {
@@ -5715,15 +6499,15 @@
     },
     {
       "slug": "poro-34b",
-      "overallIndex": 44.4,
-      "rankOverall": 228,
+      "overallIndex": 43.8,
+      "rankOverall": 260,
       "ranked": true,
       "arenaElo": null,
       "categoryIdx": {
         "human-preference": null,
         "knowledge": 50.2,
         "reasoning": 54,
-        "coding": 35.3,
+        "coding": 30.2,
         "math": 7.1,
         "vision": null,
         "agents": null
@@ -5780,7 +6564,7 @@
     {
       "slug": "qvq-72b-preview",
       "overallIndex": 86.3,
-      "rankOverall": 14,
+      "rankOverall": 10,
       "ranked": true,
       "arenaElo": null,
       "categoryIdx": {
@@ -5796,7 +6580,7 @@
     {
       "slug": "qwen-1-8b",
       "overallIndex": 24.3,
-      "rankOverall": 264,
+      "rankOverall": 295,
       "ranked": true,
       "arenaElo": null,
       "categoryIdx": {
@@ -5812,7 +6596,7 @@
     {
       "slug": "qwen-14b",
       "overallIndex": 51.7,
-      "rankOverall": 207,
+      "rankOverall": 235,
       "ranked": true,
       "arenaElo": null,
       "categoryIdx": {
@@ -5828,7 +6612,7 @@
     {
       "slug": "qwen-72b",
       "overallIndex": 66.2,
-      "rankOverall": 126,
+      "rankOverall": 152,
       "ranked": true,
       "arenaElo": null,
       "categoryIdx": {
@@ -5844,7 +6628,7 @@
     {
       "slug": "qwen-7b",
       "overallIndex": 33.4,
-      "rankOverall": 251,
+      "rankOverall": 282,
       "ranked": true,
       "arenaElo": null,
       "categoryIdx": {
@@ -5892,7 +6676,7 @@
     {
       "slug": "qwen1-5-110b",
       "overallIndex": 59.8,
-      "rankOverall": 170,
+      "rankOverall": 198,
       "ranked": true,
       "arenaElo": null,
       "categoryIdx": {
@@ -5908,7 +6692,7 @@
     {
       "slug": "qwen1-5-72b",
       "overallIndex": 61.2,
-      "rankOverall": 163,
+      "rankOverall": 190,
       "ranked": true,
       "arenaElo": null,
       "categoryIdx": {
@@ -5924,7 +6708,7 @@
     {
       "slug": "qwen1-5-moe-a2-7b",
       "overallIndex": 41.9,
-      "rankOverall": 234,
+      "rankOverall": 266,
       "ranked": true,
       "arenaElo": null,
       "categoryIdx": {
@@ -5940,7 +6724,7 @@
     {
       "slug": "qwen2-5-14b",
       "overallIndex": 63.5,
-      "rankOverall": 149,
+      "rankOverall": 175,
       "ranked": true,
       "arenaElo": null,
       "categoryIdx": {
@@ -5956,7 +6740,7 @@
     {
       "slug": "qwen2-5-32b",
       "overallIndex": 68.1,
-      "rankOverall": 115,
+      "rankOverall": 135,
       "ranked": true,
       "arenaElo": null,
       "categoryIdx": {
@@ -5972,7 +6756,7 @@
     {
       "slug": "qwen2-5-72b",
       "overallIndex": 72.4,
-      "rankOverall": 82,
+      "rankOverall": 101,
       "ranked": true,
       "arenaElo": null,
       "categoryIdx": {
@@ -5988,7 +6772,7 @@
     {
       "slug": "qwen2-5-7b",
       "overallIndex": 58.3,
-      "rankOverall": 176,
+      "rankOverall": 204,
       "ranked": true,
       "arenaElo": null,
       "categoryIdx": {
@@ -6003,7 +6787,7 @@
     },
     {
       "slug": "qwen2-5-coder-32b",
-      "overallIndex": 77.9,
+      "overallIndex": 66.7,
       "rankOverall": null,
       "ranked": false,
       "arenaElo": null,
@@ -6011,7 +6795,7 @@
         "human-preference": null,
         "knowledge": null,
         "reasoning": null,
-        "coding": 77.9,
+        "coding": 66.7,
         "math": null,
         "vision": null,
         "agents": null
@@ -6036,7 +6820,7 @@
     {
       "slug": "qwen2-5-max",
       "overallIndex": 65.7,
-      "rankOverall": 131,
+      "rankOverall": 157,
       "ranked": true,
       "arenaElo": null,
       "categoryIdx": {
@@ -6051,7 +6835,7 @@
     },
     {
       "slug": "qwen2-5-vl-72b",
-      "overallIndex": 88.6,
+      "overallIndex": 86.1,
       "rankOverall": null,
       "ranked": false,
       "arenaElo": null,
@@ -6061,14 +6845,14 @@
         "reasoning": null,
         "coding": null,
         "math": null,
-        "vision": 88.6,
+        "vision": 86.1,
         "agents": null
       }
     },
     {
       "slug": "qwen2-57b-a14b",
       "overallIndex": 50.3,
-      "rankOverall": 214,
+      "rankOverall": 240,
       "ranked": true,
       "arenaElo": null,
       "categoryIdx": {
@@ -6084,7 +6868,7 @@
     {
       "slug": "qwen2-72b",
       "overallIndex": 63.4,
-      "rankOverall": 151,
+      "rankOverall": 177,
       "ranked": true,
       "arenaElo": null,
       "categoryIdx": {
@@ -6100,7 +6884,7 @@
     {
       "slug": "qwen2-7b",
       "overallIndex": 49.3,
-      "rankOverall": 217,
+      "rankOverall": 245,
       "ranked": true,
       "arenaElo": null,
       "categoryIdx": {
@@ -6116,7 +6900,7 @@
     {
       "slug": "qwen2-math-72b",
       "overallIndex": 76.9,
-      "rankOverall": 52,
+      "rankOverall": 60,
       "ranked": true,
       "arenaElo": null,
       "categoryIdx": {
@@ -6147,8 +6931,8 @@
     },
     {
       "slug": "qwen3-14b-non-thinking",
-      "overallIndex": 41.7,
-      "rankOverall": 235,
+      "overallIndex": 43.4,
+      "rankOverall": 262,
       "ranked": true,
       "arenaElo": null,
       "categoryIdx": {
@@ -6158,13 +6942,13 @@
         "coding": 30.9,
         "math": 31.7,
         "vision": null,
-        "agents": 60.1
+        "agents": 66.9
       }
     },
     {
       "slug": "qwen3-14b-thinking",
-      "overallIndex": 68.9,
-      "rankOverall": 109,
+      "overallIndex": 71,
+      "rankOverall": 111,
       "ranked": true,
       "arenaElo": null,
       "categoryIdx": {
@@ -6174,13 +6958,13 @@
         "coding": 67.6,
         "math": 79.3,
         "vision": null,
-        "agents": 73
+        "agents": 81.3
       }
     },
     {
       "slug": "qwen3-235b-a22b-instruct-2507",
       "overallIndex": 77.3,
-      "rankOverall": 45,
+      "rankOverall": 52,
       "ranked": true,
       "arenaElo": null,
       "categoryIdx": {
@@ -6195,8 +6979,8 @@
     },
     {
       "slug": "qwen3-235b-a22b-non-thinking",
-      "overallIndex": 50.4,
-      "rankOverall": 213,
+      "overallIndex": 52.3,
+      "rankOverall": 232,
       "ranked": true,
       "arenaElo": null,
       "categoryIdx": {
@@ -6206,12 +6990,12 @@
         "coding": 37.6,
         "math": 40.1,
         "vision": null,
-        "agents": 69.6
+        "agents": 77.4
       }
     },
     {
       "slug": "qwen3-235b-a22b-thinking",
-      "overallIndex": 73.8,
+      "overallIndex": 75.5,
       "rankOverall": 72,
       "ranked": true,
       "arenaElo": null,
@@ -6222,13 +7006,29 @@
         "coding": 75.2,
         "math": 85.7,
         "vision": null,
-        "agents": 73.6
+        "agents": 81.9
+      }
+    },
+    {
+      "slug": "qwen3-235b-a22b-thinking-2507",
+      "overallIndex": 75.1,
+      "rankOverall": 78,
+      "ranked": true,
+      "arenaElo": null,
+      "categoryIdx": {
+        "human-preference": 94.9,
+        "knowledge": 93.7,
+        "reasoning": 66.7,
+        "coding": 78.8,
+        "math": 92.3,
+        "vision": null,
+        "agents": 53.2
       }
     },
     {
       "slug": "qwen3-30b-a3b-non-thinking",
       "overallIndex": 51.9,
-      "rankOverall": 206,
+      "rankOverall": 234,
       "ranked": true,
       "arenaElo": null,
       "categoryIdx": {
@@ -6244,7 +7044,7 @@
     {
       "slug": "qwen3-30b-a3b-thinking",
       "overallIndex": 75.2,
-      "rankOverall": 64,
+      "rankOverall": 77,
       "ranked": true,
       "arenaElo": null,
       "categoryIdx": {
@@ -6260,7 +7060,7 @@
     {
       "slug": "qwen3-32b-non-thinking",
       "overallIndex": 54.2,
-      "rankOverall": 197,
+      "rankOverall": 224,
       "ranked": true,
       "arenaElo": null,
       "categoryIdx": {
@@ -6276,7 +7076,7 @@
     {
       "slug": "qwen3-32b-thinking",
       "overallIndex": 77.7,
-      "rankOverall": 43,
+      "rankOverall": 51,
       "ranked": true,
       "arenaElo": null,
       "categoryIdx": {
@@ -6290,9 +7090,41 @@
       }
     },
     {
+      "slug": "qwen3-7-max",
+      "overallIndex": 80.4,
+      "rankOverall": 38,
+      "ranked": true,
+      "arenaElo": null,
+      "categoryIdx": {
+        "human-preference": null,
+        "knowledge": null,
+        "reasoning": 91.6,
+        "coding": 74.8,
+        "math": null,
+        "vision": null,
+        "agents": null
+      }
+    },
+    {
+      "slug": "qwen3-7-plus",
+      "overallIndex": 78.6,
+      "rankOverall": 47,
+      "ranked": true,
+      "arenaElo": null,
+      "categoryIdx": {
+        "human-preference": null,
+        "knowledge": null,
+        "reasoning": 89,
+        "coding": 73.4,
+        "math": null,
+        "vision": null,
+        "agents": null
+      }
+    },
+    {
       "slug": "qwen3-8b-non-thinking",
       "overallIndex": 44.6,
-      "rankOverall": 226,
+      "rankOverall": 257,
       "ranked": true,
       "arenaElo": null,
       "categoryIdx": {
@@ -6308,7 +7140,7 @@
     {
       "slug": "qwen3-8b-thinking",
       "overallIndex": 70.9,
-      "rankOverall": 92,
+      "rankOverall": 114,
       "ranked": true,
       "arenaElo": null,
       "categoryIdx": {
@@ -6323,7 +7155,7 @@
     },
     {
       "slug": "qwen3-coder-480b-a35b",
-      "overallIndex": 65.7,
+      "overallIndex": 47,
       "rankOverall": null,
       "ranked": false,
       "arenaElo": null,
@@ -6331,7 +7163,7 @@
         "human-preference": null,
         "knowledge": null,
         "reasoning": null,
-        "coding": 65.7,
+        "coding": 47,
         "math": null,
         "vision": null,
         "agents": null
@@ -6339,24 +7171,24 @@
     },
     {
       "slug": "qwen3-max",
-      "overallIndex": 83.2,
-      "rankOverall": 25,
+      "overallIndex": 75,
+      "rankOverall": 79,
       "ranked": true,
       "arenaElo": null,
       "categoryIdx": {
-        "human-preference": null,
+        "human-preference": 100,
         "knowledge": null,
-        "reasoning": 93.9,
-        "coding": 80.9,
-        "math": null,
+        "reasoning": 71.8,
+        "coding": 66.5,
+        "math": 80.6,
         "vision": null,
-        "agents": 74.8
+        "agents": 64.9
       }
     },
     {
       "slug": "qwq-32b",
-      "overallIndex": 73.9,
-      "rankOverall": 68,
+      "overallIndex": 75.4,
+      "rankOverall": 76,
       "ranked": true,
       "arenaElo": null,
       "categoryIdx": {
@@ -6366,13 +7198,13 @@
         "coding": 67.4,
         "math": 79.5,
         "vision": null,
-        "agents": 67.2
+        "agents": 74.8
       }
     },
     {
       "slug": "qwq-32b-preview",
       "overallIndex": 64.5,
-      "rankOverall": 139,
+      "rankOverall": 166,
       "ranked": true,
       "arenaElo": null,
       "categoryIdx": {
@@ -6468,7 +7300,7 @@
     {
       "slug": "reka-core",
       "overallIndex": 73.8,
-      "rankOverall": 73,
+      "rankOverall": 92,
       "ranked": true,
       "arenaElo": null,
       "categoryIdx": {
@@ -6482,9 +7314,25 @@
       }
     },
     {
+      "slug": "reka-edge-2026",
+      "overallIndex": 100,
+      "rankOverall": null,
+      "ranked": false,
+      "arenaElo": null,
+      "categoryIdx": {
+        "human-preference": null,
+        "knowledge": null,
+        "reasoning": null,
+        "coding": null,
+        "math": null,
+        "vision": 100,
+        "agents": null
+      }
+    },
+    {
       "slug": "reka-edge-7b",
       "overallIndex": 52.9,
-      "rankOverall": 202,
+      "rankOverall": 229,
       "ranked": true,
       "arenaElo": null,
       "categoryIdx": {
@@ -6500,7 +7348,7 @@
     {
       "slug": "reka-flash-21b",
       "overallIndex": 72.3,
-      "rankOverall": 83,
+      "rankOverall": 103,
       "ranked": true,
       "arenaElo": null,
       "categoryIdx": {
@@ -6580,7 +7428,7 @@
     {
       "slug": "sarvam-1-2b",
       "overallIndex": 49.1,
-      "rankOverall": 218,
+      "rankOverall": 246,
       "ranked": true,
       "arenaElo": null,
       "categoryIdx": {
@@ -6595,24 +7443,40 @@
     },
     {
       "slug": "sarvam-105b",
-      "overallIndex": 77.2,
-      "rankOverall": 47,
+      "overallIndex": 76.5,
+      "rankOverall": 63,
       "ranked": true,
       "arenaElo": null,
       "categoryIdx": {
         "human-preference": null,
         "knowledge": 88.3,
         "reasoning": 74.3,
-        "coding": 64.3,
+        "coding": 61.3,
         "math": 93.3,
         "vision": null,
         "agents": 51.6
       }
     },
     {
+      "slug": "seed-2-1-pro",
+      "overallIndex": 0,
+      "rankOverall": null,
+      "ranked": false,
+      "arenaElo": null,
+      "categoryIdx": {
+        "human-preference": null,
+        "knowledge": null,
+        "reasoning": null,
+        "coding": null,
+        "math": null,
+        "vision": null,
+        "agents": null
+      }
+    },
+    {
       "slug": "seed-oss-36b",
       "overallIndex": 83.8,
-      "rankOverall": 23,
+      "rankOverall": 17,
       "ranked": true,
       "arenaElo": null,
       "categoryIdx": {
@@ -6628,7 +7492,7 @@
     {
       "slug": "seed1-5-thinking",
       "overallIndex": 57.1,
-      "rankOverall": 180,
+      "rankOverall": 209,
       "ranked": true,
       "arenaElo": null,
       "categoryIdx": {
@@ -6644,7 +7508,7 @@
     {
       "slug": "skywork-13b",
       "overallIndex": 53.6,
-      "rankOverall": 199,
+      "rankOverall": 227,
       "ranked": true,
       "arenaElo": null,
       "categoryIdx": {
@@ -6660,7 +7524,7 @@
     {
       "slug": "skywork-moe-base",
       "overallIndex": 62.2,
-      "rankOverall": 158,
+      "rankOverall": 184,
       "ranked": true,
       "arenaElo": null,
       "categoryIdx": {
@@ -6692,7 +7556,7 @@
     {
       "slug": "skywork-r1v-38b",
       "overallIndex": 73.6,
-      "rankOverall": 75,
+      "rankOverall": 94,
       "ranked": true,
       "arenaElo": null,
       "categoryIdx": {
@@ -6708,7 +7572,7 @@
     {
       "slug": "smollm2-1-7b",
       "overallIndex": 34.7,
-      "rankOverall": 250,
+      "rankOverall": 281,
       "ranked": true,
       "arenaElo": null,
       "categoryIdx": {
@@ -6724,7 +7588,7 @@
     {
       "slug": "smollm3-3b-no-thinking",
       "overallIndex": 30,
-      "rankOverall": 259,
+      "rankOverall": 290,
       "ranked": true,
       "arenaElo": null,
       "categoryIdx": {
@@ -6756,7 +7620,7 @@
     {
       "slug": "snowflake-arctic",
       "overallIndex": 55.9,
-      "rankOverall": 188,
+      "rankOverall": 216,
       "ranked": true,
       "arenaElo": null,
       "categoryIdx": {
@@ -6820,7 +7684,7 @@
     {
       "slug": "stable-lm-2-1-6b",
       "overallIndex": 29.7,
-      "rankOverall": 260,
+      "rankOverall": 291,
       "ranked": true,
       "arenaElo": null,
       "categoryIdx": {
@@ -6836,7 +7700,7 @@
     {
       "slug": "stable-lm-2-12b",
       "overallIndex": 61.9,
-      "rankOverall": 160,
+      "rankOverall": 186,
       "ranked": true,
       "arenaElo": null,
       "categoryIdx": {
@@ -6852,7 +7716,7 @@
     {
       "slug": "stablelm-3b-4e1t",
       "overallIndex": 31.3,
-      "rankOverall": 256,
+      "rankOverall": 287,
       "ranked": true,
       "arenaElo": null,
       "categoryIdx": {
@@ -6884,7 +7748,7 @@
     {
       "slug": "stablelm-zephyr-3b",
       "overallIndex": 40.1,
-      "rankOverall": 238,
+      "rankOverall": 269,
       "ranked": true,
       "arenaElo": null,
       "categoryIdx": {
@@ -6916,7 +7780,7 @@
     {
       "slug": "starcoder2-15b",
       "overallIndex": 65.8,
-      "rankOverall": 130,
+      "rankOverall": 156,
       "ranked": true,
       "arenaElo": null,
       "categoryIdx": {
@@ -6932,7 +7796,7 @@
     {
       "slug": "starcoder2-3b",
       "overallIndex": 39.2,
-      "rankOverall": 242,
+      "rankOverall": 273,
       "ranked": true,
       "arenaElo": null,
       "categoryIdx": {
@@ -7026,6 +7890,22 @@
       }
     },
     {
+      "slug": "step-3-7-flash",
+      "overallIndex": 12.7,
+      "rankOverall": null,
+      "ranked": false,
+      "arenaElo": null,
+      "categoryIdx": {
+        "human-preference": null,
+        "knowledge": null,
+        "reasoning": 12.7,
+        "coding": null,
+        "math": null,
+        "vision": null,
+        "agents": null
+      }
+    },
+    {
       "slug": "t-lu-2-dpo-70b",
       "overallIndex": 82.9,
       "rankOverall": null,
@@ -7044,7 +7924,7 @@
     {
       "slug": "t-lu-3-405b",
       "overallIndex": 84.4,
-      "rankOverall": 21,
+      "rankOverall": 15,
       "ranked": true,
       "arenaElo": null,
       "categoryIdx": {
@@ -7060,7 +7940,7 @@
     {
       "slug": "t-lu-3-70b",
       "overallIndex": 79.1,
-      "rankOverall": 37,
+      "rankOverall": 45,
       "ranked": true,
       "arenaElo": null,
       "categoryIdx": {
@@ -7076,7 +7956,7 @@
     {
       "slug": "teuken-7b-instruct",
       "overallIndex": 23,
-      "rankOverall": 266,
+      "rankOverall": 297,
       "ranked": true,
       "arenaElo": null,
       "categoryIdx": {
@@ -7087,6 +7967,22 @@
         "math": null,
         "vision": null,
         "agents": null
+      }
+    },
+    {
+      "slug": "trinity-large-thinking",
+      "overallIndex": 80.2,
+      "rankOverall": 40,
+      "ranked": true,
+      "arenaElo": null,
+      "categoryIdx": {
+        "human-preference": null,
+        "knowledge": 90,
+        "reasoning": 60.1,
+        "coding": 65.2,
+        "math": 96.3,
+        "vision": null,
+        "agents": 94.7
       }
     },
     {
@@ -7140,7 +8036,7 @@
     {
       "slug": "upstage-solar-pro",
       "overallIndex": 70.3,
-      "rankOverall": 95,
+      "rankOverall": 118,
       "ranked": true,
       "arenaElo": null,
       "categoryIdx": {
@@ -7252,7 +8148,7 @@
     {
       "slug": "wizardlm-2-8x22b",
       "overallIndex": 21.3,
-      "rankOverall": 269,
+      "rankOverall": 300,
       "ranked": true,
       "arenaElo": null,
       "categoryIdx": {
@@ -7284,7 +8180,7 @@
     {
       "slug": "xgen-7b-8k",
       "overallIndex": 30.7,
-      "rankOverall": 257,
+      "rankOverall": 288,
       "ranked": true,
       "arenaElo": null,
       "categoryIdx": {
@@ -7300,7 +8196,7 @@
     {
       "slug": "yandexgpt-5-pro",
       "overallIndex": 70,
-      "rankOverall": 98,
+      "rankOverall": 119,
       "ranked": true,
       "arenaElo": null,
       "categoryIdx": {
@@ -7316,7 +8212,7 @@
     {
       "slug": "yi-1-5-34b",
       "overallIndex": 32.5,
-      "rankOverall": 252,
+      "rankOverall": 283,
       "ranked": true,
       "arenaElo": null,
       "categoryIdx": {
@@ -7348,7 +8244,7 @@
     {
       "slug": "yi-34b",
       "overallIndex": 36,
-      "rankOverall": 247,
+      "rankOverall": 278,
       "ranked": true,
       "arenaElo": null,
       "categoryIdx": {
@@ -7364,7 +8260,7 @@
     {
       "slug": "yi-6b",
       "overallIndex": 19,
-      "rankOverall": 271,
+      "rankOverall": 302,
       "ranked": true,
       "arenaElo": null,
       "categoryIdx": {
@@ -7380,7 +8276,7 @@
     {
       "slug": "yi-lightning",
       "overallIndex": 67,
-      "rankOverall": 123,
+      "rankOverall": 147,
       "ranked": true,
       "arenaElo": 1287,
       "categoryIdx": {
@@ -7396,7 +8292,7 @@
     {
       "slug": "zephyr-7b-beta",
       "overallIndex": 58.6,
-      "rankOverall": 174,
+      "rankOverall": 202,
       "ranked": true,
       "arenaElo": null,
       "categoryIdx": {
@@ -7437,7 +8333,7 @@
       "name": "Sarvam-105B",
       "prevSlug": "sarvam-1-2b",
       "prevName": "Sarvam-1 (2B)",
-      "delta": 28.1
+      "delta": 27.4
     },
     {
       "slug": "seed-oss-36b",

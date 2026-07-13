@@ -10,26 +10,25 @@ test.describe('benchmarks', () => {
     // mentions "SWE-bench Verified" in passing, so an unanchored substring match hits both cards
     const swe = page.getByTestId('benchmark-card').filter({ hasText: /^SWE-bench Verified/ })
     await expect(swe).toContainText('leader')
-    // real leaderboard: Claude Opus 4.5 (80.9%) edges out the tied Claude Opus 4.5 (High) row
-    // alphabetically, and both display models sit ahead of Claude Opus 4.6 (80.8%)
-    await expect(swe).toContainText('Claude Opus 4.5')
+    // real leaderboard leader: Claude Fable 5 (95.0%, Vals AI independent re-run)
+    await expect(swe).toContainText('Claude Fable 5')
   })
 
   test('detail leaderboard ranks the field with provenance badges (D8)', async ({ page }) => {
     await gotoHydrated(page, '/benchmarks/swe-bench')
     const first = page.getByTestId('leaderboard-row').first()
-    await expect(first).toContainText('Claude Opus 4.5')
-    await expect(first).toContainText('80.9%')
-    await expect(first.getByTestId('provenance-badge')).toHaveText('self-reported')
-    // real field: 56 of the 463 models carry a SWE-bench Verified score
-    await expect(page.getByTestId('leaderboard-row')).toHaveCount(56)
+    await expect(first).toContainText('Claude Fable 5')
+    await expect(first).toContainText('95.0%')
+    await expect(first.getByTestId('provenance-badge')).toHaveText('independent')
+    // real field: 75 of the 519 models carry a SWE-bench Verified score
+    await expect(page.getByTestId('leaderboard-row')).toHaveCount(75)
   })
 
   test('distribution histogram + open-only params scatter render', async ({ page }) => {
     await gotoHydrated(page, '/benchmarks/gpqa')
     await expect(page.getByTestId('histogram').locator('div')).toHaveCount(10)
-    // open models with disclosed params carry the scatter (real GPQA field: 143 total, 82 open+params)
-    await expect(page.getByTestId('params-point')).toHaveCount(82)
+    // open models with disclosed params carry the scatter (real GPQA field, expanded catalog)
+    await expect(page.getByTestId('params-point')).toHaveCount(102)
   })
 
   test('params-scatter points carry tooltips and link to the model', async ({ page }) => {

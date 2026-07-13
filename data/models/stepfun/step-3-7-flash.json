@@ -1,0 +1,47 @@
+{
+  "slug": "step-3-7-flash",
+  "name": "Step 3.7 Flash",
+  "orgSlug": "stepfun",
+  "familySlug": "step",
+  "releaseDate": "2026-05-29",
+  "status": "released",
+  "predecessor": null,
+  "openness": "open-weights",
+  "license": "Apache 2.0",
+  "paramsB": 198,
+  "activeParamsB": 11,
+  "archClass": "moe",
+  "archDisplay": "Sparse Mixture-of-Experts with 1.8B vision encoder + 196B language backbone, 198B total / 11B active",
+  "ctxK": 262,
+  "modalities": [
+    "text",
+    "vision"
+  ],
+  "langCount": null,
+  "capabilities": {
+    "reasoning": false,
+    "coding": true,
+    "vision": true,
+    "functionCalling": true,
+    "toolUse": true,
+    "agentic": true
+  },
+  "apiAvailable": true,
+  "price": {
+    "input": 0.2,
+    "output": 1.15
+  },
+  "links": {
+    "hf": "stepfun-ai/Step-3.7-Flash",
+    "docs": "https://github.com/stepfun-ai/Step-3.7-Flash"
+  },
+  "note": "Newest StepFun release (successor to Step 3.5 Flash), adding native multimodal (image/GUI/document) support that the text-only Step 3.5 Flash lacked. Not previously in corpus (corpus's newest StepFun entry is Step-3 from 2025-07-31). No shipped 'Step 4' flagship found -- only reported as in training.",
+  "quants": [],
+  "vramQ4Gb": null,
+  "vramFp16Gb": null,
+  "tps4090": null,
+  "tpsNote": null,
+  "effortLabel": null,
+  "isDefaultConfig": true,
+  "isBestConfig": true
+}

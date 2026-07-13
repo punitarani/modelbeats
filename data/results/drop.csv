@@ -1,7 +1,7 @@
 model_slug,score,source,source_url,evaluated_at,notes
-amazon-nova-lite,80.2,independent,https://deepranking.ai/llm-models/nova-lite,,
-amazon-nova-micro,79.3,independent,https://deepranking.ai/llm-models/nova-micro,,
-amazon-nova-pro,85.4,independent,https://deepranking.ai/llm-models/nova-pro,,
+amazon-nova-lite,80.2,self-reported,https://deepranking.ai/llm-models/nova-lite,,"[relabeled self-reported: aggregator/press relay of a vendor figure, not an independent re-measurement]"
+amazon-nova-micro,79.3,self-reported,https://deepranking.ai/llm-models/nova-micro,,"[relabeled self-reported: aggregator/press relay of a vendor figure, not an independent re-measurement]"
+amazon-nova-pro,85.4,self-reported,https://deepranking.ai/llm-models/nova-pro,,"[relabeled self-reported: aggregator/press relay of a vendor figure, not an independent re-measurement]"
 claude-3-5-sonnet,87.1,self-reported,https://www-cdn.anthropic.com/fed9cc193a14b84131812372d8d5857f8f304c52/Model_Card_Claude_3_Addendum.pdf,2024-06-20,"F1 score, 3-shot"
 claude-3-haiku,78.4,self-reported,https://www-cdn.anthropic.com/de8ba9b01c9ab7cbabf5c33b80b7bbc618857627/Model_Card_Claude_3.pdf,2024-03-13,"F1 score, 3-shot"
 claude-3-opus,83.1,self-reported,https://www-cdn.anthropic.com/de8ba9b01c9ab7cbabf5c33b80b7bbc618857627/Model_Card_Claude_3.pdf,2024-03-04,"F1 score, 3-shot"

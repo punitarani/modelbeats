@@ -1,0 +1,43 @@
+{
+  "slug": "openpangu-2-0-flash-thinking",
+  "name": "openPangu-2.0-Flash (Thinking)",
+  "orgSlug": "huawei",
+  "familySlug": "openpangu",
+  "releaseDate": "2026-06-12",
+  "status": "released",
+  "predecessor": null,
+  "openness": "open-weights",
+  "license": "OpenPangu Model License Agreement v2.0",
+  "paramsB": 92,
+  "activeParamsB": 6,
+  "archClass": "moe",
+  "archDisplay": "MoE with MLA + DSA/SWA hybrid attention (1:2 ratio), 4-stream mHC residual, multi-token prediction heads; trained on Huawei Ascend NPUs (no NVIDIA hardware)",
+  "ctxK": 512,
+  "modalities": [
+    "text"
+  ],
+  "langCount": null,
+  "capabilities": {
+    "reasoning": true,
+    "coding": true,
+    "vision": false,
+    "functionCalling": true,
+    "toolUse": true,
+    "agentic": true
+  },
+  "apiAvailable": false,
+  "price": null,
+  "links": {
+    "hf": "openpangu/openPangu-2.0-Flash",
+    "docs": "https://huggingface.co/openpangu/openPangu-2.0-Flash"
+  },
+  "note": "Announced at HDC 2026 (June 12, 2026); Huawei's first frontier-scale open-weight release, trained entirely on Ascend 910B NPUs with zero NVIDIA involvement. A larger 505B-total/18B-active 'Pro' sibling in the same openPangu 2.0 family was also announced but its benchmark card could not be independently confirmed via a fetchable source this pass (see uncertain). Scores here are the model's 'Thinking' inference-mode numbers; a 'Non-Thinking' mode is reported separately as a sibling entry per the effort-tier convention.",
+  "quants": [],
+  "vramQ4Gb": null,
+  "vramFp16Gb": null,
+  "tps4090": null,
+  "tpsNote": null,
+  "effortLabel": "Thinking",
+  "isDefaultConfig": false,
+  "isBestConfig": true
+}

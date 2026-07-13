@@ -1,0 +1,47 @@
+{
+  "slug": "mistral-large-3",
+  "name": "Mistral Large 3",
+  "orgSlug": "mistral-ai",
+  "familySlug": "mistral-large",
+  "releaseDate": "2025-12-02",
+  "status": "released",
+  "predecessor": "mistral-large-24-11",
+  "openness": "open-weights",
+  "license": "Apache 2.0",
+  "paramsB": 675,
+  "activeParamsB": 41,
+  "archClass": "moe",
+  "archDisplay": "Sparse Mixture-of-Experts, 675B total / 41B active parameters",
+  "ctxK": 256,
+  "modalities": [
+    "text",
+    "vision"
+  ],
+  "langCount": null,
+  "capabilities": {
+    "reasoning": false,
+    "coding": true,
+    "vision": true,
+    "functionCalling": true,
+    "toolUse": true,
+    "agentic": true
+  },
+  "apiAvailable": true,
+  "price": {
+    "input": 0.5,
+    "output": 1.5
+  },
+  "links": {
+    "hf": "mistralai/Mistral-Large-3-675B-Instruct-2512",
+    "docs": "https://docs.mistral.ai/"
+  },
+  "note": "Mistral's Dec 2025 flagship, not previously in corpus (corpus's newest Mistral entries were Magistral/Small 3.2 from June 2025). Apache 2.0, trained on 3000 H200s per vendor.",
+  "quants": [],
+  "vramQ4Gb": null,
+  "vramFp16Gb": null,
+  "tps4090": null,
+  "tpsNote": null,
+  "effortLabel": null,
+  "isDefaultConfig": true,
+  "isBestConfig": true
+}

@@ -1,2 +1,4 @@
 model_slug,score,source,source_url,evaluated_at,notes
+glm-5,43.2,self-reported,https://huggingface.co/zai-org/GLM-5,,CyberGym
+glm-5-1,68.7,self-reported,https://huggingface.co/zai-org/GLM-5.1,,CyberGym
 gpt-5-5,81.8,self-reported,https://openai.com/index/introducing-gpt-5-5,,CyberGym; confirmed

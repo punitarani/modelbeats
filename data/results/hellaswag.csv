@@ -8,6 +8,7 @@ cerebras-gpt-13b,51.3,self-reported,https://huggingface.co/cerebras/Cerebras-GPT
 claude-3-haiku,85.9,self-reported,https://www-cdn.anthropic.com/de8ba9b01c9ab7cbabf5c33b80b7bbc618857627/Model_Card_Claude_3.pdf,2024-03-13,10-shot
 claude-3-opus,95.4,self-reported,https://www-cdn.anthropic.com/de8ba9b01c9ab7cbabf5c33b80b7bbc618857627/Model_Card_Claude_3.pdf,2024-03-04,10-shot
 claude-3-sonnet,89,self-reported,https://www-cdn.anthropic.com/de8ba9b01c9ab7cbabf5c33b80b7bbc618857627/Model_Card_Claude_3.pdf,2024-03-04,10-shot
+comma-v0-1-2t,64.4,self-reported,https://huggingface.co/common-pile/comma-v0.1-2t,,
 dbrx,89,self-reported,https://www.databricks.com/blog/introducing-dbrx-new-state-art-open-llm,,
 decilm-7b,82.51,self-reported,https://huggingface.co/Deci/DeciLM-7B,,
 deepseekmoe-16b,77.1,self-reported,https://ar5iv.labs.arxiv.org/html/2401.06066,,"Base variant, 0-shot"

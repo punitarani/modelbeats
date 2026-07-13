@@ -1,0 +1,47 @@
+{
+  "slug": "grok-4-3",
+  "name": "Grok 4.3",
+  "orgSlug": "spacexai",
+  "familySlug": "grok-4-3",
+  "releaseDate": "2026-04-30",
+  "status": "released",
+  "predecessor": null,
+  "openness": "closed",
+  "license": "Proprietary",
+  "paramsB": null,
+  "activeParamsB": null,
+  "archClass": "moe",
+  "archDisplay": "Mixture-of-Experts (size undisclosed); always-on reasoning with configurable effort (none/low/medium/high, default low)",
+  "ctxK": 1000,
+  "modalities": [
+    "text",
+    "vision",
+    "video"
+  ],
+  "langCount": null,
+  "capabilities": {
+    "reasoning": true,
+    "coding": true,
+    "vision": true,
+    "functionCalling": true,
+    "toolUse": true,
+    "agentic": true
+  },
+  "apiAvailable": true,
+  "price": {
+    "input": 1.25,
+    "output": 2.5
+  },
+  "links": {
+    "docs": "https://docs.x.ai"
+  },
+  "note": "Default/low reasoning-effort configuration of xAI's (now SpaceXAI's) April 2026 flagship. 1M-token context, native video input, always-on reasoning defaulting to the cheapest 'low' effort tier. Predecessor to Grok 4.5; xAI did not publish a full first-party benchmark table alongside launch.",
+  "quants": [],
+  "vramQ4Gb": null,
+  "vramFp16Gb": null,
+  "tps4090": null,
+  "tpsNote": null,
+  "effortLabel": null,
+  "isDefaultConfig": true,
+  "isBestConfig": false
+}

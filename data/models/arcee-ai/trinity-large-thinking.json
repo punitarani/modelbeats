@@ -1,0 +1,46 @@
+{
+  "slug": "trinity-large-thinking",
+  "name": "Trinity-Large-Thinking",
+  "orgSlug": "arcee-ai",
+  "familySlug": "trinity",
+  "releaseDate": "2026-04-01",
+  "status": "released",
+  "predecessor": null,
+  "openness": "open-weights",
+  "license": "OpenMDW-1.1",
+  "paramsB": 398,
+  "activeParamsB": 13,
+  "archClass": "moe",
+  "archDisplay": "Sparse MoE, 256 experts (4 active + 1 shared, ~1.56% sparsity), sigmoid routing, SMEBU load balancing, interleaved local/global gated attention, depth-scaled sandwich norm",
+  "ctxK": 512,
+  "modalities": [
+    "text"
+  ],
+  "langCount": null,
+  "capabilities": {
+    "reasoning": true,
+    "coding": true,
+    "vision": false,
+    "functionCalling": true,
+    "toolUse": true,
+    "agentic": true
+  },
+  "apiAvailable": true,
+  "price": {
+    "input": 0.25,
+    "output": 0.8
+  },
+  "links": {
+    "hf": "arcee-ai/Trinity-Large-Thinking",
+    "docs": "https://arxiv.org/abs/2602.17004"
+  },
+  "note": "398B-total/13B-active reasoning MoE pretrained from scratch on 17T tokens by Arcee AI, a small US startup (widely reported as building it 'from scratch to best Meta's Llama') — one of the largest open-weight models produced by an independent US lab. Sibling Trinity Mini (26B/3B active) and Trinity Nano (6B/1B active) were released alongside it but were not independently characterized here. BFCLv4 (70.1) and Tau2-Airline (88.0) scores were reported on the model card but omitted from results below because they don't cleanly match any existing benchmark slug (bfcl-v3 is a different/easier benchmark version, and no tau2-airline slug exists) — flagging bfcl-v4 as a plausible new slug to add rather than misfiling it under bfcl-v3.",
+  "quants": [],
+  "vramQ4Gb": null,
+  "vramFp16Gb": null,
+  "tps4090": null,
+  "tpsNote": null,
+  "effortLabel": "Thinking",
+  "isDefaultConfig": true,
+  "isBestConfig": true
+}

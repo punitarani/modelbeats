@@ -3,7 +3,7 @@ ai21-jamba-1-5-large,48.3,self-reported,https://arxiv.org/html/2408.12570v1,,
 ai21-jamba-1-5-mini,39.8,self-reported,https://arxiv.org/html/2408.12570v1,,
 amazon-nova-premier,73.3,independent,https://artificialanalysis.ai/models/nova-premier,,
 aya-expanse-32b,45.41,self-reported,https://huggingface.co/CohereLabs/aya-expanse-32b,2024-10-24,English MMLU-Pro
-aya-vision-32b,47.16,independent,https://www.datalearner.com/en/ai-models/pretrained-models/aya-vision-32b,,
+aya-vision-32b,47.16,self-reported,https://www.datalearner.com/en/ai-models/pretrained-models/aya-vision-32b,,"[relabeled self-reported: aggregator/press relay of a vendor figure, not an independent re-measurement]"
 claude-haiku-4-5,80,independent,https://artificialanalysis.ai/models/claude-4-5-haiku,2025-10-01,independent evaluation; same caveat as GPQA row — 80.0% figure cross-confirmed via secondary aggregators citing Artificial Analysis
 deepseek-coder-v2-236b,63.63,self-reported,https://huggingface.co/deepseek-ai/DeepSeek-Coder-V2-Instruct,,
 deepseek-r1-0528,85,self-reported,https://huggingface.co/deepseek-ai/DeepSeek-R1-0528,2025-05-28,MMLU-Pro
@@ -11,7 +11,14 @@ deepseek-v2-5,65.83,self-reported,https://huggingface.co/deepseek-ai/DeepSeek-V2
 deepseek-v3-0324,81.2,self-reported,https://huggingface.co/deepseek-ai/DeepSeek-V3-0324,2025-03-24,MMLU-Pro
 deepseek-v3-1-non-thinking,83.7,self-reported,https://huggingface.co/deepseek-ai/DeepSeek-V3.1,,MMLU-Pro (EM)
 deepseek-v3-1-thinking,84.8,self-reported,https://huggingface.co/deepseek-ai/DeepSeek-V3.1,,MMLU-Pro (EM)
+deepseek-v3-2-exp,85,self-reported,https://github.com/deepseek-ai/DeepSeek-V3.2-Exp,,DeepSeek's own README benchmark table
 deepseek-v3-671b,75.9,self-reported,https://huggingface.co/deepseek-ai/DeepSeek-V3,,
+deepseek-v4-flash-non-think,83,self-reported,https://huggingface.co/deepseek-ai/DeepSeek-V4-Flash,,Non-Think mode
+deepseek-v4-flash-think-high,86.4,self-reported,https://huggingface.co/deepseek-ai/DeepSeek-V4-Flash,,"Think High mode, per HF model card"
+deepseek-v4-flash-think-max,86.2,self-reported,https://macaron.im/blog/deepseek-v4-benchmarks,,Max mode
+deepseek-v4-pro-non-think,82.9,self-reported,https://huggingface.co/deepseek-ai/DeepSeek-V4-Pro,,Non-Think mode
+deepseek-v4-pro-think-high,87.1,self-reported,https://arxiv.org/abs/2606.19348,,"Think-High mode, per macaron.im's transcription of DeepSeek's technical report"
+deepseek-v4-pro-think-max,87.5,self-reported,https://huggingface.co/deepseek-ai/DeepSeek-V4-Pro,,Pro-Max mode
 ernie-4-5-300b-a47b,78.4,self-reported,https://huggingface.co/baidu/ERNIE-4.5-300B-A47B-PT,,
 falcon-h1-34b,58.73,self-reported,https://huggingface.co/tiiuae/Falcon-H1-34B-Instruct,,
 falcon-h1r-7b,72.1,self-reported,https://falcon-lm.github.io/blog/falcon-h1r-7b/,,
@@ -34,6 +41,7 @@ grok-2-mini,72,self-reported,https://klu.ai/glossary/xai-grok-2,2024-08-13,
 grok-3-think,79.9,self-reported,https://futureagi.com/blog/grok-3-technical-review-2025/,2025-02-17,Think mode
 hermes-3-405b,54.14,self-reported,https://arxiv.org/pdf/2408.11857,,5-shot
 hunyuan-t1,87.2,self-reported,https://tencent.github.io/llm.hunyuan.T1/README_EN.html,,ranks second only to o1
+hy3,65.76,self-reported,https://github.com/Tencent-Hunyuan/Hy3-preview,,"5-shot, from Tencent's own Hy3-preview model card"
 internlm3-8b-instruct,57.6,self-reported,https://internlm.readthedocs.io/en/latest/model_card/InternLM3.html,,
 lg-exaone-4-0-32b-non-reasoning,77.6,self-reported,https://arxiv.org/abs/2507.11407,,Non-reasoning mode
 lg-exaone-4-0-32b-reasoning,81.8,self-reported,https://arxiv.org/abs/2507.11407,,Reasoning mode
@@ -46,10 +54,12 @@ llama-4-scout,74.3,self-reported,https://huggingface.co/blog/llama4-release,,Ins
 minimax-m1,80.6,self-reported,https://huggingface.co/MiniMaxAI/MiniMax-M1-80k,,M1-40K
 minimax-m2,82,self-reported,https://github.com/MiniMax-AI/MiniMax-M2,,
 minimax-text-01,75.7,self-reported,https://huggingface.co/MiniMaxAI/MiniMax-Text-01,,
+mistral-large-3,73.11,independent,https://artificialanalysis.ai/models/mistral-large-3,,"LayerLens/Atlas independent evaluation, as reported by Artificial Analysis"
 mistral-small-3-24b,66.3,self-reported,https://huggingface.co/mistralai/Mistral-Small-24B-Instruct-2501,,
 nemotron-3-ultra-550b-a55b,86.8,self-reported,https://huggingface.co/nvidia/NVIDIA-Nemotron-3-Ultra-550B-A55B-BF16,,
 nemotron-h-56b,60.51,self-reported,https://huggingface.co/nvidia/Nemotron-H-56B-Base-8K,,
 olmo-2-7b,31,self-reported,https://huggingface.co/allenai/OLMo-2-1124-7B,,
+olmo-3-think-32b,75.9,independent,https://designforonline.com/ai-models/allenai-olmo-3-32b-think/,,"MMLU-Pro; Artificial Analysis measurement (Intelligence Index v4.0), republished on the fetched page; Ai2 reports MMLU-Pro only for OLMo 3 base models (OlmoBaseEval held-out), not the Think 32B post-trained model"
 palmyra-x5,65.02,self-reported,https://dev.writer.com/home/models,,
 phi-3-5-mini-3-8b,47.4,self-reported,https://huggingface.co/microsoft/Phi-3.5-mini-instruct,,0-shot CoT
 phi-3-5-moe-16x3-8b-6-6b-active,54.3,self-reported,https://huggingface.co/microsoft/Phi-3.5-MoE-instruct,,
@@ -64,12 +74,14 @@ qwen2-72b,55.6,self-reported,https://qwenlm.github.io/blog/qwen2/,2024-06-07,Bas
 qwen2-7b,40,self-reported,https://qwenlm.github.io/blog/qwen2/,2024-06-07,Base model
 qwen3-235b-a22b-instruct-2507,83,self-reported,https://huggingface.co/Qwen/Qwen3-235B-A22B-Instruct-2507,,MMLU-Pro
 qwen3-235b-a22b-thinking,68.18,self-reported,https://huggingface.co/Qwen/Qwen3-235B-A22B,,
+qwen3-235b-a22b-thinking-2507,84.4,self-reported,https://huggingface.co/Qwen/Qwen3-235B-A22B-Thinking-2507,,MMLU-Pro
 qwq-32b,69.07,self-reported,https://huggingface.co/Qwen/QwQ-32B,,
 qwq-32b-preview,70.97,self-reported,https://huggingface.co/Qwen/QwQ-32B-Preview,,
 reka-flash-3,65,self-reported,https://reka.ai/news/introducing-reka-flash,2025-03-10,
 sarvam-105b,81.7,self-reported,https://huggingface.co/sarvamai/sarvam-105b,2026-02-18,
 seed-oss-36b,82.7,self-reported,https://huggingface.co/ByteDance-Seed/Seed-OSS-36B-Instruct,,
 smollm2-1-7b,19.4,self-reported,https://huggingface.co/HuggingFaceTB/SmolLM2-1.7B,,"base model, MCF"
+trinity-large-thinking,83.4,self-reported,https://huggingface.co/arcee-ai/Trinity-Large-Thinking,,
 upstage-solar-pro,52.11,self-reported,https://huggingface.co/upstage/solar-pro-preview-instruct,,
 wizardlm-2-8x22b,39.96,independent,https://huggingface.co/alpindale/WizardLM-2-8x22B,,"Open LLM Leaderboard v2, 5-shot"
 yandexgpt-5-pro,68,independent,https://habr.com/ru/companies/bothub/articles/893128/,2025-02-01,

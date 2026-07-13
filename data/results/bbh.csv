@@ -2,9 +2,9 @@ model_slug,score,source,source_url,evaluated_at,notes
 ai21-jamba,45.4,self-reported,https://huggingface.co/ai21labs/Jamba-v0.1,,
 ai21-jamba-1-5-large,65.5,self-reported,https://arxiv.org/html/2408.12570v1,,
 ai21-jamba-1-5-mini,53.4,self-reported,https://arxiv.org/html/2408.12570v1,,
-amazon-nova-lite,82.4,independent,https://deepranking.ai/llm-models/nova-lite,,
-amazon-nova-micro,79.5,independent,https://deepranking.ai/llm-models/nova-micro,,
-amazon-nova-pro,86.9,independent,https://deepranking.ai/llm-models/nova-pro,,
+amazon-nova-lite,82.4,self-reported,https://deepranking.ai/llm-models/nova-lite,,"[relabeled self-reported: aggregator/press relay of a vendor figure, not an independent re-measurement]"
+amazon-nova-micro,79.5,self-reported,https://deepranking.ai/llm-models/nova-micro,,"[relabeled self-reported: aggregator/press relay of a vendor figure, not an independent re-measurement]"
+amazon-nova-pro,86.9,self-reported,https://deepranking.ai/llm-models/nova-pro,,"[relabeled self-reported: aggregator/press relay of a vendor figure, not an independent re-measurement]"
 baichuan2-13b,48.78,self-reported,https://github.com/baichuan-inc/Baichuan2/blob/main/README_EN.md,,3-shot
 chatglm2-6b,30,self-reported,https://github.com/zai-org/ChatGLM2-6B,,Chat-aligned checkpoint
 chatglm3-6b,66.1,self-reported,https://github.com/zai-org/ChatGLM3/blob/main/README_en.md,,ChatGLM3-6B-Base checkpoint

@@ -1,0 +1,46 @@
+{
+  "slug": "glm-4-6",
+  "name": "GLM-4.6",
+  "orgSlug": "zhipu-ai-z-ai-tsinghua",
+  "familySlug": "glm-4-6",
+  "releaseDate": "2025-09-30",
+  "status": "released",
+  "predecessor": null,
+  "openness": "open-weights",
+  "license": "MIT",
+  "paramsB": 357,
+  "activeParamsB": 32,
+  "archClass": "moe",
+  "archDisplay": "Mixture-of-Experts, 357B total / 32B active, 200K context (up from 128K in GLM-4.5), hybrid thinking/non-thinking response modes",
+  "ctxK": 200,
+  "modalities": [
+    "text"
+  ],
+  "langCount": null,
+  "capabilities": {
+    "reasoning": true,
+    "coding": true,
+    "vision": false,
+    "functionCalling": true,
+    "toolUse": true,
+    "agentic": true
+  },
+  "apiAvailable": true,
+  "price": {
+    "input": 0.6,
+    "output": 2.2
+  },
+  "links": {
+    "hf": "zai-org/GLM-4.6",
+    "docs": "https://docs.z.ai/guides/llm/glm-4.6"
+  },
+  "note": "Flagship coding/agentic update to GLM-4.5; expanded context to 200K, ~15% more token-efficient, near-parity with Claude Sonnet 4 on real-world coding (CC-Bench).",
+  "quants": [],
+  "vramQ4Gb": null,
+  "vramFp16Gb": null,
+  "tps4090": null,
+  "tpsNote": null,
+  "effortLabel": null,
+  "isDefaultConfig": true,
+  "isBestConfig": true
+}

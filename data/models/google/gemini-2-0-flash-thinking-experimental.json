@@ -1,0 +1,43 @@
+{
+  "slug": "gemini-2-0-flash-thinking-experimental",
+  "name": "Gemini 2.0 Flash Thinking (Experimental)",
+  "orgSlug": "google",
+  "familySlug": "gemini-2-0",
+  "releaseDate": "2025-01-21",
+  "status": "deprecated",
+  "predecessor": "gemini-2-0-flash",
+  "openness": "closed",
+  "license": "Proprietary",
+  "paramsB": null,
+  "activeParamsB": null,
+  "archClass": "moe",
+  "archDisplay": "Sparse Mixture-of-Experts Transformer (params undisclosed); Flash variant fine-tuned to emit visible chain-of-thought before its final answer",
+  "ctxK": 1000,
+  "modalities": [
+    "text",
+    "vision"
+  ],
+  "langCount": null,
+  "capabilities": {
+    "reasoning": true,
+    "coding": true,
+    "vision": true,
+    "functionCalling": false,
+    "toolUse": true,
+    "agentic": false
+  },
+  "apiAvailable": true,
+  "price": null,
+  "links": {
+    "docs": "https://ai.google.dev/gemini-api/docs/models"
+  },
+  "note": "Google's first broadly-available reasoning model (Google DeepMind's answer to OpenAI o1); free experimental Flash variant that shows its thinking process, later superseded by the Gemini 2.5/3.x thinking line.",
+  "quants": [],
+  "vramQ4Gb": null,
+  "vramFp16Gb": null,
+  "tps4090": null,
+  "tpsNote": null,
+  "effortLabel": null,
+  "isDefaultConfig": true,
+  "isBestConfig": true
+}

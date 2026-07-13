@@ -1,0 +1,46 @@
+{
+  "slug": "deepseek-v4-flash-think-high",
+  "name": "DeepSeek-V4-Flash (Think High)",
+  "orgSlug": "deepseek",
+  "familySlug": "deepseek-v4",
+  "releaseDate": "2026-04-24",
+  "status": "preview",
+  "predecessor": null,
+  "openness": "open-weights",
+  "license": "MIT",
+  "paramsB": 284,
+  "activeParamsB": 13,
+  "archClass": "moe",
+  "archDisplay": "Mixture-of-Experts (284B total / 13B active), hybrid Compressed Sparse Attention + Heavily Compressed Attention",
+  "ctxK": 1000,
+  "modalities": [
+    "text"
+  ],
+  "langCount": null,
+  "capabilities": {
+    "reasoning": true,
+    "coding": true,
+    "vision": false,
+    "functionCalling": true,
+    "toolUse": true,
+    "agentic": true
+  },
+  "apiAvailable": true,
+  "price": {
+    "input": 0.14,
+    "output": 0.28
+  },
+  "links": {
+    "hf": "deepseek-ai/DeepSeek-V4-Flash",
+    "docs": "https://api-docs.deepseek.com/news/news260424/"
+  },
+  "note": "Smaller, cheaper sibling MoE released alongside V4-Pro on the same day; fast default mode. (middle reasoning-effort tier, called 'Think High' on the official HF model-card benchmark table).",
+  "quants": [],
+  "vramQ4Gb": null,
+  "vramFp16Gb": null,
+  "tps4090": null,
+  "tpsNote": null,
+  "effortLabel": "Think High",
+  "isDefaultConfig": false,
+  "isBestConfig": false
+}

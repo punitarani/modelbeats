@@ -1,10 +1,10 @@
 model_slug,score,source,source_url,evaluated_at,notes
 ai21-jamba-1-5-large,71.3,self-reported,https://arxiv.org/html/2408.12570v1,,
 ai21-jamba-1-5-mini,62.8,self-reported,https://arxiv.org/html/2408.12570v1,,
-amazon-nova-lite,85.4,independent,https://deepranking.ai/llm-models/nova-lite,,
-amazon-nova-micro,81.1,independent,https://deepranking.ai/llm-models/nova-micro,,
-amazon-nova-pro,89,independent,https://deepranking.ai/llm-models/nova-pro,,
-aya-vision-32b,62.2,independent,https://www.datalearner.com/en/ai-models/pretrained-models/aya-vision-32b,,
+amazon-nova-lite,85.4,self-reported,https://deepranking.ai/llm-models/nova-lite,,"[relabeled self-reported: aggregator/press relay of a vendor figure, not an independent re-measurement]"
+amazon-nova-micro,81.1,self-reported,https://deepranking.ai/llm-models/nova-micro,,"[relabeled self-reported: aggregator/press relay of a vendor figure, not an independent re-measurement]"
+amazon-nova-pro,89,self-reported,https://deepranking.ai/llm-models/nova-pro,,"[relabeled self-reported: aggregator/press relay of a vendor figure, not an independent re-measurement]"
+aya-vision-32b,62.2,self-reported,https://www.datalearner.com/en/ai-models/pretrained-models/aya-vision-32b,,"[relabeled self-reported: aggregator/press relay of a vendor figure, not an independent re-measurement]"
 baichuan2-13b,17.07,self-reported,https://github.com/baichuan-inc/Baichuan2/blob/main/README_EN.md,,0-shot
 baichuan2-7b,18.29,self-reported,https://github.com/baichuan-inc/Baichuan2/blob/main/README_EN.md,,0-shot
 bloom-176b,15.5,self-reported,https://huggingface.co/bigscience/bloom,,"pass@1, Python"
@@ -26,10 +26,11 @@ codegemma-7b,44.5,self-reported,https://ai.google.dev/gemma/docs/codegemma/model
 codegen-16b-mono,29.28,self-reported,https://ar5iv.labs.arxiv.org/html/2203.13474,,"pass@1, CodeGen-Mono 16.1B"
 codegen2-5-7b,33.4,independent,https://github.com/zai-org/CodeGeeX2/blob/main/README.md,,"CodeGen2.5-7B-mono, pass@1"
 codeqwen1-5-7b,51.8,self-reported,https://qwenlm.github.io/blog/codeqwen1.5/,2024-04-16,"Base model, 0-shot"
-codestral-22b,81.1,independent,https://www.analyticsvidhya.com/blog/2024/06/codestral-22b/,2024-05-01,
+codestral-22b,81.1,self-reported,https://www.analyticsvidhya.com/blog/2024/06/codestral-22b/,2024-05-01,"[relabeled self-reported: aggregator/mirror relay of a vendor figure, not an independent re-measurement]"
 codestral-25-01,86.6,self-reported,https://mistral.ai/news/codestral-2501/,,
-codestral-mamba-7b,75,independent,https://www.marktechpost.com/2024/07/17/mistral-ai-launches-codestral-mamba-7b-a-revolutionary-code-llm-achieving-75-on-humaneval-for-python-coding/,2024-07-01,
+codestral-mamba-7b,75,self-reported,https://www.marktechpost.com/2024/07/17/mistral-ai-launches-codestral-mamba-7b-a-revolutionary-code-llm-achieving-75-on-humaneval-for-python-coding/,2024-07-01,"[relabeled self-reported: aggregator/press relay of a vendor figure, not an independent re-measurement]"
 codet5-16b,30.9,self-reported,https://ar5iv.labs.arxiv.org/html/2305.07922,,"pass@1, base CodeT5+ 16B (pass@10 51.6)"
+comma-v0-1-2t,44.2,self-reported,https://huggingface.co/common-pile/comma-v0.1-2t,,
 dbrx,70.1,self-reported,https://www.databricks.com/blog/introducing-dbrx-new-state-art-open-llm,,
 deepseek-coder-33b,79.3,self-reported,https://ar5iv.labs.arxiv.org/html/2401.14196,,"HumanEval Python, Instruct-33B, from paper Table 3"
 deepseek-coder-v2-236b,90.2,self-reported,https://github.com/deepseek-ai/DeepSeek-Coder-V2,,
@@ -37,6 +38,7 @@ deepseek-llm-67b,73.8,self-reported,https://ar5iv.labs.arxiv.org/html/2401.02954
 deepseek-v2-236b,81.1,self-reported,https://huggingface.co/deepseek-ai/DeepSeek-V2-Chat,,Chat (RL) variant
 deepseek-v2-5,89,self-reported,https://huggingface.co/deepseek-ai/DeepSeek-V2.5,,HumanEval (Python)
 deepseek-v3-671b,82.6,self-reported,https://huggingface.co/deepseek-ai/DeepSeek-V3,,HumanEval-Mul
+deepseek-v4-flash-think-high,69.5,self-reported,https://huggingface.co/deepseek-ai/DeepSeek-V4-Flash,,Think High mode
 deepseekmoe-16b,26.8,self-reported,https://ar5iv.labs.arxiv.org/html/2401.06066,,"Base variant, pass@1"
 falcon-h1-34b,87.2,self-reported,https://huggingface.co/tiiuae/Falcon-H1-34B-Instruct,,
 falcon3-10b,74.7,self-reported,https://huggingface.co/tiiuae/Falcon3-10B-Instruct,,"EvalPlus code eval, 0-shot"
@@ -49,7 +51,7 @@ glm-4,78.5,self-reported,https://arxiv.org/html/2406.12793v1,2024-05-20,"GLM-4 (
 glm-4-9b-chat,71.8,self-reported,https://huggingface.co/THUDM/glm-4-9b-chat,,
 gpt-3-5-turbo,48.1,self-reported,https://arxiv.org/abs/2303.08774,,
 gpt-4,67,self-reported,https://arxiv.org/abs/2303.08774,,
-gpt-4o,90.2,independent,https://community.openai.com/t/education-level-interpretation-of-gpt-4os-benchmarks/763947,,"OpenAI-reported figure, mirrored on this community thread since the original openai.com post blocks automated fetching"
+gpt-4o,90.2,self-reported,https://community.openai.com/t/education-level-interpretation-of-gpt-4os-benchmarks/763947,,"OpenAI-reported figure, mirrored on this community thread since the original openai.com post blocks automated fetching [relabeled self-reported: aggregator/mirror relay of a vendor figure, not an independent re-measurement]"
 gpt-4o-mini,87.2,self-reported,https://openai.com/index/gpt-4o-mini-advancing-cost-efficient-intelligence/,2024-07-18,
 granite-3-2-8b-instruct,89.35,self-reported,https://huggingface.co/ibm-granite/granite-3.2-8b-instruct,,
 granite-3-3-8b-instruct,89.73,self-reported,https://huggingface.co/ibm-granite/granite-3.3-8b-instruct,,
@@ -74,14 +76,12 @@ llama-3-70b,81.7,self-reported,https://huggingface.co/meta-llama/Meta-Llama-3-70
 llama-3-8b,62.2,self-reported,https://huggingface.co/meta-llama/Meta-Llama-3-8B,2024-04-01,"Instruct, 0-shot"
 llama-33b,21.7,self-reported,https://ar5iv.labs.arxiv.org/html/2302.13971,2023-02-01,"pass@1, Table 8"
 minicpm-2b,50,self-reported,https://github.com/OpenBMB/MiniCPM/blob/main/README-en.md,2024-02-01,MiniCPM GitHub README benchmark table
-minicpm3-4b,68.3,self-reported,https://huggingface.co/openbmb/MiniCPM3-4B,2024-09-01,HumanEval+
 minimax-text-01,86.9,self-reported,https://huggingface.co/MiniMaxAI/MiniMax-Text-01,,
 ministral-3b,77.4,self-reported,https://huggingface.co/mistralai/Ministral-8B-Instruct-2410,,pass@1
 ministral-8b,76.8,self-reported,https://huggingface.co/mistralai/Ministral-8B-Instruct-2410,,pass@1
 mistral-7b,30.5,self-reported,https://arxiv.org/abs/2310.06825,,
 mistral-large-2-24-07,92,self-reported,https://huggingface.co/mistralai/Mistral-Large-Instruct-2407,,
 mistral-small-3-1-24b,88.41,self-reported,https://huggingface.co/mistralai/Mistral-Small-3.1-24B-Instruct-2503,,
-mistral-small-3-2-24b,92.9,self-reported,https://huggingface.co/mistralai/Mistral-Small-3.2-24B-Instruct-2506,,"HumanEval Plus, pass@5"
 mistral-small-3-24b,84.8,self-reported,https://huggingface.co/mistralai/Mistral-Small-24B-Instruct-2501,,
 mixtral-8x7b,40.2,self-reported,https://ar5iv.labs.arxiv.org/html/2401.04088,2024-01-01,
 mpt-7b,17.1,independent,https://arxiv.org/abs/2405.13386,2024-05-22,confirmed Table 2
@@ -89,8 +89,6 @@ naver-hyperclova-x,55.49,self-reported,https://arxiv.org/abs/2404.01954,,"HCX-L,
 nemotron-4-15b,31.6,self-reported,https://unfoldai.com/nemotron-4-nvidia-powerful-language-model/,2024-02-26,0-shot pass@1
 nemotron-4-340b,57.3,self-reported,https://huggingface.co/nvidia/Nemotron-4-340B-Base,2024-06-14,"pass@1, 0-shot"
 nemotron-h-56b,60.37,self-reported,https://huggingface.co/nvidia/Nemotron-H-56B-Base-8K,,
-olmo-3-7b,77.2,self-reported,https://huggingface.co/allenai/Olmo-3-7B-Instruct,,HumanEvalPlus
-olmo-3-think-32b,91.4,self-reported,https://huggingface.co/allenai/Olmo-3-32B-Think,,HumanEvalPlus; Qwen 3 32B 91.2
 openai-codex,28.8,self-reported,https://arxiv.org/abs/2107.03374,,"pass@1, 12B code-davinci model"
 openai-o1-preview,92.4,independent,https://www.walturn.com/insights/comparing-openai-o1-to-other-top-models,2024-09-01,
 openhermes-2-5-mistral-7b,50.7,self-reported,https://huggingface.co/teknium/OpenHermes-2.5-Mistral-7B,,pass@1
@@ -103,9 +101,7 @@ phi-3-medium-14b,62.2,self-reported,https://huggingface.co/microsoft/Phi-3-mediu
 phi-3-mini-3-8b,57.3,self-reported,https://huggingface.co/microsoft/Phi-3-mini-4k-instruct,,0-shot
 phi-3-small-7b,61,self-reported,https://huggingface.co/microsoft/Phi-3-small-8k-instruct,,
 phi-4-14b,82.6,self-reported,https://huggingface.co/microsoft/phi-4,,
-phi-4-reasoning,92.9,self-reported,https://huggingface.co/microsoft/Phi-4-reasoning,2025-04-30,HumanEvalPlus variant
-phi-4-reasoning-14b,92.9,self-reported,https://huggingface.co/microsoft/Phi-4-reasoning,,HumanEvalPlus
-poro-34b,41.8,self-reported,https://arxiv.org/abs/2404.01856,,Average of HumanEval and MBPP code accuracy as reported in paper
+poro-34b,37.2,self-reported,https://arxiv.org/abs/2404.01856,,"HumanEval (Python, pass@10) per arXiv:2404.01856 Table 8; corrected from 41.8, a prior value that was not a pure HumanEval score."
 qwen-1-8b,15.2,self-reported,https://huggingface.co/Qwen/Qwen-1_8B,2023-11-30,0-shot pass@1
 qwen-14b,32.3,self-reported,https://huggingface.co/Qwen/Qwen-14B,2023-09-25,0-shot pass@1
 qwen-72b,35.4,self-reported,https://huggingface.co/Qwen/Qwen-72B,2023-11-30,

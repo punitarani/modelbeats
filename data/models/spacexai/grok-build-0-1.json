@@ -1,0 +1,46 @@
+{
+  "slug": "grok-build-0-1",
+  "name": "Grok Build 0.1",
+  "orgSlug": "spacexai",
+  "familySlug": "grok-build",
+  "releaseDate": "2026-05-20",
+  "status": "released",
+  "predecessor": null,
+  "openness": "closed",
+  "license": "Proprietary",
+  "paramsB": null,
+  "activeParamsB": null,
+  "archClass": "dense",
+  "archDisplay": "Architecture undisclosed; a dedicated, fast agentic-coding model (100+ tok/s) purpose-built to power the Grok Build CLI, distinct from the general-purpose Grok line",
+  "ctxK": 256,
+  "modalities": [
+    "text",
+    "vision"
+  ],
+  "langCount": null,
+  "capabilities": {
+    "reasoning": true,
+    "coding": true,
+    "vision": true,
+    "functionCalling": true,
+    "toolUse": true,
+    "agentic": true
+  },
+  "apiAvailable": true,
+  "price": {
+    "input": 1,
+    "output": 2
+  },
+  "links": {
+    "docs": "https://docs.x.ai/developers/models/grok-build-0.1"
+  },
+  "note": "Confirmed real and distinct: xAI's (SpaceXAI's) first model purpose-built for agentic coding, powering the Grok Build CLI/terminal agent. Opened to developers via the API in public beta on ~May 29, 2026, a bit after the underlying model went live (~May 20, 2026). 256K context, text+image input, always-on reasoning, function calling, structured outputs, native MCP ('bring your own MCP') support. Not to be confused with 'Grok Build' the product/CLI/agent name, which Grok 4.5 now also powers as of July 2026 — Grok Build 0.1 was the original dedicated coding model before Grok 4.5 became the CLI's default.",
+  "quants": [],
+  "vramQ4Gb": null,
+  "vramFp16Gb": null,
+  "tps4090": null,
+  "tpsNote": null,
+  "effortLabel": null,
+  "isDefaultConfig": true,
+  "isBestConfig": true
+}

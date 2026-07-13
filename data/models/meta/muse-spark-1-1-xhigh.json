@@ -1,0 +1,46 @@
+{
+  "slug": "muse-spark-1-1-xhigh",
+  "name": "Muse Spark 1.1 (xhigh)",
+  "orgSlug": "meta",
+  "familySlug": "muse-spark",
+  "releaseDate": "2026-07-09",
+  "status": "released",
+  "predecessor": null,
+  "openness": "closed",
+  "license": "Proprietary",
+  "paramsB": null,
+  "activeParamsB": null,
+  "archClass": "dense",
+  "archDisplay": "Proprietary multimodal reasoning model (undisclosed architecture), Meta Superintelligence Labs' first model family, update to April 2026 Muse Spark",
+  "ctxK": 1000,
+  "modalities": [
+    "text",
+    "vision"
+  ],
+  "langCount": null,
+  "capabilities": {
+    "reasoning": true,
+    "coding": true,
+    "vision": true,
+    "functionCalling": true,
+    "toolUse": true,
+    "agentic": true
+  },
+  "apiAvailable": true,
+  "price": {
+    "input": 1.25,
+    "output": 4.25
+  },
+  "links": {
+    "docs": "https://ai.meta.com/"
+  },
+  "note": "First flagship from Meta Superintelligence Labs (led by Alexandr Wang), replacing the open Llama line with a proprietary model; base Muse Spark launched 2026-04-08, this is the 1.1 update from 2026-07-09, evaluated here at the 'xhigh' reasoning-effort tier. Meta has said it hopes to open-source future versions but this release is closed/API-only.",
+  "quants": [],
+  "vramQ4Gb": null,
+  "vramFp16Gb": null,
+  "tps4090": null,
+  "tpsNote": null,
+  "effortLabel": "xhigh",
+  "isDefaultConfig": false,
+  "isBestConfig": true
+}

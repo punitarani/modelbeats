@@ -28,16 +28,15 @@ test.describe('model detail', () => {
   })
 
   test('closed model shows the API-only pricing card + index rank', async ({ page }) => {
-    // Gemini 3.1 Pro: the #1 overall model and the field leader on GPQA Diamond (the anchor for
-    // the "field best = this model" provenance check below).
+    // Gemini 3.1 Pro: the #1 overall model on the Index.
     await gotoHydrated(page, '/models/gemini-3-1-pro')
-    await expect(page.getByTestId('model-index')).toHaveText('93.3')
+    await expect(page.getByTestId('model-index')).toHaveText('91.1')
     await expect(page.getByText('Index · rank #1')).toBeVisible()
     await expect(page.getByTestId('price-in')).toHaveText('$2')
     await expect(page.getByTestId('price-out')).toHaveText('$12')
-    // benchmark row: GPQA 94.3, field best = this model
+    // benchmark row: GPQA 94.3; the field best is now Claude Sonnet 5 (96.2)
     await expect(page.getByTestId('bench-gpqa')).toContainText('94.3')
-    await expect(page.getByTestId('bench-gpqa')).toContainText('best: this model')
+    await expect(page.getByTestId('bench-gpqa')).toContainText('best: Claude Sonnet 5')
     // family card lists the Gemini 3.1 members (Pro + Flash-Lite)
     await expect(page.getByTestId('family-list').getByRole('link')).toHaveCount(2)
   })

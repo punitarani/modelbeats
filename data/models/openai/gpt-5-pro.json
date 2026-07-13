@@ -1,0 +1,46 @@
+{
+  "slug": "gpt-5-pro",
+  "name": "GPT-5 Pro",
+  "orgSlug": "openai",
+  "familySlug": "gpt-5",
+  "releaseDate": "2025-08-07",
+  "status": "released",
+  "predecessor": null,
+  "openness": "closed",
+  "license": "Proprietary (OpenAI API Terms)",
+  "paramsB": null,
+  "activeParamsB": null,
+  "archClass": "dense",
+  "archDisplay": "Unified reasoning system behind GPT-5's auto-router; dense transformer, exact size undisclosed; top extended-reasoning tier defaulting to maximum reasoning effort",
+  "ctxK": 400,
+  "modalities": [
+    "text",
+    "vision"
+  ],
+  "langCount": null,
+  "capabilities": {
+    "reasoning": true,
+    "coding": true,
+    "vision": true,
+    "functionCalling": true,
+    "toolUse": true,
+    "agentic": true
+  },
+  "apiAvailable": true,
+  "price": {
+    "input": 15,
+    "output": 120
+  },
+  "links": {
+    "docs": "https://developers.openai.com/api/docs/models/gpt-5-pro"
+  },
+  "note": "Top extended-reasoning tier of the GPT-5 family, launched same-day as GPT-5 for $200/mo ChatGPT Pro subscribers (Aug 7, 2025); API access (Responses API only) followed on Oct 6, 2025 at $15/$120 per M tokens, 400K context / 272K max output.",
+  "quants": [],
+  "vramQ4Gb": null,
+  "vramFp16Gb": null,
+  "tps4090": null,
+  "tpsNote": null,
+  "effortLabel": null,
+  "isDefaultConfig": true,
+  "isBestConfig": true
+}

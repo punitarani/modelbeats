@@ -1,3 +1,6 @@
 model_slug,score,source,source_url,evaluated_at,notes
+deepseek-v3-1-non-thinking,91.8,self-reported,https://huggingface.co/deepseek-ai/DeepSeek-V3.1,,"MMLU-Redux (EM), not raw MMLU"
+deepseek-v3-1-thinking,93.7,self-reported,https://huggingface.co/deepseek-ai/DeepSeek-V3.1,,"MMLU-Redux (EM), not raw MMLU"
 lg-exaone-4-0-32b-non-reasoning,89.8,self-reported,https://arxiv.org/abs/2507.11407,,Non-reasoning mode
 lg-exaone-4-0-32b-reasoning,92.3,self-reported,https://arxiv.org/abs/2507.11407,,Reasoning mode
+qwen3-235b-a22b-thinking-2507,93.8,self-reported,https://huggingface.co/Qwen/Qwen3-235B-A22B-Thinking-2507,,MMLU-Redux

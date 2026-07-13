@@ -1,0 +1,10 @@
+{
+  "slug": "mbpp-plus",
+  "name": "MBPP+",
+  "category": "coding",
+  "unit": "%",
+  "description": "EvalPlus-augmented MBPP with extra test cases (stricter than base MBPP).",
+  "normMin": 10,
+  "normMax": 90,
+  "higherIsBetter": true
+}

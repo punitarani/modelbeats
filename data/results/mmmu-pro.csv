@@ -1,4 +1,10 @@
 model_slug,score,source,source_url,evaluated_at,notes
+command-a-218b,63,self-reported,https://cohere.com/blog/command-a-plus,,
 gemini-3-1-flash-lite,76.8,self-reported,https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-3-1-flash-lite/,2026-03-03,
 gemini-3-1-pro,80.5,self-reported,https://deepmind.google/models/gemini/pro/,2026-02-19,
 gemini-3-5-flash,83.6,self-reported,https://deepmind.google/models/gemini/flash/,2026-05-19,
+gemini-3-flash,81.2,self-reported,https://storage.googleapis.com/deepmind-media/Model-Cards/Gemini-3-Flash-Model-Card.pdf,2025-12-01,MMMU-Pro variant
+gemini-3-pro,81,self-reported,https://storage.googleapis.com/deepmind-media/Model-Cards/Gemini-3-Pro-Model-Card.pdf,2025-11-01,MMMU-Pro variant
+kimi-k2-6,79.4,self-reported,https://www.kimi.com/blog/kimi-k2-6,,MMMU-Pro standard; vendor also reports 80.1 with python tool use enabled
+mimo-v2-5,77.9,self-reported,https://mimo.xiaomi.com/mimo-v2-5/,,MMMU-Pro ('Image Understanding & Reasoning'); from the embedded multimodalData chart array.
+minimax-m3,78.1,self-reported,https://huggingface.co/MiniMaxAI/MiniMax-M3,,Reported on the official model card as 'MMMU Pro'.

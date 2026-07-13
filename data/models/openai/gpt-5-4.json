@@ -1,0 +1,44 @@
+{
+  "slug": "gpt-5-4",
+  "name": "GPT-5.4",
+  "orgSlug": "openai",
+  "familySlug": "gpt-5-4",
+  "releaseDate": "2026-03-05",
+  "status": "released",
+  "predecessor": null,
+  "openness": "closed",
+  "license": "Proprietary (OpenAI API Terms)",
+  "paramsB": null,
+  "activeParamsB": null,
+  "archClass": "dense",
+  "archDisplay": "Undisclosed architecture (presumed dense transformer, reasoning-tuned); first general-purpose OpenAI model with native computer-use; ships in Thinking/Pro/mini/nano tiers",
+  "ctxK": 1050,
+  "modalities": [
+    "text",
+    "vision"
+  ],
+  "langCount": null,
+  "capabilities": {
+    "reasoning": true,
+    "coding": true,
+    "vision": true,
+    "functionCalling": true,
+    "toolUse": true,
+    "agentic": true
+  },
+  "apiAvailable": true,
+  "price": {
+    "input": 2.5,
+    "output": 15
+  },
+  "links": {},
+  "note": "Flagship/'Thinking' tier of the GPT-5.4 family, confirmed real via TechCrunch and The Decoder launch coverage. GPT-5.4 Pro ($30/$180 per M, ARC-AGI-2 83.3%, GDPval 82%) and cheaper GPT-5.4 mini/nano also shipped the same month but are out of scope for this pass (not requested).",
+  "quants": [],
+  "vramQ4Gb": null,
+  "vramFp16Gb": null,
+  "tps4090": null,
+  "tpsNote": null,
+  "effortLabel": null,
+  "isDefaultConfig": true,
+  "isBestConfig": true
+}

@@ -1,0 +1,46 @@
+{
+  "slug": "gpt-5-5-xhigh",
+  "name": "GPT-5.5 (xHigh)",
+  "orgSlug": "openai",
+  "familySlug": "gpt-5-5",
+  "releaseDate": "2026-04-23",
+  "status": "released",
+  "predecessor": null,
+  "openness": "closed",
+  "license": "Proprietary (OpenAI API Terms)",
+  "paramsB": null,
+  "activeParamsB": null,
+  "archClass": "dense",
+  "archDisplay": "Undisclosed architecture (presumed dense transformer, reasoning-tuned); codename \"Spud\"; 'xhigh' (maximum) reasoning-effort configuration",
+  "ctxK": 1050,
+  "modalities": [
+    "text",
+    "vision"
+  ],
+  "langCount": null,
+  "capabilities": {
+    "reasoning": true,
+    "coding": true,
+    "vision": true,
+    "functionCalling": true,
+    "toolUse": true,
+    "agentic": true
+  },
+  "apiAvailable": true,
+  "price": {
+    "input": 5,
+    "output": 30
+  },
+  "links": {
+    "docs": "https://developers.openai.com/api/docs/models/gpt-5.5"
+  },
+  "note": "Highest reasoning-effort sibling of the base 'GPT-5.5' entry ('reserved for the hardest quality-first workloads' per OpenAI's own guidance). Same weights/pricing/context as the default and High siblings; distinguished by reasoning.effort=xhigh.",
+  "quants": [],
+  "vramQ4Gb": null,
+  "vramFp16Gb": null,
+  "tps4090": null,
+  "tpsNote": null,
+  "effortLabel": "xHigh",
+  "isDefaultConfig": false,
+  "isBestConfig": true
+}

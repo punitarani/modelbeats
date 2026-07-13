@@ -2,9 +2,9 @@ model_slug,score,source,source_url,evaluated_at,notes
 ai21-jamba,59.9,self-reported,https://huggingface.co/ai21labs/Jamba-v0.1,,CoT
 ai21-jamba-1-5-large,87,self-reported,https://arxiv.org/html/2408.12570v1,,
 ai21-jamba-1-5-mini,75.8,self-reported,https://arxiv.org/html/2408.12570v1,,
-amazon-nova-lite,94.5,independent,https://deepranking.ai/llm-models/nova-lite,,
-amazon-nova-micro,92.3,independent,https://deepranking.ai/llm-models/nova-micro,,
-amazon-nova-pro,94.8,independent,https://deepranking.ai/llm-models/nova-pro,,
+amazon-nova-lite,94.5,self-reported,https://deepranking.ai/llm-models/nova-lite,,"[relabeled self-reported: aggregator/press relay of a vendor figure, not an independent re-measurement]"
+amazon-nova-micro,92.3,self-reported,https://deepranking.ai/llm-models/nova-micro,,"[relabeled self-reported: aggregator/press relay of a vendor figure, not an independent re-measurement]"
+amazon-nova-pro,94.8,self-reported,https://deepranking.ai/llm-models/nova-pro,,"[relabeled self-reported: aggregator/press relay of a vendor figure, not an independent re-measurement]"
 apple-dclm-baseline-7b,2.5,self-reported,https://huggingface.co/apple/DCLM-Baseline-7B,,chain-of-thought
 baichuan2-13b,52.77,self-reported,https://github.com/baichuan-inc/Baichuan2/blob/main/README_EN.md,,4-shot
 baichuan2-7b,24.49,self-reported,https://github.com/baichuan-inc/Baichuan2/blob/main/README_EN.md,,4-shot

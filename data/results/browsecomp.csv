@@ -1,5 +1,13 @@
 model_slug,score,source,source_url,evaluated_at,notes
+claude-opus-4-7,79.3,self-reported,https://www.vellum.ai/blog/claude-opus-4-7-benchmarks-explained,,
+deepseek-v3-2-exp,40.1,self-reported,https://github.com/deepseek-ai/DeepSeek-V3.2-Exp,,
+glm-4-6,45.1,self-reported,https://cirra.ai/articles/glm-4-6-vs-claude-sonnet-comparison,,BrowseComp
+glm-5,62,self-reported,https://huggingface.co/zai-org/GLM-5,,"BrowseComp, no context-management; with context-management reaches 75.9"
+glm-5-1,68,self-reported,https://huggingface.co/zai-org/GLM-5.1,,BrowseComp
+gpt-5-4,82.7,self-reported,https://the-decoder.com/openai-launches-gpt-5-4-thinking-and-pro-combining-coding-reasoning-and-computer-use-in-one-model/,,BrowseComp (Pro variant scores 89.3)
 gpt-5-5,84.4,self-reported,https://openai.com/index/introducing-gpt-5-5,,"BrowseComp, base model (Pro scores 90.1); confirmed"
 gpt-5-6,90.4,self-reported,https://openai.com/index/gpt-5-6/,,"BrowseComp, GPT-5.6 Sol standard (92.2 with Ultra); confirmed"
+kimi-k2-6,83.2,self-reported,https://www.kimi.com/blog/kimi-k2-6,,vendor also reports 86.3 in an 'agent swarm' multi-agent configuration; 83.2 is the single-agent figure used here for comparability
 kimi-k2-thinking,60.2,self-reported,https://huggingface.co/moonshotai/Kimi-K2-Thinking,,
+openpangu-2-0-flash-thinking,57,self-reported,https://huggingface.co/openpangu/openPangu-2.0-Flash/blob/main/README_EN.md,,Thinking mode only; no Non-Thinking score reported
 sarvam-105b,49.5,self-reported,https://huggingface.co/sarvamai/sarvam-105b,2026-02-18,

@@ -1,0 +1,46 @@
+{
+  "slug": "hy3",
+  "name": "Hy3",
+  "orgSlug": "tencent",
+  "familySlug": "hunyuan",
+  "releaseDate": "2026-07-06",
+  "status": "released",
+  "predecessor": "hunyuan-a13b",
+  "openness": "open-weights",
+  "license": "Apache 2.0",
+  "paramsB": 295,
+  "activeParamsB": 21,
+  "archClass": "moe",
+  "archDisplay": "Mixture-of-Experts hybrid fast/slow-thinking model, 295B total / 21B active",
+  "ctxK": 256,
+  "modalities": [
+    "text"
+  ],
+  "langCount": null,
+  "capabilities": {
+    "reasoning": true,
+    "coding": true,
+    "vision": false,
+    "functionCalling": true,
+    "toolUse": true,
+    "agentic": true
+  },
+  "apiAvailable": true,
+  "price": {
+    "input": 0.14,
+    "output": 0.55
+  },
+  "links": {
+    "hf": "tencent/Hy3",
+    "docs": "https://www.tencent.com/en-us/articles/2202386.html"
+  },
+  "note": "Full release of Tencent's Hunyuan 3 (upgraded from an April 2026 preview build), Tencent's first genuinely unrestricted Apache 2.0 flagship. Newer than Hunyuan-A13B already in corpus (dated 2025-06-27). Pricing converted from RMB 1/RMB 4 per million input/output tokens at ~7.1 RMB/USD.",
+  "quants": [],
+  "vramQ4Gb": null,
+  "vramFp16Gb": null,
+  "tps4090": null,
+  "tpsNote": null,
+  "effortLabel": null,
+  "isDefaultConfig": true,
+  "isBestConfig": true
+}

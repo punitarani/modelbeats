@@ -1,0 +1,10 @@
+{
+  "slug": "humaneval-plus",
+  "name": "HumanEval+",
+  "category": "coding",
+  "unit": "%",
+  "description": "EvalPlus-augmented HumanEval with extra test cases (stricter than base HumanEval).",
+  "normMin": 10,
+  "normMax": 100,
+  "higherIsBetter": true
+}

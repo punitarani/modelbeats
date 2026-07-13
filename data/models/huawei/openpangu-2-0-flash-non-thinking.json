@@ -1,0 +1,43 @@
+{
+  "slug": "openpangu-2-0-flash-non-thinking",
+  "name": "openPangu-2.0-Flash (Non-Thinking)",
+  "orgSlug": "huawei",
+  "familySlug": "openpangu",
+  "releaseDate": "2026-06-12",
+  "status": "released",
+  "predecessor": null,
+  "openness": "open-weights",
+  "license": "OpenPangu Model License Agreement v2.0",
+  "paramsB": 92,
+  "activeParamsB": 6,
+  "archClass": "moe",
+  "archDisplay": "MoE with MLA + DSA/SWA hybrid attention (1:2 ratio), 4-stream mHC residual, multi-token prediction heads; trained on Huawei Ascend NPUs (no NVIDIA hardware)",
+  "ctxK": 512,
+  "modalities": [
+    "text"
+  ],
+  "langCount": null,
+  "capabilities": {
+    "reasoning": true,
+    "coding": true,
+    "vision": false,
+    "functionCalling": true,
+    "toolUse": true,
+    "agentic": true
+  },
+  "apiAvailable": false,
+  "price": null,
+  "links": {
+    "hf": "openpangu/openPangu-2.0-Flash",
+    "docs": "https://huggingface.co/openpangu/openPangu-2.0-Flash"
+  },
+  "note": "Default (no-extended-reasoning) inference mode of the same openPangu-2.0-Flash weights; this is the mode a user gets without opting into Thinking mode.",
+  "quants": [],
+  "vramQ4Gb": null,
+  "vramFp16Gb": null,
+  "tps4090": null,
+  "tpsNote": null,
+  "effortLabel": "Non-Thinking",
+  "isDefaultConfig": true,
+  "isBestConfig": false
+}

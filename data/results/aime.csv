@@ -12,7 +12,10 @@ deepseek-r1-zero,71,self-reported,https://arxiv.org/html/2501.12948v1,2025-01-20
 deepseek-v3-0324,59.4,self-reported,https://huggingface.co/deepseek-ai/DeepSeek-V3-0324,2025-03-24,"AIME 2024, up from 39.6 in Dec-2024 V3"
 deepseek-v3-1-non-thinking,66.3,self-reported,https://huggingface.co/deepseek-ai/DeepSeek-V3.1,,AIME 2024 Pass@1
 deepseek-v3-1-thinking,93.1,self-reported,https://huggingface.co/deepseek-ai/DeepSeek-V3.1,,AIME 2024 Pass@1
+deepseek-v3-2-exp,89.3,self-reported,https://github.com/deepseek-ai/DeepSeek-V3.2-Exp,,AIME 2025
+deepseek-v4-pro-think-max,87.5,self-reported,https://arxiv.org/abs/2606.19348,,"AIME 2025, Pro-Max mode; reported as an improvement from 70.0 in the prior generation"
 falcon-h1r-7b,88.1,self-reported,https://falcon-lm.github.io/blog/falcon-h1r-7b/,,AIME 2024
+gemini-2-0-flash-thinking-experimental,73.3,self-reported,https://www.marktechpost.com/2025/01/21/google-ai-releases-gemini-2-0-flash-thinking-model-gemini-2-0-flash-thinking-exp-01-21-scoring-73-3-on-aime-math-and-74-2-on-gpqa-diamond-science-benchmarks/,,"AIME 2024; number originates from Google DeepMind CEO Demis Hassabis's own announcement, relayed here by press coverage -- counted as self-reported (vendor's own figure)."
 gemini-2-5-flash,72,self-reported,https://storage.googleapis.com/deepmind-media/Model-Cards/Gemini-2-5-Flash-Model-Card.pdf,2025-05-01,"AIME 2025, single attempt, thinking on"
 gemini-2-5-flash-lite-non-thinking,49.8,self-reported,https://storage.googleapis.com/deepmind-media/Model-Cards/Gemini-2-5-Flash-Lite-Model-Card.pdf,2025-06-01,"AIME 2025, (06-17) release, non-thinking"
 gemini-2-5-flash-lite-thinking,63.1,self-reported,https://storage.googleapis.com/deepmind-media/Model-Cards/Gemini-2-5-Flash-Lite-Model-Card.pdf,2025-06-01,"AIME 2025, (06-17) release, thinking on"
@@ -21,12 +24,17 @@ gemini-3-pro,95,self-reported,https://storage.googleapis.com/deepmind-media/Mode
 gemma-4,89.2,self-reported,https://ai.google.dev/gemma/docs/core/model_card_4,2026-04-02,"AIME 2026, no tools, 31B"
 glm-4-5-355b-a32b,91,self-reported,https://arxiv.org/abs/2508.06471,,"AIME 2024, GLM-4.5 paper"
 glm-4-5-air-106b-a12b,89.4,independent,https://llm-stats.com/models/compare/glm-4.5-vs-glm-4.5-air,2026-07-12,AIME 2024
-gpt-4-1-mini,49.6,independent,https://docsbot.ai/models/gpt-4-1-mini,2025-04-01,AIME 2024
+glm-4-6,93.9,self-reported,https://cirra.ai/articles/glm-4-6-vs-claude-sonnet-comparison,,"AIME 2025, standard (non-tool) mode; Z.ai's own launch figure, relayed via Communeify/cirra.ai"
+glm-5,92.7,self-reported,https://huggingface.co/zai-org/GLM-5,,AIME 2026 I
+glm-5-1,95.3,self-reported,https://huggingface.co/zai-org/GLM-5.1,,AIME 2026
+glm-5-2-max,99.2,self-reported,https://huggingface.co/blog/zai-org/glm-52-blog,,AIME 2026
+gpt-4-1-mini,49.6,self-reported,https://docsbot.ai/models/gpt-4-1-mini,2025-04-01,"AIME 2024 [relabeled self-reported: aggregator/mirror relay of a vendor figure, not an independent re-measurement]"
 gpt-4-5,36.7,independent,https://www.helicone.ai/blog/gpt-4.5-benchmarks,2025-02-01,AIME 2024
 gpt-5,94.6,self-reported,https://openai.com/index/introducing-gpt-5-for-developers/,2025-08-07,"AIME 2025, no tools, high reasoning effort"
 gpt-5-1,94,independent,https://claude5.com/news/gpt-5-1-performance-review-benchmarks-november-2025,2025-11-19,"AIME 2025, Thinking mode; literally confirmed on cited page"
 gpt-5-2,100,self-reported,https://openai.com/index/introducing-gpt-5-2/,,"AIME 2025, no tools, GPT-5.2 Thinking; confirmed"
 gpt-5-mini,91.1,self-reported,https://openai.com/index/introducing-gpt-5-for-developers/,2025-08-07,"AIME 2025, no tools, high reasoning effort"
+gpt-5-pro,100,self-reported,https://openai.com/index/introducing-gpt-5/,,AIME 2025 with Python tools (without-tools figure reported elsewhere as 99.6%); distinct from base GPT-5's 94.6 no-tools figure already in the corpus
 gpt-oss-120b-high,95.8,self-reported,https://arxiv.org/abs/2508.10925,2025-08-05,"AIME 2024, no tools, high reasoning effort"
 gpt-oss-120b-low,56.3,self-reported,https://arxiv.org/abs/2508.10925,2025-08-05,"AIME 2024, no tools, low reasoning effort"
 gpt-oss-120b-medium,80.4,self-reported,https://arxiv.org/abs/2508.10925,2025-08-05,"AIME 2024, no tools, medium reasoning effort"
@@ -40,9 +48,11 @@ grok-3-think,93.3,self-reported,https://futureagi.com/blog/grok-3-technical-revi
 grok-4,91.7,self-reported,https://www.datacamp.com/blog/grok-4,2025-07-09,"AIME 2025, no tools"
 grok-4-heavy,100,self-reported,https://www.datacamp.com/blog/grok-4,2025-07-09,AIME 2025
 hunyuan-a13b,87.3,self-reported,https://huggingface.co/tencent/Hunyuan-A13B-Instruct,,AIME 2024
+intellect-3,90.8,self-reported,https://arxiv.org/pdf/2512.16144,,AIME 2024
 internlm3-8b-instruct,20,self-reported,https://internlm.readthedocs.io/en/latest/model_card/InternLM3.html,,AIME2024
 kimi-k1-5,77.5,self-reported,https://arxiv.org/abs/2501.12599,,Long-CoT variant
 kimi-k2,69.6,self-reported,https://huggingface.co/moonshotai/Kimi-K2-Instruct,,"AIME 2024, avg@64"
+kimi-k2-6,96.4,self-reported,https://www.kimi.com/blog/kimi-k2-6,,vendor-labeled 'AIME 2026'
 kimi-k2-thinking,99.1,self-reported,https://huggingface.co/moonshotai/Kimi-K2-Thinking,,AIME25 with python tool
 lg-exaone-4-0-32b-non-reasoning,35.9,self-reported,https://arxiv.org/abs/2507.11407,,"AIME 2025, non-reasoning mode"
 lg-exaone-4-0-32b-reasoning,85.3,self-reported,https://arxiv.org/abs/2507.11407,,"AIME 2025, reasoning mode"
@@ -58,15 +68,18 @@ minimax-m2,78,self-reported,https://github.com/MiniMax-AI/MiniMax-M2,,AIME25
 nemotron-nano-2-nemotron-nano-9b-v2,72.1,self-reported,https://huggingface.co/nvidia/NVIDIA-Nemotron-Nano-9B-v2,,"AIME25, Reasoning On, vs Qwen3-8B's 69.3"
 olmo-3-7b,44.3,self-reported,https://huggingface.co/allenai/Olmo-3-7B-Instruct,,AIME 2024
 olmo-3-think-32b,76.8,self-reported,https://huggingface.co/allenai/Olmo-3-32B-Think,,AIME 2024; Qwen 3 32B 80.8
-openai-o1,74.3,independent,https://www.datacamp.com/blog/o3-openai,2024-12-01,AIME 2024
+openai-o1,74.3,self-reported,https://www.datacamp.com/blog/o3-openai,2024-12-01,"AIME 2024 [relabeled self-reported: aggregator/press relay of a vendor figure, not an independent re-measurement]"
 openai-o1-mini,70,independent,https://www.analyticsvidhya.com/blog/2024/09/o1-preview-vs-o1-mini/,2024-09-01,"AIME 2024, cited vs o1-preview 44.6%"
 openai-o1-preview,44.6,independent,https://www.analyticsvidhya.com/blog/2024/09/o1-preview-vs-o1-mini/,2024-09-01,AIME 2024 pass@1
+openai-o1-pro,86,self-reported,https://chatforest.com/reviews/openai-o1-o1-pro-reasoning-model-review/,,"AIME 2024, approximate ('~86%'); uplift from base o1's 74.4% (already in corpus as 74.3 on AIME 2024) driven by increased inference-time compute, not a different model"
 openai-o3,91.6,self-reported,https://openai.com/index/introducing-o3-and-o4-mini/,2025-04-16,AIME 2024
 openai-o3-mini-high,87.3,independent,https://www.lesswrong.com/posts/srdxEAcdmetdAiGcz/o3-mini-early-days,2025-01-01,"AIME 2024, high effort"
 openai-o3-mini-low,60,independent,https://www.lesswrong.com/posts/srdxEAcdmetdAiGcz/o3-mini-early-days,2025-01-01,"AIME 2024, low effort, reproduces OpenAI system-card table"
 openai-o3-mini-medium,76.9,independent,https://www.lesswrong.com/posts/srdxEAcdmetdAiGcz/o3-mini-early-days,2025-01-01,"AIME 2024, medium effort (default)"
-openai-o3-pro,93,independent,https://binaryverseai.com/chatgpt-o3-pro-review-benchmarks-hacks/,,AIME 2024; OpenAI has not published a full official benchmark table for o3-pro
+openai-o3-pro,93,self-reported,https://binaryverseai.com/chatgpt-o3-pro-review-benchmarks-hacks/,,"AIME 2024; OpenAI has not published a full official benchmark table for o3-pro [relabeled self-reported: aggregator/mirror relay of a vendor figure, not an independent re-measurement]"
 openai-o4-mini,93.4,self-reported,https://openai.com/index/introducing-o3-and-o4-mini/,2025-04-16,AIME 2024
+openpangu-2-0-flash-non-thinking,86.5,self-reported,https://huggingface.co/openpangu/openPangu-2.0-Flash/blob/main/README_EN.md,,"AIME 2026, Avg@16, Non-Thinking mode"
+openpangu-2-0-flash-thinking,93.3,self-reported,https://huggingface.co/openpangu/openPangu-2.0-Flash/blob/main/README_EN.md,,"AIME 2026, Avg@16, Thinking mode"
 phi-4-reasoning,75.3,self-reported,https://huggingface.co/microsoft/Phi-4-reasoning,2025-04-30,"AIME 2024, pass@1"
 phi-4-reasoning-14b,75.3,self-reported,https://huggingface.co/microsoft/Phi-4-reasoning,,AIME 2024
 qwen2-math-72b,20,self-reported,https://arxiv.org/html/2409.12122v1,2024-08-08,"Instruct, AIME 2024, 6/30 greedy CoT"
@@ -75,12 +88,14 @@ qwen3-14b-thinking,79.3,self-reported,https://arxiv.org/pdf/2505.09388,,"AIME'24
 qwen3-235b-a22b-instruct-2507,70.3,self-reported,https://huggingface.co/Qwen/Qwen3-235B-A22B-Instruct-2507,,AIME'25
 qwen3-235b-a22b-non-thinking,40.1,self-reported,https://arxiv.org/pdf/2505.09388,,"AIME'24, Non-thinking mode, Table 12"
 qwen3-235b-a22b-thinking,85.7,self-reported,https://arxiv.org/pdf/2505.09388,,"AIME'24, Thinking mode, Table 11"
+qwen3-235b-a22b-thinking-2507,92.3,self-reported,https://huggingface.co/Qwen/Qwen3-235B-A22B-Thinking-2507,,AIME25
 qwen3-30b-a3b-non-thinking,32.8,self-reported,https://arxiv.org/abs/2505.09388,,"AIME'24, non-thinking mode, Table 16"
 qwen3-30b-a3b-thinking,80.4,self-reported,https://arxiv.org/abs/2505.09388,,"AIME'24, thinking mode, Qwen3 Technical Report Table 15"
 qwen3-32b-non-thinking,31,self-reported,https://arxiv.org/abs/2505.09388,,"AIME'24, non-thinking mode, Table 14"
 qwen3-32b-thinking,81.4,self-reported,https://arxiv.org/abs/2505.09388,,"AIME'24, thinking mode, Table 13"
 qwen3-8b-non-thinking,29.1,self-reported,https://arxiv.org/abs/2505.09388,,"AIME'24, non-thinking mode, Table 18"
 qwen3-8b-thinking,76,self-reported,https://arxiv.org/abs/2505.09388,,"AIME'24, thinking mode, Table 17"
+qwen3-max,80.6,self-reported,https://felloai.com/qwen-3-max-ai-all-you-need-to-know-about-alibabas-1-trillion-parameter-llm/,,"AIME 2025, Qwen3-Max-Instruct (Preview, non-thinking), official launch chart (also transcribed by localllm.in). Some GA-release transcriptions cite 81.6; Thinking variant later reported 100 with tools + test-time compute."
 qwq-32b,79.5,self-reported,https://www.datacamp.com/blog/qwq-32b,,"AIME24; DeepSeek-R1 79.8, o1-mini 63.6"
 qwq-32b-preview,50,self-reported,https://qwenlm.github.io/blog/qwq-32b-preview/,,AIME 2024
 sarvam-105b,88.3,self-reported,https://huggingface.co/sarvamai/sarvam-105b,2026-02-18,"AIME 2025, without tools (96.7 with tools)"
@@ -89,3 +104,4 @@ seed1-5-thinking,86.7,self-reported,https://arxiv.org/abs/2504.13914,,AIME 2024
 skywork-r1v-38b,72,self-reported,https://arxiv.org/abs/2504.05599,,AIME 2024
 smollm3-3b-no-thinking,9.3,self-reported,https://huggingface.co/HuggingFaceTB/SmolLM3-3B,,"AIME 2025, no extended thinking"
 smollm3-3b-think,36.7,self-reported,https://huggingface.co/blog/smollm3,,"AIME 2025, reasoning mode"
+trinity-large-thinking,96.3,self-reported,https://huggingface.co/arcee-ai/Trinity-Large-Thinking,,AIME 2025

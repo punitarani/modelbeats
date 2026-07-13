@@ -1,0 +1,43 @@
+{
+  "slug": "jamba2-mini",
+  "name": "Jamba2 Mini",
+  "orgSlug": "ai21-labs",
+  "familySlug": "jamba",
+  "releaseDate": "2026-01-08",
+  "status": "released",
+  "predecessor": null,
+  "openness": "open-weights",
+  "license": "Apache 2.0",
+  "paramsB": 52,
+  "activeParamsB": 12,
+  "archClass": "hybrid",
+  "archDisplay": "SSM-Transformer hybrid (Mamba + Transformer) Mixture-of-Experts, 52B total / 12B active",
+  "ctxK": 256,
+  "modalities": [
+    "text"
+  ],
+  "langCount": null,
+  "capabilities": {
+    "reasoning": false,
+    "coding": false,
+    "vision": false,
+    "functionCalling": true,
+    "toolUse": true,
+    "agentic": false
+  },
+  "apiAvailable": true,
+  "price": null,
+  "links": {
+    "hf": "ai21labs/AI21-Jamba2-Mini",
+    "docs": "https://www.ai21.com/blog/introducing-jamba2/"
+  },
+  "note": "Newest Jamba generation (successor to Jamba 1.5 Large/Mini already in corpus, dated 2024-08-22), built for enterprise RAG/grounding reliability. Released alongside a 3B dense sibling.",
+  "quants": [],
+  "vramQ4Gb": null,
+  "vramFp16Gb": null,
+  "tps4090": null,
+  "tpsNote": null,
+  "effortLabel": null,
+  "isDefaultConfig": true,
+  "isBestConfig": true
+}

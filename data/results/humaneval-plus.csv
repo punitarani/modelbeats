@@ -1,0 +1,7 @@
+model_slug,score,source,source_url,evaluated_at,notes
+minicpm3-4b,68.3,self-reported,https://huggingface.co/openbmb/MiniCPM3-4B,2024-09-01,HumanEval+
+mistral-small-3-2-24b,92.9,self-reported,https://huggingface.co/mistralai/Mistral-Small-3.2-24B-Instruct-2506,,"HumanEval Plus, pass@5"
+olmo-3-7b,77.2,self-reported,https://huggingface.co/allenai/Olmo-3-7B-Instruct,,HumanEvalPlus
+olmo-3-think-32b,91.4,self-reported,https://huggingface.co/allenai/Olmo-3-32B-Think,,HumanEvalPlus; Qwen 3 32B 91.2
+phi-4-reasoning,92.9,self-reported,https://huggingface.co/microsoft/Phi-4-reasoning,2025-04-30,HumanEvalPlus variant
+phi-4-reasoning-14b,92.9,self-reported,https://huggingface.co/microsoft/Phi-4-reasoning,,HumanEvalPlus

@@ -1,0 +1,43 @@
+{
+  "slug": "intellect-3",
+  "name": "INTELLECT-3",
+  "orgSlug": "prime-intellect",
+  "familySlug": "intellect",
+  "releaseDate": "2025-11-26",
+  "status": "released",
+  "predecessor": null,
+  "openness": "open-weights",
+  "license": "Apache 2.0",
+  "paramsB": 106,
+  "activeParamsB": 12,
+  "archClass": "moe",
+  "archDisplay": "MoE, post-trained via SFT + large-scale asynchronous RL on top of Zhipu's open GLM-4.5-Air-Base",
+  "ctxK": 98,
+  "modalities": [
+    "text"
+  ],
+  "langCount": null,
+  "capabilities": {
+    "reasoning": true,
+    "coding": true,
+    "vision": false,
+    "functionCalling": true,
+    "toolUse": true,
+    "agentic": true
+  },
+  "apiAvailable": true,
+  "price": null,
+  "links": {
+    "hf": "PrimeIntellect/INTELLECT-3",
+    "docs": "https://www.primeintellect.ai/blog/intellect-3"
+  },
+  "note": "Prime Intellect (decentralized/open RL training startup) post-trained this 106B/12B-active MoE on top of the openly-licensed GLM-4.5-Air-Base checkpoint, then open-sourced not just the weights but the full RL stack (PRIME-RL framework, verifiers library, 500+ agentic RL environments) under permissive licenses. Served via Prime Intellect's own chat.primeintellect.ai and Inference API; hosted pricing not publicly confirmed.",
+  "quants": [],
+  "vramQ4Gb": null,
+  "vramFp16Gb": null,
+  "tps4090": null,
+  "tpsNote": null,
+  "effortLabel": null,
+  "isDefaultConfig": true,
+  "isBestConfig": true
+}

@@ -1,0 +1,46 @@
+{
+  "slug": "glm-5-2-high",
+  "name": "GLM-5.2 (High)",
+  "orgSlug": "zhipu-ai-z-ai-tsinghua",
+  "familySlug": "glm-5",
+  "releaseDate": "2026-06-13",
+  "status": "released",
+  "predecessor": "glm-5-1",
+  "openness": "open-weights",
+  "license": "MIT",
+  "paramsB": 744,
+  "activeParamsB": 40,
+  "archClass": "moe",
+  "archDisplay": "Mixture-of-Experts, 744B total / 40B active, DSA + 'IndexShare' sparse-attention indexer reuse (2.9x fewer per-token FLOPs at 1M context), 1M-token context; selectable High/Max reasoning-effort modes",
+  "ctxK": 1000,
+  "modalities": [
+    "text"
+  ],
+  "langCount": null,
+  "capabilities": {
+    "reasoning": true,
+    "coding": true,
+    "vision": false,
+    "functionCalling": true,
+    "toolUse": true,
+    "agentic": true
+  },
+  "apiAvailable": true,
+  "price": {
+    "input": 1.4,
+    "output": 4.4
+  },
+  "links": {
+    "hf": "zai-org/GLM-5.2",
+    "docs": "https://docs.z.ai/guides/llm/glm-5.2"
+  },
+  "note": "Default reasoning-effort tier: 'High' mode balances strong performance against latency/token cost for everyday coding, per Z.ai's own guidance. Same weights as the Max tier, selected via the reasoning_effort API parameter.",
+  "quants": [],
+  "vramQ4Gb": null,
+  "vramFp16Gb": null,
+  "tps4090": null,
+  "tpsNote": null,
+  "effortLabel": "High",
+  "isDefaultConfig": true,
+  "isBestConfig": false
+}

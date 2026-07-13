@@ -1,5 +1,6 @@
 model_slug,score,source,source_url,evaluated_at,notes
 ai21-jamba,83.2,self-reported,https://huggingface.co/ai21labs/Jamba-v0.1,,
+comma-v0-1-2t,72.5,self-reported,https://huggingface.co/common-pile/comma-v0.1-2t,,
 gpt-j-6b,76.5,self-reported,https://huggingface.co/EleutherAI/gpt-j-6b,2021-06-09,"zero-shot, LM Eval Harness"
 gpt-neo-2-7b,72.14,self-reported,https://huggingface.co/EleutherAI/gpt-neo-2.7B,2021-03-21,"zero-shot, LM Eval Harness"
 megatron-turing-nlg-530b,82,self-reported,https://developer.nvidia.com/blog/using-deepspeed-and-megatron-to-train-megatron-turing-nlg-530b-the-worlds-largest-and-most-powerful-generative-language-model/,2021-10-11,"zero-shot, physical commonsense reasoning"

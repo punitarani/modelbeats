@@ -1,0 +1,10 @@
+{
+  "slug": "osworld",
+  "name": "OSWorld",
+  "category": "agents",
+  "unit": "%",
+  "description": "Original OSWorld computer-use benchmark (screenshot-only agent configuration) — distinct from the later OSWorld-Verified subset.",
+  "normMin": 0,
+  "normMax": 40,
+  "higherIsBetter": true
+}

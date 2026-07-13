@@ -1,2 +1,3 @@
 model_slug,score,source,source_url,evaluated_at,notes
-qwen3-max,81.4,self-reported,https://dev.to/czmilo/qwen3-max-2025-complete-release-analysis-in-depth-review-of-alibabas-most-powerful-ai-model-3j7l,,SuperGPQA
+qwen3-235b-a22b-thinking-2507,64.9,self-reported,https://huggingface.co/Qwen/Qwen3-235B-A22B-Thinking-2507,,SuperGPQA
+qwen3-max,64.6,self-reported,https://felloai.com/qwen-3-max-ai-all-you-need-to-know-about-alibabas-1-trillion-parameter-llm/,,"SuperGPQA, Qwen3-Max-Instruct (Preview) official launch chart (same felloai transcription as the AIME/Arena-Hard rows; chart also shows Qwen3-235B 62.6, Kimi K2 57.2, Claude Opus 4 56.5). llm-stats lists the GA release at 65.1. Corrects a prior 81.4 (dev.to) that misread the AIME bar (GA AIME transcriptions cite 81.6)."

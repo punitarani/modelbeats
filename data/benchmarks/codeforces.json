@@ -4,7 +4,7 @@
   "category": "coding",
   "unit": "Elo",
   "description": "Competitive-programming rating estimated from Codeforces-style problems.",
-  "normMin": 800,
-  "normMax": 2860,
+  "normMin": 400,
+  "normMax": 3300,
   "higherIsBetter": true
 }

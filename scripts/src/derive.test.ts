@@ -195,8 +195,8 @@ describe('derived scores match the design formula (goldens)', () => {
     const rows = ds.results.get('swe-bench') ?? []
     const best = Math.max(...rows.map((r) => r.score))
     const leaders = rows.filter((r) => r.score === best).map((r) => r.modelSlug)
-    expect(best).toBe(80.9)
-    expect(leaders).toContain('claude-opus-4-5')
+    expect(best).toBe(95)
+    expect(leaders).toContain('claude-fable-5')
   })
 
   it('pins the real top-5 movers (rank-eligible lineage edges only)', async () => {
@@ -205,7 +205,7 @@ describe('derived scores match the design formula (goldens)', () => {
       ['nemotron-4-340b', 'nemotron-4-15b', 42.6],
       ['stable-lm-2-12b', 'stable-lm-2-1-6b', 32.2],
       ['chatglm3-6b', 'chatglm2-6b', 29],
-      ['sarvam-105b', 'sarvam-1-2b', 28.1],
+      ['sarvam-105b', 'sarvam-1-2b', 27.4],
       ['seed-oss-36b', 'seed1-5-thinking', 26.7],
     ])
   })

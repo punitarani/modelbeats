@@ -1,0 +1,10 @@
+{
+  "slug": "osworld-verified",
+  "name": "OSWorld-Verified",
+  "category": "agents",
+  "unit": "%",
+  "description": "Verified/cleaned subset of OSWorld — real desktop-GUI computer-use tasks scored pass@1.",
+  "normMin": 0,
+  "normMax": 90,
+  "higherIsBetter": true
+}

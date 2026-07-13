@@ -2,23 +2,26 @@ import { expect, test } from '@playwright/test'
 import { gotoHydrated } from './helpers'
 
 test.describe('organization + family hubs', () => {
-  test('/organizations/anthropic lists its 19 models with cadence', async ({ page }) => {
+  test('/organizations/anthropic lists its 25 models with cadence', async ({ page }) => {
     await gotoHydrated(page, '/organizations/anthropic')
-    await expect(page.getByTestId('org-meta')).toContainText('19 tracked models · 7 families')
-    await expect(page.getByTestId('org-model-row')).toHaveCount(19)
-    // rows sort by release date desc — Claude Opus 4.6 (2026-02-05) is Anthropic's newest
-    await expect(page.getByTestId('org-model-row').first()).toContainText('Claude Opus 4.6')
+    await expect(page.getByTestId('org-meta')).toContainText('25 tracked models · 8 families')
+    await expect(page.getByTestId('org-model-row')).toHaveCount(25)
+    // rows sort by release date desc — Claude Sonnet 5 (2026-06-30) is Anthropic's newest
+    await expect(page.getByTestId('org-model-row').first()).toContainText('Claude Sonnet 5')
   })
 
   test('/families/claude-4 shows progression and succession deltas', async ({ page }) => {
     await gotoHydrated(page, '/families/claude-4')
-    await expect(page.getByTestId('family-member')).toHaveCount(9)
-    await expect(page.getByTestId('family-sparkline').getByTestId('spark-dot')).toHaveCount(9)
+    // now spans Opus 4/4.1/4.5(+tiers)/4.6/4.7/4.8 and Sonnet 4/4.5/4.6 and Haiku 4.5 (12 members)
+    await expect(page.getByTestId('family-member')).toHaveCount(12)
+    await expect(page.getByTestId('family-sparkline').getByTestId('spark-dot')).toHaveCount(12)
     // lineage now prefers the canonical config over effort variants: 4.6 succeeds Opus 4.5
-    // (the default tier), not the unbenchmarked "(Medium)" config that produced a phantom delta
-    const opus46 = page.getByTestId('family-member').filter({ hasText: 'Claude Opus 4.6' })
+    // (the default tier), not the unbenchmarked "(Medium)" config that produced a phantom delta.
+    // Anchored regex (not a plain substring) because "Claude Sonnet 4.6" ALSO contains the text
+    // "succeeds Claude Opus 4.6" (its own nearest-by-date predecessor within the shared family).
+    const opus46 = page.getByTestId('family-member').filter({ hasText: /Claude Opus 4\.6CLOSED/ })
     await expect(opus46).toContainText('succeeds Claude Opus 4.5')
-    await expect(opus46).toContainText('+0.6')
+    await expect(opus46).toContainText('-7.2')
   })
 
   test('model → family: the back affordance returns to the model, not the parent', async ({

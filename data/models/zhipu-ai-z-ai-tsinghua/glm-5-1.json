@@ -1,0 +1,46 @@
+{
+  "slug": "glm-5-1",
+  "name": "GLM-5.1",
+  "orgSlug": "zhipu-ai-z-ai-tsinghua",
+  "familySlug": "glm-5",
+  "releaseDate": "2026-04-07",
+  "status": "released",
+  "predecessor": "glm-5",
+  "openness": "open-weights",
+  "license": "MIT",
+  "paramsB": 744,
+  "activeParamsB": 40,
+  "archClass": "moe",
+  "archDisplay": "Mixture-of-Experts, 744B total / 40B active, DeepSeek Sparse Attention (DSA), 200K context, tuned for autonomous long-horizon agent runs (up to 8 hours single-run)",
+  "ctxK": 200,
+  "modalities": [
+    "text"
+  ],
+  "langCount": null,
+  "capabilities": {
+    "reasoning": true,
+    "coding": true,
+    "vision": false,
+    "functionCalling": true,
+    "toolUse": true,
+    "agentic": true
+  },
+  "apiAvailable": true,
+  "price": {
+    "input": 1.4,
+    "output": 4.4
+  },
+  "links": {
+    "hf": "zai-org/GLM-5.1",
+    "docs": "https://docs.z.ai/guides/llm/glm-5.1"
+  },
+  "note": "Point release focused on extreme long-horizon agentic engineering; Z.ai's own SWE-bench Pro claim (58.4) briefly topped the public leaderboard, edging out GPT-5.4 and Claude Opus 4.6 on that benchmark at launch.",
+  "quants": [],
+  "vramQ4Gb": null,
+  "vramFp16Gb": null,
+  "tps4090": null,
+  "tpsNote": null,
+  "effortLabel": null,
+  "isDefaultConfig": true,
+  "isBestConfig": true
+}

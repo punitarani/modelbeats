@@ -1,0 +1,46 @@
+{
+  "slug": "deepseek-v4-pro-non-think",
+  "name": "DeepSeek-V4-Pro (Non-Think)",
+  "orgSlug": "deepseek",
+  "familySlug": "deepseek-v4",
+  "releaseDate": "2026-04-24",
+  "status": "preview",
+  "predecessor": null,
+  "openness": "open-weights",
+  "license": "MIT",
+  "paramsB": 1600,
+  "activeParamsB": 49,
+  "archClass": "moe",
+  "archDisplay": "Mixture-of-Experts (1.6T total / 49B active), hybrid Compressed Sparse Attention + Heavily Compressed Attention, Manifold-Constrained Hyper-Connections, Muon optimizer",
+  "ctxK": 1000,
+  "modalities": [
+    "text"
+  ],
+  "langCount": null,
+  "capabilities": {
+    "reasoning": true,
+    "coding": true,
+    "vision": false,
+    "functionCalling": true,
+    "toolUse": true,
+    "agentic": true
+  },
+  "apiAvailable": true,
+  "price": {
+    "input": 0.435,
+    "output": 0.87
+  },
+  "links": {
+    "hf": "deepseek-ai/DeepSeek-V4-Pro",
+    "docs": "https://api-docs.deepseek.com/news/news260424/"
+  },
+  "note": "Fast/low-latency mode of the DeepSeek-V4-Pro preview checkpoint, the default reasoning tier a user gets without selecting anything. (fast/low-latency mode; the default tier a user gets without selecting anything).",
+  "quants": [],
+  "vramQ4Gb": null,
+  "vramFp16Gb": null,
+  "tps4090": null,
+  "tpsNote": null,
+  "effortLabel": "Non-Think",
+  "isDefaultConfig": true,
+  "isBestConfig": false
+}

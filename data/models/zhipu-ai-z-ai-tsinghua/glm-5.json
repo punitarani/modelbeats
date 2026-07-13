@@ -1,0 +1,46 @@
+{
+  "slug": "glm-5",
+  "name": "GLM-5",
+  "orgSlug": "zhipu-ai-z-ai-tsinghua",
+  "familySlug": "glm-5",
+  "releaseDate": "2026-02-11",
+  "status": "released",
+  "predecessor": null,
+  "openness": "open-weights",
+  "license": "MIT",
+  "paramsB": 744,
+  "activeParamsB": 40,
+  "archClass": "moe",
+  "archDisplay": "Mixture-of-Experts, 744B total / 40B active, DeepSeek Sparse Attention (DSA), 200K context, trained on a 100k-GPU Huawei Ascend 910B cluster (no Nvidia/AMD/Intel silicon)",
+  "ctxK": 200,
+  "modalities": [
+    "text"
+  ],
+  "langCount": null,
+  "capabilities": {
+    "reasoning": true,
+    "coding": true,
+    "vision": false,
+    "functionCalling": true,
+    "toolUse": true,
+    "agentic": true
+  },
+  "apiAvailable": true,
+  "price": {
+    "input": 1,
+    "output": 3.2
+  },
+  "links": {
+    "hf": "zai-org/GLM-5",
+    "docs": "https://docs.z.ai/guides/llm/glm-5"
+  },
+  "note": "Major-version flagship succeeding GLM-4.6; first Z.ai model released after Zhipu's Jan 2026 Hong Kong IPO; widely reported as trained entirely on domestic Huawei chips, no Nvidia used.",
+  "quants": [],
+  "vramQ4Gb": null,
+  "vramFp16Gb": null,
+  "tps4090": null,
+  "tpsNote": null,
+  "effortLabel": null,
+  "isDefaultConfig": true,
+  "isBestConfig": true
+}

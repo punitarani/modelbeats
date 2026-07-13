@@ -1,0 +1,10 @@
+{
+  "slug": "gdpval-aa",
+  "name": "GDPval-AA",
+  "category": "agents",
+  "unit": "pts",
+  "description": "Updated/harder economically-valuable-work evaluation (0-2000 scale) — distinct from the original GDPval benchmark.",
+  "normMin": 0,
+  "normMax": 2000,
+  "higherIsBetter": true
+}

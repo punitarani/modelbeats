@@ -1,0 +1,44 @@
+{
+  "slug": "exaone-4-5",
+  "name": "EXAONE 4.5",
+  "orgSlug": "lg-ai-research",
+  "familySlug": "exaone",
+  "releaseDate": "2026-04-09",
+  "status": "released",
+  "predecessor": null,
+  "openness": "open-weights",
+  "license": "EXAONE AI Model License (research/academic/educational use)",
+  "paramsB": 33,
+  "activeParamsB": null,
+  "archClass": "dense",
+  "archDisplay": "Vision-Language Model with proprietary vision encoder + hybrid-attention LLM backbone and multi-token prediction",
+  "ctxK": 256,
+  "modalities": [
+    "text",
+    "vision"
+  ],
+  "langCount": 6,
+  "capabilities": {
+    "reasoning": true,
+    "coding": true,
+    "vision": true,
+    "functionCalling": true,
+    "toolUse": false,
+    "agentic": false
+  },
+  "apiAvailable": false,
+  "price": null,
+  "links": {
+    "hf": "LGAI-EXAONE/EXAONE-4.5-33B",
+    "docs": "https://github.com/LG-AI-EXAONE/EXAONE-4.5"
+  },
+  "note": "LG's first open-weight VLM, a fraction of the size of its 'K-EXAONE' sibling while matching its text performance; successor to EXAONE 4.0 32B already in corpus (dated 2025-07-15). Released for research/academic/educational use, not full commercial API.",
+  "quants": [],
+  "vramQ4Gb": null,
+  "vramFp16Gb": null,
+  "tps4090": null,
+  "tpsNote": null,
+  "effortLabel": null,
+  "isDefaultConfig": true,
+  "isBestConfig": true
+}

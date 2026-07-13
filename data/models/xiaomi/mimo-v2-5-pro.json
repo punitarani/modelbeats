@@ -1,0 +1,46 @@
+{
+  "slug": "mimo-v2-5-pro",
+  "name": "MiMo-V2.5-Pro",
+  "orgSlug": "xiaomi",
+  "familySlug": "mimo",
+  "releaseDate": "2026-04-22",
+  "status": "released",
+  "predecessor": null,
+  "openness": "open-weights",
+  "license": "MIT",
+  "paramsB": 1020,
+  "activeParamsB": 42,
+  "archClass": "moe",
+  "archDisplay": "Sparse MoE (384 routed experts, 8/token), 70 layers (1 dense + 69 MoE), hybrid Sliding-Window+Global attention 6:1 with learnable attention-sink bias, 3x MTP modules; text-only (no native vision/audio encoders)",
+  "ctxK": 1000,
+  "modalities": [
+    "text"
+  ],
+  "langCount": null,
+  "capabilities": {
+    "reasoning": true,
+    "coding": true,
+    "vision": false,
+    "functionCalling": true,
+    "toolUse": true,
+    "agentic": true
+  },
+  "apiAvailable": true,
+  "price": {
+    "input": 0.435,
+    "output": 0.87
+  },
+  "links": {
+    "hf": "XiaomiMiMo/MiMo-V2.5-Pro",
+    "docs": "https://mimo.xiaomi.com/mimo-v2-5-pro/"
+  },
+  "note": "Xiaomi's flagship coding/agentic model, 1.02T total / 42B active MoE, 1M context, fully open-sourced under MIT. Optimized for very long agentic trajectories (1,000+ tool calls); unlike sibling MiMo-V2.5, it is text-only (no native image/video/audio encoders).",
+  "quants": [],
+  "vramQ4Gb": null,
+  "vramFp16Gb": null,
+  "tps4090": null,
+  "tpsNote": null,
+  "effortLabel": null,
+  "isDefaultConfig": true,
+  "isBestConfig": true
+}

@@ -1,0 +1,45 @@
+{
+  "slug": "qwen3-7-max",
+  "name": "Qwen3.7-Max",
+  "orgSlug": "alibaba",
+  "familySlug": "qwen3-7",
+  "releaseDate": "2026-05-20",
+  "status": "released",
+  "predecessor": null,
+  "openness": "closed",
+  "license": "Proprietary",
+  "paramsB": null,
+  "activeParamsB": null,
+  "archClass": "moe",
+  "archDisplay": "MoE, exact expert configuration undisclosed; positioned as an agent-first reasoning model",
+  "ctxK": 1000,
+  "modalities": [
+    "text"
+  ],
+  "langCount": null,
+  "capabilities": {
+    "reasoning": true,
+    "coding": true,
+    "vision": false,
+    "functionCalling": true,
+    "toolUse": true,
+    "agentic": true
+  },
+  "apiAvailable": true,
+  "price": {
+    "input": 2.5,
+    "output": 7.5
+  },
+  "links": {
+    "docs": "www.alibabacloud.com/help/en/model-studio/models"
+  },
+  "note": "Agent-first flagship with 1M-token context (up from 256K on the prior generation); Alibaba reports 1,000+ consecutive tool calls and a 35-hour autonomous kernel-optimization run in internal testing (not independently verified). Not open-weight; no HF checkpoints as of this research.",
+  "quants": [],
+  "vramQ4Gb": null,
+  "vramFp16Gb": null,
+  "tps4090": null,
+  "tpsNote": null,
+  "effortLabel": null,
+  "isDefaultConfig": true,
+  "isBestConfig": true
+}

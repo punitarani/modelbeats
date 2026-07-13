@@ -1,0 +1,48 @@
+{
+  "slug": "kimi-k2-7-code",
+  "name": "Kimi K2.7 Code",
+  "orgSlug": "moonshot-ai",
+  "familySlug": "kimi-k2",
+  "releaseDate": "2026-06-12",
+  "status": "released",
+  "predecessor": "kimi-k2-6",
+  "openness": "open-weights",
+  "license": "Modified MIT License",
+  "paramsB": 1000,
+  "activeParamsB": 32,
+  "archClass": "moe",
+  "archDisplay": "1T-parameter MoE, 32B active/token, 384 experts (8 routed + 1 shared), 61 layers (1 dense), MLA attention, native INT4 quantization support; coding-specialized post-train of the K2.6 base with forced/persistent thinking mode across multi-turn agent sessions",
+  "ctxK": 256,
+  "modalities": [
+    "text",
+    "vision",
+    "video"
+  ],
+  "langCount": null,
+  "capabilities": {
+    "reasoning": true,
+    "coding": true,
+    "vision": true,
+    "functionCalling": true,
+    "toolUse": true,
+    "agentic": true
+  },
+  "apiAvailable": true,
+  "price": {
+    "input": 0.95,
+    "output": 4
+  },
+  "links": {
+    "hf": "moonshotai/Kimi-K2.7-Code",
+    "docs": "https://www.kimi.com/resources/kimi-k2-7-code"
+  },
+  "note": "Coding/agent-specialized variant built on the Kimi K2.6 base weights, tuned for long-horizon software-engineering workflows and thousands of sequential tool calls, with ~30% fewer thinking tokens than K2.6 for equivalent tasks. A same-weights 'HighSpeed' serving SKU (kimi-k2.7-code-highspeed) also shipped, at roughly 2x the price ($1.90/M input cache-miss, $8.00/M output) for ~180-260 tok/s output — this is a serving/throughput tier, not a reasoning-effort tier, so it is not modeled as a separate entry here. All benchmark improvements Moonshot has published for this model to date are on Moonshot's own proprietary/in-house suites (Kimi Code Bench v2, Program Bench, MLS Bench Lite, Kimi Claw 24/7 Bench, MCP Atlas, MCP Mark Verified); no standard public-benchmark numbers (SWE-bench, LiveCodeBench, AIME, GPQA) have been disclosed for K2.7 Code specifically, and no independent third-party re-run results were found as of this research.",
+  "quants": [],
+  "vramQ4Gb": null,
+  "vramFp16Gb": null,
+  "tps4090": null,
+  "tpsNote": null,
+  "effortLabel": null,
+  "isDefaultConfig": true,
+  "isBestConfig": true
+}

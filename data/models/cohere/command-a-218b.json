@@ -1,0 +1,44 @@
+{
+  "slug": "command-a-218b",
+  "name": "Command A+",
+  "orgSlug": "cohere",
+  "familySlug": "command-a",
+  "releaseDate": "2026-05-20",
+  "status": "released",
+  "predecessor": "command-a",
+  "openness": "open-weights",
+  "license": "Apache 2.0",
+  "paramsB": 218,
+  "activeParamsB": 25,
+  "archClass": "moe",
+  "archDisplay": "Sparse Mixture-of-Experts (218B total / 25B active), hybrid attention, native citation grounding, runs on 1x B200 or 2x H100 (W4A4)",
+  "ctxK": 128,
+  "modalities": [
+    "text",
+    "vision"
+  ],
+  "langCount": 48,
+  "capabilities": {
+    "reasoning": true,
+    "coding": true,
+    "vision": true,
+    "functionCalling": true,
+    "toolUse": true,
+    "agentic": true
+  },
+  "apiAvailable": true,
+  "price": null,
+  "links": {
+    "hf": "CohereLabs/command-a-plus-05-2026-bf16",
+    "docs": "https://cohere.com/blog/command-a-plus"
+  },
+  "note": "Successor to the CC-BY-NC-licensed Command A (Mar 2025), now released fully open-weight under Apache 2.0. First Command model with native image input, expanded from 23 to 48 languages, and large agentic/enterprise gains (tau2-bench-telecom 37%->85%, Terminal-Bench-Hard agentic coding 3%->25%).",
+  "quants": [],
+  "vramQ4Gb": null,
+  "vramFp16Gb": null,
+  "tps4090": null,
+  "tpsNote": null,
+  "effortLabel": null,
+  "isDefaultConfig": true,
+  "isBestConfig": true
+}

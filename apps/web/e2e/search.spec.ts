@@ -22,8 +22,8 @@ test.describe('search', () => {
 
   test('/search?q= SSRs grouped results', async ({ page }) => {
     await gotoHydrated(page, '/search?q=qwen')
-    // real corpus: 37 models across the Qwen 1/1.5/2/2.5/3 series match "qwen" (name/org/family)
-    await expect(page.getByTestId('search-summary')).toContainText('37 models')
-    await expect(page.getByTestId('search-model')).toHaveCount(37)
+    // real corpus: 40 models across the Qwen 1/1.5/2/2.5/3/3.7 series match "qwen" (name/org/family)
+    await expect(page.getByTestId('search-summary')).toContainText('40 models')
+    await expect(page.getByTestId('search-model')).toHaveCount(40)
   })
 })

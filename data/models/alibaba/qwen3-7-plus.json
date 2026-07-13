@@ -1,0 +1,47 @@
+{
+  "slug": "qwen3-7-plus",
+  "name": "Qwen3.7-Plus",
+  "orgSlug": "alibaba",
+  "familySlug": "qwen3-7",
+  "releaseDate": "2026-06-02",
+  "status": "released",
+  "predecessor": "qwen3-7-max",
+  "openness": "closed",
+  "license": "Proprietary",
+  "paramsB": null,
+  "activeParamsB": null,
+  "archClass": "moe",
+  "archDisplay": "MoE, exact expert configuration undisclosed; multimodal agent variant built on the Qwen3.7-Max backbone",
+  "ctxK": 1000,
+  "modalities": [
+    "text",
+    "vision",
+    "video"
+  ],
+  "langCount": null,
+  "capabilities": {
+    "reasoning": true,
+    "coding": true,
+    "vision": true,
+    "functionCalling": true,
+    "toolUse": true,
+    "agentic": true
+  },
+  "apiAvailable": true,
+  "price": {
+    "input": 0.4,
+    "output": 1.6
+  },
+  "links": {
+    "docs": "www.alibabacloud.com/help/en/model-studio/models"
+  },
+  "note": "Cheaper, multimodal (vision + video input) sibling of Qwen3.7-Max released ~2 weeks later on the Bailian/Model Studio platform; adds GUI grounding and screen/mobile agent capability (ScreenSpot Pro, AndroidWorld) on top of the Max agent backbone. Text output only (no image/video generation). Preceded by a preview from ~May 14, 2026.",
+  "quants": [],
+  "vramQ4Gb": null,
+  "vramFp16Gb": null,
+  "tps4090": null,
+  "tpsNote": null,
+  "effortLabel": null,
+  "isDefaultConfig": true,
+  "isBestConfig": true
+}

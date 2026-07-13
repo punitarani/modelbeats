@@ -1,0 +1,46 @@
+{
+  "slug": "claude-sonnet-4-6",
+  "name": "Claude Sonnet 4.6",
+  "orgSlug": "anthropic",
+  "familySlug": "claude-4",
+  "releaseDate": "2026-02-17",
+  "status": "released",
+  "predecessor": "claude-opus-4-6",
+  "openness": "closed",
+  "license": "Proprietary",
+  "paramsB": null,
+  "activeParamsB": null,
+  "archClass": "dense",
+  "archDisplay": "Dense transformer, architecture undisclosed",
+  "ctxK": 1000,
+  "modalities": [
+    "text",
+    "vision"
+  ],
+  "langCount": null,
+  "capabilities": {
+    "reasoning": true,
+    "coding": true,
+    "vision": true,
+    "functionCalling": true,
+    "toolUse": true,
+    "agentic": true
+  },
+  "apiAvailable": true,
+  "price": {
+    "input": 3,
+    "output": 15
+  },
+  "links": {
+    "docs": "https://platform.claude.com/docs/en/about-claude/models/overview"
+  },
+  "note": "CONFIRMED REAL — this is not a mix-up. Model id claude-sonnet-4-6. Direct predecessor to Claude Sonnet 5, sitting between Sonnet 4.5 and Sonnet 5 in the lineage; the corpus is missing it even though it already has both Opus 4.6 (2026-02-05) and Sonnet 5 (2026-06-30). Introduced 1M-token context (beta) and adaptive thinking for the Sonnet line.",
+  "quants": [],
+  "vramQ4Gb": null,
+  "vramFp16Gb": null,
+  "tps4090": null,
+  "tpsNote": null,
+  "effortLabel": null,
+  "isDefaultConfig": true,
+  "isBestConfig": true
+}

@@ -6,9 +6,9 @@ import { gotoHydrated } from './helpers'
 test.describe('history-aware back links', () => {
   test('filtered rankings → model → back restores the filtered URL', async ({ page }) => {
     await gotoHydrated(page, '/rankings?org=anthropic')
-    // rank-eligible first, by index: Claude Opus 4.6 is Anthropic's top-ranked model
+    // rank-eligible first, by index: Claude Opus 4.8 is Anthropic's top-ranked model
     await page.getByTestId('ranking-row').first().click()
-    await expect(page).toHaveURL(/\/models\/claude-opus-4-6$/)
+    await expect(page).toHaveURL(/\/models\/claude-opus-4-8$/)
     await page.getByRole('link', { name: 'Back', exact: true }).click()
     await expect(page).toHaveURL(/\/rankings\?org=anthropic$/)
   })

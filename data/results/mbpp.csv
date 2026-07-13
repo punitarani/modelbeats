@@ -1,5 +1,5 @@
 model_slug,score,source,source_url,evaluated_at,notes
-aya-vision-32b,70.43,independent,https://www.datalearner.com/en/ai-models/pretrained-models/aya-vision-32b,,
+aya-vision-32b,70.43,self-reported,https://www.datalearner.com/en/ai-models/pretrained-models/aya-vision-32b,,"[relabeled self-reported: aggregator/press relay of a vendor figure, not an independent re-measurement]"
 chatglm3-6b,52.4,self-reported,https://github.com/zai-org/ChatGLM3/blob/main/README_en.md,,ChatGLM3-6B-Base checkpoint
 claude-3-haiku,80.4,self-reported,https://www-cdn.anthropic.com/de8ba9b01c9ab7cbabf5c33b80b7bbc618857627/Model_Card_Claude_3.pdf,2024-03-13,Pass@1
 claude-3-opus,86.4,self-reported,https://www-cdn.anthropic.com/de8ba9b01c9ab7cbabf5c33b80b7bbc618857627/Model_Card_Claude_3.pdf,2024-03-04,Pass@1
@@ -10,12 +10,10 @@ code-llama-34b-python,56.2,self-reported,https://arxiv.org/html/2308.12950v3,202
 code-llama-7b,41.4,self-reported,https://arxiv.org/html/2308.12950v3,2023-08-01,"pass@1, base Code Llama 7B"
 codegemma-7b,56.2,self-reported,https://ai.google.dev/gemma/docs/codegemma/model_card,,7B pretrained (PT) variant
 codeqwen1-5-7b,72.2,self-reported,https://qwenlm.github.io/blog/codeqwen1.5/,2024-04-16,"Base model, 0-shot"
-codestral-22b,78.2,independent,https://www.analyticsvidhya.com/blog/2024/06/codestral-22b/,2024-05-01,
+codestral-22b,78.2,self-reported,https://www.analyticsvidhya.com/blog/2024/06/codestral-22b/,2024-05-01,"[relabeled self-reported: aggregator/mirror relay of a vendor figure, not an independent re-measurement]"
 codestral-25-01,80.2,self-reported,https://mistral.ai/news/codestral-2501/,,
-command-a,86.2,self-reported,https://arxiv.org/abs/2504.00698,,MBPP+
-command-r7b,72,self-reported,https://arxiv.org/abs/2504.00698,,MBPP+
+comma-v0-1-2t,41.5,self-reported,https://huggingface.co/common-pile/comma-v0.1-2t,,
 deepseek-coder-33b,70,self-reported,https://ar5iv.labs.arxiv.org/html/2401.14196,,"Instruct-33B, from paper Table 3"
-deepseek-coder-v2-236b,76.2,self-reported,https://github.com/deepseek-ai/DeepSeek-Coder-V2,,MBPP+ (EvalPlus)
 deepseek-v2-236b,72,self-reported,https://huggingface.co/deepseek-ai/DeepSeek-V2-Chat,,Chat (RL) variant
 granite-4-0-h-small,84,self-reported,https://huggingface.co/ibm-granite/granite-4.0-h-small,,
 internlm2-20b,65.8,self-reported,https://huggingface.co/internlm/internlm2-chat-20b,,
@@ -27,7 +25,6 @@ llama-33b,30.2,self-reported,https://ar5iv.labs.arxiv.org/html/2302.13971,2023-0
 llama-4-maverick,77.6,self-reported,https://huggingface.co/blog/llama4-release,,"Pre-trained/base model comparison table, pass@1 (not instruction-tuned)"
 llama-4-scout,67.8,self-reported,https://huggingface.co/blog/llama4-release,,"Pre-trained/base model comparison table, pass@1 (not instruction-tuned)"
 minicpm-2b,47.31,self-reported,https://github.com/OpenBMB/MiniCPM/blob/main/README-en.md,2024-02-01,MiniCPM GitHub README benchmark table
-minimax-text-01,71.7,self-reported,https://huggingface.co/MiniMaxAI/MiniMax-Text-01,,MBPP+ variant
 ministral-8b,70,self-reported,https://huggingface.co/mistralai/Ministral-8B-Instruct-2410,,pass@1
 mistral-7b,47.5,self-reported,https://arxiv.org/abs/2310.06825,,
 mistral-large-2-24-07,80,self-reported,https://huggingface.co/mistralai/Mistral-Large-Instruct-2407,,MBPP Base

@@ -1,0 +1,46 @@
+{
+  "slug": "claude-opus-4-8",
+  "name": "Claude Opus 4.8",
+  "orgSlug": "anthropic",
+  "familySlug": "claude-4",
+  "releaseDate": "2026-05-28",
+  "status": "released",
+  "predecessor": "claude-opus-4-7",
+  "openness": "closed",
+  "license": "Proprietary",
+  "paramsB": null,
+  "activeParamsB": null,
+  "archClass": "dense",
+  "archDisplay": "Dense transformer, architecture undisclosed; adaptive thinking controlled by a runtime effort parameter (low/medium/high/xhigh/max)",
+  "ctxK": 1000,
+  "modalities": [
+    "text",
+    "vision"
+  ],
+  "langCount": null,
+  "capabilities": {
+    "reasoning": true,
+    "coding": true,
+    "vision": true,
+    "functionCalling": true,
+    "toolUse": true,
+    "agentic": true
+  },
+  "apiAvailable": true,
+  "price": {
+    "input": 5,
+    "output": 25
+  },
+  "links": {
+    "docs": "https://platform.claude.com/docs/en/about-claude/models/overview"
+  },
+  "note": "Model id claude-opus-4-8. Introduced 'dynamic workflows' in Claude Code and a 'fast mode' (2.5x speed) priced at $10/$50 per MTok, three times cheaper than prior fast-mode pricing. Regular (non-fast) pricing unchanged from Opus 4.7 at $5/$25. Best-in-class computer-use/browser-agent model at launch (84% on Online-Mind2Web, self-reported).",
+  "quants": [],
+  "vramQ4Gb": null,
+  "vramFp16Gb": null,
+  "tps4090": null,
+  "tpsNote": null,
+  "effortLabel": null,
+  "isDefaultConfig": true,
+  "isBestConfig": true
+}

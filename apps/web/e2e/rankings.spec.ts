@@ -14,15 +14,15 @@ test.describe('rankings', () => {
     // #1 row is the broadly-benchmarked frontier leader
     const first = page.getByTestId('ranking-row').first()
     await expect(first).toContainText('Gemini 3.1 Pro')
-    await expect(first).toContainText('93.3')
+    await expect(first).toContainText('91.1')
   })
 
   test('column sort click mutates URL and reorders rows', async ({ page }) => {
     await gotoHydrated(page, '/rankings')
     await page.getByTestId('sort-gpqa').click()
     await expect(page).toHaveURL(/sort=-gpqa/)
-    // GPQA Diamond leader is Gemini 3.1 Pro (94.3), displacing the index leader
-    await expect(page.getByTestId('ranking-row').first()).toContainText('Gemini 3.1 Pro')
+    // GPQA Diamond leader is Claude Sonnet 5 (96.2), displacing the index leader
+    await expect(page.getByTestId('ranking-row').first()).toContainText('Claude Sonnet 5')
     // second click flips to ascending
     await page.getByTestId('sort-gpqa').click()
     await expect(page).toHaveURL(/sort=gpqa/)
@@ -38,7 +38,7 @@ test.describe('rankings', () => {
       html.indexOf('data-testid="ranking-row"'),
       html.indexOf('data-testid="ranking-row"') + 400,
     )
-    expect(firstRow).toContain('Kimi K2 Thinking') // open-weights AIME leader (99.1)
+    expect(firstRow).toContain('GLM-5.2 (Max)') // open-weights AIME leader (99.2)
     expect(firstRow).not.toContain('GPT-5.2') // closed AIME leader (100), filtered server-side
   })
 
@@ -46,7 +46,7 @@ test.describe('rankings', () => {
     await gotoHydrated(page, '/rankings')
     await pickOption(page, 'rankings-org', 'Anthropic')
     await expect(page).toHaveURL(/org=anthropic/)
-    await expect(page.getByTestId('rankings-meta')).toContainText('19 models')
+    await expect(page.getByTestId('rankings-meta')).toContainText('25 models')
   })
 
   test('category param filters benchmark columns; bogus category 404s', async ({ page }) => {

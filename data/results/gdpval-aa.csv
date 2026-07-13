@@ -1,0 +1,3 @@
+model_slug,score,source,source_url,evaluated_at,notes
+claude-opus-4-8,1890,self-reported,https://www.vellum.ai/blog/claude-opus-4-8-benchmarks-explained,,"PROPOSED NEW SLUG distinct from base 'gdpval': GDPval-AA v2 is Anthropic's harder/updated economically-valuable-work eval, scored on a 0-2000 scale, not the same test as the original GDPval and should not be filed under the base slug."
+claude-sonnet-5,1618,self-reported,https://www.vellum.ai/blog/claude-sonnet-5-benchmarks-explained,,"See proposed-slug note on the Opus 4.8 entry. Narrowly ahead of Opus 4.8 (1,615)."

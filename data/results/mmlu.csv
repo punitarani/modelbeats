@@ -3,13 +3,13 @@ ai21-jamba,67.4,self-reported,https://huggingface.co/ai21labs/Jamba-v0.1,,
 ai21-jamba-1-5-large,80,self-reported,https://arxiv.org/html/2408.12570v1,,
 ai21-jamba-1-5-mini,69.7,self-reported,https://arxiv.org/html/2408.12570v1,,
 airoboros-70b-l2,70.4,independent,https://raw.githubusercontent.com/dsdanielpark/Open-LLM-Leaderboard-Report/main/assets/20230904/20230904.csv,2023-09-04,"HF Open LLM Leaderboard snapshot, 5-shot"
-amazon-nova-lite,80.5,independent,https://deepranking.ai/llm-models/nova-lite,,0-shot CoT; figure traces to Amazon's Nova technical report
-amazon-nova-micro,77.6,independent,https://deepranking.ai/llm-models/nova-micro,,
-amazon-nova-pro,85.9,independent,https://deepranking.ai/llm-models/nova-pro,,0-shot CoT; matches Amazon's Nova technical report
+amazon-nova-lite,80.5,self-reported,https://deepranking.ai/llm-models/nova-lite,,"0-shot CoT; figure traces to Amazon's Nova technical report [relabeled self-reported: aggregator/press relay of a vendor figure, not an independent re-measurement]"
+amazon-nova-micro,77.6,self-reported,https://deepranking.ai/llm-models/nova-micro,,"[relabeled self-reported: aggregator/press relay of a vendor figure, not an independent re-measurement]"
+amazon-nova-pro,85.9,self-reported,https://deepranking.ai/llm-models/nova-pro,,"0-shot CoT; matches Amazon's Nova technical report [relabeled self-reported: aggregator/press relay of a vendor figure, not an independent re-measurement]"
 apple-dclm-baseline-7b,63.72,self-reported,https://huggingface.co/apple/DCLM-Baseline-7B,,5-shot (few-shot MMLU row)
 apple-foundation-model-on-device-3b,61.4,self-reported,https://arxiv.org/html/2407.21075v1,2024-07-01,"5-shot, AFM-on-device, from Apple's July 2024 tech report"
 aya-23-35b,58.2,self-reported,https://arxiv.org/abs/2405.15032,2024-05-23,Multilingual MMLU 5-shot avg across 14 languages
-aya-vision-32b,72.14,independent,https://www.datalearner.com/en/ai-models/pretrained-models/aya-vision-32b,,"Independent eval, text-only mode"
+aya-vision-32b,72.14,self-reported,https://www.datalearner.com/en/ai-models/pretrained-models/aya-vision-32b,,"Independent eval, text-only mode [relabeled self-reported: aggregator/press relay of a vendor figure, not an independent re-measurement]"
 baichuan2-13b,59.17,self-reported,https://github.com/baichuan-inc/Baichuan2/blob/main/README_EN.md,,5-shot
 baichuan2-7b,54.16,self-reported,https://github.com/baichuan-inc/Baichuan2/blob/main/README_EN.md,,5-shot
 btlm-3b-8k,28.1,self-reported,https://arxiv.org/abs/2309.11568,,5-shot
@@ -26,6 +26,7 @@ claude-opus-4-5,90.8,self-reported,https://www.vellum.ai/blog/claude-opus-4-5-be
 claude-opus-4-5-high,90.8,self-reported,https://www.vellum.ai/blog/claude-opus-4-5-benchmarks,2025-11-24,
 claude-sonnet-4,86.5,self-reported,https://www.datacamp.com/blog/claude-4,2025-05-22,with extended thinking; confirmed via direct fetch
 claude-sonnet-4-5,89.1,self-reported,https://leanware.co/insights/claude-sonnet-4-5-overview,2025-09-29,multilingual Q&A (MMMLU); confirmed via direct fetch
+comma-v0-1-2t,49.8,self-reported,https://huggingface.co/common-pile/comma-v0.1-2t,,5-shot
 command-a,85.5,self-reported,https://arxiv.org/abs/2504.00698,,"Command A technical report, Table 1"
 command-r7b,65.2,self-reported,https://arxiv.org/abs/2504.00698,,"Command A technical report, Table 1"
 dbrx,73.7,self-reported,https://www.databricks.com/blog/introducing-dbrx-new-state-art-open-llm,,
@@ -33,8 +34,6 @@ decilm-7b,59.76,self-reported,https://huggingface.co/Deci/DeciLM-7B,,
 deepseek-llm-67b,71.1,self-reported,https://ar5iv.labs.arxiv.org/html/2401.02954,,"Chat variant, paper Table 6"
 deepseek-r1-671b,90.8,self-reported,https://huggingface.co/deepseek-ai/DeepSeek-R1,2025-01-20,MMLU pass@1
 deepseek-v2-236b,77.8,self-reported,https://huggingface.co/deepseek-ai/DeepSeek-V2-Chat,,Chat (RL) variant
-deepseek-v3-1-non-thinking,91.8,self-reported,https://huggingface.co/deepseek-ai/DeepSeek-V3.1,,"MMLU-Redux (EM), not raw MMLU"
-deepseek-v3-1-thinking,93.7,self-reported,https://huggingface.co/deepseek-ai/DeepSeek-V3.1,,"MMLU-Redux (EM), not raw MMLU"
 deepseek-v3-671b,88.5,self-reported,https://huggingface.co/deepseek-ai/DeepSeek-V3,,
 deepseekmoe-16b,45,self-reported,https://ar5iv.labs.arxiv.org/html/2401.06066,,"Base variant, 5-shot"
 falcon-2-11b,58.37,independent,https://huggingface.co/blog/falcon2-11b,2024-05-13,5-shot
@@ -45,7 +44,7 @@ falcon3-7b,70.5,self-reported,https://huggingface.co/tiiuae/Falcon3-7B-Instruct,
 flan-t5-xxl,55.1,self-reported,https://arxiv.org/abs/2210.11416,,"5-shot, direct prompting, Table 3/5 of Scaling Instruction-Finetuned Language Models"
 galactica-120b,41.3,self-reported,https://ar5iv.labs.arxiv.org/html/2211.09085,2022-11-01,"Mathematics subset of MMLU only (Table 8), not full MMLU average"
 gemini-1-0-nano,55.8,self-reported,https://arxiv.org/pdf/2312.11805,2023-12-06,"Gemini Nano-2 (3.25B), 5-shot"
-gemini-1-0-pro,71.8,independent,https://llm-stats.com/models/compare/gemini-1.0-pro-vs-gemini-1.5-pro,,Gemini 1.0 Pro MMLU score
+gemini-1-0-pro,71.8,self-reported,https://llm-stats.com/models/compare/gemini-1.0-pro-vs-gemini-1.5-pro,,"Gemini 1.0 Pro MMLU score [relabeled self-reported: aggregator/mirror relay of a vendor figure, not an independent re-measurement]"
 gemini-1-0-ultra,90,self-reported,https://blog.google/technology/ai/google-gemini-ai/,2023-12-06,First model to exceed human-expert baseline on MMLU (CoT@32)
 gemini-1-5-flash,78.9,self-reported,https://storage.googleapis.com/deepmind-media/gemini/gemini_v1_5_report.pdf,2024-05-01,"5-shot, Table 11"
 gemini-1-5-flash-8b,68.1,self-reported,https://storage.googleapis.com/deepmind-media/gemini/gemini_v1_5_report.pdf,2024-10-01,"5-shot, Table 22"
@@ -69,8 +68,8 @@ glm-4-plus,86.8,self-reported,https://docs.bigmodel.cn/cn/guide/models/text/glm-
 gopher,60,self-reported,https://arxiv.org/abs/2203.15556,,"5-shot average accuracy, reported in the Chinchilla paper's comparison table"
 gpt-3-5-turbo,70,self-reported,https://arxiv.org/abs/2303.08774,,reported in GPT-4 technical report comparison table
 gpt-4,86.4,self-reported,https://arxiv.org/abs/2303.08774,,
-gpt-4-1,90.2,independent,https://www.rdworldonline.com/openai-claims-gpt-4-1-sets-new-90-standard-in-mmlu-reasoning-benchmark/,2025-04-01,
-gpt-4-1-mini,87.5,independent,https://docsbot.ai/models/gpt-4-1-mini,2025-04-01,
+gpt-4-1,90.2,self-reported,https://www.rdworldonline.com/openai-claims-gpt-4-1-sets-new-90-standard-in-mmlu-reasoning-benchmark/,2025-04-01,"[relabeled self-reported: aggregator/mirror relay of a vendor figure, not an independent re-measurement]"
+gpt-4-1-mini,87.5,self-reported,https://docsbot.ai/models/gpt-4-1-mini,2025-04-01,"[relabeled self-reported: aggregator/mirror relay of a vendor figure, not an independent re-measurement]"
 gpt-4-1-nano,80.1,self-reported,https://openai.com/index/gpt-4-1/,2025-04-14,GPT-4.1 nano
 gpt-4-turbo,86.5,independent,https://telnyx.com/llm-library/gpt-4-1106-preview,,"gpt-4-1106-preview, 5-shot"
 gpt-4o,88.7,self-reported,https://en.wikipedia.org/wiki/GPT-4o,,
@@ -97,7 +96,7 @@ hermes-3-405b,85.02,self-reported,https://arxiv.org/pdf/2408.11857,,5-shot
 hunyuan-a13b,88.17,self-reported,https://huggingface.co/tencent/Hunyuan-A13B-Instruct,,
 hunyuan-large-a52b,88.4,self-reported,https://huggingface.co/tencent/Tencent-Hunyuan-Large,,pretrained base vs Llama-3.1-405B's 85.2
 inflection-1,72.7,self-reported,https://inflection.ai/inflection-1,2023-06-22,"Average across 57 MMLU tasks; outperformed GPT-3.5, LLaMA, and PaLM-540B per Inflection's technical memo."
-inflection-2,79.6,independent,https://www.searchenginejournal.com/new-ai-model-outperforms-googles-powerful-palm-2/502191/,,"Independent comparison table; Inflection-2 ranked 2nd behind GPT-4 (86.4), just above Claude-2 CoT (78.5). Literally confirmed on page."
+inflection-2,79.6,self-reported,https://www.searchenginejournal.com/new-ai-model-outperforms-googles-powerful-palm-2/502191/,,"Independent comparison table; Inflection-2 ranked 2nd behind GPT-4 (86.4), just above Claude-2 CoT (78.5). Literally confirmed on page. [relabeled self-reported: aggregator/press relay of a vendor figure, not an independent re-measurement]"
 internlm2-20b,66.5,self-reported,https://huggingface.co/internlm/internlm2-chat-20b,,InternLM2-Chat-20B
 internlm2-5-7b,72.8,self-reported,https://huggingface.co/internlm/internlm2_5-7b-chat,,
 internlm3-8b-instruct,76.6,self-reported,https://internlm.readthedocs.io/en/latest/model_card/InternLM3.html,,
@@ -110,7 +109,7 @@ llama-13b,46.9,self-reported,https://ar5iv.labs.arxiv.org/html/2302.13971,2023-0
 llama-2-13b,54.8,self-reported,https://github.com/meta-llama/llama-models/blob/main/models/llama2/MODEL_CARD.md,2023-07-18,Reported by Meta in the Llama 2 model card
 llama-2-70b,68.9,self-reported,https://github.com/meta-llama/llama-models/blob/main/models/llama2/MODEL_CARD.md,2023-07-18,Reported by Meta in the Llama 2 model card
 llama-2-7b,45.3,self-reported,https://github.com/meta-llama/llama-models/blob/main/models/llama2/MODEL_CARD.md,2023-07-18,Reported by Meta in the Llama 2 model card
-llama-2-7b-chat,45.3,independent,https://telnyx.com/llm-library/llama-2-7b-chat-hf,,"5-shot, reported for Llama-2-7b-chat-hf"
+llama-2-7b-chat,45.3,self-reported,https://telnyx.com/llm-library/llama-2-7b-chat-hf,,"5-shot, reported for Llama-2-7b-chat-hf [relabeled self-reported: aggregator/press relay of a vendor figure, not an independent re-measurement]"
 llama-3-1-405b,87.3,self-reported,https://huggingface.co/meta-llama/Meta-Llama-3.1-8B,2024-07-01,Instruct
 llama-3-1-70b,83.6,self-reported,https://huggingface.co/meta-llama/Meta-Llama-3.1-8B,2024-07-01,Instruct
 llama-3-1-8b,69.4,self-reported,https://huggingface.co/meta-llama/Meta-Llama-3.1-8B,2024-07-01,Instruct
@@ -136,7 +135,7 @@ mistral-nemo-12b,68,self-reported,https://huggingface.co/mistralai/Mistral-Nemo-
 mistral-small-3-1-24b,80.62,self-reported,https://huggingface.co/mistralai/Mistral-Small-3.1-24B-Instruct-2503,,
 mistral-small-3-2-24b,80.5,self-reported,https://huggingface.co/mistralai/Mistral-Small-3.2-24B-Instruct-2506,,
 mistral-small-3-24b,81,self-reported,https://mistral.ai/news/mistral-small-3/,,
-mixtral-8x22b,77.3,independent,https://huggingface.co/mistral-community/Mixtral-8x22B-v0.1/discussions/3,2024-04-01,
+mixtral-8x22b,77.3,self-reported,https://huggingface.co/mistral-community/Mixtral-8x22B-v0.1/discussions/3,2024-04-01,"[relabeled self-reported: aggregator/press relay of a vendor figure, not an independent re-measurement]"
 mixtral-8x7b,70.6,self-reported,https://ar5iv.labs.arxiv.org/html/2401.04088,2024-01-01,
 mpt-7b,27.5,independent,https://arxiv.org/abs/2405.13386,2024-05-22,"5-shot via OpenCompass, 360Zhinao Technical Report Table 2 — confirmed by direct read of table"
 naver-hyperclova-x,67.98,self-reported,https://arxiv.org/abs/2404.01954,,"HCX-L (flagship), 5-shot"

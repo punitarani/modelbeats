@@ -1,0 +1,46 @@
+{
+  "slug": "deepseek-v3-2-exp",
+  "name": "DeepSeek-V3.2-Exp",
+  "orgSlug": "deepseek",
+  "familySlug": "deepseek-v3",
+  "releaseDate": "2025-09-29",
+  "status": "released",
+  "predecessor": "deepseek-v3-1-non-thinking",
+  "openness": "open-weights",
+  "license": "MIT",
+  "paramsB": 685,
+  "activeParamsB": 37,
+  "archClass": "moe",
+  "archDisplay": "685B-parameter MoE (37B active) transformer built on V3.1-Terminus, introducing DeepSeek Sparse Attention (DSA) — a lightning indexer + fine-grained token-selector for long-context efficiency",
+  "ctxK": 128,
+  "modalities": [
+    "text"
+  ],
+  "langCount": null,
+  "capabilities": {
+    "reasoning": true,
+    "coding": true,
+    "vision": false,
+    "functionCalling": true,
+    "toolUse": true,
+    "agentic": true
+  },
+  "apiAvailable": true,
+  "price": {
+    "input": 0.28,
+    "output": 0.42
+  },
+  "links": {
+    "hf": "deepseek-ai/DeepSeek-V3.2-Exp",
+    "docs": "https://api-docs.deepseek.com/news/news250929/"
+  },
+  "note": "Experimental release that debuted DeepSeek Sparse Attention (DSA), cutting single-token inference FLOPs/KV-cache substantially for long-context use while holding benchmark performance roughly on par with V3.1-Terminus. API prices cut 50%+ at launch: input cache-hit $0.028/M, cache-miss $0.28/M, output $0.42/M (vs. $0.07/$0.56/$1.68 under V3.1-Terminus). Superseded by DeepSeek-V4-Flash as the alias target for deepseek-chat/deepseek-reasoner starting Dec 2025, and by the V4 series generally in 2026.",
+  "quants": [],
+  "vramQ4Gb": null,
+  "vramFp16Gb": null,
+  "tps4090": null,
+  "tpsNote": null,
+  "effortLabel": null,
+  "isDefaultConfig": true,
+  "isBestConfig": true
+}

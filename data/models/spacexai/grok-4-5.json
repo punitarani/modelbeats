@@ -1,0 +1,46 @@
+{
+  "slug": "grok-4-5",
+  "name": "Grok 4.5",
+  "orgSlug": "spacexai",
+  "familySlug": "grok-4-5",
+  "releaseDate": "2026-07-08",
+  "status": "released",
+  "predecessor": null,
+  "openness": "closed",
+  "license": "Proprietary",
+  "paramsB": null,
+  "activeParamsB": null,
+  "archClass": "moe",
+  "archDisplay": "Mixture-of-Experts (size undisclosed by SpaceXAI); internally referred to in press coverage as a 'V9' generation, a full architecture shift from the V8-series behind Grok 4.3, retrained heavily on real Cursor developer-session data for coding/agentic work",
+  "ctxK": 500,
+  "modalities": [
+    "text",
+    "vision"
+  ],
+  "langCount": null,
+  "capabilities": {
+    "reasoning": true,
+    "coding": true,
+    "vision": true,
+    "functionCalling": true,
+    "toolUse": true,
+    "agentic": true
+  },
+  "apiAvailable": true,
+  "price": {
+    "input": 2,
+    "output": 6
+  },
+  "links": {
+    "docs": "https://docs.x.ai"
+  },
+  "note": "SpaceXAI's newest flagship (announced July 8, 2026, public July 9), the first model shipped since the SpaceXAI rebrand and since acquiring Cursor; positioned by Elon Musk as 'Opus-class... but faster, more token-efficient and lower cost' and 'roughly comparable to Opus 4.7, but much faster.' Powers the Grok Build CLI, is available in Cursor on all plans, and via the SpaceXAI console; not yet available in the EU at launch (targeted mid-July 2026). Ranks 4th on the Artificial Analysis Intelligence Index (score 54) behind Fable 5, GPT-5.5, and Opus 4.8, but at roughly 60%+ lower price than Opus 4.8/GPT-5.5, with markedly lower average output-token usage per task (token efficiency claim).",
+  "quants": [],
+  "vramQ4Gb": null,
+  "vramFp16Gb": null,
+  "tps4090": null,
+  "tpsNote": null,
+  "effortLabel": null,
+  "isDefaultConfig": true,
+  "isBestConfig": true
+}

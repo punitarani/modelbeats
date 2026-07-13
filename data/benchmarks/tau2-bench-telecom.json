@@ -1,0 +1,10 @@
+{
+  "slug": "tau2-bench-telecom",
+  "name": "τ²-Bench Telecom",
+  "category": "agents",
+  "unit": "%",
+  "description": "τ²-Bench telecom domain — dual-control tool-agent-user tasks in a simulated telecom support setting; a harder successor to tau-bench, distinct scale.",
+  "normMin": 30,
+  "normMax": 99,
+  "higherIsBetter": true
+}

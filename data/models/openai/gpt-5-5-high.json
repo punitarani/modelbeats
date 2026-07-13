@@ -1,0 +1,46 @@
+{
+  "slug": "gpt-5-5-high",
+  "name": "GPT-5.5 (High)",
+  "orgSlug": "openai",
+  "familySlug": "gpt-5-5",
+  "releaseDate": "2026-04-23",
+  "status": "released",
+  "predecessor": null,
+  "openness": "closed",
+  "license": "Proprietary (OpenAI API Terms)",
+  "paramsB": null,
+  "activeParamsB": null,
+  "archClass": "dense",
+  "archDisplay": "Undisclosed architecture (presumed dense transformer, reasoning-tuned); codename \"Spud\"; 'high' reasoning-effort configuration",
+  "ctxK": 1050,
+  "modalities": [
+    "text",
+    "vision"
+  ],
+  "langCount": null,
+  "capabilities": {
+    "reasoning": true,
+    "coding": true,
+    "vision": true,
+    "functionCalling": true,
+    "toolUse": true,
+    "agentic": true
+  },
+  "apiAvailable": true,
+  "price": {
+    "input": 5,
+    "output": 30
+  },
+  "links": {
+    "docs": "https://developers.openai.com/api/docs/models/gpt-5.5"
+  },
+  "note": "Reasoning-effort sibling of the already-catalogued base 'GPT-5.5' entry. Same weights, same pricing/context as the default/xhigh siblings; distinguished only by the reasoning.effort=high API parameter (also selectable in the ChatGPT model picker's effort selector). Same-family, same-release-date, same-paramsB per the effort-tier convention.",
+  "quants": [],
+  "vramQ4Gb": null,
+  "vramFp16Gb": null,
+  "tps4090": null,
+  "tpsNote": null,
+  "effortLabel": "High",
+  "isDefaultConfig": true,
+  "isBestConfig": false
+}
