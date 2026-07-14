@@ -1,0 +1,78 @@
+{
+  "name": "Qwen3.6-35B-A3B",
+  "org": "Alibaba",
+  "family": "Qwen3.6",
+  "releaseDate": "2026-04-16",
+  "status": "released",
+  "openness": "open-weights",
+  "license": "Apache 2.0",
+  "paramsB": 35,
+  "activeParamsB": 3,
+  "archClass": "hybrid",
+  "archDisplay": "Hybrid-attention MoE (Qwen3-Next lineage): 40 layers, 10x(3x(Gated DeltaNet -> MoE) -> 1x(Gated Attention -> MoE)); 256 experts, 8 routed + 1 shared activated per token; hidden dim 2048; natively multimodal (Causal LM with built-in vision encoder)",
+  "ctxK": 256,
+  "modalities": [
+    "text",
+    "vision"
+  ],
+  "langCount": null,
+  "capabilities": {
+    "reasoning": true,
+    "coding": true,
+    "vision": true,
+    "functionCalling": true,
+    "toolUse": true,
+    "agentic": true
+  },
+  "apiAvailable": true,
+  "price": null,
+  "links": {
+    "hf": "Qwen/Qwen3.6-35B-A3B",
+    "gh": "QwenLM/Qwen3.6",
+    "docs": "https://huggingface.co/Qwen/Qwen3.6-35B-A3B"
+  },
+  "note": "First open-weight model of the Qwen3.6 generation; sparse MoE (35B total/3B active) that substantially beats its direct predecessor Qwen3.5-35B-A3B and rivals much larger dense models on agentic coding, per the launch blog. This is the single real model behind the leads' 'Qwen3.6 (~35B, open-weights)' and 'Qwen3.6-35B-A3B' entries, which were duplicates of each other (see excluded).",
+  "quants": [],
+  "vramQ4Gb": null,
+  "vramFp16Gb": null,
+  "tps4090": null,
+  "tpsNote": null,
+  "effortLabel": null,
+  "isDefaultConfig": true,
+  "isBestConfig": false,
+  "specSources": {
+    "existence/architecture/ctxK": "https://huggingface.co/Qwen/Qwen3.6-35B-A3B",
+    "releaseDate (official changelog)": "https://github.com/QwenLM/Qwen3.6 (README: '2026-04-16: Qwen3.6-35B-A3B is now available')",
+    "results (cross-generation comparison)": "https://qwen.ai/blog?id=qwen3.6-27b"
+  },
+  "results": [
+    {
+      "benchmarkSlug": "swe-bench",
+      "score": 73.4,
+      "source": "self-reported",
+      "sourceUrl": "https://qwen.ai/blog?id=qwen3.6-27b",
+      "notes": "SWE-bench Verified; matches the value on its own HF model card's launch comparison table"
+    },
+    {
+      "benchmarkSlug": "gpqa",
+      "score": 86,
+      "source": "self-reported",
+      "sourceUrl": "https://qwen.ai/blog?id=qwen3.6-27b",
+      "notes": "GPQA Diamond"
+    },
+    {
+      "benchmarkSlug": "livecodebench",
+      "score": 80.4,
+      "source": "self-reported",
+      "sourceUrl": "https://qwen.ai/blog?id=qwen3.6-27b",
+      "notes": "LiveCodeBench v6"
+    },
+    {
+      "benchmarkSlug": "mmlu-pro",
+      "score": 85.2,
+      "source": "self-reported",
+      "sourceUrl": "https://qwen.ai/blog?id=qwen3.6-27b"
+    }
+  ],
+  "verificationNotes": "Confirmed real via direct fetch of its own HF model card (huggingface.co/Qwen/Qwen3.6-35B-A3B, full architecture spec) and the official QwenLM/Qwen3.6 GitHub README changelog, which independently states the same release date (2026-04-16; the blog's own publish-date metadata says 2026-04-15, a 1-day variance). The original leads listed this model twice: once as a generic 'Qwen3.6 (open-weights, ~35B, ~2026-04-15)' (sourced to Wikipedia's List of large language models) and once with the precise name/params. Verified these are the same model -- Wikipedia, ollama.com/library/qwen3.6, and unsloth.ai/docs/models/qwen3.6 all resolve to this exact checkpoint -- and consolidated into this single candidate (see excluded for the duplicate entry). Benchmark results are self-reported, cross-confirmed as internally consistent between two Qwen-authored primary sources (its own HF card and the later Qwen3.6-27B blog's comparison table), but no fully independent (non-Alibaba) benchmark corroboration was found in this pass."
+}

@@ -1,3 +1,5 @@
 model_slug,score,source,source_url,evaluated_at,notes
 qwen-vl,89.36,self-reported,https://huggingface.co/Qwen/Qwen-VL,,"RefCOCO val, referring-expression grounding accuracy"
+qwen3-5-omni-flash,92.6,self-reported,https://qwen.ai/blog?id=qwen3.5-omni,2026-04-17,"Reported as 'RefCOCO(avg)' in Table 6, Spatial Intelligence section — averaged across val/testA/testB splits rather than a single split score. Distinct benchmark from RefCOCO+ (catalog's separate 'refcoco-plus' slug), which is not reported here."
+qwen3-5-omni-plus,95,self-reported,https://arxiv.org/abs/2604.15804,2026-04-21,"Table 6 (Vision→Text), Spatial Intelligence section, Qwen3.5-Omni-Plus column, cell S5.T6.3.24.4. Paper labels row 'RefCOCO(avg)' with no separate RefCOCO+/RefCOCOg row, so this is an average across RefCOCO val/testA/testB splits."
 reka-edge-2026,93.13,self-reported,https://huggingface.co/RekaAI/reka-edge-2603,,best of reported RefCOCO variants (range 93.13-86.70)

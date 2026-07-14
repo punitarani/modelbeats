@@ -1,3 +1,4 @@
 model_slug,score,source,source_url,evaluated_at,notes
 gpt-5-4,83,self-reported,https://the-decoder.com/openai-launches-gpt-5-4-thinking-and-pro-combining-coding-reasoning-and-computer-use-in-one-model/,,"GDPval, GPT-5.4 standard/Thinking (Pro variant scores 82.0)"
+gpt-5-4-pro,82,self-reported,https://the-decoder.com/openai-launches-gpt-5-4-thinking-and-pro-combining-coding-reasoning-and-computer-use-in-one-model/,2026-03-05,GDPval win/tie rate. Cross-confirmed independently by DataLearnerAI (GDPval-AA: 82) and aireleasetracker.com (82%).
 gpt-5-5,84.9,self-reported,https://openai.com/index/introducing-gpt-5-5,,"GDPval, wins-or-ties; confirmed"

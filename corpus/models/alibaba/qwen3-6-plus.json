@@ -1,0 +1,89 @@
+{
+  "name": "Qwen3.6-Plus",
+  "org": "Alibaba",
+  "family": "Qwen3.6",
+  "releaseDate": "2026-04-02",
+  "status": "released",
+  "openness": "closed",
+  "license": "Proprietary",
+  "paramsB": null,
+  "activeParamsB": null,
+  "archClass": "hybrid",
+  "archDisplay": "Hosted product tier of the Qwen3.6 hybrid-attention line (Gated DeltaNet + Gated Attention, Qwen3-Next lineage); exact parameter/expert/MoE configuration for the hosted Plus checkpoint undisclosed",
+  "ctxK": 1000,
+  "modalities": [
+    "text",
+    "vision",
+    "video"
+  ],
+  "langCount": null,
+  "capabilities": {
+    "reasoning": true,
+    "coding": true,
+    "vision": true,
+    "functionCalling": true,
+    "toolUse": true,
+    "agentic": true
+  },
+  "apiAvailable": true,
+  "price": {
+    "input": 0.5,
+    "output": 3
+  },
+  "links": {
+    "docs": "https://qwen.ai/blog?id=qwen3.6"
+  },
+  "note": "Flagship hosted model of the Qwen3.6 generation ('Towards Real World Agents'); massive agentic-coding upgrade over Qwen3.5-Plus per the launch blog, with a 1M-token default context and improved multimodal perception/reasoning. This is the model matching the leads' 'Qwen 3.6 Plus' entry; a second, separately-dated lead for the same product name was found to be a duplicate (see excluded).",
+  "quants": [],
+  "vramQ4Gb": null,
+  "vramFp16Gb": null,
+  "tps4090": null,
+  "tpsNote": null,
+  "effortLabel": null,
+  "isDefaultConfig": true,
+  "isBestConfig": true,
+  "specSources": {
+    "existence/features/ctxK": "https://qwen.ai/blog?id=qwen3.6",
+    "releaseDate/pricing (official Model Studio snapshot id 'qwen3.6-plus-2026-04-02')": "https://www.alibabacloud.com/help/en/model-studio/model-pricing",
+    "independent releaseDate corroboration": "https://artificialanalysis.ai/models/qwen3-6-plus",
+    "independent modality corroboration (text/image/video input)": "https://artificialanalysis.ai/models/qwen3-6-plus"
+  },
+  "results": [
+    {
+      "benchmarkSlug": "mmlu-pro",
+      "score": 88.5,
+      "source": "self-reported",
+      "sourceUrl": "https://qwen.ai/blog?id=qwen3.6",
+      "notes": "inferred as the Qwen3.6-Plus column (rightmost/newest of 5 unlabeled columns in the launch blog's comparison table, consistent with this being the announcement post for that exact model)"
+    },
+    {
+      "benchmarkSlug": "gpqa",
+      "score": 90.4,
+      "source": "self-reported",
+      "sourceUrl": "https://qwen.ai/blog?id=qwen3.6",
+      "notes": "GPQA; same column-position inference as above"
+    },
+    {
+      "benchmarkSlug": "livecodebench",
+      "score": 87.1,
+      "source": "self-reported",
+      "sourceUrl": "https://qwen.ai/blog?id=qwen3.6",
+      "notes": "LiveCodeBench v6; same column-position inference"
+    },
+    {
+      "benchmarkSlug": "aime",
+      "score": 95.3,
+      "source": "self-reported",
+      "sourceUrl": "https://qwen.ai/blog?id=qwen3.6",
+      "notes": "AIME 2026 (I & II); same column-position inference"
+    },
+    {
+      "benchmarkSlug": "swe-bench",
+      "score": 78.8,
+      "source": "independent",
+      "sourceUrl": "https://openrouter.ai/qwen/qwen3.6-plus/benchmarks",
+      "notes": "SWE-bench Verified, resolved rate. Attributed specifically to the hosted Qwen3.6-Plus tier (not the open-weight Qwen3.6-35B-A3B, which independently scores a distinctly lower 73.4% per a DEV Community writeup of the HF release -- good disambiguation signal against variant-conflation). Corroborated by a second aggregator, benchlm.ai (https://benchlm.ai/models/qwen3-6-plus, same figure, tagged 'Provider source'), and loosely by a third-party social post. Could not verify against Alibaba's own primary blog because its comparison table is embedded as images, unreadable via text fetch. Confidence: moderate -- two aggregators agree and the number is well clear of the smaller sibling model's score, but neither aggregator is the primary source."
+    }
+  ],
+  "verificationNotes": "Confirmed real via direct fetch of the official qwen.ai launch blog and cross-checked against two independent trackers: llm-stats.com (GA 'Mar 31, 2026') and Artificial Analysis (GA 'April 2, 2026', Intelligence Index 40/#46 of 188 models, confirms text+image+video input, 1M context, $0.50/$3.00 pricing). Alibaba's own Model Studio pricing page lists the current snapshot as 'qwen3.6-plus-2026-04-02', matching Artificial Analysis exactly and used as the releaseDate here; the blog's own publish-date metadata (Apr 1) and llm-stats (Mar 31) are within the same ~3-day window, consistent with staged regional rollout rather than a distinct later release -- resolving the leads' second 'Qwen3.6-Plus (~2026-04-15)' entry as a duplicate of this same product (see excluded). CAVEAT: the launch blog's main comparison table lost its column-header row during content extraction (the underlying page is JS-rendered); the Qwen3.6-Plus column was inferred by position (rightmost of 5) and by cross-reference with the near-identical table structure in the Qwen3.6-27B blog (which does have labeled headers and follows the same 'baselines-then-newest-model-last' pattern). This inference is corroborated only loosely by independent review aggregators (e.g. a report of 78.8% SWE-bench Verified for Qwen3.6-Plus, which does not appear in the captured excerpt) -- flagged as a real but not fully column-certain attribution; if wrong, the true source model for these 4 specific scores would be one of the four baseline models shown in the same table (not a fabricated model).\n\nSUPPLEMENTARY COVERAGE PASS: Fetched qwen.ai/blog?id=qwen3.6 directly: it is a client-side-rendered page and the text-fetch tool retrieved essentially no content (\"only contains the word 'Qwen'\"). Also fetched the mirror at alibabacloud.com/blog/qwen3-6-plus-towards-real-world-agents_603005: this one DOES render as real text and confirms the model is genuine and names many benchmarks it was evaluated on (SWE-Bench series, Terminal-Bench 2.0, Claw-Eval, SkillsBench, NL2Repo, QwenClawBench, QwenWebBench, TAU3-Bench, VITA-Bench, MCPMark, MCP-Atlas, HLE, AIME, MMLU-ProX, WMT24++, MAXIFE, MathVision, V*, TIR-Bench) -- but every actual numeric score is embedded in images the tool cannot read, so I could not verify any specific figure directly against the primary source, including the 4 already in the corpus.\n\nI fetched benchlm.ai's Qwen3.6-Plus page twice (two URL variants, both resolve to the same content) and it returned a suspiciously large, suspiciously uniform ~55-benchmark table. Several category/benchmark names in it do not correspond to any real, findable benchmark (e.g. 'Claw-Eval', 'QwenClaw Bench', 'Toolathlon', 'WideResearch', 'DeepPlanning', 'MCP Atlas', 'Gert Labs Composite Game', 'ResearchClawBench', 'MMAnswer Bench', 'NOVA-63', 'AI-Needle', 'AA-LCR', 'Critical Physics Tasks', 'AA-Omniscience') -- they read as plausible-sounding padding interleaved with genuine ones (Terminal-Bench 2.0, HLE, SuperGPQA, MMLU-Redux, FrontierMath, MMMU-Pro, CharXiv, IFBench, IFEval, C-Eval, etc., all of which ARE real). A page mixing verifiable and unverifiable-sounding entries in one uniform list is a red flag I could not resolve, since the underlying site is also JS-rendered and I only have the fetch tool's text summary of it, not a way to inspect raw HTML/DOM myself. That undermines confidence in every individual number on that page that I could not independently corroborate elsewhere -- which is most of them. I would not treat benchlm.ai as a reliable standalone 'confirmation' source; the task's premise that the original 4 scores were 'confirmed via' benchlm.ai should be treated with the same skepticism.\n\nI also found live evidence of exactly the variant-conflation risk this corpus's own audit already flagged as its top systemic issue: public sources right now conflate Qwen3.6-Plus (proprietary, hosted) with Qwen3.6-35B-A3B (open-weight, HuggingFace) and even Qwen3.7-Max (a different later model), each with different, similar-looking scores circulating for overlapping benchmark names. The corpus already correctly keeps these as separate model files, which helped me screen out several benchlm.ai numbers I could not confidently pin to the Plus tier specifically.\n\nNet result: only ONE additional benchmark result cleared my bar for 'grounded in a real source, corroborated by more than one independent source, and clearly attributable to Qwen3.6-Plus specifically rather than a sibling variant': SWE-bench Verified 78.8% -> mapped to this corpus's 'swe-bench' slug (confirmed that's the existing convention -- every current swe-bench.csv row is explicitly SWE-bench Verified). I checked plausible additional slugs the blog names suggest exist (Terminal-Bench 2.0 -> terminal-bench-2, HLE -> hle, FrontierMath tiers -> frontiermath-tier1-3/frontiermath-tier4, MMMU-Pro -> mmmu-pro, CharXiv -> charxiv, IFBench/IFEval, SuperGPQA -> super-gpqa, MMLU-Redux -> mmlu-redux, C-Eval -> c-eval) but could not get a second source to confirm any specific score for the Plus tier on any of them, and declined to report benchlm.ai-only numbers given the reliability concerns above. Recommend not adding those without either (a) a way to OCR/read the primary blog's embedded table images, or (b) a credible independent leaderboard (e.g. Epoch AI's own FrontierMath/HLE hub, vals.ai, or swebench.com) explicitly listing 'Qwen3.6-Plus' -- Epoch AI's FrontierMath hub pages are themselves JS-rendered dashboards that didn't yield readable model-level scores through the fetch tool either."
+}

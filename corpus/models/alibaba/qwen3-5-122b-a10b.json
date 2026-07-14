@@ -1,0 +1,211 @@
+{
+  "name": "Qwen3.5-122B-A10B",
+  "org": "Alibaba",
+  "family": "Qwen3.5",
+  "releaseDate": "2026-02-24",
+  "status": "released",
+  "openness": "open-weights",
+  "license": "Apache 2.0",
+  "paramsB": 122,
+  "activeParamsB": 10,
+  "archClass": "hybrid",
+  "archDisplay": "Hybrid-attention MoE (Qwen3-Next lineage): 48 layers, 12x(3x(Gated DeltaNet -> MoE) -> 1x(Gated Attention -> MoE)); 256 experts, 8 routed + 1 shared activated per token; hidden dim 3072; natively multimodal (Causal LM with built-in vision encoder)",
+  "ctxK": 256,
+  "modalities": [
+    "text",
+    "vision",
+    "video"
+  ],
+  "langCount": null,
+  "capabilities": {
+    "reasoning": true,
+    "coding": true,
+    "vision": true,
+    "functionCalling": true,
+    "toolUse": true,
+    "agentic": true
+  },
+  "apiAvailable": true,
+  "price": null,
+  "links": {
+    "hf": "Qwen/Qwen3.5-122B-A10B",
+    "gh": "QwenLM/Qwen3.6",
+    "docs": "https://huggingface.co/Qwen/Qwen3.5-122B-A10B"
+  },
+  "note": "Mid-size open-weight MoE in the Qwen3.5 family, released ~1 week after the 397B-A17B flagship alongside Qwen3.5-27B (dense) and Qwen3.5-35B-A3B (MoE). Matches or beats GPT-OSS-120B and Qwen3-235B-A22B on several benchmarks at a fraction of the total/active parameter count.",
+  "quants": [],
+  "vramQ4Gb": null,
+  "vramFp16Gb": null,
+  "tps4090": null,
+  "tpsNote": null,
+  "effortLabel": null,
+  "isDefaultConfig": true,
+  "isBestConfig": true,
+  "specSources": {
+    "existence/paramsB/archDisplay/ctxK": "https://huggingface.co/Qwen/Qwen3.5-122B-A10B",
+    "releaseDate (official changelog)": "https://github.com/QwenLM/Qwen3.6 (README: '2026-02-24: Qwen3.5-122B-A10B, Qwen3.5-35B-A3B, and Qwen3.5-27B are released')"
+  },
+  "results": [
+    {
+      "benchmarkSlug": "mmlu-pro",
+      "score": 86.7,
+      "source": "self-reported",
+      "sourceUrl": "https://huggingface.co/Qwen/Qwen3.5-122B-A10B",
+      "notes": "beats GPT-5-mini (83.7), GPT-OSS-120B (80.8), and Qwen3-235B-A22B (84.4) baselines in the same table"
+    },
+    {
+      "benchmarkSlug": "mmlu-redux",
+      "score": 94,
+      "source": "self-reported",
+      "sourceUrl": "https://huggingface.co/Qwen/Qwen3.5-122B-A10B"
+    },
+    {
+      "benchmarkSlug": "gpqa",
+      "score": 86.6,
+      "source": "self-reported",
+      "sourceUrl": "https://huggingface.co/Qwen/Qwen3.5-122B-A10B",
+      "notes": "GPQA Diamond"
+    },
+    {
+      "benchmarkSlug": "livecodebench",
+      "score": 78.9,
+      "source": "self-reported",
+      "sourceUrl": "https://huggingface.co/Qwen/Qwen3.5-122B-A10B",
+      "notes": "LiveCodeBench v6"
+    },
+    {
+      "benchmarkSlug": "c-eval",
+      "score": 91.9,
+      "source": "self-reported",
+      "sourceUrl": "https://huggingface.co/Qwen/Qwen3.5-122B-A10B",
+      "notes": "Knowledge category, Language benchmark table."
+    },
+    {
+      "benchmarkSlug": "super-gpqa",
+      "score": 67.1,
+      "source": "self-reported",
+      "sourceUrl": "https://huggingface.co/Qwen/Qwen3.5-122B-A10B",
+      "notes": "Knowledge category."
+    },
+    {
+      "benchmarkSlug": "ifeval",
+      "score": 93.4,
+      "source": "self-reported",
+      "sourceUrl": "https://huggingface.co/Qwen/Qwen3.5-122B-A10B",
+      "notes": "Instruction Following category."
+    },
+    {
+      "benchmarkSlug": "ifbench",
+      "score": 76.1,
+      "source": "self-reported",
+      "sourceUrl": "https://huggingface.co/Qwen/Qwen3.5-122B-A10B",
+      "notes": "Instruction Following category."
+    },
+    {
+      "benchmarkSlug": "hle",
+      "score": 25.3,
+      "source": "self-reported",
+      "sourceUrl": "https://huggingface.co/Qwen/Qwen3.5-122B-A10B",
+      "notes": "Reported as 'HLE w/ CoT' (STEM & Reasoning category). A second, higher 'HLE w/ tool' score of 47.5 is also reported (Search Agent category) but there is no separate slug for the tool-augmented variant, so only the CoT number is used here to avoid ambiguity."
+    },
+    {
+      "benchmarkSlug": "swe-bench",
+      "score": 72,
+      "source": "self-reported",
+      "sourceUrl": "https://huggingface.co/Qwen/Qwen3.5-122B-A10B",
+      "notes": "Reported as 'SWE-bench Verified' (Coding category)."
+    },
+    {
+      "benchmarkSlug": "terminal-bench-2",
+      "score": 49.4,
+      "source": "self-reported",
+      "sourceUrl": "https://huggingface.co/Qwen/Qwen3.5-122B-A10B",
+      "notes": "Coding category."
+    },
+    {
+      "benchmarkSlug": "codeforces",
+      "score": 2100,
+      "source": "self-reported",
+      "sourceUrl": "https://huggingface.co/Qwen/Qwen3.5-122B-A10B",
+      "notes": "Elo rating, not a 0-100 score. Footnote in the README states this was evaluated on Qwen's own query set (not necessarily the standard public CodeForces problem set), so treat as vendor-reported and not perfectly apples-to-apples with third-party CodeForces evals."
+    },
+    {
+      "benchmarkSlug": "browsecomp",
+      "score": 63.8,
+      "source": "self-reported",
+      "sourceUrl": "https://huggingface.co/Qwen/Qwen3.5-122B-A10B",
+      "notes": "Search Agent category, English Browsecomp. A separate Browsecomp-zh score of 69.9 is also reported but has no distinct slug in the catalog, so it is omitted."
+    },
+    {
+      "benchmarkSlug": "mmmlu",
+      "score": 86.7,
+      "source": "self-reported",
+      "sourceUrl": "https://huggingface.co/Qwen/Qwen3.5-122B-A10B",
+      "notes": "Multilingualism category."
+    },
+    {
+      "benchmarkSlug": "mmmu",
+      "score": 83.9,
+      "source": "self-reported",
+      "sourceUrl": "https://huggingface.co/Qwen/Qwen3.5-122B-A10B",
+      "notes": "Vision-Language table, STEM and Puzzle category."
+    },
+    {
+      "benchmarkSlug": "mmmu-pro",
+      "score": 76.9,
+      "source": "self-reported",
+      "sourceUrl": "https://huggingface.co/Qwen/Qwen3.5-122B-A10B",
+      "notes": "Vision-Language table."
+    },
+    {
+      "benchmarkSlug": "mathvision",
+      "score": 86.2,
+      "source": "self-reported",
+      "sourceUrl": "https://huggingface.co/Qwen/Qwen3.5-122B-A10B",
+      "notes": "Vision-Language table; README footnote notes a fixed \\boxed{} prompt was used for this model's score."
+    },
+    {
+      "benchmarkSlug": "mathvista",
+      "score": 87.4,
+      "source": "self-reported",
+      "sourceUrl": "https://huggingface.co/Qwen/Qwen3.5-122B-A10B",
+      "notes": "Reported as 'Mathvista(mini)', the standard mini-test-set variant commonly reported as MathVista."
+    },
+    {
+      "benchmarkSlug": "mmbench-en",
+      "score": 92.8,
+      "source": "self-reported",
+      "sourceUrl": "https://huggingface.co/Qwen/Qwen3.5-122B-A10B",
+      "notes": "Reported as 'MMBench EN-DEV-v1.1'."
+    },
+    {
+      "benchmarkSlug": "charxiv",
+      "score": 77.2,
+      "source": "self-reported",
+      "sourceUrl": "https://huggingface.co/Qwen/Qwen3.5-122B-A10B",
+      "notes": "Reported as 'CharXiv(RQ)' (reasoning-question subset)."
+    },
+    {
+      "benchmarkSlug": "ai2d",
+      "score": 93.3,
+      "source": "self-reported",
+      "sourceUrl": "https://huggingface.co/Qwen/Qwen3.5-122B-A10B",
+      "notes": "Reported as 'AI2D_TEST'."
+    },
+    {
+      "benchmarkSlug": "ocrbench",
+      "score": 92.1,
+      "source": "self-reported",
+      "sourceUrl": "https://huggingface.co/Qwen/Qwen3.5-122B-A10B",
+      "notes": "Text Recognition & Document Understanding category."
+    },
+    {
+      "benchmarkSlug": "osworld-verified",
+      "score": 58,
+      "source": "self-reported",
+      "sourceUrl": "https://huggingface.co/Qwen/Qwen3.5-122B-A10B",
+      "notes": "Visual Agent category, computer-use agent benchmark."
+    }
+  ],
+  "verificationNotes": "Confirmed real via direct fetch of its own HF model card (full architecture spec + multi-baseline benchmark table) and the official QwenLM/Qwen3.6 GitHub README changelog, which independently states the exact same release date (2026-02-24) alongside its Qwen3.5-27B and Qwen3.5-35B-A3B siblings. This was the specific model named in the original lead's github.com/QwenLM/Qwen3.5 citation (that URL redirects to github.com/QwenLM/Qwen3.6, whose README covers the full 3.5+3.6 changelog including this model). No independent (non-Alibaba) benchmark corroboration was found in this pass -- all results are self-reported from the primary HF card; flagged accordingly. Not to be confused with Qwen3.5-35B-A3B or Qwen3.5-27B, its same-day-released siblings, which are real but were not part of the original flagged leads and are not added as separate candidates here (see excluded).\n\nSUPPLEMENTARY COVERAGE PASS: Primary source: fetched https://huggingface.co/Qwen/Qwen3.5-122B-A10B/raw/main/README.md directly via curl and verified line-by-line against the raw HTML tables (not just a WebFetch summary) \u2014 confirmed genuine, not hallucinated. The README has two large benchmark tables (Language, and Vision-Language) with ~70 total benchmark rows for Qwen3.5-122B-A10B, compared against GPT-5-mini, GPT-OSS-120B, Qwen3-235B-A22B / Claude-Sonnet-4.5, Qwen3-VL-235B-A22B, plus Qwen3.5-27B and Qwen3.5-35B-A3B siblings.\n\nThe Qwen blog (https://qwen.ai/blog?id=qwen3.5) could NOT be read \u2014 it is a client-side-rendered single-page app; both WebFetch and a direct curl with a browser user-agent returned only an empty page shell plus a huge SEO meta-keywords blob, no article/table content. No data from the blog was used; everything above comes from the HF model card, which is more granular than a typical blog post anyway (it lists ~70 distinct evals vs. the handful a blog post usually highlights).\n\n19 additional clean-mapping results were extracted beyond the 4 already known (MMLU-Pro, MMLU-Redux, GPQA Diamond, LiveCodeBench v6), covering knowledge, instruction-following, hard-exam (HLE), agentic coding (SWE-bench Verified, Terminal Bench 2), competitive coding (CodeForces), agentic search (Browsecomp), multilingual knowledge (MMMLU), and multimodal/vision benchmarks (MMMU, MMMU-Pro, MathVision, MathVista, MMBench-EN, CharXiv, AI2D, OCRBench, OSWorld-Verified).\n\nDeliberately excluded as NOT clean matches (to avoid misrepresenting scores under the wrong slug):\n- BFCL-V4 (72.2): catalog only has 'bfcl' and 'bfcl-v3' slugs; v4 has a different task/scoring protocol than v3, so mapping it to 'bfcl-v3' would misattribute a different benchmark version.\n- TAU2-Bench (79.5): catalog only has 'tau2-bench-telecom'; the README footnote indicates this score spans multiple domains (including an 'airline' domain fix), i.e. it looks like a cross-domain aggregate, not a telecom-only score \u2014 mapping it to the telecom-specific slug would misrepresent it.\n- RefCOCO(avg) (91.3): likely an average across RefCOCO/RefCOCO+/RefCOCOg variants; ambiguous which catalog slug (refcoco vs refcoco-plus) it corresponds to.\n- VideoMME: reported as two separate official numbers, 'w subtitles' (87.3) and 'w/o subtitles' (83.9), with no single canonical value \u2014 picking one arbitrarily for the 'videomme' slug would be a judgment call presented as fact, so it was omitted.\n- Global PIQA (88.4): this is an explicitly multilingual/adapted variant, not the standard PIQA benchmark the 'piqa' slug refers to.\n- SimpleVQA (61.7): a different benchmark from 'simpleqa' in the catalog (visual-grounded QA vs. text factual QA) \u2014 not conflated despite the similar name.\n- HLE w/ tool (47.5): a second, tool-augmented HLE variant; no separate slug exists for it distinct from the CoT-only 'hle' score already used, so it was dropped rather than double- or wrongly-mapped.\n\nMany other reported benchmarks (HMMT Feb25/Nov25, AA-LCR, LongBench v2, OJBench, FullStackBench en/zh, VITA-Bench, DeepPlanning, WideSearch, Seal-0, MMLU-ProX, NOVA-63, INCLUDE, PolyMATH, WMT24++, MAXIFE, DynaMath, ZEROBench(_sub), VlmsAreBlind, BabyVision, RealWorldQA, MMStar, HallusionBench, OmniDocBench1.5, MMLongBench-Doc, CC-OCR, ERQA, CountBench, ODInW13, EmbSpatialBench, RefSpatialBench, LingoQA, Hypersim, SUNRGBD, Nuscene, VideoMMU, MLVU, MVBench, LVBench, MMVU, ScreenSpot Pro, AndroidWorld, TIR-Bench, V*, SLAKE, PMC-VQA, MedXpertQA-MM) genuinely have no corresponding slug in the given catalog at all \u2014 this is not a gap in extraction effort, the catalog simply doesn't cover these evals. Notably absent from the actual README: AIME, GSM8K, MATH, Arena-Hard, FrontierMath, Putnam, MiniF2F, USAMO, GAIA, DocVQA, ChartQA, GQA, VQAv2, COCO-Caption, Flickr30k, GDPval \u2014 none of these were evaluated/reported for this model per the vendor's own card (grep-verified absent from the full README).\n\nOne caution: a WebSearch aggregator hit (llm-stats.com / benchlm.ai) claimed an 'AIME 2026: 91.3' score for this model, but that could not be corroborated in the vendor's own README (which instead reports HMMT Feb25=91.4 / HMMT Nov25=90.3, a different math-olympiad benchmark) and referenced unfamiliar competitor model names ('GPT-5.2', 'Claude Opus 4.6'). Treated as unverifiable third-party/aggregator noise and deliberately excluded per the 'never invent a score' instruction."
+}

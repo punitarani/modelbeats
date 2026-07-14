@@ -1,0 +1,130 @@
+{
+  "name": "Kimi K2.5",
+  "org": "Moonshot AI",
+  "family": "Kimi K2",
+  "releaseDate": "2026-01-27",
+  "status": "released",
+  "openness": "open-weights",
+  "license": "Modified MIT License",
+  "paramsB": 1000,
+  "activeParamsB": 32,
+  "archClass": "moe",
+  "archDisplay": "1T-parameter MoE, 32B active/token, 384 experts (8 routed + 1 shared), 61 layers (1 dense), MLA attention, 160K vocab, SwiGLU; native multimodal via 400M-param MoonViT vision encoder",
+  "ctxK": 256,
+  "modalities": [
+    "text",
+    "vision",
+    "video"
+  ],
+  "langCount": null,
+  "capabilities": {
+    "reasoning": true,
+    "coding": true,
+    "vision": true,
+    "functionCalling": true,
+    "toolUse": true,
+    "agentic": true
+  },
+  "apiAvailable": true,
+  "price": {
+    "input": 0.6,
+    "output": 3
+  },
+  "links": {
+    "hf": "moonshotai/Kimi-K2.5",
+    "gh": "MoonshotAI/Kimi-K2.5",
+    "docs": "https://www.kimi.com/blog/kimi-k2-5"
+  },
+  "note": "Predecessor to Kimi K2.6 (whose own docs explicitly call it 'Successor to K2.5'); Moonshot's first native-multimodal flagship, built via continual pretraining atop Kimi-K2-Base on ~15T mixed vision+text tokens. Introduced native image/video understanding and the 'Agent Swarm' research-preview multi-agent orchestration (self-directed, up to 100 sub-agents, ~1,500 coordinated tool-call steps), trained with Parallel-Agent Reinforcement Learning (PARL). Vendor claims near-frontier coding/reasoning/vision performance versus GPT-5.2 and Claude Opus 4.5-class closed models; independent Artificial Analysis Intelligence Index score was 38/100 (v4.1 methodology, ranked #14/95 open+closed models at time of measurement), corroborating strong but not universally frontier-topping performance. As of July 2026 it has been superseded as Moonshot's flagship by K2.6 but remains live and served via Moonshot's own API (platform.moonshot.ai) and third-party hosts (OpenRouter, Fireworks, etc.).",
+  "quants": [],
+  "vramQ4Gb": null,
+  "vramFp16Gb": null,
+  "tps4090": null,
+  "tpsNote": null,
+  "effortLabel": null,
+  "isDefaultConfig": true,
+  "isBestConfig": true,
+  "specSources": {
+    "paramsB/activeParamsB/archDisplay/ctxK/license/modalities": "https://huggingface.co/moonshotai/Kimi-K2.5",
+    "releaseDate": "https://artificialanalysis.ai/models/kimi-k2-5 ; https://openrouter.ai/moonshotai/kimi-k2.5 ; https://techcrunch.com/2026/01/27/chinas-moonshot-releases-a-new-open-source-model-kimi-k2-5-and-a-coding-agent/",
+    "priceInput/priceOutput": "https://artificialanalysis.ai/models/kimi-k2-5 (cross-checked against Moonshot AI's own provider row on https://openrouter.ai/moonshotai/kimi-k2.5)"
+  },
+  "results": [
+    {
+      "benchmarkSlug": "swe-bench",
+      "score": 76.8,
+      "source": "self-reported",
+      "sourceUrl": "https://www.kimi.com/blog/kimi-k2-5",
+      "notes": "SWE-bench Verified, Kimi K2.5 (Thinking); independently corroborated by aireleasetracker.com's aggregator, which lists the same 76.8%"
+    },
+    {
+      "benchmarkSlug": "swe-bench-pro",
+      "score": 50.7,
+      "source": "self-reported",
+      "sourceUrl": "https://www.kimi.com/blog/kimi-k2-5",
+      "notes": "SWE-bench Pro, harder/agentic variant distinct from base swe-bench"
+    },
+    {
+      "benchmarkSlug": "gpqa",
+      "score": 87.6,
+      "source": "self-reported",
+      "sourceUrl": "https://www.kimi.com/blog/kimi-k2-5",
+      "notes": "GPQA-Diamond, avg@8, 96k-token completion budget; Artificial Analysis's independent re-run scored 87.9, closely matching"
+    },
+    {
+      "benchmarkSlug": "aime",
+      "score": 96.1,
+      "source": "self-reported",
+      "sourceUrl": "https://www.kimi.com/blog/kimi-k2-5",
+      "notes": "AIME 2025, avg@32"
+    },
+    {
+      "benchmarkSlug": "mmlu-pro",
+      "score": 87.1,
+      "source": "self-reported",
+      "sourceUrl": "https://www.kimi.com/blog/kimi-k2-5"
+    },
+    {
+      "benchmarkSlug": "mmmu-pro",
+      "score": 78.5,
+      "source": "self-reported",
+      "sourceUrl": "https://www.kimi.com/blog/kimi-k2-5",
+      "notes": "MMMU-Pro, official protocol (input order preserved, images prepended)"
+    },
+    {
+      "benchmarkSlug": "hle",
+      "score": 50.2,
+      "source": "self-reported",
+      "sourceUrl": "https://www.kimi.com/blog/kimi-k2-5",
+      "notes": "Humanity's Last Exam, full set (text+image), with tool use enabled (search/code-interpreter/web-browsing), used here for comparability with the sibling K2.6 entry's tool-enabled HLE figure; vendor also reports 30.1 without tools. Artificial Analysis's independent non-tool run scored 29.4, close to the vendor's own non-tool figure"
+    },
+    {
+      "benchmarkSlug": "livecodebench",
+      "score": 85,
+      "source": "self-reported",
+      "sourceUrl": "https://www.kimi.com/blog/kimi-k2-5",
+      "notes": "LiveCodeBench v6"
+    },
+    {
+      "benchmarkSlug": "terminal-bench-2",
+      "score": 50.8,
+      "source": "self-reported",
+      "sourceUrl": "https://www.kimi.com/blog/kimi-k2-5",
+      "notes": "Terminal-Bench 2.0, default Terminus-2 agent framework, evaluated in non-thinking mode due to context-management incompatibility with Terminus-2"
+    },
+    {
+      "benchmarkSlug": "browsecomp",
+      "score": 74.9,
+      "source": "self-reported",
+      "sourceUrl": "https://www.kimi.com/blog/kimi-k2-5",
+      "notes": "BrowseComp with context management; vendor also reports 60.6 single-agent (no ctx mgmt) and 78.4 in the 'Agent Swarm' multi-agent research-preview mode. 74.9 used here for rough comparability with the sibling K2.6 entry's single-agent-style figure"
+    },
+    {
+      "benchmarkSlug": "osworld-verified",
+      "score": 63.3,
+      "source": "self-reported",
+      "sourceUrl": "https://www.kimi.com/blog/kimi-k2-5"
+    }
+  ],
+  "verificationNotes": "Confirmed as a real, released, and still-served model (not a rumor or vendor teaser). Architecture (1T total/32B active, 384 experts [8 routed + 1 shared], 61 layers [1 dense], MLA attention, 160K vocab, SwiGLU, 400M-param MoonViT vision encoder) and license (Modified MIT) verified directly on the official Hugging Face model card (huggingface.co/moonshotai/Kimi-K2.5) and cross-checked against the official Kimi tech blog (kimi.com/blog/kimi-k2-5), which present identical spec tables. Release date January 27, 2026 independently corroborated by TechCrunch's same-day coverage, OpenRouter's model listing ('Released Jan 27, 2026'), Artificial Analysis's model page (independently states 'released on January 27, 2026'), and multiple third-party trackers (aireleasetracker.com, pricepertoken.com, benchlm.ai) that all agree on the date. Pricing ($0.60/M input cache-miss, $3.00/M output, ~$0.10/M cache-hit) confirmed on Artificial Analysis's independently measured provider data and matches the 'Moonshot AI' direct-provider row shown on OpenRouter exactly. Benchmark scores are taken from the official Kimi K2.5 blog/HF results table (Kimi K2.5 'Thinking' configuration, the config the vendor itself reports as the flagship numbers): SWE-Bench Verified (76.8) is independently corroborated by a third-party tracker (aireleasetracker.com) reporting the identical 76.8%; GPQA-Diamond (87.6) is closely corroborated by Artificial Analysis's own independent re-run (87.9); HLE is reported here using the tool-augmented full-set score (50.2) for comparability with the sibling K2.6 entry's HLE figure, and Artificial Analysis's independent non-tool HLE run (29.4) is in the same range as the vendor's own non-tool figure (30.1), i.e. no red flags of inflated self-reporting. Overall Artificial Analysis Intelligence Index = 38/100 (v4.1 composite of GDPval-AA v2, tau3-Banking, Terminal-Bench v2.1, SciCode, HLE, GPQA-Diamond, CritPt, AA-Omniscience, AA-LCR), independently measured and broadly consistent with (though less flattering than) Moonshot's own selective benchmark table \u2014 mirroring the same self-reported/independent gap pattern documented on the sibling K2.6 corpus entry. As of July 2026 the model has been superseded as Moonshot's flagship by Kimi K2.6 (whose own note/docs explicitly call it 'Successor to K2.5') but remains live and actively served today via Moonshot's own API (platform.moonshot.ai) and third-party hosts (OpenRouter, Fireworks, ModelRun, Chutes, etc.), so it is catalogued as status=released rather than deprecated."
+}

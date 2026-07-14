@@ -1,2 +1,5 @@
 model_slug,score,source,source_url,evaluated_at,notes
 glm-4v-9b,81.1,self-reported,https://huggingface.co/THUDM/glm-4v-9b,,
+qwen3-5-122b-a10b,93.3,self-reported,https://huggingface.co/Qwen/Qwen3.5-122B-A10B,,Reported as 'AI2D_TEST'.
+qwen3-5-omni-flash,89,self-reported,https://qwen.ai/blog?id=qwen3.5-omni,2026-04-17,"Reported as 'AI2D_TEST' in Table 6 (Vision→Text), Text Recognition and Document Understanding section."
+qwen3-5-omni-plus,91.2,self-reported,https://arxiv.org/abs/2604.15804,2026-04-21,"Table 6 (Vision→Text), Qwen3.5-Omni-Plus column, cell S5.T6.3.18.4. Paper labels row 'AI2D_TEST'."

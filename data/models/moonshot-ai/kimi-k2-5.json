@@ -1,0 +1,49 @@
+{
+  "slug": "kimi-k2-5",
+  "name": "Kimi K2.5",
+  "orgSlug": "moonshot-ai",
+  "familySlug": "kimi-k2",
+  "releaseDate": "2026-01-27",
+  "status": "released",
+  "predecessor": "kimi-k2-thinking",
+  "openness": "open-weights",
+  "license": "Modified MIT License",
+  "paramsB": 1000,
+  "activeParamsB": 32,
+  "archClass": "moe",
+  "archDisplay": "1T-parameter MoE, 32B active/token, 384 experts (8 routed + 1 shared), 61 layers (1 dense), MLA attention, 160K vocab, SwiGLU; native multimodal via 400M-param MoonViT vision encoder",
+  "ctxK": 256,
+  "modalities": [
+    "text",
+    "vision",
+    "video"
+  ],
+  "langCount": null,
+  "capabilities": {
+    "reasoning": true,
+    "coding": true,
+    "vision": true,
+    "functionCalling": true,
+    "toolUse": true,
+    "agentic": true
+  },
+  "apiAvailable": true,
+  "price": {
+    "input": 0.6,
+    "output": 3
+  },
+  "links": {
+    "hf": "moonshotai/Kimi-K2.5",
+    "gh": "MoonshotAI/Kimi-K2.5",
+    "docs": "https://www.kimi.com/blog/kimi-k2-5"
+  },
+  "note": "Predecessor to Kimi K2.6 (whose own docs explicitly call it 'Successor to K2.5'); Moonshot's first native-multimodal flagship, built via continual pretraining atop Kimi-K2-Base on ~15T mixed vision+text tokens. Introduced native image/video understanding and the 'Agent Swarm' research-preview multi-agent orchestration (self-directed, up to 100 sub-agents, ~1,500 coordinated tool-call steps), trained with Parallel-Agent Reinforcement Learning (PARL). Vendor claims near-frontier coding/reasoning/vision performance versus GPT-5.2 and Claude Opus 4.5-class closed models; independent Artificial Analysis Intelligence Index score was 38/100 (v4.1 methodology, ranked #14/95 open+closed models at time of measurement), corroborating strong but not universally frontier-topping performance. As of July 2026 it has been superseded as Moonshot's flagship by K2.6 but remains live and served via Moonshot's own API (platform.moonshot.ai) and third-party hosts (OpenRouter, Fireworks, etc.).",
+  "quants": [],
+  "vramQ4Gb": null,
+  "vramFp16Gb": null,
+  "tps4090": null,
+  "tpsNote": null,
+  "effortLabel": null,
+  "isDefaultConfig": true,
+  "isBestConfig": true
+}

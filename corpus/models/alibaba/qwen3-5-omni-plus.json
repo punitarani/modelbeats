@@ -1,0 +1,193 @@
+{
+  "name": "Qwen3.5-Omni-Plus",
+  "org": "Alibaba",
+  "family": "Qwen3.5",
+  "releaseDate": "2026-03-30",
+  "status": "released",
+  "openness": "closed",
+  "license": "Proprietary",
+  "paramsB": null,
+  "activeParamsB": null,
+  "archClass": "hybrid",
+  "archDisplay": "Thinker-Talker omnimodal architecture; both Thinker and Talker adopt Hybrid-Attention MoE; RVQ speech tokenizer plus ARIA text-speech interleaving in the Talker; exact parameter/expert configuration undisclosed",
+  "ctxK": 256,
+  "modalities": [
+    "text",
+    "vision",
+    "audio",
+    "video"
+  ],
+  "langCount": null,
+  "capabilities": {
+    "reasoning": true,
+    "coding": true,
+    "vision": true,
+    "functionCalling": true,
+    "toolUse": true,
+    "agentic": true
+  },
+  "apiAvailable": true,
+  "price": {
+    "input": 1.4,
+    "output": 8.3
+  },
+  "links": {
+    "docs": "https://qwen.ai/blog?id=qwen3.5-omni"
+  },
+  "note": "Flagship tier of the Qwen3.5-Omni family; claims SOTA on 215 audio/audio-visual understanding, reasoning, and interaction subtasks/benchmarks (3 audio-visual, 5 audio, 8 ASR, 156 language-specific S2TT, 43 language-specific ASR benchmarks, per the launch blog). Supports controllable, structured audio/audio-visual captioning down to screenplay-level detail.",
+  "quants": [],
+  "vramQ4Gb": null,
+  "vramFp16Gb": null,
+  "tps4090": null,
+  "tpsNote": null,
+  "effortLabel": null,
+  "isDefaultConfig": true,
+  "isBestConfig": true,
+  "specSources": {
+    "existence/architecture/features/SOTA claim": "https://qwen.ai/blog?id=qwen3.5-omni",
+    "releaseDate (press consensus)": "https://www.marktechpost.com/2026/03/30/alibaba-qwen-team-releases-qwen3-5-omni-a-native-multimodal-model-for-text-audio-video-and-realtime-interaction/",
+    "pricing (official)": "https://www.alibabacloud.com/help/en/model-studio/model-pricing"
+  },
+  "results": [
+    {
+      "benchmarkSlug": "mmlu-pro",
+      "score": 85.9,
+      "source": "self-reported",
+      "sourceUrl": "https://qwen.ai/blog?id=qwen3.5-omni",
+      "notes": "text-only evaluation"
+    },
+    {
+      "benchmarkSlug": "c-eval",
+      "score": 92,
+      "source": "self-reported",
+      "sourceUrl": "https://qwen.ai/blog?id=qwen3.5-omni"
+    },
+    {
+      "benchmarkSlug": "ifeval",
+      "score": 89.7,
+      "source": "self-reported",
+      "sourceUrl": "https://qwen.ai/blog?id=qwen3.5-omni"
+    },
+    {
+      "benchmarkSlug": "mmlu-redux",
+      "score": 94.2,
+      "source": "self-reported",
+      "sourceUrl": "https://arxiv.org/abs/2604.15804",
+      "evaluatedAt": "2026-04-21",
+      "notes": "Table 4 (Text\u2192Text), Qwen3.5-Omni-Plus column, confirmed against raw HTML table cell S5.T4.3.4.4. Distinct from Qwen3.5-Plus-Instruct (94.3) and Qwen3.5-Omni-Flash (90.0) in the same row."
+    },
+    {
+      "benchmarkSlug": "super-gpqa",
+      "score": 66.4,
+      "source": "self-reported",
+      "sourceUrl": "https://arxiv.org/abs/2604.15804",
+      "evaluatedAt": "2026-04-21",
+      "notes": "Table 4 (Text\u2192Text), Qwen3.5-Omni-Plus column, cell S5.T4.3.5.4."
+    },
+    {
+      "benchmarkSlug": "ifbench",
+      "score": 52.6,
+      "source": "self-reported",
+      "sourceUrl": "https://arxiv.org/abs/2604.15804",
+      "evaluatedAt": "2026-04-21",
+      "notes": "Table 4 (Text\u2192Text), Qwen3.5-Omni-Plus column, cell S5.T4.3.9.4 (bold/best score in that row)."
+    },
+    {
+      "benchmarkSlug": "gpqa",
+      "score": 83.9,
+      "source": "self-reported",
+      "sourceUrl": "https://arxiv.org/abs/2604.15804",
+      "evaluatedAt": "2026-04-21",
+      "notes": "Table 4 (Text\u2192Text), STEM section, Qwen3.5-Omni-Plus column, cell S5.T4.3.14.4. Paper labels it simply 'GPQA' with no subset (diamond/main) specified."
+    },
+    {
+      "benchmarkSlug": "livecodebench",
+      "score": 65.6,
+      "source": "self-reported",
+      "sourceUrl": "https://arxiv.org/abs/2604.15804",
+      "evaluatedAt": "2026-04-21",
+      "notes": "Table 4 (Text\u2192Text), Reasoning section, Qwen3.5-Omni-Plus column, cell S5.T4.3.16.4. Paper specifically labels this 'LiveCodeBench v6'; catalog has no version-specific slug so mapped to generic livecodebench."
+    },
+    {
+      "benchmarkSlug": "mmmu",
+      "score": 80.1,
+      "source": "self-reported",
+      "sourceUrl": "https://arxiv.org/abs/2604.15804",
+      "evaluatedAt": "2026-04-21",
+      "notes": "Table 6 (Vision\u2192Text), STEM and Puzzle section, Qwen3.5-Omni-Plus column, cell S5.T6.3.3.4."
+    },
+    {
+      "benchmarkSlug": "mmmu-pro",
+      "score": 73.9,
+      "source": "self-reported",
+      "sourceUrl": "https://arxiv.org/abs/2604.15804",
+      "evaluatedAt": "2026-04-21",
+      "notes": "Table 6 (Vision\u2192Text), Qwen3.5-Omni-Plus column, cell S5.T6.3.4.4."
+    },
+    {
+      "benchmarkSlug": "mathvision",
+      "score": 73,
+      "source": "self-reported",
+      "sourceUrl": "https://arxiv.org/abs/2604.15804",
+      "evaluatedAt": "2026-04-21",
+      "notes": "Table 6 (Vision\u2192Text), Qwen3.5-Omni-Plus column, cell S5.T6.3.5.4."
+    },
+    {
+      "benchmarkSlug": "mathvista",
+      "score": 86.1,
+      "source": "self-reported",
+      "sourceUrl": "https://arxiv.org/abs/2604.15804",
+      "evaluatedAt": "2026-04-21",
+      "notes": "Table 6 (Vision\u2192Text), Qwen3.5-Omni-Plus column, cell S5.T6.3.6.4. Paper labels row 'Mathvista (mini)' (the standard mini-test split)."
+    },
+    {
+      "benchmarkSlug": "mmbench-en",
+      "score": 92.8,
+      "source": "self-reported",
+      "sourceUrl": "https://arxiv.org/abs/2604.15804",
+      "evaluatedAt": "2026-04-21",
+      "notes": "Table 6 (Vision\u2192Text), General VQA section, Qwen3.5-Omni-Plus column, cell S5.T6.3.13.4. Paper labels row 'MMBench_{EN-DEV-v1.1}' (English dev split, v1.1)."
+    },
+    {
+      "benchmarkSlug": "charxiv",
+      "score": 72.5,
+      "source": "self-reported",
+      "sourceUrl": "https://arxiv.org/abs/2604.15804",
+      "evaluatedAt": "2026-04-21",
+      "notes": "Table 6 (Vision\u2192Text), Text Recognition/Document Understanding section, Qwen3.5-Omni-Plus column, cell S5.T6.3.16.4. Paper labels row 'CharXiv (RQ)' \u2014 the reasoning-question subset."
+    },
+    {
+      "benchmarkSlug": "ai2d",
+      "score": 91.2,
+      "source": "self-reported",
+      "sourceUrl": "https://arxiv.org/abs/2604.15804",
+      "evaluatedAt": "2026-04-21",
+      "notes": "Table 6 (Vision\u2192Text), Qwen3.5-Omni-Plus column, cell S5.T6.3.18.4. Paper labels row 'AI2D_TEST'."
+    },
+    {
+      "benchmarkSlug": "ocrbench",
+      "score": 91.3,
+      "source": "self-reported",
+      "sourceUrl": "https://arxiv.org/abs/2604.15804",
+      "evaluatedAt": "2026-04-21",
+      "notes": "Table 6 (Vision\u2192Text), Qwen3.5-Omni-Plus column, cell S5.T6.3.20.4."
+    },
+    {
+      "benchmarkSlug": "refcoco",
+      "score": 95,
+      "source": "self-reported",
+      "sourceUrl": "https://arxiv.org/abs/2604.15804",
+      "evaluatedAt": "2026-04-21",
+      "notes": "Table 6 (Vision\u2192Text), Spatial Intelligence section, Qwen3.5-Omni-Plus column, cell S5.T6.3.24.4. Paper labels row 'RefCOCO(avg)' with no separate RefCOCO+/RefCOCOg row, so this is an average across RefCOCO val/testA/testB splits."
+    },
+    {
+      "benchmarkSlug": "videomme",
+      "score": 81.9,
+      "source": "self-reported",
+      "sourceUrl": "https://arxiv.org/abs/2604.15804",
+      "evaluatedAt": "2026-04-21",
+      "notes": "Table 6 (Vision\u2192Text), Video Understanding section, Qwen3.5-Omni-Plus column, cell S5.T6.3.28.4. Paper labels row 'VideoMME (w/o sub.)' \u2014 without-subtitles setting."
+    }
+  ],
+  "verificationNotes": "Confirmed real via direct fetch of the official qwen.ai launch blog and the Qwen3.5-Omni Technical Report (arXiv:2604.15804, Apr 2026); press corroboration (MarkTechPost, eWeek, AnalyticsVidhya, apidog) consistently places the launch at March 30, 2026, and confirms closed/proprietary status. PRICING CORRECTED: Alibaba Cloud Model Studio's pricing table for qwen3.5-omni-plus (raw HTML confirmed directly, both on alibabacloud.com/help/en/model-studio/model-pricing and mirrored on qwencloud.com) is a 2x2 matrix, not a single input/output pair: Input Text/Image/Video = $1.40/M, Input Audio = $11.00/M, Output Text = $8.30/M, Output Text+Audio (audio-only billed) = $44.00/M. The original record mislabeled the $11.00 Audio-INPUT price as priceOutput; the correct standard text-output price is $8.30/M. priceInput=$1.40 was already correct. Params remain accurately represented as undisclosed (paramsB/activeParamsB: null) -- the technical report states the model 'scales to hundreds of billions of parameters' but gives no exact total/active split. All three benchmark scores were independently verified against Table 4 of the primary arXiv technical report (not just the self-reported blog): MMLU-Pro 85.9, C-Eval 92.0, IFEval 89.7 for the Qwen3.5-Omni-Plus column -- exact match, high confidence. The '215 SOTA subtasks' claim (3 audio-visual + 5 audio + 8 ASR + 156 S2TT + 43 ASR) is corroborated by both the official blog (via MarkTechPost mirror) and the arXiv abstract itself, so it is genuine, self-reported Alibaba framing rather than an unverifiable claim.\n\nSUPPLEMENTARY COVERAGE PASS: Blog post (qwen.ai/blog?id=qwen3.5-omni) yielded nothing usable: it's a client-side-rendered SPA whose raw HTML contains only an SEO keyword list, no article body or benchmark data. All 15 additional results below come from the arXiv technical report (2604.15804), cross-validated by pulling the raw HTML tables directly (not just the AI-summarized fetch) to confirm every score came from the correct \"Qwen3.5-Omni-Plus\" column \u2014 the paper's Tables 4 and 6 report three columns side by side (Qwen3.5-Plus-Instruct, Qwen3.5-Omni-Flash, Qwen3.5-Omni-Plus), and it would be easy to misattribute a Flash or text-only-baseline score to Omni-Plus without this check. The three previously-known values (MMLU-Pro 85.9, C-Eval 92.0, IFEval 89.7) matched exactly during this process, confirming fidelity.\n\n15 new clean-fit results found: 5 from Table 4 (Text\u2192Text: MMLU-Redux, SuperGPQA, IFBench, GPQA, LiveCodeBench) and 10 from Table 6 (Vision\u2192Text: MMMU, MMMU-Pro, MathVision, MathVista, MMBench-EN, CharXiv, AI2D, OCRBench, RefCOCO, VideoMME).\n\nDeliberately NOT mapped despite being real published Qwen3.5-Omni-Plus results, because forcing them into an adjacent slug would misrepresent the benchmark: BFCL-V4 (63.3) \u2014 catalog only has bfcl/bfcl-v3, not v4, which uses a different scoring methodology; TAU2Bench (81.0) \u2014 the paper reports one undifferentiated score under \"General Agent\" with no domain breakdown, while the catalog's only tau2 slug is telecom-specific (tau2-bench-telecom), so mapping would falsely imply a telecom-only result; HMMT Nov 25 (84.4) and IMOAnswerBench (65.5) \u2014 distinct competition-math benchmarks from AIME/olympiadbench with no catalog slug.\n\nAlso genuinely no-fit (checked and excluded, not from laziness): AA-LCR, LongBench v2, DynaMath, ZEROBench/ZEROBench_sub, RealWorldQA, MMStar, SimpleVQA (not the same benchmark as catalog's simpleqa), CC-OCR, MMLongBench-Doc, ERQA, CountBench, ODInW13, EmbSpatialBench, MLVU, MVBench, LVBench, MMVU, MME-VideoOCR, SLAKE, PMC-VQA, MedXpertQA-MM.\n\nHonest bottom line on audio: Tables 5, 7, 8, 9, 10, 11 and 12 of the report \u2014 roughly 100+ additional reported numbers (MMAU, MMAR, MMSU, VoiceBench, URO-Bench, Fleurs, CommonVoice/Librispeech/WenetSpeech/Kespeech WER, DailyOmni, WorldSense, AVUT, OmniGAIA, plus zero-shot/multilingual/cross-lingual TTS WER and speaker-similarity across ~29 languages) \u2014 are exhaustively audio, ASR, speech-translation, and speech-generation benchmarks with no analog anywhere in the given slug list. This confirms the task's own hypothesis: Qwen3.5-Omni-Plus's published eval suite is genuinely audio-first, and beyond the 15 text/vision results captured here, there isn't more mappable text-benchmark data for this model \u2014 that's a property of what Alibaba chose to report, not a gap in the extraction."
+}

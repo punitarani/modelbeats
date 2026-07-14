@@ -16,4 +16,7 @@ pixtral-large-124b,69.4,self-reported,https://mistral.ai/news/pixtral-large/,202
 qvq-72b-preview,71.4,self-reported,https://huggingface.co/Qwen/QVQ-72B-Preview,,MathVista mini
 qwen2-5-vl-72b,74.8,self-reported,https://huggingface.co/Qwen/Qwen2.5-VL-72B-Instruct,,MathVista mini
 qwen2-vl-72b,70.5,self-reported,https://huggingface.co/Qwen/Qwen2-VL-72B-Instruct,,"Instruct checkpoint, MathVista testmini"
+qwen3-5-122b-a10b,87.4,self-reported,https://huggingface.co/Qwen/Qwen3.5-122B-A10B,,"Reported as 'Mathvista(mini)', the standard mini-test-set variant commonly reported as MathVista."
+qwen3-5-omni-flash,82.9,self-reported,https://qwen.ai/blog?id=qwen3.5-omni,2026-04-17,Reported as 'Mathvista (mini)' in Table 6 (Vision→Text) — the standard mini-testmini split used by most MathVista comparisons.
+qwen3-5-omni-plus,86.1,self-reported,https://arxiv.org/abs/2604.15804,2026-04-21,"Table 6 (Vision→Text), Qwen3.5-Omni-Plus column, cell S5.T6.3.6.4. Paper labels row 'Mathvista (mini)' (the standard mini-test split)."
 skywork-r1v-38b,67.5,self-reported,https://arxiv.org/abs/2504.05599,,MathVista-mini

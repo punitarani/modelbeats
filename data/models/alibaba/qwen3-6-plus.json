@@ -1,0 +1,47 @@
+{
+  "slug": "qwen3-6-plus",
+  "name": "Qwen3.6-Plus",
+  "orgSlug": "alibaba",
+  "familySlug": "qwen3-6",
+  "releaseDate": "2026-04-02",
+  "status": "released",
+  "predecessor": null,
+  "openness": "closed",
+  "license": "Proprietary",
+  "paramsB": null,
+  "activeParamsB": null,
+  "archClass": "hybrid",
+  "archDisplay": "Hosted product tier of the Qwen3.6 hybrid-attention line (Gated DeltaNet + Gated Attention, Qwen3-Next lineage); exact parameter/expert/MoE configuration for the hosted Plus checkpoint undisclosed",
+  "ctxK": 1000,
+  "modalities": [
+    "text",
+    "vision",
+    "video"
+  ],
+  "langCount": null,
+  "capabilities": {
+    "reasoning": true,
+    "coding": true,
+    "vision": true,
+    "functionCalling": true,
+    "toolUse": true,
+    "agentic": true
+  },
+  "apiAvailable": true,
+  "price": {
+    "input": 0.5,
+    "output": 3
+  },
+  "links": {
+    "docs": "https://qwen.ai/blog?id=qwen3.6"
+  },
+  "note": "Flagship hosted model of the Qwen3.6 generation ('Towards Real World Agents'); massive agentic-coding upgrade over Qwen3.5-Plus per the launch blog, with a 1M-token default context and improved multimodal perception/reasoning. This is the model matching the leads' 'Qwen 3.6 Plus' entry; a second, separately-dated lead for the same product name was found to be a duplicate (see excluded).",
+  "quants": [],
+  "vramQ4Gb": null,
+  "vramFp16Gb": null,
+  "tps4090": null,
+  "tpsNote": null,
+  "effortLabel": null,
+  "isDefaultConfig": true,
+  "isBestConfig": true
+}

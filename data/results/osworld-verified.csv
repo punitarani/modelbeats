@@ -2,3 +2,7 @@ model_slug,score,source,source_url,evaluated_at,notes
 claude-opus-4-8,83.4,self-reported,https://www.vellum.ai/blog/claude-opus-4-8-benchmarks-explained,,PROPOSED NEW SLUG: 'osworld-verified' has no existing match in the valid slug list. Pass@1 on the OSWorld-Verified computer-use benchmark.
 claude-sonnet-4-6,72.5,self-reported,https://venturebeat.com/technology/anthropics-sonnet-4-6-matches-flagship-ai-performance-at-one-fifth-the-cost,,Essentially tied with Opus 4.6's 72.7% at launch. See proposed-slug note on the Opus 4.8 entry.
 claude-sonnet-5,81.2,self-reported,https://www.vellum.ai/blog/claude-sonnet-5-benchmarks-explained,,See proposed-slug note on the Opus 4.8 entry.
+gpt-5-4-mini,72.1,self-reported,https://openai.com/index/introducing-gpt-5-4-mini-and-nano/,2026-03-17,"OSWorld-Verified, xhigh reasoning effort. Cross-confirmed verbatim by datacamp.com/blog/gpt-5-4-mini-nano."
+gpt-5-4-nano,39,self-reported,https://openai.com/index/introducing-gpt-5-4-mini-and-nano/,2026-03-17,"OSWorld-Verified, xhigh reasoning effort -- weaker than GPT-5 mini's 42.0% here since nano isn't tuned for computer-use/vision tasks. Cross-confirmed verbatim by datacamp.com/blog/gpt-5-4-mini-nano."
+kimi-k2-5,63.3,self-reported,https://www.kimi.com/blog/kimi-k2-5,,
+qwen3-5-122b-a10b,58,self-reported,https://huggingface.co/Qwen/Qwen3.5-122B-A10B,,"Visual Agent category, computer-use agent benchmark."

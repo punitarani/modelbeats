@@ -1,0 +1,194 @@
+{
+  "name": "Qwen3.5-Omni-Flash",
+  "org": "Alibaba",
+  "family": "Qwen3.5",
+  "releaseDate": "2026-03-30",
+  "status": "released",
+  "openness": "closed",
+  "license": "Proprietary",
+  "paramsB": null,
+  "activeParamsB": null,
+  "archClass": "hybrid",
+  "archDisplay": "Thinker-Talker omnimodal architecture; both Thinker and Talker adopt Hybrid-Attention MoE; RVQ speech tokenizer (from Qwen3-Omni) plus ARIA (Adaptive Rate Interleave Alignment) text-speech interleaving in the Talker; exact parameter/expert configuration undisclosed",
+  "ctxK": 256,
+  "modalities": [
+    "text",
+    "vision",
+    "audio",
+    "video"
+  ],
+  "langCount": null,
+  "capabilities": {
+    "reasoning": true,
+    "coding": true,
+    "vision": true,
+    "functionCalling": true,
+    "toolUse": true,
+    "agentic": true
+  },
+  "apiAvailable": true,
+  "price": {
+    "input": 0.4,
+    "output": 2.2
+  },
+  "links": {
+    "docs": "https://qwen.ai/blog?id=qwen3.5-omni"
+  },
+  "note": "Smaller/faster tier of the Qwen3.5-Omni family (alongside Plus and a third 'Light' tier not in original leads); processes 10+ hours of audio and 400+ seconds of 720p audio-visual input at 1 FPS, with realtime speech generation. Notably released closed-weight, breaking Alibaba's open-weight streak for this class of model per press coverage.",
+  "quants": [],
+  "vramQ4Gb": null,
+  "vramFp16Gb": null,
+  "tps4090": null,
+  "tpsNote": null,
+  "effortLabel": null,
+  "isDefaultConfig": true,
+  "isBestConfig": false,
+  "specSources": {
+    "existence/architecture/features": "https://qwen.ai/blog?id=qwen3.5-omni",
+    "releaseDate (press consensus)": "https://www.marktechpost.com/2026/03/30/alibaba-qwen-team-releases-qwen3-5-omni-a-native-multimodal-model-for-text-audio-video-and-realtime-interaction/",
+    "closed-weight status (press)": "https://winbuzzer.com/2026/03/31/alibaba-qwen35-omni-closed-source-multimodal-ai-xcxwbn/",
+    "pricing (official)": "https://www.alibabacloud.com/help/en/model-studio/model-pricing"
+  },
+  "results": [
+    {
+      "benchmarkSlug": "mmlu-pro",
+      "score": 79.9,
+      "source": "self-reported",
+      "sourceUrl": "https://qwen.ai/blog?id=qwen3.5-omni",
+      "notes": "text-only evaluation"
+    },
+    {
+      "benchmarkSlug": "c-eval",
+      "score": 86,
+      "source": "self-reported",
+      "sourceUrl": "https://qwen.ai/blog?id=qwen3.5-omni"
+    },
+    {
+      "benchmarkSlug": "ifeval",
+      "score": 85.2,
+      "source": "self-reported",
+      "sourceUrl": "https://qwen.ai/blog?id=qwen3.5-omni"
+    },
+    {
+      "benchmarkSlug": "mmlu-redux",
+      "score": 90,
+      "source": "self-reported",
+      "sourceUrl": "https://qwen.ai/blog?id=qwen3.5-omni",
+      "evaluatedAt": "2026-04-17",
+      "notes": "Table 4 (Text\u2192Text), Knowledge section. Confirmed identical in arXiv:2604.15804 Table 4."
+    },
+    {
+      "benchmarkSlug": "super-gpqa",
+      "score": 54.9,
+      "source": "self-reported",
+      "sourceUrl": "https://qwen.ai/blog?id=qwen3.5-omni",
+      "evaluatedAt": "2026-04-17",
+      "notes": "Table 4 (Text\u2192Text), Knowledge section. Confirmed identical in arXiv:2604.15804 Table 4."
+    },
+    {
+      "benchmarkSlug": "ifbench",
+      "score": 38.4,
+      "source": "self-reported",
+      "sourceUrl": "https://qwen.ai/blog?id=qwen3.5-omni",
+      "evaluatedAt": "2026-04-17",
+      "notes": "Table 4 (Text\u2192Text), Instruction Following section. Confirmed identical in arXiv:2604.15804 Table 4."
+    },
+    {
+      "benchmarkSlug": "gpqa",
+      "score": 76.4,
+      "source": "self-reported",
+      "sourceUrl": "https://qwen.ai/blog?id=qwen3.5-omni",
+      "evaluatedAt": "2026-04-17",
+      "notes": "Table 4 (Text\u2192Text), STEM section. Distinct from SuperGPQA, mapped separately above. Confirmed identical in arXiv:2604.15804 Table 4."
+    },
+    {
+      "benchmarkSlug": "livecodebench",
+      "score": 56.6,
+      "source": "self-reported",
+      "sourceUrl": "https://qwen.ai/blog?id=qwen3.5-omni",
+      "evaluatedAt": "2026-04-17",
+      "notes": "Reported as 'LiveCodeBench v6' in Table 4 (Text\u2192Text), Reasoning section. Catalog has no version-specific LiveCodeBench slug, so mapped to the generic 'livecodebench' slug; note the v6 revision when comparing against other models' LiveCodeBench entries that may use a different code-release version."
+    },
+    {
+      "benchmarkSlug": "mmmu",
+      "score": 76.9,
+      "source": "self-reported",
+      "sourceUrl": "https://qwen.ai/blog?id=qwen3.5-omni",
+      "evaluatedAt": "2026-04-17",
+      "notes": "Table 6 (Vision\u2192Text), STEM and Puzzle section. Confirmed identical in arXiv:2604.15804 Table 6."
+    },
+    {
+      "benchmarkSlug": "mmmu-pro",
+      "score": 68.2,
+      "source": "self-reported",
+      "sourceUrl": "https://qwen.ai/blog?id=qwen3.5-omni",
+      "evaluatedAt": "2026-04-17",
+      "notes": "Table 6 (Vision\u2192Text), STEM and Puzzle section. Paper does not specify which MMMU-Pro input variant (standard vs. vision-only) was used; flagging as a minor methodology caveat."
+    },
+    {
+      "benchmarkSlug": "mathvision",
+      "score": 65.4,
+      "source": "self-reported",
+      "sourceUrl": "https://qwen.ai/blog?id=qwen3.5-omni",
+      "evaluatedAt": "2026-04-17",
+      "notes": "Table 6 (Vision\u2192Text), STEM and Puzzle section. Confirmed identical in arXiv:2604.15804 Table 6."
+    },
+    {
+      "benchmarkSlug": "mathvista",
+      "score": 82.9,
+      "source": "self-reported",
+      "sourceUrl": "https://qwen.ai/blog?id=qwen3.5-omni",
+      "evaluatedAt": "2026-04-17",
+      "notes": "Reported as 'Mathvista (mini)' in Table 6 (Vision\u2192Text) \u2014 the standard mini-testmini split used by most MathVista comparisons."
+    },
+    {
+      "benchmarkSlug": "mmbench-en",
+      "score": 88.8,
+      "source": "self-reported",
+      "sourceUrl": "https://qwen.ai/blog?id=qwen3.5-omni",
+      "evaluatedAt": "2026-04-17",
+      "notes": "Reported as 'MMBenchEN-DEV-v1.1' in Table 6 (Vision\u2192Text), General VQA section \u2014 the English dev split, v1.1. Flag the split/version when comparing to other MMBench-EN entries that may use a different split."
+    },
+    {
+      "benchmarkSlug": "charxiv",
+      "score": 64.4,
+      "source": "self-reported",
+      "sourceUrl": "https://qwen.ai/blog?id=qwen3.5-omni",
+      "evaluatedAt": "2026-04-17",
+      "notes": "Reported as 'CharXiv (RQ)' in Table 6 \u2014 the Reasoning Questions subset only, not CharXiv's Descriptive Questions subset or a combined score. Flag this subset scope when comparing to full-CharXiv entries."
+    },
+    {
+      "benchmarkSlug": "ai2d",
+      "score": 89,
+      "source": "self-reported",
+      "sourceUrl": "https://qwen.ai/blog?id=qwen3.5-omni",
+      "evaluatedAt": "2026-04-17",
+      "notes": "Reported as 'AI2D_TEST' in Table 6 (Vision\u2192Text), Text Recognition and Document Understanding section."
+    },
+    {
+      "benchmarkSlug": "ocrbench",
+      "score": 89.1,
+      "source": "self-reported",
+      "sourceUrl": "https://qwen.ai/blog?id=qwen3.5-omni",
+      "evaluatedAt": "2026-04-17",
+      "notes": "Table 6 (Vision\u2192Text), Text Recognition and Document Understanding section."
+    },
+    {
+      "benchmarkSlug": "refcoco",
+      "score": 92.6,
+      "source": "self-reported",
+      "sourceUrl": "https://qwen.ai/blog?id=qwen3.5-omni",
+      "evaluatedAt": "2026-04-17",
+      "notes": "Reported as 'RefCOCO(avg)' in Table 6, Spatial Intelligence section \u2014 averaged across val/testA/testB splits rather than a single split score. Distinct benchmark from RefCOCO+ (catalog's separate 'refcoco-plus' slug), which is not reported here."
+    },
+    {
+      "benchmarkSlug": "videomme",
+      "score": 77,
+      "source": "self-reported",
+      "sourceUrl": "https://qwen.ai/blog?id=qwen3.5-omni",
+      "evaluatedAt": "2026-04-17",
+      "notes": "Reported as 'VideoMME(w/o sub.)' in Table 6 (Vision\u2192Text), Video Understanding section \u2014 vision-only, no subtitles. A second, higher-scoring VideoMME variant ('VideoMME with audio' = 79.3, use_audio_in_video=True) appears in Table 7 (AudioVisual\u2192Text) but was deliberately excluded here to avoid two conflicting scores under the same 'videomme' slug; see coverageNotes."
+    }
+  ],
+  "verificationNotes": "Confirmed real via direct fetch of the official qwen.ai launch blog and independently corroborated by press: MarkTechPost, Winbuzzer, and apidog.com all report the March 30, 2026 launch (matching the original lead's ~2026-03-29 estimate within 1 day). Winbuzzer's headline ('Alibaba Keeps New Qwen3.5-Omni AI Models Closed, Breaks Open-Source Streak') independently corroborates the closed/proprietary status. One notable discrepancy: Alibaba's own Model Studio pricing page lists the underlying model snapshot as 'qwen3.5-omni-flash-2026-03-15', roughly two weeks before the press-covered public launch -- likely a staged/regional rollout vs. the global GA announcement; used the press-consensus date (Mar 30) as releaseDate per corpus convention, flagging the variance. Omni pricing is multi-tiered by input modality (text vs. audio) on the official pricing page; priceInput/priceOutput here use the text-tier figures ($0.40/$3.00 per M) -- audio-tier pricing ($2.20 in / $11.90 out per M) is higher and not captured in this single input/output pair. A third 'Qwen3.5-Omni-Light' tier also exists per the launch blog but was not in the original leads and is not added separately here.\n\nSUPPLEMENTARY COVERAGE PASS: Both sources were fetched directly and cross-verified: the qwen.ai blog page (rendered via browser, since the plain WebFetch summarizer failed to render its JS-driven content) contains full Text/Visual/Audio/Audio-Visual comparison tables with a Qwen3.5-Omni-Flash column, and arXiv:2604.15804 (fetched as arxiv.org/html/2604.15804v1, also via direct browser read of the rendered HTML, not just the summarizer) contains the identical numbers in Tables 4, 5, 6, and 7. The two sources agree exactly wherever they overlap, so I'm confident these are not fabricated.\n\n15 additional Flash-tier results map cleanly to catalog slugs, pulled from Table 4 (Text\u2192Text: mmlu-redux, super-gpqa, ifbench, gpqa, livecodebench) and Table 6 (Vision\u2192Text: mmmu, mmmu-pro, mathvision, mathvista, mmbench-en, charxiv, ai2d, ocrbench, refcoco, videomme).\n\nHonest gaps \u2014 most of Qwen3.5-Omni-Flash's remaining published evals genuinely have no catalog fit, confirming the expectation for an omni model:\n- Table 5 (Audio\u2192Text) is entirely audio/ASR/S2TT/dialogue benchmarks with zero overlap with the catalog: MMAU, MMAR, MMSU, RUL-MuchoMusic, SongFormBench (x2), VoiceBench, URO-Bench-pro, SpeechRole, WildSpeech-Bench, Fleurs S2TT (x3), Fleurs ASR, CV15 (x2), LibriSpeech, WenetSpeech, KeSpeech, MIR-1K, Opencpop.\n- Table 7 (AudioVisual\u2192Text) is audiovisual-native and has no catalog fit: DailyOmni, WorldSense, AVUT, AV-SpeakerBench, Qualcomm IVD, Omni-Cloze. OmniGAIA (33.9) was deliberately NOT mapped to the catalog's 'gaia' slug \u2014 it is a distinct audiovisual tool-use benchmark (graded by a DeepSeek-V3.2-Thinking judge), not the standard text-based GAIA benchmark, and force-mapping it would misrepresent the number.\n- Table 6 also includes vision/medical/video rows with no catalog slug: DynaMath, ZEROBench, ZEROBench_sub, RealWorldQA, MMStar, SimpleVQA (distinct from the catalog's text-based 'simpleqa' \u2014 not mapped), CC-OCR, MMLongBench-Doc, ERQA, CountBench, ODInW13, EmbSpatialBench, MLVU, MVBench, LVBench, MMVU (distinct from MMMU \u2014 not conflated), MME-VideoOCR, SLAKE, PMC-VQA, MedXpertQA-MM.\n- Table 4 also includes AA-LCR, LongBench v2 (long-context, no slug), HMMT Nov 25, IMOAnswerBench (competition math, no slug), BFCL-V4 (55.3 \u2014 excluded: catalog only has 'bfcl' and 'bfcl-v3', and V4 is a materially different task version, so mapping to either would misrepresent it), and TAU2Bench (78.0 \u2014 excluded: catalog has 'tau-bench' and 'tau2-bench-telecom' but the paper reports an aggregate TAU2Bench score not scoped to the telecom domain, so neither slug is a clean fit).\n\nNet effect on the Index concern: 15 new grounded data points (on top of the original 3) meaningfully broaden Qwen3.5-Omni-Flash's real coverage in the catalog, and the pattern (strong knowledge/instruction-following scores, but consistently 5-15 points below its own larger Plus sibling and below Qwen3.5-Plus-NoThinking on every single text/vision benchmark) should pull its computed Index down from the outlier 89.4 once ingested, rather than leaving it propped up by a 3-benchmark sample."
+}

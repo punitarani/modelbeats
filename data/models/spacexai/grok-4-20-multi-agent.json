@@ -1,0 +1,46 @@
+{
+  "slug": "grok-4-20-multi-agent",
+  "name": "Grok 4.20 Multi-Agent",
+  "orgSlug": "spacexai",
+  "familySlug": "grok-4-20",
+  "releaseDate": "2026-03-10",
+  "status": "released",
+  "predecessor": null,
+  "openness": "closed",
+  "license": "Proprietary",
+  "paramsB": null,
+  "activeParamsB": null,
+  "archClass": "moe",
+  "archDisplay": "Mixture-of-Experts (size undisclosed) served as 4 parallel specialized agent roles (coordinator 'Grok/Captain', research/fact-check 'Harper', math/logic 'Benjamin', creative/balance 'Lucas') sharing weights and KV-cache, debating before synthesizing one final answer",
+  "ctxK": 1000,
+  "modalities": [
+    "text",
+    "vision"
+  ],
+  "langCount": null,
+  "capabilities": {
+    "reasoning": true,
+    "coding": true,
+    "vision": true,
+    "functionCalling": true,
+    "toolUse": true,
+    "agentic": true
+  },
+  "apiAvailable": true,
+  "price": {
+    "input": 1.25,
+    "output": 2.5
+  },
+  "links": {
+    "docs": "https://docs.x.ai/developers/models/grok-4.20-multi-agent-beta-0309"
+  },
+  "note": "Multi-agent sibling of Grok 4.20, paralleling how 'Grok 4 Heavy' relates to 'Grok-4' elsewhere in this corpus: 4 specialized agent roles collaborate at inference time on every complex query, running as parallel replicas of the same underlying model rather than 4 independent models. xAI states the marginal inference cost is roughly 1.5-2.5x a single pass, not 4x. Public beta Feb 17, 2026; full API GA Mar 10, 2026 alongside the base model.",
+  "quants": [],
+  "vramQ4Gb": null,
+  "vramFp16Gb": null,
+  "tps4090": null,
+  "tpsNote": null,
+  "effortLabel": null,
+  "isDefaultConfig": false,
+  "isBestConfig": true
+}

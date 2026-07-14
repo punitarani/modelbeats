@@ -1,0 +1,48 @@
+{
+  "slug": "qwen3-6-27b",
+  "name": "Qwen3.6-27B",
+  "orgSlug": "alibaba",
+  "familySlug": "qwen3-6",
+  "releaseDate": "2026-04-22",
+  "status": "released",
+  "predecessor": "qwen3-6-35b-a3b",
+  "openness": "open-weights",
+  "license": "Apache 2.0",
+  "paramsB": 27,
+  "activeParamsB": null,
+  "archClass": "hybrid",
+  "archDisplay": "Hybrid-attention dense model (Qwen3-Next lineage, no MoE routing): 64 layers, 16x(3x(Gated DeltaNet -> FFN) -> 1x(Gated Attention -> FFN)); hidden dim 5120, FFN intermediate dim 17408; natively multimodal (Causal LM with built-in vision encoder)",
+  "ctxK": 256,
+  "modalities": [
+    "text",
+    "vision"
+  ],
+  "langCount": null,
+  "capabilities": {
+    "reasoning": true,
+    "coding": true,
+    "vision": true,
+    "functionCalling": true,
+    "toolUse": true,
+    "agentic": true
+  },
+  "apiAvailable": true,
+  "price": {
+    "input": 0.6,
+    "output": 3.6
+  },
+  "links": {
+    "hf": "Qwen/Qwen3.6-27B",
+    "gh": "QwenLM/Qwen3.6",
+    "docs": "https://huggingface.co/Qwen/Qwen3.6-27B"
+  },
+  "note": "Not in the original flagged leads, but discovered via direct primary-source research (qwen.ai/blog and github.com/QwenLM/Qwen3.6) while verifying the flagged models -- and arguably the single most important model actually missing, since it is explicitly billed by Alibaba as surpassing the prior open-weight flagship Qwen3.5-397B-A17B (15x its parameter count) on every major agentic-coding benchmark despite being fully dense at 27B params.",
+  "quants": [],
+  "vramQ4Gb": null,
+  "vramFp16Gb": null,
+  "tps4090": null,
+  "tpsNote": null,
+  "effortLabel": null,
+  "isDefaultConfig": true,
+  "isBestConfig": true
+}

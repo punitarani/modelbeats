@@ -39,6 +39,10 @@ olmo-3-think-32b,89,self-reported,https://huggingface.co/allenai/Olmo-3-32B-Thin
 openpangu-2-0-flash-non-thinking,89.3,self-reported,https://huggingface.co/openpangu/openPangu-2.0-Flash/blob/main/README_EN.md,,"Prompt-level strict accuracy, Non-Thinking mode"
 openpangu-2-0-flash-thinking,95.9,self-reported,https://huggingface.co/openpangu/openPangu-2.0-Flash/blob/main/README_EN.md,,"Prompt-level strict accuracy, Thinking mode"
 qwen3-235b-a22b-thinking-2507,87.8,self-reported,https://huggingface.co/Qwen/Qwen3-235B-A22B-Thinking-2507,,IFEval
+qwen3-5-122b-a10b,93.4,self-reported,https://huggingface.co/Qwen/Qwen3.5-122B-A10B,,Instruction Following category.
+qwen3-5-omni-flash,85.2,self-reported,https://qwen.ai/blog?id=qwen3.5-omni,,
+qwen3-5-omni-plus,89.7,self-reported,https://qwen.ai/blog?id=qwen3.5-omni,,
+qwen3-5-plus,89.7,self-reported,https://qwen.ai/blog?id=qwen3.5-omni,,Qwen3.5-Plus-NoThinking
 qwq-32b,83.9,self-reported,https://www.datacamp.com/blog/qwq-32b,,
 smollm3-3b-no-thinking,76.7,self-reported,https://huggingface.co/HuggingFaceTB/SmolLM3-3B,,No extended thinking
 snowflake-arctic,52.4,independent,https://www.flexera.com/blog/finops/snowflake-arctic,,

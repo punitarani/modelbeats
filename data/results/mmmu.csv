@@ -43,6 +43,9 @@ pixtral-12b,52.5,self-reported,https://mistral.ai/news/pixtral-12b/,2024-09-11,C
 qvq-72b-preview,70.3,self-reported,https://huggingface.co/Qwen/QVQ-72B-Preview,,MMMU val
 qwen2-5-vl-72b,70.2,self-reported,https://huggingface.co/Qwen/Qwen2.5-VL-72B-Instruct,,MMMU val
 qwen2-vl-72b,64.5,self-reported,https://huggingface.co/Qwen/Qwen2-VL-72B-Instruct,,"Instruct checkpoint, MMMU val"
+qwen3-5-122b-a10b,83.9,self-reported,https://huggingface.co/Qwen/Qwen3.5-122B-A10B,,"Vision-Language table, STEM and Puzzle category."
+qwen3-5-omni-flash,76.9,self-reported,https://qwen.ai/blog?id=qwen3.5-omni,2026-04-17,"Table 6 (Vision→Text), STEM and Puzzle section. Confirmed identical in arXiv:2604.15804 Table 6."
+qwen3-5-omni-plus,80.1,self-reported,https://arxiv.org/abs/2604.15804,2026-04-21,"Table 6 (Vision→Text), STEM and Puzzle section, Qwen3.5-Omni-Plus column, cell S5.T6.3.3.4."
 reka-core,56.3,self-reported,https://reka.ai/news/reka-core-our-frontier-class-multimodal-language-model,,near GPT-4V 56.8
 skywork-r1v-38b,69,self-reported,https://arxiv.org/abs/2504.05599,,"MMMU val, pass@1"
 step-3,74.2,self-reported,https://chat.stepfun.com/research/en/step3,,Vision-language understanding

@@ -1,0 +1,46 @@
+{
+  "slug": "qwen3-5-122b-a10b",
+  "name": "Qwen3.5-122B-A10B",
+  "orgSlug": "alibaba",
+  "familySlug": "qwen3-5",
+  "releaseDate": "2026-02-24",
+  "status": "released",
+  "predecessor": "qwen3-5-397b-a17b",
+  "openness": "open-weights",
+  "license": "Apache 2.0",
+  "paramsB": 122,
+  "activeParamsB": 10,
+  "archClass": "hybrid",
+  "archDisplay": "Hybrid-attention MoE (Qwen3-Next lineage): 48 layers, 12x(3x(Gated DeltaNet -> MoE) -> 1x(Gated Attention -> MoE)); 256 experts, 8 routed + 1 shared activated per token; hidden dim 3072; natively multimodal (Causal LM with built-in vision encoder)",
+  "ctxK": 256,
+  "modalities": [
+    "text",
+    "vision",
+    "video"
+  ],
+  "langCount": null,
+  "capabilities": {
+    "reasoning": true,
+    "coding": true,
+    "vision": true,
+    "functionCalling": true,
+    "toolUse": true,
+    "agentic": true
+  },
+  "apiAvailable": true,
+  "price": null,
+  "links": {
+    "hf": "Qwen/Qwen3.5-122B-A10B",
+    "gh": "QwenLM/Qwen3.6",
+    "docs": "https://huggingface.co/Qwen/Qwen3.5-122B-A10B"
+  },
+  "note": "Mid-size open-weight MoE in the Qwen3.5 family, released ~1 week after the 397B-A17B flagship alongside Qwen3.5-27B (dense) and Qwen3.5-35B-A3B (MoE). Matches or beats GPT-OSS-120B and Qwen3-235B-A22B on several benchmarks at a fraction of the total/active parameter count.",
+  "quants": [],
+  "vramQ4Gb": null,
+  "vramFp16Gb": null,
+  "tps4090": null,
+  "tpsNote": null,
+  "effortLabel": null,
+  "isDefaultConfig": true,
+  "isBestConfig": true
+}

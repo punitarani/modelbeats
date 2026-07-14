@@ -1,0 +1,46 @@
+{
+  "slug": "qwen3-5-397b-a17b",
+  "name": "Qwen3.5-397B-A17B",
+  "orgSlug": "alibaba",
+  "familySlug": "qwen3-5",
+  "releaseDate": "2026-02-16",
+  "status": "released",
+  "predecessor": null,
+  "openness": "open-weights",
+  "license": "Apache 2.0",
+  "paramsB": 397,
+  "activeParamsB": 17,
+  "archClass": "hybrid",
+  "archDisplay": "Hybrid-attention MoE (Qwen3-Next lineage): 60 layers, 15x(3x(Gated DeltaNet -> MoE) -> 1x(Gated Attention -> MoE)); 512 experts, 10 routed + 1 shared activated per token; hidden dim 4096; natively multimodal (\"Causal Language Model with Vision Encoder\" per HF card, not text-only)",
+  "ctxK": 256,
+  "modalities": [
+    "text",
+    "vision",
+    "video"
+  ],
+  "langCount": 201,
+  "capabilities": {
+    "reasoning": true,
+    "coding": true,
+    "vision": true,
+    "functionCalling": true,
+    "toolUse": true,
+    "agentic": true
+  },
+  "apiAvailable": true,
+  "price": null,
+  "links": {
+    "hf": "Qwen/Qwen3.5-397B-A17B",
+    "gh": "QwenLM/Qwen3.6",
+    "docs": "https://huggingface.co/Qwen/Qwen3.5-397B-A17B"
+  },
+  "note": "Open-weight flagship of the Qwen3.5 generation; native vision-language model (not a bolt-on VL variant) built on Qwen3-Next-style hybrid linear-attention/MoE architecture. Native 262,144-token context, extensible to ~1.01M via YaRN. First confirmed model of the flagged 'missing generation'.",
+  "quants": [],
+  "vramQ4Gb": null,
+  "vramFp16Gb": null,
+  "tps4090": null,
+  "tpsNote": null,
+  "effortLabel": null,
+  "isDefaultConfig": true,
+  "isBestConfig": true
+}

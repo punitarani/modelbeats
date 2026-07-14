@@ -1,0 +1,44 @@
+{
+  "slug": "gemma-4-26b-a4b",
+  "name": "Gemma 4 26B A4B",
+  "orgSlug": "google",
+  "familySlug": "gemma-4",
+  "releaseDate": "2026-04-02",
+  "status": "released",
+  "predecessor": null,
+  "openness": "open-weights",
+  "license": "Apache-2.0",
+  "paramsB": 25.2,
+  "activeParamsB": 3.8,
+  "archClass": "moe",
+  "archDisplay": "Sparse Mixture-of-Experts Transformer — 128 total experts (8 active + 1 shared routed per token), 30 layers, 1024-token sliding-window local attention, multimodal text+image encoder (~550M params)",
+  "ctxK": 256,
+  "modalities": [
+    "text",
+    "vision"
+  ],
+  "langCount": 140,
+  "capabilities": {
+    "reasoning": true,
+    "coding": true,
+    "vision": true,
+    "functionCalling": true,
+    "toolUse": true,
+    "agentic": true
+  },
+  "apiAvailable": true,
+  "price": null,
+  "links": {
+    "hf": "google/gemma-4-26B-A4B-it",
+    "docs": "https://ai.google.dev/gemma/docs/core/model_card_4"
+  },
+  "note": "The MoE sibling of the dense Gemma 4 31B, flagged as missing in the dense model's own verificationNotes and now confirmed directly: 128 experts, 8 active + 1 shared per token, near-31B quality while running about as fast as a 4B model.",
+  "quants": [],
+  "vramQ4Gb": null,
+  "vramFp16Gb": null,
+  "tps4090": null,
+  "tpsNote": null,
+  "effortLabel": null,
+  "isDefaultConfig": true,
+  "isBestConfig": true
+}

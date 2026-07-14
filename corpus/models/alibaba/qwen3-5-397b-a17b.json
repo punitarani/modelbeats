@@ -1,0 +1,95 @@
+{
+  "name": "Qwen3.5-397B-A17B",
+  "org": "Alibaba",
+  "family": "Qwen3.5",
+  "releaseDate": "2026-02-16",
+  "status": "released",
+  "openness": "open-weights",
+  "license": "Apache 2.0",
+  "paramsB": 397,
+  "activeParamsB": 17,
+  "archClass": "hybrid",
+  "archDisplay": "Hybrid-attention MoE (Qwen3-Next lineage): 60 layers, 15x(3x(Gated DeltaNet -> MoE) -> 1x(Gated Attention -> MoE)); 512 experts, 10 routed + 1 shared activated per token; hidden dim 4096; natively multimodal (\"Causal Language Model with Vision Encoder\" per HF card, not text-only)",
+  "ctxK": 256,
+  "modalities": [
+    "text",
+    "vision",
+    "video"
+  ],
+  "langCount": 201,
+  "capabilities": {
+    "reasoning": true,
+    "coding": true,
+    "vision": true,
+    "functionCalling": true,
+    "toolUse": true,
+    "agentic": true
+  },
+  "apiAvailable": true,
+  "price": null,
+  "links": {
+    "hf": "Qwen/Qwen3.5-397B-A17B",
+    "gh": "QwenLM/Qwen3.6",
+    "docs": "https://huggingface.co/Qwen/Qwen3.5-397B-A17B"
+  },
+  "note": "Open-weight flagship of the Qwen3.5 generation; native vision-language model (not a bolt-on VL variant) built on Qwen3-Next-style hybrid linear-attention/MoE architecture. Native 262,144-token context, extensible to ~1.01M via YaRN. First confirmed model of the flagged 'missing generation'.",
+  "quants": [],
+  "vramQ4Gb": null,
+  "vramFp16Gb": null,
+  "tps4090": null,
+  "tpsNote": null,
+  "effortLabel": null,
+  "isDefaultConfig": true,
+  "isBestConfig": true,
+  "specSources": {
+    "existence/paramsB/archDisplay/ctxK/openness": "https://huggingface.co/Qwen/Qwen3.5-397B-A17B",
+    "releaseDate (official changelog)": "https://github.com/QwenLM/Qwen3.6 (README, redirect target of github.com/QwenLM/Qwen3.5)",
+    "press corroboration": "https://www.cnbc.com/2026/02/17/china-alibaba-qwen-ai-agent-latest-model.html",
+    "launch blog": "https://qwen.ai/blog?id=qwen3.5"
+  },
+  "results": [
+    {
+      "benchmarkSlug": "swe-bench",
+      "score": 76.4,
+      "source": "self-reported",
+      "sourceUrl": "https://huggingface.co/Qwen/Qwen3.5-397B-A17B",
+      "notes": "SWE-bench Verified. Corrected from 76.2 to 76.4: the model's own HF model card benchmark table AND HF's separate structured 'Evaluation results' widget both show 76.4, matching the original qwen.ai/blog?id=qwen3.5 launch blog. The candidate's cited value (76.2) came from the later qwen.ai/blog?id=qwen3.6-27b cross-generation table, which used a different/refined agent scaffold for its comparisons -- it is not the model's canonical self-reported figure, and the original record's claim that 76.2 is 'corroborated verbatim on the HF model card' is factually incorrect (the HF card shows 76.4)."
+    },
+    {
+      "benchmarkSlug": "gpqa",
+      "score": 88.4,
+      "source": "self-reported",
+      "sourceUrl": "https://huggingface.co/Qwen/Qwen3.5-397B-A17B",
+      "notes": "GPQA Diamond. Verified correct via fresh fetch of HF model card table and the original qwen.ai/blog?id=qwen3.5 launch blog table (both show 88.4); also matches automatio.ai third-party listing."
+    },
+    {
+      "benchmarkSlug": "mmlu-pro",
+      "score": 87.8,
+      "source": "self-reported",
+      "sourceUrl": "https://huggingface.co/Qwen/Qwen3.5-397B-A17B",
+      "notes": "Verified correct via fresh fetch of HF model card table, qwen.ai/blog?id=qwen3.5 launch blog table, and Ollama registry readme (all show 87.8)."
+    },
+    {
+      "benchmarkSlug": "livecodebench",
+      "score": 83.6,
+      "source": "self-reported",
+      "sourceUrl": "https://huggingface.co/Qwen/Qwen3.5-397B-A17B",
+      "notes": "LiveCodeBench v6. Verified correct via fresh fetch of HF model card table and qwen.ai/blog?id=qwen3.5 launch blog table (both show 83.6)."
+    },
+    {
+      "benchmarkSlug": "hle",
+      "score": 28.7,
+      "source": "self-reported",
+      "sourceUrl": "https://huggingface.co/Qwen/Qwen3.5-397B-A17B",
+      "notes": "Humanity's Last Exam, text-only setting. Verified correct via fresh fetch of HF model card table and qwen.ai/blog?id=qwen3.5 launch blog table (both show 28.7); also matches automatio.ai third-party listing."
+    },
+    {
+      "benchmarkSlug": "aime",
+      "score": 91.3,
+      "source": "self-reported",
+      "sourceUrl": "https://huggingface.co/Qwen/Qwen3.5-397B-A17B",
+      "notes": "AIME26 (AIME 2026). Corrected from 93.3 to 91.3: the model's own HF model card table and the original qwen.ai/blog?id=qwen3.5 launch blog both report 91.3, corroborated independently by third-party trackers automatio.ai and morphllm.com. The candidate's cited value (93.3) came from qwen.ai/blog?id=qwen3.6-27b's cross-generation table, which carries an explicit footnote from Qwen themselves: 'We use the full AIME 2026 (I & II), where the scores may differ from Qwen 3.5 notes' -- i.e. Qwen is flagging that this is a different, non-canonical re-evaluation, not the model's own self-reported figure."
+    }
+  ],
+  "verificationNotes": "Confirmed real and independently corroborated. Primary sources fetched directly: HF model card (huggingface.co/Qwen/Qwen3.5-397B-A17B, full spec + benchmark table), the QwenLM GitHub org (github.com/QwenLM/Qwen3.5 redirects to github.com/QwenLM/Qwen3.6, whose README changelog gives the official release date 2026-02-16 and confirms Apache-2.0 licensing for all open-weight models in the family), and the qwen.ai/blog?id=qwen3.5 launch post. Press corroboration: CNBC (the exact lead URL, cnbc.com/2026/02/17/...) confirms the Feb 2026 launch and notes CNBC could not independently verify Alibaba's self-reported benchmark comparisons -- flagged accordingly (all results here are self-reported). GPQA Diamond score (88.4) is corroborated twice within the same source (blog table + HF's own embedded community leaderboard widget for that exact dataset). Architecture is hybrid (Gated DeltaNet linear-attention blocks interleaved with regular Gated Attention blocks, MoE FFN) -- this is the Qwen3-Next architectural lineage, not a plain MoE like Qwen3-235B-A22B, so archClass is set to 'hybrid' rather than 'moe'. Native context is 262,144 tokens (=256K), extensible to 1,010,000 via documented YaRN scaling -- ctxK set to the native figure per corpus convention (matches how Qwen3-Coder-480B-A35B records native rather than YaRN-extended context). No official Alibaba Cloud Model Studio API price found for the raw open-weight model id in this pass (only the hosted 'Plus' product has listed pricing); apiAvailable is true based on third-party inference listings (OpenRouter etc.) referenced across secondary sources."
+}

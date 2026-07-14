@@ -1,0 +1,47 @@
+{
+  "name": "Grok 4.20 Multi-Agent",
+  "org": "SpaceXAI",
+  "family": "Grok 4.20",
+  "releaseDate": "2026-03-10",
+  "status": "released",
+  "openness": "closed",
+  "license": "Proprietary",
+  "paramsB": null,
+  "activeParamsB": null,
+  "archClass": "moe",
+  "archDisplay": "Mixture-of-Experts (size undisclosed) served as 4 parallel specialized agent roles (coordinator 'Grok/Captain', research/fact-check 'Harper', math/logic 'Benjamin', creative/balance 'Lucas') sharing weights and KV-cache, debating before synthesizing one final answer",
+  "ctxK": 1000,
+  "modalities": [
+    "text",
+    "vision"
+  ],
+  "langCount": null,
+  "capabilities": {
+    "reasoning": true,
+    "coding": true,
+    "vision": true,
+    "functionCalling": true,
+    "toolUse": true,
+    "agentic": true
+  },
+  "apiAvailable": true,
+  "price": {
+    "input": 1.25,
+    "output": 2.5
+  },
+  "links": {
+    "docs": "https://docs.x.ai/developers/models/grok-4.20-multi-agent-beta-0309"
+  },
+  "note": "Multi-agent sibling of Grok 4.20, paralleling how 'Grok 4 Heavy' relates to 'Grok-4' elsewhere in this corpus: 4 specialized agent roles collaborate at inference time on every complex query, running as parallel replicas of the same underlying model rather than 4 independent models. xAI states the marginal inference cost is roughly 1.5-2.5x a single pass, not 4x. Public beta Feb 17, 2026; full API GA Mar 10, 2026 alongside the base model.",
+  "quants": [],
+  "vramQ4Gb": null,
+  "vramFp16Gb": null,
+  "tps4090": null,
+  "tpsNote": null,
+  "effortLabel": null,
+  "isDefaultConfig": false,
+  "isBestConfig": true,
+  "specSources": {},
+  "results": [],
+  "verificationNotes": "Sibling entry to 'Grok 4.20', confirmed via the same primary source: docs.x.ai/developers/release-notes explicitly announces both together ('Mar 10 -- Grok 4.20 and Grok 4.20 Multi-agent are live'), and I separately fetched the dedicated model card at docs.x.ai/developers/models/grok-4.20-multi-agent-beta-0309 directly (model slug `grok-4.20-multi-agent-0309`; aliases: grok-4.20-multi-agent, grok-4.20-multi-agent-latest, grok-4.20-multi-agent-beta-0309, grok-4.20-multi-agent-experimental-beta-0304). Same pricing as the base model ($1.25/$2.50 per 1M, $0.20 cached) and same stated 1,000,000-token context window, subject to the identical primary-vs-aggregator discrepancy documented on the sibling 'Grok 4.20' entry (independent aggregators including LLM Stats -- which separately tracks 'Grok-4.20 Multi-Agent Beta', released Mar 9, 2026, at $2.00/$6.00 and 2M context -- again disagree with the primary source's 1M/$1.25 figures, likely reflecting a later point-release; I trusted the live primary-source page). The 4-agent architecture and named roles (Grok/Captain, Harper, Benjamin, Lucas) are independently corroborated across multiple unrelated secondary write-ups (natural20.com citing NextBigFuture and a Yahoo Finance piece on Alpha Arena live-trading results; aimlapi.com; cometapi.com) describing the same four agents consistently enough to treat as accurate, even though xAI itself never published an official blog post for this release (confirmed absent: x.ai/news/grok-4-20 404s, and natural20.com explicitly notes xAI's last x.ai/news entry at the time was the Nov 2025 Grok 4.1 post). NO VERIFIED BENCHMARK SCORES for the same reasons documented on the sibling 'Grok 4.20' entry: no xAI-published benchmark table exists, LLM Stats shows 'Score pending' for this exact model, and I deliberately did not use the single-sourced Alpha Arena live-trading returns (+34.59%) or an 'estimated LMArena Elo of 1505-1535' cited by natural20.com, since neither is a standard benchmark in this corpus's approved slug taxonomy and the Elo figure is explicitly self-described as an estimate rather than a measured result."
+}

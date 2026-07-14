@@ -1,0 +1,46 @@
+{
+  "slug": "qwen3-5-plus",
+  "name": "Qwen3.5-Plus",
+  "orgSlug": "alibaba",
+  "familySlug": "qwen3-5",
+  "releaseDate": "2026-02-16",
+  "status": "released",
+  "predecessor": null,
+  "openness": "closed",
+  "license": "Proprietary",
+  "paramsB": null,
+  "activeParamsB": null,
+  "archClass": "hybrid",
+  "archDisplay": "Hosted product tier of the Qwen3.5 hybrid-attention MoE line (Gated DeltaNet + Gated Attention + MoE, Qwen3-Next lineage); exact parameter/expert configuration for the specific hosted 'Plus' checkpoint undisclosed",
+  "ctxK": 1000,
+  "modalities": [
+    "text",
+    "vision"
+  ],
+  "langCount": null,
+  "capabilities": {
+    "reasoning": true,
+    "coding": true,
+    "vision": true,
+    "functionCalling": true,
+    "toolUse": true,
+    "agentic": true
+  },
+  "apiAvailable": true,
+  "price": {
+    "input": 0.4,
+    "output": 2.4
+  },
+  "links": {
+    "docs": "https://qwen.ai/blog?id=qwen3.5"
+  },
+  "note": "Hosted/API counterpart to the open-weight Qwen3.5-397B-A17B, launched the same day via Alibaba Cloud Model Studio with a 1M-token default context, official built-in tools, and adaptive tool use on top of the open-weight base.",
+  "quants": [],
+  "vramQ4Gb": null,
+  "vramFp16Gb": null,
+  "tps4090": null,
+  "tpsNote": null,
+  "effortLabel": null,
+  "isDefaultConfig": true,
+  "isBestConfig": true
+}

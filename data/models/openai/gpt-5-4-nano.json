@@ -1,0 +1,46 @@
+{
+  "slug": "gpt-5-4-nano",
+  "name": "GPT-5.4 nano",
+  "orgSlug": "openai",
+  "familySlug": "gpt-5-4",
+  "releaseDate": "2026-03-17",
+  "status": "released",
+  "predecessor": "gpt-5-4",
+  "openness": "closed",
+  "license": "Proprietary (OpenAI API Terms)",
+  "paramsB": null,
+  "activeParamsB": null,
+  "archClass": "dense",
+  "archDisplay": "Undisclosed architecture (presumed dense transformer); cheapest/fastest tier of the GPT-5.4 family, targeted at classification, extraction, ranking, and lightweight coding subagents; lacks native computer-use tool support that mini/flagship have",
+  "ctxK": 400,
+  "modalities": [
+    "text",
+    "vision"
+  ],
+  "langCount": null,
+  "capabilities": {
+    "reasoning": true,
+    "coding": true,
+    "vision": true,
+    "functionCalling": true,
+    "toolUse": true,
+    "agentic": true
+  },
+  "apiAvailable": true,
+  "price": {
+    "input": 0.2,
+    "output": 1.25
+  },
+  "links": {
+    "docs": "https://developers.openai.com/api/docs/models/gpt-5.4-nano"
+  },
+  "note": "Cheapest tier of the GPT-5.4 family, launched Mar 17 2026 alongside GPT-5.4 mini via OpenAI's own announcement as a distinct, separately-priced ($0.20/$1.25 vs GPT-5 nano's $0.05 per-M input per OpenAI's own pricing-comparison table), separately-benchmarked model -- not a repricing of GPT-5 nano. API-only (no ChatGPT/Codex availability); OpenAI's own model card lists computer-use as 'Not supported' for this tier (unlike mini/flagship).",
+  "quants": [],
+  "vramQ4Gb": null,
+  "vramFp16Gb": null,
+  "tps4090": null,
+  "tpsNote": null,
+  "effortLabel": null,
+  "isDefaultConfig": false,
+  "isBestConfig": false
+}

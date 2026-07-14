@@ -1,3 +1,4 @@
 model_slug,score,source,source_url,evaluated_at,notes
 gpt-5-2,86.2,self-reported,https://openai.com/index/introducing-gpt-5-2/,,"ARC-AGI-1 Verified, GPT-5.2 Thinking; confirmed"
 gpt-5-4,93.7,self-reported,https://the-decoder.com/openai-launches-gpt-5-4-thinking-and-pro-combining-coding-reasoning-and-computer-use-in-one-model/,,ARC-AGI-1 (Pro variant scores 94.5)
+gpt-5-4-pro,94.5,self-reported,https://the-decoder.com/openai-launches-gpt-5-4-thinking-and-pro-combining-coding-reasoning-and-computer-use-in-one-model/,2026-03-05,ARC-AGI-1 (Verified). Cross-confirmed by DataLearnerAI (94.50).

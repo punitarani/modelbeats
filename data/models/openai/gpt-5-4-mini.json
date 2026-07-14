@@ -1,0 +1,46 @@
+{
+  "slug": "gpt-5-4-mini",
+  "name": "GPT-5.4 mini",
+  "orgSlug": "openai",
+  "familySlug": "gpt-5-4",
+  "releaseDate": "2026-03-17",
+  "status": "released",
+  "predecessor": "gpt-5-4",
+  "openness": "closed",
+  "license": "Proprietary (OpenAI API Terms)",
+  "paramsB": null,
+  "activeParamsB": null,
+  "archClass": "dense",
+  "archDisplay": "Undisclosed architecture (presumed dense transformer); cost-efficient mid-tier sibling of GPT-5.4, optimized for coding, computer use, and subagent workloads, running more than 2x faster than the flagship",
+  "ctxK": 400,
+  "modalities": [
+    "text",
+    "vision"
+  ],
+  "langCount": null,
+  "capabilities": {
+    "reasoning": true,
+    "coding": true,
+    "vision": true,
+    "functionCalling": true,
+    "toolUse": true,
+    "agentic": true
+  },
+  "apiAvailable": true,
+  "price": {
+    "input": 0.75,
+    "output": 4.5
+  },
+  "links": {
+    "docs": "https://developers.openai.com/api/docs/models/gpt-5.4-mini"
+  },
+  "note": "Mid-tier sibling of GPT-5.4, launched Mar 17 2026 (12 days after the flagship/Pro) via OpenAI's own 'Introducing GPT-5.4 mini and nano' announcement as a distinct, separately-priced, separately-benchmarked model -- not a rename or repricing of GPT-5 mini. Runs >2x faster than GPT-5 mini and beats it on every published coding/tool/knowledge/vision benchmark; available in ChatGPT (Free/Go default, fallback for others), Codex, and the API.",
+  "quants": [],
+  "vramQ4Gb": null,
+  "vramFp16Gb": null,
+  "tps4090": null,
+  "tpsNote": null,
+  "effortLabel": null,
+  "isDefaultConfig": false,
+  "isBestConfig": false
+}

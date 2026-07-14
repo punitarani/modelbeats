@@ -5,6 +5,13 @@ gemini-3-1-pro,80.5,self-reported,https://deepmind.google/models/gemini/pro/,202
 gemini-3-5-flash,83.6,self-reported,https://deepmind.google/models/gemini/flash/,2026-05-19,
 gemini-3-flash,81.2,self-reported,https://storage.googleapis.com/deepmind-media/Model-Cards/Gemini-3-Flash-Model-Card.pdf,2025-12-01,MMMU-Pro variant
 gemini-3-pro,81,self-reported,https://storage.googleapis.com/deepmind-media/Model-Cards/Gemini-3-Pro-Model-Card.pdf,2025-11-01,MMMU-Pro variant
+gemma-4-26b-a4b,73.8,self-reported,https://huggingface.co/google/gemma-4-26B-A4B-it,2026-04-02,"MMMU-Pro (vision), 26B A4B; also independently listed in the model repo's structured eval_results (.eval_results/mmmu_pro.yaml, value 73.8)."
+gpt-5-4-mini,76.6,self-reported,https://openai.com/index/introducing-gpt-5-4-mini-and-nano/,2026-03-17,"MMMU-Pro (standard, no Python tool; the 'w/ Python' variant scores 78.0%), xhigh reasoning effort."
+gpt-5-4-nano,66.1,self-reported,https://openai.com/index/introducing-gpt-5-4-mini-and-nano/,2026-03-17,"MMMU-Pro (standard, no Python tool; the 'w/ Python' variant scores 69.5%), xhigh reasoning effort."
+kimi-k2-5,78.5,self-reported,https://www.kimi.com/blog/kimi-k2-5,,"MMMU-Pro, official protocol (input order preserved, images prepended)"
 kimi-k2-6,79.4,self-reported,https://www.kimi.com/blog/kimi-k2-6,,MMMU-Pro standard; vendor also reports 80.1 with python tool use enabled
 mimo-v2-5,77.9,self-reported,https://mimo.xiaomi.com/mimo-v2-5/,,MMMU-Pro ('Image Understanding & Reasoning'); from the embedded multimodalData chart array.
 minimax-m3,78.1,self-reported,https://huggingface.co/MiniMaxAI/MiniMax-M3,,Reported on the official model card as 'MMMU Pro'.
+qwen3-5-122b-a10b,76.9,self-reported,https://huggingface.co/Qwen/Qwen3.5-122B-A10B,,Vision-Language table.
+qwen3-5-omni-flash,68.2,self-reported,https://qwen.ai/blog?id=qwen3.5-omni,2026-04-17,"Table 6 (Vision→Text), STEM and Puzzle section. Paper does not specify which MMMU-Pro input variant (standard vs. vision-only) was used; flagging as a minor methodology caveat."
+qwen3-5-omni-plus,73.9,self-reported,https://arxiv.org/abs/2604.15804,2026-04-21,"Table 6 (Vision→Text), Qwen3.5-Omni-Plus column, cell S5.T6.3.4.4."

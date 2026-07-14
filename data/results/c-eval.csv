@@ -11,5 +11,9 @@ qwen-14b,72.1,self-reported,https://huggingface.co/Qwen/Qwen-14B,2023-09-25,5-sh
 qwen-72b,83.3,self-reported,https://huggingface.co/Qwen/Qwen-72B,2023-11-30,
 qwen-7b,63.5,self-reported,https://huggingface.co/Qwen/Qwen-7B,2023-09-28,"5-shot, val"
 qwen1-5-72b,84.1,self-reported,https://qwenlm.github.io/blog/qwen1.5/,2024-02-04,base model
+qwen3-5-122b-a10b,91.9,self-reported,https://huggingface.co/Qwen/Qwen3.5-122B-A10B,,"Knowledge category, Language benchmark table."
+qwen3-5-omni-flash,86,self-reported,https://qwen.ai/blog?id=qwen3.5-omni,,
+qwen3-5-omni-plus,92,self-reported,https://qwen.ai/blog?id=qwen3.5-omni,,
+qwen3-5-plus,92.3,self-reported,https://qwen.ai/blog?id=qwen3.5-omni,,Qwen3.5-Plus-NoThinking
 skywork-13b,60.6,self-reported,https://huggingface.co/Skywork/Skywork-13B-base,,
 skywork-moe-base,82.2,self-reported,https://arxiv.org/html/2406.06563v1,,

@@ -4,3 +4,6 @@ glm-4v-9b,786,self-reported,https://huggingface.co/THUDM/glm-4v-9b,,out of 1000
 internvl2-5-78b,854,self-reported,https://internvl.github.io/blog/2024-12-05-InternVL-2.5/,,
 internvl3-78b,906,self-reported,https://arxiv.org/html/2504.10479v1,,
 minicpm-o-2-6,897,self-reported,https://huggingface.co/openbmb/MiniCPM-o-2_6,2025-01-01,State-of-the-art for models under 25B params
+qwen3-5-122b-a10b,92.1,self-reported,https://huggingface.co/Qwen/Qwen3.5-122B-A10B,,Text Recognition & Document Understanding category.
+qwen3-5-omni-flash,89.1,self-reported,https://qwen.ai/blog?id=qwen3.5-omni,2026-04-17,"Table 6 (Vision→Text), Text Recognition and Document Understanding section."
+qwen3-5-omni-plus,91.3,self-reported,https://arxiv.org/abs/2604.15804,2026-04-21,"Table 6 (Vision→Text), Qwen3.5-Omni-Plus column, cell S5.T6.3.20.4."

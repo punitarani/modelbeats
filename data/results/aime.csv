@@ -22,6 +22,7 @@ gemini-2-5-flash-lite-thinking,63.1,self-reported,https://storage.googleapis.com
 gemini-3-flash,95.2,self-reported,https://storage.googleapis.com/deepmind-media/Model-Cards/Gemini-3-Flash-Model-Card.pdf,2025-12-01,"AIME 2025, no tools (99.7% with code execution)"
 gemini-3-pro,95,self-reported,https://storage.googleapis.com/deepmind-media/Model-Cards/Gemini-3-Pro-Model-Card.pdf,2025-11-01,"AIME 2025, no tools (100% with code execution)"
 gemma-4,89.2,self-reported,https://ai.google.dev/gemma/docs/core/model_card_4,2026-04-02,"AIME 2026, no tools, 31B"
+gemma-4-26b-a4b,88.3,self-reported,https://huggingface.co/google/gemma-4-26B-A4B-it,2026-04-02,"AIME 2026, no tools, 26B A4B."
 glm-4-5-355b-a32b,91,self-reported,https://arxiv.org/abs/2508.06471,,"AIME 2024, GLM-4.5 paper"
 glm-4-5-air-106b-a12b,89.4,independent,https://llm-stats.com/models/compare/glm-4.5-vs-glm-4.5-air,2026-07-12,AIME 2024
 glm-4-6,93.9,self-reported,https://cirra.ai/articles/glm-4-6-vs-claude-sonnet-comparison,,"AIME 2025, standard (non-tool) mode; Z.ai's own launch figure, relayed via Communeify/cirra.ai"
@@ -52,6 +53,7 @@ intellect-3,90.8,self-reported,https://arxiv.org/pdf/2512.16144,,AIME 2024
 internlm3-8b-instruct,20,self-reported,https://internlm.readthedocs.io/en/latest/model_card/InternLM3.html,,AIME2024
 kimi-k1-5,77.5,self-reported,https://arxiv.org/abs/2501.12599,,Long-CoT variant
 kimi-k2,69.6,self-reported,https://huggingface.co/moonshotai/Kimi-K2-Instruct,,"AIME 2024, avg@64"
+kimi-k2-5,96.1,self-reported,https://www.kimi.com/blog/kimi-k2-5,,"AIME 2025, avg@32"
 kimi-k2-6,96.4,self-reported,https://www.kimi.com/blog/kimi-k2-6,,vendor-labeled 'AIME 2026'
 kimi-k2-thinking,99.1,self-reported,https://huggingface.co/moonshotai/Kimi-K2-Thinking,,AIME25 with python tool
 lg-exaone-4-0-32b-non-reasoning,35.9,self-reported,https://arxiv.org/abs/2507.11407,,"AIME 2025, non-reasoning mode"
@@ -93,6 +95,8 @@ qwen3-30b-a3b-non-thinking,32.8,self-reported,https://arxiv.org/abs/2505.09388,,
 qwen3-30b-a3b-thinking,80.4,self-reported,https://arxiv.org/abs/2505.09388,,"AIME'24, thinking mode, Qwen3 Technical Report Table 15"
 qwen3-32b-non-thinking,31,self-reported,https://arxiv.org/abs/2505.09388,,"AIME'24, non-thinking mode, Table 14"
 qwen3-32b-thinking,81.4,self-reported,https://arxiv.org/abs/2505.09388,,"AIME'24, thinking mode, Table 13"
+qwen3-5-397b-a17b,91.3,self-reported,https://huggingface.co/Qwen/Qwen3.5-397B-A17B,,"AIME26 (AIME 2026). Corrected from 93.3 to 91.3: the model's own HF model card table and the original qwen.ai/blog?id=qwen3.5 launch blog both report 91.3, corroborated independently by third-party trackers automatio.ai and morphllm.com. The candidate's cited value (93.3) came from qwen.ai/blog?id=qwen3.6-27b's cross-generation table, which carries an explicit footnote from Qwen themselves: 'We use the full AIME 2026 (I & II), where the scores may differ from Qwen 3.5 notes' -- i.e. Qwen is flagging that this is a different, non-canonical re-evaluation, not the model's own self-reported figure."
+qwen3-6-plus,95.3,self-reported,https://qwen.ai/blog?id=qwen3.6,,AIME 2026 (I & II); same column-position inference
 qwen3-8b-non-thinking,29.1,self-reported,https://arxiv.org/abs/2505.09388,,"AIME'24, non-thinking mode, Table 18"
 qwen3-8b-thinking,76,self-reported,https://arxiv.org/abs/2505.09388,,"AIME'24, thinking mode, Table 17"
 qwen3-max,80.6,self-reported,https://felloai.com/qwen-3-max-ai-all-you-need-to-know-about-alibabas-1-trillion-parameter-llm/,,"AIME 2025, Qwen3-Max-Instruct (Preview, non-thinking), official launch chart (also transcribed by localllm.in). Some GA-release transcriptions cite 81.6; Thinking variant later reported 100 with tools + test-time compute."

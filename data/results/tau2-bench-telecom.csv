@@ -4,6 +4,8 @@ glm-4-6,75.9,self-reported,https://cirra.ai/articles/glm-4-6-vs-claude-sonnet-co
 glm-5,89.7,self-reported,https://huggingface.co/zai-org/GLM-5,,"tau2-Bench, labeled 'T2-Bench' on HF model card"
 gpt-5,96.7,self-reported,https://openai.com/index/introducing-gpt-5-for-developers/,2025-08-07,"τ²-bench telecom, high reasoning effort"
 gpt-5-2,98.7,self-reported,https://openai.com/index/introducing-gpt-5-2/,,"Tau2-bench Telecom, GPT-5.2 Thinking; confirmed"
+gpt-5-4-mini,93.4,self-reported,https://openai.com/index/introducing-gpt-5-4-mini-and-nano/,2026-03-17,"tau2-bench (telecom), xhigh reasoning effort."
+gpt-5-4-nano,92.5,self-reported,https://openai.com/index/introducing-gpt-5-4-mini-and-nano/,2026-03-17,"tau2-bench (telecom), xhigh reasoning effort. datacamp.com independently notes GPT-5.4 nano scores 9.5 points higher than Claude Haiku 4.5 on this benchmark, consistent with this figure."
 grok-4-3-high,97.7,independent,https://artificialanalysis.ai/articles/xai-launches-grok-4-3-with-improved-agentic-performance-and-lower-pricing,,"tau2-Bench Telecom, as measured by Artificial Analysis at launch, 2026-04-30 (also cited as 98% by other outlets)."
 naver-hyperclova-x-seed-think-32b,87,independent,https://www.ajupress.com/view/20251230092739502,2025-12-26,"tau2-Bench Telecom, per Artificial Analysis (article phrases it as '87 percent in an evaluation that assessed agent tool usage capabilities through a simulated telecommunications customer support scenario')"
 qwen3-235b-a22b-thinking-2507,45.6,self-reported,https://huggingface.co/Qwen/Qwen3-235B-A22B-Thinking-2507,,TAU2-Telecom

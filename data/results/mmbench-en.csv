@@ -1,2 +1,5 @@
 model_slug,score,source,source_url,evaluated_at,notes
 glm-4v-9b,81.1,self-reported,https://huggingface.co/THUDM/glm-4v-9b,,MMBench-EN-Test
+qwen3-5-122b-a10b,92.8,self-reported,https://huggingface.co/Qwen/Qwen3.5-122B-A10B,,Reported as 'MMBench EN-DEV-v1.1'.
+qwen3-5-omni-flash,88.8,self-reported,https://qwen.ai/blog?id=qwen3.5-omni,2026-04-17,"Reported as 'MMBenchEN-DEV-v1.1' in Table 6 (Vision→Text), General VQA section — the English dev split, v1.1. Flag the split/version when comparing to other MMBench-EN entries that may use a different split."
+qwen3-5-omni-plus,92.8,self-reported,https://arxiv.org/abs/2604.15804,2026-04-21,"Table 6 (Vision→Text), General VQA section, Qwen3.5-Omni-Plus column, cell S5.T6.3.13.4. Paper labels row 'MMBench_{EN-DEV-v1.1}' (English dev split, v1.1)."

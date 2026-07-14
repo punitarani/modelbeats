@@ -3,3 +3,6 @@ claude-opus-4-7,82.1,self-reported,https://www.vellum.ai/blog/claude-opus-4-7-be
 command-a-218b,52.7,self-reported,https://cohere.com/blog/command-a-plus,,reasoning subset
 gemini-3-5-flash,84.2,self-reported,https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-3-5/,2026-05-19,CharXiv multimodal reasoning
 mimo-v2-5,81,self-reported,https://mimo.xiaomi.com/mimo-v2-5/,,"CharXiv 'RQ' (reasoning-question) subset, chart-understanding benchmark; from the embedded multimodalData chart array."
+qwen3-5-122b-a10b,77.2,self-reported,https://huggingface.co/Qwen/Qwen3.5-122B-A10B,,Reported as 'CharXiv(RQ)' (reasoning-question subset).
+qwen3-5-omni-flash,64.4,self-reported,https://qwen.ai/blog?id=qwen3.5-omni,2026-04-17,"Reported as 'CharXiv (RQ)' in Table 6 — the Reasoning Questions subset only, not CharXiv's Descriptive Questions subset or a combined score. Flag this subset scope when comparing to full-CharXiv entries."
+qwen3-5-omni-plus,72.5,self-reported,https://arxiv.org/abs/2604.15804,2026-04-21,"Table 6 (Vision→Text), Text Recognition/Document Understanding section, Qwen3.5-Omni-Plus column, cell S5.T6.3.16.4. Paper labels row 'CharXiv (RQ)' — the reasoning-question subset."

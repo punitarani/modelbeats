@@ -8,6 +8,7 @@ deepseek-v4-flash-think-high,2816,self-reported,https://huggingface.co/deepseek-
 deepseek-v4-flash-think-max,3052,self-reported,https://huggingface.co/deepseek-ai/DeepSeek-V4-Flash,,"Codeforces rating, Think Max mode"
 deepseek-v4-pro-think-high,2919,self-reported,https://huggingface.co/deepseek-ai/DeepSeek-V4-Pro,,"Codeforces rating, Think High mode"
 deepseek-v4-pro-think-max,3206,self-reported,https://redreamality.com/blog/deepseek-v4-benchmarks-guide/,,"CodeElo/Codeforces rating, Pro-Max mode"
+gemma-4-26b-a4b,1718,self-reported,https://huggingface.co/google/gemma-4-26B-A4B-it,2026-04-02,"Codeforces Elo, 26B A4B (dense 31B scores 2150 on the same table)."
 openai-o1,1891,self-reported,https://www.datacamp.com/blog/o3-openai,2024-12-01,"Codeforces Elo [relabeled self-reported: aggregator/press relay of a vendor figure, not an independent re-measurement]"
 openai-o1-mini,1650,independent,https://www.analyticsvidhya.com/blog/2024/09/o1-preview-vs-o1-mini/,2024-09-01,"Codeforces Elo, ~86th percentile"
 openai-o1-preview,1258,independent,https://www.analyticsvidhya.com/blog/2024/09/o1-preview-vs-o1-mini/,2024-09-01,
@@ -17,4 +18,5 @@ openai-o3-mini-low,1831,independent,https://www.lesswrong.com/posts/srdxEAcdmetd
 openai-o3-mini-medium,2036,independent,https://www.lesswrong.com/posts/srdxEAcdmetdAiGcz/o3-mini-early-days,2025-01-01,"Codeforces Elo, medium effort"
 openai-o3-pro,2748,self-reported,https://binaryverseai.com/chatgpt-o3-pro-review-benchmarks-hacks/,,"Elo rating [relabeled self-reported: aggregator/mirror relay of a vendor figure, not an independent re-measurement]"
 openai-o4-mini,2719,self-reported,https://openai.com/index/introducing-o3-and-o4-mini/,2025-04-16,Elo rating
+qwen3-5-122b-a10b,2100,self-reported,https://huggingface.co/Qwen/Qwen3.5-122B-A10B,,"Elo rating, not a 0-100 score. Footnote in the README states this was evaluated on Qwen's own query set (not necessarily the standard public CodeForces problem set), so treat as vendor-reported and not perfectly apples-to-apples with third-party CodeForces evals."
 seed1-5-thinking,55,self-reported,https://github.com/ByteDance-Seed/Seed-Thinking-v1.5,,Codeforces pass@8

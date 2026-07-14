@@ -1,0 +1,81 @@
+{
+  "name": "Qwen3.5-Plus",
+  "org": "Alibaba",
+  "family": "Qwen3.5",
+  "releaseDate": "2026-02-16",
+  "status": "released",
+  "openness": "closed",
+  "license": "Proprietary",
+  "paramsB": null,
+  "activeParamsB": null,
+  "archClass": "hybrid",
+  "archDisplay": "Hosted product tier of the Qwen3.5 hybrid-attention MoE line (Gated DeltaNet + Gated Attention + MoE, Qwen3-Next lineage); exact parameter/expert configuration for the specific hosted 'Plus' checkpoint undisclosed",
+  "ctxK": 1000,
+  "modalities": [
+    "text",
+    "vision"
+  ],
+  "langCount": null,
+  "capabilities": {
+    "reasoning": true,
+    "coding": true,
+    "vision": true,
+    "functionCalling": true,
+    "toolUse": true,
+    "agentic": true
+  },
+  "apiAvailable": true,
+  "price": {
+    "input": 0.4,
+    "output": 2.4
+  },
+  "links": {
+    "docs": "https://qwen.ai/blog?id=qwen3.5"
+  },
+  "note": "Hosted/API counterpart to the open-weight Qwen3.5-397B-A17B, launched the same day via Alibaba Cloud Model Studio with a 1M-token default context, official built-in tools, and adaptive tool use on top of the open-weight base.",
+  "quants": [],
+  "vramQ4Gb": null,
+  "vramFp16Gb": null,
+  "tps4090": null,
+  "tpsNote": null,
+  "effortLabel": null,
+  "isDefaultConfig": true,
+  "isBestConfig": true,
+  "specSources": {
+    "existence/features/ctxK": "https://qwen.ai/blog?id=qwen3.5",
+    "releaseDate": "https://github.com/QwenLM/Qwen3.6 (README changelog, matches CNBC's Feb 17 coverage of the joint launch)",
+    "pricing (official, International 0-256K tier)": "https://www.alibabacloud.com/help/en/model-studio/model-pricing",
+    "results": "https://qwen.ai/blog?id=qwen3.5-omni (Qwen3.5-Plus-NoThinking used as comparison baseline)"
+  },
+  "results": [
+    {
+      "benchmarkSlug": "mmlu-pro",
+      "score": 86.8,
+      "source": "self-reported",
+      "sourceUrl": "https://qwen.ai/blog?id=qwen3.5-omni",
+      "notes": "Qwen3.5-Plus-NoThinking, used as the baseline column in the Qwen3.5-Omni launch blog's text-benchmark table"
+    },
+    {
+      "benchmarkSlug": "c-eval",
+      "score": 92.3,
+      "source": "self-reported",
+      "sourceUrl": "https://qwen.ai/blog?id=qwen3.5-omni",
+      "notes": "Qwen3.5-Plus-NoThinking"
+    },
+    {
+      "benchmarkSlug": "ifeval",
+      "score": 89.7,
+      "source": "self-reported",
+      "sourceUrl": "https://qwen.ai/blog?id=qwen3.5-omni",
+      "notes": "Qwen3.5-Plus-NoThinking"
+    },
+    {
+      "benchmarkSlug": "ifbench",
+      "score": 51.1,
+      "source": "self-reported",
+      "sourceUrl": "https://qwen.ai/blog?id=qwen3.5-omni",
+      "notes": "Qwen3.5-Plus-NoThinking"
+    }
+  ],
+  "verificationNotes": "Confirmed real via the official qwen.ai launch blog (which announces the open-weight 397B-A17B and the hosted Plus tier together) and the official Alibaba Cloud Model Studio pricing page, which lists a versioned snapshot 'qwen3.5-plus-2026-02-15' with explicit tiered pricing ($0.40/$2.40 per M for 0-256K, $0.50/$3.00 for 256K-1M, International) -- used the base tier. Independent corroboration: a third-party review (medium.com/@leucopsis, 'Qwen3.5-Plus Review') and CNBC's coverage of the joint launch both place the release at Feb 16-17, 2026, consistent with the official GitHub changelog date of 2026-02-16 (the pricing page's internal snapshot suffix of '2026-02-15' is a 1-day variance, likely a timezone/versioning artifact, common across this vendor's other Plus-tier entries in this corpus e.g. Qwen3.7-Plus). Benchmark results are only available as the 'NoThinking' baseline used in a later Qwen3.5-Omni comparison table (self-reported, single primary source) -- no independently-corroborated third-party score could be found in this pass; flagged as lower-confidence than the open-weight sibling's results. Architecture/params undisclosed for this hosted tier specifically, consistent with corpus convention for all Plus/Max hosted variants (Qwen3-Max, Qwen3.7-Max, Qwen3.7-Plus)."
+}

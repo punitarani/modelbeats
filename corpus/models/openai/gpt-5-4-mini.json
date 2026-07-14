@@ -1,0 +1,108 @@
+{
+  "name": "GPT-5.4 mini",
+  "org": "OpenAI",
+  "family": "GPT-5.4",
+  "releaseDate": "2026-03-17",
+  "status": "released",
+  "openness": "closed",
+  "license": "Proprietary (OpenAI API Terms)",
+  "paramsB": null,
+  "activeParamsB": null,
+  "archClass": "dense",
+  "archDisplay": "Undisclosed architecture (presumed dense transformer); cost-efficient mid-tier sibling of GPT-5.4, optimized for coding, computer use, and subagent workloads, running more than 2x faster than the flagship",
+  "ctxK": 400,
+  "modalities": [
+    "text",
+    "vision"
+  ],
+  "langCount": null,
+  "capabilities": {
+    "reasoning": true,
+    "coding": true,
+    "vision": true,
+    "functionCalling": true,
+    "toolUse": true,
+    "agentic": true
+  },
+  "apiAvailable": true,
+  "price": {
+    "input": 0.75,
+    "output": 4.5
+  },
+  "links": {
+    "docs": "https://developers.openai.com/api/docs/models/gpt-5.4-mini"
+  },
+  "note": "Mid-tier sibling of GPT-5.4, launched Mar 17 2026 (12 days after the flagship/Pro) via OpenAI's own 'Introducing GPT-5.4 mini and nano' announcement as a distinct, separately-priced, separately-benchmarked model -- not a rename or repricing of GPT-5 mini. Runs >2x faster than GPT-5 mini and beats it on every published coding/tool/knowledge/vision benchmark; available in ChatGPT (Free/Go default, fallback for others), Codex, and the API.",
+  "quants": [],
+  "vramQ4Gb": null,
+  "vramFp16Gb": null,
+  "tps4090": null,
+  "tpsNote": null,
+  "effortLabel": null,
+  "isDefaultConfig": false,
+  "isBestConfig": false,
+  "specSources": {
+    "releaseDate": "https://openai.com/index/introducing-gpt-5-4-mini-and-nano/",
+    "ctxK/priceInput/priceOutput": "https://developers.openai.com/api/docs/models/gpt-5.4-mini",
+    "openness": "https://developers.openai.com/api/docs/models/gpt-5.4-mini"
+  },
+  "results": [
+    {
+      "benchmarkSlug": "swe-bench-pro",
+      "score": 54.4,
+      "source": "self-reported",
+      "sourceUrl": "https://openai.com/index/introducing-gpt-5-4-mini-and-nano/",
+      "evaluatedAt": "2026-03-17",
+      "notes": "SWE-Bench Pro (Public), xhigh reasoning effort. Flagship scores 57.7%, GPT-5 mini scores 45.7% on the same table. Cross-confirmed verbatim by datacamp.com/blog/gpt-5-4-mini-nano (independent secondary source)."
+    },
+    {
+      "benchmarkSlug": "terminal-bench-2",
+      "score": 60,
+      "source": "self-reported",
+      "sourceUrl": "https://openai.com/index/introducing-gpt-5-4-mini-and-nano/",
+      "evaluatedAt": "2026-03-17",
+      "notes": "Terminal-Bench 2.0, xhigh reasoning effort. Cross-confirmed verbatim by datacamp.com/blog/gpt-5-4-mini-nano."
+    },
+    {
+      "benchmarkSlug": "gpqa",
+      "score": 88,
+      "source": "self-reported",
+      "sourceUrl": "https://openai.com/index/introducing-gpt-5-4-mini-and-nano/",
+      "evaluatedAt": "2026-03-17",
+      "notes": "GPQA Diamond, xhigh reasoning effort."
+    },
+    {
+      "benchmarkSlug": "osworld-verified",
+      "score": 72.1,
+      "source": "self-reported",
+      "sourceUrl": "https://openai.com/index/introducing-gpt-5-4-mini-and-nano/",
+      "evaluatedAt": "2026-03-17",
+      "notes": "OSWorld-Verified, xhigh reasoning effort. Cross-confirmed verbatim by datacamp.com/blog/gpt-5-4-mini-nano."
+    },
+    {
+      "benchmarkSlug": "hle",
+      "score": 28.2,
+      "source": "self-reported",
+      "sourceUrl": "https://openai.com/index/introducing-gpt-5-4-mini-and-nano/",
+      "evaluatedAt": "2026-03-17",
+      "notes": "Humanity's Last Exam, no tools, xhigh reasoning effort (with-tools variant scores 41.5%)."
+    },
+    {
+      "benchmarkSlug": "tau2-bench-telecom",
+      "score": 93.4,
+      "source": "self-reported",
+      "sourceUrl": "https://openai.com/index/introducing-gpt-5-4-mini-and-nano/",
+      "evaluatedAt": "2026-03-17",
+      "notes": "tau2-bench (telecom), xhigh reasoning effort."
+    },
+    {
+      "benchmarkSlug": "mmmu-pro",
+      "score": 76.6,
+      "source": "self-reported",
+      "sourceUrl": "https://openai.com/index/introducing-gpt-5-4-mini-and-nano/",
+      "evaluatedAt": "2026-03-17",
+      "notes": "MMMU-Pro (standard, no Python tool; the 'w/ Python' variant scores 78.0%), xhigh reasoning effort."
+    }
+  ],
+  "verificationNotes": "Existence and distinctness from GPT-5 mini confirmed by directly fetching OpenAI's own official launch post (openai.com/index/introducing-gpt-5-4-mini-and-nano/, dated Mar 17 2026), which explicitly benchmarks GPT-5.4 mini against GPT-5 mini side by side and states it 'significantly improves over GPT-5 mini across coding, reasoning, multimodal understanding, and tool use.' Pricing ($0.75/$4.50 per M), 400K context, and 128K max output independently confirmed via OpenAI's live developers.openai.com/api/docs/models/gpt-5.4-mini model card (own snapshot dated gpt-5.4-mini-2026-03-17, matching the announcement date). Independent secondary source datacamp.com/blog/gpt-5-4-mini-nano (fetched directly) corroborates the same benchmark table verbatim and its FAQ states plainly: 'Is GPT-5.4 mini just a faster GPT-5 mini? No, it's both faster and significantly stronger on benchmarks... while keeping a 400k context window.' All 7 result rows taken from OpenAI's own multi-table benchmark breakdown (Coding/Tool-calling/Intelligence/MM-Vision-CUA sections); Toolathlon and MCP Atlas scores were also published but omitted here since no corpus benchmark slug matches them."
+}

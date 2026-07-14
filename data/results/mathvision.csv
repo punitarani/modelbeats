@@ -1,2 +1,5 @@
 model_slug,score,source,source_url,evaluated_at,notes
 qvq-72b-preview,35.9,self-reported,https://huggingface.co/Qwen/QVQ-72B-Preview,,MathVision full
+qwen3-5-122b-a10b,86.2,self-reported,https://huggingface.co/Qwen/Qwen3.5-122B-A10B,,Vision-Language table; README footnote notes a fixed \boxed{} prompt was used for this model's score.
+qwen3-5-omni-flash,65.4,self-reported,https://qwen.ai/blog?id=qwen3.5-omni,2026-04-17,"Table 6 (Vision→Text), STEM and Puzzle section. Confirmed identical in arXiv:2604.15804 Table 6."
+qwen3-5-omni-plus,73,self-reported,https://arxiv.org/abs/2604.15804,2026-04-21,"Table 6 (Vision→Text), Qwen3.5-Omni-Plus column, cell S5.T6.3.5.4."

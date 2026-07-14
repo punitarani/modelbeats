@@ -1,0 +1,46 @@
+{
+  "slug": "gpt-5-4-pro",
+  "name": "GPT-5.4 Pro",
+  "orgSlug": "openai",
+  "familySlug": "gpt-5-4",
+  "releaseDate": "2026-03-05",
+  "status": "released",
+  "predecessor": null,
+  "openness": "closed",
+  "license": "Proprietary (OpenAI API Terms)",
+  "paramsB": null,
+  "activeParamsB": null,
+  "archClass": "dense",
+  "archDisplay": "Undisclosed architecture (presumed dense transformer, reasoning-tuned), same family as GPT-5.4 flagship but run at maximum reasoning effort ('Highest' reasoning / 'Slowest' speed per OpenAI's own model card); Responses-API-only, supports multi-turn background processing for long-running tasks",
+  "ctxK": 1050,
+  "modalities": [
+    "text",
+    "vision"
+  ],
+  "langCount": null,
+  "capabilities": {
+    "reasoning": true,
+    "coding": true,
+    "vision": true,
+    "functionCalling": true,
+    "toolUse": true,
+    "agentic": true
+  },
+  "apiAvailable": true,
+  "price": {
+    "input": 30,
+    "output": 180
+  },
+  "links": {
+    "docs": "https://developers.openai.com/api/docs/models/gpt-5.4-pro"
+  },
+  "note": "Top-performance tier of the GPT-5.4 family, launched same-day as the flagship/Thinking tier (Mar 5, 2026); available on ChatGPT Pro/Enterprise plans and via the Responses API only (not Chat Completions). Priced at $30/$180 per M tokens on a shared 1.05M-token context window. Interestingly, on GDPval the standard Thinking tier (83.0%) actually beats Pro (82.0%) -- OpenAI's own chart flags this explicitly.",
+  "quants": [],
+  "vramQ4Gb": null,
+  "vramFp16Gb": null,
+  "tps4090": null,
+  "tpsNote": null,
+  "effortLabel": null,
+  "isDefaultConfig": false,
+  "isBestConfig": true
+}

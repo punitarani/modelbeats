@@ -1,0 +1,48 @@
+{
+  "slug": "qwen3-5-omni-flash",
+  "name": "Qwen3.5-Omni-Flash",
+  "orgSlug": "alibaba",
+  "familySlug": "qwen3-5",
+  "releaseDate": "2026-03-30",
+  "status": "released",
+  "predecessor": "qwen3-5-122b-a10b",
+  "openness": "closed",
+  "license": "Proprietary",
+  "paramsB": null,
+  "activeParamsB": null,
+  "archClass": "hybrid",
+  "archDisplay": "Thinker-Talker omnimodal architecture; both Thinker and Talker adopt Hybrid-Attention MoE; RVQ speech tokenizer (from Qwen3-Omni) plus ARIA (Adaptive Rate Interleave Alignment) text-speech interleaving in the Talker; exact parameter/expert configuration undisclosed",
+  "ctxK": 256,
+  "modalities": [
+    "text",
+    "vision",
+    "audio",
+    "video"
+  ],
+  "langCount": null,
+  "capabilities": {
+    "reasoning": true,
+    "coding": true,
+    "vision": true,
+    "functionCalling": true,
+    "toolUse": true,
+    "agentic": true
+  },
+  "apiAvailable": true,
+  "price": {
+    "input": 0.4,
+    "output": 2.2
+  },
+  "links": {
+    "docs": "https://qwen.ai/blog?id=qwen3.5-omni"
+  },
+  "note": "Smaller/faster tier of the Qwen3.5-Omni family (alongside Plus and a third 'Light' tier not in original leads); processes 10+ hours of audio and 400+ seconds of 720p audio-visual input at 1 FPS, with realtime speech generation. Notably released closed-weight, breaking Alibaba's open-weight streak for this class of model per press coverage.",
+  "quants": [],
+  "vramQ4Gb": null,
+  "vramFp16Gb": null,
+  "tps4090": null,
+  "tpsNote": null,
+  "effortLabel": null,
+  "isDefaultConfig": true,
+  "isBestConfig": false
+}

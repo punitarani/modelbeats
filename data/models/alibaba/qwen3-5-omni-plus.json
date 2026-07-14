@@ -1,0 +1,48 @@
+{
+  "slug": "qwen3-5-omni-plus",
+  "name": "Qwen3.5-Omni-Plus",
+  "orgSlug": "alibaba",
+  "familySlug": "qwen3-5",
+  "releaseDate": "2026-03-30",
+  "status": "released",
+  "predecessor": "qwen3-5-122b-a10b",
+  "openness": "closed",
+  "license": "Proprietary",
+  "paramsB": null,
+  "activeParamsB": null,
+  "archClass": "hybrid",
+  "archDisplay": "Thinker-Talker omnimodal architecture; both Thinker and Talker adopt Hybrid-Attention MoE; RVQ speech tokenizer plus ARIA text-speech interleaving in the Talker; exact parameter/expert configuration undisclosed",
+  "ctxK": 256,
+  "modalities": [
+    "text",
+    "vision",
+    "audio",
+    "video"
+  ],
+  "langCount": null,
+  "capabilities": {
+    "reasoning": true,
+    "coding": true,
+    "vision": true,
+    "functionCalling": true,
+    "toolUse": true,
+    "agentic": true
+  },
+  "apiAvailable": true,
+  "price": {
+    "input": 1.4,
+    "output": 8.3
+  },
+  "links": {
+    "docs": "https://qwen.ai/blog?id=qwen3.5-omni"
+  },
+  "note": "Flagship tier of the Qwen3.5-Omni family; claims SOTA on 215 audio/audio-visual understanding, reasoning, and interaction subtasks/benchmarks (3 audio-visual, 5 audio, 8 ASR, 156 language-specific S2TT, 43 language-specific ASR benchmarks, per the launch blog). Supports controllable, structured audio/audio-visual captioning down to screenplay-level detail.",
+  "quants": [],
+  "vramQ4Gb": null,
+  "vramFp16Gb": null,
+  "tps4090": null,
+  "tpsNote": null,
+  "effortLabel": null,
+  "isDefaultConfig": true,
+  "isBestConfig": true
+}
