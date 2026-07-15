@@ -53,13 +53,6 @@
       "notes": "GPQA Diamond, from Tencent's own Hy3-preview model card (295B-A21B); full July release benchmark table not separately located [Corrected during full-corpus audit: The existing 87.2 figure was pulled from the April-2026 Hy3-preview build's GitHub model card (explicitly flagged in the prior verificationNotes as a stand-in because 'the full July release benchmark table' hadn't been located). That table has now been located: the official tencent/Hy3 model card's benchmark-appendix image reports GPQA Diamond = 90.4 for the actual shipped Hy3 (295B-A21B) model, v]"
     },
     {
-      "benchmarkSlug": "mmlu-pro",
-      "score": 65.76,
-      "source": "self-reported",
-      "sourceUrl": "https://github.com/Tencent-Hunyuan/Hy3-preview",
-      "notes": "5-shot, from Tencent's own Hy3-preview model card"
-    },
-    {
       "benchmarkSlug": "swe-bench",
       "score": 78,
       "source": "self-reported",

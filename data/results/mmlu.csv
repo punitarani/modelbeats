@@ -65,7 +65,6 @@ gemini-2-5-flash,88.4,self-reported,https://storage.googleapis.com/deepmind-medi
 gemini-2-5-flash-lite-non-thinking,81.1,self-reported,https://storage.googleapis.com/deepmind-media/Model-Cards/Gemini-2-5-Flash-Lite-Model-Card.pdf,2025-06-01,"Global MMLU (Lite), non-thinking"
 gemini-2-5-flash-lite-thinking,84.5,self-reported,https://storage.googleapis.com/deepmind-media/Model-Cards/Gemini-2-5-Flash-Lite-Model-Card.pdf,2025-06-01,"Global MMLU (Lite), thinking on"
 gemini-3-flash,91.8,self-reported,https://storage.googleapis.com/deepmind-media/Model-Cards/Gemini-3-Flash-Model-Card.pdf,2025-12-01,"MMMLU, multilingual Q&A"
-gemini-3-pro,91.8,self-reported,https://storage.googleapis.com/deepmind-media/Model-Cards/Gemini-3-Pro-Model-Card.pdf,2025-11-01,"MMMLU, multilingual Q&A"
 gemma-2-27b,75.2,self-reported,https://ai.google.dev/gemma/docs/core/model_card_2,2024-06-01,5-shot
 gemma-2-9b,71.3,self-reported,https://ai.google.dev/gemma/docs/core/model_card_2,2024-06-01,5-shot
 gemma-2b,42.3,self-reported,https://huggingface.co/google/gemma-2b,,5-shot
@@ -114,7 +113,6 @@ guanaco-65b,62.2,self-reported,https://huggingface.co/timdettmers/guanaco-65b,20
 h2o-danube-1-8b,33.49,self-reported,https://arxiv.org/abs/2401.16818,,"5-shot MMLU for h2o-danube-1.8b-chat, Open LLM Leaderboard-style eval, from the technical report Table 5. Below the taxonomy's typical MMLU floor, but this is a genuine, expected result for a 1.8B chat model and uses the same standardized harness as the leaderboard."
 h2o-danube3-4b,54.74,independent,https://huggingface.co/h2oai/h2o-danube3-4b-chat,,Open LLM Leaderboard v1
 hermes-3-405b,85.02,self-reported,https://arxiv.org/pdf/2408.11857,,5-shot
-hunyuan-a13b,88.17,self-reported,https://huggingface.co/tencent/Hunyuan-A13B-Instruct,,
 hunyuan-large-a52b,88.4,self-reported,https://huggingface.co/tencent/Tencent-Hunyuan-Large,,pretrained base vs Llama-3.1-405B's 85.2
 hunyuan-turbos,85.8,self-reported,https://arxiv.org/abs/2505.15431,2025-04-16,"5-shot, Table 4, post-trained/instruct TurboS-20250416 (distinct from the 87.94 pre-trained base-model number in Table 2)"
 inflection-1,72.7,self-reported,https://inflection.ai/inflection-1,2023-06-22,"Average across 57 MMLU tasks; outperformed GPT-3.5, LLaMA, and PaLM-540B per Inflection's technical memo."

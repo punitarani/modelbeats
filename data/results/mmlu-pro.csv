@@ -63,7 +63,6 @@ hermes-3-405b,54.14,self-reported,https://arxiv.org/pdf/2408.11857,,5-shot
 hunyuan-large-a52b,60.2,self-reported,https://huggingface.co/tencent/Tencent-Hunyuan-Large,,"Pretrain/base model table, consistent with the framing of the existing mmlu/gsm8k/math/humaneval rows for this entry."
 hunyuan-t1,87.2,self-reported,https://tencent.github.io/llm.hunyuan.T1/README_EN.html,,ranks second only to o1
 hunyuan-turbos,78,self-reported,https://arxiv.org/abs/2505.15431,2025-04-16,"5-shot, Table 4 (matches the 78.0 shown in Figure 1's bar chart)"
-hy3,65.76,self-reported,https://github.com/Tencent-Hunyuan/Hy3-preview,,"5-shot, from Tencent's own Hy3-preview model card"
 intellect-3,81.9,self-reported,https://arxiv.org/pdf/2512.16144,,Table 2 of the INTELLECT-3 Technical Report.
 internlm3-8b-instruct,57.6,self-reported,https://internlm.readthedocs.io/en/latest/model_card/InternLM3.html,,
 kimi-k2,81.1,self-reported,https://huggingface.co/moonshotai/Kimi-K2-Instruct,,General Tasks table (EM); cross-confirmed in GitHub README mirror
@@ -147,4 +146,4 @@ upstage-solar-pro,52.11,self-reported,https://huggingface.co/upstage/solar-pro-p
 wizardlm-2-8x22b,39.96,independent,https://huggingface.co/alpindale/WizardLM-2-8x22B,,"Open LLM Leaderboard v2, 5-shot"
 yandexgpt-5-pro,68,independent,https://habr.com/ru/companies/bothub/articles/893128/,2025-02-01,
 yi-1-5-34b,47.1,independent,https://huggingface.co/datasets/open-llm-leaderboard/01-ai__Yi-1.5-34B-32K-details,,"Yi-1.5-34B-32K base model, Open LLM Leaderboard v2"
-yi-1-5-9b,45.95,independent,https://huggingface.co/01-ai/Yi-1.5-9B-Chat,,"Yi-1.5-9B-Chat variant, via TIGER-Lab MMLU-Pro leaderboard evaluation"
+yi-1-5-9b,39.16,independent,https://huggingface.co/01-ai/Yi-1.5-9B-Chat,,"Yi-1.5-9B-Chat variant, via TIGER-Lab MMLU-Pro leaderboard evaluation [score corrected during round-5 full-corpus accuracy re-verify: 45.95 -> 39.16]"

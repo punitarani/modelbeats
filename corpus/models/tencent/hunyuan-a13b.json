@@ -54,12 +54,6 @@
   },
   "results": [
     {
-      "benchmarkSlug": "mmlu",
-      "score": 88.17,
-      "source": "self-reported",
-      "sourceUrl": "https://huggingface.co/tencent/Hunyuan-A13B-Instruct"
-    },
-    {
       "benchmarkSlug": "aime",
       "score": 87.3,
       "source": "self-reported",
@@ -117,7 +111,7 @@
       "score": 54.7,
       "source": "self-reported",
       "sourceUrl": "https://huggingface.co/tencent/Hunyuan-A13B-Instruct",
-      "notes": "\u03c4-Bench, agentic tool-use."
+      "notes": "τ-Bench, agentic tool-use."
     }
   ],
   "verificationNotes": "Confirmed real: Tencent announced Hunyuan-A13B open-source release on 2025-06-27 (official Tencent Hunyuan X/Twitter post, GitHub repo, MarkTechPost coverage all corroborate). Fetched the Hugging Face model card directly and confirmed MMLU 88.17, AIME2024 87.3, MATH 94.3, GPQA 49.12 literally appear; fetched MarkTechPost article and confirmed BFCL-v3 78.3 literally appears. Confirmed 80B total/13B active MoE (1 shared + 64 routed experts, 8 active), 256K native context, and license identifier 'tencent-hunyuan-a13b' whose full text is the Tencent Hunyuan Community License Agreement (verified via GitHub LICENSE file)."

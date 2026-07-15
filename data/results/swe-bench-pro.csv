@@ -1,5 +1,5 @@
 model_slug,score,source,source_url,evaluated_at,notes
-claude-fable-5,80.3,self-reported,https://www.vellum.ai/blog/claude-fable-5-and-mythos-5-benchmarks-explained,,Ahead of Opus 4.8 (69.2%) and GPT-5.5 (58.6%).
+claude-fable-5,80,self-reported,https://www.vellum.ai/blog/claude-fable-5-and-mythos-5-benchmarks-explained,,Ahead of Opus 4.8 (69.2%) and GPT-5.5 (58.6%). [score corrected during round-5 full-corpus accuracy re-verify: 80.3 -> 80]
 claude-opus-4-5-high,52,self-reported,https://www-cdn.anthropic.com/bf10f64990cfda0ba858290be7b8cc6317685f47.pdf,2025-11-24,"SWE-bench Pro (Scale AI's harder, 1,865-problem variant), no-thinking configuration (52.0%; 51.60% with 64k thinking) — system card Table 2.4.A."
 claude-opus-4-7,64.3,self-reported,https://www.vellum.ai/blog/claude-opus-4-7-benchmarks-explained,,Up from 53.4% on Opus 4.6 per the same source.
 claude-opus-4-8,69.2,self-reported,https://www.vellum.ai/blog/claude-opus-4-8-benchmarks-explained,,

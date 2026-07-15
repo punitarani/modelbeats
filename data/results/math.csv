@@ -100,7 +100,7 @@ llama-3-3-nemotron-super-49b-v1-reasoning-on,96.6,self-reported,https://huggingf
 llama-3-70b,50.4,self-reported,https://huggingface.co/meta-llama/Meta-Llama-3-70B-Instruct,,"4-shot CoT, Instruct-tuned checkpoint"
 llama-3-8b,30,self-reported,https://huggingface.co/meta-llama/Meta-Llama-3-8B,2024-04-01,"Instruct, 4-shot"
 llama-4-maverick,61.2,self-reported,https://huggingface.co/blog/llama4-release,,Instruction-tuned
-llama-4-scout,50.3,self-reported,https://huggingface.co/blog/llama4-release,,Instruction-tuned
+llama-4-scout,50.3,self-reported,https://huggingface.co/blog/llama4-release,,"Pre-trained/base model comparison table (em_maj1@1), not instruction-tuned — corrected during round-5 full-corpus accuracy re-verify (was mislabeled 'Instruction-tuned'; no MATH row exists in the instruction-tuned table)."
 magistral-medium,94.3,self-reported,https://arxiv.org/abs/2506.10910,2025-06-10,MATH-500; Magistral technical report Table 2
 magistral-small,95.9,self-reported,https://arxiv.org/abs/2506.10910,2025-06-10,"MATH-500, SFT+RL configuration; Magistral technical report Table 3 (not shown on the HF model card)"
 minicpm-2b,10.24,self-reported,https://github.com/OpenBMB/MiniCPM/blob/main/README-en.md,2024-02-01,MiniCPM GitHub README benchmark table
@@ -168,7 +168,6 @@ reka-edge-7b,23.2,self-reported,https://arxiv.org/html/2404.12387v1,2024-02-12,"
 reka-flash-21b,29.6,self-reported,https://arxiv.org/html/2404.12387v1,,"MATH 4-shot, Reka Flash (21B), from Table 15 of the tech report (same table the corpus's existing MMLU/GSM8K/HumanEval rows are drawn from)"
 reka-flash-3,90.6,self-reported,https://reka.ai/news/introducing-reka-flash,2025-03-10,"Labeled 'MATH-500' in the official launch blog's benchmark chart, matching the taxonomy's 500-competition-math-problems definition"
 sarvam-105b,98.6,self-reported,https://huggingface.co/sarvamai/sarvam-105b,2026-02-18,MATH-500
-seed-oss-36b,81.7,self-reported,https://huggingface.co/ByteDance-Seed/Seed-OSS-36B-Instruct,,
 skywork-moe-base,31.9,self-reported,https://arxiv.org/html/2406.06563v1,,
 skywork-o1-open-llama-3-1-8b,78.1,self-reported,https://huggingface.co/Skywork/Skywork-o1-Open-Llama-3.1-8B,2024-11-26,"From official HF model card table (row 'Skywork-o1-Open-8B', base model without QStar test-time scaling)."
 skywork-r1v-38b,94,self-reported,https://arxiv.org/abs/2504.05599,,
@@ -177,8 +176,8 @@ t-lu-3-405b,67.3,self-reported,https://huggingface.co/allenai/Llama-3.1-Tulu-3-4
 t-lu-3-70b,63,self-reported,https://huggingface.co/allenai/Llama-3.1-Tulu-3-70B,,"4-shot CoT, Flex"
 wizardlm-2-8x22b,22.28,independent,https://huggingface.co/alpindale/WizardLM-2-8x22B,,"Open LLM Leaderboard v2, MATH Level 5"
 yandexgpt-5-pro,57.5,independent,https://github.com/kuk/simple-evals-ru,2025-03-20,"MATH-500 subset, independent third-party eval (115/200 correct). CAVEAT: the repo author and a Sber/Gigachat release post both flag a known discrepancy between this measured YandexGPT MATH score and Yandex's own official claims, attributed to possible answer-extraction/parsing issues in this specific eval harness rather than the repo mismeasuring other benchmarks -- see reports/errors/math/17_yandexgpt_5_pro.md in the repo for the error analysis."
-yi-1-5-34b,13.4,independent,https://huggingface.co/datasets/open-llm-leaderboard/01-ai__Yi-1.5-34B-32K-details,,"MATH Hard subset, exact match"
-yi-1-5-9b,10.2,independent,https://huggingface.co/datasets/open-llm-leaderboard/01-ai__Yi-1.5-9B-details,2024-06-16,"MATH Hard subset, exact match. Yi-1.5-9B base model, Open LLM Leaderboard v2."
+yi-1-5-34b,15.4,independent,https://huggingface.co/datasets/open-llm-leaderboard/01-ai__Yi-1.5-34B-32K-details,,"MATH Hard subset, exact match [score corrected during round-5 full-corpus accuracy re-verify: 13.4 -> 15.4]"
+yi-1-5-9b,11.4,independent,https://huggingface.co/datasets/open-llm-leaderboard/01-ai__Yi-1.5-9B-details,2024-06-16,"MATH Hard subset, exact match. Yi-1.5-9B base model, Open LLM Leaderboard v2. [score corrected during round-5 full-corpus accuracy re-verify: 10.2 -> 11.4]"
 yi-34b,14.4,self-reported,https://arxiv.org/abs/2403.04652,2024-03-01,4-shot pass@1
 yi-6b,4.6,self-reported,https://arxiv.org/abs/2403.04652,2024-03-01,4-shot pass@1
 yi-lightning,76.4,self-reported,https://arxiv.org/abs/2412.01253,,0-shot

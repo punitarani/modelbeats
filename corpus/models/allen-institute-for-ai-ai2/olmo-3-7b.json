@@ -123,10 +123,10 @@
     },
     {
       "benchmarkSlug": "gpqa",
-      "score": 40.4,
+      "score": 40,
       "source": "independent",
       "sourceUrl": "https://designforonline.com/ai-models/allenai-olmo-3-7b-instruct/",
-      "notes": "GPQA Diamond, measured by Artificial Analysis (Intelligence Index v4), republished on the fetched page. Ai2's own self-reported GPQA on the HF card/paper is 40.4, but per the OLMo 3 technical report this uses the gpqa_main split (via olmes), not Diamond, so the independent Diamond figure is used for this Diamond-scoped slug (consistent with how OLMo 3-Think 32B is handled in this corpus)"
+      "notes": "GPQA Diamond, measured by Artificial Analysis (Intelligence Index v4), republished on the fetched page. Ai2's own self-reported GPQA on the HF card/paper is 40.4, but per the OLMo 3 technical report this uses the gpqa_main split (via olmes), not Diamond, so the independent Diamond figure is used for this Diamond-scoped slug (consistent with how OLMo 3-Think 32B is handled in this corpus) [score corrected during round-5 full-corpus accuracy re-verify: 40.4 -> 40]"
     },
     {
       "benchmarkSlug": "hle",

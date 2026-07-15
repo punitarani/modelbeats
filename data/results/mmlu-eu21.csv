@@ -1,7 +1,6 @@
 model_slug,score,source,source_url,evaluated_at,notes
 bloom-7b1,25.6,independent,https://arxiv.org/abs/2410.08928,2024-10-17,"EU21-MMLU (DeepL-translated MMLU across 21 EU languages), Thellmann et al. 2024 'Towards Multilingual LLM Evaluation for European Languages', Table 13. HF checkpoint bigscience/bloom-7b1, exact name/size match."
 command-r,56.1,independent,https://arxiv.org/abs/2410.08928,2024-10-17,"EU21-MMLU, Thellmann et al. 2024, Table 13 ('c4ai-command-r-35B-v01'). Matches this catalog entry's linked HF checkpoint CohereLabs/c4ai-command-r-v01 exactly."
-gemma-7b,56.8,independent,https://arxiv.org/abs/2410.08928,2024-10-17,"EU21-MMLU, Thellmann et al. 2024, Table 13 ('Gemma-7b', base checkpoint, not the 1.1-Instruct variant tested separately in the same paper). Matches this catalog entry's linked google/gemma-7b."
 llama-2-13b-chat,42.9,independent,https://arxiv.org/abs/2410.08928,2024-10-17,"EU21-MMLU, Thellmann et al. 2024, Table 13 ('Meta-Llama-2-13B-Chat'). Matches this catalog entry's linked meta-llama/Llama-2-13b-chat."
 llama-2-7b,36.4,independent,https://arxiv.org/abs/2410.08928,2024-10-17,"EU21-MMLU, Thellmann et al. 2024, Table 13 ('Meta-Llama-2-7B', base checkpoint). Matches this catalog entry's linked meta-llama/Llama-2-7b."
 llama-2-7b-chat,37,independent,https://arxiv.org/abs/2410.08928,2024-10-17,"EU21-MMLU, Thellmann et al. 2024, Table 13 ('Meta-Llama-2-7B-Chat'). Matches this catalog entry's linked meta-llama/Llama-2-7b-chat-hf."

@@ -88,11 +88,11 @@
       "sourceUrl": "https://huggingface.co/tiiuae/Falcon3-10B-Instruct"
     },
     {
-      "benchmarkSlug": "humaneval",
+      "benchmarkSlug": "humaneval-plus",
       "score": 74.7,
       "source": "self-reported",
       "sourceUrl": "https://huggingface.co/tiiuae/Falcon3-10B-Instruct",
-      "notes": "EvalPlus code eval, 0-shot"
+      "notes": "EvalPlus code eval, 0-shot [benchmarkSlug corrected during round-5 full-corpus accuracy re-verify: humaneval -> humaneval-plus, same score]"
     },
     {
       "benchmarkSlug": "mmlu-pro",

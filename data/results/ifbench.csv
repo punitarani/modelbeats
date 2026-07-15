@@ -31,7 +31,7 @@ qwen3-5-omni-flash,38.4,self-reported,https://qwen.ai/blog?id=qwen3.5-omni,2026-
 qwen3-5-omni-plus,52.6,self-reported,https://arxiv.org/abs/2604.15804,2026-04-21,"Table 4 (Text→Text), Qwen3.5-Omni-Plus column, cell S5.T4.3.9.4 (bold/best score in that row)."
 qwen3-5-plus,51.1,self-reported,https://qwen.ai/blog?id=qwen3.5-omni,,Qwen3.5-Plus-NoThinking
 qwen3-6-plus,75.2,independent,https://designforonline.com/ai-models/qwen-qwen3-6-plus/,,"IFBench, as measured by Artificial Analysis. 75.2% corroborated exactly by a second aggregator, benchlm.ai ('AA-IFBench: 75.2%'). Distinct from the IFEval result above."
-qwen3-6-plus,74.2,self-reported,https://qwen.ai/blog?id=qwen3.6,2026-04-02,"Instruction Following table, IFBench row."
+qwen3-6-plus,75.8,self-reported,https://qwen.ai/blog?id=qwen3.6,2026-04-02,"Instruction Following table, IFBench row. [score corrected during round-5 full-corpus accuracy re-verify: 74.2 -> 75.8]"
 qwen3-7-max,79.1,self-reported,https://www.alibabacloud.com/blog/qwen3-7-the-agent-frontier_603154,,Confirmed via direct fetch of the official Alibaba Cloud launch blog's 'General Capabilities & Multilingualism' section.
 qwen3-7-plus,79.1,self-reported,https://qwen.ai/blog?id=qwen3.7-plus,2026-05-31,"Official Qwen launch blog, 'General Capability' table; reported as a separate row from IFEval."
 qwen3-max,48,independent,https://artificialanalysis.ai/models/qwen3-max-preview,,"IFBench (instruction following), Qwen3-Max-Preview (non-reasoning). Artificial Analysis Intelligence Index v4.1 breakdown, same title/date-verified fetch. AA's chart shows 48%, exactly matching the independently cited 48% for the GA Sept-23 release on designforonline.com."

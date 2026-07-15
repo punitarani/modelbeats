@@ -2,6 +2,7 @@ model_slug,score,source,source_url,evaluated_at,notes
 codeqwen1-5-7b,45.7,self-reported,https://qwenlm.github.io/blog/codeqwen1.5/,2024-04-16,"Base model, 0-shot."
 ernie-4-5-300b-a47b,92.1,self-reported,https://ernie.baidu.com/blog/publication/ERNIE_Technical_Report.pdf,2025-06-29,"HumanEval+, Table 5."
 falcon-h1-34b,81.71,self-reported,https://huggingface.co/tiiuae/Falcon-H1-34B-Instruct,,HumanEval+
+falcon3-10b,74.7,self-reported,https://huggingface.co/tiiuae/Falcon3-10B-Instruct,,"EvalPlus code eval, 0-shot [benchmarkSlug corrected during round-5 full-corpus accuracy re-verify: humaneval -> humaneval-plus, same score]"
 granite-3-2-8b-instruct,85.72,self-reported,https://huggingface.co/ibm-granite/granite-3.2-8b-instruct,,Listed as 'HumanEval+' immediately next to the existing HumanEval 89.35 column in the same table.
 granite-3-3-8b-instruct,86.09,self-reported,https://huggingface.co/ibm-granite/granite-3.3-8b-instruct,,Listed as 'HumanEval+' immediately next to the existing HumanEval 89.73 column in the same table.
 granite-4-0-h-small,83,self-reported,https://huggingface.co/ibm-granite/granite-4.0-h-small,,"HumanEval+, pass@1"

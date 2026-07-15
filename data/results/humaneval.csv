@@ -46,11 +46,9 @@ deepseek-llm-67b,73.8,self-reported,https://ar5iv.labs.arxiv.org/html/2401.02954
 deepseek-v2-236b,81.1,self-reported,https://huggingface.co/deepseek-ai/DeepSeek-V2-Chat,,Chat (RL) variant
 deepseek-v2-5,89,self-reported,https://huggingface.co/deepseek-ai/DeepSeek-V2.5,,HumanEval (Python)
 deepseek-v3-671b,82.6,self-reported,https://huggingface.co/deepseek-ai/DeepSeek-V3,,HumanEval-Mul
-deepseek-v4-flash-think-high,69.5,self-reported,https://huggingface.co/deepseek-ai/DeepSeek-V4-Flash,,Think High mode
 deepseekmoe-16b,26.8,self-reported,https://ar5iv.labs.arxiv.org/html/2401.06066,,"Base variant, pass@1"
 falcon-2-11b,29.59,independent,https://huggingface.co/blog/falcon2-11b,2024-05-24,"pass@1, Python; blog states this was evaluated via the BigCode Leaderboard"
 falcon-h1-34b,87.2,self-reported,https://huggingface.co/tiiuae/Falcon-H1-34B-Instruct,,
-falcon3-10b,74.7,self-reported,https://huggingface.co/tiiuae/Falcon3-10B-Instruct,,"EvalPlus code eval, 0-shot"
 gemini-1-0-pro,67.7,self-reported,https://storage.googleapis.com/deepmind-media/gemini/gemini_1_report.pdf,2023-12-06,"Table 2, 0-shot instruction-tuned."
 gemini-1-0-ultra,74.4,self-reported,https://storage.googleapis.com/deepmind-media/gemini/gemini_1_report.pdf,2023-12-06,"Table 2, 0-shot instruction-tuned."
 gemini-1-5-flash,74.3,self-reported,https://storage.googleapis.com/deepmind-media/gemini/gemini_v1_5_report.pdf,2024-05-01,"0-shot pass rate (PT chat preamble), Table 11"

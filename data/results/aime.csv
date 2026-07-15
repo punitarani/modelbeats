@@ -22,7 +22,6 @@ deepseek-v3-1-non-thinking,66.3,self-reported,https://huggingface.co/deepseek-ai
 deepseek-v3-1-thinking,93.1,self-reported,https://huggingface.co/deepseek-ai/DeepSeek-V3.1,,AIME 2024 Pass@1
 deepseek-v3-2-exp,89.3,self-reported,https://github.com/deepseek-ai/DeepSeek-V3.2-Exp,,AIME 2025
 deepseek-v3-671b,39.2,self-reported,https://huggingface.co/deepseek-ai/DeepSeek-V3,,"AIME 2024 (Pass@1), Chat model"
-deepseek-v4-pro-think-max,87.5,self-reported,https://arxiv.org/abs/2606.19348,,"AIME 2025, Pro-Max mode; reported as an improvement from 70.0 in the prior generation"
 ernie-4-5-300b-a47b,35.1,self-reported,https://ernie.baidu.com/blog/publication/ERNIE_Technical_Report.pdf,2025-06-29,"AIME 2025, Table 5 (AIME 2024 score also given there: 54.8)."
 exaone-4-5,92.6,self-reported,https://arxiv.org/abs/2604.08644,2026-04-09,AIME 2026
 falcon-h1-34b,23.75,self-reported,https://huggingface.co/tiiuae/Falcon-H1-34B-Instruct,,"AIME-24 (card also reports AIME-25=16.67, not added since only one aime slug exists)"
@@ -68,7 +67,7 @@ grok-4-heavy,100,self-reported,https://www.datacamp.com/blog/grok-4,2025-07-09,A
 hunyuan-a13b,87.3,self-reported,https://huggingface.co/tencent/Hunyuan-A13B-Instruct,,AIME 2024
 hunyuan-t1,78.2,self-reported,https://winbuzzer.com/2025/03/23/tencents-releases-its-hunyuan-t1-reasoning-model-beating-deepseek-r1-gpt-4-5-o1-across-benchmarks-xcxwbn/,,"AIME 2024. Tencent's own official comparison table (per the source article, this and the following rows are explicitly Tencent's official published figures, not the outlet's own eval) is rendered as an image on the primary tencent.github.io page and could not be OCR'd directly, but this figure is independently corroborated verbatim by a second outlet, SCMP: https://www.scmp.com/tech/big-tech/article/3303456/tencents-hunyuan-t1-ai-reasoning-model-rivals-deepseek-performance-and-price"
 hunyuan-turbos,40,self-reported,https://arxiv.org/abs/2505.15431,2025-04-16,"AIME 2025 pass@1, Table 4 (also shown in the paper's Figure 1 bar chart); the paper separately reports AIME 2024 = 56.7 but the taxonomy has only one undated 'aime' slug so only the 2025 figure is recorded"
-intellect-3,90.8,self-reported,https://arxiv.org/pdf/2512.16144,,AIME 2024
+intellect-3,88,self-reported,https://arxiv.org/pdf/2512.16144,,AIME 2025
 internlm3-8b-instruct,20,self-reported,https://internlm.readthedocs.io/en/latest/model_card/InternLM3.html,,AIME2024
 kimi-k1-5,77.5,self-reported,https://arxiv.org/abs/2501.12599,,Long-CoT variant
 kimi-k2,69.6,self-reported,https://huggingface.co/moonshotai/Kimi-K2-Instruct,,"AIME 2024, avg@64"
@@ -77,7 +76,7 @@ kimi-k2-6,96.4,self-reported,https://www.kimi.com/blog/kimi-k2-6,,vendor-labeled
 kimi-k2-thinking,99.1,self-reported,https://huggingface.co/moonshotai/Kimi-K2-Thinking,,AIME25 with python tool
 lg-exaone-4-0-32b-non-reasoning,35.9,self-reported,https://arxiv.org/abs/2507.11407,,"AIME 2025, non-reasoning mode"
 lg-exaone-4-0-32b-reasoning,85.3,self-reported,https://arxiv.org/abs/2507.11407,,"AIME 2025, reasoning mode"
-lg-exaone-deep-32b,72.1,self-reported,https://github.com/LG-AI-EXAONE/EXAONE-Deep,2025-03-01,"AIME 2024, pass@1 (90.0 consistency@64)"
+lg-exaone-deep-32b,65.8,self-reported,https://github.com/LG-AI-EXAONE/EXAONE-Deep,2025-03-01,"AIME 2025, pass@1 (80.0 consistency@64). Distinct sitting from the existing AIME 2024 result above; both appear in Table 2 of the arXiv paper (2503.12524) and the GitHub README performance table."
 llama-3-1-nemotron-ultra-253b-v1-reasoning-off,16.67,self-reported,https://huggingface.co/nvidia/Llama-3_1-Nemotron-Ultra-253B-v1,,"AIME25, Reasoning Off"
 llama-3-1-nemotron-ultra-253b-v1-reasoning-on,72.5,self-reported,https://huggingface.co/nvidia/Llama-3_1-Nemotron-Ultra-253B-v1,,"AIME25, Reasoning On; DeepSeek-R1 scored 79.8"
 llama-3-3-nemotron-super-49b-v1-reasoning-off,13.33,self-reported,https://huggingface.co/nvidia/Llama-3_3-Nemotron-Super-49B-v1,,"AIME25, Reasoning Off"
@@ -127,7 +126,7 @@ qwen3-8b-thinking,76,self-reported,https://arxiv.org/abs/2505.09388,,"AIME'24, t
 qwen3-max,80.6,self-reported,https://felloai.com/qwen-3-max-ai-all-you-need-to-know-about-alibabas-1-trillion-parameter-llm/,,"AIME 2025, Qwen3-Max-Instruct (Preview, non-thinking), official launch chart (also transcribed by localllm.in). Some GA-release transcriptions cite 81.6; Thinking variant later reported 100 with tools + test-time compute."
 qwq-32b,79.5,self-reported,https://www.datacamp.com/blog/qwq-32b,,"AIME24; DeepSeek-R1 79.8, o1-mini 63.6"
 qwq-32b-preview,50,self-reported,https://qwenlm.github.io/blog/qwq-32b-preview/,,AIME 2024
-r1-1776,80.96,self-reported,https://www.deeplearning.ai/the-batch/perplexity-launches-uncensored-version-of-deepseek-r1-ai-model,,"AIME 2024 pass@1, relaying Perplexity's own launch benchmark chart (original R1-1776 base model scored 80.96 on the same eval)"
+r1-1776,79.8,self-reported,https://www.deeplearning.ai/the-batch/perplexity-launches-uncensored-version-of-deepseek-r1-ai-model,,"AIME 2024 pass@1, relaying Perplexity's own launch benchmark chart (original R1-1776 base model scored 80.96 on the same eval) [score corrected during round-5 full-corpus accuracy re-verify: 80.96 -> 79.8]"
 sarvam-105b,88.3,self-reported,https://huggingface.co/sarvamai/sarvam-105b,2026-02-18,"AIME 2025, without tools (96.7 with tools)"
 seed-oss-36b,91.7,self-reported,https://huggingface.co/ByteDance-Seed/Seed-OSS-36B-Instruct,,AIME24
 seed1-5-thinking,86.7,self-reported,https://arxiv.org/abs/2504.13914,,AIME 2024

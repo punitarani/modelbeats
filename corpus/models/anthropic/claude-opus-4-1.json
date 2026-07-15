@@ -110,15 +110,15 @@
       "source": "self-reported",
       "sourceUrl": "https://www-cdn.anthropic.com/bf10f64990cfda0ba858290be7b8cc6317685f47.pdf",
       "evaluatedAt": "2025-11-24",
-      "notes": "Terminal-bench 2.0 (the harder, second-generation suite \u2014 distinct from the classic Terminal-Bench 43.3% already recorded for Opus 4.1). This retroactive re-evaluation of Opus 4.1 only appears in Claude Opus 4.5's Nov-2025 launch page/system card comparison table, not on Opus 4.1's own original Aug-2025 launch page (Terminal-Bench 2.0 didn't exist yet at that time)."
+      "notes": "Terminal-bench 2.0 (the harder, second-generation suite — distinct from the classic Terminal-Bench 43.3% already recorded for Opus 4.1). This retroactive re-evaluation of Opus 4.1 only appears in Claude Opus 4.5's Nov-2025 launch page/system card comparison table, not on Opus 4.1's own original Aug-2025 launch page (Terminal-Bench 2.0 didn't exist yet at that time)."
     },
     {
-      "benchmarkSlug": "osworld-verified",
+      "benchmarkSlug": "osworld",
       "score": 44.4,
       "source": "self-reported",
       "sourceUrl": "https://www-cdn.anthropic.com/bf10f64990cfda0ba858290be7b8cc6317685f47.pdf",
       "evaluatedAt": "2025-11-24",
-      "notes": "OSWorld-Verified computer-use score for Opus 4.1, likewise only published retroactively in Claude Opus 4.5's Nov-2025 system card/launch comparison table (Opus 4.1's own launch page did not test computer use)."
+      "notes": "OSWorld-Verified computer-use score for Opus 4.1, likewise only published retroactively in Claude Opus 4.5's Nov-2025 system card/launch comparison table (Opus 4.1's own launch page did not test computer use). [benchmarkSlug corrected during round-5 full-corpus accuracy re-verify: osworld-verified -> osworld, same score]"
     },
     {
       "benchmarkSlug": "gaia",
@@ -128,5 +128,5 @@
       "notes": "Princeton HAL 'HAL Generalist Agent' scaffold, standard (non-High-thinking) config, Claude Opus 4.1 (Aug 2025 snapshot). GAIA validation set."
     }
   ],
-  "verificationNotes": "Real model, confirmed via anthropic.com/news/claude-opus-4-1 and Anthropic's X announcement (release 2025-08-05, same $15/$75 pricing as Opus 4, 200K context). SWE-bench 74.5% confirmed on InfoQ; the other 3 rows (Terminal-bench 43.3%, AIME 78%, GPQA 80.9%) were not literally present in the InfoQ text extraction, so sourceUrl was swapped to Winbuzzer's article, which explicitly lists all four figures. Per Anthropic's official model-deprecations page (fetched 2026-07-12): claude-opus-4-1-20250805 is currently 'Deprecated' (as of 2026-06-05) with tentative retirement 2026-08-05, which has NOT yet passed as of today (2026-07-12) \u2014 status='deprecated' and apiAvailable=true both confirmed correct as given."
+  "verificationNotes": "Real model, confirmed via anthropic.com/news/claude-opus-4-1 and Anthropic's X announcement (release 2025-08-05, same $15/$75 pricing as Opus 4, 200K context). SWE-bench 74.5% confirmed on InfoQ; the other 3 rows (Terminal-bench 43.3%, AIME 78%, GPQA 80.9%) were not literally present in the InfoQ text extraction, so sourceUrl was swapped to Winbuzzer's article, which explicitly lists all four figures. Per Anthropic's official model-deprecations page (fetched 2026-07-12): claude-opus-4-1-20250805 is currently 'Deprecated' (as of 2026-06-05) with tentative retirement 2026-08-05, which has NOT yet passed as of today (2026-07-12) — status='deprecated' and apiAvailable=true both confirmed correct as given."
 }

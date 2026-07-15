@@ -61,18 +61,6 @@
       "sourceUrl": "https://huggingface.co/ByteDance-Seed/Seed-OSS-36B-Instruct"
     },
     {
-      "benchmarkSlug": "gsm8k",
-      "score": 90.8,
-      "source": "self-reported",
-      "sourceUrl": "https://huggingface.co/ByteDance-Seed/Seed-OSS-36B-Instruct"
-    },
-    {
-      "benchmarkSlug": "math",
-      "score": 81.7,
-      "source": "self-reported",
-      "sourceUrl": "https://huggingface.co/ByteDance-Seed/Seed-OSS-36B-Instruct"
-    },
-    {
       "benchmarkSlug": "aime",
       "score": 91.7,
       "source": "self-reported",

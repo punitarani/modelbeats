@@ -60,10 +60,10 @@
     },
     {
       "benchmarkSlug": "mbpp",
-      "score": 76.4,
+      "score": 83,
       "source": "self-reported",
       "sourceUrl": "https://arxiv.org/abs/2409.12186",
-      "notes": "Base model"
+      "notes": "Base model [score corrected during round-5 full-corpus accuracy re-verify: 76.4 -> 83]"
     },
     {
       "benchmarkSlug": "bigcodebench",

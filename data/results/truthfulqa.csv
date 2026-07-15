@@ -69,7 +69,7 @@ stablelm-alpha-7b,40.19,independent,https://huggingface.co/datasets/open-llm-lea
 stablelm-zephyr-3b,46.49,self-reported,https://huggingface.co/stabilityai/stablelm-zephyr-3b,,"TruthfulQA (0-shot, mc2), Open LLM Leaderboard, from the model-index metadata embedded in the HF README.md."
 starling-7b-alpha,46.39,independent,https://huggingface.co/datasets/open-llm-leaderboard-old/results/blob/main/berkeley-nest/Starling-LM-7B-alpha/results_2023-12-04T15-57-32.180703.json,2023-12-04,"TruthfulQA MC2 score (0-shot), the standard metric used across the leaderboard/community for this benchmark. Same v1 Open LLM Leaderboard automated run."
 t-lu-3-70b,67.6,self-reported,https://huggingface.co/allenai/Llama-3.1-Tulu-3-70B,,"TruthfulQA (6-shot) for the final Tülu 3 70B model, same table."
-teuken-7b-instruct,0.503,self-reported,https://huggingface.co/openGPT-X/Teuken-7B-instruct-commercial-v0.4,,"EU21-TruthfulQA, averaged across 21 EU languages"
+teuken-7b-instruct,50.3,self-reported,https://huggingface.co/openGPT-X/Teuken-7B-instruct-commercial-v0.4,,"EU21-TruthfulQA, averaged across 21 EU languages [score corrected during round-5 full-corpus accuracy re-verify: 0.503 -> 50.3]"
 upstage-solar-10-7b,45.04,self-reported,https://arxiv.org/abs/2312.15166,,"Table 2 of the SOLAR 10.7B paper (base model row), 0-shot TruthfulQA."
 xgen-7b-8k,39.1,self-reported,https://ar5iv.labs.arxiv.org/html/2309.03450,2023-07-03,"Zero-shot, Table 6 of the XGen-7B technical report (same table as the corpus's existing MMLU/HellaSwag/ARC-Challenge/Winogrande rows)"
 zephyr-7b-beta,57.45,self-reported,https://huggingface.co/HuggingFaceH4/zephyr-7b-beta,,0-shot

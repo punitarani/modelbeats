@@ -263,11 +263,11 @@
     },
     {
       "benchmarkSlug": "ifbench",
-      "score": 74.2,
+      "score": 75.8,
       "source": "self-reported",
       "sourceUrl": "https://qwen.ai/blog?id=qwen3.6",
       "evaluatedAt": "2026-04-02",
-      "notes": "Instruction Following table, IFBench row."
+      "notes": "Instruction Following table, IFBench row. [score corrected during round-5 full-corpus accuracy re-verify: 74.2 -> 75.8]"
     },
     {
       "benchmarkSlug": "agents-last-exam",

@@ -32,7 +32,7 @@
   "links": {
     "docs": "https://platform.claude.com/docs/en/about-claude/models/whats-new-sonnet-5"
   },
-  "note": "Model id claude-sonnet-5. Drop-in upgrade for Sonnet 4.6: adaptive thinking on by default, manual extended-thinking removed (400 error), new tokenizer (~30% more tokens for same text vs Sonnet 4.6), non-default sampling params rejected. Introductory pricing $2/$10 per MTok through 2026-08-31, standard pricing $3/$15 thereafter (used here). On Terminal-Bench 2.1 and GDPval-AA v2 it narrowly beats Opus 4.8 despite Sonnet-tier pricing. NO SEPARATE '(High)' PRODUCT: Anthropic's docs state explicitly that setting effort to 'high' 'produces exactly the same behavior as omitting the effort parameter entirely,' and high is the documented default \u2014 there is no distinct marketed 'Sonnet 5 (High)' SKU to add as a sibling entry.",
+  "note": "Model id claude-sonnet-5. Drop-in upgrade for Sonnet 4.6: adaptive thinking on by default, manual extended-thinking removed (400 error), new tokenizer (~30% more tokens for same text vs Sonnet 4.6), non-default sampling params rejected. Introductory pricing $2/$10 per MTok through 2026-08-31, standard pricing $3/$15 thereafter (used here). On Terminal-Bench 2.1 and GDPval-AA v2 it narrowly beats Opus 4.8 despite Sonnet-tier pricing. NO SEPARATE '(High)' PRODUCT: Anthropic's docs state explicitly that setting effort to 'high' 'produces exactly the same behavior as omitting the effort parameter entirely,' and high is the documented default — there is no distinct marketed 'Sonnet 5 (High)' SKU to add as a sibling entry.",
   "quants": [],
   "vramQ4Gb": null,
   "vramFp16Gb": null,
@@ -46,13 +46,6 @@
     "release date, positioning": "https://www.anthropic.com/news/claude-sonnet-5"
   },
   "results": [
-    {
-      "benchmarkSlug": "gpqa",
-      "score": 96.2,
-      "source": "self-reported",
-      "sourceUrl": "https://o-mega.ai/articles/claude-sonnet-5-benchmarks-and-cost-breakdown",
-      "notes": "GPQA Diamond, third-party recap of Anthropic's reported figure."
-    },
     {
       "benchmarkSlug": "swe-bench",
       "score": 85.2,

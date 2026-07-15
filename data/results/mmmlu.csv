@@ -10,6 +10,7 @@ claude-opus-4-6,91.1,self-reported,https://www.vellum.ai/blog/claude-opus-4-6-be
 claude-opus-4-7,91.5,self-reported,https://www.vellum.ai/blog/claude-opus-4-7-benchmarks-explained,,Multilingual MMLU.
 claude-sonnet-4-6,89.3,self-reported,https://www.anthropic.com/claude-sonnet-4-6-system-card,2026-02-17,"MMMLU (Multilingual MMLU across 57 subjects x 14 non-English languages), averaged over 10 trials, adaptive thinking + max effort (System Card Section 2.11 / Table 2.1.A)."
 exaone-4-5,85.4,self-reported,https://arxiv.org/abs/2604.08644,2026-04-09,"MMMLU average over ko/de/es/ja subset only (paper does not report the full 14-language average), so treat as approximate/partial match to the taxonomy definition"
+gemini-3-pro,91.8,self-reported,https://storage.googleapis.com/deepmind-media/Model-Cards/Gemini-3-Pro-Model-Card.pdf,2025-11-01,"MMMLU, multilingual Q&A [benchmarkSlug corrected during round-5 full-corpus accuracy re-verify: mmlu -> mmmlu, same score]"
 gemma-4,88.4,self-reported,https://ai.google.dev/gemma/docs/core/model_card_4,2026-04-02,"Multilingual MMLU, 31B. Slightly above the taxonomy's typical 30-88 range ceiling but confirmed identically on two independent primary sources (ai.google.dev and huggingface.co)."
 gemma-4-26b-a4b,86.3,self-reported,https://huggingface.co/google/gemma-4-26B-A4B-it,2026-04-02,"Multilingual MMLU, 26B A4B, from the official Gemma 4 benchmark table."
 gpt-4-1,87.3,self-reported,https://docsbot.ai/models/compare/gpt-4-1/gpt-4-1-mini,2025-04-14,"Listed as ""Global MMLU"" pass@1 in OpenAI's launch table."

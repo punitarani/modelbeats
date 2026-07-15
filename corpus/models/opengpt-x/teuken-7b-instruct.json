@@ -58,24 +58,24 @@
     },
     {
       "benchmarkSlug": "arc-challenge",
-      "score": 0.569,
+      "score": 56.9,
       "source": "self-reported",
       "sourceUrl": "https://huggingface.co/openGPT-X/Teuken-7B-instruct-commercial-v0.4",
-      "notes": "EU21-ARC, averaged across 21 EU languages"
+      "notes": "EU21-ARC, averaged across 21 EU languages [score corrected during round-5 full-corpus accuracy re-verify: 0.569 -> 56.9]"
     },
     {
       "benchmarkSlug": "hellaswag",
-      "score": 0.62,
+      "score": 62,
       "source": "self-reported",
       "sourceUrl": "https://huggingface.co/openGPT-X/Teuken-7B-instruct-commercial-v0.4",
-      "notes": "EU21-HellaSwag, averaged across 21 EU languages"
+      "notes": "EU21-HellaSwag, averaged across 21 EU languages [score corrected during round-5 full-corpus accuracy re-verify: 0.62 -> 62]"
     },
     {
       "benchmarkSlug": "truthfulqa",
-      "score": 0.503,
+      "score": 50.3,
       "source": "self-reported",
       "sourceUrl": "https://huggingface.co/openGPT-X/Teuken-7B-instruct-commercial-v0.4",
-      "notes": "EU21-TruthfulQA, averaged across 21 EU languages"
+      "notes": "EU21-TruthfulQA, averaged across 21 EU languages [score corrected during round-5 full-corpus accuracy re-verify: 0.503 -> 50.3]"
     }
   ],
   "verificationNotes": "Confirmed real model. Fraunhofer IAIS press release (fetched via search) confirms release date 2024-11-26 exactly and '24 official EU languages' / 7B params / open-source commercial license. HF README (fetched via raw.githubusercontent-style raw endpoint) confirms context length 4096 (=ctxK 4) and all four EU21 benchmark scores (MMLU 0.430, ARC 0.569, HellaSwag 0.620, TruthfulQA 0.503) literally match. No changes needed."

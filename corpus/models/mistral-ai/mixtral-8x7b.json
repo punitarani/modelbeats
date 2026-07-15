@@ -148,11 +148,11 @@
     },
     {
       "benchmarkSlug": "logickor",
-      "score": 5.99,
+      "score": 5.98,
       "source": "independent",
       "sourceUrl": "https://lk.instruct.kr/",
       "evaluatedAt": "2024-06-26",
-      "notes": "LogicKor official leaderboard, model_id mistralai/mixtral-8x7b-instruct, default prompt strategy"
+      "notes": "LogicKor official leaderboard, model_id mistralai/mixtral-8x7b-instruct, default prompt strategy [score corrected during round-5 full-corpus accuracy re-verify: 5.99 -> 5.98]"
     }
   ],
   "verificationNotes": "Fetched mistral.ai/news/mixtral-of-experts/ directly: confirms 2023-12-11 release, 46.7B total/12.9B active params, 32K context, Apache 2.0, MT-Bench 8.30. Fetched ar5iv.labs.arxiv.org/html/2401.04088 Table 2 directly: all 8 base-model benchmark scores (MMLU 70.6, HumanEval 40.2, MBPP 60.7, GSM8K 74.4, ARC-Challenge 59.7, HellaSwag 84.4, Winogrande 77.2, MATH 28.4) match exactly. No changes made."

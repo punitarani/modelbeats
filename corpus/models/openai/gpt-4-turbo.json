@@ -75,7 +75,7 @@
       "source": "self-reported",
       "sourceUrl": "https://github.com/openai/simple-evals",
       "evaluatedAt": "2024-05-13",
-      "notes": "gpt-4-turbo-2024-04-09 (the snapshot this file's note field identifies as GPT-4 Turbo's current default), 0-shot CoT, 'assistant' system prompt. From OpenAI's own simple-evals repo \u2014 the accuracy table OpenAI publishes to be transparent about numbers accompanying its model launches; this row is the GPT-4 Turbo comparison point first published alongside the GPT-4o ('Hello GPT-4o') launch."
+      "notes": "gpt-4-turbo-2024-04-09 (the snapshot this file's note field identifies as GPT-4 Turbo's current default), 0-shot CoT, 'assistant' system prompt. From OpenAI's own simple-evals repo — the accuracy table OpenAI publishes to be transparent about numbers accompanying its model launches; this row is the GPT-4 Turbo comparison point first published alongside the GPT-4o ('Hello GPT-4o') launch."
     },
     {
       "benchmarkSlug": "math",
@@ -91,7 +91,7 @@
       "source": "self-reported",
       "sourceUrl": "https://github.com/openai/simple-evals",
       "evaluatedAt": "2024-05-13",
-      "notes": "gpt-4-turbo-2024-04-09, 0-shot, OpenAI simple-evals. A harder/independent data point worth cross-checking against: Aider's April 2024 code-EDITING benchmark separately found this same snapshot scored only 62% (lowest of the GPT-4 family at the time) \u2014 not added here since Aider's benchmark isn't the same evaluation as any taxonomy slug (it predates and differs from 'aider-polyglot', which launched later in 2024)."
+      "notes": "gpt-4-turbo-2024-04-09, 0-shot, OpenAI simple-evals. A harder/independent data point worth cross-checking against: Aider's April 2024 code-EDITING benchmark separately found this same snapshot scored only 62% (lowest of the GPT-4 family at the time) — not added here since Aider's benchmark isn't the same evaluation as any taxonomy slug (it predates and differs from 'aider-polyglot', which launched later in 2024)."
     },
     {
       "benchmarkSlug": "mgsm",
@@ -115,21 +115,21 @@
       "source": "self-reported",
       "sourceUrl": "https://github.com/openai/simple-evals",
       "evaluatedAt": "2024-05-13",
-      "notes": "gpt-4-turbo-2024-04-09, OpenAI simple-evals SimpleQA column (short-form factuality / hallucination-rate proxy) \u2014 a genuinely hard, non-cherry-picked eval OpenAI's own suite ships this model on."
+      "notes": "gpt-4-turbo-2024-04-09, OpenAI simple-evals SimpleQA column (short-form factuality / hallucination-rate proxy) — a genuinely hard, non-cherry-picked eval OpenAI's own suite ships this model on."
     },
     {
       "benchmarkSlug": "arena-hard",
       "score": 82.6,
       "source": "independent",
       "sourceUrl": "https://github.com/lmarena/arena-hard-auto/blob/main/misc/past_leaderboards.md",
-      "notes": "gpt-4-turbo-2024-04-09, Arena-Hard-v0.1 (no style control), win-rate vs. the gpt-4-0314 baseline (fixed at 50.0), GPT-4-Turbo-as-judge pipeline. Official LMArena (formerly LMSYS) archived leaderboard. A style-controlled variant of the same benchmark, added later in 2024, scores this same snapshot at 74.3 in the same archive \u2014 noted for completeness but not added as a separate row since it isn't a distinct taxonomy slug."
+      "notes": "gpt-4-turbo-2024-04-09, Arena-Hard-v0.1 (no style control), win-rate vs. the gpt-4-0314 baseline (fixed at 50.0), GPT-4-Turbo-as-judge pipeline. Official LMArena (formerly LMSYS) archived leaderboard. A style-controlled variant of the same benchmark, added later in 2024, scores this same snapshot at 74.3 in the same archive — noted for completeness but not added as a separate row since it isn't a distinct taxonomy slug."
     },
     {
       "benchmarkSlug": "livecodebench",
       "score": 28.7,
       "source": "independent",
       "sourceUrl": "https://livecodebench.github.io/leaderboard.html",
-      "notes": "gpt-4-turbo-2024-04-09, Pass@1, official LiveCodeBench leaderboard, current problem time-window 2024-08-01 to 2025-05-01 (454 contamination-controlled problems released after model training cutoffs). A genuinely hard eval: breaks down to Easy 81.0 / Medium 24.8 / Hard 3.1, i.e. the model solves almost none of the Hard-tier problems \u2014 included deliberately per the instruction to surface harder evals, not just favorable ones."
+      "notes": "gpt-4-turbo-2024-04-09, Pass@1, official LiveCodeBench leaderboard, current problem time-window 2024-08-01 to 2025-05-01 (454 contamination-controlled problems released after model training cutoffs). A genuinely hard eval: breaks down to Easy 81.0 / Medium 24.8 / Hard 3.1, i.e. the model solves almost none of the Hard-tier problems — included deliberately per the instruction to surface harder evals, not just favorable ones."
     },
     {
       "benchmarkSlug": "mmlu",
@@ -137,7 +137,7 @@
       "source": "self-reported",
       "sourceUrl": "https://github.com/openai/simple-evals",
       "evaluatedAt": "2024-05-13",
-      "notes": "gpt-4-turbo-2024-04-09, 0-shot CoT, 'assistant' system prompt, OpenAI simple-evals. Distinct from \u2014 not a replacement for \u2014 the existing 86.5 row already in this file (gpt-4-1106-preview, classic 5-shot, via Telnyx): different snapshot AND different eval protocol, so both are genuine and kept side by side. Headline-score precedence in this repo's derive step still favors the existing 'independent'-sourced row over this 'self-reported' one, so adding it cannot silently inflate the index."
+      "notes": "gpt-4-turbo-2024-04-09, 0-shot CoT, 'assistant' system prompt, OpenAI simple-evals. Distinct from — not a replacement for — the existing 86.5 row already in this file (gpt-4-1106-preview, classic 5-shot, via Telnyx): different snapshot AND different eval protocol, so both are genuine and kept side by side. Headline-score precedence in this repo's derive step still favors the existing 'independent'-sourced row over this 'self-reported' one, so adding it cannot silently inflate the index."
     },
     {
       "benchmarkSlug": "minif2f-test",
@@ -164,11 +164,11 @@
     },
     {
       "benchmarkSlug": "logickor",
-      "score": 9.1,
+      "score": 9.17,
       "source": "independent",
       "sourceUrl": "https://lk.instruct.kr/",
       "evaluatedAt": "2024-06-26",
-      "notes": "LogicKor official leaderboard, model_id openai/gpt-4-1106-preview (matches catalog's 2023-11-06 GPT-4 Turbo release), default prompt strategy [score corrected during adversarial verify: proposed 9.18 -> 9.1, per verifier: Fetched lk.instruct.kr directly and parsed the embedded logickor_v2_scores dataset (245 records). Exactly two records exist for model_id \"openai/gpt-4-1106-preview\": (1) prompt_strategy \"1-shot\", avg=9.095238095238095 (\u22489.10); (2) prompt_strategy \"cot-1-shot\", avg=8.976190476190476 (\u22488.98). There is NO \"default\" prompt-strategy record for this model_id at all \u2014 that part of the claimed provenance is fabricated. The claimed score 9.18 does not match either real record. Best real match is the 1-shot avg, \u22489.10 (or 9.09 if truncated rather than rounded to 2dp). A separate, different model_id (\"openai/gpt-4-0125-preview\", default strategy, avg=9.13) exists in the dataset and could be a source of confusion but is a different snapshot, not GPT-4 Turbo (1106) per the catalog's release date. Recommend updating the result to score=9.10, source note \"1-shot prompt strategy\" (or 8.98 for cot-1-shot if that variant is preferred), and removing the incorrect \"default prompt strategy\" characterization.]"
+      "notes": "LogicKor official leaderboard, model_id openai/gpt-4-1106-preview (matches catalog's 2023-11-06 GPT-4 Turbo release), default prompt strategy [score corrected during adversarial verify: proposed 9.18 -> 9.1, per verifier: Fetched lk.instruct.kr directly and parsed the embedded logickor_v2_scores dataset (245 records). Exactly two records exist for model_id \"openai/gpt-4-1106-preview\": (1) prompt_strategy \"1-shot\", avg=9.095238095238095 (≈9.10); (2) prompt_strategy \"cot-1-shot\", avg=8.976190476190476 (≈8.98). There is NO \"default\" prompt-strategy record for this model_id at all — that part of the claimed provenance is fabricated. The claimed score 9.18 does not match either real record. Best real match is the 1-shot avg, ≈9.10 (or 9.09 if truncated rather than rounded to 2dp). A separate, different model_id (\"openai/gpt-4-0125-preview\", default strategy, avg=9.13) exists in the dataset and could be a source of confusion but is a different snapshot, not GPT-4 Turbo (1106) per the catalog's release date. Recommend updating the result to score=9.10, source note \"1-shot prompt strategy\" (or 8.98 for cot-1-shot if that variant is preferred), and removing the incorrect \"default prompt strategy\" characterization.] [score corrected during round-5 full-corpus accuracy re-verify: 9.1 -> 9.17]"
     }
   ],
   "verificationNotes": "DevDay announcement Nov 6, 2023 confirmed (OpenAI/CNBC); 128K context and $10/$30 per-million pricing confirmed via OpenAI's own DevDay post and current docs. Both result rows (MMLU 86.5 5-shot; Arena Elo 1251) verified literally on the cited Telnyx page (fetched directly, confirmed exact text). No changes made."

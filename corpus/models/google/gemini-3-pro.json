@@ -91,12 +91,12 @@
       "notes": "MMMU-Pro variant"
     },
     {
-      "benchmarkSlug": "mmlu",
+      "benchmarkSlug": "mmmlu",
       "score": 91.8,
       "source": "self-reported",
       "sourceUrl": "https://storage.googleapis.com/deepmind-media/Model-Cards/Gemini-3-Pro-Model-Card.pdf",
       "evaluatedAt": "2025-11-01",
-      "notes": "MMMLU, multilingual Q&A"
+      "notes": "MMMLU, multilingual Q&A [benchmarkSlug corrected during round-5 full-corpus accuracy re-verify: mmlu -> mmmlu, same score]"
     },
     {
       "benchmarkSlug": "livecodebench-pro",

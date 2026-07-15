@@ -57,19 +57,19 @@
     },
     {
       "benchmarkSlug": "minif2f-valid",
-      "score": 91,
+      "score": 90.6,
       "source": "self-reported",
       "sourceUrl": "https://arxiv.org/pdf/2504.21801",
       "evaluatedAt": "2025-04-30",
-      "notes": "MiniF2F-valid pass ratio"
+      "notes": "MiniF2F-valid pass ratio [score corrected during round-5 full-corpus accuracy re-verify: 91 -> 90.6]"
     },
     {
       "benchmarkSlug": "putnam-bench",
-      "score": 7.45,
+      "score": 7.14,
       "source": "self-reported",
       "sourceUrl": "https://huggingface.co/deepseek-ai/DeepSeek-Prover-V2-671B",
       "evaluatedAt": "2025-04-30",
-      "notes": "PutnamBench: 49 of 658 problems solved (%)"
+      "notes": "PutnamBench: 49 of 658 problems solved (%) [score corrected during round-5 full-corpus accuracy re-verify: 7.45 -> 7.14]"
     }
   ],
   "verificationNotes": "Release date April 30 2025 confirmed by multiple independent outlets (WinBuzzer, Synced, TechCrunch) plus the HF card. License confirmed MIT by fetching the actual LICENSE file on HF (not just the model card summary). MiniF2F-test (88.9%) and PutnamBench (49/658 = 7.45%) confirmed on the HF card; MiniF2F-valid (91.0%) confirmed by fetching the arXiv HTML paper's Table 2 directly (220(+2)/244 problems). 671B/37B params confirmed as same V3-Base MoE architecture, consistent across all sources despite the raw safetensors sum running slightly higher (~685B, same MTP-head nuance as V3/V3-0324)."

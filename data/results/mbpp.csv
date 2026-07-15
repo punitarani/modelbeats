@@ -88,7 +88,7 @@ qwen2-5-14b,76.7,self-reported,https://qwenlm.github.io/blog/qwen2.5-llm/,,
 qwen2-5-32b,84.5,self-reported,https://qwenlm.github.io/blog/qwen2.5-llm/,,
 qwen2-5-72b,84.7,self-reported,https://qwenlm.github.io/blog/qwen2.5-llm/,,
 qwen2-5-7b,74.9,self-reported,https://qwenlm.github.io/blog/qwen2.5-llm/,,
-qwen2-5-coder-32b,76.4,self-reported,https://arxiv.org/abs/2409.12186,,Base model
+qwen2-5-coder-32b,83,self-reported,https://arxiv.org/abs/2409.12186,,Base model [score corrected during round-5 full-corpus accuracy re-verify: 76.4 -> 83]
 qwen2-57b-a14b,71.9,self-reported,https://qwenlm.github.io/blog/qwen2/,2024-06-07,Base model
 qwen2-72b,76.9,self-reported,https://qwenlm.github.io/blog/qwen2/,2024-06-07,Base model
 qwen2-7b,65.9,self-reported,https://qwenlm.github.io/blog/qwen2/,2024-06-07,Base model

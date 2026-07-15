@@ -70,7 +70,7 @@
       "score": 50.3,
       "source": "self-reported",
       "sourceUrl": "https://huggingface.co/blog/llama4-release",
-      "notes": "Instruction-tuned"
+      "notes": "Pre-trained/base model comparison table (em_maj1@1), not instruction-tuned — corrected during round-5 full-corpus accuracy re-verify (was mislabeled 'Instruction-tuned'; no MATH row exists in the instruction-tuned table)."
     },
     {
       "benchmarkSlug": "mbpp",

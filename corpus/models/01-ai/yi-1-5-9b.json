@@ -49,10 +49,10 @@
   "results": [
     {
       "benchmarkSlug": "mmlu-pro",
-      "score": 45.95,
+      "score": 39.16,
       "source": "independent",
       "sourceUrl": "https://huggingface.co/01-ai/Yi-1.5-9B-Chat",
-      "notes": "Yi-1.5-9B-Chat variant, via TIGER-Lab MMLU-Pro leaderboard evaluation"
+      "notes": "Yi-1.5-9B-Chat variant, via TIGER-Lab MMLU-Pro leaderboard evaluation [score corrected during round-5 full-corpus accuracy re-verify: 45.95 -> 39.16]"
     },
     {
       "benchmarkSlug": "bbh",
@@ -80,11 +80,11 @@
     },
     {
       "benchmarkSlug": "math",
-      "score": 10.2,
+      "score": 11.4,
       "source": "independent",
       "sourceUrl": "https://huggingface.co/datasets/open-llm-leaderboard/01-ai__Yi-1.5-9B-details",
       "evaluatedAt": "2024-06-16",
-      "notes": "MATH Hard subset, exact match. Yi-1.5-9B base model, Open LLM Leaderboard v2."
+      "notes": "MATH Hard subset, exact match. Yi-1.5-9B base model, Open LLM Leaderboard v2. [score corrected during round-5 full-corpus accuracy re-verify: 10.2 -> 11.4]"
     },
     {
       "benchmarkSlug": "ifeval",
@@ -95,5 +95,5 @@
       "notes": "Yi-1.5-9B base model, Open LLM Leaderboard v2. IFEval 'Inst-and-Prompt Level Strict Acc' (average of prompt-level strict 23.11% and inst-level strict 35.61%)."
     }
   ],
-  "verificationNotes": "Existence and release date (2024-05-13) confirmed on GitHub README ('Yi-1.5 series models are open-sourced'). Apache 2.0 license, 9B params, base-variant 4K context (vs the separate -16K/-32K suffixed checkpoints), and 3.6T-token continual pretraining confirmed on HF model card. The single result row is explicitly for the -Chat variant per its own notes field; fetched the cited HF page (01-ai/Yi-1.5-9B-Chat) and confirmed the MMLU-Pro 45.95 score literally appears there \u2014 no changes."
+  "verificationNotes": "Existence and release date (2024-05-13) confirmed on GitHub README ('Yi-1.5 series models are open-sourced'). Apache 2.0 license, 9B params, base-variant 4K context (vs the separate -16K/-32K suffixed checkpoints), and 3.6T-token continual pretraining confirmed on HF model card. The single result row is explicitly for the -Chat variant per its own notes field; fetched the cited HF page (01-ai/Yi-1.5-9B-Chat) and confirmed the MMLU-Pro 45.95 score literally appears there — no changes."
 }

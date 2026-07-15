@@ -12,15 +12,16 @@ test.describe('rankings', () => {
     // #1 row is the broadly-benchmarked frontier leader (Frontier Elo, D21)
     const first = page.getByTestId('ranking-row').first()
     await expect(first).toContainText('GPT-5.6')
-    await expect(first).toContainText('3130.4')
+    await expect(first).toContainText('3239.1')
   })
 
   test('column sort click mutates URL and reorders rows', async ({ page }) => {
     await gotoHydrated(page, '/rankings')
     await page.getByTestId('sort-gpqa').click()
     await expect(page).toHaveURL(/sort=-gpqa/)
-    // GPQA Diamond leader is Claude Sonnet 5 (96.2), displacing the Elo leader
-    await expect(page.getByTestId('ranking-row').first()).toContainText('Claude Sonnet 5')
+    // GPT-5.6 leads both the Elo index and GPQA Diamond (94.6), so sorting by GPQA
+    // keeps it in first place — no reordering, but the sort param still mutates the URL
+    await expect(page.getByTestId('ranking-row').first()).toContainText('GPT-5.6')
     // second click flips to ascending
     await page.getByTestId('sort-gpqa').click()
     await expect(page).toHaveURL(/sort=gpqa/)
