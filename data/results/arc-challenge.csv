@@ -37,6 +37,7 @@ gpt-3-175b,51.5,self-reported,https://arxiv.org/abs/2005.14165,,Few-shot (Table 
 gpt-3-5-turbo,85.2,self-reported,https://arxiv.org/abs/2303.08774,,
 gpt-4,96.3,self-reported,https://arxiv.org/abs/2303.08774,,
 gpt-4o,96.7,independent,https://arxiv.org/abs/2407.21783,2024-07-23,"0-shot. From the same Meta Llama-3 paper comparison table (Table 2), verified directly against the PDF."
+gpt-4o-mini,93.3,independent,https://arxiv.org/abs/2409.12183,2024-09-18,"Same paper/table as the BBH row above (Sprague et al. 2025, Appendix Table 7): GPT-4o Mini scores 93.3% zero-shot CoT accuracy on ARC-Challenge (82.6% without CoT)."
 gpt-j-6b,34,self-reported,https://arxiv.org/abs/2204.06745,2022-04-14,"Zero-shot, Table 2 of the GPT-NeoX-20B paper (acc=0.340)."
 gpt-neox-20b,38,self-reported,https://arxiv.org/abs/2204.06745,2022-04-14,"Zero-shot, Table 2 of the GPT-NeoX-20B paper (acc=0.380)."
 granite-3-0-2b-instruct,54.35,self-reported,https://huggingface.co/ibm-granite/granite-3.0-2b-instruct,,"ARC-C, pass@1"
@@ -125,6 +126,7 @@ stable-lm-2-1-6b,43.69,independent,https://huggingface.co/stabilityai/stablelm-2
 stable-lm-2-12b,65.02,self-reported,https://huggingface.co/stabilityai/stablelm-2-12b-chat,,chat variant
 stablelm-3b-4e1t,46.59,independent,https://huggingface.co/stabilityai/stablelm-3b-4e1t,,"Open LLM Leaderboard, 25-shot"
 stablelm-zephyr-3b,46.08,self-reported,https://huggingface.co/stabilityai/stablelm-zephyr-3b,,"AI2 Reasoning Challenge (25-Shot), Open LLM Leaderboard, from the model-index metadata embedded in the HF README.md."
+starling-7b-alpha,63.82,independent,https://huggingface.co/datasets/open-llm-leaderboard-old/results/blob/main/berkeley-nest/Starling-LM-7B-alpha/results_2023-12-04T15-57-32.180703.json,2023-12-04,"AI2 Reasoning Challenge (Challenge set), 25-shot, acc_norm. From the original (v1) Open LLM Leaderboard's automated lm-eval-harness run for berkeley-nest/Starling-LM-7B-alpha (job finished 2023-12-04, status FINISHED per the leaderboard's request file); verified directly against the raw results JSON."
 teuken-7b-instruct,0.569,self-reported,https://huggingface.co/openGPT-X/Teuken-7B-instruct-commercial-v0.4,,"EU21-ARC, averaged across 21 EU languages"
 upstage-solar-10-7b,61.95,self-reported,https://arxiv.org/abs/2312.15166,,"Table 2 of the SOLAR 10.7B paper (base model row), Open-LLM-Leaderboard-style 25-shot ARC-Challenge."
 upstage-solar-pro,68.86,self-reported,https://huggingface.co/upstage/solar-pro-preview-instruct,,"HF model card benchmark table, ARC-C column, 25-shot acc_norm per the card's own eval-protocol notes."

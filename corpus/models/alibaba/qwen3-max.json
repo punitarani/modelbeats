@@ -89,6 +89,35 @@
       "source": "self-reported",
       "sourceUrl": "https://felloai.com/qwen-3-max-ai-all-you-need-to-know-about-alibabas-1-trillion-parameter-llm/",
       "notes": "LiveCodeBench v6, Qwen3-Max-Instruct (Preview) launch chart. Conflicting GA-era transcriptions cite 74.8 (e.g. apidog); no official text source resolves it."
+    },
+    {
+      "benchmarkSlug": "gpqa",
+      "score": 76,
+      "source": "independent",
+      "sourceUrl": "https://artificialanalysis.ai/models/qwen3-max-preview",
+      "notes": "GPQA Diamond (scientific reasoning), Qwen3-Max-Preview (non-reasoning). Artificial Analysis Intelligence Index v4.1 breakdown, confirmed via direct browser fetch with page-title verified as 'Qwen3 Max (Preview)' and FAQ confirming 'released on September 5, 2025' -- exact match to this catalog entry. Score read off AA's evaluation chart (rounded to whole percent); a third-party aggregator (designforonline.com, citing AA+HF) separately reports 76.4% for the later Sept-23 GA 'Qwen3-Max' release, consistent within rounding."
+    },
+    {
+      "benchmarkSlug": "hle",
+      "score": 9,
+      "source": "independent",
+      "sourceUrl": "https://artificialanalysis.ai/models/qwen3-max-preview",
+      "notes": "Humanity's Last Exam, Qwen3-Max-Preview (non-reasoning). Artificial Analysis Intelligence Index v4.1 breakdown, same title/date-verified fetch as the GPQA entry. AA's chart shows 9% (rounded); designforonline.com separately cites 9.3% for the GA Sept-23 release, consistent."
+    },
+    {
+      "benchmarkSlug": "ifbench",
+      "score": 48,
+      "source": "independent",
+      "sourceUrl": "https://artificialanalysis.ai/models/qwen3-max-preview",
+      "notes": "IFBench (instruction following), Qwen3-Max-Preview (non-reasoning). Artificial Analysis Intelligence Index v4.1 breakdown, same title/date-verified fetch. AA's chart shows 48%, exactly matching the independently cited 48% for the GA Sept-23 release on designforonline.com."
+    },
+    {
+      "benchmarkSlug": "arena",
+      "score": 1432,
+      "source": "independent",
+      "sourceUrl": "https://web.archive.org/web/20251113220020/https://lmarena.ai/leaderboard/text",
+      "evaluatedAt": "2025-11-13",
+      "notes": "LMArena (Chatbot Arena) Text leaderboard Elo rating for model id 'qwen3-max-preview' (linked to Alibaba Cloud Model Studio docs), rank #5 at this Nov 13 2025 archive.org snapshot, ~25,932 votes, +/-5. Score fluctuated narrowly (1432-1438) across multiple archived snapshots from Nov 2025 through Jan 2026; this is the earliest well-populated post-launch snapshot."
     }
   ],
   "verificationNotes": "Confirmed real: preview announced Sept 5, 2025 (X/Alibaba_Qwen, MarkTechPost, Cybernews, Interesting Engineering all corroborate), over 1T total params (undisclosed exact figure) trained on 36T tokens, MoE architecture, closed/API-only via Alibaba Cloud/DashScope -- all confirmed. SWE-bench Verified 69.6 and Tau2-Bench 74.8 confirmed verbatim via direct fetch of the cited alibabacloud.com blog. SuperGPQA 81.4 confirmed verbatim via direct fetch of the cited dev.to article. Pricing ($1.2/$6 per M, 0-32K tier) confirmed exactly via Alibaba Cloud Model Studio official pricing page. No changes made."

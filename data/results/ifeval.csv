@@ -55,12 +55,14 @@ llama-2-13b-chat,34.01,independent,https://huggingface.co/datasets/open-llm-lead
 llama-3-1-405b,88.6,self-reported,https://huggingface.co/meta-llama/Meta-Llama-3.1-8B,2024-07-01,Instruct
 llama-3-1-70b,87.5,self-reported,https://huggingface.co/meta-llama/Meta-Llama-3.1-8B,2024-07-01,Instruct
 llama-3-1-8b,80.4,self-reported,https://huggingface.co/meta-llama/Meta-Llama-3.1-8B,2024-07-01,Instruct
+llama-3-1-nemotron-70b-instruct,78.3,independent,https://huggingface.co/datasets/open-llm-leaderboard/nvidia__Llama-3.1-Nemotron-70B-Instruct-HF-details,2024-10-16,inst_level_strict_acc from the HF Open LLM Leaderboard v2 automated evaluation run (0.782974 raw). Not published by NVIDIA directly; independent third-party harness result.
 llama-3-1-nemotron-ultra-253b-v1-reasoning-off,88.85,self-reported,https://huggingface.co/nvidia/Llama-3_1-Nemotron-Ultra-253B-v1,,Reasoning Off
 llama-3-1-nemotron-ultra-253b-v1-reasoning-on,89.45,self-reported,https://huggingface.co/nvidia/Llama-3_1-Nemotron-Ultra-253B-v1,,Reasoning On; beats DeepSeek-R1's 83.3
 llama-3-2-1b,59.5,self-reported,https://github.com/meta-llama/llama-models/blob/main/models/llama3_2/MODEL_CARD.md,2024-09-01,"Instruct, BF16, Avg(Prompt/Instruction acc Loose/Strict)"
 llama-3-2-3b,77.4,self-reported,https://github.com/meta-llama/llama-models/blob/main/models/llama3_2/MODEL_CARD.md,2024-09-01,"Instruct, BF16, Avg(Prompt/Instruction acc Loose/Strict)"
 llama-3-3-70b,92.1,self-reported,https://huggingface.co/meta-llama/Llama-3.3-70B-Instruct,,
 llama-3-3-nemotron-super-49b-v1-reasoning-off,89.21,self-reported,https://huggingface.co/nvidia/Llama-3_3-Nemotron-Super-49B-v1,,"Strict:Instruction, Reasoning Off"
+llama-3-3-nemotron-super-49b-v1-reasoning-on,89.2,self-reported,https://arxiv.org/abs/2505.00949,2025-05-01,"IFEval, Reasoning On. From Table 4 of the technical report, which reports both modes for the final LN-Super checkpoint (on=89.2, off=89.0). The HF model card/NIM docs publish only a single IFEval value (89.21) explicitly labeled 'Reasoning Off' with no Reasoning-On figure at all -- so this paper-sourced on-mode value fills a genuine gap versus the card, though note the close-but-not-identical off-mode figures (89.0 in the paper vs 89.21 on the card) suggest some methodological variance between the two official publications."
 minicpm3-4b,68.4,self-reported,https://huggingface.co/openbmb/MiniCPM3-4B,2024-09-01,Reported as 'IFEVAL (Prompt Strict-Acc.)' on the model card.
 minimax-text-01,89.1,self-reported,https://huggingface.co/MiniMaxAI/MiniMax-Text-01,,average
 mistral-small-3-24b,82.9,self-reported,https://huggingface.co/mistralai/Mistral-Small-24B-Instruct-2501,,
@@ -96,6 +98,7 @@ qwen3-5-omni-flash,85.2,self-reported,https://qwen.ai/blog?id=qwen3.5-omni,,
 qwen3-5-omni-plus,89.7,self-reported,https://qwen.ai/blog?id=qwen3.5-omni,,
 qwen3-5-plus,89.7,self-reported,https://qwen.ai/blog?id=qwen3.5-omni,,Qwen3.5-Plus-NoThinking
 qwen3-6-plus,94.3,independent,https://apidog.com/blog/qwen3-6-plus-api/,,"IFEval (strict), instruction-following. 94.3% corroborated by a second independent aggregator, benchlm.ai, with an identical figure. Distinct from the separately-tracked IFBench score (75.2%) added below -- the two are different benchmarks with different, non-conflicting scores, consistent with them being genuinely different evals rather than a mislabeled duplicate."
+qwen3-6-plus,94.3,self-reported,https://qwen.ai/blog?id=qwen3.6,2026-04-02,"IFEval, strict-prompt setting (Instruction Following table)."
 qwen3-7-max,94.3,self-reported,https://www.alibabacloud.com/blog/qwen3-7-the-agent-frontier_603154,2026-05-21,"Distinct row from IFBench (already tracked at 79.1) in the same table image -- IFEval and IFBench are separate taxonomy slugs and separate rows in Alibaba's own table. Qwen3.7-Max scored 94.3, tied with Qwen3.6-Plus and just behind K2.6 Thinking/GLM-5.1 Thinking (94.5 each)."
 qwen3-7-plus,94.6,self-reported,https://qwen.ai/blog?id=qwen3.7-plus,2026-05-31,"Official Qwen launch blog, 'General Capability' table."
 qwen3-8b-non-thinking,83,self-reported,https://arxiv.org/abs/2505.09388,,"IFEval strict prompt, non-thinking mode, Table 18"
@@ -107,6 +110,7 @@ seed1-5-thinking,87.4,self-reported,https://github.com/ByteDance-Seed/Seed-Think
 smollm3-3b-no-thinking,76.7,self-reported,https://huggingface.co/HuggingFaceTB/SmolLM3-3B,,No extended thinking
 smollm3-3b-think,71.2,self-reported,https://huggingface.co/HuggingFaceTB/SmolLM3-3B,,Extended-thinking mode.
 snowflake-arctic,52.4,independent,https://www.flexera.com/blog/finops/snowflake-arctic,,
+starling-7b-alpha,54.8,independent,https://huggingface.co/datasets/open-llm-leaderboard/contents,2024-06-12,"IFEval, 0-shot, strict accuracy. From the newer Open LLM Leaderboard v2 (open-llm-leaderboard/contents dataset), submission date 2024-06-12 for fullname 'berkeley-nest/Starling-LM-7B-alpha'; verified directly against the raw parquet row (raw, un-normalized column)."
 t-lu-3-405b,86,self-reported,https://huggingface.co/allenai/Llama-3.1-Tulu-3-405B,,"loose; DeepSeek V3 88.0, GPT-4o 84.8"
 t-lu-3-70b,83.2,self-reported,https://huggingface.co/allenai/Llama-3.1-Tulu-3-70B,,prompt loose
 upstage-solar-pro,84.37,self-reported,https://huggingface.co/upstage/solar-pro-preview-instruct,,

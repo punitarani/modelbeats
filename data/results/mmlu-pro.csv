@@ -43,6 +43,7 @@ gemma-4-26b-a4b,82.6,self-reported,https://huggingface.co/google/gemma-4-26B-A4B
 glm-4-5-355b-a32b,84.6,independent,https://llm-stats.com/models/compare/glm-4.5-vs-glm-4.5-air,2026-07-12,
 glm-4-5-air-106b-a12b,81.4,independent,https://llm-stats.com/models/compare/glm-4.5-vs-glm-4.5-air,2026-07-12,
 gpt-4o,72.55,independent,https://github.com/TIGER-AI-Lab/MMLU-Pro,,"5-shot CoT, from TIGER-Lab's own MMLU-Pro leaderboard/paper (the benchmark's creators), published June 2024 -- contemporaneous with GPT-4o's initial release. Note: Meta's 'Llama 3 Herd of Models' paper (arXiv 2407.21783) independently re-measured GPT-4o at 74.0 on nominally the same 5-shot-CoT config; used the benchmark authors' own figure here as the more canonical measurement to avoid a conflicting duplicate row."
+gpt-4o-mini,63.1,independent,https://huggingface.co/spaces/TIGER-Lab/MMLU-Pro,2024-07-20,"TIGER-Lab's independently-run MMLU-Pro leaderboard (results.csv in TIGER-Lab/mmlu_pro_leaderboard_submission, data source listed as ""TIGER-Lab"", i.e. run by the benchmark authors rather than self-reported) records GPT-4o-mini's overall accuracy as 0.6309 (63.09%). The MMLU-Pro README confirms GPT-4o-mini was added to the leaderboard on 2024-07-20."
 gpt-5-nano,78,independent,https://themodelbeat.com/models/gpt-5-nano,,"MMLU-Pro score from Epoch AI's independent evaluation of GPT-5 nano, relayed via themodelbeat.com."
 granite-3-0-2b-instruct,27.92,self-reported,https://huggingface.co/ibm-granite/granite-3.0-2b-instruct,,
 granite-3-0-8b-instruct,34.45,self-reported,https://huggingface.co/ibm-granite/granite-3.0-8b-instruct,,
@@ -80,8 +81,10 @@ llama-3-3-70b,68.9,self-reported,https://huggingface.co/meta-llama/Llama-3.3-70B
 llama-4-maverick,80.5,self-reported,https://huggingface.co/blog/llama4-release,,Instruction-tuned
 llama-4-scout,74.3,self-reported,https://huggingface.co/blog/llama4-release,,Instruction-tuned
 mimo-v2-5,82.93,independent,https://www.vals.ai/models/xiaomi_mimo-v2.5,,"MMLU-Pro, independently benchmarked by Vals AI for MiMo V2.5 (±0.37 CI). Not published by Xiaomi itself for this model (the MMLU/MMLU-Pro table in the HF README is explicitly the pretrained -Base checkpoint, not this released model)."
+mimo-v2-5-pro,84.59,independent,https://www.vals.ai/models/xiaomi_mimo-v2.5-pro,,"MMLU-Pro, independently measured by Vals AI. Verified via rendered screenshot ('84.59%'); raw HTML CSS bar 'target-width:84.595%' matches. New benchmark, not previously in the corpus for this model (the HF README's MMLU-Pro figure of 68.5 is explicitly for the pretrained Base checkpoint, not this released chat model, and was correctly excluded already)."
 minimax-m1,80.6,self-reported,https://huggingface.co/MiniMaxAI/MiniMax-M1-80k,,M1-40K
 minimax-m2,82,self-reported,https://github.com/MiniMax-AI/MiniMax-M2,,
+minimax-m2-7,81.8,self-reported,https://arxiv.org/pdf/2605.26494,2026-05-26,"Official MiniMax-M2 technical report (arXiv:2605.26494), Table 4, row 'MMLU-Pro' — M2.7 scores 81.8 (M2.5: 85.2 [sic, M2.5 scores higher here per the published table]; Opus 4.6: 89.1; Sonnet 4.6: 87.3; GPT-5.4: 87.5; Gemini 3.1 Pro: 91.2)."
 minimax-text-01,75.7,self-reported,https://huggingface.co/MiniMaxAI/MiniMax-Text-01,,
 mistral-large-2-24-07,65.91,independent,https://huggingface.co/mistralai/Mistral-Large-Instruct-2407,2024-07-24,"From the HF 'Evaluation results' auto-generated widget, backed by the community EvalEval automated eval-results datastore - not a number Mistral wrote into their own benchmark tables, hence independent rather than self-reported."
 mistral-large-24-11,67.94,independent,https://huggingface.co/mistralai/Mistral-Large-Instruct-2411,2024-11-18,"From the HF 'Evaluation results' auto-generated widget, backed by the community EvalEval automated eval-results datastore - an automated third-party eval run, not a Mistral self-report."
@@ -137,6 +140,7 @@ seed-oss-36b,82.7,self-reported,https://huggingface.co/ByteDance-Seed/Seed-OSS-3
 seed1-5-thinking,87,self-reported,https://github.com/ByteDance-Seed/Seed-Thinking-v1.5,,
 smollm2-1-7b,19.4,self-reported,https://huggingface.co/HuggingFaceTB/SmolLM2-1.7B,,"base model, MCF"
 sonar,68.9,independent,https://designforonline.com/ai-models/perplexity-sonar/,,Attributed to Artificial Analysis; corroborated identically by mindstudio.ai/models/sonar. See gpqa addition notes for sourcing caveats.
+starling-7b-alpha,31.72,independent,https://huggingface.co/datasets/open-llm-leaderboard/contents,2024-06-12,"MMLU-Pro, 5-shot, acc (raw, un-normalized leaderboard column). Open LLM Leaderboard v2, same submission as above."
 trinity-large-thinking,83.4,self-reported,https://huggingface.co/arcee-ai/Trinity-Large-Thinking,,
 upstage-solar-pro,52.11,self-reported,https://huggingface.co/upstage/solar-pro-preview-instruct,,
 wizardlm-2-8x22b,39.96,independent,https://huggingface.co/alpindale/WizardLM-2-8x22B,,"Open LLM Leaderboard v2, 5-shot"

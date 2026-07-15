@@ -1,3 +1,4 @@
 model_slug,score,source,source_url,evaluated_at,notes
+grok-4,37.5,self-reported,https://x.ai/news/grok-4,2025-07-09,"USAMO 2025 (Olympiad Math Proofs), no tools. Read directly off xAI's official launch page bar chart (Grok 4 bar labeled 37.5, vs. Grok 4 Heavy w/ Python 61.9); corroborated by datacamp.com/blog/grok-4's benchmark table citing the identical 37.5% figure."
 grok-4-heavy,61.9,self-reported,https://www.datacamp.com/blog/grok-4,2025-07-09,USAMO 2025
 minimax-m3,85.7,self-reported,https://huggingface.co/MiniMaxAI/MiniMax-M3,2026-06-01,"USAMO 2026, reported as 36/42 (=85.7%) on the official model-card benchmark image. Per the card's methodology footnote, graded per MathArena's official evaluation approach: model proof output normalized, then graded by two independent judge models (GPT-5.4 and Gemini 3.1 Pro, both at high reasoning effort) using human-expert rubrics, with the minimum of the two judges' scores taken as final."

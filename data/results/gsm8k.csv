@@ -49,6 +49,7 @@ glm-4-9b-chat,79.6,self-reported,https://huggingface.co/THUDM/glm-4-9b-chat,,
 gpt-3-5-turbo,57.1,self-reported,https://arxiv.org/abs/2303.08774,,
 gpt-4,92,self-reported,https://arxiv.org/abs/2303.08774,,training set partially contaminated per OpenAI's own footnote
 gpt-4o,96.1,independent,https://arxiv.org/abs/2407.21783,2024-07-23,"8-shot CoT. From the same Meta Llama-3 paper comparison table (Table 2), verified directly against the PDF."
+gpt-4o-mini,94.1,independent,https://arxiv.org/abs/2409.12183,2024-09-18,"Same paper/table as the BBH row above (Sprague et al. 2025, Appendix Table 7): GPT-4o Mini scores 94.1% zero-shot CoT accuracy on GSM8K (31.8% without CoT)."
 granite-3-0-2b-instruct,59.66,self-reported,https://huggingface.co/ibm-granite/granite-3.0-2b-instruct,,pass@1
 granite-3-0-8b-instruct,68.99,self-reported,https://huggingface.co/ibm-granite/granite-3.0-8b-instruct,,"GSM8K, 5-shot CoT. Confirmed in HF model-index YAML and technical report Table 10."
 granite-3-1-8b-instruct,73.84,independent,https://huggingface.co/ibm-granite/granite-3.1-8b-instruct,,HF Open LLM Leaderboard V1
@@ -155,6 +156,7 @@ stablelm-3b-4e1t,3.34,independent,https://huggingface.co/stabilityai/stablelm-3b
 stablelm-zephyr-3b,42.15,self-reported,https://huggingface.co/stabilityai/stablelm-zephyr-3b,,5-shot
 starcoder2-15b,65.1,self-reported,https://huggingface.co/bigcode/starcoder2-15b,,PAL
 starcoder2-3b,27.7,self-reported,https://huggingface.co/bigcode/starcoder2-3b,,PAL
+starling-7b-alpha,62.4,independent,https://huggingface.co/datasets/open-llm-leaderboard-old/results/blob/main/berkeley-nest/Starling-LM-7B-alpha/results_2023-12-04T15-57-32.180703.json,2023-12-04,"GSM8K, 5-shot, acc. This is the corrected re-run (job started 2023-12-04) after a known Open LLM Leaderboard GSM8K harness bug; an earlier 2023-11-28 run for this same model showed an anomalous 25.85 pre-fix, which is why the later, post-fix, FINISHED-status run is used."
 t-lu-3-405b,95.5,self-reported,https://huggingface.co/allenai/Llama-3.1-Tulu-3-405B,,"8-shot CoT; DeepSeek V3 94.1, GPT-4o 91.7"
 t-lu-3-70b,93.5,self-reported,https://huggingface.co/allenai/Llama-3.1-Tulu-3-70B,,8-shot CoT
 ul2-20b,6.9,self-reported,https://arxiv.org/abs/2205.05131,2022-05-10,"UL2 20B (base, non-Flan), 8-shot chain-of-thought + external calculator (no self-consistency) on GSM8K, from Table 12. This was notable as the first publicly-available pretrained checkpoint (no fine-tuning) shown to successfully leverage CoT prompting. With self-consistency added the paper reports 10.2%; with plain CoT (no calculator) only 4.4%; I chose the CoT+calculator (no SC) figure since it's the closest match to the calculator-augmented, non-self-consistency methodology already used for PaLM 540B's existing GSM8K entry in this corpus."

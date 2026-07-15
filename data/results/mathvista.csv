@@ -42,6 +42,7 @@ phi-4-multimodal-5-6b,62.4,self-reported,https://huggingface.co/microsoft/Phi-4-
 phi-4-multimodal-instruct,62.4,self-reported,https://arxiv.org/abs/2503.01743,,"Table 1, MathVista (testmini); already present in the sibling phi-4-multimodal-5-6b.json record but missing here."
 pixtral-12b,58,self-reported,https://mistral.ai/news/pixtral-12b/,,CoT prompting
 pixtral-large-124b,69.4,self-reported,https://mistral.ai/news/pixtral-large/,2024-11-18,
+qvq-72b-preview,70.3,independent,https://arxiv.org/abs/2504.10479,2025-04-14,"Independent third-party reproduction via VLMEvalKit, reported in the InternVL3 Technical Report (Table 2, row 'QvQ-72B-Preview'). MathVista(mini) 70.3, vs. Qwen's own self-reported 71.4 -- minor eval-harness variance, not a discrepancy in the underlying benchmark."
 qvq-72b-preview,71.4,self-reported,https://huggingface.co/Qwen/QVQ-72B-Preview,,MathVista mini
 qwen2-5-vl-72b,74.8,self-reported,https://huggingface.co/Qwen/Qwen2.5-VL-72B-Instruct,,MathVista mini
 qwen2-vl-72b,70.5,self-reported,https://huggingface.co/Qwen/Qwen2-VL-72B-Instruct,,"Instruct checkpoint, MathVista testmini"

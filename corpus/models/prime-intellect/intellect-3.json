@@ -84,6 +84,13 @@
       "source": "self-reported",
       "sourceUrl": "https://arxiv.org/pdf/2512.16144",
       "notes": "Table 2 of the INTELLECT-3 Technical Report."
+    },
+    {
+      "benchmarkSlug": "math",
+      "score": 98.1,
+      "source": "self-reported",
+      "sourceUrl": "https://huggingface.co/PrimeIntellect/INTELLECT-3",
+      "notes": "MATH-500. Reported in the official Prime Intellect HF model card evaluation table alongside AIME24/AIME25/LCB/GPQA/HLE/MMLU-Pro (same 6 metrics as the technical report's Table 2, plus this one extra column). Not present in the arXiv technical report itself. INTELLECT-3 scores 98.1 vs. GLM-4.5-Air's 97.8 and GLM-4.5's 97.0 on the same vendor table."
     }
   ],
   "verificationNotes": "Cross-checked the INTELLECT-3 technical report (arXiv:2512.16144) against Prime Intellect's own blog post and the Hugging Face repo (PrimeIntellect/INTELLECT-3); benchmark numbers are vendor-reported in both the paper and blog."

@@ -80,6 +80,14 @@
       "sourceUrl": "https://www.lmsys.org/blog/2023-06-22-leaderboard/",
       "evaluatedAt": "2023-06-22",
       "notes": "GPT-4-judged MT-Bench score for Guanaco-65B from the LMSYS Chatbot Arena Leaderboard Week 8 update ('Introducing MT-Bench and Vicuna-33B')."
+    },
+    {
+      "benchmarkSlug": "alpaca-eval",
+      "score": 71.8,
+      "source": "independent",
+      "sourceUrl": "https://github.com/tatsu-lab/alpaca_eval/blob/main/docs/data_AlpacaEval/alpaca_eval_gpt4_leaderboard.csv",
+      "evaluatedAt": "2023-06-01",
+      "notes": "AlpacaEval (GPT-4 annotator) win rate vs. text-davinci-003 reference = 71.80% (avg response length 1249 tokens), status 'verified' in the official tatsu-lab/alpaca_eval leaderboard CSV; row links directly to https://huggingface.co/timdettmers/guanaco-65b and to the model's raw outputs at results/guanaco-65b/model_outputs.json in the same repo. The newer length-controlled win rate for this entry is 54.69%, but that metric postdates this model and the classic win_rate is the metric the leaderboard originally reported it under."
     }
   ],
   "verificationNotes": "Confirmed real model via HF model card (fetched): 65B params, Apache-2.0 adapter license, Vicuna Elo human=1023/GPT-4=1022 literally match the page. releaseDate 2023-05-23 confirmed via arXiv (2305.14314). The paper's full text confirms 99.3% and '24 hours on a single [48GB] professional GPU' specifically describe the 65B (largest/best) model, so this note is correct as-is (no change needed, unlike the 33B record)."

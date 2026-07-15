@@ -69,6 +69,86 @@
       "sourceUrl": "https://huggingface.co/berkeley-nest/Starling-LM-7B-alpha",
       "evaluatedAt": "2023-11-20",
       "notes": "MMLU score listed in the official model card's benchmark comparison table (also confirmed on the official project page starling.cs.berkeley.edu, described there as testing 'basic capability of the model')."
+    },
+    {
+      "benchmarkSlug": "arc-challenge",
+      "score": 63.82,
+      "source": "independent",
+      "sourceUrl": "https://huggingface.co/datasets/open-llm-leaderboard-old/results/blob/main/berkeley-nest/Starling-LM-7B-alpha/results_2023-12-04T15-57-32.180703.json",
+      "evaluatedAt": "2023-12-04",
+      "notes": "AI2 Reasoning Challenge (Challenge set), 25-shot, acc_norm. From the original (v1) Open LLM Leaderboard's automated lm-eval-harness run for berkeley-nest/Starling-LM-7B-alpha (job finished 2023-12-04, status FINISHED per the leaderboard's request file); verified directly against the raw results JSON."
+    },
+    {
+      "benchmarkSlug": "hellaswag",
+      "score": 84.9,
+      "source": "independent",
+      "sourceUrl": "https://huggingface.co/datasets/open-llm-leaderboard-old/results/blob/main/berkeley-nest/Starling-LM-7B-alpha/results_2023-12-04T15-57-32.180703.json",
+      "evaluatedAt": "2023-12-04",
+      "notes": "HellaSwag, 10-shot, acc_norm. Same v1 Open LLM Leaderboard automated run, verified against raw results JSON."
+    },
+    {
+      "benchmarkSlug": "truthfulqa",
+      "score": 46.39,
+      "source": "independent",
+      "sourceUrl": "https://huggingface.co/datasets/open-llm-leaderboard-old/results/blob/main/berkeley-nest/Starling-LM-7B-alpha/results_2023-12-04T15-57-32.180703.json",
+      "evaluatedAt": "2023-12-04",
+      "notes": "TruthfulQA MC2 score (0-shot), the standard metric used across the leaderboard/community for this benchmark. Same v1 Open LLM Leaderboard automated run."
+    },
+    {
+      "benchmarkSlug": "winogrande",
+      "score": 80.58,
+      "source": "independent",
+      "sourceUrl": "https://huggingface.co/datasets/open-llm-leaderboard-old/results/blob/main/berkeley-nest/Starling-LM-7B-alpha/results_2023-12-04T15-57-32.180703.json",
+      "evaluatedAt": "2023-12-04",
+      "notes": "WinoGrande, 5-shot, acc. Same v1 Open LLM Leaderboard automated run."
+    },
+    {
+      "benchmarkSlug": "gsm8k",
+      "score": 62.4,
+      "source": "independent",
+      "sourceUrl": "https://huggingface.co/datasets/open-llm-leaderboard-old/results/blob/main/berkeley-nest/Starling-LM-7B-alpha/results_2023-12-04T15-57-32.180703.json",
+      "evaluatedAt": "2023-12-04",
+      "notes": "GSM8K, 5-shot, acc. This is the corrected re-run (job started 2023-12-04) after a known Open LLM Leaderboard GSM8K harness bug; an earlier 2023-11-28 run for this same model showed an anomalous 25.85 pre-fix, which is why the later, post-fix, FINISHED-status run is used."
+    },
+    {
+      "benchmarkSlug": "ifeval",
+      "score": 54.8,
+      "source": "independent",
+      "sourceUrl": "https://huggingface.co/datasets/open-llm-leaderboard/contents",
+      "evaluatedAt": "2024-06-12",
+      "notes": "IFEval, 0-shot, strict accuracy. From the newer Open LLM Leaderboard v2 (open-llm-leaderboard/contents dataset), submission date 2024-06-12 for fullname 'berkeley-nest/Starling-LM-7B-alpha'; verified directly against the raw parquet row (raw, un-normalized column)."
+    },
+    {
+      "benchmarkSlug": "bbh",
+      "score": 44.4,
+      "source": "independent",
+      "sourceUrl": "https://huggingface.co/datasets/open-llm-leaderboard/contents",
+      "evaluatedAt": "2024-06-12",
+      "notes": "Big-Bench-Hard, 3-shot per subtask, acc_norm averaged over 23 subtasks (raw, un-normalized leaderboard column, not the leaderboard's baseline-subtracted display score). Open LLM Leaderboard v2, same submission as IFEval above."
+    },
+    {
+      "benchmarkSlug": "gpqa",
+      "score": 29.7,
+      "source": "independent",
+      "sourceUrl": "https://huggingface.co/datasets/open-llm-leaderboard/contents",
+      "evaluatedAt": "2024-06-12",
+      "notes": "GPQA, 0-shot, acc_norm (raw, un-normalized leaderboard column). Open LLM Leaderboard v2 uses the main GPQA set (not the smaller Diamond subset some vendors quote), so this number is not directly comparable to GPQA-Diamond-only scores elsewhere in the corpus."
+    },
+    {
+      "benchmarkSlug": "mmlu-pro",
+      "score": 31.72,
+      "source": "independent",
+      "sourceUrl": "https://huggingface.co/datasets/open-llm-leaderboard/contents",
+      "evaluatedAt": "2024-06-12",
+      "notes": "MMLU-Pro, 5-shot, acc (raw, un-normalized leaderboard column). Open LLM Leaderboard v2, same submission as above."
+    },
+    {
+      "benchmarkSlug": "arena",
+      "score": 1083,
+      "source": "arena",
+      "sourceUrl": "https://lmsys.org/blog/2023-12-07-leaderboard/",
+      "evaluatedAt": "2023-12-07",
+      "notes": "LMSYS Chatbot Arena Elo rating, 2,250 votes, from the official LMSYS 'New models & Elo system update' blog post; verified directly against the raw HTML table (row: Starling-LM-7B-alpha | 1083 | 2250 | CC-BY-NC-4.0). A point-in-time snapshot from shortly after release, not the model's current/final Arena standing."
     }
   ],
   "verificationNotes": "Existence, org (UC Berkeley/Berkeley NEST), and Nov 20, 2023 release date independently reconfirmed (secondary sources explicitly state 'released on November 20, 2023 by the same UC Berkeley BAIR team'). Fetched the HF model card directly (huggingface.co/berkeley-nest/Starling-LM-7B-alpha) and literally confirmed: license = 'Apache-2.0 license under the condition that the model is not used to compete with OpenAI', base = Openchat-3.5/Mistral-7B-v0.1 (7B params), MT-Bench = 8.09, AlpacaEval = 91.99 \u2014 all four values matched the input record exactly, no corrections needed. ctxK=8 consistent with Mistral-7B-v0.1's native 8192-token context. vramQ4Gb/vramFp16Gb/tps4090 are labeled as architecture-class estimates (not vendor-measured), which is appropriate given no checkpoint-specific benchmark was found."

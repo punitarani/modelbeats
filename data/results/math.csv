@@ -73,6 +73,7 @@ hunyuan-a13b,94.3,self-reported,https://huggingface.co/tencent/Hunyuan-A13B-Inst
 hunyuan-large-a52b,69.8,self-reported,https://huggingface.co/tencent/Tencent-Hunyuan-Large,,
 hunyuan-t1,96.2,self-reported,https://tencent.github.io/llm.hunyuan.T1/README_EN.html,,"MATH-500, closely trailing DeepSeek R1"
 hunyuan-turbos,90,self-reported,https://arxiv.org/abs/2505.15431,2025-04-16,"5-shot, Table 4 of the same technical report"
+intellect-3,98.1,self-reported,https://huggingface.co/PrimeIntellect/INTELLECT-3,,"MATH-500. Reported in the official Prime Intellect HF model card evaluation table alongside AIME24/AIME25/LCB/GPQA/HLE/MMLU-Pro (same 6 metrics as the technical report's Table 2, plus this one extra column). Not present in the arXiv technical report itself. INTELLECT-3 scores 98.1 vs. GLM-4.5-Air's 97.8 and GLM-4.5's 97.0 on the same vendor table."
 internlm2-20b,31.9,self-reported,https://huggingface.co/internlm/internlm2-chat-20b,,
 internlm2-5-7b,60.1,self-reported,https://huggingface.co/internlm/internlm2_5-7b-chat,,
 internlm3-8b-instruct,83,self-reported,https://internlm.readthedocs.io/en/latest/model_card/InternLM3.html,,"MATH-500, thinking mode"
@@ -86,6 +87,7 @@ llama-2-13b,3.9,self-reported,https://ar5iv.labs.arxiv.org/html/2307.09288,2023-
 llama-3-1-405b,73.8,self-reported,https://huggingface.co/meta-llama/Meta-Llama-3.1-8B,2024-07-01,"Instruct, CoT"
 llama-3-1-70b,68,self-reported,https://huggingface.co/meta-llama/Meta-Llama-3.1-8B,2024-07-01,"Instruct, CoT"
 llama-3-1-8b,51.9,self-reported,https://huggingface.co/meta-llama/Meta-Llama-3.1-8B,2024-07-01,"Instruct, CoT"
+llama-3-1-nemotron-70b-instruct,26.96,independent,https://huggingface.co/datasets/open-llm-leaderboard/nvidia__Llama-3.1-Nemotron-70B-Instruct-HF-details,2024-10-16,"MATH Level-5 (hardest subset only), 4-shot, exact_match, from the HF Open LLM Leaderboard v2 harness (0.269637 raw). This is a harder/narrower slice than a full-MATH score elsewhere and is not directly comparable to a full-test-set MATH number — flagged per house convention (see Falcon3-10B's identical Open LLM Leaderboard-sourced 'math' entry for precedent)."
 llama-3-1-nemotron-ultra-253b-v1-reasoning-off,80.4,self-reported,https://huggingface.co/nvidia/Llama-3_1-Nemotron-Ultra-253B-v1,,"MATH500, Reasoning Off"
 llama-3-1-nemotron-ultra-253b-v1-reasoning-on,97,self-reported,https://huggingface.co/nvidia/Llama-3_1-Nemotron-Ultra-253B-v1,,"MATH500, Reasoning On; DeepSeek-R1 scored 97.00"
 llama-3-2-11b-vision,51.9,self-reported,https://github.com/meta-llama/llama-models/blob/main/models/llama3_2/MODEL_CARD_VISION.md,2024-09-01,"Instruct, text-only capability of the vision model, CoT final_em"

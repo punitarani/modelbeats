@@ -22,6 +22,7 @@ claude-sonnet-5,85.2,self-reported,https://o-mega.ai/articles/claude-sonnet-5-be
 deepseek-r1-0528,57.6,self-reported,https://huggingface.co/deepseek-ai/DeepSeek-R1-0528,2025-05-28,"SWE-bench Verified, resolved rate"
 deepseek-r1-671b,49.2,self-reported,https://huggingface.co/deepseek-ai/DeepSeek-R1,2025-01-20,"SWE-bench Verified, resolved rate"
 deepseek-v2-5,16.8,self-reported,https://huggingface.co/deepseek-ai/DeepSeek-V2.5,2024-09-05,"'SWE-verified' row from the same official HF model card table, i.e. SWE-bench Verified."
+deepseek-v3-0324,38.8,independent,https://www.openhands.dev/blog/introducing-openhands-lm-32b-a-strong-open-coding-agent-model,2025-03-31,"SWE-bench Verified resolved rate for DeepSeek V3-0324 run with the OpenHands agent scaffold (not DeepSeek's own harness), published by the OpenHands/All Hands AI team in their 'Introducing OpenHands LM 32B' post as the best open-weights model result at the time. A harder, agentic coding eval distinct from the vendor's own non-agentic LiveCodeBench/MATH-500 numbers already on file."
 deepseek-v3-1-non-thinking,66,self-reported,https://huggingface.co/deepseek-ai/DeepSeek-V3.1,,"SWE-bench Verified, agent mode"
 deepseek-v3-2-exp,67.8,self-reported,https://github.com/deepseek-ai/DeepSeek-V3.2-Exp,,SWE-bench Verified
 deepseek-v3-671b,42,self-reported,https://huggingface.co/deepseek-ai/DeepSeek-V3,,"SWE-bench Verified, Resolved"
@@ -66,6 +67,7 @@ kimi-k2-5,76.8,self-reported,https://www.kimi.com/blog/kimi-k2-5,,"SWE-bench Ver
 kimi-k2-6,80.2,self-reported,https://www.kimi.com/blog/kimi-k2-6,,SWE-bench Verified
 kimi-k2-thinking,71.3,self-reported,https://huggingface.co/moonshotai/Kimi-K2-Thinking,,SWE-bench Verified
 mimo-v2-5,71,independent,https://www.vals.ai/models/xiaomi_mimo-v2.5,,"SWE-bench (distinct from the already-tracked SWE-Bench Pro), independently benchmarked by Vals AI for MiMo V2.5 (±2.03 CI). Not to be confused with the widely-reported 'SWE-bench Verified 78.9%' figure, which is for MiMo-V2.5-Pro, a different (1.02T/42B) model -- deliberately excluded here."
+mimo-v2-5-pro,74,independent,https://www.vals.ai/models/xiaomi_mimo-v2.5-pro,,"SWE-bench Verified, independently re-measured by Vals AI using their own bash-tool-only mini-SWE-agent harness (Tier-2 independent evaluator per Vals AI's own methodology) -- distinct from Xiaomi's self-reported 78.9% already in this file. A harder/lower, less-favorable independent data point included deliberately for thoroughness. Verified via rendered screenshot ('74.00%'); raw HTML CSS bar 'target-width' matches."
 mimo-v2-5-pro,78.9,self-reported,https://mimo.xiaomi.com/mimo-v2-5-pro/,,SWE-bench Verified; from the embedded fbCategories chart data on Xiaomi's official MiMo-V2.5-Pro product page. Independently corroborated (same 78.9 figure) via automatio.ai.
 minimax-m1,56,self-reported,https://huggingface.co/MiniMaxAI/MiniMax-M1-80k,,"SWE-bench Verified, M1-80K"
 minimax-m2,69.4,self-reported,https://github.com/MiniMax-AI/MiniMax-M2,,SWE-bench Verified

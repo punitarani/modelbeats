@@ -84,7 +84,9 @@ gpt-4,86.4,self-reported,https://arxiv.org/abs/2303.08774,,
 gpt-4-1,90.2,self-reported,https://www.rdworldonline.com/openai-claims-gpt-4-1-sets-new-90-standard-in-mmlu-reasoning-benchmark/,2025-04-01,"[relabeled self-reported: aggregator/mirror relay of a vendor figure, not an independent re-measurement]"
 gpt-4-1-mini,87.5,self-reported,https://docsbot.ai/models/gpt-4-1-mini,2025-04-01,"[relabeled self-reported: aggregator/mirror relay of a vendor figure, not an independent re-measurement]"
 gpt-4-1-nano,80.1,self-reported,https://openai.com/index/gpt-4-1/,2025-04-14,GPT-4.1 nano
+gpt-4-5,89.6,self-reported,https://cdn.openai.com/gpt-4-5-system-card-2272025.pdf,2025-02-27,"MMLU, English (not translated), 0-shot — Table 16 of OpenAI's official GPT-4.5 System Card (Section 5, Multilingual Performance). GPT-4.5 scored 0.896 vs GPT-4o's 0.887 and o1's 0.923 on the same table."
 gpt-4-turbo,86.5,independent,https://telnyx.com/llm-library/gpt-4-1106-preview,,"gpt-4-1106-preview, 5-shot"
+gpt-4-turbo,86.7,self-reported,https://github.com/openai/simple-evals,2024-05-13,"gpt-4-turbo-2024-04-09, 0-shot CoT, 'assistant' system prompt, OpenAI simple-evals. Distinct from — not a replacement for — the existing 86.5 row already in this file (gpt-4-1106-preview, classic 5-shot, via Telnyx): different snapshot AND different eval protocol, so both are genuine and kept side by side. Headline-score precedence in this repo's derive step still favors the existing 'independent'-sourced row over this 'self-reported' one, so adding it cannot silently inflate the index."
 gpt-4o,88.7,self-reported,https://en.wikipedia.org/wiki/GPT-4o,,
 gpt-4o-mini,82,self-reported,https://openai.com/index/gpt-4o-mini-advancing-cost-efficient-intelligence/,2024-07-18,
 gpt-neox-20b,28.98,self-reported,https://blog.eleuther.ai/announcing-20b/,2022-02-09,average across Humanities/Social Science/STEM subject clusters; one of the earliest models eval'd on then-new MMLU

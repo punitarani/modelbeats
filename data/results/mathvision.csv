@@ -9,6 +9,7 @@ kimi-k2-5,84.2,self-reported,https://www.kimi.com/blog/kimi-k2-5,,"MathVision, K
 kimi-k2-6,87.4,self-reported,https://www.kimi.com/blog/kimi-k2-6,,"MathVision, no python tool use, avg@3; vendor also reports 93.2 with python tool use enabled."
 minicpm-o-2-6,23.1,self-reported,https://huggingface.co/openbmb/MiniCPM-o-2_6,2025-01-13,Evaluated with chain-of-thought prompting per the model card's footnote.
 minicpm-v-2-6,18.3,self-reported,https://huggingface.co/openbmb/MiniCPM-o-2_6,2024-08-06,Not in MiniCPM-V 2.6's own results table; taken from the fuller cross-model comparison table on the MiniCPM-o 2.6 model card.
+qvq-72b-preview,34.9,independent,https://arxiv.org/abs/2504.10479,2025-04-14,"Independent third-party reproduction via VLMEvalKit, reported in the InternVL3 Technical Report (Table 2, row 'QvQ-72B-Preview'). MathVision 34.9, vs. Qwen's own self-reported 35.9(full) -- minor eval-harness variance."
 qvq-72b-preview,35.9,self-reported,https://huggingface.co/Qwen/QVQ-72B-Preview,,MathVision full
 qwen2-5-vl-72b,38.1,self-reported,https://huggingface.co/Qwen/Qwen2.5-VL-72B-Instruct,2025-01-28,MathVision_FULL
 qwen3-5-122b-a10b,86.2,self-reported,https://huggingface.co/Qwen/Qwen3.5-122B-A10B,,Vision-Language table; README footnote notes a fixed \boxed{} prompt was used for this model's score.

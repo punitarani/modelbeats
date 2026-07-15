@@ -70,6 +70,68 @@
       "sourceUrl": "https://www.minimax.io/news/minimax-m27-en",
       "evaluatedAt": "2026-03-18",
       "notes": "GDPval-AA Elo score across 45 evaluated models, stated on MiniMax's official M2.7 launch post as the highest among open-weight models (behind only Opus 4.6/Sonnet 4.6/GPT-5.4). Corroborated verbatim by independent press (MarkTechPost, Artificial Analysis)."
+    },
+    {
+      "benchmarkSlug": "aime",
+      "score": 94.2,
+      "source": "self-reported",
+      "sourceUrl": "https://arxiv.org/pdf/2605.26494",
+      "evaluatedAt": "2026-05-26",
+      "notes": "MiniMax's official 'The MiniMax-M2 Series' technical report (arXiv:2605.26494), Table 4 full cross-model benchmark comparison, row 'AIME 2026' \u2014 M2.7 scores 94.2 vs M2.5's 87.2, and vs Opus 4.6 (92.5), Sonnet 4.6 (92.7), GPT-5.4 (97.0), Gemini 3.1 Pro (88.7). Also restated in the paper's abstract/intro prose ('M2.7 posts 94.2 on AIME 2026'). Mapped to the generic taxonomy 'aime' slug since the corpus has no year-specific AIME variant; the exact competition-year label used by MiniMax was 'AIME 2026'."
+    },
+    {
+      "benchmarkSlug": "gpqa",
+      "score": 89.8,
+      "source": "self-reported",
+      "sourceUrl": "https://arxiv.org/pdf/2605.26494",
+      "evaluatedAt": "2026-05-26",
+      "notes": "Official MiniMax-M2 technical report (arXiv:2605.26494), Table 4, row 'GPQA-Diamond' \u2014 M2.7 scores 89.8 (M2.5: 85.2; Opus 4.6: 89.6; Sonnet 4.6: 87.5; GPT-5.4: 92.0; Gemini 3.1 Pro: 94.1). Also called out in the report's intro prose alongside the AIME 2026 figure."
+    },
+    {
+      "benchmarkSlug": "hle",
+      "score": 28,
+      "source": "self-reported",
+      "sourceUrl": "https://arxiv.org/pdf/2605.26494",
+      "evaluatedAt": "2026-05-26",
+      "notes": "Official MiniMax-M2 technical report (arXiv:2605.26494), Table 4, row 'HLE' (Humanity's Last Exam) \u2014 M2.7 scores 28.0 (M2.5: 19.0; Opus 4.6: 36.7; Sonnet 4.6: 30.0; GPT-5.4: 41.6; Gemini 3.1 Pro: 44.7). Independently, Artificial Analysis's own HLE measurement for MiniMax-M2.7 (artificialanalysis.ai/models/minimax-m2-7) reads ~28%, closely corroborating this self-reported figure."
+    },
+    {
+      "benchmarkSlug": "ifbench",
+      "score": 76,
+      "source": "self-reported",
+      "sourceUrl": "https://arxiv.org/pdf/2605.26494",
+      "evaluatedAt": "2026-05-26",
+      "notes": "Official MiniMax-M2 technical report (arXiv:2605.26494), Table 4, row 'IFBench' \u2014 M2.7 scores 76.0 (M2.5: 72.0; Opus 4.6: 53.1; Sonnet 4.6: 56.6; GPT-5.4: 73.9; Gemini 3.1 Pro: 77.1). The report highlights this as a standout result, attributing it to the multi-domain RL strategy and rubric-based response filtering described in its Sections 4.3/6. Independently corroborated at ~76% by Artificial Analysis's own IFBench measurement (artificialanalysis.ai/models/minimax-m2-7)."
+    },
+    {
+      "benchmarkSlug": "mmlu-pro",
+      "score": 81.8,
+      "source": "self-reported",
+      "sourceUrl": "https://arxiv.org/pdf/2605.26494",
+      "evaluatedAt": "2026-05-26",
+      "notes": "Official MiniMax-M2 technical report (arXiv:2605.26494), Table 4, row 'MMLU-Pro' \u2014 M2.7 scores 81.8 (M2.5: 85.2 [sic, M2.5 scores higher here per the published table]; Opus 4.6: 89.1; Sonnet 4.6: 87.3; GPT-5.4: 87.5; Gemini 3.1 Pro: 91.2)."
+    },
+    {
+      "benchmarkSlug": "browsecomp",
+      "score": 77.8,
+      "source": "self-reported",
+      "sourceUrl": "https://arxiv.org/pdf/2605.26494",
+      "evaluatedAt": "2026-05-26",
+      "notes": "Official MiniMax-M2 technical report (arXiv:2605.26494), Table 4, 'Search' block, row 'BrowseComp' \u2014 M2.7 scores 77.8 (M2.5: 76.3; Opus 4.6: 84.0; Sonnet 4.6: 74.7; GPT-5.4: 82.7; Gemini 3.1 Pro: 85.9). Distinct from the report's separate 'BrowseComp-zh' (Chinese-language variant) figure used only in an earlier architecture-ablation table (Table 3), not in this final-model cross-comparison."
+    },
+    {
+      "benchmarkSlug": "gpqa",
+      "score": 87,
+      "source": "independent",
+      "sourceUrl": "https://artificialanalysis.ai/models/minimax-m2-7",
+      "notes": "Second, independently-run GPQA Diamond measurement by Artificial Analysis (their own eval harness), distinct from MiniMax's self-reported 89.8 already added above from arXiv:2605.26494 Table 4 \u2014 different methodology/harness, hence recorded as a separate result under the same gpqa slug (mirroring how this corpus already dual-sources e.g. Qwen3.6-Plus's GPQA and Grok 4.5's Terminal-Bench). Read directly off AA's live model-comparison chart for MiniMax-M2.7 (rank-ordered list cross-referenced against adjacent score list) on 2026-07-14."
+    },
+    {
+      "benchmarkSlug": "terminal-bench-2",
+      "score": 55,
+      "source": "independent",
+      "sourceUrl": "https://artificialanalysis.ai/models/minimax-m2-7",
+      "notes": "Second, independently-run Terminal-Bench v2.1 measurement by Artificial Analysis (their own harness/sandbox), distinct from MiniMax's self-reported 57.0 already present in this model's corpus entry (sourced from minimax.io's launch post) and from the 57.0 in arXiv:2605.26494 Table 4 \u2014 recorded as a separate result under the same terminal-bench-2 slug per this corpus's existing dual-sourcing convention (e.g. Grok 4.5's terminal-bench-2 has both a self-reported and an AA-independent entry). Read off AA's live model-comparison chart for MiniMax-M2.7 on 2026-07-14."
     }
   ],
   "verificationNotes": "Confirmed released (not just announced) via official minimax.io news post, MiniMax API docs, NVIDIA developer blog, Hugging Face model page, and Artificial Analysis independent tracker \u2014 all agree on a March 18, 2026 launch. Param counts (230B total/10B active) corroborated by both NVIDIA's technical blog and the official model page; the HF repo metadata itself lists a slightly different '229B' which is very likely a rounding artifact of the same figure. Context window cited as 200K by NVIDIA and ~205K tokens by Artificial Analysis (likely 204,800 rounded two different ways) \u2014 used 200 as the vendor-stated round figure."

@@ -6,6 +6,7 @@ claude-opus-4-8,79.1,independent,https://contracollective.com/blog/opus-4-8-vs-g
 deepseek-r1-0528,71.6,self-reported,https://huggingface.co/deepseek-ai/DeepSeek-R1-0528,2025-05-28,Aider-Polyglot accuracy
 deepseek-r1-671b,53.3,self-reported,https://huggingface.co/deepseek-ai/DeepSeek-R1,2025-01-20,Aider-Polyglot accuracy
 deepseek-v2-5,17.8,self-reported,https://huggingface.co/deepseek-ai/DeepSeek-V2.5,2024-09-05,'Aider' row from the same official HF model card table (real-world multi-language code-editing benchmark used by the Aider tool).
+deepseek-v3-0324,55.1,independent,https://aider.chat/docs/leaderboards/,2025-03-24,"Aider polyglot coding benchmark (225 exercises across 6 languages), diff edit format, run against the DeepSeek API as 'deepseek-chat' (which pointed to V3-0324 at test time); percent-correct (pass-rate-2) 55.1%, 99.6% well-formed. Independent third-party measurement, not vendor self-reported."
 deepseek-v3-1-non-thinking,68.4,self-reported,https://huggingface.co/deepseek-ai/DeepSeek-V3.1,,"Aider-Polyglot (Acc.), Non-Thinking mode, from official HF model card benchmark table"
 deepseek-v3-1-thinking,76.3,self-reported,https://huggingface.co/deepseek-ai/DeepSeek-V3.1,,"Aider-Polyglot (Acc.), Thinking mode, from official HF model card benchmark table"
 deepseek-v3-2-exp,74.5,self-reported,https://github.com/deepseek-ai/DeepSeek-V3.2-Exp,,
@@ -23,6 +24,7 @@ gpt-oss-120b-medium,34.2,self-reported,https://arxiv.org/abs/2508.10925,2025-08-
 gpt-oss-20b-high,34.2,self-reported,https://arxiv.org/abs/2508.10925,2025-08-05,"Aider Polyglot (diff), high reasoning effort"
 gpt-oss-20b-low,16.6,self-reported,https://arxiv.org/abs/2508.10925,2025-08-05,"Aider Polyglot (diff), low reasoning effort"
 gpt-oss-20b-medium,26.6,self-reported,https://arxiv.org/abs/2508.10925,2025-08-05,"Aider Polyglot (diff), medium reasoning effort"
+grok-4,79.6,independent,https://aider.chat/docs/leaderboards/,2025-07-11,"Aider polyglot coding benchmark, high reasoning effort, run via openrouter/x-ai/grok-4 (diff edit format), pass_rate_2 = 79.6% (92/225 first-try, 179/225 with retry), 97.3% well-formed edits. Independently run and published by the Aider project, not an xAI-reported figure."
 kimi-k2,60,self-reported,https://huggingface.co/moonshotai/Kimi-K2-Instruct,,"Aider-Polyglot accuracy, from Coding Tasks table (GitHub README mirror)"
 magistral-medium,47.1,self-reported,https://arxiv.org/abs/2506.10910,2025-06-10,Aider Polyglot; Magistral technical report Table 2
 openai-o3,81.3,self-reported,https://openai.com/index/introducing-o3-and-o4-mini/,2025-04-16,"Aider Polyglot code editing, diff format, o3-high (whole-format score is 81.3%). Diff-format figure used to match this corpus's existing aider-polyglot convention (e.g. gpt-5.json uses the diff figure)."

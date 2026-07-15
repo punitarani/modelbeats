@@ -26,6 +26,7 @@ gpt-3-5-turbo,64.1,self-reported,https://arxiv.org/abs/2303.08774,,F1 score
 gpt-4,80.9,self-reported,https://arxiv.org/abs/2303.08774,,F1 score
 gpt-4-turbo,86,self-reported,https://github.com/openai/simple-evals,2024-05-13,"gpt-4-turbo-2024-04-09, F1 score, 3-shot. OpenAI simple-evals."
 gpt-4o,83.4,self-reported,https://community.openai.com/t/education-level-interpretation-of-gpt-4os-benchmarks/763947,,"DROP (F1) score of 83.4 for GPT-4o, part of the same OpenAI-sourced benchmark table (MMLU/GPQA/MATH/HumanEval/MGSM) already used for this model's other 4 rows. Directly fetched this community.openai.com thread and confirmed it literally lists 'DROP: 83.4' alongside the other 5 figures already in the corpus."
+gpt-4o-mini,79.7,self-reported,https://github.com/openai/simple-evals,2024-07-18,"DROP (F1, 3-shot) score of 79.7% for gpt-4o-mini-2024-07-18, from OpenAI's own simple-evals benchmark table (same source/table as the GPQA row above, cross-validated against the already-recorded MMLU/MATH/HumanEval/MGSM values)."
 granite-3-2-8b-instruct,50.95,self-reported,https://huggingface.co/ibm-granite/granite-3.2-8b-instruct,,
 granite-3-3-8b-instruct,59.36,self-reported,https://huggingface.co/ibm-granite/granite-3.3-8b-instruct,,
 hunyuan-a13b,91.1,self-reported,https://huggingface.co/tencent/Hunyuan-A13B-Instruct,,

@@ -94,6 +94,14 @@
       "sourceUrl": "https://x.ai/news/grok-3",
       "evaluatedAt": "2025-02-17",
       "notes": "Official non-reasoning 'Grok 3 Beta' row in xAI's launch-blog benchmark table ('Grok 3 also excels in image understanding (MMMU)...'). Note: corpus currently marks this model modalities:['text']/capabilities.vision:false, which conflicts with xAI's own claim of an MMMU score for this exact (non-reasoning) configuration -- worth a separate look at the capabilities flags, though that's outside this results-only report."
+    },
+    {
+      "benchmarkSlug": "arena",
+      "score": 1402,
+      "source": "self-reported",
+      "sourceUrl": "https://x.ai/news/grok-3",
+      "evaluatedAt": "2025-02-19",
+      "notes": "LMArena (Chatbot Arena) Elo score for Grok 3, per xAI's official launch blog: 'Grok 3 has leading performance across both academic benchmarks and real-world user preferences, achieving an Elo score of 1402 in the Chatbot Arena.' First model ever to break 1400 Elo; ran under early preview codename 'chocolate' before shipping as Grok 3 Beta (confirmed matching score independently reported by Analytics Vidhya and other outlets covering the Feb 2025 LMArena leaderboard)."
     }
   ],
   "verificationNotes": "Confirmed real: Grok 3 launched Feb 17, 2025 via livestream (TechCrunch, multiple outlets). Both result rows literally confirmed by fetching the medium.com source directly ('52.2%... AIME'24' and '75.4% on GPQA'). Oracle docs confirm 131,072 ctx, text-only, and deprecated May 15, 2026 status. Pricing $3/$15 per 1M tokens corroborated independently."

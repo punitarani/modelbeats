@@ -19,6 +19,7 @@ gemma-2b,77.3,self-reported,https://huggingface.co/google/gemma-2b,,0-shot
 gemma-7b,81.2,self-reported,https://storage.googleapis.com/deepmind-media/gemma/gemma-report.pdf,2024-02-21,"Table 6, 0-shot."
 gopher,81.8,self-reported,https://arxiv.org/abs/2203.15556,2022-03-29,"Zero-shot, Table 8."
 gpt-3-175b,82.8,self-reported,https://arxiv.org/abs/2005.14165,,"Few-shot, evaluated on PIQA test server (Table 3.6); paper flags a possible test-set contamination issue on this result"
+gpt-4o-mini,93.1,independent,https://arxiv.org/abs/2409.12183,2024-09-18,"Same paper/table as the BBH row above (Sprague et al. 2025, Appendix Table 7): GPT-4o Mini scores 93.1% zero-shot CoT accuracy on PIQA (88.6% without CoT)."
 gpt-j-6b,76.5,self-reported,https://huggingface.co/EleutherAI/gpt-j-6b,2021-06-09,"zero-shot, LM Eval Harness"
 gpt-neo-2-7b,72.14,self-reported,https://huggingface.co/EleutherAI/gpt-neo-2.7B,2021-03-21,"zero-shot, LM Eval Harness"
 h2o-danube-1-8b,76.71,self-reported,https://huggingface.co/h2oai/h2o-danube-1.8b-chat,,"0-shot PIQA for h2o-danube-1.8b-chat, from the HF model card's benchmark table; cross-confirmed in arXiv:2401.16818 Table 4."

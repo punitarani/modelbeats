@@ -16,6 +16,7 @@ gemma-2-9b,88,self-reported,https://huggingface.co/google/gemma-2-9b,2024-06-01,
 gemma-2b,73.2,self-reported,https://huggingface.co/google/gemma-2b,,ARC-e
 gemma-7b,81.5,self-reported,https://storage.googleapis.com/deepmind-media/gemma/gemma-report.pdf,2024-02-21,"Table 6, ARC-e, 0-shot."
 gpt-3-175b,70.1,self-reported,https://arxiv.org/abs/2005.14165,,Few-shot (Table 3.6)
+gpt-4o-mini,96.8,independent,https://arxiv.org/abs/2409.12183,2024-09-18,"Same paper/table as the BBH row above (Sprague et al. 2025, Appendix Table 7): GPT-4o Mini scores 96.8% zero-shot CoT accuracy on ARC-Easy (94.6% without CoT)."
 gpt-j-6b,67,self-reported,https://arxiv.org/abs/2204.06745,2022-04-14,"Zero-shot, Table 2 of the GPT-NeoX-20B paper (Black et al. 2022), which EleutherAI ran as a head-to-head comparison across GPT-J-6B, GPT-NeoX-20B, GPT-3 and FairSeq models using the LM Eval Harness (acc=0.670)."
 gpt-neox-20b,72.3,self-reported,https://arxiv.org/abs/2204.06745,2022-04-14,"Zero-shot, Table 2 of the GPT-NeoX-20B paper (acc=0.723)."
 h2o-danube-1-8b,67.51,self-reported,https://huggingface.co/h2oai/h2o-danube-1.8b-chat,,"0-shot ARC-Easy for h2o-danube-1.8b-chat, from the HF model card's benchmark table; independently cross-confirmed in the technical report (arXiv:2401.16818, Table 4, chat-model commonsense reasoning results)."

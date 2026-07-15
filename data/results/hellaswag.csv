@@ -114,6 +114,7 @@ stable-lm-2-1-6b,69.34,independent,https://huggingface.co/stabilityai/stablelm-2
 stable-lm-2-12b,86.06,self-reported,https://huggingface.co/stabilityai/stablelm-2-12b-chat,,chat variant
 stablelm-3b-4e1t,75.94,independent,https://huggingface.co/stabilityai/stablelm-3b-4e1t,,"Open LLM Leaderboard, 10-shot"
 stablelm-zephyr-3b,74.16,self-reported,https://huggingface.co/stabilityai/stablelm-zephyr-3b,,10-shot
+starling-7b-alpha,84.9,independent,https://huggingface.co/datasets/open-llm-leaderboard-old/results/blob/main/berkeley-nest/Starling-LM-7B-alpha/results_2023-12-04T15-57-32.180703.json,2023-12-04,"HellaSwag, 10-shot, acc_norm. Same v1 Open LLM Leaderboard automated run, verified against raw results JSON."
 teuken-7b-instruct,0.62,self-reported,https://huggingface.co/openGPT-X/Teuken-7B-instruct-commercial-v0.4,,"EU21-HellaSwag, averaged across 21 EU languages"
 upstage-solar-10-7b,84.6,self-reported,https://arxiv.org/abs/2312.15166,,"Table 2 of the SOLAR 10.7B paper (base model row), 10-shot HellaSwag."
 upstage-solar-pro,86.36,self-reported,https://huggingface.co/upstage/solar-pro-preview-instruct,,"HF model card benchmark table, HellaSwag column, 10-shot acc_norm per the card's own eval-protocol notes."

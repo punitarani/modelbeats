@@ -1,5 +1,6 @@
 model_slug,score,source,source_url,evaluated_at,notes
 claude-opus-4-5-high,80,self-reported,https://www-cdn.anthropic.com/bf10f64990cfda0ba858290be7b8cc6317685f47.pdf,2025-11-24,Per the system card (Section 2.10): 'The ARC Prize Foundation reports that Claude Opus 4.5 achieved 80.0% on ARC-AGI-1 ... with 64k thinking tokens on their private dataset.'
+gpt-4o-mini,3.6,independent,https://x.com/arcprize/status/1814042508797907031,2024-07-18,"The ARC Prize Foundation's official account posted a baseline score for GPT-4o mini on the ARC-AGI-Pub public evaluation set of 3.6%, published the same day as the model's launch (2024-07-18). Corroborated by multiple independent secondary sources quoting the same figure verbatim; this is ARC-AGI-1 (the original ARC-AGI-Pub benchmark, pre-dating ARC-AGI-2)."
 gpt-5-2,86.2,self-reported,https://openai.com/index/introducing-gpt-5-2/,,"ARC-AGI-1 Verified, GPT-5.2 Thinking; confirmed"
 gpt-5-4,93.7,self-reported,https://the-decoder.com/openai-launches-gpt-5-4-thinking-and-pro-combining-coding-reasoning-and-computer-use-in-one-model/,,ARC-AGI-1 (Pro variant scores 94.5)
 gpt-5-4-pro,94.5,self-reported,https://the-decoder.com/openai-launches-gpt-5-4-thinking-and-pro-combining-coding-reasoning-and-computer-use-in-one-model/,2026-03-05,ARC-AGI-1 (Verified). Cross-confirmed by DataLearnerAI (94.50).

@@ -96,6 +96,21 @@
       "source": "independent",
       "sourceUrl": "https://epoch.ai/models/gpt-5-pro",
       "notes": "Epoch AI's independent ARC-AGI-2 evaluation of GPT-5 Pro -- a genuinely hard, non-saturating eval (contrast with the model's much higher scores on GPQA/AIME)."
+    },
+    {
+      "benchmarkSlug": "hle",
+      "score": 31.6,
+      "source": "independent",
+      "sourceUrl": "https://epoch.ai/models/gpt-5-pro",
+      "notes": "Humanity's Last Exam as independently evaluated by Epoch AI under their own harness/config -- distinct from OpenAI's self-reported 42.0% (with Python/search tools) already in the corpus. Kept as a separate entry because it reflects a genuinely different evaluation methodology/source, consistent with how this corpus already tracks self-reported vs. independent divergence."
+    },
+    {
+      "benchmarkSlug": "frontiermath-tier1-3",
+      "score": 32.1,
+      "source": "self-reported",
+      "sourceUrl": "https://openai.com/index/introducing-gpt-5/",
+      "evaluatedAt": "2025-08-07",
+      "notes": "FrontierMath Tiers 1-3, 'GPT-5 pro (python)' bar in the launch blog's 'FrontierMath, Tier 1-3' chart (extracted from the page's embedded Vega-Lite chart JSON, which cross-checked exactly against the 'GPT-5 pro' bars found for AIME, GPQA, and HLE already in this file). No GPT-5-pro-specific bar exists on any of the other ~16 evaluation charts on that page (coding, agentic tool use, multimodal, health, economic tasks) -- only base GPT-5/o3/GPT-4o are compared there."
     }
   ],
   "verificationNotes": "Existence and same-day (Aug 7, 2025) ChatGPT Pro availability confirmed via CNBC and TechCrunch's GPT-5 launch coverage ('$200-per-month Pro subscribers received unlimited access to GPT-5, as well as a souped-up version called GPT-5 Pro'). Context window (400K, 272K max output), pricing ($15/$120 per M), Responses-API-only availability, and text+image-in/text-out modalities confirmed by direct fetch of developers.openai.com/api/docs/models/gpt-5-pro. GPQA-Diamond 88.4% (no tools) and AIME-2025 100% (with Python tools) confirmed via targeted searches quoting OpenAI's own openai.com/index/introducing-gpt-5/ announcement page verbatim (direct fetch of that URL 403s, consistent with the pattern already noted in the corpus's existing gpt-5.json entry). Did not include SWE-bench/Aider-polyglot 'Pro' numbers surfaced by a Vellum aggregator page, since that page's Pro pricing ($1.25/$10) and release date (Dec 3, 2025) contradicted every other source and its 'Pro' SWE-bench/Aider figures were numerically identical to base GPT-5's \u2014 strong signal of a mislabeled/conflated table, so those two rows were dropped per the 'omit rather than guess' instruction."

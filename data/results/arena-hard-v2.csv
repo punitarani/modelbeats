@@ -1,4 +1,5 @@
 model_slug,score,source,source_url,evaluated_at,notes
+gpt-4-5,50,independent,https://github.com/lmarena/arena-hard-auto/blob/main/README.md,2025-04-23,"Arena-Hard-v2.0-Preview, Hard Prompt with Style Control, Gemini-2.5 as judge (the repo's official configuration). gpt-4.5-preview scored 50.0 (95% CI -1.9/+2.0), tied with o3-mini-2025-01-31 and gpt-4.1. Date is the v2.0 benchmark's public release date (exact eval-run date not published); score pulled directly from the maintained leaderboard table in the official LMArena arena-hard-auto repo."
 mistral-small-3-2-24b,43.1,self-reported,https://huggingface.co/mistralai/Mistral-Small-3.2-24B-Instruct-2506,,
 nemotron-3-super,73.88,self-reported,https://arxiv.org/abs/2604.12374,,Table 5.
 qwen3-235b-a22b-instruct-2507,79.2,self-reported,https://huggingface.co/Qwen/Qwen3-235B-A22B-Instruct-2507,,

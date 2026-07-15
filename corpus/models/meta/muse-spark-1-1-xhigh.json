@@ -135,6 +135,21 @@
       "source": "independent",
       "sourceUrl": "https://www.vals.ai/models/meta_muse-spark-1.1",
       "notes": "SWE-bench (base/Verified-style variant, per this corpus's existing convention for the 'swe-bench' slug), measured independently by Vals AI (\u00b11.72 CI, ranked 8/69 models). Distinct from the 'swe-bench-pro' slug already recorded for this model, which is Scale AI's separate, harder SWE-Bench Pro benchmark self-reported by Meta at 61.5."
+    },
+    {
+      "benchmarkSlug": "hle",
+      "score": 52.2,
+      "source": "self-reported",
+      "sourceUrl": "https://ai.meta.com/static-resource/muse-spark-1-1-evaluation-report",
+      "evaluatedAt": "2026-07-09",
+      "notes": "Humanity's Last Exam, no-tools configuration, full 2,500-question set, GPT o3-mini as LLM-judge, xhigh reasoning effort; Figure 44 ('General capability benchmark results') of Meta's official Muse Spark 1.1 Evaluation Report, Section 5.2.5. Distinct from the with-tools score of 62.1 (also recorded separately) and from this model's existing independent Artificial Analysis HLE measurement of 45% already in this model's results."
+    },
+    {
+      "benchmarkSlug": "terminal-bench-2",
+      "score": 78,
+      "source": "independent",
+      "sourceUrl": "https://artificialanalysis.ai/models/muse-spark-1-1",
+      "notes": "Terminal-Bench v2.1, measured independently by Artificial Analysis as one of the 9 evaluations in their Intelligence Index v4.1 breakdown. Notably lower than Meta's own self-reported 80.0 (already recorded for this model) and Vals AI's independently-measured 69.29 (also recorded here), illustrating the self-report/independent-eval gap on this benchmark."
     }
   ],
   "verificationNotes": "Base Muse Spark's own April 2026 release announcement (via Meta AI blog, relayed by buildfastwithai.com) reports Intelligence Index v4.0 52, HealthBench Hard 42.8, HLE 50.2%, Terminal-Bench 2.0 59.0, ARC-AGI-2 42.5 -- these are self-reported. Artificial Analysis independently measured Muse Spark 1.1 (xhigh) at Intelligence Index 51, a +8pt gain over the original that AA attributes mostly to Coding (+12) and HLE (+5, to 45%)."

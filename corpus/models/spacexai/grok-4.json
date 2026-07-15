@@ -94,7 +94,31 @@
       "sourceUrl": "https://www.datacamp.com/blog/grok-4",
       "evaluatedAt": "2025-07-09",
       "notes": "ARC-AGI v1 (semi-private eval), independently verified by the ARC Prize Foundation; corroborated by a second independent source (gpt.gekko.de) citing the same 66.6% figure."
+    },
+    {
+      "benchmarkSlug": "hle",
+      "score": 38.6,
+      "source": "self-reported",
+      "sourceUrl": "https://x.ai/news/grok-4",
+      "evaluatedAt": "2025-07-09",
+      "notes": "Humanity's Last Exam, full set (April 3, 2025), with Python + Internet tools. Read directly off xAI's official launch page bar chart (Grok 4 bar labeled 38.6, vs. Grok 4 Heavy 44.4); corroborated by deeplearning.ai's The Batch and beebom.com, both independently reporting 38.6%."
+    },
+    {
+      "benchmarkSlug": "usamo",
+      "score": 37.5,
+      "source": "self-reported",
+      "sourceUrl": "https://x.ai/news/grok-4",
+      "evaluatedAt": "2025-07-09",
+      "notes": "USAMO 2025 (Olympiad Math Proofs), no tools. Read directly off xAI's official launch page bar chart (Grok 4 bar labeled 37.5, vs. Grok 4 Heavy w/ Python 61.9); corroborated by datacamp.com/blog/grok-4's benchmark table citing the identical 37.5% figure."
+    },
+    {
+      "benchmarkSlug": "aider-polyglot",
+      "score": 79.6,
+      "source": "independent",
+      "sourceUrl": "https://aider.chat/docs/leaderboards/",
+      "evaluatedAt": "2025-07-11",
+      "notes": "Aider polyglot coding benchmark, high reasoning effort, run via openrouter/x-ai/grok-4 (diff edit format), pass_rate_2 = 79.6% (92/225 first-try, 179/225 with retry), 97.3% well-formed edits. Independently run and published by the Aider project, not an xAI-reported figure."
     }
   ],
-  "verificationNotes": "Confirmed real: launched July 9, 2025 via livestream (Teslarati, TechCrunch, etc.), official model card exists at data.x.ai/2025-08-20-grok-4-model-card.pdf. GPQA 87.5, AIME 91.7, and LiveCodeBench 79 confirmed literally present on datacamp.com/blog/grok-4 via direct fetch. HLE 25.4 confirmed literally on scientificamerican.com ('scored 25.4 percent'). CORRECTED the ARC-AGI-2 sourceUrl: the original x.com/xai tweet URL returned HTTP 402 (paywalled, unfetchable); replaced with introl.com, which was fetched directly and literally contains '15.9%' attributed to Grok 4 Thinking mode on ARC-AGI-2 \u2014 independently corroborated by ARC Prize Foundation's own announcement (x.com/arcprize) and multiple outlets (Built In, Teslarati). Context window 256K and pricing $3/$15 confirmed independently. 200K H100 Colossus claim confirmed via xAI/NVIDIA/Tom's Hardware coverage."
+  "verificationNotes": "Confirmed real: launched July 9, 2025 via livestream (Teslarati, TechCrunch, etc.), official model card exists at data.x.ai/2025-08-20-grok-4-model-card.pdf. GPQA 87.5, AIME 91.7, and LiveCodeBench 79 confirmed literally present on datacamp.com/blog/grok-4 via direct fetch. HLE 25.4 confirmed literally on scientificamerican.com ('scored 25.4 percent'). CORRECTED the ARC-AGI-2 sourceUrl: the original x.com/xai tweet URL returned HTTP 402 (paywalled, unfetchable); replaced with introl.com, which was fetched directly and literally contains '15.9%' attributed to Grok 4 Thinking mode on ARC-AGI-2 \u2014 independently corroborated by ARC Prize Foundation's own announcement (x.com/arcprize) and multiple outlets (Built In, Teslarati). Context window 256K and pricing $3/$15 confirmed independently. 200K H100 Colossus claim confirmed via xAI/NVIDIA/Tom's Hardware coverage. 2026-07-14 coverage pass: rendered x.ai/news/grok-4 directly in a live browser (the model card PDF is a safety-only document with no capability benchmarks, and static fetches of x.ai/news/grok-4 return HTTP 403) and read the exact bar-chart values off xAI's own launch page for HLE (with tools, full set) = 38.6 and USAMO 2025 = 37.5, both new to the corpus; also confirmed GPQA 87.5, LiveCodeBench 79, AIME'25 91.7, and ARC-AGI-2 15.9 match the values already on file, byte-for-byte. Added Aider polyglot 79.6% (independent, aider.chat/docs/leaderboards, run 2025-07-11 via openrouter/x-ai/grok-4 high reasoning). Explicitly did NOT add SWE-bench, tau-bench, BFCL, or MMLU-Pro figures circulating on SEO content-mill blogs (tokenmix.ai, callsphere.ai, benchlm.ai) \u2014 those numbers are unsourced/templated across multiple unrelated posts (identical boilerplate phrasing, comparisons to future unreleased models) and could not be corroborated by xAI's own launch page, swebench.com's official leaderboard (no Grok-4 entry found under any harness), or llm-stats.com's BFCL-v3/MMLU-Pro trackers (no Grok-4 entry found). HMMT 2025 (90.0, confirmed on the official chart) has no corresponding taxonomy slug so was left out."
 }

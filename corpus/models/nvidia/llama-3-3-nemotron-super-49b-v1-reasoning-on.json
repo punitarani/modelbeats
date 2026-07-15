@@ -88,6 +88,30 @@
       "sourceUrl": "https://arxiv.org/abs/2505.00949",
       "evaluatedAt": "2025-05-01",
       "notes": "LiveCodeBench (2408-2502 window), Reasoning On, Final checkpoint. From Table 4 of the technical report; this benchmark is absent from the HF model card entirely for this model."
+    },
+    {
+      "benchmarkSlug": "ifeval",
+      "score": 89.2,
+      "source": "self-reported",
+      "sourceUrl": "https://arxiv.org/abs/2505.00949",
+      "evaluatedAt": "2025-05-01",
+      "notes": "IFEval, Reasoning On. From Table 4 of the technical report, which reports both modes for the final LN-Super checkpoint (on=89.2, off=89.0). The HF model card/NIM docs publish only a single IFEval value (89.21) explicitly labeled 'Reasoning Off' with no Reasoning-On figure at all -- so this paper-sourced on-mode value fills a genuine gap versus the card, though note the close-but-not-identical off-mode figures (89.0 in the paper vs 89.21 on the card) suggest some methodological variance between the two official publications."
+    },
+    {
+      "benchmarkSlug": "bfcl",
+      "score": 73.7,
+      "source": "self-reported",
+      "sourceUrl": "https://arxiv.org/abs/2505.00949",
+      "evaluatedAt": "2025-05-01",
+      "notes": "BFCL V2 Live, Reasoning On. From Table 4 of the technical report, which splits the final LN-Super checkpoint into on=73.7 / off=73.9. CAVEAT: the HF model card/NIM docs publish this exact same number (73.7) but label it 'Reasoning Off' (with no separate on-value given there) -- i.e. the two official NVIDIA sources disagree on which reasoning mode 73.7 belongs to. Since the paper's own off-mode figure for this row is 73.9 (not 73.7), the numeric evidence favors the paper's on-mode attribution, but this is a real conflict between NVIDIA's own official docs worth flagging to a human reviewer rather than silently resolving."
+    },
+    {
+      "benchmarkSlug": "arena-hard",
+      "score": 88.3,
+      "source": "self-reported",
+      "sourceUrl": "https://arxiv.org/abs/2505.00949",
+      "evaluatedAt": "2025-05-01",
+      "notes": "Arena-Hard, Reasoning On. From Table 4 of the technical report: for the final LN-Super checkpoint the row reads 'on=88.3 | off=\u2014' (no off-mode figure reported). CAVEAT: the HF model card/NIM docs publish this identical number (88.3) but label it 'Reasoning Off' instead, and that exact value/label pairing is already recorded in the sibling 'Reasoning Off' corpus entry for this model. This is a direct labeling conflict between NVIDIA's two official sources for the identical figure -- flagging for reviewer judgment rather than fabricating a resolution. Section 6.2 of the paper's body text corroborates an Arena-Hard score in the high-80s for the RLHF'd LN-Super (RPO raised it from 69.1 to 88.1), which is more consistent with this being the model's general/default (would suggest either mode) chat-preference score than a mode-specific figure."
     }
   ],
   "verificationNotes": "Confirmed via HF model card (fetched): same model card as Reasoning-Off variant; all four Reasoning-On benchmark scores match exactly (MATH500 96.6, AIME25 58.4, GPQA 66.67, MBPP 91.3)."

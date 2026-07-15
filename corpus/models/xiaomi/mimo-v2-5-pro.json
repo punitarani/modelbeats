@@ -84,6 +84,62 @@
       "source": "self-reported",
       "sourceUrl": "https://mimo.xiaomi.com/mimo-v2-5-pro/",
       "notes": "GDPVal-AA (labeled 'Elo' on the page, but the taxonomy's own unit for this slug is pts on a 0-2000 scale, which matches this value) from the 'General Agent' category of the embedded fbCategories chart data on Xiaomi's official MiMo-V2.5-Pro product page; MiMo-V2.5-Pro scores 1581 vs Claude Opus 4.6 1606, Gemini 3.1 Pro 1317, GPT-5.4 1674, Kimi K2.6 1480, GLM 5.1 1535, DeepSeek V4 Pro 1554, and the prior-gen MiMo-V2-Pro 1426."
+    },
+    {
+      "benchmarkSlug": "gpqa",
+      "score": 86.6,
+      "source": "independent",
+      "sourceUrl": "https://artificialanalysis.ai/models/mimo-v2-5-pro",
+      "notes": "GPQA Diamond, independently measured by Artificial Analysis. Not shown in AA's rendered (JS-hydrated) page text, but present as a raw field ('gpqa': 0.865656565656566) inside the model's embedded Next.js data payload fetched directly from the live page HTML. Corroborated verbatim by a third-party mirror, designforonline.com's MiMo-V2.5-Pro profile ('GPQA Diamond: 86.6%'). Not previously in the corpus."
+    },
+    {
+      "benchmarkSlug": "ifbench",
+      "score": 79.9,
+      "source": "independent",
+      "sourceUrl": "https://artificialanalysis.ai/models/mimo-v2-5-pro",
+      "notes": "IFBench (instruction-following), independently measured by Artificial Analysis (raw 'ifbench': 0.798639455782313 in the model's embedded JSON payload). Corroborated verbatim by designforonline.com's mirror ('IFBench: 79.9%'). New benchmark, not previously in the corpus for this model."
+    },
+    {
+      "benchmarkSlug": "tau2-bench-telecom",
+      "score": 94.2,
+      "source": "independent",
+      "sourceUrl": "https://artificialanalysis.ai/models/mimo-v2-5-pro",
+      "notes": "\u03c4\u00b2-Bench Telecom, independently measured by Artificial Analysis (raw field 'tau2': 0.941520467836257 in the model's embedded JSON payload). AA's dedicated public leaderboard confirms this metric key specifically denotes '\ud835\udf0f\u00b2-Bench Telecom' (https://artificialanalysis.ai/evaluations/tau2-bench), distinct from AA's newer '\u03c4\u00b3-Banking' evaluation which this same model reports separately (field 'tauBanking': 0.0866, no matching taxonomy slug, excluded). Corroborated by designforonline.com's identical mirror figure ('\u03c4\u00b2-Bench: 94.2%'). Moderate-high confidence: the field is present and consistent across two sources, though AA's current UI surfaces \u03c4\u00b3-Banking rather than \u03c4\u00b2-Telecom for this model, suggesting the underlying eval may be a carried-over/legacy measurement rather than a freshly re-run one."
+    },
+    {
+      "benchmarkSlug": "livecodebench",
+      "score": 81.35,
+      "source": "independent",
+      "sourceUrl": "https://www.vals.ai/models/xiaomi_mimo-v2.5-pro",
+      "notes": "LiveCodeBench, independently measured by Vals AI. Verified via rendered screenshot ('81.35%'), since raw fetched HTML text shows a placeholder '0.0%' before the client-side animation completes; cross-checked against the CSS bar's 'target-width:81.354%' attribute in the raw HTML, which matches. New benchmark, not previously in the corpus for this model. Note: a separate, unrelated third-party aggregator (automatio.ai, echoed by SEO-content sites) claims a similar-looking 80.6% LiveCodeBench figure for this model, but the existing corpus file already flags that aggregator's whole benchmark table as likely-fabricated/unreliable -- this Vals AI figure is sourced independently from that flagged table and is not a reuse of it."
+    },
+    {
+      "benchmarkSlug": "mmlu-pro",
+      "score": 84.59,
+      "source": "independent",
+      "sourceUrl": "https://www.vals.ai/models/xiaomi_mimo-v2.5-pro",
+      "notes": "MMLU-Pro, independently measured by Vals AI. Verified via rendered screenshot ('84.59%'); raw HTML CSS bar 'target-width:84.595%' matches. New benchmark, not previously in the corpus for this model (the HF README's MMLU-Pro figure of 68.5 is explicitly for the pretrained Base checkpoint, not this released chat model, and was correctly excluded already)."
+    },
+    {
+      "benchmarkSlug": "swe-bench",
+      "score": 74,
+      "source": "independent",
+      "sourceUrl": "https://www.vals.ai/models/xiaomi_mimo-v2.5-pro",
+      "notes": "SWE-bench Verified, independently re-measured by Vals AI using their own bash-tool-only mini-SWE-agent harness (Tier-2 independent evaluator per Vals AI's own methodology) -- distinct from Xiaomi's self-reported 78.9% already in this file. A harder/lower, less-favorable independent data point included deliberately for thoroughness. Verified via rendered screenshot ('74.00%'); raw HTML CSS bar 'target-width' matches."
+    },
+    {
+      "benchmarkSlug": "terminal-bench-2",
+      "score": 57.3,
+      "source": "independent",
+      "sourceUrl": "https://www.vals.ai/models/xiaomi_mimo-v2.5-pro",
+      "notes": "Terminal-Bench 2.1, independently re-measured by Vals AI (own harness) -- distinct from Xiaomi's self-reported 68.4% already in this file. A notably harder/lower, less-favorable independent data point included deliberately for thoroughness rather than cherry-picking only favorable figures. Verified via rendered screenshot ('57.30%'); raw HTML CSS bar 'target-width:57.303%' matches."
+    },
+    {
+      "benchmarkSlug": "hle",
+      "score": 33.8,
+      "source": "independent",
+      "sourceUrl": "https://artificialanalysis.ai/models/mimo-v2-5-pro",
+      "notes": "Humanity's Last Exam, independently measured by Artificial Analysis without tool access (raw 'hle': 0.337812789620019 in the model's embedded JSON payload) -- distinct from the tool-augmented 48.0% already in this file's results. Closely matches Xiaomi's own self-reported 'w.o. tools' figure of 34.0% shown in the same chart data that produced the existing 48.0 entry, but that no-tools variant was never itself recorded as a separate result until now. A harder (no-tools) data point, included for thoroughness."
     }
   ],
   "verificationNotes": "Params/architecture/context/license confirmed directly against the raw HuggingFace README (XiaomiMiMo/MiMo-V2.5-Pro). SWE-bench Verified score (78.9) independently cross-confirmed identical across three sources: Xiaomi's own product-page benchmark chart, a WebSearch snippet from automatio.ai, and a separate search-result summary \u2014 high confidence. IMPORTANT CAVEAT: the numeric benchmark table inside the HuggingFace README (GSM8K 99.6, GPQA-Diamond 66.7, MMLU 89.4, etc.) is explicitly labeled 'Base Model Evaluation' \u2014 i.e. it scores the pretrained MiMo-V2.5-Pro-Base checkpoint, not the released/post-trained chat model this entry represents \u2014 so those numbers were deliberately NOT used in 'results' below to avoid misrepresenting the shipped model. Instead, results are taken from the live JS-driven comparison charts embedded in Xiaomi's own MiMo-V2.5-Pro product page, fetched and parsed directly from raw HTML/JS (bypassing any summarization risk), which score the actual released model against Claude Opus 4.6, Gemini 3.1 Pro, GPT-5.4, Kimi K2.6, GLM 5.1, DeepSeek V4 Pro. A third-party aggregator (automatio.ai) also lists a much wider benchmark table (GPQA 54%, MMLU 86.7%, LiveCodeBench 80.6%, and even MMMU scores despite Pro being text-only) that conflicts substantially with both the vendor's own base-model table and the vendor's chat-model chart data, and separately implies multimodality Xiaomi itself denies for this model \u2014 treated as unreliable/likely-fabricated and excluded entirely."

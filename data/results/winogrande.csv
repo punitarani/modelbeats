@@ -29,6 +29,7 @@ gopher,70.1,self-reported,https://arxiv.org/abs/2203.15556,2022-03-29,"Zero-shot
 gpt-3-175b,77.7,self-reported,https://arxiv.org/abs/2005.14165,,"Few-shot, Winogrande XL (Table 3.5)"
 gpt-3-5-turbo,81.6,self-reported,https://arxiv.org/abs/2303.08774,,
 gpt-4,87.5,self-reported,https://arxiv.org/abs/2303.08774,,
+gpt-4o-mini,79.2,independent,https://arxiv.org/abs/2409.12183,2024-09-18,"Same paper/table as the BBH row above (Sprague et al. 2025, Appendix Table 7): GPT-4o Mini scores 79.2% zero-shot CoT accuracy on WinoGrande (71.9% without CoT)."
 gpt-j-6b,65.3,self-reported,https://huggingface.co/EleutherAI/gpt-j-6b,2021-06-09,"zero-shot, LM Eval Harness"
 gpt-neo-2-7b,56.5,self-reported,https://huggingface.co/EleutherAI/gpt-neo-2.7B,2021-03-21,"zero-shot, LM Eval Harness"
 gpt-neox-20b,66.1,self-reported,https://blog.eleuther.ai/announcing-20b/,2022-02-09,"zero-shot, LM Eval Harness"
@@ -108,6 +109,7 @@ stable-lm-2-1-6b,64.09,independent,https://huggingface.co/stabilityai/stablelm-2
 stable-lm-2-12b,78.77,self-reported,https://huggingface.co/stabilityai/stablelm-2-12b-chat,,chat variant
 stablelm-3b-4e1t,71.19,independent,https://huggingface.co/stabilityai/stablelm-3b-4e1t,,"Open LLM Leaderboard, 5-shot"
 stablelm-zephyr-3b,65.51,self-reported,https://huggingface.co/stabilityai/stablelm-zephyr-3b,,5-shot
+starling-7b-alpha,80.58,independent,https://huggingface.co/datasets/open-llm-leaderboard-old/results/blob/main/berkeley-nest/Starling-LM-7B-alpha/results_2023-12-04T15-57-32.180703.json,2023-12-04,"WinoGrande, 5-shot, acc. Same v1 Open LLM Leaderboard automated run."
 upstage-solar-10-7b,83.66,self-reported,https://arxiv.org/abs/2312.15166,,"Table 2 of the SOLAR 10.7B paper (base model row), 5-shot Winogrande."
 xgen-7b-8k,64.9,self-reported,https://ar5iv.labs.arxiv.org/html/2309.03450,,
 yi-6b,71.3,self-reported,https://arxiv.org/abs/2403.04652,2024-03-01,"5-shot. Yi technical report Table 8 (depth-upscaling section, Yi-6B baseline row)."

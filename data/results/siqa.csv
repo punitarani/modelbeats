@@ -7,6 +7,7 @@ gemma-2-9b,53.4,self-reported,https://huggingface.co/google/gemma-2-9b,2024-06-0
 gemma-2b,49.7,self-reported,https://huggingface.co/google/gemma-2b,,"SocialIQA, 0-shot"
 gemma-7b,51.8,self-reported,https://storage.googleapis.com/deepmind-media/gemma/gemma-report.pdf,2024-02-21,"Table 6, 0-shot."
 gopher,50.6,self-reported,https://arxiv.org/abs/2203.15556,2022-03-29,"Zero-shot, Table 8; also stated directly in the original Gopher paper's prose ('Gopher achieves a 50.6% accuracy under the zero-shot setup' on SocialIQA)."
+gpt-4o-mini,79,independent,https://arxiv.org/abs/2409.12183,2024-09-18,"Same paper/table as the BBH row above (Sprague et al. 2025, Appendix Table 7): GPT-4o Mini scores 79.0% zero-shot CoT accuracy on SiQA (80.0% without CoT)."
 granite-3-0-2b-instruct,66.36,self-reported,https://huggingface.co/ibm-granite/granite-3.0-2b-instruct,,Social IQa
 granite-3-0-8b-instruct,71.21,self-reported,https://huggingface.co/ibm-granite/granite-3.0-8b-instruct,,"SIQA, 0-shot pass@1. Confirmed in HF model-index YAML and technical report Table 10. Note: this exceeds the taxonomy's documented siqa range (40-68) by ~3 points; the number is nonetheless exactly what IBM's own model card and paper state."
 jais-70b,52.9,self-reported,https://huggingface.co/inceptionai/jais-adapted-70b,,English SIQA (Social IQA) score for jais-adapted-70b-chat.

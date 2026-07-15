@@ -97,6 +97,30 @@
       "sourceUrl": "https://reka.ai/news/introducing-reka-flash",
       "evaluatedAt": "2025-03-10",
       "notes": "Labeled 'BFCL V2' in the official launch blog's benchmark chart"
+    },
+    {
+      "benchmarkSlug": "hle",
+      "score": 5.1,
+      "source": "independent",
+      "sourceUrl": "https://artificialanalysis.ai/models/reka-flash-3",
+      "evaluatedAt": "2026-07-14",
+      "notes": "Humanity's Last Exam score from Artificial Analysis's independent third-party evaluation (part of their Intelligence Index v4.1 suite); not previously covered for this model. Confirmed live on the AA model page (position-matched bar-chart extraction) and cross-checked against a second aggregator (designforonline.com Reka Flash 3 review, which independently cites 5.1%)."
+    },
+    {
+      "benchmarkSlug": "ifbench",
+      "score": 30.4,
+      "source": "independent",
+      "sourceUrl": "https://artificialanalysis.ai/models/reka-flash-3",
+      "evaluatedAt": "2026-07-14",
+      "notes": "IFBench (instruction-following) score from Artificial Analysis's independent evaluation; not previously covered for this model. Corroborated by a second aggregator (designforonline.com Reka Flash 3 review), which independently states 'ifbench 0.304'."
+    },
+    {
+      "benchmarkSlug": "gpqa",
+      "score": 52.9,
+      "source": "independent",
+      "sourceUrl": "https://artificialanalysis.ai/models/reka-flash-3",
+      "evaluatedAt": "2026-07-14",
+      "notes": "GPQA Diamond score from Artificial Analysis's independent evaluation. Differs from the vendor's self-reported 61.1 (from the launch blog's full GPQA number) \u2014 kept as a separate entry since it's a distinct source/methodology (independent re-run on the Diamond subset vs. vendor self-report). Cross-checked against designforonline.com, which independently cites the same 52.9%."
     }
   ],
   "verificationNotes": "CONFIRMED. reka.ai's official 'Reasoning with Reka Flash 3' post explicitly states release date March 10, 2025, 21B params, 32k context, Apache 2.0 license, and MMLU-Pro score of 'only 65.0' \u2014 matches record exactly. HF config.json confirms max_position_embeddings=32768 (32K), matching ctxK 32 (a separate secondary source's claim of 65,536 tokens was found to be inconsistent with the primary config.json and was disregarded). Current docs.reka.ai pricing confirms $0.20 input / $0.80 output exactly. No corrections required."

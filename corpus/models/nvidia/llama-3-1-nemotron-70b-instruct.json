@@ -79,6 +79,46 @@
       "source": "independent",
       "sourceUrl": "https://huggingface.co/nvidia/Llama-3.1-Nemotron-70B-Instruct-HF",
       "notes": "Shown on the HF model card via an automated third-party evaluation-results widget (linking to TIGER-Lab/MMLU-Pro leaderboard and the community 'evaleval' results datastore), not stated in NVIDIA's own prose/table -- treated as independent/aggregator rather than self-reported."
+    },
+    {
+      "benchmarkSlug": "arena",
+      "score": 1267,
+      "source": "arena",
+      "sourceUrl": "https://huggingface.co/nvidia/Llama-3.1-Nemotron-70B-Instruct-HF",
+      "evaluatedAt": "2024-10-24",
+      "notes": "LMSYS Chatbot Arena Elo (\u00b17), rank 9 as of Oct 24 2024 \u2014 stated directly on the official HF model card, distinct from the self-reported Arena Hard/AlpacaEval/MT-Bench trio already in the corpus."
+    },
+    {
+      "benchmarkSlug": "ifeval",
+      "score": 78.3,
+      "source": "independent",
+      "sourceUrl": "https://huggingface.co/datasets/open-llm-leaderboard/nvidia__Llama-3.1-Nemotron-70B-Instruct-HF-details",
+      "evaluatedAt": "2024-10-16",
+      "notes": "inst_level_strict_acc from the HF Open LLM Leaderboard v2 automated evaluation run (0.782974 raw). Not published by NVIDIA directly; independent third-party harness result."
+    },
+    {
+      "benchmarkSlug": "bbh",
+      "score": 63.04,
+      "source": "independent",
+      "sourceUrl": "https://huggingface.co/datasets/open-llm-leaderboard/nvidia__Llama-3.1-Nemotron-70B-Instruct-HF-details",
+      "evaluatedAt": "2024-10-16",
+      "notes": "acc_norm from the HF Open LLM Leaderboard v2 automated evaluation run (0.630446 raw)."
+    },
+    {
+      "benchmarkSlug": "math",
+      "score": 26.96,
+      "source": "independent",
+      "sourceUrl": "https://huggingface.co/datasets/open-llm-leaderboard/nvidia__Llama-3.1-Nemotron-70B-Instruct-HF-details",
+      "evaluatedAt": "2024-10-16",
+      "notes": "MATH Level-5 (hardest subset only), 4-shot, exact_match, from the HF Open LLM Leaderboard v2 harness (0.269637 raw). This is a harder/narrower slice than a full-MATH score elsewhere and is not directly comparable to a full-test-set MATH number \u2014 flagged per house convention (see Falcon3-10B's identical Open LLM Leaderboard-sourced 'math' entry for precedent)."
+    },
+    {
+      "benchmarkSlug": "gpqa",
+      "score": 25.84,
+      "source": "independent",
+      "sourceUrl": "https://huggingface.co/datasets/open-llm-leaderboard/nvidia__Llama-3.1-Nemotron-70B-Instruct-HF-details",
+      "evaluatedAt": "2024-10-16",
+      "notes": "acc_norm, GPQA (main), 0-shot, from the HF Open LLM Leaderboard v2 harness (0.258389 raw)."
     }
   ],
   "verificationNotes": "Confirmed via HF model card (fetched): 128K max input context, dual NVIDIA/Llama 3.1 license, and all three benchmark scores (Arena Hard 85.0, AlpacaEval 2 LC 57.6, MT-Bench 8.98) match exactly. Release date corrected to 2024-10-15 (independently confirmed via multiple secondary sources, e.g. NGC catalog coverage) \u2014 note the HF card/arXiv paper is dated Oct 1-2 2024 for the underlying technical report, while the public HF model release date is Oct 15, 2024; paramsB 70.6B is the standard precise figure for the Llama-3-70B architecture (70,553,706,496 params) that this model is built on, consistent with NVIDIA's usage."

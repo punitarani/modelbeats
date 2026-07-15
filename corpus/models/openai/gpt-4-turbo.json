@@ -130,6 +130,14 @@
       "source": "independent",
       "sourceUrl": "https://livecodebench.github.io/leaderboard.html",
       "notes": "gpt-4-turbo-2024-04-09, Pass@1, official LiveCodeBench leaderboard, current problem time-window 2024-08-01 to 2025-05-01 (454 contamination-controlled problems released after model training cutoffs). A genuinely hard eval: breaks down to Easy 81.0 / Medium 24.8 / Hard 3.1, i.e. the model solves almost none of the Hard-tier problems \u2014 included deliberately per the instruction to surface harder evals, not just favorable ones."
+    },
+    {
+      "benchmarkSlug": "mmlu",
+      "score": 86.7,
+      "source": "self-reported",
+      "sourceUrl": "https://github.com/openai/simple-evals",
+      "evaluatedAt": "2024-05-13",
+      "notes": "gpt-4-turbo-2024-04-09, 0-shot CoT, 'assistant' system prompt, OpenAI simple-evals. Distinct from \u2014 not a replacement for \u2014 the existing 86.5 row already in this file (gpt-4-1106-preview, classic 5-shot, via Telnyx): different snapshot AND different eval protocol, so both are genuine and kept side by side. Headline-score precedence in this repo's derive step still favors the existing 'independent'-sourced row over this 'self-reported' one, so adding it cannot silently inflate the index."
     }
   ],
   "verificationNotes": "DevDay announcement Nov 6, 2023 confirmed (OpenAI/CNBC); 128K context and $10/$30 per-million pricing confirmed via OpenAI's own DevDay post and current docs. Both result rows (MMLU 86.5 5-shot; Arena Elo 1251) verified literally on the cited Telnyx page (fetched directly, confirmed exact text). No changes made."

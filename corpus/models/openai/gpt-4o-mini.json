@@ -83,7 +83,111 @@
       "sourceUrl": "https://openai.com/index/gpt-4o-mini-advancing-cost-efficient-intelligence/",
       "evaluatedAt": "2024-07-18",
       "notes": "OpenAI's official GPT-4o mini launch page reports MATH at 70.2%, part of the same benchmark table as the already-recorded MMLU/MGSM/HumanEval/MMMU rows. Direct automated fetch of openai.com returns 403 (same as the existing 4 rows in this file), but the figure is corroborated verbatim and consistently across multiple independent secondary sources/search results quoting the official launch table."
+    },
+    {
+      "benchmarkSlug": "gpqa",
+      "score": 40.2,
+      "source": "self-reported",
+      "sourceUrl": "https://github.com/openai/simple-evals",
+      "evaluatedAt": "2024-07-18",
+      "notes": "OpenAI's own simple-evals benchmark table (raw README, fetched directly) lists gpt-4o-mini-2024-07-18 at GPQA 40.2%. This table's MMLU (82.0), MATH (70.2), HumanEval (87.2), and MGSM (87.0) columns match the values already recorded in this file exactly, confirming it is the same official evaluation source referenced by the launch blog's benchmark chart."
+    },
+    {
+      "benchmarkSlug": "drop",
+      "score": 79.7,
+      "source": "self-reported",
+      "sourceUrl": "https://github.com/openai/simple-evals",
+      "evaluatedAt": "2024-07-18",
+      "notes": "DROP (F1, 3-shot) score of 79.7% for gpt-4o-mini-2024-07-18, from OpenAI's own simple-evals benchmark table (same source/table as the GPQA row above, cross-validated against the already-recorded MMLU/MATH/HumanEval/MGSM values)."
+    },
+    {
+      "benchmarkSlug": "simpleqa",
+      "score": 9.5,
+      "source": "self-reported",
+      "sourceUrl": "https://github.com/openai/simple-evals",
+      "evaluatedAt": "2024-07-18",
+      "notes": "OpenAI's simple-evals benchmark table lists gpt-4o-mini-2024-07-18 at SimpleQA 09.5%. Note: the original SimpleQA paper (Wei et al., \"Measuring short-form factuality in large language models\", cdn.openai.com/papers/simpleqa.pdf, Table 3) reports a slightly different \"correct\" figure of 8.6% for GPT-4o-mini in its initial evaluation run; the simple-evals repo figure used here is OpenAI's more current canonical benchmark-table number and is the one consistent with the already-verified MMLU/MATH/HumanEval/MGSM rows in this file."
+    },
+    {
+      "benchmarkSlug": "mmlu-pro",
+      "score": 63.1,
+      "source": "independent",
+      "sourceUrl": "https://huggingface.co/spaces/TIGER-Lab/MMLU-Pro",
+      "evaluatedAt": "2024-07-20",
+      "notes": "TIGER-Lab's independently-run MMLU-Pro leaderboard (results.csv in TIGER-Lab/mmlu_pro_leaderboard_submission, data source listed as \"TIGER-Lab\", i.e. run by the benchmark authors rather than self-reported) records GPT-4o-mini's overall accuracy as 0.6309 (63.09%). The MMLU-Pro README confirms GPT-4o-mini was added to the leaderboard on 2024-07-20."
+    },
+    {
+      "benchmarkSlug": "arc-agi-1",
+      "score": 3.6,
+      "source": "independent",
+      "sourceUrl": "https://x.com/arcprize/status/1814042508797907031",
+      "evaluatedAt": "2024-07-18",
+      "notes": "The ARC Prize Foundation's official account posted a baseline score for GPT-4o mini on the ARC-AGI-Pub public evaluation set of 3.6%, published the same day as the model's launch (2024-07-18). Corroborated by multiple independent secondary sources quoting the same figure verbatim; this is ARC-AGI-1 (the original ARC-AGI-Pub benchmark, pre-dating ARC-AGI-2)."
+    },
+    {
+      "benchmarkSlug": "bigcodebench",
+      "score": 57.4,
+      "source": "independent",
+      "sourceUrl": "https://huggingface.co/spaces/bigcode/bigcodebench-leaderboard",
+      "evaluatedAt": "2024-07-18",
+      "notes": "BigCodeBench's official leaderboard results table (bigcode/bigcodebench-results dataset on HuggingFace, fetched and parsed directly) lists GPT-4o-mini-2024-07-18 at 57.4 on the \"Complete\" split and 46.1 on the \"Instruct\" split; the Complete-split score is used here as the standard headline figure."
+    },
+    {
+      "benchmarkSlug": "bbh",
+      "score": 77.7,
+      "source": "independent",
+      "sourceUrl": "https://arxiv.org/abs/2409.12183",
+      "evaluatedAt": "2024-09-18",
+      "notes": "From Sprague et al., \"To CoT or not to CoT? Chain-of-thought helps mainly on math and symbolic reasoning\" (ICLR 2025), Appendix Table 7 (full zero-shot results, fetched and parsed from the paper PDF directly): GPT-4o Mini scores 77.7% zero-shot CoT accuracy on Big-Bench Hard (49.7% without CoT)."
+    },
+    {
+      "benchmarkSlug": "arc-challenge",
+      "score": 93.3,
+      "source": "independent",
+      "sourceUrl": "https://arxiv.org/abs/2409.12183",
+      "evaluatedAt": "2024-09-18",
+      "notes": "Same paper/table as the BBH row above (Sprague et al. 2025, Appendix Table 7): GPT-4o Mini scores 93.3% zero-shot CoT accuracy on ARC-Challenge (82.6% without CoT)."
+    },
+    {
+      "benchmarkSlug": "arc-easy",
+      "score": 96.8,
+      "source": "independent",
+      "sourceUrl": "https://arxiv.org/abs/2409.12183",
+      "evaluatedAt": "2024-09-18",
+      "notes": "Same paper/table as the BBH row above (Sprague et al. 2025, Appendix Table 7): GPT-4o Mini scores 96.8% zero-shot CoT accuracy on ARC-Easy (94.6% without CoT)."
+    },
+    {
+      "benchmarkSlug": "piqa",
+      "score": 93.1,
+      "source": "independent",
+      "sourceUrl": "https://arxiv.org/abs/2409.12183",
+      "evaluatedAt": "2024-09-18",
+      "notes": "Same paper/table as the BBH row above (Sprague et al. 2025, Appendix Table 7): GPT-4o Mini scores 93.1% zero-shot CoT accuracy on PIQA (88.6% without CoT)."
+    },
+    {
+      "benchmarkSlug": "winogrande",
+      "score": 79.2,
+      "source": "independent",
+      "sourceUrl": "https://arxiv.org/abs/2409.12183",
+      "evaluatedAt": "2024-09-18",
+      "notes": "Same paper/table as the BBH row above (Sprague et al. 2025, Appendix Table 7): GPT-4o Mini scores 79.2% zero-shot CoT accuracy on WinoGrande (71.9% without CoT)."
+    },
+    {
+      "benchmarkSlug": "siqa",
+      "score": 79.0,
+      "source": "independent",
+      "sourceUrl": "https://arxiv.org/abs/2409.12183",
+      "evaluatedAt": "2024-09-18",
+      "notes": "Same paper/table as the BBH row above (Sprague et al. 2025, Appendix Table 7): GPT-4o Mini scores 79.0% zero-shot CoT accuracy on SiQA (80.0% without CoT)."
+    },
+    {
+      "benchmarkSlug": "gsm8k",
+      "score": 94.1,
+      "source": "independent",
+      "sourceUrl": "https://arxiv.org/abs/2409.12183",
+      "evaluatedAt": "2024-09-18",
+      "notes": "Same paper/table as the BBH row above (Sprague et al. 2025, Appendix Table 7): GPT-4o Mini scores 94.1% zero-shot CoT accuracy on GSM8K (31.8% without CoT)."
     }
   ],
-  "verificationNotes": "Confirmed via web search of OpenAI's official announcement (direct fetch blocked by 403, but search excerpts quote the page verbatim): MMLU 82%, MGSM 87%, HumanEval 87.2%, MMMU 59.4% all match exactly. Release date 2024-07-18, 128K context, and closed/proprietary licensing confirmed by independent sources (OpenAI blog via search, Azure blog, DataCamp). No changes made."
+  "verificationNotes": "Confirmed via web search of OpenAI's official announcement (direct fetch blocked by 403, but search excerpts quote the page verbatim): MMLU 82%, MGSM 87%, HumanEval 87.2%, MMMU 59.4% all match exactly. Release date 2024-07-18, 128K context, and closed/proprietary licensing confirmed by independent sources (OpenAI blog via search, Azure blog, DataCamp). Coverage-completeness pass (2026-07-14): pulled OpenAI's own openai/simple-evals GitHub table directly (its MMLU/MATH/HumanEval/MGSM columns reproduce this file's existing values exactly, validating it as the source behind the launch-blog chart), adding GPQA, DROP, and SimpleQA. Added MMLU-Pro from TIGER-Lab's independently-run leaderboard (raw results.csv fetched and parsed), ARC-AGI-1 from the ARC Prize Foundation's official baseline announcement, BigCodeBench from the official bigcode-project leaderboard results dataset (parquet fetched and parsed directly), and BBH/ARC-Challenge/ARC-Easy/PIQA/WinoGrande/SiQA/GSM8K from Sprague et al. (ICLR 2025, arXiv:2409.12183), an independent academic zero-shot-CoT evaluation whose full per-dataset appendix table was fetched and parsed directly from the PDF. Benchmarks OpenAI's launch blog is known to have charted but for which no exact numeric transcription could be sourced (MathVista) were left out rather than guessed. OpenAI has not published gpt-4o-mini results on agentic/tool-use suites (BFCL, tau-bench, GAIA, SWE-bench) or on frontier-2025-era evals (LiveCodeBench, Terminal-Bench, ARC-AGI-2) that postdate or were never run against this July-2024 budget model; searches for those came up empty on both OpenAI's own material and third-party leaderboards, so they are honestly omitted rather than fabricated."
 }
