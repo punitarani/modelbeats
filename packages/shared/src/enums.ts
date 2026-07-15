@@ -47,16 +47,29 @@ export const HEADLINE_SOURCE_PRECEDENCE: readonly ResultSource[] = [
   'self-reported',
 ]
 
-/** Headline score across multi-source rows (lowest precedence index wins). */
-export function pickHeadlineScore(
-  rows: readonly { score: number; source: ResultSource }[],
-): number | null {
-  let best: { score: number; rank: number } | null = null
+export interface HeadlineRow {
+  score: number
+  source: ResultSource
+}
+
+/**
+ * Headline row across multi-source rows (lowest precedence index wins; same-source ties
+ * keep the first-seen row). The single implementation every headline-score consumer
+ * (derive.ts, snapshot.ts, catalog.ts's D1-rebuild path) shares, so a score and its
+ * displayed provenance badge can never come from two different tie-break rules.
+ */
+export function pickHeadlineRow(rows: readonly HeadlineRow[]): HeadlineRow | null {
+  let best: { row: HeadlineRow; rank: number } | null = null
   for (const r of rows) {
     const rank = HEADLINE_SOURCE_PRECEDENCE.indexOf(r.source)
-    if (best == null || rank < best.rank) best = { score: r.score, rank }
+    if (best == null || rank < best.rank) best = { row: r, rank }
   }
-  return best?.score ?? null
+  return best?.row ?? null
+}
+
+/** Headline score across multi-source rows — see {@link pickHeadlineRow}. */
+export function pickHeadlineScore(rows: readonly HeadlineRow[]): number | null {
+  return pickHeadlineRow(rows)?.score ?? null
 }
 
 export const ARCH_CLASSES = ['dense', 'moe', 'ssm', 'hybrid'] as const

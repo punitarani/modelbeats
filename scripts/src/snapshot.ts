@@ -6,7 +6,7 @@ import {
   type CatalogSnapshot,
   catalogKey,
   catalogSnapshotSchema,
-  HEADLINE_SOURCE_PRECEDENCE,
+  pickHeadlineRow,
   type ResultSource,
 } from '@rankedmodel/shared'
 import { deriveScores } from './derive'
@@ -61,12 +61,7 @@ export async function buildSnapshot(root: string, version: number): Promise<Cata
       byModel.get(r.modelSlug)?.push({ score: r.score, source: r.source })
     }
     for (const [modelSlug, modelRows] of byModel) {
-      const sorted = [...modelRows].sort(
-        (a, z) =>
-          HEADLINE_SOURCE_PRECEDENCE.indexOf(a.source) -
-          HEADLINE_SOURCE_PRECEDENCE.indexOf(z.source),
-      )
-      const head = sorted[0]
+      const head = pickHeadlineRow(modelRows)
       if (!head) continue
       const scores = bench.get(modelSlug) ?? {}
       scores[benchSlug] = head.score

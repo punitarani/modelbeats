@@ -29,6 +29,20 @@ export function datasetCounts() {
 }
 
 /**
+ * A model's current Elo rating/rank off the committed derived scores (not a hardcoded
+ * literal) — so a rank-position assertion tracks whatever the corpus currently produces
+ * instead of breaking every time an unrelated model's data shifts that model's position.
+ */
+export function modelScore(slug: string): { index: number; rank: number | null } {
+  const scores = JSON.parse(readFileSync(join(DATA_ROOT, 'derived', 'scores.json'), 'utf8'))
+  const m = (
+    scores.models as { slug: string; overallIndex: number; rankOverall: number | null }[]
+  ).find((x) => x.slug === slug)
+  if (!m) throw new Error(`no derived score for '${slug}' — is it still in the corpus?`)
+  return { index: m.overallIndex, rank: m.rankOverall }
+}
+
+/**
  * goto + wait for the app's hydration marker. Under parallel load, interacting with
  * SSR'd controls before React attaches handlers silently does nothing — every spec
  * that clicks/selects must go through this. Returns the navigation response so status

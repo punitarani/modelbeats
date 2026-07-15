@@ -4,8 +4,7 @@ import {
   type CatalogSnapshot,
   catalogKey,
   catalogSnapshotSchema,
-  HEADLINE_SOURCE_PRECEDENCE,
-  pickHeadlineScore,
+  pickHeadlineRow,
   type ResultSource,
 } from '@rankedmodel/shared'
 import { eq } from 'drizzle-orm'
@@ -63,28 +62,23 @@ async function rebuildFromD1(version: number): Promise<CatalogSnapshot> {
     if (!rowsByModelBench.has(key)) rowsByModelBench.set(key, [])
     rowsByModelBench.get(key)?.push({ score: r.score, source: r.source })
   }
-  const benchMapFor = (modelId: number): Record<string, number | null> => {
-    const out: Record<string, number | null> = {}
+  // One pass per model over its benchmark rows (was two, with a duplicated inline
+  // precedence sort) — pickHeadlineRow is the single shared source of truth for headline
+  // score + provenance, same as derive.ts and snapshot.ts.
+  const headlineFor = (
+    modelId: number,
+  ): { bench: Record<string, number | null>; benchSources: Record<string, ResultSource> } => {
+    const bench: Record<string, number | null> = {}
+    const benchSources: Record<string, ResultSource> = {}
     for (const b of benches) {
       const rows = rowsByModelBench.get(`${modelId}|${b.id}`)
-      if (rows) out[b.slug] = pickHeadlineScore(rows)
+      if (!rows) continue
+      const head = pickHeadlineRow(rows)
+      if (!head) continue
+      bench[b.slug] = head.score
+      benchSources[b.slug] = head.source
     }
-    return out
-  }
-  const benchSourcesFor = (modelId: number): Record<string, ResultSource> => {
-    const out: Record<string, ResultSource> = {}
-    for (const b of benches) {
-      const rows = rowsByModelBench.get(`${modelId}|${b.id}`)
-      if (!rows || rows.length === 0) continue
-      const sorted = [...rows].sort(
-        (a, z) =>
-          HEADLINE_SOURCE_PRECEDENCE.indexOf(a.source) -
-          HEADLINE_SOURCE_PRECEDENCE.indexOf(z.source),
-      )
-      const head = sorted[0]
-      if (head) out[b.slug] = head.source
-    }
-    return out
+    return { bench, benchSources }
   }
 
   const snapshot: CatalogSnapshot = {
@@ -117,6 +111,7 @@ async function rebuildFromD1(version: number): Promise<CatalogSnapshot> {
           vision: score.visionIndex ?? null,
           agents: score.agentsIndex ?? null,
         }
+        const { bench, benchSources } = headlineFor(m.id)
         return {
           slug: m.slug,
           name: m.name,
@@ -139,8 +134,8 @@ async function rebuildFromD1(version: number): Promise<CatalogSnapshot> {
           modalities: m.modalities,
           caps: m.capabilities,
           apiAvailable: m.apiAvailable,
-          bench: benchMapFor(m.id),
-          benchSources: benchSourcesFor(m.id),
+          bench,
+          benchSources,
           price: null, // filled from pricing below
           vramQ4: m.vramQ4Gb,
           vramFp16: m.vramFp16Gb,

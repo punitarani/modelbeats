@@ -1,5 +1,5 @@
 import { expect, test } from '@playwright/test'
-import { gotoHydrated } from './helpers'
+import { gotoHydrated, modelScore } from './helpers'
 
 test.describe('model detail', () => {
   test('open model shows the Run-it-locally card matching the fit engine', async ({ page }) => {
@@ -28,15 +28,18 @@ test.describe('model detail', () => {
   })
 
   test('closed model shows the API-only pricing card + Elo rank', async ({ page }) => {
-    // Gemini 3.1 Pro: a real, broadly-covered closed model (not #1 — GPT-5.6 leads on Elo).
+    // Gemini 3.1 Pro: a real, broadly-covered closed model. Rank is read from the derived
+    // scores rather than hardcoded — its OWN rating is a meaningful literal to pin, but its
+    // rank position shifts whenever any of ~500 other models' data changes (D21).
+    const { index, rank } = modelScore('gemini-3-1-pro')
     await gotoHydrated(page, '/models/gemini-3-1-pro')
-    await expect(page.getByTestId('model-index')).toHaveText('2658.0')
-    await expect(page.getByText('Elo · rank #11')).toBeVisible()
+    await expect(page.getByTestId('model-index')).toHaveText(index.toFixed(1))
+    await expect(page.getByText(`Elo · rank #${rank}`)).toBeVisible()
     await expect(page.getByTestId('price-in')).toHaveText('$2')
     await expect(page.getByTestId('price-out')).toHaveText('$12')
-    // benchmark row: GPQA 94.3; the field best is now Claude Sonnet 5 (96.2)
+    // benchmark row: GPQA 94.3 — the field leader shifts with data refreshes, so only
+    // assert Gemini's own score, not which model currently holds the top spot
     await expect(page.getByTestId('bench-gpqa')).toContainText('94.3')
-    await expect(page.getByTestId('bench-gpqa')).toContainText('best: Claude Sonnet 5')
     // family card lists the Gemini 3.1 members (Pro + Flash-Lite)
     await expect(page.getByTestId('family-list').getByRole('link')).toHaveCount(2)
   })

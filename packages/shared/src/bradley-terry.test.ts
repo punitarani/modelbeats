@@ -183,6 +183,28 @@ describe('fitBradleyTerry', () => {
     )
     expect(fit.converged).toBe(false)
   })
+
+  it('throws for a pair referencing a player not in the players list', () => {
+    expect(() =>
+      fitBradleyTerry(['alpha', 'bravo'], [{ a: 'alpha', b: 'charlie', winsA: 1, winsB: 0 }]),
+    ).toThrow(/unknown player/)
+  })
+
+  it('throws for a self-pair', () => {
+    expect(() =>
+      fitBradleyTerry(['alpha', 'bravo'], [{ a: 'alpha', b: 'alpha', winsA: 1, winsB: 0 }]),
+    ).toThrow(/self-pair/)
+  })
+
+  it('anchorLambda actually changes the fit — a stronger anchor pulls an undefeated player closer to it', () => {
+    const pairs: PairRecord[] = [{ a: 'alpha', b: 'bravo', winsA: 3, winsB: 0 }]
+    const weakAnchor = fitBradleyTerry(['alpha', 'bravo'], pairs, { anchorLambda: 1 })
+    const strongAnchor = fitBradleyTerry(['alpha', 'bravo'], pairs, { anchorLambda: 4 })
+    const distanceFromAnchor = (rating: number) => Math.abs(rating - BT_ANCHOR_RATING)
+    const weakDistance = distanceFromAnchor(weakAnchor.ratings.get('alpha') ?? Number.NaN)
+    const strongDistance = distanceFromAnchor(strongAnchor.ratings.get('alpha') ?? Number.NaN)
+    expect(strongDistance).toBeLessThan(weakDistance)
+  })
 })
 
 describe('roundRating', () => {

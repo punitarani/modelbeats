@@ -111,10 +111,16 @@ describe('catalog spine (getCatalog server logic)', () => {
       `INSERT INTO benchmarks (id, slug, name, category, unit, description, norm_min, norm_max)
        VALUES (1, 'genbench', 'GenBench', 'knowledge', '%', 'test', 40, 100)`,
       `INSERT INTO benchmark_results (id, model_id, benchmark_id, score, source) VALUES (1, 1, 1, 88.1, 'curated')`,
-      `INSERT INTO model_scores (model_id, overall_index, rank_overall, knowledge_index, computed_at)
-       VALUES (1, 80.2, 1, 80.2, '2026-07-11')`,
+      // two categories populated, one left null — a copy-paste column swap in the
+      // categoryIdx mapping would show up as a mismatch between these three states
+      `INSERT INTO model_scores (model_id, overall_index, rank_overall, knowledge_index, reasoning_index, computed_at)
+       VALUES (1, 80.2, 1, 80.2, 74.5, '2026-07-11')`,
       `INSERT INTO model_pricing (id, model_id, provider, input_per_mtok, output_per_mtok, effective_date)
        VALUES (1, 1, 'acme-ai', 2, 8, '2026-03-01')`,
+      `INSERT INTO hardware_profiles (id, slug, name, kind, vram_gb) VALUES (1, 'rtx4090', 'RTX 4090 24GB', 'consumer', 24)`,
+      `INSERT INTO quantizations (id, model_id, method) VALUES (1, 1, 'GGUF Q4')`,
+      `INSERT INTO throughput_estimates (id, model_id, quantization_id, hardware_id, framework, tokens_per_sec)
+       VALUES (1, 1, 1, 1, 'llama.cpp', 225)`,
     ]
     for (const sql of stmts) await env.DB.prepare(sql).run()
 
@@ -130,6 +136,17 @@ describe('catalog spine (getCatalog server logic)', () => {
       price: { input: 2, output: 8 },
     })
     expect(catalog.models[0]?.bench.genbench).toBe(88.1)
+    expect(catalog.models[0]?.benchSources.genbench).toBe('curated')
+    expect(catalog.models[0]?.categoryIdx).toEqual({
+      'human-preference': null,
+      knowledge: 80.2,
+      reasoning: 74.5,
+      coding: null,
+      math: null,
+      vision: null,
+      agents: null,
+    })
+    expect(catalog.models[0]?.tps4090).toBe(225)
   })
 
   it('fails loudly when nothing has been published', async () => {
