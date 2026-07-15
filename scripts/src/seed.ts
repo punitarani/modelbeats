@@ -4,6 +4,7 @@ import { join, resolve } from 'node:path'
 import { normalizeScore } from '@rankedmodel/shared'
 import { type DerivedScores, deriveScores } from './derive'
 import { type Dataset, loadDataset } from './lib/load'
+import { validateData } from './validate'
 
 /**
  * Seed generator (plan commit 11): curated + derived data → literal-value SQL applied
@@ -459,5 +460,14 @@ export async function seed(root: string, target: '--local' | '--remote'): Promis
 if (import.meta.main) {
   const target = process.argv.includes('--remote') ? '--remote' : '--local'
   const root = process.argv[2]?.startsWith('--') ? 'data' : (process.argv[2] ?? 'data')
+  // seed() itself only checks loadDataset's schema-level errors — full cross-file
+  // validation belongs to validateData. publish-data.ts already runs it first; this CLI
+  // entrypoint can be invoked standalone, so it must guard itself the same way.
+  const report = await validateData(root)
+  if (report.errors.length > 0) {
+    console.error(`✗ ${report.errors.length} validation error(s) in ${root}/ — run validate first:`)
+    for (const e of report.errors) console.error(`  - ${e}`)
+    process.exit(1)
+  }
   await seed(root, target)
 }

@@ -32,7 +32,7 @@ export async function loadCatalog(): Promise<CatalogSnapshot> {
   if (cached) {
     const parsed = catalogSnapshotSchema.safeParse(cached)
     if (parsed.success) return parsed.data
-    console.warn(`catalog:v${version} in KV failed schema parse — rebuilding from D1`)
+    console.error(`catalog:v${version} in KV failed schema parse — rebuilding from D1`)
   }
   return rebuildFromD1(version)
 }
@@ -105,14 +105,17 @@ async function rebuildFromD1(version: number): Promise<CatalogSnapshot> {
       .sort((a, z) => a.slug.localeCompare(z.slug))
       .map((m) => {
         const score = scoreByModel.get(m.id)
+        if (!score) {
+          throw new Error(`D1 rebuild: no model_scores row for ${m.slug} (id ${m.id})`)
+        }
         const categoryIdx: Record<BenchmarkCategory, number | null> = {
-          'human-preference': score?.humanPreferenceIndex ?? null,
-          knowledge: score?.knowledgeIndex ?? null,
-          reasoning: score?.reasoningIndex ?? null,
-          coding: score?.codingIndex ?? null,
-          math: score?.mathIndex ?? null,
-          vision: score?.visionIndex ?? null,
-          agents: score?.agentsIndex ?? null,
+          'human-preference': score.humanPreferenceIndex ?? null,
+          knowledge: score.knowledgeIndex ?? null,
+          reasoning: score.reasoningIndex ?? null,
+          coding: score.codingIndex ?? null,
+          math: score.mathIndex ?? null,
+          vision: score.visionIndex ?? null,
+          agents: score.agentsIndex ?? null,
         }
         return {
           slug: m.slug,
@@ -149,9 +152,9 @@ async function rebuildFromD1(version: number): Promise<CatalogSnapshot> {
           isBestConfig: m.isBestConfig,
           links: m.links,
           note: m.note,
-          index: score?.overallIndex ?? 0,
-          rank: score?.ranked ? (score.rankOverall ?? null) : null,
-          ranked: score?.ranked ?? false,
+          index: score.overallIndex,
+          rank: score.ranked ? (score.rankOverall ?? null) : null,
+          ranked: score.ranked,
           categoryIdx,
         }
       }),

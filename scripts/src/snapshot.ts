@@ -11,6 +11,7 @@ import {
 } from '@rankedmodel/shared'
 import { deriveScores } from './derive'
 import { loadDataset } from './lib/load'
+import { validateData } from './validate'
 
 /**
  * Snapshot builder + KV publisher (plan commit 12). Builds the C3 catalog JSON, parses
@@ -147,6 +148,32 @@ export async function buildSnapshot(root: string, version: number): Promise<Cata
   return catalogSnapshotSchema.parse(snapshot)
 }
 
+/**
+ * Parses wrangler's `d1 execute --json` stdout for the `meta.data_version` row. Pulled
+ * out of `currentDataVersion` so the parsing (the part that can actually go wrong) is
+ * unit-testable without shelling out. Only "no row yet" returns 0 — any other parse
+ * failure throws, so wrangler noise on stdout (e.g. an update banner) can never be
+ * silently mistaken for a fresh database and reset a real data_version back to 0.
+ */
+export function parseDataVersionOutput(out: string): number {
+  let parsed: unknown
+  try {
+    parsed = JSON.parse(out)
+  } catch {
+    throw new Error(
+      `could not parse D1 data_version response — wrangler stdout was not JSON:\n${out}`,
+    )
+  }
+  const rows = (parsed as { results?: { value: string }[] }[])[0]?.results ?? []
+  if (rows.length === 0) return 0
+  const value = rows[0]?.value
+  const version = Number(value)
+  if (!Number.isInteger(version) || version < 0) {
+    throw new Error(`meta.data_version is not a valid integer: ${JSON.stringify(value)}`)
+  }
+  return version
+}
+
 export function currentDataVersion(target: '--local' | '--remote'): number {
   const out = wrangler(
     [
@@ -160,12 +187,7 @@ export function currentDataVersion(target: '--local' | '--remote'): number {
     ],
     { json: true },
   )
-  try {
-    const rows = JSON.parse(out)[0]?.results ?? []
-    return rows.length > 0 ? Number(rows[0].value) : 0
-  } catch {
-    return 0
-  }
+  return parseDataVersionOutput(out)
 }
 
 export async function publishSnapshot(
@@ -196,7 +218,7 @@ export async function publishSnapshot(
     target,
     '-y',
     '--command',
-    `INSERT INTO meta (key, value) VALUES ('data_version', '${version}'), ('published_at', '${new Date().toISOString()}'), ('as_of', '${snapshot.asOf.replaceAll("'", "''")}'), ('as_of_iso', '${snapshot.asOfIso}') ON CONFLICT(key) DO UPDATE SET value=excluded.value;`,
+    `INSERT INTO meta (key, value) VALUES ('data_version', '${version}'), ('published_at', '${new Date().toISOString()}'), ('as_of', '${snapshot.asOf.replaceAll("'", "''")}'), ('as_of_iso', '${snapshot.asOfIso.replaceAll("'", "''")}') ON CONFLICT(key) DO UPDATE SET value=excluded.value;`,
   ])
 
   console.log(
@@ -208,5 +230,15 @@ export async function publishSnapshot(
 if (import.meta.main) {
   const target = process.argv.includes('--remote') ? '--remote' : '--local'
   const root = process.argv[2]?.startsWith('--') ? 'data' : (process.argv[2] ?? 'data')
+  // buildSnapshot/deriveScores only check loadDataset's schema-level errors — full
+  // cross-file validation belongs to validateData. publish-data.ts already runs it
+  // first; this CLI entrypoint can be invoked standalone, so it must guard itself the
+  // same way.
+  const report = await validateData(root)
+  if (report.errors.length > 0) {
+    console.error(`✗ ${report.errors.length} validation error(s) in ${root}/ — run validate first:`)
+    for (const e of report.errors) console.error(`  - ${e}`)
+    process.exit(1)
+  }
   await publishSnapshot(root, target)
 }

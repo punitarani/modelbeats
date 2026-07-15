@@ -17,6 +17,7 @@ import {
   toIndexScale,
 } from '@rankedmodel/shared'
 import { loadDataset } from './lib/load'
+import { validateData } from './validate'
 
 /**
  * Publish-time derivation (C1/D21): validate must have passed first. Emits
@@ -141,6 +142,16 @@ export async function deriveScores(root: string): Promise<DerivedScores> {
 
 if (import.meta.main) {
   const root = process.argv[2] ?? 'data'
+  // deriveScores itself only checks loadDataset's schema-level errors — full cross-file
+  // validation (unknown slugs, duplicate results, price mismatches, …) belongs to
+  // validateData. publish-data.ts already runs it first; this CLI entrypoint can be
+  // invoked standalone, so it must guard itself the same way.
+  const report = await validateData(root)
+  if (report.errors.length > 0) {
+    console.error(`✗ ${report.errors.length} validation error(s) in ${root}/ — run validate first:`)
+    for (const e of report.errors) console.error(`  - ${e}`)
+    process.exit(1)
+  }
   const derived = await deriveScores(root)
   const outDir = join(root, 'derived')
   await mkdir(outDir, { recursive: true })

@@ -1,9 +1,33 @@
 import { join } from 'node:path'
 import { gzipSync } from 'node:zlib'
 import { describe, expect, it } from 'vitest'
-import { buildSnapshot } from './snapshot'
+import { buildSnapshot, parseDataVersionOutput } from './snapshot'
 
 const DATA = join(import.meta.dirname, '..', '..', 'data')
+
+describe('parseDataVersionOutput', () => {
+  it('parses the version out of a real wrangler --json result row', () => {
+    expect(parseDataVersionOutput('[{"results":[{"value":"12"}]}]')).toBe(12)
+  })
+
+  it('returns 0 when meta.data_version has never been set (empty result set)', () => {
+    expect(parseDataVersionOutput('[{"results":[]}]')).toBe(0)
+  })
+
+  it('throws instead of silently returning 0 when wrangler prints non-JSON noise', () => {
+    // e.g. an update-notifier banner or deprecation warning printed ahead of the JSON,
+    // even on a zero exit code — must not be confused with "no version row yet"
+    expect(() => parseDataVersionOutput('⚠ wrangler update available\n[{"results":[]}]')).toThrow(
+      /could not parse/i,
+    )
+  })
+
+  it('throws on a non-numeric stored value instead of returning NaN', () => {
+    expect(() => parseDataVersionOutput('[{"results":[{"value":"not-a-number"}]}]')).toThrow(
+      /not a valid integer/i,
+    )
+  })
+})
 
 describe('catalog snapshot (C3 golden shape)', () => {
   it('builds a schema-valid snapshot over the real dataset', async () => {

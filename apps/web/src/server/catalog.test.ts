@@ -1,6 +1,6 @@
 import { env } from 'cloudflare:test'
 import type { CatalogSnapshot } from '@rankedmodel/shared'
-import { describe, expect, it } from 'vitest'
+import { describe, expect, it, vi } from 'vitest'
 import { loadCatalog } from './catalog'
 
 const kvSnapshot: CatalogSnapshot = {
@@ -136,5 +136,48 @@ describe('catalog spine (getCatalog server logic)', () => {
     // storage is per-file here, not per-test — clear the version row explicitly
     await env.DB.prepare("DELETE FROM meta WHERE key='data_version'").run()
     await expect(loadCatalog()).rejects.toThrow(/publish-data/)
+  })
+
+  it('throws on D1 rebuild instead of fabricating index:0 for a model with no model_scores row', async () => {
+    await setVersion(4) // no catalog:v4 in KV — forces the D1 rebuild path
+    const stmts = [
+      `INSERT INTO organizations (id, slug, name, type) VALUES (2, 'acme-ai-2', 'Acme AI 2', 'lab')`,
+      `INSERT INTO model_families (id, slug, org_id, name) VALUES (2, 'strato-3', 2, 'Strato 3')`,
+      // model 2 is seeded with NO matching model_scores row — a partial/broken seed
+      `INSERT INTO models (id, slug, org_id, family_id, name, release_date, status, openness, license,
+        arch_class, arch_display, context_length, modalities, capabilities, api_available, links, note, quants)
+       VALUES (2, 'strato-3', 2, 2, 'Strato 3', '2026-04-01', 'released', 'closed', 'Proprietary',
+        'moe', 'MoE (undisclosed)', 200000, '["text"]',
+        '{"reasoning":true,"coding":true,"vision":false,"functionCalling":true,"toolUse":true,"agentic":true}',
+        1, '{}', 'test model', '[]')`,
+    ]
+    for (const sql of stmts) await env.DB.prepare(sql).run()
+
+    try {
+      await expect(loadCatalog()).rejects.toThrow(/strato-3/)
+    } finally {
+      // D1 storage is per-file, not per-test (see comment above) — rebuildFromD1 rebuilds
+      // from whatever is currently in the models table regardless of the requested version,
+      // so this broken row must not leak into later tests that exercise the rebuild path.
+      await env.DB.prepare('DELETE FROM models WHERE id = 2').run()
+      await env.DB.prepare('DELETE FROM model_families WHERE id = 2').run()
+      await env.DB.prepare('DELETE FROM organizations WHERE id = 2').run()
+    }
+  })
+
+  it('logs at error level (not warn) when the cached KV blob fails schema validation', async () => {
+    await setVersion(1)
+    await env.CATALOG.put('catalog:v1', JSON.stringify({ not: 'a valid snapshot' }))
+    const errorSpy = vi.spyOn(console, 'error').mockImplementation(() => {})
+    try {
+      // KV is corrupt, so this falls through to rebuildFromD1 — which rebuilds from
+      // whatever is currently in D1 (model id=1, seeded by the earlier "rebuilds from
+      // D1" test) regardless of the version number; the point here is only that the
+      // KV corruption itself is reported loudly, not what rebuildFromD1 returns.
+      await loadCatalog()
+      expect(errorSpy).toHaveBeenCalledWith(expect.stringContaining('catalog:v1'))
+    } finally {
+      errorSpy.mockRestore()
+    }
   })
 })
