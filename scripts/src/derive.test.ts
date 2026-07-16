@@ -177,11 +177,11 @@ describe('derived scores match the D21 contract (goldens)', () => {
       .filter((m) => m.rankOverall != null && m.rankOverall <= 5)
       .sort((a, b) => (a.rankOverall ?? 0) - (b.rankOverall ?? 0))
     expect(top5.map((m) => [m.slug, m.overallIndex])).toEqual([
-      ['gpt-5-6', 3145.7],
-      ['claude-fable-5', 3012],
-      ['claude-opus-4-8', 2893.4],
-      ['gpt-5-4-pro', 2848.5],
-      ['claude-sonnet-5', 2832.7],
+      ['gpt-5-6', 3145.9],
+      ['claude-fable-5', 3012.1],
+      ['claude-opus-4-8', 2893.6],
+      ['gpt-5-4-pro', 2848.7],
+      ['claude-sonnet-5', 2832.8],
     ])
   })
 
@@ -266,7 +266,7 @@ describe('derived scores match the D21 contract (goldens)', () => {
     const { models, movers } = await derived()
     expect(movers.map((m) => [m.slug, m.prevSlug, m.delta])).toEqual([
       ['sarvam-105b', 'sarvam-1-2b', 1550],
-      ['hy3', 'hunyuan-a13b', 1025.1],
+      ['hy3', 'hunyuan-a13b', 1025.3],
       ['smollm3-3b-think', 'smollm2-1-7b', 976.1],
       ['smollm3-3b-no-thinking', 'smollm2-1-7b', 797.5],
       ['phi-4-reasoning', 'phi-4-mini-3-8b', 764.3],

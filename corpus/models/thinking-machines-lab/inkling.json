@@ -148,6 +148,13 @@
       "sourceUrl": "https://thinkingmachines.ai/model-card/inkling/",
       "evaluatedAt": "2026-07-15",
       "notes": "CharXiv reasoning-question (RQ) subset, no Python tool — matches this corpus's established charxiv convention. With-Python variant scores 82.0%."
+    },
+    {
+      "benchmarkSlug": "mcp-atlas",
+      "score": 74.1,
+      "source": "self-reported",
+      "sourceUrl": "https://thinkingmachines.ai/model-card/inkling/",
+      "notes": "Official model card, Agentic/general table, MCP Atlas row (74.1%, xHigh config). Cross-checked column identity via the adjacent GDPVal-AA v2 row matching the corpus's own existing 1238 score exactly. Independently corroborated by Scale AI's official MCP Atlas leaderboard (labs.scale.com/leaderboard/mcp_atlas): 'Inkling (xHigh) — 74.10±2.70'."
     }
   ],
   "verificationNotes": "Confirmed real via the official announcement (thinkingmachines.ai/news/introducing-inkling/) and model card (thinkingmachines.ai/model-card/inkling/), fetched directly, plus independent press corroboration (TechCrunch, Bloomberg, Axios, SiliconANGLE, MarkTechPost) and third-party benchmark corroboration from Artificial Analysis (which independently placed it at Intelligence Index 41, the highest of any US open-weights model at release, ahead of Nemotron 3 Ultra at 38). This is Thinking Machines Lab's first public model release (their only prior product, Tinker, launched Oct 2025, is a training/fine-tuning API, not a model). Companion model Inkling-Small (276B total/12B active) also announced but not yet added — no dedicated benchmark table found for it separately from Inkling proper. Benchmarks not mapped to an existing taxonomy slug (MCP Atlas, tau3-Banking, AA-Omniscience, Global-MMLU-Lite, Audio MC, MMAU, VoiceBench, FORTRESS, StrongREJECT, ForecastBench, Design Arena) were intentionally left uncaptured rather than force-fit to a non-equivalent existing slug. Pricing reflects Tinker's 64K-context tier post-intro-discount as of 2026-07-17 (tinker-docs.thinkingmachines.ai/tinker/models/); a 256K tier is also offered at roughly 2x the price. VRAM figures per Unsloth's dynamic-quant documentation (unsloth.ai/docs/models/inkling)."
