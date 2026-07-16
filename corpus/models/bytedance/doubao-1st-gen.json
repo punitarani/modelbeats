@@ -42,6 +42,15 @@
     "ctxK": "https://blog.csdn.net/heehelcom/article/details/138908782",
     "openness": "https://aiproem.substack.com/p/bytedances-ai-legacy-and-strategy"
   },
-  "results": [],
+  "results": [
+    {
+      "benchmarkSlug": "superclue",
+      "score": 66.35,
+      "source": "independent",
+      "sourceUrl": "https://github.com/CLUEbenchmark/SuperCLUE",
+      "evaluatedAt": "2023-12-27",
+      "notes": "SuperCLUE December 2023 Leaderboard, rank 11/17, listed under the pre-rebrand name '云雀大模型' (Yunque/Doubao's original internal name). Source: CLUEbenchmark/SuperCLUE GitHub README table."
+    }
+  ],
   "verificationNotes": "Confirmed real: launched May 15 2024 at Volcano Engine's FORCE conference (multiple independent sources), pricing ~99% below industry rates confirmed. FlagEval score 75.96 literally confirmed on the volcengine.com docs page (Chinese text: '综合评分75.96分排名第二...是得分最高的国产大模型' = score 75.96, ranked #2 behind GPT-4, top domestic model) — matches the claimed row exactly."
 }

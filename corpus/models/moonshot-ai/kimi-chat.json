@@ -46,6 +46,15 @@
     "ctxK": "https://en.wikipedia.org/wiki/Kimi_(chatbot)",
     "openness": "https://en.wikipedia.org/wiki/Kimi_(chatbot)"
   },
-  "results": [],
+  "results": [
+    {
+      "benchmarkSlug": "superclue",
+      "score": 71.92,
+      "source": "independent",
+      "sourceUrl": "https://github.com/CLUEbenchmark/SuperCLUE",
+      "evaluatedAt": "2023-12-27",
+      "notes": "SuperCLUE December 2023 Leaderboard, rank 5/17. Source: CLUEbenchmark/SuperCLUE GitHub README table."
+    }
+  ],
   "verificationNotes": "Confirmed genuine: Moonshot AI announced Kimi Chat on 2023-10-09 with open beta 2023-10-10 and general public release 2023-11-16, matching the record's releaseDate exactly; independently confirmed via multiple sources beyond Wikipedia. 128K lossless context (first of its kind) confirmed. moonshot-v1-128k pricing ($2 input/$5 output per 1M tokens) confirmed via platform.kimi.ai pricing docs and third-party pricing trackers. 'Deprecated' status is reasonable given kimi-latest was discontinued Jan 2026 and the product line has moved to K2.x. No changes needed."
 }

@@ -44,6 +44,15 @@
     "openness": "https://www.chinadaily.com.cn/a/202310/25/WS6538737ea31090682a5ea8b8.html",
     "ctxK": "https://www.xfyun.cn/doc/spark/%E6%8E%A5%E5%8F%A3%E8%AF%B4%E6%98%8E.html"
   },
-  "results": [],
+  "results": [
+    {
+      "benchmarkSlug": "superclue",
+      "score": 59.33,
+      "source": "independent",
+      "sourceUrl": "https://github.com/CLUEbenchmark/SuperCLUE",
+      "evaluatedAt": "2023-12-27",
+      "notes": "SuperCLUE December 2023 Leaderboard, rank 15/17, sub-scores OPEN=51.74 / OPT=77.03. Source: CLUEbenchmark/SuperCLUE GitHub README table (row '讯飞星火V3.0 | 科大讯飞 | 59.33 | 51.74 | 77.03 | API')."
+    }
+  ],
   "verificationNotes": "Existence and Oct 24, 2023 Hefei release confirmed via chinadaily.com.cn, iflytek.com, and multiple press (PRNewswire, Pandaily). SuperCLUE score of 59.33 (plus 51.74 OPEN / 77.03 OPT sub-scores) for Dec 2023 confirmed by fetching github.com/CLUEbenchmark/SuperCLUE directly - numbers match exactly. 'Rebranded as Spark Pro' claim is plausible per Chinese AI ecosystem reporting but not independently pinned to a single primary source; left in note field (non-critical, unverified nuance) rather than a hard spec."
 }

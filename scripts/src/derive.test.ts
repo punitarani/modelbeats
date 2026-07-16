@@ -177,11 +177,11 @@ describe('derived scores match the D21 contract (goldens)', () => {
       .filter((m) => m.rankOverall != null && m.rankOverall <= 5)
       .sort((a, b) => (a.rankOverall ?? 0) - (b.rankOverall ?? 0))
     expect(top5.map((m) => [m.slug, m.overallIndex])).toEqual([
-      ['gpt-5-6', 3146.5],
-      ['claude-fable-5', 3012.9],
-      ['claude-opus-4-8', 2889.6],
-      ['gpt-5-4-pro', 2850.7],
-      ['claude-sonnet-5', 2834],
+      ['gpt-5-6', 3138.9],
+      ['claude-fable-5', 3005.3],
+      ['claude-opus-4-8', 2882],
+      ['gpt-5-4-pro', 2843.1],
+      ['claude-sonnet-5', 2826.4],
     ])
   })
 
@@ -203,7 +203,7 @@ describe('derived scores match the D21 contract (goldens)', () => {
     const codex = models.find((m) => m.slug === 'openai-codex')
     expect(codex?.ranked).toBe(false)
     expect(codex?.rankOverall).toBeNull()
-    expect(codex?.overallIndex).toBe(24.8)
+    expect(codex?.overallIndex).toBe(17.8)
     const top = models.find((m) => m.rankOverall === 1)
     expect(top?.slug).toBe('gpt-5-6')
   })
@@ -238,7 +238,7 @@ describe('derived scores match the D21 contract (goldens)', () => {
     const { models } = await derived()
     const llama = models.find((m) => m.slug === 'llama-3-1-405b')
     expect(llama?.ranked).toBe(true)
-    expect(llama?.overallIndex).toBe(1249.9)
+    expect(llama?.overallIndex).toBe(1242.9)
     expect(llama?.rankOverall).toBe(173)
     // categoryIdx stays min-max (D21 keeps the radar on D2 bounds) — unchanged literals
     expect(llama?.categoryIdx).toEqual({
@@ -265,10 +265,10 @@ describe('derived scores match the D21 contract (goldens)', () => {
   it('pins the real top-5 movers and their rating self-consistency', async () => {
     const { models, movers } = await derived()
     expect(movers.map((m) => [m.slug, m.prevSlug, m.delta])).toEqual([
-      ['sarvam-105b', 'sarvam-1-2b', 1555.5],
-      ['hy3', 'hunyuan-a13b', 1018.5],
+      ['sarvam-105b', 'sarvam-1-2b', 1555.4],
+      ['hy3', 'hunyuan-a13b', 1017.9],
       ['smollm3-3b-think', 'smollm2-1-7b', 983.8],
-      ['smollm3-3b-no-thinking', 'smollm2-1-7b', 802.1],
+      ['smollm3-3b-no-thinking', 'smollm2-1-7b', 802.2],
       ['phi-4-reasoning', 'phi-4-mini-3-8b', 768.1],
     ])
     // structural: every mover delta is the rounded rating gap between two RANKED models

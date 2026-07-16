@@ -400,6 +400,16 @@
     "higherIsBetter": true
   },
   {
+    "slug": "gdpval-aa",
+    "name": "GDPval-AA",
+    "category": "agents",
+    "unit": "pts",
+    "description": "Updated/harder economically-valuable-work evaluation (0-2000 scale) — distinct from the original GDPval benchmark.",
+    "normMin": 0,
+    "normMax": 2000,
+    "higherIsBetter": true
+  },
+  {
     "slug": "gpqa",
     "name": "GPQA Diamond",
     "category": "reasoning",
@@ -477,6 +487,16 @@
     "description": "Fill-in-the-middle code completion variant of HumanEval.",
     "normMin": 0,
     "normMax": 91,
+    "higherIsBetter": true
+  },
+  {
+    "slug": "humaneval-plus",
+    "name": "HumanEval+",
+    "category": "coding",
+    "unit": "%",
+    "description": "EvalPlus-augmented HumanEval with extra test cases (stricter than base HumanEval).",
+    "normMin": 10,
+    "normMax": 100,
     "higherIsBetter": true
   },
   {
@@ -597,6 +617,16 @@
     "description": "Mostly Basic Python Problems, pass@1.",
     "normMin": 10,
     "normMax": 96,
+    "higherIsBetter": true
+  },
+  {
+    "slug": "mbpp-plus",
+    "name": "MBPP+",
+    "category": "coding",
+    "unit": "%",
+    "description": "EvalPlus-augmented MBPP with extra test cases (stricter than base MBPP).",
+    "normMin": 10,
+    "normMax": 90,
     "higherIsBetter": true
   },
   {
@@ -840,6 +870,26 @@
     "higherIsBetter": true
   },
   {
+    "slug": "osworld",
+    "name": "OSWorld",
+    "category": "agents",
+    "unit": "%",
+    "description": "Original OSWorld computer-use benchmark (screenshot-only agent configuration) — distinct from the later OSWorld-Verified subset.",
+    "normMin": 0,
+    "normMax": 88,
+    "higherIsBetter": true
+  },
+  {
+    "slug": "osworld-verified",
+    "name": "OSWorld-Verified",
+    "category": "agents",
+    "unit": "%",
+    "description": "Verified/cleaned subset of OSWorld — real desktop-GUI computer-use tasks scored pass@1.",
+    "normMin": 0,
+    "normMax": 90,
+    "higherIsBetter": true
+  },
+  {
     "slug": "pinchbench",
     "name": "PinchBench",
     "category": "agents",
@@ -990,6 +1040,16 @@
     "higherIsBetter": true
   },
   {
+    "slug": "superclue",
+    "name": "SuperCLUE",
+    "category": "knowledge",
+    "unit": "%",
+    "description": "Comprehensive Chinese-language LLM evaluation (CLUEbenchmark), covering reasoning, knowledge, and generation.",
+    "normMin": 40,
+    "normMax": 90,
+    "higherIsBetter": true
+  },
+  {
     "slug": "superglue",
     "name": "SuperGLUE",
     "category": "reasoning",
@@ -1027,6 +1087,16 @@
     "description": "Tool-agent-user interactions in realistic airline/retail domains.",
     "normMin": 0,
     "normMax": 100,
+    "higherIsBetter": true
+  },
+  {
+    "slug": "tau2-bench-telecom",
+    "name": "τ²-Bench Telecom",
+    "category": "agents",
+    "unit": "%",
+    "description": "τ²-Bench telecom domain — dual-control tool-agent-user tasks in a simulated telecom support setting; a harder successor to tau-bench, distinct scale.",
+    "normMin": 30,
+    "normMax": 99,
     "higherIsBetter": true
   },
   {
@@ -1167,66 +1237,6 @@
     "description": "Cross-lingual Winograd-schema commonsense resolution.",
     "normMin": 50,
     "normMax": 88,
-    "higherIsBetter": true
-  },
-  {
-    "slug": "tau2-bench-telecom",
-    "name": "τ²-Bench Telecom",
-    "category": "agents",
-    "unit": "%",
-    "description": "τ²-Bench telecom domain — dual-control tool-agent-user tasks in a simulated telecom support setting; a harder successor to tau-bench, distinct scale.",
-    "normMin": 30,
-    "normMax": 99,
-    "higherIsBetter": true
-  },
-  {
-    "slug": "mbpp-plus",
-    "name": "MBPP+",
-    "category": "coding",
-    "unit": "%",
-    "description": "EvalPlus-augmented MBPP with extra test cases (stricter than base MBPP).",
-    "normMin": 10,
-    "normMax": 90,
-    "higherIsBetter": true
-  },
-  {
-    "slug": "humaneval-plus",
-    "name": "HumanEval+",
-    "category": "coding",
-    "unit": "%",
-    "description": "EvalPlus-augmented HumanEval with extra test cases (stricter than base HumanEval).",
-    "normMin": 10,
-    "normMax": 100,
-    "higherIsBetter": true
-  },
-  {
-    "slug": "osworld-verified",
-    "name": "OSWorld-Verified",
-    "category": "agents",
-    "unit": "%",
-    "description": "Verified/cleaned subset of OSWorld — real desktop-GUI computer-use tasks scored pass@1.",
-    "normMin": 0,
-    "normMax": 90,
-    "higherIsBetter": true
-  },
-  {
-    "slug": "osworld",
-    "name": "OSWorld",
-    "category": "agents",
-    "unit": "%",
-    "description": "Original OSWorld computer-use benchmark (screenshot-only agent configuration) — distinct from the later OSWorld-Verified subset.",
-    "normMin": 0,
-    "normMax": 88,
-    "higherIsBetter": true
-  },
-  {
-    "slug": "gdpval-aa",
-    "name": "GDPval-AA",
-    "category": "agents",
-    "unit": "pts",
-    "description": "Updated/harder economically-valuable-work evaluation (0-2000 scale) — distinct from the original GDPval benchmark.",
-    "normMin": 0,
-    "normMax": 2000,
     "higherIsBetter": true
   }
 ]

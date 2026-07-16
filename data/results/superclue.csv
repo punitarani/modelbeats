@@ -1,0 +1,7 @@
+model_slug,score,source,source_url,evaluated_at,notes
+baichuan-4,80.64,independent,https://www.qbitai.com/2024/05/145905.html,2024-05-22,"SuperCLUE monthly leaderboard (~May 2024), ranked 1st, beating GPT-4-Turbo-0125 in the report's Chinese-comprehensive test. Source confirmed via qbitai.com and sohu.com (original inf.news citation returned HTTP 403)."
+doubao-1st-gen,66.35,independent,https://github.com/CLUEbenchmark/SuperCLUE,2023-12-27,"SuperCLUE December 2023 Leaderboard, rank 11/17, listed under the pre-rebrand name '云雀大模型' (Yunque/Doubao's original internal name). Source: CLUEbenchmark/SuperCLUE GitHub README table."
+iflytek-spark-v3-0-xinghuo,59.33,independent,https://github.com/CLUEbenchmark/SuperCLUE,2023-12-27,"SuperCLUE December 2023 Leaderboard, rank 15/17, sub-scores OPEN=51.74 / OPT=77.03. Source: CLUEbenchmark/SuperCLUE GitHub README table (row '讯飞星火V3.0 | 科大讯飞 | 59.33 | 51.74 | 77.03 | API')."
+kimi-chat,71.92,independent,https://github.com/CLUEbenchmark/SuperCLUE,2023-12-27,"SuperCLUE December 2023 Leaderboard, rank 5/17. Source: CLUEbenchmark/SuperCLUE GitHub README table."
+kimi-k2-5,61.5,independent,https://www.sohu.com/a/983920477_468661,2026-02-05,"SuperCLUE 中文大模型基准测评 2025 年年度报告 (2025 annual report, published 2026-02-05): best domestic open-source model, rank 4 globally."
+qwen3-max,60.61,independent,https://www.sohu.com/a/983920477_468661,2026-02-05,"SuperCLUE 中文大模型基准测评 2025 年年度报告 (2025 annual report, published 2026-02-05): best domestic closed-source model."

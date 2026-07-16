@@ -1,0 +1,10 @@
+{
+  "slug": "superclue",
+  "name": "SuperCLUE",
+  "category": "knowledge",
+  "unit": "%",
+  "description": "Comprehensive Chinese-language LLM evaluation (CLUEbenchmark), covering reasoning, knowledge, and generation.",
+  "normMin": 40,
+  "normMax": 90,
+  "higherIsBetter": true
+}
