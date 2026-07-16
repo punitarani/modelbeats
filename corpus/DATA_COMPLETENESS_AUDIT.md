@@ -24,7 +24,7 @@ the set itself should be larger.
 | — independent | 1,030 (19%) |
 | — arena | 33 |
 | — curated | 10 |
-| Models with zero results | 16 (3.0%) |
+| Models with zero results | 15 (2.8%) |
 | Benchmarks with <3 results ("thin") | 4 |
 
 ## Methodology summary (what "collection" covered)
@@ -56,8 +56,27 @@ targeted subset, using progressively diversified methodology:
    3–6 above (35 corrected, 9 refuted of 838). Between the two passes, **every current
    result in the corpus has been through at least one independent, adversarial,
    fresh-source re-verification** — this is a completed, not partial, accuracy pass.
+8. **Sibling-model cross-reference scan** — grepped every already-covered model's own
+   corpus file for the *name* of each zero-result model, on the theory that vendors
+   often cite competitor/sibling scores in their own benchmark tables. Closed
+   Llama-3.1-ELYZA-JP-70B this way (its mt-bench score was cited verbatim inside its
+   sibling model's file). Re-run against the residual 15-model set afterward: the two
+   textual hits it found (Grok 4.20 Multi-Agent mentioned inside Grok 4.20's own file;
+   GLM-5.2 High mentioned inside GLM-5.2 Max's file) were both already-logged references
+   in those models' own prior search rounds, not new data.
+9. **Structurally distinct source types: HuggingFace raw model-card content + academic
+   citation search** — for each of the 15 remaining zero-result models, fetched the
+   vendor's HF org page directly (not general web search) to check for a repo/model
+   card/eval_results.json, and queried Semantic Scholar + Google Scholar for papers
+   that *cite* the model in a benchmark comparison table (the pattern that would
+   surface e.g. a third-party NLP paper reporting ERNIE 3.0 Titan's scores even though
+   Baidu itself never published a benchmark table). Result: 0 of 15 models had either
+   an HF repo with reportable eval data or a citing paper with reportable scores — in
+   every case the gap was confirmed structural (no open weights → no HF repo; no
+   published paper yet → nothing to cite) rather than a search shortfall. Full
+   per-model detail is appended to each file's own `verificationNotes`.
 
-## Per-model audit: the 16 zero-result models
+## Per-model audit: the 15 zero-result models
 
 Every model below has been checked in **2–5 separate, dated research rounds**, each
 searching a different angle. Full detail is in each file's `verificationNotes`
@@ -77,7 +96,6 @@ always checked first and isn't tallied separately here).
 | GLM-5.2 (High) | Zhipu AI / Z.ai | 2026-06-13 | 12 | 2 | Later-published numbers are attributed to the sibling "Max" tier only; no tier-specific "High" table found anywhere. |
 | Grok 4.20 Multi-Agent | SpaceXAI | 2026-03-10 | 6 | 5 | Multi-agent orchestration product, not benchmarked as a standalone model by xAI or any tracker. |
 | Hunyuan (1st-gen) | Tencent | 2023-09-07 | 12 | 2 | Chinese leaderboards (SuperCLUE, C-Eval, OpenCompass) only have entries starting from 2024-era Hunyuan variants; this 1st-gen predates their coverage. |
-| Llama-3.1-ELYZA-JP-70B | ELYZA | 2024-10-25 | 8 | 2 | Japanese vendor fine-tune; ELYZA's own materials give qualitative claims only, no numeric table found on any Japanese leaderboard (Nejumi, Shaberi, Rakuda). |
 | MAI-1-preview | Microsoft | 2025-08-28 | 15 | 3 | Preview/limited release; Microsoft did not publish a benchmark table for this specific checkpoint. |
 | Step-1 | StepFun | 2024-03-01 | 14 | 3 | Chinese vendor; leaderboards (SuperCLUE, OpenCompass) only track StepFun's later multimodal models (Step-1V, Step-2, Step-3), not this text-only original. |
 | Step-2 | StepFun | 2024-07-01 | 15 | 2 | Same landscape gap as Step-1 — third-party Chinese trackers start coverage later. |
