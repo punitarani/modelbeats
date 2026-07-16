@@ -139,6 +139,22 @@
       "source": "independent",
       "sourceUrl": "https://artificialanalysis.ai/models/hyperclova-x-seed-think-32b",
       "notes": "IFBench (instruction following), independently measured by Artificial Analysis. Read directly off the 'IFBench' breakdown chart on the model's live AA page (38%, ranked 22nd of 26 models shown). Genuinely new — not the same as the paper's self-reported benchmarks already tracked."
+    },
+    {
+      "benchmarkSlug": "tau2-bench-retail",
+      "score": 71.6,
+      "source": "self-reported",
+      "sourceUrl": "https://arxiv.org/abs/2601.03286",
+      "evaluatedAt": "2025-12-26",
+      "notes": "Table 5 of the model's own technical report (arXiv 2601.03286), 'Tau2-Retail' row, same table as the tracked tau2-bench-telecom=65.1 row. [taxonomy-gap backfill: this score was already verified in an earlier research round but had no matching benchmark slug at the time; added once the slug was introduced.]"
+    },
+    {
+      "benchmarkSlug": "tau2-bench-airline",
+      "score": 58.0,
+      "source": "self-reported",
+      "sourceUrl": "https://arxiv.org/abs/2601.03286",
+      "evaluatedAt": "2025-12-26",
+      "notes": "Table 5 of the model's own technical report (arXiv 2601.03286), 'Tau2-Airline' row, same table as the tracked tau2-bench-telecom=65.1 row. [taxonomy-gap backfill: this score was already verified in an earlier research round but had no matching benchmark slug at the time; added once the slug was introduced.]"
     }
   ],
   "verificationNotes": "Confirmed genuinely real (highest-scrutiny record given Dec-2025 release date) — found live HF model card, arXiv paper 2601.03286, Artificial Analysis model page, and independent press/X coverage (Ajupress, Artificial Analysis and Wes Roth X posts) all describing this exact model. 32B params, license name, 128K context, and text/image/video modalities all confirmed verbatim on the HF page. The '87' tau-bench score is confirmed present on the ajupress.com sourceUrl (paraphrased as '87 percent' for an agentic telecom customer-support tool-use eval, i.e. tau2-Bench Telecom). The note's claim of an initial 44 vs EXAONE (43) at launch, later recalibrated to 17 under AA's v4.1 methodology, was independently verified: X posts from Artificial Analysis/Wes Roth at launch cite 44 outperforming EXAONE 4.0 32B, while the current live artificialanalysis.ai page now shows Intelligence Index 17 under v4.1 methodology — both halves of the note check out."

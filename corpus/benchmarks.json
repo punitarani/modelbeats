@@ -1090,6 +1090,26 @@
     "higherIsBetter": true
   },
   {
+    "slug": "tau2-bench-airline",
+    "name": "τ²-Bench Airline",
+    "category": "agents",
+    "unit": "%",
+    "description": "τ²-Bench airline domain — dual-control tool-agent-user tasks in a simulated airline support setting; a harder successor to tau-bench, distinct scale.",
+    "normMin": 20,
+    "normMax": 95,
+    "higherIsBetter": true
+  },
+  {
+    "slug": "tau2-bench-retail",
+    "name": "τ²-Bench Retail",
+    "category": "agents",
+    "unit": "%",
+    "description": "τ²-Bench retail domain — dual-control tool-agent-user tasks in a simulated e-commerce/retail support setting; a harder successor to tau-bench, distinct scale.",
+    "normMin": 30,
+    "normMax": 99,
+    "higherIsBetter": true
+  },
+  {
     "slug": "tau2-bench-telecom",
     "name": "τ²-Bench Telecom",
     "category": "agents",
@@ -1097,6 +1117,16 @@
     "description": "τ²-Bench telecom domain — dual-control tool-agent-user tasks in a simulated telecom support setting; a harder successor to tau-bench, distinct scale.",
     "normMin": 30,
     "normMax": 99,
+    "higherIsBetter": true
+  },
+  {
+    "slug": "tau3-banking",
+    "name": "τ³-Banking",
+    "category": "agents",
+    "unit": "%",
+    "description": "τ³-Bench banking domain (Artificial Analysis) — a newer, substantially harder generation of dual-control tool-agent-user tasks than τ²-Bench; scores are much lower across the field.",
+    "normMin": 0,
+    "normMax": 45,
     "higherIsBetter": true
   },
   {

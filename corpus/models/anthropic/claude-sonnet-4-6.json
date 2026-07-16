@@ -171,6 +171,14 @@
       "source": "independent",
       "sourceUrl": "https://www.vals.ai/models/anthropic_claude-sonnet-4-6",
       "notes": "Vals AI independent evaluation. Distinct from the already-tracked 'mmmu-pro' slug on this model, which is a harder/different benchmark."
+    },
+    {
+      "benchmarkSlug": "tau2-bench-retail",
+      "score": 91.7,
+      "source": "self-reported",
+      "sourceUrl": "https://www.anthropic.com/claude-sonnet-4-6-system-card",
+      "evaluatedAt": "2026-02-17",
+      "notes": "τ²-bench Retail sub-domain, system card Section 2.5 (same table as the tracked τ²-bench Telecom=97.9 row). [taxonomy-gap backfill: this score was already verified in an earlier research round but had no matching benchmark slug at the time; added once the slug was introduced.]"
     }
   ],
   "verificationNotes": "Release date confirmed via Anthropic's own announcement (fetched directly; page states February 17, 2026, though one press recap gave February 15 — treated the primary source as authoritative). SWE-bench/OSWorld figures below are from direct launch-day press coverage citing Anthropic's numbers; GPQA figure is from a third-party recap with lower confidence."

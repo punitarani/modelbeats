@@ -157,6 +157,22 @@
       "source": "independent",
       "sourceUrl": "https://artificialanalysis.ai/models/exaone-4-5-33b",
       "notes": "Humanity's Last Exam score from Artificial Analysis' independent test run (their model detail page for exaone-4-5-33b embeds hle:0.11631...). Not previously tracked for this model under any source."
+    },
+    {
+      "benchmarkSlug": "tau2-bench-retail",
+      "score": 77.9,
+      "source": "self-reported",
+      "sourceUrl": "https://huggingface.co/LGAI-EXAONE/EXAONE-4.5-33B",
+      "evaluatedAt": "2026-04-09",
+      "notes": "tau2-Bench Retail domain (same model card table as the tracked tau2-bench-telecom=73 row). [taxonomy-gap backfill: this score was already verified in an earlier research round but had no matching benchmark slug at the time; added once the slug was introduced.]"
+    },
+    {
+      "benchmarkSlug": "tau2-bench-airline",
+      "score": 56.5,
+      "source": "self-reported",
+      "sourceUrl": "https://huggingface.co/LGAI-EXAONE/EXAONE-4.5-33B",
+      "evaluatedAt": "2026-04-09",
+      "notes": "tau2-Bench Airline domain (same model card table as the tracked tau2-bench-telecom=73 row). [taxonomy-gap backfill: this score was already verified in an earlier research round but had no matching benchmark slug at the time; added once the slug was introduced.]"
     }
   ],
   "verificationNotes": "Context window (256K, precisely 262,144 tokens) sourced from the EXAONE 4.5 Technical Report, not the press release."

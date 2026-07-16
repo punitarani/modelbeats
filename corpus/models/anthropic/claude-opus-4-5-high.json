@@ -177,6 +177,14 @@
       "source": "independent",
       "sourceUrl": "https://www.vals.ai/models/anthropic_claude-opus-4-5-20251101-thinking",
       "notes": "Vals AI independent eval, Thinking/high-effort variant. MMLU-Pro 87.26%, from the model page's embedded score data (raw HTML fetch). The corpus already tracks plain 'mmlu' (90.8) and 'mmmlu' (90.8) for this model but not the distinct, harder 'mmlu-pro' slug."
+    },
+    {
+      "benchmarkSlug": "tau2-bench-retail",
+      "score": 88.9,
+      "source": "self-reported",
+      "sourceUrl": "https://www.anthropic.com/news/claude-opus-4-5",
+      "evaluatedAt": "2025-11-24",
+      "notes": "τ2-bench Retail domain, official launch-page table and system card Table 2.3.A (same table as the tracked τ2-bench Telecom=98.2 row). [taxonomy-gap backfill: this score was already verified in an earlier research round but had no matching benchmark slug at the time; added once the slug was introduced.]"
     }
   ],
   "verificationNotes": "Confirmed real; anthropic.com/news/claude-opus-4-5 verifies release date, 200K context, $5/$25 pricing. The 80.9% SWE-bench figure is a genuine, widely-reported Anthropic claim, but it appears on anthropic.com's own page only as a chart label, not literal text, so the sourceUrl was swapped to theunwindai.com, whose headline literally states 'Claude Opus 4.5 Scores 80.9% on SWE-bench.' The other four rows (GPQA 87.0, MMLU 90.8, MMMU 80.7, HLE-with-search 43.2, Terminal-Bench 59.3) were all confirmed as literal quotes on vellum.ai/blog/claude-opus-4-5-benchmarks."

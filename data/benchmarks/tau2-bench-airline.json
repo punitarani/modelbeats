@@ -1,0 +1,10 @@
+{
+  "slug": "tau2-bench-airline",
+  "name": "τ²-Bench Airline",
+  "category": "agents",
+  "unit": "%",
+  "description": "τ²-Bench airline domain — dual-control tool-agent-user tasks in a simulated airline support setting; a harder successor to tau-bench, distinct scale.",
+  "normMin": 20,
+  "normMax": 95,
+  "higherIsBetter": true
+}

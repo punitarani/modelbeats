@@ -170,6 +170,20 @@
       "sourceUrl": "https://arena.ai/leaderboard/text",
       "evaluatedAt": "2026-07-13",
       "notes": "Arena.ai Text Arena Overall Elo for 'kimi-k2-0711-preview' -- rank 101/374, 27,610 votes, $0.60/$2.50 pricing and 131.1K context shown alongside it (release-date slug '0711' matches this model's exact July 11, 2025 release). Confirmed via the leaderboard's own embedded data table."
+    },
+    {
+      "benchmarkSlug": "tau2-bench-retail",
+      "score": 70.6,
+      "source": "self-reported",
+      "sourceUrl": "https://arxiv.org/abs/2507.20534",
+      "notes": "Tau2-Bench Retail domain, avg@4; arXiv:2507.20534 Table 3 and GitHub README mirror (same source as the tracked tau2-bench-telecom=65.8 row). [taxonomy-gap backfill: this score was already verified in an earlier research round but had no matching benchmark slug at the time; added once the slug was introduced.]"
+    },
+    {
+      "benchmarkSlug": "tau2-bench-airline",
+      "score": 56.5,
+      "source": "self-reported",
+      "sourceUrl": "https://arxiv.org/abs/2507.20534",
+      "notes": "Tau2-Bench Airline domain, avg@4; arXiv:2507.20534 Table 3 and GitHub README mirror (same source as the tracked tau2-bench-telecom=65.8 row). [taxonomy-gap backfill: this score was already verified in an earlier research round but had no matching benchmark slug at the time; added once the slug was introduced.]"
     }
   ],
   "verificationNotes": "Confirmed real model. GitHub README (moonshotai/Kimi-K2, mirrors HF card) verified 1T total/32B active/384 experts/128K ctx/Modified MIT License and all 5 benchmark scores (LiveCodeBench 53.7, AIME24 69.6, MMLU 89.5, SWE-bench 65.8, MATH-500 97.4) verbatim. Exact release date July 11, 2025 confirmed via multiple sources (model's own '0711' version tag, Global Times, Wikipedia). Pricing $0.57/$2.30 per M tokens confirmed via OpenRouter/pricepertoken listings for 'Kimi K2 0711'. HF page itself was rate-limited (429) during this session but GitHub README mirror gave identical figures."

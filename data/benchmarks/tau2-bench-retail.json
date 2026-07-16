@@ -1,0 +1,10 @@
+{
+  "slug": "tau2-bench-retail",
+  "name": "τ²-Bench Retail",
+  "category": "agents",
+  "unit": "%",
+  "description": "τ²-Bench retail domain — dual-control tool-agent-user tasks in a simulated e-commerce/retail support setting; a harder successor to tau-bench, distinct scale.",
+  "normMin": 30,
+  "normMax": 99,
+  "higherIsBetter": true
+}

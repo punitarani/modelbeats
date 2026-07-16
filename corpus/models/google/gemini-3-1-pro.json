@@ -151,6 +151,14 @@
       "sourceUrl": "https://deepmind.google/models/gemini/pro/",
       "evaluatedAt": "2026-02-19",
       "notes": "MMMLU (Multilingual MMLU), single attempt. Confirmed via direct fetch of the official model page; sits in the same performance table as the 12 benchmarks already tracked but was not yet captured."
+    },
+    {
+      "benchmarkSlug": "tau2-bench-retail",
+      "score": 90.8,
+      "source": "self-reported",
+      "sourceUrl": "https://deepmind.google/models/gemini/pro/",
+      "evaluatedAt": "2026-02-19",
+      "notes": "τ2-bench Retail domain (labeled 'τ2-bench Retail' on the page, alongside the tracked τ2-bench Telecom score). [taxonomy-gap backfill: this score was already verified in an earlier research round but had no matching benchmark slug at the time; added once the slug was introduced.]"
     }
   ],
   "verificationNotes": "Confirmed real via blog.google (2026-02-19 launch) and deepmind.google/models/gemini/pro/ (fetched directly). All 5 benchmark numbers (GPQA 94.3, ARC-AGI-2 77.1, SWE-bench 80.6, MMMU-Pro 80.5, LiveCodeBench Pro 2887 Elo) literally confirmed on the cited pages. 1M context and $2/$12 pricing confirmed via independent sources. Still in preview as of July 2026 (not yet GA) per multiple July-2026 press coverage — status left as preview, correctly. No changes to record."
