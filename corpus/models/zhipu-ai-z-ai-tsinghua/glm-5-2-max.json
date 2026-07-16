@@ -112,6 +112,13 @@
       "sourceUrl": "https://artificialanalysis.ai/evaluations/tau2-bench",
       "evaluatedAt": "2026-07-15",
       "notes": "Artificial Analysis's own Tau2-Bench Telecom leaderboard entry for GLM-5.2 (max): 99.1%, directly confirmed by fetching AA's public evaluation leaderboard page ('GLM-5.2 (max) with a score of 99.1%'), also mirrored in BenchLM.ai's embedded model data. Independent of Zhipu's self-reported figures and not currently tracked for this model (sibling releases GLM-4.5-Air and GLM-4.6 have self-/independently-reported Tau2-Telecom scores, but GLM-5.2 (Max) did not until now)."
+    },
+    {
+      "benchmarkSlug": "mcp-atlas",
+      "score": 76.8,
+      "source": "self-reported",
+      "sourceUrl": "https://huggingface.co/blog/zai-org/glm-52-blog",
+      "notes": "MCP-Atlas score from the official GLM-5.2 launch blog's benchmark table. [taxonomy-gap backfill: this score was already verified in an earlier research round but had no matching benchmark slug at the time; added once the slug was introduced.]"
     }
   ],
   "verificationNotes": "See GLM-5.2 (High) entry for shared model-level verification (existence, dates, params, license). This entry carries the publicly reported self-reported benchmark scores, on the assumption (not fully confirmed by Z.ai) that the published numbers reflect the top/Max reasoning-effort configuration -- Z.ai did not publish an explicit per-tier breakdown at launch per MarkTechPost's coverage. Scores cross-checked between huggingface.co/blog/zai-org/glm-52-blog (HLE, AIME, GPQA, and an extended coding-benchmark table) and official docs.z.ai/guides/llm/glm-5.2 (Terminal-Bench 2.1 81.0 vs Claude Opus 4.8's 85.0, SWE-bench Pro 62.1, FrontierSWE within 1% of Opus 4.8) -- both agree on SWE-bench Pro 62.1 and Terminal-Bench 2.1 ~81.0, giving good confidence in those two figures. Omitted CritPt (16.7), HMMT Nov 2025 (94.4), HMMT Feb 2026 (92.5), IMOAnswerBench (91.0), NL2Repo (48.9), DeepSWE (46.2), ProgramBench (63.7), FrontierSWE (74.4), PostTrainBench (34.3), SWE-Marathon (13.0), MCP-Atlas (76.8), and Tool-Decathlon (48.2) for lack of a matching corpus benchmark slug."

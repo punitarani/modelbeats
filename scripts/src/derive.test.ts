@@ -177,11 +177,11 @@ describe('derived scores match the D21 contract (goldens)', () => {
       .filter((m) => m.rankOverall != null && m.rankOverall <= 5)
       .sort((a, b) => (a.rankOverall ?? 0) - (b.rankOverall ?? 0))
     expect(top5.map((m) => [m.slug, m.overallIndex])).toEqual([
-      ['gpt-5-6', 3137.8],
-      ['claude-fable-5', 3004.2],
-      ['claude-opus-4-8', 2881],
-      ['gpt-5-4-pro', 2842],
-      ['claude-sonnet-5', 2825.3],
+      ['gpt-5-6', 3137.9],
+      ['claude-fable-5', 3004.3],
+      ['claude-opus-4-8', 2881.1],
+      ['gpt-5-4-pro', 2842.1],
+      ['claude-sonnet-5', 2825.4],
     ])
   })
 
@@ -265,10 +265,10 @@ describe('derived scores match the D21 contract (goldens)', () => {
   it('pins the real top-5 movers and their rating self-consistency', async () => {
     const { models, movers } = await derived()
     expect(movers.map((m) => [m.slug, m.prevSlug, m.delta])).toEqual([
-      ['sarvam-105b', 'sarvam-1-2b', 1555],
-      ['hy3', 'hunyuan-a13b', 1017.2],
-      ['smollm3-3b-think', 'smollm2-1-7b', 983.7],
-      ['smollm3-3b-no-thinking', 'smollm2-1-7b', 802.2],
+      ['sarvam-105b', 'sarvam-1-2b', 1555.1],
+      ['hy3', 'hunyuan-a13b', 1017.3],
+      ['smollm3-3b-think', 'smollm2-1-7b', 983.6],
+      ['smollm3-3b-no-thinking', 'smollm2-1-7b', 802.1],
       ['phi-4-reasoning', 'phi-4-mini-3-8b', 767.8],
     ])
     // structural: every mover delta is the rounded rating gap between two RANKED models

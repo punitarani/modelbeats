@@ -1,0 +1,10 @@
+{
+  "slug": "mcp-atlas",
+  "name": "MCP Atlas",
+  "category": "agents",
+  "unit": "%",
+  "description": "Multi-server Model Context Protocol tool-use benchmark across realistic agentic workflows.",
+  "normMin": 50,
+  "normMax": 90,
+  "higherIsBetter": true
+}
