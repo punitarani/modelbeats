@@ -65,7 +65,14 @@
       "sourceUrl": "https://arxiv.org/html/2308.12950v3",
       "evaluatedAt": "2024-01-29",
       "notes": "pass@1, Code Llama - Instruct 70B, Table 2 of the Code Llama paper (arXiv 2308.12950v3, updated when the 70B family was released Jan 29 2024). Directly fetched and cross-confirmed via two independent fetches plus corroborating web search; not currently in the corpus (only HumanEval is recorded)."
+    },
+    {
+      "benchmarkSlug": "humaneval-plus",
+      "score": 65.9,
+      "source": "independent",
+      "sourceUrl": "https://evalplus.github.io/leaderboard.html",
+      "notes": "pass@1, greedy decoding, EvalPlus rigorous HumanEval+ test suite (raw data confirmed directly from https://raw.githubusercontent.com/evalplus/evalplus.github.io/main/results.json, entry \"CodeLlama-70B-Instruct\"). Independent re-evaluation by the EvalPlus team, distinct from the corpus's existing self-reported HumanEval (67.8) and MBPP (62.2) entries from the Code Llama paper. This EvalPlus dataset also lists a HumanEval score of 72.0 for this model, but that is skipped per instructions since a humaneval result already exists in the corpus under another source. MBPP+ was not evaluated for this model (null in source data)."
     }
   ],
-  "verificationNotes": "Confirmed real. Fetched the-decoder.com article directly: it literally states Code Llama 70B Instruct scored 67.8 on HumanEval and edged out GPT-4/Gemini Pro zero-shot \u2014 matches the record exactly, kept. Release date, license (Llama 2 Community License Agreement), and 16K context corroborated the same way as the base model via HF card and Meta's blog. No changes."
+  "verificationNotes": "Confirmed real. Fetched the-decoder.com article directly: it literally states Code Llama 70B Instruct scored 67.8 on HumanEval and edged out GPT-4/Gemini Pro zero-shot — matches the record exactly, kept. Release date, license (Llama 2 Community License Agreement), and 16K context corroborated the same way as the base model via HF card and Meta's blog. No changes."
 }

@@ -73,6 +73,22 @@
       "source": "curated",
       "sourceUrl": "https://arxiv.org/abs/2402.19173",
       "notes": "RepoBench v1.1 exact match (EM), averaged across the Python and Java splits reported in Table 17 of the StarCoder2 & The Stack v2 paper (Lozhkov et al., 2024): Python EM 33.85, Java EM 39.61."
+    },
+    {
+      "benchmarkSlug": "humaneval-plus",
+      "score": 3.66,
+      "source": "independent",
+      "sourceUrl": "https://arxiv.org/abs/2411.10656",
+      "evaluatedAt": "2026-04-03",
+      "notes": "pass@1, unquantized base CodeLlama 7B, from Melin, Torek, Eisty & Kennington, 'Precision or Peril: A PoC of Python Code Quality from Quantized Large Language Models' (AI-SQE '26 workshop, arXiv:2411.10656v2, Table 2). Independent third-party evaluation using the EvalPlus HumanEvalPlus expanded test suite (164 problems), zero-shot code completion with temperature 0.1/top-p 0.9 and no prompt engineering. Score is much lower than the paper's official HumanEval number (33.5) because this uses the stricter EvalPlus test cases and an unassisted base-model completion harness rather than Meta's own eval setup. Same paper also reports 4-bit AWQ (3.66%) and 8-bit AWQ (2.44%) quantized variants; the unquantized figure is used here since it matches this corpus entry's full-precision config."
+    },
+    {
+      "benchmarkSlug": "mbpp-plus",
+      "score": 11.03,
+      "source": "independent",
+      "sourceUrl": "https://arxiv.org/abs/2411.10656",
+      "evaluatedAt": "2026-04-03",
+      "notes": "pass@1, unquantized base CodeLlama 7B, from Melin, Torek, Eisty & Kennington, 'Precision or Peril: A PoC of Python Code Quality from Quantized Large Language Models' (AI-SQE '26 workshop, arXiv:2411.10656v2, Table 2). Independent third-party evaluation using the EvalPlus MBPP Plus expanded test suite (399 problems), zero-shot code completion with temperature 0.1/top-p 0.9 and no prompt engineering. Score is much lower than the paper's official MBPP number (41.4) because this uses the stricter EvalPlus test cases and an unassisted base-model completion harness rather than Meta's own eval setup. Same paper also reports 4-bit AWQ (12.03%) and 8-bit AWQ (11.28%) quantized variants; the unquantized figure is used here since it matches this corpus entry's full-precision config."
     }
   ],
   "verificationNotes": "Confirmed release 2023-08-24 (TechCrunch, Meta blog) and Llama 2 Community License. Directly fetched arxiv.org/html/2308.12950v3 Table 2: HumanEval 33.5 / MBPP 41.4 for base Code Llama 7B both confirmed exactly (an initial secondary web-search summary had returned different, incorrect numbers (28.2/37.3) before the primary-source fetch corrected this). FIM infilling support for 7B confirmed via Meta docs/arXiv (7B and 13B support infilling; 34B does not)."

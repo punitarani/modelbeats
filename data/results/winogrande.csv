@@ -90,6 +90,7 @@ olmo-7b,67.9,self-reported,https://huggingface.co/allenai/OLMo-7B,,
 olmoe-1b-7b-0924,70.2,self-reported,https://huggingface.co/allenai/OLMoE-1B-7B-0924,,
 openhermes-2-5-mistral-7b,74.35,self-reported,https://huggingface.co/teknium/OpenHermes-2.5-Mistral-7B,2023-11-03,Part of GPT4All suite on the official HF model card.
 openllama-7b,67,self-reported,https://github.com/openlm-research/open_llama,,"winogrande/acc via lm-evaluation-harness, OpenLLaMA 7B (v1)"
+opt-175b,72.6,independent,https://ar5iv.labs.arxiv.org/html/2211.10438,2022-11-18,"FP16 baseline (zero-shot) for OPT-175B, same Table 3 of the SmoothQuant paper (arXiv 2211.10438) as the HellaSwag/OpenBookQA additions — verified in both ar5iv HTML and the original PDF. WinoGrande was not previously tracked for this model."
 opt-iml-30b,67.8,self-reported,https://ar5iv.labs.arxiv.org/html/2212.12017,2022-12-22,"0-shot accuracy on WinoGrande for OPT-IML 30B, Table 9 of the OPT-IML paper. Row 'OPT-IML 30B', Winogrande column = 67.8/69.0 (0-shot/32-shot)."
 palm-2,90.9,self-reported,https://arxiv.org/abs/2305.10403,2023-05-17,"Instruction-tuned PaLM 2 (L), 5-shot WinoGrande, from Table 5 (section 4.3 Reasoning)."
 palm-540b,81.1,self-reported,https://arxiv.org/abs/2204.02311,2022-04-05,"PaLM 540B, 0-shot WinoGrande, from Table 4 (main English NLP tasks results)."

@@ -139,6 +139,14 @@
       "sourceUrl": "https://github.com/meta-llama/llama-models/blob/main/models/llama3_2/MODEL_CARD_VISION.md",
       "evaluatedAt": "2024-09-01",
       "notes": "Instruct, text-only capability of the vision model, Multilingual MGSM CoT 0-shot em"
+    },
+    {
+      "benchmarkSlug": "seedbench",
+      "score": 72.6,
+      "source": "independent",
+      "sourceUrl": "https://arxiv.org/abs/2504.00557",
+      "evaluatedAt": "2025-04-01",
+      "notes": "SEED-Bench Image, 'Original' (uncompressed baseline) row for Llama-3.2-V Inst. 11B in Table 1 of Lee et al., 'Efficient LLaMA-3.2-Vision by Trimming Cross-attended Visual Features' (CVPR 2025 Workshop on ELVM); independent third-party re-evaluation, not Meta's own reported number."
     }
   ],
   "verificationNotes": "Confirmed real via HF model card fetch: card states '11B (10.6)' params, release 2024-09-25 (matches ai.meta.com blog), license Llama 3.2 Community License Agreement. All 5 benchmark rows (MMMU 50.7, MMLU 73.0, MathVista 51.5, ChartQA 83.4, DocVQA 88.4) literally confirmed on the cited HF page."

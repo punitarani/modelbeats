@@ -184,7 +184,7 @@
       "source": "independent",
       "sourceUrl": "https://ar5iv.labs.arxiv.org/html/2305.15334",
       "evaluatedAt": "2023-05-24",
-      "notes": "Gorilla paper (Patil et al., arXiv 2305.15334), Table 1 \u2014 zero-shot, no-retriever accuracy on APIBench (HuggingFace subset), using the 7B LLaMA checkpoint. Reported score is literally 0.00% (base LLaMA cannot produce valid API calls zero-shot) \u2014 a real, deliberately-reported floor baseline, not a placeholder."
+      "notes": "Gorilla paper (Patil et al., arXiv 2305.15334), Table 1 — zero-shot, no-retriever accuracy on APIBench (HuggingFace subset), using the 7B LLaMA checkpoint. Reported score is literally 0.00% (base LLaMA cannot produce valid API calls zero-shot) — a real, deliberately-reported floor baseline, not a placeholder."
     },
     {
       "benchmarkSlug": "tensorhub-apibench",
@@ -193,6 +193,22 @@
       "sourceUrl": "https://ar5iv.labs.arxiv.org/html/2305.15334",
       "evaluatedAt": "2023-05-24",
       "notes": "Gorilla paper (Patil et al. 2023), Table 1: zero-shot (no retriever) overall accuracy on the TensorFlow Hub (TensorHub) split of APIBench. LLaMA-7B scored 0% zero-shot, with 100% hallucination error."
+    },
+    {
+      "benchmarkSlug": "openbookqa",
+      "score": 57.2,
+      "source": "self-reported",
+      "sourceUrl": "https://ar5iv.labs.arxiv.org/html/2302.13971",
+      "evaluatedAt": "2023-02-01",
+      "notes": "0-shot, Table 3 (Common Sense Reasoning table) — same table/source already used in this record for HellaSwag, PIQA, SIQA, WinoGrande, ARC-e, ARC-c"
+    },
+    {
+      "benchmarkSlug": "math",
+      "score": 2.9,
+      "source": "self-reported",
+      "sourceUrl": "https://ar5iv.labs.arxiv.org/html/2302.13971",
+      "evaluatedAt": "2023-02-01",
+      "notes": "Table 7, single-sample result (the paper's separate majority-voting/maj1@k variant scores higher at 6.9 and is a distinct setting — same treatment already applied to the GSM8k entry in this record)"
     }
   ],
   "verificationNotes": "Confirmed real release, part of the same 2023-02-24 LLaMA drop. Wikipedia confirms 7B=6.7B params exactly, 2048 ctx, gated non-commercial license. Fetched the MODEL_CARD.md comparison table and confirmed MMLU 35.1, TruthfulQA 27.42, Toxigen 23.00 all appear for the Llama-1-7B row. No changes made."

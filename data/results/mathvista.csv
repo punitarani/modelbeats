@@ -30,6 +30,7 @@ kimi-k1-5,74.9,self-reported,https://arxiv.org/abs/2501.12599,,"Long-CoT variant
 kimi-k2-5,90.1,self-reported,https://www.kimi.com/blog/kimi-k2-5,,"MathVista (mini/testmini), Kimi K2.5 Thinking, avg@3."
 llama-3-2-11b-vision,51.5,self-reported,https://huggingface.co/meta-llama/Llama-3.2-11B-Vision,2024-09-01,"Instruct, testmini"
 llama-3-2-90b-vision,57.3,self-reported,https://huggingface.co/meta-llama/Llama-3.2-90B-Vision-Instruct,,MathVista testmini
+llama-4-maverick,73.7,self-reported,https://huggingface.co/blog/llama4-release,2025-04-05,"Instruction-tuned, accuracy. Same official benchmark table as the model's existing MMMU/ChartQA/DocVQA rows; MathVista row was not yet captured."
 llama-4-scout,70.7,self-reported,https://huggingface.co/blog/llama4-release,2025-04-05,"Instruction-tuned table, accuracy. Not previously tracked for this model. Searched separately for IFEval and BFCL scores (Meta's official release materials and independent trackers) but neither is published for Llama 4 Scout, so they are not included. [score corrected during round-6 completeness verify: proposed 73.7 -> 70.7]"
 minicpm-llama3-v-2-5,54.3,self-reported,https://github.com/OpenBMB/MiniCPM-V/blob/main/docs/minicpm_llama3_v2dot5.md,2024-05-20,Reported as 'Math-Vista' in the official results table.
 minicpm-o-2-6,71.9,self-reported,https://huggingface.co/openbmb/MiniCPM-o-2_6,2025-01-13,MathVista mini; evaluated with chain-of-thought prompting per the model card's footnote.

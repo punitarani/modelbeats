@@ -40,7 +40,7 @@
   "vramQ4Gb": 210,
   "vramFp16Gb": 800,
   "tps4090": null,
-  "tpsNote": "400B total MoE weights (~210GB at Q4) far exceed a single RTX 4090; needs multi-GPU/datacenter hardware \u2014 no single-4090 benchmark exists.",
+  "tpsNote": "400B total MoE weights (~210GB at Q4) far exceed a single RTX 4090; needs multi-GPU/datacenter hardware — no single-4090 benchmark exists.",
   "effortLabel": null,
   "isDefaultConfig": true,
   "isBestConfig": true,
@@ -126,6 +126,22 @@
       "sourceUrl": "https://huggingface.co/blog/llama4-release",
       "evaluatedAt": "2025-04-05",
       "notes": "Pre-trained/base model comparison table, ANLS metric"
+    },
+    {
+      "benchmarkSlug": "mmmu-pro",
+      "score": 59.6,
+      "source": "self-reported",
+      "sourceUrl": "https://huggingface.co/blog/llama4-release",
+      "evaluatedAt": "2025-04-05",
+      "notes": "Instruction-tuned, accuracy. Same official benchmark table already used as source for this model's MMMU/ChartQA/DocVQA entries; MMMU-Pro row was not yet captured."
+    },
+    {
+      "benchmarkSlug": "mathvista",
+      "score": 73.7,
+      "source": "self-reported",
+      "sourceUrl": "https://huggingface.co/blog/llama4-release",
+      "evaluatedAt": "2025-04-05",
+      "notes": "Instruction-tuned, accuracy. Same official benchmark table as the model's existing MMMU/ChartQA/DocVQA rows; MathVista row was not yet captured."
     }
   ],
   "verificationNotes": "Re-confirmed via huggingface.co/blog/llama4-release and ai.meta.com/blog/llama-4-multimodal-intelligence/: release date 2025-04-05, 400B total/17B active MoE with 128 experts, 1M-token instruct context, 12-language fine-tuning support, MMLU-Pro 80.5 / GPQA Diamond 69.8 / MATH 61.2 (instruction-tuned) all match verbatim. Corrected the MBPP row's notes field: the 77.6 score is from the pre-trained/base-model comparison table on that page, not the instruction-tuned table as originally labeled (score itself confirmed correct)."

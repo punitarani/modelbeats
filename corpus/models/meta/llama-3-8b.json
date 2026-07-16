@@ -154,6 +154,22 @@
       "sourceUrl": "https://arxiv.org/abs/2407.03203",
       "evaluatedAt": "2024-07-03",
       "notes": "From TheoremLlama paper's Table 1, listed as 'Llama3-Instruct 8B' (matches catalog entry, which links to meta-llama/Meta-Llama-3-8B-Instruct) evaluated un-finetuned on miniF2F-valid (Lean 4): 25.41% valid / 20.08% test."
+    },
+    {
+      "benchmarkSlug": "ifeval",
+      "score": 40.9,
+      "source": "independent",
+      "sourceUrl": "https://huggingface.co/datasets/open-llm-leaderboard/meta-llama__Meta-Llama-3-8B-Instruct-details",
+      "evaluatedAt": "2024-07-22",
+      "notes": "Open LLM Leaderboard v2 (Hugging Face) evaluation of meta-llama/Meta-Llama-3-8B-Instruct, run 2024-07-22T11-50-32. IFEval prompt-level strict accuracy = 0.409 (instruction-level strict accuracy was 0.548; the leaderboard's displayed composite IFEval score averages the two, ~47.9, but only the prompt-level strict figure is reported here since that is the precise value independently confirmed from the dataset's aggregated results). Not previously tracked for this model — no ifeval result exists in the current entry."
+    },
+    {
+      "benchmarkSlug": "mmlu-pro",
+      "score": 35.9,
+      "source": "independent",
+      "sourceUrl": "https://huggingface.co/datasets/open-llm-leaderboard/meta-llama__Meta-Llama-3-8B-Instruct-details",
+      "evaluatedAt": "2024-07-22",
+      "notes": "Open LLM Leaderboard v2 (Hugging Face) evaluation of meta-llama/Meta-Llama-3-8B-Instruct, run 2024-07-22T11-50-32. leaderboard_mmlu_pro acc = 0.359. This is MMLU-Pro (harder, 10-choice reformulation), distinct from the plain 5-shot MMLU (68.4) already in the entry, and no mmlu-pro result currently exists for this model."
     }
   ],
   "verificationNotes": "Confirmed real. Exact parameter count 8.03B (8,030,257,152) corroborated by multiple independent sources (Ollama, technical writeups). Meta's official llama3 GitHub MODEL_CARD.md / HF page confirms all five Instruct scores exactly: MMLU 68.4, GPQA 34.2, HumanEval 62.2, GSM8K 79.6, MATH 30.0. 15T-token pretraining claim and April 18, 2024 release date confirmed via ai.meta.com/blog/meta-llama-3. No changes."

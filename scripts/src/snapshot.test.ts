@@ -48,14 +48,14 @@ describe('catalog snapshot (C3 golden shape)', () => {
       org: 'Meta',
       family: 'Llama 3.1',
       open: true,
-      index: 1271.2, // Frontier Elo rating (D21)
-      rank: 164,
+      index: 1251.2, // Frontier Elo rating (D21)
+      rank: 172,
       ranked: true,
       ctxK: 128,
     })
     expect(llama?.bench.arena).toBe(1229)
     expect(llama?.price).toBeNull()
-    expect(llama?.categoryIdx.coding).toBe(93)
+    expect(llama?.categoryIdx.coding).toBe(86.6)
   })
 
   it('stays far under the 1.5 MB gzip budget at real scale', async () => {
