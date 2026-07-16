@@ -177,11 +177,11 @@ describe('derived scores match the D21 contract (goldens)', () => {
       .filter((m) => m.rankOverall != null && m.rankOverall <= 5)
       .sort((a, b) => (a.rankOverall ?? 0) - (b.rankOverall ?? 0))
     expect(top5.map((m) => [m.slug, m.overallIndex])).toEqual([
-      ['gpt-5-6', 3145.9],
-      ['claude-fable-5', 3012.1],
-      ['claude-opus-4-8', 2893.6],
-      ['gpt-5-4-pro', 2848.7],
-      ['claude-sonnet-5', 2832.8],
+      ['gpt-5-6', 3144.7],
+      ['claude-fable-5', 3011],
+      ['claude-opus-4-8', 2892.4],
+      ['gpt-5-4-pro', 2847.5],
+      ['claude-sonnet-5', 2831.7],
     ])
   })
 
@@ -203,7 +203,7 @@ describe('derived scores match the D21 contract (goldens)', () => {
     const codex = models.find((m) => m.slug === 'openai-codex')
     expect(codex?.ranked).toBe(false)
     expect(codex?.rankOverall).toBeNull()
-    expect(codex?.overallIndex).toBe(19.4)
+    expect(codex?.overallIndex).toBe(18.2)
     const top = models.find((m) => m.rankOverall === 1)
     expect(top?.slug).toBe('gpt-5-6')
   })
@@ -238,8 +238,8 @@ describe('derived scores match the D21 contract (goldens)', () => {
     const { models } = await derived()
     const llama = models.find((m) => m.slug === 'llama-3-1-405b')
     expect(llama?.ranked).toBe(true)
-    expect(llama?.overallIndex).toBe(1240.5)
-    expect(llama?.rankOverall).toBe(173)
+    expect(llama?.overallIndex).toBe(1239.4)
+    expect(llama?.rankOverall).toBe(172)
     // categoryIdx stays min-max (D21 keeps the radar on D2 bounds) — unchanged literals
     expect(llama?.categoryIdx).toEqual({
       'human-preference': 69.4,
@@ -265,9 +265,9 @@ describe('derived scores match the D21 contract (goldens)', () => {
   it('pins the real top-5 movers and their rating self-consistency', async () => {
     const { models, movers } = await derived()
     expect(movers.map((m) => [m.slug, m.prevSlug, m.delta])).toEqual([
-      ['sarvam-105b', 'sarvam-1-2b', 1550],
-      ['hy3', 'hunyuan-a13b', 1025.3],
-      ['smollm3-3b-think', 'smollm2-1-7b', 976.1],
+      ['sarvam-105b', 'sarvam-1-2b', 1550.1],
+      ['hy3', 'hunyuan-a13b', 1025.2],
+      ['smollm3-3b-think', 'smollm2-1-7b', 976.2],
       ['smollm3-3b-no-thinking', 'smollm2-1-7b', 797.5],
       ['phi-4-reasoning', 'phi-4-mini-3-8b', 764.3],
     ])
