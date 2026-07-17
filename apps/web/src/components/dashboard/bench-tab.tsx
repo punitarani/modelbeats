@@ -59,7 +59,7 @@ export function BenchTab({ catalog }: { catalog: CatalogSnapshot }) {
                       </span>
                     </div>
                     <InlineBar
-                      pct={normPct(v, b.normMin, b.normMax)}
+                      pct={normPct(v, b.normMin, b.normMax, 3)}
                       color={m.open ? 'var(--open)' : 'var(--closed)'}
                       className="mt-[3px]"
                     />

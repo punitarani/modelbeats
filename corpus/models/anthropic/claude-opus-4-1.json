@@ -134,7 +134,21 @@
       "sourceUrl": "https://arena.ai/leaderboard/text",
       "evaluatedAt": "2026-07-13",
       "notes": "Live Text Arena leaderboard, model row 'claude-opus-4-1-20250805' (non-thinking-tagged variant, matching this corpus record's single isDefaultConfig/isBestConfig entry), Elo 1447 (rank 56/374, 77,265 votes) as of the Jul 13, 2026 snapshot fetched directly from arena.ai. A separate 'claude-opus-4-1-20250805-thinking-16k' row (Elo 1449) also exists but was not used since this corpus record does not track a distinct extended-thinking config. Not previously tracked for this model."
+    },
+    {
+      "benchmarkSlug": "hle",
+      "score": 7.92,
+      "source": "independent",
+      "sourceUrl": "https://labs.scale.com/leaderboard/humanitys_last_exam",
+      "notes": "Raw HTML of the leaderboard page verified directly (not just AI-summarized): 'claude-opus-4-1-20250805' row shows 7.92% ±1.06, Calibration Error 70, rank 30/89. Non-thinking variant chosen to match this record's single-config convention (a '-thinking' row also exists at 11.52%)."
+    },
+    {
+      "benchmarkSlug": "livecodebench",
+      "score": 64.6,
+      "source": "independent",
+      "sourceUrl": "https://www.vals.ai/models/anthropic_claude-opus-4-1-20250805",
+      "notes": "Raw HTML of the model page verified directly: LiveCodeBench score bar has --target-width:64.559%, rounded to 64.6 per this corpus's established 1-decimal rounding convention for Vals.ai scores (matches sibling claude-opus-4.json and claude-haiku-4-5.json entries for the same source)."
     }
   ],
-  "verificationNotes": "Real model, confirmed via anthropic.com/news/claude-opus-4-1 and Anthropic's X announcement (release 2025-08-05, same $15/$75 pricing as Opus 4, 200K context). SWE-bench 74.5% confirmed on InfoQ; the other 3 rows (Terminal-bench 43.3%, AIME 78%, GPQA 80.9%) were not literally present in the InfoQ text extraction, so sourceUrl was swapped to Winbuzzer's article, which explicitly lists all four figures. Per Anthropic's official model-deprecations page (fetched 2026-07-12): claude-opus-4-1-20250805 is currently 'Deprecated' (as of 2026-06-05) with tentative retirement 2026-08-05, which has NOT yet passed as of today (2026-07-12) — status='deprecated' and apiAvailable=true both confirmed correct as given."
+  "verificationNotes": "Real model, confirmed via anthropic.com/news/claude-opus-4-1 and Anthropic's X announcement (release 2025-08-05, same $15/$75 pricing as Opus 4, 200K context). SWE-bench 74.5% confirmed on InfoQ; the other 3 rows (Terminal-bench 43.3%, AIME 78%, GPQA 80.9%) were not literally present in the InfoQ text extraction, so sourceUrl was swapped to Winbuzzer's article, which explicitly lists all four figures. Per Anthropic's official model-deprecations page (fetched 2026-07-12): claude-opus-4-1-20250805 is currently 'Deprecated' (as of 2026-06-05) with tentative retirement 2026-08-05, which has NOT yet passed as of today (2026-07-12) — status='deprecated' and apiAvailable=true both confirmed correct as given.\n\n[2026-07-16 gap-fill pass]: Resolved 5 core-benchmark gaps. ADDED hle=7.92% (Scale AI/CAIS official Humanity's Last Exam leaderboard, non-thinking variant, raw-HTML-verified) and livecodebench=64.6% (Vals AI independent eval, raw-HTML-verified, same methodology as sibling claude-opus-4.json). OMITTED (no credible published score found) for mmlu, math, humaneval: checked Anthropic's own launch page (benchmark table image contains only TAU-bench/Terminal-Bench/GPQA/MMMLU/MMMU/AIME/SWE-bench), independent trackers Vals.ai (raw HTML shows only GPQA/LiveCodeBench/MMLU-Pro/MMMU/niche domain benchmarks for this model, no plain MMLU/MATH/HumanEval), Artificial Analysis (current suite dropped these benchmarks entirely), and Epoch AI (only composite ECI index exposed); also cross-checked all 8 other Claude-4.x-family sibling files in this corpus — none carry 'math' or 'humaneval' entries at all, and 'mmlu' is present only where a specific source (e.g. DataCamp reproducing Anthropic's own Claude-4-launch table) happened to report it, which no source does for Opus 4.1 specifically. This is consistent with Anthropic's Claude-4-generation shift away from these legacy/saturated benchmarks toward AIME (math) and SWE-bench/LiveCodeBench/Terminal-Bench (coding)."
 }

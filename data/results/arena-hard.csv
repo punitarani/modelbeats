@@ -42,7 +42,7 @@ qwen2-72b,48.1,self-reported,https://arxiv.org/abs/2407.10671,2024-06-07,Instruc
 qwen3-14b-non-thinking,86.3,self-reported,https://arxiv.org/pdf/2505.09388,,"Arena-Hard, Table 16, Qwen3-14B (Non-thinking) column"
 qwen3-14b-thinking,91.7,self-reported,https://arxiv.org/pdf/2505.09388,,"Arena-Hard, Table 15, Qwen3-14B (Thinking) column"
 qwen3-235b-a22b-non-thinking,96.1,self-reported,https://arxiv.org/pdf/2505.09388,,"Arena-Hard, Table 12, Qwen3-235B-A22B (Non-thinking) column"
-qwen3-235b-a22b-thinking,95.6,self-reported,https://arxiv.org/pdf/2505.09388,2025-05-15,"Arena-Hard (first-gen, distinct from Arena-Hard v2), Thinking mode, Table 11"
+qwen3-235b-a22b-thinking,95.6,self-reported,https://arxiv.org/pdf/2505.09388,2025-05-15,"Arena-Hard (v1/first-gen). Verified 2026-07-16 by reading Table 11 directly (arXiv 2505.09388, page 14): the row is literally labeled 'Arena-Hard', citing Li et al. 2024 (the original Arena-Hard-Auto paper) -- NOT Arena-Hard v2. Comparable to other corpus 'arena-hard' rows from the same table (e.g. DeepSeek-R1=92.3); would be out-of-range for the separate arena-hard-v2 catalog entry (normMax 84 vs this score of 95.6)."
 qwen3-30b-a3b-non-thinking,88,self-reported,https://arxiv.org/abs/2505.09388,,"Arena-Hard, non-thinking mode"
 qwen3-30b-a3b-thinking,91,self-reported,https://arxiv.org/abs/2505.09388,,"Arena-Hard, thinking mode"
 qwen3-32b-non-thinking,92.8,self-reported,https://arxiv.org/abs/2505.09388,,"Arena-Hard, non-thinking mode"

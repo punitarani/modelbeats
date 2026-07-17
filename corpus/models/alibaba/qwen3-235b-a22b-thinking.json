@@ -110,14 +110,6 @@
       "notes": "IFEval strict-prompt, Thinking mode, Table 11"
     },
     {
-      "benchmarkSlug": "arena-hard",
-      "score": 95.6,
-      "source": "self-reported",
-      "sourceUrl": "https://arxiv.org/pdf/2505.09388",
-      "evaluatedAt": "2025-05-15",
-      "notes": "Arena-Hard (first-gen, distinct from Arena-Hard v2), Thinking mode, Table 11"
-    },
-    {
       "benchmarkSlug": "math",
       "score": 98,
       "source": "self-reported",
@@ -171,7 +163,15 @@
       "sourceUrl": "https://aider.chat/2025/05/08/qwen3.html",
       "evaluatedAt": "2025-05-08",
       "notes": "Aider Polyglot coding benchmark, independent third-party eval by the Aider project (not a Qwen self-report). Row labeled 'Qwen3 235B A22B diff on OpenRouter, all providers, default settings (thinking)' -- confirmed via raw HTML fetch (curl) that this is the only thinking/reasoning-mode-enabled row for this model in the post; all other configurations tested explicitly disabled thinking (/no_think). Matches this file's original April 2025 thinking-mode checkpoint. No aider-polyglot slug was previously present in this file."
+    },
+    {
+      "benchmarkSlug": "arena-hard",
+      "score": 95.6,
+      "source": "self-reported",
+      "sourceUrl": "https://arxiv.org/pdf/2505.09388",
+      "notes": "Arena-Hard (v1/first-gen). Verified 2026-07-16 by reading Table 11 directly (arXiv 2505.09388, page 14): the row is literally labeled 'Arena-Hard', citing Li et al. 2024 (the original Arena-Hard-Auto paper) -- NOT Arena-Hard v2. Comparable to other corpus 'arena-hard' rows from the same table (e.g. DeepSeek-R1=92.3); would be out-of-range for the separate arena-hard-v2 catalog entry (normMax 84 vs this score of 95.6).",
+      "evaluatedAt": "2025-05-15"
     }
   ],
-  "verificationNotes": "Confirmed via HF model card (235B total/22B active, 128 experts/8 active per token, Apache 2.0, native 32,768 tokens extendable to 131,072/128K via YaRN) and qwenlm.github.io/blog/qwen3 (release date 2025-04-29). Read Table 11 of arxiv.org/pdf/2505.09388 directly: AIME'24=85.7, LiveCodeBench v5=70.7, GPQA-Diamond=71.1, BFCL v3=70.8 all match exactly; HF page confirmed MMLU-Pro=68.18 verbatim. No changes."
+  "verificationNotes": "Confirmed via HF model card (235B total/22B active, 128 experts/8 active per token, Apache 2.0, native 32,768 tokens extendable to 131,072/128K via YaRN) and qwenlm.github.io/blog/qwen3 (release date 2025-04-29). Read Table 11 of arxiv.org/pdf/2505.09388 directly: AIME'24=85.7, LiveCodeBench v5=70.7, GPQA-Diamond=71.1, BFCL v3=70.8 all match exactly; HF page confirmed MMLU-Pro=68.18 verbatim. No changes.\n\n2026-07-16 comparability re-check: re-verified the arena-hard=95.6 flag by directly reading Table 11 of the primary source PDF (arXiv 2505.09388, page 14) -- the row is literally labeled \"Arena-Hard\" (citing Li et al., 2024, the original Arena-Hard-Auto benchmark), not \"Arena-Hard v2\"; confirmed comparable to sibling corpus 'arena-hard' entries from the same table (e.g. DeepSeek-R1=92.3 in deepseek-r1-671b.json) and structurally incompatible with the separate arena-hard-v2 catalog range (normMax 84). No slug change or drop was needed -- the entry was already correctly filed under 'arena-hard'; notes tightened with an explicit source citation to prevent future re-flagging."
 }

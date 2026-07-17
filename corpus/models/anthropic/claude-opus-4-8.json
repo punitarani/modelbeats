@@ -140,7 +140,21 @@
       "sourceUrl": "https://www.datacamp.com/blog/claude-opus-4-8",
       "evaluatedAt": "2026-05-28",
       "notes": "USAMO 2026, confirmed via direct fetch of datacamp.com/blog/claude-opus-4-8. Independently corroborated (same 96.7% figure) via direct fetches of llm-stats.com/blog/research/claude-opus-4-8-launch and digitalapplied.com/blog/claude-opus-4-8-release-dynamic-workflows-2026, both explicitly citing the Anthropic Claude Opus 4.8 System Card. Represents a 27.4pp jump over Opus 4.7's 69.3%, described across sources as the largest single-cycle math gain in the Opus line. Not currently tracked in this corpus for this model."
+    },
+    {
+      "benchmarkSlug": "livecodebench",
+      "score": 87.82,
+      "source": "independent",
+      "sourceUrl": "https://www.vals.ai/models/anthropic_claude-opus-4-8",
+      "notes": "Extracted from the page's embedded CSS bar-width value (87.819%); JS count-up animation shows 0.0% in a plain static fetch, so read directly from HTML source. Cross-validated by reproducing this model's known SWE-bench score (88.6%) via the same method."
+    },
+    {
+      "benchmarkSlug": "mmmu",
+      "score": 86.59,
+      "source": "independent",
+      "sourceUrl": "https://www.vals.ai/models/anthropic_claude-opus-4-8",
+      "notes": "Extracted from the page's embedded CSS bar-width value (86.59%), same method/validation as the livecodebench entry."
     }
   ],
-  "verificationNotes": "Release date, model id, and pricing confirmed directly from Anthropic's own announcement and platform docs (fetched). Benchmark table numbers below are relayed via a third-party writeup that explicitly cites 'Claude Opus 4.8 System Card, Table 8.1.A'."
+  "verificationNotes": "Release date, model id, and pricing confirmed directly from Anthropic's own announcement and platform docs (fetched). Benchmark table numbers below are relayed via a third-party writeup that explicitly cites 'Claude Opus 4.8 System Card, Table 8.1.A'.\n\n2026-07-16: Researched the six missing core benchmarks (mmlu, math, aime, humaneval, livecodebench, mmmu). Fetched Anthropic's official Claude Opus 4.8 System Card PDF directly (www-cdn.anthropic.com/0b4915911bb0d19eca5b5ee635c80fef830a37ea.pdf, 8,282 lines of extracted text) and searched it exhaustively: 'HumanEval' has zero occurrences anywhere in the document; standalone 'MATH' as a benchmark name has zero occurrences; 'MMLU' appears only as GMMLU (a 42-language variant, Section 8.15.1) and MMLU-Pro (used solely as a probe-question set for a chain-of-thought-controllability safety eval, Section 6.5.1) — neither is a scored capability-benchmark row. The main Table 8.1.A capability evaluation summary (the card's own headline benchmark table) does not include MMLU, MATH, AIME, HumanEval, LiveCodeBench, or MMMU at all — its focus has shifted entirely to agentic/computer-use/coding evals (SWE-bench variants, BrowseComp, Terminal-Bench 2.1, OSWorld-Verified, GDPval-AA, MCP-Atlas, GraphWalks, etc). The card explicitly states (p.198, Section 8.7) that AIME 'was a popular AI benchmark last year but is now saturated,' and that USAMO 2026 (already tracked in this file at 96.7%) is its replacement in the math-olympiad track. Cross-checked two independent trackers (vals.ai, artificialanalysis.ai) and one benchmark aggregator (benchlm.ai, whose dedicated /math leaderboard shows dashes for AIME/HMMT/MATH-500 rows for this exact model) — none report MMLU, MATH, AIME, or HumanEval scores for Claude Opus 4.8, consistent with these being legitimately unpublished saturated legacy benchmarks rather than a research gap. For livecodebench and mmmu, vals.ai's independent leaderboard page for this model (fetched directly) does carry live scores: LiveCodeBench 87.82% and MMMU 86.59%, both added. (Vals.ai's page renders these via a JS count-up animation that shows 0.0% in a plain static HTML fetch; the true values were read from the embedded CSS bar-width attributes in the fetched HTML, and the method was cross-validated by confirming it reproduces this model's known SWE-bench score of exactly 88.6% via the identical extraction, matching the self-reported figure already on file.)"
 }

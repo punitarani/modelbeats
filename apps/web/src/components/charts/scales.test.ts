@@ -197,6 +197,11 @@ describe('bars', () => {
     expect(normPct(10, 40, 100)).toBe(0)
     expect(normPct(null, 40, 100)).toBe(0)
   })
+  it('normPct floors below-bound scores to minVisiblePct so a real value never renders an invisible bar', () => {
+    expect(normPct(10, 40, 100, 3)).toBe(3) // below normMin, but a real recorded score
+    expect(normPct(70, 40, 100, 3)).toBe(50) // in-range values are unaffected by the floor
+    expect(normPct(null, 40, 100, 3)).toBe(0) // no data still renders no bar
+  })
 
   it('ratingWindow spans the rendered Elo ratings for relative bars (D21)', () => {
     expect(ratingWindow([-148.2, 1000, 3103.6])).toEqual({ min: -148.2, max: 3103.6 })

@@ -167,7 +167,7 @@ export function RankingsTable({
         {benchCols.map((c) => {
           const bounds = boundsBySlug.get(c.slug)
           const v = m.bench[c.slug]
-          const pct = bounds ? normPct(v, bounds.normMin, bounds.normMax) : 0
+          const pct = bounds ? normPct(v, bounds.normMin, bounds.normMax, 3) : 0
           return (
             <span key={c.slug} className="text-right">
               <span

@@ -10,10 +10,9 @@ test.describe('dashboard overview', () => {
     await expect(cards.nth(0)).toContainText(String(models))
     await expect(cards.nth(0)).toContainText(`${organizations} organizations`)
     // Open–closed gap is computed on the universal Elo rating (arena covers only a sliver), so
-    // it's always a real number, and the leader is the top-ranked open model (GLM-5.2 Max under
-    // pairwise Elo — it wins more head-to-heads than the old index's breadth-average favorite).
+    // it's always a real number, and the leader is the top-ranked open model under pairwise Elo.
     await expect(cards.nth(3)).toContainText('Elo')
-    await expect(cards.nth(3)).toContainText('GLM-5.2 (Max) leads open')
+    await expect(cards.nth(3)).toContainText('MiniMax M3 leads open')
   })
 
   test('scatter plots every priced+ranked model; movers show real lineage gains', async ({
@@ -29,7 +28,7 @@ test.describe('dashboard overview', () => {
     // real top mover is a rank-eligible family edge; deltas are Elo points (D21), so a large
     // cross-tier lineage jump (105B succeeding a 2B) posts a four-digit gain
     await expect(movers).toContainText('Sarvam-105B')
-    await expect(movers).toContainText('+1550')
+    await expect(movers).toContainText('+1549')
   })
 
   test('y-axis auto-zooms to the data instead of a fixed axis', async ({ page }) => {
@@ -82,7 +81,7 @@ test.describe('dashboard overview', () => {
     const rail = page.getByTestId('arena-rail')
     // rail now leads with the #1 overall model by Elo rating
     await expect(rail).toContainText('GPT-5.6')
-    await expect(rail).toContainText('3144.7')
+    await expect(rail).toContainText('3075.0')
     await pickOption(page, 'qc-b', 'Llama 3.1 405B — Meta')
     await page.getByTestId('qc-go').click()
     // quick-compare slot A defaults to the #1 rank-eligible model (GPT-5.6)
@@ -112,7 +111,7 @@ test.describe('dashboard releases + bench tabs', () => {
     const frontier = page.getByTestId('frontier')
     // regrounded on the universal Elo rating, so both camps' leaders always plot
     await expect(frontier).toContainText('GPT-5.6')
-    await expect(frontier).toContainText('GLM-5.2 (Max)')
+    await expect(frontier).toContainText('MiniMax M3')
     await expect(page.getByTestId('gap-note')).not.toHaveText('')
   })
 

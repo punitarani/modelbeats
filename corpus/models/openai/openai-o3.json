@@ -157,7 +157,38 @@
       "sourceUrl": "https://x.com/EpochAIResearch/status/1913379478778134941",
       "evaluatedAt": "2025-04-17",
       "notes": "FrontierMath, o3 with high reasoning effort, independently measured by Epoch AI at 10% (±2%) — notably lower than OpenAI's original ~25% claim from the December 2024 pre-release demo, attributed to using the actual released model, an updated/expanded problem set (290 problems vs. the original 180), and no special internal scaffold/compute. Reported alongside o4-mini (17%) in the same evaluation."
+    },
+    {
+      "benchmarkSlug": "mmlu",
+      "score": 92.9,
+      "source": "self-reported",
+      "sourceUrl": "https://github.com/openai/simple-evals",
+      "notes": "Same source/convention already used for sibling o3-mini-high, o3-mini-medium, and o4-mini corpus entries.",
+      "evaluatedAt": "2025-04-16"
+    },
+    {
+      "benchmarkSlug": "math",
+      "score": 97.8,
+      "source": "self-reported",
+      "sourceUrl": "https://github.com/openai/simple-evals",
+      "notes": "Consistent with how sibling o3-mini/o4-mini files already label this slug.",
+      "evaluatedAt": "2025-04-16"
+    },
+    {
+      "benchmarkSlug": "humaneval",
+      "score": 87.4,
+      "source": "self-reported",
+      "sourceUrl": "https://github.com/openai/simple-evals",
+      "notes": "n/a",
+      "evaluatedAt": "2025-04-16"
+    },
+    {
+      "benchmarkSlug": "livecodebench",
+      "score": 75.8,
+      "source": "independent",
+      "sourceUrl": "https://livecodebench.github.io/leaderboard.html",
+      "notes": "Computed by fetching the leaderboard's underlying JSON and replicating its own default-view aggregation logic, matching the exact window/problem-count already used for gpt-4-turbo.json's livecodebench entry in this corpus."
     }
   ],
-  "verificationNotes": "Confirmed release 2025-04-16 via OpenAI/TechCrunch. Pricing $2/$8 verified as OpenAI's current price after an 80% cut on 2025-06-10 from the original $10/$40 launch price (confirmed via OpenAI Devs official X post and VentureBeat) — note added to clarify this isn't the launch price. Direct fetch of openai.com/index/introducing-o3-and-o4-mini/ returned 403, but all 6 benchmark rows (AIME 91.6, GPQA 83.3, SWE-bench 69.1, MMMU 82.9, HLE 24.9-with-tools, Codeforces 2706) were independently corroborated verbatim by multiple secondary sources quoting OpenAI's official launch figures — distinct from the earlier Dec-2024 o3 preview-announcement numbers (e.g. 96.7% AIME), confirming these are the correct April-2025 released-model figures."
+  "verificationNotes": "Confirmed release 2025-04-16 via OpenAI/TechCrunch. Pricing $2/$8 verified as OpenAI's current price after an 80% cut on 2025-06-10 from the original $10/$40 launch price (confirmed via OpenAI Devs official X post and VentureBeat) — note added to clarify this isn't the launch price. Direct fetch of openai.com/index/introducing-o3-and-o4-mini/ returned 403, but all 6 benchmark rows (AIME 91.6, GPQA 83.3, SWE-bench 69.1, MMMU 82.9, HLE 24.9-with-tools, Codeforces 2706) were independently corroborated verbatim by multiple secondary sources quoting OpenAI's official launch figures — distinct from the earlier Dec-2024 o3 preview-announcement numbers (e.g. 96.7% AIME), confirming these are the correct April-2025 released-model figures.\n\n2026-07-16 gap-fill pass: added mmlu (92.9), math/MATH-500 (97.8), and humaneval (87.4) from the 'o3' (default/medium, no-tools) row of OpenAI's own simple-evals GitHub README table — the same source already trusted for sibling files o3-mini-high/o3-mini-medium/o4-mini, cross-checked via direct raw-GitHub fetch including footnotes [^6] (MATH-500) and [^10] (no tools). Added livecodebench (75.8, Easy 99.1/Medium 84.4/Hard 57.1) by fetching the official LiveCodeBench leaderboard's raw performances_generation.json and reproducing its own default 2024-08-01–2025-05-01 window aggregation (454 problems) for the 'O3 (High)' entry — identical window/methodology already used for gpt-4-turbo.json in this corpus, confirming consistency. OpenAI's own launch blog and the full o3/o4-mini system card PDF were checked and do not report LiveCodeBench."
 }

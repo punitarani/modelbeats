@@ -67,6 +67,8 @@ gpt-4-1-mini,81.4,self-reported,https://github.com/openai/simple-evals,2025-04-1
 gpt-4-turbo,73.4,self-reported,https://github.com/openai/simple-evals,2024-05-13,"gpt-4-turbo-2024-04-09, 0-shot CoT. Classic MATH test set (OpenAI's simple-evals only swaps to the newer MATH-500 split for o1-and-later models, so this is the original benchmark, not a variant)."
 gpt-4o,76.6,self-reported,https://community.openai.com/t/education-level-interpretation-of-gpt-4os-benchmarks/763947,,"OpenAI-reported figure, mirrored on this community thread since the original openai.com post blocks automated fetching [relabeled self-reported: aggregator/mirror relay of a vendor figure, not an independent re-measurement]"
 gpt-4o-mini,70.2,self-reported,https://openai.com/index/gpt-4o-mini-advancing-cost-efficient-intelligence/,2024-07-18,"OpenAI's official GPT-4o mini launch page reports MATH at 70.2%, part of the same benchmark table as the already-recorded MMLU/MGSM/HumanEval/MMMU rows. Direct automated fetch of openai.com returns 403 (same as the existing 4 rows in this file), but the figure is corroborated verbatim and consistently across multiple independent secondary sources/search results quoting the official launch table."
+gpt-5,99.4,independent,https://artificialanalysis.ai/evaluations/math-500,,
+gpt-5-mini,94.8,independent,https://www.vals.ai/benchmarks/math500-04-15-2025,2026-01-09,Dedicated Vals MATH 500 leaderboard page last updated 1/9/2026.
 granite-3-0-2b-instruct,23.66,self-reported,https://huggingface.co/ibm-granite/granite-3.0-2b-instruct,,pass@1
 granite-3-0-8b-instruct,30.94,self-reported,https://huggingface.co/ibm-granite/granite-3.0-8b-instruct,,"MATH, 4-shot. Confirmed in HF model-index YAML and technical report Table 10."
 granite-3-1-8b-instruct,21.68,independent,https://huggingface.co/ibm-granite/granite-3.1-8b-instruct,,"MATH Lvl 5, HF Open LLM Leaderboard V2"
@@ -142,6 +144,7 @@ olmo-3-think-32b,96.1,self-reported,https://huggingface.co/allenai/Olmo-3-32B-Th
 openai-o1,96.4,self-reported,https://github.com/openai/simple-evals,,"MATH-500 (repo evaluates o-series models on MATH-500, not legacy MATH test set)."
 openai-o1-mini,90,self-reported,https://github.com/openai/simple-evals,,MATH-500 (repo footnote: 'for newer models (anything on or after o1) we evaluate on MATH-500').
 openai-o1-preview,85.5,independent,https://www.walturn.com/insights/comparing-openai-o1-to-other-top-models,2024-09-01,MATH 0-shot CoT
+openai-o3,97.8,self-reported,https://github.com/openai/simple-evals,2025-04-16,Consistent with how sibling o3-mini/o4-mini files already label this slug.
 openai-o3-mini-high,97.9,self-reported,https://github.com/openai/simple-evals,,MATH-500.
 openai-o3-mini-low,95.8,self-reported,https://github.com/openai/simple-evals,2025-01-31,"MATH-500, from the 'o3-mini-low' row of OpenAI's own simple-evals README table (raw file directly fetched and confirmed). Not currently tracked for this model."
 openai-o3-mini-medium,97.3,self-reported,https://github.com/openai/simple-evals,,"MATH-500, from the 'o3-mini' (medium/default) row of OpenAI's simple-evals README table. Verified via raw GitHub fetch."

@@ -48,12 +48,12 @@ test.describe('model detail', () => {
     await gotoHydrated(page, '/models/gemini-3-1-pro')
     await page.getByTestId('compare-this').click()
     // compareB picks the top rank-eligible model on the OTHER side of the open/closed line —
-    // GLM-5.2 (Max), the top open model on Elo — which isn't the static compare default
+    // MiniMax M3, the top open model on Elo — which isn't the static compare default
     // pair, so the URL carries an explicit ?m=
-    await expect(page).toHaveURL(/m=gemini-3-1-pro(%2C|,)glm-5-2-max/)
+    await expect(page).toHaveURL(/m=gemini-3-1-pro(%2C|,)minimax-m3/)
     const legend = page.getByTestId('compare-legend')
     await expect(legend).toContainText('Gemini 3.1 Pro')
-    await expect(legend).toContainText('GLM-5.2 (Max)')
+    await expect(legend).toContainText('MiniMax M3')
   })
 
   test('unknown model slug 404s with the designed copy', async ({ page }) => {

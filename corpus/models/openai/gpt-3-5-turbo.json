@@ -132,7 +132,7 @@
       "source": "independent",
       "sourceUrl": "https://ar5iv.labs.arxiv.org/html/2305.15334",
       "evaluatedAt": "2023-05-24",
-      "notes": "Gorilla paper (Patil et al., arXiv 2305.15334), Table 1 \u2014 zero-shot, no-retriever accuracy on APIBench (HuggingFace subset). Model evaluated as gpt-3.5-turbo-0301 checkpoint."
+      "notes": "Gorilla paper (Patil et al., arXiv 2305.15334), Table 1 — zero-shot, no-retriever accuracy on APIBench (HuggingFace subset). Model evaluated as gpt-3.5-turbo-0301 checkpoint."
     },
     {
       "benchmarkSlug": "tensorhub-apibench",
@@ -175,5 +175,5 @@
       "notes": "JASTER (jaster) 0-shot average, Table 2 of Preferred Networks' 'PLaMo-100B: A Ground-Up Language Model Designed for Japanese Proficiency' (arXiv:2410.07563). GPT-3.5 Turbo scored 0.567 as a comparison baseline in the paper's jaster results table (alongside GPT-4-0125-Preview 0.722, PLaMo-100B-Instruct 0.738); evaluation run via the same jaster/llm-jp-eval harness used for PLaMo-100B's own already-tracked jaster rows in this catalog. Not self-reported by OpenAI, hence classified independent."
     }
   ],
-  "verificationNotes": "Release confirmed March 1, 2023 via OpenAI's 'Introducing ChatGPT and Whisper APIs' post. Current 16,385-token context and $0.50/$1.50 per-million pricing confirmed on OpenAI's live model docs page. All 7 benchmark rows (MMLU 70.0, HellaSwag 85.5, ARC 85.2, Winogrande 81.6, HumanEval 48.1, DROP 64.1 F1, GSM8K 57.1) verified to literally appear in arXiv 2303.08774's GPT-3.5 comparison column. No changes made."
+  "verificationNotes": "Release confirmed March 1, 2023 via OpenAI's 'Introducing ChatGPT and Whisper APIs' post. Current 16,385-token context and $0.50/$1.50 per-million pricing confirmed on OpenAI's live model docs page. All 7 benchmark rows (MMLU 70.0, HellaSwag 85.5, ARC 85.2, Winogrande 81.6, HumanEval 48.1, DROP 64.1 F1, GSM8K 57.1) verified to literally appear in arXiv 2303.08774's GPT-3.5 comparison column. No changes made.\n\n2026-07-16: Light delta-check on the thin-benchmark 'jaster' entry (score 56.7 / 0.567) — re-fetched arXiv:2410.07563 and confirmed Table 2 still shows GPT-3.5 Turbo at exactly 0.567 (FA 0.183, MC 0.610, MR 0.770, NLI 0.590, QA 0.429, RC 0.818), matching the existing entry verbatim. Checked Swallow-LLM's Japanese evaluation leaderboard (swallow-llm.github.io/evaluation) as a candidate corroborating/superseding source: it explicitly excludes GPT-3.5/GPT-4 from its jaster-style scoring (\"no evaluation was conducted... average score... treated as 0\"), so it is not usable as either corroboration or a replacement. No newer or alternative jaster source for GPT-3.5 Turbo was found; existing entry stands unchanged."
 }

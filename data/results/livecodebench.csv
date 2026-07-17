@@ -3,9 +3,15 @@ claude-3-7-sonnet,56.66,independent,https://www.vals.ai/models/anthropic_claude-
 claude-fable-5,89.8,independent,https://www.vals.ai/models/anthropic_claude-fable-5,,"Vals AI independent eval. LiveCodeBench 89.778% (ranked 1st of 127 models per the page), from the model page's embedded score data. Corroborated by a separate morphllm.com roundup citing the identical 89.78% figure and #1 rank. Not previously tracked for this model."
 claude-haiku-4-5,41.2,independent,https://www.vals.ai/models/anthropic_claude-haiku-4-5-20251001-thinking,,"Vals AI independent eval, Thinking variant. LiveCodeBench 41.175%, from the model page's embedded score bars (raw HTML fetch). Not previously tracked (the corpus has 'terminal-bench', 'gpqa', 'mmlu-pro' etc. for this model but no coding-contest benchmark)."
 claude-opus-4,62.6,independent,https://www.vals.ai/models/anthropic_claude-opus-4-20250514,,"Vals AI independent eval (only variant listed for this model, i.e. standard/non-extended-thinking). LiveCodeBench 62.629%, from the model page's embedded score bars (raw HTML fetch). Not previously tracked for this model."
+claude-opus-4-1,64.6,independent,https://www.vals.ai/models/anthropic_claude-opus-4-1-20250805,,"Raw HTML of the model page verified directly: LiveCodeBench score bar has --target-width:64.559%, rounded to 64.6 per this corpus's established 1-decimal rounding convention for Vals.ai scores (matches sibling claude-opus-4.json and claude-haiku-4-5.json entries for the same source)."
+claude-opus-4-5,83.7,independent,https://www.vals.ai/models/anthropic_claude-opus-4-5-20251101-thinking,2025-11-24,"Cross-confirmed against claude-opus-4-5-high.json's identical 83.7 livecodebench entry (also Vals.ai-sourced). Non-thinking Vals.ai variant scores lower, 75.03% (https://www.vals.ai/models/anthropic_claude-opus-4-5-20251101), not used here since it doesn't match this file's high-effort headline configuration."
 claude-opus-4-5-high,83.7,independent,https://www.vals.ai/models/anthropic_claude-opus-4-5-20251101-thinking,,"Vals AI independent eval of Claude Opus 4.5 (Thinking variant, matching the corpus's 'High'/default-effort config). LiveCodeBench pass rate 83.67%, extracted directly from the model page's embedded score bars (raw HTML fetch, not the JS-summarized view). Not previously tracked for this model (only 'terminal-bench'/'terminal-bench-2' and generic 'mmlu'/'mmmlu' coding/knowledge scores were present)."
+claude-opus-4-6,84.68,independent,https://www.vals.ai/models/anthropic_claude-opus-4-6-thinking,,"Verified via raw HTML fetch (curl); method validated by reproducing sibling models' (Sonnet 4.6, Opus 4.7) already-tracked LiveCodeBench scores exactly via the same target-width extraction."
 claude-opus-4-7,85.07,independent,https://www.vals.ai/models/anthropic_claude-opus-4-7,,Vals AI independent evaluation (confirmed via rendered browser screenshot; static HTML fetch shows placeholder 0.0% values).
+claude-opus-4-8,87.82,independent,https://www.vals.ai/models/anthropic_claude-opus-4-8,,"Extracted from the page's embedded CSS bar-width value (87.819%); JS count-up animation shows 0.0% in a plain static fetch, so read directly from HTML source. Cross-validated by reproducing this model's known SWE-bench score (88.6%) via the same method."
+claude-sonnet-4-5,73,independent,https://www.vals.ai/models/anthropic_claude-sonnet-4-5-20250929-thinking,2025-09-29,
 claude-sonnet-4-6,82.09,independent,https://www.vals.ai/models/anthropic_claude-sonnet-4-6,,Vals AI independent evaluation (confirmed via rendered browser screenshot; static HTML fetch shows placeholder 0.0% values).
+claude-sonnet-5,82.43,independent,https://www.vals.ai/models/anthropic_claude-sonnet-5,2026-07-16,Not published by Anthropic; not evaluated by Epoch AI or Artificial Analysis for this model (AA's own JSON payload explicitly lists 'livecodebench': null for Claude Sonnet 5 (max)). Read directly from Vals AI's raw HTML embedded data-target score attribute.
 codeqwen1-5-7b,7.9,self-reported,https://arxiv.org/abs/2409.12186,2024-09-18,"LiveCodeBench Pass@1, CodeQwen1.5-7B-Chat variant, from Qwen2.5-Coder Technical Report Table 16 ('performance of different instruct models on code generation by HumanEval, MBPP, bigcodebench and livecodebench'). Flagging that this is the Chat variant while the file's existing HumanEval/MBPP rows are labeled 'Base model' even though the row's hf link points to Qwen/CodeQwen1.5-7B-Chat -- worth reconciling variant labeling across the row during merge. Not previously tracked."
 codestral-25-01,37.9,self-reported,https://mistral.ai/news/codestral-2501/,,
 command-a,35.07,independent,https://www.vals.ai/models/cohere_command-a-03-2025,,"Vals AI independent evaluation, LiveCodeBench accuracy 35.07% (rank 121/127 at time of capture). Not previously tracked for Command A; confirmed via live-rendered Vals AI benchmark table (initial WebFetch of the page returned stale/zeroed placeholder values, so this was re-verified via a screenshot of the fully rendered page)."
@@ -29,6 +35,7 @@ deepseek-v4-flash-think-max,91.6,self-reported,https://macaron.im/blog/deepseek-
 deepseek-v4-pro-non-think,56.8,self-reported,https://huggingface.co/deepseek-ai/DeepSeek-V4-Pro,,Non-Think mode
 deepseek-v4-pro-think-high,89.8,self-reported,https://arxiv.org/abs/2606.19348,,Think-High mode
 deepseek-v4-pro-think-max,93.5,self-reported,https://huggingface.co/deepseek-ai/DeepSeek-V4-Pro,,Pro-Max mode
+doubao-seed-1-6,66.8,self-reported,https://github.com/ByteDance-Seed/seed-oss/blob/master/README.md,2025-08-20,LiveCodeBench v6 score from the ByteDance-authored comparison table.
 ernie-4-5-300b-a47b,38.8,self-reported,https://ernie.baidu.com/blog/publication/ERNIE_Technical_Report.pdf,2025-06-29,Table 5.
 exaone-4-5,81.4,self-reported,https://www.prnewswire.com/news-releases/lg-reveals-next-gen-multimodal-ai-exaone-4-5-302736993.html,,"LiveCodeBench v6, vendor-reported vs Gemma 4 (80.0)"
 falcon-h1-34b,49.71,self-reported,https://huggingface.co/tiiuae/Falcon-H1-34B-Instruct,,
@@ -41,6 +48,8 @@ gemini-2-5-flash-lite-non-thinking,33.7,self-reported,https://storage.googleapis
 gemini-2-5-flash-lite-thinking,34.3,self-reported,https://storage.googleapis.com/deepmind-media/Model-Cards/Gemini-2-5-Flash-Lite-Model-Card.pdf,2025-06-01,"LiveCodeBench v5, (06-17), thinking on"
 gemini-2-5-pro,70.4,self-reported,https://storage.googleapis.com/deepmind-media/Model-Cards/Gemini-2-5-Pro-Model-Card.pdf,2025-03-25,"LiveCodeBench v5 (UI window 10/1/2024-2/1/2025), single attempt, Gemini 2.5 Pro (Experimental 03-25) column."
 gemini-3-1-flash-lite,72,self-reported,https://storage.googleapis.com/deepmind-media/gemini/gemini_3-1_flash-lite_model_evaluation.pdf,2026-03-01,"LiveCodeBench code generation, 175 UI problems dated 1/1/2025-5/1/2025 (distinct from LiveCodeBench Pro's Elo scale)."
+gemini-3-1-pro,88.48,independent,https://www.vals.ai/models/google_gemini-3.1-pro-preview,2026-07-16,Score extracted from the page's embedded data-target HTML attribute since a plain static fetch only shows client-side-animated placeholder values.
+gemini-3-pro,86.4,independent,https://www.vals.ai/models/google_gemini-3-pro-preview,2025-11-18,Fills the missing 'livecodebench' core benchmark; not a duplicate of livecodebench-pro since the two are methodologically different metrics (0-100 pass rate vs Elo).
 gemma-3-12b,24.6,self-reported,https://storage.googleapis.com/deepmind-media/gemma/Gemma3Report.pdf,2025-03-12,
 gemma-3-27b,29.7,self-reported,https://storage.googleapis.com/deepmind-media/gemma/Gemma3Report.pdf,2025-03-12,
 gemma-3-4b,12.6,self-reported,https://storage.googleapis.com/deepmind-media/gemma/Gemma3Report.pdf,2025-03-12,
@@ -50,13 +59,23 @@ glm-4-5-355b-a32b,72.9,independent,https://llm-stats.com/models/compare/glm-4.5-
 glm-4-5-air-106b-a12b,70.7,independent,https://llm-stats.com/models/compare/glm-4.5-vs-glm-4.5-air,2026-07-12,
 glm-4-6,82.8,self-reported,https://cirra.ai/articles/glm-4-6-vs-claude-sonnet-comparison,,LiveCodeBench v6; corroborated separately by CometAPI's write-up of the same launch figure
 glm-4-plus,45.8,self-reported,https://docs.bigmodel.cn/cn/guide/models/text/glm-4,,Labeled 'LCB' in the docs table and marked with an asterisk denoting a Zhipu-reproduced result (not the original paper's number); GLM-4-Plus vs GPT-4o 45.5 (101%).
+glm-5,81.87,independent,https://www.vals.ai/models/zai_glm-5-thinking,2026-07-16,Verified via fully-rendered browser page (initial WebFetch/static-HTML pull returned stale zeroed placeholder values from Vals AI's animated counters).
+glm-5-1,81.4,independent,https://www.vals.ai/models/zai_glm-5.1,2026-07-16,
+glm-5-2-max,69.5,independent,https://www.vals.ai/benchmarks/lcb,2026-07-16,"Verified via the page's embedded JSON payload for model id zai/glm-5.2 (accuracy 69.5, stderr 1.179, reasoning_effort='max'), not just the rendered bar."
 glm-z1-32b-0414,59.1,self-reported,https://github.com/zai-org/GLM-4/blob/main/README.md,,Labeled 'LCB (2408-2501)' (a time-windowed LiveCodeBench subset) in the official GitHub README benchmark chart.
 gpt-4-turbo,28.7,independent,https://livecodebench.github.io/leaderboard.html,,"gpt-4-turbo-2024-04-09, Pass@1, official LiveCodeBench leaderboard, current problem time-window 2024-08-01 to 2025-05-01 (454 contamination-controlled problems released after model training cutoffs). A genuinely hard eval: breaks down to Easy 81.0 / Medium 24.8 / Hard 3.1, i.e. the model solves almost none of the Hard-tier problems — included deliberately per the instruction to surface harder evals, not just favorable ones."
+gpt-5-1,86.5,independent,https://benchmarklist.com/models/openai-gpt-5.1/,2026-07-13,"Source type: independent tracker (benchmarklist.com, underlying primary source vals.ai)."
+gpt-5-2,88.9,independent,https://themodelbeat.com/models/gpt-5-2,2025-12-11,Not self-reported by OpenAI; this is an independent third-party eval.
+gpt-5-4,84.1,independent,https://www.vals.ai/models/openai_gpt-5.4-2026-03-05,,"Value extracted from the page's CSS bar-fill (--target-width:84.141%); extraction method cross-validated against the same page's GPQA Diamond figure, which closely matches this file's already-confirmed GPQA numbers."
+gpt-5-4-mini,81.47,independent,https://www.vals.ai/models/openai_gpt-5.4-mini-2026-03-17,2026-07-09,"Model identity confirmed via matching release date (3/17/2026), 400k context, 128k max output, and $0.75/$4.5 pricing on the same vals.ai page."
+gpt-5-5,85.3,independent,https://www.vals.ai/models/openai_gpt-5.5,,
+gpt-5-mini,86.61,independent,https://www.vals.ai/models/openai_gpt-5-mini-2025-08-07,2026-07-09,Dedicated Vals LiveCodeBench leaderboard page last updated 7/9/2026.
 gpt-5-nano,78.9,independent,https://themodelbeat.com/models/gpt-5-nano,,"LiveCodeBench score from Epoch AI's independent evaluation of GPT-5 nano, relayed via themodelbeat.com -- same source/methodology already used for this model's existing hle/mmlu-pro/aime/arc-agi-1/arc-agi-2 independent rows."
 grok-3-mini,69.6,independent,https://designforonline.com/ai-models/xai-grok-3-mini/,,
 grok-3-standard,57,self-reported,https://x.ai/news/grok-3,2025-02-17,Official non-reasoning 'Grok 3 Beta' row in xAI's launch-blog benchmark table (LCB column).
 grok-3-think,79.4,self-reported,https://futureagi.com/blog/grok-3-technical-review-2025/,2025-02-17,Think mode
 grok-4,79,self-reported,https://www.datacamp.com/blog/grok-4,2025-07-09,no tools
+grok-4-3-high,84.49,independent,https://www.vals.ai/models/grok_grok-4.3,,
 grok-4-5,87.35,independent,https://www.vals.ai/models/grok_grok-4.5,,"Vals AI independent eval of Grok 4.5, ranked 7/127 models on the platform's LiveCodeBench tracker (fetched July 2026)."
 grok-4-heavy,79.4,self-reported,https://www.datacamp.com/blog/grok-4,2025-07-09,
 hunyuan-a13b,63.9,self-reported,https://huggingface.co/tencent/Hunyuan-A13B-Instruct,,
@@ -94,6 +113,9 @@ nemotron-3-ultra-550b-a55b,89,self-reported,https://huggingface.co/nvidia/NVIDIA
 nemotron-nano-2-nemotron-nano-9b-v2,71.1,self-reported,https://huggingface.co/nvidia/NVIDIA-Nemotron-Nano-9B-v2,,"Reasoning On, vs Qwen3-8B's 59.5"
 olmo-3-7b,29.5,self-reported,https://huggingface.co/allenai/Olmo-3-7B-Instruct,,LiveCodeBench v3
 olmo-3-think-32b,83.5,self-reported,https://huggingface.co/allenai/Olmo-3-32B-Think,,LiveCodeBench v3; Qwen 3 32B 90.2
+openai-o3,75.8,independent,https://livecodebench.github.io/leaderboard.html,,"Computed by fetching the leaderboard's underlying JSON and replicating its own default-view aggregation logic, matching the exact window/problem-count already used for gpt-4-turbo.json's livecodebench entry in this corpus."
+openai-o3-mini-high,67.4,independent,https://livecodebench.github.io/leaderboard.html,2026-07-16,"Sibling rows 'O3-Mini-2025-01-31 (Med)' at 67.4->lower and '(Low)' also present in the same table and rank below High, consistent with the corpus's existing High>Med>Low ordering for this model family on AIME/GPQA/Codeforces/SWE-bench."
+openai-o4-mini,82.21,independent,https://www.vals.ai/models/openai_o4-mini-2025-04-16,2025-04-16,"Verified model identity on the Vals.ai page (release date 4/16/2025, $1.10/$4.40 pricing, 200K context/100K max output) matches this corpus's existing o4-mini record exactly, confirming it is the correct model."
 openpangu-2-0-flash-non-thinking,50.9,self-reported,https://huggingface.co/openpangu/openPangu-2.0-Flash/blob/main/README_EN.md,,"LiveCodeBench V6, Avg@3, Non-Thinking mode"
 openpangu-2-0-flash-thinking,85.1,self-reported,https://huggingface.co/openpangu/openPangu-2.0-Flash/blob/main/README_EN.md,,"LiveCodeBench V6, Avg@3, Thinking mode"
 phi-4-mini-3-8b,19.9,self-reported,https://arxiv.org/abs/2503.01743,,"Table 8, 'LCB (05-09-2024)' = LiveCodeBench dated release window, a contamination-controlled rolling problem set matching the livecodebench slug."
@@ -127,6 +149,7 @@ qwen3-7-max,91.6,self-reported,https://www.alibabacloud.com/blog/qwen3-7-the-age
 qwen3-7-plus,89.6,self-reported,https://qwen.ai/blog?id=qwen3.7-plus,2026-05-31,"Official Qwen launch blog, 'STEM & Reasoning' table."
 qwen3-8b-non-thinking,22.8,self-reported,https://arxiv.org/abs/2505.09388,,"LiveCodeBench v5, non-thinking mode"
 qwen3-8b-thinking,57.5,self-reported,https://arxiv.org/abs/2505.09388,,"LiveCodeBench v5, thinking mode"
+qwen3-coder-480b-a35b,44.93,self-reported,https://arxiv.org/abs/2603.00729,2026-02-28,
 qwen3-max,57.5,self-reported,https://felloai.com/qwen-3-max-ai-all-you-need-to-know-about-alibabas-1-trillion-parameter-llm/,,"LiveCodeBench v6, Qwen3-Max-Instruct (Preview) launch chart. Conflicting GA-era transcriptions cite 74.8 (e.g. apidog); no official text source resolves it."
 qwq-32b,63.4,self-reported,https://www.datacamp.com/blog/qwq-32b,,
 qwq-32b-preview,50,self-reported,https://qwenlm.github.io/blog/qwq-32b-preview/,,

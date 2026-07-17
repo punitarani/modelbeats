@@ -97,7 +97,28 @@
       "sourceUrl": "https://qwenlm.github.io/blog/qwen3-coder/",
       "evaluatedAt": "2025-07-22",
       "notes": "TAU-Bench Airline domain, same chart. Reported separately from the Retail-domain score since the blog breaks TAU-Bench into two domain sub-scores rather than a single aggregate."
+    },
+    {
+      "benchmarkSlug": "gpqa",
+      "score": 62,
+      "source": "independent",
+      "sourceUrl": "https://artificialanalysis.ai/models/qwen3-coder-480b-a35b-instruct",
+      "evaluatedAt": "2026-07-16"
+    },
+    {
+      "benchmarkSlug": "hle",
+      "score": 4,
+      "source": "independent",
+      "sourceUrl": "https://artificialanalysis.ai/models/qwen3-coder-480b-a35b-instruct",
+      "evaluatedAt": "2026-07-16"
+    },
+    {
+      "benchmarkSlug": "livecodebench",
+      "score": 44.93,
+      "source": "self-reported",
+      "sourceUrl": "https://arxiv.org/abs/2603.00729",
+      "evaluatedAt": "2026-02-28"
     }
   ],
-  "verificationNotes": "Fully confirmed: 480B total/35B active params, 160 experts/8 active, Apache 2.0, 256K native/1M extrapolated context, all directly confirmed via HF model card fetch. SWE-bench Pro 38.7 and Terminal-Bench 2.0 23.9 confirmed verbatim on the HF evaluation-results table. SWE-bench Verified 66.5 could not be read as literal text on the cited qwenlm.github.io blog (the number is rendered inside an image chart, not extractable text), but is independently corroborated verbatim by multiple unaffiliated sources (Qwen's own X/Twitter post title, NVIDIA build catalog, several LLM pricing/benchmark aggregators) all citing 66.5% Pass@1 for this exact model/benchmark combination -- kept with this caveat noted rather than dropped, since the figure is not a hallucination risk given the volume of independent agreement. Pricing ($1.5/$7.5 per M, 0-32K tier) confirmed exactly via Alibaba Cloud Model Studio official pricing page. Release date July 22, 2025 confirmed via multiple sources."
+  "verificationNotes": "Fully confirmed: 480B total/35B active params, 160 experts/8 active, Apache 2.0, 256K native/1M extrapolated context, all directly confirmed via HF model card fetch. SWE-bench Pro 38.7 and Terminal-Bench 2.0 23.9 confirmed verbatim on the HF evaluation-results table. SWE-bench Verified 66.5 could not be read as literal text on the cited qwenlm.github.io blog (the number is rendered inside an image chart, not extractable text), but is independently corroborated verbatim by multiple unaffiliated sources (Qwen's own X/Twitter post title, NVIDIA build catalog, several LLM pricing/benchmark aggregators) all citing 66.5% Pass@1 for this exact model/benchmark combination -- kept with this caveat noted rather than dropped, since the figure is not a hallucination risk given the volume of independent agreement. Pricing ($1.5/$7.5 per M, 0-32K tier) confirmed exactly via Alibaba Cloud Model Studio official pricing page. Release date July 22, 2025 confirmed via multiple sources.\n\n[2026-07-16] Researched the 8 missing core-benchmark gaps (mmlu, gpqa, hle, math, aime, humaneval, livecodebench, mmmu). Added 3 with credible sources: GPQA Diamond 62 and HLE 4, both from Artificial Analysis's independent Intelligence Index v4.1 evaluation breakdown (artificialanalysis.ai/models/qwen3-coder-480b-a35b-instruct, live-fetched); and LiveCodeBench (v6) 44.93, self-reported by the Qwen team as a baseline-comparison figure in Table 6 of their own Qwen3-Coder-Next Technical Report (arXiv:2603.00729, Feb 2026). For the remaining 5 (mmlu, math, aime, humaneval, mmmu), checked all three required source types with no credible hit: (1) official materials -- the qwenlm.github.io launch blog, the HF model card (including raw YAML frontmatter, which has no model-index/eval_results block), and the GitHub README report zero scores on any of these five; (2) independent leaderboards -- Epoch AI's dedicated model page (epoch.ai/models/qwen3-coder-480b-a35b) explicitly states 'No math and science benchmarks evaluated for this model' and 'No multimodal benchmarks evaluated for this model,' and Artificial Analysis's current v4.1 methodology (9 evals: GDPval-AA v2, tau3-Banking, Terminal-Bench v2.1, SciCode, HLE, GPQA Diamond, CritPt, AA-Omniscience, AA-LCR) does not include MMLU, MATH, AIME, HumanEval or MMMU at all, and Qwen3 Coder 480B is absent from AA's MMMU-Pro leaderboard (consistent with its vision:false/text-only capability); (3) sibling-model cross-reference -- the Qwen3-Coder-Next Technical Report's baseline table for this exact model covers only EvalPlus/MultiPL-E/CRUXEval/LiveCodeBench/OJBench/Codeforces, with no MMLU/MATH/AIME/HumanEval/MMMU row. Numbers for these five did surface on SEO-aggregator sites (llm-stats.com search snippets: MMLU-Pro 78.8, AIME 47.7; aimodels.fyi: HumanEval 93.9%) but every attempt to reach the underlying page returned 403/no-data, no methodology or primary citation was ever produced, and one companion figure from the same cluster (LiveCodeBench 58.5) directly conflicts with the verified self-reported 44.93 -- so all five were treated as unverifiable and omitted rather than guessed. Conclusion: this is a real, deliberate absence -- Alibaba scoped this coding/agentic-specialist release's evaluation suite to SWE-bench, Terminal-Bench, BFCL, Tau-bench, Aider-Polyglot, LiveCodeBench, EvalPlus, MultiPL-E, CRUXEval, OJBench, Codeforces, FullStackBench, Spider and BIRD-SQL, and skipped the legacy general-knowledge/math/vision suite (MMLU, MATH, AIME, HumanEval, MMMU) entirely, both at launch and in the Feb 2026 follow-up paper."
 }

@@ -166,20 +166,26 @@
       "notes": "Vals AI independent evaluation."
     },
     {
-      "benchmarkSlug": "mmmu",
-      "score": 83.58,
-      "source": "independent",
-      "sourceUrl": "https://www.vals.ai/models/anthropic_claude-sonnet-4-6",
-      "notes": "Vals AI independent evaluation. Distinct from the already-tracked 'mmmu-pro' slug on this model, which is a harder/different benchmark."
-    },
-    {
       "benchmarkSlug": "tau2-bench-retail",
       "score": 91.7,
       "source": "self-reported",
       "sourceUrl": "https://www.anthropic.com/claude-sonnet-4-6-system-card",
       "evaluatedAt": "2026-02-17",
       "notes": "τ²-bench Retail sub-domain, system card Section 2.5 (same table as the tracked τ²-bench Telecom=97.9 row). [taxonomy-gap backfill: this score was already verified in an earlier research round but had no matching benchmark slug at the time; added once the slug was introduced.]"
+    },
+    {
+      "benchmarkSlug": "aime",
+      "score": 95.6,
+      "source": "self-reported",
+      "sourceUrl": "https://www.anthropic.com/claude-sonnet-4-6-system-card",
+      "evaluatedAt": "2026-02-17"
+    },
+    {
+      "benchmarkSlug": "mmmu-pro",
+      "score": 83.58,
+      "source": "independent",
+      "sourceUrl": "https://www.vals.ai/models/anthropic_claude-sonnet-4-6"
     }
   ],
-  "verificationNotes": "Release date confirmed via Anthropic's own announcement (fetched directly; page states February 17, 2026, though one press recap gave February 15 — treated the primary source as authoritative). SWE-bench/OSWorld figures below are from direct launch-day press coverage citing Anthropic's numbers; GPQA figure is from a third-party recap with lower confidence."
+  "verificationNotes": "Release date confirmed via Anthropic's own announcement (fetched directly; page states February 17, 2026, though one press recap gave February 15 — treated the primary source as authoritative). SWE-bench/OSWorld figures below are from direct launch-day press coverage citing Anthropic's numbers; GPQA figure is from a third-party recap with lower confidence.\n\n2026-07-16: Researched the four flagged gaps. (1) AIME -- found and added a real self-reported score: the official System Card (fetched directly, PDF text-extracted), Section 2.10, states Claude Sonnet 4.6 scored 95.6% on AIME 2025 without tools (10-trial average, adaptive thinking, max effort), with the same contamination caveat Anthropic applies to sibling model Opus 4.6's AIME score. (2)-(4) MMLU, MATH/MATH-500, and HumanEval -- checked the official System Card (full table of contents and the Table 2.1.A summary table, both directly reviewed) and Vals.ai's independent evaluation page (rendered via browser, not just static HTML) for this model: none of the three benchmarks appear in either source. Vals.ai runs 'MMLU Pro' (already tracked) but not plain MMLU, MATH, AIME, or HumanEval for this model at all. General web search surfaced only low-quality SEO-aggregator sites (gpt0x.com, tokencalculator.com, promptchief.tech) with implausible or internally-inconsistent numbers (e.g. a suspiciously round 98% HumanEval, and an \"89.3% MMLU\" that is actually just this model's already-tracked MMMLU score relabeled) -- these do not meet this corpus's sourcing bar and were not used. This pattern matches sibling models Claude Opus 4.6 and Claude Sonnet 4.5, whose 4.6-generation system cards likewise carry no math/humaneval/mmlu entries (Opus 4.6 does report AIME, mirroring Sonnet 4.6); treating the absence of MMLU/MATH/HumanEval as Anthropic retiring these saturated legacy benchmarks from its current system-card suite, not a research gap. (5) COMPARABILITY -- confirmed via a rendered fetch of vals.ai/benchmarks/mmmu (page title \"MMMU Pro\"; methodology text: \"We adhered closely to the official MMMU Pro evaluation protocol\" on the ~1,700-question MMMU-Pro set) that the model's Vals.ai score of 83.58%, previously filed under the generic 'mmmu' slug, is actually a MMMU-Pro measurement; relabeled to 'mmmu-pro' (kept alongside the existing self-reported MMMU-Pro entry of 74.5%/75.6% as a distinct independent measurement, not a duplicate) and the mislabeled 'mmmu' entry was dropped."
 }

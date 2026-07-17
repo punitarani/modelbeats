@@ -95,7 +95,7 @@
       "source": "self-reported",
       "sourceUrl": "https://openai.com/index/introducing-gpt-5-for-developers/",
       "evaluatedAt": "2025-08-07",
-      "notes": "τ²-bench telecom, high reasoning effort"
+      "notes": "\u03c4\u00b2-bench telecom, high reasoning effort"
     },
     {
       "benchmarkSlug": "aider-polyglot",
@@ -150,7 +150,7 @@
       "source": "independent",
       "sourceUrl": "https://x.com/EpochAIResearch/status/1953615906535313664",
       "evaluatedAt": "2025-08-07",
-      "notes": "FrontierMath Tiers 1-3, Epoch AI's own scaffold, GPT-5 with high reasoning effort. Epoch's own launch-day post: 'GPT-5 sets a new record on FrontierMath! On our scaffold, GPT-5 with high reasoning effort scores 24.8% (±2.5%) ... in tiers 1-3'. This is a coincidental numeric match with GPT-5's already-tracked HLE score (also 24.8) but is a distinct benchmark/eval; verified via the primary Epoch AI research account post. Not previously tracked for base GPT-5 (only tracked for GPT-5 Pro)."
+      "notes": "FrontierMath Tiers 1-3, Epoch AI's own scaffold, GPT-5 with high reasoning effort. Epoch's own launch-day post: 'GPT-5 sets a new record on FrontierMath! On our scaffold, GPT-5 with high reasoning effort scores 24.8% (\u00b12.5%) ... in tiers 1-3'. This is a coincidental numeric match with GPT-5's already-tracked HLE score (also 24.8) but is a distinct benchmark/eval; verified via the primary Epoch AI research account post. Not previously tracked for base GPT-5 (only tracked for GPT-5 Pro)."
     },
     {
       "benchmarkSlug": "frontiermath-tier4",
@@ -158,8 +158,14 @@
       "source": "independent",
       "sourceUrl": "https://x.com/EpochAIResearch/status/1953615906535313664",
       "evaluatedAt": "2025-08-07",
-      "notes": "FrontierMath Tier 4, same Epoch AI post as the tier1-3 entry: 'and 8.3% (±4.0%) in tiers 1-3 and 4, respectively' for GPT-5 with high reasoning effort. Distinct from GPT-5 Pro's already-tracked 19.5% tier-4 figure."
+      "notes": "FrontierMath Tier 4, same Epoch AI post as the tier1-3 entry: 'and 8.3% (\u00b14.0%) in tiers 1-3 and 4, respectively' for GPT-5 with high reasoning effort. Distinct from GPT-5 Pro's already-tracked 19.5% tier-4 figure."
+    },
+    {
+      "benchmarkSlug": "math",
+      "score": 99.4,
+      "source": "independent",
+      "sourceUrl": "https://artificialanalysis.ai/evaluations/math-500"
     }
   ],
-  "verificationNotes": "Existence, release date (Aug 7 2025, confirmed via TechCrunch) and pricing/context ($1.25/$10 per 1M, 400K context) confirmed by live-fetching developers.openai.com/api/docs/models/gpt-5. The primary blog (openai.com/index/introducing-gpt-5-for-developers/) itself returned HTTP 403 to direct fetch, so each of the 7 result rows was independently cross-checked via secondary sources (Vellum, digitalapplied.com, Runbear, and search-engine excerpts) that quote the OpenAI figures verbatim: SWE-bench 74.9, AIME 2025 94.6, GPQA(no tools) 85.7 (distinct from GPT-5 Pro's 88.4/89.4-with-tools figures, so no conflict), HLE 24.8 ('jumping from 6.3% to 24.8%' with thinking), MMMU 84.2, τ2-bench telecom 96.7, Aider polyglot 88 — all confirmed exactly, no changes."
+  "verificationNotes": "Existence, release date (Aug 7 2025, confirmed via TechCrunch) and pricing/context ($1.25/$10 per 1M, 400K context) confirmed by live-fetching developers.openai.com/api/docs/models/gpt-5. The primary blog (openai.com/index/introducing-gpt-5-for-developers/) itself returned HTTP 403 to direct fetch, so each of the 7 result rows was independently cross-checked via secondary sources (Vellum, digitalapplied.com, Runbear, and search-engine excerpts) that quote the OpenAI figures verbatim: SWE-bench 74.9, AIME 2025 94.6, GPQA(no tools) 85.7 (distinct from GPT-5 Pro's 88.4/89.4-with-tools figures, so no conflict), HLE 24.8 ('jumping from 6.3% to 24.8%' with thinking), MMMU 84.2, \u03c42-bench telecom 96.7, Aider polyglot 88 \u2014 all confirmed exactly, no changes.\n\n[2026-07-16] Resolved 4 core-benchmark gaps (mmlu, math, humaneval, livecodebench). Checked OpenAI's own official materials first: the launch blog (already established in prior notes as unreachable directly but cross-verified via secondary quoting sources) and the official GPT-5 System Card PDF (cdn.openai.com/gpt-5-system-card.pdf, downloaded and full-text-extracted via pdftotext for a thorough search) contain zero mentions of HumanEval, LiveCodeBench, or MATH/MATH-500 in any form, and no plain-English MMLU score -- the System Card's only MMLU-adjacent content is Table 11 (\u00a73.11 'Multilingual Performance'), a professionally-translated 13-language variant ('MMLU Language') that excludes English entirely and is a distinct benchmark from this corpus's 'mmlu' slug, so it was not used. Independent leaderboards were then checked directly (raw HTML fetched via curl, not just AI-summarized snippets, since JS-rendered leaderboard sites often hide the real numbers from simple fetches): Artificial Analysis (artificialanalysis.ai) has a live, human-readable MATH-500 leaderboard confirming GPT-5 (high) = 99.4% (added). For MMLU, Artificial Analysis's full per-model dataset (verified across three separately-fetched pages) contains no plain 'mmlu' field for any model, only 'mmlu_pro' -- confirming the industry, including independent evaluators, has moved past plain MMLU as saturated/legacy, same as OpenAI. For HumanEval, Artificial Analysis no longer hosts a public leaderboard page for it at all (artificialanalysis.ai/evaluations/humaneval returns HTTP 404); it is not linked from GPT-5's current model page and displays nowhere as visible text on the site, so no citable claim exists even though a legacy value sits unexposed in AA's backend schema. For LiveCodeBench, Vals.ai's leaderboard (vals.ai/benchmarks/lcb) lists 'GPT 5 Mini' and 'GPT 5.2 Codex' but no plain 'GPT-5' entry, and Artificial Analysis's public LiveCodeBench page's visible leader-callout names Gemini 3 Pro Preview (91.7%) with GPT-5 (high) absent from any rendered text (it is flagged deprecated/superseded-by-GPT-5.1 in AA's system and excluded from the page's visible top-N comparisons) -- again, a legacy value exists only in unexposed backend JSON, not as a citable public claim. Both are therefore correctly omitted rather than guessed; this reflects genuine non-publication of these two legacy coding benchmarks for GPT-5 by both OpenAI and the independent trackers checked, not a research gap."
 }

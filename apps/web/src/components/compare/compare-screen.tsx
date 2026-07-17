@@ -243,7 +243,7 @@ export function CompareScreen({
                         </span>
                         {m != null && (
                           <InlineBar
-                            pct={v == null ? 0 : normPct(v, b.normMin, b.normMax)}
+                            pct={v == null ? 0 : normPct(v, b.normMin, b.normMax, 3)}
                             color={SLOT_COLORS[i]}
                             className="mt-[3px] max-w-[110px]"
                           />

@@ -213,10 +213,24 @@ export function cadenceHeight(count: number, maxCount: number): number {
   return Math.max(4, Math.round((count / Math.max(1, maxCount)) * 62))
 }
 
-/** Normalized bar width percent from curated bounds (design bars). */
-export function normPct(value: number | null | undefined, min: number, max: number): number {
+/**
+ * Normalized bar width percent from curated bounds (design bars). `minVisiblePct` floors
+ * the result so a real recorded value never renders an invisible 0%-width bar merely because
+ * it falls below the benchmark's curated `normMin` — validate.ts deliberately allows scores
+ * well below that floor as legitimate data, but the raw clamp here previously made them
+ * indistinguishable from "no data." Defaults to 0 (unchanged) for callers plotting a
+ * data-derived window (e.g. ratingWindow), where sitting at the window's own min is itself
+ * meaningful and shouldn't be floored.
+ */
+export function normPct(
+  value: number | null | undefined,
+  min: number,
+  max: number,
+  minVisiblePct = 0,
+): number {
   if (value == null) return 0
-  return Math.round(Math.max(0, Math.min(1, (value - min) / (max - min))) * 100)
+  const pct = Math.round(Math.max(0, Math.min(1, (value - min) / (max - min))) * 100)
+  return Math.max(pct, minVisiblePct)
 }
 
 /**

@@ -127,6 +127,7 @@ nemotron-h-56b,60.37,self-reported,https://huggingface.co/nvidia/Nemotron-H-56B-
 openai-codex,28.8,self-reported,https://arxiv.org/abs/2107.03374,,"pass@1, 12B code-davinci model"
 openai-o1-mini,92.4,self-reported,https://github.com/openai/simple-evals,,Same table; identical figure also reported for o1-preview.
 openai-o1-preview,92.4,independent,https://www.walturn.com/insights/comparing-openai-o1-to-other-top-models,2024-09-01,
+openai-o3,87.4,self-reported,https://github.com/openai/simple-evals,2025-04-16,n/a
 openai-o3-mini-high,97.6,self-reported,https://github.com/openai/simple-evals,,
 openai-o3-mini-low,94.5,self-reported,https://github.com/openai/simple-evals,2025-01-31,From the 'o3-mini-low' row of OpenAI's own simple-evals README table (raw file directly fetched and confirmed). Not currently tracked for this model.
 openai-o3-mini-medium,96.3,self-reported,https://github.com/openai/simple-evals,,From the 'o3-mini' (medium/default) row of OpenAI's simple-evals README table. Verified via raw GitHub fetch.
@@ -161,6 +162,7 @@ qwen2-5-vl-72b,87.8,self-reported,https://arxiv.org/pdf/2502.13923,2025-02-19,"T
 qwen2-57b-a14b,53,self-reported,https://qwenlm.github.io/blog/qwen2/,2024-06-07,Base model
 qwen2-72b,64.6,self-reported,https://qwenlm.github.io/blog/qwen2/,2024-06-07,Base model
 qwen2-7b,51.2,self-reported,https://qwenlm.github.io/blog/qwen2/,2024-06-07,Base model
+qwen3-6-35b-a3b,93.3,independent,https://github.com/evalplus/evalplus/issues/299,,"No official/self-reported HumanEval number exists for this model; this is the only credible citable source found, methodologically transparent (full commands/config disclosed) though run on a Q4_K_M GGUF quant rather than the original bf16 checkpoint."
 reka-core,76.8,self-reported,https://arxiv.org/html/2404.12387v1,,"vs GPT-4 76.5, Claude 3 Opus 84.9"
 reka-edge-7b,54.3,self-reported,https://arxiv.org/html/2404.12387v1,,
 reka-flash-21b,72,self-reported,https://arxiv.org/abs/2404.12387,2024-02-12,0-shot

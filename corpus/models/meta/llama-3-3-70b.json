@@ -101,19 +101,19 @@
       "notes": "MBPP EvalPlus (base), pass@1, 0-shot."
     },
     {
-      "benchmarkSlug": "bfcl",
-      "score": 77.3,
-      "source": "self-reported",
-      "sourceUrl": "https://huggingface.co/meta-llama/Llama-3.3-70B-Instruct",
-      "notes": "BFCL v2, overall_ast_summary/macro_avg/valid, 0-shot tool-use eval. Mapped to the unversioned 'bfcl' slug rather than 'bfcl-v3' since the source explicitly reports the v2 suite, not the third-generation v3 suite."
-    },
-    {
       "benchmarkSlug": "mgsm",
       "score": 91.1,
       "source": "self-reported",
       "sourceUrl": "https://huggingface.co/meta-llama/Llama-3.3-70B-Instruct",
       "notes": "MGSM, em, 0-shot multilingual grade-school math."
+    },
+    {
+      "benchmarkSlug": "bfcl",
+      "score": 77.3,
+      "source": "self-reported",
+      "sourceUrl": "https://huggingface.co/meta-llama/Llama-3.3-70B-Instruct",
+      "notes": "BFCL v2, overall_ast_summary/macro_avg/valid, 0-shot tool-use eval. Re-confirmed 2026-07-16 via direct fetch of the HF model card: the source table explicitly labels this row 'BFCL v2', never 'v3'. Mapped to the unversioned 'bfcl' slug per this corpus's established convention for BFCL v1/v2/unspecified-version scores -- consistent with sibling entries llama-3-1-405b ('plain BFCL'), llama-3-2-1b and llama-3-2-3b ('BFCL V2'), and NVIDIA's Llama-Nemotron family ('BFCL V2 Live'), all of which likewise use 'bfcl' rather than 'bfcl-v3'. The 'bfcl-v3' slug is reserved for the separate, later third-generation BFCL suite, which is not what this row measures."
     }
   ],
-  "verificationNotes": "Confirmed real via HF model card fetch: params 70B, release 2024-12-06 (matches TechCrunch/Simon Willison contemporaneous coverage of the Dec 6 2024 surprise release), 8-language multilingual support (En/De/Fr/It/Pt/Hi/Es/Th). All 7 benchmark rows (MMLU 86.0, MMLU-Pro 68.9, HumanEval 88.4, GSM8K 94.84, MATH 77.0, IFEval 92.1, GPQA Diamond 50.5) literally confirmed on the cited HF page. Corrected license string from 'Llama 3.3 Community License' to the official 'Llama 3.3 Community License Agreement'."
+  "verificationNotes": "Confirmed real via HF model card fetch: params 70B, release 2024-12-06 (matches TechCrunch/Simon Willison contemporaneous coverage of the Dec 6 2024 surprise release), 8-language multilingual support (En/De/Fr/It/Pt/Hi/Es/Th). All 7 benchmark rows (MMLU 86.0, MMLU-Pro 68.9, HumanEval 88.4, GSM8K 94.84, MATH 77.0, IFEval 92.1, GPQA Diamond 50.5) literally confirmed on the cited HF page. Corrected license string from 'Llama 3.3 Community License' to the official 'Llama 3.3 Community License Agreement'.\n\n2026-07-16: Re-verified the bfcl=77.3 comparability flag (\"notes name 'BFCL v3' but filed under generic 'bfcl'\"). This is a false positive: the existing note has always said \"BFCL v2\" (confirmed against the current HF model card via direct fetch and independent web search), and only contained the substring \"v3\" as part of the explanatory clause \"not the third-generation v3 suite\" -- an automated scanner likely keyword-matched that fragment. Cross-checked corpus convention across 6 other models (llama-3-1-405b, llama-3-2-1b, llama-3-2-3b, both NVIDIA Llama-Nemotron reasoning-on/off pairs) confirms BFCL v1/v2/unversioned scores are deliberately filed under the unversioned 'bfcl' slug corpus-wide, reserving 'bfcl-v3' strictly for genuine third-generation BFCL evaluations. No slug, score, or sourceUrl change was warranted; tightened the note wording to remove the ambiguous \"third-generation v3 suite\" phrasing that likely triggered the false-positive flag, and made the version confirmation explicit and dated."
 }

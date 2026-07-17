@@ -5,7 +5,7 @@
   "releaseDate": "2026-03-18",
   "status": "released",
   "openness": "open-weights",
-  "license": "MiniMax Model Community License (non-commercial use restrictions; commercial use requires separate agreement) \u2014 verify exact license text at https://huggingface.co/MiniMaxAI/MiniMax-M2.7/blob/main/LICENSE",
+  "license": "MiniMax Model Community License (non-commercial use restrictions; commercial use requires separate agreement) — verify exact license text at https://huggingface.co/MiniMaxAI/MiniMax-M2.7/blob/main/LICENSE",
   "paramsB": 230,
   "activeParamsB": 10,
   "archClass": "moe",
@@ -77,7 +77,7 @@
       "source": "self-reported",
       "sourceUrl": "https://arxiv.org/pdf/2605.26494",
       "evaluatedAt": "2026-05-26",
-      "notes": "MiniMax's official 'The MiniMax-M2 Series' technical report (arXiv:2605.26494), Table 4 full cross-model benchmark comparison, row 'AIME 2026' \u2014 M2.7 scores 94.2 vs M2.5's 87.2, and vs Opus 4.6 (92.5), Sonnet 4.6 (92.7), GPT-5.4 (97.0), Gemini 3.1 Pro (88.7). Also restated in the paper's abstract/intro prose ('M2.7 posts 94.2 on AIME 2026'). Mapped to the generic taxonomy 'aime' slug since the corpus has no year-specific AIME variant; the exact competition-year label used by MiniMax was 'AIME 2026'."
+      "notes": "MiniMax's official 'The MiniMax-M2 Series' technical report (arXiv:2605.26494), Table 4 full cross-model benchmark comparison, row 'AIME 2026' — M2.7 scores 94.2 vs M2.5's 87.2, and vs Opus 4.6 (92.5), Sonnet 4.6 (92.7), GPT-5.4 (97.0), Gemini 3.1 Pro (88.7). Also restated in the paper's abstract/intro prose ('M2.7 posts 94.2 on AIME 2026'). Mapped to the generic taxonomy 'aime' slug since the corpus has no year-specific AIME variant; the exact competition-year label used by MiniMax was 'AIME 2026'."
     },
     {
       "benchmarkSlug": "gpqa",
@@ -85,7 +85,7 @@
       "source": "self-reported",
       "sourceUrl": "https://arxiv.org/pdf/2605.26494",
       "evaluatedAt": "2026-05-26",
-      "notes": "Official MiniMax-M2 technical report (arXiv:2605.26494), Table 4, row 'GPQA-Diamond' \u2014 M2.7 scores 89.8 (M2.5: 85.2; Opus 4.6: 89.6; Sonnet 4.6: 87.5; GPT-5.4: 92.0; Gemini 3.1 Pro: 94.1). Also called out in the report's intro prose alongside the AIME 2026 figure."
+      "notes": "Official MiniMax-M2 technical report (arXiv:2605.26494), Table 4, row 'GPQA-Diamond' — M2.7 scores 89.8 (M2.5: 85.2; Opus 4.6: 89.6; Sonnet 4.6: 87.5; GPT-5.4: 92.0; Gemini 3.1 Pro: 94.1). Also called out in the report's intro prose alongside the AIME 2026 figure."
     },
     {
       "benchmarkSlug": "hle",
@@ -93,7 +93,7 @@
       "source": "self-reported",
       "sourceUrl": "https://arxiv.org/pdf/2605.26494",
       "evaluatedAt": "2026-05-26",
-      "notes": "Official MiniMax-M2 technical report (arXiv:2605.26494), Table 4, row 'HLE' (Humanity's Last Exam) \u2014 M2.7 scores 28.0 (M2.5: 19.0; Opus 4.6: 36.7; Sonnet 4.6: 30.0; GPT-5.4: 41.6; Gemini 3.1 Pro: 44.7). Independently, Artificial Analysis's own HLE measurement for MiniMax-M2.7 (artificialanalysis.ai/models/minimax-m2-7) reads ~28%, closely corroborating this self-reported figure."
+      "notes": "Official MiniMax-M2 technical report (arXiv:2605.26494), Table 4, row 'HLE' (Humanity's Last Exam) — M2.7 scores 28.0 (M2.5: 19.0; Opus 4.6: 36.7; Sonnet 4.6: 30.0; GPT-5.4: 41.6; Gemini 3.1 Pro: 44.7). Independently, Artificial Analysis's own HLE measurement for MiniMax-M2.7 (artificialanalysis.ai/models/minimax-m2-7) reads ~28%, closely corroborating this self-reported figure."
     },
     {
       "benchmarkSlug": "ifbench",
@@ -101,7 +101,7 @@
       "source": "self-reported",
       "sourceUrl": "https://arxiv.org/pdf/2605.26494",
       "evaluatedAt": "2026-05-26",
-      "notes": "Official MiniMax-M2 technical report (arXiv:2605.26494), Table 4, row 'IFBench' \u2014 M2.7 scores 76.0 (M2.5: 72.0; Opus 4.6: 53.1; Sonnet 4.6: 56.6; GPT-5.4: 73.9; Gemini 3.1 Pro: 77.1). The report highlights this as a standout result, attributing it to the multi-domain RL strategy and rubric-based response filtering described in its Sections 4.3/6. Independently corroborated at ~76% by Artificial Analysis's own IFBench measurement (artificialanalysis.ai/models/minimax-m2-7)."
+      "notes": "Official MiniMax-M2 technical report (arXiv:2605.26494), Table 4, row 'IFBench' — M2.7 scores 76.0 (M2.5: 72.0; Opus 4.6: 53.1; Sonnet 4.6: 56.6; GPT-5.4: 73.9; Gemini 3.1 Pro: 77.1). The report highlights this as a standout result, attributing it to the multi-domain RL strategy and rubric-based response filtering described in its Sections 4.3/6. Independently corroborated at ~76% by Artificial Analysis's own IFBench measurement (artificialanalysis.ai/models/minimax-m2-7)."
     },
     {
       "benchmarkSlug": "mmlu-pro",
@@ -109,7 +109,7 @@
       "source": "self-reported",
       "sourceUrl": "https://arxiv.org/pdf/2605.26494",
       "evaluatedAt": "2026-05-26",
-      "notes": "Official MiniMax-M2 technical report (arXiv:2605.26494), Table 4, row 'MMLU-Pro' \u2014 M2.7 scores 81.8 (M2.5: 85.2 [sic, M2.5 scores higher here per the published table]; Opus 4.6: 89.1; Sonnet 4.6: 87.3; GPT-5.4: 87.5; Gemini 3.1 Pro: 91.2)."
+      "notes": "Official MiniMax-M2 technical report (arXiv:2605.26494), Table 4, row 'MMLU-Pro' — M2.7 scores 81.8 (M2.5: 85.2 [sic, M2.5 scores higher here per the published table]; Opus 4.6: 89.1; Sonnet 4.6: 87.3; GPT-5.4: 87.5; Gemini 3.1 Pro: 91.2)."
     },
     {
       "benchmarkSlug": "browsecomp",
@@ -117,21 +117,21 @@
       "source": "self-reported",
       "sourceUrl": "https://arxiv.org/pdf/2605.26494",
       "evaluatedAt": "2026-05-26",
-      "notes": "Official MiniMax-M2 technical report (arXiv:2605.26494), Table 4, 'Search' block, row 'BrowseComp' \u2014 M2.7 scores 77.8 (M2.5: 76.3; Opus 4.6: 84.0; Sonnet 4.6: 74.7; GPT-5.4: 82.7; Gemini 3.1 Pro: 85.9). Distinct from the report's separate 'BrowseComp-zh' (Chinese-language variant) figure used only in an earlier architecture-ablation table (Table 3), not in this final-model cross-comparison."
+      "notes": "Official MiniMax-M2 technical report (arXiv:2605.26494), Table 4, 'Search' block, row 'BrowseComp' — M2.7 scores 77.8 (M2.5: 76.3; Opus 4.6: 84.0; Sonnet 4.6: 74.7; GPT-5.4: 82.7; Gemini 3.1 Pro: 85.9). Distinct from the report's separate 'BrowseComp-zh' (Chinese-language variant) figure used only in an earlier architecture-ablation table (Table 3), not in this final-model cross-comparison."
     },
     {
       "benchmarkSlug": "gpqa",
       "score": 87,
       "source": "independent",
       "sourceUrl": "https://artificialanalysis.ai/models/minimax-m2-7",
-      "notes": "Second, independently-run GPQA Diamond measurement by Artificial Analysis (their own eval harness), distinct from MiniMax's self-reported 89.8 already added above from arXiv:2605.26494 Table 4 \u2014 different methodology/harness, hence recorded as a separate result under the same gpqa slug (mirroring how this corpus already dual-sources e.g. Qwen3.6-Plus's GPQA and Grok 4.5's Terminal-Bench). Read directly off AA's live model-comparison chart for MiniMax-M2.7 (rank-ordered list cross-referenced against adjacent score list) on 2026-07-14."
+      "notes": "Second, independently-run GPQA Diamond measurement by Artificial Analysis (their own eval harness), distinct from MiniMax's self-reported 89.8 already added above from arXiv:2605.26494 Table 4 — different methodology/harness, hence recorded as a separate result under the same gpqa slug (mirroring how this corpus already dual-sources e.g. Qwen3.6-Plus's GPQA and Grok 4.5's Terminal-Bench). Read directly off AA's live model-comparison chart for MiniMax-M2.7 (rank-ordered list cross-referenced against adjacent score list) on 2026-07-14."
     },
     {
       "benchmarkSlug": "terminal-bench-2",
       "score": 55,
       "source": "independent",
       "sourceUrl": "https://artificialanalysis.ai/models/minimax-m2-7",
-      "notes": "Second, independently-run Terminal-Bench v2.1 measurement by Artificial Analysis (their own harness/sandbox), distinct from MiniMax's self-reported 57.0 already present in this model's corpus entry (sourced from minimax.io's launch post) and from the 57.0 in arXiv:2605.26494 Table 4 \u2014 recorded as a separate result under the same terminal-bench-2 slug per this corpus's existing dual-sourcing convention (e.g. Grok 4.5's terminal-bench-2 has both a self-reported and an AA-independent entry). Read off AA's live model-comparison chart for MiniMax-M2.7 on 2026-07-14."
+      "notes": "Second, independently-run Terminal-Bench v2.1 measurement by Artificial Analysis (their own harness/sandbox), distinct from MiniMax's self-reported 57.0 already present in this model's corpus entry (sourced from minimax.io's launch post) and from the 57.0 in arXiv:2605.26494 Table 4 — recorded as a separate result under the same terminal-bench-2 slug per this corpus's existing dual-sourcing convention (e.g. Grok 4.5's terminal-bench-2 has both a self-reported and an AA-independent entry). Read off AA's live model-comparison chart for MiniMax-M2.7 on 2026-07-14."
     },
     {
       "benchmarkSlug": "agents-last-exam",
@@ -141,5 +141,5 @@
       "notes": "Agents' Last Exam (ALE-CLI, Overall leaderboard), OpenClaw harness, High reasoning effort: Pass rate 5.9% / Score 14.2% (rank 49). Score component used per corpus convention."
     }
   ],
-  "verificationNotes": "Confirmed released (not just announced) via official minimax.io news post, MiniMax API docs, NVIDIA developer blog, Hugging Face model page, and Artificial Analysis independent tracker \u2014 all agree on a March 18, 2026 launch. Param counts (230B total/10B active) corroborated by both NVIDIA's technical blog and the official model page; the HF repo metadata itself lists a slightly different '229B' which is very likely a rounding artifact of the same figure. Context window cited as 200K by NVIDIA and ~205K tokens by Artificial Analysis (likely 204,800 rounded two different ways) \u2014 used 200 as the vendor-stated round figure."
+  "verificationNotes": "Confirmed released (not just announced) via official minimax.io news post, MiniMax API docs, NVIDIA developer blog, Hugging Face model page, and Artificial Analysis independent tracker — all agree on a March 18, 2026 launch. Param counts (230B total/10B active) corroborated by both NVIDIA's technical blog and the official model page; the HF repo metadata itself lists a slightly different '229B' which is very likely a rounding artifact of the same figure. Context window cited as 200K by NVIDIA and ~205K tokens by Artificial Analysis (likely 204,800 rounded two different ways) — used 200 as the vendor-stated round figure.\n\n2026-07-16: Researched the six core-taxonomy gaps (mmlu, math, humaneval, livecodebench, swe-bench, mmmu) for MiniMax M2.7 across (1) MiniMax's own materials — minimax.io/news/minimax-m27-en, minimax.io/models/text/m27, github.com/MiniMax-AI/MiniMax-M2.7 README, and the HF model card — and, most authoritatively, the official technical report (arXiv:2605.26494, \"The MiniMax-M2 Series\"), whose Table 4 is explicitly the paper's full cross-model benchmark comparison for M2.7 vs Opus 4.6/Sonnet 4.6/GPT-5.4/Gemini 3.1 Pro (with \"–\" reserved for scores a model \"has not reported... or has not yet released\"); (2) independent trackers — Artificial Analysis's MiniMax-M2.7 model page (Intelligence Index v4.1, which substitutes GDPval-AA v2/tau3-Banking/Terminal-Bench/SciCode/HLE/GPQA-D/CritPt/AA-Omniscience/AA-LCR for the legacy suite), Epoch AI's MiniMax-M2.7 page (composite Capabilities Index only, rank 52/211, no per-benchmark breakdown), and Vals.ai's SWE-bench Verified leaderboard (MiniMax is entirely absent from it); (3) sibling models MiniMax-M2 and MiniMax-M1 in this corpus, whose own self-reported livecodebench (83, 65) and swe-bench (69.4, 56) scores are for earlier, differently-evaluated checkpoints (Oct 2025 / Jun 2025) predating the M2.5/M2.7 suite redesign, so they cannot be carried forward as M2.7 evidence. None of these sources report mmlu, math (MATH-500), humaneval, livecodebench, or swe-bench (Verified) for M2.7 specifically — Table 4 shows these were dropped from the suite entirely in favor of mmlu-pro, aime (2026), swe-bench-pro/multilingual/multi-swe-bench, and scicode, not run-and-withheld. This corpus's own benchmark catalog corroborates the saturation rationale (mmlu: \"Largely saturated at the frontier\"; humaneval: \"Long-saturated at the frontier\"). A widely-mirrored secondary-blog claim (wavespeed.ai, thomas-wiegold.com) of an unsourced \"SWE-bench Verified 78%\" figure for M2.7 was checked and rejected as uncorroborated: it appears in none of the primary sources above nor on Vals.ai, and looks like an SEO-content-mill artifact rather than a real measurement. mmmu is a multimodal/vision benchmark and M2.7 is a text-only model (modalities: [\"text\"], capabilities.vision: false), so it is architecturally inapplicable rather than merely unpublished. All six gaps resolved as omitted_no_evidence with no changes to the existing results array."
 }

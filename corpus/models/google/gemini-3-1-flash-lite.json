@@ -104,7 +104,29 @@
       "sourceUrl": "https://storage.googleapis.com/deepmind-media/gemini/gemini_3-1_flash-lite_model_evaluation.pdf",
       "evaluatedAt": "2026-03-01",
       "notes": "LiveCodeBench code generation, 175 UI problems dated 1/1/2025-5/1/2025 (distinct from LiveCodeBench Pro's Elo scale)."
+    },
+    {
+      "benchmarkSlug": "swe-bench",
+      "score": 62.8,
+      "source": "independent",
+      "sourceUrl": "https://www.vals.ai/models/google_gemini-3.1-flash-lite-preview",
+      "notes": "Vals AI's stated methodology confirms it uses the SWE-bench Verified subset, matching this corpus's 'swe-bench' slug definition."
+    },
+    {
+      "benchmarkSlug": "mmmu",
+      "score": 82.49,
+      "source": "independent",
+      "sourceUrl": "https://www.vals.ai/models/google_gemini-3.1-flash-lite-preview",
+      "notes": "Distinct from the already-tracked self-reported mmmu-pro entry (76.8%); follows the same vals.ai slug-mapping convention already established for Claude Sonnet 4.6 and Muse Spark 1.1 in this corpus."
+    },
+    {
+      "benchmarkSlug": "mmmlu",
+      "score": 88.9,
+      "source": "self-reported",
+      "sourceUrl": "https://storage.googleapis.com/deepmind-media/gemini/gemini_3-1_flash-lite_model_evaluation.pdf",
+      "notes": "Mirrors how the identical table row was handled for sibling model Gemini 3.1 Pro in this corpus.",
+      "evaluatedAt": "2026-03-01"
     }
   ],
-  "verificationNotes": "Confirmed real: preview launched 2026-03-03 (blog.google, fetched), all 3 benchmark numbers (GPQA 86.9, MMMU-Pro 76.8, Arena Elo 1432) literally confirmed on that page. Pricing $0.25/$1.50 confirmed independently. CORRECTED status from 'preview' to 'released': the model reached general availability ~2026-05-07/08 (cloud.google.com GA blog, fetched) and the original preview checkpoint was deprecated/shut down 2026-05-25 (ai.google.dev docs, fetched) \u2014 as of today (2026-07-12) the model is GA, not preview. CORRECTED modalities: added 'video' \u2014 the official model docs page (ai.google.dev/gemini-api/docs/models/gemini-3.1-flash-lite-preview) confirms input modalities as Text, Image, Video, Audio, and PDF, so 'video' was missing from the original record."
+  "verificationNotes": "Confirmed real: preview launched 2026-03-03 (blog.google, fetched), all 3 benchmark numbers (GPQA 86.9, MMMU-Pro 76.8, Arena Elo 1432) literally confirmed on that page. Pricing $0.25/$1.50 confirmed independently. CORRECTED status from 'preview' to 'released': the model reached general availability ~2026-05-07/08 (cloud.google.com GA blog, fetched) and the original preview checkpoint was deprecated/shut down 2026-05-25 (ai.google.dev docs, fetched) — as of today (2026-07-12) the model is GA, not preview. CORRECTED modalities: added 'video' — the official model docs page (ai.google.dev/gemini-api/docs/models/gemini-3.1-flash-lite-preview) confirms input modalities as Text, Image, Video, Audio, and PDF, so 'video' was missing from the original record.\n\n2026-07-16 gap-resolution pass on core benchmarks: confirmed MMLU, MATH, AIME, and HumanEval are real, deliberate absences for this model, not research gaps. Directly fetched both Google's official March-2026 evaluation-methodology PDF (storage.googleapis.com/deepmind-media/gemini/gemini_3-1_flash-lite_model_evaluation.pdf) and the May-2026 official Model Card PDF (storage.googleapis.com/deepmind-media/Model-Cards/Gemini-3-1-Flash-Lite-Model-Card.pdf) -- both contain the identical 12-row results table (Speed, HLE, GPQA Diamond, MMMU-Pro, CharXiv, Video-MMMU, SimpleQA, FACTS Suite, 'MMLU'/Multilingual Q&A, LiveCodeBench, MRCR v2 x2) with no MATH, AIME, HumanEval, or classic MMLU row. The table's 'MMLU' row is actually MMMLU per the PDF's own methodology text ('Multilingual MMLU results for Gemini models... are self-computed'); its 88.9% score has been filed under the 'mmmlu' slug instead (see added result). Cross-checked sibling Gemini 3.1 Pro (same family, launched three weeks earlier, deepmind.google/models/gemini/pro/): its corpus record likewise has no MATH/AIME/HumanEval/classic-MMLU, showing this is a Gemini-3.1-generation-wide change in what Google publishes (the prior Gemini 3 Pro/Flash generation did report AIME and MMLU/MMMLU). Checked two independent leaderboards via rendered browser (their JS-only pages return 0.0% placeholders on static fetch): Vals.ai (vals.ai/models/google_gemini-3.1-flash-lite-preview) lists Vals Index, GPQA Diamond, LiveCodeBench, LegalBench, MMLU Pro, MMMU, ProgramBench, SWE-bench, and Terminal-Bench 2.1 for this model -- no MATH, AIME, or classic HumanEval/MMLU. Artificial Analysis (artificialanalysis.ai/models/gemini-3-1-flash-lite-preview) confirms its full 18-of-22-evaluation Intelligence Index v4.1 breakdown for this model (GDPval-AA v2, τ3-Banking, Terminal-Bench v2.1, SciCode, HLE, GPQA Diamond, CritPt, AA-Omniscience Accuracy/Non-Hallucination, AA-LCR, AA-Briefcase, AutomationBench-AA, Harvey LAB-AA, EnterpriseOps-Gym-AA, IFBench, APEX-Agents-AA, ITBench-AA, MMMU-Pro) contains none of the four either. MathArena.ai, a dedicated competition-math tracker, does not list this model at all (sibling Gemini 3.1 Pro Preview is listed there; Flash-Lite is not). This is consistent with the corpus's own benchmark catalog, which already flags MMLU as 'largely saturated at the frontier' and HumanEval as 'long-saturated at the frontier.' Third-party aggregator sites (automatio.ai, layerlens.ai, llm-stats.com) surfaced self-contradicting numbers for AIME (16.7% in one query, 75% in another) and an implausible HumanEval figure identical in pattern to the already-confirmed MMMU-Pro score -- treated as unreliable scraped/hallucinated content and not used. SWE-bench and MMMU were each closeable via Vals.ai's independent evaluation: SWE-bench Verified 62.80% (±2.16, rank 58/70) and MMMU 82.49% (±0.91, rank 26/82) -- both added with source 'independent', distinct from the self-reported MMMU-Pro entry already on file."
 }

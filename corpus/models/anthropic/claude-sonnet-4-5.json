@@ -158,7 +158,28 @@
       "sourceUrl": "https://www.anthropic.com/claude-sonnet-4-6-system-card",
       "evaluatedAt": "2026-02-17",
       "notes": "τ²-bench Retail sub-domain, Sonnet 4.5 comparison figure, Table 2.1.A (same table as the tracked τ²-bench Telecom=98 row). [taxonomy-gap backfill: this score was already verified in an earlier research round but had no matching benchmark slug at the time; added once the slug was introduced.]"
+    },
+    {
+      "benchmarkSlug": "aime",
+      "score": 87,
+      "source": "self-reported",
+      "sourceUrl": "https://www.anthropic.com/news/claude-sonnet-4-5",
+      "evaluatedAt": "2025-09-29"
+    },
+    {
+      "benchmarkSlug": "mmmu",
+      "score": 77.8,
+      "source": "self-reported",
+      "sourceUrl": "https://www.anthropic.com/news/claude-sonnet-4-5",
+      "evaluatedAt": "2025-09-29"
+    },
+    {
+      "benchmarkSlug": "livecodebench",
+      "score": 73,
+      "source": "independent",
+      "sourceUrl": "https://www.vals.ai/models/anthropic_claude-sonnet-4-5-20250929-thinking",
+      "evaluatedAt": "2025-09-29"
     }
   ],
-  "verificationNotes": "Real model, confirmed via anthropic.com/news/claude-sonnet-4-5 (release 2025-09-29, $3/$15 pricing, 200K context, 30+ hour focus claim). GPQA/MMLU rows confirmed verbatim via direct fetch of leanware.co. IMPORTANT CORRECTION: input record marked status='deprecated', but Anthropic's official model-deprecations page (fetched 2026-07-12) lists claude-sonnet-4-5-20250929 as 'Active' with tentative retirement 'not sooner than 2026-09-29' — this model is currently live, not deprecated. Status corrected to 'released' (closest enum to 'Active'); apiAvailable=true confirmed correct."
+  "verificationNotes": "Real model, confirmed via anthropic.com/news/claude-sonnet-4-5 (release 2025-09-29, $3/$15 pricing, 200K context, 30+ hour focus claim). GPQA/MMLU rows confirmed verbatim via direct fetch of leanware.co. IMPORTANT CORRECTION: input record marked status='deprecated', but Anthropic's official model-deprecations page (fetched 2026-07-12) lists claude-sonnet-4-5-20250929 as 'Active' with tentative retirement 'not sooner than 2026-09-29' — this model is currently live, not deprecated. Status corrected to 'released' (closest enum to 'Active'); apiAvailable=true confirmed correct.\n\n[2026-07-16 gap-closure pass, core-benchmark completeness]: Added three previously-missing core benchmarks. (1) aime=87.0% and (2) mmmu=77.8% both come directly from Anthropic's own official Claude Sonnet 4.5 launch page (anthropic.com/news/claude-sonnet-4-5), specifically the embedded chart image titled 'Benchmark table comparing frontier models across popular public evals' (cdn.sanity.io/images/4zrzovbb/website/67081be1ea2752e2a554e49a6aab2731b265d11b-2600x2288.png) -- this table is rendered as an image, not text, so standard page-text fetches miss it entirely; it had to be downloaded and read directly. AIME uses the no-tools config (87.0%) for consistency with how sibling Claude models are recorded elsewhere in this corpus (a 100% with-python-tools figure also appears on the same chart but is not used). (3) livecodebench=73.0% comes from Vals AI's independent eval of 'Claude Sonnet 4.5 (Thinking)', extracted from embedded score data since the rendered page uses JS-animated counters that don't appear in plain-text fetches. Two core benchmarks were checked but found to have no real published score and are intentionally omitted rather than guessed: 'math' (MATH-500) and 'humaneval'. For both, I checked (a) the official launch page chart -- neither appears; (b) the official Claude Sonnet 4.6 System Card, whose full table of contents has no MATH/MATH-500 or HumanEval section at all (only AIME 2025, MMMLU, GPQA Diamond, MMMU-Pro, HLE, BrowseComp, etc. are covered); (c) Epoch AI's ECI benchmark dataset (eci_benchmarks.csv), which has extensive Claude Sonnet 4.5 coverage (GPQA, MATH level 5 [a different, harder-tier eval, not MATH-500], OTIS Mock AIME [not real AIME], SWE-bench, OSWorld, ARC-AGI-2, HLE, Terminal-Bench, GDPval, etc.) but no MATH-500 or HumanEval entry for any model in the dataset, and dedicated epoch.ai/benchmarks/math-500 and /humaneval pages both 404; (d) Vals AI's Claude Sonnet 4.5 (Thinking) model page, which tracks GPQA Diamond, LiveCodeBench, MMLU Pro, MMMU, SWE-bench, IOI and several agentic/domain evals but has no MATH or HumanEval category, and a dedicated vals.ai/benchmarks/humaneval page 404s. This is consistent with the corpus's documented pattern of frontier labs retiring saturated legacy benchmarks (HumanEval is explicitly marked 'Long-saturated at the frontier' in this corpus's own benchmark catalog) in favor of harder replacements (AIME, GPQA, MATH level 5/FrontierMath)."
 }

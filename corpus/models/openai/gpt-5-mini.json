@@ -103,7 +103,7 @@
       "source": "self-reported",
       "sourceUrl": "https://openai.com/index/introducing-gpt-5-4-mini-and-nano/",
       "evaluatedAt": "2026-03-17",
-      "notes": "\u03c42-bench (telecom), GPT-5 mini (high) baseline column. This resolves a figure ('tau-bench 74.1') that this model's verificationNotes previously flagged as unconfirmed and dropped -- the correct benchmark identity is tau2-bench-telecom (not generic tau-bench), and the 74.1 score is now directly confirmed via OpenAI's own published table."
+      "notes": "τ2-bench (telecom), GPT-5 mini (high) baseline column. This resolves a figure ('tau-bench 74.1') that this model's verificationNotes previously flagged as unconfirmed and dropped -- the correct benchmark identity is tau2-bench-telecom (not generic tau-bench), and the 74.1 score is now directly confirmed via OpenAI's own published table."
     },
     {
       "benchmarkSlug": "osworld-verified",
@@ -136,7 +136,31 @@
       "sourceUrl": "https://artificialanalysis.ai/models/gpt-5-mini",
       "evaluatedAt": "2026-07-14",
       "notes": "IFBench (instruction following), independently measured by Artificial Analysis on GPT-5 mini (high)'s live model page. No OpenAI-published IFBench figure exists for this model."
+    },
+    {
+      "benchmarkSlug": "math",
+      "score": 94.8,
+      "source": "independent",
+      "sourceUrl": "https://www.vals.ai/benchmarks/math500-04-15-2025",
+      "notes": "Dedicated Vals MATH 500 leaderboard page last updated 1/9/2026.",
+      "evaluatedAt": "2026-01-09"
+    },
+    {
+      "benchmarkSlug": "livecodebench",
+      "score": 86.61,
+      "source": "independent",
+      "sourceUrl": "https://www.vals.ai/models/openai_gpt-5-mini-2025-08-07",
+      "notes": "Dedicated Vals LiveCodeBench leaderboard page last updated 7/9/2026.",
+      "evaluatedAt": "2026-07-09"
+    },
+    {
+      "benchmarkSlug": "swe-bench",
+      "score": 60.8,
+      "source": "independent",
+      "sourceUrl": "https://www.vals.ai/models/openai_gpt-5-mini-2025-08-07",
+      "notes": "Dedicated Vals SWE-bench Verified methodology page last updated 7/14/2026; corroborating figure at https://epoch.ai/models/gpt-5-mini.",
+      "evaluatedAt": "2026-07-14"
     }
   ],
-  "verificationNotes": "Existence, release date and pricing/context ($0.25/$2 per 1M, 400K context) confirmed by live-fetching developers.openai.com/api/docs/models/gpt-5-mini. Primary blog page returned 403 to direct fetch/was rate-limited on the fetch connector, so each result row was checked against secondary sources quoting the original figures. Confirmed exactly: AIME 91.1, GPQA 82.3, HLE 16.7, Aider polyglot 71.6. Could NOT independently confirm swe-bench (71), mmmu (81.6), or tau-bench (74.1) on any accessible source \u2014 those 3 rows were dropped per verification policy (never keep an unconfirmed number)."
+  "verificationNotes": "Existence, release date and pricing/context ($0.25/$2 per 1M, 400K context) confirmed by live-fetching developers.openai.com/api/docs/models/gpt-5-mini. Primary blog page returned 403 to direct fetch/was rate-limited on the fetch connector, so each result row was checked against secondary sources quoting the original figures. Confirmed exactly: AIME 91.1, GPQA 82.3, HLE 16.7, Aider polyglot 71.6. Could NOT independently confirm swe-bench (71), mmmu (81.6), or tau-bench (74.1) on any accessible source — those 3 rows were dropped per verification policy (never keep an unconfirmed number).\n\n2026-07-16 gap-closing pass (mmlu/math/humaneval/livecodebench/swe-bench/mmmu): ADDED three core-benchmark scores, all independently measured by Vals AI on GPT-5 mini's own model page (vals.ai/models/openai_gpt-5-mini-2025-08-07; pricing $0.25/$2 and release date 8/7/2025 both confirmed match, so this is the right model row) and cross-checked against Vals's dedicated per-benchmark leaderboard pages for methodology: math (MATH-500) 94.80% -- an archived/saturated Vals benchmark, last run 1/9/2026; livecodebench 86.61% -- dedicated page updated 7/9/2026; swe-bench (Verified) 60.80% -- dedicated page (updated 7/14/2026) confirms a minimal bash-tool-only agent harness. The swe-bench figure is independently corroborated by Epoch AI's own SWE-bench Verified score for GPT-5 mini of 64.7% +/-2.2% (epoch.ai/models/gpt-5-mini) -- both independent measurements sit well below OpenAI's own unconfirmed self-reported ~71% figure that an earlier round of these notes already flagged as uncorroborated and dropped, suggesting OpenAI's internal harness is more permissive rather than either independent number being wrong.\n\nOMITTED (no citable evidence found; checked OpenAI's own official materials, Vals AI, Epoch AI, and general aggregators -- at least 2 source types each): mmlu -- absent from OpenAI's own GPT-5 system card (cdn.openai.com/gpt-5-system-card.pdf, fetched and text-extracted directly); its only MMLU-adjacent table (\"MMLU Language, 0-shot\", Table 11) is a 13-language multilingual variant tested only on gpt-5-thinking / gpt-5-main / OpenAI o3-high, not gpt-5-mini. Also absent from Vals AI (which tracks only MMLU-Pro for current-era models, not base MMLU), from Epoch AI's Capabilities-Index page for this model, and from the llm-stats.com and docsbot.ai aggregators. Consistent with MMLU being a saturated legacy benchmark that frontier labs increasingly skip publishing. humaneval -- confirmed absent from llm-stats.com's dedicated HumanEval leaderboard (66 models tracked; GPT-5 mini is not among them, while GPT-5 itself is), absent from Vals AI (whose own LiveCodeBench methodology page states they use LiveCodeBench specifically as a HumanEval replacement because \"benchmarks like HumanEval have become saturated\"), and absent from OpenAI's own system card/launch materials and the docsbot.ai aggregator of OpenAI's official published numbers. mmmu (base, non-Pro) -- OpenAI's own GPT-5 system card contains zero mentions of \"MMMU\" anywhere in the full text; Epoch AI's Capabilities-Index page for GPT-5 mini does not test MMMU; and while Vals AI's GPT-5-mini model-page sidebar shows a card simply labeled \"MMMU\" (78.91%), its underlying benchmark page (vals.ai/benchmarks/mmmu) is titled \"MMMU Pro\" and its own methodology text describes the MMMU-Pro standard-4-option / ~1,700-question protocol verbatim -- i.e. Vals's \"MMMU\" card is actually measuring MMMU-Pro, which this file already tracks separately and correctly (mmmu-pro, 67.5%, self-reported, OpenAI's own GPT-5.4 mini/nano launch table). Using Vals's number under the base \"mmmu\" slug would double-count the same MMMU-Pro evaluation under two different slugs, so it was deliberately not added -- this is a genuine absence of base MMMU data for this model, not a research gap."
 }

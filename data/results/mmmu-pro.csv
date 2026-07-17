@@ -3,6 +3,7 @@ claude-3-5-haiku,46,independent,https://artificialanalysis.ai/models/claude-3-5-
 claude-opus-4-5,70.6,self-reported,https://www.vellum.ai/blog/claude-opus-4-6-benchmarks,2025-11-24,No-tools configuration; with-tools scored 73.9% per the same source.
 claude-opus-4-6,73.9,self-reported,https://www.vellum.ai/blog/claude-opus-4-6-benchmarks,2026-02-05,No-tools configuration; with-tools scored 77.3% per the same source.
 claude-sonnet-4-5,67.5,self-reported,https://www.anthropic.com/claude-sonnet-4-6-system-card,2026-02-17,"MMMU-Pro, reasoning-only (no tools) configuration, averaged over 5 runs (Figure 2.17.2.A). With an image-cropping tool, Sonnet 4.5 scored 68.9%."
+claude-sonnet-4-6,83.58,independent,https://www.vals.ai/models/anthropic_claude-sonnet-4-6,,
 claude-sonnet-4-6,74.5,self-reported,https://www.anthropic.com/claude-sonnet-4-6-system-card,2026-02-17,"MMMU-Pro, no-tools/adaptive-thinking-max-effort configuration (Section 2.17.2). With an image-cropping tool, Sonnet 4.6 scored 75.6%."
 command-a-218b,63,self-reported,https://cohere.com/blog/command-a-plus,,
 ernie-4-5-vl-424b-a47b,58.8,self-reported,https://ernie.baidu.com/blog/publication/ERNIE_Technical_Report.pdf,2025-06-29,"Table 8, thinking mode."
@@ -48,3 +49,4 @@ qwen3-6-35b-a3b,75.3,self-reported,https://huggingface.co/Qwen/Qwen3.6-35B-A3B,,
 qwen3-6-plus,78.8,self-reported,https://qwen.ai/blog?id=qwen3.6,2026-04-02,"Vision-language table, MMMU-Pro row."
 qwen3-7-plus,79,self-reported,https://qwen.ai/blog?id=qwen3.7-plus,2026-05-31,"Official Qwen launch blog, 'Multimodal Benchmarks / Multimodal Reasoning' table."
 seed-2-1-pro,81.6,self-reported,https://seed.bytedance.com/en/seed2_1,,"MMMU-Pro, no-tool configuration, same official table. With tool use scored 82.7% (Turbo: 80.1% / 82.2%)."
+step-3-7-flash,75,independent,https://artificialanalysis.ai/models/step-3-7-flash,,"Not one of the 6 originally-flagged core gaps (mmmu-pro is not a core ranking slug), but surfaced during the mmmu investigation as a genuine, citable, correctly-slugged data point worth capturing rather than discarding."

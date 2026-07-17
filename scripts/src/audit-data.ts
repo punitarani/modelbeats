@@ -13,6 +13,21 @@ import { join } from 'node:path'
 const CUTOFF = '2026-01-31' // assistant knowledge cutoff — models past this can't be externally checked
 const DIVERGENCE_PT = 4 // self-reported minus independent gap (pts) worth surfacing
 const LOW_COVERAGE = 3 // a benchmark with < this many results barely supports cross-model comparison
+const TOP_N_COVERAGE = 100 // rank cutoff for the "flagship models missing a core benchmark" check
+// Mirrors apps/web/src/lib/search.ts's CORE_RANKINGS_CANDIDATES — the columns actually surfaced
+// on the rankings table. Kept as a local literal (not imported) since this script lives outside
+// the web app's package boundary; update both lists together if the core set changes.
+const CORE_RANKINGS_SLUGS = [
+  'mmlu',
+  'gpqa',
+  'hle',
+  'math',
+  'aime',
+  'humaneval',
+  'livecodebench',
+  'swe-bench',
+  'mmmu',
+]
 
 interface CorpusResult {
   benchmarkSlug: string
@@ -253,6 +268,44 @@ export function auditCorpus(root: string): { findings: Finding[]; stats: Record<
       )
   } catch {
     /* census/shortlist optional */
+  }
+
+  // 7. top-N core-benchmark coverage — regression radar for the invisible-bar/missing-MMLU class
+  // of gap: a flagship model missing a benchmark most of its peers report. Reads the committed
+  // derived scores (rank_overall) rather than recomputing them here. Advisory only; a real,
+  // expected absence (frontier labs no longer publishing "saturated" legacy benchmarks) looks
+  // identical to a research gap from this check alone — that's why it's a `low` finding, not
+  // `high`: it flags where to look, not a defect to fix on sight.
+  try {
+    const derivedPath = join(root, '..', 'data', 'derived', 'scores.json')
+    const derived = JSON.parse(readFileSync(derivedPath, 'utf8')) as {
+      models: { slug: string; rankOverall: number | null; ranked: boolean }[]
+    }
+    const slugOf = (rel: string) => rel.slice(rel.lastIndexOf('/') + 1).replace(/\.json$/, '')
+    const resultSlugsByModelSlug = new Map<string, Set<string>>()
+    for (const m of models)
+      resultSlugsByModelSlug.set(
+        slugOf(m._rel),
+        new Set((m.results ?? []).map((r) => r.benchmarkSlug)),
+      )
+
+    const topN = derived.models.filter(
+      (m) => m.ranked && m.rankOverall != null && m.rankOverall <= TOP_N_COVERAGE,
+    )
+    for (const bench of CORE_RANKINGS_SLUGS) {
+      const missing = topN.filter((m) => !resultSlugsByModelSlug.get(m.slug)?.has(bench))
+      if (missing.length)
+        add(
+          'low',
+          'top-n-coverage',
+          `'${bench}': ${missing.length} of the top ${TOP_N_COVERAGE} rank-eligible models are missing this benchmark: ${missing
+            .slice(0, 6)
+            .map((m) => m.slug)
+            .join(', ')}${missing.length > 6 ? ' …' : ''}`,
+        )
+    }
+  } catch {
+    /* derived scores not built yet (run `bun run derive` first) — skip this check */
   }
 
   const stats = {

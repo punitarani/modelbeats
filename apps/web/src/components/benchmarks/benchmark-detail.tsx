@@ -127,7 +127,7 @@ export function BenchmarkDetail({
                 {fmtv(m.bench[benchmark.slug] as number)}
               </span>
               <InlineBar
-                pct={normPct(m.bench[benchmark.slug], benchmark.normMin, benchmark.normMax)}
+                pct={normPct(m.bench[benchmark.slug], benchmark.normMin, benchmark.normMax, 3)}
                 color={m.open ? 'var(--open)' : 'var(--closed)'}
               />
             </button>

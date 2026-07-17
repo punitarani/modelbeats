@@ -150,7 +150,15 @@
       "sourceUrl": "https://artificialanalysis.ai/models/o3-mini-high",
       "evaluatedAt": "2026-07-15",
       "notes": "IFBench (instruction following), independently measured by Artificial Analysis on the 'o3-mini (high)' model page. Not previously tracked here."
+    },
+    {
+      "benchmarkSlug": "livecodebench",
+      "score": 67.4,
+      "source": "independent",
+      "sourceUrl": "https://livecodebench.github.io/leaderboard.html",
+      "notes": "Sibling rows 'O3-Mini-2025-01-31 (Med)' at 67.4->lower and '(Low)' also present in the same table and rank below High, consistent with the corpus's existing High>Med>Low ordering for this model family on AIME/GPQA/Codeforces/SWE-bench.",
+      "evaluatedAt": "2026-07-16"
     }
   ],
-  "verificationNotes": "Existence, release date (2025-01-31), 200K context and $1.10/$4.40 pricing all confirmed via independent sources (VentureBeat, OpenAI docs mirrors). All 4 benchmark rows (AIME 87.3, GPQA 79.7, Codeforces 2130, SWE-bench 49.3) confirmed verbatim on the cited LessWrong post. No changes made."
+  "verificationNotes": "Existence, release date (2025-01-31), 200K context and $1.10/$4.40 pricing all confirmed via independent sources (VentureBeat, OpenAI docs mirrors). All 4 benchmark rows (AIME 87.3, GPQA 79.7, Codeforces 2130, SWE-bench 49.3) confirmed verbatim on the cited LessWrong post. No changes made.\n\n[2026-07-16] Added 'livecodebench' (67.4) sourced from the live LiveCodeBench leaderboard (see result notes). Checked 'mmmu' against (1) OpenAI's official o3-mini system card PDF (cdn.openai.com/o3-mini-system-card-feb10.pdf, full-text searched: no MMMU or multimodal-benchmark mention) and (2) prompthub.us's o3-mini model card, which states explicitly 'o3-mini does not support vision capabilities' -- corroborated by this corpus's own capabilities.vision=false field and independent reporting (simonwillison.net, GitHub simonw/llm#1037) that o3-mini is text-only with no image input. MMMU is a multimodal/vision-category benchmark (see corpus/benchmarks.json); a text-only model cannot be evaluated on it, so the absence is architectural, not a reporting gap -- omitted rather than guessed."
 }

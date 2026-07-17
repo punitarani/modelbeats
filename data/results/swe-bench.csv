@@ -35,12 +35,14 @@ deepseek-v4-pro-non-think,73.6,self-reported,https://huggingface.co/deepseek-ai/
 deepseek-v4-pro-think-high,79.4,self-reported,https://arxiv.org/abs/2606.19348,,"SWE-bench Verified, Think-High mode"
 deepseek-v4-pro-think-max,80.6,self-reported,https://huggingface.co/deepseek-ai/DeepSeek-V4-Pro,,"SWE-bench Verified, Pro-Max mode"
 devstral-small,46.8,self-reported,https://mistral.ai/news/devstral/,,"SWE-Bench Verified, evaluated under the OpenHands scaffold"
+doubao-seed-1-6,41.8,self-reported,https://github.com/ByteDance-Seed/seed-oss/blob/master/README.md,2025-08-20,Table also lists 48.4 for the same checkpoint under an AgentLess 4*10 scaffold; OpenHands figure used as the more standard scaffold.
 gemini-2-0-flash,51.8,self-reported,https://developers.googleblog.com/en/the-next-chapter-of-the-gemini-era-for-developers/,2024-12-11,"SWE-bench Verified, agent setting: Gemini 2.0 Flash equipped with code execution tools plus a best-of-N sampling scaffold (selecting among many sampled solutions using unit tests and the model's own judgment), per Google's Dec 2024 developer blog post 'The next chapter of the Gemini era for developers.' This is a tool-augmented agent score, not a raw single-shot completion."
 gemini-2-0-flash-lite,12.5,self-reported,https://arxiv.org/abs/2507.06261,2025-07-01,"SWE-Bench Verified, single attempt, Gemini 2.0 Flash-Lite column, Table 3 of the Gemini 2.5 Technical Report (23.1% with multiple attempts). Same later/GA-era snapshot caveat as the Aider Polyglot addition for this model."
 gemini-2-5-flash,60.4,self-reported,https://storage.googleapis.com/deepmind-media/Model-Cards/Gemini-2-5-Flash-Model-Card.pdf,2025-05-01,"SWE-Bench Verified, thinking on"
 gemini-2-5-flash-lite-non-thinking,31.6,self-reported,https://storage.googleapis.com/deepmind-media/Model-Cards/Gemini-2-5-Flash-Lite-Model-Card.pdf,2025-06-01,"SWE-Bench Verified, single attempt, (06-17), non-thinking"
 gemini-2-5-flash-lite-thinking,27.6,self-reported,https://storage.googleapis.com/deepmind-media/Model-Cards/Gemini-2-5-Flash-Lite-Model-Card.pdf,2025-06-01,"SWE-Bench Verified, single attempt, (06-17), thinking on (44.9% with multiple attempts)"
 gemini-2-5-pro,63.8,self-reported,https://blog.google/innovation-and-ai/models-and-research/google-deepmind/gemini-model-thinking-updates-march-2025/,,"SWE-bench Verified, custom agent setup"
+gemini-3-1-flash-lite,62.8,independent,https://www.vals.ai/models/google_gemini-3.1-flash-lite-preview,,"Vals AI's stated methodology confirms it uses the SWE-bench Verified subset, matching this corpus's 'swe-bench' slug definition."
 gemini-3-1-pro,80.6,self-reported,https://deepmind.google/models/gemini/pro/,2026-02-19,SWE-bench Verified
 gemini-3-flash,78,self-reported,https://storage.googleapis.com/deepmind-media/Model-Cards/Gemini-3-Flash-Model-Card.pdf,2025-12-01,"SWE-Bench Verified, single attempt"
 gemini-3-pro,76.2,self-reported,https://storage.googleapis.com/deepmind-media/Model-Cards/Gemini-3-Pro-Model-Card.pdf,2025-11-01,"SWE-Bench Verified, single attempt"
@@ -49,6 +51,8 @@ glm-4-5-355b-a32b,64.2,self-reported,https://arxiv.org/abs/2508.06471,,"SWE-benc
 glm-4-5-air-106b-a12b,57.6,independent,https://llm-stats.com/models/compare/glm-4.5-vs-glm-4.5-air,2026-07-12,SWE-bench Verified
 glm-4-6,68,self-reported,https://cirra.ai/articles/glm-4-6-vs-claude-sonnet-comparison,,SWE-bench Verified
 glm-5,77.8,self-reported,https://docs.z.ai/guides/llm/glm-5,,SWE-bench Verified; Z.ai's own claimed 'leading open-model score' at launch
+glm-5-1,76.4,independent,https://www.vals.ai/models/zai_glm-5.1,2026-07-16,
+glm-5-2-max,82.8,independent,https://www.vals.ai/benchmarks/swebench,2026-07-16,"Page titled 'SWE-bench Verified'. Verified via the page's embedded JSON payload for model id zai/glm-5.2 (accuracy 82.8, stderr 1.689, reasoning_effort='max'). Distinct from the existing self-reported SWE-bench Pro (62.1) already in this file under the separate 'swe-bench-pro' slug."
 gpt-4-1,54.6,self-reported,https://futureagi.com/blog/gpt-4-1-benchmarks-2025/,2025-04-01,"SWE-bench Verified [relabeled self-reported: aggregator/mirror relay of a vendor figure, not an independent re-measurement] [Corrected during full-corpus audit: OpenAI's own GPT-4.1 launch benchmark table reports 54.6% on SWE-bench Verified, not the rounded 55% currently recorded. Confirmed the precise 54.6% figure independently across multiple secondary write-ups that quote OpenAI's official table verbatim (futureagi.com, infoq.com, docsbot.ai's GPT-4.1-vs-mini/nano comparison pages, helicone.ai's developer guide) — all state 54.6%, never 54.6 rounded to]"
 gpt-4-1-mini,23.6,self-reported,https://docsbot.ai/models/gpt-4-1-mini,2025-04-01,"SWE-bench Verified [relabeled self-reported: aggregator/mirror relay of a vendor figure, not an independent re-measurement]"
 gpt-4-5,38,independent,https://www.helicone.ai/blog/gpt-4.5-benchmarks,2025-02-01,SWE-bench Verified
@@ -57,13 +61,17 @@ gpt-5,74.9,self-reported,https://openai.com/index/introducing-gpt-5-for-develope
 gpt-5-1,76.3,independent,https://claude5.com/news/gpt-5-1-performance-review-benchmarks-november-2025,2025-11-19,"SWE-bench Verified, Thinking mode; literally confirmed on cited page"
 gpt-5-2,80,self-reported,https://openai.com/index/introducing-gpt-5-2/,,"SWE-bench Verified, GPT-5.2 Thinking; confirmed"
 gpt-5-4,76.9,independent,https://themodelbeat.com/models/gpt-5-4,,"SWE-bench Verified (the base 'swe-bench' slug -- distinct from the harder SWE-Bench Pro figure already tracked here under swe-bench-pro) from Epoch AI's independent evaluation of GPT-5.4, relayed via themodelbeat.com."
+gpt-5-4-mini,73,independent,https://www.vals.ai/models/openai_gpt-5.4-mini-2026-03-17,2026-07-14,Same model-identity confirmation as the livecodebench addition.
 gpt-5-codex,74.5,independent,https://www.webpronews.com/openais-gpt-5-codex-hits-74-5-on-swe-bench-boosts-coding-efficiency/,2025-09-15,"SWE-bench Verified, reported at launch"
+gpt-5-mini,60.8,independent,https://www.vals.ai/models/openai_gpt-5-mini-2025-08-07,2026-07-14,Dedicated Vals SWE-bench Verified methodology page last updated 7/14/2026; corroborating figure at https://epoch.ai/models/gpt-5-mini.
 gpt-oss-120b-high,62.4,self-reported,https://arxiv.org/abs/2508.10925,2025-08-05,"SWE-bench Verified, high reasoning effort"
 gpt-oss-120b-low,47.9,self-reported,https://arxiv.org/abs/2508.10925,2025-08-05,"SWE-bench Verified, low reasoning effort"
 gpt-oss-120b-medium,52.6,self-reported,https://arxiv.org/abs/2508.10925,2025-08-05,"SWE-bench Verified, medium reasoning effort"
 gpt-oss-20b-high,60.7,self-reported,https://arxiv.org/abs/2508.10925,2025-08-05,"SWE-bench Verified, high reasoning effort"
 gpt-oss-20b-low,37.4,self-reported,https://arxiv.org/abs/2508.10925,2025-08-05,"SWE-bench Verified, low reasoning effort"
 gpt-oss-20b-medium,53.2,self-reported,https://arxiv.org/abs/2508.10925,2025-08-05,"SWE-bench Verified, medium reasoning effort"
+grok-4,57.8,independent,https://www.vals.ai/models/grok_grok-4-0709,,
+grok-4-3-high,71.4,independent,https://www.vals.ai/models/grok_grok-4.3,,
 grok-4-5,86.6,independent,https://www.vals.ai/models/grok_grok-4.5,,"Vals AI's 'SWE-bench' benchmark; confirmed via vals.ai/benchmarks/swebench (page titled 'SWE-bench Verified') that this is the Verified split, matching this corpus's convention of filing SWE-bench Verified under the base 'swe-bench' slug. Ranked 4/69. Distinct from -- and notably higher than -- the SWE-Bench Pro figure (64.7%) already in this record; Verified and Pro are different task pools of different difficulty, not the same benchmark."
 hy3,78,self-reported,https://huggingface.co/tencent/Hy3,,SWE-bench Verified; also confirmed via HF's structured Evaluation-results widget (SWE-bench/SWE-bench_Verified = 78) and the model card's benchmark-appendix image
 inkling,77.6,self-reported,https://thinkingmachines.ai/model-card/inkling/,2026-07-15,SWE-bench Verified.
