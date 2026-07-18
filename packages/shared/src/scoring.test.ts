@@ -7,6 +7,7 @@ import {
   RADAR_AXES,
   radarVector,
   rankByIndex,
+  selectRadarAxes,
   toIndexScale,
 } from './scoring'
 
@@ -60,6 +61,30 @@ describe('categoryFractions + radar', () => {
     const v = radarVector({ arena: 1335 }, ALL)
     expect(v[0]).toBeCloseTo(0.5, 10) // PREF
     expect(v.slice(1)).toEqual([0, 0, 0, 0, 0])
+  })
+})
+
+describe('selectRadarAxes — adaptive radar axes (D24)', () => {
+  it('keeps only axes at least one model covers, in canonical order', () => {
+    // GPT-5.6-like (reasoning/coding/math/agents) + Kimi-K3-like (reasoning/coding/agents):
+    // union drops PREF and KNOW, which neither model has.
+    const axes = selectRadarAxes([
+      { reasoning: 91.1, coding: 91, math: 94.5, agents: 91.9 },
+      { reasoning: 89.6, coding: 99.2, agents: 88 },
+    ])
+    expect(axes.map((a) => a.key)).toEqual(['REASON', 'CODE', 'MATH', 'AGENT'])
+  })
+  it('treats null and undefined identically as "no data"', () => {
+    const axes = selectRadarAxes([{ reasoning: 80, coding: null, math: undefined }])
+    expect(axes.map((a) => a.key)).toEqual(['REASON'])
+  })
+  it('is the union across models, not the intersection', () => {
+    const axes = selectRadarAxes([{ math: 70 }, { coding: 60 }])
+    expect(axes.map((a) => a.key)).toEqual(['CODE', 'MATH']) // canonical order, both kept
+  })
+  it('returns no axes when nothing is covered', () => {
+    expect(selectRadarAxes([{}, { reasoning: null }])).toEqual([])
+    expect(selectRadarAxes([])).toEqual([])
   })
 })
 

@@ -142,28 +142,50 @@ export function layoutScatterLabels(inputs: ScatterLabelInput[]): ScatterLabelPl
   return out
 }
 
-/** Radar geometry (viewBox 280×260): center (140,126), r 92, six axes from −π/2. */
+/** Radar geometry (viewBox 280×260): center (140,126), r 92. `axes` is the design's default count
+ *  (6); the compare radar passes a live `axisCount` so covered axes redistribute evenly (D24). */
 export const RADAR = { cx: 140, cy: 126, r: 92, axes: 6, rings: [0.25, 0.5, 0.75, 1] } as const
 
-export function radarPoint(axisIndex: number, value: number): { x: number; y: number } {
-  const ang = -Math.PI / 2 + axisIndex * (Math.PI / 3)
+/** Angle for axis `i` of `axisCount`, starting straight up and going clockwise. */
+export function radarAngle(axisIndex: number, axisCount: number = RADAR.axes): number {
+  return -Math.PI / 2 + axisIndex * ((2 * Math.PI) / axisCount)
+}
+
+export function radarPoint(
+  axisIndex: number,
+  value: number,
+  axisCount: number = RADAR.axes,
+): { x: number; y: number } {
+  const ang = radarAngle(axisIndex, axisCount)
   return {
     x: RADAR.cx + Math.cos(ang) * RADAR.r * value,
     y: RADAR.cy + Math.sin(ang) * RADAR.r * value,
   }
 }
 
-export function radarPolygonPoints(values: number[], floor = 0.03): string {
+/**
+ * Polygon path for a series over `axisCount` evenly-spaced axes. `null` values are UNTESTED and are
+ * omitted from the path entirely (D24) — never floored to a visible dent — so a gap can't be misread
+ * as a weakness; a real `0` still draws a vertex at the center (a measured zero is honest data).
+ * `values[i]` maps to axis `i` regardless of skips, so positions stay correct.
+ */
+export function radarPolygonPoints(
+  values: (number | null)[],
+  axisCount = values.length,
+  floor = 0,
+): string {
   return values
     .map((v, i) => {
-      const p = radarPoint(i, Math.max(floor, v))
+      if (v == null) return null
+      const p = radarPoint(i, Math.max(floor, v), axisCount)
       return `${p.x.toFixed(1)},${p.y.toFixed(1)}`
     })
+    .filter((p): p is string => p != null)
     .join(' ')
 }
 
-export function radarRings(): string[] {
-  return RADAR.rings.map((rv) => radarPolygonPoints(new Array(RADAR.axes).fill(rv), 0))
+export function radarRings(axisCount: number = RADAR.axes): string[] {
+  return RADAR.rings.map((rv) => radarPolygonPoints(new Array(axisCount).fill(rv), axisCount, 0))
 }
 
 export interface RadarAxisMeta {
@@ -171,20 +193,25 @@ export interface RadarAxisMeta {
   y2: string
   lx: string
   ly: string
+  /** Label anchor point (viewBox coords), for positioning an HTML hover tooltip (D24). */
+  lxNum: number
+  lyNum: number
   anchor: 'start' | 'middle' | 'end'
 }
 
-export function radarAxisMeta(axisIndex: number): RadarAxisMeta {
-  const ang = -Math.PI / 2 + axisIndex * (Math.PI / 3)
-  const edge = radarPoint(axisIndex, 1)
+export function radarAxisMeta(axisIndex: number, axisCount: number = RADAR.axes): RadarAxisMeta {
+  const ang = radarAngle(axisIndex, axisCount)
+  const edge = radarPoint(axisIndex, 1, axisCount)
   const lx = RADAR.cx + Math.cos(ang) * (RADAR.r + 14)
-  const ly = RADAR.cy + Math.sin(ang) * (RADAR.r + 14)
+  const ly = RADAR.cy + Math.sin(ang) * (RADAR.r + 14) + 3
   const cos = Math.cos(ang)
   return {
     x2: edge.x.toFixed(1),
     y2: edge.y.toFixed(1),
     lx: lx.toFixed(1),
-    ly: (ly + 3).toFixed(1),
+    ly: ly.toFixed(1),
+    lxNum: lx,
+    lyNum: ly,
     anchor: Math.abs(cos) < 0.3 ? 'middle' : cos > 0 ? 'start' : 'end',
   }
 }

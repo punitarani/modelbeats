@@ -101,6 +101,22 @@ export const RADAR_AXES = [
   { key: 'AGENT', label: 'Agents', category: 'agents' },
 ] as const satisfies readonly { key: string; label: string; category: BenchmarkCategory }[]
 
+export type RadarAxis = (typeof RADAR_AXES)[number]
+
+/** Per-model category values keyed by category (null/undefined = untested). */
+export type CategoryIdx = Partial<Record<BenchmarkCategory, number | null>>
+
+/**
+ * Adaptive radar axes (D24): the axes at least one of the given models has data for, in canonical
+ * {@link RADAR_AXES} order. Charting only covered axes — the UNION across the compared models —
+ * keeps the radar from collapsing untested axes to the centre (where "untested" would be
+ * indistinguishable from "scored zero"); an axis no compared model covers is dropped entirely
+ * rather than drawn as a dent. Pure so the compare view and its tests share one definition.
+ */
+export function selectRadarAxes(categoryIdxs: readonly CategoryIdx[]): RadarAxis[] {
+  return RADAR_AXES.filter((a) => categoryIdxs.some((ci) => ci[a.category] != null))
+}
+
 /** Radar values in axis order; axes with no data render at 0 (design). */
 export function radarVector(scores: BenchScores, benchmarks: BenchmarkBounds[]): number[] {
   const fractions = categoryFractions(scores, benchmarks)

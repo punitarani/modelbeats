@@ -1,10 +1,12 @@
 import {
+  CATEGORY_LABELS,
   type CatalogSnapshot,
   fmtCtx,
   fmtDate,
   fmtScore,
   RADAR_AXES,
   type SnapshotModel,
+  selectRadarAxes,
 } from '@rankedmodel/shared'
 import { Link } from '@tanstack/react-router'
 import { useState } from 'react'
@@ -83,6 +85,42 @@ export function CompareScreen({
   const benchRows = catalog.benchmarks.filter((b) =>
     active.some(({ m }) => m.bench[b.slug] != null),
   )
+
+  // Adaptive capability radar (D24): chart only the categories at least one selected model covers,
+  // so an untested axis is dropped rather than collapsed to a false zero. `null` values flow through
+  // to the radar untouched (untested), never coerced to 0.
+  const radarAxes = selectRadarAxes(active.map(({ m }) => m.categoryIdx))
+  const radarSeries = active.map(({ m, i }) => ({
+    color: SLOT_COLORS[i],
+    values: radarAxes.map((a) => {
+      const v = m.categoryIdx[a.category]
+      return v == null ? null : v / 100
+    }),
+  }))
+  const radarTooltips = radarAxes.map((a) => ({
+    title: CATEGORY_LABELS[a.category],
+    rows: active.map(({ m, i }) => {
+      const parts = catalog.benchmarks
+        .filter((b) => b.category === a.category)
+        .map((b) => {
+          const v = m.bench[b.slug]
+          return v == null ? null : `${b.name} ${fmtScore(v, b.unit)}`
+        })
+        .filter((s): s is string => s != null)
+      return {
+        color: SLOT_COLORS[i],
+        name: m.name,
+        text: parts.length ? parts.join(' · ') : 'Untested',
+      }
+    }),
+  }))
+  // Categories no selected model covers — hidden from the radar, named so their absence is explicit.
+  const hiddenAxes = active.length
+    ? RADAR_AXES.filter((a) => active.every(({ m }) => m.categoryIdx[a.category] == null))
+    : []
+  const coverageOf = (m: SnapshotModel) =>
+    RADAR_AXES.filter((a) => m.categoryIdx[a.category] != null).length
+
   const [saveName, setSaveName] = useState('')
   const [savedFlash, setSavedFlash] = useState(false)
 
@@ -257,22 +295,59 @@ export function CompareScreen({
           </div>
         </div>
 
-        {/* radar */}
+        {/* radar — honest + adaptive capability profile (D24) */}
         <div className="rounded-[10px] border border-border bg-card p-4 lg:sticky lg:top-[63px]">
           <div className="text-[13px] font-semibold">Capability profile</div>
-          <div className="mt-px text-[11px] text-mut">Normalized against the tracked field</div>
-          <div data-testid="compare-radar">
-            <Radar
-              series={active.map(({ m, i }) => ({
-                values: RADAR_AXES.map((a) => (m.categoryIdx[a.category] ?? 0) / 100),
-                color: SLOT_COLORS[i],
-              }))}
-            />
+          <div className="mt-px text-[11px] text-mut">
+            Normalized against the tracked field · only categories a selected model was tested on
           </div>
-          {active.some(({ m }) => RADAR_AXES.some((a) => m.categoryIdx[a.category] == null)) && (
-            <div className="mt-1 text-[10px] leading-snug text-dim">
-              An axis reads 0 where a model has no benchmark in that category — that's untested, not
-              a zero score. See the benchmark table for exact coverage.
+          <div data-testid="compare-radar">
+            {active.length === 0 ? (
+              <div className="py-8 text-center text-[11.5px] text-mut">
+                Select a model to see its capability profile.
+              </div>
+            ) : radarAxes.length >= 3 ? (
+              <Radar axes={radarAxes} series={radarSeries} tooltips={radarTooltips} />
+            ) : (
+              <div className="mt-2 flex flex-col gap-2" data-testid="compare-radar-fallback">
+                <div className="text-[10px] leading-snug text-dim">
+                  Too few tested categories for a radar — showing coverage directly.
+                </div>
+                {RADAR_AXES.map((a) => (
+                  <div key={a.key} className="grid grid-cols-[64px_1fr] items-start gap-2">
+                    <span className="mt-[2px] font-mono text-[10px] text-mut">{a.key}</span>
+                    <div className="flex flex-col gap-1">
+                      {active.map(({ m, i }) => {
+                        const v = m.categoryIdx[a.category]
+                        return (
+                          <div key={m.slug} className="flex items-center gap-1.5">
+                            {v == null ? (
+                              <span className="text-[10px] text-dim">untested</span>
+                            ) : (
+                              <>
+                                <InlineBar
+                                  pct={v}
+                                  color={SLOT_COLORS[i]}
+                                  className="max-w-[120px]"
+                                />
+                                <span className="font-mono text-[10px] text-mut">
+                                  {v.toFixed(0)}
+                                </span>
+                              </>
+                            )}
+                          </div>
+                        )
+                      })}
+                    </div>
+                  </div>
+                ))}
+              </div>
+            )}
+          </div>
+          {radarAxes.length >= 3 && hiddenAxes.length > 0 && (
+            <div className="mt-1.5 text-[10px] leading-snug text-dim">
+              {hiddenAxes.map((a) => a.key).join(' · ')} hidden — untested by{' '}
+              {active.length > 1 ? 'all selected models' : 'this model'}, so not charted.
             </div>
           )}
           <div className="mt-2 flex flex-col gap-[5px]" data-testid="compare-legend">
@@ -283,6 +358,12 @@ export function CompareScreen({
                   style={{ background: SLOT_COLORS[i] }}
                 />
                 <span className="font-semibold">{m.name}</span>
+                <span
+                  className="font-mono text-[10px] text-dim"
+                  title={`Tested on ${coverageOf(m)} of 6 capability categories`}
+                >
+                  {coverageOf(m)}/6
+                </span>
                 <span className="ml-auto font-mono text-[11px] text-mut">{m.index.toFixed(1)}</span>
               </div>
             ))}

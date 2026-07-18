@@ -10,7 +10,11 @@ test.describe('compare', () => {
     await expect(legend).toContainText('2495.0')
     await expect(legend).toContainText('DeepSeek-V3.1 (Thinking)')
     await expect(legend).toContainText('1903.9')
-    // 4 rings + 2 series polygons
+    // honest coverage badges (D24): GPT-5.2 has no PREF/KNOW → 4/6; DeepSeek adds KNOW → 5/6
+    await expect(legend).toContainText('4/6')
+    await expect(legend).toContainText('5/6')
+    // adaptive radar (D24): union of covered axes = KNOW/REASON/CODE/MATH/AGENT (PREF hidden),
+    // so 4 rings + 2 series polygons. Untested axes are omitted from a series' path, never drawn at 0.
     await expect(page.getByTestId('compare-radar').locator('polygon')).toHaveCount(6)
     // the benchmarks card only shows rows a compared model actually scored — no wall of dashes
     await expect(page.getByText('No shared benchmark results')).toHaveCount(0)

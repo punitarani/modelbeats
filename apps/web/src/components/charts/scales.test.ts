@@ -151,8 +151,8 @@ describe('layoutScatterLabels — declutter overlapping labels (D23)', () => {
   })
 })
 
-describe('radar geometry (C6)', () => {
-  it('first axis points straight up from center', () => {
+describe('radar geometry (C6, D24 adaptive N-axis)', () => {
+  it('first axis points straight up from center (default 6 axes)', () => {
     const meta = radarAxisMeta(0)
     expect(Number(meta.x2)).toBeCloseTo(140, 1)
     expect(Number(meta.y2)).toBeCloseTo(126 - 92, 1)
@@ -162,14 +162,24 @@ describe('radar geometry (C6)', () => {
     expect(radarAxisMeta(1).anchor).toBe('start') // 30° east
     expect(radarAxisMeta(5).anchor).toBe('end') // west
   })
-  it('draws four rings of six points each', () => {
-    const rings = radarRings()
-    expect(rings).toHaveLength(4)
-    expect(rings[0]?.split(' ')).toHaveLength(6)
+  it('rings carry N points per ring, matching the axis count', () => {
+    expect(radarRings()).toHaveLength(4)
+    expect(radarRings()[0]?.split(' ')).toHaveLength(6) // default 6
+    expect(radarRings(4)[0]?.split(' ')).toHaveLength(4) // adaptive quad
+    expect(radarRings(3)[0]?.split(' ')).toHaveLength(3) // triangle
   })
-  it('floors polygon values at 0.03 so zero-data axes stay visible', () => {
-    const pts = radarPolygonPoints([0, 0, 0, 0, 0, 0])
-    expect(pts.split(' ')[0]).not.toBe('140.0,126.0')
+  it('redistributes axes evenly — with 4 axes, axis 1 is due east', () => {
+    const east = radarAxisMeta(1, 4)
+    expect(Number(east.x2)).toBeCloseTo(140 + 92, 1)
+    expect(Number(east.y2)).toBeCloseTo(126, 1)
+  })
+  it('skips null (untested) vertices instead of collapsing them to the center', () => {
+    const pts = radarPolygonPoints([0.8, null, 0.6, 0.9], 4)
+    expect(pts.split(' ')).toHaveLength(3) // the untested axis is omitted from the path
+  })
+  it('draws a real zero at the center — a measured 0 is not the same as untested', () => {
+    const pts = radarPolygonPoints([0, 0.5, 0.5], 3)
+    expect(pts.split(' ')[0]).toBe('140.0,126.0')
   })
 })
 

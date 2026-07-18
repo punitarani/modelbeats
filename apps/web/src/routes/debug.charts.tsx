@@ -40,9 +40,18 @@ function ChartsGallery() {
       </Card>
       <Card title="Capability radar">
         <Radar
+          axes={[
+            { key: 'PREF' },
+            { key: 'KNOW' },
+            { key: 'REASON' },
+            { key: 'CODE' },
+            { key: 'MATH' },
+            { key: 'AGENT' },
+          ]}
           series={[
             { values: [0.97, 0.89, 0.78, 0.84, 0.99, 0.87], color: 'var(--acc)' },
-            { values: [0.9, 0.87, 0.75, 0.79, 0.97, 0.75], color: 'var(--open)' },
+            // a real gap: this model is untested on MATH — shown as a rim marker, not a false 0
+            { values: [0.9, 0.87, 0.75, 0.79, null, 0.75], color: 'var(--open)' },
           ]}
         />
       </Card>
