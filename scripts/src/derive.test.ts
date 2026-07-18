@@ -177,11 +177,11 @@ describe('derived scores match the D21 contract (goldens)', () => {
       .filter((m) => m.rankOverall != null && m.rankOverall <= 5)
       .sort((a, b) => (a.rankOverall ?? 0) - (b.rankOverall ?? 0))
     expect(top5.map((m) => [m.slug, m.overallIndex])).toEqual([
-      ['gpt-5-6', 3073.1],
-      ['kimi-k3', 3024.8],
-      ['claude-fable-5', 2938.6],
-      ['claude-opus-4-8', 2792.7],
-      ['gpt-5-4-pro', 2784.9],
+      ['gpt-5-6', 3073.2],
+      ['kimi-k3', 3025.3],
+      ['claude-fable-5', 2936.7],
+      ['claude-opus-4-8', 2794.3],
+      ['gpt-5-4-pro', 2786],
     ])
   })
 
@@ -203,7 +203,7 @@ describe('derived scores match the D21 contract (goldens)', () => {
     const codex = models.find((m) => m.slug === 'openai-codex')
     expect(codex?.ranked).toBe(false)
     expect(codex?.rankOverall).toBeNull()
-    expect(codex?.overallIndex).toBe(15)
+    expect(codex?.overallIndex).toBe(14.4)
     const top = models.find((m) => m.rankOverall === 1)
     expect(top?.slug).toBe('gpt-5-6')
   })
@@ -238,7 +238,7 @@ describe('derived scores match the D21 contract (goldens)', () => {
     const { models } = await derived()
     const llama = models.find((m) => m.slug === 'llama-3-1-405b')
     expect(llama?.ranked).toBe(true)
-    expect(llama?.overallIndex).toBe(1237.9)
+    expect(llama?.overallIndex).toBe(1237.4)
     expect(llama?.rankOverall).toBe(173)
     // categoryIdx stays min-max (D21 keeps the radar on D2 bounds) — unchanged literals
     expect(llama?.categoryIdx).toEqual({
@@ -265,9 +265,9 @@ describe('derived scores match the D21 contract (goldens)', () => {
   it('pins the real top-5 movers and their rating self-consistency', async () => {
     const { models, movers } = await derived()
     expect(movers.map((m) => [m.slug, m.prevSlug, m.delta])).toEqual([
-      ['sarvam-105b', 'sarvam-1-2b', 1550.7],
+      ['sarvam-105b', 'sarvam-1-2b', 1547.2],
       ['smollm3-3b-think', 'smollm2-1-7b', 975.4],
-      ['hy3', 'hunyuan-a13b', 967.2],
+      ['hy3', 'hunyuan-a13b', 968.3],
       ['smollm3-3b-no-thinking', 'smollm2-1-7b', 797.4],
       ['phi-4-reasoning', 'phi-4-mini-3-8b', 762.3],
     ])

@@ -145,7 +145,23 @@
       "sourceUrl": "https://x.com/arcprize/status/1869551373848908029",
       "evaluatedAt": "2024-12-19",
       "notes": "ARC-AGI-1 Semi-Private Eval (100 tasks), full o1 model (post-Dec-5 launch, not o1-preview/o1-mini), 'High' compute setting: 32% ($3.8/task). ARC Prize also verified Low: 25% and Medium: 31% for the same full o1 model at lower compute; using the High figure since the corpus entry represents the model's best/default configuration (isBestConfig=true) and does not split by reasoning-effort tier. Independently run and verified by ARC Prize (not an OpenAI self-report), corroborated by François Chollet's tweet citing the same '25-32%' range for o1 (distinct from the separately-reported o1-preview scores of 21.2%/18% already superseded). Not currently tracked in the corpus entry (which has no arc-agi-1 result at all)."
+    },
+    {
+      "benchmarkSlug": "hle",
+      "score": 8,
+      "source": "independent",
+      "sourceUrl": "https://arxiv.org/abs/2501.14249",
+      "notes": "Verified via direct PDF fetch and page-image read of the paper's Table 1, which lists o1 at 8.0% accuracy / 83% RMS calibration error, evaluated on the full multi-modal HLE set (unlike text-only-subset models marked with * in the same table).",
+      "evaluatedAt": "2025-01-24"
+    },
+    {
+      "benchmarkSlug": "livecodebench",
+      "score": 63.4,
+      "source": "independent",
+      "sourceUrl": "https://github.com/deepseek-ai/DeepSeek-R1/blob/main/README.md",
+      "notes": "Verified via raw GitHub fetch of the README benchmark table; confirmed the header row maps the 63.4 value to the 'OpenAI o1-1217' column (adjacent to DeepSeek R1's own 65.9), distinguishing it from the o1-mini column's 53.8.",
+      "evaluatedAt": "2025-01-20"
     }
   ],
-  "verificationNotes": "Full o1 launch on 2024-12-05 (alongside o1-pro/ChatGPT Pro) confirmed via multiple independent sources (Wikipedia, InfoQ, OpenAI o1 system card PDF dated 2024-12-05). AIME 74.3, GPQA 78, SWE-bench 48.9, Codeforces 1891, MMMU 77.6 all confirmed by direct fetch of datacamp.com/blog/o3-openai, matching exactly. Scheduled shutdown 2026-10-23 confirmed via OpenAI deprecation coverage (TheRouter.ai, OpenAI community deprecation notice) - the model is still real/active as of today (2026-07-12). No changes made."
+  "verificationNotes": "Full o1 launch on 2024-12-05 (alongside o1-pro/ChatGPT Pro) confirmed via multiple independent sources (Wikipedia, InfoQ, OpenAI o1 system card PDF dated 2024-12-05). AIME 74.3, GPQA 78, SWE-bench 48.9, Codeforces 1891, MMMU 77.6 all confirmed by direct fetch of datacamp.com/blog/o3-openai, matching exactly. Scheduled shutdown 2026-10-23 confirmed via OpenAI deprecation coverage (TheRouter.ai, OpenAI community deprecation notice) - the model is still real/active as of today (2026-07-12). No changes made.\n\nRound-22 gap chase (hle, livecodebench): HLE confirmed at 8.0% via direct PDF fetch of the official Humanity's Last Exam paper (arXiv:2501.14249, Table 1) -- independent academic benchmark, o1 evaluated on full multi-modal set. LiveCodeBench confirmed at 63.4% (Pass@1-COT) via DeepSeek-R1's official README/tech-report comparison table (arXiv:2501.12948, github.com/deepseek-ai/DeepSeek-R1), which cites 'OpenAI o1-1217' as a baseline -- an independent third-party (DeepSeek) evaluation of OpenAI's model, not an OpenAI self-report. Both current-generation benchmarks were genuinely missing from the corpus entry and are now closed with citable, verified numbers."
 }
