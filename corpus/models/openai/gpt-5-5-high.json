@@ -63,10 +63,10 @@
     },
     {
       "benchmarkSlug": "gdpval-aa",
-      "score": 48.6,
+      "score": 1472,
       "source": "independent",
       "sourceUrl": "https://artificialanalysis.ai/models/gpt-5-5-high",
-      "notes": "GDPval-AA v2, normalized score (gdpvalNormalized field), from Artificial Analysis's per-model data for 'GPT-5.5 (high)'."
+      "notes": "GDPval-AA v2, normalized score (gdpvalNormalized field), from Artificial Analysis's per-model data for 'GPT-5.5 (high)'. [SCALE FIX 2026-07-17: corrected from a normalized percentage (48.6%) to this taxonomy's actual raw 0-2000-point Elo scale (matching the majority convention used by e.g. Gemini 3.1 Pro=1317, Claude Fable 5=1932). Converted via Artificial Analysis's own documented formula, normalized=(Elo-500)/2000, i.e. raw=48.6*20+500=1472. This formula is independently cross-validated against Kimi K2.7 Code's directly-disclosed embedded-JSON raw Elo (1186.79 for a displayed 34%, matching the formula almost exactly).]"
     },
     {
       "benchmarkSlug": "mmmu-pro",

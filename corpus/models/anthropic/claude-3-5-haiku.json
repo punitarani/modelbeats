@@ -174,10 +174,10 @@
     },
     {
       "benchmarkSlug": "gdpval-aa",
-      "score": 0,
+      "score": 500,
       "source": "independent",
       "sourceUrl": "https://artificialanalysis.ai/models/claude-3-5-haiku",
-      "notes": "GDPval-AA v2 (Artificial Analysis's own reproduction of OpenAI's GDPval, agentic real-world work tasks) score of 3%, from Artificial Analysis's live per-model Intelligence Breakdown chart. Mapped to the 'gdpval-aa' taxonomy slug (distinct from plain 'gdpval') since AA's benchmark is explicitly named 'GDPval-AA'. Not previously tracked for this model. [score corrected during round-6 completeness verify: proposed 3 -> 0]"
+      "notes": "GDPval-AA v2 (Artificial Analysis's own reproduction of OpenAI's GDPval, agentic real-world work tasks) score of 3%, from Artificial Analysis's live per-model Intelligence Breakdown chart. Mapped to the 'gdpval-aa' taxonomy slug (distinct from plain 'gdpval') since AA's benchmark is explicitly named 'GDPval-AA'. Not previously tracked for this model. [score corrected during round-6 completeness verify: proposed 3 -> 0] [SCALE FIX 2026-07-17: corrected from a normalized percentage (0%) to this taxonomy's actual raw 0-2000-point Elo scale. Converted via raw=0*20+500=500, but flagged as a floor approximation: AA's UI appears to clip negative-normalized scores to a displayed '0%', so the true raw Elo may be somewhat below 500 (confirmed by 3 sibling entries in this same fix batch whose documented pre-correction raw values were verified below 500 despite also displaying '0%'). Left at 500 pending a more precise reading.]"
     },
     {
       "benchmarkSlug": "arena",

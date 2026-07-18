@@ -124,11 +124,11 @@
     },
     {
       "benchmarkSlug": "gdpval-aa",
-      "score": 0,
+      "score": 397,
       "source": "independent",
       "sourceUrl": "https://artificialanalysis.ai/models/gpt-oss-120b-low",
       "evaluatedAt": "2026-07-15",
-      "notes": "GDPval-AA v2, independently measured by Artificial Analysis on the dedicated 'gpt-oss-120b (low)' model page. Score is a genuine floor result (0%, tied with several other small open-weight models on this real-world-work-tasks eval) -- confirmed by exact rank-position match against AA's ranked chart, not a placeholder. Not previously tracked on this catalog entry. [score corrected during round-6 completeness verify: proposed 0 -> 397] [score corrected during round-12 accuracy re-verify: 397 -> 0, per verifier: Live-rendered the artificialanalysis.ai/models/gpt-oss-120b-low page via browser and read the GDPval-AA v2 chart directly: gpt-oss-120b (low) is listed at 0% (tied bottom with K2 Think V2, Qwen3 Next 80B A3B, Llama 4 Scout, Llama 3.3 70B). The correc]"
+      "notes": "GDPval-AA v2, independently measured by Artificial Analysis on the dedicated 'gpt-oss-120b (low)' model page. Score is a genuine floor result (0%, tied with several other small open-weight models on this real-world-work-tasks eval) -- confirmed by exact rank-position match against AA's ranked chart, not a placeholder. Not previously tracked on this catalog entry. [score corrected during round-6 completeness verify: proposed 0 -> 397] [score corrected during round-12 accuracy re-verify: 397 -> 0, per verifier: Live-rendered the artificialanalysis.ai/models/gpt-oss-120b-low page via browser and read the GDPval-AA v2 chart directly: gpt-oss-120b (low) is listed at 0% (tied bottom with K2 Think V2, Qwen3 Next 80B A3B, Llama 4 Scout, Llama 3.3 70B). The correc] [SCALE FIX 2026-07-17: corrected from a normalized percentage (0%) back to this taxonomy's actual raw 0-2000-point Elo scale. This model's own note already documents an earlier round-6 finding of raw=397 that a later round-12 adversarial re-verify wrongly 'corrected' back down to a percentage, not realizing this benchmark's dominant corpus convention is raw Elo, not a 0-100 normalized score. Restoring the original round-6 raw reading.]"
     },
     {
       "benchmarkSlug": "terminal-bench-2",

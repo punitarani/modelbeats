@@ -123,11 +123,11 @@
     },
     {
       "benchmarkSlug": "gdpval-aa",
-      "score": 22,
+      "score": 940,
       "source": "independent",
       "sourceUrl": "https://artificialanalysis.ai/models/gpt-5-mini",
       "evaluatedAt": "2026-07-14",
-      "notes": "GDPval-AA v2 ('agentic real-world work tasks', normalized as (Elo-500)/2000), independently measured by Artificial Analysis on GPT-5 mini (high)'s live model page as one of the 9 components of their Intelligence Index v4.1. No OpenAI-published GDPval figure exists for this model, so this AA measurement is the only available data point."
+      "notes": "GDPval-AA v2 ('agentic real-world work tasks', normalized as (Elo-500)/2000), independently measured by Artificial Analysis on GPT-5 mini (high)'s live model page as one of the 9 components of their Intelligence Index v4.1. No OpenAI-published GDPval figure exists for this model, so this AA measurement is the only available data point. [SCALE FIX 2026-07-17: corrected from a normalized percentage (22%) to this taxonomy's actual raw 0-2000-point Elo scale (matching the majority convention used by e.g. Gemini 3.1 Pro=1317, Claude Fable 5=1932). Converted via Artificial Analysis's own documented formula, normalized=(Elo-500)/2000, i.e. raw=22*20+500=940. This formula is independently cross-validated against Kimi K2.7 Code's directly-disclosed embedded-JSON raw Elo (1186.79 for a displayed 34%, matching the formula almost exactly).]"
     },
     {
       "benchmarkSlug": "ifbench",

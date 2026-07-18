@@ -101,11 +101,11 @@
     },
     {
       "benchmarkSlug": "gdpval-aa",
-      "score": 38,
+      "score": 1260,
       "source": "independent",
       "sourceUrl": "https://artificialanalysis.ai/models/glm-5-1",
       "evaluatedAt": "2026-07-14",
-      "notes": "GDPval-AA v2, Artificial Analysis's independent Elo-based real-world-work-task eval (normalized as (Elo-500)/2000), one of 9 components in their Intelligence Index v4.1. Read directly from AA's live ranked bar chart (GLM-5.1 ranked 12th of 28 models shown, tied at 38% with MiMo-V2.5-Pro and Nex-N2-Pro). Not self-reported by Z.ai. AA continuously re-runs/updates this eval, so the score may shift on future snapshots; some secondary press citing an earlier v1/Elo-scale run (~1535 Elo) is not directly comparable to this v2 percentage figure."
+      "notes": "GDPval-AA v2, Artificial Analysis's independent Elo-based real-world-work-task eval (normalized as (Elo-500)/2000), one of 9 components in their Intelligence Index v4.1. Read directly from AA's live ranked bar chart (GLM-5.1 ranked 12th of 28 models shown, tied at 38% with MiMo-V2.5-Pro and Nex-N2-Pro). Not self-reported by Z.ai. AA continuously re-runs/updates this eval, so the score may shift on future snapshots; some secondary press citing an earlier v1/Elo-scale run (~1535 Elo) is not directly comparable to this v2 percentage figure. [SCALE FIX 2026-07-17: corrected from a normalized percentage (38%) to this taxonomy's actual raw 0-2000-point Elo scale (matching the majority convention used by e.g. Gemini 3.1 Pro=1317, Claude Fable 5=1932). Converted via Artificial Analysis's own documented formula, normalized=(Elo-500)/2000, i.e. raw=38*20+500=1260. This formula is independently cross-validated against Kimi K2.7 Code's directly-disclosed embedded-JSON raw Elo (1186.79 for a displayed 34%, matching the formula almost exactly).]"
     },
     {
       "benchmarkSlug": "ifbench",

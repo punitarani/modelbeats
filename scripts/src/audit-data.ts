@@ -157,6 +157,20 @@ export function auditCorpus(root: string): { findings: Finding[]; stats: Record<
   // Match the benchmark PHRASE in notes, not a bare word — "pro"/"v2" also appear in model names
   // (o3-pro, deepseek-v2-5) and would false-positive. Note the `math` slug's benchmark IS MATH-500,
   // so a "MATH-500" note there is correct and gets no marker.
+  // A note that MENTIONS a variant isn't necessarily conflating it — this corpus's own convention
+  // is to explicitly name the variant it *avoided* filing under (e.g. "not a versioned BFCL v3
+  // variant", "distinct from the already-tracked SWE-Bench Pro figure") specifically to document
+  // that the row is correctly disambiguated. Only flag when the variant phrase appears WITHOUT a
+  // nearby negation/contrast cue — checked in a window around the match, not the whole notes blob.
+  const NEGATION_CUES =
+    /\b(not|no |n't|distinct|different from|rather than|instead|as opposed to|unversion|unspecified|no version|separate|excluding|nor a|already (tracked|recorded|in this|have|has)|did not exist|does not exist|belongs under|despite|omit)\b/i
+  const NEGATION_WINDOW = 150 // chars of context on each side of the match to scan for a negation cue
+  function isNegatedNearby(notes: string, matchIndex: number, matchLength: number): boolean {
+    const start = Math.max(0, matchIndex - NEGATION_WINDOW)
+    const end = Math.min(notes.length, matchIndex + matchLength + NEGATION_WINDOW)
+    return NEGATION_CUES.test(notes.slice(start, end))
+  }
+
   const VARIANT_MARKERS: { slug: string; needle: RegExp; variant: string }[] = [
     { slug: 'swe-bench', needle: /swe-?bench pro/i, variant: 'SWE-Bench Pro' },
     { slug: 'arena-hard', needle: /arena-?hard v2/i, variant: 'Arena-Hard v2' },
@@ -172,7 +186,9 @@ export function auditCorpus(root: string): { findings: Finding[]; stats: Record<
     for (const r of m.results ?? []) {
       const notes = r.notes ?? ''
       for (const v of VARIANT_MARKERS) {
-        if (r.benchmarkSlug === v.slug && v.needle.test(notes))
+        if (r.benchmarkSlug !== v.slug) continue
+        const match = v.needle.exec(notes)
+        if (match && match.index != null && !isNegatedNearby(notes, match.index, match[0].length))
           add(
             'high',
             'comparability',
@@ -180,18 +196,35 @@ export function auditCorpus(root: string): { findings: Finding[]; stats: Record<
           )
       }
       // "average of X and Y" only conflates when X/Y are DIFFERENT benchmarks — an average of a
-      // benchmark's own sub-metrics (IFEval instruct+prompt strict) is a legitimate single score.
-      if (/\b(average|avg) of\b/i.test(notes)) {
-        const nl = notes.toLowerCase()
+      // benchmark's own sub-metrics (IFEval instruct+prompt strict) or of repeated RUNS of the same
+      // eval ("avg of 5 runs") is a legitimate single score. Require the "average of" phrase and the
+      // other benchmark's name to appear near each other (same clause), not just anywhere in a note
+      // that might separately mention a sibling benchmark for disambiguation purposes.
+      const avgMatch = /\b(average|avg) of\b/i.exec(notes)
+      if (avgMatch && avgMatch.index != null) {
+        const clauseStart = Math.max(0, avgMatch.index - NEGATION_WINDOW)
+        const clauseEnd = Math.min(
+          notes.length,
+          avgMatch.index + avgMatch[0].length + NEGATION_WINDOW,
+        )
+        const clause = notes.slice(clauseStart, clauseEnd)
+        const clauseLower = clause.toLowerCase()
+        // Skip a candidate whose name is just a stem/prefix of THIS row's own benchmark name
+        // (e.g. 'Terminal-Bench' is a prefix of 'Terminal-Bench 2.0') — that's self-reference by
+        // its own shortened name, not a mention of a genuinely different sibling benchmark.
+        const ownName = (
+          benchmarks.find((b) => b.slug === r.benchmarkSlug)?.name ?? ''
+        ).toLowerCase()
         const other = benchmarks.find(
           (b) =>
             b.slug !== r.benchmarkSlug &&
             b.name.length >= 4 &&
+            !ownName.startsWith(b.name.toLowerCase()) &&
             new RegExp(`\\b${b.name.toLowerCase().replace(/[^a-z0-9]+/g, '[^a-z0-9]?')}\\b`).test(
-              nl,
+              clauseLower,
             ),
         )
-        if (other)
+        if (other && !isNegatedNearby(notes, avgMatch.index, avgMatch[0].length))
           add(
             'high',
             'comparability',

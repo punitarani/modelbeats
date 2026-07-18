@@ -87,11 +87,11 @@
     },
     {
       "benchmarkSlug": "gdpval-aa",
-      "score": 34,
+      "score": 1186.79,
       "source": "independent",
       "sourceUrl": "https://artificialanalysis.ai/models/kimi-k2-7-code",
       "evaluatedAt": "2026-06-18",
-      "notes": "GDPval-AA v2 (agentic real-world knowledge-work tasks), independently measured by Artificial Analysis as an Intelligence Index v4.1 component. AA displays this as a normalized percentage via (Elo-500)/2000; raw Elo field 'gdpval_v2' = 1186.79 in AA's underlying dataset for slug 'kimi-k2-7-code' normalizes to 34.3%, matching the 34% shown on the rendered GDPval-AA v2 bar chart (Kimi K2.7 Code ranked 16th of 28 compared models). Cross-confirmed against both the rendered chart and the embedded JSON payload."
+      "notes": "GDPval-AA v2 (agentic real-world knowledge-work tasks), independently measured by Artificial Analysis as an Intelligence Index v4.1 component. AA displays this as a normalized percentage via (Elo-500)/2000; raw Elo field 'gdpval_v2' = 1186.79 in AA's underlying dataset for slug 'kimi-k2-7-code' normalizes to 34.3%, matching the 34% shown on the rendered GDPval-AA v2 bar chart (Kimi K2.7 Code ranked 16th of 28 compared models). Cross-confirmed against both the rendered chart and the embedded JSON payload. [SCALE FIX 2026-07-17: corrected from a normalized percentage (34%) to this taxonomy's actual raw 0-2000-point Elo scale, using the exact raw value (1186.79) already disclosed earlier in this same note (AA's underlying JSON field 'gdpval_v2') rather than the formula-derived approximation.]"
     },
     {
       "benchmarkSlug": "mcp-atlas",

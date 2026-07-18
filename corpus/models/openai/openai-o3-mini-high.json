@@ -121,11 +121,11 @@
     },
     {
       "benchmarkSlug": "gdpval-aa",
-      "score": 0,
+      "score": 468,
       "source": "independent",
       "sourceUrl": "https://artificialanalysis.ai/models/o3-mini-high",
       "evaluatedAt": "2026-07-15",
-      "notes": "GDPval-AA v2, independently measured by Artificial Analysis on the 'o3-mini (high)' model page. Genuine floor result (0%, last place of 28 models on this eval) -- an older reasoning model with no dedicated real-world-agentic-work tuning. Not previously tracked here. [score corrected during round-6 completeness verify: proposed 0 -> 468] [score corrected during round-12 accuracy re-verify: 468 -> 0, per verifier: Loaded artificialanalysis.ai/models/o3-mini-high in a real browser (WebFetch's text extraction misses the JS-rendered benchmark bars). The GDPval-AA v2 bar chart on that exact page lists 'o3-mini (high)' in last place among 29 models with a score of ]"
+      "notes": "GDPval-AA v2, independently measured by Artificial Analysis on the 'o3-mini (high)' model page. Genuine floor result (0%, last place of 28 models on this eval) -- an older reasoning model with no dedicated real-world-agentic-work tuning. Not previously tracked here. [score corrected during round-6 completeness verify: proposed 0 -> 468] [score corrected during round-12 accuracy re-verify: 468 -> 0, per verifier: Loaded artificialanalysis.ai/models/o3-mini-high in a real browser (WebFetch's text extraction misses the JS-rendered benchmark bars). The GDPval-AA v2 bar chart on that exact page lists 'o3-mini (high)' in last place among 29 models with a score of ] [SCALE FIX 2026-07-17: corrected from a normalized percentage (0%) back to this taxonomy's actual raw 0-2000-point Elo scale. This model's own note already documents an earlier round-6 finding of raw=468 that a later round-12 adversarial re-verify wrongly 'corrected' back down to a percentage, not realizing this benchmark's dominant corpus convention is raw Elo, not a 0-100 normalized score. Restoring the original round-6 raw reading.]"
     },
     {
       "benchmarkSlug": "terminal-bench-2",

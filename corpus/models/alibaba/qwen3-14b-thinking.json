@@ -128,11 +128,11 @@
     },
     {
       "benchmarkSlug": "gdpval-aa",
-      "score": 0,
+      "score": 500,
       "source": "independent",
       "sourceUrl": "https://artificialanalysis.ai/models/qwen3-14b-instruct-reasoning",
       "evaluatedAt": "2026-07-15",
-      "notes": "GDPval-AA v2, independently measured by Artificial Analysis on the model's live 'Qwen3 14B (Reasoning)' page (part of Intelligence Index v4.1 breakdown). Qwen3-14B scored 0% on this real-world agentic-work eval -- tied at the bottom of the size class with Qwen3-30B-A3B-2507, NVIDIA Nemotron 3 Nano, Qwen3-32B and Magistral Small 1.2, versus Kimi K2.6 at 35% and Nemotron 3 Ultra at 33%. Genuinely new: this benchmark is not present in the file at all."
+      "notes": "GDPval-AA v2, independently measured by Artificial Analysis on the model's live 'Qwen3 14B (Reasoning)' page (part of Intelligence Index v4.1 breakdown). Qwen3-14B scored 0% on this real-world agentic-work eval -- tied at the bottom of the size class with Qwen3-30B-A3B-2507, NVIDIA Nemotron 3 Nano, Qwen3-32B and Magistral Small 1.2, versus Kimi K2.6 at 35% and Nemotron 3 Ultra at 33%. Genuinely new: this benchmark is not present in the file at all. [SCALE FIX 2026-07-17: corrected from a normalized percentage (0%) to this taxonomy's actual raw 0-2000-point Elo scale. Converted via raw=0*20+500=500, but flagged as a floor approximation: AA's UI appears to clip negative-normalized scores to a displayed '0%', so the true raw Elo may be somewhat below 500 (confirmed by 3 sibling entries in this same fix batch whose documented pre-correction raw values were verified below 500 despite also displaying '0%'). Left at 500 pending a more precise reading.]"
     },
     {
       "benchmarkSlug": "hle",

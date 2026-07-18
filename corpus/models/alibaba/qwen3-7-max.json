@@ -137,11 +137,11 @@
     },
     {
       "benchmarkSlug": "gdpval-aa",
-      "score": 39,
+      "score": 1280,
       "source": "independent",
       "sourceUrl": "https://artificialanalysis.ai/models/qwen3-7-max",
       "evaluatedAt": "2026-07-14",
-      "notes": "GDPval-AA v2 ('agentic real-world work tasks', normalized as (Elo-500)/2000), independently measured by Artificial Analysis on their live Qwen3.7-Max model page -- not vendor self-reported. Qwen3.7-Max scored 39%, behind Claude Opus 4.8 (max) at 55% and DeepSeek V4 Pro (max) at 40%, but ahead of Kimi K2.6 (35%) and Nemotron 3 Ultra (33%). This is one of the 9 components of AA's own Intelligence Index (v4.1) for this model."
+      "notes": "GDPval-AA v2 ('agentic real-world work tasks', normalized as (Elo-500)/2000), independently measured by Artificial Analysis on their live Qwen3.7-Max model page -- not vendor self-reported. Qwen3.7-Max scored 39%, behind Claude Opus 4.8 (max) at 55% and DeepSeek V4 Pro (max) at 40%, but ahead of Kimi K2.6 (35%) and Nemotron 3 Ultra (33%). This is one of the 9 components of AA's own Intelligence Index (v4.1) for this model. [SCALE FIX 2026-07-17: corrected from a normalized percentage (39%) to this taxonomy's actual raw 0-2000-point Elo scale (matching the majority convention used by e.g. Gemini 3.1 Pro=1317, Claude Fable 5=1932). Converted via Artificial Analysis's own documented formula, normalized=(Elo-500)/2000, i.e. raw=39*20+500=1280. This formula is independently cross-validated against Kimi K2.7 Code's directly-disclosed embedded-JSON raw Elo (1186.79 for a displayed 34%, matching the formula almost exactly).]"
     },
     {
       "benchmarkSlug": "agents-last-exam",

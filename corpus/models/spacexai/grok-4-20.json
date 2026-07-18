@@ -41,7 +41,10 @@
   "effortLabel": null,
   "isDefaultConfig": true,
   "isBestConfig": false,
-  "specSources": {},
+  "specSources": {
+    "ctxK/modalities/capabilities/price/license": "https://docs.x.ai/developers/models/grok-4.20-reasoning",
+    "releaseDate": "https://docs.x.ai/developers/release-notes"
+  },
   "results": [
     {
       "benchmarkSlug": "ifbench",

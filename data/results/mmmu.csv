@@ -15,7 +15,6 @@ claude-opus-4-1,77.1,self-reported,https://www.anthropic.com/news/claude-opus-4-
 claude-opus-4-5,80.7,self-reported,https://www.vellum.ai/blog/claude-opus-4-5-benchmarks,,
 claude-opus-4-5-high,80.7,self-reported,https://www.vellum.ai/blog/claude-opus-4-5-benchmarks,2025-11-24,
 claude-opus-4-6,83.87,independent,https://www.vals.ai/models/anthropic_claude-opus-4-6-thinking,,Verified via raw HTML fetch (curl); method validated the same way as the livecodebench entry.
-claude-opus-4-7,85.55,independent,https://www.vals.ai/models/anthropic_claude-opus-4-7,,New slug: mmmu-pro. Old 'mmmu' row removed from results array; see newResults for the corrected entry.
 claude-opus-4-8,86.59,independent,https://www.vals.ai/models/anthropic_claude-opus-4-8,,"Extracted from the page's embedded CSS bar-width value (86.59%), same method/validation as the livecodebench entry."
 claude-sonnet-4,74.4,self-reported,https://www.datacamp.com/blog/claude-4,2025-05-22,multimodal understanding; confirmed via direct fetch
 claude-sonnet-4-5,77.8,self-reported,https://www.anthropic.com/news/claude-sonnet-4-5,2025-09-29,

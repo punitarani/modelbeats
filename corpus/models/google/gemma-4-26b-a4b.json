@@ -39,7 +39,10 @@
   "effortLabel": null,
   "isDefaultConfig": true,
   "isBestConfig": true,
-  "specSources": {},
+  "specSources": {
+    "paramsB/activeParamsB/archDisplay/ctxK/modalities/license": "https://huggingface.co/google/gemma-4-26B-A4B-it",
+    "releaseDate": "https://openrouter.ai/google/gemma-4-26b-a4b-it:free"
+  },
   "results": [
     {
       "benchmarkSlug": "mmlu-pro",
