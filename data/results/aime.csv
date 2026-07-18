@@ -15,6 +15,7 @@ claude-opus-4-6,99.8,self-reported,https://www-cdn.anthropic.com/0dd865075ad3132
 claude-sonnet-4,70.5,self-reported,https://www.datacamp.com/blog/claude-4,2025-05-22,"AIME 2025, with extended thinking; confirmed via direct fetch"
 claude-sonnet-4-5,87,self-reported,https://www.anthropic.com/news/claude-sonnet-4-5,2025-09-29,
 claude-sonnet-4-6,95.6,self-reported,https://www.anthropic.com/claude-sonnet-4-6-system-card,2026-02-17,
+claude-sonnet-5,86.7,independent,https://www.kaggle.com/benchmarks/open-benchmarks/aime-2025,2026-07-14,"This is the real AIME 2025 exam (integer-answer pass@1), not a proxy like Epoch's previously-excluded OTIS Mock AIME. Verified rank-to-score alignment via the page's accessibility tree rather than raw scraped text order."
 command-a-218b,90,self-reported,https://cohere.com/blog/command-a-plus,2026-05-20,"AIME 2025, official 30-question set, each question repeated 10 times, pass@1 over the 300-sample dataset (per the blog's own footnote methodology). Cohere reports an improvement from 57% (Command A Reasoning) to 90% (Command A+). The blog embeds the actual score only in a chart image, but the figure is corroborated verbatim by two independent secondary write-ups (codersera.com launch guide and a VentureBeat-sourced search summary), both citing the identical 57%->90% jump, which is strong convergent evidence for the primary vendor claim."
 deepseek-coder-v2-236b,13.3,self-reported,https://github.com/deepseek-ai/DeepSeek-Coder-V2,2024-06-17,"AIME 2024, reported as 4/30 in the 'Mathematical Reasoning' table"
 deepseek-r1-0528,91.4,self-reported,https://huggingface.co/deepseek-ai/DeepSeek-R1-0528,2025-05-28,AIME 2024 pass@1
@@ -38,6 +39,7 @@ gemini-2-5-flash,72,self-reported,https://storage.googleapis.com/deepmind-media/
 gemini-2-5-flash-lite-non-thinking,49.8,self-reported,https://storage.googleapis.com/deepmind-media/Model-Cards/Gemini-2-5-Flash-Lite-Model-Card.pdf,2025-06-01,"AIME 2025, (06-17) release, non-thinking"
 gemini-2-5-flash-lite-thinking,63.1,self-reported,https://storage.googleapis.com/deepmind-media/Model-Cards/Gemini-2-5-Flash-Lite-Model-Card.pdf,2025-06-01,"AIME 2025, (06-17) release, thinking on"
 gemini-2-5-pro,86.7,self-reported,https://storage.googleapis.com/deepmind-media/Model-Cards/Gemini-2-5-Pro-Model-Card.pdf,2025-03-25,"AIME 2025, single attempt, Gemini 2.5 Pro (Experimental 03-25) column."
+gemini-3-5-flash,95,independent,https://matharena.ai/?comp=aime--aime_2026&view=problem,2026-07-17,"Also checked HELM, arXiv/Semantic Scholar, GitHub eval logs, LiveBench, Scale Labs, PricePerToken, EvalPlus, non-English blogs, and sibling models for AIME -- MathArena was the only hit."
 gemini-3-flash,95.2,self-reported,https://storage.googleapis.com/deepmind-media/Model-Cards/Gemini-3-Flash-Model-Card.pdf,2025-12-01,"AIME 2025, no tools (99.7% with code execution)"
 gemini-3-pro,95,self-reported,https://storage.googleapis.com/deepmind-media/Model-Cards/Gemini-3-Pro-Model-Card.pdf,2025-11-01,"AIME 2025, no tools (100% with code execution)"
 gemma-4,89.2,self-reported,https://ai.google.dev/gemma/docs/core/model_card_4,2026-04-02,"AIME 2026, no tools, 31B"
@@ -147,4 +149,5 @@ smollm3-3b-no-thinking,9.3,self-reported,https://huggingface.co/HuggingFaceTB/Sm
 smollm3-3b-think,36.7,self-reported,https://huggingface.co/blog/smollm3,,"AIME 2025, reasoning mode"
 sonar,48.7,independent,https://designforonline.com/ai-models/perplexity-sonar/,,"AIME 2024; attributed to Artificial Analysis, corroborated identically by mindstudio.ai/models/sonar. See gpqa addition notes for sourcing caveats."
 step-3,82.9,self-reported,https://chat.stepfun.com/research/en/step3,,AIME 2025. Also independently corroborated verbatim by SiliconFlow's launch coverage: https://www.siliconflow.com/blog/step3-now-live-on-siliconflow-the-leading-open-source-multimodal-reasoning-model
+step-3-7-flash,95,independent,https://matharena.ai/models/stepfun_3_7_flash,,"Resolved via new source type #4 (other leaderboards/aggregators not in the first pass's checklist) -- specifically MathArena.ai, discovered during this round's sweep and not previously checked."
 trinity-large-thinking,96.3,self-reported,https://huggingface.co/arcee-ai/Trinity-Large-Thinking,,AIME 2025
