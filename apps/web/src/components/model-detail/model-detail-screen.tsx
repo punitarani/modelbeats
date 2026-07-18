@@ -68,9 +68,11 @@ export function ModelDetailScreen({
       label: 'Active params',
       value: model.active
         ? `${model.active}B (MoE)`
-        : model.params
-          ? `${model.params}B (dense)`
-          : '—',
+        : model.archClass === 'moe' || model.archClass === 'hybrid'
+          ? 'Undisclosed'
+          : model.params
+            ? `${model.params}B (dense)`
+            : '—',
     },
     { label: 'Context', value: `${fmtCtx(model.ctxK)} tokens` },
     { label: 'Architecture', value: model.arch },

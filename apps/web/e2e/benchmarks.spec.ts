@@ -28,7 +28,7 @@ test.describe('benchmarks', () => {
     await gotoHydrated(page, '/benchmarks/gpqa')
     await expect(page.getByTestId('histogram').locator('div')).toHaveCount(10)
     // open models with disclosed params carry the scatter (real GPQA field, expanded catalog)
-    await expect(page.getByTestId('params-point')).toHaveCount(183)
+    await expect(page.getByTestId('params-point')).toHaveCount(184)
   })
 
   test('params-scatter points carry tooltips and link to the model', async ({ page }) => {

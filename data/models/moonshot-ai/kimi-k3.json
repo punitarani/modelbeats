@@ -1,0 +1,46 @@
+{
+  "slug": "kimi-k3",
+  "name": "Kimi K3",
+  "orgSlug": "moonshot-ai",
+  "familySlug": "kimi-k3",
+  "releaseDate": "2026-07-16",
+  "status": "released",
+  "predecessor": null,
+  "openness": "open-weights",
+  "license": "Modified MIT License (precedent from the K2.x line; not yet formally published for K3)",
+  "paramsB": 2800,
+  "activeParamsB": null,
+  "archClass": "moe",
+  "archDisplay": "2.8T-parameter MoE, Stable LatentMoE framework activating 16 of 896 experts per token, Kimi Delta Attention (hybrid linear attention) with Attention Residuals, 1M-token context, always-on reasoning (single reasoning_effort=max tier at launch)",
+  "ctxK": 1024,
+  "modalities": [
+    "text",
+    "vision"
+  ],
+  "langCount": null,
+  "capabilities": {
+    "reasoning": true,
+    "coding": true,
+    "vision": true,
+    "functionCalling": true,
+    "toolUse": true,
+    "agentic": true
+  },
+  "apiAvailable": true,
+  "price": {
+    "input": 3,
+    "output": 15
+  },
+  "links": {
+    "docs": "https://platform.kimi.ai/docs/guide/kimi-k3-quickstart"
+  },
+  "note": "Moonshot's new flagship generation succeeding the K2.x line, launched July 16, 2026: 2.8T total parameters (vs. K2.6/K2.7's ~1T), a new Stable LatentMoE architecture (16-of-896 experts active per token, versus K2's 8 routed + 1 shared of 384) and Kimi Delta Attention, a 1M-token context window (up from K2's 256K), and a single always-on reasoning tier (no separate Instruct/Thinking split as with K2). Input pricing is $3.00/M tokens (cache-miss) with a 90%-discounted $0.30/M cache-hit rate, output $15.00/M. IMPORTANT CAVEAT: open weights are not yet published as of this research (2026-07-17, the day after launch) -- Moonshot has stated they will ship by July 27, 2026. The model is live now only via kimi.com, Kimi Work, Kimi Code, the Kimi API, and OpenRouter; no HuggingFace repo exists yet (huggingface.co/moonshotai still lists Kimi-K2.7-Code as the newest entry). The formal license text has also not been published; the value above reflects Moonshot's K2.x precedent (Modified MIT), not a confirmed K3 term -- re-verify once weights ship.",
+  "quants": [],
+  "vramQ4Gb": null,
+  "vramFp16Gb": null,
+  "tps4090": null,
+  "tpsNote": null,
+  "effortLabel": null,
+  "isDefaultConfig": true,
+  "isBestConfig": true
+}

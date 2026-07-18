@@ -1,0 +1,100 @@
+{
+  "name": "Kimi K3",
+  "org": "Moonshot AI",
+  "family": "Kimi K3",
+  "releaseDate": "2026-07-16",
+  "status": "released",
+  "openness": "open-weights",
+  "license": "Modified MIT License (precedent from the K2.x line; not yet formally published for K3)",
+  "paramsB": 2800,
+  "activeParamsB": null,
+  "archClass": "moe",
+  "archDisplay": "2.8T-parameter MoE, Stable LatentMoE framework activating 16 of 896 experts per token, Kimi Delta Attention (hybrid linear attention) with Attention Residuals, 1M-token context, always-on reasoning (single reasoning_effort=max tier at launch)",
+  "ctxK": 1024,
+  "modalities": [
+    "text",
+    "vision"
+  ],
+  "langCount": null,
+  "capabilities": {
+    "reasoning": true,
+    "coding": true,
+    "vision": true,
+    "functionCalling": true,
+    "toolUse": true,
+    "agentic": true
+  },
+  "apiAvailable": true,
+  "price": {
+    "input": 3,
+    "output": 15
+  },
+  "links": {
+    "docs": "https://platform.kimi.ai/docs/guide/kimi-k3-quickstart"
+  },
+  "note": "Moonshot's new flagship generation succeeding the K2.x line, launched July 16, 2026: 2.8T total parameters (vs. K2.6/K2.7's ~1T), a new Stable LatentMoE architecture (16-of-896 experts active per token, versus K2's 8 routed + 1 shared of 384) and Kimi Delta Attention, a 1M-token context window (up from K2's 256K), and a single always-on reasoning tier (no separate Instruct/Thinking split as with K2). Input pricing is $3.00/M tokens (cache-miss) with a 90%-discounted $0.30/M cache-hit rate, output $15.00/M. IMPORTANT CAVEAT: open weights are not yet published as of this research (2026-07-17, the day after launch) -- Moonshot has stated they will ship by July 27, 2026. The model is live now only via kimi.com, Kimi Work, Kimi Code, the Kimi API, and OpenRouter; no HuggingFace repo exists yet (huggingface.co/moonshotai still lists Kimi-K2.7-Code as the newest entry). The formal license text has also not been published; the value above reflects Moonshot's K2.x precedent (Modified MIT), not a confirmed K3 term -- re-verify once weights ship.",
+  "quants": [],
+  "vramQ4Gb": null,
+  "vramFp16Gb": null,
+  "tps4090": null,
+  "tpsNote": null,
+  "effortLabel": null,
+  "isDefaultConfig": true,
+  "isBestConfig": true,
+  "specSources": {
+    "paramsB/archDisplay/ctxK/moeStructure": "https://www.kimi.com/blog/kimi-k3",
+    "releaseDate/pricing": "https://artificialanalysis.ai/models/kimi-k3",
+    "ctxK/reasoningEffort": "https://platform.kimi.ai/docs/guide/kimi-k3-quickstart"
+  },
+  "results": [
+    {
+      "benchmarkSlug": "gpqa",
+      "score": 93.5,
+      "source": "self-reported",
+      "sourceUrl": "https://www.kimi.com/blog/kimi-k3",
+      "evaluatedAt": "2026-07-16",
+      "notes": "GPQA-Diamond, official Kimi K3 launch blog knowledge/reasoning table. Independently re-verified against 3 convergent secondary reproductions of the official table (benchlm.ai, binaryverseai.com, mer.vin) -- all agree exactly on this figure."
+    },
+    {
+      "benchmarkSlug": "hle",
+      "score": 56,
+      "source": "self-reported",
+      "sourceUrl": "https://www.kimi.com/blog/kimi-k3",
+      "evaluatedAt": "2026-07-16",
+      "notes": "Humanity's Last Exam, WITH tool use, official launch blog. A separate no-tools score of 43.5 was also published but is not recorded here to avoid conflating two different evaluation settings under one slug (matches this corpus's existing convention for other Kimi models, e.g. K2.5/K2.6 record only the tool-augmented HLE figure)."
+    },
+    {
+      "benchmarkSlug": "terminal-bench-2",
+      "score": 88.3,
+      "source": "self-reported",
+      "sourceUrl": "https://www.kimi.com/blog/kimi-k3",
+      "evaluatedAt": "2026-07-16",
+      "notes": "Terminal-Bench 2.1, official launch blog coding table. Independently re-verified via direct fetch confirming the same figure across 3 sources reproducing Moonshot's own table."
+    },
+    {
+      "benchmarkSlug": "mcp-atlas",
+      "score": 84.2,
+      "source": "self-reported",
+      "sourceUrl": "https://www.kimi.com/blog/kimi-k3",
+      "evaluatedAt": "2026-07-16",
+      "notes": "MCP Atlas, official launch blog agentic table."
+    },
+    {
+      "benchmarkSlug": "browsecomp",
+      "score": 91.2,
+      "source": "self-reported",
+      "sourceUrl": "https://www.kimi.com/blog/kimi-k3",
+      "evaluatedAt": "2026-07-16",
+      "notes": "BrowseComp, official launch blog agentic table. One secondary source rendered this as 90.4 -- within rounding/snapshot noise of the 91.2 figure independently confirmed across 3 other convergent reproductions of the official table."
+    },
+    {
+      "benchmarkSlug": "gdpval-aa",
+      "score": 1668,
+      "source": "independent",
+      "sourceUrl": "https://artificialanalysis.ai/articles/kimi-k3-achieves-3-in-the-artificial-analysis-intelligence-index-comparable-to-opus-4-8-and-gpt-5-5",
+      "evaluatedAt": "2026-07-17",
+      "notes": "GDPval-AA v2, independently measured by Artificial Analysis (raw Elo, matching this taxonomy's 0-2000-point scale as used by e.g. Gemini 3.1 Pro=1317, MiniMax M2.7=1495). A competing 1687 figure from a single non-AA community blog was discarded as a likely transcription error during adversarial re-verification (AA's own article and two independent convergent secondary reproductions all state 1668). NOTE: this is the only non-self-reported result in this entry -- included specifically to avoid the ranking resting entirely on vendor-chosen benchmarks, per this corpus's documented 'independent cross-checks are sparse' concern (see audit-data.ts)."
+    }
+  ],
+  "verificationNotes": "ROUND (2026-07-17): New model, added at explicit user request following Kimi K3's July 16, 2026 launch. Two-pass research: (1) initial broad research confirmed the model's existence, gathered specs and a wide benchmark set from official + independent sources; (2) dedicated adversarial re-verification pass independently re-fetched primary sources to resolve every discrepancy flagged by pass 1.\n\nResolved discrepancies: total params settled at 2.8T (a lone '2.7T' figure in one secondary source had no supporting citation anywhere and is treated as a transcription error). GDPval-AA v2 Elo settled at 1668 per Artificial Analysis's own article (a competing 1687 figure traced to a single non-AA community blog post, discarded).\n\nOnly 5 of the ~13 benchmark figures found are recorded here as results rows -- the rest (DeepSWE, FrontierSWE, Program Bench, SWE Marathon, Kimi Code Bench v2, AutomationBench, DeepSearchQA, MMMU-Pro, MathVision) are Moonshot in-house/proprietary suites or multimodal benchmarks with no matching taxonomy slug in this corpus, so they are omitted rather than mis-filed under an unrelated slug (matches this corpus's established citation-required, no-guessing convention). The 5 recorded here all map cleanly to existing taxonomy slugs already used by sibling Kimi K2.x entries.\n\nIndependent-source data explicitly NOT used: Vals.ai (vals.ai/models/kimi_kimi-k3) renders every individual per-benchmark score as a literal 0.0% -- a known broken/unrendered-scrape pattern already documented for other Kimi models in this corpus (see K2.7 Code's verificationNotes) -- only their aggregate Vals Index (74.70%, rank 2/38) is trustworthy from that source and it doesn't map to any taxonomy slug, so it's omitted too. Epoch AI has no Kimi K3 entry yet. Artificial Analysis's own model page (artificialanalysis.ai/models/kimi-k3) confirms an Intelligence Index of 57 and the GDPval-AA v2 Elo above, but AA's per-benchmark breakdown (Coding Index 76.2, Agentic Index 50.1, AA-Omniscience 46%/51% hallucination, AA-Briefcase Elo 1547) are AA's own composite/proprietary metrics, not standard-suite scores mappable to this corpus's taxonomy -- omitted for the same reason.\n\nKNOWN LIMITATION: open weights are not yet public (promised July 27, 2026, 11 days after this entry was created), so no independent third party has been able to verify these vendor-reported numbers by running the actual weights -- all self-reported scores here should be treated with the same caution as any other pre-independent-verification vendor claim. Recommend re-checking Artificial Analysis, Vals.ai (hoping for a fixed scrape), and Epoch AI after the July 27 weight release for independent corroboration, and re-deriving the license field once Moonshot formally publishes K3's license text.\n\nAlso checked and explicitly ruled out: 'Kimi 3 Max' / 'Kimi 3 Swarm Max' variant claims appeared in exactly one low-trust secondary source with no corroboration from the official blog, OpenRouter, or platform docs -- not added, treated as unreliable reporting, possibly confused with a different vendor's product.\n\nDATA-QUALITY NOTE (discovered while adding this entry, not fixed here): the gdpval-aa taxonomy entry declares a raw 0-2000-point Elo scale (matching Gemini 3.1 Pro=1317, MiniMax M2.7=1495, etc.), but Kimi K2.7 Code's own gdpval-aa row (34) and a few Qwen entries (23, 0, 39) appear to store a normalized 0-100 percentage instead -- a scale mismatch, not a new-data problem. Not corrected in this round since it is out of scope for a new-model-addition task; flagged for a future dedicated accuracy pass."
+}

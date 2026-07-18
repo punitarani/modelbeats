@@ -12,7 +12,7 @@ test.describe('dashboard overview', () => {
     // Open–closed gap is computed on the universal Elo rating (arena covers only a sliver), so
     // it's always a real number, and the leader is the top-ranked open model under pairwise Elo.
     await expect(cards.nth(3)).toContainText('Elo')
-    await expect(cards.nth(3)).toContainText('MiniMax M3 leads open')
+    await expect(cards.nth(3)).toContainText('Kimi K3 leads open')
   })
 
   test('scatter plots every priced+ranked model; movers show real lineage gains', async ({
@@ -81,7 +81,7 @@ test.describe('dashboard overview', () => {
     const rail = page.getByTestId('arena-rail')
     // rail now leads with the #1 overall model by Elo rating
     await expect(rail).toContainText('GPT-5.6')
-    await expect(rail).toContainText('3075.0')
+    await expect(rail).toContainText('3077.2')
     await pickOption(page, 'qc-b', 'Llama 3.1 405B — Meta')
     await page.getByTestId('qc-go').click()
     // quick-compare slot A defaults to the #1 rank-eligible model (GPT-5.6)
@@ -111,7 +111,7 @@ test.describe('dashboard releases + bench tabs', () => {
     const frontier = page.getByTestId('frontier')
     // regrounded on the universal Elo rating, so both camps' leaders always plot
     await expect(frontier).toContainText('GPT-5.6')
-    await expect(frontier).toContainText('MiniMax M3')
+    await expect(frontier).toContainText('Kimi K3')
     await expect(page.getByTestId('gap-note')).not.toHaveText('')
   })
 

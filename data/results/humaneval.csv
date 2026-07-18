@@ -172,6 +172,7 @@ sarashina2-70b,27.99,independent,https://swallow-llm.github.io/evaluation/index.
 skywork-moe-base,43.9,self-reported,https://arxiv.org/html/2406.06563v1,,
 skywork-o1-open-llama-3-1-8b,82.3,self-reported,https://huggingface.co/Skywork/Skywork-o1-Open-Llama-3.1-8B,2024-11-26,From official HF model card table (row 'Skywork-o1-Open-8B').
 snowflake-arctic,64.3,independent,https://www.flexera.com/blog/finops/snowflake-arctic,,
+soofi-s,73.8,self-reported,https://the-decoder.com/german-ai-consortium-releases-soofi-s-an-open-30b-model-that-tops-benchmarks-in-both-english-and-german/,2026-07-13,"From the consortium's own pretraining tech report (huggingface.co/spaces/Soofi-Project/Pretraining-Tech-Report), reproduced consistently by two independent journalism outlets (the-decoder.com and winbuzzer.com) -- the primary HF Space page itself is a JS-rendered Gradio app that could not be directly fetched/verified during this research (returned a 'Refreshing' loading shell). Likely reflects the Base checkpoint's few-shot pretraining eval rather than the separate Instruct-Preview chat checkpoint, since the source document is a foundation-model tech report -- filed against this Base-checkpoint entry accordingly."
 starcoder-15-5b,33.6,self-reported,https://huggingface.co/blog/starcoder,,
 starcoder2-15b,46.3,self-reported,https://huggingface.co/bigcode/starcoder2-15b,,pass@1
 starcoder2-3b,31.7,self-reported,https://huggingface.co/bigcode/starcoder2-3b,,pass@1

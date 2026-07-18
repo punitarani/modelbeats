@@ -1,0 +1,64 @@
+{
+  "name": "Soofi S",
+  "org": "SOOFI Consortium",
+  "family": "Soofi S",
+  "releaseDate": "2026-07-13",
+  "status": "preview",
+  "openness": "open-weights",
+  "license": "Unpublished (gated preview; the official HuggingFace model card states final license text is not yet finalized, though the consortium claims it meets the Open Source AI Definition 1.0)",
+  "paramsB": 31.6,
+  "activeParamsB": 3.5,
+  "archClass": "hybrid",
+  "archDisplay": "Hybrid Mamba-2/Transformer MoE, 52 layers of which only 6 maintain a KV cache (attention layers), 128 routing experts + 1 shared expert, 6 experts activated per token",
+  "ctxK": 1024,
+  "modalities": [
+    "text"
+  ],
+  "langCount": 2,
+  "capabilities": {
+    "reasoning": false,
+    "coding": true,
+    "vision": false,
+    "functionCalling": false,
+    "toolUse": false,
+    "agentic": false
+  },
+  "apiAvailable": false,
+  "price": null,
+  "links": {
+    "hf": "Soofi-Project/Soofi-S-Base"
+  },
+  "note": "A German sovereign-AI foundation model from the SOOFI Consortium (KI Bundesverband-coordinated, funded via Germany's IPCEI-CIS program), released as a gated preview on July 13, 2026 -- training itself concluded May 13, 2026. Bilingual (German + English) hybrid Mamba-2/Transformer MoE, positioned as the strongest 'fully open' (non-gated-license) model in both languages at release, though it trails the semi-open Qwen3.5 35B-A3B on the consortium's own aggregate benchmark. This entry represents the Soofi-S-Base foundation checkpoint specifically -- separate Soofi-S-Instruct-Preview (chat) and Soofi-S-Rhine-Preview (reasoning) checkpoints also exist on HuggingFace, but no independently corroborated benchmark table was found for either at the time of this research, so they are not modeled as separate entries yet. IMPORTANT: this is explicitly a gated, non-final preview -- the HuggingFace card itself states 'not an open release' and 'an intermediate result subject to change'; the consortium has committed to a fully open, ungated final release later. Long-context reliability is weak beyond the trained 1M-token nominal window: RULER long-context extraction accuracy drops to roughly 3% beyond 32K tokens per the consortium's own reporting, so treat the ctxK spec as a training-time nominal figure rather than a practically usable window.",
+  "quants": [],
+  "vramQ4Gb": null,
+  "vramFp16Gb": null,
+  "tps4090": null,
+  "tpsNote": null,
+  "effortLabel": null,
+  "isDefaultConfig": true,
+  "isBestConfig": true,
+  "specSources": {
+    "paramsB/activeParamsB/archDisplay/license/hf": "https://huggingface.co/collections/Soofi-Project/soofi-s-beta-models",
+    "releaseDate/org/funding": "https://the-decoder.com/german-ai-consortium-releases-soofi-s-an-open-30b-model-that-tops-benchmarks-in-both-english-and-german/",
+    "trainingCompletionDate/ctxK": "https://winbuzzer.com/2026/07/14/german-consortium-launches-soofi-s-for-sparse-industrial-ai-xcxwbn/"
+  },
+  "results": [
+    {
+      "benchmarkSlug": "humaneval",
+      "score": 73.8,
+      "source": "self-reported",
+      "sourceUrl": "https://the-decoder.com/german-ai-consortium-releases-soofi-s-an-open-30b-model-that-tops-benchmarks-in-both-english-and-german/",
+      "evaluatedAt": "2026-07-13",
+      "notes": "From the consortium's own pretraining tech report (huggingface.co/spaces/Soofi-Project/Pretraining-Tech-Report), reproduced consistently by two independent journalism outlets (the-decoder.com and winbuzzer.com) -- the primary HF Space page itself is a JS-rendered Gradio app that could not be directly fetched/verified during this research (returned a 'Refreshing' loading shell). Likely reflects the Base checkpoint's few-shot pretraining eval rather than the separate Instruct-Preview chat checkpoint, since the source document is a foundation-model tech report -- filed against this Base-checkpoint entry accordingly."
+    },
+    {
+      "benchmarkSlug": "mbpp",
+      "score": 70.2,
+      "source": "self-reported",
+      "sourceUrl": "https://the-decoder.com/german-ai-consortium-releases-soofi-s-an-open-30b-model-that-tops-benchmarks-in-both-english-and-german/",
+      "evaluatedAt": "2026-07-13",
+      "notes": "Same source and caveats as the HumanEval row above. This is the plain (English) MBPP score; a separate German-localized 'MBPP-DE' score (84.2) was also published but is NOT recorded here since it is a different, non-comparable evaluation (translated prompts/tests) with no matching taxonomy slug in this corpus -- filing it under the generic 'mbpp' slug would conflate two non-comparable benchmark variants, the same class of bug this corpus's data-quality audit actively flags elsewhere."
+    }
+  ],
+  "verificationNotes": "ROUND (2026-07-17): New model, added at explicit user request during a sweep for July 2026 releases. Confirmed as a genuine, citable open-weight release (not a rumor or SEO-farm fabrication) via HuggingFace collection page (huggingface.co/collections/Soofi-Project/soofi-s-beta-models, listing Soofi-S-Base, Soofi-S-Instruct-Preview, Soofi-S-Rhine-Preview, plus GGUF/quantized variants) and two independent journalism outlets (the-decoder.com, winbuzzer.com) both citing the consortium's own pretraining tech report and a companion arXiv paper (arXiv:2607.09424, 'A Sovereign, Open-Source Foundation Model for German and English' -- abstract-only access, full tables not independently extracted).\n\nDeliberately excluded from results[]: (1) the consortium's own English-aggregate (70.1) and German-aggregate (79.1) composite indices -- proprietary aggregate metrics, not standard-suite scores mappable to any single taxonomy slug; (2) a GPQA-Diamond figure reported only as a RELATIVE delta ('+9.6 points vs. Nemotron reference recipe baseline') with no disclosed absolute score -- cannot be recorded without the baseline value; (3) all German-localized benchmark variants (MBPP-DE 84.2, ARC-Challenge-DE 92.3, GLP-DE 88.8, INCLUDE-DE 61.2, Minerva MATH-DE 56) -- these are translated/localized evaluations, not comparable to the standard English benchmarks tracked under this corpus's existing plain slugs, and no dedicated DE-variant taxonomy entries exist yet (a candidate future taxonomy-gap, similar to how tau2-bench-retail/airline and mcp-atlas were added in earlier rounds once enough cross-model data existed to justify new slugs).\n\nKNOWN LIMITATIONS: (a) weights are gated (HF login + info-sharing agreement required), and the card explicitly says this is 'not an open release' -- a genuinely open final version is promised but not yet shipped; (b) benchmark numbers could not be independently re-verified against the primary tech-report table itself (Gradio Space page did not render via automated fetch) -- confidence rests on convergence between two independent journalism outlets rather than a first-party read of the source table; (c) the tech report's title and framing suggest these are Base-checkpoint pretraining evals, not Instruct-Preview chat evals -- filed against the Base entry accordingly, but this attribution is inferred rather than explicitly confirmed in either secondary source. Recommend re-verifying directly against the HF Space report or the full arXiv PDF in a future round, and adding a distinct Soofi-S-Instruct-Preview entry once/if a chat-specific benchmark table is found."
+}

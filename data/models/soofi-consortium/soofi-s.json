@@ -1,0 +1,42 @@
+{
+  "slug": "soofi-s",
+  "name": "Soofi S",
+  "orgSlug": "soofi-consortium",
+  "familySlug": "soofi-s",
+  "releaseDate": "2026-07-13",
+  "status": "preview",
+  "predecessor": null,
+  "openness": "open-weights",
+  "license": "Unpublished (gated preview; the official HuggingFace model card states final license text is not yet finalized, though the consortium claims it meets the Open Source AI Definition 1.0)",
+  "paramsB": 31.6,
+  "activeParamsB": 3.5,
+  "archClass": "hybrid",
+  "archDisplay": "Hybrid Mamba-2/Transformer MoE, 52 layers of which only 6 maintain a KV cache (attention layers), 128 routing experts + 1 shared expert, 6 experts activated per token",
+  "ctxK": 1024,
+  "modalities": [
+    "text"
+  ],
+  "langCount": 2,
+  "capabilities": {
+    "reasoning": false,
+    "coding": true,
+    "vision": false,
+    "functionCalling": false,
+    "toolUse": false,
+    "agentic": false
+  },
+  "apiAvailable": false,
+  "price": null,
+  "links": {
+    "hf": "Soofi-Project/Soofi-S-Base"
+  },
+  "note": "A German sovereign-AI foundation model from the SOOFI Consortium (KI Bundesverband-coordinated, funded via Germany's IPCEI-CIS program), released as a gated preview on July 13, 2026 -- training itself concluded May 13, 2026. Bilingual (German + English) hybrid Mamba-2/Transformer MoE, positioned as the strongest 'fully open' (non-gated-license) model in both languages at release, though it trails the semi-open Qwen3.5 35B-A3B on the consortium's own aggregate benchmark. This entry represents the Soofi-S-Base foundation checkpoint specifically -- separate Soofi-S-Instruct-Preview (chat) and Soofi-S-Rhine-Preview (reasoning) checkpoints also exist on HuggingFace, but no independently corroborated benchmark table was found for either at the time of this research, so they are not modeled as separate entries yet. IMPORTANT: this is explicitly a gated, non-final preview -- the HuggingFace card itself states 'not an open release' and 'an intermediate result subject to change'; the consortium has committed to a fully open, ungated final release later. Long-context reliability is weak beyond the trained 1M-token nominal window: RULER long-context extraction accuracy drops to roughly 3% beyond 32K tokens per the consortium's own reporting, so treat the ctxK spec as a training-time nominal figure rather than a practically usable window.",
+  "quants": [],
+  "vramQ4Gb": null,
+  "vramFp16Gb": null,
+  "tps4090": null,
+  "tpsNote": null,
+  "effortLabel": null,
+  "isDefaultConfig": true,
+  "isBestConfig": true
+}
