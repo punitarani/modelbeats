@@ -55,6 +55,11 @@ see below).
    add `CLOUDFLARE_API_TOKEN` and `CLOUDFLARE_ACCOUNT_ID` (same values as step 4). From
    now on every push to `main` deploys automatically.
 
+> Until these secrets exist, the `deploy` job still runs on every push to `main` but
+> **no-ops with a notice** (it only skips the deploy — `ci` + `e2e` still gate the push).
+> It activates the moment the `CLOUDFLARE_API_TOKEN` secret is present. So the CD wiring
+> is safe to merge before the bootstrap is done.
+
 ### Optional: approval gate
 
 `.github/workflows/ci.yml`'s `deploy` job targets a GitHub **`production` environment**.

@@ -105,4 +105,9 @@ jobs:
         env:
           CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
           CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
-        run: bun run deploy:production
+        run: |
+          if [ -z "$CLOUDFLARE_API_TOKEN" ]; then
+            echo "::notice::CLOUDFLARE_API_TOKEN secret is not set — skipping the production deploy until the one-time Cloudflare bootstrap in docs/DEPLOY.md is complete. CI + e2e still gate every push; this job activates automatically once the secret exists."
+            exit 0
+          fi
+          bun run deploy:production
