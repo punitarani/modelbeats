@@ -37,7 +37,7 @@ export function RankingsTable({
 }: {
   rows: SnapshotModel[]
   benchmarks: SnapshotBenchmark[]
-  columns: { slug: string; label: string }[]
+  columns: { slug: string; label: string; hint?: string }[]
   sort: string
   onSort: (next: string) => void
 }) {
@@ -100,10 +100,12 @@ export function RankingsTable({
     id,
     label,
     className = '',
+    hint,
   }: {
     id: string
     label: string
     className?: string
+    hint?: string
   }) => (
     <button
       type="button"
@@ -112,6 +114,7 @@ export function RankingsTable({
         sortKey === id ? 'text-acc' : 'text-dim'
       } ${className}`}
       data-testid={`sort-${id}`}
+      title={hint}
     >
       {label} {arrow(id)}
     </button>
@@ -202,7 +205,13 @@ export function RankingsTable({
           <HeadBtn id="ctx" label="Ctx" className="text-right" />
           <HeadBtn id="index" label="Elo" className="text-right" />
           {benchCols.map((c) => (
-            <HeadBtn key={c.slug} id={c.slug} label={c.label} className="text-right" />
+            <HeadBtn
+              key={c.slug}
+              id={c.slug}
+              label={c.label}
+              className="text-right"
+              hint={c.hint}
+            />
           ))}
         </div>
         {mounted ? (

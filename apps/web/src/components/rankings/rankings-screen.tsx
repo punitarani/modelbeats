@@ -79,6 +79,22 @@ export function RankingsScreen({
   const columns = useMemo(() => {
     const label = (slug: string) =>
       CORE_RANKINGS_LABELS[slug] ?? data.benchmarks.find((b) => b.slug === slug)?.name ?? slug
+    // Column-header hint (D20 follow-up): a benchmark can be well-covered catalog-wide yet
+    // mostly blank at the top of the table (legacy knowledge/math evals the frontier stopped
+    // reporting once scores saturated). Surfacing that as a hover hint turns a wall of
+    // unexplained em-dashes into a documented, expected pattern — every gap behind it has a
+    // dated, cited research trail (see corpus verificationNotes / the audit tool's
+    // top-n-coverage check), not an oversight.
+    const columnHint = (slug: string) => {
+      const top = topCoverage[slug] ?? 0
+      const total = coverage[slug] ?? 0
+      if (top >= 80) return `${top} of the top 100 ranked models report this benchmark.`
+      return (
+        `Only ${top} of the top 100 ranked models report this benchmark ` +
+        `(${total} models overall) — many frontier labs stopped publishing it once scores ` +
+        `saturated near the ceiling. See Methodology for the full research trail.`
+      )
+    }
     if (category) {
       // A category page shows that category's benchmarks by coverage; a >=5 floor keeps a
       // top-5 meaningful, capped so a broad category doesn't overflow into dozens of columns.
@@ -89,6 +105,7 @@ export function RankingsScreen({
       return (covered.length >= 3 ? covered : inCat.slice(0, 6)).map((b) => ({
         slug: b.slug,
         label: label(b.slug),
+        hint: `${coverage[b.slug] ?? 0} of ${data.models.length} tracked models report this benchmark.`,
       }))
     }
     return CORE_RANKINGS_CANDIDATES.filter(
@@ -98,8 +115,8 @@ export function RankingsScreen({
         (a, b) =>
           (topCoverage[b] ?? 0) - (topCoverage[a] ?? 0) || (coverage[b] ?? 0) - (coverage[a] ?? 0),
       )
-      .map((slug) => ({ slug, label: label(slug) }))
-  }, [category, data.benchmarks, coverage, topCoverage])
+      .map((slug) => ({ slug, label: label(slug), hint: columnHint(slug) }))
+  }, [category, data.benchmarks, data.models.length, coverage, topCoverage])
 
   // If the user sorts by a benchmark that isn't a default column, surface it as an extra
   // column so the sort arrow + "sorted by X" line always name a column you can see (D20).
