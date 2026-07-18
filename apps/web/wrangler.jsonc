@@ -2,8 +2,8 @@
  * Worker config: assets + SSR + server functions in one Worker.
  * Local dev uses these top-level bindings against miniflare state in .wrangler/state —
  * the ids below are stable local keys, not real Cloudflare resources.
- * staging/production envs re-declare bindings (envs do not inherit them); their ids are
- * placeholders filled from real resources at deploy time (docs/DEPLOY.md, ship-readiness).
+ * The `production` env re-declares its bindings (envs do not inherit them); its ids are
+ * placeholders filled from real resources during the one-time bootstrap (docs/DEPLOY.md).
  */
 {
   "$schema": "node_modules/wrangler/config-schema.json",
@@ -28,23 +28,6 @@
     }
   ],
   "env": {
-    "staging": {
-      "name": "rankedmodel-staging",
-      "d1_databases": [
-        {
-          "binding": "DB",
-          "database_name": "rankedmodel-staging",
-          "database_id": "REPLACE_AT_DEPLOY_staging_d1_id",
-          "migrations_dir": "../../packages/db/migrations"
-        }
-      ],
-      "kv_namespaces": [
-        {
-          "binding": "CATALOG",
-          "id": "REPLACE_AT_DEPLOY_staging_kv_id"
-        }
-      ]
-    },
     "production": {
       "name": "rankedmodel",
       "d1_databases": [

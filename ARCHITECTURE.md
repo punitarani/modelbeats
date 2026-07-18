@@ -179,7 +179,7 @@ Since data is manually curated, the repo *is* the CMS. Every data change is a re
 
 1. **Validate** — Zod schemas check every file: referential integrity (slugs resolve), enum membership, score ranges vs. benchmark scale, date sanity, duplicate detection. CI fails on any violation → bad data can't ship.
 2. **Derive** — compute the **Frontier Elo** (D21: Bradley-Terry ratings fitted over pairwise benchmark battles — every benchmark two models both report is a head-to-head; the fit must converge or derive fails), category indexes (mean of min-max-normalized scores per category — capability profile only), the D20 rank-eligibility gate, ranks, and lineage movers.
-3. **Seed D1** — generate idempotent upsert SQL, apply via `wrangler d1 execute` (staging first, prod on approval). Schema changes go through `drizzle-kit generate` → `wrangler d1 migrations apply`, always before seeding.
+3. **Seed D1** — generate idempotent upsert SQL, apply via `wrangler d1 execute`. Schema changes go through `drizzle-kit generate` → `wrangler d1 migrations apply`, always before seeding (the publish pipeline applies migrations itself as step 3).
 4. **Snapshot** — build the catalog JSON (models × headline fields × headline scores × facet dictionaries), gzip, write to KV as `catalog:v{N}`, then flip `meta.data_version = N`. Old versions retained for rollback.
 5. **Invalidate** — nothing to purge: all caches are keyed by data version (see §9). New version → new keys → instant global consistency.
 
@@ -306,13 +306,13 @@ rankedmodel/
   data/                     curated dataset (§5)
   scripts/                  validate.ts, derive.ts, seed.ts, snapshot.ts
   drizzle/                  schema.ts + generated migrations
-  wrangler.jsonc            Worker + D1 + KV bindings (env: staging | production)
+  wrangler.jsonc            Worker + D1 + KV bindings (local top-level + env: production)
 ```
 
-- **Environments:** `staging` (own D1 + KV) and `production`, both defined in `wrangler.jsonc` envs. PR → CF preview URL (Workers preview versions) against staging data.
-- **CI (GitHub Actions):**
-  - every PR: typecheck · Biome · Vitest (shared logic, score math, hardware engine) · `validate-data` · Playwright smoke (core routes render)
-  - merge to `main`: migrate staging → seed staging → deploy staging → (manual approval gate) → migrate/seed/deploy production → snapshot publish
+- **Environments:** `production` only (one D1 + one KV + one Worker), defined in `wrangler.jsonc` `env.production`; top-level bindings drive local miniflare, which covers pre-prod verification. (Staging was descoped — see [docs/DEPLOY.md](DEPLOY.md) and the deployment-pipeline spec.)
+- **CI/CD (GitHub Actions, `.github/workflows/ci.yml`):**
+  - every PR & push: `ci` job (typecheck · Biome · Vitest · `validate-data` · build · budgets · migration-drift guard) + `e2e` job (Playwright against the built workerd preview)
+  - push to `main`: `deploy` job, gated on `ci` + `e2e` passing, runs `bun run deploy:production` (migrate remote D1 → build → `wrangler deploy` → publish data). A merge that only touches `data/**` redeploys the same Worker and ships a new snapshot — same job, no separate path. Gated by a GitHub `production` environment (optional required-reviewer approval).
 - **Observability:** Workers Logs + Analytics; optional Sentry (client + Worker). Alert on SSR error rate and p95.
 - **Cost:** Workers Paid $5/mo covers Workers, D1 (10 GB, replicas), KV at this traffic/data scale. Effectively fixed-cost.
 
@@ -324,7 +324,7 @@ rankedmodel/
 
 | Phase | Scope | Exit criteria |
 |---|---|---|
-| **0 — Foundation** (~1 wk) | Scaffold Start+CF template, wrangler envs, Drizzle schema + migrations, CI skeleton, shadcn/Base UI + tokens + dark mode, data validation pipeline with ~20 hand-seeded models / 8 benchmarks | Deployed to staging; publish flow works end-to-end |
+| **0 — Foundation** (~1 wk) | Scaffold Start+CF template, wrangler envs, Drizzle schema + migrations, CI skeleton, shadcn/Base UI + tokens + dark mode, data validation pipeline with ~20 hand-seeded models / 8 benchmarks | Deployed to production; publish flow works end-to-end |
 | **1 — Core catalog** (~2–3 wks) | Model Explorer (table, facets, URL state, virtualization) · Model detail (specs, benchmarks, links) · Benchmark explorer + detail · Leaderboards · client-side search + ⌘K · methodology page · SEO (meta, sitemap, JSON-LD) | Usable public v1: find, inspect, rank |
 | **2 — Comparison & hardware** (~2 wks) | Compare view (diff, radar, heatmap, capability matrix, cost chart) · saved comparisons (URL + localStorage) · hardware profile + fit engine · hardware & quantization explorers | The differentiating features live |
 | **3 — Temporal & dashboard** (~1–2 wks) | Release timeline · lineage trees + perf-over-versions · family/org pages · dashboard (movers, deltas, widgets) · rank-delta computation in publish pipeline | Full route map shipped |

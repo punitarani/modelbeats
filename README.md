@@ -43,7 +43,7 @@ shared between the dev server and the wrangler CLI.
 
 ```sh
 bun install
-bun run publish-data:local   # validate → derive → seed local D1 → snapshot to local KV
+bun run publish-data:local   # validate → derive → migrate → seed local D1 → snapshot to local KV
 bun run dev                  # http://localhost:3000
 ```
 
@@ -54,7 +54,7 @@ bun run dev                  # http://localhost:3000
 | `bun run validate-data` | Zod + cross-file integrity gates over `data/` |
 | `bun run derive` | recompute `data/derived/scores.json` (committed, reviewable) |
 | `bun run publish-data:local` | full local publish pipeline (idempotent) |
-| `bun run deploy:staging` / `:production` | credential-gated real deploys — see [docs/DEPLOY.md](docs/DEPLOY.md) |
+| `bun run deploy:production` | credential-gated real deploy (also what CD runs on merge) — see [docs/DEPLOY.md](docs/DEPLOY.md) |
 
 ## Repository layout
 

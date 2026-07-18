@@ -1,4 +1,4 @@
-name: CI
+name: CI/CD
 
 on:
   push:
@@ -22,7 +22,7 @@ jobs:
       - name: Install dependencies
         run: bun install --frozen-lockfile
 
-      # Exactly what `bun run ci` runs locally: typecheck → lint → test → build.
+      # Exactly what `bun run ci` runs locally: typecheck → lint → test → build → budgets.
       # Keep this a single script call so local and CI can never drift.
       - name: CI checks
         run: bun run ci
@@ -30,6 +30,21 @@ jobs:
       - name: Generated Worker types are current
         working-directory: apps/web
         run: bunx wrangler types --check
+
+      # Guard against the "hand-written migration" drift class: if schema.ts changed
+      # without a committed migration, `drizzle-kit generate` emits new files and the
+      # tree goes dirty. Runtime (wrangler reads the dir) would still work, but the
+      # authoring pipeline would silently desync — fail loudly instead.
+      - name: DB migrations in sync with schema
+        working-directory: packages/db
+        run: |
+          bunx drizzle-kit generate
+          if [ -n "$(git status --porcelain migrations)" ]; then
+            echo "::error::schema.ts changed without a committed migration — run 'bun run generate' in packages/db and commit the result"
+            git status --porcelain migrations
+            git --no-pager diff -- migrations
+            exit 1
+          fi
 
   e2e:
     runs-on: ubuntu-latest
@@ -55,3 +70,39 @@ jobs:
       # against the built preview in workerd.
       - name: End-to-end tests
         run: bun run e2e
+
+  # Continuous deployment: every push to main that passes ci + e2e ships to production.
+  # A merge touching only data/** redeploys the same Worker and publishes a new catalog
+  # snapshot — same job, no separate path. Runs `bun run deploy:production`, which does
+  # migrate remote D1 → build → wrangler deploy → publish data (seed + KV snapshot + bump).
+  #
+  # Requires two GitHub Actions secrets: CLOUDFLARE_API_TOKEN (Workers Scripts + D1 + KV
+  # edit scopes) and CLOUDFLARE_ACCOUNT_ID. The `production` environment lets you attach a
+  # required-reviewer approval gate in repo settings without touching this file.
+  deploy:
+    needs: [ci, e2e]
+    if: github.event_name == 'push' && github.ref == 'refs/heads/main'
+    runs-on: ubuntu-latest
+    environment: production
+    concurrency:
+      group: deploy-production
+      cancel-in-progress: false
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: oven-sh/setup-bun@v2
+        with:
+          bun-version: latest
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+
+      - name: Install dependencies
+        run: bun install --frozen-lockfile
+
+      - name: Deploy to production
+        env:
+          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+        run: bun run deploy:production
