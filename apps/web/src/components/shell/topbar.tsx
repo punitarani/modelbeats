@@ -1,7 +1,6 @@
 import { useLocation } from '@tanstack/react-router'
-import { Moon, Sun } from 'lucide-react'
-import { useSyncExternalStore } from 'react'
-import { getTheme, toggleTheme } from '#/lib/theme'
+import { SidebarTrigger } from '#/components/ui/sidebar'
+import { ThemeToggle } from './theme-toggle'
 import { TopbarSearch } from './topbar-search'
 
 const TITLES: [prefix: string, title: string][] = [
@@ -22,22 +21,13 @@ function pageTitle(pathname: string): string {
   return TITLES.find(([prefix]) => pathname.startsWith(prefix))?.[1] ?? 'Dashboard'
 }
 
-// theme as an external store: identical 'dark' on server + first client render, real
-// value after subscription — no hydration mismatch, no flash (class is set pre-paint).
-let themeListeners: (() => void)[] = []
-const subscribeTheme = (cb: () => void) => {
-  themeListeners.push(cb)
-  return () => {
-    themeListeners = themeListeners.filter((l) => l !== cb)
-  }
-}
-
 export function Topbar() {
   const { pathname } = useLocation()
-  const theme = useSyncExternalStore(subscribeTheme, getTheme, () => 'dark' as const)
 
   return (
     <div className="sticky top-0 z-40 flex items-center gap-3.5 border-b border-border bg-bg px-6 py-2.5">
+      {/* Mobile-only: opens the off-canvas nav drawer. Hidden on desktop where the sidebar is persistent. */}
+      <SidebarTrigger className="-ml-2 shrink-0 text-mut md:hidden" aria-label="Open navigation" />
       <div
         className="whitespace-nowrap text-[13px] font-semibold tracking-[-0.01em]"
         data-testid="page-title"
@@ -45,25 +35,9 @@ export function Topbar() {
         {pageTitle(pathname)}
       </div>
       <TopbarSearch />
-      <button
-        type="button"
-        onClick={() => {
-          toggleTheme()
-          for (const l of themeListeners) l()
-        }}
-        className="inline-flex cursor-pointer items-center gap-1 whitespace-nowrap rounded-[7px] border border-border bg-panel2 px-[11px] py-1.5 text-[11.5px] text-mut hover:border-border2 hover:text-text"
-        data-testid="theme-toggle"
-      >
-        {theme === 'dark' ? (
-          <>
-            <Moon aria-hidden="true" className="size-3.5 shrink-0" strokeWidth={1.75} /> Light
-          </>
-        ) : (
-          <>
-            <Sun aria-hidden="true" className="size-3.5 shrink-0" strokeWidth={1.75} /> Dark
-          </>
-        )}
-      </button>
+      {/* Desktop only: on mobile the theme toggle lives at the bottom of the sidebar drawer, so the
+          mobile topbar is just the menu icon, the page title, and the search. */}
+      <ThemeToggle className="hidden md:inline-flex" testId="theme-toggle" />
     </div>
   )
 }

@@ -7,6 +7,7 @@ import { useEffect } from 'react'
 import { NotFound } from '#/components/shell/not-found'
 import { Sidebar } from '#/components/shell/sidebar'
 import { Topbar } from '#/components/shell/topbar'
+import { SidebarInset, SidebarProvider } from '#/components/ui/sidebar'
 import { catalogQueryOptions } from '#/lib/catalog'
 import { THEME_INIT_SCRIPT } from '#/lib/theme'
 import appCss from '../styles.css?url'
@@ -47,13 +48,17 @@ function RootLayout() {
     document.documentElement.dataset.hydrated = 'true'
   }, [])
   return (
-    <div className="flex min-h-screen bg-bg">
+    <SidebarProvider
+      className="bg-bg"
+      // Keep the desktop sidebar at the design's 210px (the registry default is 16rem).
+      style={{ '--sidebar-width': '210px' } as React.CSSProperties}
+    >
       <Sidebar />
-      <main className="flex min-w-0 flex-1 flex-col">
+      <SidebarInset className="min-w-0 bg-transparent">
         <Topbar />
         <Outlet />
-      </main>
-    </div>
+      </SidebarInset>
+    </SidebarProvider>
   )
 }
 

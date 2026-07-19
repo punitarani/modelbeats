@@ -93,6 +93,17 @@
   --color-input: var(--border);
   --color-ring: var(--acc);
 
+  /* shadcn Sidebar tokens mapped onto the design language (bg-sidebar, text-sidebar-foreground,
+     border-sidebar-border, …) so the collapsible sidebar + mobile drawer match the panel palette. */
+  --color-sidebar: var(--panel);
+  --color-sidebar-foreground: var(--text);
+  --color-sidebar-primary: var(--acc);
+  --color-sidebar-primary-foreground: var(--bg);
+  --color-sidebar-accent: var(--panel2);
+  --color-sidebar-accent-foreground: var(--text);
+  --color-sidebar-border: var(--border);
+  --color-sidebar-ring: var(--acc);
+
   --radius: 0.5rem;
   --animate-fadeup: fadeup 0.18s ease;
 }
