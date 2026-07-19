@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest'
-import { parseSort, selectExplorer, selectRankings, toggleSort } from './selectors'
+import { parseSort, searchModels, selectExplorer, selectRankings, toggleSort } from './selectors'
 import type { SnapshotModel } from './snapshot'
 
 const model = (over: Partial<SnapshotModel>): SnapshotModel =>
@@ -165,5 +165,47 @@ describe('selectExplorer', () => {
       gpus,
     )
     expect(rows.map((m) => m.slug)).toEqual(['oss20b'])
+  })
+})
+
+describe('searchModels', () => {
+  const gpt4o = model({ slug: 'gpt-4o', name: 'GPT-4o', org: 'OpenAI', orgSlug: 'openai' })
+  const gpt4mini = model({
+    slug: 'gpt-4o-mini',
+    name: 'GPT-4o mini',
+    org: 'OpenAI',
+    orgSlug: 'openai',
+  })
+  const claude = model({
+    slug: 'claude-4',
+    name: 'Claude 4',
+    org: 'Anthropic',
+    orgSlug: 'anthropic',
+  })
+  const all = [gpt4o, gpt4mini, claude]
+
+  it('plain substring query matches name/org/family (unchanged)', () => {
+    expect(searchModels(all, 'claude').map((m) => m.slug)).toEqual(['claude-4'])
+  })
+
+  it('provider slash filters to only that provider (all its models)', () => {
+    expect(searchModels(all, 'openai/').map((m) => m.slug)).toEqual(['gpt-4o', 'gpt-4o-mini'])
+  })
+
+  it('provider slash is case-insensitive against orgSlug and org name', () => {
+    expect(searchModels(all, 'OpenAI/').map((m) => m.slug)).toEqual(['gpt-4o', 'gpt-4o-mini'])
+  })
+
+  it('text after the slash narrows within the provider by name', () => {
+    expect(searchModels(all, 'openai/mini').map((m) => m.slug)).toEqual(['gpt-4o-mini'])
+  })
+
+  it('a slash whose prefix names no provider falls back to substring search', () => {
+    // 'gpt' is not a provider; the whole 'gpt/' string isn't in any haystack → no matches
+    expect(searchModels(all, 'gpt/')).toEqual([])
+  })
+
+  it('respects the limit within a provider scope', () => {
+    expect(searchModels(all, 'openai/', 1).map((m) => m.slug)).toEqual(['gpt-4o'])
   })
 })

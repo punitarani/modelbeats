@@ -103,10 +103,35 @@ export function selectOrgs(models: SnapshotModel[]): OrgOption[] {
     .sort((a, b) => a.name.localeCompare(b.name))
 }
 
-/** Case-insensitive substring search over name+org+family, top N (design topbar). */
+/**
+ * Case-insensitive substring search over name+org+family, top N (design topbar).
+ *
+ * Provider-scoped syntax: a query `<provider>/<rest>` whose prefix (text before the first
+ * `/`) exactly names a provider — matching either its `orgSlug` ("openai") or display `org`
+ * ("OpenAI"), case-insensitively — restricts results to that provider's models, then
+ * substring-matches `<rest>` against name+family within them. `"openai/"` → every OpenAI
+ * model; `"openai/mini"` → OpenAI models whose name/family contains "mini". A slash whose
+ * prefix names no provider falls back to a plain substring search over the whole query.
+ */
 export function searchModels(models: SnapshotModel[], q: string, limit = 8): SnapshotModel[] {
   const needle = q.trim().toLowerCase()
   if (!needle) return []
+
+  const slash = needle.indexOf('/')
+  if (slash !== -1) {
+    const provider = needle.slice(0, slash).trim()
+    const rest = needle.slice(slash + 1).trim()
+    const scoped = models.filter(
+      (m) => m.orgSlug.toLowerCase() === provider || m.org.toLowerCase() === provider,
+    )
+    if (scoped.length > 0) {
+      return scoped
+        .filter((m) => !rest || `${m.name} ${m.family}`.toLowerCase().includes(rest))
+        .slice(0, limit)
+    }
+    // prefix isn't a known provider — fall through to plain substring search
+  }
+
   return models.filter((m) => textHaystack(m).includes(needle)).slice(0, limit)
 }
 
