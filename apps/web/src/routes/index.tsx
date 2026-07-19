@@ -61,14 +61,14 @@ function DashboardRoute() {
 
   return (
     <div className="animate-fadeup px-6 py-5 pb-10">
-      <div className="mb-4 flex items-center gap-3">
+      <div className="mb-4 flex flex-col items-start gap-3 md:flex-row md:items-center">
         <div>
           <h1 className="text-lg font-semibold tracking-[-0.02em]">The state of language models</h1>
           <div className="mt-0.5 text-xs text-mut">
             Rankings, releases and benchmark movement · updated {data.asOf}
           </div>
         </div>
-        <div className="ml-auto">
+        <div className="md:ml-auto">
           <Segmented
             value={tab}
             options={[
