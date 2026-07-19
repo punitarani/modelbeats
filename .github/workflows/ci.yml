@@ -31,21 +31,6 @@ jobs:
         working-directory: apps/web
         run: bunx wrangler types --check
 
-      # Guard against the "hand-written migration" drift class: if schema.ts changed
-      # without a committed migration, `drizzle-kit generate` emits new files and the
-      # tree goes dirty. Runtime (wrangler reads the dir) would still work, but the
-      # authoring pipeline would silently desync — fail loudly instead.
-      - name: DB migrations in sync with schema
-        working-directory: packages/db
-        run: |
-          bunx drizzle-kit generate
-          if [ -n "$(git status --porcelain migrations)" ]; then
-            echo "::error::schema.ts changed without a committed migration — run 'bun run generate' in packages/db and commit the result"
-            git status --porcelain migrations
-            git --no-pager diff -- migrations
-            exit 1
-          fi
-
   e2e:
     runs-on: ubuntu-latest
     steps:

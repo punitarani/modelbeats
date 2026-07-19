@@ -27,43 +27,43 @@ link. Dark (default) + light themes from the design-token palette.
 ## Architecture in one paragraph
 
 One Cloudflare Worker serves static assets + TanStack Start SSR + two typed server
-functions. D1 (Drizzle) is the source of truth; each publish writes an **immutable,
-versioned catalog snapshot** to KV that ships to the client once and powers all
-list/filter/rank interactions through pure shared selectors. Scores are computed at
-publish time (`validate → derive → seed → snapshot → version bump`); the version bump
-*is* cache invalidation. The rating formula (Frontier Elo — Bradley-Terry over pairwise
-benchmark battles, D21), hardware-fit thresholds and snapshot schema are golden-tested
-contracts (`packages/shared`).
+functions. There is **no database**: `bun run build-catalog` computes everything from the
+curated `data/**` files into two **immutable, content-versioned** artifacts — a headline
+catalog snapshot and a per-model detail map — which are bundled into the Worker at build
+time and served from the edge cache. The catalog ships to the client once and powers all
+list/filter/rank interactions through pure shared selectors. Scores are computed at build
+time (`validate → derive → build catalog`); a data change is a new build, hence a new
+content version, hence fresh caches — nothing to purge. The rating formula (Frontier Elo —
+Bradley-Terry over pairwise benchmark battles, D21), hardware-fit thresholds and snapshot
+schema are golden-tested contracts (`packages/shared`).
 
 ## Development
 
 Prereqs: **Bun ≥ 1.3** and **Node ≥ 24** (wrangler/vite/vitest run under Node — never
-under the Bun runtime). No Cloudflare account needed: D1/KV run locally via miniflare,
-shared between the dev server and the wrangler CLI.
+under the Bun runtime). No Cloudflare account needed to develop.
 
 ```sh
 bun install
-bun run publish-data:local   # validate → derive → migrate → seed local D1 → snapshot to local KV
-bun run dev                  # http://localhost:3000
+bun run build-catalog   # validate → derive → build the catalog + model-detail artifacts
+bun run dev             # http://localhost:3000
 ```
 
 | Command | What it does |
 |---|---|
-| `bun run ci` | typecheck → lint → unit tests → build → perf budgets (exactly what CI runs) |
-| `bun run e2e` | publish local data, then Playwright against the **built** preview in workerd |
+| `bun run build-catalog` | validate → derive → build the bundled serving artifacts (run before typecheck/build/dev) |
+| `bun run ci` | build-catalog → typecheck → lint → unit tests → build → perf budgets (exactly what CI runs) |
+| `bun run e2e` | build the artifacts, then Playwright against the **built** preview in workerd |
 | `bun run validate-data` | Zod + cross-file integrity gates over `data/` |
 | `bun run derive` | recompute `data/derived/scores.json` (committed, reviewable) |
-| `bun run publish-data:local` | full local publish pipeline (idempotent) |
 | `bun run deploy:production` | credential-gated real deploy (also what CD runs on merge) — see [docs/DEPLOY.md](docs/DEPLOY.md) |
 
 ## Repository layout
 
 ```
 apps/web/          TanStack Start app (routes, screens, server fns, e2e specs)
-packages/shared/   Zod schemas · scoring engine · hardware-fit engine · selectors · formatters
-packages/db/       Drizzle schema + migrations (applied via wrangler)
+packages/shared/   Zod schemas · scoring engine · hardware-fit engine · selectors · formatters · contracts
 data/              curated dataset — the repo is the CMS (see CONTRIBUTING.md)
-scripts/           validate / derive / seed / snapshot / publish / budgets / deploy
+scripts/           validate / derive / build-catalog / budgets / deploy
 docs/              design handoff · DECISIONS.md · DEPLOY.md
 ```
 

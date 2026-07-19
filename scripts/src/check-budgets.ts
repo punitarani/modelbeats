@@ -35,7 +35,7 @@ if (!biggest) throw new Error('no client chunks found — run the build first')
 check(`largest client chunk (${biggest.f})`, biggest.kb, CLIENT_BUDGET_KB)
 
 // 2. snapshot
-const snapshot = await buildSnapshot('data', 1)
+const snapshot = await buildSnapshot('data')
 check('catalog snapshot', gzipSync(JSON.stringify(snapshot)).length / 1024, SNAPSHOT_BUDGET_KB)
 
 // 3. worker bundle via wrangler dry-run (no credentials needed)

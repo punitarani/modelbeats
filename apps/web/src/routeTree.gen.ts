@@ -9,60 +9,30 @@
 // Additionally, you should also exclude this file from your linter and/or formatter to prevent it from being checked or modified.
 
 import { Route as rootRouteImport } from './routes/__root'
-import { Route as TimelineRouteImport } from './routes/timeline'
-import { Route as SitemapDotxmlRouteImport } from './routes/sitemap[.]xml'
-import { Route as SearchRouteImport } from './routes/search'
-import { Route as SavedRouteImport } from './routes/saved'
-import { Route as RobotsDottxtRouteImport } from './routes/robots[.]txt'
-import { Route as MethodologyRouteImport } from './routes/methodology'
-import { Route as HardwareRouteImport } from './routes/hardware'
-import { Route as CompareRouteImport } from './routes/compare'
 import { Route as IndexRouteImport } from './routes/index'
-import { Route as RankingsIndexRouteImport } from './routes/rankings.index'
-import { Route as ModelsIndexRouteImport } from './routes/models.index'
+import { Route as CompareRouteImport } from './routes/compare'
+import { Route as HardwareRouteImport } from './routes/hardware'
+import { Route as MethodologyRouteImport } from './routes/methodology'
+import { Route as RobotsDottxtRouteImport } from './routes/robots[.]txt'
+import { Route as SavedRouteImport } from './routes/saved'
+import { Route as SearchRouteImport } from './routes/search'
+import { Route as SitemapDotxmlRouteImport } from './routes/sitemap[.]xml'
+import { Route as TimelineRouteImport } from './routes/timeline'
 import { Route as BenchmarksIndexRouteImport } from './routes/benchmarks.index'
-import { Route as RankingsCategoryRouteImport } from './routes/rankings.$category'
-import { Route as OrganizationsSlugRouteImport } from './routes/organizations.$slug'
-import { Route as ModelsSlugRouteImport } from './routes/models.$slug'
-import { Route as FamiliesSlugRouteImport } from './routes/families.$slug'
-import { Route as DebugChartsRouteImport } from './routes/debug.charts'
-import { Route as DebugCatalogRouteImport } from './routes/debug.catalog'
 import { Route as BenchmarksSlugRouteImport } from './routes/benchmarks.$slug'
+import { Route as DebugCatalogRouteImport } from './routes/debug.catalog'
+import { Route as DebugChartsRouteImport } from './routes/debug.charts'
+import { Route as FamiliesSlugRouteImport } from './routes/families.$slug'
+import { Route as ModelsIndexRouteImport } from './routes/models.index'
+import { Route as ModelsSlugRouteImport } from './routes/models.$slug'
+import { Route as OrganizationsSlugRouteImport } from './routes/organizations.$slug'
+import { Route as RankingsIndexRouteImport } from './routes/rankings.index'
+import { Route as RankingsCategoryRouteImport } from './routes/rankings.$category'
 import { Route as ApiCatalogVChar123versionChar125DotjsonRouteImport } from './routes/api/catalog.v{$version}[.]json'
 
-const TimelineRoute = TimelineRouteImport.update({
-  id: '/timeline',
-  path: '/timeline',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const SitemapDotxmlRoute = SitemapDotxmlRouteImport.update({
-  id: '/sitemap.xml',
-  path: '/sitemap.xml',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const SearchRoute = SearchRouteImport.update({
-  id: '/search',
-  path: '/search',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const SavedRoute = SavedRouteImport.update({
-  id: '/saved',
-  path: '/saved',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const RobotsDottxtRoute = RobotsDottxtRouteImport.update({
-  id: '/robots.txt',
-  path: '/robots.txt',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const MethodologyRoute = MethodologyRouteImport.update({
-  id: '/methodology',
-  path: '/methodology',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const HardwareRoute = HardwareRouteImport.update({
-  id: '/hardware',
-  path: '/hardware',
+const IndexRoute = IndexRouteImport.update({
+  id: '/',
+  path: '/',
   getParentRoute: () => rootRouteImport,
 } as any)
 const CompareRoute = CompareRouteImport.update({
@@ -70,19 +40,39 @@ const CompareRoute = CompareRouteImport.update({
   path: '/compare',
   getParentRoute: () => rootRouteImport,
 } as any)
-const IndexRoute = IndexRouteImport.update({
-  id: '/',
-  path: '/',
+const HardwareRoute = HardwareRouteImport.update({
+  id: '/hardware',
+  path: '/hardware',
   getParentRoute: () => rootRouteImport,
 } as any)
-const RankingsIndexRoute = RankingsIndexRouteImport.update({
-  id: '/rankings/',
-  path: '/rankings/',
+const MethodologyRoute = MethodologyRouteImport.update({
+  id: '/methodology',
+  path: '/methodology',
   getParentRoute: () => rootRouteImport,
 } as any)
-const ModelsIndexRoute = ModelsIndexRouteImport.update({
-  id: '/models/',
-  path: '/models/',
+const RobotsDottxtRoute = RobotsDottxtRouteImport.update({
+  id: '/robots.txt',
+  path: '/robots.txt',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const SavedRoute = SavedRouteImport.update({
+  id: '/saved',
+  path: '/saved',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const SearchRoute = SearchRouteImport.update({
+  id: '/search',
+  path: '/search',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const SitemapDotxmlRoute = SitemapDotxmlRouteImport.update({
+  id: '/sitemap.xml',
+  path: '/sitemap.xml',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const TimelineRoute = TimelineRouteImport.update({
+  id: '/timeline',
+  path: '/timeline',
   getParentRoute: () => rootRouteImport,
 } as any)
 const BenchmarksIndexRoute = BenchmarksIndexRouteImport.update({
@@ -90,29 +80,9 @@ const BenchmarksIndexRoute = BenchmarksIndexRouteImport.update({
   path: '/benchmarks/',
   getParentRoute: () => rootRouteImport,
 } as any)
-const RankingsCategoryRoute = RankingsCategoryRouteImport.update({
-  id: '/rankings/$category',
-  path: '/rankings/$category',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const OrganizationsSlugRoute = OrganizationsSlugRouteImport.update({
-  id: '/organizations/$slug',
-  path: '/organizations/$slug',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const ModelsSlugRoute = ModelsSlugRouteImport.update({
-  id: '/models/$slug',
-  path: '/models/$slug',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const FamiliesSlugRoute = FamiliesSlugRouteImport.update({
-  id: '/families/$slug',
-  path: '/families/$slug',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const DebugChartsRoute = DebugChartsRouteImport.update({
-  id: '/debug/charts',
-  path: '/debug/charts',
+const BenchmarksSlugRoute = BenchmarksSlugRouteImport.update({
+  id: '/benchmarks/$slug',
+  path: '/benchmarks/$slug',
   getParentRoute: () => rootRouteImport,
 } as any)
 const DebugCatalogRoute = DebugCatalogRouteImport.update({
@@ -120,9 +90,39 @@ const DebugCatalogRoute = DebugCatalogRouteImport.update({
   path: '/debug/catalog',
   getParentRoute: () => rootRouteImport,
 } as any)
-const BenchmarksSlugRoute = BenchmarksSlugRouteImport.update({
-  id: '/benchmarks/$slug',
-  path: '/benchmarks/$slug',
+const DebugChartsRoute = DebugChartsRouteImport.update({
+  id: '/debug/charts',
+  path: '/debug/charts',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const FamiliesSlugRoute = FamiliesSlugRouteImport.update({
+  id: '/families/$slug',
+  path: '/families/$slug',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ModelsIndexRoute = ModelsIndexRouteImport.update({
+  id: '/models/',
+  path: '/models/',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ModelsSlugRoute = ModelsSlugRouteImport.update({
+  id: '/models/$slug',
+  path: '/models/$slug',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const OrganizationsSlugRoute = OrganizationsSlugRouteImport.update({
+  id: '/organizations/$slug',
+  path: '/organizations/$slug',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const RankingsIndexRoute = RankingsIndexRouteImport.update({
+  id: '/rankings/',
+  path: '/rankings/',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const RankingsCategoryRoute = RankingsCategoryRouteImport.update({
+  id: '/rankings/$category',
+  path: '/rankings/$category',
   getParentRoute: () => rootRouteImport,
 } as any)
 const ApiCatalogVChar123versionChar125DotjsonRoute =
@@ -293,53 +293,11 @@ export interface RootRouteChildren {
 
 declare module '@tanstack/react-router' {
   interface FileRoutesByPath {
-    '/timeline': {
-      id: '/timeline'
-      path: '/timeline'
-      fullPath: '/timeline'
-      preLoaderRoute: typeof TimelineRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/sitemap.xml': {
-      id: '/sitemap.xml'
-      path: '/sitemap.xml'
-      fullPath: '/sitemap.xml'
-      preLoaderRoute: typeof SitemapDotxmlRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/search': {
-      id: '/search'
-      path: '/search'
-      fullPath: '/search'
-      preLoaderRoute: typeof SearchRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/saved': {
-      id: '/saved'
-      path: '/saved'
-      fullPath: '/saved'
-      preLoaderRoute: typeof SavedRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/robots.txt': {
-      id: '/robots.txt'
-      path: '/robots.txt'
-      fullPath: '/robots.txt'
-      preLoaderRoute: typeof RobotsDottxtRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/methodology': {
-      id: '/methodology'
-      path: '/methodology'
-      fullPath: '/methodology'
-      preLoaderRoute: typeof MethodologyRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/hardware': {
-      id: '/hardware'
-      path: '/hardware'
-      fullPath: '/hardware'
-      preLoaderRoute: typeof HardwareRouteImport
+    '/': {
+      id: '/'
+      path: '/'
+      fullPath: '/'
+      preLoaderRoute: typeof IndexRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/compare': {
@@ -349,25 +307,53 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof CompareRouteImport
       parentRoute: typeof rootRouteImport
     }
-    '/': {
-      id: '/'
-      path: '/'
-      fullPath: '/'
-      preLoaderRoute: typeof IndexRouteImport
+    '/hardware': {
+      id: '/hardware'
+      path: '/hardware'
+      fullPath: '/hardware'
+      preLoaderRoute: typeof HardwareRouteImport
       parentRoute: typeof rootRouteImport
     }
-    '/rankings/': {
-      id: '/rankings/'
-      path: '/rankings'
-      fullPath: '/rankings/'
-      preLoaderRoute: typeof RankingsIndexRouteImport
+    '/methodology': {
+      id: '/methodology'
+      path: '/methodology'
+      fullPath: '/methodology'
+      preLoaderRoute: typeof MethodologyRouteImport
       parentRoute: typeof rootRouteImport
     }
-    '/models/': {
-      id: '/models/'
-      path: '/models'
-      fullPath: '/models/'
-      preLoaderRoute: typeof ModelsIndexRouteImport
+    '/robots.txt': {
+      id: '/robots.txt'
+      path: '/robots.txt'
+      fullPath: '/robots.txt'
+      preLoaderRoute: typeof RobotsDottxtRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/saved': {
+      id: '/saved'
+      path: '/saved'
+      fullPath: '/saved'
+      preLoaderRoute: typeof SavedRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/search': {
+      id: '/search'
+      path: '/search'
+      fullPath: '/search'
+      preLoaderRoute: typeof SearchRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/sitemap.xml': {
+      id: '/sitemap.xml'
+      path: '/sitemap.xml'
+      fullPath: '/sitemap.xml'
+      preLoaderRoute: typeof SitemapDotxmlRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/timeline': {
+      id: '/timeline'
+      path: '/timeline'
+      fullPath: '/timeline'
+      preLoaderRoute: typeof TimelineRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/benchmarks/': {
@@ -377,39 +363,11 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof BenchmarksIndexRouteImport
       parentRoute: typeof rootRouteImport
     }
-    '/rankings/$category': {
-      id: '/rankings/$category'
-      path: '/rankings/$category'
-      fullPath: '/rankings/$category'
-      preLoaderRoute: typeof RankingsCategoryRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/organizations/$slug': {
-      id: '/organizations/$slug'
-      path: '/organizations/$slug'
-      fullPath: '/organizations/$slug'
-      preLoaderRoute: typeof OrganizationsSlugRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/models/$slug': {
-      id: '/models/$slug'
-      path: '/models/$slug'
-      fullPath: '/models/$slug'
-      preLoaderRoute: typeof ModelsSlugRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/families/$slug': {
-      id: '/families/$slug'
-      path: '/families/$slug'
-      fullPath: '/families/$slug'
-      preLoaderRoute: typeof FamiliesSlugRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/debug/charts': {
-      id: '/debug/charts'
-      path: '/debug/charts'
-      fullPath: '/debug/charts'
-      preLoaderRoute: typeof DebugChartsRouteImport
+    '/benchmarks/$slug': {
+      id: '/benchmarks/$slug'
+      path: '/benchmarks/$slug'
+      fullPath: '/benchmarks/$slug'
+      preLoaderRoute: typeof BenchmarksSlugRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/debug/catalog': {
@@ -419,11 +377,53 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof DebugCatalogRouteImport
       parentRoute: typeof rootRouteImport
     }
-    '/benchmarks/$slug': {
-      id: '/benchmarks/$slug'
-      path: '/benchmarks/$slug'
-      fullPath: '/benchmarks/$slug'
-      preLoaderRoute: typeof BenchmarksSlugRouteImport
+    '/debug/charts': {
+      id: '/debug/charts'
+      path: '/debug/charts'
+      fullPath: '/debug/charts'
+      preLoaderRoute: typeof DebugChartsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/families/$slug': {
+      id: '/families/$slug'
+      path: '/families/$slug'
+      fullPath: '/families/$slug'
+      preLoaderRoute: typeof FamiliesSlugRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/models/': {
+      id: '/models/'
+      path: '/models'
+      fullPath: '/models/'
+      preLoaderRoute: typeof ModelsIndexRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/models/$slug': {
+      id: '/models/$slug'
+      path: '/models/$slug'
+      fullPath: '/models/$slug'
+      preLoaderRoute: typeof ModelsSlugRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/organizations/$slug': {
+      id: '/organizations/$slug'
+      path: '/organizations/$slug'
+      fullPath: '/organizations/$slug'
+      preLoaderRoute: typeof OrganizationsSlugRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/rankings/': {
+      id: '/rankings/'
+      path: '/rankings'
+      fullPath: '/rankings/'
+      preLoaderRoute: typeof RankingsIndexRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/rankings/$category': {
+      id: '/rankings/$category'
+      path: '/rankings/$category'
+      fullPath: '/rankings/$category'
+      preLoaderRoute: typeof RankingsCategoryRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/api/catalog/v{$version}.json': {

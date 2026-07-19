@@ -112,9 +112,10 @@ MoE models need total-parameter memory; speed tracks active parameters.`}</Formu
 
       <H2>Versioned snapshots</H2>
       <P>
-        Data is curated in git, validated, and published as an immutable snapshot (currently v
-        {data.version}). Publishing bumps a version number that keys every cache — nothing is ever
-        purged, and any historical snapshot stays reproducible.
+        Data is curated in git, validated, and built into an immutable snapshot bundled with each
+        deploy (currently v{data.version}). The version is a content hash of the data, so it changes
+        only when the data does — it keys every cache, so nothing is ever purged and the served
+        numbers are always reproducible from the commit that shipped them.
       </P>
 
       <H2>Freshness & contributions</H2>

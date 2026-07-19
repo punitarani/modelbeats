@@ -1,9 +1,8 @@
 /**
- * Worker config: assets + SSR + server functions in one Worker.
- * Local dev uses these top-level bindings against miniflare state in .wrangler/state —
- * the ids below are stable local keys, not real Cloudflare resources.
- * The `production` env re-declares its bindings (envs do not inherit them); its ids are
- * placeholders filled from real resources during the one-time bootstrap (docs/DEPLOY.md).
+ * Worker config: static assets + TanStack Start SSR + server functions in one Worker.
+ * The catalog snapshot and per-model detail are built from data/** and bundled into the
+ * Worker at `vite build` — there is no D1, no KV, nothing to provision. A deploy is just
+ * `wrangler deploy`; the edge cache serves the rest. Deploys to rankedmodel.<sub>.workers.dev.
  */
 {
   "$schema": "node_modules/wrangler/config-schema.json",
@@ -11,39 +10,7 @@
   "compatibility_date": "2026-07-01",
   "compatibility_flags": ["nodejs_compat"],
   "main": "@tanstack/react-start/server-entry",
+  "workers_dev": true,
   "observability": { "enabled": true },
-  "upload_source_maps": true,
-  "d1_databases": [
-    {
-      "binding": "DB",
-      "database_name": "rankedmodel",
-      "database_id": "local-rankedmodel-db",
-      "migrations_dir": "../../packages/db/migrations"
-    }
-  ],
-  "kv_namespaces": [
-    {
-      "binding": "CATALOG",
-      "id": "local-rankedmodel-catalog"
-    }
-  ],
-  "env": {
-    "production": {
-      "name": "rankedmodel",
-      "d1_databases": [
-        {
-          "binding": "DB",
-          "database_name": "rankedmodel",
-          "database_id": "REPLACE_AT_DEPLOY_production_d1_id",
-          "migrations_dir": "../../packages/db/migrations"
-        }
-      ],
-      "kv_namespaces": [
-        {
-          "binding": "CATALOG",
-          "id": "REPLACE_AT_DEPLOY_production_kv_id"
-        }
-      ]
-    }
-  }
+  "upload_source_maps": true
 }

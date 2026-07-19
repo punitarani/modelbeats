@@ -24,9 +24,7 @@ A public, SEO-crawlable, SPA-feel web application on Cloudflare that catalogs ev
 |---|---|---|
 | Framework | **TanStack Start** (React 19, Vite) | First-class Cloudflare Workers target (`@cloudflare/vite-plugin`, official CF template). SSR for SEO/first-paint, then pure client-side SPA navigation. Typed file-based routing with **validated search params** — the backbone of "URL is the state". Server functions give a typed RPC layer with zero API boilerplate. |
 | Hosting | **Cloudflare Workers + Static Assets** | CF's recommended path in 2026 (Pages is legacy-maintained). One Worker serves assets + SSR + API. Cron Triggers available if ingestion is ever automated. |
-| Database | **Cloudflare D1** (SQLite) | 10 GB/db on paid plan — orders of magnitude above need. Global read replication via Sessions API for low-latency SSR reads. FTS5 supported if server-side search is ever needed (v1 searches client-side). |
-| ORM / migrations | **Drizzle ORM + drizzle-kit** | Best-in-class D1 support, SQL-transparent, generates migrations consumed by `wrangler d1 migrations`. Schema is the single typed source of truth, shared client/server. |
-| Cache / snapshots | **Workers KV + Cache API** | KV holds the published catalog snapshot (versioned, immutable keys). Cache API for server-function GET responses with SWR semantics. |
+| Data / serving | **Build-time snapshot, bundled into the Worker** (D22) | The dataset is read-only and computed at publish time, so there is **no runtime database and no store**. `bun run build-catalog` builds two artifacts from `data/**` — a headline catalog snapshot and a per-model detail map — bundled into the Worker at `vite build` and served from the edge cache. A `version` content hash keys the immutable catalog URL. Removed D1, Drizzle, migrations, seed and KV (superseded D14/D15/D17 storage). |
 | UI components | **shadcn/ui on Base UI** | Base UI is shadcn's default primitive layer as of July 2026 — exactly the requested combo. Tailwind v4, CSS-variable theming, dark/light via class strategy. |
 | Tables | **TanStack Table v8 + TanStack Virtual** | Headless sortable/filterable/column-configurable tables; virtualized rows for the full-catalog explorer. |
 | Charts | **Recharts via shadcn charts** (primary) + small custom SVG components (heatmap, timeline, radar if needed) | Keeps chart theming inside the shadcn token system. One lib; no ECharts/d3 unless a view demands it. |
@@ -82,6 +80,12 @@ This split is the core performance decision: interactions that touch *many rows 
 ## 4. Data model (D1 / Drizzle schema)
 
 Principles: flat filterable columns for anything the explorer facets on; JSON columns for link bags and rarely-queried detail; every entity has a stable `slug` for URLs; provenance on every benchmark result.
+
+> **Historical (superseded by D22).** This D1/Drizzle schema was removed on 2026-07-18. Its
+> shape now lives only as the build-time serving artifacts — the C3 catalog snapshot
+> (`packages/shared/src/snapshot.ts`) and the C3b per-model detail
+> (`packages/shared/src/model-detail.ts`), built from `data/**`. The DDL below is kept for
+> lineage/context only.
 
 ```sql
 organizations   (id PK, slug UQ, name, country, type,            -- 'lab'|'company'|'community'
@@ -348,6 +352,7 @@ The Claude Design handoff (`docs/design-handoff/`) and a competitive analysis (k
 
 | ID | Delta vs. this document |
 |---|---|
+| **D22** | **No runtime database (2026-07-18).** D1, KV, Drizzle, migrations, `packages/db` and the seed pipeline are **removed**. The catalog snapshot and a per-model detail map are built from `data/**` by `bun run build-catalog` and **bundled into the Worker** at build time, served from the edge cache. This supersedes the storage/serving specifics of **§3** (no D1/KV/seed in the data flow), **§4** (the D1/Drizzle schema below is historical), **§5** (pipeline is `validate → derive → build-catalog`), **§6** (server fns read bundled JSON), **§9** (a content-hash `version` keys the immutable catalog URL; a deploy ships a new version). See [docs/DECISIONS.md](docs/DECISIONS.md) D22. |
 | D1 | Brand is **RankedModel** (design prototype said "Modelboard"). |
 | D2 | Score normalization uses **curated per-benchmark bounds** (`benchmarks.norm_min/norm_max`), not observed min–max (§5.2 superseded). |
 | D3 | Charts are **custom SVG components**; Recharts removed from the stack (§2, §7.5 superseded). |

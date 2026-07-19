@@ -4,11 +4,11 @@ import { isoDateSchema, slugSchema } from './schema/common'
 import { capabilitiesSchema, modelLinksSchema, priceSchema } from './schema/model'
 
 /**
- * Catalog snapshot (contract C3) — the three-way contract: the publish pipeline writes
- * it to KV (`catalog:v{N}`, immutable), `getCatalog` parses it, every screen's selectors
- * consume it. A superset of the design prototype's `LLMDATA`, with `index`/`rank`/
- * `categoryIdx` precomputed at publish time (arch principle 3). Bounds ship so bar
- * widths stay client-side math.
+ * Catalog snapshot (contract C3) — the three-way contract: `bun run build-catalog` writes
+ * it from `data/**`, the Worker bundles + parses it, every screen's selectors consume it.
+ * A superset of the design prototype's `LLMDATA`, with `index`/`rank`/`categoryIdx`
+ * precomputed at build time (arch principle 3). Bounds ship so bar widths stay client-side
+ * math. `version` is a content hash — it changes iff the data changes.
  */
 
 export const snapshotBenchmarkSchema = z.object({
@@ -90,6 +90,3 @@ export type SnapshotBenchmark = z.infer<typeof snapshotBenchmarkSchema>
 export type SnapshotGpu = z.infer<typeof snapshotGpuSchema>
 export type SnapshotModel = z.infer<typeof snapshotModelSchema>
 export type CatalogSnapshot = z.infer<typeof catalogSnapshotSchema>
-
-/** KV key for an immutable snapshot version. */
-export const catalogKey = (version: number): string => `catalog:v${version}`

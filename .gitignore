@@ -6,6 +6,9 @@ dist/
 .tanstack/
 *.tsbuildinfo
 
+# generated serving artifacts (built from data/** by `bun run build-catalog`)
+apps/web/src/generated/
+
 # cloudflare local state
 .wrangler/
 .dev.vars*
