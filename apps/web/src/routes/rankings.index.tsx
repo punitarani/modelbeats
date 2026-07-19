@@ -22,7 +22,7 @@ export const Route = createFileRoute('/rankings/')({
   search: { middlewares: [stripSearchParams({ sort: '-index', q: '', org: 'all', open: 'all' })] },
   head: () =>
     seoMeta({
-      title: 'Global LLM Rankings · RankedModel',
+      title: 'Global LLM Rankings · Model Beats',
       description:
         'Every tracked language model ranked by normalized index and per-benchmark scores.',
       path: '/rankings',

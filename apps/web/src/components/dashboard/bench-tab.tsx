@@ -1,4 +1,4 @@
-import { CATEGORY_LABELS, type CatalogSnapshot, fmtScore } from '@rankedmodel/shared'
+import { CATEGORY_LABELS, type CatalogSnapshot, fmtScore } from '@modelbeats/shared'
 import { Link } from '@tanstack/react-router'
 import { InlineBar } from '#/components/charts/inline-bar'
 import { normPct } from '#/components/charts/scales'

@@ -6,7 +6,7 @@ import {
   type SnapshotBenchmark,
   type SnapshotModel,
   toggleSort,
-} from '@rankedmodel/shared'
+} from '@modelbeats/shared'
 import { useNavigate } from '@tanstack/react-router'
 import { createColumnHelper, getCoreRowModel, useReactTable } from '@tanstack/react-table'
 import { useWindowVirtualizer } from '@tanstack/react-virtual'

@@ -1,5 +1,5 @@
 /**
- * RankedModel brand mark (user-supplied artwork, 2026-07-12): a ranked list —
+ * Model Beats brand mark (user-supplied artwork, 2026-07-12): a ranked list —
  * leader dot beside the top bar, then descending bars. Renders in currentColor;
  * the same geometry is baked into public/favicon.svg + favicon.ico.
  */

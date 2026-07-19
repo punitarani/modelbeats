@@ -11,13 +11,13 @@ test.describe('seo surface', () => {
     const locs = body.match(/<loc>/g)?.length ?? 0
     // 9 static + 7 categories + every model + every org + every family + every benchmark
     expect(locs).toBe(9 + 7 + models + organizations + families + benchmarks)
-    expect(body).toContain('https://rankedmodel.com/models/gpt-5-6')
+    expect(body).toContain('https://modelbeats.com/models/gpt-5-6')
   })
 
   test('robots allows crawling, hides /debug, points at the sitemap', async ({ request }) => {
     const body = await (await request.get('/robots.txt')).text()
     expect(body).toContain('Disallow: /debug/')
-    expect(body).toContain('Sitemap: https://rankedmodel.com/sitemap.xml')
+    expect(body).toContain('Sitemap: https://modelbeats.com/sitemap.xml')
   })
 
   test('model pages ship parseable JSON-LD + canonical', async ({ request }) => {
@@ -29,7 +29,7 @@ test.describe('seo surface', () => {
     expect(ld.name).toBe('GPT-5.6')
     expect(ld.creator.name).toBe('OpenAI')
     expect(html).toContain('rel="canonical"')
-    expect(html).toContain('https://rankedmodel.com/models/gpt-5-6')
+    expect(html).toContain('https://modelbeats.com/models/gpt-5-6')
   })
 })
 

@@ -14,7 +14,7 @@ import {
   modelSchema,
   type Organization,
   organizationSchema,
-} from '@rankedmodel/shared'
+} from '@modelbeats/shared'
 import { toCsv } from './lib/csv'
 
 /**

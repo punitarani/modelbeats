@@ -9,7 +9,7 @@ export const Route = createFileRoute('/benchmarks/$slug')({
     if (!catalog.benchmarks.some((b) => b.slug === params.slug)) throw notFound()
   },
   head: ({ params }) => ({
-    meta: [{ title: `${params.slug} leaderboard · RankedModel` }],
+    meta: [{ title: `${params.slug} leaderboard · Model Beats` }],
   }),
   notFoundComponent: () => (
     <div className="py-16 text-center text-[13px] text-mut">

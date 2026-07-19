@@ -75,7 +75,7 @@ Resolved with the user before implementing:
 
 ### B. One-time Cloudflare bootstrap (owner-run; needs credentials)
 
-Documented in `docs/DEPLOY.md`. Essence: `wrangler d1 create rankedmodel` +
+Documented in `docs/DEPLOY.md`. Essence: `wrangler d1 create modelbeats` +
 `wrangler kv namespace create CATALOG` → paste ids into `env.production` → create a scoped
 API token → `bun run deploy:production` once from the shell → add the token + account id
 as GitHub Actions secrets. First deploy is manual on purpose, to prove the token and

@@ -41,7 +41,7 @@ test('sidebar uses semantic Lucide icons for every primary destination', async (
 
 - [ ] **Step 2: Run test to verify it fails**
 
-Run: `bun run --filter '@rankedmodel/web' test:e2e -- e2e/shell.spec.ts --grep "semantic Lucide icons"`
+Run: `bun run --filter '@modelbeats/web' test:e2e -- e2e/shell.spec.ts --grep "semantic Lucide icons"`
 
 Expected: FAIL because the sidebar renders Unicode glyphs instead of SVG icon components.
 
@@ -51,7 +51,7 @@ In `apps/web/src/components/shell/sidebar.tsx`, import the approved Lucide compo
 
 - [ ] **Step 4: Run test to verify it passes**
 
-Run: `bun run --filter '@rankedmodel/web' test:e2e -- e2e/shell.spec.ts --grep "semantic Lucide icons"`
+Run: `bun run --filter '@modelbeats/web' test:e2e -- e2e/shell.spec.ts --grep "semantic Lucide icons"`
 
 Expected: PASS.
 
@@ -76,7 +76,7 @@ Import `Check` and `X` in `model-detail-screen.tsx`. Replace the Unicode check a
 
 - [ ] **Step 4: Run focused browser coverage**
 
-Run: `bun run --filter '@rankedmodel/web' test:e2e -- e2e/shell.spec.ts e2e/model-detail.spec.ts`
+Run: `bun run --filter '@modelbeats/web' test:e2e -- e2e/shell.spec.ts e2e/model-detail.spec.ts`
 
 Expected: PASS.
 

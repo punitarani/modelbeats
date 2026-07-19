@@ -1,7 +1,7 @@
 /** SEO helpers (arch §6): canonical + OG/twitter meta and the site origin. */
 
-export const SITE_ORIGIN = 'https://rankedmodel.com'
-export const SITE_NAME = 'RankedModel'
+export const SITE_ORIGIN = 'https://modelbeats.com'
+export const SITE_NAME = 'Model Beats'
 
 export function seoMeta(opts: { title: string; description: string; path: string }) {
   const url = `${SITE_ORIGIN}${opts.path}`

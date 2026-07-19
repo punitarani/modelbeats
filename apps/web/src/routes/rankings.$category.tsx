@@ -1,4 +1,4 @@
-import { BENCHMARK_CATEGORIES, type BenchmarkCategory } from '@rankedmodel/shared'
+import { BENCHMARK_CATEGORIES, type BenchmarkCategory } from '@modelbeats/shared'
 import { createFileRoute, notFound, stripSearchParams } from '@tanstack/react-router'
 import { z } from 'zod'
 import { RankingsScreen } from '#/components/rankings/rankings-screen'
@@ -28,7 +28,7 @@ export const Route = createFileRoute('/rankings/$category')({
   }),
   search: { middlewares: [stripSearchParams({ sort: '-index', q: '', org: 'all', open: 'all' })] },
   head: ({ params }) => ({
-    meta: [{ title: `${params.category} rankings · RankedModel` }],
+    meta: [{ title: `${params.category} rankings · Model Beats` }],
   }),
   component: CategoryRankingsRoute,
 })

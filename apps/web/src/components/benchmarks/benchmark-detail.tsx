@@ -4,7 +4,7 @@ import {
   fmtParams,
   fmtScore,
   type SnapshotBenchmark,
-} from '@rankedmodel/shared'
+} from '@modelbeats/shared'
 import { useNavigate } from '@tanstack/react-router'
 import type * as React from 'react'
 import { useState } from 'react'

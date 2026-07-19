@@ -34,7 +34,7 @@ Shared shell: fixed 210px sidebar (λ mark + brand, nav items, footer stats + di
 - **Frontier win-rate note**: `P = 100 / (1 + 10^(−ΔElo/400))`, rendered as "~N% head-to-head win rate".
 - **Latest releases**: sort by date desc, take 8. **Feed**: 22 most recent grouped by month label.
 - **Tag colors**: OPEN → `--open`/`--opendim`; CLOSED → `--closed`/`--closeddim`.
-- **Theme**: persisted `localStorage` key (prototype: `llmhub.theme`; production: `rankedmodel.theme`), dark default.
+- **Theme**: persisted `localStorage` key (prototype: `llmhub.theme`; production: `modelbeats.theme`), dark default.
 - **Quick-compare defaults**: A = `claude-opus-4-8`, B = `deepseek-v4-5`.
 - **Scatter labeled points**: claude-opus-4-8, gpt-5-5-pro, deepseek-v3-2, deepseek-v4-5, llama-3-1-8b, gemini-3-1-pro, kimi-k2-5.
 
@@ -48,7 +48,7 @@ See plan §3 / DECISIONS D15: `ctx` is stored in K-tokens; `params`/`active` in 
 
 ## Production deltas (all decided in DECISIONS.md)
 
-Brand "Modelboard" → **RankedModel** (D1) · hash routes → real paths + typed search params (D10) ·
+Brand "Modelboard" → **Model Beats** (D1) · hash routes → real paths + typed search params (D10) ·
 Google Fonts → self-hosted (D11) · `body.light` → `html.dark` with dark-default preference (D12) ·
 plus the production-only routes (hardware, benchmarks, orgs/families, methodology, search, saved) that
 extend this design language (D6, D16).

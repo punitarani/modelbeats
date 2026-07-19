@@ -1,4 +1,4 @@
-import { type CatalogSnapshot, catalogSnapshotSchema } from '@rankedmodel/shared'
+import { type CatalogSnapshot, catalogSnapshotSchema } from '@modelbeats/shared'
 import catalogData from '#/generated/catalog.json'
 
 /**

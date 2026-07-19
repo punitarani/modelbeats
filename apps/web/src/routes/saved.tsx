@@ -3,7 +3,7 @@ import { useState } from 'react'
 import { listSaved, removeComparison, type SavedComparison } from '#/lib/saved'
 
 export const Route = createFileRoute('/saved')({
-  head: () => ({ meta: [{ title: 'Saved comparisons · RankedModel' }] }),
+  head: () => ({ meta: [{ title: 'Saved comparisons · Model Beats' }] }),
   component: SavedRoute,
 })
 

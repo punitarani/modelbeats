@@ -4,7 +4,7 @@ import { datasetCounts, gotoHydrated } from './helpers'
 test.describe('app shell', () => {
   test('renders the brand mark and nav; favicon wired', async ({ page }) => {
     await gotoHydrated(page, '/')
-    await expect(page.getByText('RankedModel').first()).toBeVisible()
+    await expect(page.getByText('Model Beats').first()).toBeVisible()
     await expect(page.locator('aside svg').first()).toBeVisible() // brand mark
     await expect(page.locator('aside')).not.toContainText('snapshot v') // footer removed
     await expect(page.locator('link[rel="icon"][type="image/svg+xml"]')).toHaveAttribute(

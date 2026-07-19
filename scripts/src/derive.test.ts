@@ -1,6 +1,6 @@
 import { readFile } from 'node:fs/promises'
 import { join } from 'node:path'
-import { buildBattles } from '@rankedmodel/shared'
+import { buildBattles } from '@modelbeats/shared'
 import { describe, expect, it } from 'vitest'
 import { type DerivedScores, deriveScores } from './derive'
 import { loadDataset } from './lib/load'

@@ -15,7 +15,7 @@ export const Route = createFileRoute('/')({
   search: { middlewares: [stripSearchParams({ tab: 'overview' })] },
   head: () => ({
     meta: [
-      { title: 'RankedModel — LLM rankings, benchmarks & hardware fit' },
+      { title: 'Model Beats — LLM rankings, benchmarks & hardware fit' },
       {
         name: 'description',
         content:

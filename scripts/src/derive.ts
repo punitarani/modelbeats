@@ -15,7 +15,7 @@ import {
   rankByIndex,
   roundRating,
   toIndexScale,
-} from '@rankedmodel/shared'
+} from '@modelbeats/shared'
 import { loadDataset } from './lib/load'
 import { validateData } from './validate'
 

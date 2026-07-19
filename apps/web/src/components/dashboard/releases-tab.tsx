@@ -1,4 +1,4 @@
-import { type CatalogSnapshot, fmtDate } from '@rankedmodel/shared'
+import { type CatalogSnapshot, fmtDate } from '@modelbeats/shared'
 import { Link } from '@tanstack/react-router'
 import { CadenceBars } from '#/components/charts/cadence-bars'
 import { normPct, ratingWindow } from '#/components/charts/scales'

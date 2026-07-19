@@ -1,4 +1,4 @@
-# RankedModel — Architecture & Scope
+# Model Beats — Architecture & Scope
 
 > The definitive hub for LLM rankings, benchmarks, evaluations, and model comparisons.
 > Status: scoping document · v1 · July 2026
@@ -303,7 +303,7 @@ Invalidation = version bump. No purge APIs, no stale-cache bugs: publish increme
 ## 10. Repo structure, environments, CI/CD
 
 ```
-rankedmodel/
+modelbeats/
   apps/web/                 TanStack Start app (routes/, components/, server/ fns)
   packages/shared/          Zod schemas, types, hardware-fit engine, score math
   packages/ui/              shadcn (Base UI) components, design tokens, chart wrappers
@@ -353,7 +353,7 @@ The Claude Design handoff (`docs/design-handoff/`) and a competitive analysis (k
 | ID | Delta vs. this document |
 |---|---|
 | **D22** | **No runtime database (2026-07-18).** D1, KV, Drizzle, migrations, `packages/db` and the seed pipeline are **removed**. The catalog snapshot and a per-model detail map are built from `data/**` by `bun run build-catalog` and **bundled into the Worker** at build time, served from the edge cache. This supersedes the storage/serving specifics of **§3** (no D1/KV/seed in the data flow), **§4** (the D1/Drizzle schema below is historical), **§5** (pipeline is `validate → derive → build-catalog`), **§6** (server fns read bundled JSON), **§9** (a content-hash `version` keys the immutable catalog URL; a deploy ships a new version). See [docs/DECISIONS.md](docs/DECISIONS.md) D22. |
-| D1 | Brand is **RankedModel** (design prototype said "Modelboard"). |
+| D1 | Brand is **Model Beats** (design prototype said "Modelboard"). |
 | D2 | Score normalization uses **curated per-benchmark bounds** (`benchmarks.norm_min/norm_max`), not observed min–max (§5.2 superseded). |
 | D3 | Charts are **custom SVG components**; Recharts removed from the stack (§2, §7.5 superseded). |
 | D4 | `/models` is the design's **card grid**; the dense table lives at `/rankings`. TanStack Virtual deferred until ~200+ rows (§7.3 amended). |

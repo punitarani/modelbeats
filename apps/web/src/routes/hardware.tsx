@@ -9,7 +9,7 @@ export const Route = createFileRoute('/hardware')({
   search: { middlewares: [stripSearchParams(HARDWARE_SEARCH_DEFAULTS)] },
   head: () => ({
     meta: [
-      { title: 'What can your hardware run? · RankedModel' },
+      { title: 'What can your hardware run? · Model Beats' },
       {
         name: 'description',
         content:

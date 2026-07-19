@@ -1,5 +1,5 @@
 {
-  "name": "@rankedmodel/scripts",
+  "name": "@modelbeats/scripts",
   "private": true,
   "type": "module",
   "scripts": {
@@ -7,7 +7,7 @@
     "test": "vitest run"
   },
   "dependencies": {
-    "@rankedmodel/shared": "workspace:*",
+    "@modelbeats/shared": "workspace:*",
     "zod": "^4.0.0"
   },
   "devDependencies": {

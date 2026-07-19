@@ -19,7 +19,7 @@ import {
   resultRowSchema,
   type ThroughputRow,
   throughputRowSchema,
-} from '@rankedmodel/shared'
+} from '@modelbeats/shared'
 import type { z } from 'zod'
 import { parseCsv } from './csv'
 

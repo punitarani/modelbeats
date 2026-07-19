@@ -24,7 +24,7 @@ export const Route = createFileRoute('/compare')({
   search: { middlewares: [stripSearchParams({ m: DEFAULT_M })] },
   head: () => ({
     meta: [
-      { title: 'Compare models · RankedModel' },
+      { title: 'Compare models · Model Beats' },
       {
         name: 'description',
         content: 'Side-by-side LLM comparison: specs, benchmarks and capability radar.',

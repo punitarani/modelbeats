@@ -1,4 +1,4 @@
-import { type ModelDetail, type ModelDetailsMap, normalizeScore } from '@rankedmodel/shared'
+import { type ModelDetail, type ModelDetailsMap, normalizeScore } from '@modelbeats/shared'
 import type { Dataset } from './lib/load'
 
 /**

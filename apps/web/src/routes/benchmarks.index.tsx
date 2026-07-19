@@ -1,4 +1,4 @@
-import { BENCHMARK_CATEGORIES, CATEGORY_LABELS, fmtScore } from '@rankedmodel/shared'
+import { BENCHMARK_CATEGORIES, CATEGORY_LABELS, fmtScore } from '@modelbeats/shared'
 import { useSuspenseQuery } from '@tanstack/react-query'
 import { createFileRoute, Link } from '@tanstack/react-router'
 import { catalogQueryOptions } from '#/lib/catalog'
@@ -6,7 +6,7 @@ import { catalogQueryOptions } from '#/lib/catalog'
 export const Route = createFileRoute('/benchmarks/')({
   head: () => ({
     meta: [
-      { title: 'Benchmarks · RankedModel' },
+      { title: 'Benchmarks · Model Beats' },
       {
         name: 'description',
         content: 'Every tracked evaluation with methodology, bounds and current leaders.',

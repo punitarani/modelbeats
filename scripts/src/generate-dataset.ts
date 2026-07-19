@@ -10,7 +10,7 @@ import {
   modelSchema,
   type Organization,
   organizationSchema,
-} from '@rankedmodel/shared'
+} from '@modelbeats/shared'
 import { type Corpus, type CorpusModel, loadCorpus } from './lib/corpus-schema'
 import { toCsv } from './lib/csv'
 import { validateData } from './validate'

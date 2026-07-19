@@ -8,7 +8,7 @@ import {
   fmtPrice,
   fmtScore,
   type SnapshotModel,
-} from '@rankedmodel/shared'
+} from '@modelbeats/shared'
 import { Link, useNavigate } from '@tanstack/react-router'
 import { Check, X } from 'lucide-react'
 import { BackLink } from '#/components/back-link'

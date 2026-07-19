@@ -8,7 +8,7 @@ const storedProfileSchema = z.union([
 ])
 export type StoredProfile = z.infer<typeof storedProfileSchema>
 
-const KEY = 'rankedmodel.hardware-profile'
+const KEY = 'modelbeats.hardware-profile'
 
 export function loadProfile(): StoredProfile | null {
   if (typeof localStorage === 'undefined') return null

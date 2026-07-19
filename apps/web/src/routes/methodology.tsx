@@ -5,11 +5,11 @@ import { catalogQueryOptions } from '#/lib/catalog'
 export const Route = createFileRoute('/methodology')({
   head: () => ({
     meta: [
-      { title: 'Methodology — scoring, provenance & hardware fit · RankedModel' },
+      { title: 'Methodology — scoring, provenance & hardware fit · Model Beats' },
       {
         name: 'description',
         content:
-          'How the RankedModel Elo rating is computed, where every number comes from, and how hardware-fit verdicts are graded.',
+          'How the Model Beats Elo rating is computed, where every number comes from, and how hardware-fit verdicts are graded.',
       },
     ],
   }),

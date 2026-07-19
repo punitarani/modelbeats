@@ -25,8 +25,8 @@ export const Route = createFileRoute('/models/$slug')({
   },
   head: ({ params, loaderData }) => {
     const base = seoMeta({
-      title: `${loaderData?.name ?? params.slug} — benchmarks, pricing & hardware fit · RankedModel`,
-      description: loaderData?.note ?? 'Model detail on RankedModel.',
+      title: `${loaderData?.name ?? params.slug} — benchmarks, pricing & hardware fit · Model Beats`,
+      description: loaderData?.note ?? 'Model detail on Model Beats.',
       path: `/models/${params.slug}`,
     })
     return {

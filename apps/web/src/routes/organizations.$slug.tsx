@@ -1,4 +1,4 @@
-import { fmtCtx, fmtDate, fmtParams } from '@rankedmodel/shared'
+import { fmtCtx, fmtDate, fmtParams } from '@modelbeats/shared'
 import { useSuspenseQuery } from '@tanstack/react-query'
 import { createFileRoute, Link, notFound } from '@tanstack/react-router'
 import { BackLink } from '#/components/back-link'
@@ -14,7 +14,7 @@ export const Route = createFileRoute('/organizations/$slug')({
     if (!catalog.models.some((m) => m.orgSlug === params.slug)) throw notFound()
   },
   head: ({ params }) => ({
-    meta: [{ title: `${params.slug} — models & release cadence · RankedModel` }],
+    meta: [{ title: `${params.slug} — models & release cadence · Model Beats` }],
   }),
   notFoundComponent: () => (
     <div className="py-16 text-center text-[13px] text-mut">

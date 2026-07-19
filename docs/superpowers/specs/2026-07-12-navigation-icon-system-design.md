@@ -2,7 +2,7 @@
 
 ## Goal
 
-Replace ambiguous Unicode navigation glyphs with a compact, semantically clear Lucide icon system while preserving RankedModel's dense sidebar and dark-first visual language.
+Replace ambiguous Unicode navigation glyphs with a compact, semantically clear Lucide icon system while preserving Model Beats's dense sidebar and dark-first visual language.
 
 ## Scope
 
@@ -18,7 +18,7 @@ The sidebar will use one 14px Lucide icon per destination at a 1.75 stroke width
 | Benchmarks | `FlaskConical` | Evaluation and testing context |
 | Methodology | `BookOpenText` | Explanatory documentation |
 
-The theme toggle will use `Sun` and `Moon`; Back links will use `ArrowLeft`; model capability chips will use `Check` and `X`. Existing Lucide controls—search, chevrons, dialog close, and dropdown checks—remain unchanged. The custom RankedModel brand mark and typographic data separators remain unchanged.
+The theme toggle will use `Sun` and `Moon`; Back links will use `ArrowLeft`; model capability chips will use `Check` and `X`. Existing Lucide controls—search, chevrons, dialog close, and dropdown checks—remain unchanged. The custom Model Beats brand mark and typographic data separators remain unchanged.
 
 ## Implementation
 

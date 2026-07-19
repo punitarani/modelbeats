@@ -1,6 +1,6 @@
 export type Theme = 'dark' | 'light'
 
-export const THEME_STORAGE_KEY = 'rankedmodel.theme'
+export const THEME_STORAGE_KEY = 'modelbeats.theme'
 
 /**
  * Pre-hydration theme script (D12): runs inline in <head> before first paint. Dark is

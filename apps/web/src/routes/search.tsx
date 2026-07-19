@@ -1,4 +1,4 @@
-import { searchModels } from '@rankedmodel/shared'
+import { searchModels } from '@modelbeats/shared'
 import { useSuspenseQuery } from '@tanstack/react-query'
 import { createFileRoute, Link } from '@tanstack/react-router'
 import { z } from 'zod'
@@ -8,7 +8,7 @@ import { catalogQueryOptions } from '#/lib/catalog'
 /** Full search results page (D13): grouped models / organizations / benchmarks. */
 export const Route = createFileRoute('/search')({
   validateSearch: z.object({ q: z.string().max(80).default('').catch('') }),
-  head: () => ({ meta: [{ title: 'Search · RankedModel' }] }),
+  head: () => ({ meta: [{ title: 'Search · Model Beats' }] }),
   component: SearchRoute,
 })
 

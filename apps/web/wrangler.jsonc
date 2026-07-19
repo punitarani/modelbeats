@@ -2,11 +2,11 @@
  * Worker config: static assets + TanStack Start SSR + server functions in one Worker.
  * The catalog snapshot and per-model detail are built from data/** and bundled into the
  * Worker at `vite build` — there is no D1, no KV, nothing to provision. A deploy is just
- * `wrangler deploy`; the edge cache serves the rest. Deploys to rankedmodel.<sub>.workers.dev.
+ * `wrangler deploy`; the edge cache serves the rest. Deploys to modelbeats.<sub>.workers.dev.
  */
 {
   "$schema": "node_modules/wrangler/config-schema.json",
-  "name": "rankedmodel",
+  "name": "modelbeats",
   "compatibility_date": "2026-07-01",
   "compatibility_flags": ["nodejs_compat"],
   "main": "@tanstack/react-start/server-entry",

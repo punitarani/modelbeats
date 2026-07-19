@@ -4,7 +4,7 @@ import {
   catalogSnapshotSchema,
   pickHeadlineRow,
   type ResultSource,
-} from '@rankedmodel/shared'
+} from '@modelbeats/shared'
 import { deriveScores } from './derive'
 import { loadDataset } from './lib/load'
 

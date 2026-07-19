@@ -1,4 +1,4 @@
-import type { ModelDetail, ModelDetailsMap } from '@rankedmodel/shared'
+import type { ModelDetail, ModelDetailsMap } from '@modelbeats/shared'
 import detailsData from '#/generated/model-details.json'
 
 /**

@@ -13,7 +13,7 @@ import {
   OPENNESS,
   RESULT_SOURCES,
   slugSchema,
-} from '@rankedmodel/shared'
+} from '@modelbeats/shared'
 import { z } from 'zod'
 
 /**

@@ -1,4 +1,4 @@
-import { type CatalogSnapshot, computeMovers, type SnapshotModel } from '@rankedmodel/shared'
+import { type CatalogSnapshot, computeMovers, type SnapshotModel } from '@modelbeats/shared'
 
 /** Display shaping for the dashboard (design renderVals, snapshot-only per D17). */
 

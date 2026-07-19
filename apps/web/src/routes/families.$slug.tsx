@@ -1,4 +1,4 @@
-import { fmtDate, fmtParams } from '@rankedmodel/shared'
+import { fmtDate, fmtParams } from '@modelbeats/shared'
 import { useSuspenseQuery } from '@tanstack/react-query'
 import { createFileRoute, Link, notFound } from '@tanstack/react-router'
 import { BackLink } from '#/components/back-link'
@@ -14,7 +14,7 @@ export const Route = createFileRoute('/families/$slug')({
     if (!catalog.models.some((m) => m.familySlug === params.slug)) throw notFound()
   },
   head: ({ params }) => ({
-    meta: [{ title: `${params.slug} family — lineage & progression · RankedModel` }],
+    meta: [{ title: `${params.slug} family — lineage & progression · Model Beats` }],
   }),
   notFoundComponent: () => (
     <div className="py-16 text-center text-[13px] text-mut">

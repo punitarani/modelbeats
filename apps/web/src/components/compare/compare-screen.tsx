@@ -7,7 +7,7 @@ import {
   RADAR_AXES,
   type SnapshotModel,
   selectRadarAxes,
-} from '@rankedmodel/shared'
+} from '@modelbeats/shared'
 import { Link } from '@tanstack/react-router'
 import { useState } from 'react'
 import { InlineBar } from '#/components/charts/inline-bar'

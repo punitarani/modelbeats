@@ -5,7 +5,7 @@ import {
   type FitVerdict,
   fmtParams,
   type SnapshotModel,
-} from '@rankedmodel/shared'
+} from '@modelbeats/shared'
 import { Link } from '@tanstack/react-router'
 import { InlineBar } from '#/components/charts/inline-bar'
 import { FilterSelect } from '#/components/filter-select'

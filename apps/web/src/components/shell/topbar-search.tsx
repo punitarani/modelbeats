@@ -1,4 +1,4 @@
-import { searchModels } from '@rankedmodel/shared'
+import { searchModels } from '@modelbeats/shared'
 import { useSuspenseQuery } from '@tanstack/react-query'
 import { useNavigate } from '@tanstack/react-router'
 import { useEffect, useRef, useState } from 'react'

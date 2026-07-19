@@ -4,7 +4,7 @@ import {
   parseSort,
   selectOrgs,
   selectRankings,
-} from '@rankedmodel/shared'
+} from '@modelbeats/shared'
 import { useSuspenseQuery } from '@tanstack/react-query'
 import { useNavigate } from '@tanstack/react-router'
 import { useMemo } from 'react'

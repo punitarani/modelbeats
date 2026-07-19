@@ -10,7 +10,7 @@ import {
   type SnapshotModel,
   selectExplorer,
   selectOrgs,
-} from '@rankedmodel/shared'
+} from '@modelbeats/shared'
 import { useSuspenseQuery } from '@tanstack/react-query'
 import { Link } from '@tanstack/react-router'
 import { useWindowVirtualizer } from '@tanstack/react-virtual'

@@ -1,5 +1,5 @@
 {
-  "name": "rankedmodel",
+  "name": "modelbeats",
   "private": true,
   "type": "module",
   "workspaces": [
@@ -20,10 +20,10 @@
     "generate-dataset": "bun scripts/src/generate-dataset.ts corpus data",
     "build-catalog": "bun scripts/src/build-catalog.ts",
     "ci": "bun run build-catalog && bun run typecheck && bun run lint && bun run test && bun run build && bun run budgets",
-    "dev": "bun run build-catalog && bun run --filter '@rankedmodel/web' dev",
-    "build": "bun run --filter '@rankedmodel/web' build",
+    "dev": "bun run build-catalog && bun run --filter '@modelbeats/web' dev",
+    "build": "bun run --filter '@modelbeats/web' build",
     "derive": "bun scripts/src/derive.ts",
-    "e2e": "bun run build-catalog && bun run --filter '@rankedmodel/web' test:e2e",
+    "e2e": "bun run build-catalog && bun run --filter '@modelbeats/web' test:e2e",
     "budgets": "bun scripts/src/check-budgets.ts",
     "deploy:production": "bun scripts/src/deploy.ts production"
   },

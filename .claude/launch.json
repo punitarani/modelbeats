@@ -17,7 +17,7 @@
       "runtimeArgs": [
         "run",
         "--filter",
-        "@rankedmodel/web",
+        "@modelbeats/web",
         "preview"
       ],
       "port": 4173

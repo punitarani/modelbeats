@@ -24,7 +24,7 @@ const ROUTES = [
 for (const route of ROUTES) {
   for (const theme of ['dark', 'light'] as const) {
     test(`axe clean: ${route} [${theme}]`, async ({ page }) => {
-      await page.addInitScript((t) => localStorage.setItem('rankedmodel.theme', t), theme)
+      await page.addInitScript((t) => localStorage.setItem('modelbeats.theme', t), theme)
       await gotoHydrated(page, route)
       const violations = await axeScan(page)
       expect(

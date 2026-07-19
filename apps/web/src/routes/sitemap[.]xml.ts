@@ -1,4 +1,4 @@
-import { BENCHMARK_CATEGORIES } from '@rankedmodel/shared'
+import { BENCHMARK_CATEGORIES } from '@modelbeats/shared'
 import { createFileRoute } from '@tanstack/react-router'
 import { SITE_ORIGIN } from '#/lib/seo'
 

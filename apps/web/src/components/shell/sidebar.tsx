@@ -32,7 +32,7 @@ export function Sidebar() {
         <span className="flex size-[22px] items-center justify-center rounded-md bg-acc text-[#0b0b0d]">
           <BrandMark className="w-[13px]" />
         </span>
-        <span className="text-sm font-semibold tracking-[-0.01em]">RankedModel</span>
+        <span className="text-sm font-semibold tracking-[-0.01em]">Model Beats</span>
       </Link>
       <nav className="flex flex-col gap-px px-2 py-0.5">
         {NAV.map((item) => (

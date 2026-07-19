@@ -9,7 +9,7 @@ const savedComparisonSchema = z.object({
 })
 export type SavedComparison = z.infer<typeof savedComparisonSchema>
 
-const KEY = 'rankedmodel.saved-comparisons'
+const KEY = 'modelbeats.saved-comparisons'
 
 export function listSaved(): SavedComparison[] {
   if (typeof localStorage === 'undefined') return []

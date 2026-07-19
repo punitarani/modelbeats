@@ -1,9 +1,9 @@
-# RankedModel
+# Model Beats
 
 > The definitive hub for LLM rankings, benchmarks, evaluations, model comparisons — and
 > the only one that also answers *“can my hardware run it, at which quant, how fast?”*
 
-RankedModel collapses the four-tab workflow — **rank it, verify it, size it, run it** —
+Model Beats collapses the four-tab workflow — **rank it, verify it, size it, run it** —
 into one provenance-honest, deep-linkable tool: every major LLM release from GPT-3
 (2020) to today — 463 models across 78 orgs, 122 benchmarks with published
 normalization bounds, version lineage, API pricing, quantizations, and a graded

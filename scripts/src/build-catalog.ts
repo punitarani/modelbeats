@@ -1,6 +1,6 @@
 import { mkdir, writeFile } from 'node:fs/promises'
 import { join, resolve } from 'node:path'
-import { modelDetailsMapSchema } from '@rankedmodel/shared'
+import { modelDetailsMapSchema } from '@modelbeats/shared'
 import { deriveScores } from './derive'
 import { loadDataset } from './lib/load'
 import { buildModelDetails } from './model-details'

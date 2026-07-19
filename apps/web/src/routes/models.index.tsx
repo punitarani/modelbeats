@@ -7,7 +7,7 @@ export const Route = createFileRoute('/models/')({
   search: { middlewares: [stripSearchParams(EXPLORER_SEARCH_DEFAULTS)] },
   head: () => ({
     meta: [
-      { title: 'Model Explorer · RankedModel' },
+      { title: 'Model Explorer · Model Beats' },
       {
         name: 'description',
         content: 'Filter every tracked LLM by openness, size, capabilities and your hardware.',

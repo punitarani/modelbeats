@@ -8,7 +8,7 @@
 
 | # | Decision |
 |---|---|
-| **D1** | **Brand = RankedModel** (design prototype said "Modelboard"); keep the design's sidebar layout and typography. The prototype's λ placeholder mark was replaced with the user-supplied ranked-bars mark (2026-07-12): `components/shell/logo.tsx`, mirrored in `public/favicon.svg`, `favicon.ico`, and the apple-touch icon. |
+| **D1** | **Brand = Model Beats** (design prototype said "Modelboard"); keep the design's sidebar layout and typography. The prototype's λ placeholder mark was replaced with the user-supplied ranked-bars mark (2026-07-12): `components/shell/logo.tsx`, mirrored in `public/favicon.svg`, `favicon.ico`, and the apple-touch icon. |
 | **D2** | **Index = curated-bounds normalization** (design), not observed min-max (arch §5 original). `benchmarks.norm_min/norm_max` columns added — distinct from display scale. Stable across publishes; reproduces design numbers exactly. Formula in C1. |
 | **D3** | **Custom SVG charts only**; Recharts dropped. The design is 100% hand-rolled SVG (scatter, bars, sparkline, radar, cadence); custom components are pixel-faithful and lighter. |
 | **D4** | `/models` = **card grid + facet rail** (design); `/rankings` = **dense sortable table** (TanStack Table headless with design markup). TanStack Virtual deferred until the catalog outgrows ~200 rows. |
@@ -19,7 +19,7 @@
 | **D9** | Movers = **family-succession index delta** (design; computable from a single snapshot). `model_scores.rank_delta_30d` stays nullable; the publish pipeline persists each version's scores so 30-day deltas populate from the 2nd publish onward. |
 | **D10** | Prototype's component-state + hash routes become **typed URL search params** (Zod via `@tanstack/zod-adapter`) on real paths. localStorage only for: theme, hardware profile, saved comparisons. |
 | **D11** | Fonts self-hosted via `@fontsource-variable/geist` + `@fontsource-variable/geist-mono` — no Google Fonts request. |
-| **D12** | Theme: shadcn's **`.dark` class on `<html>`** convention; `:root` carries the design's *light* values, `.dark` the *dark* values; **default preference = dark** (design parity). Pre-hydration inline script reads `localStorage['rankedmodel.theme'] ?? 'dark'` and sets the class; `suppressHydrationWarning` on `<html>`. **No cookie-based SSR theming** — cached HTML stays user-agnostic. |
+| **D12** | Theme: shadcn's **`.dark` class on `<html>`** convention; `:root` carries the design's *light* values, `.dark` the *dark* values; **default preference = dark** (design parity). Pre-hydration inline script reads `localStorage['modelbeats.theme'] ?? 'dark'` and sets the class; `suppressHydrationWarning` on `<html>`. **No cookie-based SSR theming** — cached HTML stays user-agnostic. |
 | **D13** | Search: topbar dropdown + `/` shortcut (design) + `/search?q=` results page (SEO). ⌘K palette → post-v1. |
 | **D14** | `packages/ui` dropped (components live in `apps/web/src/components/`); Drizzle lives in **`packages/db`** rather than top-level `drizzle/` so the app and scripts import one workspace package. *(Superseded by D22: `packages/db`, Drizzle and migrations were deleted with D1.)* |
 | **D15** | Context units: curated files store K-tokens exactly as the design does (`400` = 400K, `2000` = 2M); D1 stores absolute tokens (×1000 at seed); `fmtCtx` renders `128K` / `2M`. *(Superseded by D22: no D1 — curated K-tokens flow straight into the snapshot; the ×1000 seed conversion is gone.)* |
