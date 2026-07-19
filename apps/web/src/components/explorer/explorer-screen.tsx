@@ -44,7 +44,11 @@ const CARD_HEIGHT = CARD_H + GRID_GAP
  * post-mount grid never reflows to a different column count than the SSR/first paint.
  */
 function laneCountFor(width: number): number {
-  const contentWidth = width - 228 - 48 // minus filter rail + page padding
+  // Below md the filter rail stacks on top (full width), so the results span the whole width;
+  // at md+ the rail sits beside the results and occupies 228px. Keeping this in sync with the
+  // responsive layout means the post-mount grid matches the SSR auto-fill grid at every width.
+  const railWidth = width >= 768 ? 228 : 0
+  const contentWidth = width - railWidth - 48 // minus filter rail (md+) + page padding
   return Math.max(1, Math.floor((contentWidth + GRID_GAP) / (CARD_MIN_WIDTH + GRID_GAP)))
 }
 
@@ -204,9 +208,9 @@ export function ExplorerScreen({
   )
 
   return (
-    <div className="flex animate-fadeup items-start">
-      {/* filter rail */}
-      <div className="sticky top-[49px] flex h-[calc(100vh-49px)] w-[228px] flex-none flex-col gap-4 overflow-y-auto border-r border-border px-4 pt-[18px] pb-8">
+    <div className="flex animate-fadeup flex-col md:flex-row md:items-start">
+      {/* filter rail — stacks on top on mobile, sticky side rail at md+ */}
+      <div className="flex w-full flex-col gap-4 border-b border-border px-4 pt-[18px] pb-6 md:sticky md:top-[49px] md:h-[calc(100vh-49px)] md:w-[228px] md:flex-none md:overflow-y-auto md:border-r md:border-b-0 md:pb-8">
         <input
           type="text"
           value={search.q}
