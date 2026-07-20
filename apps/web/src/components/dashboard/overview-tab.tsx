@@ -48,7 +48,12 @@ export function OverviewTab({ catalog }: { catalog: CatalogSnapshot }) {
     () => allPoints.filter((p) => (p.open ? showCamp.open : showCamp.closed)),
     [allPoints, showCamp],
   )
-  const yWindow = useMemo(() => fitYWindow(scatterPoints.map((p) => p.index)), [scatterPoints])
+  // Pin the y-axis floor at 0 (quality can't be negative here — negative-Elo models are
+  // already filtered out): keeps the axis padding from dipping the window below zero.
+  const yWindow = useMemo(() => {
+    const w = fitYWindow(scatterPoints.map((p) => p.index))
+    return w.yMin < 0 ? { ...w, yMin: 0, yTicks: w.yTicks.filter((t) => t >= 0) } : w
+  }, [scatterPoints])
 
   const qcOptions = [...catalog.models]
     .sort((a, b) => a.name.localeCompare(b.name))

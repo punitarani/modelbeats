@@ -1,4 +1,5 @@
 import { type CatalogSnapshot, computeMovers, type SnapshotModel } from '@modelbeats/shared'
+import { SCATTER } from '#/components/charts/scales'
 
 /** Display shaping for the dashboard (design renderVals, snapshot-only per D17). */
 
@@ -56,9 +57,22 @@ export function dashboardMovers(catalog: CatalogSnapshot) {
   )
 }
 
-/** Priced, rank-eligible models with an index — the points of the quality-vs-price scatter. */
+/**
+ * Priced, rank-eligible models plotted on the quality-vs-price scatter. Restricted to the
+ * chart's visible domain: a Frontier Elo ≥ 0 (drops the rare negative-rated legacy model
+ * that would sit below the y-axis) and an output price within the log-x range [xMin, xMax]
+ * (drops a sub-$0.06 model that would render left of the axis). Keeps points off the
+ * negative side of both axes.
+ */
 export function scatterModels(catalog: CatalogSnapshot): SnapshotModel[] {
-  return catalog.models.filter((m) => m.price != null && m.ranked)
+  return catalog.models.filter(
+    (m) =>
+      m.price != null &&
+      m.ranked &&
+      m.index >= 0 &&
+      m.price.output >= SCATTER.xMin &&
+      m.price.output <= SCATTER.xMax,
+  )
 }
 
 /**
