@@ -9,6 +9,7 @@ claude-opus-4-5-high,43.2,self-reported,https://www.vellum.ai/blog/claude-opus-4
 claude-opus-4-6,40,self-reported,https://www.vellum.ai/blog/claude-opus-4-6-benchmarks,2026-02-05,without tools
 claude-opus-4-7,46.9,self-reported,https://www.vellum.ai/blog/claude-opus-4-7-benchmarks-explained,,"Humanity's Last Exam, no-tools configuration. With-tools configuration scored 54.7% (not separately filed)."
 claude-opus-4-8,49.8,self-reported,https://www.vellum.ai/blog/claude-opus-4-8-benchmarks-explained,,"Humanity's Last Exam, no-tools. With-tools scored 57.9% (not separately filed)."
+claude-opus-5,64.7,self-reported,https://www.anthropic.com/claude-opus-5-system-card,2026-07-24,"Humanity's Last Exam, WITH-tools configuration (no-tools is 56.3%), Claude Opus 5 System Card Table 8.1.A. With-tools chosen to match the sibling Sonnet 5 corpus figure (57.4%), also with-tools, keeping this mixed-config column's orderings correct."
 claude-sonnet-4-5,33.6,self-reported,https://www.anthropic.com/claude-sonnet-4-6-system-card,2026-02-17,"Humanity's Last Exam, with-tools configuration (Figure 2.20.2.A). Without tools, Sonnet 4.5 scored 17.7%."
 claude-sonnet-4-6,49,self-reported,https://www.anthropic.com/claude-sonnet-4-6-system-card,2026-02-17,"Humanity's Last Exam, with-tools configuration (web search, web fetch, code execution, context compaction up to 3M tokens). Without tools, Sonnet 4.6 scored 33.2%."
 claude-sonnet-5,57.4,self-reported,https://www.vellum.ai/blog/claude-sonnet-5-benchmarks-explained,,"Humanity's Last Exam, with-tools configuration."

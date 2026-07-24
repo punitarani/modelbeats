@@ -1,0 +1,10 @@
+{
+  "slug": "deepswe",
+  "name": "DeepSWE",
+  "category": "coding",
+  "unit": "%",
+  "description": "DeepSWE v1.1 — 113 long-horizon software-engineering tasks written from scratch to avoid contamination, measuring frontier coding agents on diverse real-world complexity. Mean over 5 trials.",
+  "normMin": 0,
+  "normMax": 85,
+  "higherIsBetter": true
+}

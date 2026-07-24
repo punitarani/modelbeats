@@ -1,0 +1,10 @@
+{
+  "slug": "aa-briefcase",
+  "name": "AA-Briefcase",
+  "category": "agents",
+  "unit": "pts",
+  "description": "Artificial Analysis Briefcase — an Elo-rated evaluation of real professional knowledge work (documents, analysis, deliverables), reported on a ~0-2000 scale. Companion to GDPval-AA.",
+  "normMin": 0,
+  "normMax": 2000,
+  "higherIsBetter": true
+}

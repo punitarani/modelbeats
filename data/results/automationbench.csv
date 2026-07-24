@@ -1,0 +1,5 @@
+model_slug,score,source,source_url,evaluated_at,notes
+claude-fable-5,17.4,self-reported,https://www.anthropic.com/claude-opus-5-system-card,2026-07-24,"Zapier AutomationBench competitor figure from the Claude Opus 5 System Card Table 8.1.A."
+claude-opus-4-8,17,self-reported,https://www.anthropic.com/claude-opus-5-system-card,2026-07-24,"Zapier AutomationBench competitor figure from the Claude Opus 5 System Card Table 8.1.A."
+claude-opus-5,26,self-reported,https://www.anthropic.com/claude-opus-5-system-card,2026-07-24,"Zapier AutomationBench (held-out private set), Claude Opus 5 System Card Table 8.1.A / §8.13.7. Anthropic reports ~1.5x the next-best model's pass rate for the same cost per task; Opus 5 topped Zapier's leaderboard."
+gpt-5-6-sol,18.1,self-reported,https://www.anthropic.com/claude-opus-5-system-card,2026-07-24,"Zapier AutomationBench competitor figure (drawn by Anthropic from the developer's published results) in the Claude Opus 5 System Card Table 8.1.A."

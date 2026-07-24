@@ -1,0 +1,4 @@
+model_slug,score,source,source_url,evaluated_at,notes
+claude-opus-4-8,1.5,self-reported,https://www.anthropic.com/claude-opus-5-system-card,2026-07-24,"ARC-AGI-3 competitor figure from the Claude Opus 5 System Card Table 8.1.A."
+claude-opus-5,30.2,self-reported,https://www.anthropic.com/claude-opus-5-system-card,2026-07-24,"ARC-AGI-3 (high effort), Claude Opus 5 System Card Table 8.1.A / §8.14.2. Anthropic's headline novel-reasoning result: ~3x the next-best model (GPT-5.6 Sol 7.8). Humans score ~100%; frontier AI was ~0.5% at the March 2026 launch, so this is a large SOTA jump."
+gpt-5-6-sol,7.8,self-reported,https://www.anthropic.com/claude-opus-5-system-card,2026-07-24,"ARC-AGI-3 competitor figure (drawn by Anthropic from the developer's published results) in the Claude Opus 5 System Card Table 8.1.A."

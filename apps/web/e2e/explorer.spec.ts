@@ -10,7 +10,7 @@ test.describe('model explorer', () => {
     // JS-computed summary count above plus the always-rendered top row, not a raw card count.
     // Rank-eligible models sort first (D20), so the #1 card is the frontier leader, not a
     // single-benchmark curiosity.
-    await expect(page.getByTestId('explorer-card').first()).toContainText('Kimi K3')
+    await expect(page.getByTestId('explorer-card').first()).toContainText('Claude Opus 5')
   })
 
   test('runs-on-my-hardware facet applies the curated 1.08× rule', async ({ page }) => {
