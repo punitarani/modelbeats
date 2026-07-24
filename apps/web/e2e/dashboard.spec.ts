@@ -31,6 +31,28 @@ test.describe('dashboard overview', () => {
     await expect(movers).toContainText('+1630.9')
   })
 
+  test('quality-vs-price scatter draws the Pareto frontier (D27)', async ({ page }) => {
+    await gotoHydrated(page, '/')
+    // The efficient-frontier guide line connects the cheapest-for-its-quality models; with 50+
+    // priced+ranked points it always has ≥2 vertices, so the polyline (and its legend key) render.
+    const frontier = page.getByTestId('pareto-frontier')
+    await expect(frontier).toBeVisible()
+    const pts = (await frontier.getAttribute('points')) ?? ''
+    expect(pts.trim().split(/\s+/).length).toBeGreaterThanOrEqual(2)
+    await expect(page.getByTestId('legend-frontier')).toContainText('Pareto frontier')
+
+    // The frontier is monotone: x strictly increases and y strictly decreases (higher Elo sits
+    // nearer the top of the SVG) left→right along the vertices.
+    const coords = pts
+      .trim()
+      .split(/\s+/)
+      .map((pair) => pair.split(',').map(Number))
+    for (let i = 1; i < coords.length; i++) {
+      expect(coords[i][0]).toBeGreaterThan(coords[i - 1][0])
+      expect(coords[i][1]).toBeLessThan(coords[i - 1][1])
+    }
+  })
+
   test('y-axis auto-zooms to the data instead of a fixed axis', async ({ page }) => {
     await gotoHydrated(page, '/')
     // Fitted to the priced+ranked Elo range (D21): round ticks that reach the ~3000-rated

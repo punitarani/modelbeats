@@ -67,7 +67,30 @@ export function OverviewTab({ catalog }: { catalog: CatalogSnapshot }) {
           <div className="flex flex-wrap items-baseline gap-2.5">
             <div className="text-[13px] font-semibold">Quality vs. price</div>
             <div className="text-[11px] text-mut">Frontier Elo against output price, log scale</div>
-            <div className="ml-auto flex gap-1.5 text-[11px]">
+            <div className="ml-auto flex items-center gap-1.5 text-[11px]">
+              <span
+                className="flex items-center gap-[5px] px-1.5 py-0.5 text-mut"
+                data-testid="legend-frontier"
+              >
+                <svg
+                  width="14"
+                  height="6"
+                  viewBox="0 0 14 6"
+                  aria-hidden="true"
+                  className="shrink-0"
+                >
+                  <line
+                    x1="1"
+                    y1="3"
+                    x2="13"
+                    y2="3"
+                    stroke="var(--acc)"
+                    strokeWidth="1.5"
+                    strokeLinecap="round"
+                  />
+                </svg>
+                Pareto frontier
+              </span>
               <LegendToggle
                 label="Open weights"
                 color="var(--open)"
