@@ -40,16 +40,14 @@ test('keyboard: rankings sort buttons are tabbable and Enter-operable', async ({
   const sortBtn = page.getByTestId('sort-gpqa')
   await expect(sortBtn).toBeVisible()
   // The table remounts once post-hydration (mounted-gate, B4), which replaces the header
-  // node and silently drops focus to <body>. Poll until a freshly-placed focus SURVIVES a
-  // beat — i.e. the remount has settled — before pressing Enter, so the keypress always
-  // reaches the button rather than racing the remount.
-  await expect
-    .poll(async () => {
-      await sortBtn.focus()
-      await page.waitForTimeout(150)
-      return page.evaluate(() => document.activeElement?.getAttribute('data-testid'))
-    })
-    .toBe('sort-gpqa')
-  await page.keyboard.press('Enter')
-  await expect(page).toHaveURL(/sort=-gpqa/, { timeout: 10_000 })
+  // node and silently drops focus to <body> — an Enter that races the remount dispatches
+  // into a detached element. Retry the focus+Enter sequence until the URL actually
+  // mutates, which asserts the real contract (keyboard-operable once settled) without
+  // racing the remount under load.
+  await expect(async () => {
+    await sortBtn.focus()
+    await expect(sortBtn).toBeFocused()
+    await page.keyboard.press('Enter')
+    await expect(page).toHaveURL(/sort=-gpqa/, { timeout: 2000 })
+  }).toPass({ timeout: 20_000 })
 })
