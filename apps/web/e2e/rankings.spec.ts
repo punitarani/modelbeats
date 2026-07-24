@@ -2,7 +2,7 @@ import { expect, test } from '@playwright/test'
 import { datasetCounts, gotoHydrated, pickOption } from './helpers'
 
 test.describe('rankings', () => {
-  test('default view: rank-eligible rows sorted by Elo, GPT-5.6 first', async ({ page }) => {
+  test('default view: rank-eligible rows sorted by Elo, Claude Opus 5 first', async ({ page }) => {
     const { models } = datasetCounts()
     await gotoHydrated(page, '/rankings')
     await expect(page.getByTestId('rankings-meta')).toContainText(
@@ -11,8 +11,8 @@ test.describe('rankings', () => {
     // the coverage gate (D20) keeps single-benchmark curiosities (Doubao) out of the top; the
     // #1 row is the broadly-benchmarked frontier leader (Frontier Elo, D21)
     const first = page.getByTestId('ranking-row').first()
-    await expect(first).toContainText('Kimi K3')
-    await expect(first).toContainText('3055.3')
+    await expect(first).toContainText('Claude Opus 5')
+    await expect(first).toContainText('3290.9')
   })
 
   test('column sort click mutates URL and reorders rows', async ({ page }) => {
@@ -25,7 +25,7 @@ test.describe('rankings', () => {
       await expect(page).toHaveURL(/sort=-gpqa/, { timeout: 2000 })
     }).toPass({ timeout: 15_000 })
     // GPQA Diamond's leader is GPT-5.6 Sol (94.6), so sorting by GPQA moves it above the
-    // Elo leader (Kimi K3) — the sort both mutates the URL and reorders the rows
+    // Elo leader (Claude Opus 5, which reports no GPQA) — the sort both mutates the URL and reorders the rows
     await expect(page.getByTestId('ranking-row').first()).toContainText('GPT-5.6')
     // second click flips to ascending
     await page.getByTestId('sort-gpqa').click()
@@ -50,7 +50,7 @@ test.describe('rankings', () => {
     await gotoHydrated(page, '/rankings')
     await pickOption(page, 'rankings-org', 'Anthropic')
     await expect(page).toHaveURL(/org=anthropic/)
-    await expect(page.getByTestId('rankings-meta')).toContainText('25 models')
+    await expect(page.getByTestId('rankings-meta')).toContainText('26 models')
   })
 
   test('category param filters benchmark columns; bogus category 404s', async ({ page }) => {

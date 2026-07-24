@@ -1,0 +1,4 @@
+model_slug,score,source,source_url,evaluated_at,notes
+claude-fable-5,86.6,self-reported,https://www.anthropic.com/claude-opus-5-system-card,2026-07-24,"SWE-bench Multilingual competitor figure from the Claude Opus 5 System Card Table 8.1.A."
+claude-opus-4-8,84.4,self-reported,https://www.anthropic.com/claude-opus-5-system-card,2026-07-24,"SWE-bench Multilingual competitor figure from the Claude Opus 5 System Card Table 8.1.A."
+claude-opus-5,89.5,self-reported,https://www.anthropic.com/claude-opus-5-system-card,2026-07-24,"SWE-bench Multilingual (300 problems, 9 languages), Claude Opus 5 System Card Table 8.1.A / §8.2. Best in row, ahead of Fable 5 (86.6) and Opus 4.8 (84.4)."

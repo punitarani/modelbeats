@@ -1,0 +1,11 @@
+{
+  "slug": "arc-agi-3",
+  "name": "ARC-AGI-3",
+  "category": "reasoning",
+  "unit": "%",
+  "description": "Interactive abstraction-and-reasoning benchmark (ARC Prize): agents explore novel turn-based environments with no instructions, infer goals on the fly, build world models, and adapt across increasingly hard levels. v3.",
+  "normMin": 0,
+  "normMax": 50,
+  "higherIsBetter": true,
+  "methodologyUrl": "https://arcprize.org/arc-agi/3"
+}

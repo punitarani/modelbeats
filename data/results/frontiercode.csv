@@ -1,0 +1,5 @@
+model_slug,score,source,source_url,evaluated_at,notes
+claude-fable-5,53.5,self-reported,https://www.anthropic.com/claude-opus-5-system-card,2026-07-24,"FrontierCode v1.1 (Main) competitor figure from the Claude Opus 5 System Card Table 8.1.A / §8.4 (each model at its best reasoning effort); best in row."
+claude-opus-4-8,46.5,self-reported,https://www.anthropic.com/claude-opus-5-system-card,2026-07-24,"FrontierCode v1.1 (Main) competitor figure from the Claude Opus 5 System Card Table 8.1.A / §8.4."
+claude-opus-5,53.4,self-reported,https://www.anthropic.com/claude-opus-5-system-card,2026-07-24,"FrontierCode v1.1 (Main set), Cognition-run agentic coding, Claude Opus 5 System Card Table 8.1.A / §8.4. Opus 5 ranks 2nd (53.4 at medium effort), improving on Opus 4.8 (46.5) and leading GPT-5.6 Sol (47.5), just behind Fable 5 (53.5)."
+gpt-5-6-sol,47.5,self-reported,https://www.anthropic.com/claude-opus-5-system-card,2026-07-24,"FrontierCode v1.1 (Main) competitor figure (drawn by Anthropic from the developer's published results) in the Claude Opus 5 System Card Table 8.1.A."

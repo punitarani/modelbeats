@@ -28,12 +28,12 @@ test.describe('dashboard overview', () => {
     // real top mover is a rank-eligible family edge; deltas are Elo points (D21), so a large
     // cross-tier lineage jump (105B succeeding a 2B) posts a four-digit gain
     await expect(movers).toContainText('Sarvam-105B')
-    await expect(movers).toContainText('+1630.9')
+    await expect(movers).toContainText('+1630.8')
   })
 
   test('y-axis auto-zooms to the data instead of a fixed axis', async ({ page }) => {
     await gotoHydrated(page, '/')
-    // Fitted to the priced+ranked Elo range (D21): round ticks that reach the ~3000-rated
+    // Fitted to the priced+ranked Elo range (D21): round ticks that reach the ~3300-rated
     // frontier instead of the retired 0–100 index band.
     const ticks = (await page.getByTestId('y-tick').allTextContents()).map(Number)
     expect(ticks.length).toBeGreaterThanOrEqual(3)
@@ -80,12 +80,12 @@ test.describe('dashboard overview', () => {
     await gotoHydrated(page, '/')
     const rail = page.getByTestId('arena-rail')
     // rail now leads with the #1 overall model by Elo rating
-    await expect(rail).toContainText('GPT-5.6')
-    await expect(rail).toContainText('3055.3')
+    await expect(rail).toContainText('Claude Opus 5')
+    await expect(rail).toContainText('3290.9')
     await pickOption(page, 'qc-b', 'Llama 3.1 405B — Meta')
     await page.getByTestId('qc-go').click()
-    // quick-compare slot A defaults to the #1 rank-eligible model (Kimi K3)
-    await expect(page).toHaveURL(/m=kimi-k3(%2C|,)llama-3-1-405b/)
+    // quick-compare slot A defaults to the #1 rank-eligible model (Claude Opus 5)
+    await expect(page).toHaveURL(/m=claude-opus-5(%2C|,)llama-3-1-405b/)
   })
 })
 
@@ -110,7 +110,7 @@ test.describe('dashboard releases + bench tabs', () => {
     await gotoHydrated(page, '/?tab=releases')
     const frontier = page.getByTestId('frontier')
     // regrounded on the universal Elo rating, so both camps' leaders always plot
-    await expect(frontier).toContainText('GPT-5.6')
+    await expect(frontier).toContainText('Claude Opus 5')
     await expect(frontier).toContainText('Kimi K3')
     await expect(page.getByTestId('gap-note')).not.toHaveText('')
   })
