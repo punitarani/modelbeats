@@ -20,6 +20,15 @@ test.describe('search', () => {
     await expect(page.getByTestId('search-dropdown')).toHaveCount(0)
   })
 
+  test('the dropdown surfaces matching benchmarks and navigates to them', async ({ page }) => {
+    await gotoHydrated(page, '/rankings')
+    await page.getByTestId('topbar-search').fill('swe-bench')
+    const bench = page.getByTestId('search-benchmark').filter({ hasText: 'SWE-bench Verified' })
+    await expect(bench).toBeVisible()
+    await bench.click()
+    await expect(page).toHaveURL(/\/benchmarks\/swe-bench$/)
+  })
+
   test('/search?q= SSRs grouped results', async ({ page }) => {
     await gotoHydrated(page, '/search?q=qwen')
     // real corpus: 48 models across the Qwen 1/1.5/2/2.5/3/3.5/3.6/3.7 series match "qwen" (name/org/family)
