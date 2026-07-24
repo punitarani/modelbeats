@@ -6,14 +6,14 @@ import { type DerivedScores, deriveScores } from './derive'
 import { loadDataset } from './lib/load'
 
 /**
- * GOLDEN TESTS (C1/D21). The deterministic half of the pipeline — headline source
+ * GOLDEN TESTS (C1/D21/D26). The deterministic half of the pipeline — headline source
  * precedence, the D20 coverage gate, category indices, battle tallies — is cross-checked
  * against an INDEPENDENT scratch reimplementation below (it does not import the scoring
  * engine). The Bradley-Terry rating itself is an iterative MLE, so instead of a second
  * implementation it is pinned three ways: analytic unit fixtures in
  * packages/shared/src/bradley-terry.test.ts, hand-verified real-model anchors here, and
  * a byte-level match against the committed data/derived/scores.json. If these fail, the
- * index no longer matches the documented D21 contract — do not "fix" the numbers; fix
+ * index no longer matches the documented D21/D26 contract — do not "fix" the numbers; fix
  * the engine (or consciously amend docs/DECISIONS.md and regenerate).
  */
 
@@ -129,25 +129,34 @@ describe('derived scores match the D21 contract (goldens)', () => {
     }
   })
 
-  it('battle tallies match an independent pairwise count', async () => {
+  it('battle tallies match an independent category-attenuated pairwise count (D26)', async () => {
     const ref = await computeReference(DATA)
-    // scratch tally: every benchmark both models hold a headline score on = 1 battle
+    const catBySlug = new Map(ref.ds.benchmarks.map((b) => [b.slug, b.category]))
+    // scratch tally, reimplemented from scratch: per pair, count shared benchmarks per
+    // category (n_c), then weight each battle 1/sqrt(n_c) — same order-independent sums.
     const scratch = new Map<string, { winsA: number; winsB: number }>()
     const sorted = [...ref.models].sort((a, b) => (a.slug < b.slug ? -1 : 1))
     for (let i = 0; i < sorted.length; i++) {
       for (let j = i + 1; j < sorted.length; j++) {
         const A = sorted[i] as RefModel
         const B = sorted[j] as RefModel
+        const nByCat = new Map<string, number>()
+        for (const [bench] of A.headline) {
+          if (B.headline.get(bench) === undefined) continue
+          const cat = catBySlug.get(bench) as string
+          nByCat.set(cat, (nByCat.get(cat) ?? 0) + 1)
+        }
         let winsA = 0
         let winsB = 0
         for (const [bench, scoreA] of A.headline) {
           const scoreB = B.headline.get(bench)
           if (scoreB === undefined) continue
-          if (scoreA > scoreB) winsA += 1
-          else if (scoreA < scoreB) winsB += 1
+          const w = 1 / Math.sqrt(nByCat.get(catBySlug.get(bench) as string) ?? 1)
+          if (scoreA > scoreB) winsA += w
+          else if (scoreA < scoreB) winsB += w
           else {
-            winsA += 0.5
-            winsB += 0.5
+            winsA += w / 2
+            winsB += w / 2
           }
         }
         if (winsA + winsB > 0) scratch.set(`${A.slug} ${B.slug}`, { winsA, winsB })
@@ -157,11 +166,16 @@ describe('derived scores match the D21 contract (goldens)', () => {
     const headlineByModel = new Map(ref.models.map((m) => [m.slug, Object.fromEntries(m.headline)]))
     const battles = buildBattles(
       headlineByModel,
-      ref.ds.benchmarks.map((b) => b.slug),
+      ref.ds.benchmarks.map((b) => ({ slug: b.slug, category: b.category })),
     )
     expect(battles).toHaveLength(scratch.size)
     for (const rec of battles) {
-      expect({ winsA: rec.winsA, winsB: rec.winsB }).toEqual(scratch.get(`${rec.a} ${rec.b}`))
+      const want = scratch.get(`${rec.a} ${rec.b}`)
+      expect(want, `${rec.a} vs ${rec.b}`).toBeDefined()
+      // scratch iterates per-pair over A's map, the engine per-benchmark globally —
+      // identical terms in different order, so compare to float tolerance, not bits
+      expect(rec.winsA).toBeCloseTo((want as { winsA: number }).winsA, 9)
+      expect(rec.winsB).toBeCloseTo((want as { winsB: number }).winsB, 9)
     }
   })
 
@@ -177,11 +191,11 @@ describe('derived scores match the D21 contract (goldens)', () => {
       .filter((m) => m.rankOverall != null && m.rankOverall <= 5)
       .sort((a, b) => (a.rankOverall ?? 0) - (b.rankOverall ?? 0))
     expect(top5.map((m) => [m.slug, m.overallIndex])).toEqual([
-      ['kimi-k3', 3042],
-      ['gpt-5-6', 3016],
-      ['claude-fable-5', 2937.2],
-      ['claude-opus-4-8', 2764.9],
-      ['gpt-5-4-pro', 2757.4],
+      ['kimi-k3', 3066.5],
+      ['claude-fable-5', 2937.4],
+      ['gpt-5-6-sol', 2915],
+      ['gpt-5-4-pro', 2772.2],
+      ['claude-opus-4-8', 2771],
     ])
   })
 
@@ -203,7 +217,7 @@ describe('derived scores match the D21 contract (goldens)', () => {
     const codex = models.find((m) => m.slug === 'openai-codex')
     expect(codex?.ranked).toBe(false)
     expect(codex?.rankOverall).toBeNull()
-    expect(codex?.overallIndex).toBe(4)
+    expect(codex?.overallIndex).toBe(0.4)
     const top = models.find((m) => m.rankOverall === 1)
     expect(top?.slug).toBe('kimi-k3')
   })
@@ -238,8 +252,8 @@ describe('derived scores match the D21 contract (goldens)', () => {
     const { models } = await derived()
     const llama = models.find((m) => m.slug === 'llama-3-1-405b')
     expect(llama?.ranked).toBe(true)
-    expect(llama?.overallIndex).toBe(1214.3)
-    expect(llama?.rankOverall).toBe(180)
+    expect(llama?.overallIndex).toBe(1220.5)
+    expect(llama?.rankOverall).toBe(182)
     // categoryIdx stays min-max (D21 keeps the radar on D2 bounds) — unchanged literals
     expect(llama?.categoryIdx).toEqual({
       'human-preference': 57.1,
@@ -265,11 +279,11 @@ describe('derived scores match the D21 contract (goldens)', () => {
   it('pins the real top-5 movers and their rating self-consistency', async () => {
     const { models, movers } = await derived()
     expect(movers.map((m) => [m.slug, m.prevSlug, m.delta])).toEqual([
-      ['sarvam-105b', 'sarvam-1-2b', 1538.7],
-      ['smollm3-3b-think', 'smollm2-1-7b', 973.7],
-      ['hy3', 'hunyuan-a13b', 954],
-      ['smollm3-3b-no-thinking', 'smollm2-1-7b', 796.5],
-      ['phi-4-reasoning', 'phi-4-mini-3-8b', 758.2],
+      ['sarvam-105b', 'sarvam-1-2b', 1620.3],
+      ['smollm3-3b-think', 'smollm2-1-7b', 1002.5],
+      ['hy3', 'hunyuan-a13b', 927.5],
+      ['smollm3-3b-no-thinking', 'smollm2-1-7b', 810.8],
+      ['phi-4-reasoning', 'phi-4-mini-3-8b', 752.4],
     ])
     // structural: every mover delta is the rounded rating gap between two RANKED models
     const bySlug = new Map(models.map((m) => [m.slug, m]))

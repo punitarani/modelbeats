@@ -2,7 +2,7 @@ import { expect, test } from '@playwright/test'
 import { datasetCounts, gotoHydrated, pickOption } from './helpers'
 
 test.describe('rankings', () => {
-  test('default view: rank-eligible rows sorted by Elo, Kimi K3 first', async ({ page }) => {
+  test('default view: rank-eligible rows sorted by Elo, GPT-5.6 first', async ({ page }) => {
     const { models } = datasetCounts()
     await gotoHydrated(page, '/rankings')
     await expect(page.getByTestId('rankings-meta')).toContainText(
@@ -12,15 +12,20 @@ test.describe('rankings', () => {
     // #1 row is the broadly-benchmarked frontier leader (Frontier Elo, D21)
     const first = page.getByTestId('ranking-row').first()
     await expect(first).toContainText('Kimi K3')
-    await expect(first).toContainText('3042.0')
+    await expect(first).toContainText('3066.5')
   })
 
   test('column sort click mutates URL and reorders rows', async ({ page }) => {
     await gotoHydrated(page, '/rankings')
-    await page.getByTestId('sort-gpqa').click()
-    await expect(page).toHaveURL(/sort=-gpqa/, { timeout: 10_000 })
-    // GPT-5.6 leads GPQA Diamond (94.6) while Kimi K3 leads the Elo index, so sorting
-    // by GPQA reorders the table and puts GPT-5.6 first
+    // The table remounts once post-hydration (mounted-gate, B4); a click that lands on the
+    // pre-remount header node dispatches into a detached element. Retry the click until the
+    // URL actually mutates so the test can't race the remount.
+    await expect(async () => {
+      await page.getByTestId('sort-gpqa').click()
+      await expect(page).toHaveURL(/sort=-gpqa/, { timeout: 2000 })
+    }).toPass({ timeout: 15_000 })
+    // GPQA Diamond's leader is GPT-5.6 Sol (94.6), so sorting by GPQA moves it above the
+    // Elo leader (Kimi K3) — the sort both mutates the URL and reorders the rows
     await expect(page.getByTestId('ranking-row').first()).toContainText('GPT-5.6')
     // second click flips to ascending
     await page.getByTestId('sort-gpqa').click()

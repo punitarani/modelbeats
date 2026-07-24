@@ -49,7 +49,9 @@ gpt-5-2,1731.5,independent,https://eqbench.com/creative_writing.html,,
 gpt-5-4,1913.1,independent,https://eqbench.com/creative_writing.html,,
 gpt-5-4-mini,1678.6,independent,https://eqbench.com/creative_writing.html,,
 gpt-5-5,1931.7,independent,https://eqbench.com/creative_writing.html,,API default reasoning effort; the high/xhigh effort variants are tracked as separate models in this corpus.
-gpt-5-6,2143.3,independent,https://eqbench.com/creative_writing.html,,"Leaderboard row 'gpt-5.6-sol'. This corpus's GPT-5.6 entry is the Sol flagship tier; the Terra and Luna tiers are distinct models not in the dataset, so their rows were not imported."
+gpt-5-6-luna,1900.8,independent,https://eqbench.com/creative_writing.html,,Leaderboard row 'gpt-5.6-luna'.
+gpt-5-6-sol,2143.3,independent,https://eqbench.com/creative_writing.html,,"Leaderboard row 'gpt-5.6-sol' (imported alongside the Terra and Luna tier rows, tracked as separate models)."
+gpt-5-6-terra,1919.0,independent,https://eqbench.com/creative_writing.html,,Leaderboard row 'gpt-5.6-terra'.
 gpt-5-mini,1315.2,independent,https://eqbench.com/creative_writing.html,,
 gpt-5-nano,856.4,independent,https://eqbench.com/creative_writing.html,,
 gpt-oss-120b-medium,1073.2,independent,https://eqbench.com/creative_writing.html,,"Leaderboard row 'openai/gpt-oss-120b' (reasoning effort not stated); attributed to medium, OpenAI's documented default effort."

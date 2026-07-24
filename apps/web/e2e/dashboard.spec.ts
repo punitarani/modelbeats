@@ -28,7 +28,7 @@ test.describe('dashboard overview', () => {
     // real top mover is a rank-eligible family edge; deltas are Elo points (D21), so a large
     // cross-tier lineage jump (105B succeeding a 2B) posts a four-digit gain
     await expect(movers).toContainText('Sarvam-105B')
-    await expect(movers).toContainText('+1538.7')
+    await expect(movers).toContainText('+1620.3')
   })
 
   test('y-axis auto-zooms to the data instead of a fixed axis', async ({ page }) => {
@@ -80,8 +80,8 @@ test.describe('dashboard overview', () => {
     await gotoHydrated(page, '/')
     const rail = page.getByTestId('arena-rail')
     // rail now leads with the #1 overall model by Elo rating
-    await expect(rail).toContainText('Kimi K3')
-    await expect(rail).toContainText('3042.0')
+    await expect(rail).toContainText('GPT-5.6')
+    await expect(rail).toContainText('3066.5')
     await pickOption(page, 'qc-b', 'Llama 3.1 405B — Meta')
     await page.getByTestId('qc-go').click()
     // quick-compare slot A defaults to the #1 rank-eligible model (Kimi K3)
