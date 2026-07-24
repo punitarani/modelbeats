@@ -1,7 +1,14 @@
 import type * as React from 'react'
 import { useState } from 'react'
 import { ChartTipBox, useChartTip } from './chart-tip'
-import { layoutScatterLabels, SCATTER, type ScatterYWindow, scatterX, scatterY } from './scales'
+import {
+  layoutScatterLabels,
+  paretoFrontier,
+  SCATTER,
+  type ScatterYWindow,
+  scatterX,
+  scatterY,
+} from './scales'
 
 export interface ScatterPoint {
   slug: string
@@ -36,6 +43,14 @@ export function QualityPriceScatter({
     x: scatterX(p.outputPrice),
     y: scatterY(p.index, yWindow),
   }))
+
+  // Pareto (efficient) frontier over the *visible* set (D27): the cheapest-for-its-quality
+  // upper-left envelope, strung into a monotone left→right guide line beneath the dots. Derived
+  // from `points`, so a legend camp filter re-fits it the same way it re-fits the y-window.
+  const frontier = paretoFrontier(points.map((p) => ({ price: p.outputPrice, quality: p.index })))
+  const frontierPath = frontier
+    .map((f) => `${scatterX(f.price).toFixed(1)},${scatterY(f.quality, yWindow).toFixed(1)}`)
+    .join(' ')
 
   const tipContent = (p: ScatterPoint) => (
     <>
@@ -144,6 +159,23 @@ export function QualityPriceScatter({
             ${price}
           </text>
         ))}
+        {/* Pareto frontier: connects the efficient models' centers; sits under the dots so a
+            frontier point still reads as a dot with the line passing through it (D27). */}
+        {frontier.length > 1 && (
+          <polyline
+            data-testid="pareto-frontier"
+            points={frontierPath}
+            fill="none"
+            stroke="var(--acc)"
+            strokeWidth="1.5"
+            strokeOpacity="0.9"
+            strokeLinejoin="round"
+            strokeLinecap="round"
+            pointerEvents="none"
+          >
+            <title>Pareto frontier — best Frontier Elo at each price</title>
+          </polyline>
+        )}
         {positions.map(({ p, x, y }) => {
           const active = hovered === p.slug
           const label = `${p.name} — Elo ${p.index.toFixed(1)} · $${p.outputPrice}/M out`

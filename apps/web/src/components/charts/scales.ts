@@ -142,6 +142,40 @@ export function layoutScatterLabels(inputs: ScatterLabelInput[]): ScatterLabelPl
   return out
 }
 
+export interface ParetoPoint {
+  /** x-objective — output price, where *lower* is better. */
+  price: number
+  /** y-objective — Frontier Elo, where *higher* is better. */
+  quality: number
+}
+
+/**
+ * Quality-vs-price Pareto frontier (D27): the points no other point dominates, where a point
+ * dominates another when it is BOTH no more expensive AND no lower quality. Since cheaper and
+ * higher-Elo are both "better", the efficient set is the plot's upper-left envelope — swept
+ * left→right in ascending price it is exactly the running maximum of quality, so a single pass
+ * over the price-sorted points is enough. Returned in ascending-price order, so callers can
+ * string the vertices straight into a monotone left-to-right line (x strictly increases; the
+ * strictly-greater test makes quality strictly increase too).
+ *
+ * Ties collapse cleanly: points sharing a price keep only the highest-quality one (the sort
+ * puts it first, and the rest fail the strictly-greater test); a costlier point that merely
+ * *equals* an earlier point's quality is dominated and dropped. Generic over the caller's point
+ * type so the returned objects carry their original payload (slug, coords, …), not just x/y.
+ */
+export function paretoFrontier<T extends ParetoPoint>(points: readonly T[]): T[] {
+  const sorted = [...points].sort((a, b) => a.price - b.price || b.quality - a.quality)
+  const frontier: T[] = []
+  let best = Number.NEGATIVE_INFINITY
+  for (const p of sorted) {
+    if (p.quality > best) {
+      frontier.push(p)
+      best = p.quality
+    }
+  }
+  return frontier
+}
+
 /** Radar geometry (viewBox 280×260): center (140,126), r 92. `axes` is the design's default count
  *  (6); the compare radar passes a live `axisCount` so covered axes redistribute evenly (D24). */
 export const RADAR = { cx: 140, cy: 126, r: 92, axes: 6, rings: [0.25, 0.5, 0.75, 1] } as const

@@ -7,6 +7,7 @@ import {
   layoutScatterLabels,
   logPos,
   normPct,
+  paretoFrontier,
   radarAxisMeta,
   radarPolygonPoints,
   radarRings,
@@ -148,6 +149,76 @@ describe('layoutScatterLabels — declutter overlapping labels (D23)', () => {
     ])
     expect(out[0].y).toBeCloseTo(50, 6)
     expect(out[1].y).toBeGreaterThanOrEqual(out[0].y + 13)
+  })
+})
+
+describe('paretoFrontier — quality-vs-price efficient frontier (D27)', () => {
+  it('keeps only non-dominated points, in ascending-price order', () => {
+    // C strictly dominates B (cheaper AND better); D dominates E. A, C, D survive.
+    const front = paretoFrontier([
+      { id: 'A', price: 0.1, quality: 500 },
+      { id: 'B', price: 1, quality: 800 },
+      { id: 'C', price: 0.5, quality: 1200 },
+      { id: 'D', price: 10, quality: 2000 },
+      { id: 'E', price: 20, quality: 1500 },
+    ])
+    expect(front.map((p) => p.id)).toEqual(['A', 'C', 'D'])
+  })
+
+  it('is a monotone staircase: price strictly increases and quality strictly increases along it', () => {
+    const front = paretoFrontier([
+      { price: 0.06, quality: 400 },
+      { price: 0.5, quality: 1500 },
+      { price: 2, quality: 1200 }, // dominated by the $0.5 point
+      { price: 5, quality: 2600 },
+      { price: 60, quality: 3100 },
+    ])
+    for (let i = 1; i < front.length; i++) {
+      expect(front[i].price).toBeGreaterThan(front[i - 1].price)
+      expect(front[i].quality).toBeGreaterThan(front[i - 1].quality)
+    }
+  })
+
+  it('collapses a price tie to the single highest-quality point', () => {
+    const front = paretoFrontier([
+      { id: 'lo', price: 3, quality: 900 },
+      { id: 'hi', price: 3, quality: 2400 },
+    ])
+    expect(front.map((p) => p.id)).toEqual(['hi'])
+  })
+
+  it('drops a costlier point that only ties an earlier point on quality (no free lunch)', () => {
+    const front = paretoFrontier([
+      { id: 'cheap', price: 1, quality: 2000 },
+      { id: 'dear', price: 9, quality: 2000 },
+    ])
+    expect(front.map((p) => p.id)).toEqual(['cheap'])
+  })
+
+  it('always includes the cheapest point and ends at the globally best-quality point', () => {
+    const pts = [
+      { id: 'cheapest', price: 0.08, quality: 550 },
+      { id: 'mid', price: 2, quality: 1800 },
+      { id: 'best', price: 40, quality: 3050 },
+      { id: 'overpriced', price: 120, quality: 1500 },
+    ]
+    const front = paretoFrontier(pts)
+    expect(front[0].id).toBe('cheapest')
+    expect(front[front.length - 1].id).toBe('best')
+  })
+
+  it('does not mutate the input array order', () => {
+    const pts = [
+      { price: 10, quality: 2000 },
+      { price: 1, quality: 500 },
+    ]
+    paretoFrontier(pts)
+    expect(pts[0].price).toBe(10) // still in original order
+  })
+
+  it('handles a single point and empty input', () => {
+    expect(paretoFrontier([{ price: 1, quality: 100 }])).toHaveLength(1)
+    expect(paretoFrontier([])).toEqual([])
   })
 })
 
