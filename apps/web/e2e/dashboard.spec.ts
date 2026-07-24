@@ -28,7 +28,7 @@ test.describe('dashboard overview', () => {
     // real top mover is a rank-eligible family edge; deltas are Elo points (D21), so a large
     // cross-tier lineage jump (105B succeeding a 2B) posts a four-digit gain
     await expect(movers).toContainText('Sarvam-105B')
-    await expect(movers).toContainText('+1630.9')
+    await expect(movers).toContainText('+1620.3')
   })
 
   test('y-axis auto-zooms to the data instead of a fixed axis', async ({ page }) => {
@@ -81,7 +81,7 @@ test.describe('dashboard overview', () => {
     const rail = page.getByTestId('arena-rail')
     // rail now leads with the #1 overall model by Elo rating
     await expect(rail).toContainText('GPT-5.6')
-    await expect(rail).toContainText('3054.4')
+    await expect(rail).toContainText('3066.5')
     await pickOption(page, 'qc-b', 'Llama 3.1 405B — Meta')
     await page.getByTestId('qc-go').click()
     // quick-compare slot A defaults to the #1 rank-eligible model (Kimi K3)
@@ -109,8 +109,9 @@ test.describe('dashboard releases + bench tabs', () => {
   test('open-vs-closed frontier renders Elo-based bars for both camps', async ({ page }) => {
     await gotoHydrated(page, '/?tab=releases')
     const frontier = page.getByTestId('frontier')
-    // regrounded on the universal Elo rating, so both camps' leaders always plot
-    await expect(frontier).toContainText('GPT-5.6')
+    // regrounded on the universal Elo rating, so both camps' leaders always plot; the
+    // EQ-Bench results put Claude Fable 5 ahead of GPT-5.6 Sol as the closed-camp leader
+    await expect(frontier).toContainText('Claude Fable 5')
     await expect(frontier).toContainText('Kimi K3')
     await expect(page.getByTestId('gap-note')).not.toHaveText('')
   })
