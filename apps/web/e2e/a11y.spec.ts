@@ -8,7 +8,7 @@ const ROUTES = [
   '/?tab=bench',
   '/rankings',
   '/models',
-  '/models/gpt-5-6',
+  '/models/gpt-5-6-sol',
   '/models/gpt-oss-20b-medium',
   '/compare?m=gpt-5-2,deepseek-v3-1-thinking',
   '/hardware',
@@ -39,10 +39,17 @@ test('keyboard: rankings sort buttons are tabbable and Enter-operable', async ({
   await gotoHydrated(page, '/rankings')
   const sortBtn = page.getByTestId('sort-gpqa')
   await expect(sortBtn).toBeVisible()
-  await sortBtn.focus()
-  // toBeFocused auto-waits until focus actually lands on the (interactive) control,
-  // so Enter can't fire before the button is operable on a slow CI runner.
-  await expect(sortBtn).toBeFocused()
+  // The table remounts once post-hydration (mounted-gate, B4), which replaces the header
+  // node and silently drops focus to <body>. Poll until a freshly-placed focus SURVIVES a
+  // beat — i.e. the remount has settled — before pressing Enter, so the keypress always
+  // reaches the button rather than racing the remount.
+  await expect
+    .poll(async () => {
+      await sortBtn.focus()
+      await page.waitForTimeout(150)
+      return page.evaluate(() => document.activeElement?.getAttribute('data-testid'))
+    })
+    .toBe('sort-gpqa')
   await page.keyboard.press('Enter')
   await expect(page).toHaveURL(/sort=-gpqa/, { timeout: 10_000 })
 })

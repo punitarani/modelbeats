@@ -11,16 +11,16 @@ test.describe('rankings', () => {
     // the coverage gate (D20) keeps single-benchmark curiosities (Doubao) out of the top; the
     // #1 row is the broadly-benchmarked frontier leader (Frontier Elo, D21)
     const first = page.getByTestId('ranking-row').first()
-    await expect(first).toContainText('GPT-5.6')
-    await expect(first).toContainText('3072.6')
+    await expect(first).toContainText('Kimi K3')
+    await expect(first).toContainText('3005.7')
   })
 
   test('column sort click mutates URL and reorders rows', async ({ page }) => {
     await gotoHydrated(page, '/rankings')
     await page.getByTestId('sort-gpqa').click()
     await expect(page).toHaveURL(/sort=-gpqa/, { timeout: 10_000 })
-    // GPT-5.6 leads both the Elo index and GPQA Diamond (94.6), so sorting by GPQA
-    // keeps it in first place — no reordering, but the sort param still mutates the URL
+    // GPQA Diamond's leader is GPT-5.6 Sol (94.6), so sorting by GPQA moves it above the
+    // Elo leader (Kimi K3) — the sort both mutates the URL and reorders the rows
     await expect(page.getByTestId('ranking-row').first()).toContainText('GPT-5.6')
     // second click flips to ascending
     await page.getByTestId('sort-gpqa').click()
