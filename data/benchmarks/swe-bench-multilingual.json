@@ -1,0 +1,10 @@
+{
+  "slug": "swe-bench-multilingual",
+  "name": "SWE-bench Multilingual",
+  "category": "coding",
+  "unit": "%",
+  "description": "SWE-bench Multilingual — 300 real-issue problems spanning 9 programming languages, extending SWE-bench beyond Python.",
+  "normMin": 0,
+  "normMax": 92,
+  "higherIsBetter": true
+}

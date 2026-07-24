@@ -191,11 +191,11 @@ describe('derived scores match the D21 contract (goldens)', () => {
       .filter((m) => m.rankOverall != null && m.rankOverall <= 5)
       .sort((a, b) => (a.rankOverall ?? 0) - (b.rankOverall ?? 0))
     expect(top5.map((m) => [m.slug, m.overallIndex])).toEqual([
-      ['kimi-k3', 3055.3],
-      ['gpt-5-6-sol', 2948],
-      ['claude-fable-5', 2939.6],
-      ['claude-opus-4-8', 2799.5],
-      ['gpt-5-4-pro', 2797.3],
+      ['claude-opus-5', 3290.9],
+      ['kimi-k3', 3066.7],
+      ['gpt-5-6-sol', 2954.3],
+      ['claude-fable-5', 2950.5],
+      ['gpt-5-4-pro', 2794],
     ])
   })
 
@@ -217,9 +217,9 @@ describe('derived scores match the D21 contract (goldens)', () => {
     const codex = models.find((m) => m.slug === 'openai-codex')
     expect(codex?.ranked).toBe(false)
     expect(codex?.rankOverall).toBeNull()
-    expect(codex?.overallIndex).toBe(1)
+    expect(codex?.overallIndex).toBe(-0.9)
     const top = models.find((m) => m.rankOverall === 1)
-    expect(top?.slug).toBe('kimi-k3')
+    expect(top?.slug).toBe('claude-opus-5')
   })
 
   it('rates zero-battle models at exactly the anchor (1000) and never ranks them', async () => {
@@ -252,8 +252,8 @@ describe('derived scores match the D21 contract (goldens)', () => {
     const { models } = await derived()
     const llama = models.find((m) => m.slug === 'llama-3-1-405b')
     expect(llama?.ranked).toBe(true)
-    expect(llama?.overallIndex).toBe(1234.3)
-    expect(llama?.rankOverall).toBe(178)
+    expect(llama?.overallIndex).toBe(1232.4)
+    expect(llama?.rankOverall).toBe(179)
     // categoryIdx stays min-max (D21 keeps the radar on D2 bounds) — unchanged literals
     expect(llama?.categoryIdx).toEqual({
       'human-preference': 69.4,
@@ -272,16 +272,16 @@ describe('derived scores match the D21 contract (goldens)', () => {
     const rows = ds.results.get('swe-bench') ?? []
     const best = Math.max(...rows.map((r) => r.score))
     const leaders = rows.filter((r) => r.score === best).map((r) => r.modelSlug)
-    expect(best).toBe(95)
-    expect(leaders).toContain('claude-fable-5')
+    expect(best).toBe(96)
+    expect(leaders).toContain('claude-opus-5')
   })
 
   it('pins the real top-5 movers and their rating self-consistency', async () => {
     const { models, movers } = await derived()
     expect(movers.map((m) => [m.slug, m.prevSlug, m.delta])).toEqual([
-      ['sarvam-105b', 'sarvam-1-2b', 1630.9],
+      ['sarvam-105b', 'sarvam-1-2b', 1630.8],
       ['smollm3-3b-think', 'smollm2-1-7b', 1005],
-      ['hy3', 'hunyuan-a13b', 945.6],
+      ['hy3', 'hunyuan-a13b', 945.3],
       ['smollm3-3b-no-thinking', 'smollm2-1-7b', 812.1],
       ['phi-4-reasoning', 'phi-4-mini-3-8b', 757.5],
     ])

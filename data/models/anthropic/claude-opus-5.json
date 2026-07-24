@@ -1,0 +1,46 @@
+{
+  "slug": "claude-opus-5",
+  "name": "Claude Opus 5",
+  "orgSlug": "anthropic",
+  "familySlug": "claude-5",
+  "releaseDate": "2026-07-24",
+  "status": "released",
+  "predecessor": null,
+  "openness": "closed",
+  "license": "Proprietary",
+  "paramsB": null,
+  "activeParamsB": null,
+  "archClass": "dense",
+  "archDisplay": "Dense transformer, architecture undisclosed; adaptive thinking on by default, controlled by a runtime effort parameter (low/medium/high/xhigh/max)",
+  "ctxK": 1000,
+  "modalities": [
+    "text",
+    "vision"
+  ],
+  "langCount": null,
+  "capabilities": {
+    "reasoning": true,
+    "coding": true,
+    "vision": true,
+    "functionCalling": true,
+    "toolUse": true,
+    "agentic": true
+  },
+  "apiAvailable": true,
+  "price": {
+    "input": 5,
+    "output": 25
+  },
+  "links": {
+    "docs": "https://www.anthropic.com/news/claude-opus-5"
+  },
+  "note": "Model id claude-opus-5 (released 2026-07-24, Anthropic's fourth Claude 5 model). Positioned as a thoughtful, proactive agent that 'comes close to the frontier intelligence of Claude Fable 5 at half the price' — same $5/$25 per MTok as Opus 4.8 (half of Fable 5's $10/$50); it is the new default model on Claude Max and the strongest model on Claude Pro. familySlug is claude-5, but predecessor is null: it is the first Opus in the Claude 5 family and cross-family predecessors are disallowed (Opus 4 likewise had a null predecessor at the start of Claude 4). Fast mode runs ~2.5x default speed at twice the base price ($10/$50). Per Anthropic's Opus 5 System Card (Table 8.1.A) it is state-of-the-art on FrontierBench v0.1 and GDPval-AA v2, roughly triples the next-best model on ARC-AGI-3, and ~1.5x the next-best on Zapier AutomationBench; it trails GPT-5.6 Sol on DeepSWE and ARC-AGI-2, and Fable 5 on SWE-bench Pro and FrontierCode. HLE headline uses the with-tools configuration (64.7%; no-tools is 56.3%) to stay ordering-consistent with the sibling Sonnet 5 row, whose corpus HLE figure (57.4%) is also with-tools. GDPval-AA v2 is deliberately NOT filed for this model: Opus 5's launch figure (1861) is on the current, re-fitted Artificial Analysis leaderboard (where Fable 5=1747, Opus 4.8=1593), whereas this corpus's gdpval-aa column is an earlier snapshot (Fable 5=1932, Opus 4.8=1890); mixing the two scales would make Opus 5 spuriously lose its GDPval-AA battles to Opus 4.8/Fable 5, contradicting the published SOTA result, so the row is omitted rather than corrupt the Elo. Cyber classifiers engage ~85% less often than Fable 5; flagged cyber/bio requests fall back to Opus 4.8 by default.",
+  "quants": [],
+  "vramQ4Gb": null,
+  "vramFp16Gb": null,
+  "tps4090": null,
+  "tpsNote": null,
+  "effortLabel": null,
+  "isDefaultConfig": true,
+  "isBestConfig": true
+}

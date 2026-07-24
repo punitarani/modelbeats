@@ -4,6 +4,7 @@ claude-opus-4-5,52,self-reported,https://www-cdn.anthropic.com/bf10f64990cfda0ba
 claude-opus-4-5-high,52,self-reported,https://www-cdn.anthropic.com/bf10f64990cfda0ba858290be7b8cc6317685f47.pdf,2025-11-24,"SWE-bench Pro (Scale AI's harder, 1,865-problem variant), no-thinking configuration (52.0%; 51.60% with 64k thinking) — system card Table 2.4.A."
 claude-opus-4-7,64.3,self-reported,https://www.vellum.ai/blog/claude-opus-4-7-benchmarks-explained,,Up from 53.4% on Opus 4.6 per the same source.
 claude-opus-4-8,69.2,self-reported,https://www.vellum.ai/blog/claude-opus-4-8-benchmarks-explained,,
+claude-opus-5,79.2,self-reported,https://www.anthropic.com/claude-opus-5-system-card,2026-07-24,"SWE-bench Pro, Claude Opus 5 System Card Table 8.1.A / §8.2. Below Fable 5 (80.0) but well above Opus 4.8 (69.2), Sonnet 5 (63.2) and GPT-5.6 Sol (64.6)."
 claude-sonnet-4-6,58.1,self-reported,https://www.vellum.ai/blog/claude-sonnet-5-benchmarks-explained,,"From the later Sonnet 5 launch comparison table, re-measured alongside Sonnet 5 and Opus 4.8."
 claude-sonnet-5,63.2,self-reported,https://www.vellum.ai/blog/claude-sonnet-5-benchmarks-explained,,"5 points ahead of Sonnet 4.6 (58.1%), 6 points behind Opus 4.8 (69.2%)."
 deepseek-v4-flash-non-think,49.1,self-reported,https://arxiv.org/abs/2606.19348,,"SWE-Pro (Resolved), Non-Think mode, Table 7 of the DeepSeek-V4 technical report"

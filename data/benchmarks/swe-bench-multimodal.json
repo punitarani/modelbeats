@@ -1,0 +1,10 @@
+{
+  "slug": "swe-bench-multimodal",
+  "name": "SWE-bench Multimodal",
+  "category": "coding",
+  "unit": "%",
+  "description": "SWE-bench Multimodal — issues augmented with visual context (screenshots, design mockups), testing whether coding agents generalize to visual software domains.",
+  "normMin": 0,
+  "normMax": 70,
+  "higherIsBetter": true
+}

@@ -1,0 +1,11 @@
+{
+  "slug": "osworld-2",
+  "name": "OSWorld 2.0",
+  "category": "agents",
+  "unit": "%",
+  "description": "OSWorld 2.0 — a harder, refreshed version of the OSWorld real-desktop-GUI computer-use benchmark, scored pass@1. Distinct from and not comparable to OSWorld-Verified (v1).",
+  "normMin": 0,
+  "normMax": 85,
+  "higherIsBetter": true,
+  "methodologyUrl": "https://os-world.github.io/"
+}

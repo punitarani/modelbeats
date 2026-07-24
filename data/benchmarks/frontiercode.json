@@ -1,0 +1,10 @@
+{
+  "slug": "frontiercode",
+  "name": "FrontierCode",
+  "category": "coding",
+  "unit": "%",
+  "description": "FrontierCode v1.1 (Main set) — 150 agentic software-engineering tasks derived from real open-source pull requests, run and graded by Cognition against held-out unit tests plus weighted code-quality rubrics. Composite score, mean@5.",
+  "normMin": 0,
+  "normMax": 70,
+  "higherIsBetter": true
+}

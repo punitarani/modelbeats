@@ -10,18 +10,18 @@ test.describe('benchmarks', () => {
     // mentions "SWE-bench Verified" in passing, so an unanchored substring match hits both cards
     const swe = page.getByTestId('benchmark-card').filter({ hasText: /^SWE-bench Verified/ })
     await expect(swe).toContainText('leader')
-    // real leaderboard leader: Claude Fable 5 (95.0%, Vals AI independent re-run)
-    await expect(swe).toContainText('Claude Fable 5')
+    // real leaderboard leader: Claude Opus 5 (96.0%, Anthropic Opus 5 system card §8.2)
+    await expect(swe).toContainText('Claude Opus 5')
   })
 
   test('detail leaderboard ranks the field with provenance badges (D8)', async ({ page }) => {
     await gotoHydrated(page, '/benchmarks/swe-bench')
     const first = page.getByTestId('leaderboard-row').first()
-    await expect(first).toContainText('Claude Fable 5')
-    await expect(first).toContainText('95.0%')
-    await expect(first.getByTestId('provenance-badge')).toHaveText('independent')
-    // real field: 119 of the 541 models carry a SWE-bench Verified score
-    await expect(page.getByTestId('leaderboard-row')).toHaveCount(119)
+    await expect(first).toContainText('Claude Opus 5')
+    await expect(first).toContainText('96.0%')
+    await expect(first.getByTestId('provenance-badge')).toHaveText('self-reported')
+    // real field: 120 of the 544 models carry a SWE-bench Verified score
+    await expect(page.getByTestId('leaderboard-row')).toHaveCount(120)
   })
 
   test('distribution histogram + open-only params scatter render', async ({ page }) => {

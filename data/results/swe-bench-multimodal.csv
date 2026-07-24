@@ -1,0 +1,4 @@
+model_slug,score,source,source_url,evaluated_at,notes
+claude-fable-5,54.1,self-reported,https://www.anthropic.com/claude-opus-5-system-card,2026-07-24,"SWE-bench Multimodal competitor figure from the Claude Opus 5 System Card Table 8.1.A."
+claude-opus-4-8,38.4,self-reported,https://www.anthropic.com/claude-opus-5-system-card,2026-07-24,"SWE-bench Multimodal competitor figure from the Claude Opus 5 System Card Table 8.1.A."
+claude-opus-5,59.4,self-reported,https://www.anthropic.com/claude-opus-5-system-card,2026-07-24,"SWE-bench Multimodal (visual-context issues), Claude Opus 5 System Card Table 8.1.A / §8.2. Best in row, well ahead of Fable 5 (54.1) and Opus 4.8 (38.4)."
