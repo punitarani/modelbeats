@@ -109,8 +109,9 @@ test.describe('dashboard releases + bench tabs', () => {
   test('open-vs-closed frontier renders Elo-based bars for both camps', async ({ page }) => {
     await gotoHydrated(page, '/?tab=releases')
     const frontier = page.getByTestId('frontier')
-    // regrounded on the universal Elo rating, so both camps' leaders always plot
-    await expect(frontier).toContainText('GPT-5.6')
+    // regrounded on the universal Elo rating, so both camps' leaders always plot; the
+    // EQ-Bench results put Claude Fable 5 ahead of GPT-5.6 Sol as the closed-camp leader
+    await expect(frontier).toContainText('Claude Fable 5')
     await expect(frontier).toContainText('Kimi K3')
     await expect(page.getByTestId('gap-note')).not.toHaveText('')
   })
