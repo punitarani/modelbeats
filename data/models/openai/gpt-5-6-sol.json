@@ -34,7 +34,7 @@
   "links": {
     "docs": "developers.openai.com/api/docs/models/gpt-5.6-sol"
   },
-  "note": "Flagship (Sol) tier of the three-tier GPT-5.6 family, billed as OpenAI's best coding model yet (Terminal-Bench 2.1 SOTA); limited-preview June 26 under US govt review, GA July 9, 2026. Sibling tiers GPT-5.6 Terra and GPT-5.6 Luna are tracked as their own corpus models in the same family (OpenAI: 'durable capability tiers that can advance on their own cadence').",
+  "note": "Flagship (Sol) tier of the three-tier GPT-5.6 family, billed as OpenAI's best coding model yet (Terminal-Bench 2.1 SOTA); limited-preview June 26 under US govt review, GA July 9, 2026. Sibling tiers GPT-5.6 Terra and GPT-5.6 Luna are tracked as their own corpus models in the same family (OpenAI: 'durable capability tiers that can advance on their own cadence'). Base price is unchanged at $5/$30 per MTok in the July 30, 2026 round of cuts that took Terra to $2/$12 and Luna to $0.20/$1.20; Sol instead gained a Fast mode in the API — up to 2.5x the speed at twice the price ($10/$60) with the same intelligence, so it is a serving option rather than a separate tier and is not filed as its own model row.",
   "quants": [],
   "vramQ4Gb": null,
   "vramFp16Gb": null,
