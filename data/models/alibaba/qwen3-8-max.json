@@ -1,0 +1,47 @@
+{
+  "slug": "qwen3-8-max",
+  "name": "Qwen3.8 Max",
+  "orgSlug": "alibaba",
+  "familySlug": "qwen3-8",
+  "releaseDate": "2026-08-03",
+  "status": "released",
+  "predecessor": null,
+  "openness": "closed",
+  "license": "Proprietary (open-weight release announced for Qwen3.8-Max and a smaller Qwen3.8-27B; not yet published as of this ingestion)",
+  "paramsB": 2400,
+  "activeParamsB": 95,
+  "archClass": "moe",
+  "archDisplay": "Sparse MoE, 2.4T total / ~95B active parameters (exact expert count undisclosed), built on the Qwen3.5 architectural foundation, 1M-token context, native text/image/video input",
+  "ctxK": 1000,
+  "modalities": [
+    "text",
+    "vision",
+    "video"
+  ],
+  "langCount": null,
+  "capabilities": {
+    "reasoning": true,
+    "coding": true,
+    "vision": true,
+    "functionCalling": true,
+    "toolUse": true,
+    "agentic": true
+  },
+  "apiAvailable": true,
+  "price": {
+    "input": 2,
+    "output": 6
+  },
+  "links": {
+    "docs": "https://qwen.ai/blog?id=qwen3.8"
+  },
+  "note": "Alibaba's new flagship, GA-launched August 3, 2026 after a July 19 preview at WAIC Shanghai — first Max-class Qwen model with a committed (but as of this writing unshipped) open-weight release. 2.4T total parameters is confirmed; ~95B active parameters, the number that actually drives inference cost, comes from third-party technical coverage rather than an official model card, since Alibaba has not yet published one. The launch comparison table is entirely vendor-run with no model card, no independent verification, and no active-parameter disclosure; multiple outlets flagged it as an unverifiable narrative claim rather than a documented launch. Only the least self-serving coding rows (SWE-bench Pro, Terminal-Bench 2.1) are recorded here — the 'best on this chart' claims (OSWorld-Verified, PaperBench) are deliberately omitted, which also keeps this entry below the ranking-coverage floor until independent evaluations exist.",
+  "quants": [],
+  "vramQ4Gb": null,
+  "vramFp16Gb": null,
+  "tps4090": null,
+  "tpsNote": null,
+  "effortLabel": null,
+  "isDefaultConfig": true,
+  "isBestConfig": true
+}

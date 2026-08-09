@@ -11,7 +11,7 @@ describe('catalog snapshot (C3 golden shape)', () => {
     // content-derived version: a positive int, stable across builds of the same data
     expect(snap.version).toBeGreaterThan(0)
     expect((await buildSnapshot(DATA)).version).toBe(snap.version)
-    expect(snap.asOfIso).toBe('2026-07-01')
+    expect(snap.asOfIso).toBe('2026-08-01')
     // relative, not hardcoded: the real corpus's size is ~463 models / 78 orgs / 122
     // benchmarks, not the old 55-model synthetic seed's fixed counts.
     expect(snap.models.length).toBeGreaterThan(400)
@@ -26,8 +26,8 @@ describe('catalog snapshot (C3 golden shape)', () => {
       org: 'Meta',
       family: 'Llama 3.1',
       open: true,
-      index: 1232.4, // Frontier Elo rating (D21/D26)
-      rank: 179,
+      index: 1222.7, // Frontier Elo rating (D21/D26)
+      rank: 180,
       ranked: true,
       ctxK: 128,
     })

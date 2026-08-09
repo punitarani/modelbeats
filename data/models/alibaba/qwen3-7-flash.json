@@ -1,0 +1,47 @@
+{
+  "slug": "qwen3-7-flash",
+  "name": "Qwen3.7 Flash",
+  "orgSlug": "alibaba",
+  "familySlug": "qwen3-7",
+  "releaseDate": "2026-07-27",
+  "status": "released",
+  "predecessor": "qwen3-7-plus",
+  "openness": "closed",
+  "license": "Proprietary",
+  "paramsB": null,
+  "activeParamsB": null,
+  "archClass": "moe",
+  "archDisplay": "MoE, exact expert configuration undisclosed; cheaper vision-language tier below Qwen3.7-Plus/Max, tuned for multimodal agents, visual coding and computer interaction",
+  "ctxK": 1000,
+  "modalities": [
+    "text",
+    "vision",
+    "video"
+  ],
+  "langCount": null,
+  "capabilities": {
+    "reasoning": true,
+    "coding": true,
+    "vision": true,
+    "functionCalling": true,
+    "toolUse": true,
+    "agentic": true
+  },
+  "apiAvailable": true,
+  "price": {
+    "input": 0.03,
+    "output": 0.13
+  },
+  "links": {
+    "docs": "https://www.alibabacloud.com/help/en/model-studio/models"
+  },
+  "note": "Cheapest tier of the Qwen3.7 line (model id qwen3.7-flash-20260727), released ~5 weeks after Qwen3.7-Max/Plus. A vision-language reasoning model pitched at multimodal agents, visual coding, search and computer interaction (object recognition, spatial understanding). No independently-verified benchmark suite found at time of writing; treat as unranked until third-party coverage lands.",
+  "quants": [],
+  "vramQ4Gb": null,
+  "vramFp16Gb": null,
+  "tps4090": null,
+  "tpsNote": null,
+  "effortLabel": null,
+  "isDefaultConfig": true,
+  "isBestConfig": true
+}

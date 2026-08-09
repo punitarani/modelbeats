@@ -50,6 +50,7 @@ deepseek-v3-1-non-thinking,"DeepSeek (official API, deepseek-chat)",0.56,1.68,20
 deepseek-v3-1-thinking,"DeepSeek (official API, deepseek-reasoner)",0.56,1.68,2025-08-21
 deepseek-v3-2-exp,deepseek,0.28,0.42,2025-09-29
 deepseek-v3-671b,OpenRouter,0.2,0.8,2024-12-26
+deepseek-v4-flash-0731,deepseek,0.14,0.28,2026-07-31
 deepseek-v4-flash-non-think,deepseek,0.14,0.28,2026-04-24
 deepseek-v4-flash-think-high,deepseek,0.14,0.28,2026-04-24
 deepseek-v4-flash-think-max,deepseek,0.14,0.28,2026-04-24
@@ -128,6 +129,7 @@ hunyuan-t1,Tencent Cloud,0.15,0.59,2025-03-21
 hunyuan-turbos,Tencent Cloud,0.12,0.3,2025-02-27
 hy3,tencent,0.14,0.55,2026-07-06
 inkling,Tinker,1.87,4.68,2026-07-15
+inkling-small,thinking-machines-lab,0.58,1.44,2026-07-30
 kimi-chat,Moonshot AI (moonshot-v1-128k),2,5,2023-10-09
 kimi-k2,Moonshot AI,0.57,2.3,2025-07-11
 kimi-k2-5,moonshot-ai,0.6,3,2026-01-27
@@ -135,6 +137,7 @@ kimi-k2-6,moonshot-ai,0.95,4,2026-04-20
 kimi-k2-7-code,moonshot-ai,0.95,4,2026-06-12
 kimi-k2-thinking,Moonshot AI,0.6,2.5,2025-11-06
 kimi-k3,moonshot-ai,3,15,2026-07-16
+kimi-k3-fast,moonshot-ai,4.5,22.5,2026-07-27
 laguna-s-2-1,Poolside (platform.poolside.ai / OpenRouter),0.1,0.2,2026-07-21
 laguna-xs-2-1,Poolside (platform.poolside.ai / OpenRouter),0.1,0.2,2026-07-02
 llama-3-1-nemotron-70b-instruct,DeepInfra,1.2,1.2,2024-10-15
@@ -163,6 +166,7 @@ mistral-small-3-1-24b,"Mistral AI (mistral-small-2503, retired 2025-11-30)",0.1,
 mistral-small-3-2-24b,Mistral La Plateforme,0.08,0.2,2025-06-20
 mistral-small-3-24b,"Mistral AI (mistral-small-2501, retired 2025-11-30)",0.1,0.3,2025-01-30
 muse-spark-1-1-xhigh,meta,1.25,4.25,2026-07-09
+muse-spark-1-2,meta,1.25,4.25,2026-08-05
 nemotron-3-nano-omni,nvidia,0.075,0.3,2026-04-29
 nemotron-3-ultra-550b-a55b,OpenRouter,0.5,2.2,2026-06-04
 nemotron-nano-2-nemotron-nano-9b-v2,DeepInfra,0.04,0.16,2025-08-18
@@ -202,8 +206,10 @@ qwen3-5-omni-plus,alibaba,1.4,8.3,2026-03-30
 qwen3-5-plus,alibaba,0.4,2.4,2026-02-16
 qwen3-6-27b,alibaba,0.6,3.6,2026-04-22
 qwen3-6-plus,alibaba,0.5,3,2026-04-02
+qwen3-7-flash,alibaba,0.03,0.13,2026-07-27
 qwen3-7-max,alibaba,2.5,7.5,2026-05-20
 qwen3-7-plus,alibaba,0.4,1.6,2026-06-02
+qwen3-8-max,alibaba,2,6,2026-08-03
 qwen3-8b-non-thinking,Alibaba Cloud Model Studio (DashScope),0.072,0.287,2025-04-29
 qwen3-8b-thinking,Alibaba Cloud Model Studio (DashScope),0.072,0.287,2025-04-29
 qwen3-coder-480b-a35b,"Alibaba Cloud Model Studio (DashScope, Intl., 0-32K tier)",1.5,7.5,2025-07-22

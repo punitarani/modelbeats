@@ -55,3 +55,4 @@ qwen3-6-plus,78.8,self-reported,https://qwen.ai/blog?id=qwen3.6,2026-04-02,"Visi
 qwen3-7-plus,79,self-reported,https://qwen.ai/blog?id=qwen3.7-plus,2026-05-31,"Official Qwen launch blog, 'Multimodal Benchmarks / Multimodal Reasoning' table."
 seed-2-1-pro,81.6,self-reported,https://seed.bytedance.com/en/seed2_1,,"MMMU-Pro, no-tool configuration, same official table. With tool use scored 82.7% (Turbo: 80.1% / 82.2%)."
 step-3-7-flash,75,independent,https://artificialanalysis.ai/models/step-3-7-flash,,"Not one of the 6 originally-flagged core gaps (mmmu-pro is not a core ranking slug), but surfaced during the mmmu investigation as a genuine, citable, correctly-slugged data point worth capturing rather than discarding."
+inkling-small,74,self-reported,https://thinkingmachines.ai/model-card/inkling-small,2026-07-30,"MMMU-Pro, official Inkling-Small model card evaluation table."
