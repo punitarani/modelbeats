@@ -1,0 +1,52 @@
+{
+  "name": "Gemini 3.5 Flash Cyber",
+  "org": "Google",
+  "family": "Gemini 3.5",
+  "releaseDate": "2026-07-21",
+  "status": "released",
+  "openness": "closed",
+  "license": "Proprietary (CodeMender pilot access only)",
+  "paramsB": null,
+  "activeParamsB": null,
+  "archClass": "moe",
+  "archDisplay": "Sparse Mixture-of-Experts Transformer (configuration undisclosed), fine-tuned from Gemini 3.5 Flash for cybersecurity vulnerability discovery, validation and patching",
+  "ctxK": 1000,
+  "modalities": ["text"],
+  "langCount": null,
+  "capabilities": {
+    "reasoning": true,
+    "coding": true,
+    "vision": false,
+    "functionCalling": true,
+    "toolUse": true,
+    "agentic": true
+  },
+  "apiAvailable": false,
+  "price": null,
+  "links": {
+    "docs": "https://deepmind.google/blog/introducing-gemini-3-5-flash-cyber"
+  },
+  "note": "Fine-tune of Gemini 3.5 Flash specialized for finding, validating and patching security vulnerabilities, released alongside Gemini 3.6 Flash and 3.5 Flash-Lite on July 21, 2026 but exclusive to Google's CodeMender program for governments and trusted partners — no public API, no published pricing, no disclosed standalone context window (1000 inherited from base 3.5 Flash as a best estimate). Within CodeMender, up to five Cyber calls are combined into one report.",
+  "quants": [],
+  "vramQ4Gb": null,
+  "vramFp16Gb": null,
+  "tps4090": null,
+  "tpsNote": null,
+  "effortLabel": null,
+  "isDefaultConfig": true,
+  "isBestConfig": true,
+  "specSources": {
+    "releaseDate": "https://deepmind.google/blog/introducing-gemini-3-5-flash-cyber",
+    "apiAvailable": "https://deepmind.google/blog/introducing-gemini-3-5-flash-cyber"
+  },
+  "results": [
+    {
+      "benchmarkSlug": "cybergym",
+      "score": 83.2,
+      "source": "self-reported",
+      "sourceUrl": "https://deepmind.google/blog/introducing-gemini-3-5-flash-cyber",
+      "evaluatedAt": "2026-07-21",
+      "notes": "CyberGym pass@1, official DeepMind launch blog. CodeMender configured to call 3.5 Flash Cyber up to five times per final report; competitor figures on the same chart are self-reported by their own providers."
+    }
+  ]
+}

@@ -1,0 +1,42 @@
+{
+  "slug": "gemini-3-5-flash-cyber",
+  "name": "Gemini 3.5 Flash Cyber",
+  "orgSlug": "google",
+  "familySlug": "gemini-3-5",
+  "releaseDate": "2026-07-21",
+  "status": "released",
+  "predecessor": "gemini-3-5-flash",
+  "openness": "closed",
+  "license": "Proprietary (CodeMender pilot access only)",
+  "paramsB": null,
+  "activeParamsB": null,
+  "archClass": "moe",
+  "archDisplay": "Sparse Mixture-of-Experts Transformer (configuration undisclosed), fine-tuned from Gemini 3.5 Flash for cybersecurity vulnerability discovery, validation and patching",
+  "ctxK": 1000,
+  "modalities": [
+    "text"
+  ],
+  "langCount": null,
+  "capabilities": {
+    "reasoning": true,
+    "coding": true,
+    "vision": false,
+    "functionCalling": true,
+    "toolUse": true,
+    "agentic": true
+  },
+  "apiAvailable": false,
+  "price": null,
+  "links": {
+    "docs": "https://deepmind.google/blog/introducing-gemini-3-5-flash-cyber"
+  },
+  "note": "Fine-tune of Gemini 3.5 Flash specialized for finding, validating and patching security vulnerabilities, released alongside Gemini 3.6 Flash and 3.5 Flash-Lite on July 21, 2026 but exclusive to Google's CodeMender program for governments and trusted partners — no public API, no published pricing (apiAvailable/price reflect that, not a data gap), no disclosed standalone context window (1M inherited from base 3.5 Flash as a best estimate). Within CodeMender, up to five Cyber calls are combined into one report.",
+  "quants": [],
+  "vramQ4Gb": null,
+  "vramFp16Gb": null,
+  "tps4090": null,
+  "tpsNote": null,
+  "effortLabel": null,
+  "isDefaultConfig": true,
+  "isBestConfig": true
+}

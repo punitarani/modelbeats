@@ -1,0 +1,44 @@
+{
+  "name": "Kimi K3 Fast",
+  "org": "Moonshot AI",
+  "family": "Kimi K3",
+  "releaseDate": "2026-07-27",
+  "status": "released",
+  "openness": "closed",
+  "license": "Proprietary (fast-inference serving variant of the open-weight Kimi K3; no distinct weights published)",
+  "paramsB": 2800,
+  "activeParamsB": null,
+  "archClass": "moe",
+  "archDisplay": "Same 2.8T-parameter Stable LatentMoE architecture as Kimi K3 (16 of 896 experts active per token, Kimi Delta Attention), served on a lower-latency inference stack",
+  "ctxK": 1024,
+  "modalities": ["text", "vision"],
+  "langCount": null,
+  "capabilities": {
+    "reasoning": true,
+    "coding": true,
+    "vision": true,
+    "functionCalling": true,
+    "toolUse": true,
+    "agentic": true
+  },
+  "apiAvailable": true,
+  "price": { "input": 4.5, "output": 22.5, "provider": "Vercel AI Gateway" },
+  "links": {
+    "docs": "https://platform.kimi.ai/docs/guide/kimi-k3-quickstart"
+  },
+  "note": "Fast-inference variant of Kimi K3, released the same day as K3's open-weight drop (July 27, 2026). Priced 50% above base K3; only listed via Vercel AI Gateway at research time, with no separate HuggingFace repo or independently-published benchmark suite distinct from base K3 — left unranked pending that coverage.",
+  "quants": [],
+  "vramQ4Gb": null,
+  "vramFp16Gb": null,
+  "tps4090": null,
+  "tpsNote": null,
+  "effortLabel": null,
+  "isDefaultConfig": true,
+  "isBestConfig": true,
+  "specSources": {
+    "price": "https://cloudprice.net/models/moonshot-kimi-k3-fast",
+    "releaseDate": "https://cloudprice.net/models/moonshot-kimi-k3-fast",
+    "ctxK": "https://cloudprice.net/models/moonshot-kimi-k3-fast"
+  },
+  "results": []
+}

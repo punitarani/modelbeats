@@ -1,0 +1,42 @@
+{
+  "slug": "ling-3-0-tiny",
+  "name": "Ling 3.0 Tiny",
+  "orgSlug": "inclusionai",
+  "familySlug": "ling-3-0",
+  "releaseDate": "2026-08-06",
+  "status": "released",
+  "predecessor": null,
+  "openness": "closed",
+  "license": "Proprietary (open-source release planned but not yet published)",
+  "paramsB": 7.9,
+  "activeParamsB": 1.3,
+  "archClass": "moe",
+  "archDisplay": "Sparse MoE, 7.9B total / 1.3B active parameters, switchable Thinking/Instant reasoning modes, designed for edge and on-device deployment",
+  "ctxK": 256,
+  "modalities": [
+    "text"
+  ],
+  "langCount": null,
+  "capabilities": {
+    "reasoning": true,
+    "coding": true,
+    "vision": false,
+    "functionCalling": true,
+    "toolUse": true,
+    "agentic": false
+  },
+  "apiAvailable": true,
+  "price": null,
+  "links": {
+    "docs": "https://developer.ant-ling.com/en/docs/models/ling/"
+  },
+  "note": "inclusionAI's (Ant Group) lightweight edge-deployment model in the Ling 3.0 series, positioned below Ling-3.0-flash: only 1.3B activated parameters for real-time interaction, lightweight code assistance, local knowledge-base retrieval and tool calling with low latency on constrained hardware. Ant's own docs say it 'will be open-sourced in the near future' as of launch, so it currently ships closed/proprietary; served free of charge (promotional) via OpenRouter at launch with no confirmed first-party metered price, hence price: null here.",
+  "quants": [],
+  "vramQ4Gb": null,
+  "vramFp16Gb": null,
+  "tps4090": null,
+  "tpsNote": null,
+  "effortLabel": null,
+  "isDefaultConfig": true,
+  "isBestConfig": true
+}

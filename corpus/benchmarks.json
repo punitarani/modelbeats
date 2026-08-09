@@ -290,6 +290,16 @@
     "higherIsBetter": true
   },
   {
+    "slug": "nl2repo",
+    "name": "NL2Repo",
+    "category": "coding",
+    "unit": "%",
+    "description": "Generating a complete, working code repository from a natural-language specification.",
+    "normMin": 0,
+    "normMax": 72,
+    "higherIsBetter": true
+  },
+  {
     "slug": "docvqa",
     "name": "DocVQA",
     "category": "vision",
