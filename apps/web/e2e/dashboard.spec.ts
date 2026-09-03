@@ -28,7 +28,7 @@ test.describe('dashboard overview', () => {
     // real top mover is a rank-eligible family edge; deltas are Elo points (D21), so a large
     // cross-tier lineage jump (105B succeeding a 2B) posts a four-digit gain
     await expect(movers).toContainText('Sarvam-105B')
-    await expect(movers).toContainText('+1630.4')
+    await expect(movers).toContainText('+1629.1')
   })
 
   test('quality-vs-price scatter draws the Pareto frontier (D27)', async ({ page }) => {

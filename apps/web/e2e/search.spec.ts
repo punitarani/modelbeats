@@ -31,8 +31,10 @@ test.describe('search', () => {
 
   test('/search?q= SSRs grouped results', async ({ page }) => {
     await gotoHydrated(page, '/search?q=qwen')
-    // real corpus: 53 models across the Qwen 1/1.5/2/2.5/3/3.5/3.6/3.7/3.8 series match "qwen" (name/org/family)
-    await expect(page.getByTestId('search-summary')).toContainText('53 models')
-    await expect(page.getByTestId('search-model')).toHaveCount(53)
+    // 53 models across the Qwen 1/1.5/2/2.5/3/3.5/3.6/3.7/3.8 series match "qwen"
+    // (name/org/family), but the route caps searchModels at 50 — so 50 is the rendered
+    // count, and it stays 50 as the corpus grows until that cap changes.
+    await expect(page.getByTestId('search-summary')).toContainText('50 models')
+    await expect(page.getByTestId('search-model')).toHaveCount(50)
   })
 })

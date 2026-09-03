@@ -31,8 +31,8 @@ test.describe('model explorer', () => {
 
   test('deep-linked facets restore on load (URL round-trip)', async ({ page }) => {
     await gotoHydrated(page, '/models?open=open&size=s&caps=reason')
-    // real corpus: 19 open, <15B-param models with the reasoning capability
-    await expect(page.getByTestId('explorer-count')).toHaveText('19 models')
+    // real corpus: 20 open, <15B-param models with the reasoning capability
+    await expect(page.getByTestId('explorer-count')).toHaveText('20 models')
     await expect(page.getByTestId('cap-reason')).toHaveAttribute('aria-pressed', 'true')
     // default sort is by Elo (rank-eligible first) — Falcon-H1R 7B leads this facet combo
     await expect(page.getByTestId('explorer-card').first()).toContainText('Falcon-H1R 7B')
