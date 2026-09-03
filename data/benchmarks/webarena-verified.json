@@ -1,0 +1,10 @@
+{
+  "slug": "webarena-verified",
+  "name": "WebArena-Verified",
+  "category": "agents",
+  "unit": "%",
+  "description": "WebArena-Verified — the human-verified split of WebArena, measuring autonomous browser use across realistic self-hosted web applications.",
+  "normMin": 0,
+  "normMax": 75,
+  "higherIsBetter": true
+}

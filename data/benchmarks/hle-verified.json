@@ -1,0 +1,10 @@
+{
+  "slug": "hle-verified",
+  "name": "HLE-Verified",
+  "category": "knowledge",
+  "unit": "%",
+  "description": "HLE-Verified — the verified subset of Humanity's Last Exam, filtered for unambiguous ground truth. Scores are not comparable with the full HLE set filed under `hle`.",
+  "normMin": 0,
+  "normMax": 70,
+  "higherIsBetter": true
+}

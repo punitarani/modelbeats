@@ -1,0 +1,2 @@
+model_slug,score,source,source_url,evaluated_at,notes
+gemini-3-8-flash-cyber,47.2,self-reported,https://blog.google/innovation-and-ai/models-and-research/gemini-models/3-8-flash-and-3-8-flash-cyber/,2026-09-02,"CWE-Bench automated patching, pass@1, run externally by Collinear and reported in Google's launch post. Google's own framing is Pareto-frontier rather than SOTA: 47.2 against a leading frontier model's 47.8, at significantly lower cost per rollout."

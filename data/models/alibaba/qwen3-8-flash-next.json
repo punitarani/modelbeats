@@ -1,0 +1,47 @@
+{
+  "slug": "qwen3-8-flash-next",
+  "name": "Qwen3.8-Flash-Next",
+  "orgSlug": "alibaba",
+  "familySlug": "qwen3-8",
+  "releaseDate": "2026-08-26",
+  "status": "released",
+  "predecessor": null,
+  "openness": "open-weights",
+  "license": "Apache 2.0",
+  "paramsB": 125,
+  "activeParamsB": 6,
+  "archClass": "hybrid",
+  "archDisplay": "125B-parameter multimodal MoE with 6B activated per token, plus 51B of N-gram embedding parameters that are deterministically addressed and never enter the per-token matmul budget. GDN + Qwen Sparse Attention hybrid (3 of every 4 layers Gated DeltaNet), gated residual, Muon optimizer; 262,144-token native context extensible to 1M with YaRN",
+  "ctxK": 262,
+  "modalities": [
+    "text",
+    "vision"
+  ],
+  "langCount": null,
+  "capabilities": {
+    "reasoning": true,
+    "coding": true,
+    "vision": true,
+    "functionCalling": true,
+    "toolUse": true,
+    "agentic": true
+  },
+  "apiAvailable": true,
+  "price": {
+    "input": 0.15,
+    "output": 0.47
+  },
+  "links": {
+    "hf": "Qwen/Qwen3.8-Flash-Next",
+    "docs": "https://qwen.ai/blog?id=qwen3.8-flash-next"
+  },
+  "note": "Alibaba's August 26, 2026 open-weight architecture preview — explicitly an early look at the stack Qwen4 will be built on, released early so the community can examine it, exactly as Qwen3-Next was. The headline is efficiency: 6B activated parameters, 8.6x the prefill throughput of Qwen3.7-Plus at 1M context under a 90% prefix-cache hit rate, and $0.15/$0.47 per Mtok for the production `qwen3.8-flash` SKU on QwenCloud (which defaults to 1M context and built-in tools). The 51B N-gram embedding table is the notable trick — capacity added at almost no per-token compute, stored in host memory and prefetched asynchronously. Results are strong for the activated size (SWE-bench Pro 62.5 beats Claude Opus 4.6 Max's 53.4; SWE-bench Multilingual 81.0) but the ceiling shows on long-horizon work: DeepSWE 1.1 58.7 and OSWorld 2.0 19.4 are far off the frontier. Rows are taken from the post-trained model card at the native 262K context, not the 1M YaRN extension; the in-house CoWorkBench, RecreationBench and ClawEval-MM benchmarks are deliberately not filed as catalog benchmarks.",
+  "quants": [],
+  "vramQ4Gb": null,
+  "vramFp16Gb": null,
+  "tps4090": null,
+  "tpsNote": null,
+  "effortLabel": null,
+  "isDefaultConfig": true,
+  "isBestConfig": true
+}

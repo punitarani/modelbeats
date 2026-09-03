@@ -1,0 +1,10 @@
+{
+  "slug": "cwe-bench",
+  "name": "CWE-Bench",
+  "category": "coding",
+  "unit": "%",
+  "description": "CWE-Bench, run by Collinear — an external benchmark for automated vulnerability patching across CWE classes. Reported as pass@1.",
+  "normMin": 0,
+  "normMax": 60,
+  "higherIsBetter": true
+}

@@ -1,0 +1,43 @@
+{
+  "slug": "claude-mythos-5-1",
+  "name": "Claude Mythos 5.1",
+  "orgSlug": "anthropic",
+  "familySlug": "claude-5",
+  "releaseDate": "2026-09-01",
+  "status": "released",
+  "predecessor": null,
+  "openness": "closed",
+  "license": "Proprietary (trusted-access only)",
+  "paramsB": null,
+  "activeParamsB": null,
+  "archClass": "dense",
+  "archDisplay": "The same weights as Claude Fable 5.1, served with safeguards designed for cybersecurity and life-sciences work; 1M-token context",
+  "ctxK": 1000,
+  "modalities": [
+    "text",
+    "vision"
+  ],
+  "langCount": null,
+  "capabilities": {
+    "reasoning": true,
+    "coding": true,
+    "vision": true,
+    "functionCalling": true,
+    "toolUse": true,
+    "agentic": true
+  },
+  "apiAvailable": false,
+  "price": null,
+  "links": {
+    "docs": "https://www.anthropic.com/claude-fable-and-mythos-5-1"
+  },
+  "note": "The trusted-access twin of Claude Fable 5.1, released the same day (September 1, 2026): same underlying model, safeguards specifically designed to support cybersecurity and life-sciences work. Availability is narrow — US organisations and individuals in Anthropic's Life Sciences Verification Program, with a Cyber Verification Program described as coming rather than available — so no public per-token rate is recorded. Anthropic reports it designed very high-affinity protein binders with a ~50% hit rate across 12 targets (10-15% is typical) validated experimentally by two external organisations, and wrote custom GPU kernels that sped seven open-source deep-learning models up by as much as 2.5x with identical outputs. ONLY ONE BENCHMARK ROW IS RECORDED HERE. Anthropic's system card reports a single combined 'Fable 5.1 / Mythos 5.1' column, so almost every score is shared with Fable 5.1 and is filed there; duplicating it under two slugs would double-count the same measurement in the pairwise rating. Terminal-Bench 4.0 is the one row where the safeguard difference is broken out (60.9 unsafeguarded vs 55.8), and the launch post's accuracy-vs-cost chart attributes the whole Fable/Mythos gap to tasks where the earlier, less precise cyber safeguards intervened. That leaves this entry deliberately below the ranking-coverage floor.",
+  "quants": [],
+  "vramQ4Gb": null,
+  "vramFp16Gb": null,
+  "tps4090": null,
+  "tpsNote": null,
+  "effortLabel": null,
+  "isDefaultConfig": true,
+  "isBestConfig": true
+}

@@ -1,0 +1,192 @@
+{
+  "name": "Muse Glimmer 30B",
+  "org": "Meta",
+  "orgSlug": "meta",
+  "family": "Muse Glimmer",
+  "familySlug": "muse-glimmer",
+  "slug": "muse-glimmer-30b",
+  "releaseDate": "2026-08-10",
+  "status": "released",
+  "openness": "open-weights",
+  "license": "Apache 2.0",
+  "paramsB": 29.6,
+  "activeParamsB": null,
+  "archClass": "dense",
+  "archDisplay": "29.6B dense causal transformer with a frozen ViT-G/14 perception encoder (~1.8B), 52 layers, hidden 6656, [Local, Local, Local, Global] attention with a 2048 sliding window, SwiGLU FFN, 202,048-token vocabulary; distilled from Muse Spark by logit distillation and shipped with a DFlash speculative-decoding drafter",
+  "ctxK": 131,
+  "modalities": [
+    "text",
+    "vision"
+  ],
+  "langCount": null,
+  "capabilities": {
+    "reasoning": true,
+    "coding": true,
+    "vision": true,
+    "functionCalling": true,
+    "toolUse": true,
+    "agentic": true
+  },
+  "apiAvailable": false,
+  "price": null,
+  "links": {
+    "hf": "meta-models/Muse-Glimmer-30B",
+    "docs": "https://research.meta.ai/blog/introducing-muse-glimmer-open-agentic-model"
+  },
+  "note": "Meta's return to open weights, August 10, 2026: a 30B always-on local agent model under a real Apache 2.0 licence, distilled from Muse Spark and explicitly sized for consumer hardware. Quantized to ~4 bits the language model drops under 20 GB, leaving room for the KV cache, the perception encoder and the speculative-decoding drafter inside a 24 or 32 GB envelope — Meta says with minimal-to-no degradation on agentic tasks. BF16 weights, two 4-bit quantizations and the perception encoder all ship; llama.cpp, MLX, ExecuTorch, vLLM and SGLang integrations followed. It is the strongest model in its size class on the agentic rows Meta cares about (MCP Atlas 75.5 vs Gemma4-31B's 54.2 and Qwen3.6-27B's 62.5, DeepSearchQA 74.6, GAIA2 43.3, tau3-Banking 23.5) and on AIME 2026 (94.7), while Qwen3.6-27B still leads it on OSWorld-Verified, SWE-bench Verified, Terminal-Bench 2.1 and GDPval-AA. VRAM figures below are Meta's own stated envelopes: ~55 GB at full precision, under 20 GB for the language model at ~4-bit (Meta also ships a 17 GB K-Quant build; the ~20 GB figure is the one that includes headroom for the encoder and drafter). No first-party API rate — it is a download.",
+  "quants": [
+    "Q4_K_M",
+    "BF16"
+  ],
+  "vramQ4Gb": 20,
+  "vramFp16Gb": 55,
+  "tps4090": null,
+  "tpsNote": "Meta benchmarks the 17 GB K-Quant build with a quantized DFlash drafter on MacBook M4-Max, M5-Max and RTX 5090 rather than a 4090, and reports 'fluid conversation and real-time agent interaction' without publishing a tokens/sec figure.",
+  "effortLabel": null,
+  "isDefaultConfig": true,
+  "isBestConfig": true,
+  "specSources": {
+    "paramsB": "https://huggingface.co/meta-models/Muse-Glimmer-30B",
+    "ctxK": "https://huggingface.co/meta-models/Muse-Glimmer-30B",
+    "releaseDate": "https://huggingface.co/meta-models/Muse-Glimmer-30B",
+    "vramQ4Gb": "https://research.meta.ai/blog/introducing-muse-glimmer-open-agentic-model"
+  },
+  "results": [
+    {
+      "benchmarkSlug": "mcp-atlas",
+      "score": 75.5,
+      "source": "self-reported",
+      "sourceUrl": "https://huggingface.co/meta-models/Muse-Glimmer-30B",
+      "evaluatedAt": "2026-08-10",
+      "notes": "MCP Atlas (public), High Reasoning, official Muse Glimmer model card; best in its size class against Gemma4-31B (54.2) and Qwen3.6-27B (62.5)."
+    },
+    {
+      "benchmarkSlug": "deepsearchqa",
+      "score": 74.6,
+      "source": "self-reported",
+      "sourceUrl": "https://huggingface.co/meta-models/Muse-Glimmer-30B",
+      "evaluatedAt": "2026-08-10",
+      "notes": "DeepSearch QA, official Muse Glimmer model card; best in row."
+    },
+    {
+      "benchmarkSlug": "tau3-banking",
+      "score": 23.5,
+      "source": "self-reported",
+      "sourceUrl": "https://huggingface.co/meta-models/Muse-Glimmer-30B",
+      "evaluatedAt": "2026-08-10",
+      "notes": "tau3-Banking, official Muse Glimmer model card; best in row over Gemma4-31B (15.1) and Qwen3.6-27B (16.7)."
+    },
+    {
+      "benchmarkSlug": "gdpval-aa",
+      "score": 953,
+      "source": "self-reported",
+      "sourceUrl": "https://huggingface.co/meta-models/Muse-Glimmer-30B",
+      "evaluatedAt": "2026-08-10",
+      "notes": "GDPVal-AA v2 Elo, official Muse Glimmer model card — below the 1,000 human baseline and well behind Qwen3.6-27B (1141), one of the rows Meta publishes as a loss."
+    },
+    {
+      "benchmarkSlug": "gaia2",
+      "score": 43.3,
+      "source": "self-reported",
+      "sourceUrl": "https://huggingface.co/meta-models/Muse-Glimmer-30B",
+      "evaluatedAt": "2026-08-10",
+      "notes": "Gaia2, official Muse Glimmer model card; best in row."
+    },
+    {
+      "benchmarkSlug": "osworld-verified",
+      "score": 65.9,
+      "source": "self-reported",
+      "sourceUrl": "https://huggingface.co/meta-models/Muse-Glimmer-30B",
+      "evaluatedAt": "2026-08-10",
+      "notes": "OSWorld-Verified, official Muse Glimmer model card; behind Qwen3.6-27B (75.6)."
+    },
+    {
+      "benchmarkSlug": "swe-bench-pro",
+      "score": 51.2,
+      "source": "self-reported",
+      "sourceUrl": "https://huggingface.co/meta-models/Muse-Glimmer-30B",
+      "evaluatedAt": "2026-08-10",
+      "notes": "SWE-Bench Pro, official Muse Glimmer model card; best in row over Qwen3.6-27B (50.2) and Gemma4-31B (36.9)."
+    },
+    {
+      "benchmarkSlug": "swe-bench",
+      "score": 76.0,
+      "source": "self-reported",
+      "sourceUrl": "https://huggingface.co/meta-models/Muse-Glimmer-30B",
+      "evaluatedAt": "2026-08-10",
+      "notes": "SWE-Bench Verified, official Muse Glimmer model card; behind Qwen3.6-27B (77.2)."
+    },
+    {
+      "benchmarkSlug": "terminal-bench-2",
+      "score": 51.7,
+      "source": "self-reported",
+      "sourceUrl": "https://huggingface.co/meta-models/Muse-Glimmer-30B",
+      "evaluatedAt": "2026-08-10",
+      "notes": "TerminalBench 2.1 (terminus2 harness), official Muse Glimmer model card; behind Qwen3.6-27B (60.7)."
+    },
+    {
+      "benchmarkSlug": "scicode",
+      "score": 43.6,
+      "source": "self-reported",
+      "sourceUrl": "https://huggingface.co/meta-models/Muse-Glimmer-30B",
+      "evaluatedAt": "2026-08-10",
+      "notes": "SciCode, official Muse Glimmer model card; best in row, narrowly over Gemma4-31B (43.4)."
+    },
+    {
+      "benchmarkSlug": "charxiv",
+      "score": 78.8,
+      "source": "self-reported",
+      "sourceUrl": "https://huggingface.co/meta-models/Muse-Glimmer-30B",
+      "evaluatedAt": "2026-08-10",
+      "notes": "CharXiv Reasoning, official Muse Glimmer model card; best in row."
+    },
+    {
+      "benchmarkSlug": "screenspot-pro",
+      "score": 75.4,
+      "source": "self-reported",
+      "sourceUrl": "https://huggingface.co/meta-models/Muse-Glimmer-30B",
+      "evaluatedAt": "2026-08-10",
+      "notes": "ScreenSpot Pro, official Muse Glimmer model card; marginally behind Qwen3.6-27B (76.1)."
+    },
+    {
+      "benchmarkSlug": "mmmu-pro",
+      "score": 74.0,
+      "source": "self-reported",
+      "sourceUrl": "https://huggingface.co/meta-models/Muse-Glimmer-30B",
+      "evaluatedAt": "2026-08-10",
+      "notes": "MMMU Pro, official Muse Glimmer model card; behind Qwen3.6-27B (75)."
+    },
+    {
+      "benchmarkSlug": "ifbench",
+      "score": 77.0,
+      "source": "self-reported",
+      "sourceUrl": "https://huggingface.co/meta-models/Muse-Glimmer-30B",
+      "evaluatedAt": "2026-08-10",
+      "notes": "IFBench, official Muse Glimmer model card; best in row."
+    },
+    {
+      "benchmarkSlug": "aime",
+      "score": 94.7,
+      "source": "self-reported",
+      "sourceUrl": "https://huggingface.co/meta-models/Muse-Glimmer-30B",
+      "evaluatedAt": "2026-08-10",
+      "notes": "AIME 2026, official Muse Glimmer model card; best in row over Qwen3.6-27B (94.1) and Gemma4-31B (89.2)."
+    },
+    {
+      "benchmarkSlug": "gpqa",
+      "score": 83.5,
+      "source": "self-reported",
+      "sourceUrl": "https://huggingface.co/meta-models/Muse-Glimmer-30B",
+      "evaluatedAt": "2026-08-10",
+      "notes": "GPQA Diamond (Artificial Analysis protocol), official Muse Glimmer model card; behind Gemma4-31B (85.7) and Qwen3.6-27B (84.2). Independently corroborated at 83.5 in Alibaba's Qwen3.8-27B comparison table."
+    },
+    {
+      "benchmarkSlug": "hle",
+      "score": 22.0,
+      "source": "self-reported",
+      "sourceUrl": "https://huggingface.co/meta-models/Muse-Glimmer-30B",
+      "evaluatedAt": "2026-08-10",
+      "notes": "HLE Text (Artificial Analysis protocol), official Muse Glimmer model card; behind Gemma4-31B (23.6) and Qwen3.6-27B (23.1)."
+    }
+  ]
+}

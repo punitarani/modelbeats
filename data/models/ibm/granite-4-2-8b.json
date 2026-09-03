@@ -1,0 +1,43 @@
+{
+  "slug": "granite-4-2-8b",
+  "name": "Granite 4.2 8B",
+  "orgSlug": "ibm",
+  "familySlug": "granite-4-2",
+  "releaseDate": "2026-08-25",
+  "status": "released",
+  "predecessor": null,
+  "openness": "open-source",
+  "license": "Apache 2.0",
+  "paramsB": 8,
+  "activeParamsB": null,
+  "archClass": "hybrid",
+  "archDisplay": "8B hybrid Mamba-2/transformer Granite 4 architecture with native reasoning and a speculative-decoding layer; trained through foundational RL, an agentic RL phase for enterprise tasks and RLHF, on 1T tokens of CodeAlchemy synthetic code plus a mid-training reasoning stage",
+  "ctxK": 128,
+  "modalities": [
+    "text"
+  ],
+  "langCount": null,
+  "capabilities": {
+    "reasoning": true,
+    "coding": true,
+    "vision": false,
+    "functionCalling": true,
+    "toolUse": true,
+    "agentic": true
+  },
+  "apiAvailable": false,
+  "price": null,
+  "links": {
+    "hf": "ibm-granite/granite-4.2-8b",
+    "docs": "https://research.ibm.com/blog/introducing-granite-4-2"
+  },
+  "note": "IBM's August 25, 2026 Granite refresh, released Apache 2.0 in 3B, 8B and 30B sizes and aimed squarely at enterprise agentic workflows — tool selection and sequencing, instruction following, coding and native reasoning — rather than leaderboard position. Distributed through Hugging Face, Ollama, watsonx, OpenRouter, Replicate, LM Studio, DeepInfra and CoreWeave. Two Granite Speech 5.0 Turbo CTC models (470M, one non-commercial) shipped the same day with no LLM backbone, reaching ~12,600 RTFx on a single H200 against the Open ASR leaderboard's ~6,000 speed leaders; they are out of scope for this catalog. Only the 8B is entered here — IBM's blog publishes competitor charts as images without a machine-readable table, and no per-benchmark numerals could be sourced to a primary IBM page for any size, so the entry ships spec-only and stays unranked rather than importing a third-party aggregator's row. The 3B and 30B siblings are deliberately deferred until IBM's Hugging Face technical write-up can be transcribed.",
+  "quants": [],
+  "vramQ4Gb": 6,
+  "vramFp16Gb": 17,
+  "tps4090": null,
+  "tpsNote": null,
+  "effortLabel": null,
+  "isDefaultConfig": true,
+  "isBestConfig": true
+}

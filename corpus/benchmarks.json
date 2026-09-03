@@ -70,6 +70,16 @@
     "higherIsBetter": true
   },
   {
+    "slug": "androidworld",
+    "name": "AndroidWorld",
+    "category": "agents",
+    "unit": "%",
+    "description": "AndroidWorld — mobile computer-use benchmark: complete real tasks in Android apps through the device UI.",
+    "normMin": 0,
+    "normMax": 90,
+    "higherIsBetter": true
+  },
+  {
     "slug": "anli",
     "name": "ANLI",
     "category": "reasoning",
@@ -157,6 +167,16 @@
     "description": "23 of the hardest BIG-bench tasks, chain-of-thought.",
     "normMin": 30,
     "normMax": 97,
+    "higherIsBetter": true
+  },
+  {
+    "slug": "benchcad",
+    "name": "BenchCAD (Vision2Code)",
+    "category": "vision",
+    "unit": "%",
+    "description": "BenchCAD Vision2Code — reconstruct a CAD program from rendered views of a part; scored by geometric overlap of the resulting 3D model against the reference.",
+    "normMin": 0,
+    "normMax": 100,
     "higherIsBetter": true
   },
   {
@@ -280,6 +300,26 @@
     "higherIsBetter": true
   },
   {
+    "slug": "cursorbench",
+    "name": "CursorBench",
+    "category": "coding",
+    "unit": "%",
+    "description": "CursorBench 3.2 — Cursor's independently-run agentic coding evaluation over real editor sessions. Reported by vendors from Cursor's runs rather than self-administered.",
+    "normMin": 0,
+    "normMax": 80,
+    "higherIsBetter": true
+  },
+  {
+    "slug": "cwe-bench",
+    "name": "CWE-Bench",
+    "category": "coding",
+    "unit": "%",
+    "description": "CWE-Bench, run by Collinear — an external benchmark for automated vulnerability patching across CWE classes. Reported as pass@1.",
+    "normMin": 0,
+    "normMax": 60,
+    "higherIsBetter": true
+  },
+  {
     "slug": "cybergym",
     "name": "CyberGym",
     "category": "coding",
@@ -290,13 +330,13 @@
     "higherIsBetter": true
   },
   {
-    "slug": "nl2repo",
-    "name": "NL2Repo",
-    "category": "coding",
+    "slug": "deepsearchqa",
+    "name": "DeepSearchQA",
+    "category": "agents",
     "unit": "%",
-    "description": "Generating a complete, working code repository from a natural-language specification.",
+    "description": "DeepSearchQA — 900 agentic browsing questions whose answers are lists of items; the agent researches each with search/open/find tools and is graded by semantic set matching (F1).",
     "normMin": 0,
-    "normMax": 72,
+    "normMax": 100,
     "higherIsBetter": true
   },
   {
@@ -327,6 +367,16 @@
     "description": "Realistic data-science coding problems across 7 Python libraries.",
     "normMin": 0,
     "normMax": 36,
+    "higherIsBetter": true
+  },
+  {
+    "slug": "exploitbench",
+    "name": "ExploitBench",
+    "category": "agents",
+    "unit": "%",
+    "description": "ExploitBench — turns known, disclosed vulnerabilities into working exploits end to end, the step above vulnerability discovery on the exploitation chain. Public-set scores are contamination-sensitive: labs increasingly report private internal ports alongside them.",
+    "normMin": 0,
+    "normMax": 100,
     "higherIsBetter": true
   },
   {
@@ -371,6 +421,16 @@
     "methodologyUrl": "https://www.frontierbench.ai/announcement"
   },
   {
+    "slug": "frontiercode-extended",
+    "name": "FrontierCode (Extended)",
+    "category": "coding",
+    "unit": "%",
+    "description": "FrontierCode v1.1 Extended set — Cognition's agentic coding benchmark built from real open-source pull requests, scored on the wider Extended split rather than the 150-task Main set. Not comparable with the Main-set scores filed under `frontiercode`.",
+    "normMin": 0,
+    "normMax": 75,
+    "higherIsBetter": true
+  },
+  {
     "slug": "frontiermath-tier1-3",
     "name": "FrontierMath (Tiers 1-3)",
     "category": "math",
@@ -401,6 +461,16 @@
     "higherIsBetter": true
   },
   {
+    "slug": "gaia2",
+    "name": "GAIA2",
+    "category": "agents",
+    "unit": "%",
+    "description": "GAIA2 — second-generation general AI assistant benchmark: multi-step, tool-using real-world assistant tasks with verifiable answers.",
+    "normMin": 0,
+    "normMax": 60,
+    "higherIsBetter": true
+  },
+  {
     "slug": "gaokao-math",
     "name": "Gaokao Math",
     "category": "math",
@@ -408,6 +478,16 @@
     "description": "China's national college entrance exam, mathematics paper.",
     "normMin": 0,
     "normMax": 100,
+    "higherIsBetter": true
+  },
+  {
+    "slug": "gdp-pdf",
+    "name": "GDP.PDF",
+    "category": "vision",
+    "unit": "%",
+    "description": "GDP.PDF — expert comprehension of complex real-world PDFs (tables, charts, dense multi-column layout), a document-understanding companion to GDPval.",
+    "normMin": 0,
+    "normMax": 50,
     "higherIsBetter": true
   },
   {
@@ -461,6 +541,16 @@
     "higherIsBetter": true
   },
   {
+    "slug": "harvey-legal-agent",
+    "name": "Harvey Legal Agent Benchmark",
+    "category": "agents",
+    "unit": "%",
+    "description": "Harvey's Legal Agent Benchmark (Vals AI) — complex, multi-step legal workflows scored by practising lawyers. Scores stay low in absolute terms: the frontier is in the teens.",
+    "normMin": 0,
+    "normMax": 25,
+    "higherIsBetter": true
+  },
+  {
     "slug": "hellaswag",
     "name": "HellaSwag",
     "category": "reasoning",
@@ -478,6 +568,16 @@
     "description": "2,500 expert-written frontier questions across 100+ subjects.",
     "normMin": 0,
     "normMax": 65,
+    "higherIsBetter": true
+  },
+  {
+    "slug": "hle-verified",
+    "name": "HLE-Verified",
+    "category": "knowledge",
+    "unit": "%",
+    "description": "HLE-Verified — the verified subset of Humanity's Last Exam, filtered for unambiguous ground truth. Scores are not comparable with the full HLE set filed under `hle`.",
+    "normMin": 0,
+    "normMax": 70,
     "higherIsBetter": true
   },
   {
@@ -551,6 +651,16 @@
     "higherIsBetter": true
   },
   {
+    "slug": "jobbench",
+    "name": "JobBench",
+    "category": "agents",
+    "unit": "%",
+    "description": "JobBench — 65 professional tasks across 35 white-collar occupations, each asking the agent to produce a practical work product scored against task-specific rubrics. Mean rubric score.",
+    "normMin": 0,
+    "normMax": 75,
+    "higherIsBetter": true
+  },
+  {
     "slug": "komt-bench",
     "name": "KoMT-Bench",
     "category": "human-preference",
@@ -598,6 +708,16 @@
     "description": "Korean-language logical/reasoning chat-quality judge benchmark.",
     "normMin": 3,
     "normMax": 9.5,
+    "higherIsBetter": true
+  },
+  {
+    "slug": "lvbench",
+    "name": "LVBench",
+    "category": "vision",
+    "unit": "%",
+    "description": "LVBench — long-video understanding over hour-scale footage, testing retrieval and reasoning across extended temporal context.",
+    "normMin": 0,
+    "normMax": 92,
     "higherIsBetter": true
   },
   {
@@ -831,6 +951,26 @@
     "higherIsBetter": true
   },
   {
+    "slug": "mrcr-v2-8n-1m",
+    "name": "MRCR v2 8-needle (512K-1M)",
+    "category": "reasoning",
+    "unit": "%",
+    "description": "OpenAI MRCR v2, 8-needle variant, 512K-1M token band — the harder long-context retrieval band, where scores separated sharply through 2026.",
+    "normMin": 0,
+    "normMax": 100,
+    "higherIsBetter": true
+  },
+  {
+    "slug": "mrcr-v2-8n-256k",
+    "name": "MRCR v2 8-needle (256K-512K)",
+    "category": "reasoning",
+    "unit": "%",
+    "description": "OpenAI MRCR v2, 8-needle variant, 256K-512K token band — pure long-context retrieval: reproduce a target turn from among 8 needles spread across the context. Graded by sequence-matcher ratio.",
+    "normMin": 0,
+    "normMax": 100,
+    "higherIsBetter": true
+  },
+  {
     "slug": "mt-bench",
     "name": "MT-Bench",
     "category": "human-preference",
@@ -838,6 +978,16 @@
     "description": "Multi-turn conversation quality, GPT-4-judged 1-10 scale.",
     "normMin": 4,
     "normMax": 9.5,
+    "higherIsBetter": true
+  },
+  {
+    "slug": "nl2repo",
+    "name": "NL2Repo",
+    "category": "coding",
+    "unit": "%",
+    "description": "Generating a complete, working code repository from a natural-language specification.",
+    "normMin": 0,
+    "normMax": 72,
     "higherIsBetter": true
   },
   {
@@ -1011,6 +1161,26 @@
     "higherIsBetter": true
   },
   {
+    "slug": "scicode",
+    "name": "SciCode",
+    "category": "coding",
+    "unit": "%",
+    "description": "SciCode — research-grade scientific coding problems drawn from published computational-science workflows, decomposed into subproblems a model must implement and pass.",
+    "normMin": 0,
+    "normMax": 55,
+    "higherIsBetter": true
+  },
+  {
+    "slug": "screenspot-pro",
+    "name": "ScreenSpot-Pro",
+    "category": "vision",
+    "unit": "%",
+    "description": "ScreenSpot-Pro — GUI element grounding on high-resolution professional-application screenshots: locate the described control precisely enough to click it.",
+    "normMin": 0,
+    "normMax": 95,
+    "higherIsBetter": true
+  },
+  {
     "slug": "seedbench",
     "name": "SEED-Bench",
     "category": "vision",
@@ -1038,6 +1208,16 @@
     "description": "Social/emotional commonsense reasoning about everyday situations.",
     "normMin": 40,
     "normMax": 84,
+    "higherIsBetter": true
+  },
+  {
+    "slug": "sre-bench",
+    "name": "SRE-Bench",
+    "category": "coding",
+    "unit": "%",
+    "description": "SRE-Bench — software reverse-engineering tasks: recover a binary's core logic without access to source. Reported pass@1 unless a row states an attempt budget.",
+    "normMin": 0,
+    "normMax": 95,
     "higherIsBetter": true
   },
   {
@@ -1088,6 +1268,16 @@
     "description": "Harder successor to GLUE spanning 8 diverse language-understanding tasks.",
     "normMin": 50,
     "normMax": 93,
+    "higherIsBetter": true
+  },
+  {
+    "slug": "swe-atlas-codebase-qna",
+    "name": "SWE-Atlas Codebase QnA",
+    "category": "coding",
+    "unit": "%",
+    "description": "SWE-Atlas Codebase QnA — 124 tasks over 11 real repositories testing deep code comprehension and question answering rather than patch generation. Mean pass@1 under a rubric judge.",
+    "normMin": 0,
+    "normMax": 70,
     "higherIsBetter": true
   },
   {
@@ -1191,6 +1381,36 @@
     "higherIsBetter": true
   },
   {
+    "slug": "terminal-bench-3",
+    "name": "Terminal-Bench 3.0",
+    "category": "agents",
+    "unit": "%",
+    "description": "Terminal-Bench 3.0 — the third-generation terminal-agent suite, a large step up in difficulty from 2.1 (frontier models score in the 20-35% range where they clear 85% on 2.1). General agent capability in a real shell, not coding alone.",
+    "normMin": 0,
+    "normMax": 45,
+    "higherIsBetter": true
+  },
+  {
+    "slug": "terminal-bench-4",
+    "name": "Terminal-Bench 4.0",
+    "category": "agents",
+    "unit": "%",
+    "description": "Terminal-Bench 4.0 — 66-task successor suite spanning computational biology, physics simulation, CAD and formal proofs, run in a real terminal environment. Measures general long-horizon agent capability rather than coding specifically.",
+    "normMin": 0,
+    "normMax": 70,
+    "higherIsBetter": true
+  },
+  {
+    "slug": "terminal-bench-science",
+    "name": "Terminal-Bench Science 0.1",
+    "category": "agents",
+    "unit": "%",
+    "description": "Terminal-Bench-Science 0.1 — a Stanford-led set of 70 agentic scientific workflows (life, physical, earth, mathematical and engineering sciences) executed in a terminal: read data, run computations, submit results. Standard error is roughly +/-3.5-4.5 points per model.",
+    "normMin": 0,
+    "normMax": 70,
+    "higherIsBetter": true
+  },
+  {
     "slug": "textvqa",
     "name": "TextVQA",
     "category": "vision",
@@ -1198,6 +1418,16 @@
     "description": "VQA requiring reading text embedded in images.",
     "normMin": 28,
     "normMax": 90,
+    "higherIsBetter": true
+  },
+  {
+    "slug": "toolathlon",
+    "name": "Toolathlon (Verified)",
+    "category": "agents",
+    "unit": "%",
+    "description": "Toolathlon Verified — multi-tool agentic task suite over realistic tool ecosystems, verified split.",
+    "normMin": 0,
+    "normMax": 85,
     "higherIsBetter": true
   },
   {
@@ -1241,6 +1471,16 @@
     "higherIsBetter": true
   },
   {
+    "slug": "vals-finance-agent",
+    "name": "Vals Finance Agent",
+    "category": "agents",
+    "unit": "%",
+    "description": "Vals Finance Agent v2 — Vals AI's independently-run benchmark of financial-analyst agent workflows over real filings and market documents.",
+    "normMin": 0,
+    "normMax": 70,
+    "higherIsBetter": true
+  },
+  {
     "slug": "vicuna-bench",
     "name": "Vicuna Bench",
     "category": "human-preference",
@@ -1268,6 +1508,16 @@
     "description": "Open-ended visual question answering.",
     "normMin": 40,
     "normMax": 87,
+    "higherIsBetter": true
+  },
+  {
+    "slug": "webarena-verified",
+    "name": "WebArena-Verified",
+    "category": "agents",
+    "unit": "%",
+    "description": "WebArena-Verified — the human-verified split of WebArena, measuring autonomous browser use across realistic self-hosted web applications.",
+    "normMin": 0,
+    "normMax": 75,
     "higherIsBetter": true
   },
   {

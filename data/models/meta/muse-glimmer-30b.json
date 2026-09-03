@@ -1,0 +1,47 @@
+{
+  "slug": "muse-glimmer-30b",
+  "name": "Muse Glimmer 30B",
+  "orgSlug": "meta",
+  "familySlug": "muse-glimmer",
+  "releaseDate": "2026-08-10",
+  "status": "released",
+  "predecessor": null,
+  "openness": "open-weights",
+  "license": "Apache 2.0",
+  "paramsB": 29.6,
+  "activeParamsB": null,
+  "archClass": "dense",
+  "archDisplay": "29.6B dense causal transformer with a frozen ViT-G/14 perception encoder (~1.8B), 52 layers, hidden 6656, [Local, Local, Local, Global] attention with a 2048 sliding window, SwiGLU FFN, 202,048-token vocabulary; distilled from Muse Spark by logit distillation and shipped with a DFlash speculative-decoding drafter",
+  "ctxK": 131,
+  "modalities": [
+    "text",
+    "vision"
+  ],
+  "langCount": null,
+  "capabilities": {
+    "reasoning": true,
+    "coding": true,
+    "vision": true,
+    "functionCalling": true,
+    "toolUse": true,
+    "agentic": true
+  },
+  "apiAvailable": false,
+  "price": null,
+  "links": {
+    "hf": "meta-models/Muse-Glimmer-30B",
+    "docs": "https://research.meta.ai/blog/introducing-muse-glimmer-open-agentic-model"
+  },
+  "note": "Meta's return to open weights, August 10, 2026: a 30B always-on local agent model under a real Apache 2.0 licence, distilled from Muse Spark and explicitly sized for consumer hardware. Quantized to ~4 bits the language model drops under 20 GB, leaving room for the KV cache, the perception encoder and the speculative-decoding drafter inside a 24 or 32 GB envelope — Meta says with minimal-to-no degradation on agentic tasks. BF16 weights, two 4-bit quantizations and the perception encoder all ship; llama.cpp, MLX, ExecuTorch, vLLM and SGLang integrations followed. It is the strongest model in its size class on the agentic rows Meta cares about (MCP Atlas 75.5 vs Gemma4-31B's 54.2 and Qwen3.6-27B's 62.5, DeepSearchQA 74.6, GAIA2 43.3, tau3-Banking 23.5) and on AIME 2026 (94.7), while Qwen3.6-27B still leads it on OSWorld-Verified, SWE-bench Verified, Terminal-Bench 2.1 and GDPval-AA. VRAM figures below are Meta's own stated envelopes: ~55 GB at full precision, under 20 GB for the language model at ~4-bit (Meta also ships a 17 GB K-Quant build; the ~20 GB figure is the one that includes headroom for the encoder and drafter). No first-party API rate — it is a download.",
+  "quants": [
+    "Q4_K_M",
+    "BF16"
+  ],
+  "vramQ4Gb": 20,
+  "vramFp16Gb": 55,
+  "tps4090": null,
+  "tpsNote": "Meta benchmarks the 17 GB K-Quant build with a quantized DFlash drafter on MacBook M4-Max, M5-Max and RTX 5090 rather than a 4090, and reports 'fluid conversation and real-time agent interaction' without publishing a tokens/sec figure.",
+  "effortLabel": null,
+  "isDefaultConfig": true,
+  "isBestConfig": true
+}

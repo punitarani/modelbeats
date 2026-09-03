@@ -1,0 +1,5 @@
+model_slug,score,source,source_url,evaluated_at,notes
+claude-opus-5,52.7,self-reported,https://research.meta.ai/blog/introducing-muse-spark-1-3,2026-09-02,"SWE-Atlas Codebase QnA, Claude Opus 5 column (max reasoning) of Meta's Muse Spark 1.3 launch scorecard."
+gpt-5-6-sol,53.5,self-reported,https://research.meta.ai/blog/introducing-muse-spark-1-3,2026-09-02,"SWE-Atlas Codebase QnA, GPT-5.6 Sol column (max reasoning) of Meta's Muse Spark 1.3 launch scorecard."
+muse-spark-1-2,46.2,self-reported,https://research.meta.ai/blog/introducing-muse-spark-1-3,2026-09-02,"SWE-Atlas Codebase QnA, Muse Spark 1.2 baseline column (xhigh) of Meta's Muse Spark 1.3 launch scorecard."
+muse-spark-1-3,59.4,self-reported,https://research.meta.ai/blog/introducing-muse-spark-1-3,2026-09-02,"SWE-Atlas Codebase QnA (124 tasks, 11 repositories, mean pass@1) at max reasoning, Meta launch scorecard; best in row over GPT-5.6 Sol (53.5) and Claude Opus 5 (52.7)."

@@ -1,0 +1,10 @@
+{
+  "slug": "androidworld",
+  "name": "AndroidWorld",
+  "category": "agents",
+  "unit": "%",
+  "description": "AndroidWorld — mobile computer-use benchmark: complete real tasks in Android apps through the device UI.",
+  "normMin": 0,
+  "normMax": 90,
+  "higherIsBetter": true
+}

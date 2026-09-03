@@ -1,0 +1,10 @@
+{
+  "slug": "deepsearchqa",
+  "name": "DeepSearchQA",
+  "category": "agents",
+  "unit": "%",
+  "description": "DeepSearchQA — 900 agentic browsing questions whose answers are lists of items; the agent researches each with search/open/find tools and is graded by semantic set matching (F1).",
+  "normMin": 0,
+  "normMax": 100,
+  "higherIsBetter": true
+}

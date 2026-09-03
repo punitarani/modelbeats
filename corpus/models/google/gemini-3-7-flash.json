@@ -1,0 +1,161 @@
+{
+  "name": "Gemini 3.7 Flash",
+  "org": "Google",
+  "orgSlug": "google",
+  "family": "Gemini 3.7",
+  "familySlug": "gemini-3-7",
+  "slug": "gemini-3-7-flash",
+  "releaseDate": "2026-08-13",
+  "status": "released",
+  "openness": "closed",
+  "license": "Proprietary",
+  "paramsB": null,
+  "activeParamsB": null,
+  "archClass": "moe",
+  "archDisplay": "Sparse Mixture-of-Experts Transformer (configuration undisclosed); natively multimodal (text/image/video/audio/PDF in, text out), 1M-token input / 64K output",
+  "ctxK": 1000,
+  "modalities": [
+    "text",
+    "vision",
+    "audio",
+    "video"
+  ],
+  "langCount": null,
+  "capabilities": {
+    "reasoning": true,
+    "coding": true,
+    "vision": true,
+    "functionCalling": true,
+    "toolUse": true,
+    "agentic": true
+  },
+  "apiAvailable": true,
+  "price": {
+    "input": 0.75,
+    "output": 3.75,
+    "provider": "Google"
+  },
+  "links": {
+    "docs": "https://ai.google.dev/gemini-api/docs/models/gemini-3.7-flash"
+  },
+  "note": "Google's August 13, 2026 workhorse Flash, three weeks after Gemini 3.6 Flash and the second of three Flash releases in six weeks. It HALVES the introductory price to $0.75/$3.75 per Mtok (from 3.6 Flash's $1.50/$7.50) while improving across software engineering, knowledge work and web development — DeepSWE v1.1 49.0 → 65.3, FrontierCode 1.1 Main 34.4 → 43.6, AutomationBench 17.0 → 30.4, WebDev Arena Elo 1538 → 1588. The introductory rate expires December 31, 2026, after which $1.50/$7.50 applies. Also powers Gemini Spark. Context: Google shipped no frontier-tier Pro model in this window — Gemini 3.5 Pro had been 'coming soon' since May and was still unshipped when 3.8 Flash landed three weeks later, superseding this model on every published row at identical pricing and specifications. Rows are Google self-reported; the cross-model comparison values come from Google's own launch table for 3.8 Flash (published as an image and transcribed by third-party coverage), where 3.7 Flash is the baseline column.",
+  "quants": [],
+  "vramQ4Gb": null,
+  "vramFp16Gb": null,
+  "tps4090": null,
+  "tpsNote": null,
+  "effortLabel": null,
+  "isDefaultConfig": true,
+  "isBestConfig": true,
+  "specSources": {
+    "price": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-3-7-flash/",
+    "releaseDate": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-3-7-flash/",
+    "ctxK": "https://ai.google.dev/gemini-api/docs/models/gemini-3.8-flash"
+  },
+  "results": [
+    {
+      "benchmarkSlug": "deepswe",
+      "score": 65.3,
+      "source": "self-reported",
+      "sourceUrl": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-3-7-flash/",
+      "evaluatedAt": "2026-08-13",
+      "notes": "DeepSWE v1.1, Gemini 3.7 Flash launch post; up from 3.6 Flash's 49.0."
+    },
+    {
+      "benchmarkSlug": "frontiercode",
+      "score": 43.6,
+      "source": "self-reported",
+      "sourceUrl": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-3-7-flash/",
+      "evaluatedAt": "2026-08-13",
+      "notes": "FrontierCode 1.1 Main, Gemini 3.7 Flash launch post; up from 3.6 Flash's 34.4."
+    },
+    {
+      "benchmarkSlug": "automationbench",
+      "score": 30.4,
+      "source": "self-reported",
+      "sourceUrl": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-3-7-flash/",
+      "evaluatedAt": "2026-08-13",
+      "notes": "AutomationBench (Zapier), Gemini 3.7 Flash launch post; up from 3.6 Flash's 17.0."
+    },
+    {
+      "benchmarkSlug": "gdp-pdf",
+      "score": 34.0,
+      "source": "self-reported",
+      "sourceUrl": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-3-7-flash/",
+      "evaluatedAt": "2026-08-13",
+      "notes": "GDP.pdf complex-document comprehension, Gemini 3.7 Flash launch post; up from 3.6 Flash's 22.0."
+    },
+    {
+      "benchmarkSlug": "terminal-bench-2",
+      "score": 85.8,
+      "source": "self-reported",
+      "sourceUrl": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/3-8-flash-and-3-8-flash-cyber/",
+      "evaluatedAt": "2026-09-02",
+      "notes": "Terminal-Bench 2.1, 3.7 Flash baseline column of Google's Gemini 3.8 Flash launch table. Independently corroborated at 85.8 by Z.ai's GLM-5.3-Flash comparison table."
+    },
+    {
+      "benchmarkSlug": "gdpval-aa",
+      "score": 1482,
+      "source": "self-reported",
+      "sourceUrl": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/3-8-flash-and-3-8-flash-cyber/",
+      "evaluatedAt": "2026-09-02",
+      "notes": "GDPval-AA v2 Elo, 3.7 Flash baseline column of Google's Gemini 3.8 Flash launch table."
+    },
+    {
+      "benchmarkSlug": "vals-finance-agent",
+      "score": 59.0,
+      "source": "self-reported",
+      "sourceUrl": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/3-8-flash-and-3-8-flash-cyber/",
+      "evaluatedAt": "2026-09-02",
+      "notes": "Vals Finance Agent v2, 3.7 Flash baseline column of Google's Gemini 3.8 Flash launch table."
+    },
+    {
+      "benchmarkSlug": "harvey-legal-agent",
+      "score": 8.8,
+      "source": "self-reported",
+      "sourceUrl": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/3-8-flash-and-3-8-flash-cyber/",
+      "evaluatedAt": "2026-09-02",
+      "notes": "Harvey's Legal Agent Benchmark, 3.7 Flash baseline column of Google's Gemini 3.8 Flash launch table."
+    },
+    {
+      "benchmarkSlug": "terminal-bench-4",
+      "score": 11.2,
+      "source": "self-reported",
+      "sourceUrl": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/3-8-flash-and-3-8-flash-cyber/",
+      "evaluatedAt": "2026-09-02",
+      "notes": "Terminal-Bench 4.0, 3.7 Flash baseline column of Google's Gemini 3.8 Flash launch table — the Flash line's weakest area by a wide margin against Claude Opus 5 (51.8)."
+    },
+    {
+      "benchmarkSlug": "charxiv",
+      "score": 84.5,
+      "source": "self-reported",
+      "sourceUrl": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/3-8-flash-and-3-8-flash-cyber/",
+      "evaluatedAt": "2026-09-02",
+      "notes": "CharXiv Reasoning, 3.7 Flash baseline column of Google's Gemini 3.8 Flash launch table."
+    },
+    {
+      "benchmarkSlug": "lvbench",
+      "score": 85.4,
+      "source": "self-reported",
+      "sourceUrl": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/3-8-flash-and-3-8-flash-cyber/",
+      "evaluatedAt": "2026-09-02",
+      "notes": "LVBench long-video understanding, 3.7 Flash baseline column of Google's Gemini 3.8 Flash launch table."
+    },
+    {
+      "benchmarkSlug": "hle-verified",
+      "score": 53.6,
+      "source": "self-reported",
+      "sourceUrl": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/3-8-flash-and-3-8-flash-cyber/",
+      "evaluatedAt": "2026-09-02",
+      "notes": "HLE-Verified, 3.7 Flash baseline column of Google's Gemini 3.8 Flash launch table."
+    },
+    {
+      "benchmarkSlug": "osworld-2",
+      "score": 50.6,
+      "source": "self-reported",
+      "sourceUrl": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/3-8-flash-and-3-8-flash-cyber/",
+      "evaluatedAt": "2026-09-02",
+      "notes": "OSWorld-2.0, 3.7 Flash baseline column of Google's Gemini 3.8 Flash launch table."
+    }
+  ]
+}

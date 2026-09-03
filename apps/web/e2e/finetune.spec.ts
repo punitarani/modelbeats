@@ -9,7 +9,7 @@ test.describe('fine-tune selector', () => {
       /^\d+ fit your hardware · of \d+ trainable$/,
     )
     // rank-eligible models lead (D20 order); the default RTX 4090 keeps QLoRA-able mid-sizers
-    await expect(page.getByTestId('finetune-row').first()).toContainText('Qwen3.6-27B')
+    await expect(page.getByTestId('finetune-row').first()).toContainText('Qwen3.8-27B')
     await expect(page.getByTestId('finetune-capacity')).toHaveText('1 × 24 GB = 24 GB usable')
   })
 

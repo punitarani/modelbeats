@@ -1,0 +1,179 @@
+{
+  "name": "Qwen3.8-27B",
+  "org": "Alibaba",
+  "orgSlug": "alibaba",
+  "family": "Qwen3.8",
+  "familySlug": "qwen3-8",
+  "slug": "qwen3-8-27b",
+  "releaseDate": "2026-08-05",
+  "status": "released",
+  "openness": "open-weights",
+  "license": "Apache 2.0",
+  "paramsB": 27,
+  "activeParamsB": null,
+  "archClass": "hybrid",
+  "archDisplay": "27B dense causal LM with a vision encoder; 64 layers in a repeating 16 x (3 x (Gated DeltaNet → FFN) → 1 x (Gated Attention → FFN)) hybrid linear/full-attention stack, multi-token prediction, 262,144-token native context extensible to 1M",
+  "ctxK": 262,
+  "modalities": [
+    "text",
+    "vision"
+  ],
+  "langCount": null,
+  "capabilities": {
+    "reasoning": true,
+    "coding": true,
+    "vision": true,
+    "functionCalling": true,
+    "toolUse": true,
+    "agentic": true
+  },
+  "apiAvailable": false,
+  "price": null,
+  "links": {
+    "hf": "Qwen/Qwen3.8-27B"
+  },
+  "note": "The small open-weight sibling of Qwen3.8-Max, and the one that actually shipped under a permissive licence: Apache 2.0 with no revenue gate, against Qwen3.8-Max's separate-agreement requirement past US$50M of model-as-a-service revenue. RELEASE DATE CONFLICT: BenchLM records August 5, 2026 as an exact-day confirmation against the Hugging Face card, while Capital & Compute reports the weights landing August 14 after Alibaba pointed at the week of August 10; the earlier, primary-source-linked date is used here. A genuinely strong small model — it leads Qwen3.7-Plus (397B/17B) on SWE-bench Pro (61.7 vs 57.6), DeepSWE 1.1 (42.2 vs 14.2), CoWorkBench and JobBench, and posts 84.3 on OSWorld-Verified — while sitting behind it on GPQA Diamond and HLE. Vision rows use the without-code-interpreter setting where Qwen reports both. No first-party per-token API rate is published for this checkpoint, so no pricing row is filed.",
+  "quants": [],
+  "vramQ4Gb": null,
+  "vramFp16Gb": null,
+  "tps4090": null,
+  "tpsNote": null,
+  "effortLabel": null,
+  "isDefaultConfig": true,
+  "isBestConfig": true,
+  "specSources": {
+    "paramsB": "https://huggingface.co/Qwen/Qwen3.8-27B",
+    "ctxK": "https://huggingface.co/Qwen/Qwen3.8-27B",
+    "releaseDate": "https://benchlm.ai/model-updates/releases/august-2026"
+  },
+  "results": [
+    {
+      "benchmarkSlug": "terminal-bench-2",
+      "score": 73.0,
+      "source": "self-reported",
+      "sourceUrl": "https://huggingface.co/Qwen/Qwen3.8-27B",
+      "evaluatedAt": "2026-08-05",
+      "notes": "Terminal Bench 2.1 (Terminus harness), official Qwen3.8-27B model card; ahead of Muse Glimmer-30B (51.7) in its size class, behind Claude Opus 4.6 Max (78.2)."
+    },
+    {
+      "benchmarkSlug": "swe-bench-pro",
+      "score": 61.7,
+      "source": "self-reported",
+      "sourceUrl": "https://huggingface.co/Qwen/Qwen3.8-27B",
+      "evaluatedAt": "2026-08-05",
+      "notes": "SWE-bench Pro, official Qwen3.8-27B model card (Claude Code harness, temp 1.0, 256K context, corrected task set with all baselines re-evaluated); best in row, ahead of Claude Opus 4.6 Max (53.4)."
+    },
+    {
+      "benchmarkSlug": "nl2repo",
+      "score": 42.3,
+      "source": "self-reported",
+      "sourceUrl": "https://huggingface.co/Qwen/Qwen3.8-27B",
+      "evaluatedAt": "2026-08-05",
+      "notes": "NL2Repo-Bench, official Qwen3.8-27B model card; behind Claude Opus 4.6 Max (47.6)."
+    },
+    {
+      "benchmarkSlug": "deepswe",
+      "score": 42.2,
+      "source": "self-reported",
+      "sourceUrl": "https://huggingface.co/Qwen/Qwen3.8-27B",
+      "evaluatedAt": "2026-08-05",
+      "notes": "DeepSWE 1.1, official Qwen3.8-27B model card; a 3x jump over Qwen3.6-27B (13.3) and ahead of the much larger Qwen3.7-Plus (14.2)."
+    },
+    {
+      "benchmarkSlug": "agents-last-exam",
+      "score": 42.9,
+      "source": "self-reported",
+      "sourceUrl": "https://huggingface.co/Qwen/Qwen3.8-27B",
+      "evaluatedAt": "2026-08-05",
+      "notes": "Agents' Last Exam, official Qwen3.8-27B model card. Score component (Pass@1 is 20.4) per corpus convention."
+    },
+    {
+      "benchmarkSlug": "jobbench",
+      "score": 33.4,
+      "source": "self-reported",
+      "sourceUrl": "https://huggingface.co/Qwen/Qwen3.8-27B",
+      "evaluatedAt": "2026-08-05",
+      "notes": "JobBench, official Qwen3.8-27B model card; best in row against Qwen3.6-27B (21.8) and Qwen3.7-Plus (27.6)."
+    },
+    {
+      "benchmarkSlug": "ifbench",
+      "score": 79.5,
+      "source": "self-reported",
+      "sourceUrl": "https://huggingface.co/Qwen/Qwen3.8-27B",
+      "evaluatedAt": "2026-08-05",
+      "notes": "IFBench instruction following, official Qwen3.8-27B model card; best in row, well ahead of Claude Opus 4.6 Max (62.5)."
+    },
+    {
+      "benchmarkSlug": "gpqa",
+      "score": 89.2,
+      "source": "self-reported",
+      "sourceUrl": "https://huggingface.co/Qwen/Qwen3.8-27B",
+      "evaluatedAt": "2026-08-05",
+      "notes": "GPQA Diamond, official Qwen3.8-27B model card; behind the larger Qwen3.7-Plus (90.3) and Claude Opus 4.6 Max (91.3)."
+    },
+    {
+      "benchmarkSlug": "hle",
+      "score": 30.8,
+      "source": "self-reported",
+      "sourceUrl": "https://huggingface.co/Qwen/Qwen3.8-27B",
+      "evaluatedAt": "2026-08-05",
+      "notes": "Humanity's Last Exam (GPT-4o as judge), official Qwen3.8-27B model card; behind Qwen3.7-Plus (34.7) and Claude Opus 4.6 Max (40.0) — the clearest cost of the smaller size."
+    },
+    {
+      "benchmarkSlug": "livecodebench",
+      "score": 90.3,
+      "source": "self-reported",
+      "sourceUrl": "https://huggingface.co/Qwen/Qwen3.8-27B",
+      "evaluatedAt": "2026-08-05",
+      "notes": "LiveCodeBench v6, official Qwen3.8-27B model card; best in row."
+    },
+    {
+      "benchmarkSlug": "osworld-verified",
+      "score": 84.3,
+      "source": "self-reported",
+      "sourceUrl": "https://huggingface.co/Qwen/Qwen3.8-27B",
+      "evaluatedAt": "2026-08-05",
+      "notes": "OSWorld-Verified computer use, official Qwen3.8-27B model card; best in row by a wide margin over Qwen3.7-Plus (73.3) and Claude Opus 4.6 Max (72.7)."
+    },
+    {
+      "benchmarkSlug": "androidworld",
+      "score": 81.9,
+      "source": "self-reported",
+      "sourceUrl": "https://huggingface.co/Qwen/Qwen3.8-27B",
+      "evaluatedAt": "2026-08-05",
+      "notes": "AndroidWorld mobile use, official Qwen3.8-27B model card; best in row."
+    },
+    {
+      "benchmarkSlug": "webarena-verified",
+      "score": 64.8,
+      "source": "self-reported",
+      "sourceUrl": "https://huggingface.co/Qwen/Qwen3.8-27B",
+      "evaluatedAt": "2026-08-05",
+      "notes": "WebArena-Verified browser use (official grader under the OSWorld scaffold), official Qwen3.8-27B model card; best in row."
+    },
+    {
+      "benchmarkSlug": "swe-bench-multimodal",
+      "score": 38.6,
+      "source": "self-reported",
+      "sourceUrl": "https://huggingface.co/Qwen/Qwen3.8-27B",
+      "evaluatedAt": "2026-08-05",
+      "notes": "SWE-MM (public dev split of SWE-bench Multimodal, Claude Code harness, Opus 4.7 system-card modifications), official Qwen3.8-27B model card; best in row."
+    },
+    {
+      "benchmarkSlug": "mathvision",
+      "score": 90.0,
+      "source": "self-reported",
+      "sourceUrl": "https://huggingface.co/Qwen/Qwen3.8-27B",
+      "evaluatedAt": "2026-08-05",
+      "notes": "MathVision, without-code-interpreter setting (94.6 with CI), official Qwen3.8-27B model card."
+    },
+    {
+      "benchmarkSlug": "charxiv",
+      "score": 83.7,
+      "source": "self-reported",
+      "sourceUrl": "https://huggingface.co/Qwen/Qwen3.8-27B",
+      "evaluatedAt": "2026-08-05",
+      "notes": "CharXiv (RQ), without-code-interpreter setting (90.2 with CI), official Qwen3.8-27B model card."
+    }
+  ]
+}

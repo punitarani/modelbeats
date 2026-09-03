@@ -1,0 +1,4 @@
+model_slug,score,source,source_url,evaluated_at,notes
+claude-fable-5-1,84.3,self-reported,https://openai.com/index/gpt-6-astra,2026-09-03,"BenchCAD Vision2Code, geometric-overlap score as reported for Fable 5.1 in OpenAI's GPT-6 Astra launch comparison."
+gpt-5-6-sol,83.3,self-reported,https://openai.com/index/gpt-6-astra,2026-09-03,"BenchCAD Vision2Code with Python tools, GPT-5.6 Sol column of OpenAI's GPT-6 Astra launch comparison."
+gpt-6-astra,95.9,self-reported,https://openai.com/index/gpt-6-astra,2026-09-03,"BenchCAD Vision2Code 1,000-file subset with Python tools, geometric-overlap score; vs GPT-5.6 Sol 83.3 and a reported 84.3 for Claude Fable 5.1."

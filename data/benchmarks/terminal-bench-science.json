@@ -1,0 +1,10 @@
+{
+  "slug": "terminal-bench-science",
+  "name": "Terminal-Bench Science 0.1",
+  "category": "agents",
+  "unit": "%",
+  "description": "Terminal-Bench-Science 0.1 — a Stanford-led set of 70 agentic scientific workflows (life, physical, earth, mathematical and engineering sciences) executed in a terminal: read data, run computations, submit results. Standard error is roughly +/-3.5-4.5 points per model.",
+  "normMin": 0,
+  "normMax": 70,
+  "higherIsBetter": true
+}

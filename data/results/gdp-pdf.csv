@@ -1,0 +1,6 @@
+model_slug,score,source,source_url,evaluated_at,notes
+claude-opus-5,37,self-reported,https://blog.google/innovation-and-ai/models-and-research/gemini-models/3-8-flash-and-3-8-flash-cyber/,2026-09-02,"GDP.PDF, Claude Opus 5 column of Google's Gemini 3.8 Flash launch table."
+gemini-3-6-flash,22,self-reported,https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-3-7-flash/,2026-08-13,"GDP.pdf, Gemini 3.6 Flash baseline in Google's Gemini 3.7 Flash launch post."
+gemini-3-7-flash,34,self-reported,https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-3-7-flash/,2026-08-13,"GDP.pdf complex-document comprehension, Gemini 3.7 Flash launch post; up from 3.6 Flash's 22.0."
+gemini-3-8-flash,35,self-reported,https://blog.google/innovation-and-ai/models-and-research/gemini-models/3-8-flash-and-3-8-flash-cyber/,2026-09-02,"GDP.PDF expert document comprehension, Google's launch table; behind Claude Opus 5 (37.0) and GPT-5.6 Sol (40.0)."
+gpt-5-6-sol,40,self-reported,https://blog.google/innovation-and-ai/models-and-research/gemini-models/3-8-flash-and-3-8-flash-cyber/,2026-09-02,"GDP.PDF, GPT-5.6 Sol column of Google's Gemini 3.8 Flash launch table; best in row."

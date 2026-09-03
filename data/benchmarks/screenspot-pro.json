@@ -1,0 +1,10 @@
+{
+  "slug": "screenspot-pro",
+  "name": "ScreenSpot-Pro",
+  "category": "vision",
+  "unit": "%",
+  "description": "ScreenSpot-Pro — GUI element grounding on high-resolution professional-application screenshots: locate the described control precisely enough to click it.",
+  "normMin": 0,
+  "normMax": 95,
+  "higherIsBetter": true
+}

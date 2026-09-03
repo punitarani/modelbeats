@@ -1,0 +1,10 @@
+{
+  "slug": "swe-atlas-codebase-qna",
+  "name": "SWE-Atlas Codebase QnA",
+  "category": "coding",
+  "unit": "%",
+  "description": "SWE-Atlas Codebase QnA — 124 tasks over 11 real repositories testing deep code comprehension and question answering rather than patch generation. Mean pass@1 under a rubric judge.",
+  "normMin": 0,
+  "normMax": 70,
+  "higherIsBetter": true
+}

@@ -1,0 +1,145 @@
+{
+  "name": "Gemini 3.8 Flash",
+  "org": "Google",
+  "orgSlug": "google",
+  "family": "Gemini 3.8",
+  "familySlug": "gemini-3-8",
+  "slug": "gemini-3-8-flash",
+  "releaseDate": "2026-09-02",
+  "status": "released",
+  "openness": "closed",
+  "license": "Proprietary",
+  "paramsB": null,
+  "activeParamsB": null,
+  "archClass": "moe",
+  "archDisplay": "Sparse Mixture-of-Experts Transformer (configuration undisclosed); natively multimodal (text/image/video/audio/PDF in, text out), 1,048,576-token input / 65,536-token output, thinking at low/medium/high",
+  "ctxK": 1000,
+  "modalities": [
+    "text",
+    "vision",
+    "audio",
+    "video"
+  ],
+  "langCount": null,
+  "capabilities": {
+    "reasoning": true,
+    "coding": true,
+    "vision": true,
+    "functionCalling": true,
+    "toolUse": true,
+    "agentic": true
+  },
+  "apiAvailable": true,
+  "price": {
+    "input": 0.75,
+    "output": 3.75,
+    "provider": "Google"
+  },
+  "links": {
+    "docs": "https://ai.google.dev/gemini-api/docs/models/gemini-3.8-flash"
+  },
+  "note": "Google's September 2, 2026 Flash — its third in 43 days — at identical specifications and identical introductory pricing to 3.7 Flash ($0.75/$3.75 per Mtok until December 31, 2026, then $1.50/$7.50), and ahead of 3.7 Flash on every published row, so there is no reason to stay on the older model. Google's pitch is that it 'works harder': more reasoning steps and iterative tool calls on complex tasks. Available in AI Studio, the Gemini API, Antigravity, Gemini Enterprise and the Gemini app for AI Pro/Ultra subscribers. The honest reading of Google's own 14-row table is that it wins 8 and loses 5 to Claude Opus 5, and the losses are where the work is open-ended: Terminal-Bench 4.0 19.1 vs 51.8, OSWorld-2.0 59.0 vs 75.4, GDPval-AA v2 1545 vs 1824. It is excellent at bounded professional tasks — finance, law, charts, video, biology — at roughly a seventh of Opus 5's price, and its DeepSWE v1.1 73.7 is within noise of Opus 5's 74.0. Widely-circulated DeepSWE figures of 74% for this model come from the public Datacurve leaderboard rather than Google's table. Its FrontierCode 1.1 rows are deliberately omitted here: the only published values come from a competitor's comparison table and are identical to 3.7 Flash's, which cannot be distinguished from a carried-forward figure.",
+  "quants": [],
+  "vramQ4Gb": null,
+  "vramFp16Gb": null,
+  "tps4090": null,
+  "tpsNote": null,
+  "effortLabel": null,
+  "isDefaultConfig": true,
+  "isBestConfig": true,
+  "specSources": {
+    "price": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/3-8-flash-and-3-8-flash-cyber/",
+    "releaseDate": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/3-8-flash-and-3-8-flash-cyber/",
+    "ctxK": "https://ai.google.dev/gemini-api/docs/models/gemini-3.8-flash"
+  },
+  "results": [
+    {
+      "benchmarkSlug": "deepswe",
+      "score": 73.7,
+      "source": "self-reported",
+      "sourceUrl": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/3-8-flash-and-3-8-flash-cyber/",
+      "evaluatedAt": "2026-09-02",
+      "notes": "DeepSWE v1.1, Google's Gemini 3.8 Flash launch table; up from 3.7 Flash's 65.3 and within 0.3 points of Claude Opus 5 (74.0) at roughly a seventh of the price. The public Datacurve leaderboard separately lists 74%."
+    },
+    {
+      "benchmarkSlug": "gdpval-aa",
+      "score": 1545,
+      "source": "self-reported",
+      "sourceUrl": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/3-8-flash-and-3-8-flash-cyber/",
+      "evaluatedAt": "2026-09-02",
+      "notes": "GDPval-AA v2 Elo, Google's launch table; up from 1482 but far behind Claude Opus 5 (1824) — the widest of Google's five losses in its own table."
+    },
+    {
+      "benchmarkSlug": "vals-finance-agent",
+      "score": 61.4,
+      "source": "self-reported",
+      "sourceUrl": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/3-8-flash-and-3-8-flash-cyber/",
+      "evaluatedAt": "2026-09-02",
+      "notes": "Vals Finance Agent v2, Google's launch table; best in row ahead of Claude Opus 5 (58.6) and GPT-5.6 Sol (53.8)."
+    },
+    {
+      "benchmarkSlug": "harvey-legal-agent",
+      "score": 10.0,
+      "source": "self-reported",
+      "sourceUrl": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/3-8-flash-and-3-8-flash-cyber/",
+      "evaluatedAt": "2026-09-02",
+      "notes": "Harvey's Legal Agent Benchmark, Google's launch table; best in row (Opus 5 6.7, GPT-5.6 Sol 2.5)."
+    },
+    {
+      "benchmarkSlug": "terminal-bench-2",
+      "score": 89.4,
+      "source": "self-reported",
+      "sourceUrl": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/3-8-flash-and-3-8-flash-cyber/",
+      "evaluatedAt": "2026-09-02",
+      "notes": "Terminal-Bench 2.1, Google's launch table; best in row ahead of Claude Opus 5 (89.1) and GPT-5.6 Sol (88.8)."
+    },
+    {
+      "benchmarkSlug": "terminal-bench-4",
+      "score": 19.1,
+      "source": "self-reported",
+      "sourceUrl": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/3-8-flash-and-3-8-flash-cyber/",
+      "evaluatedAt": "2026-09-02",
+      "notes": "Terminal-Bench 4.0, Google's launch table; up from 3.7 Flash's 11.2 but 32.7 points behind Claude Opus 5 (51.8) — general agent capability is where the Flash line is weakest."
+    },
+    {
+      "benchmarkSlug": "gdp-pdf",
+      "score": 35.0,
+      "source": "self-reported",
+      "sourceUrl": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/3-8-flash-and-3-8-flash-cyber/",
+      "evaluatedAt": "2026-09-02",
+      "notes": "GDP.PDF expert document comprehension, Google's launch table; behind Claude Opus 5 (37.0) and GPT-5.6 Sol (40.0)."
+    },
+    {
+      "benchmarkSlug": "charxiv",
+      "score": 86.2,
+      "source": "self-reported",
+      "sourceUrl": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/3-8-flash-and-3-8-flash-cyber/",
+      "evaluatedAt": "2026-09-02",
+      "notes": "CharXiv Reasoning, Google's launch table; best in row."
+    },
+    {
+      "benchmarkSlug": "lvbench",
+      "score": 87.8,
+      "source": "self-reported",
+      "sourceUrl": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/3-8-flash-and-3-8-flash-cyber/",
+      "evaluatedAt": "2026-09-02",
+      "notes": "LVBench long-video understanding, Google's launch table; best in row by a wide margin over Claude Opus 5 (75.4)."
+    },
+    {
+      "benchmarkSlug": "hle-verified",
+      "score": 54.9,
+      "source": "self-reported",
+      "sourceUrl": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/3-8-flash-and-3-8-flash-cyber/",
+      "evaluatedAt": "2026-09-02",
+      "notes": "HLE-Verified, stated in the launch post's prose as well as the table; best in row but the field is tightly bunched (Opus 5 54.4, GPT-5.6 Sol 54.5, 3.7 Flash 53.6)."
+    },
+    {
+      "benchmarkSlug": "osworld-2",
+      "score": 59.0,
+      "source": "self-reported",
+      "sourceUrl": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/3-8-flash-and-3-8-flash-cyber/",
+      "evaluatedAt": "2026-09-02",
+      "notes": "OSWorld-2.0 computer use, Google's launch table; up from 3.7 Flash's 50.6 but 16.4 points behind Claude Opus 5 (75.4)."
+    }
+  ]
+}

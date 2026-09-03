@@ -1,0 +1,46 @@
+{
+  "slug": "gpt-6-astra",
+  "name": "GPT-6 Astra",
+  "orgSlug": "openai",
+  "familySlug": "gpt-6",
+  "releaseDate": "2026-09-03",
+  "status": "released",
+  "predecessor": null,
+  "openness": "closed",
+  "license": "Proprietary",
+  "paramsB": null,
+  "activeParamsB": null,
+  "archClass": "dense",
+  "archDisplay": "Proprietary frontier reasoning model (architecture and size undisclosed); 1.05M-token context, text+image in / text out, five selectable reasoning efforts (low → max)",
+  "ctxK": 1050,
+  "modalities": [
+    "text",
+    "vision"
+  ],
+  "langCount": null,
+  "capabilities": {
+    "reasoning": true,
+    "coding": true,
+    "vision": true,
+    "functionCalling": true,
+    "toolUse": true,
+    "agentic": true
+  },
+  "apiAvailable": true,
+  "price": {
+    "input": 10,
+    "output": 50
+  },
+  "links": {
+    "docs": "https://developers.openai.com/api/docs/models/gpt-6-astra"
+  },
+  "note": "OpenAI's first GPT-6-generation model, launched September 3, 2026 as `gpt-6-astra` after a month of staged safety disclosure: previewed August 1 through ten solved open mathematics problems, then confirmed on September 1 as the first model OpenAI has ever classified **Critical** for cybersecurity under its Preparedness Framework (it can find and weaponise zero-days in hardened targets without human direction). Rolling out first to enterprises in the Trusted Access Program, with API, Plus, Pro, Business and Enterprise access following; advanced offensive-cyber capability stays gated behind Daybreak Blue. $10/$50 per Mtok (cached input $1.00, cache writes $12.50; >272K-token prompts billed at 2x input / 1.5x output; Fast mode 2x at up to 2.5x speed), 1,050,000-token context, 128K max output, April 30 2026 knowledge cutoff. PROVENANCE CAVEATS — every recorded row is OpenAI-run at maximum effort, and OpenAI does not say whether standard users can select that effort. Two headline claims are deliberately NOT recorded here: the ARC-AGI-3 99.9% (run through a Responses-API harness that retains reasoning across turns and compacts context — OpenAI has itself shown those settings can triple ARC-AGI-3 scores without changing the model, so the number measures the agent system; the public ARC Prize leaderboard's best result is Claude Opus 5 at ~30.2%, and the viral 98.6%/99.9% figures were flagged as unverified by third-party coverage) and the FrontierMath Tier 4 98% saturation claim (no independent corroboration). Its DeepSWE lead is also narrower than the launch chart suggests: OpenAI's own chart omits Muse Spark 1.3, which reports 75.4% against Astra's 74.1%.",
+  "quants": [],
+  "vramQ4Gb": null,
+  "vramFp16Gb": null,
+  "tps4090": null,
+  "tpsNote": null,
+  "effortLabel": null,
+  "isDefaultConfig": true,
+  "isBestConfig": true
+}

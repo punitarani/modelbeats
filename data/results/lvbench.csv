@@ -1,0 +1,7 @@
+model_slug,score,source,source_url,evaluated_at,notes
+claude-opus-5,75.4,self-reported,https://blog.google/innovation-and-ai/models-and-research/gemini-models/3-8-flash-and-3-8-flash-cyber/,2026-09-02,"LVBench, Claude Opus 5 column of Google's Gemini 3.8 Flash launch table."
+gemini-3-7-flash,85.4,self-reported,https://blog.google/innovation-and-ai/models-and-research/gemini-models/3-8-flash-and-3-8-flash-cyber/,2026-09-02,"LVBench long-video understanding, 3.7 Flash baseline column of Google's Gemini 3.8 Flash launch table."
+gemini-3-8-flash,87.8,self-reported,https://blog.google/innovation-and-ai/models-and-research/gemini-models/3-8-flash-and-3-8-flash-cyber/,2026-09-02,"LVBench long-video understanding, Google's launch table; best in row by a wide margin over Claude Opus 5 (75.4)."
+gpt-5-6-sol,82.1,self-reported,https://blog.google/innovation-and-ai/models-and-research/gemini-models/3-8-flash-and-3-8-flash-cyber/,2026-09-02,"LVBench, GPT-5.6 Sol column of Google's Gemini 3.8 Flash launch table."
+qwen3-8-flash-next,76.6,self-reported,https://qwen.ai/blog?id=qwen3.8-flash-next,2026-08-26,"LVBench long-video understanding, official Qwen3.8-Flash-Next model card; well behind Gemini 3.8 Flash (87.8)."
+qwen3-8-max,81.8,self-reported,https://qwen.ai/blog?id=qwen3.8,2026-08-03,"LVBench, Qwen3.8-Max release benchmarks; a coding-adjacent row from Alibaba's launch post that is not one of the contested best-on-chart claims excluded from that model's entry."

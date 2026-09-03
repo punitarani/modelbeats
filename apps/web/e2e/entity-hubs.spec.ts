@@ -2,12 +2,13 @@ import { expect, test } from '@playwright/test'
 import { gotoHydrated } from './helpers'
 
 test.describe('organization + family hubs', () => {
-  test('/organizations/anthropic lists its 26 models with cadence', async ({ page }) => {
+  test('/organizations/anthropic lists its 28 models with cadence', async ({ page }) => {
     await gotoHydrated(page, '/organizations/anthropic')
-    await expect(page.getByTestId('org-meta')).toContainText('26 tracked models · 8 families')
-    await expect(page.getByTestId('org-model-row')).toHaveCount(26)
-    // rows sort by release date desc — Claude Opus 5 (2026-07-24) is Anthropic's newest
-    await expect(page.getByTestId('org-model-row').first()).toContainText('Claude Opus 5')
+    await expect(page.getByTestId('org-meta')).toContainText('28 tracked models · 8 families')
+    await expect(page.getByTestId('org-model-row')).toHaveCount(28)
+    // rows sort by release date desc — Claude Fable 5.1 (2026-09-01) is Anthropic's newest
+    // (Mythos 5.1 shares the date and follows it under the stable catalog-order tiebreak)
+    await expect(page.getByTestId('org-model-row').first()).toContainText('Claude Fable 5.1')
   })
 
   test('/families/claude-4 shows progression and succession deltas', async ({ page }) => {

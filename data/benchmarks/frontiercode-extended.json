@@ -1,0 +1,10 @@
+{
+  "slug": "frontiercode-extended",
+  "name": "FrontierCode (Extended)",
+  "category": "coding",
+  "unit": "%",
+  "description": "FrontierCode v1.1 Extended set — Cognition's agentic coding benchmark built from real open-source pull requests, scored on the wider Extended split rather than the 150-task Main set. Not comparable with the Main-set scores filed under `frontiercode`.",
+  "normMin": 0,
+  "normMax": 75,
+  "higherIsBetter": true
+}

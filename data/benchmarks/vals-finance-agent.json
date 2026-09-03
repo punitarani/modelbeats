@@ -1,0 +1,10 @@
+{
+  "slug": "vals-finance-agent",
+  "name": "Vals Finance Agent",
+  "category": "agents",
+  "unit": "%",
+  "description": "Vals Finance Agent v2 — Vals AI's independently-run benchmark of financial-analyst agent workflows over real filings and market documents.",
+  "normMin": 0,
+  "normMax": 70,
+  "higherIsBetter": true
+}

@@ -20,15 +20,15 @@ test.describe('benchmarks', () => {
     await expect(first).toContainText('Claude Opus 5')
     await expect(first).toContainText('96.0%')
     await expect(first.getByTestId('provenance-badge')).toHaveText('self-reported')
-    // real field: 121 of the 552 models carry a SWE-bench Verified score
-    await expect(page.getByTestId('leaderboard-row')).toHaveCount(121)
+    // real field: 122 of the 568 models carry a SWE-bench Verified score
+    await expect(page.getByTestId('leaderboard-row')).toHaveCount(122)
   })
 
   test('distribution histogram + open-only params scatter render', async ({ page }) => {
     await gotoHydrated(page, '/benchmarks/gpqa')
     await expect(page.getByTestId('histogram').locator('div')).toHaveCount(10)
     // open models with disclosed params carry the scatter (real GPQA field, expanded catalog)
-    await expect(page.getByTestId('params-point')).toHaveCount(184)
+    await expect(page.getByTestId('params-point')).toHaveCount(187)
   })
 
   test('params-scatter points carry tooltips and link to the model', async ({ page }) => {

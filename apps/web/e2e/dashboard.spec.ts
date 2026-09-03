@@ -12,7 +12,7 @@ test.describe('dashboard overview', () => {
     // Open–closed gap is computed on the universal Elo rating (arena covers only a sliver), so
     // it's always a real number, and the leader is the top-ranked open model under pairwise Elo.
     await expect(cards.nth(3)).toContainText('Elo')
-    await expect(cards.nth(3)).toContainText('Kimi K3 leads open')
+    await expect(cards.nth(3)).toContainText('GLM-5.3 leads open')
   })
 
   test('scatter plots every priced+ranked model; movers show real lineage gains', async ({
@@ -102,12 +102,12 @@ test.describe('dashboard overview', () => {
     await gotoHydrated(page, '/')
     const rail = page.getByTestId('arena-rail')
     // rail now leads with the #1 overall model by Elo rating
-    await expect(rail).toContainText('Claude Opus 5')
-    await expect(rail).toContainText('3296.3')
+    await expect(rail).toContainText('GPT-6 Astra')
+    await expect(rail).toContainText('3305.4')
     await pickOption(page, 'qc-b', 'Llama 3.1 405B — Meta')
     await page.getByTestId('qc-go').click()
-    // quick-compare slot A defaults to the #1 rank-eligible model (Claude Opus 5)
-    await expect(page).toHaveURL(/m=claude-opus-5(%2C|,)llama-3-1-405b/)
+    // quick-compare slot A defaults to the #1 rank-eligible model (GPT-6 Astra)
+    await expect(page).toHaveURL(/m=gpt-6-astra(%2C|,)llama-3-1-405b/)
   })
 })
 
@@ -132,8 +132,8 @@ test.describe('dashboard releases + bench tabs', () => {
     await gotoHydrated(page, '/?tab=releases')
     const frontier = page.getByTestId('frontier')
     // regrounded on the universal Elo rating, so both camps' leaders always plot
-    await expect(frontier).toContainText('Claude Opus 5')
-    await expect(frontier).toContainText('Kimi K3')
+    await expect(frontier).toContainText('GPT-6 Astra')
+    await expect(frontier).toContainText('GLM-5.3')
     await expect(page.getByTestId('gap-note')).not.toHaveText('')
   })
 

@@ -1,0 +1,10 @@
+{
+  "slug": "terminal-bench-4",
+  "name": "Terminal-Bench 4.0",
+  "category": "agents",
+  "unit": "%",
+  "description": "Terminal-Bench 4.0 — 66-task successor suite spanning computational biology, physics simulation, CAD and formal proofs, run in a real terminal environment. Measures general long-horizon agent capability rather than coding specifically.",
+  "normMin": 0,
+  "normMax": 70,
+  "higherIsBetter": true
+}
