@@ -1,0 +1,10 @@
+{
+  "slug": "lvbench",
+  "name": "LVBench",
+  "category": "vision",
+  "unit": "%",
+  "description": "LVBench — long-video understanding over hour-scale footage, testing retrieval and reasoning across extended temporal context.",
+  "normMin": 0,
+  "normMax": 92,
+  "higherIsBetter": true
+}

@@ -28,6 +28,7 @@ gpt-5-mini,67.5,self-reported,https://openai.com/index/introducing-gpt-5-4-mini-
 grok-4-5,80.4,independent,https://benchlm.ai/models/grok-4-5,,MMMU-Pro 80.4% (Artificial Analysis independent evaluation). Cross-corroborated by doit.software/blog/grok-statistics ('MMMU-Pro: 80%'). AA's own Grok 4.5 model page (directly fetched) lists MMMU-Pro among its individual Intelligence Index evaluations for this model.
 grok-build-0-1,77,independent,https://artificialanalysis.ai/models/grok-build-0-1-06-16,,Bonus/out-of-scope addition beyond the 3 assigned gaps; flagging clearly in case the orchestrator wants to review scope before merging.
 inkling,73.5,self-reported,https://thinkingmachines.ai/model-card/inkling/,2026-07-15,"MMMU Pro, Standard (10 options) split. The independently-hosted HF blog post reports 73.3%, a minor rounding/transcription discrepancy from the official model card's 73.5% used here."
+inkling-small,74,self-reported,https://thinkingmachines.ai/model-card/inkling-small,2026-07-30,"MMMU-Pro, official Inkling-Small model card evaluation table."
 internvl2-5-78b,48.6,self-reported,https://internvl.github.io/blog/2024-12-05-InternVL-2.5/,,MMMU-Pro overall (std10 51.4 / vision 45.9 / overall 48.6)
 kimi-k2-5,78.5,self-reported,https://www.kimi.com/blog/kimi-k2-5,,"MMMU-Pro, official protocol (input order preserved, images prepended)"
 kimi-k2-6,79.4,self-reported,https://www.kimi.com/blog/kimi-k2-6,,MMMU-Pro standard; vendor also reports 80.1 with python tool use enabled
@@ -40,6 +41,7 @@ minimax-m3,78.1,self-reported,https://huggingface.co/MiniMaxAI/MiniMax-M3,,Repor
 minimax-vl-01,52.7,self-reported,https://huggingface.co/MiniMaxAI/MiniMax-VL-01,,From the same official evaluation table as the already-recorded MMMU score.
 mistral-large-3,56,independent,https://artificialanalysis.ai/models/mistral-large-3,,"MMMU-Pro (visual reasoning), independently measured by Artificial Analysis; last of only 7 models in their comparison set with a reported score."
 mistral-small-3-1-24b,49.25,self-reported,https://huggingface.co/mistralai/Mistral-Small-3.1-24B-Instruct-2503,,
+muse-glimmer-30b,74,self-reported,https://huggingface.co/meta-models/Muse-Glimmer-30B,2026-08-10,"MMMU Pro, official Muse Glimmer model card; behind Qwen3.6-27B (75)."
 nemotron-3-nano-omni,53,independent,https://artificialanalysis.ai/models/nemotron-3-nano-omni-30b-a3b,2026-07-14,"MMMU-Pro (harder variant of MMMU, distinct taxonomy slug from the corpus's existing 'mmmu' result of 70.8) from Artificial Analysis's independent evaluation, position-verified against the 17-model MMMU-Pro ranking list ('Nemotron 3 Nano Omni 30B A3B Reasoning' = 53%, second-lowest of the models AA has scored on this eval)."
 phi-4-multimodal-5-6b,38.5,self-reported,https://arxiv.org/abs/2503.01743,,Table 1 (vision-language benchmarks) of the Phi-4-Mini/Multimodal Technical Report; standard/vision sub-scores 39.7/37.3.
 phi-4-multimodal-instruct,38.5,self-reported,https://arxiv.org/abs/2503.01743,,"Table 1, MMMUPro (standard/vision avg); sub-scores 39.7/37.3."
@@ -53,6 +55,6 @@ qwen3-6-27b,75.8,self-reported,https://huggingface.co/Qwen/Qwen3.6-27B,,Official
 qwen3-6-35b-a3b,75.3,self-reported,https://huggingface.co/Qwen/Qwen3.6-35B-A3B,,Official HF model card.
 qwen3-6-plus,78.8,self-reported,https://qwen.ai/blog?id=qwen3.6,2026-04-02,"Vision-language table, MMMU-Pro row."
 qwen3-7-plus,79,self-reported,https://qwen.ai/blog?id=qwen3.7-plus,2026-05-31,"Official Qwen launch blog, 'Multimodal Benchmarks / Multimodal Reasoning' table."
+qwen3-8-max-0902,82.7,self-reported,https://www.qwencloud.com/models/qwen3.8-max-0902,2026-09-02,"MMMU-Pro overall, Qwen3.8-Max-0902 release chart as transcribed by BenchmarkList; just behind Claude Opus 5 (84.7)."
 seed-2-1-pro,81.6,self-reported,https://seed.bytedance.com/en/seed2_1,,"MMMU-Pro, no-tool configuration, same official table. With tool use scored 82.7% (Turbo: 80.1% / 82.2%)."
 step-3-7-flash,75,independent,https://artificialanalysis.ai/models/step-3-7-flash,,"Not one of the 6 originally-flagged core gaps (mmmu-pro is not a core ranking slug), but surfaced during the mmmu investigation as a genuine, citable, correctly-slugged data point worth capturing rather than discarding."
-inkling-small,74,self-reported,https://thinkingmachines.ai/model-card/inkling-small,2026-07-30,"MMMU-Pro, official Inkling-Small model card evaluation table."

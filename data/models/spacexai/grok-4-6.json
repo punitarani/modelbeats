@@ -1,0 +1,46 @@
+{
+  "slug": "grok-4-6",
+  "name": "Grok 4.6",
+  "orgSlug": "spacexai",
+  "familySlug": "grok-4-6",
+  "releaseDate": "2026-08-12",
+  "status": "released",
+  "predecessor": null,
+  "openness": "closed",
+  "license": "Proprietary",
+  "paramsB": null,
+  "activeParamsB": null,
+  "archClass": "moe",
+  "archDisplay": "Mixture-of-Experts (size undisclosed); a longer supplemental training run over the Grok 4.5 foundation with regenerated SFT trajectories and agentic RL across kernel optimization, web development and CAD environments",
+  "ctxK": 500,
+  "modalities": [
+    "text",
+    "vision"
+  ],
+  "langCount": null,
+  "capabilities": {
+    "reasoning": true,
+    "coding": true,
+    "vision": true,
+    "functionCalling": true,
+    "toolUse": true,
+    "agentic": true
+  },
+  "apiAvailable": true,
+  "price": {
+    "input": 2,
+    "output": 6
+  },
+  "links": {
+    "docs": "https://x.ai/news/grok-4-6"
+  },
+  "note": "SpaceXAI's August 12, 2026 successor to Grok 4.5, 35 days later, focused on long-running agents and interactive/visual work. Same headline $2/$6 per Mtok as 4.5, but cached input rose from $0.30 to $0.50/Mtok, so a cache-heavy prompt costs MORE against the newer model; a 'fast' variant is double price. Available in Cursor, Grok Build, the SpaceXAI API, OpenRouter, Vercel and Cloudflare. SpaceXAI's claim is parity rather than a lead: it matches GPT-5.6 Sol on the Artificial Analysis Intelligence Index (61 each, with Claude Fable 5 at 62). All figures recorded here are the Grok 4.6 High column of SpaceXAI's own eval table, with competitor rows drawn by SpaceXAI from those developers' published results. The table is honest about losses — Terminal-Bench 3.0 26.0 against GPT-5.6 Sol Max 34.6 and Fable 5 Max 34.1, DeepSWE 65.9 against 73.0 and 70.0 — while its clearest wins are GDPval-AA v2 (1753) and Harvey LAB (15.8, far ahead of Sol's 2.5).",
+  "quants": [],
+  "vramQ4Gb": null,
+  "vramFp16Gb": null,
+  "tps4090": null,
+  "tpsNote": null,
+  "effortLabel": null,
+  "isDefaultConfig": true,
+  "isBestConfig": true
+}

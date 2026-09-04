@@ -1,0 +1,10 @@
+{
+  "slug": "gdp-pdf",
+  "name": "GDP.PDF",
+  "category": "vision",
+  "unit": "%",
+  "description": "GDP.PDF — expert comprehension of complex real-world PDFs (tables, charts, dense multi-column layout), a document-understanding companion to GDPval.",
+  "normMin": 0,
+  "normMax": 50,
+  "higherIsBetter": true
+}

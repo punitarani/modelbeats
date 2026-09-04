@@ -1,0 +1,10 @@
+model_slug,score,source,source_url,evaluated_at,notes
+claude-fable-5,74.7,self-reported,https://z.ai/blog/glm-5.3,2026-08-14,"Toolathlon Verified, 'Fable 5 (w/ fallback)' column of Z.ai's official GLM-5.3 comparison table."
+claude-opus-4-8,76.2,self-reported,https://z.ai/blog/glm-5.3,2026-08-14,"Toolathlon Verified, Claude Opus 4.8 column of Z.ai's official GLM-5.3 comparison table."
+glm-5-2-max,59.9,self-reported,https://z.ai/blog/glm-5.3,2026-08-14,"Toolathlon Verified, GLM-5.2 baseline column of Z.ai's GLM-5.3 comparison table."
+glm-5-3,73,self-reported,https://z.ai/blog/glm-5.3,2026-08-14,"Toolathlon Verified, official GLM-5.3 comparison table; up from GLM-5.2's 59.9 but behind Kimi K3 (76.5) and Claude Opus 4.8 (76.2)."
+glm-5-3-flash,78.4,self-reported,https://z.ai/blog/glm-5.3-flash,2026-08-26,"Toolathlon Verified, official GLM-5.3-Flash comparison table; best in row ahead of Claude Opus 4.8 (76.2) and GPT-5.6 Terra (74.9)."
+gpt-5-6-sol,74.9,self-reported,https://z.ai/blog/glm-5.3,2026-08-14,"Toolathlon Verified, GPT-5.6 Sol column of Z.ai's official GLM-5.3 comparison table."
+kimi-k3,76.5,self-reported,https://z.ai/blog/glm-5.3,2026-08-14,"Toolathlon Verified, Kimi K3 column of Z.ai's official GLM-5.3 comparison table; best in row."
+qwen3-8-flash-next,73.5,self-reported,https://qwen.ai/blog?id=qwen3.8-flash-next,2026-08-26,"Toolathlon Verified, official Qwen3.8-Flash-Next model card."
+qwen3-8-max,72.5,self-reported,https://z.ai/blog/glm-5.3,2026-08-14,"Toolathlon Verified, Qwen3.8-Max column of Z.ai's official GLM-5.3 comparison table."

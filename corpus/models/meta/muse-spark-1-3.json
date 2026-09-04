@@ -1,0 +1,137 @@
+{
+  "name": "Muse Spark 1.3",
+  "org": "Meta",
+  "orgSlug": "meta",
+  "family": "Muse Spark",
+  "familySlug": "muse-spark",
+  "slug": "muse-spark-1-3",
+  "releaseDate": "2026-09-02",
+  "status": "released",
+  "openness": "closed",
+  "license": "Proprietary",
+  "paramsB": null,
+  "activeParamsB": null,
+  "archClass": "dense",
+  "archDisplay": "Proprietary multimodal reasoning model (undisclosed architecture); 1M-token context, trained across a diverse set of agent harnesses for long-horizon collaborative work",
+  "ctxK": 1000,
+  "modalities": [
+    "text",
+    "vision",
+    "audio",
+    "video"
+  ],
+  "langCount": null,
+  "capabilities": {
+    "reasoning": true,
+    "coding": true,
+    "vision": true,
+    "functionCalling": true,
+    "toolUse": true,
+    "agentic": true
+  },
+  "apiAvailable": true,
+  "price": {
+    "input": 1.25,
+    "output": 4.25,
+    "provider": "Meta"
+  },
+  "links": {
+    "docs": "https://research.meta.ai/blog/introducing-muse-spark-1-3"
+  },
+  "note": "Meta's September 2, 2026 developer release in Muse Code and the Meta Model API — no consumer surface named. Pricing is unchanged since July at $1.25/$4.25 per Mtok with a 1M context, which is what makes it interesting: it posts frontier long-context and agentic-coding numbers at roughly an eighth of the Fable/Astra rate. Meta reports ~20% fewer tool calls and ~25% fewer tokens than 1.2 in its own engineers' use, and trained it to ask clarifying questions, invoke help when stuck and confirm before consequential actions. TWO CAVEATS THE LAUNCH TABLE DOES NOT MAKE OBVIOUS, both recorded here rather than papered over. First, the benchmarked configuration is Muse Spark 1.3 at MAX reasoning, which is still in limited preview pending safety testing; the generally-available build is xhigh, which Artificial Analysis scores 61 on Intelligence Index v4.1.1 against max's 62. Second, Meta's methodology states it ran 1.3, Claude Opus 5 and GPT-5.6 Sol at max but Muse Spark 1.2 at xhigh — so the eye-catching gains over its own predecessor are partly an effort-setting change that Meta does not break out, while the comparison against Opus 5 and Sol is like-for-like. The table also predates Claude Fable 5.1 by a day and omits Gemini 3.8 Flash, released the same day. On Meta's own scorecard it wins coding and long context and loses all six agent rows to Opus 5 or Sol. Terminal-Bench 2.1 pairs each model with its own coding-agent product rather than a common harness, so that row measures products, not models — noted per row. Its high overall position therefore describes the limited-preview max configuration, not the xhigh build a developer gets on the API today.",
+  "quants": [],
+  "vramQ4Gb": null,
+  "vramFp16Gb": null,
+  "tps4090": null,
+  "tpsNote": null,
+  "effortLabel": null,
+  "isDefaultConfig": true,
+  "isBestConfig": true,
+  "specSources": {
+    "price": "https://developer.meta.com/ai/models/muse-spark/",
+    "releaseDate": "https://research.meta.ai/blog/introducing-muse-spark-1-3",
+    "ctxK": "https://developer.meta.com/ai/models/muse-spark/"
+  },
+  "results": [
+    {
+      "benchmarkSlug": "deepswe",
+      "score": 75.4,
+      "source": "self-reported",
+      "sourceUrl": "https://research.meta.ai/blog/introducing-muse-spark-1-3",
+      "evaluatedAt": "2026-09-02",
+      "notes": "DeepSWE v1.1 at max reasoning, Meta launch scorecard; Meta ran 1.3 on mini-swe-agent and took peers from the official Datacurve leaderboard. Best published figure on the benchmark at the time — ahead of Claude Opus 5 (74.0), GPT-5.6 Sol (73.0) and, by 1.3 points, GPT-6 Astra's 74.1 the following day. The benchmarked max configuration is still in limited preview."
+    },
+    {
+      "benchmarkSlug": "swe-atlas-codebase-qna",
+      "score": 59.4,
+      "source": "self-reported",
+      "sourceUrl": "https://research.meta.ai/blog/introducing-muse-spark-1-3",
+      "evaluatedAt": "2026-09-02",
+      "notes": "SWE-Atlas Codebase QnA (124 tasks, 11 repositories, mean pass@1) at max reasoning, Meta launch scorecard; best in row over GPT-5.6 Sol (53.5) and Claude Opus 5 (52.7)."
+    },
+    {
+      "benchmarkSlug": "terminal-bench-2",
+      "score": 88.8,
+      "source": "self-reported",
+      "sourceUrl": "https://research.meta.ai/blog/introducing-muse-spark-1-3",
+      "evaluatedAt": "2026-09-02",
+      "notes": "Terminal-Bench 2.1 at max reasoning, Meta launch scorecard; ties GPT-5.6 Sol (88.8) and leads Claude Opus 5 (86.7). METHODOLOGY CAVEAT: each result uses the model's own named coding-agent product rather than one identical harness, so this row compares products, not models."
+    },
+    {
+      "benchmarkSlug": "mrcr-v2-8n-256k",
+      "score": 98.5,
+      "source": "self-reported",
+      "sourceUrl": "https://research.meta.ai/blog/introducing-muse-spark-1-3",
+      "evaluatedAt": "2026-09-02",
+      "notes": "MRCR v2 8-needle, 256K-512K band, Meta launch scorecard; best in row over GPT-5.6 Sol (91.5), and a jump from Muse Spark 1.2's 66.3."
+    },
+    {
+      "benchmarkSlug": "mrcr-v2-8n-1m",
+      "score": 98.1,
+      "source": "self-reported",
+      "sourceUrl": "https://research.meta.ai/blog/introducing-muse-spark-1-3",
+      "evaluatedAt": "2026-09-02",
+      "notes": "MRCR v2 8-needle, 512K-1M band, Meta launch scorecard — the launch's most striking number: 55.5 → 98.1 over Muse Spark 1.2, against GPT-5.6 Sol's 73.8. Claude Opus 5 has no published score in either band. This is retrieval from context, not general long-context reasoning."
+    },
+    {
+      "benchmarkSlug": "gdpval-aa",
+      "score": 1754,
+      "source": "self-reported",
+      "sourceUrl": "https://research.meta.ai/blog/introducing-muse-spark-1-3",
+      "evaluatedAt": "2026-09-02",
+      "notes": "GDPVal-AA v2 Elo (Artificial Analysis Stirrup harness, blind pairwise LLM judging, human baseline 1000), Meta launch scorecard; ahead of GPT-5.6 Sol (1710) but behind Claude Opus 5 (1824)."
+    },
+    {
+      "benchmarkSlug": "jobbench",
+      "score": 64.9,
+      "source": "self-reported",
+      "sourceUrl": "https://research.meta.ai/blog/introducing-muse-spark-1-3",
+      "evaluatedAt": "2026-09-02",
+      "notes": "JobBench, Meta launch scorecard; narrowly behind Claude Opus 5 (65.7), far ahead of GPT-5.6 Sol (45.4)."
+    },
+    {
+      "benchmarkSlug": "osworld-2",
+      "score": 66.9,
+      "source": "self-reported",
+      "sourceUrl": "https://research.meta.ai/blog/introducing-muse-spark-1-3",
+      "evaluatedAt": "2026-09-02",
+      "notes": "OSWorld 2.0, mean per-task partial score, Meta launch scorecard; behind Claude Opus 5 (68.3). All models were evaluated on release 08.08 except Muse Spark 1.2, which used 06.24."
+    },
+    {
+      "benchmarkSlug": "deepsearchqa",
+      "score": 89.4,
+      "source": "self-reported",
+      "sourceUrl": "https://research.meta.ai/blog/introducing-muse-spark-1-3",
+      "evaluatedAt": "2026-09-02",
+      "notes": "DeepSearchQA F1, Meta launch scorecard; behind both GPT-5.6 Sol (93.0) and Claude Opus 5 (90.4) — one of the six agent rows Meta loses."
+    },
+    {
+      "benchmarkSlug": "automationbench",
+      "score": 49.4,
+      "source": "self-reported",
+      "sourceUrl": "https://research.meta.ai/blog/introducing-muse-spark-1-3",
+      "evaluatedAt": "2026-09-02",
+      "notes": "AutomationBench (Zapier, public v3 task set, pass@1), Meta launch scorecard; behind Claude Opus 5 (50.3), ahead of GPT-5.6 Sol (46.7). The 0.9-point gap is well inside the noise Meta publishes no confidence intervals for."
+    }
+  ]
+}

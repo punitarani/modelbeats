@@ -1,0 +1,10 @@
+{
+  "slug": "sre-bench",
+  "name": "SRE-Bench",
+  "category": "coding",
+  "unit": "%",
+  "description": "SRE-Bench — software reverse-engineering tasks: recover a binary's core logic without access to source. Reported pass@1 unless a row states an attempt budget.",
+  "normMin": 0,
+  "normMax": 95,
+  "higherIsBetter": true
+}

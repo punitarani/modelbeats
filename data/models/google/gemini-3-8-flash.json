@@ -1,0 +1,48 @@
+{
+  "slug": "gemini-3-8-flash",
+  "name": "Gemini 3.8 Flash",
+  "orgSlug": "google",
+  "familySlug": "gemini-3-8",
+  "releaseDate": "2026-09-02",
+  "status": "released",
+  "predecessor": null,
+  "openness": "closed",
+  "license": "Proprietary",
+  "paramsB": null,
+  "activeParamsB": null,
+  "archClass": "moe",
+  "archDisplay": "Sparse Mixture-of-Experts Transformer (configuration undisclosed); natively multimodal (text/image/video/audio/PDF in, text out), 1,048,576-token input / 65,536-token output, thinking at low/medium/high",
+  "ctxK": 1000,
+  "modalities": [
+    "text",
+    "vision",
+    "audio",
+    "video"
+  ],
+  "langCount": null,
+  "capabilities": {
+    "reasoning": true,
+    "coding": true,
+    "vision": true,
+    "functionCalling": true,
+    "toolUse": true,
+    "agentic": true
+  },
+  "apiAvailable": true,
+  "price": {
+    "input": 0.75,
+    "output": 3.75
+  },
+  "links": {
+    "docs": "https://ai.google.dev/gemini-api/docs/models/gemini-3.8-flash"
+  },
+  "note": "Google's September 2, 2026 Flash — its third in 43 days — at identical specifications and identical introductory pricing to 3.7 Flash ($0.75/$3.75 per Mtok until December 31, 2026, then $1.50/$7.50), and ahead of 3.7 Flash on every published row, so there is no reason to stay on the older model. Google's pitch is that it 'works harder': more reasoning steps and iterative tool calls on complex tasks. Available in AI Studio, the Gemini API, Antigravity, Gemini Enterprise and the Gemini app for AI Pro/Ultra subscribers. The honest reading of Google's own 14-row table is that it wins 8 and loses 5 to Claude Opus 5, and the losses are where the work is open-ended: Terminal-Bench 4.0 19.1 vs 51.8, OSWorld-2.0 59.0 vs 75.4, GDPval-AA v2 1545 vs 1824. It is excellent at bounded professional tasks — finance, law, charts, video, biology — at roughly a seventh of Opus 5's price, and its DeepSWE v1.1 73.7 is within noise of Opus 5's 74.0. Widely-circulated DeepSWE figures of 74% for this model come from the public Datacurve leaderboard rather than Google's table. Its FrontierCode 1.1 rows are deliberately omitted here: the only published values come from a competitor's comparison table and are identical to 3.7 Flash's, which cannot be distinguished from a carried-forward figure.",
+  "quants": [],
+  "vramQ4Gb": null,
+  "vramFp16Gb": null,
+  "tps4090": null,
+  "tpsNote": null,
+  "effortLabel": null,
+  "isDefaultConfig": true,
+  "isBestConfig": true
+}

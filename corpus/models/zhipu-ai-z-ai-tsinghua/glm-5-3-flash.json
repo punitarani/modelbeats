@@ -1,0 +1,120 @@
+{
+  "name": "GLM-5.3-Flash",
+  "org": "Zhipu AI / Z.ai (Tsinghua)",
+  "orgSlug": "zhipu-ai-z-ai-tsinghua",
+  "family": "GLM-5",
+  "familySlug": "glm-5",
+  "slug": "glm-5-3-flash",
+  "releaseDate": "2026-08-26",
+  "status": "released",
+  "openness": "open-weights",
+  "license": "Weights published on Hugging Face (zai-org/GLM-5.3-flash); licence not named in the launch post",
+  "paramsB": 320,
+  "activeParamsB": 18,
+  "archClass": "hybrid",
+  "archDisplay": "Newly trained base: 320B total / 18B active sparse MoE with a hybrid sparse+linear attention stack, 45 layers (against GLM-5.3's 92) — 3.0x less attention compute and a 4.4x smaller KV cache than GLM-5.3. First natively multimodal model in the GLM-5 series",
+  "ctxK": 200,
+  "modalities": [
+    "text",
+    "vision"
+  ],
+  "langCount": null,
+  "capabilities": {
+    "reasoning": true,
+    "coding": true,
+    "vision": true,
+    "functionCalling": true,
+    "toolUse": true,
+    "agentic": true
+  },
+  "apiAvailable": true,
+  "price": {
+    "input": 0.14,
+    "output": 0.44,
+    "provider": "Zhipu AI / Z.ai (Tsinghua)"
+  },
+  "links": {
+    "hf": "zai-org/GLM-5.3-flash",
+    "docs": "https://z.ai/blog/glm-5.3-flash"
+  },
+  "note": "Z.ai's August 26, 2026 Flash-tier model and the first natively multimodal GLM-5. A new base rather than a post-training refresh: 320B total / 18B active with hybrid sparse+linear attention, halving both active parameters and layer count against GLM-4.5's 355B/32B while beating GLM-5.2 across the board at about a tenth of the price. Z.ai places it on the Pareto frontier of Artificial Analysis Intelligence Index v4.1.1 at 57 for $0.045 per task (discounted) — a level previously available only at roughly 10x the cost. Notable for being served entirely on domestic Chinese AI chips, and for having been A/B-tested anonymously as `ox-alpha` on OpenCode and OpenRouter before launch. Pricing here is the published per-Mtok rate; peak/off-peak billing applies on the coding plan. Its HLE row (55.3) is the WITH-tools configuration and its CharXiv row is with tools, both noted per row. Agents' Last Exam is omitted for the same metric-incompatibility reason as GLM-5.3.",
+  "quants": [],
+  "vramQ4Gb": null,
+  "vramFp16Gb": null,
+  "tps4090": null,
+  "tpsNote": null,
+  "effortLabel": null,
+  "isDefaultConfig": true,
+  "isBestConfig": true,
+  "specSources": {
+    "paramsB": "https://z.ai/blog/glm-5.3-flash",
+    "releaseDate": "https://z.ai/blog/glm-5.3-flash",
+    "price": "https://benchlm.ai/model-updates/releases/august-2026"
+  },
+  "results": [
+    {
+      "benchmarkSlug": "terminal-bench-2",
+      "score": 84.3,
+      "source": "self-reported",
+      "sourceUrl": "https://z.ai/blog/glm-5.3-flash",
+      "evaluatedAt": "2026-08-26",
+      "notes": "Terminal Bench 2.1, official GLM-5.3-Flash comparison table; up from GLM-5.2's 81.0, approaching Claude Opus 4.8 (85.0)."
+    },
+    {
+      "benchmarkSlug": "deepswe",
+      "score": 63.4,
+      "source": "self-reported",
+      "sourceUrl": "https://z.ai/blog/glm-5.3-flash",
+      "evaluatedAt": "2026-08-26",
+      "notes": "DeepSWE v1.1, official GLM-5.3-Flash comparison table; 46.2 → 63.4 over GLM-5.2 and ahead of Claude Opus 4.8 (58.0) at a fraction of the price."
+    },
+    {
+      "benchmarkSlug": "nl2repo",
+      "score": 56.3,
+      "source": "self-reported",
+      "sourceUrl": "https://z.ai/blog/glm-5.3-flash",
+      "evaluatedAt": "2026-08-26",
+      "notes": "NL2Repo, official GLM-5.3-Flash comparison table; behind DeepSeek-V4-Vision-Exp (57.7) and Claude Opus 4.8 (69.7)."
+    },
+    {
+      "benchmarkSlug": "toolathlon",
+      "score": 78.4,
+      "source": "self-reported",
+      "sourceUrl": "https://z.ai/blog/glm-5.3-flash",
+      "evaluatedAt": "2026-08-26",
+      "notes": "Toolathlon Verified, official GLM-5.3-Flash comparison table; best in row ahead of Claude Opus 4.8 (76.2) and GPT-5.6 Terra (74.9)."
+    },
+    {
+      "benchmarkSlug": "automationbench",
+      "score": 48.8,
+      "source": "self-reported",
+      "sourceUrl": "https://z.ai/blog/glm-5.3-flash",
+      "evaluatedAt": "2026-08-26",
+      "notes": "AutomationBench v1.0.6, official GLM-5.3-Flash comparison table; 26.2 → 48.8 over GLM-5.2, behind Gemini 3.7 Flash (52.3 in Z.ai's table)."
+    },
+    {
+      "benchmarkSlug": "gdpval-aa",
+      "score": 1773,
+      "source": "self-reported",
+      "sourceUrl": "https://z.ai/blog/glm-5.3-flash",
+      "evaluatedAt": "2026-08-26",
+      "notes": "GDPval-AA v2 Elo, official GLM-5.3-Flash comparison table; best in row by a wide margin over Claude Opus 4.8 (1582) and GPT-5.6 Terra (1571) — a striking claim for a Flash-tier model, and vendor-run."
+    },
+    {
+      "benchmarkSlug": "hle",
+      "score": 55.3,
+      "source": "self-reported",
+      "sourceUrl": "https://z.ai/blog/glm-5.3-flash",
+      "evaluatedAt": "2026-08-26",
+      "notes": "Humanity's Last Exam, WITH-tools full set (GPT-5.6-luna medium as judge, 300K context management), official GLM-5.3-Flash comparison table; just behind Claude Opus 4.8 (57.9)."
+    },
+    {
+      "benchmarkSlug": "charxiv",
+      "score": 89.4,
+      "source": "self-reported",
+      "sourceUrl": "https://z.ai/blog/glm-5.3-flash",
+      "evaluatedAt": "2026-08-26",
+      "notes": "CharXiv Reasoning with tools, official GLM-5.3-Flash comparison table; effectively level with Claude Opus 4.8 (89.9)."
+    }
+  ]
+}

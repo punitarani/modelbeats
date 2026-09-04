@@ -1,0 +1,176 @@
+{
+  "name": "GPT-6 Astra",
+  "org": "OpenAI",
+  "orgSlug": "openai",
+  "family": "GPT-6",
+  "familySlug": "gpt-6",
+  "slug": "gpt-6-astra",
+  "releaseDate": "2026-09-03",
+  "status": "released",
+  "openness": "closed",
+  "license": "Proprietary",
+  "paramsB": null,
+  "activeParamsB": null,
+  "archClass": "dense",
+  "archDisplay": "Proprietary frontier reasoning model (architecture and size undisclosed); 1.05M-token context, text+image in / text out, five selectable reasoning efforts (low → max)",
+  "ctxK": 1050,
+  "modalities": [
+    "text",
+    "vision"
+  ],
+  "langCount": null,
+  "capabilities": {
+    "reasoning": true,
+    "coding": true,
+    "vision": true,
+    "functionCalling": true,
+    "toolUse": true,
+    "agentic": true
+  },
+  "apiAvailable": true,
+  "price": {
+    "input": 10,
+    "output": 50,
+    "provider": "OpenAI"
+  },
+  "links": {
+    "docs": "https://developers.openai.com/api/docs/models/gpt-6-astra"
+  },
+  "note": "OpenAI's first GPT-6-generation model, launched September 3, 2026 as `gpt-6-astra` after a month of staged safety disclosure: previewed August 1 through ten solved open mathematics problems, then confirmed on September 1 as the first model OpenAI has ever classified **Critical** for cybersecurity under its Preparedness Framework (it can find and weaponise zero-days in hardened targets without human direction). Rolling out first to enterprises in the Trusted Access Program, with API, Plus, Pro, Business and Enterprise access following; advanced offensive-cyber capability stays gated behind Daybreak Blue. $10/$50 per Mtok (cached input $1.00, cache writes $12.50; >272K-token prompts billed at 2x input / 1.5x output; Fast mode 2x at up to 2.5x speed), 1,050,000-token context, 128K max output, April 30 2026 knowledge cutoff. PROVENANCE CAVEATS — every recorded row is OpenAI-run at maximum effort, and OpenAI does not say whether standard users can select that effort. Two headline claims are deliberately NOT recorded here: the ARC-AGI-3 99.9% (run through a Responses-API harness that retains reasoning across turns and compacts context — OpenAI has itself shown those settings can triple ARC-AGI-3 scores without changing the model, so the number measures the agent system; the public ARC Prize leaderboard's best result is Claude Opus 5 at ~30.2%, and the viral 98.6%/99.9% figures were flagged as unverified by third-party coverage) and the FrontierMath Tier 4 98% saturation claim (no independent corroboration). Its DeepSWE lead is also narrower than the launch chart suggests: OpenAI's own chart omits Muse Spark 1.3, which reports 75.4% against Astra's 74.1%.",
+  "quants": [],
+  "vramQ4Gb": null,
+  "vramFp16Gb": null,
+  "tps4090": null,
+  "tpsNote": null,
+  "effortLabel": null,
+  "isDefaultConfig": true,
+  "isBestConfig": true,
+  "specSources": {
+    "price": "https://developers.openai.com/api/docs/models/gpt-6-astra",
+    "releaseDate": "https://openai.com/index/gpt-6-astra",
+    "ctxK": "https://developers.openai.com/api/docs/models/gpt-6-astra",
+    "modalities": "https://developers.openai.com/api/docs/models/gpt-6-astra"
+  },
+  "results": [
+    {
+      "benchmarkSlug": "agents-last-exam",
+      "score": 59.3,
+      "source": "self-reported",
+      "sourceUrl": "https://openai.com/index/gpt-6-astra",
+      "evaluatedAt": "2026-09-03",
+      "notes": "Agents' Last Exam, GPT-6 Astra launch table (Computer Use section). Score component per corpus convention. New high in OpenAI's comparison, ahead of Claude Opus 5 (55.5) and GPT-5.6 Sol (53.6), while using ~65% fewer output tokens than Opus 5."
+    },
+    {
+      "benchmarkSlug": "automationbench",
+      "score": 41.4,
+      "source": "self-reported",
+      "sourceUrl": "https://openai.com/index/gpt-6-astra",
+      "evaluatedAt": "2026-09-03",
+      "notes": "AutomationBench, GPT-6 Astra launch table (Professional section); best in row, well clear of Claude Fable 5.1 (31.4)."
+    },
+    {
+      "benchmarkSlug": "terminal-bench-4",
+      "score": 57.7,
+      "source": "self-reported",
+      "sourceUrl": "https://openai.com/index/gpt-6-astra",
+      "evaluatedAt": "2026-09-03",
+      "notes": "Terminal-Bench 4.0, GPT-6 Astra launch table (Coding section); leads Claude Fable 5.1 (55.8) and Opus 5 (52.3)."
+    },
+    {
+      "benchmarkSlug": "terminal-bench-science",
+      "score": 64.6,
+      "source": "self-reported",
+      "sourceUrl": "https://openai.com/index/gpt-6-astra",
+      "evaluatedAt": "2026-09-03",
+      "notes": "Terminal-Bench Science 0.1, GPT-6 Astra launch table (Academic section). OpenAI reports 64.6% against Claude Fable 5.1's 52.6% at ~31% lower estimated API cost."
+    },
+    {
+      "benchmarkSlug": "frontiercode",
+      "score": 53.3,
+      "source": "self-reported",
+      "sourceUrl": "https://openai.com/index/gpt-6-astra",
+      "evaluatedAt": "2026-09-03",
+      "notes": "FrontierCode v1.1 Main set, GPT-6 Astra launch table. Ahead of GPT-5.6 Sol (47.5) but a hair behind Claude Fable 5 (53.5) and Opus 5 (53.4) — an honest non-SOTA row."
+    },
+    {
+      "benchmarkSlug": "frontiercode-extended",
+      "score": 64.5,
+      "source": "self-reported",
+      "sourceUrl": "https://openai.com/index/gpt-6-astra",
+      "evaluatedAt": "2026-09-03",
+      "notes": "FrontierCode v1.1 Extended set, GPT-6 Astra launch table; behind Claude Fable 5 (64.9)."
+    },
+    {
+      "benchmarkSlug": "gpqa",
+      "score": 96.0,
+      "source": "self-reported",
+      "sourceUrl": "https://openai.com/index/gpt-6-astra",
+      "evaluatedAt": "2026-09-03",
+      "notes": "GPQA Diamond, GPT-6 Astra launch table (Academic section); new high in OpenAI's comparison. At a lower-cost effort setting it still reports 94.9% vs Sol's best 94.6%."
+    },
+    {
+      "benchmarkSlug": "arc-agi-1",
+      "score": 98.5,
+      "source": "self-reported",
+      "sourceUrl": "https://openai.com/index/gpt-6-astra",
+      "evaluatedAt": "2026-09-03",
+      "notes": "ARC-AGI-1, GPT-6 Astra launch table (Abstract reasoning); ties Claude Fable 5's 98.5."
+    },
+    {
+      "benchmarkSlug": "arc-agi-2",
+      "score": 95.0,
+      "source": "self-reported",
+      "sourceUrl": "https://openai.com/index/gpt-6-astra",
+      "evaluatedAt": "2026-09-03",
+      "notes": "ARC-AGI-2, GPT-6 Astra launch table; best in row ahead of GPT-5.6 Sol (92.5) and Claude Opus 5 (90.4)."
+    },
+    {
+      "benchmarkSlug": "screenspot-pro",
+      "score": 92.7,
+      "source": "self-reported",
+      "sourceUrl": "https://openai.com/index/gpt-6-astra",
+      "evaluatedAt": "2026-09-03",
+      "notes": "ScreenSpot-Pro (no tools), GPT-6 Astra launch table (Computer Use); vs GPT-5.6 Sol 76.9 and Claude Fable 5 87.3."
+    },
+    {
+      "benchmarkSlug": "mrcr-v2-8n-256k",
+      "score": 100.0,
+      "source": "self-reported",
+      "sourceUrl": "https://openai.com/index/gpt-6-astra",
+      "evaluatedAt": "2026-09-03",
+      "notes": "OpenAI MRCR v2 8-needle, 256K-512K band, GPT-6 Astra launch table — saturated, vs GPT-5.6 Sol 91.5."
+    },
+    {
+      "benchmarkSlug": "mrcr-v2-8n-1m",
+      "score": 96.3,
+      "source": "self-reported",
+      "sourceUrl": "https://openai.com/index/gpt-6-astra",
+      "evaluatedAt": "2026-09-03",
+      "notes": "OpenAI MRCR v2 8-needle, 512K-1M band, GPT-6 Astra launch table; vs GPT-5.6 Sol 73.8. Meta reports 98.1 for Muse Spark 1.3 on the same band."
+    },
+    {
+      "benchmarkSlug": "exploitbench",
+      "score": 100.0,
+      "source": "self-reported",
+      "sourceUrl": "https://openai.com/index/path-to-astra/",
+      "evaluatedAt": "2026-09-01",
+      "notes": "ExploitBench, perfect score reported in OpenAI's 'Path to Astra' preparedness post — the result that, with expert-led browser and OS compromise assessments, put Astra over the Critical cybersecurity threshold. Measured with Daybreak Blue access, not the default production configuration; OpenAI itself flags public-set contamination and built a private June-August 2026 port in response."
+    },
+    {
+      "benchmarkSlug": "sre-bench",
+      "score": 88.0,
+      "source": "self-reported",
+      "sourceUrl": "https://openai.com/index/gpt-6-astra",
+      "evaluatedAt": "2026-09-03",
+      "notes": "SRE-Bench (binary reverse engineering), pass@1 in a single attempt; 99.2% within four attempts, vs GPT-5.6 Sol's 55.9 / 68.7."
+    },
+    {
+      "benchmarkSlug": "benchcad",
+      "score": 95.9,
+      "source": "self-reported",
+      "sourceUrl": "https://openai.com/index/gpt-6-astra",
+      "evaluatedAt": "2026-09-03",
+      "notes": "BenchCAD Vision2Code 1,000-file subset with Python tools, geometric-overlap score; vs GPT-5.6 Sol 83.3 and a reported 84.3 for Claude Fable 5.1."
+    }
+  ]
+}

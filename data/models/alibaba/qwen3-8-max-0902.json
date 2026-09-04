@@ -1,0 +1,47 @@
+{
+  "slug": "qwen3-8-max-0902",
+  "name": "Qwen3.8-Max-0902",
+  "orgSlug": "alibaba",
+  "familySlug": "qwen3-8",
+  "releaseDate": "2026-09-02",
+  "status": "released",
+  "predecessor": "qwen3-8-max",
+  "openness": "closed",
+  "license": "Proprietary hosted snapshot (the August Qwen3.8-Max weights are published; this refresh is API-only)",
+  "paramsB": 2400,
+  "activeParamsB": 95,
+  "archClass": "moe",
+  "archDisplay": "Post-trained refresh of the Qwen3.8-Max checkpoint — same 2.4T total / ~95B active sparse MoE underneath, 1M-token context, thinking mode and the full built-in tool ecosystem retained",
+  "ctxK": 1000,
+  "modalities": [
+    "text",
+    "vision",
+    "video"
+  ],
+  "langCount": null,
+  "capabilities": {
+    "reasoning": true,
+    "coding": true,
+    "vision": true,
+    "functionCalling": true,
+    "toolUse": true,
+    "agentic": true
+  },
+  "apiAvailable": true,
+  "price": {
+    "input": 2,
+    "output": 6
+  },
+  "links": {
+    "docs": "https://www.qwencloud.com/models/qwen3.8-max-0902"
+  },
+  "note": "A September 2, 2026 post-training snapshot of Qwen3.8-Max (alias `qwen3.8-max-2026-09-02`), not a new model underneath — Alibaba's own changelog describes deeper coding on engineering-scale projects, stronger multi-tool orchestration and refined chart/document/multimodal perception, with the 1M context, thinking mode and tool ecosystem unchanged. Pricing is unchanged at $2/$6 per Mtok ($0.25 cached). The bare `qwen3.8-max` endpoint transitions to this snapshot on September 5, 2026 at the same rates. Only three rows are recorded: Alibaba published a release chart rather than a full comparison table, and its own framing is that the strongest evidence is the snapshot-over-snapshot improvement rather than a clean cross-lab ranking, since the comparison models are run under different harnesses. Recorded values come from BenchmarkList's transcription of that chart, which links the QwenCloud model page and the Alibaba_Qwen launch post as its sources. READ ITS RANK WITH THAT IN MIND: three rows across two categories is exactly the D20 coverage floor, and all three are vendor-chosen rows on which the snapshot does well, so its overall position rests on far thinner evidence than the models around it. It should move once a fuller comparison table or an independent evaluation lands.",
+  "quants": [],
+  "vramQ4Gb": null,
+  "vramFp16Gb": null,
+  "tps4090": null,
+  "tpsNote": null,
+  "effortLabel": null,
+  "isDefaultConfig": true,
+  "isBestConfig": true
+}

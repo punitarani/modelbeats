@@ -1,0 +1,59 @@
+{
+  "name": "Gemini 3.8 Flash Cyber",
+  "org": "Google",
+  "orgSlug": "google",
+  "family": "Gemini 3.8",
+  "familySlug": "gemini-3-8",
+  "slug": "gemini-3-8-flash-cyber",
+  "releaseDate": "2026-09-02",
+  "status": "released",
+  "openness": "closed",
+  "license": "Proprietary (Fairwind Program trusted-defender access)",
+  "paramsB": null,
+  "activeParamsB": null,
+  "archClass": "moe",
+  "archDisplay": "The Gemini 3.8 Flash core specialised for defensive cybersecurity, served under a separate access envelope; same Flash-tier speed and cost profile",
+  "ctxK": 1000,
+  "modalities": [
+    "text",
+    "vision",
+    "audio",
+    "video"
+  ],
+  "langCount": null,
+  "capabilities": {
+    "reasoning": true,
+    "coding": true,
+    "vision": true,
+    "functionCalling": true,
+    "toolUse": true,
+    "agentic": true
+  },
+  "apiAvailable": false,
+  "price": null,
+  "links": {
+    "docs": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/3-8-flash-and-3-8-flash-cyber/"
+  },
+  "note": "Released alongside Gemini 3.8 Flash on September 2, 2026 for trusted defenders through Google's new Fairwind Program — one core model, two access envelopes. Google reports frontier-level autonomous vulnerability discovery on CyberGym, surpassing both 3.5 Flash Cyber and significantly larger frontier models, plus an internal benchmark spanning 20+ languages built because CyberGym is C/C++-only; neither carries a published numeral, so neither is recorded. The one citable number is CWE-Bench patching. Wiz separately reports +7.5-9.7% higher recall on its internal penetration-testing benchmark at 2.3-5.2x lower cost than other leading frontier models. No public per-token rate — access is program-gated, not self-serve — so the entry ships with a single result row and stays below the ranking-coverage floor.",
+  "quants": [],
+  "vramQ4Gb": null,
+  "vramFp16Gb": null,
+  "tps4090": null,
+  "tpsNote": null,
+  "effortLabel": null,
+  "isDefaultConfig": true,
+  "isBestConfig": true,
+  "specSources": {
+    "releaseDate": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/3-8-flash-and-3-8-flash-cyber/"
+  },
+  "results": [
+    {
+      "benchmarkSlug": "cwe-bench",
+      "score": 47.2,
+      "source": "self-reported",
+      "sourceUrl": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/3-8-flash-and-3-8-flash-cyber/",
+      "evaluatedAt": "2026-09-02",
+      "notes": "CWE-Bench automated patching, pass@1, run externally by Collinear and reported in Google's launch post. Google's own framing is Pareto-frontier rather than SOTA: 47.2 against a leading frontier model's 47.8, at significantly lower cost per rollout."
+    }
+  ]
+}

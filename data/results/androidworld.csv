@@ -1,0 +1,5 @@
+model_slug,score,source,source_url,evaluated_at,notes
+qwen3-6-27b,70.3,self-reported,https://huggingface.co/Qwen/Qwen3.8-27B,2026-08-05,"AndroidWorld, Qwen3.6-27B column of the official Qwen3.8-27B model card."
+qwen3-7-plus,81,self-reported,https://huggingface.co/Qwen/Qwen3.8-27B,2026-08-05,"AndroidWorld, Qwen3.7-Plus column of the official Qwen3.8-27B model card."
+qwen3-8-27b,81.9,self-reported,https://huggingface.co/Qwen/Qwen3.8-27B,2026-08-05,"AndroidWorld mobile use, official Qwen3.8-27B model card; best in row."
+qwen3-8-flash-next,84.5,self-reported,https://qwen.ai/blog?id=qwen3.8-flash-next,2026-08-26,"AndroidWorld mobile use, official Qwen3.8-Flash-Next model card."

@@ -1,0 +1,10 @@
+{
+  "slug": "terminal-bench-3",
+  "name": "Terminal-Bench 3.0",
+  "category": "agents",
+  "unit": "%",
+  "description": "Terminal-Bench 3.0 — the third-generation terminal-agent suite, a large step up in difficulty from 2.1 (frontier models score in the 20-35% range where they clear 85% on 2.1). General agent capability in a real shell, not coding alone.",
+  "normMin": 0,
+  "normMax": 45,
+  "higherIsBetter": true
+}

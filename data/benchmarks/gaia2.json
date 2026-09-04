@@ -1,0 +1,10 @@
+{
+  "slug": "gaia2",
+  "name": "GAIA2",
+  "category": "agents",
+  "unit": "%",
+  "description": "GAIA2 — second-generation general AI assistant benchmark: multi-step, tool-using real-world assistant tasks with verifiable answers.",
+  "normMin": 0,
+  "normMax": 60,
+  "higherIsBetter": true
+}

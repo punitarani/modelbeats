@@ -1,0 +1,4 @@
+model_slug,score,source,source_url,evaluated_at,notes
+qwen3-6-27b,48.8,self-reported,https://huggingface.co/Qwen/Qwen3.8-27B,2026-08-05,"WebArena-Verified, Qwen3.6-27B column of the official Qwen3.8-27B model card."
+qwen3-7-plus,55.3,self-reported,https://huggingface.co/Qwen/Qwen3.8-27B,2026-08-05,"WebArena-Verified, Qwen3.7-Plus column of the official Qwen3.8-27B model card."
+qwen3-8-27b,64.8,self-reported,https://huggingface.co/Qwen/Qwen3.8-27B,2026-08-05,"WebArena-Verified browser use (official grader under the OSWorld scaffold), official Qwen3.8-27B model card; best in row."

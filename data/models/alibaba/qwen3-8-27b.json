@@ -1,0 +1,43 @@
+{
+  "slug": "qwen3-8-27b",
+  "name": "Qwen3.8-27B",
+  "orgSlug": "alibaba",
+  "familySlug": "qwen3-8",
+  "releaseDate": "2026-08-05",
+  "status": "released",
+  "predecessor": null,
+  "openness": "open-weights",
+  "license": "Apache 2.0",
+  "paramsB": 27,
+  "activeParamsB": null,
+  "archClass": "hybrid",
+  "archDisplay": "27B dense causal LM with a vision encoder; 64 layers in a repeating 16 x (3 x (Gated DeltaNet → FFN) → 1 x (Gated Attention → FFN)) hybrid linear/full-attention stack, multi-token prediction, 262,144-token native context extensible to 1M",
+  "ctxK": 262,
+  "modalities": [
+    "text",
+    "vision"
+  ],
+  "langCount": null,
+  "capabilities": {
+    "reasoning": true,
+    "coding": true,
+    "vision": true,
+    "functionCalling": true,
+    "toolUse": true,
+    "agentic": true
+  },
+  "apiAvailable": false,
+  "price": null,
+  "links": {
+    "hf": "Qwen/Qwen3.8-27B"
+  },
+  "note": "The small open-weight sibling of Qwen3.8-Max, and the one that actually shipped under a permissive licence: Apache 2.0 with no revenue gate, against Qwen3.8-Max's separate-agreement requirement past US$50M of model-as-a-service revenue. RELEASE DATE CONFLICT: BenchLM records August 5, 2026 as an exact-day confirmation against the Hugging Face card, while Capital & Compute reports the weights landing August 14 after Alibaba pointed at the week of August 10; the earlier, primary-source-linked date is used here. A genuinely strong small model — it leads Qwen3.7-Plus (397B/17B) on SWE-bench Pro (61.7 vs 57.6), DeepSWE 1.1 (42.2 vs 14.2), CoWorkBench and JobBench, and posts 84.3 on OSWorld-Verified — while sitting behind it on GPQA Diamond and HLE. Vision rows use the without-code-interpreter setting where Qwen reports both. No first-party per-token API rate is published for this checkpoint, so no pricing row is filed.",
+  "quants": [],
+  "vramQ4Gb": null,
+  "vramFp16Gb": null,
+  "tps4090": null,
+  "tpsNote": null,
+  "effortLabel": null,
+  "isDefaultConfig": true,
+  "isBestConfig": true
+}

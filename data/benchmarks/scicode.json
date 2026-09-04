@@ -1,0 +1,10 @@
+{
+  "slug": "scicode",
+  "name": "SciCode",
+  "category": "coding",
+  "unit": "%",
+  "description": "SciCode — research-grade scientific coding problems drawn from published computational-science workflows, decomposed into subproblems a model must implement and pass.",
+  "normMin": 0,
+  "normMax": 55,
+  "higherIsBetter": true
+}

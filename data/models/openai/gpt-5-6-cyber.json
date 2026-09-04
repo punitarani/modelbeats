@@ -1,0 +1,46 @@
+{
+  "slug": "gpt-5-6-cyber",
+  "name": "GPT-5.6 Cyber",
+  "orgSlug": "openai",
+  "familySlug": "gpt-5-6",
+  "releaseDate": "2026-08-10",
+  "status": "released",
+  "predecessor": null,
+  "openness": "closed",
+  "license": "Proprietary",
+  "paramsB": null,
+  "activeParamsB": null,
+  "archClass": "dense",
+  "archDisplay": "GPT-5.6 Sol base, purpose-trained for dual-use cybersecurity work; 400K total context (272K max input / 128K max output), Responses API only",
+  "ctxK": 400,
+  "modalities": [
+    "text",
+    "vision"
+  ],
+  "langCount": null,
+  "capabilities": {
+    "reasoning": true,
+    "coding": true,
+    "vision": true,
+    "functionCalling": true,
+    "toolUse": true,
+    "agentic": true
+  },
+  "apiAvailable": true,
+  "price": {
+    "input": 12.5,
+    "output": 75
+  },
+  "links": {
+    "docs": "https://developers.openai.com/api/docs/models/gpt-5.6-cyber"
+  },
+  "note": "OpenAI's first purpose-trained cybersecurity SKU, released August 10, 2026 as `gpt-5.6-cyber` (alias `daybreak-red-latest`) when the Daybreak program split into two tiers: Daybreak Blue (frontier general models with defence-calibrated safeguards, alias pointing at GPT-5.6 Sol) and Daybreak Red (cyber specialists for authorized vulnerability research, exploit validation and security testing). Access is the product: approval, identity verification, legal attestation, monitoring, and — from September 1, 2026 — mandatory hardware security keys on individual accounts. $12.50/$1.25 cached/$75 per Mtok against Sol's $5/$0.50/$30, with a smaller 400K context and Chat Completions unsupported. Rated **High**, not Critical, on OpenAI's cyber preparedness scale (Astra later became the first Critical model). NO BENCHMARK ROWS ARE RECORDED: OpenAI published no numeric public benchmark table for this SKU, only directional claims (beats Sol on ExploitGym and internal zero-day work; LAGS Sol on vulnerability discovery and report writing; Sol is more token-efficient on ExploitBench 300-turn), plus a press-relayed internal figure of ~95% dual-use request completion vs ~1.5% for safeguarded Sol. Sol's general leaderboard scores are not this model's scores, and no independent evaluation exists yet — so the entry ships spec-only and stays unranked rather than borrowing numbers.",
+  "quants": [],
+  "vramQ4Gb": null,
+  "vramFp16Gb": null,
+  "tps4090": null,
+  "tpsNote": null,
+  "effortLabel": null,
+  "isDefaultConfig": true,
+  "isBestConfig": true
+}

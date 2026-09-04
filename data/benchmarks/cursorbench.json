@@ -1,0 +1,10 @@
+{
+  "slug": "cursorbench",
+  "name": "CursorBench",
+  "category": "coding",
+  "unit": "%",
+  "description": "CursorBench 3.2 — Cursor's independently-run agentic coding evaluation over real editor sessions. Reported by vendors from Cursor's runs rather than self-administered.",
+  "normMin": 0,
+  "normMax": 80,
+  "higherIsBetter": true
+}

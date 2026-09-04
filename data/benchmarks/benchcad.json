@@ -1,0 +1,10 @@
+{
+  "slug": "benchcad",
+  "name": "BenchCAD (Vision2Code)",
+  "category": "vision",
+  "unit": "%",
+  "description": "BenchCAD Vision2Code — reconstruct a CAD program from rendered views of a part; scored by geometric overlap of the resulting 3D model against the reference.",
+  "normMin": 0,
+  "normMax": 100,
+  "higherIsBetter": true
+}
