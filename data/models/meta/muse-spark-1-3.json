@@ -1,0 +1,48 @@
+{
+  "slug": "muse-spark-1-3",
+  "name": "Muse Spark 1.3",
+  "orgSlug": "meta",
+  "familySlug": "muse-spark",
+  "releaseDate": "2026-09-02",
+  "status": "released",
+  "predecessor": "muse-spark-1-2",
+  "openness": "closed",
+  "license": "Proprietary",
+  "paramsB": null,
+  "activeParamsB": null,
+  "archClass": "dense",
+  "archDisplay": "Proprietary multimodal reasoning model (undisclosed architecture); 1M-token context, trained across a diverse set of agent harnesses for long-horizon collaborative work",
+  "ctxK": 1000,
+  "modalities": [
+    "text",
+    "vision",
+    "audio",
+    "video"
+  ],
+  "langCount": null,
+  "capabilities": {
+    "reasoning": true,
+    "coding": true,
+    "vision": true,
+    "functionCalling": true,
+    "toolUse": true,
+    "agentic": true
+  },
+  "apiAvailable": true,
+  "price": {
+    "input": 1.25,
+    "output": 4.25
+  },
+  "links": {
+    "docs": "https://research.meta.ai/blog/introducing-muse-spark-1-3"
+  },
+  "note": "Meta's September 2, 2026 developer release in Muse Code and the Meta Model API — no consumer surface named. Pricing is unchanged since July at $1.25/$4.25 per Mtok with a 1M context, which is what makes it interesting: it posts frontier long-context and agentic-coding numbers at roughly an eighth of the Fable/Astra rate. Meta reports ~20% fewer tool calls and ~25% fewer tokens than 1.2 in its own engineers' use, and trained it to ask clarifying questions, invoke help when stuck and confirm before consequential actions. TWO CAVEATS THE LAUNCH TABLE DOES NOT MAKE OBVIOUS, both recorded here rather than papered over. First, the benchmarked configuration is Muse Spark 1.3 at MAX reasoning, which is still in limited preview pending safety testing; the generally-available build is xhigh, which Artificial Analysis scores 61 on Intelligence Index v4.1.1 against max's 62. Second, Meta's methodology states it ran 1.3, Claude Opus 5 and GPT-5.6 Sol at max but Muse Spark 1.2 at xhigh — so the eye-catching gains over its own predecessor are partly an effort-setting change that Meta does not break out, while the comparison against Opus 5 and Sol is like-for-like. The table also predates Claude Fable 5.1 by a day and omits Gemini 3.8 Flash, released the same day. On Meta's own scorecard it wins coding and long context and loses all six agent rows to Opus 5 or Sol. Terminal-Bench 2.1 pairs each model with its own coding-agent product rather than a common harness, so that row measures products, not models — noted per row. Its high overall position therefore describes the limited-preview max configuration, not the xhigh build a developer gets on the API today.",
+  "quants": [],
+  "vramQ4Gb": null,
+  "vramFp16Gb": null,
+  "tps4090": null,
+  "tpsNote": null,
+  "effortLabel": null,
+  "isDefaultConfig": true,
+  "isBestConfig": true
+}

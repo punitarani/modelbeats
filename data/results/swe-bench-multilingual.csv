@@ -1,4 +1,6 @@
 model_slug,score,source,source_url,evaluated_at,notes
-claude-fable-5,86.6,self-reported,https://www.anthropic.com/claude-opus-5-system-card,2026-07-24,"SWE-bench Multilingual competitor figure from the Claude Opus 5 System Card Table 8.1.A."
-claude-opus-4-8,84.4,self-reported,https://www.anthropic.com/claude-opus-5-system-card,2026-07-24,"SWE-bench Multilingual competitor figure from the Claude Opus 5 System Card Table 8.1.A."
+claude-fable-5,86.6,self-reported,https://www.anthropic.com/claude-opus-5-system-card,2026-07-24,SWE-bench Multilingual competitor figure from the Claude Opus 5 System Card Table 8.1.A.
+claude-fable-5-1,89.1,self-reported,https://www.anthropic.com/claude-fable-and-mythos-5-1,2026-09-01,"SWE-bench Multilingual, System Card Table 8.1.A; up from Fable 5's 86.6 but BEHIND Opus 5 (89.5)."
+claude-opus-4-8,84.4,self-reported,https://www.anthropic.com/claude-opus-5-system-card,2026-07-24,SWE-bench Multilingual competitor figure from the Claude Opus 5 System Card Table 8.1.A.
 claude-opus-5,89.5,self-reported,https://www.anthropic.com/claude-opus-5-system-card,2026-07-24,"SWE-bench Multilingual (300 problems, 9 languages), Claude Opus 5 System Card Table 8.1.A / §8.2. Best in row, ahead of Fable 5 (86.6) and Opus 4.8 (84.4)."
+qwen3-8-flash-next,81,self-reported,https://qwen.ai/blog?id=qwen3.8-flash-next,2026-08-26,"SWE-bench Multilingual (mini-SWE-agent harness), official model card; ahead of Claude Opus 4.6 Max (77.5), behind Claude Opus 5 (89.5)."

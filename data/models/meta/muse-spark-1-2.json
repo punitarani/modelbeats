@@ -1,0 +1,48 @@
+{
+  "slug": "muse-spark-1-2",
+  "name": "Muse Spark 1.2",
+  "orgSlug": "meta",
+  "familySlug": "muse-spark",
+  "releaseDate": "2026-08-05",
+  "status": "released",
+  "predecessor": "muse-spark-1-1-xhigh",
+  "openness": "closed",
+  "license": "Proprietary",
+  "paramsB": null,
+  "activeParamsB": null,
+  "archClass": "dense",
+  "archDisplay": "Proprietary multimodal reasoning model (undisclosed architecture), incremental update to Muse Spark 1.1",
+  "ctxK": 1000,
+  "modalities": [
+    "text",
+    "vision",
+    "audio",
+    "video"
+  ],
+  "langCount": null,
+  "capabilities": {
+    "reasoning": true,
+    "coding": true,
+    "vision": true,
+    "functionCalling": true,
+    "toolUse": true,
+    "agentic": true
+  },
+  "apiAvailable": true,
+  "price": {
+    "input": 1.25,
+    "output": 4.25
+  },
+  "links": {
+    "docs": "https://developer.meta.com/ai/models/muse-spark"
+  },
+  "note": "Meta's August 5, 2026 update to Muse Spark 1.1, same $1.25/$4.25 pricing and 1M-token context. CloudPrice also lists a separate, much cheaper 'Muse Spark 1.2 Contributor' SKU ($0.10/$0.20) active the same day. Meta's own developer.meta.com comparison table has an unlabeled 'Muse Spark' column next to 'Muse Spark 1.1' showing large regressions on several benchmarks (e.g. DeepSWE 10.0 vs. 1.1's 53.3, JobBench 17.0 vs. 54.7) alongside gains on others (MCP Atlas 82.2 vs. 78.2) — it is unclear whether that column reflects this $1.25/$4.25 flagship or the cheaper Contributor tier, so no per-benchmark results are filed here pending disambiguation; this entry is intentionally left unranked.",
+  "quants": [],
+  "vramQ4Gb": null,
+  "vramFp16Gb": null,
+  "tps4090": null,
+  "tpsNote": null,
+  "effortLabel": null,
+  "isDefaultConfig": true,
+  "isBestConfig": true
+}

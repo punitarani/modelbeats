@@ -1,0 +1,10 @@
+{
+  "slug": "jobbench",
+  "name": "JobBench",
+  "category": "agents",
+  "unit": "%",
+  "description": "JobBench — 65 professional tasks across 35 white-collar occupations, each asking the agent to produce a practical work product scored against task-specific rubrics. Mean rubric score.",
+  "normMin": 0,
+  "normMax": 75,
+  "higherIsBetter": true
+}

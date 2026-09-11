@@ -1,0 +1,47 @@
+{
+  "slug": "glm-5-3-flash",
+  "name": "GLM-5.3-Flash",
+  "orgSlug": "zhipu-ai-z-ai-tsinghua",
+  "familySlug": "glm-5",
+  "releaseDate": "2026-08-26",
+  "status": "released",
+  "predecessor": null,
+  "openness": "open-weights",
+  "license": "Weights published on Hugging Face (zai-org/GLM-5.3-flash); licence not named in the launch post",
+  "paramsB": 320,
+  "activeParamsB": 18,
+  "archClass": "hybrid",
+  "archDisplay": "Newly trained base: 320B total / 18B active sparse MoE with a hybrid sparse+linear attention stack, 45 layers (against GLM-5.3's 92) — 3.0x less attention compute and a 4.4x smaller KV cache than GLM-5.3. First natively multimodal model in the GLM-5 series",
+  "ctxK": 200,
+  "modalities": [
+    "text",
+    "vision"
+  ],
+  "langCount": null,
+  "capabilities": {
+    "reasoning": true,
+    "coding": true,
+    "vision": true,
+    "functionCalling": true,
+    "toolUse": true,
+    "agentic": true
+  },
+  "apiAvailable": true,
+  "price": {
+    "input": 0.14,
+    "output": 0.44
+  },
+  "links": {
+    "hf": "zai-org/GLM-5.3-flash",
+    "docs": "https://z.ai/blog/glm-5.3-flash"
+  },
+  "note": "Z.ai's August 26, 2026 Flash-tier model and the first natively multimodal GLM-5. A new base rather than a post-training refresh: 320B total / 18B active with hybrid sparse+linear attention, halving both active parameters and layer count against GLM-4.5's 355B/32B while beating GLM-5.2 across the board at about a tenth of the price. Z.ai places it on the Pareto frontier of Artificial Analysis Intelligence Index v4.1.1 at 57 for $0.045 per task (discounted) — a level previously available only at roughly 10x the cost. Notable for being served entirely on domestic Chinese AI chips, and for having been A/B-tested anonymously as `ox-alpha` on OpenCode and OpenRouter before launch. Pricing here is the published per-Mtok rate; peak/off-peak billing applies on the coding plan. Its HLE row (55.3) is the WITH-tools configuration and its CharXiv row is with tools, both noted per row. Agents' Last Exam is omitted for the same metric-incompatibility reason as GLM-5.3.",
+  "quants": [],
+  "vramQ4Gb": null,
+  "vramFp16Gb": null,
+  "tps4090": null,
+  "tpsNote": null,
+  "effortLabel": null,
+  "isDefaultConfig": true,
+  "isBestConfig": true
+}

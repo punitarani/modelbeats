@@ -1,0 +1,10 @@
+{
+  "slug": "harvey-legal-agent",
+  "name": "Harvey Legal Agent Benchmark",
+  "category": "agents",
+  "unit": "%",
+  "description": "Harvey's Legal Agent Benchmark (Vals AI) — complex, multi-step legal workflows scored by practising lawyers. Scores stay low in absolute terms: the frontier is in the teens.",
+  "normMin": 0,
+  "normMax": 25,
+  "higherIsBetter": true
+}

@@ -1,0 +1,46 @@
+{
+  "slug": "deepseek-v4-flash-0731",
+  "name": "DeepSeek-V4-Flash-0731",
+  "orgSlug": "deepseek",
+  "familySlug": "deepseek-v4",
+  "releaseDate": "2026-07-31",
+  "status": "released",
+  "predecessor": "deepseek-v4-flash-non-think",
+  "openness": "open-weights",
+  "license": "MIT",
+  "paramsB": 284,
+  "activeParamsB": 13,
+  "archClass": "moe",
+  "archDisplay": "Mixture-of-Experts (284B total / 13B active), hybrid Compressed Sparse Attention + Heavily Compressed Attention — retrained checkpoint of DeepSeek-V4-Flash on the same architecture",
+  "ctxK": 1000,
+  "modalities": [
+    "text"
+  ],
+  "langCount": null,
+  "capabilities": {
+    "reasoning": true,
+    "coding": true,
+    "vision": false,
+    "functionCalling": true,
+    "toolUse": true,
+    "agentic": true
+  },
+  "apiAvailable": true,
+  "price": {
+    "input": 0.14,
+    "output": 0.28
+  },
+  "links": {
+    "hf": "deepseek-ai/DeepSeek-V4-Flash-0731",
+    "docs": "https://api-docs.deepseek.com/quick_start/pricing/"
+  },
+  "note": "Retrained checkpoint of DeepSeek-V4-Flash published July 31, 2026, same 284B/13B architecture and API pricing as the April siblings. DeepSeek's own model card only reruns the launch-day agentic/coding table (Terminal-Bench 2.1, NL2Repo, CyberGym, DeepSWE) with an unreleased internal harness ('DeepSeek Harness'); general reasoning/knowledge benchmarks were not rerun and still carry April Preview values, so this row is coding/agentic-only evidence, not a full refresh.",
+  "quants": [],
+  "vramQ4Gb": null,
+  "vramFp16Gb": null,
+  "tps4090": null,
+  "tpsNote": null,
+  "effortLabel": null,
+  "isDefaultConfig": true,
+  "isBestConfig": true
+}

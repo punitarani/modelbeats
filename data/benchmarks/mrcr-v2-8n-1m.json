@@ -1,0 +1,10 @@
+{
+  "slug": "mrcr-v2-8n-1m",
+  "name": "MRCR v2 8-needle (512K-1M)",
+  "category": "reasoning",
+  "unit": "%",
+  "description": "OpenAI MRCR v2, 8-needle variant, 512K-1M token band — the harder long-context retrieval band, where scores separated sharply through 2026.",
+  "normMin": 0,
+  "normMax": 100,
+  "higherIsBetter": true
+}

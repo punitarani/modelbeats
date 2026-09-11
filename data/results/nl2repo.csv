@@ -1,0 +1,7 @@
+model_slug,score,source,source_url,evaluated_at,notes
+glm-5-3,58,self-reported,https://z.ai/blog/glm-5.3,2026-08-14,"NL2Repo, official GLM-5.3 comparison table; level with Kimi K3 (58.0), behind DeepSeek-V4-Pro-0813 (61.1) and Claude Opus 4.8 (69.7)."
+glm-5-3-flash,56.3,self-reported,https://z.ai/blog/glm-5.3-flash,2026-08-26,"NL2Repo, official GLM-5.3-Flash comparison table; behind DeepSeek-V4-Vision-Exp (57.7) and Claude Opus 4.8 (69.7)."
+qwen3-6-27b,36.2,self-reported,https://huggingface.co/Qwen/Qwen3.8-27B,2026-08-05,"NL2Repo-Bench, Qwen3.6-27B column of the official Qwen3.8-27B model card."
+qwen3-7-plus,41.1,self-reported,https://huggingface.co/Qwen/Qwen3.8-27B,2026-08-05,"NL2Repo-Bench, Qwen3.7-Plus column of the official Qwen3.8-27B model card."
+qwen3-8-27b,42.3,self-reported,https://huggingface.co/Qwen/Qwen3.8-27B,2026-08-05,"NL2Repo-Bench, official Qwen3.8-27B model card; behind Claude Opus 4.6 Max (47.6)."
+qwen3-8-flash-next,48.1,self-reported,https://qwen.ai/blog?id=qwen3.8-flash-next,2026-08-26,"NL2Repo-Bench (Claude Code harness with repository-fetch commands disabled to prevent reward hacking), official model card."

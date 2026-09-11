@@ -1,0 +1,94 @@
+{
+  "name": "Muse Spark 1.2",
+  "org": "Meta",
+  "family": "Muse Spark",
+  "releaseDate": "2026-08-05",
+  "status": "released",
+  "openness": "closed",
+  "license": "Proprietary",
+  "paramsB": null,
+  "activeParamsB": null,
+  "archClass": "dense",
+  "archDisplay": "Proprietary multimodal reasoning model (undisclosed architecture), incremental update to Muse Spark 1.1",
+  "ctxK": 1000,
+  "modalities": ["text", "vision", "audio", "video"],
+  "langCount": null,
+  "capabilities": {
+    "reasoning": true,
+    "coding": true,
+    "vision": true,
+    "functionCalling": true,
+    "toolUse": true,
+    "agentic": true
+  },
+  "apiAvailable": true,
+  "price": { "input": 1.25, "output": 4.25, "provider": "Meta" },
+  "links": {
+    "docs": "https://developer.meta.com/ai/models/muse-spark"
+  },
+  "note": "Meta's August 5, 2026 update to Muse Spark 1.1, same $1.25/$4.25 pricing and 1M-token context. CloudPrice also lists a separate, much cheaper 'Muse Spark 1.2 Contributor' SKU ($0.10/$0.20) active the same day. Meta's own comparison table has an unlabeled 'Muse Spark' column next to 'Muse Spark 1.1' showing large regressions on several benchmarks (e.g. DeepSWE 10.0 vs. 1.1's 53.3, JobBench 17.0 vs. 54.7) alongside gains on others (MCP Atlas 82.2 vs. 78.2) — it is unclear whether that column reflects this $1.25/$4.25 flagship or the cheaper Contributor tier, so results below are recorded for the research trail but NOT ported to /data pending disambiguation.",
+  "quants": [],
+  "vramQ4Gb": null,
+  "vramFp16Gb": null,
+  "tps4090": null,
+  "tpsNote": null,
+  "effortLabel": null,
+  "isDefaultConfig": true,
+  "isBestConfig": true,
+  "specSources": {
+    "price": "https://cloudprice.net/models/meta-muse-spark-1-2",
+    "releaseDate": "https://cloudprice.net/models/meta-muse-spark-1-2",
+    "modalities": "https://cloudprice.net/models/meta-muse-spark-1-2"
+  },
+  "results": [
+    {
+      "benchmarkSlug": "mcp-atlas",
+      "score": 82.2,
+      "source": "self-reported",
+      "sourceUrl": "https://developer.meta.com/ai/models/muse-spark",
+      "notes": "MCP Atlas, official Meta comparison table, unlabeled 'Muse Spark' column (ambiguous SKU attribution — see model note)."
+    },
+    {
+      "benchmarkSlug": "osworld-verified",
+      "score": 53.3,
+      "source": "self-reported",
+      "sourceUrl": "https://developer.meta.com/ai/models/muse-spark",
+      "notes": "OSWorld-Verified, official Meta comparison table, unlabeled 'Muse Spark' column (ambiguous SKU attribution — see model note); down from 1.1's 80.8."
+    },
+    {
+      "benchmarkSlug": "hle",
+      "score": 50.4,
+      "source": "self-reported",
+      "sourceUrl": "https://developer.meta.com/ai/models/muse-spark",
+      "notes": "Humanity's Last Exam (w/ tools), official Meta comparison table, unlabeled 'Muse Spark' column (ambiguous SKU attribution — see model note)."
+    },
+    {
+      "benchmarkSlug": "terminal-bench-2",
+      "score": 67.3,
+      "source": "self-reported",
+      "sourceUrl": "https://developer.meta.com/ai/models/muse-spark",
+      "notes": "Terminal-Bench 2.1, official Meta comparison table, unlabeled 'Muse Spark' column (ambiguous SKU attribution — see model note); down from 1.1's 80.0."
+    },
+    {
+      "benchmarkSlug": "swe-bench-pro",
+      "score": 55,
+      "source": "self-reported",
+      "sourceUrl": "https://developer.meta.com/ai/models/muse-spark",
+      "notes": "SWE-Bench Pro, official Meta comparison table, unlabeled 'Muse Spark' column (ambiguous SKU attribution — see model note)."
+    },
+    {
+      "benchmarkSlug": "deepswe",
+      "score": 10,
+      "source": "self-reported",
+      "sourceUrl": "https://developer.meta.com/ai/models/muse-spark",
+      "notes": "DeepSWE 1.1, official Meta comparison table, unlabeled 'Muse Spark' column (ambiguous SKU attribution — see model note); sharply down from 1.1's 53.3."
+    },
+    {
+      "benchmarkSlug": "charxiv",
+      "score": 88.9,
+      "source": "self-reported",
+      "sourceUrl": "https://developer.meta.com/ai/models/muse-spark",
+      "notes": "CharXiv Reasoning, official Meta comparison table, unlabeled 'Muse Spark' column (ambiguous SKU attribution — see model note)."
+    }
+  ]
+}

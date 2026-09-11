@@ -1,0 +1,87 @@
+{
+  "name": "Inkling-Small",
+  "org": "Thinking Machines Lab",
+  "family": "Inkling",
+  "releaseDate": "2026-07-30",
+  "status": "released",
+  "openness": "open-weights",
+  "license": "Apache 2.0",
+  "paramsB": 276,
+  "activeParamsB": 12,
+  "archClass": "moe",
+  "archDisplay": "Sparse MoE, 276B total / 12B active (roughly a quarter of Inkling's size), same text/vision/audio multimodal design and adjustable inference-time thinking effort as its larger sibling",
+  "ctxK": 1000,
+  "modalities": ["text", "vision", "audio"],
+  "langCount": null,
+  "capabilities": {
+    "reasoning": true,
+    "coding": true,
+    "vision": true,
+    "functionCalling": true,
+    "toolUse": true,
+    "agentic": true
+  },
+  "apiAvailable": true,
+  "price": { "input": 0.58, "output": 1.44, "provider": "Thinking Machines Lab" },
+  "links": {
+    "hf": "thinkingmachines/Inkling-Small",
+    "docs": "https://thinkingmachines.ai/model-card/inkling-small"
+  },
+  "note": "Thinking Machines Lab's second open-weight release, two weeks after flagship Inkling: a quarter-sized MoE (276B/12B active vs. 975B/41B) that the model card says matches Inkling on many benchmarks at lower cost and latency.",
+  "quants": [],
+  "vramQ4Gb": null,
+  "vramFp16Gb": null,
+  "tps4090": null,
+  "tpsNote": null,
+  "effortLabel": null,
+  "isDefaultConfig": true,
+  "isBestConfig": true,
+  "specSources": {
+    "paramsB": "https://thinkingmachines.ai/model-card/inkling-small",
+    "activeParamsB": "https://thinkingmachines.ai/model-card/inkling-small",
+    "price": "https://benchlm.ai/models/inkling-small",
+    "releaseDate": "https://thinkingmachines.ai/model-card/inkling-small"
+  },
+  "results": [
+    {
+      "benchmarkSlug": "swe-bench",
+      "score": 80.2,
+      "source": "self-reported",
+      "sourceUrl": "https://thinkingmachines.ai/model-card/inkling-small",
+      "evaluatedAt": "2026-07-30",
+      "notes": "SWE-bench Verified, official Inkling-Small model card evaluation table."
+    },
+    {
+      "benchmarkSlug": "swe-bench-pro",
+      "score": 55.9,
+      "source": "self-reported",
+      "sourceUrl": "https://thinkingmachines.ai/model-card/inkling-small",
+      "evaluatedAt": "2026-07-30",
+      "notes": "SWE-bench Pro (public split), official Inkling-Small model card evaluation table."
+    },
+    {
+      "benchmarkSlug": "mmmu-pro",
+      "score": 74,
+      "source": "self-reported",
+      "sourceUrl": "https://thinkingmachines.ai/model-card/inkling-small",
+      "evaluatedAt": "2026-07-30",
+      "notes": "MMMU-Pro, official Inkling-Small model card evaluation table."
+    },
+    {
+      "benchmarkSlug": "charxiv",
+      "score": 81.3,
+      "source": "self-reported",
+      "sourceUrl": "https://thinkingmachines.ai/model-card/inkling-small",
+      "evaluatedAt": "2026-07-30",
+      "notes": "CharXiv Reasoning (with tools), official Inkling-Small model card evaluation table."
+    },
+    {
+      "benchmarkSlug": "ifbench",
+      "score": 82.2,
+      "source": "self-reported",
+      "sourceUrl": "https://thinkingmachines.ai/model-card/inkling-small",
+      "evaluatedAt": "2026-07-30",
+      "notes": "IFBench, official Inkling-Small model card evaluation table."
+    }
+  ]
+}

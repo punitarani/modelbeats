@@ -10,7 +10,7 @@ test.describe('model explorer', () => {
     // JS-computed summary count above plus the always-rendered top row, not a raw card count.
     // Rank-eligible models sort first (D20), so the #1 card is the frontier leader, not a
     // single-benchmark curiosity.
-    await expect(page.getByTestId('explorer-card').first()).toContainText('Claude Opus 5')
+    await expect(page.getByTestId('explorer-card').first()).toContainText('GPT-6 Astra')
   })
 
   test('runs-on-my-hardware facet applies the curated 1.08× rule', async ({ page }) => {
@@ -31,8 +31,8 @@ test.describe('model explorer', () => {
 
   test('deep-linked facets restore on load (URL round-trip)', async ({ page }) => {
     await gotoHydrated(page, '/models?open=open&size=s&caps=reason')
-    // real corpus: 19 open, <15B-param models with the reasoning capability
-    await expect(page.getByTestId('explorer-count')).toHaveText('19 models')
+    // real corpus: 20 open, <15B-param models with the reasoning capability
+    await expect(page.getByTestId('explorer-count')).toHaveText('20 models')
     await expect(page.getByTestId('cap-reason')).toHaveAttribute('aria-pressed', 'true')
     // default sort is by Elo (rank-eligible first) — Falcon-H1R 7B leads this facet combo
     await expect(page.getByTestId('explorer-card').first()).toContainText('Falcon-H1R 7B')

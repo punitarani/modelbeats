@@ -2,7 +2,7 @@ import { expect, test } from '@playwright/test'
 import { datasetCounts, gotoHydrated, pickOption } from './helpers'
 
 test.describe('rankings', () => {
-  test('default view: rank-eligible rows sorted by Elo, Claude Opus 5 first', async ({ page }) => {
+  test('default view: rank-eligible rows sorted by Elo, GPT-6 Astra first', async ({ page }) => {
     const { models } = datasetCounts()
     await gotoHydrated(page, '/rankings')
     await expect(page.getByTestId('rankings-meta')).toContainText(
@@ -11,8 +11,8 @@ test.describe('rankings', () => {
     // the coverage gate (D20) keeps single-benchmark curiosities (Doubao) out of the top; the
     // #1 row is the broadly-benchmarked frontier leader (Frontier Elo, D21)
     const first = page.getByTestId('ranking-row').first()
-    await expect(first).toContainText('Claude Opus 5')
-    await expect(first).toContainText('3290.9')
+    await expect(first).toContainText('GPT-6 Astra')
+    await expect(first).toContainText('3305.4')
   })
 
   test('column sort click mutates URL and reorders rows', async ({ page }) => {
@@ -24,9 +24,12 @@ test.describe('rankings', () => {
       await page.getByTestId('sort-gpqa').click()
       await expect(page).toHaveURL(/sort=-gpqa/, { timeout: 2000 })
     }).toPass({ timeout: 15_000 })
-    // GPQA Diamond's leader is GPT-5.6 Sol (94.6), so sorting by GPQA moves it above the
-    // Elo leader (Claude Opus 5, which reports no GPQA) — the sort both mutates the URL and reorders the rows
-    await expect(page.getByTestId('ranking-row').first()).toContainText('GPT-5.6')
+    // GPQA Diamond's leader (GPT-6 Astra, 96.0) also happens to lead on Elo, so the reorder
+    // shows in the SECOND row: under Elo it is Muse Spark 1.3 (no GPQA score at all), under
+    // GPQA it is GPT-5.6 Sol (94.6). The sort both mutates the URL and reorders the rows.
+    const sorted = page.getByTestId('ranking-row')
+    await expect(sorted.first()).toContainText('GPT-6 Astra')
+    await expect(sorted.nth(1)).toContainText('GPT-5.6 Sol')
     // second click flips to ascending
     await page.getByTestId('sort-gpqa').click()
     await expect(page).toHaveURL(/sort=gpqa/, { timeout: 10_000 })
@@ -50,7 +53,7 @@ test.describe('rankings', () => {
     await gotoHydrated(page, '/rankings')
     await pickOption(page, 'rankings-org', 'Anthropic')
     await expect(page).toHaveURL(/org=anthropic/)
-    await expect(page.getByTestId('rankings-meta')).toContainText('26 models')
+    await expect(page.getByTestId('rankings-meta')).toContainText('28 models')
   })
 
   test('category param filters benchmark columns; bogus category 404s', async ({ page }) => {

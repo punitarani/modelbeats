@@ -1,0 +1,5 @@
+model_slug,score,source,source_url,evaluated_at,notes
+claude-opus-5,54.4,self-reported,https://blog.google/innovation-and-ai/models-and-research/gemini-models/3-8-flash-and-3-8-flash-cyber/,2026-09-02,"HLE-Verified, Claude Opus 5 column of Google's Gemini 3.8 Flash launch table."
+gemini-3-7-flash,53.6,self-reported,https://blog.google/innovation-and-ai/models-and-research/gemini-models/3-8-flash-and-3-8-flash-cyber/,2026-09-02,"HLE-Verified, 3.7 Flash baseline column of Google's Gemini 3.8 Flash launch table."
+gemini-3-8-flash,54.9,self-reported,https://blog.google/innovation-and-ai/models-and-research/gemini-models/3-8-flash-and-3-8-flash-cyber/,2026-09-02,"HLE-Verified, stated in the launch post's prose as well as the table; best in row but the field is tightly bunched (Opus 5 54.4, GPT-5.6 Sol 54.5, 3.7 Flash 53.6)."
+gpt-5-6-sol,54.5,self-reported,https://blog.google/innovation-and-ai/models-and-research/gemini-models/3-8-flash-and-3-8-flash-cyber/,2026-09-02,"HLE-Verified, GPT-5.6 Sol column of Google's Gemini 3.8 Flash launch table."

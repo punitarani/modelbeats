@@ -1,0 +1,5 @@
+model_slug,score,source,source_url,evaluated_at,notes
+gpt-5-6-sol,73.8,self-reported,https://research.meta.ai/blog/introducing-muse-spark-1-3,2026-09-02,"OpenAI MRCR v2 8-needle 512K-1M, GPT-5.6 Sol column of Meta's Muse Spark 1.3 launch scorecard; OpenAI's own GPT-6 Astra table records the same 73.8."
+gpt-6-astra,96.3,self-reported,https://openai.com/index/gpt-6-astra,2026-09-03,"OpenAI MRCR v2 8-needle, 512K-1M band, GPT-6 Astra launch table; vs GPT-5.6 Sol 73.8. Meta reports 98.1 for Muse Spark 1.3 on the same band."
+muse-spark-1-2,55.5,self-reported,https://research.meta.ai/blog/introducing-muse-spark-1-3,2026-09-02,"OpenAI MRCR v2 8-needle 512K-1M, Muse Spark 1.2 baseline column (xhigh) of Meta's Muse Spark 1.3 launch scorecard."
+muse-spark-1-3,98.1,self-reported,https://research.meta.ai/blog/introducing-muse-spark-1-3,2026-09-02,"MRCR v2 8-needle, 512K-1M band, Meta launch scorecard — the launch's most striking number: 55.5 → 98.1 over Muse Spark 1.2, against GPT-5.6 Sol's 73.8. Claude Opus 5 has no published score in either band. This is retrieval from context, not general long-context reasoning."

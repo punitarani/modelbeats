@@ -1,0 +1,3 @@
+model_slug,score,source,source_url,evaluated_at,notes
+muse-glimmer-30b,43.6,self-reported,https://huggingface.co/meta-models/Muse-Glimmer-30B,2026-08-10,"SciCode, official Muse Glimmer model card; best in row, narrowly over Gemma4-31B (43.4)."
+qwen3-6-27b,39.8,self-reported,https://huggingface.co/meta-models/Muse-Glimmer-30B,2026-08-10,"SciCode, Qwen3.6-27B thinking-mode column of the official Muse Glimmer 30B model card."

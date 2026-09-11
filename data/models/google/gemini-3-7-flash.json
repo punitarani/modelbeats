@@ -1,0 +1,48 @@
+{
+  "slug": "gemini-3-7-flash",
+  "name": "Gemini 3.7 Flash",
+  "orgSlug": "google",
+  "familySlug": "gemini-3-7",
+  "releaseDate": "2026-08-13",
+  "status": "released",
+  "predecessor": null,
+  "openness": "closed",
+  "license": "Proprietary",
+  "paramsB": null,
+  "activeParamsB": null,
+  "archClass": "moe",
+  "archDisplay": "Sparse Mixture-of-Experts Transformer (configuration undisclosed); natively multimodal (text/image/video/audio/PDF in, text out), 1M-token input / 64K output",
+  "ctxK": 1000,
+  "modalities": [
+    "text",
+    "vision",
+    "audio",
+    "video"
+  ],
+  "langCount": null,
+  "capabilities": {
+    "reasoning": true,
+    "coding": true,
+    "vision": true,
+    "functionCalling": true,
+    "toolUse": true,
+    "agentic": true
+  },
+  "apiAvailable": true,
+  "price": {
+    "input": 0.75,
+    "output": 3.75
+  },
+  "links": {
+    "docs": "https://ai.google.dev/gemini-api/docs/models/gemini-3.7-flash"
+  },
+  "note": "Google's August 13, 2026 workhorse Flash, three weeks after Gemini 3.6 Flash and the second of three Flash releases in six weeks. It HALVES the introductory price to $0.75/$3.75 per Mtok (from 3.6 Flash's $1.50/$7.50) while improving across software engineering, knowledge work and web development — DeepSWE v1.1 49.0 → 65.3, FrontierCode 1.1 Main 34.4 → 43.6, AutomationBench 17.0 → 30.4, WebDev Arena Elo 1538 → 1588. The introductory rate expires December 31, 2026, after which $1.50/$7.50 applies. Also powers Gemini Spark. Context: Google shipped no frontier-tier Pro model in this window — Gemini 3.5 Pro had been 'coming soon' since May and was still unshipped when 3.8 Flash landed three weeks later, superseding this model on every published row at identical pricing and specifications. Rows are Google self-reported; the cross-model comparison values come from Google's own launch table for 3.8 Flash (published as an image and transcribed by third-party coverage), where 3.7 Flash is the baseline column.",
+  "quants": [],
+  "vramQ4Gb": null,
+  "vramFp16Gb": null,
+  "tps4090": null,
+  "tpsNote": null,
+  "effortLabel": null,
+  "isDefaultConfig": true,
+  "isBestConfig": true
+}

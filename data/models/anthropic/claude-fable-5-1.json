@@ -1,0 +1,46 @@
+{
+  "slug": "claude-fable-5-1",
+  "name": "Claude Fable 5.1",
+  "orgSlug": "anthropic",
+  "familySlug": "claude-5",
+  "releaseDate": "2026-09-01",
+  "status": "released",
+  "predecessor": "claude-fable-5",
+  "openness": "closed",
+  "license": "Proprietary",
+  "paramsB": null,
+  "activeParamsB": null,
+  "archClass": "dense",
+  "archDisplay": "Proprietary frontier model (architecture and size undisclosed); adaptive thinking with selectable effort (low → max), 1M-token context, text+image in / text out",
+  "ctxK": 1000,
+  "modalities": [
+    "text",
+    "vision"
+  ],
+  "langCount": null,
+  "capabilities": {
+    "reasoning": true,
+    "coding": true,
+    "vision": true,
+    "functionCalling": true,
+    "toolUse": true,
+    "agentic": true
+  },
+  "apiAvailable": true,
+  "price": {
+    "input": 10,
+    "output": 50
+  },
+  "links": {
+    "docs": "https://www.anthropic.com/claude/fable"
+  },
+  "note": "Anthropic's September 1, 2026 Mythos-class flagship, shipping as `claude-fable-5-1` on the Claude API, AWS, Google Cloud and Microsoft Foundry. List price is unchanged from Fable 5 at $10/$50 per Mtok — the change is cache reads, cut 75% to $0.25/Mtok, which Anthropic measures as roughly 25% lower cost on typical workloads and up to ~45% on context-heavy agentic ones. Defaults to High effort in Claude Code and Medium in Claude Cowork and on claude.ai. Fable 5.1 and Mythos 5.1 are the SAME underlying model with different safeguard levels; this row is the generally-available one. The gains concentrate in long, tool-using work — Terminal-Bench-Science more than doubles (24.7 → 52.6) and AutomationBench nearly doubles (17.1 → 31.4) — while already-strong short coding moves ~3 points (CursorBench 70.5 → 73.4). PROVENANCE — the launch table is vendor-run with production safeguards ON, which Anthropic says likely depresses several rows (both Fable 5.1 and Fable 5 scored zero on the tasks where safeguards intervened on OSWorld 2.0, as did Fable 5 on AutomationBench). Anthropic publishes rows it loses: Fable 5 beats it on ARC-AGI-1 (98.5 vs 97.5), GPT-5.6 Sol leads ARC-AGI-2 (92.5 vs 90.0), and Opus 5 leads SWE-bench Multimodal and HealthBench Professional. It headlines NO SWE-bench Verified figure — the 95.0% widely re-attributed to it is Fable 5's June number. Independent checks agree on direction: Artificial Analysis ranks it first on Intelligence Index v4.1.1 (66), Vals AI first on the Vals Index (67.87%), and ARC Prize ran ARC-AGI-1/2 on its own semi-private set. OSWorld 2.0 here is the benchmark authors' August 2026 task release, which Anthropic says is not comparable with earlier OSWorld 2.0 publications.",
+  "quants": [],
+  "vramQ4Gb": null,
+  "vramFp16Gb": null,
+  "tps4090": null,
+  "tpsNote": null,
+  "effortLabel": null,
+  "isDefaultConfig": true,
+  "isBestConfig": true
+}

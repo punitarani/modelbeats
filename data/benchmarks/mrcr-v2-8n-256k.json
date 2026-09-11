@@ -1,0 +1,10 @@
+{
+  "slug": "mrcr-v2-8n-256k",
+  "name": "MRCR v2 8-needle (256K-512K)",
+  "category": "reasoning",
+  "unit": "%",
+  "description": "OpenAI MRCR v2, 8-needle variant, 256K-512K token band — pure long-context retrieval: reproduce a target turn from among 8 needles spread across the context. Graded by sequence-matcher ratio.",
+  "normMin": 0,
+  "normMax": 100,
+  "higherIsBetter": true
+}

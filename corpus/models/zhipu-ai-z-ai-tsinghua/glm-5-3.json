@@ -1,0 +1,119 @@
+{
+  "name": "GLM-5.3",
+  "org": "Zhipu AI / Z.ai (Tsinghua)",
+  "orgSlug": "zhipu-ai-z-ai-tsinghua",
+  "family": "GLM-5",
+  "familySlug": "glm-5",
+  "slug": "glm-5-3",
+  "releaseDate": "2026-08-14",
+  "status": "released",
+  "openness": "open-weights",
+  "license": "Weights published on Hugging Face two weeks after the API launch; licence not named in advance by Z.ai",
+  "paramsB": 744,
+  "activeParamsB": 40,
+  "archClass": "moe",
+  "archDisplay": "The SAME base model as GLM-5.2 — every gain comes from scaled post-training (IndexShare long-context, SAO long-horizon RL, slime async training). Sparse MoE, three thinking-effort levels (low/high/max); disabling thinking is no longer supported",
+  "ctxK": 200,
+  "modalities": [
+    "text"
+  ],
+  "langCount": null,
+  "capabilities": {
+    "reasoning": true,
+    "coding": true,
+    "vision": false,
+    "functionCalling": true,
+    "toolUse": true,
+    "agentic": true
+  },
+  "apiAvailable": true,
+  "price": {
+    "input": 1.4,
+    "output": 4.4,
+    "provider": "Zhipu AI / Z.ai (Tsinghua)"
+  },
+  "links": {
+    "hf": "zai-org/GLM-5.3",
+    "docs": "https://z.ai/blog/glm-5.3"
+  },
+  "note": "Z.ai's August 14, 2026 release, and an unusually clean natural experiment: the same base model as GLM-5.2, with every gain from post-training alone. Terminal-Bench 3.0 goes 4.6 → 28.3, DeepSWE v1.1 46.2 → 66.9, AutomationBench 26.2 → 48.2, and Z.ai's in-house Code Bench improves ~50% — while consuming FEWER output tokens at every effort level (34.5% at ~75K tokens/task at max, against GLM-5.2's 23.4% at 96K). API-only at launch at $1.40/$4.40 per Mtok with off-peak billing at half rate; Z.ai said weights would follow roughly two weeks later once safety hardening completed, without naming a licence in advance — so `openness` reflects the commitment, and the licence field records that it was still unnamed. The headline finding is emergent cyber capability that Z.ai says developed faster than expected: SOTA on CyberGym at 84.5 (ahead of Mythos 5's 83.8 and GPT-5.6 Sol's 83.6) and more than double GLM-5.2 on exploitation, but the gap to the closed frontier WIDENS further up the exploitation chain — ExploitBench 54.4 against Mythos 5's 78.0 and Sol's 76.5. Its Agents' Last Exam figure (28.5) is omitted: Z.ai reports a pass-rate-style metric incompatible with the Score convention used by the other rows in that file.",
+  "quants": [],
+  "vramQ4Gb": null,
+  "vramFp16Gb": null,
+  "tps4090": null,
+  "tpsNote": null,
+  "effortLabel": null,
+  "isDefaultConfig": true,
+  "isBestConfig": true,
+  "specSources": {
+    "releaseDate": "https://z.ai/blog/glm-5.3",
+    "price": "https://capitalandcompute.net/blog/new-ai-models-august-2026",
+    "paramsB": "https://z.ai/blog/glm-5.3-flash"
+  },
+  "results": [
+    {
+      "benchmarkSlug": "terminal-bench-2",
+      "score": 88.2,
+      "source": "self-reported",
+      "sourceUrl": "https://z.ai/blog/glm-5.3",
+      "evaluatedAt": "2026-08-14",
+      "notes": "Terminal Bench 2.1, official GLM-5.3 comparison table; open-weights SOTA, ahead of Kimi K3 (88.3 in the same table is Moonshot's figure) and Claude Fable 5 with fallback (88.0)."
+    },
+    {
+      "benchmarkSlug": "terminal-bench-3",
+      "score": 28.3,
+      "source": "self-reported",
+      "sourceUrl": "https://z.ai/blog/glm-5.3",
+      "evaluatedAt": "2026-08-14",
+      "notes": "Terminal Bench 3.0, official GLM-5.3 comparison table — a 6x jump over GLM-5.2 (4.6) from post-training alone, and open-source SOTA, though behind Claude Fable 5 (33.7) and GPT-5.6 Sol (34.6)."
+    },
+    {
+      "benchmarkSlug": "deepswe",
+      "score": 66.9,
+      "source": "self-reported",
+      "sourceUrl": "https://z.ai/blog/glm-5.3",
+      "evaluatedAt": "2026-08-14",
+      "notes": "DeepSWE v1.1, official GLM-5.3 comparison table; up from GLM-5.2's 46.2, behind Claude Fable 5 (69.7) and GPT-5.6 Sol (72.7)."
+    },
+    {
+      "benchmarkSlug": "nl2repo",
+      "score": 58.0,
+      "source": "self-reported",
+      "sourceUrl": "https://z.ai/blog/glm-5.3",
+      "evaluatedAt": "2026-08-14",
+      "notes": "NL2Repo, official GLM-5.3 comparison table; level with Kimi K3 (58.0), behind DeepSeek-V4-Pro-0813 (61.1) and Claude Opus 4.8 (69.7)."
+    },
+    {
+      "benchmarkSlug": "cybergym",
+      "score": 84.5,
+      "source": "self-reported",
+      "sourceUrl": "https://z.ai/blog/glm-5.3",
+      "evaluatedAt": "2026-08-14",
+      "notes": "CyberGym white-box vulnerability discovery, official GLM-5.3 comparison table; Z.ai's headline SOTA claim, up from GLM-5.2's 77.2 and ahead of Claude Mythos 5 (83.8) and GPT-5.6 Sol (83.6)."
+    },
+    {
+      "benchmarkSlug": "exploitbench",
+      "score": 54.4,
+      "source": "self-reported",
+      "sourceUrl": "https://z.ai/blog/glm-5.3",
+      "evaluatedAt": "2026-08-14",
+      "notes": "ExploitBench, official GLM-5.3 comparison table. More than doubles GLM-5.2 (24.4) but the closed frontier stays far ahead — Claude Mythos 5 78.0, GPT-5.6 Sol 76.5 — the gap widening the further up the exploitation chain the benchmark sits."
+    },
+    {
+      "benchmarkSlug": "toolathlon",
+      "score": 73.0,
+      "source": "self-reported",
+      "sourceUrl": "https://z.ai/blog/glm-5.3",
+      "evaluatedAt": "2026-08-14",
+      "notes": "Toolathlon Verified, official GLM-5.3 comparison table; up from GLM-5.2's 59.9 but behind Kimi K3 (76.5) and Claude Opus 4.8 (76.2)."
+    },
+    {
+      "benchmarkSlug": "automationbench",
+      "score": 48.2,
+      "source": "self-reported",
+      "sourceUrl": "https://z.ai/blog/glm-5.3",
+      "evaluatedAt": "2026-08-14",
+      "notes": "AutomationBench v1.0.6, official GLM-5.3 comparison table; best in row, nearly double GLM-5.2 (26.2)."
+    }
+  ]
+}
