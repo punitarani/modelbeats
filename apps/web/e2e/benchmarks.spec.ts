@@ -20,8 +20,8 @@ test.describe('benchmarks', () => {
     await expect(first).toContainText('Claude Opus 5')
     await expect(first).toContainText('96.0%')
     await expect(first.getByTestId('provenance-badge')).toHaveText('self-reported')
-    // real field: 122 of the 568 models carry a SWE-bench Verified score
-    await expect(page.getByTestId('leaderboard-row')).toHaveCount(122)
+    // real field: 131 of the 584 models carry a SWE-bench Verified score
+    await expect(page.getByTestId('leaderboard-row')).toHaveCount(131)
   })
 
   test('distribution histogram + open-only params scatter render', async ({ page }) => {

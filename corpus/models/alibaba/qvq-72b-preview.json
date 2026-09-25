@@ -80,16 +80,16 @@
       "score": 70.3,
       "source": "independent",
       "sourceUrl": "https://arxiv.org/abs/2504.10479",
-      "evaluatedAt": "2025-04-14",
-      "notes": "Independent third-party reproduction via VLMEvalKit, reported in the InternVL3 Technical Report (Table 2, row 'QvQ-72B-Preview'). MathVista(mini) 70.3, vs. Qwen's own self-reported 71.4 -- minor eval-harness variance, not a discrepancy in the underlying benchmark."
+      "notes": "Independent third-party reproduction via VLMEvalKit, reported in the InternVL3 Technical Report (Table 2, row 'QvQ-72B-Preview'). MathVista(mini) 70.3, vs. Qwen's own self-reported 71.4 -- minor eval-harness variance, not a discrepancy in the underlying benchmark.",
+      "evaluatedAt": "2025-04-14"
     },
     {
       "benchmarkSlug": "mathvision",
       "score": 34.9,
       "source": "independent",
       "sourceUrl": "https://arxiv.org/abs/2504.10479",
-      "evaluatedAt": "2025-04-14",
-      "notes": "Independent third-party reproduction via VLMEvalKit, reported in the InternVL3 Technical Report (Table 2, row 'QvQ-72B-Preview'). MathVision 34.9, vs. Qwen's own self-reported 35.9(full) -- minor eval-harness variance."
+      "notes": "Independent third-party reproduction via VLMEvalKit, reported in the InternVL3 Technical Report (Table 2, row 'QvQ-72B-Preview'). MathVision 34.9, vs. Qwen's own self-reported 35.9(full) -- minor eval-harness variance.",
+      "evaluatedAt": "2025-04-14"
     },
     {
       "benchmarkSlug": "chartqa",

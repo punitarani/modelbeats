@@ -11,7 +11,12 @@
   "archClass": "dense",
   "archDisplay": "Proprietary multimodal reasoning model (undisclosed architecture), incremental update to Muse Spark 1.1",
   "ctxK": 1000,
-  "modalities": ["text", "vision", "audio", "video"],
+  "modalities": [
+    "text",
+    "vision",
+    "audio",
+    "video"
+  ],
   "langCount": null,
   "capabilities": {
     "reasoning": true,
@@ -22,11 +27,15 @@
     "agentic": true
   },
   "apiAvailable": true,
-  "price": { "input": 1.25, "output": 4.25, "provider": "Meta" },
+  "price": {
+    "input": 1.25,
+    "output": 4.25,
+    "provider": "Meta"
+  },
   "links": {
     "docs": "https://developer.meta.com/ai/models/muse-spark"
   },
-  "note": "Meta's August 5, 2026 update to Muse Spark 1.1, same $1.25/$4.25 pricing and 1M-token context. CloudPrice also lists a separate, much cheaper 'Muse Spark 1.2 Contributor' SKU ($0.10/$0.20) active the same day. Meta's own comparison table has an unlabeled 'Muse Spark' column next to 'Muse Spark 1.1' showing large regressions on several benchmarks (e.g. DeepSWE 10.0 vs. 1.1's 53.3, JobBench 17.0 vs. 54.7) alongside gains on others (MCP Atlas 82.2 vs. 78.2) — it is unclear whether that column reflects this $1.25/$4.25 flagship or the cheaper Contributor tier, so results below are recorded for the research trail but NOT ported to /data pending disambiguation.",
+  "note": "Meta's August 5, 2026 update to Muse Spark 1.1, same $1.25/$4.25 pricing and 1M-token context. CloudPrice also lists a separate, much cheaper 'Muse Spark 1.2 Contributor' SKU ($0.10/$0.20) active the same day. Meta's own developer.meta.com comparison table has an unlabeled 'Muse Spark' column next to 'Muse Spark 1.1' showing large regressions on several benchmarks (e.g. DeepSWE 10.0 vs. 1.1's 53.3, JobBench 17.0 vs. 54.7) alongside gains on others (MCP Atlas 82.2 vs. 78.2) — it is unclear whether that column reflects this $1.25/$4.25 flagship or the cheaper Contributor tier, so no per-benchmark results are filed here pending disambiguation; this entry is intentionally left unranked. For the research trail, the unlabeled column's figures withheld from /data: mcp-atlas 82.2; osworld-verified 53.3; hle 50.4; terminal-bench-2 67.3; swe-bench-pro 55; deepswe 10; charxiv 88.9.",
   "quants": [],
   "vramQ4Gb": null,
   "vramFp16Gb": null,
@@ -42,53 +51,44 @@
   },
   "results": [
     {
-      "benchmarkSlug": "mcp-atlas",
-      "score": 82.2,
+      "benchmarkSlug": "deepsearchqa",
+      "score": 85.9,
       "source": "self-reported",
-      "sourceUrl": "https://developer.meta.com/ai/models/muse-spark",
-      "notes": "MCP Atlas, official Meta comparison table, unlabeled 'Muse Spark' column (ambiguous SKU attribution — see model note)."
+      "sourceUrl": "https://research.meta.ai/blog/introducing-muse-spark-1-3",
+      "evaluatedAt": "2026-09-02",
+      "notes": "DeepSearchQA F1, Muse Spark 1.2 baseline column (xhigh) of Meta's Muse Spark 1.3 launch scorecard."
     },
     {
-      "benchmarkSlug": "osworld-verified",
-      "score": 53.3,
+      "benchmarkSlug": "jobbench",
+      "score": 61.6,
       "source": "self-reported",
-      "sourceUrl": "https://developer.meta.com/ai/models/muse-spark",
-      "notes": "OSWorld-Verified, official Meta comparison table, unlabeled 'Muse Spark' column (ambiguous SKU attribution — see model note); down from 1.1's 80.8."
+      "sourceUrl": "https://research.meta.ai/blog/introducing-muse-spark-1-3",
+      "evaluatedAt": "2026-09-02",
+      "notes": "JobBench, Muse Spark 1.2 baseline column of Meta's Muse Spark 1.3 launch scorecard. NOTE: Meta ran 1.2 at xhigh while every other column is max, so part of the 1.2-to-1.3 delta is an effort-setting change."
     },
     {
-      "benchmarkSlug": "hle",
-      "score": 50.4,
+      "benchmarkSlug": "mrcr-v2-8n-1m",
+      "score": 55.5,
       "source": "self-reported",
-      "sourceUrl": "https://developer.meta.com/ai/models/muse-spark",
-      "notes": "Humanity's Last Exam (w/ tools), official Meta comparison table, unlabeled 'Muse Spark' column (ambiguous SKU attribution — see model note)."
+      "sourceUrl": "https://research.meta.ai/blog/introducing-muse-spark-1-3",
+      "evaluatedAt": "2026-09-02",
+      "notes": "OpenAI MRCR v2 8-needle 512K-1M, Muse Spark 1.2 baseline column (xhigh) of Meta's Muse Spark 1.3 launch scorecard."
     },
     {
-      "benchmarkSlug": "terminal-bench-2",
-      "score": 67.3,
+      "benchmarkSlug": "mrcr-v2-8n-256k",
+      "score": 66.3,
       "source": "self-reported",
-      "sourceUrl": "https://developer.meta.com/ai/models/muse-spark",
-      "notes": "Terminal-Bench 2.1, official Meta comparison table, unlabeled 'Muse Spark' column (ambiguous SKU attribution — see model note); down from 1.1's 80.0."
+      "sourceUrl": "https://research.meta.ai/blog/introducing-muse-spark-1-3",
+      "evaluatedAt": "2026-09-02",
+      "notes": "OpenAI MRCR v2 8-needle 256K-512K, Muse Spark 1.2 baseline column (xhigh) of Meta's Muse Spark 1.3 launch scorecard."
     },
     {
-      "benchmarkSlug": "swe-bench-pro",
-      "score": 55,
+      "benchmarkSlug": "swe-atlas-codebase-qna",
+      "score": 46.2,
       "source": "self-reported",
-      "sourceUrl": "https://developer.meta.com/ai/models/muse-spark",
-      "notes": "SWE-Bench Pro, official Meta comparison table, unlabeled 'Muse Spark' column (ambiguous SKU attribution — see model note)."
-    },
-    {
-      "benchmarkSlug": "deepswe",
-      "score": 10,
-      "source": "self-reported",
-      "sourceUrl": "https://developer.meta.com/ai/models/muse-spark",
-      "notes": "DeepSWE 1.1, official Meta comparison table, unlabeled 'Muse Spark' column (ambiguous SKU attribution — see model note); sharply down from 1.1's 53.3."
-    },
-    {
-      "benchmarkSlug": "charxiv",
-      "score": 88.9,
-      "source": "self-reported",
-      "sourceUrl": "https://developer.meta.com/ai/models/muse-spark",
-      "notes": "CharXiv Reasoning, official Meta comparison table, unlabeled 'Muse Spark' column (ambiguous SKU attribution — see model note)."
+      "sourceUrl": "https://research.meta.ai/blog/introducing-muse-spark-1-3",
+      "evaluatedAt": "2026-09-02",
+      "notes": "SWE-Atlas Codebase QnA, Muse Spark 1.2 baseline column (xhigh) of Meta's Muse Spark 1.3 launch scorecard."
     }
   ]
 }

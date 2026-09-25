@@ -1,0 +1,46 @@
+{
+  "slug": "seed-2-2-pro",
+  "name": "Seed 2.2 Pro",
+  "orgSlug": "bytedance",
+  "familySlug": "doubao-seed",
+  "releaseDate": "2026-09-10",
+  "status": "released",
+  "predecessor": "seed-2-1-pro",
+  "openness": "closed",
+  "license": "Proprietary",
+  "paramsB": null,
+  "activeParamsB": null,
+  "archClass": "dense",
+  "archDisplay": "Proprietary multimodal flagship in the Doubao Seed line; 256K-token context",
+  "ctxK": 256,
+  "modalities": [
+    "text",
+    "vision"
+  ],
+  "langCount": null,
+  "capabilities": {
+    "reasoning": true,
+    "coding": true,
+    "vision": true,
+    "functionCalling": true,
+    "toolUse": true,
+    "agentic": true
+  },
+  "apiAvailable": true,
+  "price": {
+    "input": 0.9,
+    "output": 4.4
+  },
+  "links": {
+    "docs": "https://www.volcengine.com/docs/82379/1541523"
+  },
+  "note": "ByteDance's September 10, 2026 Seed 2.2 Pro — the second-quarterly bump to the Doubao Seed line (2.1 Pro was June 24). $0.90/$4.40 per Mtok keeps it far under every Western frontier price while the launch table pushes the vision/agentic rows ByteDance always leads with: Video-MME Pro 90.4 (a new revision it co-announces), OSWorld 3.0 74.6, MathVision 93.1. Text-side reasoning rows improve by 1.5-2.5 points across the board. As with Seed 2.1, the numbers are vendor-run but the suite is broad and consistent with ByteDance's published cadence.",
+  "quants": [],
+  "vramQ4Gb": null,
+  "vramFp16Gb": null,
+  "tps4090": null,
+  "tpsNote": null,
+  "effortLabel": null,
+  "isDefaultConfig": true,
+  "isBestConfig": true
+}

@@ -1,0 +1,46 @@
+{
+  "slug": "kimi-k3-1",
+  "name": "Kimi K3.1",
+  "orgSlug": "moonshot-ai",
+  "familySlug": "kimi-k3",
+  "releaseDate": "2026-09-23",
+  "status": "released",
+  "predecessor": "kimi-k3-fast",
+  "openness": "open-weights",
+  "license": "Modified MIT License (precedent from the K2.x line)",
+  "paramsB": 2800,
+  "activeParamsB": null,
+  "archClass": "moe",
+  "archDisplay": "2.8T-parameter LatentMoE reasoning model, open weights; 1.02M-token context",
+  "ctxK": 1024,
+  "modalities": [
+    "text",
+    "vision"
+  ],
+  "langCount": null,
+  "capabilities": {
+    "reasoning": true,
+    "coding": true,
+    "vision": true,
+    "functionCalling": true,
+    "toolUse": true,
+    "agentic": true
+  },
+  "apiAvailable": true,
+  "price": {
+    "input": 3,
+    "output": 15
+  },
+  "links": {
+    "docs": "https://platform.moonshot.ai/docs/models/kimi-k3.1"
+  },
+  "note": "Moonshot's September 23, 2026 refresh of July's Kimi K3 — same 2.8T LatentMoE open-weights skeleton (Modified MIT), same $3/$15 API, two months of post-training work on the agentic rows. The launch table is conservative: +1-3 points almost everywhere with the biggest moves on Terminal-Bench 3 (17.4 → 21.8) and ExploitBench (32.2 → 36.7). No weights-size change, no price change — an iterate-in-place release rather than a new tier. The K3 family's fast tier (K3-Fast) is untouched.",
+  "quants": [],
+  "vramQ4Gb": null,
+  "vramFp16Gb": null,
+  "tps4090": null,
+  "tpsNote": null,
+  "effortLabel": null,
+  "isDefaultConfig": true,
+  "isBestConfig": true
+}

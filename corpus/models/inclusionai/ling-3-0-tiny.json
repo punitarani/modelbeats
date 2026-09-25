@@ -11,7 +11,9 @@
   "archClass": "moe",
   "archDisplay": "Sparse MoE, 7.9B total / 1.3B active parameters, switchable Thinking/Instant reasoning modes, designed for edge and on-device deployment",
   "ctxK": 256,
-  "modalities": ["text"],
+  "modalities": [
+    "text"
+  ],
   "langCount": null,
   "capabilities": {
     "reasoning": true,
@@ -26,7 +28,7 @@
   "links": {
     "docs": "https://developer.ant-ling.com/en/docs/models/ling/"
   },
-  "note": "inclusionAI's (Ant Group) lightweight edge-deployment model in the Ling 3.0 series, positioned below Ling-3.0-flash: 1.3B activated parameters for real-time interaction, lightweight code assistance, local knowledge-base retrieval and tool calling on constrained hardware. Ant's own docs say it 'will be open-sourced in the near future' as of launch. Served free of charge (promotional) via OpenRouter at launch with no confirmed first-party metered price. Third-party benchmark aggregators publish conflicting/implausibly-high raw percentages (e.g. GPQA 73.4%) for a 1.3B-active model alongside a modest Artificial Analysis Intelligence Index of 23 — the composite index is trusted here, the raw percentages are not, hence no results are ported to /data.",
+  "note": "inclusionAI's (Ant Group) lightweight edge-deployment model in the Ling 3.0 series, positioned below Ling-3.0-flash: only 1.3B activated parameters for real-time interaction, lightweight code assistance, local knowledge-base retrieval and tool calling with low latency on constrained hardware. Ant's own docs say it 'will be open-sourced in the near future' as of launch, so it currently ships closed/proprietary; served free of charge (promotional) via OpenRouter at launch with no confirmed first-party metered price, hence price: null here.",
   "quants": [],
   "vramQ4Gb": null,
   "vramFp16Gb": null,

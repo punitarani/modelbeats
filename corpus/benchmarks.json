@@ -1501,6 +1501,16 @@
     "higherIsBetter": true
   },
   {
+    "slug": "videomme-pro",
+    "name": "Video-MME Pro",
+    "category": "vision",
+    "unit": "%",
+    "description": "Video-MME Pro — the harder professional-grade revision of Video-MME covering long-form and technical video understanding. Scores are not comparable with the original Video-MME filed under `videomme`.",
+    "normMin": 30,
+    "normMax": 92,
+    "higherIsBetter": true
+  },
+  {
     "slug": "vqav2",
     "name": "VQAv2",
     "category": "vision",
@@ -1548,6 +1558,100 @@
     "description": "Cross-lingual Winograd-schema commonsense resolution.",
     "normMin": 50,
     "normMax": 88,
+    "higherIsBetter": true
+  },
+  {
+    "slug": "aa-briefcase",
+    "name": "AA-Briefcase",
+    "category": "agents",
+    "unit": "pts",
+    "description": "Artificial Analysis Briefcase — an Elo-rated evaluation of real professional knowledge work (documents, analysis, deliverables), reported on a ~0-2000 scale. Companion to GDPval-AA.",
+    "normMin": 0,
+    "normMax": 2000,
+    "higherIsBetter": true
+  },
+  {
+    "slug": "arc-agi-3",
+    "name": "ARC-AGI-3",
+    "category": "reasoning",
+    "unit": "%",
+    "description": "Interactive abstraction-and-reasoning benchmark (ARC Prize): agents explore novel turn-based environments with no instructions, infer goals on the fly, build world models, and adapt across increasingly hard levels. v3.",
+    "normMin": 0,
+    "normMax": 50,
+    "higherIsBetter": true,
+    "methodologyUrl": "https://arcprize.org/arc-agi/3"
+  },
+  {
+    "slug": "automationbench",
+    "name": "AutomationBench",
+    "category": "agents",
+    "unit": "%",
+    "description": "Zapier's cross-application workflow-orchestration benchmark: whether an agent can complete real business tasks end to end via REST/tool calls. Scored on a held-out private set where every assertion must pass.",
+    "normMin": 0,
+    "normMax": 50,
+    "higherIsBetter": true,
+    "methodologyUrl": "https://zapier.com/benchmarks"
+  },
+  {
+    "slug": "deepswe",
+    "name": "DeepSWE",
+    "category": "coding",
+    "unit": "%",
+    "description": "DeepSWE v1.1 — 113 long-horizon software-engineering tasks written from scratch to avoid contamination, measuring frontier coding agents on diverse real-world complexity. Mean over 5 trials.",
+    "normMin": 0,
+    "normMax": 85,
+    "higherIsBetter": true
+  },
+  {
+    "slug": "frontiercode",
+    "name": "FrontierCode",
+    "category": "coding",
+    "unit": "%",
+    "description": "FrontierCode v1.1 (Main set) — 150 agentic software-engineering tasks derived from real open-source pull requests, run and graded by Cognition against held-out unit tests plus weighted code-quality rubrics. Composite score, mean@5.",
+    "normMin": 0,
+    "normMax": 70,
+    "higherIsBetter": true
+  },
+  {
+    "slug": "osworld-2",
+    "name": "OSWorld 2.0",
+    "category": "agents",
+    "unit": "%",
+    "description": "OSWorld 2.0 — a harder, refreshed version of the OSWorld real-desktop-GUI computer-use benchmark, scored pass@1. Distinct from and not comparable to OSWorld-Verified (v1).",
+    "normMin": 0,
+    "normMax": 85,
+    "higherIsBetter": true,
+    "methodologyUrl": "https://os-world.github.io/"
+  },
+  {
+    "slug": "osworld-3",
+    "name": "OSWorld 3.0",
+    "category": "agents",
+    "unit": "%",
+    "description": "OSWorld 3.0 — third-generation real-desktop-GUI computer-use benchmark with longer-horizon multi-app tasks, scored pass@1. Distinct from and not comparable to OSWorld 2.0 or OSWorld-Verified (v1).",
+    "normMin": 0,
+    "normMax": 82,
+    "higherIsBetter": true,
+    "methodologyUrl": "https://os-world.github.io/"
+  },
+  {
+    "slug": "swe-bench-multilingual",
+    "name": "SWE-bench Multilingual",
+    "category": "coding",
+    "unit": "%",
+    "description": "SWE-bench Multilingual — 300 real-issue problems spanning 9 programming languages, extending SWE-bench beyond Python.",
+    "normMin": 0,
+    "normMax": 92,
+    "higherIsBetter": true
+  },
+  {
+    "slug": "swe-bench-multimodal",
+    "name": "SWE-bench Multimodal",
+    "category": "coding",
+    "unit": "%",
+    "description": "SWE-bench Multimodal — issues augmented with visual context (screenshots, design mockups), testing whether coding agents generalize to visual software domains.",
+    "normMin": 0,
+    "normMax": 70,
     "higherIsBetter": true
   }
 ]

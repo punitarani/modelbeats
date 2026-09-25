@@ -1,0 +1,46 @@
+{
+  "slug": "deepseek-v4-1-non-think",
+  "name": "DeepSeek-V4.1 (Non-Think)",
+  "orgSlug": "deepseek",
+  "familySlug": "deepseek-v4",
+  "releaseDate": "2026-09-22",
+  "status": "released",
+  "predecessor": "deepseek-v4-flash-0731",
+  "openness": "open-weights",
+  "license": "MIT",
+  "paramsB": 1600,
+  "activeParamsB": 49,
+  "archClass": "moe",
+  "archDisplay": "1600B-total/49B-active sparse MoE (same skeleton as DeepSeek-V4-Pro), 1M-token context; text-only",
+  "ctxK": 1000,
+  "modalities": [
+    "text"
+  ],
+  "langCount": null,
+  "capabilities": {
+    "reasoning": true,
+    "coding": true,
+    "vision": false,
+    "functionCalling": true,
+    "toolUse": true,
+    "agentic": true
+  },
+  "apiAvailable": true,
+  "price": {
+    "input": 0.5,
+    "output": 1
+  },
+  "links": {
+    "hf": "deepseek-ai/DeepSeek-V4.1",
+    "docs": "https://api-docs.deepseek.com/quick_start/pricing/"
+  },
+  "note": "DeepSeek's September 22, 2026 incremental refresh of the V4-Pro line — same 1600B/49B MoE skeleton and 1M context, retrained post-training stack, filed as the three-config V4.1 family (Non-Think default / Think High / Think Max best). API price moves from $0.435/$0.87 to $0.50/$1.00 per Mtok — the first price increase in the V line, still far below every closed frontier model. The launch table's honest read: +1.5 to +3 points over V4-Pro across the shared rows, nothing that changes the open-vs-closed frontier picture by itself. Think Max additionally carries an independent ARC Prize ARC-AGI-2 run (49.3) — unusually quick third-party coverage for a DeepSeek release.",
+  "quants": [],
+  "vramQ4Gb": null,
+  "vramFp16Gb": null,
+  "tps4090": null,
+  "tpsNote": null,
+  "effortLabel": "Non-Think",
+  "isDefaultConfig": true,
+  "isBestConfig": false
+}

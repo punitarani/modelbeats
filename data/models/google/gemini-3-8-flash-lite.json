@@ -1,0 +1,48 @@
+{
+  "slug": "gemini-3-8-flash-lite",
+  "name": "Gemini 3.8 Flash-Lite",
+  "orgSlug": "google",
+  "familySlug": "gemini-3-8",
+  "releaseDate": "2026-09-16",
+  "status": "released",
+  "predecessor": "gemini-3-8-flash",
+  "openness": "closed",
+  "license": "Proprietary",
+  "paramsB": null,
+  "activeParamsB": null,
+  "archClass": "moe",
+  "archDisplay": "Proprietary cost-optimized variant of Gemini 3.8 Flash (sparse MoE, undisclosed size); 1M-token context, natively multimodal",
+  "ctxK": 1000,
+  "modalities": [
+    "text",
+    "vision",
+    "audio",
+    "video"
+  ],
+  "langCount": null,
+  "capabilities": {
+    "reasoning": true,
+    "coding": true,
+    "vision": true,
+    "functionCalling": true,
+    "toolUse": true,
+    "agentic": true
+  },
+  "apiAvailable": true,
+  "price": {
+    "input": 0.25,
+    "output": 1.5
+  },
+  "links": {
+    "docs": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/3-8-flash-lite/"
+  },
+  "note": "Google's September 16, 2026 high-volume tier — the 3.8 generation's Flash-Lite, at $0.25/$1.50 per Mtok (a third of 3.8 Flash's rate). Keeps the full text/vision/audio/video modality stack, which is the Lite line's real differentiator against Qwen Flash-Next and Claude Haiku 5, both of which arrived the same week. The launch table stays narrow (Google saves its multi-suite treatment for Pro/Flash): four headline rows plus OSWorld-Verified and Video-MME Pro, a benchmark revision Google is now co-citing with ByteDance. Filed as its own row rather than an effort config because Google bills Lite as a distinct model id.",
+  "quants": [],
+  "vramQ4Gb": null,
+  "vramFp16Gb": null,
+  "tps4090": null,
+  "tpsNote": null,
+  "effortLabel": null,
+  "isDefaultConfig": true,
+  "isBestConfig": true
+}

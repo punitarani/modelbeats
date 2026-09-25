@@ -117,6 +117,7 @@ mistral-7b,30.5,self-reported,https://arxiv.org/abs/2310.06825,,
 mistral-large,45.1,self-reported,https://mistral.ai/news/mistral-large/,2024-02-26,'Coding & Math' detailed-benchmarks chart in the launch blog (HumanE column).
 mistral-large-2-24-07,92,self-reported,https://huggingface.co/mistralai/Mistral-Large-Instruct-2407,,
 mistral-large-3,90.24,independent,https://medium.com/@layerlens/mistral-large-3-early-results-from-atlas-13f6a3c6b35a,2025-12-05,LayerLens/Atlas independent evaluation (same evaluator already cited above for MMLU-Pro); described as one of the model's strongest results in their write-up.
+mistral-large-4,91.3,independent,https://huggingface.co/mistralai/Mistral-Large-4,2026-09-16,"HumanEval, independent run."
 mistral-small-3-1-24b,88.41,self-reported,https://huggingface.co/mistralai/Mistral-Small-3.1-24B-Instruct-2503,,
 mistral-small-3-24b,84.8,self-reported,https://huggingface.co/mistralai/Mistral-Small-24B-Instruct-2501,,
 mixtral-8x7b,40.2,self-reported,https://ar5iv.labs.arxiv.org/html/2401.04088,2024-01-01,

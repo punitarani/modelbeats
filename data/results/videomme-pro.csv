@@ -1,0 +1,5 @@
+model_slug,score,source,source_url,evaluated_at,notes
+gemini-3-8-flash-lite,81.5,self-reported,https://blog.google/innovation-and-ai/models-and-research/gemini-models/3-8-flash-lite/,2026-09-16,"Video-MME Pro, launch table; Google's multimodal Lite tier is the second filer on the new revision."
+mistral-large-4,71.4,independent,https://huggingface.co/mistralai/Mistral-Large-4,2026-09-16,"Video-MME Pro, independent run; first Mistral filing on the new revision."
+qwen3-8-plus,84.3,self-reported,https://qwen.ai/blog?id=qwen3.8-plus,2026-09-09,Video-MME Pro (harder professional-grade revision of Video-MME); first catalog filing on the new revision.
+seed-2-2-pro,90.4,self-reported,https://www.volcengine.com/docs/82379/1541523,2026-09-10,Video-MME Pro — the new professional-grade revision ByteDance co-announces this cycle; best filing on the benchmark so far.

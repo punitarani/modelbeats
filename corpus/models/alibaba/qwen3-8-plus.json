@@ -1,0 +1,150 @@
+{
+  "name": "Qwen3.8-Plus",
+  "org": "Alibaba",
+  "orgSlug": "alibaba",
+  "family": "Qwen3.8",
+  "familySlug": "qwen3-8",
+  "slug": "qwen3-8-plus",
+  "releaseDate": "2026-09-09",
+  "status": "released",
+  "openness": "closed",
+  "license": "Proprietary",
+  "paramsB": null,
+  "activeParamsB": null,
+  "archClass": "hybrid",
+  "archDisplay": "API-only mid tier of the Qwen3.8 line (hybrid linear/full-attention stack shared with the open 27B); undisclosed parameter count, 1M-token context",
+  "ctxK": 1000,
+  "modalities": [
+    "text",
+    "vision"
+  ],
+  "langCount": null,
+  "capabilities": {
+    "reasoning": true,
+    "coding": true,
+    "vision": true,
+    "functionCalling": true,
+    "toolUse": true,
+    "agentic": true
+  },
+  "apiAvailable": true,
+  "price": {
+    "input": 0.8,
+    "output": 2.4
+  },
+  "links": {
+    "docs": "https://qwen.ai/blog?id=qwen3.8-plus"
+  },
+  "note": "Alibaba's September 9, 2026 mid-tier API model, slotted between Qwen3.8-Flash-Next and the flagship 0902 Max refresh — the hosted counterpart to the open 27B weights. Priced at $0.80/$2.40 per Mtok, roughly 2.5x below the Max, with the same 1M context. Launch table is entirely vendor-run (Qwen's own harness); it leads the open 27B across the board but trails the Max by 3-5 points on the shared rows, matching the historical Plus-vs-Max gap. Video-MME Pro row is the first filing on that benchmark revision for this catalog — Qwen is the only vendor citing it so far.",
+  "quants": [],
+  "vramQ4Gb": null,
+  "vramFp16Gb": null,
+  "tps4090": null,
+  "tpsNote": null,
+  "effortLabel": null,
+  "isDefaultConfig": true,
+  "isBestConfig": true,
+  "specSources": {
+    "releaseDate": "https://qwen.ai/blog?id=qwen3.8-plus",
+    "price": "https://qwen.ai/pricing",
+    "ctxK": "https://help.aliyun.com/zh/model-studio/models"
+  },
+  "results": [
+    {
+      "benchmarkSlug": "swe-bench-pro",
+      "score": 60.2,
+      "source": "self-reported",
+      "sourceUrl": "https://qwen.ai/blog?id=qwen3.8-plus",
+      "evaluatedAt": "2026-09-09",
+      "notes": "SWE-Bench Pro, Qwen3.8-Plus launch table; between Flash-Next (56.8) and Max-0902 (64.1)."
+    },
+    {
+      "benchmarkSlug": "terminal-bench-2",
+      "score": 74.8,
+      "source": "self-reported",
+      "sourceUrl": "https://qwen.ai/blog?id=qwen3.8-plus",
+      "evaluatedAt": "2026-09-09",
+      "notes": "Terminal-Bench 2.1, launch table."
+    },
+    {
+      "benchmarkSlug": "gpqa",
+      "score": 89.4,
+      "source": "self-reported",
+      "sourceUrl": "https://qwen.ai/blog?id=qwen3.8-plus",
+      "evaluatedAt": "2026-09-09",
+      "notes": "GPQA Diamond, launch table."
+    },
+    {
+      "benchmarkSlug": "hle",
+      "score": 41.2,
+      "source": "self-reported",
+      "sourceUrl": "https://qwen.ai/blog?id=qwen3.8-plus",
+      "evaluatedAt": "2026-09-09",
+      "notes": "Humanity's Last Exam with tools, launch table."
+    },
+    {
+      "benchmarkSlug": "mmmu-pro",
+      "score": 80.6,
+      "source": "self-reported",
+      "sourceUrl": "https://qwen.ai/blog?id=qwen3.8-plus",
+      "evaluatedAt": "2026-09-09",
+      "notes": "MMMU-Pro, launch table; behind Max-0902's 82.7."
+    },
+    {
+      "benchmarkSlug": "deepswe",
+      "score": 58.9,
+      "source": "self-reported",
+      "sourceUrl": "https://qwen.ai/blog?id=qwen3.8-plus",
+      "evaluatedAt": "2026-09-09",
+      "notes": "DeepSWE v1.1, launch table."
+    },
+    {
+      "benchmarkSlug": "osworld-2",
+      "score": 52.4,
+      "source": "self-reported",
+      "sourceUrl": "https://qwen.ai/blog?id=qwen3.8-plus",
+      "evaluatedAt": "2026-09-09",
+      "notes": "OSWorld 2.0, launch table."
+    },
+    {
+      "benchmarkSlug": "gdpval-aa",
+      "score": 1492,
+      "source": "self-reported",
+      "sourceUrl": "https://qwen.ai/blog?id=qwen3.8-plus",
+      "evaluatedAt": "2026-09-09",
+      "notes": "GDPval-AA v2 Elo as printed on the launch chart; self-reported, no independent AA run yet."
+    },
+    {
+      "benchmarkSlug": "jobbench",
+      "score": 55.7,
+      "source": "self-reported",
+      "sourceUrl": "https://qwen.ai/blog?id=qwen3.8-plus",
+      "evaluatedAt": "2026-09-09",
+      "notes": "JobBench, launch table; below Max-0902's 64.0."
+    },
+    {
+      "benchmarkSlug": "mcp-atlas",
+      "score": 76.8,
+      "source": "self-reported",
+      "sourceUrl": "https://qwen.ai/blog?id=qwen3.8-plus",
+      "evaluatedAt": "2026-09-09",
+      "notes": "MCP Atlas, launch table."
+    },
+    {
+      "benchmarkSlug": "livecodebench",
+      "score": 78.9,
+      "source": "self-reported",
+      "sourceUrl": "https://qwen.ai/blog?id=qwen3.8-plus",
+      "evaluatedAt": "2026-09-09",
+      "notes": "LiveCodeBench v6, launch table."
+    },
+    {
+      "benchmarkSlug": "videomme-pro",
+      "score": 84.3,
+      "source": "self-reported",
+      "sourceUrl": "https://qwen.ai/blog?id=qwen3.8-plus",
+      "evaluatedAt": "2026-09-09",
+      "notes": "Video-MME Pro (harder professional-grade revision of Video-MME); first catalog filing on the new revision."
+    }
+  ]
+}

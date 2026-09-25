@@ -1,0 +1,155 @@
+{
+  "name": "Seed 2.2 Pro",
+  "org": "ByteDance",
+  "family": "Doubao Seed",
+  "slug": "seed-2-2-pro",
+  "releaseDate": "2026-09-10",
+  "status": "released",
+  "openness": "closed",
+  "license": "Proprietary",
+  "paramsB": null,
+  "activeParamsB": null,
+  "archClass": "dense",
+  "archDisplay": "Proprietary multimodal flagship in the Doubao Seed line; 256K-token context",
+  "ctxK": 256,
+  "modalities": [
+    "text",
+    "vision"
+  ],
+  "langCount": null,
+  "capabilities": {
+    "reasoning": true,
+    "coding": true,
+    "vision": true,
+    "functionCalling": true,
+    "toolUse": true,
+    "agentic": true
+  },
+  "apiAvailable": true,
+  "price": {
+    "input": 0.9,
+    "output": 4.4
+  },
+  "links": {
+    "docs": "https://www.volcengine.com/docs/82379/1541523"
+  },
+  "note": "ByteDance's September 10, 2026 Seed 2.2 Pro — the second-quarterly bump to the Doubao Seed line (2.1 Pro was June 24). $0.90/$4.40 per Mtok keeps it far under every Western frontier price while the launch table pushes the vision/agentic rows ByteDance always leads with: Video-MME Pro 90.4 (a new revision it co-announces), OSWorld 3.0 74.6, MathVision 93.1. Text-side reasoning rows improve by 1.5-2.5 points across the board. As with Seed 2.1, the numbers are vendor-run but the suite is broad and consistent with ByteDance's published cadence.",
+  "quants": [],
+  "vramQ4Gb": null,
+  "vramFp16Gb": null,
+  "tps4090": null,
+  "tpsNote": null,
+  "effortLabel": null,
+  "isDefaultConfig": true,
+  "isBestConfig": true,
+  "specSources": {
+    "releaseDate": "https://www.volcengine.com/docs/82379/1541523",
+    "price": "https://www.volcengine.com/docs/82379/1541523"
+  },
+  "results": [
+    {
+      "benchmarkSlug": "super-gpqa",
+      "score": 72.4,
+      "source": "self-reported",
+      "sourceUrl": "https://www.volcengine.com/docs/82379/1541523",
+      "evaluatedAt": "2026-09-10",
+      "notes": "SuperGPQA, Seed 2.2 Pro launch table; up from 2.1's 70.8."
+    },
+    {
+      "benchmarkSlug": "terminal-bench-2",
+      "score": 73.6,
+      "source": "self-reported",
+      "sourceUrl": "https://www.volcengine.com/docs/82379/1541523",
+      "evaluatedAt": "2026-09-10",
+      "notes": "Terminal-Bench 2.1, launch table."
+    },
+    {
+      "benchmarkSlug": "videomme-pro",
+      "score": 90.4,
+      "source": "self-reported",
+      "sourceUrl": "https://www.volcengine.com/docs/82379/1541523",
+      "evaluatedAt": "2026-09-10",
+      "notes": "Video-MME Pro — the new professional-grade revision ByteDance co-announces this cycle; best filing on the benchmark so far."
+    },
+    {
+      "benchmarkSlug": "mathvision",
+      "score": 93.1,
+      "source": "self-reported",
+      "sourceUrl": "https://www.volcengine.com/docs/82379/1541523",
+      "evaluatedAt": "2026-09-10",
+      "notes": "MathVision, launch table."
+    },
+    {
+      "benchmarkSlug": "mmmu-pro",
+      "score": 82.9,
+      "source": "self-reported",
+      "sourceUrl": "https://www.volcengine.com/docs/82379/1541523",
+      "evaluatedAt": "2026-09-10",
+      "notes": "MMMU-Pro, launch table."
+    },
+    {
+      "benchmarkSlug": "charxiv",
+      "score": 86.7,
+      "source": "self-reported",
+      "sourceUrl": "https://www.volcengine.com/docs/82379/1541523",
+      "evaluatedAt": "2026-09-10",
+      "notes": "CharXiv Reasoning, launch table."
+    },
+    {
+      "benchmarkSlug": "gdpval",
+      "score": 88.6,
+      "source": "self-reported",
+      "sourceUrl": "https://www.volcengine.com/docs/82379/1541523",
+      "evaluatedAt": "2026-09-10",
+      "notes": "GDPval (original suite, not the AA Elo variant), launch table."
+    },
+    {
+      "benchmarkSlug": "agents-last-exam",
+      "score": 43.9,
+      "source": "self-reported",
+      "sourceUrl": "https://www.volcengine.com/docs/82379/1541523",
+      "evaluatedAt": "2026-09-10",
+      "notes": "Agents Last Exam, launch table; up from 2.1's 41.4."
+    },
+    {
+      "benchmarkSlug": "browsecomp",
+      "score": 87.5,
+      "source": "self-reported",
+      "sourceUrl": "https://www.volcengine.com/docs/82379/1541523",
+      "evaluatedAt": "2026-09-10",
+      "notes": "BrowseComp, launch table."
+    },
+    {
+      "benchmarkSlug": "hle",
+      "score": 45.2,
+      "source": "self-reported",
+      "sourceUrl": "https://www.volcengine.com/docs/82379/1541523",
+      "evaluatedAt": "2026-09-10",
+      "notes": "Humanity's Last Exam, launch table."
+    },
+    {
+      "benchmarkSlug": "arc-agi-2",
+      "score": 65.8,
+      "source": "self-reported",
+      "sourceUrl": "https://www.volcengine.com/docs/82379/1541523",
+      "evaluatedAt": "2026-09-10",
+      "notes": "ARC-AGI-2, launch table; up from 2.1's 62.5."
+    },
+    {
+      "benchmarkSlug": "osworld-3",
+      "score": 74.6,
+      "source": "self-reported",
+      "sourceUrl": "https://www.volcengine.com/docs/82379/1541523",
+      "evaluatedAt": "2026-09-10",
+      "notes": "OSWorld 3.0 — the new third-generation computer-use benchmark ByteDance's launch table introduces to this catalog."
+    },
+    {
+      "benchmarkSlug": "mathvista",
+      "score": 91.4,
+      "source": "self-reported",
+      "sourceUrl": "https://www.volcengine.com/docs/82379/1541523",
+      "evaluatedAt": "2026-09-10",
+      "notes": "MathVista, launch table."
+    }
+  ]
+}

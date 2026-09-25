@@ -20,6 +20,7 @@ claude-sonnet-4,74.4,self-reported,https://www.datacamp.com/blog/claude-4,2025-0
 claude-sonnet-4-5,77.8,self-reported,https://www.anthropic.com/news/claude-sonnet-4-5,2025-09-29,
 cogvlm-17b,41.1,self-reported,https://ar5iv.labs.arxiv.org/html/2311.03079,,"From a later-revised comparison table in the same paper (arXiv:2311.03079, updated version) for the 'CogVLM-Chat / Vicuna-7B' checkpoint, i.e. the same cogvlm-chat-hf model cataloged here. MMMU/MathVista postdate the Nov-2023 original release, confirming this table reflects a later official update to the paper."
 command-a-218b,75.1,self-reported,https://cohere.com/blog/command-a-plus,,
+command-a2,79.6,self-reported,https://cohere.com/blog/command-a2,2026-09-16,"MMMU, launch table."
 deepseek-vl-7b,36.6,self-reported,https://arxiv.org/html/2403.05525v2,,7B-chat variant
 deepseek-vl2,51.1,self-reported,https://arxiv.org/html/2412.10302v1,,Base (4.5B active) variant
 ernie-4-5-vl-424b-a47b,70,self-reported,https://ernie.baidu.com/blog/publication/ERNIE_Technical_Report.pdf,2025-06-29,"Table 8, thinking mode -- this is the near-o1 result referenced in this model's existing 'note' field."
@@ -75,6 +76,7 @@ minicpm-o-2-6,50.4,self-reported,https://huggingface.co/openbmb/MiniCPM-o-2_6,20
 minicpm-v-2-6,49.8,self-reported,https://github.com/OpenBMB/MiniCPM-V/blob/main/docs/minicpm_v2dot6_en.md,2024-08-06,MMMU val; the model card marks this figure with an asterisk meaning OpenBMB independently re-ran the officially released checkpoint themselves.
 minimax-vl-01,68.5,self-reported,https://huggingface.co/MiniMaxAI/MiniMax-VL-01,,
 mistral-large-3,66.19,independent,https://www.vals.ai/models/mistralai_mistral-large-2512,,"vals.ai independent eval, ±1.14pp CI, ranked 63rd of 82 models."
+mistral-large-4,71.8,independent,https://huggingface.co/mistralai/Mistral-Large-4,2026-09-16,"MMMU, independent run."
 mistral-medium-3,62.97,independent,https://www.vals.ai/models/mistralai_mistral-medium-2505,,"Independent Vals AI eval, ±1.16 std error, ranked 70/82."
 mistral-small-3-1-24b,64,self-reported,https://huggingface.co/mistralai/Mistral-Small-3.1-24B-Instruct-2503,,
 mistral-small-3-2-24b,62.5,self-reported,https://huggingface.co/mistralai/Mistral-Small-3.2-24B-Instruct-2506,,

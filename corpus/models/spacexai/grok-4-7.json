@@ -1,0 +1,126 @@
+{
+  "name": "Grok 4.7",
+  "org": "SpaceXAI",
+  "orgSlug": "spacexai",
+  "family": "Grok 4.7",
+  "familySlug": "grok-4-7",
+  "slug": "grok-4-7",
+  "releaseDate": "2026-09-16",
+  "status": "released",
+  "openness": "closed",
+  "license": "Proprietary",
+  "paramsB": null,
+  "activeParamsB": null,
+  "archClass": "moe",
+  "archDisplay": "Proprietary sparse-MoE reasoning model (undisclosed size); 500K-token context",
+  "ctxK": 500,
+  "modalities": [
+    "text",
+    "vision"
+  ],
+  "langCount": null,
+  "capabilities": {
+    "reasoning": true,
+    "coding": true,
+    "vision": true,
+    "functionCalling": true,
+    "toolUse": true,
+    "agentic": true
+  },
+  "apiAvailable": true,
+  "price": {
+    "input": 2,
+    "output": 6,
+    "provider": "SpaceXAI"
+  },
+  "links": {
+    "docs": "https://x.ai/news/grok-4-7"
+  },
+  "note": "SpaceXAI's September 16, 2026 point release — Grok 4.6's successor at an unchanged $2/$6 per Mtok. The launch table is a straight line over 4.6's: GDPval-AA +43, AA Briefcase +44, DeepSWE +3.5, CursorBench +3.9, Terminal-Bench 3 +3.7, with a first-time ExploitBench row (44.8) replacing the marketing-speak with a defensive-security number. No major capability claims beyond 'fastest frontier agent on our harness'; the honest read is a steady monthly cadence keeping Grok roughly level with Sonnet-class mid-frontier models rather than contesting Astra/Fable at the top.",
+  "quants": [],
+  "vramQ4Gb": null,
+  "vramFp16Gb": null,
+  "tps4090": null,
+  "tpsNote": null,
+  "effortLabel": null,
+  "isDefaultConfig": true,
+  "isBestConfig": true,
+  "specSources": {
+    "releaseDate": "https://x.ai/news/grok-4-7",
+    "price": "https://x.ai/api"
+  },
+  "results": [
+    {
+      "benchmarkSlug": "gdpval-aa",
+      "score": 1796,
+      "source": "self-reported",
+      "sourceUrl": "https://x.ai/news/grok-4-7",
+      "evaluatedAt": "2026-09-16",
+      "notes": "GDPval-AA v2 Elo, Grok 4.7 launch table; up from 4.6's 1753."
+    },
+    {
+      "benchmarkSlug": "aa-briefcase",
+      "score": 1621,
+      "source": "self-reported",
+      "sourceUrl": "https://x.ai/news/grok-4-7",
+      "evaluatedAt": "2026-09-16",
+      "notes": "AA Briefcase Elo, launch table; up from 4.6's 1577."
+    },
+    {
+      "benchmarkSlug": "cursorbench",
+      "score": 73.8,
+      "source": "self-reported",
+      "sourceUrl": "https://x.ai/news/grok-4-7",
+      "evaluatedAt": "2026-09-16",
+      "notes": "CursorBench, launch table; up from 4.6's 69.9."
+    },
+    {
+      "benchmarkSlug": "deepswe",
+      "score": 69.4,
+      "source": "self-reported",
+      "sourceUrl": "https://x.ai/news/grok-4-7",
+      "evaluatedAt": "2026-09-16",
+      "notes": "DeepSWE v1.1 at High reasoning, launch table; up from 4.6's 65.9."
+    },
+    {
+      "benchmarkSlug": "frontiercode-extended",
+      "score": 63.9,
+      "source": "self-reported",
+      "sourceUrl": "https://x.ai/news/grok-4-7",
+      "evaluatedAt": "2026-09-16",
+      "notes": "FrontierCode Extended, launch table."
+    },
+    {
+      "benchmarkSlug": "terminal-bench-3",
+      "score": 29.7,
+      "source": "self-reported",
+      "sourceUrl": "https://x.ai/news/grok-4-7",
+      "evaluatedAt": "2026-09-16",
+      "notes": "Terminal-Bench 3.0, launch table; up from 4.6's 26.0."
+    },
+    {
+      "benchmarkSlug": "harvey-legal-agent",
+      "score": 17.2,
+      "source": "self-reported",
+      "sourceUrl": "https://x.ai/news/grok-4-7",
+      "evaluatedAt": "2026-09-16",
+      "notes": "Harvey Legal Agent, launch table."
+    },
+    {
+      "benchmarkSlug": "exploitbench",
+      "score": 44.8,
+      "source": "self-reported",
+      "sourceUrl": "https://x.ai/news/grok-4-7",
+      "evaluatedAt": "2026-09-16",
+      "notes": "ExploitBench — first Grok filing on the defensive-security suite; launch table."
+    },
+    {
+      "benchmarkSlug": "gpqa",
+      "score": 93.1,
+      "source": "self-reported",
+      "sourceUrl": "https://x.ai/news/grok-4-7",
+      "evaluatedAt": "2026-09-16",
+      "notes": "GPQA Diamond, launch table."
+    }
+  ]
+}

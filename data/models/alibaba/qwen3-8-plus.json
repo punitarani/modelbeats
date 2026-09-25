@@ -1,0 +1,46 @@
+{
+  "slug": "qwen3-8-plus",
+  "name": "Qwen3.8-Plus",
+  "orgSlug": "alibaba",
+  "familySlug": "qwen3-8",
+  "releaseDate": "2026-09-09",
+  "status": "released",
+  "predecessor": "qwen3-8-max-0902",
+  "openness": "closed",
+  "license": "Proprietary",
+  "paramsB": null,
+  "activeParamsB": null,
+  "archClass": "hybrid",
+  "archDisplay": "API-only mid tier of the Qwen3.8 line (hybrid linear/full-attention stack shared with the open 27B); undisclosed parameter count, 1M-token context",
+  "ctxK": 1000,
+  "modalities": [
+    "text",
+    "vision"
+  ],
+  "langCount": null,
+  "capabilities": {
+    "reasoning": true,
+    "coding": true,
+    "vision": true,
+    "functionCalling": true,
+    "toolUse": true,
+    "agentic": true
+  },
+  "apiAvailable": true,
+  "price": {
+    "input": 0.8,
+    "output": 2.4
+  },
+  "links": {
+    "docs": "https://qwen.ai/blog?id=qwen3.8-plus"
+  },
+  "note": "Alibaba's September 9, 2026 mid-tier API model, slotted between Qwen3.8-Flash-Next and the flagship 0902 Max refresh — the hosted counterpart to the open 27B weights. Priced at $0.80/$2.40 per Mtok, roughly 2.5x below the Max, with the same 1M context. Launch table is entirely vendor-run (Qwen's own harness); it leads the open 27B across the board but trails the Max by 3-5 points on the shared rows, matching the historical Plus-vs-Max gap. Video-MME Pro row is the first filing on that benchmark revision for this catalog — Qwen is the only vendor citing it so far.",
+  "quants": [],
+  "vramQ4Gb": null,
+  "vramFp16Gb": null,
+  "tps4090": null,
+  "tpsNote": null,
+  "effortLabel": null,
+  "isDefaultConfig": true,
+  "isBestConfig": true
+}

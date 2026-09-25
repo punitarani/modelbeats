@@ -11,7 +11,9 @@
   "archClass": "moe",
   "archDisplay": "Mixture-of-Experts (284B total / 13B active), hybrid Compressed Sparse Attention + Heavily Compressed Attention — retrained checkpoint of DeepSeek-V4-Flash on the same architecture",
   "ctxK": 1000,
-  "modalities": ["text"],
+  "modalities": [
+    "text"
+  ],
   "langCount": null,
   "capabilities": {
     "reasoning": true,
@@ -22,12 +24,15 @@
     "agentic": true
   },
   "apiAvailable": true,
-  "price": { "input": 0.14, "output": 0.28, "provider": "DeepSeek" },
+  "price": {
+    "input": 0.14,
+    "output": 0.28
+  },
   "links": {
     "hf": "deepseek-ai/DeepSeek-V4-Flash-0731",
     "docs": "https://api-docs.deepseek.com/quick_start/pricing/"
   },
-  "note": "Retrained checkpoint of DeepSeek-V4-Flash published July 31, 2026, same 284B/13B architecture and API pricing as the April siblings. DeepSeek's own model card only reruns the launch-day agentic/coding table with an unreleased internal 'DeepSeek Harness'; general reasoning/knowledge benchmarks were not rerun and still carry April Preview values, so this is coding/agentic-only evidence, not a full refresh.",
+  "note": "Retrained checkpoint of DeepSeek-V4-Flash published July 31, 2026, same 284B/13B architecture and API pricing as the April siblings. DeepSeek's own model card only reruns the launch-day agentic/coding table (Terminal-Bench 2.1, NL2Repo, CyberGym, DeepSWE) with an unreleased internal harness ('DeepSeek Harness'); general reasoning/knowledge benchmarks were not rerun and still carry April Preview values, so this row is coding/agentic-only evidence, not a full refresh.",
   "quants": [],
   "vramQ4Gb": null,
   "vramFp16Gb": null,
@@ -48,7 +53,7 @@
       "source": "self-reported",
       "sourceUrl": "https://huggingface.co/deepseek-ai/DeepSeek-V4-Flash-0731",
       "evaluatedAt": "2026-07-31",
-      "notes": "Terminal-Bench 2.1, official model card launch table, evaluated with an unreleased internal 'DeepSeek Harness' (minimal mode); vs. 61.8 for the April Preview checkpoint on the same 2.1 suite."
+      "notes": "Terminal-Bench 2.1, DeepSeek official model card launch table, evaluated with an unreleased internal DeepSeek Harness (minimal mode); vs. 61.8 for the April Preview checkpoint on the same 2.1 suite."
     },
     {
       "benchmarkSlug": "nl2repo",
@@ -64,7 +69,7 @@
       "source": "self-reported",
       "sourceUrl": "https://huggingface.co/deepseek-ai/DeepSeek-V4-Flash-0731",
       "evaluatedAt": "2026-07-31",
-      "notes": "CyberGym, official model card launch table; vs. 38.7 for the April Preview checkpoint."
+      "notes": "CyberGym, DeepSeek official model card launch table; vs. 38.7 for the April Preview checkpoint."
     },
     {
       "benchmarkSlug": "deepswe",
@@ -72,7 +77,7 @@
       "source": "self-reported",
       "sourceUrl": "https://huggingface.co/deepseek-ai/DeepSeek-V4-Flash-0731",
       "evaluatedAt": "2026-07-31",
-      "notes": "DeepSWE, official model card launch table; vs. 7.9 for the April Preview checkpoint."
+      "notes": "DeepSWE, DeepSeek official model card launch table; vs. 7.9 for the April Preview checkpoint (DeepSWE was not one of the benchmarks that carried over well between versions)."
     }
   ]
 }

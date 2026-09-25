@@ -328,8 +328,13 @@ export function generate(corpus: Corpus): Generated {
   const pricing: Row[] = resolved
     .filter((r) => r.m.price)
     .map((r) => {
-      const p = r.m.price as { input: number; output: number; provider?: string }
-      return [r.slug, p.provider ?? r.orgSlug, p.input, p.output, r.m.releaseDate]
+      const p = r.m.price as {
+        input: number
+        output: number
+        provider?: string
+        effectiveAt?: string
+      }
+      return [r.slug, p.provider ?? r.orgSlug, p.input, p.output, p.effectiveAt ?? r.m.releaseDate]
     })
     .sort((a, b) => String(a[0]).localeCompare(String(b[0])))
 

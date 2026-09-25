@@ -1,0 +1,128 @@
+{
+  "name": "Inkling-Medium",
+  "org": "Thinking Machines Lab",
+  "family": "Inkling",
+  "slug": "inkling-medium",
+  "releaseDate": "2026-09-10",
+  "status": "released",
+  "openness": "open-weights",
+  "license": "Apache 2.0",
+  "paramsB": 320,
+  "activeParamsB": 22,
+  "archClass": "moe",
+  "archDisplay": "320B-total/22B-active sparse MoE trained with Tinker's fine-tuning stack, Apache 2.0 open weights; 1M-token context, natively audio+vision",
+  "ctxK": 1000,
+  "modalities": [
+    "text",
+    "vision",
+    "audio"
+  ],
+  "langCount": null,
+  "capabilities": {
+    "reasoning": true,
+    "coding": true,
+    "vision": true,
+    "functionCalling": true,
+    "toolUse": true,
+    "agentic": true
+  },
+  "apiAvailable": true,
+  "price": {
+    "input": 1.2,
+    "output": 3.6,
+    "provider": "Thinking Machines Lab"
+  },
+  "links": {
+    "hf": "thinking-machines/Inkling-Medium",
+    "docs": "https://thinkingmachines.dev/tinker"
+  },
+  "note": "Thinking Machines Lab's September 10, 2026 middle tier — the Inkling line's first scale-up beyond July's Small (276B/12B). 320B/22B MoE, Apache 2.0 weights, and Tinker-metered API pricing at $1.20/$3.60 per Mtok (the lab's fine-tuning-served inference stack, not a conventional model API). The launch table is the lab's usual narrow but careful set: every shared row lands 2-4 points over Inkling-Small with a first-time Terminal-Bench 2.1 and BrowseComp filing, and GPQA/HLE rows that put it within reach of Sonnet 5's published independent numbers.",
+  "quants": [],
+  "vramQ4Gb": null,
+  "vramFp16Gb": null,
+  "tps4090": null,
+  "tpsNote": null,
+  "effortLabel": null,
+  "isDefaultConfig": true,
+  "isBestConfig": true,
+  "specSources": {
+    "releaseDate": "https://thinkingmachines.dev/blog/inkling-medium",
+    "paramsB": "https://huggingface.co/thinking-machines/Inkling-Medium",
+    "price": "https://thinkingmachines.dev/tinker/pricing",
+    "openness": "https://huggingface.co/thinking-machines/Inkling-Medium"
+  },
+  "results": [
+    {
+      "benchmarkSlug": "swe-bench",
+      "score": 82.6,
+      "source": "self-reported",
+      "sourceUrl": "https://thinkingmachines.dev/blog/inkling-medium",
+      "evaluatedAt": "2026-09-10",
+      "notes": "SWE-bench Verified, launch post; up from Inkling-Small's 80.2."
+    },
+    {
+      "benchmarkSlug": "swe-bench-pro",
+      "score": 59.7,
+      "source": "self-reported",
+      "sourceUrl": "https://thinkingmachines.dev/blog/inkling-medium",
+      "evaluatedAt": "2026-09-10",
+      "notes": "SWE-Bench Pro, launch post; up from Small's 55.9."
+    },
+    {
+      "benchmarkSlug": "mmmu-pro",
+      "score": 77.9,
+      "source": "self-reported",
+      "sourceUrl": "https://thinkingmachines.dev/blog/inkling-medium",
+      "evaluatedAt": "2026-09-10",
+      "notes": "MMMU-Pro, launch post."
+    },
+    {
+      "benchmarkSlug": "charxiv",
+      "score": 84.6,
+      "source": "self-reported",
+      "sourceUrl": "https://thinkingmachines.dev/blog/inkling-medium",
+      "evaluatedAt": "2026-09-10",
+      "notes": "CharXiv Reasoning, launch post."
+    },
+    {
+      "benchmarkSlug": "ifbench",
+      "score": 85.3,
+      "source": "self-reported",
+      "sourceUrl": "https://thinkingmachines.dev/blog/inkling-medium",
+      "evaluatedAt": "2026-09-10",
+      "notes": "IFBench, launch post; up from Small's 82.2."
+    },
+    {
+      "benchmarkSlug": "gpqa",
+      "score": 88.4,
+      "source": "self-reported",
+      "sourceUrl": "https://thinkingmachines.dev/blog/inkling-medium",
+      "evaluatedAt": "2026-09-10",
+      "notes": "GPQA Diamond, launch post."
+    },
+    {
+      "benchmarkSlug": "hle",
+      "score": 41.7,
+      "source": "self-reported",
+      "sourceUrl": "https://thinkingmachines.dev/blog/inkling-medium",
+      "evaluatedAt": "2026-09-10",
+      "notes": "Humanity's Last Exam, launch post."
+    },
+    {
+      "benchmarkSlug": "terminal-bench-2",
+      "score": 63.2,
+      "source": "self-reported",
+      "sourceUrl": "https://thinkingmachines.dev/blog/inkling-medium",
+      "evaluatedAt": "2026-09-10",
+      "notes": "Terminal-Bench 2.1 — first Inkling filing on this benchmark."
+    },
+    {
+      "benchmarkSlug": "browsecomp",
+      "score": 79.4,
+      "source": "self-reported",
+      "sourceUrl": "https://thinkingmachines.dev/blog/inkling-medium",
+      "evaluatedAt": "2026-09-10",
+      "notes": "BrowseComp — first Inkling filing on this benchmark."
+    }
+  ]
+}

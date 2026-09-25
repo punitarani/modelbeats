@@ -1,0 +1,46 @@
+{
+  "slug": "gpt-6-astra-mini",
+  "name": "GPT-6 Astra Mini",
+  "orgSlug": "openai",
+  "familySlug": "gpt-6",
+  "releaseDate": "2026-09-24",
+  "status": "released",
+  "predecessor": "gpt-6-astra",
+  "openness": "closed",
+  "license": "Proprietary",
+  "paramsB": null,
+  "activeParamsB": null,
+  "archClass": "dense",
+  "archDisplay": "Proprietary distilled tier of GPT-6 Astra (size undisclosed); 1.05M-token context, text+image in / text out, five selectable reasoning efforts (low → max)",
+  "ctxK": 1050,
+  "modalities": [
+    "text",
+    "vision"
+  ],
+  "langCount": null,
+  "capabilities": {
+    "reasoning": true,
+    "coding": true,
+    "vision": true,
+    "functionCalling": true,
+    "toolUse": true,
+    "agentic": true
+  },
+  "apiAvailable": true,
+  "price": {
+    "input": 1.5,
+    "output": 6
+  },
+  "links": {
+    "docs": "https://developers.openai.com/api/docs/models/gpt-6-astra-mini"
+  },
+  "note": "OpenAI's September 24, 2026 volume tier for the GPT-6 line — Astra Mini at $1.50/$6 per Mtok, roughly a seventh of the flagship's $10/$50 for what OpenAI's own docs describe as 80-85% of its eval profile. Same 1.05M context and the same five-effort reasoning selector as full Astra; the architecture is billed as a distill rather than a separate training run. The published table mirrors Astra's suite row-for-row at reduced figures — a cleaner family story than the GPT-5.6 tier split, and the first GPT-6 row cheap enough for high-volume agent loops.",
+  "quants": [],
+  "vramQ4Gb": null,
+  "vramFp16Gb": null,
+  "tps4090": null,
+  "tpsNote": null,
+  "effortLabel": null,
+  "isDefaultConfig": true,
+  "isBestConfig": true
+}

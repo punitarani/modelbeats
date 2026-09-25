@@ -1,0 +1,126 @@
+{
+  "name": "DeepSeek-V4.1 (Non-Think)",
+  "org": "DeepSeek",
+  "family": "DeepSeek-V4",
+  "slug": "deepseek-v4-1-non-think",
+  "releaseDate": "2026-09-22",
+  "status": "released",
+  "openness": "open-weights",
+  "license": "MIT",
+  "paramsB": 1600,
+  "activeParamsB": 49,
+  "archClass": "moe",
+  "archDisplay": "1600B-total/49B-active sparse MoE (same skeleton as DeepSeek-V4-Pro), 1M-token context; text-only",
+  "ctxK": 1000,
+  "modalities": [
+    "text"
+  ],
+  "langCount": null,
+  "capabilities": {
+    "reasoning": true,
+    "coding": true,
+    "vision": false,
+    "functionCalling": true,
+    "toolUse": true,
+    "agentic": true
+  },
+  "apiAvailable": true,
+  "price": {
+    "input": 0.5,
+    "output": 1.0
+  },
+  "links": {
+    "hf": "deepseek-ai/DeepSeek-V4.1",
+    "docs": "https://api-docs.deepseek.com/quick_start/pricing/"
+  },
+  "note": "DeepSeek's September 22, 2026 incremental refresh of the V4-Pro line — same 1600B/49B MoE skeleton and 1M context, retrained post-training stack, filed as the three-config V4.1 family (Non-Think default / Think High / Think Max best). API price moves from $0.435/$0.87 to $0.50/$1.00 per Mtok — the first price increase in the V line, still far below every closed frontier model. The launch table's honest read: +1.5 to +3 points over V4-Pro across the shared rows, nothing that changes the open-vs-closed frontier picture by itself. Think Max additionally carries an independent ARC Prize ARC-AGI-2 run (49.3) — unusually quick third-party coverage for a DeepSeek release.",
+  "quants": [],
+  "vramQ4Gb": null,
+  "vramFp16Gb": null,
+  "tps4090": null,
+  "tpsNote": null,
+  "effortLabel": "Non-Think",
+  "isDefaultConfig": true,
+  "isBestConfig": false,
+  "specSources": {
+    "paramsB": "https://huggingface.co/deepseek-ai/DeepSeek-V4.1",
+    "releaseDate": "https://api-docs.deepseek.com/news/news250922",
+    "ctxK": "https://api-docs.deepseek.com/quick_start/pricing/",
+    "price": "https://api-docs.deepseek.com/quick_start/pricing/",
+    "openness": "https://huggingface.co/deepseek-ai/DeepSeek-V4.1"
+  },
+  "results": [
+    {
+      "benchmarkSlug": "mmlu-pro",
+      "score": 84.2,
+      "source": "self-reported",
+      "sourceUrl": "https://api-docs.deepseek.com/news/news250922",
+      "evaluatedAt": "2026-09-22",
+      "notes": "MMLU-Pro, DeepSeek-V4.1 Non-Think launch table."
+    },
+    {
+      "benchmarkSlug": "gpqa",
+      "score": 74.6,
+      "source": "self-reported",
+      "sourceUrl": "https://api-docs.deepseek.com/news/news250922",
+      "evaluatedAt": "2026-09-22",
+      "notes": "GPQA Diamond, Non-Think row of the V4.1 launch table."
+    },
+    {
+      "benchmarkSlug": "livecodebench",
+      "score": 58.9,
+      "source": "self-reported",
+      "sourceUrl": "https://api-docs.deepseek.com/news/news250922",
+      "evaluatedAt": "2026-09-22",
+      "notes": "LiveCodeBench v6, Non-Think row."
+    },
+    {
+      "benchmarkSlug": "hle",
+      "score": 8.9,
+      "source": "self-reported",
+      "sourceUrl": "https://api-docs.deepseek.com/news/news250922",
+      "evaluatedAt": "2026-09-22",
+      "notes": "Humanity's Last Exam, Non-Think row; the thinking configurations are the meaningful HLE rows."
+    },
+    {
+      "benchmarkSlug": "swe-bench",
+      "score": 74.8,
+      "source": "self-reported",
+      "sourceUrl": "https://api-docs.deepseek.com/news/news250922",
+      "evaluatedAt": "2026-09-22",
+      "notes": "SWE-bench Verified, Non-Think row."
+    },
+    {
+      "benchmarkSlug": "terminal-bench-2",
+      "score": 61.7,
+      "source": "self-reported",
+      "sourceUrl": "https://api-docs.deepseek.com/news/news250922",
+      "evaluatedAt": "2026-09-22",
+      "notes": "Terminal-Bench 2.1, Non-Think row."
+    },
+    {
+      "benchmarkSlug": "swe-bench-pro",
+      "score": 53.6,
+      "source": "self-reported",
+      "sourceUrl": "https://api-docs.deepseek.com/news/news250922",
+      "evaluatedAt": "2026-09-22",
+      "notes": "SWE-Bench Pro, Non-Think row."
+    },
+    {
+      "benchmarkSlug": "browsecomp",
+      "score": 74.2,
+      "source": "self-reported",
+      "sourceUrl": "https://api-docs.deepseek.com/news/news250922",
+      "evaluatedAt": "2026-09-22",
+      "notes": "BrowseComp, Non-Think row."
+    },
+    {
+      "benchmarkSlug": "ifbench",
+      "score": 48.5,
+      "source": "independent",
+      "sourceUrl": "https://artificialanalysis.ai/models/deepseek-v4-1",
+      "evaluatedAt": "2026-09-24",
+      "notes": "IFBench, Artificial Analysis independent run on the default Non-Think configuration (Intelligence Index v4.1.1 harness)."
+    }
+  ]
+}

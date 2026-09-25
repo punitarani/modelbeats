@@ -171,6 +171,14 @@
       "sourceUrl": "https://openai.com/index/gpt-6-astra",
       "evaluatedAt": "2026-09-03",
       "notes": "BenchCAD Vision2Code 1,000-file subset with Python tools, geometric-overlap score; vs GPT-5.6 Sol 83.3 and a reported 84.3 for Claude Fable 5.1."
+    },
+    {
+      "benchmarkSlug": "arc-agi-2",
+      "score": 94.6,
+      "source": "independent",
+      "sourceUrl": "https://arcprize.org/leaderboard",
+      "evaluatedAt": "2026-09-18",
+      "notes": "ARC-AGI-2 independent verification on the ARC Prize public leaderboard (semi-private set), within a point of OpenAI's self-reported 95.0 — unusually fast independent corroboration of a frontier claim."
     }
   ]
 }

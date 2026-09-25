@@ -36,7 +36,7 @@
   "links": {
     "docs": "https://developer.meta.com/ai/models/muse-spark"
   },
-  "note": "Meta's August 5, 2026 update to Muse Spark 1.1, same $1.25/$4.25 pricing and 1M-token context. CloudPrice also lists a separate, much cheaper 'Muse Spark 1.2 Contributor' SKU ($0.10/$0.20) active the same day. Meta's own developer.meta.com comparison table has an unlabeled 'Muse Spark' column next to 'Muse Spark 1.1' showing large regressions on several benchmarks (e.g. DeepSWE 10.0 vs. 1.1's 53.3, JobBench 17.0 vs. 54.7) alongside gains on others (MCP Atlas 82.2 vs. 78.2) — it is unclear whether that column reflects this $1.25/$4.25 flagship or the cheaper Contributor tier, so no per-benchmark results are filed here pending disambiguation; this entry is intentionally left unranked.",
+  "note": "Meta's August 5, 2026 update to Muse Spark 1.1, same $1.25/$4.25 pricing and 1M-token context. CloudPrice also lists a separate, much cheaper 'Muse Spark 1.2 Contributor' SKU ($0.10/$0.20) active the same day. Meta's own developer.meta.com comparison table has an unlabeled 'Muse Spark' column next to 'Muse Spark 1.1' showing large regressions on several benchmarks (e.g. DeepSWE 10.0 vs. 1.1's 53.3, JobBench 17.0 vs. 54.7) alongside gains on others (MCP Atlas 82.2 vs. 78.2) — it is unclear whether that column reflects this $1.25/$4.25 flagship or the cheaper Contributor tier, so no per-benchmark results are filed here pending disambiguation; this entry is intentionally left unranked. For the research trail, the unlabeled column's figures withheld from /data: mcp-atlas 82.2; osworld-verified 53.3; hle 50.4; terminal-bench-2 67.3; swe-bench-pro 55; deepswe 10; charxiv 88.9.",
   "quants": [],
   "vramQ4Gb": null,
   "vramFp16Gb": null,

@@ -5,3 +5,4 @@ claude-opus-5,70,independent,https://www.anthropic.com/claude-fable-and-mythos-5
 gpt-5-6-sol,67.2,independent,https://x.ai/news/grok-4-6,2026-08-12,"CursorBench v3.2, GPT-5.6 Sol Max column of SpaceXAI's official Grok 4.6 eval table. Run by Cursor rather than the model vendor."
 grok-4-5,66.7,independent,https://x.ai/news/grok-4-6,2026-08-12,"CursorBench v3.2, Grok 4.5 High column of SpaceXAI's official Grok 4.6 eval table. Run by Cursor rather than the model vendor."
 grok-4-6,69.9,self-reported,https://x.ai/news/grok-4-6,2026-08-12,"CursorBench v3.2, Grok 4.6 High, official SpaceXAI eval table; behind Claude Fable 5 Max (70.5), ahead of GPT-5.6 Sol Max (67.2)."
+grok-4-7,73.8,self-reported,https://x.ai/news/grok-4-7,2026-09-16,"CursorBench, launch table; up from 4.6's 69.9."
