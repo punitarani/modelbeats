@@ -7,7 +7,7 @@ import {
   selectRadarAxes,
 } from '@modelbeats/shared'
 import { Link, useNavigate } from '@tanstack/react-router'
-import { useMemo, useState } from 'react'
+import { useMemo, useRef, useState } from 'react'
 import { Radar } from '#/components/charts/radar'
 import { fitYWindow } from '#/components/charts/scales'
 import { QualityPriceScatter } from '#/components/charts/scatter'
@@ -90,7 +90,8 @@ export function CompareScreen({
   }, [scatterPoints])
   const unplotted = active.filter(({ m }) => !scatterPoints.some((p) => p.slug === m.slug))
 
-  const [saveName, setSaveName] = useState('')
+  const saveNameRef = useRef<HTMLInputElement>(null)
+  const [hasSaveName, setHasSaveName] = useState(false)
   const [savedFlash, setSavedFlash] = useState(false)
   const [copied, setCopied] = useState(false)
 
@@ -138,24 +139,31 @@ export function CompareScreen({
           </div>
         ))}
         <div className="ml-auto flex items-end gap-1.5">
+          {/* Uncontrolled + ref-read: hydration can reset a controlled input's DOM value if
+              input lands before React attaches to this subtree — aria-disabled (not
+              `disabled`) keeps the click reachable, and the handler reads the DOM value. */}
           <input
+            ref={saveNameRef}
             type="text"
-            value={saveName}
-            onChange={(e) => setSaveName(e.target.value)}
+            defaultValue=""
+            onInput={(e) => setHasSaveName(e.currentTarget.value.trim().length > 0)}
             placeholder="Name this comparison…"
             className="w-[160px] rounded-md border border-border bg-panel2 px-2 py-[5px] text-xs outline-none focus:border-acc"
             data-testid="save-name"
           />
           <button
             type="button"
-            disabled={!saveName.trim() || active.length === 0}
+            aria-disabled={!hasSaveName || active.length === 0}
             onClick={() => {
-              saveComparison(saveName.trim(), slugs.filter(Boolean).join(','))
-              setSaveName('')
+              const name = saveNameRef.current?.value.trim() ?? ''
+              if (!name || active.length === 0) return
+              saveComparison(name, slugs.filter(Boolean).join(','))
+              if (saveNameRef.current) saveNameRef.current.value = ''
+              setHasSaveName(false)
               setSavedFlash(true)
               setTimeout(() => setSavedFlash(false), 1500)
             }}
-            className="cursor-pointer rounded-md border border-border bg-panel2 px-2.5 py-[5px] text-xs text-mut hover:text-text disabled:cursor-default disabled:opacity-50"
+            className="cursor-pointer rounded-md border border-border bg-panel2 px-2.5 py-[5px] text-xs text-mut hover:text-text aria-disabled:cursor-default aria-disabled:opacity-50"
             data-testid="save-comparison"
           >
             {savedFlash ? 'Saved ✓' : 'Save'}
