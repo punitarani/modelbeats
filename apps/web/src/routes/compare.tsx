@@ -38,28 +38,30 @@ function CompareRoute() {
   const { m } = Route.useSearch()
   const navigate = Route.useNavigate()
   const { data } = useSuspenseQuery(catalogQueryOptions)
-  const parts = m.split(',').slice(0, 3)
+  const parts = m.split(',').slice(0, 4)
   const known = new Set(data.models.map((x) => x.slug))
   // Fall back to rank-eligible models only (never a sparse, unrated model — D20).
   const byRank = data.models
     .filter((x) => x.ranked && x.rank != null)
     .sort((a, b) => (a.rank as number) - (b.rank as number))
   const topOpen = byRank.find((x) => x.open)
-  // Slot A/B must always resolve to a real model (never an empty compare slot); slot C
-  // (index 2) is genuinely optional and stays blank when absent.
+  // Slots A/B must always resolve to a real model (never an empty compare slot); slots C/D
+  // are genuinely optional and stay blank when absent or unknown.
   const fallback = (i: 0 | 1) => (i === 1 ? (topOpen ?? byRank[0])?.slug : byRank[0]?.slug) ?? ''
-  const resolve = (i: 0 | 1 | 2): string => {
+  const resolve = (i: number): string => {
     const raw = parts[i]
-    if (i === 2) return raw ?? ''
-    return raw && known.has(raw) ? raw : fallback(i)
+    if (i >= 2) return raw && known.has(raw) ? raw : ''
+    return raw && known.has(raw) ? raw : fallback(i as 0 | 1)
   }
-  const slugs: [string, string, string] = [resolve(0), resolve(1), resolve(2)]
+  const slugs = [resolve(0), resolve(1), resolve(2), resolve(3)]
   return (
     <CompareScreen
       catalog={data}
       slugs={slugs}
       onChangeSlugs={(next) =>
-        navigate({ search: { m: next.filter((s, i) => s || i < 2).join(',') } })
+        // Positional join: a set D with empty C must keep its comma (`a,b,,d`), while
+        // trailing empties are dropped (`a,b,,` → `a,b`).
+        navigate({ search: { m: next.join(',').replace(/,+$/, '') } })
       }
     />
   )
