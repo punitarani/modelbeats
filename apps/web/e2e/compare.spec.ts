@@ -38,7 +38,13 @@ test.describe('compare', () => {
   test('save → appears on /saved → open restores → delete removes', async ({ page }) => {
     await gotoHydrated(page, '/compare?m=llama-3-1-405b,gemma-3-27b')
     await page.getByTestId('save-name').fill('agentic duo')
-    await page.getByTestId('save-comparison').click()
+    // data-hydrated marks the root shell; the compare subtree hydrates a tick later and a
+    // click inside that window is dropped — retry until the save's observable
+    // completion (the flash) lands before navigating away.
+    await expect(async () => {
+      await page.getByTestId('save-comparison').click()
+      await expect(page.getByTestId('save-comparison')).toHaveText('Saved ✓', { timeout: 750 })
+    }).toPass()
     await gotoHydrated(page, '/saved')
     const row = page.getByTestId('saved-list').getByText('agentic duo')
     await expect(row).toBeVisible()
