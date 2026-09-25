@@ -139,9 +139,10 @@ export function CompareScreen({
           </div>
         ))}
         <div className="ml-auto flex items-end gap-1.5">
-          {/* Uncontrolled + ref-read: hydration can reset a controlled input's DOM value if
-              input lands before React attaches to this subtree — aria-disabled (not
-              `disabled`) keeps the click reachable, and the handler reads the DOM value. */}
+          {/* Uncontrolled + ref-read + no disabled semantics: hydration can reset a
+              controlled input's DOM value if input lands before React attaches to this
+              subtree, and any disabled/aria-disabled marker would let the click be
+              blocked forever — the guard lives in the handler instead. */}
           <input
             ref={saveNameRef}
             type="text"
@@ -153,7 +154,7 @@ export function CompareScreen({
           />
           <button
             type="button"
-            aria-disabled={!hasSaveName || active.length === 0}
+            data-inactive={!hasSaveName || active.length === 0 ? '' : undefined}
             onClick={() => {
               const name = saveNameRef.current?.value.trim() ?? ''
               if (!name || active.length === 0) return
@@ -163,7 +164,7 @@ export function CompareScreen({
               setSavedFlash(true)
               setTimeout(() => setSavedFlash(false), 1500)
             }}
-            className="cursor-pointer rounded-md border border-border bg-panel2 px-2.5 py-[5px] text-xs text-mut hover:text-text aria-disabled:cursor-default aria-disabled:opacity-50"
+            className="cursor-pointer rounded-md border border-border bg-panel2 px-2.5 py-[5px] text-xs text-mut hover:text-text data-[inactive]:cursor-default data-[inactive]:opacity-50"
             data-testid="save-comparison"
           >
             {savedFlash ? 'Saved ✓' : 'Save'}
