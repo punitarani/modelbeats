@@ -15,6 +15,7 @@ import {
 import { assessFit, type FitVerdict, type SizeClass, sizeClass } from './hardware-fit'
 import { LICENSE_CLASS_ORDER, type LicenseClass, licenseClass } from './license-class'
 import { type BenchmarkBounds, type BenchScores, normalizeScore, toIndexScale } from './scoring'
+import { modelMatchScore } from './selectors'
 import type { SnapshotModel } from './snapshot'
 
 /**
@@ -232,7 +233,7 @@ export function selectFinetune(
   const rows: FinetuneRow[] = []
   for (const m of models) {
     if (!isTrainableCheckpoint(m) || m.params == null) continue
-    if (q && !`${m.name} ${m.org} ${m.family}`.toLowerCase().includes(q)) continue
+    if (q && modelMatchScore(m, q) <= 0) continue
     if (query.org !== 'all' && m.orgSlug !== query.org) continue
 
     const license = licenseClass(m.license, m.openness)

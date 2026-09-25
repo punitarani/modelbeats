@@ -208,4 +208,52 @@ describe('searchModels', () => {
   it('respects the limit within a provider scope', () => {
     expect(searchModels(all, 'openai/', 1).map((m) => m.slug)).toEqual(['gpt-4o'])
   })
+
+  it('orders by relevance: newer release wins a match-quality tie', () => {
+    const old = model({
+      slug: 'deepseek-coder-33b',
+      name: 'DeepSeek Coder 33B',
+      date: '2023-11-01',
+    })
+    const mid = model({
+      slug: 'deepseek-r1',
+      name: 'DeepSeek-R1 671B',
+      date: '2025-01-20',
+    })
+    const newest = model({
+      slug: 'deepseek-v3-2',
+      name: 'DeepSeek-V3.2',
+      date: '2026-08-01',
+    })
+    // catalog order is oldest-first — relevance flips it to newest-first
+    expect(searchModels([old, mid, newest], 'deepseek').map((m) => m.slug)).toEqual([
+      'deepseek-v3-2',
+      'deepseek-r1',
+      'deepseek-coder-33b',
+    ])
+  })
+
+  it('prefix/exact name matches outrank org or substring hits', () => {
+    const nameHit = model({ slug: 'sonnet-4', name: 'Sonnet 4', org: 'Acme', date: '2024-01-01' })
+    const orgHit = model({ slug: 'other', name: 'Other', org: 'Sonnet Labs', date: '2026-01-01' })
+    expect(searchModels([orgHit, nameHit], 'sonnet').map((m) => m.slug)[0]).toBe('sonnet-4')
+  })
+
+  it('ties on equal match and date fall back to Frontier Elo', () => {
+    const weak = model({ slug: 'alpha-x', name: 'Alpha X', index: 50, date: '2026-01-01' })
+    const strong = model({ slug: 'alpha-y', name: 'Alpha Y', index: 95, date: '2026-01-01' })
+    expect(searchModels([weak, strong], 'alpha').map((m) => m.slug)).toEqual(['alpha-y', 'alpha-x'])
+  })
+
+  it('token-AND requires every token to hit somewhere', () => {
+    const r1 = model({ slug: 'deepseek-r1', name: 'DeepSeek-R1 671B' })
+    const coder = model({ slug: 'deepseek-coder', name: 'DeepSeek Coder 33B' })
+    expect(searchModels([coder, r1], 'deepseek r1').map((m) => m.slug)).toEqual(['deepseek-r1'])
+    expect(searchModels([coder, r1], 'deepseek r2')).toEqual([])
+  })
+
+  it('out-of-order multi-word queries still match', () => {
+    const m = model({ slug: 'claude-sonnet-5', name: 'Claude Sonnet 5' })
+    expect(searchModels([m], 'sonnet claude').map((x) => x.slug)).toEqual(['claude-sonnet-5'])
+  })
 })

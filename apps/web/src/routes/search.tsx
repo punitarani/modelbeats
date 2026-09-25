@@ -1,4 +1,4 @@
-import { searchModels } from '@modelbeats/shared'
+import { rankByScore, searchModels, textMatchScore } from '@modelbeats/shared'
 import { useSuspenseQuery } from '@tanstack/react-query'
 import { createFileRoute, Link } from '@tanstack/react-router'
 import { z } from 'zod'
@@ -25,12 +25,14 @@ function SearchRoute() {
   const needle = q.trim().toLowerCase()
   const models = needle ? searchModels(data.models, q, 50) : []
   const orgs = needle
-    ? [...new Map(data.models.map((m) => [m.orgSlug, m.org])).entries()].filter(([, name]) =>
-        name.toLowerCase().includes(needle),
+    ? rankByScore([...new Map(data.models.map((m) => [m.orgSlug, m.org])).entries()], ([, name]) =>
+        textMatchScore(name.toLowerCase(), needle),
       )
     : []
   const benchmarks = needle
-    ? data.benchmarks.filter((b) => b.name.toLowerCase().includes(needle))
+    ? rankByScore(data.benchmarks, (b) =>
+        Math.max(textMatchScore(b.name.toLowerCase(), needle), textMatchScore(b.slug, needle)),
+      )
     : []
 
   return (

@@ -5,6 +5,7 @@ import { fitYWindow, normPct, ratingWindow } from '#/components/charts/scales'
 import { QualityPriceScatter } from '#/components/charts/scatter'
 import { ModelTag } from '#/components/model-tag'
 import { SearchSelect } from '#/components/search-select'
+import { modelOptionRanker } from '#/lib/search-rank'
 import {
   dashboardMovers,
   latestReleases,
@@ -58,6 +59,7 @@ export function OverviewTab({ catalog }: { catalog: CatalogSnapshot }) {
   const qcOptions = [...catalog.models]
     .sort((a, b) => a.name.localeCompare(b.name))
     .map((o) => ({ value: o.slug, label: `${o.name} — ${o.org}` }))
+  const qcRanker = useMemo(() => modelOptionRanker(catalog.models), [catalog.models])
 
   return (
     <div className="grid grid-cols-1 items-start gap-3.5 lg:grid-cols-[minmax(0,1.9fr)_minmax(280px,1fr)]">
@@ -212,6 +214,7 @@ export function OverviewTab({ catalog }: { catalog: CatalogSnapshot }) {
               value={qcA}
               onValueChange={setQcA}
               options={qcOptions}
+              rankOptions={qcRanker}
               aria-label="Quick compare model A"
               searchPlaceholder="Search models…"
               testid="qc-a"
@@ -221,6 +224,7 @@ export function OverviewTab({ catalog }: { catalog: CatalogSnapshot }) {
               value={qcB}
               onValueChange={setQcB}
               options={qcOptions}
+              rankOptions={qcRanker}
               aria-label="Quick compare model B"
               searchPlaceholder="Search models…"
               testid="qc-b"

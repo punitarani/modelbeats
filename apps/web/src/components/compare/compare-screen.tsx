@@ -16,6 +16,7 @@ import { VerdictCard } from '#/components/compare/verdict-card'
 import { scatterModels } from '#/components/dashboard/dashboard-data'
 import { SearchSelect } from '#/components/search-select'
 import { saveComparison } from '#/lib/saved'
+import { modelOptionRanker } from '#/lib/search-rank'
 
 export function CompareScreen({
   catalog,
@@ -33,6 +34,7 @@ export function CompareScreen({
     .map((m, i) => ({ m, i }))
     .filter((x): x is { m: SnapshotModel; i: number } => x.m != null)
   const options = [...catalog.models].sort((a, b) => a.name.localeCompare(b.name))
+  const modelRanker = useMemo(() => modelOptionRanker(catalog.models), [catalog.models])
 
   // Adaptive capability radar (D24): chart only the categories at least one selected model covers,
   // so an untested axis is dropped rather than collapsed to a false zero. `null` values flow through
@@ -130,6 +132,7 @@ export function CompareScreen({
                   .filter((o) => o.slug === slugs[i] || !slugs.includes(o.slug))
                   .map((o) => ({ value: o.slug, label: `${o.name} — ${o.org}` })),
               ]}
+              rankOptions={modelRanker}
               aria-label={label}
               placeholder={i < 2 ? 'Select…' : '+ add model'}
               searchPlaceholder="Search models…"

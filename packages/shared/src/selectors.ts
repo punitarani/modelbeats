@@ -33,8 +33,75 @@ function matchesOpen(m: SnapshotModel, f: OpenFilter): boolean {
   return f === 'all' || (f === 'open') === m.open
 }
 
-function textHaystack(m: SnapshotModel): string {
-  return `${m.name} ${m.org} ${m.family}`.toLowerCase()
+// ---------- relevance scoring (match quality → recency → quality) ----------
+
+/** Score of one query token against a lowercased field (0 = no match).
+ *  Tiers only — no intra-tier position penalty, so equal-tier matches fall through
+ *  to the recency/quality tiebreaks instead of arbitrary string offsets. */
+function tokenScore(text: string, token: string): number {
+  const idx = text.indexOf(token)
+  if (idx === -1) return 0
+  if (text === token) return 100
+  if (idx === 0) return 80
+  // a match starting a word/segment ("-r1", " (mini)") beats one buried mid-word
+  return ' \t-/():'.includes(text[idx - 1] ?? '') ? 60 : 40
+}
+
+/**
+ * Score of a whole (normalized, lowercased) needle against a single field.
+ * Tokens are AND-ed: every whitespace-separated token must hit, score is the sum.
+ */
+export function textMatchScore(text: string, needle: string): number {
+  let total = 0
+  for (const token of needle.split(/\s+/)) {
+    const s = tokenScore(text, token)
+    if (s === 0) return 0
+    total += s
+  }
+  return total
+}
+
+/** Field weights: a hit on the model name outranks the same hit on its org/family. */
+const SEARCH_FIELDS: ReadonlyArray<{ get: (m: SnapshotModel) => string; weight: number }> = [
+  { get: (m) => m.name.toLowerCase(), weight: 1 },
+  { get: (m) => m.slug, weight: 0.9 }, // slugs are already kebab-case
+  { get: (m) => m.family.toLowerCase(), weight: 0.7 },
+  { get: (m) => m.org.toLowerCase(), weight: 0.6 },
+]
+
+/**
+ * Relevance score of a model against a normalized (lowercased, trimmed) query.
+ * 0 = no match. Each token scores its best field; all tokens must hit.
+ */
+export function modelMatchScore(m: SnapshotModel, needle: string): number {
+  let total = 0
+  for (const token of needle.split(/\s+/)) {
+    let best = 0
+    for (const f of SEARCH_FIELDS) {
+      const s = tokenScore(f.get(m), token) * f.weight
+      if (s > best) best = s
+    }
+    if (best === 0) return 0
+    total += best
+  }
+  return total
+}
+
+/**
+ * Stable score-descending rank: items scoring ≤ 0 drop out, ties keep input order
+ * (so curated/prior ordering survives equal scores).
+ */
+export function rankByScore<T>(
+  items: readonly T[],
+  score: (item: T) => number,
+  limit = items.length,
+): T[] {
+  return items
+    .map((item, i) => ({ item, i, s: score(item) }))
+    .filter((x) => x.s > 0)
+    .sort((a, b) => b.s - a.s || a.i - b.i)
+    .slice(0, limit)
+    .map((x) => x.item)
 }
 
 export function selectRankings(models: SnapshotModel[], query: RankingsQuery): SnapshotModel[] {
@@ -70,7 +137,7 @@ export function selectRankings(models: SnapshotModel[], query: RankingsQuery): S
       (m) =>
         matchesOpen(m, query.open) &&
         (query.org === 'all' || m.orgSlug === query.org) &&
-        (!q || textHaystack(m).includes(q)),
+        (!q || modelMatchScore(m, q) > 0),
     )
     .sort((a, b) => {
       const ia = sortInfo(a)
@@ -104,18 +171,35 @@ export function selectOrgs(models: SnapshotModel[]): OrgOption[] {
 }
 
 /**
- * Case-insensitive substring search over name+org+family, top N (design topbar).
+ * Relevance-ranked model search (design topbar + /search page), top N. Every query token
+ * must hit name/slug/family/org (token-AND); results order by best match, then newest
+ * release, then Frontier Elo, then slug — so `deepseek` surfaces R1-era models, not the
+ * 2023 Coder/LLM entries catalog order produced.
  *
  * Provider-scoped syntax: a query `<provider>/<rest>` whose prefix (text before the first
  * `/`) exactly names a provider — matching either its `orgSlug` ("openai") or display `org`
  * ("OpenAI"), case-insensitively — restricts results to that provider's models, then
- * substring-matches `<rest>` against name+family within them. `"openai/"` → every OpenAI
- * model; `"openai/mini"` → OpenAI models whose name/family contains "mini". A slash whose
- * prefix names no provider falls back to a plain substring search over the whole query.
+ * relevance-ranks `<rest>` within them. `"openai/"` → every OpenAI model newest-first;
+ * `"openai/mini"` → OpenAI models matching "mini". A slash whose prefix names no provider
+ * falls back to a plain relevance search over the whole query.
  */
 export function searchModels(models: SnapshotModel[], q: string, limit = 8): SnapshotModel[] {
   const needle = q.trim().toLowerCase()
   if (!needle) return []
+
+  const rank = (list: SnapshotModel[], n: string): SnapshotModel[] =>
+    list
+      .map((m) => ({ m, s: n ? modelMatchScore(m, n) : 1 }))
+      .filter((x) => x.s > 0)
+      .sort(
+        (a, b) =>
+          b.s - a.s ||
+          b.m.date.localeCompare(a.m.date) ||
+          b.m.index - a.m.index ||
+          a.m.slug.localeCompare(b.m.slug),
+      )
+      .slice(0, limit)
+      .map((x) => x.m)
 
   const slash = needle.indexOf('/')
   if (slash !== -1) {
@@ -124,15 +208,11 @@ export function searchModels(models: SnapshotModel[], q: string, limit = 8): Sna
     const scoped = models.filter(
       (m) => m.orgSlug.toLowerCase() === provider || m.org.toLowerCase() === provider,
     )
-    if (scoped.length > 0) {
-      return scoped
-        .filter((m) => !rest || `${m.name} ${m.family}`.toLowerCase().includes(rest))
-        .slice(0, limit)
-    }
-    // prefix isn't a known provider — fall through to plain substring search
+    if (scoped.length > 0) return rank(scoped, rest)
+    // prefix isn't a known provider — fall through to the plain relevance search
   }
 
-  return models.filter((m) => textHaystack(m).includes(needle)).slice(0, limit)
+  return rank(models, needle)
 }
 
 // ---------- explorer (design filter rail + card grid) ----------
@@ -180,7 +260,7 @@ export function selectExplorer(
 
   const rows = models.filter(
     (m) =>
-      (!q || `${m.name} ${m.org} ${m.family}`.toLowerCase().includes(q)) &&
+      (!q || modelMatchScore(m, q) > 0) &&
       (query.open === 'all' || (query.open === 'open') === m.open) &&
       (query.org === 'all' || m.orgSlug === query.org) &&
       sizeOk(m) &&

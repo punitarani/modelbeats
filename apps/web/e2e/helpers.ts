@@ -1,6 +1,6 @@
 import { readdirSync, readFileSync } from 'node:fs'
 import { join } from 'node:path'
-import type { Page, Response } from '@playwright/test'
+import { expect, type Page, type Response } from '@playwright/test'
 
 const DATA_ROOT = join(import.meta.dirname, '..', '..', '..', 'data')
 
@@ -61,6 +61,12 @@ export async function gotoHydrated(page: Page, url: string): Promise<Response | 
  * in a portal, so one helper covers them.
  */
 export async function pickOption(page: Page, testid: string, optionLabel: string) {
-  await page.getByTestId(testid).click()
-  await page.getByRole('option', { name: optionLabel, exact: true }).click()
+  // data-hydrated only marks the root shell; a route subtree may hydrate a tick later and
+  // swallow the trigger click — retry until the listbox is observably open.
+  const option = page.getByRole('option', { name: optionLabel, exact: true })
+  await expect(async () => {
+    await page.getByTestId(testid).click()
+    await expect(option).toBeVisible({ timeout: 750 })
+  }).toPass()
+  await option.click()
 }
