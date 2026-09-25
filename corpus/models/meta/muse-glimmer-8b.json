@@ -1,0 +1,160 @@
+{
+  "name": "Muse Glimmer 8B",
+  "org": "Meta",
+  "orgSlug": "meta",
+  "family": "Muse Glimmer",
+  "familySlug": "muse-glimmer",
+  "slug": "muse-glimmer-8b",
+  "releaseDate": "2026-09-15",
+  "status": "released",
+  "openness": "open-weights",
+  "license": "Apache 2.0",
+  "paramsB": 8.2,
+  "activeParamsB": null,
+  "archClass": "dense",
+  "archDisplay": "8.2B dense causal transformer with a distilled ViT-S/16 perception encoder (~0.4B); 131K-token context, the Glimmer line's consumer-GPU tier",
+  "ctxK": 131,
+  "modalities": [
+    "text",
+    "vision"
+  ],
+  "langCount": null,
+  "capabilities": {
+    "reasoning": true,
+    "coding": true,
+    "vision": true,
+    "functionCalling": true,
+    "toolUse": true,
+    "agentic": true
+  },
+  "apiAvailable": false,
+  "price": null,
+  "links": {
+    "hf": "meta-llama/Muse-Glimmer-8B",
+    "docs": "https://developer.meta.com/ai/models/muse-glimmer"
+  },
+  "note": "Meta's September 15, 2026 open-weights release — the 8.2B consumer-GPU tier of the Muse Glimmer line that debuted at 30B in August. The point of the release is footprint: 5.8GB at Q4_K_M (16.5GB at BF16) with ~95 tok/s on an RTX 4090, i.e. a genuinely local multimodal model. The capability story is proportionate — most scores land at 70-80% of the 30B sibling, with agentic rows (MCP Atlas, OSWorld-Verified, Terminal-Bench) falling off hardest, as expected at this size. Apache 2.0, weights on HuggingFace, no first-party API.",
+  "quants": [
+    "Q4_K_M",
+    "BF16"
+  ],
+  "vramQ4Gb": 5.8,
+  "vramFp16Gb": 16.5,
+  "tps4090": 95,
+  "tpsNote": "Measured on RTX 4090, Q4_K_M GGUF via llama.cpp b7294, 512-token generation at batch 1; Meta's release README publishes 95.2 avg tok/s.",
+  "effortLabel": null,
+  "isDefaultConfig": true,
+  "isBestConfig": true,
+  "specSources": {
+    "paramsB": "https://huggingface.co/meta-llama/Muse-Glimmer-8B",
+    "ctxK": "https://huggingface.co/meta-llama/Muse-Glimmer-8B",
+    "releaseDate": "https://developer.meta.com/ai/models/muse-glimmer",
+    "vramQ4Gb": "https://huggingface.co/meta-llama/Muse-Glimmer-8B"
+  },
+  "results": [
+    {
+      "benchmarkSlug": "swe-bench",
+      "score": 61.2,
+      "source": "self-reported",
+      "sourceUrl": "https://huggingface.co/meta-llama/Muse-Glimmer-8B",
+      "evaluatedAt": "2026-09-15",
+      "notes": "SWE-bench Verified, release table; vs. 30B's 76.0 — the steepest drop is on long-horizon rows."
+    },
+    {
+      "benchmarkSlug": "swe-bench-pro",
+      "score": 38.4,
+      "source": "self-reported",
+      "sourceUrl": "https://huggingface.co/meta-llama/Muse-Glimmer-8B",
+      "evaluatedAt": "2026-09-15",
+      "notes": "SWE-Bench Pro, release table."
+    },
+    {
+      "benchmarkSlug": "terminal-bench-2",
+      "score": 36.9,
+      "source": "self-reported",
+      "sourceUrl": "https://huggingface.co/meta-llama/Muse-Glimmer-8B",
+      "evaluatedAt": "2026-09-15",
+      "notes": "Terminal-Bench 2.1, release table."
+    },
+    {
+      "benchmarkSlug": "gpqa",
+      "score": 68.7,
+      "source": "self-reported",
+      "sourceUrl": "https://huggingface.co/meta-llama/Muse-Glimmer-8B",
+      "evaluatedAt": "2026-09-15",
+      "notes": "GPQA Diamond, release table."
+    },
+    {
+      "benchmarkSlug": "hle",
+      "score": 12.4,
+      "source": "self-reported",
+      "sourceUrl": "https://huggingface.co/meta-llama/Muse-Glimmer-8B",
+      "evaluatedAt": "2026-09-15",
+      "notes": "Humanity's Last Exam, release table."
+    },
+    {
+      "benchmarkSlug": "aime",
+      "score": 82.1,
+      "source": "self-reported",
+      "sourceUrl": "https://huggingface.co/meta-llama/Muse-Glimmer-8B",
+      "evaluatedAt": "2026-09-15",
+      "notes": "AIME 2026, release table; surprisingly strong at 8B — the release notes attribute it to 30B-distilled reasoning traces."
+    },
+    {
+      "benchmarkSlug": "mmmu-pro",
+      "score": 58.3,
+      "source": "self-reported",
+      "sourceUrl": "https://huggingface.co/meta-llama/Muse-Glimmer-8B",
+      "evaluatedAt": "2026-09-15",
+      "notes": "MMMU-Pro, release table."
+    },
+    {
+      "benchmarkSlug": "charxiv",
+      "score": 63.5,
+      "source": "self-reported",
+      "sourceUrl": "https://huggingface.co/meta-llama/Muse-Glimmer-8B",
+      "evaluatedAt": "2026-09-15",
+      "notes": "CharXiv Reasoning, release table."
+    },
+    {
+      "benchmarkSlug": "screenspot-pro",
+      "score": 61.8,
+      "source": "self-reported",
+      "sourceUrl": "https://huggingface.co/meta-llama/Muse-Glimmer-8B",
+      "evaluatedAt": "2026-09-15",
+      "notes": "ScreenSpot-Pro, release table."
+    },
+    {
+      "benchmarkSlug": "mcp-atlas",
+      "score": 61.2,
+      "source": "self-reported",
+      "sourceUrl": "https://huggingface.co/meta-llama/Muse-Glimmer-8B",
+      "evaluatedAt": "2026-09-15",
+      "notes": "MCP Atlas, release table."
+    },
+    {
+      "benchmarkSlug": "osworld-verified",
+      "score": 52.7,
+      "source": "self-reported",
+      "sourceUrl": "https://huggingface.co/meta-llama/Muse-Glimmer-8B",
+      "evaluatedAt": "2026-09-15",
+      "notes": "OSWorld-Verified, release table."
+    },
+    {
+      "benchmarkSlug": "ifbench",
+      "score": 64.8,
+      "source": "self-reported",
+      "sourceUrl": "https://huggingface.co/meta-llama/Muse-Glimmer-8B",
+      "evaluatedAt": "2026-09-15",
+      "notes": "IFBench, release table."
+    },
+    {
+      "benchmarkSlug": "gdpval-aa",
+      "score": 812,
+      "source": "self-reported",
+      "sourceUrl": "https://huggingface.co/meta-llama/Muse-Glimmer-8B",
+      "evaluatedAt": "2026-09-15",
+      "notes": "GDPval-AA v2 Elo per the release README; the 30B sibling scored 953."
+    }
+  ]
+}

@@ -1,0 +1,159 @@
+{
+  "name": "Mistral Large 4",
+  "org": "Mistral AI",
+  "family": "Mistral Large",
+  "slug": "mistral-large-4",
+  "releaseDate": "2026-09-09",
+  "status": "released",
+  "openness": "open-weights",
+  "license": "Apache 2.0",
+  "paramsB": 685,
+  "activeParamsB": 43,
+  "archClass": "moe",
+  "archDisplay": "685B-total/43B-active sparse MoE, Apache 2.0 open weights; 512K-token context",
+  "ctxK": 512,
+  "modalities": [
+    "text",
+    "vision"
+  ],
+  "langCount": null,
+  "capabilities": {
+    "reasoning": false,
+    "coding": true,
+    "vision": true,
+    "functionCalling": true,
+    "toolUse": true,
+    "agentic": true
+  },
+  "apiAvailable": true,
+  "price": {
+    "input": 0.6,
+    "output": 1.8
+  },
+  "links": {
+    "hf": "mistralai/Mistral-Large-4",
+    "docs": "https://docs.mistral.ai/getting-started/models/models_overview/"
+  },
+  "note": "Mistral's September 9, 2026 flagship — a modest 685B/43B scale-up over Large 3 (675B/41B) that stays Apache 2.0 and doubles context to 512K. The honest read is unchanged from the Large line's recent history: competent open generalist, visibly behind the reasoning-specialized crowd — HLE 9.4 (independent), Terminal-Bench 2.1 at 21.6, SWE-bench 52.7. As with Large 3, the filings here are the independent/third-party measurements Mistral's own docs now link out to rather than vendor table claims; capabilities.reasoning stays false (no thinking mode).",
+  "quants": [],
+  "vramQ4Gb": null,
+  "vramFp16Gb": null,
+  "tps4090": null,
+  "tpsNote": null,
+  "effortLabel": null,
+  "isDefaultConfig": true,
+  "isBestConfig": true,
+  "specSources": {
+    "paramsB": "https://huggingface.co/mistralai/Mistral-Large-4",
+    "releaseDate": "https://mistral.ai/news/mistral-large-4",
+    "price": "https://mistral.ai/pricing",
+    "openness": "https://huggingface.co/mistralai/Mistral-Large-4",
+    "ctxK": "https://docs.mistral.ai/getting-started/models/models_overview/"
+  },
+  "results": [
+    {
+      "benchmarkSlug": "mmlu-pro",
+      "score": 78.4,
+      "source": "independent",
+      "sourceUrl": "https://huggingface.co/mistralai/Mistral-Large-4",
+      "evaluatedAt": "2026-09-16",
+      "notes": "MMLU-Pro, independent re-measurement via HF Open LLM Leaderboard V2 harness."
+    },
+    {
+      "benchmarkSlug": "gpqa",
+      "score": 72.8,
+      "source": "independent",
+      "sourceUrl": "https://huggingface.co/mistralai/Mistral-Large-4",
+      "evaluatedAt": "2026-09-16",
+      "notes": "GPQA Diamond, independent run; up from Large 3's 67.2."
+    },
+    {
+      "benchmarkSlug": "hle",
+      "score": 9.4,
+      "source": "independent",
+      "sourceUrl": "https://huggingface.co/mistralai/Mistral-Large-4",
+      "evaluatedAt": "2026-09-16",
+      "notes": "Humanity's Last Exam, independent run; the non-reasoning ceiling shows here."
+    },
+    {
+      "benchmarkSlug": "ifbench",
+      "score": 44.2,
+      "source": "independent",
+      "sourceUrl": "https://huggingface.co/mistralai/Mistral-Large-4",
+      "evaluatedAt": "2026-09-16",
+      "notes": "IFBench, independent run."
+    },
+    {
+      "benchmarkSlug": "mmmu-pro",
+      "score": 62.7,
+      "source": "independent",
+      "sourceUrl": "https://huggingface.co/mistralai/Mistral-Large-4",
+      "evaluatedAt": "2026-09-16",
+      "notes": "MMMU-Pro, independent run."
+    },
+    {
+      "benchmarkSlug": "terminal-bench-2",
+      "score": 21.6,
+      "source": "independent",
+      "sourceUrl": "https://huggingface.co/mistralai/Mistral-Large-4",
+      "evaluatedAt": "2026-09-16",
+      "notes": "Terminal-Bench 2.1, independent run; well off the agentic frontier."
+    },
+    {
+      "benchmarkSlug": "livecodebench",
+      "score": 62.9,
+      "source": "independent",
+      "sourceUrl": "https://huggingface.co/mistralai/Mistral-Large-4",
+      "evaluatedAt": "2026-09-16",
+      "notes": "LiveCodeBench v6, independent run."
+    },
+    {
+      "benchmarkSlug": "mmmu",
+      "score": 71.8,
+      "source": "independent",
+      "sourceUrl": "https://huggingface.co/mistralai/Mistral-Large-4",
+      "evaluatedAt": "2026-09-16",
+      "notes": "MMMU, independent run."
+    },
+    {
+      "benchmarkSlug": "swe-bench",
+      "score": 52.7,
+      "source": "independent",
+      "sourceUrl": "https://huggingface.co/mistralai/Mistral-Large-4",
+      "evaluatedAt": "2026-09-16",
+      "notes": "SWE-bench Verified, independent run; up from Large 3's 41.4."
+    },
+    {
+      "benchmarkSlug": "humaneval",
+      "score": 91.3,
+      "source": "independent",
+      "sourceUrl": "https://huggingface.co/mistralai/Mistral-Large-4",
+      "evaluatedAt": "2026-09-16",
+      "notes": "HumanEval, independent run."
+    },
+    {
+      "benchmarkSlug": "math",
+      "score": 94.2,
+      "source": "independent",
+      "sourceUrl": "https://huggingface.co/mistralai/Mistral-Large-4",
+      "evaluatedAt": "2026-09-16",
+      "notes": "MATH-500, independent run."
+    },
+    {
+      "benchmarkSlug": "aime",
+      "score": 52.6,
+      "source": "independent",
+      "sourceUrl": "https://huggingface.co/mistralai/Mistral-Large-4",
+      "evaluatedAt": "2026-09-16",
+      "notes": "AIME 2026, independent run; up from Large 3's 40.0."
+    },
+    {
+      "benchmarkSlug": "videomme-pro",
+      "score": 71.4,
+      "source": "independent",
+      "sourceUrl": "https://huggingface.co/mistralai/Mistral-Large-4",
+      "evaluatedAt": "2026-09-16",
+      "notes": "Video-MME Pro, independent run; first Mistral filing on the new revision."
+    }
+  ]
+}

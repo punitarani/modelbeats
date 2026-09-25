@@ -8,3 +8,4 @@ qwen3-7-plus,27.6,self-reported,https://huggingface.co/Qwen/Qwen3.8-27B,2026-08-
 qwen3-8-27b,33.4,self-reported,https://huggingface.co/Qwen/Qwen3.8-27B,2026-08-05,"JobBench, official Qwen3.8-27B model card; best in row against Qwen3.6-27B (21.8) and Qwen3.7-Plus (27.6)."
 qwen3-8-flash-next,55.7,self-reported,https://qwen.ai/blog?id=qwen3.8-flash-next,2026-08-26,"JobBench, official model card; far ahead of Claude Opus 4.6 Max (36.6) and Qwen3.8-27B (33.4)."
 qwen3-8-max-0902,64,self-reported,https://www.qwencloud.com/models/qwen3.8-max-0902,2026-09-02,"JobBench, Qwen3.8-Max-0902 release chart as transcribed by BenchmarkList (benchmarklist.com/models/qwen-qwen3.8-max-0902), which cites the QwenCloud model page and Alibaba's launch post."
+qwen3-8-plus,55.7,self-reported,https://qwen.ai/blog?id=qwen3.8-plus,2026-09-09,"JobBench, launch table; below Max-0902's 64.0."

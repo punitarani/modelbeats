@@ -1,0 +1,141 @@
+{
+  "name": "Kimi K3.1",
+  "org": "Moonshot AI",
+  "family": "Kimi K3",
+  "slug": "kimi-k3-1",
+  "releaseDate": "2026-09-23",
+  "status": "released",
+  "openness": "open-weights",
+  "license": "Modified MIT License (precedent from the K2.x line)",
+  "paramsB": 2800,
+  "activeParamsB": null,
+  "archClass": "moe",
+  "archDisplay": "2.8T-parameter LatentMoE reasoning model, open weights; 1.02M-token context",
+  "ctxK": 1024,
+  "modalities": [
+    "text",
+    "vision"
+  ],
+  "langCount": null,
+  "capabilities": {
+    "reasoning": true,
+    "coding": true,
+    "vision": true,
+    "functionCalling": true,
+    "toolUse": true,
+    "agentic": true
+  },
+  "apiAvailable": true,
+  "price": {
+    "input": 3,
+    "output": 15
+  },
+  "links": {
+    "docs": "https://platform.moonshot.ai/docs/models/kimi-k3.1"
+  },
+  "note": "Moonshot's September 23, 2026 refresh of July's Kimi K3 — same 2.8T LatentMoE open-weights skeleton (Modified MIT), same $3/$15 API, two months of post-training work on the agentic rows. The launch table is conservative: +1-3 points almost everywhere with the biggest moves on Terminal-Bench 3 (17.4 → 21.8) and ExploitBench (32.2 → 36.7). No weights-size change, no price change — an iterate-in-place release rather than a new tier. The K3 family's fast tier (K3-Fast) is untouched.",
+  "quants": [],
+  "vramQ4Gb": null,
+  "vramFp16Gb": null,
+  "tps4090": null,
+  "tpsNote": null,
+  "effortLabel": null,
+  "isDefaultConfig": true,
+  "isBestConfig": true,
+  "specSources": {
+    "releaseDate": "https://platform.moonshot.ai/blog/kimi-k3-1",
+    "price": "https://platform.moonshot.ai/docs/pricing",
+    "paramsB": "https://huggingface.co/moonshotai/Kimi-K3.1",
+    "openness": "https://huggingface.co/moonshotai/Kimi-K3.1"
+  },
+  "results": [
+    {
+      "benchmarkSlug": "gpqa",
+      "score": 94.2,
+      "source": "self-reported",
+      "sourceUrl": "https://platform.moonshot.ai/blog/kimi-k3-1",
+      "evaluatedAt": "2026-09-23",
+      "notes": "GPQA Diamond, K3.1 launch table; up from K3's 93.5."
+    },
+    {
+      "benchmarkSlug": "hle",
+      "score": 58.3,
+      "source": "self-reported",
+      "sourceUrl": "https://platform.moonshot.ai/blog/kimi-k3-1",
+      "evaluatedAt": "2026-09-23",
+      "notes": "Humanity's Last Exam, launch table; up from K3's 56.0."
+    },
+    {
+      "benchmarkSlug": "terminal-bench-2",
+      "score": 89.1,
+      "source": "self-reported",
+      "sourceUrl": "https://platform.moonshot.ai/blog/kimi-k3-1",
+      "evaluatedAt": "2026-09-23",
+      "notes": "Terminal-Bench 2.1, launch table; up from K3's 88.3."
+    },
+    {
+      "benchmarkSlug": "mcp-atlas",
+      "score": 85.6,
+      "source": "self-reported",
+      "sourceUrl": "https://platform.moonshot.ai/blog/kimi-k3-1",
+      "evaluatedAt": "2026-09-23",
+      "notes": "MCP Atlas, launch table."
+    },
+    {
+      "benchmarkSlug": "browsecomp",
+      "score": 92.4,
+      "source": "self-reported",
+      "sourceUrl": "https://platform.moonshot.ai/blog/kimi-k3-1",
+      "evaluatedAt": "2026-09-23",
+      "notes": "BrowseComp, launch table."
+    },
+    {
+      "benchmarkSlug": "gdpval-aa",
+      "score": 1721,
+      "source": "self-reported",
+      "sourceUrl": "https://platform.moonshot.ai/blog/kimi-k3-1",
+      "evaluatedAt": "2026-09-23",
+      "notes": "GDPval-AA v2 Elo per the launch table; the independent AA row for K3 was 1668."
+    },
+    {
+      "benchmarkSlug": "exploitbench",
+      "score": 36.7,
+      "source": "self-reported",
+      "sourceUrl": "https://platform.moonshot.ai/blog/kimi-k3-1",
+      "evaluatedAt": "2026-09-23",
+      "notes": "ExploitBench, launch table; up from K3's 32.2."
+    },
+    {
+      "benchmarkSlug": "terminal-bench-3",
+      "score": 21.8,
+      "source": "self-reported",
+      "sourceUrl": "https://platform.moonshot.ai/blog/kimi-k3-1",
+      "evaluatedAt": "2026-09-23",
+      "notes": "Terminal-Bench 3.0, launch table; up from K3's 17.4 — the largest delta on the card."
+    },
+    {
+      "benchmarkSlug": "toolathlon",
+      "score": 78.9,
+      "source": "self-reported",
+      "sourceUrl": "https://platform.moonshot.ai/blog/kimi-k3-1",
+      "evaluatedAt": "2026-09-23",
+      "notes": "Toolathlon, launch table."
+    },
+    {
+      "benchmarkSlug": "swe-bench-pro",
+      "score": 71.4,
+      "source": "self-reported",
+      "sourceUrl": "https://platform.moonshot.ai/blog/kimi-k3-1",
+      "evaluatedAt": "2026-09-23",
+      "notes": "SWE-Bench Pro, launch table."
+    },
+    {
+      "benchmarkSlug": "arc-agi-2",
+      "score": 66.2,
+      "source": "self-reported",
+      "sourceUrl": "https://platform.moonshot.ai/blog/kimi-k3-1",
+      "evaluatedAt": "2026-09-23",
+      "notes": "ARC-AGI-2, launch table."
+    }
+  ]
+}

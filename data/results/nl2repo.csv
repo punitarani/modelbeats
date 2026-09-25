@@ -1,4 +1,5 @@
 model_slug,score,source,source_url,evaluated_at,notes
+deepseek-v4-flash-0731,54.2,self-reported,https://huggingface.co/deepseek-ai/DeepSeek-V4-Flash-0731,2026-07-31,"NL2Repo, official model card launch table; vs. 39.4 for the April Preview checkpoint."
 glm-5-3,58,self-reported,https://z.ai/blog/glm-5.3,2026-08-14,"NL2Repo, official GLM-5.3 comparison table; level with Kimi K3 (58.0), behind DeepSeek-V4-Pro-0813 (61.1) and Claude Opus 4.8 (69.7)."
 glm-5-3-flash,56.3,self-reported,https://z.ai/blog/glm-5.3-flash,2026-08-26,"NL2Repo, official GLM-5.3-Flash comparison table; behind DeepSeek-V4-Vision-Exp (57.7) and Claude Opus 4.8 (69.7)."
 qwen3-6-27b,36.2,self-reported,https://huggingface.co/Qwen/Qwen3.8-27B,2026-08-05,"NL2Repo-Bench, Qwen3.6-27B column of the official Qwen3.8-27B model card."

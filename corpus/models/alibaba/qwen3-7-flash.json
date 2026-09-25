@@ -11,7 +11,11 @@
   "archClass": "moe",
   "archDisplay": "MoE, exact expert configuration undisclosed; cheaper vision-language tier below Qwen3.7-Plus/Max, tuned for multimodal agents, visual coding and computer interaction",
   "ctxK": 1000,
-  "modalities": ["text", "vision", "video"],
+  "modalities": [
+    "text",
+    "vision",
+    "video"
+  ],
   "langCount": null,
   "capabilities": {
     "reasoning": true,
@@ -22,11 +26,15 @@
     "agentic": true
   },
   "apiAvailable": true,
-  "price": { "input": 0.03, "output": 0.13, "provider": "Alibaba" },
+  "price": {
+    "input": 0.03,
+    "output": 0.13,
+    "provider": "Alibaba"
+  },
   "links": {
     "docs": "https://www.alibabacloud.com/help/en/model-studio/models"
   },
-  "note": "Cheapest tier of the Qwen3.7 line (model id qwen3.7-flash-20260727), released ~5 weeks after Qwen3.7-Max/Plus. A vision-language reasoning model pitched at multimodal agents, visual coding, search and computer interaction. No independently-verified benchmark suite found at research time; left unranked pending third-party coverage.",
+  "note": "Cheapest tier of the Qwen3.7 line (model id qwen3.7-flash-20260727), released ~5 weeks after Qwen3.7-Max/Plus. A vision-language reasoning model pitched at multimodal agents, visual coding, search and computer interaction (object recognition, spatial understanding). No independently-verified benchmark suite found at time of writing; treat as unranked until third-party coverage lands.",
   "quants": [],
   "vramQ4Gb": null,
   "vramFp16Gb": null,

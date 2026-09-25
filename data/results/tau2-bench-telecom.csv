@@ -6,6 +6,7 @@ claude-opus-4-6,99.3,self-reported,https://www.vellum.ai/blog/claude-opus-4-6-be
 claude-sonnet-4-5,98,self-reported,https://www.anthropic.com/claude-sonnet-4-6-system-card,2026-02-17,"τ²-bench Telecom domain, Sonnet 4.5 comparison figure, Table 2.1.A. (Sonnet 4.5 also scored 86.2% on the Retail sub-domain, which has no matching taxonomy slug distinct from tau-bench.)"
 claude-sonnet-4-6,97.9,self-reported,https://www.anthropic.com/claude-sonnet-4-6-system-card,2026-02-17,"τ²-bench Telecom domain (Section 2.5). Sonnet 4.6 also scored 91.7% on the Retail sub-domain, which has no matching taxonomy slug."
 command-a-218b,85,self-reported,https://cohere.com/blog/command-a-plus,,up from 37% for Command A Reasoning
+command-a2,88.4,self-reported,https://cohere.com/blog/command-a2,2026-09-16,"τ²-Bench Telecom, Command A2 launch table; up from A+'s 85.0."
 exaone-4-5,73,self-reported,https://huggingface.co/LGAI-EXAONE/EXAONE-4.5-33B,2026-04-09,"tau2-Bench, telecom domain (model card also reports Retail 77.9 and Airline 56.5 domains, which don't map to any taxonomy slug and are omitted)"
 falcon-h1r-7b,25.4,self-reported,https://huggingface.co/tiiuae/Falcon-H1R-7B,,Listed on the card as 'τ²-Bench Telecom'.
 gemini-2-0-flash,29.5,independent,https://artificialanalysis.ai/models/gemini-2-0-flash,2026-07-15,"τ²-Bench Telecom agentic tool-use eval, Artificial Analysis independent evaluation of the GA 'Gemini 2.0 Flash (Feb '25)' snapshot (raw score 0.2953216374269 extracted directly from the model page's evaluation data). Not previously tracked."

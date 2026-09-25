@@ -1,0 +1,134 @@
+{
+  "name": "DeepSeek-V4.1 (Think High)",
+  "org": "DeepSeek",
+  "family": "DeepSeek-V4",
+  "slug": "deepseek-v4-1-think-high",
+  "releaseDate": "2026-09-22",
+  "status": "released",
+  "openness": "open-weights",
+  "license": "MIT",
+  "paramsB": 1600,
+  "activeParamsB": 49,
+  "archClass": "moe",
+  "archDisplay": "1600B-total/49B-active sparse MoE (same skeleton as DeepSeek-V4-Pro), 1M-token context; text-only",
+  "ctxK": 1000,
+  "modalities": [
+    "text"
+  ],
+  "langCount": null,
+  "capabilities": {
+    "reasoning": true,
+    "coding": true,
+    "vision": false,
+    "functionCalling": true,
+    "toolUse": true,
+    "agentic": true
+  },
+  "apiAvailable": true,
+  "price": {
+    "input": 0.5,
+    "output": 1.0
+  },
+  "links": {
+    "hf": "deepseek-ai/DeepSeek-V4.1",
+    "docs": "https://api-docs.deepseek.com/quick_start/pricing/"
+  },
+  "note": "DeepSeek's September 22, 2026 incremental refresh of the V4-Pro line — same 1600B/49B MoE skeleton and 1M context, retrained post-training stack, filed as the three-config V4.1 family (Non-Think default / Think High / Think Max best). API price moves from $0.435/$0.87 to $0.50/$1.00 per Mtok — the first price increase in the V line, still far below every closed frontier model. The launch table's honest read: +1.5 to +3 points over V4-Pro across the shared rows, nothing that changes the open-vs-closed frontier picture by itself. Think Max additionally carries an independent ARC Prize ARC-AGI-2 run (49.3) — unusually quick third-party coverage for a DeepSeek release.",
+  "quants": [],
+  "vramQ4Gb": null,
+  "vramFp16Gb": null,
+  "tps4090": null,
+  "tpsNote": null,
+  "effortLabel": "Think High",
+  "isDefaultConfig": false,
+  "isBestConfig": false,
+  "specSources": {
+    "paramsB": "https://huggingface.co/deepseek-ai/DeepSeek-V4.1",
+    "releaseDate": "https://api-docs.deepseek.com/news/news250922",
+    "ctxK": "https://api-docs.deepseek.com/quick_start/pricing/",
+    "price": "https://api-docs.deepseek.com/quick_start/pricing/",
+    "openness": "https://huggingface.co/deepseek-ai/DeepSeek-V4.1"
+  },
+  "results": [
+    {
+      "benchmarkSlug": "mmlu-pro",
+      "score": 87.9,
+      "source": "self-reported",
+      "sourceUrl": "https://api-docs.deepseek.com/news/news250922",
+      "evaluatedAt": "2026-09-22",
+      "notes": "MMLU-Pro, Think High row of the V4.1 launch table."
+    },
+    {
+      "benchmarkSlug": "gpqa",
+      "score": 89.4,
+      "source": "self-reported",
+      "sourceUrl": "https://api-docs.deepseek.com/news/news250922",
+      "evaluatedAt": "2026-09-22",
+      "notes": "GPQA Diamond, Think High row."
+    },
+    {
+      "benchmarkSlug": "livecodebench",
+      "score": 91.8,
+      "source": "self-reported",
+      "sourceUrl": "https://api-docs.deepseek.com/news/news250922",
+      "evaluatedAt": "2026-09-22",
+      "notes": "LiveCodeBench v6, Think High row."
+    },
+    {
+      "benchmarkSlug": "swe-bench",
+      "score": 80.9,
+      "source": "self-reported",
+      "sourceUrl": "https://api-docs.deepseek.com/news/news250922",
+      "evaluatedAt": "2026-09-22",
+      "notes": "SWE-bench Verified, Think High row."
+    },
+    {
+      "benchmarkSlug": "swe-bench-pro",
+      "score": 56.8,
+      "source": "self-reported",
+      "sourceUrl": "https://api-docs.deepseek.com/news/news250922",
+      "evaluatedAt": "2026-09-22",
+      "notes": "SWE-Bench Pro, Think High row."
+    },
+    {
+      "benchmarkSlug": "terminal-bench-2",
+      "score": 69.4,
+      "source": "self-reported",
+      "sourceUrl": "https://api-docs.deepseek.com/news/news250922",
+      "evaluatedAt": "2026-09-22",
+      "notes": "Terminal-Bench 2.1, Think High row."
+    },
+    {
+      "benchmarkSlug": "hle",
+      "score": 38.9,
+      "source": "self-reported",
+      "sourceUrl": "https://api-docs.deepseek.com/news/news250922",
+      "evaluatedAt": "2026-09-22",
+      "notes": "Humanity's Last Exam, Think High row."
+    },
+    {
+      "benchmarkSlug": "codeforces",
+      "score": 3180,
+      "source": "self-reported",
+      "sourceUrl": "https://api-docs.deepseek.com/news/news250922",
+      "evaluatedAt": "2026-09-22",
+      "notes": "Codeforces Elo, Think High row; vs. V4-Pro Think Max's 3206 — DeepSeek still publishes raw Codeforces Elo."
+    },
+    {
+      "benchmarkSlug": "browsecomp",
+      "score": 84.7,
+      "source": "self-reported",
+      "sourceUrl": "https://api-docs.deepseek.com/news/news250922",
+      "evaluatedAt": "2026-09-22",
+      "notes": "BrowseComp, Think High row."
+    },
+    {
+      "benchmarkSlug": "gdpval-aa",
+      "score": 1589,
+      "source": "self-reported",
+      "sourceUrl": "https://api-docs.deepseek.com/news/news250922",
+      "evaluatedAt": "2026-09-22",
+      "notes": "GDPval-AA v2 Elo, Think High row of the launch table."
+    }
+  ]
+}

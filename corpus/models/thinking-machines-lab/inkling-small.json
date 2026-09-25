@@ -11,7 +11,11 @@
   "archClass": "moe",
   "archDisplay": "Sparse MoE, 276B total / 12B active (roughly a quarter of Inkling's size), same text/vision/audio multimodal design and adjustable inference-time thinking effort as its larger sibling",
   "ctxK": 1000,
-  "modalities": ["text", "vision", "audio"],
+  "modalities": [
+    "text",
+    "vision",
+    "audio"
+  ],
   "langCount": null,
   "capabilities": {
     "reasoning": true,
@@ -22,12 +26,16 @@
     "agentic": true
   },
   "apiAvailable": true,
-  "price": { "input": 0.58, "output": 1.44, "provider": "Thinking Machines Lab" },
+  "price": {
+    "input": 0.58,
+    "output": 1.44,
+    "provider": "Thinking Machines Lab"
+  },
   "links": {
     "hf": "thinkingmachines/Inkling-Small",
     "docs": "https://thinkingmachines.ai/model-card/inkling-small"
   },
-  "note": "Thinking Machines Lab's second open-weight release, two weeks after flagship Inkling: a quarter-sized MoE (276B/12B active vs. 975B/41B) that the model card says matches Inkling on many benchmarks at lower cost and latency.",
+  "note": "Thinking Machines Lab's second open-weight release, two weeks after flagship Inkling: a quarter-sized MoE (276B/12B active vs. 975B/41B) that the model card says matches Inkling on many benchmarks at lower cost and latency, aimed at cheaper multimodal-agent deployment.",
   "quants": [],
   "vramQ4Gb": null,
   "vramFp16Gb": null,

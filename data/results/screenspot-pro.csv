@@ -2,5 +2,7 @@ model_slug,score,source,source_url,evaluated_at,notes
 claude-fable-5,87.3,self-reported,https://openai.com/index/gpt-6-astra,2026-09-03,"ScreenSpot-Pro (no tools), Claude Fable 5 column of OpenAI's GPT-6 Astra launch comparison."
 gpt-5-6-sol,76.9,self-reported,https://openai.com/index/gpt-6-astra,2026-09-03,"ScreenSpot-Pro (no tools), GPT-5.6 Sol column of OpenAI's GPT-6 Astra launch comparison."
 gpt-6-astra,92.7,self-reported,https://openai.com/index/gpt-6-astra,2026-09-03,"ScreenSpot-Pro (no tools), GPT-6 Astra launch table (Computer Use); vs GPT-5.6 Sol 76.9 and Claude Fable 5 87.3."
+gpt-6-astra-mini,84.3,self-reported,https://developers.openai.com/api/docs/models/gpt-6-astra-mini,2026-09-24,"ScreenSpot-Pro at max effort, launch table."
 muse-glimmer-30b,75.4,self-reported,https://huggingface.co/meta-models/Muse-Glimmer-30B,2026-08-10,"ScreenSpot Pro, official Muse Glimmer model card; marginally behind Qwen3.6-27B (76.1)."
+muse-glimmer-8b,61.8,self-reported,https://huggingface.co/meta-llama/Muse-Glimmer-8B,2026-09-15,"ScreenSpot-Pro, release table."
 qwen3-6-27b,76.1,self-reported,https://huggingface.co/meta-models/Muse-Glimmer-30B,2026-08-10,"ScreenSpot Pro, Qwen3.6-27B thinking-mode column of the official Muse Glimmer 30B model card; best in row."

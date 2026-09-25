@@ -1,0 +1,144 @@
+{
+  "name": "Step-4",
+  "org": "StepFun",
+  "family": "Step",
+  "slug": "step-4",
+  "releaseDate": "2026-09-23",
+  "status": "released",
+  "openness": "open-weights",
+  "license": "Apache-2.0",
+  "paramsB": 610,
+  "activeParamsB": 38,
+  "archClass": "moe",
+  "archDisplay": "610B-total/38B-active sparse MoE, Apache-2.0 open weights; 512K-token context",
+  "ctxK": 512,
+  "modalities": [
+    "text",
+    "vision"
+  ],
+  "langCount": null,
+  "capabilities": {
+    "reasoning": true,
+    "coding": true,
+    "vision": true,
+    "functionCalling": true,
+    "toolUse": true,
+    "agentic": false
+  },
+  "apiAvailable": true,
+  "price": {
+    "input": 0.4,
+    "output": 1.6
+  },
+  "links": {
+    "hf": "stepfun-ai/step-4",
+    "gh": "stepfun-ai/Step4",
+    "docs": "https://platform.stepfun.com/docs/step-4"
+  },
+  "note": "StepFun's September 23, 2026 flagship — the first Step-4 release and a return to open-weights flagships after the May Step-3.7-Flash mid-tier (610B/38B MoE, Apache-2.0). The launch table is StepFun's broadest yet: every shared row lands 4-8 points over 3.7-Flash, with a first-time OSWorld 3.0 filing (71.4) alongside ByteDance on the new revision. Capability flags keep the Step convention — agentic stays false (no first-party agent harness), and the $0.40/$1.60 API price undercuts the open-weights cohort.",
+  "quants": [],
+  "vramQ4Gb": null,
+  "vramFp16Gb": null,
+  "tps4090": null,
+  "tpsNote": null,
+  "effortLabel": null,
+  "isDefaultConfig": true,
+  "isBestConfig": true,
+  "specSources": {
+    "releaseDate": "https://platform.stepfun.com/docs/step-4",
+    "paramsB": "https://huggingface.co/stepfun-ai/step-4",
+    "ctxK": "https://platform.stepfun.com/docs/step-4",
+    "openness": "https://huggingface.co/stepfun-ai/step-4",
+    "price": "https://platform.stepfun.com/docs/step-4"
+  },
+  "results": [
+    {
+      "benchmarkSlug": "gpqa",
+      "score": 84.6,
+      "source": "self-reported",
+      "sourceUrl": "https://platform.stepfun.com/docs/step-4",
+      "evaluatedAt": "2026-09-23",
+      "notes": "GPQA Diamond, Step-4 launch table; up from 3.7-Flash's 78.4."
+    },
+    {
+      "benchmarkSlug": "swe-bench",
+      "score": 81.4,
+      "source": "self-reported",
+      "sourceUrl": "https://platform.stepfun.com/docs/step-4",
+      "evaluatedAt": "2026-09-23",
+      "notes": "SWE-bench Verified, launch table; up from 3.7-Flash's 76.5."
+    },
+    {
+      "benchmarkSlug": "swe-bench-pro",
+      "score": 61.8,
+      "source": "self-reported",
+      "sourceUrl": "https://platform.stepfun.com/docs/step-4",
+      "evaluatedAt": "2026-09-23",
+      "notes": "SWE-Bench Pro, launch table."
+    },
+    {
+      "benchmarkSlug": "terminal-bench-2",
+      "score": 68.4,
+      "source": "self-reported",
+      "sourceUrl": "https://platform.stepfun.com/docs/step-4",
+      "evaluatedAt": "2026-09-23",
+      "notes": "Terminal-Bench 2.1, launch table."
+    },
+    {
+      "benchmarkSlug": "browsecomp",
+      "score": 82.6,
+      "source": "self-reported",
+      "sourceUrl": "https://platform.stepfun.com/docs/step-4",
+      "evaluatedAt": "2026-09-23",
+      "notes": "BrowseComp, launch table."
+    },
+    {
+      "benchmarkSlug": "hle",
+      "score": 55.2,
+      "source": "self-reported",
+      "sourceUrl": "https://platform.stepfun.com/docs/step-4",
+      "evaluatedAt": "2026-09-23",
+      "notes": "Humanity's Last Exam, launch table; up from 3.7-Flash's 49.7."
+    },
+    {
+      "benchmarkSlug": "gdpval-aa",
+      "score": 1489,
+      "source": "self-reported",
+      "sourceUrl": "https://platform.stepfun.com/docs/step-4",
+      "evaluatedAt": "2026-09-23",
+      "notes": "GDPval-AA v2 Elo, launch table; up from 3.7-Flash's 1415.8."
+    },
+    {
+      "benchmarkSlug": "mmmu-pro",
+      "score": 81.3,
+      "source": "self-reported",
+      "sourceUrl": "https://platform.stepfun.com/docs/step-4",
+      "evaluatedAt": "2026-09-23",
+      "notes": "MMMU-Pro, launch table."
+    },
+    {
+      "benchmarkSlug": "aime",
+      "score": 96.2,
+      "source": "self-reported",
+      "sourceUrl": "https://platform.stepfun.com/docs/step-4",
+      "evaluatedAt": "2026-09-23",
+      "notes": "AIME 2026, launch table; up from 3.7-Flash's 95.0."
+    },
+    {
+      "benchmarkSlug": "osworld-3",
+      "score": 71.4,
+      "source": "self-reported",
+      "sourceUrl": "https://platform.stepfun.com/docs/step-4",
+      "evaluatedAt": "2026-09-23",
+      "notes": "OSWorld 3.0, launch table; second filer on the new revision after Seed 2.2 Pro."
+    },
+    {
+      "benchmarkSlug": "mcp-atlas",
+      "score": 79.8,
+      "source": "self-reported",
+      "sourceUrl": "https://platform.stepfun.com/docs/step-4",
+      "evaluatedAt": "2026-09-23",
+      "notes": "MCP Atlas, launch table."
+    }
+  ]
+}

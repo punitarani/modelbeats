@@ -1,0 +1,119 @@
+{
+  "name": "Gemini 3.8 Flash-Lite",
+  "org": "Google",
+  "family": "Gemini 3.8",
+  "slug": "gemini-3-8-flash-lite",
+  "releaseDate": "2026-09-16",
+  "status": "released",
+  "openness": "closed",
+  "license": "Proprietary",
+  "paramsB": null,
+  "activeParamsB": null,
+  "archClass": "moe",
+  "archDisplay": "Proprietary cost-optimized variant of Gemini 3.8 Flash (sparse MoE, undisclosed size); 1M-token context, natively multimodal",
+  "ctxK": 1000,
+  "modalities": [
+    "text",
+    "vision",
+    "audio",
+    "video"
+  ],
+  "langCount": null,
+  "capabilities": {
+    "reasoning": true,
+    "coding": true,
+    "vision": true,
+    "functionCalling": true,
+    "toolUse": true,
+    "agentic": true
+  },
+  "apiAvailable": true,
+  "price": {
+    "input": 0.25,
+    "output": 1.5,
+    "provider": "Google AI Studio / Vertex AI (Gemini API)"
+  },
+  "links": {
+    "docs": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/3-8-flash-lite/"
+  },
+  "note": "Google's September 16, 2026 high-volume tier — the 3.8 generation's Flash-Lite, at $0.25/$1.50 per Mtok (a third of 3.8 Flash's rate). Keeps the full text/vision/audio/video modality stack, which is the Lite line's real differentiator against Qwen Flash-Next and Claude Haiku 5, both of which arrived the same week. The launch table stays narrow (Google saves its multi-suite treatment for Pro/Flash): four headline rows plus OSWorld-Verified and Video-MME Pro, a benchmark revision Google is now co-citing with ByteDance. Filed as its own row rather than an effort config because Google bills Lite as a distinct model id.",
+  "quants": [],
+  "vramQ4Gb": null,
+  "vramFp16Gb": null,
+  "tps4090": null,
+  "tpsNote": null,
+  "effortLabel": null,
+  "isDefaultConfig": true,
+  "isBestConfig": true,
+  "specSources": {
+    "releaseDate": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/3-8-flash-lite/",
+    "price": "https://ai.google.dev/gemini-api/docs/pricing",
+    "ctxK": "https://ai.google.dev/gemini-api/docs/models"
+  },
+  "results": [
+    {
+      "benchmarkSlug": "swe-bench-pro",
+      "score": 57.6,
+      "source": "self-reported",
+      "sourceUrl": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/3-8-flash-lite/",
+      "evaluatedAt": "2026-09-16",
+      "notes": "SWE-Bench Pro, launch table; up from 3.5 Flash-Lite's 54.2."
+    },
+    {
+      "benchmarkSlug": "terminal-bench-2",
+      "score": 58.9,
+      "source": "self-reported",
+      "sourceUrl": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/3-8-flash-lite/",
+      "evaluatedAt": "2026-09-16",
+      "notes": "Terminal-Bench 2.1, launch table."
+    },
+    {
+      "benchmarkSlug": "gdpval-aa",
+      "score": 1342,
+      "source": "self-reported",
+      "sourceUrl": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/3-8-flash-lite/",
+      "evaluatedAt": "2026-09-16",
+      "notes": "GDPval-AA v2 Elo, launch table; between 3.5 Flash-Lite (1140) and 3.8 Flash (1545)."
+    },
+    {
+      "benchmarkSlug": "osworld-verified",
+      "score": 76.4,
+      "source": "self-reported",
+      "sourceUrl": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/3-8-flash-lite/",
+      "evaluatedAt": "2026-09-16",
+      "notes": "OSWorld-Verified, launch table."
+    },
+    {
+      "benchmarkSlug": "hle-verified",
+      "score": 38.6,
+      "source": "self-reported",
+      "sourceUrl": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/3-8-flash-lite/",
+      "evaluatedAt": "2026-09-16",
+      "notes": "HLE-Verified (verified subset — not comparable to full HLE), launch table."
+    },
+    {
+      "benchmarkSlug": "videomme-pro",
+      "score": 81.5,
+      "source": "self-reported",
+      "sourceUrl": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/3-8-flash-lite/",
+      "evaluatedAt": "2026-09-16",
+      "notes": "Video-MME Pro, launch table; Google's multimodal Lite tier is the second filer on the new revision."
+    },
+    {
+      "benchmarkSlug": "mmmu-pro",
+      "score": 74.8,
+      "source": "self-reported",
+      "sourceUrl": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/3-8-flash-lite/",
+      "evaluatedAt": "2026-09-16",
+      "notes": "MMMU-Pro, launch table."
+    },
+    {
+      "benchmarkSlug": "deepswe",
+      "score": 52.3,
+      "source": "self-reported",
+      "sourceUrl": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/3-8-flash-lite/",
+      "evaluatedAt": "2026-09-16",
+      "notes": "DeepSWE v1.1, launch table; an honest Lite-tier row well below 3.8 Flash's 73.7."
+    }
+  ]
+}

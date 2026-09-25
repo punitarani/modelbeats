@@ -1,0 +1,163 @@
+{
+  "name": "Command A2",
+  "org": "Cohere",
+  "family": "Command A",
+  "slug": "command-a2",
+  "releaseDate": "2026-09-16",
+  "status": "released",
+  "openness": "open-weights",
+  "license": "Apache 2.0",
+  "paramsB": 340,
+  "activeParamsB": 32,
+  "archClass": "moe",
+  "archDisplay": "340B-total/32B-active sparse MoE, Apache 2.0 open weights; 256K-token context, 48-language coverage",
+  "ctxK": 256,
+  "modalities": [
+    "text",
+    "vision"
+  ],
+  "langCount": 48,
+  "capabilities": {
+    "reasoning": true,
+    "coding": true,
+    "vision": true,
+    "functionCalling": true,
+    "toolUse": true,
+    "agentic": true
+  },
+  "apiAvailable": true,
+  "price": null,
+  "links": {
+    "hf": "CohereLabs/command-a2",
+    "docs": "https://docs.cohere.com/docs/command-a2"
+  },
+  "note": "Cohere's September 16, 2026 successor to May's Command A+ — 340B/32B MoE under Apache 2.0, keeping the line's enterprise-multilingual positioning (48 languages) and, like A+, shipped weights-first with no first-party metered price at launch (price: null, same as A+). The launch table is a straight +3-8 point lift across the A+ suite with first-time SWE-Bench Pro and DeepSearchQA rows; Terminal-Bench 2.1 remains the family's weak spot at 29.4.",
+  "quants": [],
+  "vramQ4Gb": null,
+  "vramFp16Gb": null,
+  "tps4090": null,
+  "tpsNote": null,
+  "effortLabel": null,
+  "isDefaultConfig": true,
+  "isBestConfig": true,
+  "specSources": {
+    "releaseDate": "https://cohere.com/blog/command-a2",
+    "paramsB": "https://huggingface.co/CohereLabs/command-a2",
+    "openness": "https://huggingface.co/CohereLabs/command-a2",
+    "langCount": "https://cohere.com/blog/command-a2"
+  },
+  "results": [
+    {
+      "benchmarkSlug": "tau2-bench-telecom",
+      "score": 88.4,
+      "source": "self-reported",
+      "sourceUrl": "https://cohere.com/blog/command-a2",
+      "evaluatedAt": "2026-09-16",
+      "notes": "τ²-Bench Telecom, Command A2 launch table; up from A+'s 85.0."
+    },
+    {
+      "benchmarkSlug": "mmmu",
+      "score": 79.6,
+      "source": "self-reported",
+      "sourceUrl": "https://cohere.com/blog/command-a2",
+      "evaluatedAt": "2026-09-16",
+      "notes": "MMMU, launch table."
+    },
+    {
+      "benchmarkSlug": "mmmu-pro",
+      "score": 69.8,
+      "source": "self-reported",
+      "sourceUrl": "https://cohere.com/blog/command-a2",
+      "evaluatedAt": "2026-09-16",
+      "notes": "MMMU-Pro, launch table; up from A+'s 63.0."
+    },
+    {
+      "benchmarkSlug": "mathvista",
+      "score": 84.9,
+      "source": "self-reported",
+      "sourceUrl": "https://cohere.com/blog/command-a2",
+      "evaluatedAt": "2026-09-16",
+      "notes": "MathVista, launch table."
+    },
+    {
+      "benchmarkSlug": "charxiv",
+      "score": 61.4,
+      "source": "self-reported",
+      "sourceUrl": "https://cohere.com/blog/command-a2",
+      "evaluatedAt": "2026-09-16",
+      "notes": "CharXiv Reasoning, launch table; up from A+'s 52.7."
+    },
+    {
+      "benchmarkSlug": "aime",
+      "score": 93.2,
+      "source": "self-reported",
+      "sourceUrl": "https://cohere.com/blog/command-a2",
+      "evaluatedAt": "2026-09-16",
+      "notes": "AIME 2026, launch table."
+    },
+    {
+      "benchmarkSlug": "gpqa",
+      "score": 81.7,
+      "source": "independent",
+      "sourceUrl": "https://www.vals.ai/models/cohere_command-a2",
+      "evaluatedAt": "2026-09-21",
+      "notes": "GPQA Diamond, Vals AI independent run within a week of launch — fast third-party coverage for a Command release."
+    },
+    {
+      "benchmarkSlug": "hle",
+      "score": 16.8,
+      "source": "independent",
+      "sourceUrl": "https://www.vals.ai/models/cohere_command-a2",
+      "evaluatedAt": "2026-09-21",
+      "notes": "Humanity's Last Exam, Vals AI independent run."
+    },
+    {
+      "benchmarkSlug": "ifbench",
+      "score": 79.4,
+      "source": "independent",
+      "sourceUrl": "https://www.vals.ai/models/cohere_command-a2",
+      "evaluatedAt": "2026-09-21",
+      "notes": "IFBench, Vals AI independent run."
+    },
+    {
+      "benchmarkSlug": "mmlu-pro",
+      "score": 82.6,
+      "source": "independent",
+      "sourceUrl": "https://www.vals.ai/models/cohere_command-a2",
+      "evaluatedAt": "2026-09-21",
+      "notes": "MMLU-Pro, Vals AI independent run."
+    },
+    {
+      "benchmarkSlug": "livecodebench",
+      "score": 83.7,
+      "source": "independent",
+      "sourceUrl": "https://www.vals.ai/models/cohere_command-a2",
+      "evaluatedAt": "2026-09-21",
+      "notes": "LiveCodeBench v6, Vals AI independent run."
+    },
+    {
+      "benchmarkSlug": "terminal-bench-2",
+      "score": 29.4,
+      "source": "independent",
+      "sourceUrl": "https://www.vals.ai/models/cohere_command-a2",
+      "evaluatedAt": "2026-09-21",
+      "notes": "Terminal-Bench 2.1, Vals AI independent run; still the family's weakest tracked row."
+    },
+    {
+      "benchmarkSlug": "swe-bench-pro",
+      "score": 46.8,
+      "source": "self-reported",
+      "sourceUrl": "https://cohere.com/blog/command-a2",
+      "evaluatedAt": "2026-09-16",
+      "notes": "SWE-Bench Pro, launch table — first Command filing on this benchmark."
+    },
+    {
+      "benchmarkSlug": "deepsearchqa",
+      "score": 71.2,
+      "source": "self-reported",
+      "sourceUrl": "https://cohere.com/blog/command-a2",
+      "evaluatedAt": "2026-09-16",
+      "notes": "DeepSearchQA, launch table; the Command line's agentic-search row."
+    }
+  ]
+}

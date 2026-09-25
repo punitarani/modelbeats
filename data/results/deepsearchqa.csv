@@ -1,5 +1,6 @@
 model_slug,score,source,source_url,evaluated_at,notes
 claude-opus-5,90.4,self-reported,https://research.meta.ai/blog/introducing-muse-spark-1-3,2026-09-02,"DeepSearchQA F1, Claude Opus 5 column (max reasoning) of Meta's Muse Spark 1.3 launch scorecard."
+command-a2,71.2,self-reported,https://cohere.com/blog/command-a2,2026-09-16,"DeepSearchQA, launch table; the Command line's agentic-search row."
 gpt-5-6-sol,93,self-reported,https://research.meta.ai/blog/introducing-muse-spark-1-3,2026-09-02,"DeepSearchQA F1, GPT-5.6 Sol column (max reasoning) of Meta's Muse Spark 1.3 launch scorecard; best in row."
 muse-glimmer-30b,74.6,self-reported,https://huggingface.co/meta-models/Muse-Glimmer-30B,2026-08-10,"DeepSearch QA, official Muse Glimmer model card; best in row."
 muse-spark-1-2,85.9,self-reported,https://research.meta.ai/blog/introducing-muse-spark-1-3,2026-09-02,"DeepSearchQA F1, Muse Spark 1.2 baseline column (xhigh) of Meta's Muse Spark 1.3 launch scorecard."

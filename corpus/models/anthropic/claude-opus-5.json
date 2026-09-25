@@ -1,0 +1,270 @@
+{
+  "name": "Claude Opus 5",
+  "org": "Anthropic",
+  "orgSlug": "anthropic",
+  "family": "Claude 5",
+  "familySlug": "claude-5",
+  "slug": "claude-opus-5",
+  "releaseDate": "2026-07-24",
+  "status": "released",
+  "openness": "closed",
+  "license": "Proprietary",
+  "paramsB": null,
+  "activeParamsB": null,
+  "archClass": "dense",
+  "archDisplay": "Dense transformer, architecture undisclosed; adaptive thinking on by default, controlled by a runtime effort parameter (low/medium/high/xhigh/max)",
+  "ctxK": 1000,
+  "modalities": [
+    "text",
+    "vision"
+  ],
+  "langCount": null,
+  "capabilities": {
+    "reasoning": true,
+    "coding": true,
+    "vision": true,
+    "functionCalling": true,
+    "toolUse": true,
+    "agentic": true
+  },
+  "apiAvailable": true,
+  "price": {
+    "input": 5,
+    "output": 25
+  },
+  "links": {
+    "docs": "https://www.anthropic.com/news/claude-opus-5"
+  },
+  "note": "Model id claude-opus-5 (released 2026-07-24, Anthropic's fourth Claude 5 model). Positioned as a thoughtful, proactive agent that 'comes close to the frontier intelligence of Claude Fable 5 at half the price' — same $5/$25 per MTok as Opus 4.8 (half of Fable 5's $10/$50); it is the new default model on Claude Max and the strongest model on Claude Pro. familySlug is claude-5, but predecessor is null: it is the first Opus in the Claude 5 family and cross-family predecessors are disallowed (Opus 4 likewise had a null predecessor at the start of Claude 4). Fast mode runs ~2.5x default speed at twice the base price ($10/$50). Per Anthropic's Opus 5 System Card (Table 8.1.A) it is state-of-the-art on FrontierBench v0.1 and GDPval-AA v2, roughly triples the next-best model on ARC-AGI-3, and ~1.5x the next-best on Zapier AutomationBench; it trails GPT-5.6 Sol on DeepSWE and ARC-AGI-2, and Fable 5 on SWE-bench Pro and FrontierCode. HLE headline uses the with-tools configuration (64.7%; no-tools is 56.3%) to stay ordering-consistent with the sibling Sonnet 5 row, whose corpus HLE figure (57.4%) is also with-tools. GDPval-AA v2 is deliberately NOT filed for this model: Opus 5's launch figure (1861) is on the current, re-fitted Artificial Analysis leaderboard (where Fable 5=1747, Opus 4.8=1593), whereas this corpus's gdpval-aa column is an earlier snapshot (Fable 5=1932, Opus 4.8=1890); mixing the two scales would make Opus 5 spuriously lose its GDPval-AA battles to Opus 4.8/Fable 5, contradicting the published SOTA result, so the row is omitted rather than corrupt the Elo. Cyber classifiers engage ~85% less often than Fable 5; flagged cyber/bio requests fall back to Opus 4.8 by default.",
+  "quants": [],
+  "vramQ4Gb": null,
+  "vramFp16Gb": null,
+  "tps4090": null,
+  "tpsNote": null,
+  "effortLabel": null,
+  "isDefaultConfig": true,
+  "isBestConfig": true,
+  "specSources": {
+    "releaseDate": "https://www.anthropic.com/news/claude-opus-5",
+    "price": "https://www.anthropic.com/pricing",
+    "ctxK": "https://docs.anthropic.com/en/docs/about-claude/models/claude-opus-5"
+  },
+  "results": [
+    {
+      "benchmarkSlug": "aa-briefcase",
+      "score": 1720.0,
+      "source": "self-reported",
+      "sourceUrl": "https://www.anthropic.com/claude-opus-5-system-card",
+      "evaluatedAt": "2026-07-24",
+      "notes": "AA-Briefcase (Artificial Analysis professional knowledge-work Elo), Claude Opus 5 System Card Table 8.1.A / §8.13.5. SOTA in row, ahead of Fable 5 (1574), GPT-5.6 Sol (1505) and Opus 4.8 (1346). All four values are from the same Anthropic run, so the scale is internally consistent."
+    },
+    {
+      "benchmarkSlug": "arc-agi-1",
+      "score": 97.5,
+      "source": "self-reported",
+      "sourceUrl": "https://www.anthropic.com/claude-opus-5-system-card",
+      "evaluatedAt": "2026-07-24",
+      "notes": "ARC-AGI-1, Claude Opus 5 System Card Table 8.1.A (best effort). Tied with GPT-5.6 Sol (97.5, xhigh) in Anthropic's table; ahead of Opus 4.8 (92.5)."
+    },
+    {
+      "benchmarkSlug": "arc-agi-2",
+      "score": 90.4,
+      "source": "self-reported",
+      "sourceUrl": "https://www.anthropic.com/claude-opus-5-system-card",
+      "evaluatedAt": "2026-07-24",
+      "notes": "ARC-AGI-2, Claude Opus 5 System Card Table 8.1.A. Large jump over Opus 4.8 (72.1) but behind GPT-5.6 Sol (92.5)."
+    },
+    {
+      "benchmarkSlug": "arc-agi-3",
+      "score": 30.2,
+      "source": "self-reported",
+      "sourceUrl": "https://www.anthropic.com/claude-opus-5-system-card",
+      "evaluatedAt": "2026-07-24",
+      "notes": "ARC-AGI-3 (high effort), Claude Opus 5 System Card Table 8.1.A / §8.14.2. Anthropic's headline novel-reasoning result: ~3x the next-best model (GPT-5.6 Sol 7.8). Humans score ~100%; frontier AI was ~0.5% at the March 2026 launch, so this is a large SOTA jump."
+    },
+    {
+      "benchmarkSlug": "automationbench",
+      "score": 26.0,
+      "source": "self-reported",
+      "sourceUrl": "https://www.anthropic.com/claude-opus-5-system-card",
+      "evaluatedAt": "2026-07-24",
+      "notes": "Zapier AutomationBench (held-out private set), Claude Opus 5 System Card Table 8.1.A / §8.13.7. Anthropic reports ~1.5x the next-best model's pass rate for the same cost per task; Opus 5 topped Zapier's leaderboard."
+    },
+    {
+      "benchmarkSlug": "browsecomp",
+      "score": 90.8,
+      "source": "self-reported",
+      "sourceUrl": "https://www.anthropic.com/claude-opus-5-system-card",
+      "evaluatedAt": "2026-07-24",
+      "notes": "BrowseComp (single-agent), Claude Opus 5 System Card Table 8.1.A. Beats Opus 4.8 (84.3), Fable 5 (87.4) and GPT-5.6 Sol (90.4)."
+    },
+    {
+      "benchmarkSlug": "cursorbench",
+      "score": 70.0,
+      "source": "independent",
+      "sourceUrl": "https://www.anthropic.com/claude-fable-and-mythos-5-1",
+      "evaluatedAt": "2026-09-01",
+      "notes": "CursorBench 3.2.0, Claude Opus 5 column of the Claude Fable 5.1 System Card Table 8.1.A. Run by Cursor rather than the model vendor."
+    },
+    {
+      "benchmarkSlug": "deepsearchqa",
+      "score": 90.4,
+      "source": "self-reported",
+      "sourceUrl": "https://research.meta.ai/blog/introducing-muse-spark-1-3",
+      "evaluatedAt": "2026-09-02",
+      "notes": "DeepSearchQA F1, Claude Opus 5 column (max reasoning) of Meta's Muse Spark 1.3 launch scorecard."
+    },
+    {
+      "benchmarkSlug": "deepswe",
+      "score": 68.8,
+      "source": "self-reported",
+      "sourceUrl": "https://www.anthropic.com/claude-opus-5-system-card",
+      "evaluatedAt": "2026-07-24",
+      "notes": "DeepSWE v1.1 (113 long-horizon SWE tasks, mean over 5 trials), Claude Opus 5 System Card Table 8.1.A / §8.3. Ahead of Opus 4.8 (59.0) but behind Fable 5 (69.7) and GPT-5.6 Sol (72.7) — an honest non-SOTA row."
+    },
+    {
+      "benchmarkSlug": "frontierbench",
+      "score": 43.3,
+      "source": "independent",
+      "sourceUrl": "https://www.frontierbench.ai/",
+      "evaluatedAt": "2026-07-24",
+      "notes": "FrontierBench v0.1 (74 tasks, 7 domains), Terminal-Bench's successor: resolution rate 43.3%, rank 1 on the official leaderboard — surpasses all other models and more than doubles Opus 4.8's 21.1% (Fable 5 33.8, GPT-5.6 Sol 34.4). Cross-confirmed by the Claude Opus 5 System Card Table 8.1.A (43.3)."
+    },
+    {
+      "benchmarkSlug": "frontiercode-extended",
+      "score": 63.6,
+      "source": "self-reported",
+      "sourceUrl": "https://openai.com/index/gpt-6-astra",
+      "evaluatedAt": "2026-09-03",
+      "notes": "FrontierCode v1.1 Extended, Claude Opus 5 column of OpenAI's GPT-6 Astra launch comparison."
+    },
+    {
+      "benchmarkSlug": "frontiercode",
+      "score": 53.4,
+      "source": "self-reported",
+      "sourceUrl": "https://www.anthropic.com/claude-opus-5-system-card",
+      "evaluatedAt": "2026-07-24",
+      "notes": "FrontierCode v1.1 (Main set), Cognition-run agentic coding, Claude Opus 5 System Card Table 8.1.A / §8.4. Opus 5 ranks 2nd (53.4 at medium effort), improving on Opus 4.8 (46.5) and leading GPT-5.6 Sol (47.5), just behind Fable 5 (53.5)."
+    },
+    {
+      "benchmarkSlug": "gdp-pdf",
+      "score": 37.0,
+      "source": "self-reported",
+      "sourceUrl": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/3-8-flash-and-3-8-flash-cyber/",
+      "evaluatedAt": "2026-09-02",
+      "notes": "GDP.PDF, Claude Opus 5 column of Google's Gemini 3.8 Flash launch table."
+    },
+    {
+      "benchmarkSlug": "harvey-legal-agent",
+      "score": 6.7,
+      "source": "self-reported",
+      "sourceUrl": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/3-8-flash-and-3-8-flash-cyber/",
+      "evaluatedAt": "2026-09-02",
+      "notes": "Harvey's Legal Agent Benchmark, Claude Opus 5 column of Google's Gemini 3.8 Flash launch table."
+    },
+    {
+      "benchmarkSlug": "hle-verified",
+      "score": 54.4,
+      "source": "self-reported",
+      "sourceUrl": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/3-8-flash-and-3-8-flash-cyber/",
+      "evaluatedAt": "2026-09-02",
+      "notes": "HLE-Verified, Claude Opus 5 column of Google's Gemini 3.8 Flash launch table."
+    },
+    {
+      "benchmarkSlug": "hle",
+      "score": 64.7,
+      "source": "self-reported",
+      "sourceUrl": "https://www.anthropic.com/claude-opus-5-system-card",
+      "evaluatedAt": "2026-07-24",
+      "notes": "Humanity's Last Exam, WITH-tools configuration (no-tools is 56.3%), Claude Opus 5 System Card Table 8.1.A. With-tools chosen to match the sibling Sonnet 5 corpus figure (57.4%), also with-tools, keeping this mixed-config column's orderings correct."
+    },
+    {
+      "benchmarkSlug": "jobbench",
+      "score": 65.7,
+      "source": "self-reported",
+      "sourceUrl": "https://research.meta.ai/blog/introducing-muse-spark-1-3",
+      "evaluatedAt": "2026-09-02",
+      "notes": "JobBench, Claude Opus 5 column (max reasoning) of Meta's Muse Spark 1.3 launch scorecard; best in row."
+    },
+    {
+      "benchmarkSlug": "lvbench",
+      "score": 75.4,
+      "source": "self-reported",
+      "sourceUrl": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/3-8-flash-and-3-8-flash-cyber/",
+      "evaluatedAt": "2026-09-02",
+      "notes": "LVBench, Claude Opus 5 column of Google's Gemini 3.8 Flash launch table."
+    },
+    {
+      "benchmarkSlug": "osworld-2",
+      "score": 70.6,
+      "source": "self-reported",
+      "sourceUrl": "https://www.anthropic.com/claude-opus-5-system-card",
+      "evaluatedAt": "2026-07-24",
+      "notes": "OSWorld 2.0 computer-use benchmark, Claude Opus 5 System Card Table 8.1.A / §8.12.3. SOTA — surpasses Fable 5's best result (66.1) at just over a third of the cost, and beats GPT-5.6 Sol (62.6)."
+    },
+    {
+      "benchmarkSlug": "swe-atlas-codebase-qna",
+      "score": 52.7,
+      "source": "self-reported",
+      "sourceUrl": "https://research.meta.ai/blog/introducing-muse-spark-1-3",
+      "evaluatedAt": "2026-09-02",
+      "notes": "SWE-Atlas Codebase QnA, Claude Opus 5 column (max reasoning) of Meta's Muse Spark 1.3 launch scorecard."
+    },
+    {
+      "benchmarkSlug": "swe-bench-multilingual",
+      "score": 89.5,
+      "source": "self-reported",
+      "sourceUrl": "https://www.anthropic.com/claude-opus-5-system-card",
+      "evaluatedAt": "2026-07-24",
+      "notes": "SWE-bench Multilingual (300 problems, 9 languages), Claude Opus 5 System Card Table 8.1.A / §8.2. Best in row, ahead of Fable 5 (86.6) and Opus 4.8 (84.4)."
+    },
+    {
+      "benchmarkSlug": "swe-bench-multimodal",
+      "score": 59.4,
+      "source": "self-reported",
+      "sourceUrl": "https://www.anthropic.com/claude-opus-5-system-card",
+      "evaluatedAt": "2026-07-24",
+      "notes": "SWE-bench Multimodal (visual-context issues), Claude Opus 5 System Card Table 8.1.A / §8.2. Best in row, well ahead of Fable 5 (54.1) and Opus 4.8 (38.4)."
+    },
+    {
+      "benchmarkSlug": "swe-bench-pro",
+      "score": 79.2,
+      "source": "self-reported",
+      "sourceUrl": "https://www.anthropic.com/claude-opus-5-system-card",
+      "evaluatedAt": "2026-07-24",
+      "notes": "SWE-bench Pro, Claude Opus 5 System Card Table 8.1.A / §8.2. Below Fable 5 (80.0) but well above Opus 4.8 (69.2), Sonnet 5 (63.2) and GPT-5.6 Sol (64.6)."
+    },
+    {
+      "benchmarkSlug": "swe-bench",
+      "score": 96.0,
+      "source": "self-reported",
+      "sourceUrl": "https://www.anthropic.com/claude-opus-5-system-card",
+      "evaluatedAt": "2026-07-24",
+      "notes": "SWE-bench Verified, Claude Opus 5 System Card §8.2 (avg over 5 trials, adaptive thinking at max effort). Highest generally-available Claude on Verified; the suite is saturating (Fable 5 95.0, Opus 4.8 88.6)."
+    },
+    {
+      "benchmarkSlug": "terminal-bench-4",
+      "score": 52.3,
+      "source": "self-reported",
+      "sourceUrl": "https://www.anthropic.com/claude-fable-and-mythos-5-1",
+      "evaluatedAt": "2026-09-01",
+      "notes": "Terminal-Bench 4.0, Claude Opus 5 column of the Claude Fable 5.1 / Mythos 5.1 System Card Table 8.1.A."
+    },
+    {
+      "benchmarkSlug": "terminal-bench-science",
+      "score": 29.0,
+      "source": "self-reported",
+      "sourceUrl": "https://www.anthropic.com/claude-fable-and-mythos-5-1",
+      "evaluatedAt": "2026-09-01",
+      "notes": "Terminal-Bench-Science 0.1, Claude Opus 5 column of the Claude Fable 5.1 System Card Table 8.1.A — Anthropic's reproduction of the public leaderboard's 30.0."
+    },
+    {
+      "benchmarkSlug": "vals-finance-agent",
+      "score": 58.6,
+      "source": "self-reported",
+      "sourceUrl": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/3-8-flash-and-3-8-flash-cyber/",
+      "evaluatedAt": "2026-09-02",
+      "notes": "Vals Finance Agent v2, Claude Opus 5 column of Google's Gemini 3.8 Flash launch table."
+    }
+  ]
+}

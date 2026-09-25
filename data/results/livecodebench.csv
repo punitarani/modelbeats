@@ -16,6 +16,7 @@ codeqwen1-5-7b,7.9,self-reported,https://arxiv.org/abs/2409.12186,2024-09-18,"Li
 codestral-25-01,37.9,self-reported,https://mistral.ai/news/codestral-2501/,,
 command-a,35.07,independent,https://www.vals.ai/models/cohere_command-a-03-2025,,"Vals AI independent evaluation, LiveCodeBench accuracy 35.07% (rank 121/127 at time of capture). Not previously tracked for Command A; confirmed via live-rendered Vals AI benchmark table (initial WebFetch of the page returned stale/zeroed placeholder values, so this was re-verified via a screenshot of the fully rendered page)."
 command-a-218b,79.38,independent,https://www.vals.ai/models/cohere_command-a-plus-05-2026,,"Vals AI independent evaluation, LiveCodeBench accuracy 79.38%. Genuinely new coding-benchmark data point; not currently tracked for Command A+."
+command-a2,83.7,independent,https://www.vals.ai/models/cohere_command-a2,2026-09-21,"LiveCodeBench v6, Vals AI independent run."
 deepseek-coder-v2-236b,43.4,self-reported,https://github.com/deepseek-ai/DeepSeek-Coder-V2,,
 deepseek-r1-0528,73.3,self-reported,https://huggingface.co/deepseek-ai/DeepSeek-R1-0528,2025-05-28,LiveCodeBench (2408-2505)
 deepseek-r1-671b,65.9,self-reported,https://huggingface.co/deepseek-ai/DeepSeek-R1,2025-01-20,LiveCodeBench pass@1
@@ -29,6 +30,9 @@ deepseek-v3-1-non-thinking,56.4,self-reported,https://huggingface.co/deepseek-ai
 deepseek-v3-1-thinking,74.8,self-reported,https://huggingface.co/deepseek-ai/DeepSeek-V3.1,,2408-2505 Pass@1
 deepseek-v3-2-exp,74.1,self-reported,https://github.com/deepseek-ai/DeepSeek-V3.2-Exp,,
 deepseek-v3-671b,37.6,self-reported,https://huggingface.co/deepseek-ai/DeepSeek-V3,,Pass@1
+deepseek-v4-1-non-think,58.9,self-reported,https://api-docs.deepseek.com/news/news250922,2026-09-22,"LiveCodeBench v6, Non-Think row."
+deepseek-v4-1-think-high,91.8,self-reported,https://api-docs.deepseek.com/news/news250922,2026-09-22,"LiveCodeBench v6, Think High row."
+deepseek-v4-1-think-max,94.2,self-reported,https://api-docs.deepseek.com/news/news250922,2026-09-22,"LiveCodeBench v6, Think Max row."
 deepseek-v4-flash-non-think,55.2,self-reported,https://huggingface.co/deepseek-ai/DeepSeek-V4-Flash,,Non-Think mode
 deepseek-v4-flash-think-high,88.4,self-reported,https://huggingface.co/deepseek-ai/DeepSeek-V4-Flash,,Think High mode
 deepseek-v4-flash-think-max,91.6,self-reported,https://macaron.im/blog/deepseek-v4-benchmarks,,Max mode
@@ -109,6 +113,7 @@ minicpm3-4b,22.6,self-reported,https://huggingface.co/openbmb/MiniCPM3-4B,2024-0
 minimax-m1,65,self-reported,https://huggingface.co/MiniMaxAI/MiniMax-M1-80k,,M1-80K
 minimax-m2,83,self-reported,https://github.com/MiniMax-AI/MiniMax-M2,,
 mistral-large-3,55.34,independent,https://www.vals.ai/models/mistralai_mistral-large-2512,,"vals.ai independent eval, ±1.15pp CI, ranked 97th of 127 models on their LiveCodeBench leaderboard."
+mistral-large-4,62.9,independent,https://huggingface.co/mistralai/Mistral-Large-4,2026-09-16,"LiveCodeBench v6, independent run."
 mistral-medium-3,44.84,independent,https://www.vals.ai/models/mistralai_mistral-medium-2505,,"Independent third-party eval by Vals AI of mistral-medium-2505 (release date 5/7/2025, price $0.4/$2, 131k context — all match this corpus entry). Vals AI labels the model 'Mistral Medium 3.1 (05/2025)' in their own versioning scheme but the model ID, price, and release date confirm this is Mistral Medium 3 (mistral-medium-2505). Score with ±1.15 std error, ranked 106/127 on their leaderboard at time of eval."
 muse-spark-1-1-xhigh,85.91,independent,https://www.vals.ai/models/meta_muse-spark-1.1,,"LiveCodeBench, measured independently by Vals AI (±0.99 CI, ranked 18/127 models on their leaderboard). Not reported anywhere in Meta's own materials for Muse Spark 1.1."
 nemotron-3-nano-omni,63.2,self-reported,https://arxiv.org/abs/2604.24954,,Table 10; LiveCodeBench v5 (07/24-05/25).
@@ -154,6 +159,7 @@ qwen3-7-max,91.6,self-reported,https://www.alibabacloud.com/blog/qwen3-7-the-age
 qwen3-7-plus,89.6,self-reported,https://qwen.ai/blog?id=qwen3.7-plus,2026-05-31,"Official Qwen launch blog, 'STEM & Reasoning' table."
 qwen3-8-27b,90.3,self-reported,https://huggingface.co/Qwen/Qwen3.8-27B,2026-08-05,"LiveCodeBench v6, official Qwen3.8-27B model card; best in row."
 qwen3-8-flash-next,91.9,self-reported,https://qwen.ai/blog?id=qwen3.8-flash-next,2026-08-26,"LiveCodeBench v6, official Qwen3.8-Flash-Next model card."
+qwen3-8-plus,78.9,self-reported,https://qwen.ai/blog?id=qwen3.8-plus,2026-09-09,"LiveCodeBench v6, launch table."
 qwen3-8b-non-thinking,22.8,self-reported,https://arxiv.org/abs/2505.09388,,"LiveCodeBench v5, non-thinking mode"
 qwen3-8b-thinking,57.5,self-reported,https://arxiv.org/abs/2505.09388,,"LiveCodeBench v5, thinking mode"
 qwen3-coder-480b-a35b,44.93,self-reported,https://arxiv.org/abs/2603.00729,2026-02-28,

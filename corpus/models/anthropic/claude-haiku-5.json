@@ -1,0 +1,141 @@
+{
+  "name": "Claude Haiku 5",
+  "org": "Anthropic",
+  "family": "Claude 5",
+  "slug": "claude-haiku-5",
+  "releaseDate": "2026-09-17",
+  "status": "released",
+  "openness": "closed",
+  "license": "Proprietary",
+  "paramsB": null,
+  "activeParamsB": null,
+  "archClass": "dense",
+  "archDisplay": "Proprietary smallest-tier model of the Claude 5 family; 500K-token context, extended thinking supported",
+  "ctxK": 500,
+  "modalities": [
+    "text",
+    "vision"
+  ],
+  "langCount": null,
+  "capabilities": {
+    "reasoning": true,
+    "coding": true,
+    "vision": true,
+    "functionCalling": true,
+    "toolUse": true,
+    "agentic": true
+  },
+  "apiAvailable": true,
+  "price": {
+    "input": 1,
+    "output": 5,
+    "provider": "Anthropic"
+  },
+  "links": {
+    "docs": "https://docs.anthropic.com/en/docs/about-claude/models/overview"
+  },
+  "note": "The volume tier of the Claude 5 family, released September 17, 2026 — six weeks after Fable 5.1/Mythos 5.1 and the first Haiku at the 5-series capability level. $1/$5 per Mtok makes it a fifth of Sonnet 5's price for roughly 85-90% of its benchmark profile, which Anthropic itself frames as the high-volume-agent play. The launch table leans on the established suite (no DeepSWE or OSWorld 2.0 rows) and notably does NOT repeat the 'best in class' framing Anthropic used for Opus 5 — the numbers are honest for a small tier. 500K context (vs. the family's usual 1M) is the clearest architectural tell.",
+  "quants": [],
+  "vramQ4Gb": null,
+  "vramFp16Gb": null,
+  "tps4090": null,
+  "tpsNote": null,
+  "effortLabel": null,
+  "isDefaultConfig": true,
+  "isBestConfig": true,
+  "specSources": {
+    "releaseDate": "https://www.anthropic.com/news/claude-haiku-5",
+    "price": "https://www.anthropic.com/pricing",
+    "ctxK": "https://docs.anthropic.com/en/docs/about-claude/models/overview"
+  },
+  "results": [
+    {
+      "benchmarkSlug": "swe-bench",
+      "score": 78.4,
+      "source": "self-reported",
+      "sourceUrl": "https://www.anthropic.com/news/claude-haiku-5",
+      "evaluatedAt": "2026-09-17",
+      "notes": "SWE-bench Verified, Haiku 5 launch table."
+    },
+    {
+      "benchmarkSlug": "swe-bench-pro",
+      "score": 52.8,
+      "source": "self-reported",
+      "sourceUrl": "https://www.anthropic.com/news/claude-haiku-5",
+      "evaluatedAt": "2026-09-17",
+      "notes": "SWE-Bench Pro, launch table; 10 points behind Sonnet 5's 63.2 — honest small-tier gap."
+    },
+    {
+      "benchmarkSlug": "terminal-bench-2",
+      "score": 64.7,
+      "source": "self-reported",
+      "sourceUrl": "https://www.anthropic.com/news/claude-haiku-5",
+      "evaluatedAt": "2026-09-17",
+      "notes": "Terminal-Bench 2.1, launch table."
+    },
+    {
+      "benchmarkSlug": "gpqa",
+      "score": 86.9,
+      "source": "self-reported",
+      "sourceUrl": "https://www.anthropic.com/news/claude-haiku-5",
+      "evaluatedAt": "2026-09-17",
+      "notes": "GPQA Diamond, launch table."
+    },
+    {
+      "benchmarkSlug": "hle",
+      "score": 39.8,
+      "source": "self-reported",
+      "sourceUrl": "https://www.anthropic.com/news/claude-haiku-5",
+      "evaluatedAt": "2026-09-17",
+      "notes": "Humanity's Last Exam with tools, launch table."
+    },
+    {
+      "benchmarkSlug": "osworld-verified",
+      "score": 71.6,
+      "source": "self-reported",
+      "sourceUrl": "https://www.anthropic.com/news/claude-haiku-5",
+      "evaluatedAt": "2026-09-17",
+      "notes": "OSWorld-Verified (v1 verified subset), launch table."
+    },
+    {
+      "benchmarkSlug": "gdpval-aa",
+      "score": 1389,
+      "source": "self-reported",
+      "sourceUrl": "https://www.anthropic.com/news/claude-haiku-5",
+      "evaluatedAt": "2026-09-17",
+      "notes": "GDPval-AA v2 Elo per the launch table; Anthropic relays the Artificial Analysis figure, no independent run at filing."
+    },
+    {
+      "benchmarkSlug": "charxiv",
+      "score": 71.2,
+      "source": "self-reported",
+      "sourceUrl": "https://www.anthropic.com/news/claude-haiku-5",
+      "evaluatedAt": "2026-09-17",
+      "notes": "CharXiv Reasoning, launch table."
+    },
+    {
+      "benchmarkSlug": "browsecomp",
+      "score": 76.3,
+      "source": "self-reported",
+      "sourceUrl": "https://www.anthropic.com/news/claude-haiku-5",
+      "evaluatedAt": "2026-09-17",
+      "notes": "BrowseComp, launch table."
+    },
+    {
+      "benchmarkSlug": "mmlu-pro",
+      "score": 83.4,
+      "source": "self-reported",
+      "sourceUrl": "https://www.anthropic.com/news/claude-haiku-5",
+      "evaluatedAt": "2026-09-17",
+      "notes": "MMLU-Pro, launch table."
+    },
+    {
+      "benchmarkSlug": "arc-agi-2",
+      "score": 61.5,
+      "source": "self-reported",
+      "sourceUrl": "https://www.anthropic.com/news/claude-haiku-5",
+      "evaluatedAt": "2026-09-17",
+      "notes": "ARC-AGI-2, launch table; well behind the frontier rows but ahead of every small-tier filing to date."
+    }
+  ]
+}

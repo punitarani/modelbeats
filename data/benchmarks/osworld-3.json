@@ -1,0 +1,11 @@
+{
+  "slug": "osworld-3",
+  "name": "OSWorld 3.0",
+  "category": "agents",
+  "unit": "%",
+  "description": "OSWorld 3.0 — third-generation real-desktop-GUI computer-use benchmark with longer-horizon multi-app tasks, scored pass@1. Distinct from and not comparable to OSWorld 2.0 or OSWorld-Verified (v1).",
+  "normMin": 0,
+  "normMax": 82,
+  "higherIsBetter": true,
+  "methodologyUrl": "https://os-world.github.io/"
+}

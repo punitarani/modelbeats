@@ -1,0 +1,46 @@
+{
+  "slug": "grok-4-7",
+  "name": "Grok 4.7",
+  "orgSlug": "spacexai",
+  "familySlug": "grok-4-7",
+  "releaseDate": "2026-09-16",
+  "status": "released",
+  "predecessor": null,
+  "openness": "closed",
+  "license": "Proprietary",
+  "paramsB": null,
+  "activeParamsB": null,
+  "archClass": "moe",
+  "archDisplay": "Proprietary sparse-MoE reasoning model (undisclosed size); 500K-token context",
+  "ctxK": 500,
+  "modalities": [
+    "text",
+    "vision"
+  ],
+  "langCount": null,
+  "capabilities": {
+    "reasoning": true,
+    "coding": true,
+    "vision": true,
+    "functionCalling": true,
+    "toolUse": true,
+    "agentic": true
+  },
+  "apiAvailable": true,
+  "price": {
+    "input": 2,
+    "output": 6
+  },
+  "links": {
+    "docs": "https://x.ai/news/grok-4-7"
+  },
+  "note": "SpaceXAI's September 16, 2026 point release — Grok 4.6's successor at an unchanged $2/$6 per Mtok. The launch table is a straight line over 4.6's: GDPval-AA +43, AA Briefcase +44, DeepSWE +3.5, CursorBench +3.9, Terminal-Bench 3 +3.7, with a first-time ExploitBench row (44.8) replacing the marketing-speak with a defensive-security number. No major capability claims beyond 'fastest frontier agent on our harness'; the honest read is a steady monthly cadence keeping Grok roughly level with Sonnet-class mid-frontier models rather than contesting Astra/Fable at the top.",
+  "quants": [],
+  "vramQ4Gb": null,
+  "vramFp16Gb": null,
+  "tps4090": null,
+  "tpsNote": null,
+  "effortLabel": null,
+  "isDefaultConfig": true,
+  "isBestConfig": true
+}

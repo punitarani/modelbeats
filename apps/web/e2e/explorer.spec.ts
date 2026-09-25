@@ -31,11 +31,11 @@ test.describe('model explorer', () => {
 
   test('deep-linked facets restore on load (URL round-trip)', async ({ page }) => {
     await gotoHydrated(page, '/models?open=open&size=s&caps=reason')
-    // real corpus: 20 open, <15B-param models with the reasoning capability
-    await expect(page.getByTestId('explorer-count')).toHaveText('20 models')
+    // real corpus: 21 open, <15B-param models with the reasoning capability
+    await expect(page.getByTestId('explorer-count')).toHaveText('21 models')
     await expect(page.getByTestId('cap-reason')).toHaveAttribute('aria-pressed', 'true')
-    // default sort is by Elo (rank-eligible first) — Falcon-H1R 7B leads this facet combo
-    await expect(page.getByTestId('explorer-card').first()).toContainText('Falcon-H1R 7B')
+    // default sort is by Elo (rank-eligible first) — Muse Glimmer 8B leads this facet combo
+    await expect(page.getByTestId('explorer-card').first()).toContainText('Muse Glimmer 8B')
   })
 
   test('cheapest-API sort puts Ministral 3B first ($0.04/M out)', async ({ page }) => {

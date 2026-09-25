@@ -39,6 +39,8 @@ export const corpusPriceSchema = z.object({
   input: z.number().positive(),
   output: z.number().positive(),
   provider: z.string().min(1).optional(),
+  // ISO date the quoted price took effect, when it differs from the model's releaseDate (e.g. a post-GA price cut).
+  effectiveAt: z.string().date().optional(),
 })
 
 export const corpusModelSchema = z.object({

@@ -1,4 +1,5 @@
 model_slug,score,source,source_url,evaluated_at,notes
+claude-haiku-5,76.3,self-reported,https://www.anthropic.com/news/claude-haiku-5,2026-09-17,"BrowseComp, launch table."
 claude-opus-4-5,67.8,self-reported,https://www.vellum.ai/blog/claude-opus-4-6-benchmarks,2025-11-24,"Standard single-agent BrowseComp figure from Anthropic's system card, distinct from the higher 'BrowseComp-Plus' fetch-enabled figure (85.3%) Anthropic also reports separately."
 claude-opus-4-6,84,self-reported,https://www.vellum.ai/blog/claude-opus-4-6-benchmarks,2026-02-05,"Standard single-agent figure per the dedicated Opus 4.6 benchmarks article (direct fetch). Anthropic's own launch page (anthropic.com/news/claude-opus-4-6) separately states 86.8% 'with a multi-agent harness' — a different configuration, not this headline number. A later retrospective Vellum article (claude-opus-4-7-benchmarks-explained) lists Opus 4.6 at 83.7% for the same benchmark; kept the dedicated article's 84.0% as the primary figure."
 claude-opus-4-7,79.3,self-reported,https://www.vellum.ai/blog/claude-opus-4-7-benchmarks-explained,,
@@ -9,6 +10,9 @@ claude-sonnet-4-6,74.01,self-reported,https://www.anthropic.com/claude-sonnet-4-
 claude-sonnet-5,84.7,self-reported,https://www.anthropic.com/claude-sonnet-5-system-card,2026-06-30,"BrowseComp, single-agent configuration, adaptive thinking at max effort, 10M-token context-compaction limit (Section 8.9.2). With a multi-agent orchestrator setup, Sonnet 5 scored 86.6%."
 deepseek-v3-1-thinking,30,self-reported,https://huggingface.co/deepseek-ai/DeepSeek-V3.1,,"BrowseComp (Acc.), Thinking mode, from official HF model card benchmark table"
 deepseek-v3-2-exp,40.1,self-reported,https://github.com/deepseek-ai/DeepSeek-V3.2-Exp,,
+deepseek-v4-1-non-think,74.2,self-reported,https://api-docs.deepseek.com/news/news250922,2026-09-22,"BrowseComp, Non-Think row."
+deepseek-v4-1-think-high,84.7,self-reported,https://api-docs.deepseek.com/news/news250922,2026-09-22,"BrowseComp, Think High row."
+deepseek-v4-1-think-max,86.1,self-reported,https://api-docs.deepseek.com/news/news250922,2026-09-22,"BrowseComp, Think Max row."
 deepseek-v4-flash-think-high,53.5,self-reported,https://huggingface.co/deepseek-ai/DeepSeek-V4-Flash,2026-04-24,"BrowseComp Pass@1, Think High mode. Cross-verified identical value in DeepSeek-V4 tech report Table 7 (arXiv:2606.19348)."
 deepseek-v4-flash-think-max,73.2,self-reported,https://huggingface.co/deepseek-ai/DeepSeek-V4-Flash,2026-04-24,"BrowseComp Pass@1, Think Max / Pro-Max mode. Cross-verified identical value in DeepSeek-V4 tech report Table 7 (arXiv:2606.19348)."
 deepseek-v4-pro-think-high,80.4,self-reported,https://huggingface.co/deepseek-ai/DeepSeek-V4-Pro,2026-04-24,"BrowseComp Pass@1, Think High mode. Cross-verified identical value in DeepSeek-V4 tech report Table 7 (arXiv:2606.19348)."
@@ -27,13 +31,16 @@ gpt-5-6-sol,90.4,self-reported,https://openai.com/index/gpt-5-6/,,"BrowseComp, G
 gpt-5-6-terra,87.5,self-reported,https://openai.com/index/gpt-5-6/,2026-07-24,"BrowseComp, GPT-5.6 Terra, OpenAI launch table; per kingy.ai's launch-table digest (kingy.ai/blog/gpt-5-6-sol-terra-luna-benchmarks-specs), corroborated by BenchLM (87.5%)."
 hy3,84.2,self-reported,https://huggingface.co/tencent/Hy3,,"BrowseComp, from the benchmark-appendix image (Agentic Search section)"
 inkling,77.1,self-reported,https://thinkingmachines.ai/model-card/inkling/,2026-07-15,BrowseComp with context/browsing tools enabled (the benchmark's standard agentic configuration).
+inkling-medium,79.4,self-reported,https://thinkingmachines.dev/blog/inkling-medium,2026-09-10,BrowseComp — first Inkling filing on this benchmark.
 kimi-k2-5,74.9,self-reported,https://www.kimi.com/blog/kimi-k2-5,,BrowseComp with context management; vendor also reports 60.6 single-agent (no ctx mgmt) and 78.4 in the 'Agent Swarm' multi-agent research-preview mode. 74.9 used here for rough comparability with the sibling K2.6 entry's single-agent-style figure
 kimi-k2-6,83.2,self-reported,https://www.kimi.com/blog/kimi-k2-6,,vendor also reports 86.3 in an 'agent swarm' multi-agent configuration; 83.2 is the single-agent figure used here for comparability
 kimi-k2-thinking,60.2,self-reported,https://huggingface.co/moonshotai/Kimi-K2-Thinking,,
 kimi-k3,91.2,self-reported,https://www.kimi.com/blog/kimi-k3,2026-07-16,"BrowseComp, official launch blog agentic table. One secondary source rendered this as 90.4 -- within rounding/snapshot noise of the 91.2 figure independently confirmed across 3 other convergent reproductions of the official table."
+kimi-k3-1,92.4,self-reported,https://platform.moonshot.ai/blog/kimi-k3-1,2026-09-23,"BrowseComp, launch table."
 minimax-m2,44,self-reported,https://github.com/MiniMax-AI/MiniMax-M2,2025-10-27,BrowseComp (English); confirmed identically on the HF model card's 'Coding & Agentic Benchmarks' table. A separate BrowseComp-zh score of 48.5 also exists but has no distinct taxonomy slug.
 minimax-m2-7,77.8,self-reported,https://arxiv.org/pdf/2605.26494,2026-05-26,"Official MiniMax-M2 technical report (arXiv:2605.26494), Table 4, 'Search' block, row 'BrowseComp' — M2.7 scores 77.8 (M2.5: 76.3; Opus 4.6: 84.0; Sonnet 4.6: 74.7; GPT-5.4: 82.7; Gemini 3.1 Pro: 85.9). Distinct from the report's separate 'BrowseComp-zh' (Chinese-language variant) figure used only in an earlier architecture-ablation table (Table 3), not in this final-model cross-comparison."
 minimax-m3,83.5,self-reported,https://www.minimax.io/models/text/m3,2026-06-01,Stated directly on MiniMax's official M3 product page as surpassing Claude Opus 4.7 (79.3); also relayed by independent press (VentureBeat and others).
+minimax-m3-5,84.9,self-reported,https://www.minimax.io/news/minimax-m35-en,2026-09-08,"BrowseComp, launch table."
 nemotron-3-super,31.28,self-reported,https://arxiv.org/abs/2604.12374,,"Table 5, 'BrowseComp with Search'."
 nemotron-3-ultra-550b-a55b,44.4,self-reported,https://research.nvidia.com/labs/nemotron/files/NVIDIA-Nemotron-3-Ultra-Technical-Report.pdf,,Table 10.
 openai-o3,49.7,self-reported,https://openai.com/index/introducing-o3-and-o4-mini/,2025-04-16,"BrowseComp agentic browsing, o3 with python+browsing tools, high reasoning effort. From OpenAI's official launch blog chart (4o+browsing=1.9, o3=49.7, o4-mini=28.3, deep research=51.5); confirmed by independent secondary-source search corroboration."
@@ -42,4 +49,6 @@ openpangu-2-0-flash-thinking,57,self-reported,https://huggingface.co/openpangu/o
 qwen3-5-122b-a10b,63.8,self-reported,https://huggingface.co/Qwen/Qwen3.5-122B-A10B,,"Search Agent category, English Browsecomp. A separate Browsecomp-zh score of 69.9 is also reported but has no distinct slug in the catalog, so it is omitted."
 sarvam-105b,49.5,self-reported,https://huggingface.co/sarvamai/sarvam-105b,2026-02-18,
 seed-2-1-pro,86.2,self-reported,https://lf3-static.bytednsdoc.com/obj/eden-cn/lapzild-tss/ljhwZthlaukjlkulzlp/seed2.1/Seed2_1_Model_Card.pdf,,"BrowseComp (with Search -- the benchmark's standard/only mode, since it is unsolvable without browsing access), Table 11 ('Fundamental language capability evaluation') of the official model card, citing the original OpenAI BrowseComp paper (Wei et al.) as its reference. Seed2.1-Pro scores 86.2, the highest of the five compared (GPT-5.5 84.4, Claude-4.7-Opus 79.3, Gemini-3.1-Pro 85.9, Seed2.1-Turbo 84.9)."
+seed-2-2-pro,87.5,self-reported,https://www.volcengine.com/docs/82379/1541523,2026-09-10,"BrowseComp, launch table."
 step-3-7-flash,75.8,self-reported,https://static.stepfun.com/blog/step-3.7-flash/,2026-05-29,"'It reaches 75.82% on BrowseComp, approaching larger models such as Claude Opus 4.7 and GLM 5.1' -- stated directly in StepFun's official launch blog text and confirmed in the accompanying benchmark chart (75.8%)."
+step-4,82.6,self-reported,https://platform.stepfun.com/docs/step-4,2026-09-23,"BrowseComp, launch table."

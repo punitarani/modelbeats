@@ -140,7 +140,7 @@ test.describe('fine-tune selector', () => {
     // …flip to All and it becomes discoverable as a non-fitting row
     await page.getByRole('button', { name: 'All', exact: true }).click()
     await expect(page).toHaveURL(/show=all/)
-    const row = page.getByTestId('finetune-row').filter({ hasText: 'Kimi K3' })
+    const row = page.getByTestId('finetune-row').filter({ hasText: 'Kimi K3.1' })
     await expect(row).toHaveCount(1)
     await expect(row).toContainText('exceeds 8× B200')
   })

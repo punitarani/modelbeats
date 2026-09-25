@@ -11,7 +11,11 @@
   "archClass": "moe",
   "archDisplay": "Sparse MoE, 2.4T total / ~95B active parameters (exact expert count undisclosed), built on the Qwen3.5 architectural foundation, 1M-token context, native text/image/video input",
   "ctxK": 1000,
-  "modalities": ["text", "vision", "video"],
+  "modalities": [
+    "text",
+    "vision",
+    "video"
+  ],
   "langCount": null,
   "capabilities": {
     "reasoning": true,
@@ -22,11 +26,15 @@
     "agentic": true
   },
   "apiAvailable": true,
-  "price": { "input": 2, "output": 6, "provider": "Alibaba" },
+  "price": {
+    "input": 2,
+    "output": 6,
+    "provider": "Alibaba"
+  },
   "links": {
     "docs": "https://qwen.ai/blog?id=qwen3.8"
   },
-  "note": "Alibaba's new flagship, GA-launched August 3, 2026 after a July 19 preview at WAIC Shanghai — first Max-class Qwen model with a committed (but unshipped) open-weight release. 2.4T total parameters confirmed by Alibaba; ~95B active parameters comes from third-party technical coverage, not an official model card (none published). The launch comparison table is entirely vendor-run with no independent verification; multiple outlets (e.g. aigovernancecourses.com, DataCamp) flagged it as an unverifiable narrative claim. Only the least self-serving coding rows are kept in /data — the 'best on this chart' claims (OSWorld-Verified, PaperBench) are recorded here for completeness but intentionally excluded from /data pending independent evaluation.",
+  "note": "Alibaba's new flagship, GA-launched August 3, 2026 after a July 19 preview at WAIC Shanghai — first Max-class Qwen model with a committed (but as of this writing unshipped) open-weight release. 2.4T total parameters is confirmed; ~95B active parameters, the number that actually drives inference cost, comes from third-party technical coverage rather than an official model card, since Alibaba has not yet published one. The launch comparison table is entirely vendor-run with no model card, no independent verification, and no active-parameter disclosure; multiple outlets flagged it as an unverifiable narrative claim rather than a documented launch. Only the least self-serving coding rows (SWE-bench Pro, Terminal-Bench 2.1) are recorded here — the 'best on this chart' claims (OSWorld-Verified 86.1 — claimed ahead of GPT-5.6 Sol Max 83.2, Claude Fable 5 85.0, Gemini 3.1 Pro 76.2 — and PaperBench) are deliberately omitted, which also keeps this entry below the ranking-coverage floor until independent evaluations exist.",
   "quants": [],
   "vramQ4Gb": null,
   "vramFp16Gb": null,
@@ -59,12 +67,28 @@
       "notes": "Terminal-Bench 2.1, Alibaba official Qwen3.8-Max launch comparison table."
     },
     {
-      "benchmarkSlug": "osworld-verified",
-      "score": 86.1,
+      "benchmarkSlug": "exploitbench",
+      "score": 28.8,
+      "source": "self-reported",
+      "sourceUrl": "https://z.ai/blog/glm-5.3",
+      "evaluatedAt": "2026-08-14",
+      "notes": "ExploitBench, Qwen3.8-Max column of Z.ai's official GLM-5.3 comparison table."
+    },
+    {
+      "benchmarkSlug": "lvbench",
+      "score": 81.8,
       "source": "self-reported",
       "sourceUrl": "https://qwen.ai/blog?id=qwen3.8",
       "evaluatedAt": "2026-08-03",
-      "notes": "OSWorld-Verified, Alibaba official launch table claims best-on-chart ahead of GPT-5.6 Sol Max (83.2), Claude Fable 5 (85.0), Gemini 3.1 Pro (76.2). NOT included in /data — see model note."
+      "notes": "LVBench, Qwen3.8-Max release benchmarks; a coding-adjacent row from Alibaba's launch post that is not one of the contested best-on-chart claims excluded from that model's entry."
+    },
+    {
+      "benchmarkSlug": "toolathlon",
+      "score": 72.5,
+      "source": "self-reported",
+      "sourceUrl": "https://z.ai/blog/glm-5.3",
+      "evaluatedAt": "2026-08-14",
+      "notes": "Toolathlon Verified, Qwen3.8-Max column of Z.ai's official GLM-5.3 comparison table."
     }
   ]
 }

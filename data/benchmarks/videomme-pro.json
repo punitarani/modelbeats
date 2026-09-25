@@ -1,0 +1,10 @@
+{
+  "slug": "videomme-pro",
+  "name": "Video-MME Pro",
+  "category": "vision",
+  "unit": "%",
+  "description": "Video-MME Pro — the harder professional-grade revision of Video-MME covering long-form and technical video understanding. Scores are not comparable with the original Video-MME filed under `videomme`.",
+  "normMin": 30,
+  "normMax": 92,
+  "higherIsBetter": true
+}
