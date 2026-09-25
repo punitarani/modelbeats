@@ -53,7 +53,7 @@ test.describe('rankings', () => {
     await gotoHydrated(page, '/rankings')
     await pickOption(page, 'rankings-org', 'Anthropic')
     await expect(page).toHaveURL(/org=anthropic/)
-    await expect(page.getByTestId('rankings-meta')).toContainText('28 models')
+    await expect(page.getByTestId('rankings-meta')).toContainText('29 models')
   })
 
   test('category param filters benchmark columns; bogus category 404s', async ({ page }) => {
