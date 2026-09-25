@@ -26,6 +26,7 @@
   --opendim: rgba(23, 138, 86, 0.1);
   --closed: #7a50d6;
   --closeddim: rgba(122, 80, 214, 0.1);
+  --slotd: #b0761a;
   --bar: #e9e9ee;
   --hover: #f2f2f5;
 }
@@ -46,6 +47,7 @@
   --opendim: rgba(76, 195, 138, 0.13);
   --closed: #b491f5;
   --closeddim: rgba(180, 145, 245, 0.14);
+  --slotd: #e0a94a;
   --bar: #26262e;
   --hover: #1a1a20;
 }
@@ -70,6 +72,7 @@
   --color-opendim: var(--opendim);
   --color-closed: var(--closed);
   --color-closeddim: var(--closeddim);
+  --color-slotd: var(--slotd);
   --color-bar: var(--bar);
   --color-hover: var(--hover);
 
