@@ -14,6 +14,7 @@ import { SearchSelect } from '#/components/search-select'
 import { Segmented } from '#/components/segmented'
 import { storeProfile } from '#/lib/hardware-profile'
 import type { HardwareSearch } from '#/lib/search'
+import { modelOptionRanker } from '#/lib/search-rank'
 
 /** Verdict → token color (C2 grades in the design language). */
 const VERDICT_COLOR: Record<FitVerdict, string> = {
@@ -54,6 +55,7 @@ export function HardwareScreen({
   const profile = manual ? undefined : catalog.gpus.find((g) => g.slug === search.gpu)
   const capacity = manual ? search.vram : (profile?.vramGb ?? 0)
   const localModels = catalog.models.filter((m) => m.open && m.vramQ4 != null)
+  const modelRanker = modelOptionRanker(catalog.models)
 
   const setGpu = (gpu: string) => {
     navigateSearch({ gpu })
@@ -258,6 +260,7 @@ export function HardwareScreen({
                 .filter((m) => m.open && m.vramQ4 != null)
                 .sort((a, b) => a.name.localeCompare(b.name))
                 .map((m) => ({ value: m.slug, label: `${m.name} — ${m.vramQ4} GB @ Q4` }))}
+              rankOptions={modelRanker}
               aria-label="Model to check"
               searchPlaceholder="Search open models…"
               testid="hw-model"

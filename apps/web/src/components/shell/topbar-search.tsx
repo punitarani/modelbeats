@@ -1,4 +1,4 @@
-import { searchModels } from '@modelbeats/shared'
+import { rankByScore, searchModels, textMatchScore } from '@modelbeats/shared'
 import { useSuspenseQuery } from '@tanstack/react-query'
 import { useNavigate } from '@tanstack/react-router'
 import { useEffect, useRef, useState } from 'react'
@@ -24,9 +24,12 @@ export function TopbarSearch() {
   const models = searchModels(data.models, q)
   const needle = q.trim().toLowerCase()
   const benchmarks = needle
-    ? data.benchmarks
-        .filter((b) => b.name.toLowerCase().includes(needle) || b.slug.includes(needle))
-        .slice(0, BENCH_LIMIT)
+    ? rankByScore(
+        data.benchmarks,
+        (b) =>
+          Math.max(textMatchScore(b.name.toLowerCase(), needle), textMatchScore(b.slug, needle)),
+        BENCH_LIMIT,
+      )
     : []
   // Flat, cursor-indexed view over both groups: models first, then benchmarks.
   const items = [

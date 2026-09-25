@@ -9,12 +9,13 @@ import {
   selectRadarAxes,
 } from '@modelbeats/shared'
 import { Link } from '@tanstack/react-router'
-import { useState } from 'react'
+import { useMemo, useState } from 'react'
 import { InlineBar } from '#/components/charts/inline-bar'
 import { Radar } from '#/components/charts/radar'
 import { normPct } from '#/components/charts/scales'
 import { SearchSelect } from '#/components/search-select'
 import { saveComparison } from '#/lib/saved'
+import { modelOptionRanker } from '#/lib/search-rank'
 
 /** Slot colors per the design: A=accent, B=open-green, C=closed-purple. */
 const SLOT_COLORS = ['var(--acc)', 'var(--open)', 'var(--closed)'] as const
@@ -82,6 +83,7 @@ export function CompareScreen({
     .map((m, i) => ({ m, i }))
     .filter((x): x is { m: SnapshotModel; i: number } => x.m != null)
   const options = [...catalog.models].sort((a, b) => a.name.localeCompare(b.name))
+  const modelRanker = useMemo(() => modelOptionRanker(catalog.models), [catalog.models])
   const benchRows = catalog.benchmarks.filter((b) =>
     active.some(({ m }) => m.bench[b.slug] != null),
   )
@@ -155,6 +157,7 @@ export function CompareScreen({
                 { value: '', label: '— none —' },
                 ...options.map((o) => ({ value: o.slug, label: `${o.name} — ${o.org}` })),
               ]}
+              rankOptions={modelRanker}
               aria-label={label}
               searchPlaceholder="Search models…"
               testid={`compare-slot-${i}`}
