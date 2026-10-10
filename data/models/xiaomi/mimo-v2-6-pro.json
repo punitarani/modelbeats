@@ -1,0 +1,49 @@
+{
+  "slug": "mimo-v2-6-pro",
+  "name": "MiMo-V2.6-Pro",
+  "orgSlug": "xiaomi",
+  "familySlug": "mimo",
+  "releaseDate": "2026-09-22",
+  "status": "released",
+  "predecessor": "mimo-v2-5",
+  "openness": "open-weights",
+  "license": "MIT",
+  "paramsB": 1020,
+  "activeParamsB": 42,
+  "archClass": "moe",
+  "archDisplay": "Sparse MoE, 1.02T total / 42B active; 70 layers (60 SWA / 10 GA), 384 routed experts with 8 active, no shared experts; 681M MiMo ViT + 308M AudioTokenizer + 127M audio patch encoder; 5-layer MTP speculative decoder predicting 7 tokens. Natively omnimodal (unlike text-only V2.5-Pro)",
+  "ctxK": 1000,
+  "modalities": [
+    "text",
+    "vision",
+    "audio",
+    "video"
+  ],
+  "langCount": null,
+  "capabilities": {
+    "reasoning": true,
+    "coding": true,
+    "vision": true,
+    "functionCalling": true,
+    "toolUse": true,
+    "agentic": true
+  },
+  "apiAvailable": true,
+  "price": {
+    "input": 0.435,
+    "output": 0.87
+  },
+  "links": {
+    "hf": "XiaomiMiMo/MiMo-V2.6-Pro-MOPD",
+    "docs": "https://mimo.xiaomi.com/mimo-v2-6/article.html"
+  },
+  "note": "Xiaomi's 2026-09-22 flagship, released with open MIT weights alongside a technical report, training environments and RL code. Same 1.02T / 42B MoE scale as V2.5-Pro but now natively omnimodal (text, image, video, audio); the release centres on a single mixed RL run across coding, agent, visual and cybersecurity tasks plus multi-teacher on-policy distillation (MOPD2). Xiaomi's table shows huge gains over V2.5-Pro (DeepSWE v1.1 19.0 -> 71.9, Terminal Bench 2.1 65.2 -> 89.9) and a CyberGym 94.0, while ExploitBench (47.9) stays far behind the closed frontier (70-78.5). API price unchanged at $0.435/$0.87 per Mtok; an UltraSpeed serving tier is sold separately.",
+  "quants": [],
+  "vramQ4Gb": null,
+  "vramFp16Gb": null,
+  "tps4090": null,
+  "tpsNote": null,
+  "effortLabel": null,
+  "isDefaultConfig": true,
+  "isBestConfig": true
+}

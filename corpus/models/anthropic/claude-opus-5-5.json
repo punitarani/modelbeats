@@ -1,0 +1,186 @@
+{
+  "name": "Claude Opus 5.5",
+  "org": "Anthropic",
+  "orgSlug": "anthropic",
+  "family": "Claude 5.5",
+  "familySlug": "claude-5-5",
+  "slug": "claude-opus-5-5",
+  "releaseDate": "2026-09-22",
+  "status": "released",
+  "openness": "closed",
+  "license": "Proprietary",
+  "paramsB": null,
+  "activeParamsB": null,
+  "archClass": "dense",
+  "archDisplay": "Proprietary model; architecture and parameter count undisclosed; adaptive thinking with a runtime effort parameter (low to max), 1M-token context",
+  "ctxK": 1000,
+  "modalities": [
+    "text",
+    "vision"
+  ],
+  "langCount": null,
+  "capabilities": {
+    "reasoning": true,
+    "coding": true,
+    "vision": true,
+    "functionCalling": true,
+    "toolUse": true,
+    "agentic": true
+  },
+  "apiAvailable": true,
+  "price": {
+    "input": 4,
+    "output": 20,
+    "provider": "Anthropic"
+  },
+  "links": {
+    "docs": "https://platform.claude.com/docs/en/models/opus-5-5/overview"
+  },
+  "note": "Model id claude-opus-5-5, released 2026-09-22 as 'the first model in our new Claude 5.5 family'. Anthropic says it 'performs at the level of Claude Fable 5.1 on most work and costs 40% less to run than Opus 5'. Priced at $4/$20 per MTok (20% below Opus 5), with cache reads at $0.20 (60% less than Opus 5). It has a 1M context, 128K max output, adaptive thinking that is always on (it can't be disabled), and medium default effort. It ships with Fable-5.1-class cyber/bio safeguards, and flagged cyber tasks fall back to Opus 4.8. Launch scores were run with safeguards on, which Anthropic says likely depresses some rows.",
+  "quants": [],
+  "vramQ4Gb": null,
+  "vramFp16Gb": null,
+  "tps4090": null,
+  "tpsNote": null,
+  "effortLabel": null,
+  "isDefaultConfig": true,
+  "isBestConfig": true,
+  "specSources": {
+    "releaseDate": "https://platform.claude.com/docs/en/models/opus-5-5/overview",
+    "price": "https://platform.claude.com/docs/en/about-claude/pricing",
+    "ctxK": "https://platform.claude.com/docs/en/models/opus-5-5/overview",
+    "modalities": "https://platform.claude.com/docs/en/models/opus-5-5/overview",
+    "announcement": "https://www.anthropic.com/claude-opus-5-5",
+    "systemCard": "https://anthropic.com/claude-opus-5-5-system-card"
+  },
+  "results": [
+    {
+      "benchmarkSlug": "terminal-bench-4",
+      "score": 66.4,
+      "source": "self-reported",
+      "sourceUrl": "https://www.anthropic.com/claude-opus-5-5",
+      "evaluatedAt": "2026-09-22",
+      "notes": "Terminal-Bench 4.0 at XHIGH effort (Anthropic: Opus 5.5's highest score; max is lower). SE ±2.6. System Card §8.5 gives 66.36 with safeguards on (fallback on 2.5% of requests). Table: Fable 5.1 55.8, Opus 5 52.3, GPT-6 Astra 57.9 (high, per OpenAI), GPT-5.6 Sol 37.3."
+    },
+    {
+      "benchmarkSlug": "frontiercode",
+      "score": 54.6,
+      "source": "self-reported",
+      "sourceUrl": "https://anthropic.com/claude-opus-5-5-system-card",
+      "evaluatedAt": "2026-09-22",
+      "notes": "FrontierCode v1.1 (Main), best reasoning effort, which is MEDIUM (the default): System Card §8.4 and the announcement chart caption both say 54.6. The announcement table's max-effort cell is 54.4. Note that SC §8.4 lists Opus 5 at 53.4 (best effort) while the max-effort table lists Opus 5 at 48.0."
+    },
+    {
+      "benchmarkSlug": "frontiercode-extended",
+      "score": 65.3,
+      "source": "self-reported",
+      "sourceUrl": "https://anthropic.com/claude-opus-5-5-system-card",
+      "evaluatedAt": "2026-09-22",
+      "notes": "FrontierCode v1.1 (Extended), System Card §8.4; ahead of Opus 5 63.6, Fable 5 64.9, GPT-6 Astra 64.5, Fable 5.1 63.6."
+    },
+    {
+      "benchmarkSlug": "automationbench",
+      "score": 40.0,
+      "source": "self-reported",
+      "sourceUrl": "https://www.anthropic.com/claude-opus-5-5",
+      "evaluatedAt": "2026-09-22",
+      "notes": "AutomationBench (Zapier), max effort. Anthropic footnote: 'run and reported by Zapier... without fallback models, so safeguard interventions were considered failures'. Opus 5.5's result comes from Zapier's early-access evaluation. It is behind GPT-6 Astra's 41.4."
+    },
+    {
+      "benchmarkSlug": "hle",
+      "score": 67.7,
+      "source": "self-reported",
+      "sourceUrl": "https://www.anthropic.com/claude-opus-5-5",
+      "evaluatedAt": "2026-09-22",
+      "notes": "Humanity's Last Exam WITH tools (corpus convention for Claude rows). Without tools it scores 64.4 (System Card Table 8.1.A). Note that 67.7 exceeds the hle normMax of 65."
+    },
+    {
+      "benchmarkSlug": "terminal-bench-science",
+      "score": 58.7,
+      "source": "self-reported",
+      "sourceUrl": "https://www.anthropic.com/claude-opus-5-5",
+      "evaluatedAt": "2026-09-22",
+      "notes": "Terminal-Bench-Science 0.1, max effort, safeguards on (fallback on 3.9% of requests). SE ±3.5–5. Behind GPT-6 Astra's 64.6 (as reported by OpenAI)."
+    },
+    {
+      "benchmarkSlug": "osworld-2",
+      "score": 81.8,
+      "source": "self-reported",
+      "sourceUrl": "https://anthropic.com/claude-opus-5-5-system-card",
+      "evaluatedAt": "2026-09-22",
+      "notes": "OSWorld partial-credit score; strict pass rate is 48.7. Benchmark label conflict: the Opus 5.5 announcement table calls this row 'OSWorld 2.1' while System Card Table 8.1.A and §8.13.3 call it 'OSWorld 2.0 (partial/strict)'. Fable 5.1 re-evaluated under the same conditions scores 80.7 partial here vs 77.9 in the corpus (Aug-2026 task release), so it is plausibly the osworld-2 column on a newer task release. Corpus convention for Fable 5.1 used the partial-credit metric."
+    },
+    {
+      "benchmarkSlug": "swe-bench-pro",
+      "score": 89.9,
+      "source": "self-reported",
+      "sourceUrl": "https://anthropic.com/claude-opus-5-5-system-card",
+      "evaluatedAt": "2026-09-22",
+      "notes": "SWE-bench Pro, average of 5 trials, System Card Table 8.1.A / §8.2. Exceeds the swe-bench-pro normMax of 85. Opus 5 79.2, Fable 5.1 81.2."
+    },
+    {
+      "benchmarkSlug": "swe-bench-multilingual",
+      "score": 93.9,
+      "source": "self-reported",
+      "sourceUrl": "https://anthropic.com/claude-opus-5-5-system-card",
+      "evaluatedAt": "2026-09-22",
+      "notes": "SWE-bench Multilingual, System Card §8.2. Exceeds normMax 92."
+    },
+    {
+      "benchmarkSlug": "swe-bench-multimodal",
+      "score": 61.4,
+      "source": "self-reported",
+      "sourceUrl": "https://anthropic.com/claude-opus-5-5-system-card",
+      "evaluatedAt": "2026-09-22",
+      "notes": "SWE-bench Multimodal, System Card §8.2. Opus 5 59.4, Fable 5.1 54.7."
+    },
+    {
+      "benchmarkSlug": "deepswe",
+      "score": 74.2,
+      "source": "self-reported",
+      "sourceUrl": "https://anthropic.com/claude-opus-5-5-system-card",
+      "evaluatedAt": "2026-09-22",
+      "notes": "DeepSWE v1.1, mean of 5 trials, System Card §8.3."
+    },
+    {
+      "benchmarkSlug": "cursorbench-4",
+      "score": 57.8,
+      "source": "self-reported",
+      "sourceUrl": "https://www.anthropic.com/claude-opus-5-5",
+      "evaluatedAt": "2026-09-22",
+      "notes": "CursorBench 4.0 at max effort, Claude Opus 5.5 launch table (medium/default 52.5 per System Card §8.8)."
+    },
+    {
+      "benchmarkSlug": "chartography",
+      "score": 64.4,
+      "source": "self-reported",
+      "sourceUrl": "https://www.anthropic.com/claude-sonnet-5-5",
+      "evaluatedAt": "2026-09-28",
+      "notes": "No tools, Claude Opus 5.5 column of the Claude Sonnet 5.5 launch table (89.0 with tools)."
+    },
+    {
+      "benchmarkSlug": "healthbench-professional",
+      "score": 65.6,
+      "source": "self-reported",
+      "sourceUrl": "https://anthropic.com/claude-opus-5-5-system-card",
+      "evaluatedAt": "2026-09-22",
+      "notes": "Claude Opus 5.5 System Card Table 8.1.A (length-adjusted; §8.15.2 raw score is 77.1)."
+    },
+    {
+      "benchmarkSlug": "frontierswe-v2",
+      "score": 62.3,
+      "source": "self-reported",
+      "sourceUrl": "https://anthropic.com/claude-opus-5-5-system-card",
+      "evaluatedAt": "2026-09-22",
+      "notes": "Claude Opus 5.5 System Card §8.7."
+    },
+    {
+      "benchmarkSlug": "officeqa-pro",
+      "score": 67.7,
+      "source": "self-reported",
+      "sourceUrl": "https://anthropic.com/claude-opus-5-5-system-card",
+      "evaluatedAt": "2026-09-22",
+      "notes": "Claude Opus 5.5 System Card."
+    }
+  ]
+}

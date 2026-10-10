@@ -1,0 +1,46 @@
+{
+  "slug": "claude-sonnet-5-5",
+  "name": "Claude Sonnet 5.5",
+  "orgSlug": "anthropic",
+  "familySlug": "claude-5-5",
+  "releaseDate": "2026-09-28",
+  "status": "released",
+  "predecessor": "claude-opus-5-5",
+  "openness": "closed",
+  "license": "Proprietary",
+  "paramsB": null,
+  "activeParamsB": null,
+  "archClass": "dense",
+  "archDisplay": "Proprietary model; architecture and parameter count undisclosed; adaptive thinking with a runtime effort parameter, 1M-token context",
+  "ctxK": 1000,
+  "modalities": [
+    "text",
+    "vision"
+  ],
+  "langCount": null,
+  "capabilities": {
+    "reasoning": true,
+    "coding": true,
+    "vision": true,
+    "functionCalling": true,
+    "toolUse": true,
+    "agentic": true
+  },
+  "apiAvailable": true,
+  "price": {
+    "input": 2,
+    "output": 10
+  },
+  "links": {
+    "docs": "https://platform.claude.com/docs/en/models/sonnet-5-5/overview"
+  },
+  "note": "Model id claude-sonnet-5-5, released 2026-09-28 as 'the second model in the Claude 5.5 family'. Anthropic says it runs 30%+ faster than Sonnet 5 and costs up to 30% less per task. List price matches Sonnet 5 at $2/$10. Cache reads launched at $0.20 and were halved to $0.10 on 2026-10-07. It is the first Sonnet to ship with cyber safeguards, which fall back to Sonnet 5. Anthropic says Opus 5.5 is 'clearly stronger at complex, open-ended work' despite similar Max-effort benchmark scores. Its Terminal-Bench 4.0 score (70.6) beats Opus 5.5's (66.4).",
+  "quants": [],
+  "vramQ4Gb": null,
+  "vramFp16Gb": null,
+  "tps4090": null,
+  "tpsNote": null,
+  "effortLabel": null,
+  "isDefaultConfig": true,
+  "isBestConfig": true
+}

@@ -1,0 +1,10 @@
+{
+  "slug": "chartography",
+  "name": "Chartography",
+  "category": "vision",
+  "unit": "%",
+  "description": "Surge AI visual chart-recognition benchmark, scored without tools.",
+  "normMin": 0,
+  "normMax": 90,
+  "higherIsBetter": true
+}

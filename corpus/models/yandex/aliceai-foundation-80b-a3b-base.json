@@ -1,0 +1,94 @@
+{
+  "name": "AliceAI-Foundation-80B-A3B-Base",
+  "org": "Yandex",
+  "family": "AliceAI Foundation",
+  "slug": "aliceai-foundation-80b-a3b-base",
+  "releaseDate": "2026-09-21",
+  "status": "released",
+  "openness": "open-weights",
+  "license": "Apache 2.0",
+  "paramsB": 80,
+  "activeParamsB": 3,
+  "archClass": "hybrid",
+  "archDisplay": "Hybrid-attention MoE base model trained from scratch: 12 × (3 × (KDA → MoE) → 1 × (Gated Attention → MoE))",
+  "ctxK": 256,
+  "modalities": [
+    "text"
+  ],
+  "langCount": 2,
+  "capabilities": {
+    "reasoning": false,
+    "coding": true,
+    "vision": false,
+    "functionCalling": false,
+    "toolUse": false,
+    "agentic": false
+  },
+  "apiAvailable": false,
+  "price": null,
+  "links": {
+    "hf": "yandex/AliceAI-Foundation-80B-A3B-Base",
+    "docs": "https://yandex.com/company/news/2026-09-21"
+  },
+  "note": "Yandex's first open-weights LLM trained from scratch: an 80B-total / 3B-active hybrid-attention MoE pretrained base (no post-training), 262,144-token context, Apache 2.0. Yandex describes it as an experimental base for testing architecture choices for its future unified reasoning model behind Alice AI. Benchmarks on the card are base-model few-shot evals against other base checkpoints. HF safetensors count is 81,286,433,408 params.",
+  "quants": [],
+  "vramQ4Gb": null,
+  "vramFp16Gb": null,
+  "tps4090": null,
+  "tpsNote": null,
+  "effortLabel": null,
+  "isDefaultConfig": true,
+  "isBestConfig": true,
+  "specSources": {
+    "releaseDate": "https://yandex.com/company/news/2026-09-21",
+    "license": "https://yandex.com/company/news/2026-09-21",
+    "paramsB": "https://yandex.com/company/news/2026-09-21",
+    "activeParamsB": "https://huggingface.co/yandex/AliceAI-Foundation-80B-A3B-Base/raw/main/README_en.md",
+    "ctxK": "https://huggingface.co/yandex/AliceAI-Foundation-80B-A3B-Base/raw/main/README_en.md",
+    "archClass": "https://huggingface.co/yandex/AliceAI-Foundation-80B-A3B-Base/raw/main/README_en.md",
+    "langCount": "https://huggingface.co/api/models/yandex/AliceAI-Foundation-80B-A3B-Base",
+    "openness": "https://huggingface.co/yandex/AliceAI-Foundation-80B-A3B-Base"
+  },
+  "results": [
+    {
+      "benchmarkSlug": "mmlu-pro",
+      "score": 66.8,
+      "source": "self-reported",
+      "sourceUrl": "https://huggingface.co/yandex/AliceAI-Foundation-80B-A3B-Base/raw/main/README_en.md",
+      "evaluatedAt": "2026-09-21",
+      "notes": "MMLU-Pro CoT, 5-shot, base model, vLLM t=0."
+    },
+    {
+      "benchmarkSlug": "super-gpqa",
+      "score": 44.3,
+      "source": "self-reported",
+      "sourceUrl": "https://huggingface.co/yandex/AliceAI-Foundation-80B-A3B-Base/raw/main/README_en.md",
+      "evaluatedAt": "2026-09-21",
+      "notes": "SuperGPQA CoT, 5-shot, base model, t=0."
+    },
+    {
+      "benchmarkSlug": "math",
+      "score": 91.1,
+      "source": "self-reported",
+      "sourceUrl": "https://huggingface.co/yandex/AliceAI-Foundation-80B-A3B-Base/raw/main/README_en.md",
+      "evaluatedAt": "2026-09-21",
+      "notes": "MATH-500, few-shot with longer reasoning traces, graded by LLM-as-a-judge (not exact match); base model, t=0."
+    },
+    {
+      "benchmarkSlug": "trivia-qa",
+      "score": 79.0,
+      "source": "self-reported",
+      "sourceUrl": "https://huggingface.co/yandex/AliceAI-Foundation-80B-A3B-Base/raw/main/README_en.md",
+      "evaluatedAt": "2026-09-21",
+      "notes": "TriviaQA, 5-shot, graded by LLM-as-a-judge instead of exact match; base model, t=0."
+    },
+    {
+      "benchmarkSlug": "livecodebench",
+      "score": 50.5,
+      "source": "self-reported",
+      "sourceUrl": "https://huggingface.co/yandex/AliceAI-Foundation-80B-A3B-Base/raw/main/README_en.md",
+      "evaluatedAt": "2026-09-21",
+      "notes": "LiveCodeBench v5-6 CoT, 1-shot pass@1, t=0 (main table). A second table at t=1/presence_penalty=1.5 reports pass@1 60.4 and pass@8 82.9."
+    }
+  ]
+}

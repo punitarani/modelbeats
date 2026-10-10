@@ -1,4 +1,5 @@
 model_slug,score,source,source_url,evaluated_at,notes
+aliceai-foundation-80b-a3b-base,79,self-reported,https://huggingface.co/yandex/AliceAI-Foundation-80B-A3B-Base/raw/main/README_en.md,2026-09-21,"TriviaQA, 5-shot, graded by LLM-as-a-judge instead of exact match; base model, t=0."
 apple-dclm-baseline-7b,52.7,self-reported,https://huggingface.co/apple/DCLM-Baseline-7B,,'TriviaQA' row (0.5270) on the model's official HF eval table.
 btlm-3b-8k,34.9,self-reported,https://arxiv.org/abs/2309.11568,,"0-shot, Table 4"
 chinchilla,73.2,self-reported,https://arxiv.org/abs/2203.15556,,"TriviaQA unfiltered, 5-shot"

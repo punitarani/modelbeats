@@ -12,7 +12,7 @@ test.describe('dashboard overview', () => {
     // Open–closed gap is computed on the universal Elo rating (arena covers only a sliver), so
     // it's always a real number, and the leader is the top-ranked open model under pairwise Elo.
     await expect(cards.nth(3)).toContainText('Elo')
-    await expect(cards.nth(3)).toContainText('Kimi K3 leads open')
+    await expect(cards.nth(3)).toContainText('MiMo-V2.6-Pro leads open')
   })
 
   test('scatter plots every priced+ranked model; movers show real lineage gains', async ({
@@ -28,7 +28,7 @@ test.describe('dashboard overview', () => {
     // real top mover is a rank-eligible family edge; deltas are Elo points (D21), so a large
     // cross-tier lineage jump (105B succeeding a 2B) posts a four-digit gain
     await expect(movers).toContainText('Sarvam-105B')
-    await expect(movers).toContainText('+1628.5')
+    await expect(movers).toContainText('+1624')
   })
 
   test('quality-vs-price scatter draws the Pareto frontier (D27)', async ({ page }) => {
@@ -102,12 +102,12 @@ test.describe('dashboard overview', () => {
     await gotoHydrated(page, '/')
     const rail = page.getByTestId('arena-rail')
     // rail now leads with the #1 overall model by Elo rating
-    await expect(rail).toContainText('Muse Spark 1.3')
-    await expect(rail).toContainText('3115.2')
+    await expect(rail).toContainText('Claude Opus 5.5')
+    await expect(rail).toContainText('3266.5')
     await pickOption(page, 'qc-b', 'Llama 3.1 405B — Meta')
     await page.getByTestId('qc-go').click()
-    // quick-compare slot A defaults to the #1 rank-eligible model (Muse Spark 1.3)
-    await expect(page).toHaveURL(/m=muse-spark-1-3(%2C|,)llama-3-1-405b/)
+    // quick-compare slot A defaults to the #1 rank-eligible model (Claude Opus 5.5)
+    await expect(page).toHaveURL(/m=claude-opus-5-5(%2C|,)llama-3-1-405b/)
   })
 })
 
@@ -132,8 +132,8 @@ test.describe('dashboard releases + bench tabs', () => {
     await gotoHydrated(page, '/?tab=releases')
     const frontier = page.getByTestId('frontier')
     // regrounded on the universal Elo rating, so both camps' leaders always plot
-    await expect(frontier).toContainText('Muse Spark 1.3')
-    await expect(frontier).toContainText('Kimi K3')
+    await expect(frontier).toContainText('Claude Opus 5.5')
+    await expect(frontier).toContainText('MiMo-V2.6-Pro')
     await expect(page.getByTestId('gap-note')).not.toHaveText('')
   })
 

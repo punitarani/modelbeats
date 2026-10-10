@@ -1,0 +1,46 @@
+{
+  "slug": "claude-haiku-5-5",
+  "name": "Claude Haiku 5.5",
+  "orgSlug": "anthropic",
+  "familySlug": "claude-5-5",
+  "releaseDate": "2026-10-07",
+  "status": "released",
+  "predecessor": "claude-sonnet-5-5",
+  "openness": "closed",
+  "license": "Proprietary",
+  "paramsB": null,
+  "activeParamsB": null,
+  "archClass": "dense",
+  "archDisplay": "Proprietary model; architecture and parameter count undisclosed; first Haiku with an adjustable effort setting, 1M-token context",
+  "ctxK": 1000,
+  "modalities": [
+    "text",
+    "vision"
+  ],
+  "langCount": null,
+  "capabilities": {
+    "reasoning": true,
+    "coding": true,
+    "vision": true,
+    "functionCalling": true,
+    "toolUse": true,
+    "agentic": true
+  },
+  "apiAvailable": true,
+  "price": {
+    "input": 0.1,
+    "output": 0.5
+  },
+  "links": {
+    "docs": "https://platform.claude.com/docs/en/models/haiku-5-5/overview"
+  },
+  "note": "Model id claude-haiku-5-5, released 2026-10-07. Anthropic calls it its 'cheapest, fastest, and most capable small model'. It is priced 90% below Haiku 4.5 for prompts up to 100K tokens ($0.10/$0.50) and 50% below for longer prompts ($0.50/$2.50). It has a 1M context, 128K max output, and is the first Haiku with an effort parameter (default medium). It uses the newer tokenizer (~30% more tokens than Haiku 4.5). The launch table compares it only with Haiku 4.5, GPT-6 Luna and Sonnet 5.5. Cyber safeguards are looser than Sonnet 5.5's but stricter than Haiku 4.5's.",
+  "quants": [],
+  "vramQ4Gb": null,
+  "vramFp16Gb": null,
+  "tps4090": null,
+  "tpsNote": null,
+  "effortLabel": null,
+  "isDefaultConfig": true,
+  "isBestConfig": true
+}

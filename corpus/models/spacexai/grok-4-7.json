@@ -62,14 +62,6 @@
       "notes": "DeepSWE v1.1 at HIGH effort (asterisk: \"An asterisk on Grok 4.7 DeepSWE marks a high-effort score\"); Grok 4.6 High 65.2 in same table."
     },
     {
-      "benchmarkSlug": "aa-briefcase",
-      "score": 1657,
-      "source": "self-reported",
-      "sourceUrl": "https://x.ai/news/grok-4-7",
-      "evaluatedAt": "2026-09-21",
-      "notes": "AA Briefcase v1.1 Elo, xHigh. Note version v1.1; corpus grok-4-6 row (1577) was from the 4.6 launch table (unversioned AA-Briefcase); the 4.7 table lists Grok 4.6 High at 1,546 on v1.1."
-    },
-    {
       "benchmarkSlug": "terminal-bench-4",
       "score": 37.6,
       "source": "self-reported",
@@ -116,6 +108,22 @@
       "sourceUrl": "https://arena.ai/leaderboard/text",
       "evaluatedAt": "2026-10-08",
       "notes": "Text Arena row 'grok-4.7-xhigh', 8,780 votes; leaderboard last updated Oct 8 2026. No arena row in the corpus today."
+    },
+    {
+      "benchmarkSlug": "cursorbench-4",
+      "score": 46.3,
+      "source": "self-reported",
+      "sourceUrl": "https://x.ai/news/grok-4-7",
+      "evaluatedAt": "2026-09-21",
+      "notes": "Grok 4.7 at xHigh, xAI launch table."
+    },
+    {
+      "benchmarkSlug": "healthbench-professional",
+      "score": 56.7,
+      "source": "self-reported",
+      "sourceUrl": "https://x.ai/news/grok-4-7",
+      "evaluatedAt": "2026-09-21",
+      "notes": "Grok 4.7 at xHigh, xAI launch table."
     }
   ]
 }

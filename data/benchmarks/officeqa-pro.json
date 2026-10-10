@@ -1,0 +1,10 @@
+{
+  "slug": "officeqa-pro",
+  "name": "OfficeQA Pro",
+  "category": "agents",
+  "unit": "%",
+  "description": "Databricks OfficeQA Pro: grounded question answering over large enterprise document collections.",
+  "normMin": 0,
+  "normMax": 85,
+  "higherIsBetter": true
+}

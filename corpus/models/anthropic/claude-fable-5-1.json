@@ -202,6 +202,46 @@
       "sourceUrl": "https://arena.ai/leaderboard/text",
       "evaluatedAt": "2026-10-08",
       "notes": "Text Arena row 'claude-fable-5.1-max', 13,063 votes; leaderboard last updated Oct 8 2026. No arena row in the corpus today."
+    },
+    {
+      "benchmarkSlug": "cursorbench-4",
+      "score": 51.8,
+      "source": "self-reported",
+      "sourceUrl": "https://www.anthropic.com/claude-opus-5-5",
+      "evaluatedAt": "2026-09-22",
+      "notes": "Claude Fable 5.1 column of the Claude Opus 5.5 launch table."
+    },
+    {
+      "benchmarkSlug": "chartography",
+      "score": 44.8,
+      "source": "self-reported",
+      "sourceUrl": "https://anthropic.com/claude-opus-5-5-system-card",
+      "evaluatedAt": "2026-09-22",
+      "notes": "No tools, Claude Opus 5.5 System Card §8.13.1."
+    },
+    {
+      "benchmarkSlug": "healthbench-professional",
+      "score": 62.1,
+      "source": "self-reported",
+      "sourceUrl": "https://anthropic.com/claude-opus-5-5-system-card",
+      "evaluatedAt": "2026-09-22",
+      "notes": "Claude Opus 5.5 System Card Table 8.1.A."
+    },
+    {
+      "benchmarkSlug": "frontierswe-v2",
+      "score": 56.3,
+      "source": "self-reported",
+      "sourceUrl": "https://anthropic.com/claude-opus-5-5-system-card",
+      "evaluatedAt": "2026-09-22",
+      "notes": "Claude Opus 5.5 System Card §8.7."
+    },
+    {
+      "benchmarkSlug": "officeqa-pro",
+      "score": 69.0,
+      "source": "self-reported",
+      "sourceUrl": "https://anthropic.com/claude-opus-5-5-system-card",
+      "evaluatedAt": "2026-09-22",
+      "notes": "Claude Fable 5.1 column, Claude Opus 5.5 System Card."
     }
   ]
 }

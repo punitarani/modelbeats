@@ -1,0 +1,48 @@
+{
+  "name": "Ling-3.0-flash",
+  "org": "inclusionAI",
+  "family": "Ling 3.0",
+  "slug": "ling-3-0-flash",
+  "releaseDate": "2026-07-24",
+  "status": "released",
+  "openness": "open-weights",
+  "license": "MIT",
+  "paramsB": 124,
+  "activeParamsB": 5.1,
+  "archClass": "hybrid",
+  "archDisplay": "Hybrid-linear MoE: 35 KDA + 7 Gated MLA layers (5:1), 2 dense layers, 512 routed / 1 shared / 8 active experts, hidden 2560",
+  "ctxK": 256,
+  "modalities": [
+    "text"
+  ],
+  "langCount": null,
+  "capabilities": {
+    "reasoning": true,
+    "coding": true,
+    "vision": false,
+    "functionCalling": true,
+    "toolUse": true,
+    "agentic": true
+  },
+  "apiAvailable": true,
+  "price": null,
+  "links": {
+    "hf": "inclusionAI/Ling-3.0-flash",
+    "docs": "https://developer.ant-ling.com/zh-CN/blogs/ling-3.0-flash-release"
+  },
+  "note": "inclusionAI's Ling 3.0 mid-tier, launched 2026-07-24 and open-sourced on Hugging Face under MIT on 2026-08-02. It is a 124B-total / 5.1B-active hybrid-linear MoE with a native 256K context (extendable to 1M) and thinking on by default but switchable. Ant says it matches or beats its predecessor Ring-2.6-1T on key benchmarks, but its comparison charts are images only, so no table values can be transcribed. The one text-stated figure is MiniAppBench 25.3% (in-house), which has no catalog slug.",
+  "quants": [],
+  "vramQ4Gb": null,
+  "vramFp16Gb": null,
+  "tps4090": null,
+  "tpsNote": null,
+  "effortLabel": null,
+  "isDefaultConfig": true,
+  "isBestConfig": true,
+  "specSources": {
+    "releaseDate": "https://developer.ant-ling.com/zh-CN/blogs/ling-3.0-flash-release",
+    "params/arch/ctx/license": "https://huggingface.co/inclusionAI/Ling-3.0-flash/raw/main/README.md",
+    "price": "https://developer.ant-ling.com/en/docs/models/price/"
+  },
+  "results": []
+}

@@ -1,0 +1,48 @@
+{
+  "slug": "qwen3-8-omni-flash",
+  "name": "Qwen3.8-Omni-Flash",
+  "orgSlug": "alibaba",
+  "familySlug": "qwen3-8",
+  "releaseDate": "2026-09-18",
+  "status": "released",
+  "predecessor": "qwen3-8-max-0902",
+  "openness": "closed",
+  "license": "Proprietary (API only; no weights)",
+  "paramsB": null,
+  "activeParamsB": null,
+  "archClass": "dense",
+  "archDisplay": "Proprietary model; architecture and parameter count undisclosed (API-only); natively omnimodal text/image/audio/video input, 1M-token context",
+  "ctxK": 1000,
+  "modalities": [
+    "text",
+    "vision",
+    "audio",
+    "video"
+  ],
+  "langCount": null,
+  "capabilities": {
+    "reasoning": true,
+    "coding": true,
+    "vision": true,
+    "functionCalling": true,
+    "toolUse": true,
+    "agentic": true
+  },
+  "apiAvailable": true,
+  "price": {
+    "input": 0.15,
+    "output": 0.47
+  },
+  "links": {
+    "docs": "https://www.alibabacloud.com/help/en/model-studio/qwen3-8-omni-flash"
+  },
+  "note": "Alibaba's next-generation native omnimodal model (text, image, audio and video in; text out), launched on 2026-09-18 as an API-only model with a 1M-token context, 4x the 256K of Qwen3.5-Omni-Flash. Qwen says its text performance matches a text-only model of the same size: its text table lines up closely with Qwen3.8-Flash (SWE-bench Pro 63.3 vs 62.5, GPQA 91.0 vs 91.7). Its omnimodal and agentic rows improve sharply over Qwen3.5-Omni-Plus, for example WildClawBench-MM rises from 34.5 to 71.0 and StreamingBench from 57.1 to 80.8. International pricing is $0.15/$0.47 per Mtok, and parameter count is undisclosed.",
+  "quants": [],
+  "vramQ4Gb": null,
+  "vramFp16Gb": null,
+  "tps4090": null,
+  "tpsNote": null,
+  "effortLabel": null,
+  "isDefaultConfig": true,
+  "isBestConfig": true
+}

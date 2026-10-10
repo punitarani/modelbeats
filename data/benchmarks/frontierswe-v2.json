@@ -1,0 +1,10 @@
+{
+  "slug": "frontierswe-v2",
+  "name": "FrontierSWE v2",
+  "category": "coding",
+  "unit": "%",
+  "description": "Proximal's FrontierSWE v2 long-horizon software-engineering benchmark (distinct from FrontierCode).",
+  "normMin": 0,
+  "normMax": 80,
+  "higherIsBetter": true
+}

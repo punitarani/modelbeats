@@ -2,6 +2,7 @@ model_slug,score,source,source_url,evaluated_at,notes
 claude-fable-5,64.9,self-reported,https://openai.com/index/gpt-6-astra,2026-09-03,"FrontierCode v1.1 Extended, Claude Fable 5 column of OpenAI's GPT-6 Astra launch comparison; best in row, ahead of Astra's 64.5."
 claude-fable-5-1,63.6,self-reported,https://openai.com/index/gpt-6-astra,2026-09-03,FrontierCode v1.1 Extended set; figure as tabulated in OpenAI's GPT-6 Astra launch comparison (Anthropic reports 63.6 at medium effort).
 claude-opus-5,63.6,self-reported,https://openai.com/index/gpt-6-astra,2026-09-03,"FrontierCode v1.1 Extended, Claude Opus 5 column of OpenAI's GPT-6 Astra launch comparison."
+claude-opus-5-5,65.3,self-reported,https://anthropic.com/claude-opus-5-5-system-card,2026-09-22,"FrontierCode v1.1 (Extended), System Card §8.4; ahead of Opus 5 63.6, Fable 5 64.9, GPT-6 Astra 64.5, Fable 5.1 63.6."
 gpt-5-6-sol,60.6,self-reported,https://openai.com/index/gpt-6-astra,2026-09-03,"FrontierCode v1.1 Extended, GPT-5.6 Sol column of OpenAI's GPT-6 Astra launch comparison; SpaceXAI's Grok 4.6 table records the same 60.6 for Sol Max."
 gpt-6-astra,64.5,self-reported,https://openai.com/index/gpt-6-astra,2026-09-03,"FrontierCode v1.1 Extended set, GPT-6 Astra launch table; behind Claude Fable 5 (64.9)."
 grok-4-5,56.6,self-reported,https://x.ai/news/grok-4-6,2026-08-12,"FrontierCode v1.1 (Extended), Grok 4.5 High column of SpaceXAI's official Grok 4.6 eval table."

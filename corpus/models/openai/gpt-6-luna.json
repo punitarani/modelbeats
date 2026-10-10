@@ -1,0 +1,81 @@
+{
+  "name": "GPT-6 Luna",
+  "org": "OpenAI",
+  "orgSlug": "openai",
+  "family": "GPT-6",
+  "familySlug": "gpt-6",
+  "slug": "gpt-6-luna",
+  "releaseDate": "2026-09-22",
+  "status": "released",
+  "openness": "closed",
+  "license": "Proprietary",
+  "paramsB": null,
+  "activeParamsB": null,
+  "archClass": "dense",
+  "archDisplay": "Proprietary model; architecture and parameter count undisclosed; 1.05M-token context, selectable reasoning effort (none to max)",
+  "ctxK": 1050,
+  "modalities": [
+    "text",
+    "vision"
+  ],
+  "langCount": null,
+  "capabilities": {
+    "reasoning": true,
+    "coding": true,
+    "vision": true,
+    "functionCalling": true,
+    "toolUse": true,
+    "agentic": true
+  },
+  "apiAvailable": true,
+  "price": {
+    "input": 0.1,
+    "output": 0.5,
+    "provider": "OpenAI"
+  },
+  "links": {
+    "docs": "https://developers.openai.com/api/docs/models/gpt-6-luna"
+  },
+  "note": "API id gpt-6-luna, released 2026-09-22. It is the low-cost GPT-6 tier at $0.10/$0.50 per Mtok (cached $0.01), 50% below GPT-5.6 Luna's $0.20/$1.20, with a 1.05M context. It is the ChatGPT Free/Go default since 2026-10-07 and powers the Decisions API beta (2026-10-06). It shares the 2026-09-25 image-encoding bug fix with Sol. OpenAI printed only one Luna number (DeepSWE). The other rows come from Anthropic's Claude Haiku 5.5 comparison table.",
+  "quants": [],
+  "vramQ4Gb": null,
+  "vramFp16Gb": null,
+  "tps4090": null,
+  "tpsNote": null,
+  "effortLabel": null,
+  "isDefaultConfig": true,
+  "isBestConfig": true,
+  "specSources": {
+    "releaseDate": "https://developers.openai.com/api/docs/changelog",
+    "price": "https://developers.openai.com/api/docs/models/gpt-6-luna",
+    "ctxK": "https://developers.openai.com/api/docs/models/gpt-6-luna",
+    "modalities": "https://developers.openai.com/api/docs/models/gpt-6-luna",
+    "announcement": "https://openai.com/index/introducing-gpt-6-sol-and-luna/"
+  },
+  "results": [
+    {
+      "benchmarkSlug": "deepswe",
+      "score": 66.6,
+      "source": "self-reported",
+      "sourceUrl": "https://openai.com/index/introducing-gpt-6-sol-and-luna/",
+      "evaluatedAt": "2026-09-22",
+      "notes": "DeepSWE v1.1 at MAX effort; 'comparable to Claude Opus 5 and Fable 5 at medium effort' at 93%/96% lower cost per task."
+    },
+    {
+      "benchmarkSlug": "terminal-bench-4",
+      "score": 16.4,
+      "source": "self-reported",
+      "sourceUrl": "https://www.anthropic.com/claude-haiku-5-5",
+      "evaluatedAt": "2026-10-07",
+      "notes": "Terminal-Bench 4.0, GPT-6 Luna column of Anthropic's Haiku 5.5 table (effort not stated)."
+    },
+    {
+      "benchmarkSlug": "frontiercode",
+      "score": 42.4,
+      "source": "self-reported",
+      "sourceUrl": "https://www.anthropic.com/claude-haiku-5-5",
+      "evaluatedAt": "2026-10-07",
+      "notes": "FrontierCode 1.1 (Main), GPT-6 Luna column of Anthropic's Haiku 5.5 table (effort not stated)."
+    }
+  ]
+}
