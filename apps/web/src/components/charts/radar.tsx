@@ -46,7 +46,7 @@ export function Radar({
         role="img"
         aria-label="Capability radar"
       >
-        <title>Capability radar across {axes.map((a) => a.key).join(', ')}</title>
+        <title>{`Capability radar across ${axes.map((a) => a.key).join(', ')}`}</title>
         {radarRings(n).map((pts) => (
           <polygon key={pts} points={pts} fill="none" stroke="var(--border)" strokeWidth="1" />
         ))}
