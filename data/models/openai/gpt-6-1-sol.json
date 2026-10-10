@@ -1,0 +1,46 @@
+{
+  "slug": "gpt-6-1-sol",
+  "name": "GPT-6.1 Sol",
+  "orgSlug": "openai",
+  "familySlug": "gpt-6-1",
+  "releaseDate": "2026-09-29",
+  "status": "released",
+  "predecessor": null,
+  "openness": "closed",
+  "license": "Proprietary",
+  "paramsB": null,
+  "activeParamsB": null,
+  "archClass": "dense",
+  "archDisplay": "Proprietary model; architecture and parameter count undisclosed; 1.05M-token context, reasoning effort low to max",
+  "ctxK": 1050,
+  "modalities": [
+    "text",
+    "vision"
+  ],
+  "langCount": null,
+  "capabilities": {
+    "reasoning": true,
+    "coding": true,
+    "vision": true,
+    "functionCalling": true,
+    "toolUse": true,
+    "agentic": true
+  },
+  "apiAvailable": true,
+  "price": {
+    "input": 2,
+    "output": 10
+  },
+  "links": {
+    "docs": "https://developers.openai.com/api/docs/models/gpt-6.1-sol"
+  },
+  "note": "API id gpt-6.1-sol, released 2026-09-29 (DevDay week) as 'an upgrade to GPT-6 Sol that nearly matches GPT-6 Astra’s intelligence on agentic coding, computer use, and professional work at one-fifth of Astra’s standard input and output token prices'. It costs $2/$10 per Mtok with cached input at $0.10 (half of GPT-6 Sol's). It has a 1.05M context and 128K max output, and it is now the 'Default' Sol on the API models page. The launch post gives benchmark results only as charts and relative deltas: DeepSWE v1.1 is +6.4 pp over GPT-6 Sol's best, AutomationBench 1.0.6 is +2.2 pp over Opus 5.5 at medium and +4.8 pp over GPT-6 Sol, OSWorld 2.0 offline is +7 pp over GPT-6 Sol at max and within 2.1 pp of Astra, and Terminal-Bench Science 0.1 is more than double GPT-6 Sol at max, at $5.47/task vs $23.21 for Opus 5.5. None of these can be filed as absolute scores. OpenAI applies Astra-level cyber safeguards and a phased Daybreak rollout.",
+  "quants": [],
+  "vramQ4Gb": null,
+  "vramFp16Gb": null,
+  "tps4090": null,
+  "tpsNote": null,
+  "effortLabel": null,
+  "isDefaultConfig": true,
+  "isBestConfig": true
+}

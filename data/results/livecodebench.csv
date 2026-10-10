@@ -1,4 +1,5 @@
 model_slug,score,source,source_url,evaluated_at,notes
+aliceai-foundation-80b-a3b-base,50.5,self-reported,https://huggingface.co/yandex/AliceAI-Foundation-80B-A3B-Base/raw/main/README_en.md,2026-09-21,"LiveCodeBench v5-6 CoT, 1-shot pass@1, t=0 (main table). A second table at t=1/presence_penalty=1.5 reports pass@1 60.4 and pass@8 82.9."
 claude-3-7-sonnet,56.66,independent,https://www.vals.ai/models/anthropic_claude-3-7-sonnet-20250219,,"Vals AI independent evaluation, 'Claude 3.7 Sonnet (Nonthinking)' model page (confirmed via rendered browser screenshot, since the static HTML placeholder shows 0.0% until client JS animates the real value in). Chose the Nonthinking variant to match this file's standard-mode convention; the Thinking variant scored 60.44% on the same benchmark."
 claude-fable-5,89.8,independent,https://www.vals.ai/models/anthropic_claude-fable-5,,"Vals AI independent eval. LiveCodeBench 89.778% (ranked 1st of 127 models per the page), from the model page's embedded score data. Corroborated by a separate morphllm.com roundup citing the identical 89.78% figure and #1 rank. Not previously tracked for this model."
 claude-haiku-4-5,41.2,independent,https://www.vals.ai/models/anthropic_claude-haiku-4-5-20251001-thinking,,"Vals AI independent eval, Thinking variant. LiveCodeBench 41.175%, from the model page's embedded score bars (raw HTML fetch). Not previously tracked (the corpus has 'terminal-bench', 'gpqa', 'mmlu-pro' etc. for this model but no coding-contest benchmark)."
@@ -154,6 +155,7 @@ qwen3-7-max,91.6,self-reported,https://www.alibabacloud.com/blog/qwen3-7-the-age
 qwen3-7-plus,89.6,self-reported,https://qwen.ai/blog?id=qwen3.7-plus,2026-05-31,"Official Qwen launch blog, 'STEM & Reasoning' table."
 qwen3-8-27b,90.3,self-reported,https://huggingface.co/Qwen/Qwen3.8-27B,2026-08-05,"LiveCodeBench v6, official Qwen3.8-27B model card; best in row."
 qwen3-8-flash-next,91.9,self-reported,https://qwen.ai/blog?id=qwen3.8-flash-next,2026-08-26,"LiveCodeBench v6, official Qwen3.8-Flash-Next model card."
+qwen3-8-omni-flash,92.6,self-reported,https://qwen.ai/blog?id=qwen3.8-omni-flash,2026-09-18,"Qwen3.8-Omni-Flash column, official Qwen launch blog. LiveCodeBench v6."
 qwen3-8b-non-thinking,22.8,self-reported,https://arxiv.org/abs/2505.09388,,"LiveCodeBench v5, non-thinking mode"
 qwen3-8b-thinking,57.5,self-reported,https://arxiv.org/abs/2505.09388,,"LiveCodeBench v5, thinking mode"
 qwen3-coder-480b-a35b,44.93,self-reported,https://arxiv.org/abs/2603.00729,2026-02-28,

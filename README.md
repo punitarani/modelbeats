@@ -5,7 +5,7 @@
 
 Model Beats collapses the four-tab workflow — **rank it, verify it, size it, run it** —
 into one provenance-honest, deep-linkable tool: every major LLM release from GPT-3
-(2020) to today — 570 models across 86 orgs, 164 benchmarks with published
+(2020) to today — 585 models across 86 orgs, 170 benchmarks with published
 normalization bounds, version lineage, API pricing, quantizations, and a graded
 hardware-fit engine. System design in
 [ARCHITECTURE.md](ARCHITECTURE.md) (§13 reconciles it with the committed design

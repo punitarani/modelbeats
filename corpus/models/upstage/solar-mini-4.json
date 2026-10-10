@@ -1,0 +1,78 @@
+{
+  "name": "Solar Mini 4",
+  "org": "Upstage",
+  "family": "SOLAR",
+  "slug": "solar-mini-4",
+  "releaseDate": "2026-09-22",
+  "status": "released",
+  "openness": "closed",
+  "license": "Proprietary",
+  "paramsB": 35,
+  "activeParamsB": 3,
+  "archClass": "moe",
+  "archDisplay": "Mixture-of-Experts (35B total / 3B active), pretrained from scratch by Upstage; reasoning off by default, reasoning_effort selectable",
+  "ctxK": 512,
+  "modalities": [
+    "text"
+  ],
+  "langCount": 3,
+  "capabilities": {
+    "reasoning": true,
+    "coding": true,
+    "vision": false,
+    "functionCalling": true,
+    "toolUse": true,
+    "agentic": true
+  },
+  "apiAvailable": true,
+  "price": {
+    "input": 0.1,
+    "output": 0.4,
+    "provider": "Upstage"
+  },
+  "links": {
+    "docs": "https://console.upstage.ai/docs/models/solar-mini-4"
+  },
+  "note": "Upstage's compact agent-oriented MoE (35B total / 3B active) with a 512K context window and 128K max output, supporting English, Korean and Japanese. Released 2026-09-22 per the Console version id solar-mini4-260922; the English launch blog is dated October 1, 2026. Reasoning is off by default and controlled via reasoning_effort. Available via Upstage Console API, Solar Chat, OpenRouter and on-prem; no weights on Upstage's Hugging Face org.",
+  "quants": [],
+  "vramQ4Gb": null,
+  "vramFp16Gb": null,
+  "tps4090": null,
+  "tpsNote": null,
+  "effortLabel": null,
+  "isDefaultConfig": true,
+  "isBestConfig": true,
+  "specSources": {
+    "paramsB": "https://console.upstage.ai/docs/models/solar-mini-4",
+    "activeParamsB": "https://console.upstage.ai/docs/models/solar-mini-4",
+    "ctxK": "https://console.upstage.ai/docs/models/solar-mini-4",
+    "releaseDate": "https://console.upstage.ai/docs/models/solar-mini-4",
+    "price": "https://console.upstage.ai/docs/models/solar-mini-4",
+    "langCount": "https://console.upstage.ai/docs/models/solar-mini-4",
+    "capabilities": "https://console.upstage.ai/docs/models/solar-mini-4",
+    "openness": "https://huggingface.co/api/models?author=upstage&sort=createdAt&direction=-1&limit=15",
+    "archClass": "https://www.upstage.ai/blog/en/solar-mini-4"
+  },
+  "aliases": [
+    "solar-mini4",
+    "solar-mini4-260922"
+  ],
+  "results": [
+    {
+      "benchmarkSlug": "hle",
+      "score": 25.8,
+      "source": "self-reported",
+      "sourceUrl": "https://www.upstage.ai/blog/en/solar-mini-4",
+      "evaluatedAt": "2026-10-01",
+      "notes": "\"It also scored 25.8% on Humanity's Last Exam\". Launch blog does not state effort/mode or who ran it; the same blog cites the Artificial Analysis Intelligence Index v4.3.2, so this is likely AA's HLE run (no tools)."
+    },
+    {
+      "benchmarkSlug": "scicode",
+      "score": 47.6,
+      "source": "self-reported",
+      "sourceUrl": "https://www.upstage.ai/blog/en/solar-mini-4",
+      "evaluatedAt": "2026-10-01",
+      "notes": "\"scored 47.6% on SciCode\". Effort/mode and evaluator not stated (likely AA Intelligence Index component)."
+    }
+  ]
+}

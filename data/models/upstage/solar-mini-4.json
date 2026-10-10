@@ -1,0 +1,45 @@
+{
+  "slug": "solar-mini-4",
+  "name": "Solar Mini 4",
+  "orgSlug": "upstage",
+  "familySlug": "solar",
+  "releaseDate": "2026-09-22",
+  "status": "released",
+  "predecessor": "upstage-solar-pro-2-chat",
+  "openness": "closed",
+  "license": "Proprietary",
+  "paramsB": 35,
+  "activeParamsB": 3,
+  "archClass": "moe",
+  "archDisplay": "Mixture-of-Experts (35B total / 3B active), pretrained from scratch by Upstage; reasoning off by default, reasoning_effort selectable",
+  "ctxK": 512,
+  "modalities": [
+    "text"
+  ],
+  "langCount": 3,
+  "capabilities": {
+    "reasoning": true,
+    "coding": true,
+    "vision": false,
+    "functionCalling": true,
+    "toolUse": true,
+    "agentic": true
+  },
+  "apiAvailable": true,
+  "price": {
+    "input": 0.1,
+    "output": 0.4
+  },
+  "links": {
+    "docs": "https://console.upstage.ai/docs/models/solar-mini-4"
+  },
+  "note": "Upstage's compact agent-oriented MoE (35B total / 3B active) with a 512K context window and 128K max output, supporting English, Korean and Japanese. Released 2026-09-22 per the Console version id solar-mini4-260922; the English launch blog is dated October 1, 2026. Reasoning is off by default and controlled via reasoning_effort. Available via Upstage Console API, Solar Chat, OpenRouter and on-prem; no weights on Upstage's Hugging Face org.",
+  "quants": [],
+  "vramQ4Gb": null,
+  "vramFp16Gb": null,
+  "tps4090": null,
+  "tpsNote": null,
+  "effortLabel": null,
+  "isDefaultConfig": true,
+  "isBestConfig": true
+}

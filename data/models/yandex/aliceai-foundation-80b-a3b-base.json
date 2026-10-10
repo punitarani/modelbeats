@@ -1,0 +1,43 @@
+{
+  "slug": "aliceai-foundation-80b-a3b-base",
+  "name": "AliceAI-Foundation-80B-A3B-Base",
+  "orgSlug": "yandex",
+  "familySlug": "aliceai-foundation",
+  "releaseDate": "2026-09-21",
+  "status": "released",
+  "predecessor": null,
+  "openness": "open-weights",
+  "license": "Apache 2.0",
+  "paramsB": 80,
+  "activeParamsB": 3,
+  "archClass": "hybrid",
+  "archDisplay": "Hybrid-attention MoE base model trained from scratch: 12 × (3 × (KDA → MoE) → 1 × (Gated Attention → MoE))",
+  "ctxK": 256,
+  "modalities": [
+    "text"
+  ],
+  "langCount": 2,
+  "capabilities": {
+    "reasoning": false,
+    "coding": true,
+    "vision": false,
+    "functionCalling": false,
+    "toolUse": false,
+    "agentic": false
+  },
+  "apiAvailable": false,
+  "price": null,
+  "links": {
+    "hf": "yandex/AliceAI-Foundation-80B-A3B-Base",
+    "docs": "https://yandex.com/company/news/2026-09-21"
+  },
+  "note": "Yandex's first open-weights LLM trained from scratch: an 80B-total / 3B-active hybrid-attention MoE pretrained base (no post-training), 262,144-token context, Apache 2.0. Yandex describes it as an experimental base for testing architecture choices for its future unified reasoning model behind Alice AI. Benchmarks on the card are base-model few-shot evals against other base checkpoints. HF safetensors count is 81,286,433,408 params.",
+  "quants": [],
+  "vramQ4Gb": null,
+  "vramFp16Gb": null,
+  "tps4090": null,
+  "tpsNote": null,
+  "effortLabel": null,
+  "isDefaultConfig": true,
+  "isBestConfig": true
+}

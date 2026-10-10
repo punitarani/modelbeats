@@ -1,0 +1,75 @@
+{
+  "name": "GPT-6.1 Sol",
+  "org": "OpenAI",
+  "orgSlug": "openai",
+  "family": "GPT-6.1",
+  "familySlug": "gpt-6-1",
+  "slug": "gpt-6-1-sol",
+  "releaseDate": "2026-09-29",
+  "status": "released",
+  "openness": "closed",
+  "license": "Proprietary",
+  "paramsB": null,
+  "activeParamsB": null,
+  "archClass": "dense",
+  "archDisplay": "Proprietary model; architecture and parameter count undisclosed; 1.05M-token context, reasoning effort low to max",
+  "ctxK": 1050,
+  "modalities": [
+    "text",
+    "vision"
+  ],
+  "langCount": null,
+  "capabilities": {
+    "reasoning": true,
+    "coding": true,
+    "vision": true,
+    "functionCalling": true,
+    "toolUse": true,
+    "agentic": true
+  },
+  "apiAvailable": true,
+  "price": {
+    "input": 2,
+    "output": 10,
+    "provider": "OpenAI"
+  },
+  "links": {
+    "docs": "https://developers.openai.com/api/docs/models/gpt-6.1-sol"
+  },
+  "note": "API id gpt-6.1-sol, released 2026-09-29 (DevDay week) as 'an upgrade to GPT-6 Sol that nearly matches GPT-6 Astra’s intelligence on agentic coding, computer use, and professional work at one-fifth of Astra’s standard input and output token prices'. It costs $2/$10 per Mtok with cached input at $0.10 (half of GPT-6 Sol's). It has a 1.05M context and 128K max output, and it is now the 'Default' Sol on the API models page. The launch post gives benchmark results only as charts and relative deltas: DeepSWE v1.1 is +6.4 pp over GPT-6 Sol's best, AutomationBench 1.0.6 is +2.2 pp over Opus 5.5 at medium and +4.8 pp over GPT-6 Sol, OSWorld 2.0 offline is +7 pp over GPT-6 Sol at max and within 2.1 pp of Astra, and Terminal-Bench Science 0.1 is more than double GPT-6 Sol at max, at $5.47/task vs $23.21 for Opus 5.5. None of these can be filed as absolute scores. OpenAI applies Astra-level cyber safeguards and a phased Daybreak rollout.",
+  "quants": [],
+  "vramQ4Gb": null,
+  "vramFp16Gb": null,
+  "tps4090": null,
+  "tpsNote": null,
+  "effortLabel": null,
+  "isDefaultConfig": true,
+  "isBestConfig": true,
+  "specSources": {
+    "releaseDate": "https://developers.openai.com/api/docs/changelog",
+    "releaseDateAlt": "https://deploymentsafety.openai.com/gpt-6-1-sol",
+    "price": "https://developers.openai.com/api/docs/models/gpt-6.1-sol",
+    "ctxK": "https://developers.openai.com/api/docs/models/gpt-6.1-sol",
+    "modalities": "https://developers.openai.com/api/docs/models/gpt-6.1-sol",
+    "announcement": "https://openai.com/index/introducing-gpt-6-1-sol/",
+    "systemCardAddendum": "https://deploymentsafety.openai.com/gpt-6-1-sol"
+  },
+  "results": [
+    {
+      "benchmarkSlug": "exploitbench",
+      "score": 99.7,
+      "source": "self-reported",
+      "sourceUrl": "https://deploymentsafety.openai.com/gpt-6-1-sol",
+      "evaluatedAt": "2026-09-29",
+      "notes": "Public ExploitBench at maximum reasoning effort, system card addendum §9.1.2.1; GPT-6 Sol 81.7, GPT-6 Astra 100. OpenAI caveat: possibly 'artificially inflated due to potential contamination'. On the private Internal Port it scores 21.5% (Astra 31.5%)."
+    },
+    {
+      "benchmarkSlug": "healthbench-professional",
+      "score": 64.2,
+      "source": "self-reported",
+      "sourceUrl": "https://deploymentsafety.openai.com/gpt-6-1-sol",
+      "evaluatedAt": "2026-09-29",
+      "notes": "Length-adjusted (raw 67.2), GPT-6.1 Sol system card addendum."
+    }
+  ]
+}

@@ -1,3 +1,5 @@
 model_slug,score,source,source_url,evaluated_at,notes
 muse-glimmer-30b,43.6,self-reported,https://huggingface.co/meta-models/Muse-Glimmer-30B,2026-08-10,"SciCode, official Muse Glimmer model card; best in row, narrowly over Gemma4-31B (43.4)."
 qwen3-6-27b,39.8,self-reported,https://huggingface.co/meta-models/Muse-Glimmer-30B,2026-08-10,"SciCode, Qwen3.6-27B thinking-mode column of the official Muse Glimmer 30B model card."
+solar-mini-4,47.6,self-reported,https://www.upstage.ai/blog/en/solar-mini-4,2026-10-01,"""scored 47.6% on SciCode"". Effort/mode and evaluator not stated (likely AA Intelligence Index component)."
+step-5-preview,58.9,self-reported,https://www.stepfun.com/step-5-preview,2026-09-20,Step 5 Preview (High effort) column of the official 'Benchmarking Step 5 Preview' table; rivals run at Max. SciCode.

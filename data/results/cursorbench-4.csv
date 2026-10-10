@@ -1,0 +1,8 @@
+model_slug,score,source,source_url,evaluated_at,notes
+claude-fable-5-1,51.8,self-reported,https://www.anthropic.com/claude-opus-5-5,2026-09-22,Claude Fable 5.1 column of the Claude Opus 5.5 launch table.
+claude-opus-5,46.6,self-reported,https://www.anthropic.com/claude-opus-5-5,2026-09-22,Claude Opus 5 column of the Claude Opus 5.5 launch table.
+claude-opus-5-5,57.8,self-reported,https://www.anthropic.com/claude-opus-5-5,2026-09-22,"CursorBench 4.0 at max effort, Claude Opus 5.5 launch table (medium/default 52.5 per System Card §8.8)."
+claude-sonnet-5,34.1,self-reported,https://www.anthropic.com/claude-sonnet-5-5,2026-09-28,Claude Sonnet 5 column of the Claude Sonnet 5.5 launch table.
+claude-sonnet-5-5,55.5,self-reported,https://www.anthropic.com/claude-sonnet-5-5,2026-09-28,Claude Sonnet 5.5 launch table.
+grok-4-6,40.4,self-reported,https://x.ai/news/grok-4-7,2026-09-21,"Grok 4.6 at High, column of the Grok 4.7 launch table."
+grok-4-7,46.3,self-reported,https://x.ai/news/grok-4-7,2026-09-21,"Grok 4.7 at xHigh, xAI launch table."

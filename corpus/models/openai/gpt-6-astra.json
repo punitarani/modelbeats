@@ -203,6 +203,14 @@
       "sourceUrl": "https://arena.ai/leaderboard/text",
       "evaluatedAt": "2026-10-08",
       "notes": "Text Arena row 'gpt-6-astra-max', 10,536 votes; leaderboard last updated Oct 8 2026. No arena row in the corpus today."
+    },
+    {
+      "benchmarkSlug": "healthbench-professional",
+      "score": 64.7,
+      "source": "self-reported",
+      "sourceUrl": "https://deploymentsafety.openai.com/gpt-6-1-sol",
+      "evaluatedAt": "2026-09-29",
+      "notes": "Length-adjusted, GPT-6.1 Sol system card addendum (Anthropic's table lists 63.4)."
     }
   ]
 }

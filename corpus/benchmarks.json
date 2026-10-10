@@ -1237,7 +1237,7 @@
     "unit": "%",
     "description": "Real-time, live-streaming video comprehension benchmark.",
     "normMin": 30,
-    "normMax": 68,
+    "normMax": 82,
     "higherIsBetter": true
   },
   {
@@ -1641,6 +1641,66 @@
     "description": "SWE-bench Multimodal — issues augmented with visual context (screenshots, design mockups), testing whether coding agents generalize to visual software domains.",
     "normMin": 0,
     "normMax": 70,
+    "higherIsBetter": true
+  },
+  {
+    "slug": "cursorbench-4",
+    "name": "CursorBench 4.0",
+    "category": "coding",
+    "unit": "%",
+    "description": "Cursor's agentic coding benchmark, version 4.0 (scores are not comparable with the 3.2 column).",
+    "normMin": 0,
+    "normMax": 75,
+    "higherIsBetter": true
+  },
+  {
+    "slug": "chartography",
+    "name": "Chartography",
+    "category": "vision",
+    "unit": "%",
+    "description": "Surge AI visual chart-recognition benchmark, scored without tools.",
+    "normMin": 0,
+    "normMax": 90,
+    "higherIsBetter": true
+  },
+  {
+    "slug": "healthbench-professional",
+    "name": "HealthBench Professional",
+    "category": "knowledge",
+    "unit": "%",
+    "description": "OpenAI HealthBench Professional clinical-reasoning set; length-adjusted score where the lab reports both.",
+    "normMin": 0,
+    "normMax": 80,
+    "higherIsBetter": true
+  },
+  {
+    "slug": "frontierswe-v2",
+    "name": "FrontierSWE v2",
+    "category": "coding",
+    "unit": "%",
+    "description": "Proximal's FrontierSWE v2 long-horizon software-engineering benchmark (distinct from FrontierCode).",
+    "normMin": 0,
+    "normMax": 80,
+    "higherIsBetter": true
+  },
+  {
+    "slug": "sec-bench-pro",
+    "name": "SEC-Bench Pro",
+    "category": "coding",
+    "unit": "%",
+    "description": "Security-engineering benchmark of real-world vulnerability reproduction and patching tasks.",
+    "normMin": 0,
+    "normMax": 85,
+    "higherIsBetter": true
+  },
+  {
+    "slug": "officeqa-pro",
+    "name": "OfficeQA Pro",
+    "category": "agents",
+    "unit": "%",
+    "description": "Databricks OfficeQA Pro: grounded question answering over large enterprise document collections.",
+    "normMin": 0,
+    "normMax": 85,
     "higherIsBetter": true
   }
 ]

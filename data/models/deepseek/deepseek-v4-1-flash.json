@@ -1,0 +1,47 @@
+{
+  "slug": "deepseek-v4-1-flash",
+  "name": "DeepSeek-V4.1-Flash",
+  "orgSlug": "deepseek",
+  "familySlug": "deepseek-v4",
+  "releaseDate": "2026-09-10",
+  "status": "released",
+  "predecessor": "deepseek-v4-flash-0731",
+  "openness": "open-weights",
+  "license": "MIT",
+  "paramsB": 552,
+  "activeParamsB": 16,
+  "archClass": "moe",
+  "archDisplay": "552B sparse MoE, 40-layer causal encoder-decoder (1 shared + 384 routed experts, 6 routed active per token), ~8B active in prefill / 16B in decode, ~890 bytes/token global KV cache (about 1/4 of V4-Flash); natively multimodal (image+text in, text out); ~45T multimodal pre-training tokens",
+  "ctxK": 1000,
+  "modalities": [
+    "text",
+    "vision"
+  ],
+  "langCount": null,
+  "capabilities": {
+    "reasoning": true,
+    "coding": true,
+    "vision": true,
+    "functionCalling": true,
+    "toolUse": true,
+    "agentic": true
+  },
+  "apiAvailable": true,
+  "price": {
+    "input": 0.3,
+    "output": 1.2
+  },
+  "links": {
+    "hf": "deepseek-ai/DeepSeek-V4.1-Flash",
+    "docs": "https://api-docs.deepseek.com/news/news260910"
+  },
+  "note": "DeepSeek's 2026-09-10 release, the smallest model of a new architecture family: a 552B-backbone causal encoder-decoder MoE that activates ~8B parameters in prefill and 16B in decode, with native image input, a 1M context and a KV cache about a quarter the size of V4-Flash's. Open weights under MIT. On DeepSeek's own table it beats every compared model on Terminal-Bench 2.1 (90.6), DeepSWE v1.1 (74.2), Codeforces (3471), CyberGym (88.1) and AutomationBench (54.8), but trails the closed frontier on HLE and Terminal-Bench 3.0/4.0. The API alias deepseek-flash now points to it, legacy V4-Flash names are routed to it, and from 2026-09-14 deepseek-v4-pro requests are also served by V4.1-Flash at Flash rates until V4.1-Pro launches.",
+  "quants": [],
+  "vramQ4Gb": null,
+  "vramFp16Gb": null,
+  "tps4090": null,
+  "tpsNote": null,
+  "effortLabel": null,
+  "isDefaultConfig": true,
+  "isBestConfig": true
+}

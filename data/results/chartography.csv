@@ -1,0 +1,7 @@
+model_slug,score,source,source_url,evaluated_at,notes
+claude-fable-5-1,44.8,self-reported,https://anthropic.com/claude-opus-5-5-system-card,2026-09-22,"No tools, Claude Opus 5.5 System Card §8.13.1."
+claude-haiku-5-5,46.4,self-reported,https://www.anthropic.com/claude-haiku-5-5,2026-10-07,"No tools, Claude Haiku 5.5 launch table."
+claude-opus-5,29.8,self-reported,https://anthropic.com/claude-opus-5-5-system-card,2026-09-22,"No tools, Claude Opus 5.5 System Card §8.13.1."
+claude-opus-5-5,64.4,self-reported,https://www.anthropic.com/claude-sonnet-5-5,2026-09-28,"No tools, Claude Opus 5.5 column of the Claude Sonnet 5.5 launch table (89.0 with tools)."
+claude-sonnet-5-5,61.6,self-reported,https://www.anthropic.com/claude-sonnet-5-5,2026-09-28,"No tools, Claude Sonnet 5.5 launch table."
+gemini-4-argon,71.6,self-reported,https://deepmind.google/models/gemini/,2026-09-30,"Without tools, Google DeepMind Gemini 4 Argon evaluation table."

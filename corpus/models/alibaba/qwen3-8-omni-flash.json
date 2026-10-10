@@ -1,0 +1,159 @@
+{
+  "name": "Qwen3.8-Omni-Flash",
+  "org": "Alibaba",
+  "family": "Qwen3.8",
+  "slug": "qwen3-8-omni-flash",
+  "releaseDate": "2026-09-18",
+  "status": "released",
+  "openness": "closed",
+  "license": "Proprietary (API only; no weights)",
+  "paramsB": null,
+  "activeParamsB": null,
+  "archClass": "dense",
+  "archDisplay": "Proprietary model; architecture and parameter count undisclosed (API-only); natively omnimodal text/image/audio/video input, 1M-token context",
+  "ctxK": 1000,
+  "modalities": [
+    "text",
+    "vision",
+    "audio",
+    "video"
+  ],
+  "langCount": null,
+  "capabilities": {
+    "reasoning": true,
+    "coding": true,
+    "vision": true,
+    "functionCalling": true,
+    "toolUse": true,
+    "agentic": true
+  },
+  "apiAvailable": true,
+  "price": {
+    "input": 0.15,
+    "output": 0.47,
+    "provider": "Alibaba Cloud Model Studio"
+  },
+  "links": {
+    "docs": "https://www.alibabacloud.com/help/en/model-studio/qwen3-8-omni-flash"
+  },
+  "note": "Alibaba's next-generation native omnimodal model (text, image, audio and video in; text out), launched on 2026-09-18 as an API-only model with a 1M-token context, 4x the 256K of Qwen3.5-Omni-Flash. Qwen says its text performance matches a text-only model of the same size: its text table lines up closely with Qwen3.8-Flash (SWE-bench Pro 63.3 vs 62.5, GPQA 91.0 vs 91.7). Its omnimodal and agentic rows improve sharply over Qwen3.5-Omni-Plus, for example WildClawBench-MM rises from 34.5 to 71.0 and StreamingBench from 57.1 to 80.8. International pricing is $0.15/$0.47 per Mtok, and parameter count is undisclosed.",
+  "quants": [],
+  "vramQ4Gb": null,
+  "vramFp16Gb": null,
+  "tps4090": null,
+  "tpsNote": null,
+  "effortLabel": null,
+  "isDefaultConfig": true,
+  "isBestConfig": true,
+  "specSources": {
+    "releaseDate": "https://qwen.ai/blog?id=qwen3.8-omni-flash",
+    "ctxK/maxOutput/modalities/thinking": "https://www.alibabacloud.com/help/en/model-studio/qwen3-8-omni-flash",
+    "price": "https://www.alibabacloud.com/help/en/model-studio/model-pricing"
+  },
+  "results": [
+    {
+      "benchmarkSlug": "deepswe",
+      "score": 57.8,
+      "source": "self-reported",
+      "sourceUrl": "https://qwen.ai/blog?id=qwen3.8-omni-flash",
+      "evaluatedAt": "2026-09-18",
+      "notes": "Qwen3.8-Omni-Flash column, official Qwen launch blog. DeepSWE 1.1, best of Claude Code and mini-SWE-agent harnesses, temp 1.0, top_p 0.95, 256K context."
+    },
+    {
+      "benchmarkSlug": "swe-bench-pro",
+      "score": 63.3,
+      "source": "self-reported",
+      "sourceUrl": "https://qwen.ai/blog?id=qwen3.8-omni-flash",
+      "evaluatedAt": "2026-09-18",
+      "notes": "Qwen3.8-Omni-Flash column, official Qwen launch blog. SWE-bench Pro, Claude Code harness on Qwen's corrected task set."
+    },
+    {
+      "benchmarkSlug": "swe-bench-multilingual",
+      "score": 80.5,
+      "source": "self-reported",
+      "sourceUrl": "https://qwen.ai/blog?id=qwen3.8-omni-flash",
+      "evaluatedAt": "2026-09-18",
+      "notes": "Qwen3.8-Omni-Flash column, official Qwen launch blog. SWE-bench Multilingual, mini-SWE-agent harness."
+    },
+    {
+      "benchmarkSlug": "nl2repo",
+      "score": 48.9,
+      "source": "self-reported",
+      "sourceUrl": "https://qwen.ai/blog?id=qwen3.8-omni-flash",
+      "evaluatedAt": "2026-09-18",
+      "notes": "Qwen3.8-Omni-Flash column, official Qwen launch blog. NL2Repo-Bench, Claude Code harness with repo-fetch commands disabled."
+    },
+    {
+      "benchmarkSlug": "ifbench",
+      "score": 81.5,
+      "source": "self-reported",
+      "sourceUrl": "https://qwen.ai/blog?id=qwen3.8-omni-flash",
+      "evaluatedAt": "2026-09-18",
+      "notes": "Qwen3.8-Omni-Flash column, official Qwen launch blog. IFBench."
+    },
+    {
+      "benchmarkSlug": "gpqa",
+      "score": 91.0,
+      "source": "self-reported",
+      "sourceUrl": "https://qwen.ai/blog?id=qwen3.8-omni-flash",
+      "evaluatedAt": "2026-09-18",
+      "notes": "Qwen3.8-Omni-Flash column, official Qwen launch blog. GPQA Diamond."
+    },
+    {
+      "benchmarkSlug": "hle",
+      "score": 36.5,
+      "source": "self-reported",
+      "sourceUrl": "https://qwen.ai/blog?id=qwen3.8-omni-flash",
+      "evaluatedAt": "2026-09-18",
+      "notes": "Qwen3.8-Omni-Flash column, official Qwen launch blog. HLE (no tools), judged by GPT-4o."
+    },
+    {
+      "benchmarkSlug": "livecodebench",
+      "score": 92.6,
+      "source": "self-reported",
+      "sourceUrl": "https://qwen.ai/blog?id=qwen3.8-omni-flash",
+      "evaluatedAt": "2026-09-18",
+      "notes": "Qwen3.8-Omni-Flash column, official Qwen launch blog. LiveCodeBench v6."
+    },
+    {
+      "benchmarkSlug": "androidworld",
+      "score": 87.1,
+      "source": "self-reported",
+      "sourceUrl": "https://qwen.ai/blog?id=qwen3.8-omni-flash",
+      "evaluatedAt": "2026-09-18",
+      "notes": "Qwen3.8-Omni-Flash column, official Qwen launch blog. AndroidWorld mobile use."
+    },
+    {
+      "benchmarkSlug": "lvbench",
+      "score": 76.9,
+      "source": "self-reported",
+      "sourceUrl": "https://qwen.ai/blog?id=qwen3.8-omni-flash",
+      "evaluatedAt": "2026-09-18",
+      "notes": "Qwen3.8-Omni-Flash column, official Qwen launch blog. LVBench long-video understanding."
+    },
+    {
+      "benchmarkSlug": "mathvision",
+      "score": 91.8,
+      "source": "self-reported",
+      "sourceUrl": "https://qwen.ai/blog?id=qwen3.8-omni-flash",
+      "evaluatedAt": "2026-09-18",
+      "notes": "Qwen3.8-Omni-Flash column, official Qwen launch blog. MathVision without code interpreter (96.2 with CI) — without-CI per the Qwen3.8-27B / Flash-Next precedent."
+    },
+    {
+      "benchmarkSlug": "charxiv",
+      "score": 83.5,
+      "source": "self-reported",
+      "sourceUrl": "https://qwen.ai/blog?id=qwen3.8-omni-flash",
+      "evaluatedAt": "2026-09-18",
+      "notes": "Qwen3.8-Omni-Flash column, official Qwen launch blog. CharXiv (RQ) without code interpreter (91.4 with CI). Uses the without-CI value per qwen3-8-27b precedent; note qwen3-8-flash-next used the WITH-CI value (see corpusIssues)."
+    },
+    {
+      "benchmarkSlug": "streamingbench",
+      "score": 80.8,
+      "source": "self-reported",
+      "sourceUrl": "https://qwen.ai/blog?id=qwen3.8-omni-flash",
+      "evaluatedAt": "2026-09-18",
+      "notes": "Qwen3.8-Omni-Flash column, official Qwen launch blog. StreamingBench (audio-visual interaction). Exceeds slug normMax (68)."
+    }
+  ]
+}

@@ -1,0 +1,137 @@
+{
+  "name": "MiMo-V2.6-Pro",
+  "org": "Xiaomi",
+  "family": "MiMo",
+  "slug": "mimo-v2-6-pro",
+  "releaseDate": "2026-09-22",
+  "status": "released",
+  "openness": "open-weights",
+  "license": "MIT",
+  "paramsB": 1020,
+  "activeParamsB": 42,
+  "archClass": "moe",
+  "archDisplay": "Sparse MoE, 1.02T total / 42B active; 70 layers (60 SWA / 10 GA), 384 routed experts with 8 active, no shared experts; 681M MiMo ViT + 308M AudioTokenizer + 127M audio patch encoder; 5-layer MTP speculative decoder predicting 7 tokens. Natively omnimodal (unlike text-only V2.5-Pro)",
+  "ctxK": 1000,
+  "modalities": [
+    "text",
+    "vision",
+    "audio",
+    "video"
+  ],
+  "langCount": null,
+  "capabilities": {
+    "reasoning": true,
+    "coding": true,
+    "vision": true,
+    "functionCalling": true,
+    "toolUse": true,
+    "agentic": true
+  },
+  "apiAvailable": true,
+  "price": {
+    "input": 0.435,
+    "output": 0.87,
+    "provider": "Xiaomi"
+  },
+  "links": {
+    "hf": "XiaomiMiMo/MiMo-V2.6-Pro-MOPD",
+    "docs": "https://mimo.xiaomi.com/mimo-v2-6/article.html"
+  },
+  "note": "Xiaomi's 2026-09-22 flagship, released with open MIT weights alongside a technical report, training environments and RL code. Same 1.02T / 42B MoE scale as V2.5-Pro but now natively omnimodal (text, image, video, audio); the release centres on a single mixed RL run across coding, agent, visual and cybersecurity tasks plus multi-teacher on-policy distillation (MOPD2). Xiaomi's table shows huge gains over V2.5-Pro (DeepSWE v1.1 19.0 -> 71.9, Terminal Bench 2.1 65.2 -> 89.9) and a CyberGym 94.0, while ExploitBench (47.9) stays far behind the closed frontier (70-78.5). API price unchanged at $0.435/$0.87 per Mtok; an UltraSpeed serving tier is sold separately.",
+  "quants": [],
+  "vramQ4Gb": null,
+  "vramFp16Gb": null,
+  "tps4090": null,
+  "tpsNote": null,
+  "effortLabel": null,
+  "isDefaultConfig": true,
+  "isBestConfig": true,
+  "specSources": {
+    "paramsB/activeParamsB/arch/ctxK/modalities/license": "https://huggingface.co/XiaomiMiMo/MiMo-V2.6-Pro-RL/raw/main/README.md",
+    "releaseDate": "https://mimo.xiaomi.com/mimo-v2-6/article.html",
+    "price": "https://mimo.xiaomi.com/mimo-v2-6/article.html",
+    "openness": "https://mimo.mi.com/docs/en-US/news/latest/v2-6"
+  },
+  "results": [
+    {
+      "benchmarkSlug": "deepswe",
+      "score": 71.9,
+      "source": "self-reported",
+      "sourceUrl": "https://huggingface.co/XiaomiMiMo/MiMo-V2.6-Pro-RL/raw/main/README.md",
+      "evaluatedAt": "2026-09-22",
+      "notes": "MiMo-V2.6 Pro column of the Evaluation Results table on the official XiaomiMiMo Hugging Face card (MiMo-V2.6-Pro-RL). DeepSWE v1.1. CONFLICT: Xiaomi's release article reports DeepSWE v1.1 rising 58.4 -> 72.57 (Pro) and 48.8 -> 65.68 (Flash) over the RL run; the HF table prints 71.9 / 67.9. HF table value used; flag for review."
+    },
+    {
+      "benchmarkSlug": "automationbench",
+      "score": 53.1,
+      "source": "self-reported",
+      "sourceUrl": "https://huggingface.co/XiaomiMiMo/MiMo-V2.6-Pro-RL/raw/main/README.md",
+      "evaluatedAt": "2026-09-22",
+      "notes": "MiMo-V2.6 Pro column of the Evaluation Results table on the official XiaomiMiMo Hugging Face card (MiMo-V2.6-Pro-RL). AutomationBench v1.0.6. Exceeds slug normMax (50)."
+    },
+    {
+      "benchmarkSlug": "toolathlon",
+      "score": 76.9,
+      "source": "self-reported",
+      "sourceUrl": "https://huggingface.co/XiaomiMiMo/MiMo-V2.6-Pro-RL/raw/main/README.md",
+      "evaluatedAt": "2026-09-22",
+      "notes": "MiMo-V2.6 Pro column of the Evaluation Results table on the official XiaomiMiMo Hugging Face card (MiMo-V2.6-Pro-RL). Toolathlon-Verified."
+    },
+    {
+      "benchmarkSlug": "terminal-bench-4",
+      "score": 34.9,
+      "source": "self-reported",
+      "sourceUrl": "https://huggingface.co/XiaomiMiMo/MiMo-V2.6-Pro-RL/raw/main/README.md",
+      "evaluatedAt": "2026-09-22",
+      "notes": "MiMo-V2.6 Pro column of the Evaluation Results table on the official XiaomiMiMo Hugging Face card (MiMo-V2.6-Pro-RL). Terminal Bench 4.0."
+    },
+    {
+      "benchmarkSlug": "terminal-bench-2",
+      "score": 89.9,
+      "source": "self-reported",
+      "sourceUrl": "https://huggingface.co/XiaomiMiMo/MiMo-V2.6-Pro-RL/raw/main/README.md",
+      "evaluatedAt": "2026-09-22",
+      "notes": "MiMo-V2.6 Pro column of the Evaluation Results table on the official XiaomiMiMo Hugging Face card (MiMo-V2.6-Pro-RL). Terminal Bench 2.1 (mapped to terminal-bench-2 per precedent). Exceeds slug normMax (89)."
+    },
+    {
+      "benchmarkSlug": "osworld-verified",
+      "score": 82.0,
+      "source": "self-reported",
+      "sourceUrl": "https://huggingface.co/XiaomiMiMo/MiMo-V2.6-Pro-RL/raw/main/README.md",
+      "evaluatedAt": "2026-09-22",
+      "notes": "MiMo-V2.6 Pro column of the Evaluation Results table on the official XiaomiMiMo Hugging Face card (MiMo-V2.6-Pro-RL). OSWorld-Verified."
+    },
+    {
+      "benchmarkSlug": "jobbench",
+      "score": 62.0,
+      "source": "self-reported",
+      "sourceUrl": "https://huggingface.co/XiaomiMiMo/MiMo-V2.6-Pro-RL/raw/main/README.md",
+      "evaluatedAt": "2026-09-22",
+      "notes": "MiMo-V2.6 Pro column of the Evaluation Results table on the official XiaomiMiMo Hugging Face card (MiMo-V2.6-Pro-RL). JobBench."
+    },
+    {
+      "benchmarkSlug": "cybergym",
+      "score": 94.0,
+      "source": "self-reported",
+      "sourceUrl": "https://huggingface.co/XiaomiMiMo/MiMo-V2.6-Pro-RL/raw/main/README.md",
+      "evaluatedAt": "2026-09-22",
+      "notes": "MiMo-V2.6 Pro column of the Evaluation Results table on the official XiaomiMiMo Hugging Face card (MiMo-V2.6-Pro-RL). CyberGym. Exceeds slug normMax (87)."
+    },
+    {
+      "benchmarkSlug": "exploitbench",
+      "score": 47.9,
+      "source": "self-reported",
+      "sourceUrl": "https://huggingface.co/XiaomiMiMo/MiMo-V2.6-Pro-RL/raw/main/README.md",
+      "evaluatedAt": "2026-09-22",
+      "notes": "MiMo-V2.6 Pro column of the Evaluation Results table on the official XiaomiMiMo Hugging Face card (MiMo-V2.6-Pro-RL). ExploitBench."
+    },
+    {
+      "benchmarkSlug": "sec-bench-pro",
+      "score": 66.3,
+      "source": "self-reported",
+      "sourceUrl": "https://huggingface.co/XiaomiMiMo/MiMo-V2.6-Pro-RL/raw/main/README.md",
+      "evaluatedAt": "2026-09-22",
+      "notes": "MiMo-V2.6 Pro column of the official Evaluation Results table."
+    }
+  ]
+}

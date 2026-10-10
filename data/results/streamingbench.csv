@@ -4,3 +4,4 @@ gemini-1-5-pro,70.26,independent,https://streamingbench.github.io/,2024-06-15,"O
 gpt-4o,64.1,independent,https://streamingbench.github.io/,2024-06-15,Overall accuracy on StreamingBench official leaderboard; rank 3 of 16. Paper (arXiv:2411.03628) reports 60.15% in its Table 2 print version; leaderboard site shows 64.10% as the updated/canonical figure -- used the leaderboard as source of record.
 minicpm-o-2-6,66,self-reported,https://huggingface.co/openbmb/MiniCPM-o-2_6,2025-01-01,Outperforms GPT-4o-202408 (64.1) on multimodal live-streaming benchmark
 minicpm-v-2-6,57.67,independent,https://streamingbench.github.io/,2024-08-12,"Overall accuracy (8B params, 64 frames) on StreamingBench official leaderboard; rank 8 of 16."
+qwen3-8-omni-flash,80.8,self-reported,https://qwen.ai/blog?id=qwen3.8-omni-flash,2026-09-18,"Qwen3.8-Omni-Flash column, official Qwen launch blog. StreamingBench (audio-visual interaction). Exceeds slug normMax (68)."

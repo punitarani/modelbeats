@@ -1,0 +1,10 @@
+{
+  "slug": "sec-bench-pro",
+  "name": "SEC-Bench Pro",
+  "category": "coding",
+  "unit": "%",
+  "description": "Security-engineering benchmark of real-world vulnerability reproduction and patching tasks.",
+  "normMin": 0,
+  "normMax": 85,
+  "higherIsBetter": true
+}

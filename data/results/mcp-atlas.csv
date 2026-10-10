@@ -6,3 +6,4 @@ inkling,74.1,self-reported,https://thinkingmachines.ai/model-card/inkling/,,"Off
 kimi-k2-7-code,76,self-reported,https://huggingface.co/moonshotai/Kimi-K2.7-Code,,"Official HF model card, Section 3 Evaluation Results > Agentic > MCP Atlas row. Raw README.md table: Kimi K2.6=69.4, Kimi K2.7 Code=76.0, GPT-5.5=79.4, Claude Opus 4.8=81.3 -- column headers confirm 76.0 is unambiguously this model's own score."
 kimi-k3,84.2,self-reported,https://www.kimi.com/blog/kimi-k3,2026-07-16,"MCP Atlas, official launch blog agentic table."
 muse-glimmer-30b,75.5,self-reported,https://huggingface.co/meta-models/Muse-Glimmer-30B,2026-08-10,"MCP Atlas (public), High Reasoning, official Muse Glimmer model card; best in its size class against Gemma4-31B (54.2) and Qwen3.6-27B (62.5)."
+step-5-preview,85.6,self-reported,https://www.stepfun.com/step-5-preview,2026-09-20,Step 5 Preview (High effort) column of the official 'Benchmarking Step 5 Preview' table; rivals run at Max. MCP-Atlas.

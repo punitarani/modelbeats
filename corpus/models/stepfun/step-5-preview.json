@@ -1,0 +1,195 @@
+{
+  "name": "Step 5 Preview",
+  "org": "StepFun",
+  "family": "Step",
+  "slug": "step-5-preview",
+  "releaseDate": "2026-09-20",
+  "status": "preview",
+  "openness": "closed",
+  "license": "Proprietary for now (open weights promised for October 15, 2026)",
+  "paramsB": 600,
+  "activeParamsB": 27,
+  "archClass": "moe",
+  "archDisplay": "Sparse MoE, 600B total / 27B active, 1M-token context, text/image/video input; reasoning effort low/medium/high",
+  "ctxK": 1000,
+  "modalities": [
+    "text",
+    "vision",
+    "video"
+  ],
+  "langCount": null,
+  "capabilities": {
+    "reasoning": true,
+    "coding": true,
+    "vision": true,
+    "functionCalling": true,
+    "toolUse": true,
+    "agentic": true
+  },
+  "apiAvailable": true,
+  "price": {
+    "input": 1.0,
+    "output": 2.7,
+    "provider": "StepFun"
+  },
+  "links": {
+    "docs": "https://platform.stepfun.ai/docs/en/guides/models/step-5-preview"
+  },
+  "note": "StepFun's new flagship for agentic work: a 600B-total / 27B-active sparse MoE with a 1M-token context and text/image/video input, launched API-only around 2026-09-20 with open weights promised for October 15. StepFun's own table runs it at High effort against rivals at Max; it ties or edges Kimi K3 and GLM-5.3 on DeepSWE v1.1 (67.7) and GPQA (93.5) but trails them on Terminal-Bench v4 (33.3 vs GLM-5.3 41.9) and several agent rows. Priced at $1.00/$2.70 per Mtok. StepFun's comparison set contains no 'Step-4', 'Kimi K3.1' or other model the corpus added on 2026-09-23. Release date is secondary-sourced: StepFun pages print no date, and 2026-09-20 comes from MarkTechPost coverage (https://www.marktechpost.com/2026/09/20/stepfun-launches-step-5-preview/).",
+  "quants": [],
+  "vramQ4Gb": null,
+  "vramFp16Gb": null,
+  "tps4090": null,
+  "tpsNote": null,
+  "effortLabel": null,
+  "isDefaultConfig": true,
+  "isBestConfig": true,
+  "specSources": {
+    "paramsB/activeParamsB": "https://www.stepfun.com/step-5-preview",
+    "ctxK": "https://platform.stepfun.ai/docs/en/guides/models/step-5-preview",
+    "maxOutput": "https://platform.stepfun.ai/docs/en/guides/models/step-5-preview",
+    "modalities": "https://platform.stepfun.ai/docs/en/llm/modeloverview",
+    "openness": "https://www.stepfun.com/step-5-preview",
+    "price": "https://platform.stepfun.ai/docs/en/pricing/details",
+    "effortTiers": "https://platform.stepfun.ai/docs/en/guides/models/step-5-preview",
+    "releaseDate": "secondary only: https://www.marktechpost.com/2026/09/20/stepfun-launches-step-5-preview/"
+  },
+  "results": [
+    {
+      "benchmarkSlug": "gpqa",
+      "score": 93.5,
+      "source": "self-reported",
+      "sourceUrl": "https://www.stepfun.com/step-5-preview",
+      "evaluatedAt": "2026-09-20",
+      "notes": "Step 5 Preview (High effort) column of the official 'Benchmarking Step 5 Preview' table; rivals run at Max. GPQA Diamond."
+    },
+    {
+      "benchmarkSlug": "hle",
+      "score": 46.5,
+      "source": "self-reported",
+      "sourceUrl": "https://www.stepfun.com/step-5-preview",
+      "evaluatedAt": "2026-09-20",
+      "notes": "Step 5 Preview (High effort) column of the official 'Benchmarking Step 5 Preview' table; rivals run at Max. Humanity's Last Exam without tools. A separate 'HLE w/ tools' row reads 59.4 but was run on the text-only subset (footnote ‡) — not used."
+    },
+    {
+      "benchmarkSlug": "deepswe",
+      "score": 67.7,
+      "source": "self-reported",
+      "sourceUrl": "https://www.stepfun.com/step-5-preview",
+      "evaluatedAt": "2026-09-20",
+      "notes": "Step 5 Preview (High effort) column of the official 'Benchmarking Step 5 Preview' table; rivals run at Max. DeepSWE v1.1, SWE-agent harness, temperature 1.0, top_p 0.95."
+    },
+    {
+      "benchmarkSlug": "terminal-bench-2",
+      "score": 85.0,
+      "source": "self-reported",
+      "sourceUrl": "https://www.stepfun.com/step-5-preview",
+      "evaluatedAt": "2026-09-20",
+      "notes": "Step 5 Preview (High effort) column of the official 'Benchmarking Step 5 Preview' table; rivals run at Max. Terminal-Bench v2.1 (mapped to terminal-bench-2 per corpus precedent for 2.1 rows)."
+    },
+    {
+      "benchmarkSlug": "terminal-bench-4",
+      "score": 33.3,
+      "source": "self-reported",
+      "sourceUrl": "https://www.stepfun.com/step-5-preview",
+      "evaluatedAt": "2026-09-20",
+      "notes": "Step 5 Preview (High effort) column of the official 'Benchmarking Step 5 Preview' table; rivals run at Max. Terminal-Bench v4."
+    },
+    {
+      "benchmarkSlug": "cybergym",
+      "score": 84.7,
+      "source": "self-reported",
+      "sourceUrl": "https://www.stepfun.com/step-5-preview",
+      "evaluatedAt": "2026-09-20",
+      "notes": "Step 5 Preview (High effort) column of the official 'Benchmarking Step 5 Preview' table; rivals run at Max. CyberGym."
+    },
+    {
+      "benchmarkSlug": "scicode",
+      "score": 58.9,
+      "source": "self-reported",
+      "sourceUrl": "https://www.stepfun.com/step-5-preview",
+      "evaluatedAt": "2026-09-20",
+      "notes": "Step 5 Preview (High effort) column of the official 'Benchmarking Step 5 Preview' table; rivals run at Max. SciCode."
+    },
+    {
+      "benchmarkSlug": "swe-atlas-codebase-qna",
+      "score": 63.6,
+      "source": "self-reported",
+      "sourceUrl": "https://www.stepfun.com/step-5-preview",
+      "evaluatedAt": "2026-09-20",
+      "notes": "Step 5 Preview (High effort) column of the official 'Benchmarking Step 5 Preview' table; rivals run at Max. Row labelled 'SWE-Atlas-QnA'. Mapping to swe-atlas-codebase-qna is a moderate-confidence match (same benchmark family/name, version not printed)."
+    },
+    {
+      "benchmarkSlug": "tau3-banking",
+      "score": 42.5,
+      "source": "self-reported",
+      "sourceUrl": "https://www.stepfun.com/step-5-preview",
+      "evaluatedAt": "2026-09-20",
+      "notes": "Step 5 Preview (High effort) column of the official 'Benchmarking Step 5 Preview' table; rivals run at Max. τ³-Banking."
+    },
+    {
+      "benchmarkSlug": "automationbench",
+      "score": 44.0,
+      "source": "self-reported",
+      "sourceUrl": "https://www.stepfun.com/step-5-preview",
+      "evaluatedAt": "2026-09-20",
+      "notes": "Step 5 Preview (High effort) column of the official 'Benchmarking Step 5 Preview' table; rivals run at Max. Row 'AutomationBench (public)'; GLM-5.3 reads 48.2 in the same row, matching the corpus GLM-5.3 automationbench value, so the public row is the catalog's benchmark. A separate 'AutomationBench-AA' row (51.0) is a different variant — see newBenchmarkCandidates."
+    },
+    {
+      "benchmarkSlug": "toolathlon",
+      "score": 74.1,
+      "source": "self-reported",
+      "sourceUrl": "https://www.stepfun.com/step-5-preview",
+      "evaluatedAt": "2026-09-20",
+      "notes": "Step 5 Preview (High effort) column of the official 'Benchmarking Step 5 Preview' table; rivals run at Max. Toolathlon-Verified."
+    },
+    {
+      "benchmarkSlug": "mcp-atlas",
+      "score": 85.6,
+      "source": "self-reported",
+      "sourceUrl": "https://www.stepfun.com/step-5-preview",
+      "evaluatedAt": "2026-09-20",
+      "notes": "Step 5 Preview (High effort) column of the official 'Benchmarking Step 5 Preview' table; rivals run at Max. MCP-Atlas."
+    },
+    {
+      "benchmarkSlug": "jobbench",
+      "score": 59.0,
+      "source": "self-reported",
+      "sourceUrl": "https://www.stepfun.com/step-5-preview",
+      "evaluatedAt": "2026-09-20",
+      "notes": "Step 5 Preview (High effort) column of the official 'Benchmarking Step 5 Preview' table; rivals run at Max. JobBench."
+    },
+    {
+      "benchmarkSlug": "browsecomp",
+      "score": 88.7,
+      "source": "self-reported",
+      "sourceUrl": "https://www.stepfun.com/step-5-preview",
+      "evaluatedAt": "2026-09-20",
+      "notes": "Step 5 Preview (High effort) column of the official 'Benchmarking Step 5 Preview' table; rivals run at Max. BrowseComp."
+    },
+    {
+      "benchmarkSlug": "mmmu-pro",
+      "score": 76.0,
+      "source": "self-reported",
+      "sourceUrl": "https://www.stepfun.com/step-5-preview",
+      "evaluatedAt": "2026-09-20",
+      "notes": "Step 5 Preview (High effort) column of the official 'Benchmarking Step 5 Preview' table; rivals run at Max. MMMU-Pro."
+    },
+    {
+      "benchmarkSlug": "gdp-pdf",
+      "score": 14.8,
+      "source": "self-reported",
+      "sourceUrl": "https://www.stepfun.com/step-5-preview",
+      "evaluatedAt": "2026-09-20",
+      "notes": "Step 5 Preview (High effort) column of the official 'Benchmarking Step 5 Preview' table; rivals run at Max. GDP.pdf."
+    },
+    {
+      "benchmarkSlug": "officeqa-pro",
+      "score": 60.3,
+      "source": "self-reported",
+      "sourceUrl": "https://www.stepfun.com/step-5-preview",
+      "evaluatedAt": "2026-09-20",
+      "notes": "Step 5 Preview (High effort) column of the official launch table."
+    }
+  ]
+}

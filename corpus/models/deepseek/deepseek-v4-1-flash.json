@@ -1,0 +1,144 @@
+{
+  "name": "DeepSeek-V4.1-Flash",
+  "org": "DeepSeek",
+  "family": "DeepSeek-V4",
+  "slug": "deepseek-v4-1-flash",
+  "releaseDate": "2026-09-10",
+  "status": "released",
+  "openness": "open-weights",
+  "license": "MIT",
+  "paramsB": 552,
+  "activeParamsB": 16,
+  "archClass": "moe",
+  "archDisplay": "552B sparse MoE, 40-layer causal encoder-decoder (1 shared + 384 routed experts, 6 routed active per token), ~8B active in prefill / 16B in decode, ~890 bytes/token global KV cache (about 1/4 of V4-Flash); natively multimodal (image+text in, text out); ~45T multimodal pre-training tokens",
+  "ctxK": 1000,
+  "modalities": [
+    "text",
+    "vision"
+  ],
+  "langCount": null,
+  "capabilities": {
+    "reasoning": true,
+    "coding": true,
+    "vision": true,
+    "functionCalling": true,
+    "toolUse": true,
+    "agentic": true
+  },
+  "apiAvailable": true,
+  "price": {
+    "input": 0.3,
+    "output": 1.2,
+    "provider": "DeepSeek"
+  },
+  "links": {
+    "hf": "deepseek-ai/DeepSeek-V4.1-Flash",
+    "docs": "https://api-docs.deepseek.com/news/news260910"
+  },
+  "note": "DeepSeek's 2026-09-10 release, the smallest model of a new architecture family: a 552B-backbone causal encoder-decoder MoE that activates ~8B parameters in prefill and 16B in decode, with native image input, a 1M context and a KV cache about a quarter the size of V4-Flash's. Open weights under MIT. On DeepSeek's own table it beats every compared model on Terminal-Bench 2.1 (90.6), DeepSWE v1.1 (74.2), Codeforces (3471), CyberGym (88.1) and AutomationBench (54.8), but trails the closed frontier on HLE and Terminal-Bench 3.0/4.0. The API alias deepseek-flash now points to it, legacy V4-Flash names are routed to it, and from 2026-09-14 deepseek-v4-pro requests are also served by V4.1-Flash at Flash rates until V4.1-Pro launches.",
+  "quants": [],
+  "vramQ4Gb": null,
+  "vramFp16Gb": null,
+  "tps4090": null,
+  "tpsNote": null,
+  "effortLabel": null,
+  "isDefaultConfig": true,
+  "isBestConfig": true,
+  "specSources": {
+    "releaseDate": "https://api-docs.deepseek.com/updates",
+    "paramsB/activeParamsB/ctxK/license/arch": "https://huggingface.co/deepseek-ai/DeepSeek-V4.1-Flash/raw/main/README.md",
+    "price": "https://api-docs.deepseek.com/quick_start/pricing/",
+    "maxOutput/vision": "https://api-docs.deepseek.com/quick_start/pricing/",
+    "openness": "https://huggingface.co/deepseek-ai/DeepSeek-V4.1-Flash/raw/main/README.md"
+  },
+  "results": [
+    {
+      "benchmarkSlug": "gpqa",
+      "score": 90.9,
+      "source": "self-reported",
+      "sourceUrl": "https://huggingface.co/deepseek-ai/DeepSeek-V4.1-Flash/raw/main/README.md",
+      "evaluatedAt": "2026-09-10",
+      "notes": "DS-V4.1-Flash column of the official instruct comparison table on the deepseek-ai Hugging Face model card (reasoning_effort=100, temperature 1.0, top_p 0.95). GPQA Diamond (Pass@1)."
+    },
+    {
+      "benchmarkSlug": "hle",
+      "score": 36.8,
+      "source": "self-reported",
+      "sourceUrl": "https://huggingface.co/deepseek-ai/DeepSeek-V4.1-Flash/raw/main/README.md",
+      "evaluatedAt": "2026-09-10",
+      "notes": "DS-V4.1-Flash column of the official instruct comparison table on the deepseek-ai Hugging Face model card (reasoning_effort=100, temperature 1.0, top_p 0.95). HLE (Pass@1), full set; the card also prints 39.1 on the text-only subset (†)."
+    },
+    {
+      "benchmarkSlug": "codeforces",
+      "score": 3471,
+      "source": "self-reported",
+      "sourceUrl": "https://huggingface.co/deepseek-ai/DeepSeek-V4.1-Flash/raw/main/README.md",
+      "evaluatedAt": "2026-09-10",
+      "notes": "DS-V4.1-Flash column of the official instruct comparison table on the deepseek-ai Hugging Face model card (reasoning_effort=100, temperature 1.0, top_p 0.95). Codeforces rating. Exceeds the slug's normMax (3300)."
+    },
+    {
+      "benchmarkSlug": "terminal-bench-2",
+      "score": 90.6,
+      "source": "self-reported",
+      "sourceUrl": "https://huggingface.co/deepseek-ai/DeepSeek-V4.1-Flash/raw/main/README.md",
+      "evaluatedAt": "2026-09-10",
+      "notes": "DS-V4.1-Flash column of the official instruct comparison table on the deepseek-ai Hugging Face model card (reasoning_effort=100, temperature 1.0, top_p 0.95). Terminal-Bench 2.1 (Pass@1), DeepSeek Harness Minimal mode, 1M context. Exceeds slug normMax (89)."
+    },
+    {
+      "benchmarkSlug": "terminal-bench-3",
+      "score": 30.0,
+      "source": "self-reported",
+      "sourceUrl": "https://huggingface.co/deepseek-ai/DeepSeek-V4.1-Flash/raw/main/README.md",
+      "evaluatedAt": "2026-09-10",
+      "notes": "DS-V4.1-Flash column of the official instruct comparison table on the deepseek-ai Hugging Face model card (reasoning_effort=100, temperature 1.0, top_p 0.95). Terminal-Bench 3.0 (Pass@1)."
+    },
+    {
+      "benchmarkSlug": "terminal-bench-4",
+      "score": 31.2,
+      "source": "self-reported",
+      "sourceUrl": "https://huggingface.co/deepseek-ai/DeepSeek-V4.1-Flash/raw/main/README.md",
+      "evaluatedAt": "2026-09-10",
+      "notes": "DS-V4.1-Flash column of the official instruct comparison table on the deepseek-ai Hugging Face model card (reasoning_effort=100, temperature 1.0, top_p 0.95). Terminal-Bench 4.0 (Pass@1)."
+    },
+    {
+      "benchmarkSlug": "deepswe",
+      "score": 74.2,
+      "source": "self-reported",
+      "sourceUrl": "https://huggingface.co/deepseek-ai/DeepSeek-V4.1-Flash/raw/main/README.md",
+      "evaluatedAt": "2026-09-10",
+      "notes": "DS-V4.1-Flash column of the official instruct comparison table on the deepseek-ai Hugging Face model card (reasoning_effort=100, temperature 1.0, top_p 0.95). DeepSWE v1.1 (Resolved)."
+    },
+    {
+      "benchmarkSlug": "nl2repo",
+      "score": 64.0,
+      "source": "self-reported",
+      "sourceUrl": "https://huggingface.co/deepseek-ai/DeepSeek-V4.1-Flash/raw/main/README.md",
+      "evaluatedAt": "2026-09-10",
+      "notes": "DS-V4.1-Flash column of the official instruct comparison table on the deepseek-ai Hugging Face model card (reasoning_effort=100, temperature 1.0, top_p 0.95). NL2Repo-Bench (Score)."
+    },
+    {
+      "benchmarkSlug": "cybergym",
+      "score": 88.1,
+      "source": "self-reported",
+      "sourceUrl": "https://huggingface.co/deepseek-ai/DeepSeek-V4.1-Flash/raw/main/README.md",
+      "evaluatedAt": "2026-09-10",
+      "notes": "DS-V4.1-Flash column of the official instruct comparison table on the deepseek-ai Hugging Face model card (reasoning_effort=100, temperature 1.0, top_p 0.95). CyberGym (Pass@1). Exceeds slug normMax (87)."
+    },
+    {
+      "benchmarkSlug": "automationbench",
+      "score": 54.8,
+      "source": "self-reported",
+      "sourceUrl": "https://huggingface.co/deepseek-ai/DeepSeek-V4.1-Flash/raw/main/README.md",
+      "evaluatedAt": "2026-09-10",
+      "notes": "DS-V4.1-Flash column of the official instruct comparison table on the deepseek-ai Hugging Face model card (reasoning_effort=100, temperature 1.0, top_p 0.95). AutomationBench (Pass@1); version not printed (GLM-5.3 reads 48.8 in this table vs 48.2 in Z.ai's own table, so the version may differ from Z.ai's v1.0.6 — moderate confidence). Exceeds slug normMax (50)."
+    },
+    {
+      "benchmarkSlug": "sec-bench-pro",
+      "score": 62.8,
+      "source": "self-reported",
+      "sourceUrl": "https://huggingface.co/deepseek-ai/DeepSeek-V4.1-Flash/raw/main/README.md",
+      "evaluatedAt": "2026-09-10",
+      "notes": "DS-V4.1-Flash column of the official instruct comparison table (reasoning_effort=100)."
+    }
+  ]
+}

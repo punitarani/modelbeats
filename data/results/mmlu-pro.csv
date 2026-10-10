@@ -2,6 +2,7 @@ model_slug,score,source,source_url,evaluated_at,notes
 ai21-jamba,16.57,independent,https://huggingface.co/datasets/open-llm-leaderboard/contents,2024-09-16,HF Open LLM Leaderboard V2 run on ai21labs/Jamba-v0.1. Not previously tracked for this model.
 ai21-jamba-1-5-large,48.3,self-reported,https://arxiv.org/html/2408.12570v1,,
 ai21-jamba-1-5-mini,39.8,self-reported,https://arxiv.org/html/2408.12570v1,,
+aliceai-foundation-80b-a3b-base,66.8,self-reported,https://huggingface.co/yandex/AliceAI-Foundation-80B-A3B-Base/raw/main/README_en.md,2026-09-21,"MMLU-Pro CoT, 5-shot, base model, vLLM t=0."
 amazon-nova-premier,73.3,independent,https://artificialanalysis.ai/models/nova-premier,,
 aya-23-35b,33.56,independent,https://huggingface.co/datasets/open-llm-leaderboard/results/resolve/main/CohereForAI/aya-23-35B/results_2025-02-13T18-27-04.338360.json,2025-02-13,"Open LLM Leaderboard v2, leaderboard_mmlu_pro, 5-shot, acc. New for this model (existing mmlu entry is the multilingual variant from the Aya 23 paper, a distinct methodology)."
 aya-expanse-32b,45.41,self-reported,https://huggingface.co/CohereLabs/aya-expanse-32b,2024-10-24,English MMLU-Pro

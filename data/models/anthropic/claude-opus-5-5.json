@@ -1,0 +1,46 @@
+{
+  "slug": "claude-opus-5-5",
+  "name": "Claude Opus 5.5",
+  "orgSlug": "anthropic",
+  "familySlug": "claude-5-5",
+  "releaseDate": "2026-09-22",
+  "status": "released",
+  "predecessor": null,
+  "openness": "closed",
+  "license": "Proprietary",
+  "paramsB": null,
+  "activeParamsB": null,
+  "archClass": "dense",
+  "archDisplay": "Proprietary model; architecture and parameter count undisclosed; adaptive thinking with a runtime effort parameter (low to max), 1M-token context",
+  "ctxK": 1000,
+  "modalities": [
+    "text",
+    "vision"
+  ],
+  "langCount": null,
+  "capabilities": {
+    "reasoning": true,
+    "coding": true,
+    "vision": true,
+    "functionCalling": true,
+    "toolUse": true,
+    "agentic": true
+  },
+  "apiAvailable": true,
+  "price": {
+    "input": 4,
+    "output": 20
+  },
+  "links": {
+    "docs": "https://platform.claude.com/docs/en/models/opus-5-5/overview"
+  },
+  "note": "Model id claude-opus-5-5, released 2026-09-22 as 'the first model in our new Claude 5.5 family'. Anthropic says it 'performs at the level of Claude Fable 5.1 on most work and costs 40% less to run than Opus 5'. Priced at $4/$20 per MTok (20% below Opus 5), with cache reads at $0.20 (60% less than Opus 5). It has a 1M context, 128K max output, adaptive thinking that is always on (it can't be disabled), and medium default effort. It ships with Fable-5.1-class cyber/bio safeguards, and flagged cyber tasks fall back to Opus 4.8. Launch scores were run with safeguards on, which Anthropic says likely depresses some rows.",
+  "quants": [],
+  "vramQ4Gb": null,
+  "vramFp16Gb": null,
+  "tps4090": null,
+  "tpsNote": null,
+  "effortLabel": null,
+  "isDefaultConfig": true,
+  "isBestConfig": true
+}

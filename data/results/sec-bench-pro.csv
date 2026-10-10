@@ -1,0 +1,4 @@
+model_slug,score,source,source_url,evaluated_at,notes
+deepseek-v4-1-flash,62.8,self-reported,https://huggingface.co/deepseek-ai/DeepSeek-V4.1-Flash/raw/main/README.md,2026-09-10,DS-V4.1-Flash column of the official instruct comparison table (reasoning_effort=100).
+mimo-v2-6-flash,47.5,self-reported,https://huggingface.co/XiaomiMiMo/MiMo-V2.6-Pro-RL/raw/main/README.md,2026-09-22,MiMo-V2.6 Flash column of the official Evaluation Results table.
+mimo-v2-6-pro,66.3,self-reported,https://huggingface.co/XiaomiMiMo/MiMo-V2.6-Pro-RL/raw/main/README.md,2026-09-22,MiMo-V2.6 Pro column of the official Evaluation Results table.

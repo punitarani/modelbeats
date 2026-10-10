@@ -1,0 +1,10 @@
+{
+  "slug": "healthbench-professional",
+  "name": "HealthBench Professional",
+  "category": "knowledge",
+  "unit": "%",
+  "description": "OpenAI HealthBench Professional clinical-reasoning set; length-adjusted score where the lab reports both.",
+  "normMin": 0,
+  "normMax": 80,
+  "higherIsBetter": true
+}

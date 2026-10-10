@@ -1,0 +1,46 @@
+{
+  "slug": "gpt-6-sol",
+  "name": "GPT-6 Sol",
+  "orgSlug": "openai",
+  "familySlug": "gpt-6",
+  "releaseDate": "2026-09-22",
+  "status": "released",
+  "predecessor": "gpt-6-astra",
+  "openness": "closed",
+  "license": "Proprietary",
+  "paramsB": null,
+  "activeParamsB": null,
+  "archClass": "dense",
+  "archDisplay": "Proprietary model; architecture and parameter count undisclosed; 1.05M-token context, selectable reasoning effort (none to max)",
+  "ctxK": 1050,
+  "modalities": [
+    "text",
+    "vision"
+  ],
+  "langCount": null,
+  "capabilities": {
+    "reasoning": true,
+    "coding": true,
+    "vision": true,
+    "functionCalling": true,
+    "toolUse": true,
+    "agentic": true
+  },
+  "apiAvailable": true,
+  "price": {
+    "input": 2,
+    "output": 10
+  },
+  "links": {
+    "docs": "https://developers.openai.com/api/docs/models/gpt-6-sol"
+  },
+  "note": "API id gpt-6-sol, released 2026-09-22 together with GPT-6 Luna as cheaper GPT-6-generation tiers 'trained with similar methods as GPT-6 Astra'. It costs $2/$10 per Mtok, 50% below GPT-5.6 Sol's promotional $4/$20. It has a 1.05M context and 128K max output. It launched in ChatGPT Work/Codex and the API, and on 2026-10-07 became the default GPT-6 in ChatGPT for paid tiers. GPT-6.1 Sol superseded it in the API on 2026-09-29. On 2026-09-25 OpenAI fixed an image-encoding bug that had degraded GPT-6 Sol/Luna image understanding, so vision-dependent launch-week third-party scores may understate it. Most launch claims are cost-relative charts; only the four numeric figures below were printed.",
+  "quants": [],
+  "vramQ4Gb": null,
+  "vramFp16Gb": null,
+  "tps4090": null,
+  "tpsNote": null,
+  "effortLabel": null,
+  "isDefaultConfig": true,
+  "isBestConfig": true
+}
