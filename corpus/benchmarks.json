@@ -1577,7 +1577,7 @@
     "unit": "%",
     "description": "Interactive abstraction-and-reasoning benchmark (ARC Prize): agents explore novel turn-based environments with no instructions, infer goals on the fly, build world models, and adapt across increasingly hard levels. v3.",
     "normMin": 0,
-    "normMax": 50,
+    "normMax": 70,
     "higherIsBetter": true,
     "methodologyUrl": "https://arcprize.org/arc-agi/3"
   },
@@ -1620,17 +1620,6 @@
     "description": "OSWorld 2.0 — a harder, refreshed version of the OSWorld real-desktop-GUI computer-use benchmark, scored pass@1. Distinct from and not comparable to OSWorld-Verified (v1).",
     "normMin": 0,
     "normMax": 85,
-    "higherIsBetter": true,
-    "methodologyUrl": "https://os-world.github.io/"
-  },
-  {
-    "slug": "osworld-3",
-    "name": "OSWorld 3.0",
-    "category": "agents",
-    "unit": "%",
-    "description": "OSWorld 3.0 — third-generation real-desktop-GUI computer-use benchmark with longer-horizon multi-app tasks, scored pass@1. Distinct from and not comparable to OSWorld 2.0 or OSWorld-Verified (v1).",
-    "normMin": 0,
-    "normMax": 82,
     "higherIsBetter": true,
     "methodologyUrl": "https://os-world.github.io/"
   },

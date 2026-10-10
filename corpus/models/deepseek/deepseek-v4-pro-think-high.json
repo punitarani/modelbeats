@@ -25,14 +25,15 @@
   },
   "apiAvailable": true,
   "price": {
-    "input": 0.435,
-    "output": 0.87
+    "input": 1.32,
+    "output": 3.96,
+    "effectiveAt": "2026-08-16"
   },
   "links": {
     "hf": "deepseek-ai/DeepSeek-V4-Pro",
     "docs": "https://api-docs.deepseek.com/news/news260424/"
   },
-  "note": "Fast/low-latency mode of the DeepSeek-V4-Pro preview checkpoint, the default reasoning tier a user gets without selecting anything. (middle reasoning-effort tier, called 'Think High' on the official HF model-card benchmark table).",
+  "note": "Fast/low-latency mode of the DeepSeek-V4-Pro preview checkpoint, the default reasoning tier a user gets without selecting anything. (middle reasoning-effort tier, called 'Think High' on the official HF model-card benchmark table). DeepSeek repriced deepseek-v4-pro (now serving the V4-Pro-0813 GA checkpoint) to $1.32/$3.96 per MTok standard, $0.66/$1.98 off-peak, effective Aug 16, 2026.",
   "quants": [],
   "vramQ4Gb": null,
   "vramFp16Gb": null,
@@ -45,7 +46,8 @@
     "paramsB": "https://huggingface.co/deepseek-ai/DeepSeek-V4-Pro",
     "releaseDate": "https://api-docs.deepseek.com/news/news260424/",
     "ctxK": "https://huggingface.co/deepseek-ai/DeepSeek-V4-Pro",
-    "openness": "https://huggingface.co/deepseek-ai/DeepSeek-V4-Pro"
+    "openness": "https://huggingface.co/deepseek-ai/DeepSeek-V4-Pro",
+    "price": "https://api-docs.deepseek.com/quick_start/pricing/"
   },
   "results": [
     {

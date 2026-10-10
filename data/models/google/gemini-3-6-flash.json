@@ -30,13 +30,13 @@
   },
   "apiAvailable": true,
   "price": {
-    "input": 1.5,
-    "output": 7.5
+    "input": 0.75,
+    "output": 3.75
   },
   "links": {
     "docs": "https://deepmind.google/models/gemini/flash/"
   },
-  "note": "Google DeepMind's new workhorse Flash model, released 2026-07-21 alongside Gemini 3.5 Flash-Lite and the gated Gemini 3.5 Flash Cyber (there was NO Pro release in this wave -- the flagship stayed on Gemini 3.1 Pro; Gemini 3.5 Pro remained 'coming soon'/in partner testing). Built on Gemini 3.5 Flash, it is pitched as a straight quality-and-efficiency upgrade: better coding, knowledge work and multimodal performance while using ~17% fewer output tokens for the same work, and it CUTS the output price from $9.00 to $7.50/M (input unchanged at $1.50/M; cache-hit input ~$0.15/M). 1M-token input / 64K output context, natively multimodal (text/image/audio/video in, text out), knowledge cutoff March 2026. Model ID gemini-3.6-flash, generally available on the Gemini API, AI Studio, Vertex, the Gemini apps and Antigravity. All benchmark figures here are Google self-reported from the official model card -- no independent per-benchmark scores exist yet (Artificial Analysis publishes only its composite Intelligence Index of 50 for this model, no per-benchmark numerals). Re-check trackers after independent evals land.",
+  "note": "Google DeepMind's new workhorse Flash model, released 2026-07-21 alongside Gemini 3.5 Flash-Lite and the gated Gemini 3.5 Flash Cyber (there was NO Pro release in this wave -- the flagship stayed on Gemini 3.1 Pro; Gemini 3.5 Pro remained 'coming soon'/in partner testing). Built on Gemini 3.5 Flash, it is pitched as a straight quality-and-efficiency upgrade: better coding, knowledge work and multimodal performance while using ~17% fewer output tokens for the same work, and it CUTS the output price from $9.00 to $7.50/M (input unchanged at $1.50/M; cache-hit input ~$0.15/M). 1M-token input / 64K output context, natively multimodal (text/image/audio/video in, text out), knowledge cutoff March 2026. Model ID gemini-3.6-flash, generally available on the Gemini API, AI Studio, Vertex, the Gemini apps and Antigravity. All benchmark figures here are Google self-reported from the official model card -- no independent per-benchmark scores exist yet (Artificial Analysis publishes only its composite Intelligence Index of 50 for this model, no per-benchmark numerals). Re-check trackers after independent evals land. Google lists an introductory $0.75/$3.75 per MTok for gemini-3.6-flash through Dec 31, 2026, reverting to $1.50/$7.50 on Jan 1, 2027; no start date is published, so the effective date is the date it was first observed.",
   "quants": [],
   "vramQ4Gb": null,
   "vramFp16Gb": null,

@@ -5,7 +5,7 @@
   "family": "Grok 4.7",
   "familySlug": "grok-4-7",
   "slug": "grok-4-7",
-  "releaseDate": "2026-09-16",
+  "releaseDate": "2026-09-21",
   "status": "released",
   "openness": "closed",
   "license": "Proprietary",
@@ -34,9 +34,9 @@
     "provider": "SpaceXAI"
   },
   "links": {
-    "docs": "https://x.ai/news/grok-4-7"
+    "docs": "https://docs.x.ai/developers/grok-4-7"
   },
-  "note": "SpaceXAI's September 16, 2026 point release — Grok 4.6's successor at an unchanged $2/$6 per Mtok. The launch table is a straight line over 4.6's: GDPval-AA +43, AA Briefcase +44, DeepSWE +3.5, CursorBench +3.9, Terminal-Bench 3 +3.7, with a first-time ExploitBench row (44.8) replacing the marketing-speak with a defensive-security number. No major capability claims beyond 'fastest frontier agent on our harness'; the honest read is a steady monthly cadence keeping Grok roughly level with Sonnet-class mid-frontier models rather than contesting Astra/Fable at the top.",
+  "note": "SpaceXAI's Sep 21, 2026 flagship, available the same day on the xAI API as grok-4.7, in Cursor and Grok Build, at Grok 4.6's unchanged $2/$6 per Mtok with a 500K context. The launch post says it uses a new, larger base model and a longer RL run weighted to multi-hour tasks. At xHigh effort its launch-table rows are CursorBench 4.0 46.3%, DeepSWE v1.1 71.0% (high effort), AA Briefcase v1.1 1,657, Terminal-Bench 4.0 37.6% and Harvey Legal Agent 19.6%, well ahead of Grok 4.6 High on every row but behind Fable 5.1 Max on most coding rows.",
   "quants": [],
   "vramQ4Gb": null,
   "vramFp16Gb": null,
@@ -47,80 +47,75 @@
   "isBestConfig": true,
   "specSources": {
     "releaseDate": "https://x.ai/news/grok-4-7",
-    "price": "https://x.ai/api"
+    "price": "https://docs.x.ai/developers/pricing",
+    "ctxK": "https://docs.x.ai/developers/release-notes",
+    "modalities": "https://docs.x.ai/developers/release-notes",
+    "modelCard": "https://media.x.ai/v1/website/4p7card-5eccc980.pdf"
   },
   "results": [
     {
-      "benchmarkSlug": "gdpval-aa",
-      "score": 1796,
+      "benchmarkSlug": "deepswe",
+      "score": 71.0,
       "source": "self-reported",
       "sourceUrl": "https://x.ai/news/grok-4-7",
-      "evaluatedAt": "2026-09-16",
-      "notes": "GDPval-AA v2 Elo, Grok 4.7 launch table; up from 4.6's 1753."
+      "evaluatedAt": "2026-09-21",
+      "notes": "DeepSWE v1.1 at HIGH effort (asterisk: \"An asterisk on Grok 4.7 DeepSWE marks a high-effort score\"); Grok 4.6 High 65.2 in same table."
     },
     {
       "benchmarkSlug": "aa-briefcase",
-      "score": 1621,
+      "score": 1657,
       "source": "self-reported",
       "sourceUrl": "https://x.ai/news/grok-4-7",
-      "evaluatedAt": "2026-09-16",
-      "notes": "AA Briefcase Elo, launch table; up from 4.6's 1577."
+      "evaluatedAt": "2026-09-21",
+      "notes": "AA Briefcase v1.1 Elo, xHigh. Note version v1.1; corpus grok-4-6 row (1577) was from the 4.6 launch table (unversioned AA-Briefcase); the 4.7 table lists Grok 4.6 High at 1,546 on v1.1."
     },
     {
-      "benchmarkSlug": "cursorbench",
-      "score": 73.8,
+      "benchmarkSlug": "terminal-bench-4",
+      "score": 37.6,
       "source": "self-reported",
       "sourceUrl": "https://x.ai/news/grok-4-7",
-      "evaluatedAt": "2026-09-16",
-      "notes": "CursorBench, launch table; up from 4.6's 69.9."
-    },
-    {
-      "benchmarkSlug": "deepswe",
-      "score": 69.4,
-      "source": "self-reported",
-      "sourceUrl": "https://x.ai/news/grok-4-7",
-      "evaluatedAt": "2026-09-16",
-      "notes": "DeepSWE v1.1 at High reasoning, launch table; up from 4.6's 65.9."
-    },
-    {
-      "benchmarkSlug": "frontiercode-extended",
-      "score": 63.9,
-      "source": "self-reported",
-      "sourceUrl": "https://x.ai/news/grok-4-7",
-      "evaluatedAt": "2026-09-16",
-      "notes": "FrontierCode Extended, launch table."
-    },
-    {
-      "benchmarkSlug": "terminal-bench-3",
-      "score": 29.7,
-      "source": "self-reported",
-      "sourceUrl": "https://x.ai/news/grok-4-7",
-      "evaluatedAt": "2026-09-16",
-      "notes": "Terminal-Bench 3.0, launch table; up from 4.6's 26.0."
+      "evaluatedAt": "2026-09-21",
+      "notes": "Terminal-Bench 4.0, xHigh, launch table. The model card (read via a summarising fetcher, not raw text) appears to list 38.0% (xhigh); launch post value used."
     },
     {
       "benchmarkSlug": "harvey-legal-agent",
-      "score": 17.2,
+      "score": 19.6,
       "source": "self-reported",
       "sourceUrl": "https://x.ai/news/grok-4-7",
-      "evaluatedAt": "2026-09-16",
-      "notes": "Harvey Legal Agent, launch table."
+      "evaluatedAt": "2026-09-21",
+      "notes": "Harvey Legal Agent Benchmark, xHigh; Grok 4.6 High 15.8 in same table."
     },
     {
-      "benchmarkSlug": "exploitbench",
-      "score": 44.8,
-      "source": "self-reported",
-      "sourceUrl": "https://x.ai/news/grok-4-7",
-      "evaluatedAt": "2026-09-16",
-      "notes": "ExploitBench — first Grok filing on the defensive-security suite; launch table."
+      "benchmarkSlug": "arc-agi-1",
+      "score": 90.2,
+      "source": "independent",
+      "sourceUrl": "https://arcprize.org/results/xai-grok-4-7",
+      "evaluatedAt": "2026-09-21",
+      "notes": "High variant (XHigh 89.5%)."
     },
     {
-      "benchmarkSlug": "gpqa",
-      "score": 93.1,
-      "source": "self-reported",
-      "sourceUrl": "https://x.ai/news/grok-4-7",
-      "evaluatedAt": "2026-09-16",
-      "notes": "GPQA Diamond, launch table."
+      "benchmarkSlug": "arc-agi-2",
+      "score": 61.4,
+      "source": "independent",
+      "sourceUrl": "https://arcprize.org/results/xai-grok-4-7",
+      "evaluatedAt": "2026-09-21",
+      "notes": "XHigh variant."
+    },
+    {
+      "benchmarkSlug": "arc-agi-3",
+      "score": 1.82,
+      "source": "independent",
+      "sourceUrl": "https://arcprize.org/results/xai-grok-4-7",
+      "evaluatedAt": "2026-09-21",
+      "notes": "XHigh, Standard harness. Provider Adapter harness gives 10.05% (High), which is the figure on the results index."
+    },
+    {
+      "benchmarkSlug": "arena",
+      "score": 1443,
+      "source": "arena",
+      "sourceUrl": "https://arena.ai/leaderboard/text",
+      "evaluatedAt": "2026-10-08",
+      "notes": "Text Arena row 'grok-4.7-xhigh', 8,780 votes; leaderboard last updated Oct 8 2026. No arena row in the corpus today."
     }
   ]
 }

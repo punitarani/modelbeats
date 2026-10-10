@@ -140,6 +140,46 @@
       "sourceUrl": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/3-8-flash-and-3-8-flash-cyber/",
       "evaluatedAt": "2026-09-02",
       "notes": "OSWorld-2.0 computer use, Google's launch table; up from 3.7 Flash's 50.6 but 16.4 points behind Claude Opus 5 (75.4)."
+    },
+    {
+      "benchmarkSlug": "arc-agi-1",
+      "score": 98.5,
+      "source": "independent",
+      "sourceUrl": "https://arcprize.org/results/google-gemini-3-8-flash",
+      "evaluatedAt": "2026-09-02",
+      "notes": "High variant."
+    },
+    {
+      "benchmarkSlug": "arc-agi-2",
+      "score": 89.2,
+      "source": "independent",
+      "sourceUrl": "https://arcprize.org/results/google-gemini-3-8-flash",
+      "evaluatedAt": "2026-09-02",
+      "notes": "High variant."
+    },
+    {
+      "benchmarkSlug": "arc-agi-3",
+      "score": 10.37,
+      "source": "independent",
+      "sourceUrl": "https://arcprize.org/results/google-gemini-3-8-flash",
+      "evaluatedAt": "2026-09-02",
+      "notes": "High, Standard harness. Provider Adapter harness gives 35.00%."
+    },
+    {
+      "benchmarkSlug": "arena",
+      "score": 1497,
+      "source": "arena",
+      "sourceUrl": "https://arena.ai/leaderboard/text",
+      "evaluatedAt": "2026-10-08",
+      "notes": "Text Arena row 'gemini-3.8-flash-high', 31,437 votes; leaderboard last updated Oct 8 2026. No arena row in the corpus today. Marked Preliminary."
+    },
+    {
+      "benchmarkSlug": "swe-bench",
+      "score": 80.0,
+      "source": "independent",
+      "sourceUrl": "https://www.vals.ai/benchmarks/swebench",
+      "evaluatedAt": "2026-09-01",
+      "notes": "Vals.ai SWE-bench Verified (mini-SWE-agent), 'As of September 1, 2026'. Vals has archived this benchmark: 'Since performance on this benchmark has saturated, we no longer run this benchmark on new model releases.'"
     }
   ]
 }

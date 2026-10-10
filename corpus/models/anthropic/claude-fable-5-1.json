@@ -194,6 +194,14 @@
       "sourceUrl": "https://openai.com/index/gpt-6-astra",
       "evaluatedAt": "2026-09-03",
       "notes": "BenchCAD Vision2Code, geometric-overlap score as reported for Fable 5.1 in OpenAI's GPT-6 Astra launch comparison."
+    },
+    {
+      "benchmarkSlug": "arena",
+      "score": 1501,
+      "source": "arena",
+      "sourceUrl": "https://arena.ai/leaderboard/text",
+      "evaluatedAt": "2026-10-08",
+      "notes": "Text Arena row 'claude-fable-5.1-max', 13,063 votes; leaderboard last updated Oct 8 2026. No arena row in the corpus today."
     }
   ]
 }

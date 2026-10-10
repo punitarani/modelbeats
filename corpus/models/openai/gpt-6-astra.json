@@ -174,11 +174,35 @@
     },
     {
       "benchmarkSlug": "arc-agi-2",
-      "score": 94.6,
+      "score": 95.0,
       "source": "independent",
-      "sourceUrl": "https://arcprize.org/leaderboard",
+      "sourceUrl": "https://arcprize.org/results/openai-gpt-6-astra",
       "evaluatedAt": "2026-09-18",
-      "notes": "ARC-AGI-2 independent verification on the ARC Prize public leaderboard (semi-private set), within a point of OpenAI's self-reported 95.0 — unusually fast independent corroboration of a frontier claim."
+      "notes": "ARC Prize verified result, Max effort (XHigh 93.3%, High 92.1%). Replaces an unsourced 94.6."
+    },
+    {
+      "benchmarkSlug": "arc-agi-1",
+      "score": 98.5,
+      "source": "independent",
+      "sourceUrl": "https://arcprize.org/results/openai-gpt-6-astra",
+      "evaluatedAt": "2026-09-02",
+      "notes": "XHigh and High 98.5% (Max 97.5%)."
+    },
+    {
+      "benchmarkSlug": "arc-agi-3",
+      "score": 62.71,
+      "source": "independent",
+      "sourceUrl": "https://arcprize.org/results/openai-gpt-6-astra",
+      "evaluatedAt": "2026-09-02",
+      "notes": "Max, Standard harness. With the new Provider Adapter harness ARC Prize reports 98.55% (Max) / 99.95% (High). Standard harness is the comparable figure for older ARC-AGI-3 rows."
+    },
+    {
+      "benchmarkSlug": "arena",
+      "score": 1475,
+      "source": "arena",
+      "sourceUrl": "https://arena.ai/leaderboard/text",
+      "evaluatedAt": "2026-10-08",
+      "notes": "Text Arena row 'gpt-6-astra-max', 10,536 votes; leaderboard last updated Oct 8 2026. No arena row in the corpus today."
     }
   ]
 }

@@ -12,7 +12,7 @@
   "activeParamsB": 40,
   "archClass": "moe",
   "archDisplay": "The SAME base model as GLM-5.2 — every gain comes from scaled post-training (IndexShare long-context, SAO long-horizon RL, slime async training). Sparse MoE, three thinking-effort levels (low/high/max); disabling thinking is no longer supported",
-  "ctxK": 200,
+  "ctxK": 1000,
   "modalities": [
     "text"
   ],

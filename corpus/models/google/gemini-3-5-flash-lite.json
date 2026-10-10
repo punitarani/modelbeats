@@ -80,6 +80,38 @@
       "sourceUrl": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-3-6-flash-3-5-flash-lite-3-5-flash-cyber/",
       "evaluatedAt": "2026-07-21",
       "notes": "OSWorld-Verified, computer use, official launch blog (74.0% vs 65.1% for Gemini 3 Flash). Corroborated by 9to5Google."
+    },
+    {
+      "benchmarkSlug": "arc-agi-1",
+      "score": 53.5,
+      "source": "independent",
+      "sourceUrl": "https://arcprize.org/results/gemini-3-5-flash-lite",
+      "evaluatedAt": "2026-07-21",
+      "notes": "High variant."
+    },
+    {
+      "benchmarkSlug": "arc-agi-2",
+      "score": 10.3,
+      "source": "independent",
+      "sourceUrl": "https://arcprize.org/results/gemini-3-5-flash-lite",
+      "evaluatedAt": "2026-07-21",
+      "notes": "High variant."
+    },
+    {
+      "benchmarkSlug": "arena",
+      "score": 1455,
+      "source": "arena",
+      "sourceUrl": "https://arena.ai/leaderboard/text",
+      "evaluatedAt": "2026-10-08",
+      "notes": "Text Arena row 'gemini-3.5-flash-lite', 35,892 votes; leaderboard last updated Oct 8 2026. No arena row in the corpus today."
+    },
+    {
+      "benchmarkSlug": "swe-bench",
+      "score": 75.0,
+      "source": "independent",
+      "sourceUrl": "https://www.vals.ai/benchmarks/swebench",
+      "evaluatedAt": "2026-09-01",
+      "notes": "Vals.ai SWE-bench Verified (mini-SWE-agent), 'As of September 1, 2026'. Vals has archived this benchmark: 'Since performance on this benchmark has saturated, we no longer run this benchmark on new model releases.'"
     }
   ],
   "verificationNotes": "ROUND (2026-07-22): New model from Google's July-21-2026 Flash wave (see gemini-3-6-flash verificationNotes for the shared scope decisions -- Gemini 3.5 Pro excluded as unreleased, Gemini 3.5 Flash Cyber excluded as gated/specialized). All four self-reported figures were confirmed on both the official launch blog and 9to5Google's reproduction of it. Direct fetch of artificialanalysis.ai/models/gemini-3-5-flash-lite confirmed AA shows only its composite Intelligence Index (36), no per-benchmark numerals, so no independent counterweight is available yet. Omitted NO-SLUG figure: GDM-MRCR v2 long-context 72.2%. 4 self-reported benchmarks across 2 categories (coding, agents) -> meets the D20 ranking gate. Predecessor resolves within the 'Gemini 3.5' family to gemini-3-5-flash (the mechanical nearest-older sibling), consistent with how gemini-3-1-flash-lite succeeds gemini-3-1-pro in this corpus."

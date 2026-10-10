@@ -13,7 +13,7 @@
   "activeParamsB": 40,
   "archClass": "moe",
   "archDisplay": "The SAME base model as GLM-5.2 — every gain comes from scaled post-training (IndexShare long-context, SAO long-horizon RL, slime async training). Sparse MoE, three thinking-effort levels (low/high/max); disabling thinking is no longer supported",
-  "ctxK": 200,
+  "ctxK": 1000,
   "modalities": [
     "text"
   ],
@@ -48,7 +48,8 @@
   "specSources": {
     "releaseDate": "https://z.ai/blog/glm-5.3",
     "price": "https://capitalandcompute.net/blog/new-ai-models-august-2026",
-    "paramsB": "https://z.ai/blog/glm-5.3-flash"
+    "paramsB": "https://z.ai/blog/glm-5.3-flash",
+    "ctxK": "https://docs.z.ai/guides/llm/glm-5.3"
   },
   "results": [
     {
@@ -114,6 +115,22 @@
       "sourceUrl": "https://z.ai/blog/glm-5.3",
       "evaluatedAt": "2026-08-14",
       "notes": "AutomationBench v1.0.6, official GLM-5.3 comparison table; best in row, nearly double GLM-5.2 (26.2)."
+    },
+    {
+      "benchmarkSlug": "arena",
+      "score": 1478,
+      "source": "arena",
+      "sourceUrl": "https://arena.ai/leaderboard/text",
+      "evaluatedAt": "2026-10-08",
+      "notes": "Text Arena row 'glm-5.3-max', 20,049 votes; leaderboard last updated Oct 8 2026. No arena row in the corpus today."
+    },
+    {
+      "benchmarkSlug": "swe-bench",
+      "score": 95.4,
+      "source": "independent",
+      "sourceUrl": "https://www.vals.ai/benchmarks/swebench",
+      "evaluatedAt": "2026-09-01",
+      "notes": "Vals.ai SWE-bench Verified (mini-SWE-agent), 'As of September 1, 2026'. Vals has archived this benchmark: 'Since performance on this benchmark has saturated, we no longer run this benchmark on new model releases.'"
     }
   ]
 }

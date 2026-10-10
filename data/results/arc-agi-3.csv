@@ -1,4 +1,13 @@
 model_slug,score,source,source_url,evaluated_at,notes
 claude-opus-4-8,1.5,self-reported,https://www.anthropic.com/claude-opus-5-system-card,2026-07-24,ARC-AGI-3 competitor figure from the Claude Opus 5 System Card Table 8.1.A.
+claude-opus-5,30.16,independent,https://arcprize.org/results/anthropic-claude-opus-5,2026-07-24,"ARC Prize verified, High effort only (Max not run on ARC-AGI-3)."
 claude-opus-5,30.2,self-reported,https://www.anthropic.com/claude-opus-5-system-card,2026-07-24,"ARC-AGI-3 (high effort), Claude Opus 5 System Card Table 8.1.A / §8.14.2. Anthropic's headline novel-reasoning result: ~3x the next-best model (GPT-5.6 Sol 7.8). Humans score ~100%; frontier AI was ~0.5% at the March 2026 launch, so this is a large SOTA jump."
+gemini-3-8-flash,10.37,independent,https://arcprize.org/results/google-gemini-3-8-flash,2026-09-02,"High, Standard harness. Provider Adapter harness gives 35.00%."
+gpt-5-6-luna,0.18,independent,https://arcprize.org/results/openai-gpt-5-6-luna,2026-07-09,Max variant.
+gpt-5-6-sol,7.78,independent,https://arcprize.org/results/openai-gpt-5-6-sol,2026-07-09,"ARC Prize verified, Max. Corpus row cites the Anthropic Opus 5 system card. (FYI the page shows ARC-AGI-1 XHigh 97.5% vs the Max 96.5% the corpus uses.)"
 gpt-5-6-sol,7.8,self-reported,https://www.anthropic.com/claude-opus-5-system-card,2026-07-24,ARC-AGI-3 competitor figure (drawn by Anthropic from the developer's published results) in the Claude Opus 5 System Card Table 8.1.A.
+gpt-5-6-terra,0.8,independent,https://arcprize.org/results/openai-gpt-5-6-terra,2026-07-09,Max variant.
+gpt-6-astra,62.71,independent,https://arcprize.org/results/openai-gpt-6-astra,2026-09-02,"Max, Standard harness. With the new Provider Adapter harness ARC Prize reports 98.55% (Max) / 99.95% (High). Standard harness is the comparable figure for older ARC-AGI-3 rows."
+grok-4-5,0.32,independent,https://arcprize.org/results/xai-grok-4-5,2026-07-16,Medium variant (High 0.30%).
+grok-4-6,2.11,independent,https://arcprize.org/results/xai-grok-4-6,2026-08-11,XHigh variant.
+grok-4-7,1.82,independent,https://arcprize.org/results/xai-grok-4-7,2026-09-21,"XHigh, Standard harness. Provider Adapter harness gives 10.05% (High), which is the figure on the results index."
