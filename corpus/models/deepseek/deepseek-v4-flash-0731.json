@@ -3,7 +3,7 @@
   "org": "DeepSeek",
   "family": "DeepSeek-V4",
   "releaseDate": "2026-07-31",
-  "status": "released",
+  "status": "deprecated",
   "openness": "open-weights",
   "license": "MIT",
   "paramsB": 284,
@@ -32,7 +32,7 @@
     "hf": "deepseek-ai/DeepSeek-V4-Flash-0731",
     "docs": "https://api-docs.deepseek.com/quick_start/pricing/"
   },
-  "note": "Retrained checkpoint of DeepSeek-V4-Flash published July 31, 2026, same 284B/13B architecture and API pricing as the April siblings. DeepSeek's own model card only reruns the launch-day agentic/coding table (Terminal-Bench 2.1, NL2Repo, CyberGym, DeepSWE) with an unreleased internal harness ('DeepSeek Harness'); general reasoning/knowledge benchmarks were not rerun and still carry April Preview values, so this row is coding/agentic-only evidence, not a full refresh.",
+  "note": "Retrained checkpoint of DeepSeek-V4-Flash published July 31, 2026, same 284B/13B architecture and API pricing as the April siblings. DeepSeek's own model card only reruns the launch-day agentic/coding table (Terminal-Bench 2.1, NL2Repo, CyberGym, DeepSWE) with an unreleased internal harness ('DeepSeek Harness'); general reasoning/knowledge benchmarks were not rerun and still carry April Preview values, so this row is coding/agentic-only evidence, not a full refresh. DeepSeek retired V4 Flash on Sep 10, 2026; the deepseek-v4-flash name now routes to V4.1-Flash.",
   "quants": [],
   "vramQ4Gb": null,
   "vramFp16Gb": null,
@@ -44,7 +44,8 @@
   "specSources": {
     "license": "https://huggingface.co/deepseek-ai/DeepSeek-V4-Flash-0731",
     "price": "https://api-docs.deepseek.com/quick_start/pricing/",
-    "releaseDate": "https://benchlm.ai/blog/posts/deepseek-v4-flash-0731"
+    "releaseDate": "https://benchlm.ai/blog/posts/deepseek-v4-flash-0731",
+    "status": "https://api-docs.deepseek.com/updates"
   },
   "results": [
     {
@@ -78,6 +79,30 @@
       "sourceUrl": "https://huggingface.co/deepseek-ai/DeepSeek-V4-Flash-0731",
       "evaluatedAt": "2026-07-31",
       "notes": "DeepSWE, DeepSeek official model card launch table; vs. 7.9 for the April Preview checkpoint (DeepSWE was not one of the benchmarks that carried over well between versions)."
+    },
+    {
+      "benchmarkSlug": "arc-agi-1",
+      "score": 89.0,
+      "source": "independent",
+      "sourceUrl": "https://arcprize.org/results/deepseek-v4-flash-0731",
+      "evaluatedAt": "2026-07-31",
+      "notes": "Max variant."
+    },
+    {
+      "benchmarkSlug": "arc-agi-2",
+      "score": 61.4,
+      "source": "independent",
+      "sourceUrl": "https://arcprize.org/results/deepseek-v4-flash-0731",
+      "evaluatedAt": "2026-07-31",
+      "notes": "Max variant."
+    },
+    {
+      "benchmarkSlug": "swe-bench",
+      "score": 88.8,
+      "source": "independent",
+      "sourceUrl": "https://www.vals.ai/benchmarks/swebench",
+      "evaluatedAt": "2026-09-01",
+      "notes": "Vals.ai SWE-bench Verified (mini-SWE-agent), 'As of September 1, 2026'. Vals has archived this benchmark: 'Since performance on this benchmark has saturated, we no longer run this benchmark on new model releases.'"
     }
   ]
 }

@@ -4,7 +4,7 @@
   "orgSlug": "deepseek",
   "familySlug": "deepseek-v4",
   "releaseDate": "2026-07-31",
-  "status": "released",
+  "status": "deprecated",
   "predecessor": "deepseek-v4-flash-non-think",
   "openness": "open-weights",
   "license": "MIT",
@@ -34,7 +34,7 @@
     "hf": "deepseek-ai/DeepSeek-V4-Flash-0731",
     "docs": "https://api-docs.deepseek.com/quick_start/pricing/"
   },
-  "note": "Retrained checkpoint of DeepSeek-V4-Flash published July 31, 2026, same 284B/13B architecture and API pricing as the April siblings. DeepSeek's own model card only reruns the launch-day agentic/coding table (Terminal-Bench 2.1, NL2Repo, CyberGym, DeepSWE) with an unreleased internal harness ('DeepSeek Harness'); general reasoning/knowledge benchmarks were not rerun and still carry April Preview values, so this row is coding/agentic-only evidence, not a full refresh.",
+  "note": "Retrained checkpoint of DeepSeek-V4-Flash published July 31, 2026, same 284B/13B architecture and API pricing as the April siblings. DeepSeek's own model card only reruns the launch-day agentic/coding table (Terminal-Bench 2.1, NL2Repo, CyberGym, DeepSWE) with an unreleased internal harness ('DeepSeek Harness'); general reasoning/knowledge benchmarks were not rerun and still carry April Preview values, so this row is coding/agentic-only evidence, not a full refresh. DeepSeek retired V4 Flash on Sep 10, 2026; the deepseek-v4-flash name now routes to V4.1-Flash.",
   "quants": [],
   "vramQ4Gb": null,
   "vramFp16Gb": null,

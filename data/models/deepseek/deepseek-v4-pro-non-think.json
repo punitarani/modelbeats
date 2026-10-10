@@ -27,14 +27,14 @@
   },
   "apiAvailable": true,
   "price": {
-    "input": 0.435,
-    "output": 0.87
+    "input": 1.32,
+    "output": 3.96
   },
   "links": {
     "hf": "deepseek-ai/DeepSeek-V4-Pro",
     "docs": "https://api-docs.deepseek.com/news/news260424/"
   },
-  "note": "Fast/low-latency mode of the DeepSeek-V4-Pro preview checkpoint, the default reasoning tier a user gets without selecting anything. (fast/low-latency mode; the default tier a user gets without selecting anything).",
+  "note": "Fast/low-latency mode of the DeepSeek-V4-Pro preview checkpoint, the default reasoning tier a user gets without selecting anything. (fast/low-latency mode; the default tier a user gets without selecting anything). DeepSeek repriced deepseek-v4-pro (now serving the V4-Pro-0813 GA checkpoint) to $1.32/$3.96 per MTok standard, $0.66/$1.98 off-peak, effective Aug 16, 2026.",
   "quants": [],
   "vramQ4Gb": null,
   "vramFp16Gb": null,

@@ -2,7 +2,7 @@ import { expect, test } from '@playwright/test'
 import { datasetCounts, gotoHydrated, pickOption } from './helpers'
 
 test.describe('rankings', () => {
-  test('default view: rank-eligible rows sorted by Elo, GPT-6 Astra first', async ({ page }) => {
+  test('default view: rank-eligible rows sorted by Elo, Muse Spark 1.3 first', async ({ page }) => {
     const { models } = datasetCounts()
     await gotoHydrated(page, '/rankings')
     await expect(page.getByTestId('rankings-meta')).toContainText(
@@ -11,8 +11,8 @@ test.describe('rankings', () => {
     // the coverage gate (D20) keeps single-benchmark curiosities (Doubao) out of the top; the
     // #1 row is the broadly-benchmarked frontier leader (Frontier Elo, D21)
     const first = page.getByTestId('ranking-row').first()
-    await expect(first).toContainText('GPT-6 Astra')
-    await expect(first).toContainText('3310.2')
+    await expect(first).toContainText('Muse Spark 1.3')
+    await expect(first).toContainText('3115.2')
   })
 
   test('column sort click mutates URL and reorders rows', async ({ page }) => {
@@ -53,7 +53,7 @@ test.describe('rankings', () => {
     await gotoHydrated(page, '/rankings')
     await pickOption(page, 'rankings-org', 'Anthropic')
     await expect(page).toHaveURL(/org=anthropic/)
-    await expect(page.getByTestId('rankings-meta')).toContainText('29 models')
+    await expect(page.getByTestId('rankings-meta')).toContainText('28 models')
   })
 
   test('category param filters benchmark columns; bogus category 404s', async ({ page }) => {

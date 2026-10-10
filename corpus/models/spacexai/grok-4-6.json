@@ -105,6 +105,46 @@
       "sourceUrl": "https://x.ai/news/grok-4-6",
       "evaluatedAt": "2026-08-12",
       "notes": "Harvey LAB (Vals), Grok 4.6 High, official SpaceXAI eval table; best in row by a wide margin over GPT-5.6 Sol Max (2.5) and Fable 5 Max (11.3)."
+    },
+    {
+      "benchmarkSlug": "arc-agi-1",
+      "score": 87.5,
+      "source": "independent",
+      "sourceUrl": "https://arcprize.org/results/xai-grok-4-6",
+      "evaluatedAt": "2026-08-11",
+      "notes": "Medium variant is the best ARC-AGI-1 (XHigh/High 87.0%)."
+    },
+    {
+      "benchmarkSlug": "arc-agi-2",
+      "score": 67.1,
+      "source": "independent",
+      "sourceUrl": "https://arcprize.org/results/xai-grok-4-6",
+      "evaluatedAt": "2026-08-11",
+      "notes": "XHigh variant."
+    },
+    {
+      "benchmarkSlug": "arc-agi-3",
+      "score": 2.11,
+      "source": "independent",
+      "sourceUrl": "https://arcprize.org/results/xai-grok-4-6",
+      "evaluatedAt": "2026-08-11",
+      "notes": "XHigh variant."
+    },
+    {
+      "benchmarkSlug": "arena",
+      "score": 1454,
+      "source": "arena",
+      "sourceUrl": "https://arena.ai/leaderboard/text",
+      "evaluatedAt": "2026-10-08",
+      "notes": "Text Arena row 'grok-4.6-high', 26,115 votes; leaderboard last updated Oct 8 2026. No arena row in the corpus today."
+    },
+    {
+      "benchmarkSlug": "swe-bench",
+      "score": 95.6,
+      "source": "independent",
+      "sourceUrl": "https://www.vals.ai/benchmarks/swebench",
+      "evaluatedAt": "2026-09-01",
+      "notes": "Vals.ai SWE-bench Verified (mini-SWE-agent), 'As of September 1, 2026'. Vals has archived this benchmark: 'Since performance on this benchmark has saturated, we no longer run this benchmark on new model releases.'"
     }
   ]
 }

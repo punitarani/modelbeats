@@ -3,7 +3,7 @@
   "name": "Grok 4.7",
   "orgSlug": "spacexai",
   "familySlug": "grok-4-7",
-  "releaseDate": "2026-09-16",
+  "releaseDate": "2026-09-21",
   "status": "released",
   "predecessor": null,
   "openness": "closed",
@@ -32,9 +32,9 @@
     "output": 6
   },
   "links": {
-    "docs": "https://x.ai/news/grok-4-7"
+    "docs": "https://docs.x.ai/developers/grok-4-7"
   },
-  "note": "SpaceXAI's September 16, 2026 point release — Grok 4.6's successor at an unchanged $2/$6 per Mtok. The launch table is a straight line over 4.6's: GDPval-AA +43, AA Briefcase +44, DeepSWE +3.5, CursorBench +3.9, Terminal-Bench 3 +3.7, with a first-time ExploitBench row (44.8) replacing the marketing-speak with a defensive-security number. No major capability claims beyond 'fastest frontier agent on our harness'; the honest read is a steady monthly cadence keeping Grok roughly level with Sonnet-class mid-frontier models rather than contesting Astra/Fable at the top.",
+  "note": "SpaceXAI's Sep 21, 2026 flagship, available the same day on the xAI API as grok-4.7, in Cursor and Grok Build, at Grok 4.6's unchanged $2/$6 per Mtok with a 500K context. The launch post says it uses a new, larger base model and a longer RL run weighted to multi-hour tasks. At xHigh effort its launch-table rows are CursorBench 4.0 46.3%, DeepSWE v1.1 71.0% (high effort), AA Briefcase v1.1 1,657, Terminal-Bench 4.0 37.6% and Harvey Legal Agent 19.6%, well ahead of Grok 4.6 High on every row but behind Fable 5.1 Max on most coding rows.",
   "quants": [],
   "vramQ4Gb": null,
   "vramFp16Gb": null,

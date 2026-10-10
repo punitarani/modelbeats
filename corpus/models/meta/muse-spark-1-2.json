@@ -89,6 +89,22 @@
       "sourceUrl": "https://research.meta.ai/blog/introducing-muse-spark-1-3",
       "evaluatedAt": "2026-09-02",
       "notes": "SWE-Atlas Codebase QnA, Muse Spark 1.2 baseline column (xhigh) of Meta's Muse Spark 1.3 launch scorecard."
+    },
+    {
+      "benchmarkSlug": "arena",
+      "score": 1492,
+      "source": "arena",
+      "sourceUrl": "https://arena.ai/leaderboard/text",
+      "evaluatedAt": "2026-10-08",
+      "notes": "Text Arena row 'muse-spark-1.2 (xHigh)', 6,118 votes; leaderboard last updated Oct 8 2026. No arena row in the corpus today. Read on first fetch only, not re-confirmed."
+    },
+    {
+      "benchmarkSlug": "swe-bench",
+      "score": 86.6,
+      "source": "independent",
+      "sourceUrl": "https://www.vals.ai/benchmarks/swebench",
+      "evaluatedAt": "2026-09-01",
+      "notes": "Vals.ai SWE-bench Verified (mini-SWE-agent), 'As of September 1, 2026'. Vals has archived this benchmark: 'Since performance on this benchmark has saturated, we no longer run this benchmark on new model releases.'"
     }
   ]
 }

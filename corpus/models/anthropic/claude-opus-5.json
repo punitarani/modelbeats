@@ -265,6 +265,46 @@
       "sourceUrl": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/3-8-flash-and-3-8-flash-cyber/",
       "evaluatedAt": "2026-09-02",
       "notes": "Vals Finance Agent v2, Claude Opus 5 column of Google's Gemini 3.8 Flash launch table."
+    },
+    {
+      "benchmarkSlug": "arc-agi-1",
+      "score": 97.5,
+      "source": "independent",
+      "sourceUrl": "https://arcprize.org/results/anthropic-claude-opus-5",
+      "evaluatedAt": "2026-07-24",
+      "notes": "ARC Prize verified, Max and High both 97.5%. Same number, swap source to independent."
+    },
+    {
+      "benchmarkSlug": "arc-agi-2",
+      "score": 90.4,
+      "source": "independent",
+      "sourceUrl": "https://arcprize.org/results/anthropic-claude-opus-5",
+      "evaluatedAt": "2026-07-24",
+      "notes": "ARC Prize verified, Max variant (High 88.3%)."
+    },
+    {
+      "benchmarkSlug": "arc-agi-3",
+      "score": 30.16,
+      "source": "independent",
+      "sourceUrl": "https://arcprize.org/results/anthropic-claude-opus-5",
+      "evaluatedAt": "2026-07-24",
+      "notes": "ARC Prize verified, High effort only (Max not run on ARC-AGI-3)."
+    },
+    {
+      "benchmarkSlug": "arena",
+      "score": 1490,
+      "source": "arena",
+      "sourceUrl": "https://arena.ai/leaderboard/text",
+      "evaluatedAt": "2026-10-08",
+      "notes": "Text Arena row 'claude-opus-5-high', 62,934 votes; leaderboard last updated Oct 8 2026. No arena row in the corpus today. claude-opus-5-max is 1489 (30,569 votes)."
+    },
+    {
+      "benchmarkSlug": "swe-bench",
+      "score": 97.0,
+      "source": "independent",
+      "sourceUrl": "https://www.vals.ai/benchmarks/swebench",
+      "evaluatedAt": "2026-09-01",
+      "notes": "Vals.ai SWE-bench Verified (mini-SWE-agent), 'As of September 1, 2026'. Vals has archived this benchmark: 'Since performance on this benchmark has saturated, we no longer run this benchmark on new model releases.'"
     }
   ]
 }

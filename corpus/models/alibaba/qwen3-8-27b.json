@@ -174,6 +174,30 @@
       "sourceUrl": "https://huggingface.co/Qwen/Qwen3.8-27B",
       "evaluatedAt": "2026-08-05",
       "notes": "CharXiv (RQ), without-code-interpreter setting (90.2 with CI), official Qwen3.8-27B model card."
+    },
+    {
+      "benchmarkSlug": "arc-agi-1",
+      "score": 87.5,
+      "source": "independent",
+      "sourceUrl": "https://arcprize.org/results/alibaba-qwen3-8-27b",
+      "evaluatedAt": "2026-08-14",
+      "notes": "XHigh variant."
+    },
+    {
+      "benchmarkSlug": "arc-agi-2",
+      "score": 42.4,
+      "source": "independent",
+      "sourceUrl": "https://arcprize.org/results/alibaba-qwen3-8-27b",
+      "evaluatedAt": "2026-08-14",
+      "notes": "XHigh variant."
+    },
+    {
+      "benchmarkSlug": "swe-bench",
+      "score": 86.0,
+      "source": "independent",
+      "sourceUrl": "https://www.vals.ai/benchmarks/swebench",
+      "evaluatedAt": "2026-09-01",
+      "notes": "Vals.ai SWE-bench Verified (mini-SWE-agent), 'As of September 1, 2026'. Vals has archived this benchmark: 'Since performance on this benchmark has saturated, we no longer run this benchmark on new model releases.'"
     }
   ]
 }

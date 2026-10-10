@@ -4,7 +4,7 @@
   "orgSlug": "deepseek",
   "familySlug": "deepseek-v4",
   "releaseDate": "2026-04-24",
-  "status": "preview",
+  "status": "deprecated",
   "predecessor": null,
   "openness": "open-weights",
   "license": "MIT",
@@ -34,7 +34,7 @@
     "hf": "deepseek-ai/DeepSeek-V4-Flash",
     "docs": "https://api-docs.deepseek.com/news/news260424/"
   },
-  "note": "Smaller, cheaper sibling MoE released alongside V4-Pro on the same day; fast default mode. (fast/low-latency mode; the default tier a user gets without selecting anything).",
+  "note": "Smaller, cheaper sibling MoE released alongside V4-Pro on the same day; fast default mode. (fast/low-latency mode; the default tier a user gets without selecting anything). DeepSeek retired V4 Flash on Sep 10, 2026; the deepseek-v4-flash name now routes to V4.1-Flash.",
   "quants": [],
   "vramQ4Gb": null,
   "vramFp16Gb": null,

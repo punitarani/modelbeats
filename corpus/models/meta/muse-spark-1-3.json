@@ -132,6 +132,14 @@
       "sourceUrl": "https://research.meta.ai/blog/introducing-muse-spark-1-3",
       "evaluatedAt": "2026-09-02",
       "notes": "AutomationBench (Zapier, public v3 task set, pass@1), Meta launch scorecard; behind Claude Opus 5 (50.3), ahead of GPT-5.6 Sol (46.7). The 0.9-point gap is well inside the noise Meta publishes no confidence intervals for."
+    },
+    {
+      "benchmarkSlug": "arena",
+      "score": 1494,
+      "source": "arena",
+      "sourceUrl": "https://arena.ai/leaderboard/text",
+      "evaluatedAt": "2026-10-08",
+      "notes": "Text Arena row 'muse-spark-1.3-max', 14,694 votes; leaderboard last updated Oct 8 2026. No arena row in the corpus today."
     }
   ]
 }
