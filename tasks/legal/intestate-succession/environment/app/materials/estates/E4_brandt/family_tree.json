@@ -1,0 +1,386 @@
+{
+  "estate_id": "E4",
+  "estate_name": "Estate of Felix August Brandt",
+  "decedent": "B01",
+  "notes": "Genealogical research report prepared for the personal representative. Dates only; for exact times of death see the vital records in this folder. A null 'died' value means the researcher found the person living as of September 30, 2026. 'sex' is recorded to identify paternal and maternal lines. Parent-child links record genetic and adoptive relationships as found in birth, adoption and court records, without legal conclusions. The researcher found no other descendants of Konrad and Elise Brandt, of Friedrich and Margarethe Brandt, or of Heinrich and Anna Albers. A search of vital, probate, census and church records in Montana, Wisconsin and Germany found no living relative of Felix by blood or adoption other than Greta Brandt.",
+  "persons": [
+    {
+      "id": "B01",
+      "name": "Felix August Brandt",
+      "sex": "M",
+      "born": "1950-02-14",
+      "died": "2026-08-10"
+    },
+    {
+      "id": "B02",
+      "name": "Joan Hart Brandt",
+      "sex": "F",
+      "born": "1956-06-30",
+      "died": "2026-08-16"
+    },
+    {
+      "id": "B03",
+      "name": "Ingrid Vogel Brandt",
+      "sex": "F",
+      "born": "1948-10-09",
+      "died": "2010-02-18"
+    },
+    {
+      "id": "B04",
+      "name": "Hans Vogel",
+      "sex": "M",
+      "born": "1945-03-21",
+      "died": "1980-11-02"
+    },
+    {
+      "id": "B05",
+      "name": "Anton Vogel",
+      "sex": "M",
+      "born": "1972-05-05",
+      "died": null
+    },
+    {
+      "id": "B06",
+      "name": "Bea Vogel Lind",
+      "sex": "F",
+      "born": "1975-09-12",
+      "died": "2026-09-20"
+    },
+    {
+      "id": "B07",
+      "name": "Carsten Lind",
+      "sex": "M",
+      "born": "2002-04-17",
+      "died": null
+    },
+    {
+      "id": "B08",
+      "name": "Leo Hart",
+      "sex": "M",
+      "born": "1952-12-01",
+      "died": null
+    },
+    {
+      "id": "B09",
+      "name": "Mark Hart",
+      "sex": "M",
+      "born": "1978-01-29",
+      "died": null
+    },
+    {
+      "id": "B10",
+      "name": "Nell Hart",
+      "sex": "F",
+      "born": "1981-07-07",
+      "died": null
+    },
+    {
+      "id": "B11",
+      "name": "Paul Hart",
+      "sex": "M",
+      "born": "1984-03-03",
+      "died": "2019-05-05"
+    },
+    {
+      "id": "B12",
+      "name": "Quentin Hart",
+      "sex": "M",
+      "born": "2008-08-08",
+      "died": null
+    },
+    {
+      "id": "B13",
+      "name": "Rhea Hart",
+      "sex": "F",
+      "born": "2011-11-11",
+      "died": null
+    },
+    {
+      "id": "B14",
+      "name": "Konrad Brandt",
+      "sex": "M",
+      "born": "1920-04-04",
+      "died": "1995-06-06"
+    },
+    {
+      "id": "B15",
+      "name": "Elise Albers Brandt",
+      "sex": "F",
+      "born": "1924-01-01",
+      "died": "2003-03-03"
+    },
+    {
+      "id": "B16",
+      "name": "Friedrich Brandt",
+      "sex": "M",
+      "born": "1890-05-05",
+      "died": "1960-07-07"
+    },
+    {
+      "id": "B17",
+      "name": "Margarethe Brandt",
+      "sex": "F",
+      "born": "1894-08-08",
+      "died": "1972-09-09"
+    },
+    {
+      "id": "B18",
+      "name": "Hedwig Brandt",
+      "sex": "F",
+      "born": "1922-02-02",
+      "died": "1999-12-12"
+    },
+    {
+      "id": "B19",
+      "name": "Otto Brandt",
+      "sex": "M",
+      "born": "1926-06-16",
+      "died": "1985-10-10"
+    },
+    {
+      "id": "B20",
+      "name": "Johann Brandt",
+      "sex": "M",
+      "born": "1862-01-01",
+      "died": "1940-01-01"
+    },
+    {
+      "id": "B21",
+      "name": "Wilhelm Brandt",
+      "sex": "M",
+      "born": "1893-03-03",
+      "died": "1970-04-04"
+    },
+    {
+      "id": "B22",
+      "name": "Rudolf Brandt",
+      "sex": "M",
+      "born": "1925-05-25",
+      "died": "2000-02-20"
+    },
+    {
+      "id": "B23",
+      "name": "Greta Brandt",
+      "sex": "F",
+      "born": "1958-11-30",
+      "died": null
+    },
+    {
+      "id": "B24",
+      "name": "Heinrich Albers",
+      "sex": "M",
+      "born": "1896-09-09",
+      "died": "1965-05-15"
+    },
+    {
+      "id": "B25",
+      "name": "Anna Albers",
+      "sex": "F",
+      "born": "1900-10-10",
+      "died": "1980-08-18"
+    }
+  ],
+  "parent_child": [
+    {
+      "parent": "B14",
+      "child": "B01",
+      "type": "genetic"
+    },
+    {
+      "parent": "B15",
+      "child": "B01",
+      "type": "genetic"
+    },
+    {
+      "parent": "B16",
+      "child": "B14",
+      "type": "genetic"
+    },
+    {
+      "parent": "B17",
+      "child": "B14",
+      "type": "genetic"
+    },
+    {
+      "parent": "B16",
+      "child": "B18",
+      "type": "genetic"
+    },
+    {
+      "parent": "B17",
+      "child": "B18",
+      "type": "genetic"
+    },
+    {
+      "parent": "B16",
+      "child": "B19",
+      "type": "genetic"
+    },
+    {
+      "parent": "B17",
+      "child": "B19",
+      "type": "genetic"
+    },
+    {
+      "parent": "B20",
+      "child": "B16",
+      "type": "genetic"
+    },
+    {
+      "parent": "B20",
+      "child": "B21",
+      "type": "genetic"
+    },
+    {
+      "parent": "B21",
+      "child": "B22",
+      "type": "genetic"
+    },
+    {
+      "parent": "B22",
+      "child": "B23",
+      "type": "genetic"
+    },
+    {
+      "parent": "B24",
+      "child": "B15",
+      "type": "genetic"
+    },
+    {
+      "parent": "B25",
+      "child": "B15",
+      "type": "genetic"
+    },
+    {
+      "parent": "B04",
+      "child": "B05",
+      "type": "genetic"
+    },
+    {
+      "parent": "B03",
+      "child": "B05",
+      "type": "genetic"
+    },
+    {
+      "parent": "B04",
+      "child": "B06",
+      "type": "genetic"
+    },
+    {
+      "parent": "B03",
+      "child": "B06",
+      "type": "genetic"
+    },
+    {
+      "parent": "B06",
+      "child": "B07",
+      "type": "genetic"
+    },
+    {
+      "parent": "B08",
+      "child": "B09",
+      "type": "genetic"
+    },
+    {
+      "parent": "B02",
+      "child": "B09",
+      "type": "genetic"
+    },
+    {
+      "parent": "B08",
+      "child": "B10",
+      "type": "genetic"
+    },
+    {
+      "parent": "B02",
+      "child": "B10",
+      "type": "genetic"
+    },
+    {
+      "parent": "B08",
+      "child": "B11",
+      "type": "genetic"
+    },
+    {
+      "parent": "B02",
+      "child": "B11",
+      "type": "genetic"
+    },
+    {
+      "parent": "B11",
+      "child": "B12",
+      "type": "genetic"
+    },
+    {
+      "parent": "B11",
+      "child": "B13",
+      "type": "genetic"
+    }
+  ],
+  "marriages": [
+    {
+      "spouses": [
+        "B14",
+        "B15"
+      ],
+      "married": "1948-06-12",
+      "ended": "1995-06-06",
+      "ended_by": "death of B14"
+    },
+    {
+      "spouses": [
+        "B16",
+        "B17"
+      ],
+      "married": "1919-04-20",
+      "ended": "1960-07-07",
+      "ended_by": "death of B16"
+    },
+    {
+      "spouses": [
+        "B24",
+        "B25"
+      ],
+      "married": "1922-05-01",
+      "ended": "1965-05-15",
+      "ended_by": "death of B24"
+    },
+    {
+      "spouses": [
+        "B03",
+        "B04"
+      ],
+      "married": "1970-08-15",
+      "ended": "1980-11-02",
+      "ended_by": "death of B04"
+    },
+    {
+      "spouses": [
+        "B01",
+        "B03"
+      ],
+      "married": "1985-04-27",
+      "ended": "2010-02-18",
+      "ended_by": "death of B03"
+    },
+    {
+      "spouses": [
+        "B02",
+        "B08"
+      ],
+      "married": "1976-09-04",
+      "ended": "1999-03-30",
+      "ended_by": "divorce"
+    },
+    {
+      "spouses": [
+        "B01",
+        "B02"
+      ],
+      "married": "2012-10-06",
+      "ended": "2026-08-10",
+      "ended_by": "death of B01"
+    }
+  ],
+  "adoptions": []
+}

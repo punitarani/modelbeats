@@ -16,7 +16,8 @@
       "!**/migrations",
       "!**/dist",
       "!**/.wrangler",
-      "!.claude"
+      "!.claude",
+      "!tasks"
     ]
   },
   "formatter": {

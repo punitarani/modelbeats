@@ -1,0 +1,106 @@
+{
+  "volume_limits": {
+    "VRNB": 597390,
+    "KSTM": 186400
+  },
+  "positions": {
+    "P01": {
+      "max_shares_sellable_now": 487390,
+      "form_144_required": true
+    },
+    "P02": {
+      "max_shares_sellable_now": 600000,
+      "form_144_required": false
+    },
+    "P03": {
+      "max_shares_sellable_now": 0,
+      "form_144_required": false
+    },
+    "P04": {
+      "max_shares_sellable_now": 100000,
+      "form_144_required": false
+    },
+    "P05": {
+      "max_shares_sellable_now": 40000,
+      "form_144_required": false
+    },
+    "P06": {
+      "max_shares_sellable_now": 80000,
+      "form_144_required": false
+    },
+    "P07": {
+      "max_shares_sellable_now": 30000,
+      "form_144_required": false
+    },
+    "P08": {
+      "max_shares_sellable_now": 725000,
+      "form_144_required": false
+    },
+    "P09": {
+      "max_shares_sellable_now": 50000,
+      "form_144_required": false
+    },
+    "P10": {
+      "max_shares_sellable_now": 70000,
+      "form_144_required": false
+    },
+    "P11": {
+      "max_shares_sellable_now": 0,
+      "form_144_required": false
+    },
+    "P12": {
+      "max_shares_sellable_now": 0,
+      "form_144_required": false
+    },
+    "P13": {
+      "max_shares_sellable_now": 20000,
+      "form_144_required": false
+    },
+    "P14": {
+      "max_shares_sellable_now": 0,
+      "form_144_required": false
+    },
+    "P15": {
+      "max_shares_sellable_now": 400000,
+      "form_144_required": false
+    },
+    "P16": {
+      "max_shares_sellable_now": 100000,
+      "form_144_required": false
+    },
+    "P17": {
+      "max_shares_sellable_now": 40000,
+      "form_144_required": false
+    },
+    "P18": {
+      "max_shares_sellable_now": 116400,
+      "form_144_required": true
+    },
+    "P19": {
+      "max_shares_sellable_now": 116400,
+      "form_144_required": false
+    },
+    "P20": {
+      "max_shares_sellable_now": 40000,
+      "form_144_required": false
+    }
+  },
+  "graded": [
+    "volume_limits.VRNB",
+    "volume_limits.KSTM",
+    "P01.max_shares_sellable_now",
+    "P02.max_shares_sellable_now",
+    "P03.max_shares_sellable_now",
+    "P04.form_144_required",
+    "P05.max_shares_sellable_now",
+    "P06.max_shares_sellable_now",
+    "P07.max_shares_sellable_now",
+    "P08.max_shares_sellable_now",
+    "P09.max_shares_sellable_now",
+    "P14.max_shares_sellable_now",
+    "P14.form_144_required",
+    "P18.max_shares_sellable_now",
+    "P19.form_144_required",
+    "P20.max_shares_sellable_now"
+  ]
+}

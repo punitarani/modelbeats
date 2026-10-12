@@ -1,0 +1,38 @@
+schema_version = "1.4"
+artifacts = []
+
+[task]
+name = "punitarani/legal-cam-reconciliation"
+version = "3.0.0"
+description = "For three tenants of a Los Angeles office tower, compute 2024-2025 lease Taxes, escalations and objection deadlines (California holidays), where the tax exclusions turn on Proposition 13 counterfactuals with a decline-in-value parcel, and project the supplemental taxes and corrected roll value produced by a twelve-step deed and legal-entity transfer chain plus new construction."
+keywords = ["legal", "real-estate", "commercial-lease", "cam", "operating-expenses", "lease-audit", "california", "property-tax", "proposition-13"]
+[[task.authors]]
+name = "ModelBeats"
+
+[metadata]
+author_name = "ModelBeats"
+author_email = "unknown"
+difficulty = "hard"
+category = "legal"
+tags = ["legal", "real-estate", "commercial-lease", "operating-expenses", "california", "property-tax", "change-in-ownership", "supplemental-assessment", "deadlines", "decline-in-value", "new-construction"]
+expert_time_estimate_min = 240
+junior_time_estimate_min = 720
+
+[verifier]
+timeout_sec = 120.0
+collect = []
+
+[verifier.env]
+
+[agent]
+timeout_sec = 1800.0
+
+[environment]
+network_mode = "public"
+build_timeout_sec = 600.0
+os = "linux"
+mcp_servers = []
+
+[environment.env]
+
+[solution.env]

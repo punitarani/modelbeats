@@ -1,0 +1,530 @@
+{
+  "items": [
+    {
+      "id": "acca_occasions_finder",
+      "path": [
+        "acca_occasions_finder"
+      ],
+      "type": "enum",
+      "tag": "nuance",
+      "expected": "jury_beyond_reasonable_doubt"
+    },
+    {
+      "id": "whitfield.points.CR-2012-0790",
+      "path": [
+        "clients",
+        "whitfield",
+        "points_by_case",
+        "CR-2012-0790"
+      ],
+      "type": "int",
+      "tag": "nuance",
+      "expected": 0
+    },
+    {
+      "id": "whitfield.points.M-25-0412",
+      "path": [
+        "clients",
+        "whitfield",
+        "points_by_case",
+        "M-25-0412"
+      ],
+      "type": "int",
+      "tag": "nuance",
+      "expected": 0
+    },
+    {
+      "id": "whitfield.points.CR-2016-1402",
+      "path": [
+        "clients",
+        "whitfield",
+        "points_by_case",
+        "CR-2016-1402"
+      ],
+      "type": "int",
+      "tag": "nuance",
+      "expected": 1
+    },
+    {
+      "id": "whitfield.d",
+      "path": [
+        "clients",
+        "whitfield",
+        "d"
+      ],
+      "type": "int",
+      "tag": "nuance",
+      "expected": 1
+    },
+    {
+      "id": "whitfield.total",
+      "path": [
+        "clients",
+        "whitfield",
+        "total"
+      ],
+      "type": "int",
+      "tag": "nuance",
+      "expected": 6
+    },
+    {
+      "id": "whitfield.acca_predicates.CR-2016-1402",
+      "path": [
+        "clients",
+        "whitfield",
+        "acca_predicates",
+        "CR-2016-1402"
+      ],
+      "type": "bool",
+      "tag": "nuance",
+      "expected": false
+    },
+    {
+      "id": "whitfield.acca_occasions",
+      "path": [
+        "clients",
+        "whitfield",
+        "acca_occasions"
+      ],
+      "type": "int",
+      "tag": "nuance",
+      "expected": 2
+    },
+    {
+      "id": "whitfield.career_offender_predicates",
+      "path": [
+        "clients",
+        "whitfield",
+        "career_offender_predicates"
+      ],
+      "type": "int",
+      "tag": "nuance",
+      "expected": 2
+    },
+    {
+      "id": "whitfield.final_category",
+      "path": [
+        "clients",
+        "whitfield",
+        "final_category"
+      ],
+      "type": "cat",
+      "tag": "nuance",
+      "expected": "III"
+    },
+    {
+      "id": "brandt.acca_predicates.JV-91-0440",
+      "path": [
+        "clients",
+        "brandt",
+        "acca_predicates",
+        "JV-91-0440"
+      ],
+      "type": "bool",
+      "tag": "nuance",
+      "expected": true
+    },
+    {
+      "id": "brandt.acca_predicates.MX-2020-118",
+      "path": [
+        "clients",
+        "brandt",
+        "acca_predicates",
+        "MX-2020-118"
+      ],
+      "type": "bool",
+      "tag": "nuance",
+      "expected": false
+    },
+    {
+      "id": "brandt.points.CR-2017-1702",
+      "path": [
+        "clients",
+        "brandt",
+        "points_by_case",
+        "CR-2017-1702"
+      ],
+      "type": "int",
+      "tag": "nuance",
+      "expected": 3
+    },
+    {
+      "id": "brandt.points.CR-2017-0274",
+      "path": [
+        "clients",
+        "brandt",
+        "points_by_case",
+        "CR-2017-0274"
+      ],
+      "type": "int",
+      "tag": "routine",
+      "expected": 0
+    },
+    {
+      "id": "brandt.total",
+      "path": [
+        "clients",
+        "brandt",
+        "total"
+      ],
+      "type": "int",
+      "tag": "nuance",
+      "expected": 5
+    },
+    {
+      "id": "brandt.final_category",
+      "path": [
+        "clients",
+        "brandt",
+        "final_category"
+      ],
+      "type": "cat",
+      "tag": "nuance",
+      "expected": "VI"
+    },
+    {
+      "id": "ferro.points.GCMO-09-0117",
+      "path": [
+        "clients",
+        "ferro",
+        "points_by_case",
+        "GCMO-09-0117"
+      ],
+      "type": "int",
+      "tag": "routine",
+      "expected": 3
+    },
+    {
+      "id": "ferro.points.CR-2014-0861",
+      "path": [
+        "clients",
+        "ferro",
+        "points_by_case",
+        "CR-2014-0861"
+      ],
+      "type": "int",
+      "tag": "nuance",
+      "expected": 3
+    },
+    {
+      "id": "ferro.points.CR-2025-1130",
+      "path": [
+        "clients",
+        "ferro",
+        "points_by_case",
+        "CR-2025-1130"
+      ],
+      "type": "int",
+      "tag": "nuance",
+      "expected": 3
+    },
+    {
+      "id": "ferro.points.M-24-5590",
+      "path": [
+        "clients",
+        "ferro",
+        "points_by_case",
+        "M-24-5590"
+      ],
+      "type": "int",
+      "tag": "routine",
+      "expected": 1
+    },
+    {
+      "id": "ferro.e",
+      "path": [
+        "clients",
+        "ferro",
+        "e"
+      ],
+      "type": "int",
+      "tag": "nuance",
+      "expected": 1
+    },
+    {
+      "id": "ferro.career_offender_predicates",
+      "path": [
+        "clients",
+        "ferro",
+        "career_offender_predicates"
+      ],
+      "type": "int",
+      "tag": "nuance",
+      "expected": 1
+    },
+    {
+      "id": "ferro.career_offender",
+      "path": [
+        "clients",
+        "ferro",
+        "career_offender"
+      ],
+      "type": "bool",
+      "tag": "nuance",
+      "expected": false
+    },
+    {
+      "id": "pruitt.points.JV-17-0412",
+      "path": [
+        "clients",
+        "pruitt",
+        "points_by_case",
+        "JV-17-0412"
+      ],
+      "type": "int",
+      "tag": "nuance",
+      "expected": 0
+    },
+    {
+      "id": "pruitt.points.JV-18-1175",
+      "path": [
+        "clients",
+        "pruitt",
+        "points_by_case",
+        "JV-18-1175"
+      ],
+      "type": "int",
+      "tag": "nuance",
+      "expected": 2
+    },
+    {
+      "id": "pruitt.points.JV-19-0688",
+      "path": [
+        "clients",
+        "pruitt",
+        "points_by_case",
+        "JV-19-0688"
+      ],
+      "type": "int",
+      "tag": "nuance",
+      "expected": 0
+    },
+    {
+      "id": "pruitt.points.CR-2019-1630",
+      "path": [
+        "clients",
+        "pruitt",
+        "points_by_case",
+        "CR-2019-1630"
+      ],
+      "type": "int",
+      "tag": "nuance",
+      "expected": 2
+    },
+    {
+      "id": "pruitt.e",
+      "path": [
+        "clients",
+        "pruitt",
+        "e"
+      ],
+      "type": "int",
+      "tag": "nuance",
+      "expected": 1
+    },
+    {
+      "id": "pruitt.category_part_a",
+      "path": [
+        "clients",
+        "pruitt",
+        "category_part_a"
+      ],
+      "type": "cat",
+      "tag": "nuance",
+      "expected": "IV"
+    },
+    {
+      "id": "pruitt.career_offender",
+      "path": [
+        "clients",
+        "pruitt",
+        "career_offender"
+      ],
+      "type": "bool",
+      "tag": "nuance",
+      "expected": true
+    },
+    {
+      "id": "kessler.points.M-15-1388",
+      "path": [
+        "clients",
+        "kessler",
+        "points_by_case",
+        "M-15-1388"
+      ],
+      "type": "int",
+      "tag": "nuance",
+      "expected": 1
+    },
+    {
+      "id": "kessler.points.CR-2016-1588",
+      "path": [
+        "clients",
+        "kessler",
+        "points_by_case",
+        "CR-2016-1588"
+      ],
+      "type": "int",
+      "tag": "nuance",
+      "expected": 2
+    },
+    {
+      "id": "kessler.points.M-21-02904",
+      "path": [
+        "clients",
+        "kessler",
+        "points_by_case",
+        "M-21-02904"
+      ],
+      "type": "int",
+      "tag": "nuance",
+      "expected": 0
+    },
+    {
+      "id": "kessler.points.MC-20-0418",
+      "path": [
+        "clients",
+        "kessler",
+        "points_by_case",
+        "MC-20-0418"
+      ],
+      "type": "int",
+      "tag": "nuance",
+      "expected": 1
+    },
+    {
+      "id": "kessler.points.M-21-3302",
+      "path": [
+        "clients",
+        "kessler",
+        "points_by_case",
+        "M-21-3302"
+      ],
+      "type": "int",
+      "tag": "nuance",
+      "expected": 1
+    },
+    {
+      "id": "kessler.e",
+      "path": [
+        "clients",
+        "kessler",
+        "e"
+      ],
+      "type": "int",
+      "tag": "nuance",
+      "expected": 0
+    },
+    {
+      "id": "kessler.category_part_a",
+      "path": [
+        "clients",
+        "kessler",
+        "category_part_a"
+      ],
+      "type": "cat",
+      "tag": "nuance",
+      "expected": "III"
+    },
+    {
+      "id": "ochoa.points.CR-2007-1145",
+      "path": [
+        "clients",
+        "ochoa",
+        "points_by_case",
+        "CR-2007-1145"
+      ],
+      "type": "int",
+      "tag": "routine",
+      "expected": 3
+    },
+    {
+      "id": "ochoa.points.CR-2024-2210",
+      "path": [
+        "clients",
+        "ochoa",
+        "points_by_case",
+        "CR-2024-2210"
+      ],
+      "type": "int",
+      "tag": "nuance",
+      "expected": 1
+    },
+    {
+      "id": "ochoa.e",
+      "path": [
+        "clients",
+        "ochoa",
+        "e"
+      ],
+      "type": "int",
+      "tag": "nuance",
+      "expected": 0
+    },
+    {
+      "id": "ochoa.category_part_a",
+      "path": [
+        "clients",
+        "ochoa",
+        "category_part_a"
+      ],
+      "type": "cat",
+      "tag": "nuance",
+      "expected": "IV"
+    },
+    {
+      "id": "ochoa.career_offender",
+      "path": [
+        "clients",
+        "ochoa",
+        "career_offender"
+      ],
+      "type": "bool",
+      "tag": "nuance",
+      "expected": true
+    },
+    {
+      "id": "halloran.total",
+      "path": [
+        "clients",
+        "halloran",
+        "total"
+      ],
+      "type": "int",
+      "tag": "nuance",
+      "expected": 0
+    },
+    {
+      "id": "halloran.zero_point_eligible",
+      "path": [
+        "clients",
+        "halloran",
+        "zero_point_eligible"
+      ],
+      "type": "bool",
+      "tag": "nuance",
+      "expected": true
+    },
+    {
+      "id": "vance.zero_point_eligible",
+      "path": [
+        "clients",
+        "vance",
+        "zero_point_eligible"
+      ],
+      "type": "bool",
+      "tag": "nuance",
+      "expected": false
+    }
+  ],
+  "graded": [
+    "brandt.total",
+    "ferro.points.M-24-5590",
+    "ferro.career_offender_predicates",
+    "pruitt.category_part_a",
+    "pruitt.points.JV-17-0412",
+    "kessler.points.CR-2016-1588",
+    "ochoa.e",
+    "pruitt.e"
+  ]
+}

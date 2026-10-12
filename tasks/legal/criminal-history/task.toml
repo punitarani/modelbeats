@@ -1,0 +1,38 @@
+schema_version = "1.4"
+artifacts = []
+
+[task]
+name = "punitarani/legal-criminal-history"
+version = "1.0.0"
+description = "From case files and certified prior-record abstracts (no law supplied), compute 2025 USSG Chapter Four criminal history points, categories, career offender and armed career criminal (18 U.S.C. 924(e)) status, and 4C1.1 zero-point eligibility for eight federal defendants."
+keywords = ["legal", "criminal", "federal-sentencing", "sentencing-guidelines", "criminal-history"]
+[[task.authors]]
+name = "ModelBeats"
+
+[metadata]
+author_name = "ModelBeats"
+author_email = "unknown"
+difficulty = "hard"
+category = "legal"
+tags = ["legal", "criminal-law", "federal-sentencing", "ussg", "criminal-history", "computation", "career-offender", "acca"]
+expert_time_estimate_min = 180
+junior_time_estimate_min = 480
+
+[verifier]
+timeout_sec = 120.0
+collect = []
+
+[verifier.env]
+
+[agent]
+timeout_sec = 1800.0
+
+[environment]
+network_mode = "public"
+build_timeout_sec = 600.0
+os = "linux"
+mcp_servers = []
+
+[environment.env]
+
+[solution.env]

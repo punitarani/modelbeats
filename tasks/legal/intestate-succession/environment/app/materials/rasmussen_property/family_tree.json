@@ -1,0 +1,454 @@
+{
+  "matter": "Rasmussen family land",
+  "persons": [
+    {
+      "id": "R01",
+      "name": "Arne Nils Rasmussen",
+      "sex": "M",
+      "born": "1938-03-22",
+      "died": "2020-05-14"
+    },
+    {
+      "id": "R02",
+      "name": "Helen Dahl Rasmussen",
+      "sex": "F",
+      "born": "1944-07-01",
+      "died": "2023-11-02"
+    },
+    {
+      "id": "R03",
+      "name": "Ruth Berg Haines",
+      "sex": "F",
+      "born": "1941-02-10",
+      "died": "2016-06-30"
+    },
+    {
+      "id": "R04",
+      "name": "Mark Arne Rasmussen",
+      "sex": "M",
+      "born": "1964-09-05",
+      "died": "2024-01-09"
+    },
+    {
+      "id": "R05",
+      "name": "Dale Haines",
+      "sex": "M",
+      "born": "1939-12-01",
+      "died": "2010-04-04"
+    },
+    {
+      "id": "R06",
+      "name": "Owen Haines",
+      "sex": "M",
+      "born": "1972-04-18",
+      "died": null
+    },
+    {
+      "id": "R07",
+      "name": "Peter Lund",
+      "sex": "M",
+      "born": "1966-01-12",
+      "died": "2018-02-03"
+    },
+    {
+      "id": "R08",
+      "name": "Gunnar Lund",
+      "sex": "M",
+      "born": "1940-08-08",
+      "died": "1999-10-21"
+    },
+    {
+      "id": "R09",
+      "name": "Carol Ness Lund",
+      "sex": "F",
+      "born": "1967-05-05",
+      "died": "2021-08-19"
+    },
+    {
+      "id": "R10",
+      "name": "Sara Lund Price",
+      "sex": "F",
+      "born": "1989-03-03",
+      "died": null
+    },
+    {
+      "id": "R11",
+      "name": "Thomas Lund",
+      "sex": "M",
+      "born": "1991-10-10",
+      "died": "2025-03-22"
+    },
+    {
+      "id": "R12",
+      "name": "Vincent Lund",
+      "sex": "M",
+      "born": "1993-06-06",
+      "died": "2022-09-14"
+    },
+    {
+      "id": "R13",
+      "name": "Zoe Price",
+      "sex": "F",
+      "born": "2015-04-04",
+      "died": null
+    },
+    {
+      "id": "R14",
+      "name": "Adam Price",
+      "sex": "M",
+      "born": "1987-11-11",
+      "died": null
+    },
+    {
+      "id": "R15",
+      "name": "Leah Lund",
+      "sex": "F",
+      "born": "2016-01-20",
+      "died": null
+    },
+    {
+      "id": "R16",
+      "name": "Eli Lund",
+      "sex": "M",
+      "born": "2018-07-07",
+      "died": null
+    },
+    {
+      "id": "R17",
+      "name": "Megan Cole",
+      "sex": "F",
+      "born": "1994-02-14",
+      "died": null
+    },
+    {
+      "id": "R18",
+      "name": "Nancy Webb",
+      "sex": "F",
+      "born": "1966-12-12",
+      "died": null
+    },
+    {
+      "id": "R19",
+      "name": "Lily Rasmussen",
+      "sex": "F",
+      "born": "1990-02-02",
+      "died": "2019-08-11"
+    },
+    {
+      "id": "R20",
+      "name": "Jordan Pike",
+      "sex": "M",
+      "born": "1989-06-30",
+      "died": "2019-08-11"
+    },
+    {
+      "id": "R21",
+      "name": "Benjamin Carver",
+      "sex": "M",
+      "born": "2017-05-05",
+      "died": null
+    },
+    {
+      "id": "R22",
+      "name": "Joan Webb Carver",
+      "sex": "F",
+      "born": "1969-09-09",
+      "died": null
+    },
+    {
+      "id": "R23",
+      "name": "Richard Carver",
+      "sex": "M",
+      "born": "1968-03-03",
+      "died": null
+    },
+    {
+      "id": "R24",
+      "name": "Harold Webb",
+      "sex": "M",
+      "born": "1938-01-01",
+      "died": "2005-05-05"
+    },
+    {
+      "id": "R25",
+      "name": "Edith Webb",
+      "sex": "F",
+      "born": "1940-02-02",
+      "died": "2012-12-12"
+    },
+    {
+      "id": "R26",
+      "name": "Dana Moss",
+      "sex": "F",
+      "born": "1970-10-10",
+      "died": null
+    },
+    {
+      "id": "R27",
+      "name": "Kyle Moss",
+      "sex": "M",
+      "born": "1996-08-08",
+      "died": null
+    }
+  ],
+  "parent_child": [
+    {
+      "parent": "R01",
+      "child": "R04",
+      "type": "genetic"
+    },
+    {
+      "parent": "R03",
+      "child": "R04",
+      "type": "genetic"
+    },
+    {
+      "parent": "R03",
+      "child": "R06",
+      "type": "genetic"
+    },
+    {
+      "parent": "R05",
+      "child": "R06",
+      "type": "genetic"
+    },
+    {
+      "parent": "R08",
+      "child": "R07",
+      "type": "genetic"
+    },
+    {
+      "parent": "R02",
+      "child": "R07",
+      "type": "genetic"
+    },
+    {
+      "parent": "R07",
+      "child": "R10",
+      "type": "genetic"
+    },
+    {
+      "parent": "R09",
+      "child": "R10",
+      "type": "genetic"
+    },
+    {
+      "parent": "R07",
+      "child": "R11",
+      "type": "genetic"
+    },
+    {
+      "parent": "R09",
+      "child": "R11",
+      "type": "genetic"
+    },
+    {
+      "parent": "R07",
+      "child": "R12",
+      "type": "genetic"
+    },
+    {
+      "parent": "R09",
+      "child": "R12",
+      "type": "genetic"
+    },
+    {
+      "parent": "R10",
+      "child": "R13",
+      "type": "genetic"
+    },
+    {
+      "parent": "R14",
+      "child": "R13",
+      "type": "genetic"
+    },
+    {
+      "parent": "R12",
+      "child": "R15",
+      "type": "genetic"
+    },
+    {
+      "parent": "R17",
+      "child": "R15",
+      "type": "genetic"
+    },
+    {
+      "parent": "R12",
+      "child": "R16",
+      "type": "genetic"
+    },
+    {
+      "parent": "R17",
+      "child": "R16",
+      "type": "genetic"
+    },
+    {
+      "parent": "R04",
+      "child": "R19",
+      "type": "genetic"
+    },
+    {
+      "parent": "R18",
+      "child": "R19",
+      "type": "genetic"
+    },
+    {
+      "parent": "R19",
+      "child": "R21",
+      "type": "genetic"
+    },
+    {
+      "parent": "R20",
+      "child": "R21",
+      "type": "genetic"
+    },
+    {
+      "parent": "R22",
+      "child": "R21",
+      "type": "adoptive"
+    },
+    {
+      "parent": "R23",
+      "child": "R21",
+      "type": "adoptive"
+    },
+    {
+      "parent": "R24",
+      "child": "R18",
+      "type": "genetic"
+    },
+    {
+      "parent": "R25",
+      "child": "R18",
+      "type": "genetic"
+    },
+    {
+      "parent": "R24",
+      "child": "R22",
+      "type": "genetic"
+    },
+    {
+      "parent": "R25",
+      "child": "R22",
+      "type": "genetic"
+    },
+    {
+      "parent": "R26",
+      "child": "R27",
+      "type": "genetic"
+    }
+  ],
+  "marriages": [
+    {
+      "spouses": [
+        "R01",
+        "R03"
+      ],
+      "married": "1962-06-16",
+      "ended": "1970-09-01",
+      "ended_by": "divorce"
+    },
+    {
+      "spouses": [
+        "R03",
+        "R05"
+      ],
+      "married": "1971-05-01",
+      "ended": "2010-04-04",
+      "ended_by": "death of R05"
+    },
+    {
+      "spouses": [
+        "R02",
+        "R08"
+      ],
+      "married": "1965-04-24",
+      "ended": "1999-10-21",
+      "ended_by": "death of R08"
+    },
+    {
+      "spouses": [
+        "R01",
+        "R02"
+      ],
+      "married": "2000-06-10",
+      "ended": "2020-05-14",
+      "ended_by": "death of R01"
+    },
+    {
+      "spouses": [
+        "R07",
+        "R09"
+      ],
+      "married": "1988-07-09",
+      "ended": "2018-02-03",
+      "ended_by": "death of R07"
+    },
+    {
+      "spouses": [
+        "R04",
+        "R18"
+      ],
+      "married": "1988-05-14",
+      "ended": "1995-11-30",
+      "ended_by": "divorce"
+    },
+    {
+      "spouses": [
+        "R04",
+        "R26"
+      ],
+      "married": "2015-09-19",
+      "ended": "2023-08-25",
+      "ended_by": "divorce"
+    },
+    {
+      "spouses": [
+        "R10",
+        "R14"
+      ],
+      "married": "2013-06-01",
+      "ended": null,
+      "ended_by": null
+    },
+    {
+      "spouses": [
+        "R12",
+        "R17"
+      ],
+      "married": "2014-05-17",
+      "ended": "2019-12-02",
+      "ended_by": "divorce"
+    },
+    {
+      "spouses": [
+        "R22",
+        "R23"
+      ],
+      "married": "1995-08-12",
+      "ended": null,
+      "ended_by": null
+    },
+    {
+      "spouses": [
+        "R24",
+        "R25"
+      ],
+      "married": "1964-06-06",
+      "ended": "2005-05-05",
+      "ended_by": "death of R24"
+    }
+  ],
+  "adoptions": [
+    {
+      "adoptee": "R21",
+      "adoptive_parents": [
+        "R22",
+        "R23"
+      ],
+      "decree_date": "2020-03-16",
+      "note": "Adoption of Benjamin Pike (born 2017) by his great-aunt Joan Webb Carver, the sister of his late mother's mother, Nancy Webb, and Joan's husband Richard Carver, after the deaths of both of the child's parents."
+    }
+  ],
+  "notes": "Genealogical research report prepared for counsel. Dates only. A null 'died' value means the researcher found the person living as of September 30, 2026. Parent-child links record genetic and adoptive relationships as found in birth, adoption and court records, without legal conclusions. Only persons relevant to the Rasmussen family's land are included; the researcher found no other children of Arne Rasmussen, Ruth Berg Haines, Peter Lund, Carol Ness Lund, Mark Rasmussen, Thomas Lund or Vincent Lund."
+}

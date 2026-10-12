@@ -1,0 +1,61 @@
+{
+  "E1": {
+    "net_intestate_estate": 1240000.0,
+    "distribution": {
+      "V02": 732500.0,
+      "V03": 253750.0,
+      "V04": 253750.0
+    }
+  },
+  "E2": {
+    "net_intestate_estate": 612000.0,
+    "distribution": {
+      "ESTATE:M04": 306000.0,
+      "M11": 153000.0,
+      "M12": 153000.0
+    }
+  },
+  "E3": {
+    "net_intestate_estate": 1134000.0,
+    "distribution": {
+      "W16": 378000.0,
+      "W17": 94500.0,
+      "W20": 94500.0,
+      "W21": 189000.0,
+      "W22": 378000.0
+    }
+  },
+  "E4": {
+    "net_intestate_estate": 708000.0,
+    "distribution": {
+      "B23": 708000.0
+    }
+  },
+  "E5": {
+    "net_intestate_estate": 858000.0,
+    "distribution": {
+      "P07": 429000.0,
+      "P08": 143000.0,
+      "P09": 143000.0,
+      "P10": 143000.0
+    }
+  },
+  "E6": {
+    "net_intestate_estate": 324000.0,
+    "distribution": {
+      "ESTATE:T02": 324000.0
+    }
+  },
+  "rasmussen_property": {
+    "montana_ranch": {
+      "R06": "1/2",
+      "R10": "1/6",
+      "R13": "1/12",
+      "R15": "1/8",
+      "R16": "1/8"
+    },
+    "north_dakota_tract": {
+      "R21": "1"
+    }
+  }
+}

@@ -1,0 +1,136 @@
+{
+  "estate_id": "E6",
+  "estate_name": "Estate of Raymond Earl Teller",
+  "decedent": "T01",
+  "notes": "Genealogical research report prepared for the personal representative. Dates only; for exact times of death see the vital records in this folder. A null 'died' value means the researcher found the person living as of September 30, 2026. 'sex' is recorded to identify paternal and maternal lines. Parent-child links record genetic and adoptive relationships as found in birth, adoption and court records, without legal conclusions. Heir search (Copper Line Genealogy, certified report of August 28, 2026): Arnold Teller and Vivian Kos Teller were each the only child of their parents, and Emil, Hanna, Stefan and Marta each had no siblings who left descendants. Apart from Joyce, no living relative of Raymond by blood or adoption, of any degree, was found.",
+  "persons": [
+    {
+      "id": "T01",
+      "name": "Raymond Earl Teller",
+      "sex": "M",
+      "born": "1961-02-17",
+      "died": "2026-04-11"
+    },
+    {
+      "id": "T02",
+      "name": "Joyce Ann Teller",
+      "sex": "F",
+      "born": "1964-09-03",
+      "died": "2026-04-14"
+    },
+    {
+      "id": "T03",
+      "name": "Arnold Teller",
+      "sex": "M",
+      "born": "1932-07-12",
+      "died": "2001-05-30"
+    },
+    {
+      "id": "T04",
+      "name": "Vivian Kos Teller",
+      "sex": "F",
+      "born": "1935-11-08",
+      "died": "2016-02-26"
+    },
+    {
+      "id": "T05",
+      "name": "Emil Teller",
+      "sex": "M",
+      "born": "1904-03-03",
+      "died": "1971-09-09"
+    },
+    {
+      "id": "T06",
+      "name": "Hanna Teller",
+      "sex": "F",
+      "born": "1908-12-12",
+      "died": "1980-01-15"
+    },
+    {
+      "id": "T07",
+      "name": "Stefan Kos",
+      "sex": "M",
+      "born": "1907-06-20",
+      "died": "1975-04-04"
+    },
+    {
+      "id": "T08",
+      "name": "Marta Kos",
+      "sex": "F",
+      "born": "1910-02-14",
+      "died": "1990-10-10"
+    }
+  ],
+  "parent_child": [
+    {
+      "parent": "T03",
+      "child": "T01",
+      "type": "genetic"
+    },
+    {
+      "parent": "T04",
+      "child": "T01",
+      "type": "genetic"
+    },
+    {
+      "parent": "T03",
+      "child": "T02",
+      "type": "genetic"
+    },
+    {
+      "parent": "T04",
+      "child": "T02",
+      "type": "genetic"
+    },
+    {
+      "parent": "T05",
+      "child": "T03",
+      "type": "genetic"
+    },
+    {
+      "parent": "T06",
+      "child": "T03",
+      "type": "genetic"
+    },
+    {
+      "parent": "T07",
+      "child": "T04",
+      "type": "genetic"
+    },
+    {
+      "parent": "T08",
+      "child": "T04",
+      "type": "genetic"
+    }
+  ],
+  "marriages": [
+    {
+      "spouses": [
+        "T03",
+        "T04"
+      ],
+      "married": "1958-06-14",
+      "ended": "2001-05-30",
+      "ended_by": "death of T03"
+    },
+    {
+      "spouses": [
+        "T05",
+        "T06"
+      ],
+      "married": "1930-05-01",
+      "ended": "1971-09-09",
+      "ended_by": "death of T05"
+    },
+    {
+      "spouses": [
+        "T07",
+        "T08"
+      ],
+      "married": "1933-09-30",
+      "ended": "1975-04-04",
+      "ended_by": "death of T07"
+    }
+  ],
+  "adoptions": []
+}

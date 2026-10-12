@@ -1,0 +1,434 @@
+{
+  "scenarios": {
+    "S1": {
+      "closing_merger_consideration": 30138473.4,
+      "carve_out_payments": {
+        "okafor": 905447.7,
+        "raman": 646748.36,
+        "lindqvist": 388049.01,
+        "diallo": 258699.34,
+        "ortiz": 0.0
+      },
+      "okafor_transaction_bonus": 344552.3,
+      "class_totals": {
+        "series_c": 18000000.0,
+        "series_b": 6000000.0,
+        "series_a": 4950381.77,
+        "series_seed": 1188091.63,
+        "common": 0.0,
+        "options": 0.0,
+        "warrants": 0.0,
+        "notes": 7998082.19
+      },
+      "holders": {
+        "northgate": 16359205.48,
+        "meridian": 9450000.0,
+        "calloway": 3990076.35,
+        "redwood": 4358022.01,
+        "sandpiper": 3504015.09,
+        "brightline": 475236.65,
+        "okafor": 0.0,
+        "okafor_trust": 0.0,
+        "lindqvist": 0.0,
+        "brandt": 0.0,
+        "ortiz": 0.0,
+        "raman": 0.0,
+        "diallo": 0.0,
+        "choi": 0.0,
+        "harbor_lane": 0.0,
+        "other_common": 0.0,
+        "other_options": 0.0
+      },
+      "compensation_payments": {
+        "okafor": {
+          "federal_income_tax": 339500.0,
+          "section_4999_excise": 0.0,
+          "social_security": 0.0,
+          "medicare": 29375.0,
+          "state_income_tax": 127875.0,
+          "state_disability_insurance": 16250.0,
+          "gross": 1250000.0,
+          "net": 737000.0
+        },
+        "raman": {
+          "federal_income_tax": 142284.64,
+          "section_4999_excise": 0.0,
+          "social_security": 0.0,
+          "medicare": 15198.59,
+          "state_income_tax": 66162.36,
+          "state_disability_insurance": 8407.73,
+          "gross": 646748.36,
+          "net": 414695.04
+        },
+        "lindqvist": {
+          "federal_income_tax": 85370.78,
+          "section_4999_excise": 0.0,
+          "social_security": 0.0,
+          "medicare": 9119.15,
+          "state_income_tax": 39697.41,
+          "state_disability_insurance": 5044.64,
+          "gross": 388049.01,
+          "net": 248817.03
+        },
+        "diallo": {
+          "federal_income_tax": 56913.86,
+          "section_4999_excise": 0.0,
+          "social_security": 434.0,
+          "medicare": 5876.93,
+          "state_income_tax": 0.0,
+          "state_disability_insurance": 0.0,
+          "gross": 258699.34,
+          "net": 195474.55
+        },
+        "tanaka": {
+          "federal_income_tax": 105600.0,
+          "section_4999_excise": 0.0,
+          "social_security": 0.0,
+          "medicare": 11280.0,
+          "state_income_tax": 0.0,
+          "state_disability_insurance": 0.0,
+          "gross": 480000.0,
+          "net": 363120.0
+        },
+        "choi": {
+          "federal_income_tax": 0.0,
+          "section_4999_excise": 0.0,
+          "social_security": 0.0,
+          "medicare": 0.0,
+          "state_income_tax": 0.0,
+          "state_disability_insurance": 0.0,
+          "gross": 0.0,
+          "net": 0.0
+        }
+      }
+    },
+    "S2": {
+      "closing_merger_consideration": 59934513.4,
+      "carve_out_payments": {
+        "okafor": 1800607.7,
+        "raman": 1286148.36,
+        "lindqvist": 771689.01,
+        "diallo": 514459.34,
+        "ortiz": 0.0
+      },
+      "okafor_transaction_bonus": 0.0,
+      "class_totals": {
+        "series_c": 18000000.0,
+        "series_b": 12628237.16,
+        "series_a": 9000000.0,
+        "series_seed": 5302589.73,
+        "common": 11599415.03,
+        "options": 2147341.68,
+        "warrants": 63847.11,
+        "notes": 7998082.19
+      },
+      "holders": {
+        "northgate": 18347676.63,
+        "meridian": 11438471.15,
+        "calloway": 8114118.58,
+        "redwood": 6625808.22,
+        "sandpiper": 6944622.33,
+        "brightline": 2121035.89,
+        "okafor": 6834072.57,
+        "okafor_trust": 397694.23,
+        "lindqvist": 3314118.58,
+        "brandt": 0.0,
+        "ortiz": 66282.37,
+        "raman": 205599.86,
+        "diallo": 0.0,
+        "choi": 0.0,
+        "harbor_lane": 63847.11,
+        "other_common": 1590776.92,
+        "other_options": 675388.46
+      },
+      "compensation_payments": {
+        "okafor": {
+          "federal_income_tax": 1011775.59,
+          "section_4999_excise": 0.0,
+          "social_security": 0.0,
+          "medicare": 72073.58,
+          "state_income_tax": 313750.12,
+          "state_disability_insurance": 39870.49,
+          "gross": 3066961.06,
+          "net": 1629491.28
+        },
+        "raman": {
+          "federal_income_tax": 410946.84,
+          "section_4999_excise": 0.0,
+          "social_security": 0.0,
+          "medicare": 35056.08,
+          "state_income_tax": 152605.84,
+          "state_disability_insurance": 19392.73,
+          "gross": 1491748.22,
+          "net": 873746.73
+        },
+        "lindqvist": {
+          "federal_income_tax": 169771.58,
+          "section_4999_excise": 0.0,
+          "social_security": 0.0,
+          "medicare": 18134.69,
+          "state_income_tax": 78943.79,
+          "state_disability_insurance": 10031.96,
+          "gross": 771689.01,
+          "net": 494806.99
+        },
+        "diallo": {
+          "federal_income_tax": 113181.06,
+          "section_4999_excise": 0.0,
+          "social_security": 434.0,
+          "medicare": 11887.29,
+          "state_income_tax": 0.0,
+          "state_disability_insurance": 0.0,
+          "gross": 514459.34,
+          "net": 388956.99
+        },
+        "tanaka": {
+          "federal_income_tax": 184800.0,
+          "section_4999_excise": 0.0,
+          "social_security": 0.0,
+          "medicare": 19740.0,
+          "state_income_tax": 0.0,
+          "state_disability_insurance": 0.0,
+          "gross": 840000.0,
+          "net": 635460.0
+        },
+        "choi": {
+          "federal_income_tax": 0.0,
+          "section_4999_excise": 0.0,
+          "social_security": 0.0,
+          "medicare": 0.0,
+          "state_income_tax": 0.0,
+          "state_disability_insurance": 0.0,
+          "gross": 0.0,
+          "net": 0.0
+        }
+      }
+    },
+    "S3": {
+      "closing_merger_consideration": 99585500.0,
+      "carve_out_payments": {
+        "okafor": 0.0,
+        "raman": 0.0,
+        "lindqvist": 0.0,
+        "diallo": 0.0,
+        "ortiz": 0.0
+      },
+      "okafor_transaction_bonus": 1250000.0,
+      "class_totals": {
+        "series_c": 18000000.0,
+        "series_b": 18000000.0,
+        "series_a": 16091852.65,
+        "series_seed": 10298785.7,
+        "common": 22528593.71,
+        "options": 5019890.41,
+        "warrants": 251204.46,
+        "notes": 7077946.28
+      },
+      "holders": {
+        "northgate": 19497447.97,
+        "meridian": 13050000.0,
+        "calloway": 12218370.53,
+        "redwood": 10409250.76,
+        "sandpiper": 11461349.31,
+        "brightline": 4119514.28,
+        "okafor": 13485258.46,
+        "okafor_trust": 772408.93,
+        "lindqvist": 6436741.06,
+        "brandt": 0.0,
+        "ortiz": 128734.82,
+        "raman": 559496.66,
+        "diallo": 127145.76,
+        "choi": 0.0,
+        "harbor_lane": 251204.46,
+        "other_common": 3089635.71,
+        "other_options": 1661714.51
+      },
+      "compensation_payments": {
+        "okafor": {
+          "federal_income_tax": 1327967.39,
+          "section_4999_excise": 0.0,
+          "social_security": 0.0,
+          "medicare": 92156.04,
+          "state_income_tax": 401172.87,
+          "state_disability_insurance": 50979.94,
+          "gross": 3921533.48,
+          "net": 2049257.24
+        },
+        "raman": {
+          "federal_income_tax": 123089.27,
+          "section_4999_excise": 0.0,
+          "social_security": 0.0,
+          "medicare": 13148.17,
+          "state_income_tax": 57236.51,
+          "state_disability_insurance": 7273.46,
+          "gross": 559496.66,
+          "net": 358749.25
+        },
+        "lindqvist": {
+          "federal_income_tax": 0.0,
+          "section_4999_excise": 0.0,
+          "social_security": 0.0,
+          "medicare": 0.0,
+          "state_income_tax": 0.0,
+          "state_disability_insurance": 0.0,
+          "gross": 0.0,
+          "net": 0.0
+        },
+        "diallo": {
+          "federal_income_tax": 27972.07,
+          "section_4999_excise": 0.0,
+          "social_security": 434.0,
+          "medicare": 2785.43,
+          "state_income_tax": 0.0,
+          "state_disability_insurance": 0.0,
+          "gross": 127145.76,
+          "net": 95954.26
+        },
+        "tanaka": {
+          "federal_income_tax": 275500.0,
+          "section_4999_excise": 140000.0,
+          "social_security": 0.0,
+          "medicare": 27025.0,
+          "state_income_tax": 0.0,
+          "state_disability_insurance": 0.0,
+          "gross": 1150000.0,
+          "net": 707475.0
+        },
+        "choi": {
+          "federal_income_tax": 0.0,
+          "section_4999_excise": 0.0,
+          "social_security": 0.0,
+          "medicare": 0.0,
+          "state_income_tax": 0.0,
+          "state_disability_insurance": 0.0,
+          "gross": 0.0,
+          "net": 0.0
+        }
+      }
+    },
+    "S4": {
+      "closing_merger_consideration": 130385500.0,
+      "carve_out_payments": {
+        "okafor": 0.0,
+        "raman": 0.0,
+        "lindqvist": 0.0,
+        "diallo": 0.0,
+        "ortiz": 0.0
+      },
+      "okafor_transaction_bonus": 1250000.0,
+      "class_totals": {
+        "series_c": 18000000.0,
+        "series_b": 18796221.61,
+        "series_a": 23495277.01,
+        "series_seed": 15036977.29,
+        "common": 32893387.82,
+        "options": 8017112.61,
+        "warrants": 428886.65,
+        "notes": 10334317.13
+      },
+      "holders": {
+        "northgate": 22208922.44,
+        "meridian": 13288866.48,
+        "calloway": 14097166.21,
+        "redwood": 15198264.32,
+        "sandpiper": 16734404.84,
+        "brightline": 6014790.91,
+        "okafor": 19792976.01,
+        "okafor_trust": 1127773.3,
+        "lindqvist": 9398110.8,
+        "brandt": 0.0,
+        "ortiz": 187962.22,
+        "raman": 895118.17,
+        "diallo": 290021.09,
+        "choi": 134565.57,
+        "harbor_lane": 428886.65,
+        "other_common": 4511093.19,
+        "other_options": 2693257.91
+      },
+      "compensation_payments": {
+        "okafor": {
+          "federal_income_tax": 1821035.45,
+          "section_4999_excise": 0.0,
+          "social_security": 0.0,
+          "medicare": 123472.52,
+          "state_income_tax": 537499.53,
+          "state_disability_insurance": 68303.95,
+          "gross": 5254149.86,
+          "net": 2703838.41
+        },
+        "raman": {
+          "federal_income_tax": 196926.0,
+          "section_4999_excise": 0.0,
+          "social_security": 0.0,
+          "medicare": 21035.28,
+          "state_income_tax": 91570.59,
+          "state_disability_insurance": 11636.54,
+          "gross": 895118.17,
+          "net": 573949.76
+        },
+        "lindqvist": {
+          "federal_income_tax": 0.0,
+          "section_4999_excise": 0.0,
+          "social_security": 0.0,
+          "medicare": 0.0,
+          "state_income_tax": 0.0,
+          "state_disability_insurance": 0.0,
+          "gross": 0.0,
+          "net": 0.0
+        },
+        "diallo": {
+          "federal_income_tax": 63804.64,
+          "section_4999_excise": 0.0,
+          "social_security": 434.0,
+          "medicare": 6613.0,
+          "state_income_tax": 0.0,
+          "state_disability_insurance": 0.0,
+          "gross": 290021.09,
+          "net": 219169.45
+        },
+        "tanaka": {
+          "federal_income_tax": 405000.0,
+          "section_4999_excise": 210000.0,
+          "social_security": 0.0,
+          "medicare": 35250.0,
+          "state_income_tax": 0.0,
+          "state_disability_insurance": 0.0,
+          "gross": 1500000.0,
+          "net": 849750.0
+        },
+        "choi": {
+          "federal_income_tax": 0.0,
+          "section_4999_excise": 0.0,
+          "social_security": 0.0,
+          "medicare": 0.0,
+          "state_income_tax": 0.0,
+          "state_disability_insurance": 0.0,
+          "gross": 134565.57,
+          "net": 134565.57
+        }
+      }
+    }
+  },
+  "graded": [
+    "S1.compensation_payments.okafor.net",
+    "S3.compensation_payments.okafor.net",
+    "S4.compensation_payments.okafor.net",
+    "S3.compensation_payments.tanaka.net",
+    "S4.compensation_payments.tanaka.net",
+    "S3.compensation_payments.tanaka.section_4999_excise",
+    "S4.compensation_payments.tanaka.section_4999_excise",
+    "S1.okafor_transaction_bonus",
+    "S3.okafor_transaction_bonus",
+    "S4.okafor_transaction_bonus",
+    "S2.compensation_payments.okafor.net",
+    "S2.compensation_payments.raman.net",
+    "S3.compensation_payments.raman.net",
+    "S3.compensation_payments.diallo.net",
+    "S1.compensation_payments.tanaka.net",
+    "S1.compensation_payments.tanaka.section_4999_excise",
+    "S4.compensation_payments.choi.net",
+    "S3.class_totals.series_b",
+    "S3.holders.ortiz",
+    "S2.holders.brandt"
+  ]
+}

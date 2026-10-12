@@ -1,0 +1,33 @@
+entry,date,certificate,holder_name,class_series,shares,action,reference
+1,2016-03-01,CS-1,Dana Okafor,Common,4500000,Issued,Founder Restricted Stock Purchase Agreement
+2,2016-03-01,CS-2,Marcus Lindqvist,Common,3000000,Issued,Founder Restricted Stock Purchase Agreement
+3,2016-03-01,CS-3,Erik Brandt,Common,1500000,Issued,Founder Restricted Stock Purchase Agreement (subject to Company repurchase option on unvested shares)
+4,2017-05-10,SS-1,"Sandpiper Seed Fund I, L.P.",Series Seed Preferred,2400000,Issued,Series Seed Preferred Stock Purchase Agreement
+5,2017-05-10,SS-2,Brightline Angels LLC,Series Seed Preferred,1600000,Issued,Series Seed Preferred Stock Purchase Agreement
+6,2018-09-04,CS-4,Wen Li,Common,200000,Issued,Option exercise (Grant E-004)
+7,2019-02-28,CS-3,Erik Brandt,Common,1500000,Cancelled,Surrendered on exercise of Company repurchase option (RSPA Sec. 3) as to 600000 unvested shares
+8,2019-02-28,CS-5,Erik Brandt,Common,900000,Issued,Balance certificate for vested shares retained after repurchase
+9,2019-02-28,CS-6,"Halvorsen Robotics, Inc.",Common,600000,Issued,Repurchased from E. Brandt under RSPA Sec. 3; held as treasury stock
+10,2019-06-20,PA-1,"Redwood Hollow Ventures, L.P.",Series A Preferred,3360000,Issued,Series A Preferred Stock Purchase Agreement
+11,2019-06-20,PA-2,"Sandpiper Seed Fund I, L.P.",Series A Preferred,1440000,Issued,Series A Preferred Stock Purchase Agreement
+12,2019-06-20,PA-3,"Calloway Capital Fund II, L.P.",Series A Preferred,1200000,Issued,Series A Preferred Stock Purchase Agreement
+13,2020-11-12,CS-7,Rosa Jimenez,Common,250000,Issued,Common Stock Purchase Agreement ($0.08 per share)
+14,2021-04-12,CS-1,Dana Okafor,Common,4500000,Cancelled,Transfer of 300000 shares by gift (estate planning)
+15,2021-04-12,CS-8,Dana Okafor,Common,4200000,Issued,Balance certificate
+16,2021-04-12,CS-9,Okafor Family Trust dated March 2 2021,Common,300000,Issued,Gift transfer from D. Okafor
+17,2021-09-02,PB-1,"Northgate Ventures III, L.P.",Series B Preferred,1000000,Issued,Series B Preferred Stock Purchase Agreement
+18,2021-09-02,PB-2,"Meridian Growth Partners II, L.P.",Series B Preferred,1500000,Issued,Series B Preferred Stock Purchase Agreement
+19,2021-09-02,PB-3,"Calloway Capital Fund II, L.P.",Series B Preferred,2500000,Issued,Series B Preferred Stock Purchase Agreement
+20,2022-07-18,CS-10,Tobias Reinholt,Common,180000,Issued,Option exercise (Grant E-014)
+21,2023-03-06,CS-11,Wen Li,Common,120000,Issued,Option exercise (Grant E-004)
+22,2024-02-27,PC-1,"Northgate Ventures III, L.P.",Series C Preferred,2400000,Issued,Series C Preferred Stock Purchase Agreement
+23,2024-02-27,PC-2,"Meridian Growth Partners II, L.P.",Series C Preferred,1600000,Issued,Series C Preferred Stock Purchase Agreement
+24,2024-03-15,CS-2,Marcus Lindqvist,Common,3000000,Cancelled,Secondary sale of 500000 shares to Northgate Ventures III; Company ROFR and co-sale rights waived
+25,2024-03-15,CS-12,Marcus Lindqvist,Common,2500000,Issued,Balance certificate
+26,2024-03-15,CS-13,"Northgate Ventures III, L.P.",Common,500000,Issued,Secondary purchase from M. Lindqvist
+27,2024-10-01,CS-14,Priyanka Shah,Common,300000,Issued,Option exercise (Grant E-017)
+28,2025-05-19,CS-15,Daniel Osei,Common,150000,Issued,Option exercise (Grant E-019)
+29,2026-08-14,PC-1,"Northgate Ventures III, L.P.",Series C Preferred,2400000,Cancelled,Secondary sale of 100000 shares to Meridian Growth Partners II; ROFR waived
+30,2026-08-14,PC-3,"Northgate Ventures III, L.P.",Series C Preferred,2300000,Issued,Balance certificate
+31,2026-08-14,PC-4,"Meridian Growth Partners II, L.P.",Series C Preferred,100000,Issued,Secondary purchase from Northgate Ventures III
+32,2026-09-15,CS-16,Javier Ortiz,Common,50000,Issued,Option exercise (Grant H-121)

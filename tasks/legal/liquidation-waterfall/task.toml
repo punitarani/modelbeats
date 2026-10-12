@@ -1,0 +1,38 @@
+schema_version = "1.4"
+artifacts = []
+
+[task]
+name = "punitarani/legal-liquidation-waterfall"
+version = "1.0.0"
+description = "Prepare a Delaware merger closing allocation and closing payroll schedule for four sale prices from a venture-backed company's deal file: liquidation waterfall, appraisal and charter-amendment validity, a 280G cleansing vote, a short-tenure executive's 280G/4999 excise, and 2026 federal and California withholding on option cash-outs, carve-out payments and bonuses."
+keywords = ["legal", "corporate", "m&a", "venture capital", "liquidation preference", "waterfall", "appraisal", "280G", "DGCL", "payroll withholding"]
+[[task.authors]]
+name = "ModelBeats"
+
+[metadata]
+author_name = "ModelBeats"
+author_email = "unknown"
+difficulty = "hard"
+category = "legal"
+tags = ["legal", "corporate", "m&a", "venture-capital", "liquidation-preference", "cap-table", "delaware"]
+expert_time_estimate_min = 300
+junior_time_estimate_min = 900
+
+[verifier]
+timeout_sec = 120.0
+collect = []
+
+[verifier.env]
+
+[agent]
+timeout_sec = 1800.0
+
+[environment]
+network_mode = "public"
+build_timeout_sec = 600.0
+os = "linux"
+mcp_servers = []
+
+[environment.env]
+
+[solution.env]

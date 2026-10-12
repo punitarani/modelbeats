@@ -1,0 +1,74 @@
+{
+  "tenants": {
+    "brightwater": {
+      "2024": {
+        "taxes": 3696454.56,
+        "tenant_share": 75794.61,
+        "objection_deadline": "2025-09-10"
+      },
+      "2025": {
+        "taxes": 4339335.57,
+        "tenant_share": 139414.12,
+        "objection_deadline": "2026-10-20"
+      }
+    },
+    "harlow_pike": {
+      "2024": {
+        "taxes": 3284048.3,
+        "tenant_share": 22138.94,
+        "objection_deadline": "2027-02-16"
+      },
+      "2025": {
+        "taxes": 3370028.19,
+        "tenant_share": 49330.08,
+        "objection_deadline": "2027-09-27"
+      }
+    },
+    "copperline": {
+      "2024": {
+        "taxes": 3353048.3,
+        "tenant_share": 36597.87,
+        "objection_deadline": "2025-08-25"
+      },
+      "2025": {
+        "taxes": 3232028.19,
+        "tenant_share": 37485.91,
+        "objection_deadline": "2026-10-13"
+      }
+    }
+  },
+  "office_taxable_value_2024_25": 310590000.0,
+  "supplemental_taxes": {
+    "5101-001-010": {
+      "2022-23": 122847.82,
+      "2023-24": 667424.59,
+      "2025-26": 66890.17,
+      "2026-27": 171013.04
+    },
+    "5101-001-011": {
+      "2022-23": 0.0,
+      "2023-24": 0.0,
+      "2025-26": 13583.28,
+      "2026-27": 52409.38
+    }
+  },
+  "graded": [
+    "brightwater.2024.objection_deadline",
+    "brightwater.2025.objection_deadline",
+    "harlow_pike.2024.objection_deadline",
+    "harlow_pike.2025.taxes",
+    "harlow_pike.2025.tenant_share",
+    "harlow_pike.2025.objection_deadline",
+    "copperline.2025.taxes",
+    "copperline.2025.tenant_share",
+    "copperline.2025.objection_deadline",
+    "office_taxable_value_2024_25",
+    "supplemental_taxes.5101-001-010.2022-23",
+    "supplemental_taxes.5101-001-010.2023-24",
+    "supplemental_taxes.5101-001-010.2025-26",
+    "supplemental_taxes.5101-001-010.2026-27",
+    "supplemental_taxes.5101-001-011.2022-23",
+    "supplemental_taxes.5101-001-011.2025-26",
+    "supplemental_taxes.5101-001-011.2026-27"
+  ]
+}

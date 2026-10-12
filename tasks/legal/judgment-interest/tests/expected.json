@@ -1,0 +1,93 @@
+{
+  "matters": {
+    "M01": {
+      "prejudgment_interest": 97858.36,
+      "postjudgment_interest": 98505.95,
+      "payoff_amount": 621364.31
+    },
+    "M02": {
+      "prejudgment_interest": 396789.04,
+      "postjudgment_accrual_start": "2024-09-20",
+      "postjudgment_interest": 183028.62,
+      "payoff_amount": 1479817.66
+    },
+    "M03": {
+      "prejudgment_interest": 3066.81,
+      "postjudgment_interest": 3415.81,
+      "payoff_amount": 92982.62
+    },
+    "M04": {
+      "prejudgment_interest": 37983.43,
+      "payoff_amount": 440470.51
+    },
+    "M05": {
+      "prejudgment_accrual_start": "2024-03-06",
+      "prejudgment_interest": 71617.81,
+      "postjudgment_interest": 164892.46,
+      "payoff_amount": 1161510.27
+    },
+    "M06": {
+      "prejudgment_interest": 37418.63,
+      "postjudgment_interest": 73824.75,
+      "payoff_amount": 273243.38
+    },
+    "M07": {
+      "prejudgment_accrual_start": "2023-06-05",
+      "prejudgment_interest": 98805.48
+    },
+    "M08": {
+      "postjudgment_interest": 3783.69,
+      "payoff_amount": 24764.24
+    },
+    "M09": {
+      "prejudgment_accrual_start": "2022-08-09",
+      "prejudgment_interest": 115117.32,
+      "postjudgment_interest": 348486.83,
+      "payoff_amount": 2171054.15
+    },
+    "M10": {
+      "prejudgment_interest": 124685.51,
+      "judgment_amount": 1525861.95,
+      "payoff_amount": 1639737.49
+    },
+    "M11": {
+      "prejudgment_interest": 90512.88,
+      "postjudgment_interest": 173691.56,
+      "payoff_amount": 994204.44
+    },
+    "M12": {
+      "fee_interest_accrual_start": "2025-11-18",
+      "prejudgment_interest": 1474.86,
+      "postjudgment_interest": 123207.71,
+      "payoff_amount": 1604282.57
+    },
+    "M13": {
+      "prejudgment_accrual_start": "2023-03-03",
+      "prejudgment_interest": 337249.32,
+      "postjudgment_interest": 74018.31,
+      "payoff_amount": 1561267.62
+    }
+  },
+  "graded": [
+    "M02.postjudgment_accrual_start",
+    "M02.postjudgment_interest",
+    "M03.prejudgment_interest",
+    "M03.payoff_amount",
+    "M04.prejudgment_interest",
+    "M04.payoff_amount",
+    "M05.prejudgment_interest",
+    "M06.postjudgment_interest",
+    "M07.prejudgment_accrual_start",
+    "M09.prejudgment_interest",
+    "M09.postjudgment_interest",
+    "M09.payoff_amount",
+    "M10.prejudgment_interest",
+    "M10.judgment_amount",
+    "M10.payoff_amount",
+    "M11.postjudgment_interest",
+    "M12.postjudgment_interest",
+    "M12.payoff_amount",
+    "M13.prejudgment_accrual_start",
+    "M13.postjudgment_interest"
+  ]
+}

@@ -1,0 +1,38 @@
+schema_version = "1.4"
+artifacts = []
+
+[task]
+name = "punitarani/legal-judgment-interest"
+version = "1.0.0"
+description = "Compute prejudgment interest, post-judgment interest and payoff amounts for thirteen money judgments in federal (S.D.N.Y., D. Mass.), New York, California, Texas and Florida courts as of a payoff date, from judgments, contracts, payment ledgers and published rate data, with no statutes supplied."
+keywords = ["legal", "litigation", "judgment-enforcement", "prejudgment-interest", "post-judgment-interest", "28-usc-1961", "new-york", "california", "texas", "florida", "massachusetts"]
+[[task.authors]]
+name = "ModelBeats"
+
+[metadata]
+author_name = "ModelBeats"
+author_email = "unknown"
+difficulty = "hard"
+category = "legal"
+tags = ["legal", "judgment-interest", "prejudgment-interest", "post-judgment-interest", "28-usc-1961", "cplr-5001", "cplr-5004", "ccp-685-010", "civil-code-3291", "texas-finance-code-304", "florida-55-03", "mass-231-6b", "frap-37"]
+expert_time_estimate_min = 180
+junior_time_estimate_min = 600
+
+[verifier]
+timeout_sec = 120.0
+collect = []
+
+[verifier.env]
+
+[agent]
+timeout_sec = 3600.0
+
+[environment]
+network_mode = "public"
+build_timeout_sec = 600.0
+os = "linux"
+mcp_servers = []
+
+[environment.env]
+
+[solution.env]

@@ -1,0 +1,193 @@
+{
+  "estate_id": "E1",
+  "estate_name": "Estate of Harold James Vance",
+  "decedent": "V01",
+  "notes": "Genealogical research report prepared for the personal representative. Dates only; for exact times of death see the vital records in this folder. A null 'died' value means the researcher found the person living as of September 30, 2026. 'sex' is recorded to identify paternal and maternal lines. Parent-child links record genetic and adoptive relationships as found in birth, adoption and court records, without legal conclusions.",
+  "persons": [
+    {
+      "id": "V01",
+      "name": "Harold James Vance",
+      "sex": "M",
+      "born": "1968-04-11",
+      "died": "2026-03-05"
+    },
+    {
+      "id": "V02",
+      "name": "Lena Marie Vance",
+      "sex": "F",
+      "born": "1981-09-02",
+      "died": null
+    },
+    {
+      "id": "V03",
+      "name": "Noah Harold Vance",
+      "sex": "M",
+      "born": "2019-06-14",
+      "died": null
+    },
+    {
+      "id": "V04",
+      "name": "Ivy Ruth Vance",
+      "sex": "F",
+      "born": "2026-07-19",
+      "died": null
+    },
+    {
+      "id": "V05",
+      "name": "Owen Patrick Vance",
+      "sex": "M",
+      "born": "1996-03-30",
+      "died": "2026-03-10"
+    },
+    {
+      "id": "V06",
+      "name": "Theo Martin Hale",
+      "sex": "M",
+      "born": "2013-11-05",
+      "died": null
+    },
+    {
+      "id": "V07",
+      "name": "Ruth Ellen Vance",
+      "sex": "F",
+      "born": "1944-01-22",
+      "died": null
+    },
+    {
+      "id": "V08",
+      "name": "George Vance",
+      "sex": "M",
+      "born": "1941-07-09",
+      "died": "2015-10-01"
+    },
+    {
+      "id": "V09",
+      "name": "Diane Cole",
+      "sex": "F",
+      "born": "1970-05-17",
+      "died": null
+    },
+    {
+      "id": "V10",
+      "name": "Bianca Torres Vance",
+      "sex": "F",
+      "born": "1997-08-21",
+      "died": null
+    },
+    {
+      "id": "V11",
+      "name": "Peter George Vance",
+      "sex": "M",
+      "born": "1972-02-02",
+      "died": null
+    },
+    {
+      "id": "V12",
+      "name": "Martin Hale",
+      "sex": "M",
+      "born": "1979-12-12",
+      "died": null
+    }
+  ],
+  "parent_child": [
+    {
+      "parent": "V08",
+      "child": "V01",
+      "type": "genetic"
+    },
+    {
+      "parent": "V07",
+      "child": "V01",
+      "type": "genetic"
+    },
+    {
+      "parent": "V08",
+      "child": "V11",
+      "type": "genetic"
+    },
+    {
+      "parent": "V07",
+      "child": "V11",
+      "type": "genetic"
+    },
+    {
+      "parent": "V01",
+      "child": "V05",
+      "type": "genetic"
+    },
+    {
+      "parent": "V09",
+      "child": "V05",
+      "type": "genetic"
+    },
+    {
+      "parent": "V01",
+      "child": "V03",
+      "type": "genetic"
+    },
+    {
+      "parent": "V02",
+      "child": "V03",
+      "type": "genetic"
+    },
+    {
+      "parent": "V01",
+      "child": "V04",
+      "type": "genetic"
+    },
+    {
+      "parent": "V02",
+      "child": "V04",
+      "type": "genetic"
+    },
+    {
+      "parent": "V02",
+      "child": "V06",
+      "type": "genetic"
+    },
+    {
+      "parent": "V12",
+      "child": "V06",
+      "type": "genetic"
+    }
+  ],
+  "marriages": [
+    {
+      "spouses": [
+        "V01",
+        "V09"
+      ],
+      "married": "1995-06-10",
+      "ended": "2001-04-03",
+      "ended_by": "divorce"
+    },
+    {
+      "spouses": [
+        "V02",
+        "V12"
+      ],
+      "married": "2012-05-19",
+      "ended": "2016-01-08",
+      "ended_by": "divorce"
+    },
+    {
+      "spouses": [
+        "V01",
+        "V02"
+      ],
+      "married": "2017-09-23",
+      "ended": "2026-03-05",
+      "ended_by": "death of V01"
+    },
+    {
+      "spouses": [
+        "V05",
+        "V10"
+      ],
+      "married": "2022-10-01",
+      "ended": "2026-03-10",
+      "ended_by": "death of V05"
+    }
+  ],
+  "adoptions": []
+}

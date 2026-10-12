@@ -1,0 +1,38 @@
+schema_version = "1.4"
+artifacts = []
+
+[task]
+name = "punitarani/legal-frcp-deadlines"
+version = "1.0.0"
+description = "Reconstruct 41 federal civil deadlines across four C.D. Cal. matters (service, removal, post-judgment tolling, separate-document, reopening) from case files alone; FRCP/FRAP/Title 28/California law and holiday calendars are not supplied."
+keywords = ["legal", "litigation", "civil-procedure", "frcp", "frap", "deadlines", "docketing", "time-computation"]
+[[task.authors]]
+name = "ModelBeats"
+
+[metadata]
+author_name = "ModelBeats"
+author_email = "unknown"
+difficulty = "hard"
+category = "legal"
+tags = ["legal", "litigation", "federal-civil-procedure", "frcp-6", "frap-4", "removal", "docketing", "appellate-deadlines"]
+expert_time_estimate_min = 180
+junior_time_estimate_min = 480
+
+[verifier]
+timeout_sec = 120.0
+collect = []
+
+[verifier.env]
+
+[agent]
+timeout_sec = 1800.0
+
+[environment]
+network_mode = "public"
+build_timeout_sec = 600.0
+os = "linux"
+mcp_servers = []
+
+[environment.env]
+
+[solution.env]

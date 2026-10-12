@@ -1,0 +1,53 @@
+# Dataset manifest for punitarani/legal
+# Add tasks using: harbor dataset add <org>/<name>
+# Publish using: harbor publish
+
+[dataset]
+name = "punitarani/legal"
+version = "1.0.0"
+description = "Ten legal tasks: an agent works a lawyer's file (documents, no law supplied) and produces dates or dollar amounts that depend on chains of legal determinations. Calibrated so Claude Sonnet 5.5 scores 0.3-0.7 per task."
+keywords = [ "legal", "law", "litigation", "transactional", "deadlines", "calculation",]
+[[dataset.authors]]
+name = "ModelBeats"
+
+
+[[tasks]]
+name = "punitarani/legal-ca-civil-deadlines"
+digest = "sha256:71368066e9a6650c5b715e4d69afa7e4546ea90b7963c3faa00dba1140f4afe5"
+
+[[tasks]]
+name = "punitarani/legal-cam-reconciliation"
+digest = "sha256:987100f211c62bf59876fa251badccceb87d76e32edd068c177fdec25c5b70ae"
+
+[[tasks]]
+name = "punitarani/legal-criminal-history"
+digest = "sha256:180db51e3c9aa946e699e1ba79af64f962c7f5cbf88ff305e1b250e5d9956141"
+
+[[tasks]]
+name = "punitarani/legal-frcp-deadlines"
+digest = "sha256:c0a1bf4be152caba8612c6f76728205f9895ca9a10d72b7faa3fb9ecccd6849a"
+
+[[tasks]]
+name = "punitarani/legal-intestate-succession"
+digest = "sha256:d22e286371817fad363a4a652d7f55590e9e48436861468876bdcf67711ae158"
+
+[[tasks]]
+name = "punitarani/legal-judgment-interest"
+digest = "sha256:5018f5bf3ac5d8b209e9564ddca9a07b8cd9883c08cee22434658903fa9f7388"
+
+[[tasks]]
+name = "punitarani/legal-limitations-tolling"
+digest = "sha256:0b0af6968e1e1038abba3f05b28aa6c117c01544ee538808cc4ed789d91ee696"
+
+[[tasks]]
+name = "punitarani/legal-liquidation-waterfall"
+digest = "sha256:38eab7167f71b849cfddbd7a09cdca12d3c4eff540834e45b939599d3aa89e6b"
+
+[[tasks]]
+name = "punitarani/legal-rule144-sales"
+digest = "sha256:4213f4e35da8d03eea114dc62135455ccb48dd012333328a8aaf62e97d86cbf2"
+
+[[tasks]]
+name = "punitarani/legal-ucc9-priority"
+digest = "sha256:f106240f89a7abc9a17b63eacfb37cae5fb96214cbd923db1a00323089521ded"
+

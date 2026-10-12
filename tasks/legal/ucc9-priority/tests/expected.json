@@ -1,0 +1,138 @@
+{
+  "pool_order": [
+    "EQ-A",
+    "EQ-C",
+    "EQ-B",
+    "EQ-ASHBY",
+    "INV-CALDER-1",
+    "CP-LEGENDED",
+    "AR-PELLSTON",
+    "LOT-GANTRY",
+    "DA-NORTHBRIDGE",
+    "EQ-GEN",
+    "DA-COBALT",
+    "INV-CALDER-2",
+    "AR-CALDER",
+    "INV-ORRIN",
+    "INV-CONSIGNED",
+    "EQ-HURCO",
+    "EQ-HAAS"
+  ],
+  "pools": {
+    "EQ-A": {
+      "distributions": {
+        "TRISTATE": 468300.0,
+        "DELMAR": 96500.0,
+        "PINECREST": 6350.0
+      },
+      "surplus_to_debtor": 0.0
+    },
+    "EQ-C": {
+      "distributions": {
+        "BRENNAN": 95000.0,
+        "NORTHBRIDGE": 129160.0
+      },
+      "surplus_to_debtor": 0.0
+    },
+    "EQ-B": {
+      "distributions": {
+        "TRISTATE": 241750.0,
+        "NORTHBRIDGE": 320500.0
+      },
+      "surplus_to_debtor": 0.0
+    },
+    "EQ-ASHBY": {
+      "distributions": {
+        "PINECREST": 390400.0
+      },
+      "surplus_to_debtor": 0.0
+    },
+    "INV-CALDER-1": {
+      "distributions": {
+        "CALDER": 460300.0,
+        "NORTHBRIDGE": 152500.0
+      },
+      "surplus_to_debtor": 0.0
+    },
+    "CP-LEGENDED": {
+      "distributions": {
+        "NORTHBRIDGE": 118900.0
+      },
+      "surplus_to_debtor": 0.0
+    },
+    "AR-PELLSTON": {
+      "distributions": {
+        "NORTHBRIDGE": 221300.0
+      },
+      "surplus_to_debtor": 0.0
+    },
+    "LOT-GANTRY": {
+      "distributions": {
+        "NORTHBRIDGE": 117888.0
+      },
+      "surplus_to_debtor": 0.0
+    },
+    "DA-NORTHBRIDGE": {
+      "distributions": {
+        "NORTHBRIDGE": 743215.48
+      },
+      "surplus_to_debtor": 0.0
+    },
+    "EQ-GEN": {
+      "distributions": {
+        "NORTHBRIDGE": 696536.52,
+        "IRONWOOD": 687963.48
+      },
+      "surplus_to_debtor": 0.0
+    },
+    "DA-COBALT": {
+      "distributions": {
+        "IRONWOOD": 577036.52
+      },
+      "surplus_to_debtor": 931383.65
+    },
+    "INV-CALDER-2": {
+      "distributions": {},
+      "surplus_to_debtor": 201300.0
+    },
+    "AR-CALDER": {
+      "distributions": {},
+      "surplus_to_debtor": 338884.0
+    },
+    "INV-ORRIN": {
+      "distributions": {
+        "ORRIN": 59040.0
+      },
+      "surplus_to_debtor": 0.0
+    },
+    "INV-CONSIGNED": {
+      "distributions": {
+        "WESTFIELD": 92160.0
+      },
+      "surplus_to_debtor": 0.0
+    },
+    "EQ-HURCO": {
+      "distributions": {
+        "QUARRY": 120000.0
+      },
+      "surplus_to_debtor": 0.0
+    },
+    "EQ-HAAS": {
+      "distributions": {
+        "PINECREST": 95000.0,
+        "QUARRY": 45000.0
+      },
+      "surplus_to_debtor": 0.0
+    }
+  },
+  "graded": [
+    "EQ-C",
+    "EQ-B",
+    "EQ-ASHBY",
+    "INV-CALDER-1",
+    "CP-LEGENDED",
+    "EQ-GEN",
+    "DA-COBALT",
+    "INV-CALDER-2"
+  ]
+}

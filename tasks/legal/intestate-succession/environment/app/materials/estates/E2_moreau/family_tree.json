@@ -1,0 +1,253 @@
+{
+  "estate_id": "E2",
+  "estate_name": "Estate of Daniel Luis Moreau",
+  "decedent": "M01",
+  "notes": "Genealogical research report prepared for the personal representative. Dates only; for exact times of death see the vital records in this folder. A null 'died' value means the researcher found the person living as of September 30, 2026. 'sex' is recorded to identify paternal and maternal lines. Parent-child links record genetic and adoptive relationships as found in birth, adoption and court records, without legal conclusions.",
+  "persons": [
+    {
+      "id": "M01",
+      "name": "Daniel Luis Moreau",
+      "sex": "M",
+      "born": "1992-01-27",
+      "died": "2026-03-14"
+    },
+    {
+      "id": "M02",
+      "name": "Paula Castillo Moreau",
+      "sex": "F",
+      "born": "1966-05-03",
+      "died": "2021-09-09"
+    },
+    {
+      "id": "M03",
+      "name": "Gary Wayne Pruitt",
+      "sex": "M",
+      "born": "1964-02-11",
+      "died": null
+    },
+    {
+      "id": "M04",
+      "name": "Lucy Anne Moreau",
+      "sex": "F",
+      "born": "1990-08-08",
+      "died": "2026-06-20"
+    },
+    {
+      "id": "M05",
+      "name": "Liam Moreau Fisher",
+      "sex": "M",
+      "born": "2015-03-03",
+      "died": null
+    },
+    {
+      "id": "M06",
+      "name": "Samuel Henderson",
+      "sex": "M",
+      "born": "1995-07-19",
+      "died": null
+    },
+    {
+      "id": "M07",
+      "name": "Walter Henderson",
+      "sex": "M",
+      "born": "1960-01-01",
+      "died": null
+    },
+    {
+      "id": "M08",
+      "name": "June Henderson",
+      "sex": "F",
+      "born": "1962-02-02",
+      "died": null
+    },
+    {
+      "id": "M09",
+      "name": "Tomas Alvarez",
+      "sex": "M",
+      "born": "1963-12-19",
+      "died": null
+    },
+    {
+      "id": "M10",
+      "name": "Rosa Alvarez",
+      "sex": "F",
+      "born": "1999-04-24",
+      "died": "2023-12-05"
+    },
+    {
+      "id": "M11",
+      "name": "Nina Alvarez",
+      "sex": "F",
+      "born": "2018-10-10",
+      "died": null
+    },
+    {
+      "id": "M12",
+      "name": "Omar Alvarez",
+      "sex": "M",
+      "born": "2021-06-01",
+      "died": null
+    },
+    {
+      "id": "M13",
+      "name": "Dawn Kerr Pruitt",
+      "sex": "F",
+      "born": "1970-07-07",
+      "died": null
+    },
+    {
+      "id": "M14",
+      "name": "Kyle Pruitt",
+      "sex": "M",
+      "born": "2003-09-15",
+      "died": null
+    },
+    {
+      "id": "M15",
+      "name": "Bella Kerr",
+      "sex": "F",
+      "born": "1996-11-20",
+      "died": null
+    },
+    {
+      "id": "M16",
+      "name": "Ryan Fisher",
+      "sex": "M",
+      "born": "1989-05-05",
+      "died": null
+    },
+    {
+      "id": "M17",
+      "name": "Henri Paul Moreau",
+      "sex": "M",
+      "born": "1961-10-30",
+      "died": "2017-04-02"
+    }
+  ],
+  "parent_child": [
+    {
+      "parent": "M02",
+      "child": "M01",
+      "type": "genetic"
+    },
+    {
+      "parent": "M03",
+      "child": "M01",
+      "type": "genetic"
+    },
+    {
+      "parent": "M02",
+      "child": "M04",
+      "type": "genetic"
+    },
+    {
+      "parent": "M02",
+      "child": "M06",
+      "type": "genetic"
+    },
+    {
+      "parent": "M07",
+      "child": "M06",
+      "type": "adoptive"
+    },
+    {
+      "parent": "M08",
+      "child": "M06",
+      "type": "adoptive"
+    },
+    {
+      "parent": "M04",
+      "child": "M05",
+      "type": "genetic"
+    },
+    {
+      "parent": "M16",
+      "child": "M05",
+      "type": "genetic"
+    },
+    {
+      "parent": "M02",
+      "child": "M10",
+      "type": "genetic"
+    },
+    {
+      "parent": "M09",
+      "child": "M10",
+      "type": "genetic"
+    },
+    {
+      "parent": "M10",
+      "child": "M11",
+      "type": "genetic"
+    },
+    {
+      "parent": "M10",
+      "child": "M12",
+      "type": "genetic"
+    },
+    {
+      "parent": "M03",
+      "child": "M14",
+      "type": "genetic"
+    },
+    {
+      "parent": "M13",
+      "child": "M14",
+      "type": "genetic"
+    },
+    {
+      "parent": "M17",
+      "child": "M04",
+      "type": "genetic"
+    }
+  ],
+  "marriages": [
+    {
+      "spouses": [
+        "M02",
+        "M17"
+      ],
+      "married": "1988-05-21",
+      "ended": "1991-03-15",
+      "ended_by": "divorce"
+    },
+    {
+      "spouses": [
+        "M02",
+        "M09"
+      ],
+      "married": "1998-06-06",
+      "ended": "2021-09-09",
+      "ended_by": "death of M02"
+    },
+    {
+      "spouses": [
+        "M03",
+        "M13"
+      ],
+      "married": "2002-03-30",
+      "ended": null,
+      "ended_by": null
+    },
+    {
+      "spouses": [
+        "M04",
+        "M16"
+      ],
+      "married": "2014-04-12",
+      "ended": "2019-10-31",
+      "ended_by": "divorce"
+    }
+  ],
+  "adoptions": [
+    {
+      "adoptee": "M06",
+      "adoptive_parents": [
+        "M07",
+        "M08"
+      ],
+      "decree_date": "1996-01-16",
+      "note": "Agency adoption by Walter and June Henderson, a married couple unrelated to the child or his mother. Birth father unknown."
+    }
+  ]
+}

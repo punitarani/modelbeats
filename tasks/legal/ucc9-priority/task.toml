@@ -1,0 +1,38 @@
+schema_version = "1.4"
+artifacts = []
+
+[task]
+name = "punitarani/legal-ucc9-priority"
+version = "1.0.0"
+description = "Determine the dollar distribution of seventeen collateral pools in a manufacturer's out-of-court liquidation under UCC Article 9 and a sequential waterfall, from a realistic deal file of loan documents, filings, notices, and correspondence."
+keywords = ["legal", "secured-transactions", "ucc-article-9", "priority", "lien", "distribution-waterfall"]
+[[task.authors]]
+name = "ModelBeats"
+
+[metadata]
+author_name = "ModelBeats"
+author_email = "unknown"
+difficulty = "hard"
+category = "legal"
+tags = ["legal", "secured-transactions", "ucc", "article-9", "commercial-law", "creditors-rights"]
+expert_time_estimate_min = 210
+junior_time_estimate_min = 540
+
+[verifier]
+timeout_sec = 120.0
+collect = []
+
+[verifier.env]
+
+[agent]
+timeout_sec = 1800.0
+
+[environment]
+network_mode = "public"
+build_timeout_sec = 600.0
+os = "linux"
+mcp_servers = []
+
+[environment.env]
+
+[solution.env]

@@ -1,0 +1,386 @@
+{
+  "estate_id": "E3",
+  "estate_name": "Estate of Nora Whitfield Lane",
+  "decedent": "W01",
+  "notes": "Genealogical research report prepared for the personal representative. Dates only; for exact times of death see the vital records in this folder. A null 'died' value means the researcher found the person living as of September 30, 2026. 'sex' is recorded to identify paternal and maternal lines. Parent-child links record genetic and adoptive relationships as found in birth, adoption and court records, without legal conclusions.",
+  "persons": [
+    {
+      "id": "W01",
+      "name": "Nora Whitfield Lane",
+      "sex": "F",
+      "born": "1975-12-03",
+      "died": "2026-05-02"
+    },
+    {
+      "id": "W02",
+      "name": "Carl Lane",
+      "sex": "M",
+      "born": "1969-08-08",
+      "died": "2022-01-17"
+    },
+    {
+      "id": "W03",
+      "name": "Dylan Lane",
+      "sex": "M",
+      "born": "1998-02-14",
+      "died": null
+    },
+    {
+      "id": "W04",
+      "name": "Paul Whitfield",
+      "sex": "M",
+      "born": "1945-06-01",
+      "died": "2010-04-22"
+    },
+    {
+      "id": "W05",
+      "name": "Mary Lund Whitfield",
+      "sex": "F",
+      "born": "1948-09-19",
+      "died": "2018-12-30"
+    },
+    {
+      "id": "W06",
+      "name": "Walter Whitfield",
+      "sex": "M",
+      "born": "1918-03-03",
+      "died": "1999-07-07"
+    },
+    {
+      "id": "W07",
+      "name": "Edna Whitfield",
+      "sex": "F",
+      "born": "1921-10-10",
+      "died": "2004-02-02"
+    },
+    {
+      "id": "W08",
+      "name": "Arthur Lund",
+      "sex": "M",
+      "born": "1920-01-15",
+      "died": "1990-05-05"
+    },
+    {
+      "id": "W09",
+      "name": "Hilda Berg Lund",
+      "sex": "F",
+      "born": "1924-04-04",
+      "died": "2011-11-11"
+    },
+    {
+      "id": "W10",
+      "name": "Lars Berg",
+      "sex": "M",
+      "born": "1895-02-02",
+      "died": "1970-03-03"
+    },
+    {
+      "id": "W11",
+      "name": "Signe Berg",
+      "sex": "F",
+      "born": "1898-06-06",
+      "died": "1981-08-08"
+    },
+    {
+      "id": "W12",
+      "name": "Opal Berg Strand",
+      "sex": "F",
+      "born": "1936-07-21",
+      "died": null
+    },
+    {
+      "id": "W13",
+      "name": "Pierce Strand",
+      "sex": "M",
+      "born": "1962-03-17",
+      "died": null
+    },
+    {
+      "id": "W14",
+      "name": "Frank Whitfield",
+      "sex": "M",
+      "born": "1950-05-05",
+      "died": "2013-02-10"
+    },
+    {
+      "id": "W15",
+      "name": "Marisol Reyes Whitfield",
+      "sex": "F",
+      "born": "1965-11-11",
+      "died": "2014-08-19"
+    },
+    {
+      "id": "W16",
+      "name": "Rex Whitfield",
+      "sex": "M",
+      "born": "1990-01-20",
+      "died": null
+    },
+    {
+      "id": "W17",
+      "name": "Quinn Whitfield Ames",
+      "sex": "M",
+      "born": "2006-04-09",
+      "died": null
+    },
+    {
+      "id": "W18",
+      "name": "Grace Whitfield Ames",
+      "sex": "F",
+      "born": "1947-02-28",
+      "died": "2019-09-15"
+    },
+    {
+      "id": "W19",
+      "name": "Tess Ames",
+      "sex": "F",
+      "born": "1972-12-12",
+      "died": "2024-03-08"
+    },
+    {
+      "id": "W20",
+      "name": "Vera Ames",
+      "sex": "F",
+      "born": "2004-05-25",
+      "died": null
+    },
+    {
+      "id": "W21",
+      "name": "Ward Ames",
+      "sex": "M",
+      "born": "1975-07-04",
+      "died": null
+    },
+    {
+      "id": "W22",
+      "name": "Hugo Whitfield",
+      "sex": "M",
+      "born": "1953-08-30",
+      "died": null
+    },
+    {
+      "id": "W23",
+      "name": "Leonard Ames",
+      "sex": "M",
+      "born": "1944-01-09",
+      "died": "2016-06-16"
+    }
+  ],
+  "parent_child": [
+    {
+      "parent": "W04",
+      "child": "W01",
+      "type": "genetic"
+    },
+    {
+      "parent": "W05",
+      "child": "W01",
+      "type": "genetic"
+    },
+    {
+      "parent": "W02",
+      "child": "W03",
+      "type": "genetic"
+    },
+    {
+      "parent": "W06",
+      "child": "W04",
+      "type": "genetic"
+    },
+    {
+      "parent": "W07",
+      "child": "W04",
+      "type": "genetic"
+    },
+    {
+      "parent": "W06",
+      "child": "W14",
+      "type": "genetic"
+    },
+    {
+      "parent": "W07",
+      "child": "W14",
+      "type": "genetic"
+    },
+    {
+      "parent": "W06",
+      "child": "W18",
+      "type": "genetic"
+    },
+    {
+      "parent": "W07",
+      "child": "W18",
+      "type": "genetic"
+    },
+    {
+      "parent": "W06",
+      "child": "W22",
+      "type": "genetic"
+    },
+    {
+      "parent": "W07",
+      "child": "W22",
+      "type": "genetic"
+    },
+    {
+      "parent": "W08",
+      "child": "W05",
+      "type": "genetic"
+    },
+    {
+      "parent": "W09",
+      "child": "W05",
+      "type": "genetic"
+    },
+    {
+      "parent": "W10",
+      "child": "W09",
+      "type": "genetic"
+    },
+    {
+      "parent": "W11",
+      "child": "W09",
+      "type": "genetic"
+    },
+    {
+      "parent": "W10",
+      "child": "W12",
+      "type": "genetic"
+    },
+    {
+      "parent": "W11",
+      "child": "W12",
+      "type": "genetic"
+    },
+    {
+      "parent": "W12",
+      "child": "W13",
+      "type": "genetic"
+    },
+    {
+      "parent": "W14",
+      "child": "W16",
+      "type": "genetic"
+    },
+    {
+      "parent": "W15",
+      "child": "W16",
+      "type": "genetic"
+    },
+    {
+      "parent": "W14",
+      "child": "W17",
+      "type": "genetic"
+    },
+    {
+      "parent": "W15",
+      "child": "W17",
+      "type": "genetic"
+    },
+    {
+      "parent": "W18",
+      "child": "W19",
+      "type": "genetic"
+    },
+    {
+      "parent": "W23",
+      "child": "W19",
+      "type": "genetic"
+    },
+    {
+      "parent": "W18",
+      "child": "W21",
+      "type": "genetic"
+    },
+    {
+      "parent": "W23",
+      "child": "W21",
+      "type": "genetic"
+    },
+    {
+      "parent": "W19",
+      "child": "W20",
+      "type": "genetic"
+    },
+    {
+      "parent": "W19",
+      "child": "W17",
+      "type": "adoptive"
+    }
+  ],
+  "marriages": [
+    {
+      "spouses": [
+        "W01",
+        "W02"
+      ],
+      "married": "2008-07-12",
+      "ended": "2022-01-17",
+      "ended_by": "death of W02"
+    },
+    {
+      "spouses": [
+        "W04",
+        "W05"
+      ],
+      "married": "1973-05-26",
+      "ended": "2010-04-22",
+      "ended_by": "death of W04"
+    },
+    {
+      "spouses": [
+        "W06",
+        "W07"
+      ],
+      "married": "1943-04-17",
+      "ended": "1999-07-07",
+      "ended_by": "death of W06"
+    },
+    {
+      "spouses": [
+        "W08",
+        "W09"
+      ],
+      "married": "1946-10-05",
+      "ended": "1990-05-05",
+      "ended_by": "death of W08"
+    },
+    {
+      "spouses": [
+        "W10",
+        "W11"
+      ],
+      "married": "1922-09-09",
+      "ended": "1970-03-03",
+      "ended_by": "death of W10"
+    },
+    {
+      "spouses": [
+        "W14",
+        "W15"
+      ],
+      "married": "1988-08-20",
+      "ended": "2013-02-10",
+      "ended_by": "death of W14"
+    },
+    {
+      "spouses": [
+        "W18",
+        "W23"
+      ],
+      "married": "1970-06-13",
+      "ended": "2016-06-16",
+      "ended_by": "death of W23"
+    }
+  ],
+  "adoptions": [
+    {
+      "adoptee": "W17",
+      "adoptive_parents": [
+        "W19"
+      ],
+      "decree_date": "2015-05-29",
+      "note": "Quinn, whose parents Frank and Marisol had both died, was adopted by his first cousin Tess Ames (Grace's daughter), who was unmarried."
+    }
+  ]
+}

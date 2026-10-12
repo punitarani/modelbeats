@@ -1,0 +1,38 @@
+schema_version = "1.4"
+artifacts = []
+
+[task]
+name = "punitarani/legal-intestate-succession"
+version = "1.0.0"
+description = "Montana intestacy: compute net intestate estates and distribution schedules for six estates, and trace current fractional ownership of a Montana ranch and a North Dakota tract through four successions, from vital and court records, wills, inventories, and correspondence, with no statutes supplied."
+keywords = ["legal", "trusts-and-estates", "probate", "intestate-succession", "montana", "north-dakota", "heirship", "inheritance"]
+[[task.authors]]
+name = "ModelBeats"
+
+[metadata]
+author_name = "ModelBeats"
+author_email = "unknown"
+difficulty = "hard"
+category = "legal"
+tags = ["legal", "trusts-and-estates", "probate", "intestacy", "montana", "antilapse", "revocation-by-divorce", "disclaimers", "adoption", "120-hour-rule", "conflict-of-laws"]
+expert_time_estimate_min = 240
+junior_time_estimate_min = 720
+
+[verifier]
+timeout_sec = 120.0
+collect = []
+
+[verifier.env]
+
+[agent]
+timeout_sec = 3600.0
+
+[environment]
+network_mode = "public"
+build_timeout_sec = 600.0
+os = "linux"
+mcp_servers = []
+
+[environment.env]
+
+[solution.env]

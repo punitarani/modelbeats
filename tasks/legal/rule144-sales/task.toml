@@ -1,0 +1,38 @@
+schema_version = "1.4"
+artifacts = []
+
+[task]
+name = "punitarani/legal-rule144-sales"
+version = "1.0.0"
+description = "Without any law supplied, clear twenty broker client positions in five issuers for public resale on a given date: compute Rule 144 volume limits, the maximum shares each position may sell, and Form 144 obligations, applying Rule 144, Rules 145 and 701, Section 4(a)(7) and SEC staff interpretations."
+keywords = ["legal", "securities", "rule-144", "rule-145", "rule-701", "resale", "volume-limitation", "form-144"]
+[[task.authors]]
+name = "ModelBeats"
+
+[metadata]
+author_name = "ModelBeats"
+author_email = "unknown"
+difficulty = "hard"
+category = "legal"
+tags = ["legal", "securities", "rule-144", "holding-period", "affiliates", "aggregation", "form-144", "shell-company", "c-and-di"]
+expert_time_estimate_min = 165
+junior_time_estimate_min = 420
+
+[verifier]
+timeout_sec = 120.0
+collect = []
+
+[verifier.env]
+
+[agent]
+timeout_sec = 1800.0
+
+[environment]
+network_mode = "public"
+build_timeout_sec = 600.0
+os = "linux"
+mcp_servers = []
+
+[environment.env]
+
+[solution.env]

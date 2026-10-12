@@ -1,0 +1,236 @@
+{
+  "estate_id": "E5",
+  "estate_name": "Estate of Dale Robert Prescott",
+  "decedent": "P01",
+  "notes": "Genealogical research report prepared for the personal representative. Dates only; for exact times of death see the vital records in this folder. A null 'died' value means the researcher found the person living as of September 30, 2026. 'sex' is recorded to identify paternal and maternal lines. Parent-child links record genetic and adoptive relationships as found in birth, adoption and court records, without legal conclusions.",
+  "persons": [
+    {
+      "id": "P01",
+      "name": "Dale Robert Prescott",
+      "sex": "M",
+      "born": "1958-09-14",
+      "died": "2026-07-03"
+    },
+    {
+      "id": "P02",
+      "name": "Karen Lynn Weller",
+      "sex": "F",
+      "born": "1962-02-11",
+      "died": null
+    },
+    {
+      "id": "P03",
+      "name": "Walter James Prescott",
+      "sex": "M",
+      "born": "1930-05-02",
+      "died": "2009-11-20"
+    },
+    {
+      "id": "P04",
+      "name": "Irene Marsh Prescott",
+      "sex": "F",
+      "born": "1933-08-19",
+      "died": "2019-03-04"
+    },
+    {
+      "id": "P05",
+      "name": "Glen Walter Prescott",
+      "sex": "M",
+      "born": "1955-01-30",
+      "died": null
+    },
+    {
+      "id": "P06",
+      "name": "Ruth Prescott Hayes",
+      "sex": "F",
+      "born": "1961-06-06",
+      "died": "2021-10-12"
+    },
+    {
+      "id": "P07",
+      "name": "Mason Prescott",
+      "sex": "M",
+      "born": "1986-04-22",
+      "died": null
+    },
+    {
+      "id": "P08",
+      "name": "Abigail Hayes Norris",
+      "sex": "F",
+      "born": "1988-01-15",
+      "died": null
+    },
+    {
+      "id": "P09",
+      "name": "Benjamin Hayes",
+      "sex": "M",
+      "born": "1990-07-07",
+      "died": null
+    },
+    {
+      "id": "P10",
+      "name": "Cole Hayes",
+      "sex": "M",
+      "born": "1994-12-03",
+      "died": null
+    },
+    {
+      "id": "P11",
+      "name": "Doris Weller",
+      "sex": "F",
+      "born": "1938-03-03",
+      "died": null
+    },
+    {
+      "id": "P12",
+      "name": "Sharon Prescott",
+      "sex": "F",
+      "born": "1957-05-05",
+      "died": null
+    },
+    {
+      "id": "P13",
+      "name": "Thomas Hayes",
+      "sex": "M",
+      "born": "1959-02-02",
+      "died": null
+    },
+    {
+      "id": "P14",
+      "name": "Frederick Weller",
+      "sex": "M",
+      "born": "1936-10-10",
+      "died": "2015-01-21"
+    }
+  ],
+  "parent_child": [
+    {
+      "parent": "P03",
+      "child": "P01",
+      "type": "genetic"
+    },
+    {
+      "parent": "P04",
+      "child": "P01",
+      "type": "genetic"
+    },
+    {
+      "parent": "P03",
+      "child": "P05",
+      "type": "genetic"
+    },
+    {
+      "parent": "P04",
+      "child": "P05",
+      "type": "genetic"
+    },
+    {
+      "parent": "P03",
+      "child": "P06",
+      "type": "genetic"
+    },
+    {
+      "parent": "P04",
+      "child": "P06",
+      "type": "genetic"
+    },
+    {
+      "parent": "P05",
+      "child": "P07",
+      "type": "genetic"
+    },
+    {
+      "parent": "P12",
+      "child": "P07",
+      "type": "genetic"
+    },
+    {
+      "parent": "P06",
+      "child": "P08",
+      "type": "genetic"
+    },
+    {
+      "parent": "P13",
+      "child": "P08",
+      "type": "genetic"
+    },
+    {
+      "parent": "P06",
+      "child": "P09",
+      "type": "genetic"
+    },
+    {
+      "parent": "P13",
+      "child": "P09",
+      "type": "genetic"
+    },
+    {
+      "parent": "P06",
+      "child": "P10",
+      "type": "genetic"
+    },
+    {
+      "parent": "P13",
+      "child": "P10",
+      "type": "genetic"
+    },
+    {
+      "parent": "P14",
+      "child": "P02",
+      "type": "genetic"
+    },
+    {
+      "parent": "P11",
+      "child": "P02",
+      "type": "genetic"
+    }
+  ],
+  "marriages": [
+    {
+      "spouses": [
+        "P03",
+        "P04"
+      ],
+      "married": "1953-06-20",
+      "ended": "2009-11-20",
+      "ended_by": "death of P03"
+    },
+    {
+      "spouses": [
+        "P01",
+        "P02"
+      ],
+      "married": "1990-06-16",
+      "ended": "2023-02-14",
+      "ended_by": "divorce"
+    },
+    {
+      "spouses": [
+        "P05",
+        "P12"
+      ],
+      "married": "1984-09-08",
+      "ended": null,
+      "ended_by": null
+    },
+    {
+      "spouses": [
+        "P06",
+        "P13"
+      ],
+      "married": "1986-05-17",
+      "ended": "2021-10-12",
+      "ended_by": "death of P06"
+    },
+    {
+      "spouses": [
+        "P14",
+        "P11"
+      ],
+      "married": "1959-08-01",
+      "ended": "2015-01-21",
+      "ended_by": "death of P14"
+    }
+  ],
+  "adoptions": []
+}
