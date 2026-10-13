@@ -1,0 +1,48 @@
+{
+  "slug": "muse-wonder",
+  "name": "Muse Wonder",
+  "orgSlug": "meta",
+  "familySlug": "muse-wonder",
+  "releaseDate": "2026-10-12",
+  "status": "released",
+  "predecessor": null,
+  "openness": "closed",
+  "license": "Proprietary",
+  "paramsB": null,
+  "activeParamsB": null,
+  "archClass": "dense",
+  "archDisplay": "Proprietary multimodal reasoning model (architecture undisclosed); 1M-token context, trained for long-running personal and professional agent work",
+  "ctxK": 1000,
+  "modalities": [
+    "text",
+    "vision",
+    "audio",
+    "video"
+  ],
+  "langCount": null,
+  "capabilities": {
+    "reasoning": true,
+    "coding": true,
+    "vision": true,
+    "functionCalling": true,
+    "toolUse": true,
+    "agentic": true
+  },
+  "apiAvailable": true,
+  "price": {
+    "input": 4,
+    "output": 20
+  },
+  "links": {
+    "docs": "https://research.meta.ai/blog/muse-wonder"
+  },
+  "note": "Meta's first frontier-tier model, released October 12, 2026 in the Meta Model API (muse-wonder-1.0) and Muse Code at $4/$20 per Mtok ($0.20 cached input), four times Muse Spark 1.3's price. Meta's own scorecard puts it level with Claude Opus 5.5 and GPT-6 Astra rather than ahead: it leads DeepSWE 1.1 (78.8) and Meta's internal MemoryBench, trails Opus 5.5 on HealthBench Pro, OSWorld and Terminal-Bench 4.0. Independent rows here come from Vals AI's launch-day run (Vals Index 61.06%, #10 of 47; #1 on CyberBench v1.1). NOT FILED: Meta's Personal Superintelligence Index (54.3) and MemoryBench (85.6) are internal composites; Harvey LAB-AA (10.0) is Artificial Analysis's v1.1 re-grading with hallucination checks, not the Vals-run harvey-legal-agent column; AutomationBench-AA (39.1) is AA's variant, not Zapier's private-set AutomationBench column; ProgramBench (50.0) uses a >=95%-tests-passing metric that disagrees with Vals' ProgramBench scale; Artificial Analysis Intelligence Index v4.3 is 52 (no corpus column).",
+  "quants": [],
+  "vramQ4Gb": null,
+  "vramFp16Gb": null,
+  "tps4090": null,
+  "tpsNote": null,
+  "effortLabel": null,
+  "isDefaultConfig": true,
+  "isBestConfig": true
+}
