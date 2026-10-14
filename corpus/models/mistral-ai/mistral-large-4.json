@@ -76,6 +76,30 @@
       "sourceUrl": "https://mistral.ai/news/mistral-large-4/",
       "evaluatedAt": "2026-10-06",
       "notes": "\"28.3% on Terminal-Bench 4\" (chart label \"Terminal Bench 4.0\")."
+    },
+    {
+      "benchmarkSlug": "terminal-bench-4",
+      "score": 22.73,
+      "source": "independent",
+      "sourceUrl": "https://www.vals.ai/benchmarks/terminal-bench-4",
+      "evaluatedAt": "2026-10-12",
+      "notes": "Terminal-Bench 4.0, Vals AI independent run (mini-swe-agent harness, avg@3, 8-hour agent limit); #22 of 47 on the Vals board. Supersedes the self-reported 28.3 row as headline."
+    },
+    {
+      "benchmarkSlug": "harvey-legal-agent",
+      "score": 15.83,
+      "source": "independent",
+      "sourceUrl": "https://www.vals.ai/benchmarks/hlab",
+      "evaluatedAt": "2026-10-12",
+      "notes": "Harvey's Legal Agent Benchmark, Vals AI independent run on the held-out set (task pass rate, average of GPT 5.5 and Sonnet 4.6 judges); #9 of 63 on the Vals board."
+    },
+    {
+      "benchmarkSlug": "vals-finance-agent",
+      "score": 54.68,
+      "source": "independent",
+      "sourceUrl": "https://www.vals.ai/benchmarks/fabv2",
+      "evaluatedAt": "2026-10-12",
+      "notes": "Vals Finance Agent v2, Vals AI independent run (dealbreaker-gated partial credit, mean of 3 runs, test split); #24 of 59 on the Vals board."
     }
   ]
 }

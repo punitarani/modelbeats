@@ -8,11 +8,11 @@
   "releaseDate": "2026-09-30",
   "status": "released",
   "openness": "closed",
-  "license": "Proprietary (Fairwind Program trusted-defender access)",
+  "license": "Proprietary",
   "paramsB": null,
   "activeParamsB": null,
   "archClass": "dense",
-  "archDisplay": "Proprietary model; architecture and parameter count undisclosed; 1M-token output limit; gated to trusted cyber defenders at launch",
+  "archDisplay": "Proprietary model; architecture and parameter count undisclosed; 1M-token unified input-output limit",
   "ctxK": 1000,
   "modalities": [
     "text",
@@ -28,12 +28,17 @@
     "toolUse": true,
     "agentic": true
   },
-  "apiAvailable": false,
-  "price": null,
+  "apiAvailable": true,
+  "price": {
+    "input": 2,
+    "output": 10,
+    "provider": "Google",
+    "effectiveAt": "2026-10-13"
+  },
   "links": {
     "docs": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-4-argon/"
   },
-  "note": "Google DeepMind's Sep 30, 2026 frontier model, announced by Koray Kavukcuoglu and initially rolling out only to trusted cyber defenders via the Fairwind Program, with paid API and AI Ultra access promised later. Google reports DeepSWE v1.1 77.9%, AutomationBench 51.3% (#1), LVBench 91.7% and a tie for first on CWE-bench v1 at 68.0%, with an output token limit raised to 1M. Announced introductory pricing is $2/$10 per Mtok, rising to $4/$20 after the introductory period. It trails competitors in Google's own table on FrontierSWE v2, Terminal-Bench 4.0, PostTrainBench, Terminal-Bench Science and OSWorld 2.0. Corpus choices: ctxK is filed as 1000 because Google publishes only the 1M-token output limit (the input window is at least that); price is null until the announced $2/$10 introductory price is self-serve, following the Gemini 3.8 Flash Cyber precedent; status released with apiAvailable false for the same reason.",
+  "note": "Google DeepMind's Sep 30, 2026 frontier model, announced by Koray Kavukcuoglu and first rolled out only to trusted cyber defenders via the Fairwind Program. On Oct 13, 2026 Google made it generally available on the paid tier of the Gemini API (AI Studio and the Gemini platform), in Antigravity for AI Ultra subscribers, and in the Gemini app for AI Pro/Ultra. Introductory price is $2/$10 per Mtok (cached input 95% off) until Nov 30, 2026, then $4/$20; Vals AI already bills its runs at the $4/$20 list price. Google reports DeepSWE v1.1 77.9%, AutomationBench 51.3% (#1), LVBench 91.7% and a tie for first on CWE-bench v1 at 68.0%. Vals AI's independent runs put it #1 on the Vals Index (68.90) and Finance Agent v2 (65.40), #6 on Terminal-Bench 4.0 (57.58) and #5 on Terminal-Bench Science (44.29). It trails competitors in Google's own table on FrontierSWE v2, Terminal-Bench 4.0, PostTrainBench, Terminal-Bench Science and OSWorld 2.0. Corpus choices: ctxK is filed as 1000 from Google's 1M unified input-output token limit; the headline price is the introductory $2/$10.",
   "quants": [],
   "vramQ4Gb": null,
   "vramFp16Gb": null,
@@ -44,8 +49,8 @@
   "isBestConfig": true,
   "specSources": {
     "releaseDate": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-4-argon/",
-    "price": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-4-argon/",
-    "status": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-4-argon/",
+    "price": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-4-argon/",
+    "status": "https://blog.google/innovation-and-ai/technology/developers-tools/build-with-gemini-4-argon/",
     "results": "https://deepmind.google/models/gemini/",
     "methodology": "https://deepmind.google/models/evals-methodology/gemini-4-argon"
   },
@@ -121,6 +126,38 @@
       "sourceUrl": "https://deepmind.google/models/gemini/",
       "evaluatedAt": "2026-09-30",
       "notes": "Google DeepMind Gemini 4 Argon evaluation table."
+    },
+    {
+      "benchmarkSlug": "terminal-bench-4",
+      "score": 57.58,
+      "source": "independent",
+      "sourceUrl": "https://www.vals.ai/benchmarks/terminal-bench-4",
+      "evaluatedAt": "2026-10-12",
+      "notes": "Terminal-Bench 4.0, Vals AI independent run (mini-swe-agent harness, avg@3, 8-hour agent limit); #6 of 47 on the Vals board. Supersedes the self-reported 57.4 row as headline."
+    },
+    {
+      "benchmarkSlug": "terminal-bench-science",
+      "score": 44.29,
+      "source": "independent",
+      "sourceUrl": "https://www.vals.ai/benchmarks/terminal-bench-science",
+      "evaluatedAt": "2026-10-08",
+      "notes": "Terminal-Bench Science 0.1, Vals AI independent run (single-run pass@1, mostly mini-swe-agent harness; Vals notes its figures sit below vendor-harness numbers); #5 of 39 on the Vals board."
+    },
+    {
+      "benchmarkSlug": "harvey-legal-agent",
+      "score": 19.58,
+      "source": "independent",
+      "sourceUrl": "https://www.vals.ai/benchmarks/hlab",
+      "evaluatedAt": "2026-10-12",
+      "notes": "Harvey's Legal Agent Benchmark, Vals AI independent run on the held-out set (task pass rate, average of GPT 5.5 and Sonnet 4.6 judges); #6 of 63 on the Vals board. Supersedes the self-reported 19.6 row as headline."
+    },
+    {
+      "benchmarkSlug": "vals-finance-agent",
+      "score": 65.4,
+      "source": "independent",
+      "sourceUrl": "https://www.vals.ai/benchmarks/fabv2",
+      "evaluatedAt": "2026-10-12",
+      "notes": "Vals Finance Agent v2, Vals AI independent run (dealbreaker-gated partial credit, mean of 3 runs, test split); #1 of 59 on the Vals board. Supersedes the self-reported 65.4 row as headline."
     }
   ]
 }

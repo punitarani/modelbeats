@@ -84,6 +84,38 @@
       "sourceUrl": "https://www.anthropic.com/claude-haiku-5-5",
       "evaluatedAt": "2026-10-07",
       "notes": "No tools, Claude Haiku 5.5 launch table."
+    },
+    {
+      "benchmarkSlug": "terminal-bench-4",
+      "score": 35.35,
+      "source": "independent",
+      "sourceUrl": "https://www.vals.ai/benchmarks/terminal-bench-4",
+      "evaluatedAt": "2026-10-12",
+      "notes": "Terminal-Bench 4.0, Vals AI independent run (mini-swe-agent harness, avg@3, 8-hour agent limit); #14 of 47 on the Vals board. Supersedes the self-reported 39.2 row as headline."
+    },
+    {
+      "benchmarkSlug": "terminal-bench-science",
+      "score": 10.0,
+      "source": "independent",
+      "sourceUrl": "https://www.vals.ai/benchmarks/terminal-bench-science",
+      "evaluatedAt": "2026-10-08",
+      "notes": "Terminal-Bench Science 0.1, Vals AI independent run (single-run pass@1, mostly mini-swe-agent harness; Vals notes its figures sit below vendor-harness numbers); #13 of 39 on the Vals board."
+    },
+    {
+      "benchmarkSlug": "harvey-legal-agent",
+      "score": 1.25,
+      "source": "independent",
+      "sourceUrl": "https://www.vals.ai/benchmarks/hlab",
+      "evaluatedAt": "2026-10-12",
+      "notes": "Harvey's Legal Agent Benchmark, Vals AI independent run on the held-out set (task pass rate, average of GPT 5.5 and Sonnet 4.6 judges); #54 of 63 on the Vals board."
+    },
+    {
+      "benchmarkSlug": "vals-finance-agent",
+      "score": 54.14,
+      "source": "independent",
+      "sourceUrl": "https://www.vals.ai/benchmarks/fabv2",
+      "evaluatedAt": "2026-10-12",
+      "notes": "Vals Finance Agent v2, Vals AI independent run (dealbreaker-gated partial credit, mean of 3 runs, test split); #26 of 59 on the Vals board."
     }
   ]
 }

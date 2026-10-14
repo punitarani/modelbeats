@@ -81,7 +81,7 @@
       "source": "self-reported",
       "sourceUrl": "https://www.anthropic.com/claude-fable-and-mythos-5-1",
       "evaluatedAt": "2026-09-01",
-      "notes": "Terminal-Bench 4.0 (66 tasks: computational biology, physics simulation, CAD, formal proofs), System Card Table 8.1.A. Unsafeguarded Mythos 5.1 scores 60.9 on the same suite; Fable 5 scored 42.0, Opus 5 52.3, GPT-5.6 Sol 37.3."
+      "notes": "Terminal-Bench 4.0 (66 tasks: computational biology, physics simulation, CAD, formal proofs), System Card Table 8.1.A. Unsafeguarded Mythos 5.1 scores 60.9 on the same suite; Fable 5 scored 42.0, Opus 5 52.3, GPT-5.6 Sol 37.3. Vals AI's independent run (58.08, 2026-10-12) is not filed: 22 attempts were served by Opus 5 provider fallback (50.00 counting those as failures)."
     },
     {
       "benchmarkSlug": "terminal-bench-science",
@@ -250,6 +250,30 @@
       "sourceUrl": "https://www.swemarathon.org/",
       "evaluatedAt": "2026-10-13",
       "notes": "SWE-Marathon v1.1 official leaderboard (Abundant AI), pass@1 over k=8 trials: Claude Fable 5.1 (max) / Claude Code."
+    },
+    {
+      "benchmarkSlug": "terminal-bench-science",
+      "score": 40.0,
+      "source": "independent",
+      "sourceUrl": "https://www.vals.ai/benchmarks/terminal-bench-science",
+      "evaluatedAt": "2026-10-08",
+      "notes": "Terminal-Bench Science 0.1, Vals AI independent run (single-run pass@1, mostly mini-swe-agent harness; Vals notes its figures sit below vendor-harness numbers); #6 of 39 on the Vals board. Supersedes the self-reported 52.6 row as headline."
+    },
+    {
+      "benchmarkSlug": "harvey-legal-agent",
+      "score": 6.67,
+      "source": "independent",
+      "sourceUrl": "https://www.vals.ai/benchmarks/hlab",
+      "evaluatedAt": "2026-10-12",
+      "notes": "Harvey's Legal Agent Benchmark, Vals AI independent run on the held-out set (task pass rate, average of GPT 5.5 and Sonnet 4.6 judges); #29 of 63 on the Vals board."
+    },
+    {
+      "benchmarkSlug": "vals-finance-agent",
+      "score": 58.88,
+      "source": "independent",
+      "sourceUrl": "https://www.vals.ai/benchmarks/fabv2",
+      "evaluatedAt": "2026-10-12",
+      "notes": "Vals Finance Agent v2, Vals AI independent run (dealbreaker-gated partial credit, mean of 3 runs, test split); #8 of 59 on the Vals board."
     }
   ]
 }
