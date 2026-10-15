@@ -108,6 +108,14 @@
       "sourceUrl": "https://www.vals.ai/benchmarks/fabv2",
       "evaluatedAt": "2026-10-12",
       "notes": "Vals Finance Agent v2, Vals AI independent run (dealbreaker-gated partial credit, mean of 3 runs, test split); #43 of 59 on the Vals board."
+    },
+    {
+      "benchmarkSlug": "arena",
+      "score": 1443,
+      "source": "arena",
+      "sourceUrl": "https://arena.ai/leaderboard/text",
+      "evaluatedAt": "2026-10-13",
+      "notes": "Text Arena row 'gpt-6-luna-max', 43,294 votes; leaderboard last updated Oct 13 2026. No arena row in the corpus today."
     }
   ]
 }

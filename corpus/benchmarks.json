@@ -136,7 +136,7 @@
     "unit": "Elo",
     "description": "Blind pairwise human votes (arena.ai). The gold standard for conversational preference.",
     "normMin": 1000,
-    "normMax": 1460,
+    "normMax": 1480,
     "higherIsBetter": true
   },
   {

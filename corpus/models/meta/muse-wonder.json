@@ -132,6 +132,14 @@
       "sourceUrl": "https://dev.meta.ai/models/muse-wonder",
       "evaluatedAt": "2026-10-12",
       "notes": "SWE-Marathon pass@1, Meta's launch scorecard on dev.meta.ai (max reasoning effort; peers GPT-6 Astra, Claude Fable 5.1 and Claude Opus 5.5 also at max). Meta attributes the figure to Abundant AI, but it is not yet on the public swemarathon.org leaderboard, so it is filed as self-reported."
+    },
+    {
+      "benchmarkSlug": "arena",
+      "score": 1513,
+      "source": "arena",
+      "sourceUrl": "https://arena.ai/leaderboard/text",
+      "evaluatedAt": "2026-10-13",
+      "notes": "Text Arena row 'muse-wonder-max', 1,944 votes; leaderboard last updated Oct 13 2026. No arena row in the corpus today."
     }
   ]
 }
