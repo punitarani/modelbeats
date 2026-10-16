@@ -1,0 +1,139 @@
+{
+  "name": "Muse Spark Open",
+  "org": "Meta",
+  "orgSlug": "meta",
+  "family": "Muse Spark",
+  "familySlug": "muse-spark",
+  "slug": "muse-spark-open",
+  "releaseDate": "2026-10-15",
+  "status": "released",
+  "openness": "open-weights",
+  "license": "Muse Model License (free use with attribution; Model-as-a-Service providers above $20M annual revenue need a separate agreement with Meta)",
+  "paramsB": 816,
+  "activeParamsB": 42,
+  "archClass": "moe",
+  "archDisplay": "Sparse MoE transformer, 816B total / 42B active (256 experts, top-8 routing, 62 layers, GQA with gated attention) plus a 1.8B perception encoder; 1M-token context; reasoning effort low to xhigh",
+  "ctxK": 1000,
+  "modalities": [
+    "text",
+    "vision",
+    "audio",
+    "video"
+  ],
+  "langCount": null,
+  "capabilities": {
+    "reasoning": true,
+    "coding": true,
+    "vision": true,
+    "functionCalling": true,
+    "toolUse": true,
+    "agentic": true
+  },
+  "apiAvailable": true,
+  "price": null,
+  "links": {
+    "hf": "meta-models/Muse-Spark-Open-816B-A42B",
+    "docs": "https://research.meta.ai/blog/muse-spark-open"
+  },
+  "note": "Meta's open-weight release of Muse Spark, October 15, 2026: an 816B-total / 42B-active natively multimodal MoE (text, image, video and audio in, text out) with a 1M-token context, shipped in BF16 and NVFP4 under the Muse Model License and served by third-party hosts (Baseten, Fireworks, Groq, Modal, Nebius, OpenRouter, Together); Meta sets no first-party price. Meta's table runs it at xhigh effort against open-weight peers: it leads JobBench (61.8) and MCP-Atlas (89.2) but trails GLM 5.3 and Kimi K3 on DeepSWE 1.1 (60) and Terminal-Bench 2.1 (76.4). NOT FILED: Artificial Analysis Intelligence Index (39) has no corpus column; GDPVal-AA v2 (1401) is not filed because the corpus gdpval-aa column and AA's re-based v2.x launch figures are on different scales; HLE-Diamond no-tools (26.1) is a subset, not the full HLE; AA Omniscience (25), ZeroBench, BabyVision, SimpleVQA, WorldVQA, IntPhys2 and VideoMME v2 have no matching column; FORTRESS and StrongREJECT are safety metrics.",
+  "quants": [
+    "NVFP4"
+  ],
+  "vramQ4Gb": 700,
+  "vramFp16Gb": 2000,
+  "tps4090": null,
+  "tpsNote": null,
+  "effortLabel": null,
+  "isDefaultConfig": true,
+  "isBestConfig": true,
+  "specSources": {
+    "paramsB/activeParamsB": "https://huggingface.co/meta-models/Muse-Spark-Open-816B-A42B",
+    "ctxK": "https://huggingface.co/meta-models/Muse-Spark-Open-816B-A42B",
+    "releaseDate": "https://huggingface.co/meta-models/Muse-Spark-Open-816B-A42B",
+    "license": "https://huggingface.co/meta-models/Muse-Spark-Open-816B-A42B/blob/main/LICENSE.md",
+    "vramQ4Gb/vramFp16Gb": "https://huggingface.co/meta-models/Muse-Spark-Open-816B-A42B (Meta: at least 700GB VRAM for the NVFP4 weights, 2TB for BF16; vramQ4Gb holds the NVFP4 figure)",
+    "quants": "https://huggingface.co/collections/meta-models/muse-spark-open"
+  },
+  "results": [
+    {
+      "benchmarkSlug": "jobbench",
+      "score": 61.8,
+      "source": "self-reported",
+      "sourceUrl": "https://huggingface.co/meta-models/Muse-Spark-Open-816B-A42B",
+      "evaluatedAt": "2026-10-15",
+      "notes": "Muse Spark Open (xhigh) column of the Benchmarks table on Meta's Hugging Face model card (temperature 1.0, top_p 1.0, top_k off; peers Inkling, Nemotron 3 Ultra, Beam, Mistral Large 4, Qwen3.8-2.4T-A95B, GLM 5.3 and Kimi K3 as run by Meta). JobBench."
+    },
+    {
+      "benchmarkSlug": "mcp-atlas",
+      "score": 89.2,
+      "source": "self-reported",
+      "sourceUrl": "https://huggingface.co/meta-models/Muse-Spark-Open-816B-A42B",
+      "evaluatedAt": "2026-10-15",
+      "notes": "Muse Spark Open (xhigh) column of the Benchmarks table on Meta's Hugging Face model card (temperature 1.0, top_p 1.0, top_k off; peers Inkling, Nemotron 3 Ultra, Beam, Mistral Large 4, Qwen3.8-2.4T-A95B, GLM 5.3 and Kimi K3 as run by Meta). MCP-Atlas."
+    },
+    {
+      "benchmarkSlug": "osworld-verified",
+      "score": 80.4,
+      "source": "self-reported",
+      "sourceUrl": "https://huggingface.co/meta-models/Muse-Spark-Open-816B-A42B",
+      "evaluatedAt": "2026-10-15",
+      "notes": "Muse Spark Open (xhigh) column of the Benchmarks table on Meta's Hugging Face model card (temperature 1.0, top_p 1.0, top_k off; peers Inkling, Nemotron 3 Ultra, Beam, Mistral Large 4, Qwen3.8-2.4T-A95B, GLM 5.3 and Kimi K3 as run by Meta). OSWorld Verified."
+    },
+    {
+      "benchmarkSlug": "toolathlon",
+      "score": 72.8,
+      "source": "self-reported",
+      "sourceUrl": "https://huggingface.co/meta-models/Muse-Spark-Open-816B-A42B",
+      "evaluatedAt": "2026-10-15",
+      "notes": "Muse Spark Open (xhigh) column of the Benchmarks table on Meta's Hugging Face model card (temperature 1.0, top_p 1.0, top_k off; peers Inkling, Nemotron 3 Ultra, Beam, Mistral Large 4, Qwen3.8-2.4T-A95B, GLM 5.3 and Kimi K3 as run by Meta). Toolathlon Verified."
+    },
+    {
+      "benchmarkSlug": "scicode",
+      "score": 58.5,
+      "source": "self-reported",
+      "sourceUrl": "https://huggingface.co/meta-models/Muse-Spark-Open-816B-A42B",
+      "evaluatedAt": "2026-10-15",
+      "notes": "Muse Spark Open (xhigh) column of the Benchmarks table on Meta's Hugging Face model card (temperature 1.0, top_p 1.0, top_k off; peers Inkling, Nemotron 3 Ultra, Beam, Mistral Large 4, Qwen3.8-2.4T-A95B, GLM 5.3 and Kimi K3 as run by Meta). SciCode."
+    },
+    {
+      "benchmarkSlug": "hle",
+      "score": 61.0,
+      "source": "self-reported",
+      "sourceUrl": "https://huggingface.co/meta-models/Muse-Spark-Open-816B-A42B",
+      "evaluatedAt": "2026-10-15",
+      "notes": "Muse Spark Open (xhigh) column of the Benchmarks table on Meta's Hugging Face model card (temperature 1.0, top_p 1.0, top_k off; peers Inkling, Nemotron 3 Ultra, Beam, Mistral Large 4, Qwen3.8-2.4T-A95B, GLM 5.3 and Kimi K3 as run by Meta). Humanity's Last Exam with tools (the table's 'HLE (w/ tools)' row; Kimi K3's corpus hle row of 56 matches its with-tools figure in the same table). The no-tools row is HLE-Diamond, a subset, and is not filed."
+    },
+    {
+      "benchmarkSlug": "gpqa",
+      "score": 89.0,
+      "source": "self-reported",
+      "sourceUrl": "https://huggingface.co/meta-models/Muse-Spark-Open-816B-A42B",
+      "evaluatedAt": "2026-10-15",
+      "notes": "Muse Spark Open (xhigh) column of the Benchmarks table on Meta's Hugging Face model card (temperature 1.0, top_p 1.0, top_k off; peers Inkling, Nemotron 3 Ultra, Beam, Mistral Large 4, Qwen3.8-2.4T-A95B, GLM 5.3 and Kimi K3 as run by Meta). GPQA Diamond."
+    },
+    {
+      "benchmarkSlug": "deepswe",
+      "score": 60,
+      "source": "self-reported",
+      "sourceUrl": "https://huggingface.co/meta-models/Muse-Spark-Open-816B-A42B",
+      "evaluatedAt": "2026-10-15",
+      "notes": "Muse Spark Open (xhigh) column of the Benchmarks table on Meta's Hugging Face model card (temperature 1.0, top_p 1.0, top_k off; peers Inkling, Nemotron 3 Ultra, Beam, Mistral Large 4, Qwen3.8-2.4T-A95B, GLM 5.3 and Kimi K3 as run by Meta). DeepSWE 1.1, preferred harness; Meta prints integers."
+    },
+    {
+      "benchmarkSlug": "swe-atlas-codebase-qna",
+      "score": 58,
+      "source": "self-reported",
+      "sourceUrl": "https://huggingface.co/meta-models/Muse-Spark-Open-816B-A42B",
+      "evaluatedAt": "2026-10-15",
+      "notes": "Muse Spark Open (xhigh) column of the Benchmarks table on Meta's Hugging Face model card (temperature 1.0, top_p 1.0, top_k off; peers Inkling, Nemotron 3 Ultra, Beam, Mistral Large 4, Qwen3.8-2.4T-A95B, GLM 5.3 and Kimi K3 as run by Meta). SWE-Atlas-QnA, preferred harness; Meta prints integers."
+    },
+    {
+      "benchmarkSlug": "terminal-bench-2",
+      "score": 76.4,
+      "source": "self-reported",
+      "sourceUrl": "https://huggingface.co/meta-models/Muse-Spark-Open-816B-A42B",
+      "evaluatedAt": "2026-10-15",
+      "notes": "Muse Spark Open (xhigh) column of the Benchmarks table on Meta's Hugging Face model card (temperature 1.0, top_p 1.0, top_k off; peers Inkling, Nemotron 3 Ultra, Beam, Mistral Large 4, Qwen3.8-2.4T-A95B, GLM 5.3 and Kimi K3 as run by Meta). Terminal-Bench 2.1 with the Terminus 2 agent (mapped to terminal-bench-2 per corpus precedent for 2.1 rows)."
+    }
+  ]
+}

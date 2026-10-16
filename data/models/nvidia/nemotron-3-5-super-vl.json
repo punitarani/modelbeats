@@ -1,0 +1,47 @@
+{
+  "slug": "nemotron-3-5-super-vl",
+  "name": "Nemotron 3.5 Super VL",
+  "orgSlug": "nvidia",
+  "familySlug": "nemotron-3-5",
+  "releaseDate": "2026-10-15",
+  "status": "released",
+  "predecessor": null,
+  "openness": "open-weights",
+  "license": "OpenMDW License 1.1",
+  "paramsB": 120,
+  "activeParamsB": 12,
+  "archClass": "hybrid",
+  "archDisplay": "Hybrid Mamba-2 / Transformer MoE (512 routed experts per MoE layer), 120B total / 12B active, with a C-RADIO vision encoder and multi-token prediction; 1M-token context",
+  "ctxK": 1000,
+  "modalities": [
+    "text",
+    "vision",
+    "video"
+  ],
+  "langCount": null,
+  "capabilities": {
+    "reasoning": true,
+    "coding": true,
+    "vision": true,
+    "functionCalling": true,
+    "toolUse": true,
+    "agentic": true
+  },
+  "apiAvailable": true,
+  "price": null,
+  "links": {
+    "hf": "nvidia/NVIDIA-Nemotron-3.5-Super-VL-120B-A12B-BF16",
+    "docs": "https://developer.nvidia.com/blog/nvidia-nemotron-3-5-super-vl-powers-specialized-agents-with-multimodal-reasoning"
+  },
+  "note": "NVIDIA's open vision-language Nemotron, released October 15, 2026 alongside Nemotron 3.5 Bolt: a 120B-total / 12B-active hybrid Mamba-Transformer MoE with a C-RADIO vision encoder and a 1M-token context, under OpenMDW-1.1, in BF16 and NVFP4. Served through NVIDIA NIM and OpenRouter; NVIDIA sets no first-party token price. NVIDIA's NeMo Gym table puts it below Qwen3.8-Flash-Next and GLM-5.3-Flash on most agentic rows (Terminal-Bench 2.1 66.7 vs 85.8 and 82.7). NOT FILED: rows marked [offline] in the table (BrowseComp offline, WebVoyager, AA-Briefcase-Lite, AutomationBench-AA, GDP.pdf, Terminal Bench 4, DeepSWE) are non-standard offline runs; GDPval-AA v2 (1211) is on AA's re-based scale; HLE text-only (31.79) is a subset (the full-set 29.20 is filed); MMLU-ProX, AA-Omniscience, CritPt, APEX shortlist, AA-LCR, GraphWalks, LMArena v3 proxy, WMT24++, BabyVision, MMLongBench-Doc, V*, OCR-Reasoning, OCRBench v2 and Video-MME v2 have no matching corpus column.",
+  "quants": [
+    "NVFP4"
+  ],
+  "vramQ4Gb": null,
+  "vramFp16Gb": null,
+  "tps4090": null,
+  "tpsNote": null,
+  "effortLabel": null,
+  "isDefaultConfig": true,
+  "isBestConfig": true
+}
