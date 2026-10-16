@@ -1,0 +1,48 @@
+{
+  "slug": "nemotron-3-5-bolt-74b-a9b",
+  "name": "Nemotron 3.5 Bolt 74B-A9B",
+  "orgSlug": "nvidia",
+  "familySlug": "nemotron-3-5",
+  "releaseDate": "2026-10-15",
+  "status": "released",
+  "predecessor": null,
+  "openness": "open-weights",
+  "license": "OpenMDW License 1.1",
+  "paramsB": 74,
+  "activeParamsB": 9,
+  "archClass": "hybrid",
+  "archDisplay": "Hybrid Mamba-2 / Transformer LatentMoE, 74B total / 9B active, compressed from Nemotron 3.5 Super VL with Star Elastic architecture search and distillation; C-RADIO v4-H vision encoder; 256K-token context; native 2-bit 24GB release",
+  "ctxK": 256,
+  "modalities": [
+    "text",
+    "vision",
+    "video"
+  ],
+  "langCount": null,
+  "capabilities": {
+    "reasoning": true,
+    "coding": true,
+    "vision": true,
+    "functionCalling": true,
+    "toolUse": true,
+    "agentic": true
+  },
+  "apiAvailable": false,
+  "price": null,
+  "links": {
+    "hf": "nvidia/NVIDIA-Nemotron-3.5-Bolt-74B-A9B-BF16",
+    "docs": "https://developer.nvidia.com/blog/nvidia-nemotron-3-5-super-vl-powers-specialized-agents-with-multimodal-reasoning"
+  },
+  "note": "First model in NVIDIA's edge-focused Bolt line, released October 15, 2026 with Nemotron 3.5 Super VL: a 74B-total / 9B-active hybrid LatentMoE compressed from Super VL and shipped with native 2-bit quantization so it runs in 24GB of memory, plus BF16 reference weights, under OpenMDW-1.1. A smaller Bolt E4B 4GB is scheduled for October 23 and is not in the corpus. Scores are NVIDIA's for the 24GB IQ2 build. NOT FILED: GDPVal-AA-V2 (28.47) is on a different scale from the corpus gdpval-aa column; AA-Omniscience, AA-LCR and WebArena (vision) have no matching column.",
+  "quants": [
+    "2-bit",
+    "GGUF"
+  ],
+  "vramQ4Gb": null,
+  "vramFp16Gb": null,
+  "tps4090": null,
+  "tpsNote": null,
+  "effortLabel": null,
+  "isDefaultConfig": true,
+  "isBestConfig": true
+}
