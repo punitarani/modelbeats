@@ -1702,5 +1702,16 @@
     "normMin": 0,
     "normMax": 85,
     "higherIsBetter": true
+  },
+  {
+    "slug": "swe-marathon",
+    "name": "SWE-Marathon",
+    "category": "coding",
+    "unit": "%",
+    "description": "SWE-Marathon v1.1 (Abundant AI) — 20 realistic multi-hour software-engineering projects (library reproductions, full-stack clones, ML engineering) graded by executing project tests. Binary reward per task, pass@1 averaged over k=8 trials. Each model runs in its lab's own agent product (Claude Code, Codex, Grok Build, Muse Code), so rows compare model+harness pairs.",
+    "normMin": 0,
+    "normMax": 60,
+    "higherIsBetter": true,
+    "methodologyUrl": "https://github.com/abundant-ai/swe-marathon"
   }
 ]

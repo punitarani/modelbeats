@@ -1,0 +1,48 @@
+{
+  "slug": "muse-spark-open",
+  "name": "Muse Spark Open",
+  "orgSlug": "meta",
+  "familySlug": "muse-spark",
+  "releaseDate": "2026-10-15",
+  "status": "released",
+  "predecessor": "muse-spark-1-3",
+  "openness": "open-weights",
+  "license": "Muse Model License (free use with attribution; Model-as-a-Service providers above $20M annual revenue need a separate agreement with Meta)",
+  "paramsB": 816,
+  "activeParamsB": 42,
+  "archClass": "moe",
+  "archDisplay": "Sparse MoE transformer, 816B total / 42B active (256 experts, top-8 routing, 62 layers, GQA with gated attention) plus a 1.8B perception encoder; 1M-token context; reasoning effort low to xhigh",
+  "ctxK": 1000,
+  "modalities": [
+    "text",
+    "vision",
+    "audio",
+    "video"
+  ],
+  "langCount": null,
+  "capabilities": {
+    "reasoning": true,
+    "coding": true,
+    "vision": true,
+    "functionCalling": true,
+    "toolUse": true,
+    "agentic": true
+  },
+  "apiAvailable": true,
+  "price": null,
+  "links": {
+    "hf": "meta-models/Muse-Spark-Open-816B-A42B",
+    "docs": "https://research.meta.ai/blog/muse-spark-open"
+  },
+  "note": "Meta's open-weight release of Muse Spark, October 15, 2026: an 816B-total / 42B-active natively multimodal MoE (text, image, video and audio in, text out) with a 1M-token context, shipped in BF16 and NVFP4 under the Muse Model License and served by third-party hosts (Baseten, Fireworks, Groq, Modal, Nebius, OpenRouter, Together); Meta sets no first-party price. Meta's table runs it at xhigh effort against open-weight peers: it leads JobBench (61.8) and MCP-Atlas (89.2) but trails GLM 5.3 and Kimi K3 on DeepSWE 1.1 (60) and Terminal-Bench 2.1 (76.4). NOT FILED: Artificial Analysis Intelligence Index (39) has no corpus column; GDPVal-AA v2 (1401) is not filed because the corpus gdpval-aa column and AA's re-based v2.x launch figures are on different scales; HLE-Diamond no-tools (26.1) is a subset, not the full HLE; AA Omniscience (25), ZeroBench, BabyVision, SimpleVQA, WorldVQA, IntPhys2 and VideoMME v2 have no matching column; FORTRESS and StrongREJECT are safety metrics.",
+  "quants": [
+    "NVFP4"
+  ],
+  "vramQ4Gb": 700,
+  "vramFp16Gb": 2000,
+  "tps4090": null,
+  "tpsNote": null,
+  "effortLabel": null,
+  "isDefaultConfig": true,
+  "isBestConfig": true
+}

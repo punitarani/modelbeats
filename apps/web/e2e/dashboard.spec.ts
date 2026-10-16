@@ -28,7 +28,7 @@ test.describe('dashboard overview', () => {
     // real top mover is a rank-eligible family edge; deltas are Elo points (D21), so a large
     // cross-tier lineage jump (105B succeeding a 2B) posts a four-digit gain
     await expect(movers).toContainText('Sarvam-105B')
-    await expect(movers).toContainText('+1624')
+    await expect(movers).toContainText('+1622.9')
   })
 
   test('quality-vs-price scatter draws the Pareto frontier (D27)', async ({ page }) => {
@@ -103,7 +103,7 @@ test.describe('dashboard overview', () => {
     const rail = page.getByTestId('arena-rail')
     // rail now leads with the #1 overall model by Elo rating
     await expect(rail).toContainText('Claude Opus 5.5')
-    await expect(rail).toContainText('3266.5')
+    await expect(rail).toContainText('3259.5')
     await pickOption(page, 'qc-b', 'Llama 3.1 405B — Meta')
     await page.getByTestId('qc-go').click()
     // quick-compare slot A defaults to the #1 rank-eligible model (Claude Opus 5.5)
