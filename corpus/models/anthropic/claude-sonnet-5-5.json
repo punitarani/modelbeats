@@ -60,7 +60,7 @@
       "source": "self-reported",
       "sourceUrl": "https://www.anthropic.com/claude-sonnet-5-5",
       "evaluatedAt": "2026-09-28",
-      "notes": "Terminal-Bench 4.0; Sonnet 5 10.3, Opus 5.5 66.4 (xhigh). Exceeds terminal-bench-4 normMax 70. The Haiku 5.5 page repeats 70.6 for Sonnet 5.5."
+      "notes": "Terminal-Bench 4.0; Sonnet 5 10.3, Opus 5.5 66.4 (xhigh). Exceeds terminal-bench-4 normMax 70. The Haiku 5.5 page repeats 70.6 for Sonnet 5.5. Vals AI's independent run (64.14, 2026-10-12) is not filed: 4 attempts were served by Sonnet 5 provider fallback (62.63 counting those as failures)."
     },
     {
       "benchmarkSlug": "frontiercode",
@@ -93,6 +93,30 @@
       "sourceUrl": "https://www.anthropic.com/claude-sonnet-5-5",
       "evaluatedAt": "2026-09-28",
       "notes": "No tools, Claude Sonnet 5.5 launch table."
+    },
+    {
+      "benchmarkSlug": "harvey-legal-agent",
+      "score": 2.92,
+      "source": "independent",
+      "sourceUrl": "https://www.vals.ai/benchmarks/hlab",
+      "evaluatedAt": "2026-10-12",
+      "notes": "Harvey's Legal Agent Benchmark, Vals AI independent run on the held-out set (task pass rate, average of GPT 5.5 and Sonnet 4.6 judges); #43 of 63 on the Vals board."
+    },
+    {
+      "benchmarkSlug": "vals-finance-agent",
+      "score": 58.1,
+      "source": "independent",
+      "sourceUrl": "https://www.vals.ai/benchmarks/fabv2",
+      "evaluatedAt": "2026-10-12",
+      "notes": "Vals Finance Agent v2, Vals AI independent run (dealbreaker-gated partial credit, mean of 3 runs, test split); #11 of 59 on the Vals board."
+    },
+    {
+      "benchmarkSlug": "arena",
+      "score": 1475,
+      "source": "arena",
+      "sourceUrl": "https://arena.ai/leaderboard/text",
+      "evaluatedAt": "2026-10-13",
+      "notes": "Text Arena row 'claude-sonnet-5.5-xhigh', 6,254 votes; leaderboard last updated Oct 13 2026. No arena row in the corpus today."
     }
   ]
 }

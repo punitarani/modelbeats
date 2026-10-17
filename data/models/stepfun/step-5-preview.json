@@ -6,8 +6,8 @@
   "releaseDate": "2026-09-20",
   "status": "preview",
   "predecessor": "step-3-7-flash",
-  "openness": "closed",
-  "license": "Proprietary for now (open weights promised for October 15, 2026)",
+  "openness": "open-weights",
+  "license": "StepFun Model License 1.0 (Apache-2.0-style, with added attribution and commercial-license conditions)",
   "paramsB": 600,
   "activeParamsB": 27,
   "archClass": "moe",
@@ -33,10 +33,14 @@
     "output": 2.7
   },
   "links": {
+    "hf": "stepfun-ai/Step-5-Preview",
     "docs": "https://platform.stepfun.ai/docs/en/guides/models/step-5-preview"
   },
-  "note": "StepFun's new flagship for agentic work: a 600B-total / 27B-active sparse MoE with a 1M-token context and text/image/video input, launched API-only around 2026-09-20 with open weights promised for October 15. StepFun's own table runs it at High effort against rivals at Max; it ties or edges Kimi K3 and GLM-5.3 on DeepSWE v1.1 (67.7) and GPQA (93.5) but trails them on Terminal-Bench v4 (33.3 vs GLM-5.3 41.9) and several agent rows. Priced at $1.00/$2.70 per Mtok. StepFun's comparison set contains no 'Step-4', 'Kimi K3.1' or other model the corpus added on 2026-09-23. Release date is secondary-sourced: StepFun pages print no date, and 2026-09-20 comes from MarkTechPost coverage (https://www.marktechpost.com/2026/09/20/stepfun-launches-step-5-preview/).",
-  "quants": [],
+  "note": "StepFun's new flagship for agentic work: a 600B-total / 27B-active sparse MoE with a 1M-token context and text/image/video input, launched API-only around 2026-09-20; StepFun published the open weights on its official Hugging Face org on the promised date, 2026-10-15 (stepfun-ai/Step-5-Preview in FP8, plus -BF16 and -NVFP4 repos), under the StepFun Model License 1.0. StepFun's own table runs it at High effort against rivals at Max; it ties or edges Kimi K3 and GLM-5.3 on DeepSWE v1.1 (67.7) and GPQA (93.5) but trails them on Terminal-Bench v4 (33.3 vs GLM-5.3 41.9) and several agent rows. Priced at $1.00/$2.70 per Mtok. StepFun's comparison set contains no 'Step-4', 'Kimi K3.1' or other model the corpus added on 2026-09-23. Release date is secondary-sourced: StepFun pages print no date, and 2026-09-20 comes from MarkTechPost coverage (https://www.marktechpost.com/2026/09/20/stepfun-launches-step-5-preview/).",
+  "quants": [
+    "FP8",
+    "NVFP4"
+  ],
   "vramQ4Gb": null,
   "vramFp16Gb": null,
   "tps4090": null,

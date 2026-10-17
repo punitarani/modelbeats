@@ -134,6 +134,30 @@
       "sourceUrl": "https://huggingface.co/meta-models/Muse-Spark-Open-816B-A42B",
       "evaluatedAt": "2026-10-15",
       "notes": "Muse Spark Open (xhigh) column of the Benchmarks table on Meta's Hugging Face model card (temperature 1.0, top_p 1.0, top_k off; peers Inkling, Nemotron 3 Ultra, Beam, Mistral Large 4, Qwen3.8-2.4T-A95B, GLM 5.3 and Kimi K3 as run by Meta). Terminal-Bench 2.1 with the Terminus 2 agent (mapped to terminal-bench-2 per corpus precedent for 2.1 rows)."
+    },
+    {
+      "benchmarkSlug": "vals-finance-agent",
+      "score": 61.34,
+      "source": "independent",
+      "sourceUrl": "https://www.vals.ai/benchmarks/fabv2",
+      "evaluatedAt": "2026-10-16",
+      "notes": "Vals Finance Agent v2, Vals AI independent run (dealbreaker-gated partial credit, mean of 3 runs, test split; ±2.09); #3 of 79 on the Vals board. Run through Together AI at xhigh effort, the default provider on Vals' Muse Spark Open page."
+    },
+    {
+      "benchmarkSlug": "harvey-legal-agent",
+      "score": 16.67,
+      "source": "independent",
+      "sourceUrl": "https://www.vals.ai/models/meta_muse-spark-open",
+      "evaluatedAt": "2026-10-16",
+      "notes": "Harvey's Legal Agent Benchmark, Vals AI independent run on the held-out set (task pass rate; ±3.09); #9 of 80 per Vals' Muse Spark Open page. Run through Together AI at xhigh effort."
+    },
+    {
+      "benchmarkSlug": "terminal-bench-4",
+      "score": 6.57,
+      "source": "independent",
+      "sourceUrl": "https://www.vals.ai/benchmarks/terminal-bench-4",
+      "evaluatedAt": "2026-10-16",
+      "notes": "Terminal-Bench 4.0, Vals AI independent run (mini-swe-agent harness, avg@3, 8-hour agent limit); #40 of 49 on the Vals board (updated 2026-10-16). ±0.51. Run through Together AI at xhigh effort; far below the card's Terminal-Bench 2 76.4, which is a different task set."
     }
   ]
 }

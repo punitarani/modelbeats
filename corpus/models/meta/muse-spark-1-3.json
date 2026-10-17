@@ -148,6 +148,38 @@
       "sourceUrl": "https://www.swemarathon.org/",
       "evaluatedAt": "2026-10-13",
       "notes": "SWE-Marathon v1.1 official leaderboard (Abundant AI), pass@1 over k=8 trials: Muse Spark 1.3 (XHIGH) / Muse Code; note the corpus row describes the max configuration."
+    },
+    {
+      "benchmarkSlug": "terminal-bench-4",
+      "score": 10.61,
+      "source": "independent",
+      "sourceUrl": "https://www.vals.ai/benchmarks/terminal-bench-4",
+      "evaluatedAt": "2026-10-12",
+      "notes": "Terminal-Bench 4.0, Vals AI independent run (mini-swe-agent harness, avg@3, 8-hour agent limit); #35 of 47 on the Vals board."
+    },
+    {
+      "benchmarkSlug": "terminal-bench-science",
+      "score": 4.29,
+      "source": "independent",
+      "sourceUrl": "https://www.vals.ai/benchmarks/terminal-bench-science",
+      "evaluatedAt": "2026-10-08",
+      "notes": "Terminal-Bench Science 0.1, Vals AI independent run (single-run pass@1, mostly mini-swe-agent harness; Vals notes its figures sit below vendor-harness numbers); #23 of 39 on the Vals board."
+    },
+    {
+      "benchmarkSlug": "harvey-legal-agent",
+      "score": 22.92,
+      "source": "independent",
+      "sourceUrl": "https://www.vals.ai/benchmarks/hlab",
+      "evaluatedAt": "2026-10-12",
+      "notes": "Harvey's Legal Agent Benchmark, Vals AI independent run on the held-out set (task pass rate, average of GPT 5.5 and Sonnet 4.6 judges); #3 of 63 on the Vals board."
+    },
+    {
+      "benchmarkSlug": "vals-finance-agent",
+      "score": 58.9,
+      "source": "independent",
+      "sourceUrl": "https://www.vals.ai/benchmarks/fabv2",
+      "evaluatedAt": "2026-10-12",
+      "notes": "Vals Finance Agent v2, Vals AI independent run (dealbreaker-gated partial credit, mean of 3 runs, test split); #7 of 59 on the Vals board."
     }
   ]
 }

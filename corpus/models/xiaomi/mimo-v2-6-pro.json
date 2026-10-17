@@ -132,6 +132,46 @@
       "sourceUrl": "https://huggingface.co/XiaomiMiMo/MiMo-V2.6-Pro-RL/raw/main/README.md",
       "evaluatedAt": "2026-09-22",
       "notes": "MiMo-V2.6 Pro column of the official Evaluation Results table."
+    },
+    {
+      "benchmarkSlug": "terminal-bench-4",
+      "score": 31.31,
+      "source": "independent",
+      "sourceUrl": "https://www.vals.ai/benchmarks/terminal-bench-4",
+      "evaluatedAt": "2026-10-12",
+      "notes": "Terminal-Bench 4.0, Vals AI independent run (mini-swe-agent harness, avg@3, 8-hour agent limit); #17 of 47 on the Vals board. Supersedes the self-reported 34.9 row as headline."
+    },
+    {
+      "benchmarkSlug": "terminal-bench-science",
+      "score": 2.86,
+      "source": "independent",
+      "sourceUrl": "https://www.vals.ai/benchmarks/terminal-bench-science",
+      "evaluatedAt": "2026-10-08",
+      "notes": "Terminal-Bench Science 0.1, Vals AI independent run (single-run pass@1, mostly mini-swe-agent harness; Vals notes its figures sit below vendor-harness numbers); #30 of 39 on the Vals board."
+    },
+    {
+      "benchmarkSlug": "harvey-legal-agent",
+      "score": 10.83,
+      "source": "independent",
+      "sourceUrl": "https://www.vals.ai/benchmarks/hlab",
+      "evaluatedAt": "2026-10-12",
+      "notes": "Harvey's Legal Agent Benchmark, Vals AI independent run on the held-out set (task pass rate, average of GPT 5.5 and Sonnet 4.6 judges); #17 of 63 on the Vals board."
+    },
+    {
+      "benchmarkSlug": "vals-finance-agent",
+      "score": 57.34,
+      "source": "independent",
+      "sourceUrl": "https://www.vals.ai/benchmarks/fabv2",
+      "evaluatedAt": "2026-10-12",
+      "notes": "Vals Finance Agent v2, Vals AI independent run (dealbreaker-gated partial credit, mean of 3 runs, test split); #14 of 59 on the Vals board."
+    },
+    {
+      "benchmarkSlug": "arena",
+      "score": 1479,
+      "source": "arena",
+      "sourceUrl": "https://arena.ai/leaderboard/text",
+      "evaluatedAt": "2026-10-13",
+      "notes": "Text Arena row 'mimo-v2.6-pro', 4,071 votes; leaderboard last updated Oct 13 2026. No arena row in the corpus today."
     }
   ]
 }

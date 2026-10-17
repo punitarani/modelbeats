@@ -187,6 +187,14 @@
       "sourceUrl": "https://huggingface.co/meta-models/Muse-Glimmer-30B",
       "evaluatedAt": "2026-08-10",
       "notes": "HLE Text (Artificial Analysis protocol), official Muse Glimmer model card; behind Gemma4-31B (23.6) and Qwen3.6-27B (23.1)."
+    },
+    {
+      "benchmarkSlug": "arena",
+      "score": 1425,
+      "source": "arena",
+      "sourceUrl": "https://arena.ai/leaderboard/text",
+      "evaluatedAt": "2026-10-13",
+      "notes": "Text Arena row 'muse-glimmer', 3,889 votes; leaderboard last updated Oct 13 2026. No arena row in the corpus today."
     }
   ]
 }
