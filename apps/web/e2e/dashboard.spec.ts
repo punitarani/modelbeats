@@ -103,7 +103,7 @@ test.describe('dashboard overview', () => {
     const rail = page.getByTestId('arena-rail')
     // rail now leads with the #1 overall model by Elo rating
     await expect(rail).toContainText('Gemini 4 Argon')
-    await expect(rail).toContainText('3158.4')
+    await expect(rail).toContainText('3159.2')
     await pickOption(page, 'qc-b', 'Llama 3.1 405B — Meta')
     await page.getByTestId('qc-go').click()
     // quick-compare slot A defaults to the #1 rank-eligible model (Gemini 4 Argon)

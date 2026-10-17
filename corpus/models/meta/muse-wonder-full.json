@@ -135,6 +135,14 @@
       "sourceUrl": "https://research.meta.ai/static/muse-wonder-model-card",
       "evaluatedAt": "2026-10-12",
       "notes": "ExploitBench, Muse Wonder model card section 4. ExploitGym (92 flags, of which 21 via the intended vulnerability) has no corpus column."
+    },
+    {
+      "benchmarkSlug": "terminal-bench-science",
+      "score": 37.14,
+      "source": "independent",
+      "sourceUrl": "https://www.vals.ai/benchmarks/terminal-bench-science",
+      "evaluatedAt": "2026-10-14",
+      "notes": "Terminal-Bench Science 0.1, Vals AI independent run (single-run pass@1, mini-swe-agent harness; Vals notes its figures sit below vendor-harness numbers); #7 of 41 on the Vals board (updated 2026-10-14). ±5.82; fallback rate 0.00% on Vals' Wonder Full page."
     }
   ]
 }

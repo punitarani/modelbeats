@@ -191,11 +191,11 @@ describe('derived scores match the D21 contract (goldens)', () => {
       .filter((m) => m.rankOverall != null && m.rankOverall <= 5)
       .sort((a, b) => (a.rankOverall ?? 0) - (b.rankOverall ?? 0))
     expect(top5.map((m) => [m.slug, m.overallIndex])).toEqual([
-      ['gemini-4-argon', 3158.4],
-      ['muse-wonder-full', 3135.6],
-      ['claude-opus-5-5', 3082.9],
-      ['muse-wonder', 3036.1],
-      ['claude-fable-5-1', 2915.4],
+      ['gemini-4-argon', 3159.2],
+      ['muse-wonder-full', 3114.6],
+      ['claude-opus-5-5', 3074.8],
+      ['muse-wonder', 3028.8],
+      ['claude-fable-5-1', 2911.5],
     ])
   })
 
@@ -217,7 +217,7 @@ describe('derived scores match the D21 contract (goldens)', () => {
     const codex = models.find((m) => m.slug === 'openai-codex')
     expect(codex?.ranked).toBe(false)
     expect(codex?.rankOverall).toBeNull()
-    expect(codex?.overallIndex).toBe(-99.8)
+    expect(codex?.overallIndex).toBe(-99.9)
     const top = models.find((m) => m.rankOverall === 1)
     expect(top?.slug).toBe('gemini-4-argon')
   })
@@ -280,10 +280,10 @@ describe('derived scores match the D21 contract (goldens)', () => {
     const { models, movers } = await derived()
     expect(movers.map((m) => [m.slug, m.prevSlug, m.delta])).toEqual([
       ['sarvam-105b', 'sarvam-1-2b', 1622.7],
-      ['mistral-large-4', 'mistral-large-3', 1217.5],
-      ['deepseek-v4-flash-0731', 'deepseek-v4-flash-non-think', 1011.3],
+      ['mistral-large-4', 'mistral-large-3', 1225.6],
+      ['deepseek-v4-flash-0731', 'deepseek-v4-flash-non-think', 1008.2],
       ['smollm3-3b-think', 'smollm2-1-7b', 1003.7],
-      ['hy3', 'hunyuan-a13b', 912.7],
+      ['hy3', 'hunyuan-a13b', 912.6],
     ])
     // structural: every mover delta is the rounded rating gap between two RANKED models
     const bySlug = new Map(models.map((m) => [m.slug, m]))

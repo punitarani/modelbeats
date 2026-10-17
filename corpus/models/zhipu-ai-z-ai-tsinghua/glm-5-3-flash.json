@@ -182,6 +182,14 @@
       "sourceUrl": "https://www.vals.ai/benchmarks/fabv2",
       "evaluatedAt": "2026-10-12",
       "notes": "Vals Finance Agent v2, Vals AI independent run (dealbreaker-gated partial credit, mean of 3 runs, test split); #13 of 59 on the Vals board."
+    },
+    {
+      "benchmarkSlug": "terminal-bench-4",
+      "score": 37.37,
+      "source": "independent",
+      "sourceUrl": "https://www.vals.ai/benchmarks/terminal-bench-4",
+      "evaluatedAt": "2026-10-16",
+      "notes": "Terminal-Bench 4.0, Vals AI independent run (mini-swe-agent harness, avg@3, 8-hour agent limit); #14 of 49 on the Vals board (updated 2026-10-16). ±2.67. Run through Fireworks AI, Vals' default provider for GLM 5.3 Flash."
     }
   ]
 }

@@ -163,6 +163,14 @@
       "sourceUrl": "https://www.vals.ai/benchmarks/fabv2",
       "evaluatedAt": "2026-10-12",
       "notes": "Vals Finance Agent v2, Vals AI independent run (dealbreaker-gated partial credit, mean of 3 runs, test split); #20 of 59 on the Vals board."
+    },
+    {
+      "benchmarkSlug": "terminal-bench-science",
+      "score": 5.71,
+      "source": "independent",
+      "sourceUrl": "https://www.vals.ai/benchmarks/terminal-bench-science",
+      "evaluatedAt": "2026-10-14",
+      "notes": "Terminal-Bench Science 0.1, Vals AI independent run (single-run pass@1, mini-swe-agent harness; Vals notes its figures sit below vendor-harness numbers); #22 of 41 on the Vals board (updated 2026-10-14). ±2.79. Held back on Oct 14 because the board's takeaways said 4.29; the takeaways are gone and the table and model page agree on 5.71."
     }
   ]
 }

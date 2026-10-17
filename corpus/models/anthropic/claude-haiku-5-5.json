@@ -87,11 +87,11 @@
     },
     {
       "benchmarkSlug": "terminal-bench-4",
-      "score": 35.35,
+      "score": 36.36,
       "source": "independent",
       "sourceUrl": "https://www.vals.ai/benchmarks/terminal-bench-4",
-      "evaluatedAt": "2026-10-12",
-      "notes": "Terminal-Bench 4.0, Vals AI independent run (mini-swe-agent harness, avg@3, 8-hour agent limit); #14 of 47 on the Vals board. Supersedes the self-reported 39.2 row as headline."
+      "evaluatedAt": "2026-10-16",
+      "notes": "Terminal-Bench 4.0, Vals AI independent run (mini-swe-agent harness, avg@3, 8-hour agent limit; ±2.31); #15 of 49 on the Vals board (updated 2026-10-16). Vals re-scored this row from 35.35 (Oct 12 board) to 36.36; the model page agrees. Supersedes the self-reported 39.2 row as headline."
     },
     {
       "benchmarkSlug": "terminal-bench-science",
