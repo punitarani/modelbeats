@@ -1,0 +1,96 @@
+{
+  "name": "DeepSeek-V4.1-Flash-1017",
+  "org": "DeepSeek",
+  "family": "DeepSeek-V4",
+  "slug": "deepseek-v4-1-flash-1017",
+  "releaseDate": "2026-10-17",
+  "status": "released",
+  "openness": "open-weights",
+  "license": "MIT",
+  "paramsB": 552,
+  "activeParamsB": 16,
+  "archClass": "moe",
+  "archDisplay": "552B sparse MoE, 40-layer causal encoder-decoder (1 shared + 384 routed experts, 6 routed active per token), ~8B active in prefill / 16B in decode, ~890 bytes/token global KV cache (about 1/4 of V4-Flash); natively multimodal (image+text in, text out); ~45T multimodal pre-training tokens",
+  "ctxK": 1000,
+  "modalities": [
+    "text",
+    "vision"
+  ],
+  "langCount": null,
+  "capabilities": {
+    "reasoning": true,
+    "coding": true,
+    "vision": true,
+    "functionCalling": true,
+    "toolUse": true,
+    "agentic": true
+  },
+  "apiAvailable": true,
+  "price": {
+    "input": 0.3,
+    "output": 1.2,
+    "provider": "DeepSeek"
+  },
+  "links": {
+    "hf": "deepseek-ai/DeepSeek-V4.1-Flash-1017",
+    "docs": "https://api-docs.deepseek.com/updates"
+  },
+  "note": "DeepSeek's October 17, 2026 checkpoint of V4.1-Flash: the same 552B-backbone causal encoder-decoder MoE (about 8B active in prefill, 16B in decode, native image input, 1M context) with further post-training, released as open weights under MIT. The deepseek-flash API alias, the web app and the legacy V4-Flash names now serve it at unchanged prices. DeepSeek reports gains over the September 10 checkpoint on every row it reran (HLE 42.6 vs 36.8, Terminal-Bench 4.0 42.3 vs 31.2, DeepSWE 77.0 vs 74.2, AutomationBench 60.5 vs 54.8) along with shorter outputs and runtimes. NOT FILED: Agents' Last Exam (35.4) is a pass rate, while the corpus column holds the score component; Chartography (83.0) is with tools, while the corpus column is without tools; ProgramBench, Apex Bench, BabyVision and ZeroBench have no corpus column; the text-only HLE figure (44.0) is a subset. GPQA, Codeforces, Terminal-Bench 2.1/3.0, CyberGym and SEC-Bench Pro were not rerun for this checkpoint.",
+  "quants": [],
+  "vramQ4Gb": null,
+  "vramFp16Gb": null,
+  "tps4090": null,
+  "tpsNote": null,
+  "effortLabel": null,
+  "isDefaultConfig": true,
+  "isBestConfig": true,
+  "specSources": {
+    "releaseDate": "https://api-docs.deepseek.com/updates",
+    "paramsB/activeParamsB/ctxK/arch": "https://huggingface.co/deepseek-ai/DeepSeek-V4.1-Flash/raw/main/README.md (DeepSeek calls 1017 a minor update to V4.1-Flash on the same architecture)",
+    "license": "https://huggingface.co/deepseek-ai/DeepSeek-V4.1-Flash-1017/raw/main/README.md",
+    "price": "https://api-docs.deepseek.com/quick_start/pricing/",
+    "openness": "https://huggingface.co/deepseek-ai/DeepSeek-V4.1-Flash-1017/raw/main/README.md"
+  },
+  "results": [
+    {
+      "benchmarkSlug": "hle",
+      "score": 42.6,
+      "source": "self-reported",
+      "sourceUrl": "https://huggingface.co/deepseek-ai/DeepSeek-V4.1-Flash-1017/raw/main/README.md",
+      "evaluatedAt": "2026-10-17",
+      "notes": "DS-V4.1-Flash-1017 column of the comparison table on the deepseek-ai Hugging Face model card (also in DeepSeek's Oct 17 API change log; recommended sampling temperature 1.0, top_p 1.0). HLE without tools, full set (the text-only subset reads 44.0)."
+    },
+    {
+      "benchmarkSlug": "terminal-bench-4",
+      "score": 42.3,
+      "source": "self-reported",
+      "sourceUrl": "https://huggingface.co/deepseek-ai/DeepSeek-V4.1-Flash-1017/raw/main/README.md",
+      "evaluatedAt": "2026-10-17",
+      "notes": "DS-V4.1-Flash-1017 column of the comparison table on the deepseek-ai Hugging Face model card (also in DeepSeek's Oct 17 API change log; recommended sampling temperature 1.0, top_p 1.0). Terminal-Bench 4.0 with the Claude Code harness."
+    },
+    {
+      "benchmarkSlug": "deepswe",
+      "score": 77.0,
+      "source": "self-reported",
+      "sourceUrl": "https://huggingface.co/deepseek-ai/DeepSeek-V4.1-Flash-1017/raw/main/README.md",
+      "evaluatedAt": "2026-10-17",
+      "notes": "DS-V4.1-Flash-1017 column of the comparison table on the deepseek-ai Hugging Face model card (also in DeepSeek's Oct 17 API change log; recommended sampling temperature 1.0, top_p 1.0). DeepSWE v1.1 with the Mini-SWE-V2 harness."
+    },
+    {
+      "benchmarkSlug": "nl2repo",
+      "score": 68.2,
+      "source": "self-reported",
+      "sourceUrl": "https://huggingface.co/deepseek-ai/DeepSeek-V4.1-Flash-1017/raw/main/README.md",
+      "evaluatedAt": "2026-10-17",
+      "notes": "DS-V4.1-Flash-1017 column of the comparison table on the deepseek-ai Hugging Face model card (also in DeepSeek's Oct 17 API change log; recommended sampling temperature 1.0, top_p 1.0). NL2Repo-Bench (Score)."
+    },
+    {
+      "benchmarkSlug": "automationbench",
+      "score": 60.5,
+      "source": "self-reported",
+      "sourceUrl": "https://huggingface.co/deepseek-ai/DeepSeek-V4.1-Flash-1017/raw/main/README.md",
+      "evaluatedAt": "2026-10-17",
+      "notes": "DS-V4.1-Flash-1017 column of the comparison table on the deepseek-ai Hugging Face model card (also in DeepSeek's Oct 17 API change log; recommended sampling temperature 1.0, top_p 1.0). Automation-Bench v1.0.6. Above the old slug normMax (50), which this PR widens to 56 so the bound guard admits it."
+    }
+  ]
+}
