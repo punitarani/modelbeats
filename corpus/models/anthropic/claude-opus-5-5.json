@@ -213,6 +213,22 @@
       "sourceUrl": "https://arena.ai/leaderboard/text",
       "evaluatedAt": "2026-10-13",
       "notes": "Text Arena row 'claude-opus-5.5-high', 7,687 votes; leaderboard last updated Oct 13 2026. No arena row in the corpus today."
+    },
+    {
+      "benchmarkSlug": "arc-agi-1",
+      "score": 98.5,
+      "source": "independent",
+      "sourceUrl": "https://arcprize.org/results/anthropic-claude-opus-5-5",
+      "evaluatedAt": "2026-09-22",
+      "notes": "ARC Prize verified result on the Semi-Private set, run by the ARC Prize team. High variant (Max, XHigh and Medium 97.5%)."
+    },
+    {
+      "benchmarkSlug": "arc-agi-2",
+      "score": 93.3,
+      "source": "independent",
+      "sourceUrl": "https://arcprize.org/results/anthropic-claude-opus-5-5",
+      "evaluatedAt": "2026-09-22",
+      "notes": "ARC Prize verified result on the Semi-Private set, run by the ARC Prize team. High variant (XHigh 92.5%, Max 91.7%). ARC Prize has not posted an ARC-AGI-3 result."
     }
   ]
 }

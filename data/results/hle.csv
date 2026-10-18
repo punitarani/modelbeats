@@ -25,6 +25,7 @@ deepseek-v3-1-non-thinking,6,independent,https://artificialanalysis.ai/models/de
 deepseek-v3-1-thinking,15.9,self-reported,https://huggingface.co/deepseek-ai/DeepSeek-V3.1,,"Humanity's Last Exam, text-only subset, Pass@1"
 deepseek-v3-2-exp,19.8,self-reported,https://github.com/deepseek-ai/DeepSeek-V3.2-Exp,,Humanity's Last Exam
 deepseek-v4-1-flash,36.8,self-reported,https://huggingface.co/deepseek-ai/DeepSeek-V4.1-Flash/raw/main/README.md,2026-09-10,"DS-V4.1-Flash column of the official instruct comparison table on the deepseek-ai Hugging Face model card (reasoning_effort=100, temperature 1.0, top_p 0.95). HLE (Pass@1), full set; the card also prints 39.1 on the text-only subset (†)."
+deepseek-v4-1-flash-1017,42.6,self-reported,https://huggingface.co/deepseek-ai/DeepSeek-V4.1-Flash-1017/raw/main/README.md,2026-10-17,"DS-V4.1-Flash-1017 column of the comparison table on the deepseek-ai Hugging Face model card (also in DeepSeek's Oct 17 API change log; recommended sampling temperature 1.0, top_p 1.0). HLE without tools, full set (the text-only subset reads 44.0)."
 deepseek-v4-flash-non-think,8.1,self-reported,https://huggingface.co/deepseek-ai/DeepSeek-V4-Flash,,Non-Think mode
 deepseek-v4-flash-think-high,29.4,self-reported,https://huggingface.co/deepseek-ai/DeepSeek-V4-Flash,,Think High mode
 deepseek-v4-flash-think-max,34.8,self-reported,https://huggingface.co/deepseek-ai/DeepSeek-V4-Flash,,Think Max mode

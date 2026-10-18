@@ -4,7 +4,7 @@
   "family": "DeepSeek-V4",
   "slug": "deepseek-v4-1-flash",
   "releaseDate": "2026-09-10",
-  "status": "released",
+  "status": "deprecated",
   "openness": "open-weights",
   "license": "MIT",
   "paramsB": 552,
@@ -35,7 +35,7 @@
     "hf": "deepseek-ai/DeepSeek-V4.1-Flash",
     "docs": "https://api-docs.deepseek.com/news/news260910"
   },
-  "note": "DeepSeek's 2026-09-10 release, the smallest model of a new architecture family: a 552B-backbone causal encoder-decoder MoE that activates ~8B parameters in prefill and 16B in decode, with native image input, a 1M context and a KV cache about a quarter the size of V4-Flash's. Open weights under MIT. On DeepSeek's own table it beats every compared model on Terminal-Bench 2.1 (90.6), DeepSWE v1.1 (74.2), Codeforces (3471), CyberGym (88.1) and AutomationBench (54.8), but trails the closed frontier on HLE and Terminal-Bench 3.0/4.0. The API alias deepseek-flash now points to it, legacy V4-Flash names are routed to it, and from 2026-09-14 deepseek-v4-pro requests are also served by V4.1-Flash at Flash rates until V4.1-Pro launches.",
+  "note": "DeepSeek's 2026-09-10 release, the smallest model of a new architecture family: a 552B-backbone causal encoder-decoder MoE that activates ~8B parameters in prefill and 16B in decode, with native image input, a 1M context and a KV cache about a quarter the size of V4-Flash's. Open weights under MIT. On DeepSeek's own table it beats every compared model on Terminal-Bench 2.1 (90.6), DeepSWE v1.1 (74.2), Codeforces (3471), CyberGym (88.1) and AutomationBench (54.8), but trails the closed frontier on HLE and Terminal-Bench 3.0/4.0. The API alias deepseek-flash pointed to it until 2026-10-17, when DeepSeek replaced it with the DeepSeek-V4.1-Flash-1017 checkpoint at the same prices, and the legacy V4-Flash names now route to 1017 too. DeepSeek later reversed its plan to serve deepseek-v4-pro requests with V4.1-Flash after 2026-09-14; the API still lists DeepSeek-V4-Pro-0813 under that name.",
   "quants": [],
   "vramQ4Gb": null,
   "vramFp16Gb": null,
@@ -49,7 +49,8 @@
     "paramsB/activeParamsB/ctxK/license/arch": "https://huggingface.co/deepseek-ai/DeepSeek-V4.1-Flash/raw/main/README.md",
     "price": "https://api-docs.deepseek.com/quick_start/pricing/",
     "maxOutput/vision": "https://api-docs.deepseek.com/quick_start/pricing/",
-    "openness": "https://huggingface.co/deepseek-ai/DeepSeek-V4.1-Flash/raw/main/README.md"
+    "openness": "https://huggingface.co/deepseek-ai/DeepSeek-V4.1-Flash/raw/main/README.md",
+    "status": "https://api-docs.deepseek.com/updates"
   },
   "results": [
     {
@@ -179,6 +180,30 @@
       "sourceUrl": "https://arena.ai/leaderboard/text",
       "evaluatedAt": "2026-10-13",
       "notes": "Text Arena row 'deepseek-v4.1-flash-max', 12,000 votes; leaderboard last updated Oct 13 2026. No arena row in the corpus today."
+    },
+    {
+      "benchmarkSlug": "arc-agi-1",
+      "score": 94.5,
+      "source": "independent",
+      "sourceUrl": "https://arcprize.org/results/deepseek-v4-1-flash",
+      "evaluatedAt": "2026-09-10",
+      "notes": "ARC Prize verified result on the Semi-Private set, run by the ARC Prize team. Max variant, run on the September 10 checkpoint (Low 90.5%)."
+    },
+    {
+      "benchmarkSlug": "arc-agi-2",
+      "score": 72.9,
+      "source": "independent",
+      "sourceUrl": "https://arcprize.org/results/deepseek-v4-1-flash",
+      "evaluatedAt": "2026-09-10",
+      "notes": "ARC Prize verified result on the Semi-Private set, run by the ARC Prize team. Max variant, run on the September 10 checkpoint (High 67.5%)."
+    },
+    {
+      "benchmarkSlug": "arc-agi-3",
+      "score": 0.9,
+      "source": "independent",
+      "sourceUrl": "https://arcprize.org/results/deepseek-v4-1-flash",
+      "evaluatedAt": "2026-09-10",
+      "notes": "ARC Prize verified result on the Semi-Private set, run by the ARC Prize team. Max, Standard harness (the comparable figure for older ARC-AGI-3 rows), September 10 checkpoint. Provider Adapter harness gives 3.3% (Low)."
     }
   ]
 }

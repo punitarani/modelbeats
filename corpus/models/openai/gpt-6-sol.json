@@ -141,6 +141,30 @@
       "sourceUrl": "https://arena.ai/leaderboard/text",
       "evaluatedAt": "2026-10-13",
       "notes": "Text Arena row 'gpt-6-sol-max', 11,903 votes; leaderboard last updated Oct 13 2026. No arena row in the corpus today."
+    },
+    {
+      "benchmarkSlug": "arc-agi-1",
+      "score": 95.5,
+      "source": "independent",
+      "sourceUrl": "https://arcprize.org/results/openai-gpt-6-sol",
+      "evaluatedAt": "2026-09-22",
+      "notes": "ARC Prize verified result on the Semi-Private set, run by the ARC Prize team. Max variant (XHigh 92.7%)."
+    },
+    {
+      "benchmarkSlug": "arc-agi-2",
+      "score": 89.6,
+      "source": "independent",
+      "sourceUrl": "https://arcprize.org/results/openai-gpt-6-sol",
+      "evaluatedAt": "2026-09-22",
+      "notes": "ARC Prize verified result on the Semi-Private set, run by the ARC Prize team. Max variant (XHigh 78.1%)."
+    },
+    {
+      "benchmarkSlug": "arc-agi-3",
+      "score": 4.62,
+      "source": "independent",
+      "sourceUrl": "https://arcprize.org/results/openai-gpt-6-sol",
+      "evaluatedAt": "2026-09-22",
+      "notes": "ARC Prize verified result on the Semi-Private set, run by the ARC Prize team. Max, Standard harness (the comparable figure for older ARC-AGI-3 rows). Provider Adapter harness gives 23.03%."
     }
   ]
 }
