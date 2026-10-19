@@ -91,6 +91,30 @@
       "sourceUrl": "https://huggingface.co/deepseek-ai/DeepSeek-V4.1-Flash-1017/raw/main/README.md",
       "evaluatedAt": "2026-10-17",
       "notes": "DS-V4.1-Flash-1017 column of the comparison table on the deepseek-ai Hugging Face model card (also in DeepSeek's Oct 17 API change log; recommended sampling temperature 1.0, top_p 1.0). Automation-Bench v1.0.6. Above the old slug normMax (50), which this PR widens to 56 so the bound guard admits it."
+    },
+    {
+      "benchmarkSlug": "terminal-bench-4",
+      "score": 31.82,
+      "source": "independent",
+      "sourceUrl": "https://www.vals.ai/benchmarks/terminal-bench-4",
+      "evaluatedAt": "2026-10-18",
+      "notes": "Terminal-Bench 4.0, Vals AI independent run (mini-swe-agent harness, avg@3, 8-hour agent limit; ±2.62); #17 of 50 on the Vals board (updated 2026-10-18). Run through DeepSeek's own API at max reasoning effort, the default provider on Vals' V4.1 Flash 1017 page. Supersedes the self-reported 42.3 row as headline."
+    },
+    {
+      "benchmarkSlug": "harvey-legal-agent",
+      "score": 9.17,
+      "source": "independent",
+      "sourceUrl": "https://www.vals.ai/benchmarks/hlab",
+      "evaluatedAt": "2026-10-18",
+      "notes": "Harvey's Legal Agent Benchmark, Vals AI independent run on the held-out set (task pass rate; ±2.51); #22 of 81 on the Vals board (updated 2026-10-18). Run through DeepSeek's own API at max reasoning effort, the default provider on Vals' V4.1 Flash 1017 page."
+    },
+    {
+      "benchmarkSlug": "vals-finance-agent",
+      "score": 56.96,
+      "source": "independent",
+      "sourceUrl": "https://www.vals.ai/models/deepseek_deepseek-v4.1-flash-1017",
+      "evaluatedAt": "2026-10-19",
+      "notes": "Vals Finance Agent v2, Vals AI independent run (dealbreaker-gated partial credit, mean of 3 runs, test split; ±2.05); #17 of 80 per Vals' V4.1 Flash 1017 page. The Finance Agent board itself was last updated 2026-10-16 and does not list this run yet. Run through DeepSeek's own API at max reasoning effort, the default provider on Vals' V4.1 Flash 1017 page."
     }
   ]
 }
