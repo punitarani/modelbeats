@@ -112,9 +112,9 @@
       "benchmarkSlug": "vals-finance-agent",
       "score": 56.96,
       "source": "independent",
-      "sourceUrl": "https://www.vals.ai/models/deepseek_deepseek-v4.1-flash-1017",
-      "evaluatedAt": "2026-10-19",
-      "notes": "Vals Finance Agent v2, Vals AI independent run (dealbreaker-gated partial credit, mean of 3 runs, test split; ±2.05); #17 of 80 per Vals' V4.1 Flash 1017 page. The Finance Agent board itself was last updated 2026-10-16 and does not list this run yet. Run through DeepSeek's own API at max reasoning effort, the default provider on Vals' V4.1 Flash 1017 page."
+      "sourceUrl": "https://www.vals.ai/benchmarks/fabv2",
+      "evaluatedAt": "2026-10-18",
+      "notes": "Vals Finance Agent v2, Vals AI independent run (dealbreaker-gated partial credit, mean of 3 runs, test split; ±2.05); #17 of 80 on the Vals board (updated 2026-10-18), matching Vals' V4.1 Flash 1017 page. Run through DeepSeek's own API at max reasoning effort, the default provider on that page."
     }
   ]
 }

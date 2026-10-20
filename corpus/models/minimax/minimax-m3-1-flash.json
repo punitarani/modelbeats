@@ -1,0 +1,85 @@
+{
+  "name": "MiniMax M3.1 Flash",
+  "org": "MiniMax",
+  "family": "MiniMax M3",
+  "releaseDate": "2026-10-19",
+  "status": "released",
+  "openness": "closed",
+  "license": "Proprietary API for now (MiniMax says model weights will be released later)",
+  "paramsB": null,
+  "activeParamsB": null,
+  "archClass": "dense",
+  "archDisplay": "architecture undisclosed (MiniMax cites 'more aggressive sparsity' than M3; no model card or weights yet); 1M-token context, text/image/video input, always-on thinking with effort low to max",
+  "ctxK": 1000,
+  "modalities": [
+    "text",
+    "vision",
+    "video"
+  ],
+  "langCount": null,
+  "capabilities": {
+    "reasoning": true,
+    "coding": true,
+    "vision": true,
+    "functionCalling": true,
+    "toolUse": true,
+    "agentic": true
+  },
+  "apiAvailable": true,
+  "price": {
+    "input": 0.15,
+    "output": 0.6,
+    "provider": "MiniMax"
+  },
+  "links": {
+    "docs": "https://platform.minimax.io/docs/guides/text-generation"
+  },
+  "note": "MiniMax's Oct 19, 2026 general release of the Flash model it had tested as M3.1-Flash-Preview inside MiniMax Code since Sep 27 (and anonymously as 'Space Bunny' on OpenRouter). Served on the MiniMax API, M Plan and MiniMax Code at a flat $0.15/$0.60 per Mtok ($0.015 cached input); MiniMax says agentic-task cost is 70% below M3 and output speed is about 3x faster. Thinking cannot be turned off and defaults to max effort. Weights are promised later, so openness stays closed until they land. NOT FILED: the launch comparison table is an image, and only the figures MiniMax also states in the post's text are filed (DeepSWE, OSWorld 2.0, CyberGym). Terminal-Bench 4.0 38.1, NL2Repo 61.2, HLE 43.4 and Automation-Bench 62.8 appear only in that image and in secondary mirrors (which disagree on Automation-Bench: 62.8 vs 62.2). Agents' Last Exam 29.6 is a pass rate (the same table gives GPT-5.6 Sol 30.6, against its 52.7 score component), so it is not filed under the corpus's score-component convention. BankerToolBench (76.2), LOCA-Bench, PostTrainBench, SWE Refactor Bench and GDP.pdf AA have no corpus column; AutomationBench-AA is Artificial Analysis's variant, not the Zapier column.",
+  "quants": [],
+  "vramQ4Gb": null,
+  "vramFp16Gb": null,
+  "tps4090": null,
+  "tpsNote": null,
+  "effortLabel": null,
+  "isDefaultConfig": true,
+  "isBestConfig": true,
+  "specSources": {
+    "releaseDate/price/openness": "https://www.minimax.io/blog/minimax-m31f",
+    "ctxK/modalities/effort": "https://platform.minimax.io/docs/guides/text-generation",
+    "releaseNotes": "https://platform.minimax.io/docs/release-notes/models"
+  },
+  "results": [
+    {
+      "benchmarkSlug": "deepswe",
+      "score": 73.7,
+      "source": "self-reported",
+      "sourceUrl": "https://www.minimax.io/blog/minimax-m31f",
+      "evaluatedAt": "2026-10-19",
+      "notes": "MiniMax's Oct 19, 2026 launch post (figure stated in the post's text; the comparison table itself is an image). DeepSWE v1.1 ('73.7%'). The image table puts Claude Opus 5 at 74.0 and DeepSeek-V4.1-Flash-1017 at 77.0, matching the corpus rows."
+    },
+    {
+      "benchmarkSlug": "osworld-2",
+      "score": 61.7,
+      "source": "self-reported",
+      "sourceUrl": "https://www.minimax.io/blog/minimax-m31f",
+      "evaluatedAt": "2026-10-19",
+      "notes": "MiniMax's Oct 19, 2026 launch post (figure stated in the post's text; the comparison table itself is an image). OSWorld 2.0 ('OSWorld V2', '61.7 points'). The metric isn't named; the image table gives Claude Opus 5 70.6, which matches the corpus's partial-credit row for Opus 5, so this is read as partial credit."
+    },
+    {
+      "benchmarkSlug": "cybergym",
+      "score": 82.0,
+      "source": "self-reported",
+      "sourceUrl": "https://www.minimax.io/blog/minimax-m31f",
+      "evaluatedAt": "2026-10-19",
+      "notes": "MiniMax's Oct 19, 2026 launch post (figure stated in the post's text; the comparison table itself is an image). CyberGym ('82%' in the text; secondary mirrors of the image table give 82.2)."
+    },
+    {
+      "benchmarkSlug": "terminal-bench-4",
+      "score": 25.25,
+      "source": "independent",
+      "sourceUrl": "https://www.vals.ai/benchmarks/terminal-bench-4",
+      "evaluatedAt": "2026-10-19",
+      "notes": "Terminal-Bench 4.0, Vals AI independent run (mini-swe-agent harness, avg@3, 8-hour agent limit); #22 of 51 on the Vals board (updated 2026-10-19), at MiniMax's $0.15/$0.60 price. Vals' model page (default provider MiniMax, max effort) doesn't list this run yet and shows only the new Finance Agent v2.1, Harvey LAB v1.1 and EMB v1.1 versions, which have no corpus column. MiniMax's own launch-table figure (38.1) appears only in an image and is not filed."
+    }
+  ]
+}
