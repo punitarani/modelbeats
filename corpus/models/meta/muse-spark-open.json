@@ -147,9 +147,9 @@
       "benchmarkSlug": "harvey-legal-agent",
       "score": 16.67,
       "source": "independent",
-      "sourceUrl": "https://www.vals.ai/models/meta_muse-spark-open",
+      "sourceUrl": "https://www.vals.ai/benchmarks/hlab-v1",
       "evaluatedAt": "2026-10-16",
-      "notes": "Harvey's Legal Agent Benchmark, Vals AI independent run on the held-out set (task pass rate; ±3.09); #9 of 80 per Vals' Muse Spark Open page. Run through Together AI at xhigh effort."
+      "notes": "Harvey's Legal Agent Benchmark, Vals AI independent run on the held-out set (task pass rate; ±3.09); #9 of 81 on the Vals v1 board. Run through Together AI at xhigh effort. On Oct 19 Vals moved this v1 board to /benchmarks/hlab-v1 (archived) and replaced it at /benchmarks/hlab with HLAB-Vals-1.1, whose scores are not comparable."
     },
     {
       "benchmarkSlug": "terminal-bench-4",

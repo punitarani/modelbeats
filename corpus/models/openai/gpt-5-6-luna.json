@@ -213,9 +213,9 @@
       "benchmarkSlug": "harvey-legal-agent",
       "score": 1.25,
       "source": "independent",
-      "sourceUrl": "https://www.vals.ai/benchmarks/hlab",
+      "sourceUrl": "https://www.vals.ai/benchmarks/hlab-v1",
       "evaluatedAt": "2026-10-12",
-      "notes": "Harvey's Legal Agent Benchmark, Vals AI independent run on the held-out set (task pass rate, average of GPT 5.5 and Sonnet 4.6 judges); #54 of 63 on the Vals board."
+      "notes": "Harvey's Legal Agent Benchmark, Vals AI independent run on the held-out set (task pass rate, average of GPT 5.5 and Sonnet 4.6 judges); #57 of 81 on the Vals v1 board. On Oct 19 Vals moved this v1 board to /benchmarks/hlab-v1 (archived) and replaced it at /benchmarks/hlab with HLAB-Vals-1.1, whose scores are not comparable."
     },
     {
       "benchmarkSlug": "vals-finance-agent",

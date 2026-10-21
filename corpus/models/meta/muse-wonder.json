@@ -57,9 +57,9 @@
       "benchmarkSlug": "harvey-legal-agent",
       "score": 17.08,
       "source": "independent",
-      "sourceUrl": "https://www.vals.ai/models/meta_muse-wonder",
+      "sourceUrl": "https://www.vals.ai/benchmarks/hlab-v1",
       "evaluatedAt": "2026-10-12",
-      "notes": "Harvey's Legal Agent Benchmark, Vals AI launch-day evaluation (±3.10, #8 of 79). Meta's scorecard reports the different Harvey LAB-AA v1.1 (10.0), not filed."
+      "notes": "Harvey's Legal Agent Benchmark, Vals AI launch-day evaluation (±3.10, #8 of 81 on the Vals v1 board). Meta's scorecard reports the different Harvey LAB-AA v1.1 (10.0), not filed. On Oct 19 Vals moved this v1 board to /benchmarks/hlab-v1 (archived) and replaced it at /benchmarks/hlab with HLAB-Vals-1.1, whose scores are not comparable."
     },
     {
       "benchmarkSlug": "vals-finance-agent",
