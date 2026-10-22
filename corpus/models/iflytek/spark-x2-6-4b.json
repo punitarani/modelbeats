@@ -1,0 +1,83 @@
+{
+  "name": "Spark-X2.6-4B",
+  "org": "iFlytek",
+  "family": "Spark (Xinghuo)",
+  "releaseDate": "2026-10-20",
+  "status": "released",
+  "openness": "open-weights",
+  "license": "Apache-2.0",
+  "paramsB": 4,
+  "activeParamsB": null,
+  "archClass": "dense",
+  "archDisplay": "4B-parameter on-device language model with the same architecture as Spark-X2.5-4B (Spark2_5ForCausalLM; layer layout not described on the card); 1,048,576-token context; thinking levels none, low and high",
+  "ctxK": 1024,
+  "modalities": [
+    "text"
+  ],
+  "langCount": null,
+  "capabilities": {
+    "reasoning": true,
+    "coding": true,
+    "vision": false,
+    "functionCalling": true,
+    "toolUse": true,
+    "agentic": true
+  },
+  "apiAvailable": false,
+  "price": null,
+  "links": {
+    "hf": "XHToken/Spark-X2.6-4B",
+    "docs": "https://github.com/XHToken/Spark-X2.6"
+  },
+  "note": "iFlytek's open-weight on-device model, released by its SparkLLM (XHToken) team on Hugging Face on Oct 20, 2026 (the GitHub release log dates the global launch Oct 21) and presented again at iFlytek's 1024 Developer Festival on Oct 22 alongside the cloud Spark X2.6. It keeps Spark-X2.5-4B's architecture and gains through post-training; a base checkpoint ships separately. Scores are SparkLLM's with thinking set to high. NOT FILED: BFCL-V4 (71.8; corpus has only bfcl and bfcl-v3, and V4 is a different task version) and AA-LCR v1.1 (67.3; no corpus column). Spark-X2.5-4B (Sep 1, 2026) predates this routine and is not in the corpus.",
+  "quants": [
+    "GGUF"
+  ],
+  "vramQ4Gb": null,
+  "vramFp16Gb": null,
+  "tps4090": null,
+  "tpsNote": null,
+  "effortLabel": null,
+  "isDefaultConfig": true,
+  "isBestConfig": true,
+  "specSources": {
+    "releaseDate": "https://x.com/SparkLLM/status/2112614036227408363",
+    "paramsB/ctxK/license": "https://huggingface.co/XHToken/Spark-X2.6-4B",
+    "architecture/launchLog": "https://github.com/XHToken/Spark-X2.6"
+  },
+  "results": [
+    {
+      "benchmarkSlug": "swe-bench-pro",
+      "score": 54.3,
+      "source": "self-reported",
+      "sourceUrl": "https://dev.to/sparkllm/spark-x26-4b-stronger-on-device-agents-coding-and-controllable-thinking-2fh",
+      "evaluatedAt": "2026-10-20",
+      "notes": "SparkLLM's Oct 20, 2026 launch post on its official dev.to account, 'Selected results' text table (Spark-X2.6-4B column; the release team's own results with thinking set to high). The same figures are in the full benchmark image on the Hugging Face model card. SWE Pro (54.3; Spark-X2.5-4B 44.4)."
+    },
+    {
+      "benchmarkSlug": "swe-bench",
+      "score": 62.8,
+      "source": "self-reported",
+      "sourceUrl": "https://dev.to/sparkllm/spark-x26-4b-stronger-on-device-agents-coding-and-controllable-thinking-2fh",
+      "evaluatedAt": "2026-10-20",
+      "notes": "SparkLLM's Oct 20, 2026 launch post on its official dev.to account, 'Selected results' text table (Spark-X2.6-4B column; the release team's own results with thinking set to high). The same figures are in the full benchmark image on the Hugging Face model card. SWE Verified (62.8; Spark-X2.5-4B 41.6)."
+    },
+    {
+      "benchmarkSlug": "mcp-atlas",
+      "score": 62.4,
+      "source": "self-reported",
+      "sourceUrl": "https://dev.to/sparkllm/spark-x26-4b-stronger-on-device-agents-coding-and-controllable-thinking-2fh",
+      "evaluatedAt": "2026-10-20",
+      "notes": "SparkLLM's Oct 20, 2026 launch post on its official dev.to account, 'Selected results' text table (Spark-X2.6-4B column; the release team's own results with thinking set to high). The same figures are in the full benchmark image on the Hugging Face model card. MCP-Atlas (62.4; Spark-X2.5-4B 54.6)."
+    },
+    {
+      "benchmarkSlug": "browsecomp",
+      "score": 53.1,
+      "source": "self-reported",
+      "sourceUrl": "https://dev.to/sparkllm/spark-x26-4b-stronger-on-device-agents-coding-and-controllable-thinking-2fh",
+      "evaluatedAt": "2026-10-20",
+      "notes": "SparkLLM's Oct 20, 2026 launch post on its official dev.to account, 'Selected results' text table (Spark-X2.6-4B column; the release team's own results with thinking set to high). The same figures are in the full benchmark image on the Hugging Face model card. BrowseComp (53.1; Spark-X2.5-4B 40.9)."
+    }
+  ],
+  "verificationNotes": "Release confirmed on the XHToken Hugging Face card (4B params, BF16, Apache-2.0, 1,048,576-token serving context), the XHToken/Spark-X2.6 GitHub README (release log: '2026/10/21 Global launch of the Spark-X2.6 model series'), SparkLLM's Oct 20 X post, and IT Home's Oct 22 report of iFlytek's developer-festival launch. The card's benchmark table is an image; the four filed figures are the ones SparkLLM also states as text in its dev.to post."
+}
