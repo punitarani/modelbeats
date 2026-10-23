@@ -191,11 +191,11 @@ describe('derived scores match the D21 contract (goldens)', () => {
       .filter((m) => m.rankOverall != null && m.rankOverall <= 5)
       .sort((a, b) => (a.rankOverall ?? 0) - (b.rankOverall ?? 0))
     expect(top5.map((m) => [m.slug, m.overallIndex])).toEqual([
-      ['gemini-4-argon', 3133.7],
-      ['muse-wonder-full', 3117.8],
-      ['claude-opus-5-5', 3065.7],
-      ['muse-wonder', 3027.7],
-      ['claude-fable-5-1', 2899.2],
+      ['gemini-4-argon', 3122.4],
+      ['muse-wonder-full', 3112.3],
+      ['claude-opus-5-5', 3058.4],
+      ['muse-wonder', 3022.8],
+      ['claude-fable-5-1', 2894.5],
     ])
   })
 
@@ -279,11 +279,11 @@ describe('derived scores match the D21 contract (goldens)', () => {
   it('pins the real top-5 movers and their rating self-consistency', async () => {
     const { models, movers } = await derived()
     expect(movers.map((m) => [m.slug, m.prevSlug, m.delta])).toEqual([
-      ['sarvam-105b', 'sarvam-1-2b', 1621.4],
-      ['mistral-large-4', 'mistral-large-3', 1233.4],
-      ['smollm3-3b-think', 'smollm2-1-7b', 1003.6],
-      ['deepseek-v4-flash-0731', 'deepseek-v4-flash-non-think', 1001.2],
-      ['hy3', 'hunyuan-a13b', 912.4],
+      ['sarvam-105b', 'sarvam-1-2b', 1621.5],
+      ['mistral-large-4', 'mistral-large-3', 1231.1],
+      ['smollm3-3b-think', 'smollm2-1-7b', 1003.7],
+      ['deepseek-v4-flash-0731', 'deepseek-v4-flash-non-think', 998.7],
+      ['hy3', 'hunyuan-a13b', 911.5],
     ])
     // structural: every mover delta is the rounded rating gap between two RANKED models
     const bySlug = new Map(models.map((m) => [m.slug, m]))
