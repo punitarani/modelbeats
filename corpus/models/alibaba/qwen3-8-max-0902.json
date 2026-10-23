@@ -75,6 +75,14 @@
       "sourceUrl": "https://www.qwencloud.com/models/qwen3.8-max-0902",
       "evaluatedAt": "2026-09-02",
       "notes": "MMMU-Pro overall, Qwen3.8-Max-0902 release chart as transcribed by BenchmarkList; just behind Claude Opus 5 (84.7)."
+    },
+    {
+      "benchmarkSlug": "terminal-bench-4",
+      "score": 38.89,
+      "source": "independent",
+      "sourceUrl": "https://www.vals.ai/benchmarks/terminal-bench-4",
+      "evaluatedAt": "2026-10-22",
+      "notes": "Terminal-Bench 4.0, Vals AI independent run (mini-swe-agent harness, avg@3, 8-hour agent limit; ±1.34); #13 of 54 on the Vals board (updated 2026-10-22), level with GLM 5.3. Vals' Qwen 3.8 Max 0902 page lists the same 38.89% with Alibaba as default provider."
     }
   ]
 }

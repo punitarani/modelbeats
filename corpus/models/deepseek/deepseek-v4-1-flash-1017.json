@@ -115,6 +115,22 @@
       "sourceUrl": "https://www.vals.ai/benchmarks/fabv2",
       "evaluatedAt": "2026-10-18",
       "notes": "Vals Finance Agent v2, Vals AI independent run (dealbreaker-gated partial credit, mean of 3 runs, test split; ±2.05); #17 of 80 on the Vals board (updated 2026-10-18), matching Vals' V4.1 Flash 1017 page. Run through DeepSeek's own API at max reasoning effort, the default provider on that page."
+    },
+    {
+      "benchmarkSlug": "arc-agi-1",
+      "score": 94.5,
+      "source": "independent",
+      "sourceUrl": "https://arcprize.org/results/deepseek-v4-1-flash-1017",
+      "evaluatedAt": "2026-10-17",
+      "notes": "ARC Prize verified result on the Semi-Private set, run by the ARC Prize team. High variant (Max 93.5%, Low 91.5%, None 5.7%)."
+    },
+    {
+      "benchmarkSlug": "arc-agi-2",
+      "score": 78.1,
+      "source": "independent",
+      "sourceUrl": "https://arcprize.org/results/deepseek-v4-1-flash-1017",
+      "evaluatedAt": "2026-10-17",
+      "notes": "ARC Prize verified result on the Semi-Private set, run by the ARC Prize team. Max variant (Low 73.6%, High 68.6%, None 2.1%). ARC Prize has not posted an ARC-AGI-3 result."
     }
   ]
 }
