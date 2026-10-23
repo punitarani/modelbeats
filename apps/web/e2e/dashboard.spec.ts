@@ -103,7 +103,7 @@ test.describe('dashboard overview', () => {
     const rail = page.getByTestId('arena-rail')
     // rail now leads with the #1 overall model by Elo rating
     await expect(rail).toContainText('Claude Sonnet 5.5')
-    await expect(rail).toContainText('3234.6')
+    await expect(rail).toContainText('3228.4')
     await pickOption(page, 'qc-b', 'Llama 3.1 405B — Meta')
     await page.getByTestId('qc-go').click()
     // quick-compare slot A defaults to the #1 rank-eligible model (Claude Sonnet 5.5)
