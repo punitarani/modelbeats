@@ -6,17 +6,18 @@ import { gotoHydrated } from './helpers'
 test.describe('history-aware back links', () => {
   test('filtered rankings → model → back restores the filtered URL', async ({ page }) => {
     await gotoHydrated(page, '/rankings?org=anthropic')
-    // rank-eligible first, by Elo: Claude Sonnet 5.5 is Anthropic's top-ranked model
+    // rank-eligible first, by Elo: Claude Opus 5.5 is Anthropic's top-ranked model
     await page.getByTestId('ranking-row').first().click()
-    await expect(page).toHaveURL(/\/models\/claude-sonnet-5-5$/)
+    await expect(page).toHaveURL(/\/models\/claude-opus-5-5$/)
     await page.getByRole('link', { name: 'Back', exact: true }).click()
     await expect(page).toHaveURL(/\/rankings\?org=anthropic$/)
   })
 
   test('dashboard scatter point → model → back lands on the dashboard', async ({ page }) => {
     await gotoHydrated(page, '/')
-    await page.locator('a[aria-label^="Gemini 3.1 Pro —"]').click()
-    await expect(page).toHaveURL(/\/models\/gemini-3-1-pro$/)
+    // Gemini 3.1 Pro's point sits under GPT-5.6 Terra's (same $12/M price, close Elo), so use the #1 model's point
+    await page.locator('a[aria-label^="Kimi K3.1 Pro —"]').click()
+    await expect(page).toHaveURL(/\/models\/kimi-k3-1-pro$/)
     await page.getByRole('link', { name: 'Back', exact: true }).click()
     await expect(page).toHaveURL(/\/$/)
   })

@@ -52,9 +52,9 @@
       "benchmarkSlug": "harvey-legal-agent",
       "score": 21.67,
       "source": "independent",
-      "sourceUrl": "https://www.vals.ai/models/meta_muse-wonder-full",
+      "sourceUrl": "https://www.vals.ai/benchmarks/hlab-v1",
       "evaluatedAt": "2026-10-12",
-      "notes": "Harvey's Legal Agent Benchmark, Vals AI launch-day evaluation (±3.54, #4 of 79). Meta's scorecard reports the different Harvey LAB-AA v1.1 (13.1), not filed."
+      "notes": "Harvey's Legal Agent Benchmark, Vals AI launch-day evaluation (±3.54, #4 of 81 on the Vals v1 board). Meta's scorecard reports the different Harvey LAB-AA v1.1 (13.1), not filed. On Oct 19 Vals moved this v1 board to /benchmarks/hlab-v1 (archived) and replaced it at /benchmarks/hlab with HLAB-Vals-1.1, whose scores are not comparable."
     },
     {
       "benchmarkSlug": "vals-finance-agent",
@@ -135,6 +135,14 @@
       "sourceUrl": "https://research.meta.ai/static/muse-wonder-model-card",
       "evaluatedAt": "2026-10-12",
       "notes": "ExploitBench, Muse Wonder model card section 4. ExploitGym (92 flags, of which 21 via the intended vulnerability) has no corpus column."
+    },
+    {
+      "benchmarkSlug": "terminal-bench-science",
+      "score": 37.14,
+      "source": "independent",
+      "sourceUrl": "https://www.vals.ai/benchmarks/terminal-bench-science",
+      "evaluatedAt": "2026-10-14",
+      "notes": "Terminal-Bench Science 0.1, Vals AI independent run (single-run pass@1, mini-swe-agent harness; Vals notes its figures sit below vendor-harness numbers); #7 of 41 on the Vals board (updated 2026-10-14). ±5.82; fallback rate 0.00% on Vals' Wonder Full page."
     }
   ]
 }

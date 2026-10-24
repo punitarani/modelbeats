@@ -115,6 +115,14 @@
       "sourceUrl": "https://huggingface.co/MiniMaxAI/MiniMax-M3.1-Flash/raw/main/README.md",
       "evaluatedAt": "2026-10-23",
       "notes": "MiniMax-M3.1-Flash Hugging Face model card (MiniMaxAI, weights released Oct 23, 2026), M3.1 Flash column of the benchmark table. CharXiv RQ (reasoning-question subset, GPT-5.5 judge), no tool use stated."
+    },
+    {
+      "benchmarkSlug": "terminal-bench-4",
+      "score": 25.25,
+      "source": "independent",
+      "sourceUrl": "https://www.vals.ai/benchmarks/terminal-bench-4",
+      "evaluatedAt": "2026-10-19",
+      "notes": "Terminal-Bench 4.0, Vals AI independent run (mini-swe-agent harness, avg@3, 8-hour agent limit); #22 of 51 on the Vals board (updated 2026-10-19), at MiniMax's $0.15/$0.60 price. Vals' model page (default provider MiniMax, max effort) doesn't list this run yet and shows only the new Finance Agent v2.1, Harvey LAB v1.1 and EMB v1.1 versions, which have no corpus column. MiniMax's own 38.1 (Codex harness, Hugging Face card) is filed separately as self-reported."
     }
   ]
 }

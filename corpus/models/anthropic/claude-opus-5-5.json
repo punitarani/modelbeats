@@ -60,7 +60,7 @@
       "source": "self-reported",
       "sourceUrl": "https://www.anthropic.com/claude-opus-5-5",
       "evaluatedAt": "2026-09-22",
-      "notes": "Terminal-Bench 4.0 at XHIGH effort (Anthropic: Opus 5.5's highest score; max is lower). SE ±2.6. System Card §8.5 gives 66.36 with safeguards on (fallback on 2.5% of requests). Table: Fable 5.1 55.8, Opus 5 52.3, GPT-6 Astra 57.9 (high, per OpenAI), GPT-5.6 Sol 37.3."
+      "notes": "Terminal-Bench 4.0 at XHIGH effort (Anthropic: Opus 5.5's highest score; max is lower). SE ±2.6. System Card §8.5 gives 66.36 with safeguards on (fallback on 2.5% of requests). Table: Fable 5.1 55.8, Opus 5 52.3, GPT-6 Astra 57.9 (high, per OpenAI), GPT-5.6 Sol 37.3. Vals AI's independent mini-swe-agent run (65.15, 2026-10-12) is not filed: 22 of 198 attempts were served by Opus 5 / Opus 4.8 provider fallback (58.08 counting those as failures)."
     },
     {
       "benchmarkSlug": "frontiercode",
@@ -181,6 +181,54 @@
       "sourceUrl": "https://anthropic.com/claude-opus-5-5-system-card",
       "evaluatedAt": "2026-09-22",
       "notes": "Claude Opus 5.5 System Card."
+    },
+    {
+      "benchmarkSlug": "terminal-bench-science",
+      "score": 47.14,
+      "source": "independent",
+      "sourceUrl": "https://www.vals.ai/benchmarks/terminal-bench-science",
+      "evaluatedAt": "2026-10-08",
+      "notes": "Terminal-Bench Science 0.1, Vals AI independent run (single-run pass@1, mostly mini-swe-agent harness; Vals notes its figures sit below vendor-harness numbers); #3 of 39 on the Vals board. Supersedes the self-reported 58.7 row as headline."
+    },
+    {
+      "benchmarkSlug": "harvey-legal-agent",
+      "score": 3.75,
+      "source": "independent",
+      "sourceUrl": "https://www.vals.ai/benchmarks/hlab-v1",
+      "evaluatedAt": "2026-10-12",
+      "notes": "Harvey's Legal Agent Benchmark, Vals AI independent run on the held-out set (task pass rate, average of GPT 5.5 and Sonnet 4.6 judges); #43 of 81 on the Vals v1 board. On Oct 19 Vals moved this v1 board to /benchmarks/hlab-v1 (archived) and replaced it at /benchmarks/hlab with HLAB-Vals-1.1, whose scores are not comparable."
+    },
+    {
+      "benchmarkSlug": "vals-finance-agent",
+      "score": 58.59,
+      "source": "independent",
+      "sourceUrl": "https://www.vals.ai/benchmarks/fabv2",
+      "evaluatedAt": "2026-10-12",
+      "notes": "Vals Finance Agent v2, Vals AI independent run (dealbreaker-gated partial credit, mean of 3 runs, test split); #10 of 59 on the Vals board."
+    },
+    {
+      "benchmarkSlug": "arena",
+      "score": 1508,
+      "source": "arena",
+      "sourceUrl": "https://arena.ai/leaderboard/text",
+      "evaluatedAt": "2026-10-13",
+      "notes": "Text Arena row 'claude-opus-5.5-high', 7,687 votes; leaderboard last updated Oct 13 2026. No arena row in the corpus today."
+    },
+    {
+      "benchmarkSlug": "arc-agi-1",
+      "score": 98.5,
+      "source": "independent",
+      "sourceUrl": "https://arcprize.org/results/anthropic-claude-opus-5-5",
+      "evaluatedAt": "2026-09-22",
+      "notes": "ARC Prize verified result on the Semi-Private set, run by the ARC Prize team. High variant (Max, XHigh and Medium 97.5%)."
+    },
+    {
+      "benchmarkSlug": "arc-agi-2",
+      "score": 93.3,
+      "source": "independent",
+      "sourceUrl": "https://arcprize.org/results/anthropic-claude-opus-5-5",
+      "evaluatedAt": "2026-09-22",
+      "notes": "ARC Prize verified result on the Semi-Private set, run by the ARC Prize team. High variant (XHigh 92.5%, Max 91.7%). ARC Prize has not posted an ARC-AGI-3 result."
     }
   ]
 }

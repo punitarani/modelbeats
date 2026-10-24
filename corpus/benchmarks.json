@@ -136,7 +136,7 @@
     "unit": "Elo",
     "description": "Blind pairwise human votes (arena.ai). The gold standard for conversational preference.",
     "normMin": 1000,
-    "normMax": 1460,
+    "normMax": 1480,
     "higherIsBetter": true
   },
   {
@@ -545,7 +545,7 @@
     "name": "Harvey Legal Agent Benchmark",
     "category": "agents",
     "unit": "%",
-    "description": "Harvey's Legal Agent Benchmark (Vals AI) — complex, multi-step legal workflows scored by practising lawyers. Scores stay low in absolute terms: the frontier is in the teens.",
+    "description": "Harvey's Legal Agent Benchmark v1 (Vals AI) — complex, multi-step legal workflows scored by practising lawyers. Scores stay low in absolute terms: the frontier is in the teens. Vals' HLAB-Vals-1.1 (Oct 2026) runs on a remediated holdout and is not comparable, so it is not filed in this column.",
     "normMin": 0,
     "normMax": 25,
     "higherIsBetter": true

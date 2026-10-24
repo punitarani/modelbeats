@@ -91,6 +91,46 @@
       "sourceUrl": "https://huggingface.co/deepseek-ai/DeepSeek-V4.1-Flash-1017/raw/main/README.md",
       "evaluatedAt": "2026-10-17",
       "notes": "DS-V4.1-Flash-1017 column of the comparison table on the deepseek-ai Hugging Face model card (also in DeepSeek's Oct 17 API change log; recommended sampling temperature 1.0, top_p 1.0). Automation-Bench v1.0.6. Above the old slug normMax (50), which this PR widens to 56 so the bound guard admits it."
+    },
+    {
+      "benchmarkSlug": "terminal-bench-4",
+      "score": 31.82,
+      "source": "independent",
+      "sourceUrl": "https://www.vals.ai/benchmarks/terminal-bench-4",
+      "evaluatedAt": "2026-10-18",
+      "notes": "Terminal-Bench 4.0, Vals AI independent run (mini-swe-agent harness, avg@3, 8-hour agent limit; ±2.62); #17 of 50 on the Vals board (updated 2026-10-18). Run through DeepSeek's own API at max reasoning effort, the default provider on Vals' V4.1 Flash 1017 page. Supersedes the self-reported 42.3 row as headline."
+    },
+    {
+      "benchmarkSlug": "harvey-legal-agent",
+      "score": 9.17,
+      "source": "independent",
+      "sourceUrl": "https://www.vals.ai/benchmarks/hlab-v1",
+      "evaluatedAt": "2026-10-18",
+      "notes": "Harvey's Legal Agent Benchmark, Vals AI independent run on the held-out set (task pass rate; ±2.51); #22 of 81 on the Vals v1 board (updated 2026-10-18). Run through DeepSeek's own API at max reasoning effort, the default provider on Vals' V4.1 Flash 1017 page. On Oct 19 Vals moved this v1 board to /benchmarks/hlab-v1 (archived) and replaced it at /benchmarks/hlab with HLAB-Vals-1.1, whose scores are not comparable."
+    },
+    {
+      "benchmarkSlug": "vals-finance-agent",
+      "score": 56.96,
+      "source": "independent",
+      "sourceUrl": "https://www.vals.ai/benchmarks/fabv2",
+      "evaluatedAt": "2026-10-18",
+      "notes": "Vals Finance Agent v2, Vals AI independent run (dealbreaker-gated partial credit, mean of 3 runs, test split; ±2.05); #17 of 80 on the Vals board (updated 2026-10-18), matching Vals' V4.1 Flash 1017 page. Run through DeepSeek's own API at max reasoning effort, the default provider on that page."
+    },
+    {
+      "benchmarkSlug": "arc-agi-1",
+      "score": 94.5,
+      "source": "independent",
+      "sourceUrl": "https://arcprize.org/results/deepseek-v4-1-flash-1017",
+      "evaluatedAt": "2026-10-17",
+      "notes": "ARC Prize verified result on the Semi-Private set, run by the ARC Prize team. High variant (Max 93.5%, Low 91.5%, None 5.7%)."
+    },
+    {
+      "benchmarkSlug": "arc-agi-2",
+      "score": 78.1,
+      "source": "independent",
+      "sourceUrl": "https://arcprize.org/results/deepseek-v4-1-flash-1017",
+      "evaluatedAt": "2026-10-17",
+      "notes": "ARC Prize verified result on the Semi-Private set, run by the ARC Prize team. Max variant (Low 73.6%, High 68.6%, None 2.1%). ARC Prize has not posted an ARC-AGI-3 result."
     }
   ]
 }

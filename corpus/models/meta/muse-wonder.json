@@ -57,9 +57,9 @@
       "benchmarkSlug": "harvey-legal-agent",
       "score": 17.08,
       "source": "independent",
-      "sourceUrl": "https://www.vals.ai/models/meta_muse-wonder",
+      "sourceUrl": "https://www.vals.ai/benchmarks/hlab-v1",
       "evaluatedAt": "2026-10-12",
-      "notes": "Harvey's Legal Agent Benchmark, Vals AI launch-day evaluation (±3.10, #8 of 79). Meta's scorecard reports the different Harvey LAB-AA v1.1 (10.0), not filed."
+      "notes": "Harvey's Legal Agent Benchmark, Vals AI launch-day evaluation (±3.10, #8 of 81 on the Vals v1 board). Meta's scorecard reports the different Harvey LAB-AA v1.1 (10.0), not filed. On Oct 19 Vals moved this v1 board to /benchmarks/hlab-v1 (archived) and replaced it at /benchmarks/hlab with HLAB-Vals-1.1, whose scores are not comparable."
     },
     {
       "benchmarkSlug": "vals-finance-agent",
@@ -132,6 +132,14 @@
       "sourceUrl": "https://dev.meta.ai/models/muse-wonder",
       "evaluatedAt": "2026-10-12",
       "notes": "SWE-Marathon pass@1, Meta's launch scorecard on dev.meta.ai (max reasoning effort; peers GPT-6 Astra, Claude Fable 5.1 and Claude Opus 5.5 also at max). Meta attributes the figure to Abundant AI, but it is not yet on the public swemarathon.org leaderboard, so it is filed as self-reported."
+    },
+    {
+      "benchmarkSlug": "arena",
+      "score": 1513,
+      "source": "arena",
+      "sourceUrl": "https://arena.ai/leaderboard/text",
+      "evaluatedAt": "2026-10-13",
+      "notes": "Text Arena row 'muse-wonder-max', 1,944 votes; leaderboard last updated Oct 13 2026. No arena row in the corpus today."
     }
   ]
 }

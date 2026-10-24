@@ -84,6 +84,62 @@
       "sourceUrl": "https://www.anthropic.com/claude-haiku-5-5",
       "evaluatedAt": "2026-10-07",
       "notes": "No tools, Claude Haiku 5.5 launch table."
+    },
+    {
+      "benchmarkSlug": "terminal-bench-4",
+      "score": 36.36,
+      "source": "independent",
+      "sourceUrl": "https://www.vals.ai/benchmarks/terminal-bench-4",
+      "evaluatedAt": "2026-10-16",
+      "notes": "Terminal-Bench 4.0, Vals AI independent run (mini-swe-agent harness, avg@3, 8-hour agent limit; ±2.31); #15 of 49 on the Vals board (updated 2026-10-16). Vals re-scored this row from 35.35 (Oct 12 board) to 36.36; the model page agrees. Supersedes the self-reported 39.2 row as headline."
+    },
+    {
+      "benchmarkSlug": "terminal-bench-science",
+      "score": 10.0,
+      "source": "independent",
+      "sourceUrl": "https://www.vals.ai/benchmarks/terminal-bench-science",
+      "evaluatedAt": "2026-10-08",
+      "notes": "Terminal-Bench Science 0.1, Vals AI independent run (single-run pass@1, mostly mini-swe-agent harness; Vals notes its figures sit below vendor-harness numbers); #13 of 39 on the Vals board."
+    },
+    {
+      "benchmarkSlug": "harvey-legal-agent",
+      "score": 1.25,
+      "source": "independent",
+      "sourceUrl": "https://www.vals.ai/benchmarks/hlab-v1",
+      "evaluatedAt": "2026-10-12",
+      "notes": "Harvey's Legal Agent Benchmark, Vals AI independent run on the held-out set (task pass rate, average of GPT 5.5 and Sonnet 4.6 judges); #59 of 81 on the Vals v1 board. On Oct 19 Vals moved this v1 board to /benchmarks/hlab-v1 (archived) and replaced it at /benchmarks/hlab with HLAB-Vals-1.1, whose scores are not comparable."
+    },
+    {
+      "benchmarkSlug": "vals-finance-agent",
+      "score": 54.14,
+      "source": "independent",
+      "sourceUrl": "https://www.vals.ai/benchmarks/fabv2",
+      "evaluatedAt": "2026-10-12",
+      "notes": "Vals Finance Agent v2, Vals AI independent run (dealbreaker-gated partial credit, mean of 3 runs, test split); #26 of 59 on the Vals board."
+    },
+    {
+      "benchmarkSlug": "arc-agi-1",
+      "score": 89.0,
+      "source": "independent",
+      "sourceUrl": "https://arcprize.org/results/anthropic-claude-haiku-5-5",
+      "evaluatedAt": "2026-10-07",
+      "notes": "ARC Prize verified result on the Semi-Private set, run by the ARC Prize team. Max variant; ARC Prize counts the 7 of 100 tasks the run did not complete as incorrect (XHigh 87.5%)."
+    },
+    {
+      "benchmarkSlug": "arc-agi-2",
+      "score": 61.3,
+      "source": "independent",
+      "sourceUrl": "https://arcprize.org/results/anthropic-claude-haiku-5-5",
+      "evaluatedAt": "2026-10-07",
+      "notes": "ARC Prize verified result on the Semi-Private set, run by the ARC Prize team. XHigh variant; ARC Prize omits the Max run because only 74 of 120 tasks completed."
+    },
+    {
+      "benchmarkSlug": "arc-agi-3",
+      "score": 0.45,
+      "source": "independent",
+      "sourceUrl": "https://arcprize.org/results/anthropic-claude-haiku-5-5",
+      "evaluatedAt": "2026-10-07",
+      "notes": "ARC Prize verified result on the Semi-Private set, run by the ARC Prize team. Max, Standard harness (the comparable figure for older ARC-AGI-3 rows). Provider Adapter harness gives 2.82%."
     }
   ]
 }
