@@ -1,0 +1,70 @@
+{
+  "name": "Nemotron 3.5 Bolt E4B",
+  "org": "NVIDIA",
+  "orgSlug": "nvidia",
+  "family": "Nemotron 3.5",
+  "familySlug": "nemotron-3-5",
+  "slug": "nemotron-3-5-bolt-e4b",
+  "releaseDate": "2026-10-23",
+  "status": "released",
+  "openness": "open-weights",
+  "license": "OpenMDW License 1.1 (base Gemma 4 E4B under Apache-2.0)",
+  "paramsB": 8,
+  "activeParamsB": null,
+  "archClass": "dense",
+  "archDisplay": "Gemma-4-E4B architecture (8B total, 4B effective parameters), post-trained by NVIDIA from Gemma-4-E4B-it with multi-environment GRPO RL; 64K-token context; text in, text out; Q4_K_M 4GB release with BF16 reference weights and a DFlash speculative-decoding drafter",
+  "ctxK": 64,
+  "modalities": [
+    "text"
+  ],
+  "langCount": null,
+  "capabilities": {
+    "reasoning": true,
+    "coding": false,
+    "vision": false,
+    "functionCalling": true,
+    "toolUse": true,
+    "agentic": true
+  },
+  "apiAvailable": false,
+  "price": null,
+  "links": {
+    "hf": "nvidia/NVIDIA-Nemotron-3.5-Bolt-E4B-4GB",
+    "docs": "https://research.nvidia.com/labs/nemotron/NVIDIA-Nemotron-3.5-Bolt-E4B-4GB/"
+  },
+  "note": "Second model in NVIDIA's edge-focused Bolt line, released Oct 23, 2026 on Hugging Face and build.nvidia.com as announced with Bolt 74B-A9B on Oct 15: a Gemma-4-E4B post-trained by NVIDIA for fast local voice and device assistants, personas and embedded interfaces, with stronger multi-turn tool use, instruction following and input grounding. It ships as a 4GB Q4_K_M build plus BF16 weights under OpenMDW-1.1. NOT FILED: Tau2-Bench (55.10 BF16 / 52.32 Q4; the card links the aggregate 'core' board, while the corpus has per-domain tau2 columns), and MultiChallenge, RoleBench, RoleMRC, EQ-Bench v3, Brevity, When2Call, ToolSandbox, IHEval, AgentIF, StructEval-T, InverseIFEval, RULER (64K), LongMemEval, LongBench v2, SysBench, GaRAGe, RAGTruth and RelyToolBench, which have no corpus column.",
+  "quants": [
+    "4-bit",
+    "GGUF"
+  ],
+  "vramQ4Gb": null,
+  "vramFp16Gb": null,
+  "tps4090": null,
+  "tpsNote": null,
+  "effortLabel": null,
+  "isDefaultConfig": true,
+  "isBestConfig": true,
+  "specSources": {
+    "paramsB/ctxK/license/quants/releaseDate": "https://huggingface.co/nvidia/NVIDIA-Nemotron-3.5-Bolt-E4B-4GB",
+    "architecture": "https://huggingface.co/nvidia/NVIDIA-Nemotron-3.5-Bolt-E4B-4GB",
+    "blog": "https://research.nvidia.com/labs/nemotron/NVIDIA-Nemotron-3.5-Bolt-E4B-4GB/"
+  },
+  "results": [
+    {
+      "benchmarkSlug": "bfcl-v3",
+      "score": 67.31,
+      "source": "self-reported",
+      "sourceUrl": "https://huggingface.co/nvidia/NVIDIA-Nemotron-3.5-Bolt-E4B-4GB",
+      "evaluatedAt": "2026-10-23",
+      "notes": "Nemotron-3.5 Q4_K_M column of the benchmark table on NVIDIA's Hugging Face model card (measured by NVIDIA in NeMo Gym, reasoning mode); NVIDIA ships this 4GB Q4_K_M build, and the BF16 column (68.51) is not filed, matching the Bolt 74B-A9B entry. BFCL v3 (Gemma 4 E4B Q4_K_M 65.03, Qwen3.5 Q4_K_M 70.56)."
+    },
+    {
+      "benchmarkSlug": "ifbench",
+      "score": 64.0,
+      "source": "self-reported",
+      "sourceUrl": "https://huggingface.co/nvidia/NVIDIA-Nemotron-3.5-Bolt-E4B-4GB",
+      "evaluatedAt": "2026-10-23",
+      "notes": "Nemotron-3.5 Q4_K_M column of the benchmark table on NVIDIA's Hugging Face model card (measured by NVIDIA in NeMo Gym, reasoning mode); NVIDIA ships this 4GB Q4_K_M build, and the BF16 column (63.79) is not filed, matching the Bolt 74B-A9B entry. IFBench (Gemma 4 E4B Q4_K_M 42.67)."
+    }
+  ]
+}
