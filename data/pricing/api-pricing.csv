@@ -55,6 +55,7 @@ deepseek-v3-1-thinking,"DeepSeek (official API, deepseek-reasoner)",0.56,1.68,20
 deepseek-v3-2-exp,deepseek,0.28,0.42,2025-09-29
 deepseek-v3-671b,OpenRouter,0.2,0.8,2024-12-26
 deepseek-v4-1-flash,DeepSeek,0.3,1.2,2026-09-10
+deepseek-v4-1-flash-1017,DeepSeek,0.3,1.2,2026-10-17
 deepseek-v4-flash-0731,deepseek,0.14,0.28,2026-07-31
 deepseek-v4-flash-non-think,deepseek,0.14,0.28,2026-04-24
 deepseek-v4-flash-think-high,deepseek,0.14,0.28,2026-04-24
@@ -153,6 +154,7 @@ kimi-k2-6,moonshot-ai,0.95,4,2026-04-20
 kimi-k2-7-code,moonshot-ai,0.95,4,2026-06-12
 kimi-k2-thinking,Moonshot AI,0.6,2.5,2025-11-06
 kimi-k3,moonshot-ai,3,15,2026-07-16
+kimi-k3-1-pro,moonshot-ai,2,10,2026-10-23
 kimi-k3-fast,Vercel AI Gateway,4.5,22.5,2026-07-27
 laguna-s-2-1,Poolside (platform.poolside.ai / OpenRouter),0.1,0.2,2026-07-21
 laguna-xs-2-1,Poolside (platform.poolside.ai / OpenRouter),0.1,0.2,2026-07-02
@@ -172,6 +174,7 @@ minimax-m1,"MiniMax (platform.minimax.io, 0-200K token input tier; 200K-1M tier 
 minimax-m2,MiniMax (platform.minimax.io),0.3,1.2,2025-10-27
 minimax-m2-7,minimax,0.3,1.2,2026-03-18
 minimax-m3,minimax,0.3,1.2,2026-06-01
+minimax-m3-1-flash,MiniMax,0.15,0.6,2026-10-19
 minimax-vl-01,MiniMax (platform.minimax.io),0.2,1.1,2025-01-14
 ministral-3b,"Mistral La Plateforme (launch pricing, now retired)",0.04,0.04,2024-10-16
 ministral-8b,"Mistral La Plateforme (launch pricing, now retired)",0.1,0.1,2024-10-16
@@ -187,6 +190,7 @@ mistral-small-3-24b,"Mistral AI (mistral-small-2501, retired 2025-11-30)",0.1,0.
 muse-spark-1-1-xhigh,meta,1.25,4.25,2026-07-09
 muse-spark-1-2,Meta,1.25,4.25,2026-08-05
 muse-spark-1-3,Meta,1.25,4.25,2026-09-02
+muse-wonder,Meta,4,20,2026-10-12
 nemotron-3-nano-omni,nvidia,0.075,0.3,2026-04-29
 nemotron-3-ultra-550b-a55b,OpenRouter,0.5,2.2,2026-06-04
 nemotron-nano-2-nemotron-nano-9b-v2,DeepInfra,0.04,0.16,2025-08-18

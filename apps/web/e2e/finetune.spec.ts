@@ -130,7 +130,7 @@ test.describe('fine-tune selector', () => {
     await gotoHydrated(page, '/finetune')
     await pickOption(page, 'finetune-ctx', '≥ 1M tokens')
     await expect(page).toHaveURL(/ctx=1000/)
-    await expect(page.getByTestId('finetune-count')).toHaveText(/^2 fit your hardware/)
+    await expect(page.getByTestId('finetune-count')).toHaveText(/^3 fit your hardware/)
   })
 
   test('All mode surfaces non-fitting big models with a won’t-fit verdict', async ({ page }) => {

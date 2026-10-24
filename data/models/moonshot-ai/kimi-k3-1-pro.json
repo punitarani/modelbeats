@@ -1,0 +1,47 @@
+{
+  "slug": "kimi-k3-1-pro",
+  "name": "Kimi K3.1 Pro",
+  "orgSlug": "moonshot-ai",
+  "familySlug": "kimi-k3",
+  "releaseDate": "2026-10-23",
+  "status": "released",
+  "predecessor": "kimi-k3-fast",
+  "openness": "closed",
+  "license": "Proprietary API for now (Moonshot says full model weights will be released by Nov 4, 2026)",
+  "paramsB": 2800,
+  "activeParamsB": null,
+  "archClass": "moe",
+  "archDisplay": "Post-trained version of Kimi K3 (same 2.8T-parameter MoE base) with substantially larger multi-domain joint RL; 1M-token context; always-on thinking with reasoning_effort low, high or max (default max); text, image and video input",
+  "ctxK": 1024,
+  "modalities": [
+    "text",
+    "vision",
+    "video"
+  ],
+  "langCount": null,
+  "capabilities": {
+    "reasoning": true,
+    "coding": true,
+    "vision": true,
+    "functionCalling": true,
+    "toolUse": true,
+    "agentic": true
+  },
+  "apiAvailable": true,
+  "price": {
+    "input": 2,
+    "output": 10
+  },
+  "links": {
+    "docs": "https://platform.kimi.ai/docs/guide/kimi-k3-1-pro-quickstart"
+  },
+  "note": "First model of Moonshot's K3.1 series, launched Oct 23, 2026 on Kimi.ai, Kimi Work, Kimi Code and the Kimi API, alongside a 2-3x faster Kimi K3.1 Pro Highspeed. Moonshot calls it a post-trained Kimi K3 with much more RL compute and says full weights will ship by Nov 4, 2026, so it is filed as closed until they do (MiniMax M3.1 Flash precedent). Moonshot also says it removed cyber-related data from mid-training and RL for the open-weight release. API price $2/$10 per Mtok (Artificial Analysis, from Kimi's API; Kimi's own pricing table renders client-side and could not be read). Scores are Moonshot's at max effort. NOT FILED: OfficeQA Pro v2 (64.4; the corpus officeqa-pro column holds v1 figures, e.g. Opus 5.5 67.7 vs 62.2 on v2), Frontier Finance (58.6), ProgramBench (binary-score variant), GDPval-AA v2.1 (AA re-based scale), Agents' Last Exam, GDP.pdf, ChartoGraphy, ZeroBench, HLE without tools, and Kimi's internal suites (Kimi Code Bench, Hallu Bench, xdev-bench-hard); DeepSWE v1.1 (75.5) and MMMU-Pro (84.1) appear in only one transcription of the image grid. Kimi K3.1 Pro Highspeed is not filed separately: no benchmark table and no first-party price could be read.",
+  "quants": [],
+  "vramQ4Gb": null,
+  "vramFp16Gb": null,
+  "tps4090": null,
+  "tpsNote": null,
+  "effortLabel": null,
+  "isDefaultConfig": true,
+  "isBestConfig": true
+}
