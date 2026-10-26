@@ -50,6 +50,14 @@
   "results": [
     {
       "benchmarkSlug": "terminal-bench-4",
+      "score": 63.64,
+      "source": "independent",
+      "sourceUrl": "https://www.vals.ai/benchmarks/terminal-bench-4",
+      "evaluatedAt": "2026-10-24",
+      "notes": "Terminal-Bench 4.0, Vals AI independent run (mini-swe-agent harness, avg@3, 8-hour agent limit; ±1.75); #3 of 55 on the Vals board (updated 2026-10-24), behind Claude Opus 5.5 and Sonnet 5.5. Vals' Kimi K3.1 Pro page lists the same 63.64% with Moonshot AI as default provider at max reasoning effort. Moonshot's own figure is 65.7% (Claude Code harness)."
+    },
+    {
+      "benchmarkSlug": "terminal-bench-4",
       "score": 65.7,
       "source": "self-reported",
       "sourceUrl": "https://www.kimi.ai/blog/kimi-k3-1-pro",
