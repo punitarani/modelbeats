@@ -32,7 +32,7 @@
   "links": {
     "docs": "https://platform.claude.com/docs/en/about-claude/models/introducing-claude-fable-5-and-claude-mythos-5"
   },
-  "note": "Model id claude-fable-5. This is the correct current name of the family the task flagged as 'a newer Claude model family' — it is Anthropic's first widely-released 'Mythos-class' model (a tier above Opus), positioned above Opus 4.8. It shares identical underlying weights with the invitation-only Claude Mythos 5 (claude-mythos-5, Project Glasswing only) but adds safety classifiers that can refuse requests; Mythos 5 does not have those classifiers. Notably, access to Fable 5 was briefly restricted/pulled and then restored in July 2026 following a jailbreak-linked export-control issue (see anthropic.com/news/redeploying-fable-5) — this does not change its specs. NO SEPARATE '(High)' PRODUCT: like Sonnet 5, 'high' is the documented default effort level and is not a distinct marketed SKU; not added as a sibling entry. Claude Mythos 5 itself was NOT added as a separate corpus entry given its restricted, non-public availability and the difficulty independently sourcing benchmark numbers specific to it (as opposed to Fable 5).",
+  "note": "Model id claude-fable-5. This is the correct current name of the family the task flagged as 'a newer Claude model family' — it is Anthropic's first widely-released 'Mythos-class' model (a tier above Opus), positioned above Opus 4.8. It shares identical underlying weights with the invitation-only Claude Mythos 5 (claude-mythos-5, Project Glasswing only) but adds safety classifiers that can refuse requests; Mythos 5 does not have those classifiers. Notably, access to Fable 5 was briefly restricted/pulled and then restored in July 2026 following a jailbreak-linked export-control issue (see anthropic.com/news/redeploying-fable-5) — this does not change its specs. NO SEPARATE '(High)' PRODUCT: like Sonnet 5, 'high' is the documented default effort level and is not a distinct marketed SKU; not added as a sibling entry. Claude Mythos 5 itself was NOT added as a separate corpus entry given its restricted, non-public availability and the difficulty independently sourcing benchmark numbers specific to it (as opposed to Fable 5). NOT FILED: SWE-Marathon v1.1 45.0 (official leaderboard, Fable 5 max / Claude Code), because the leaderboard flags that run as having used a fallback model.",
   "quants": [],
   "vramQ4Gb": null,
   "vramFp16Gb": null,
@@ -285,14 +285,6 @@
       "sourceUrl": "https://arcprize.org/results/anthropic-claude-fable-5",
       "evaluatedAt": "2026-08-03",
       "notes": "Max variant."
-    },
-    {
-      "benchmarkSlug": "swe-marathon",
-      "score": 45.0,
-      "source": "independent",
-      "sourceUrl": "https://www.swemarathon.org/",
-      "evaluatedAt": "2026-10-13",
-      "notes": "SWE-Marathon v1.1 official leaderboard (Abundant AI), pass@1 over k=8 trials: Claude Fable 5 (max) / Claude Code; leaderboard flags that it ran with a fallback model."
     },
     {
       "benchmarkSlug": "terminal-bench-science",

@@ -191,11 +191,11 @@ describe('derived scores match the D21 contract (goldens)', () => {
       .filter((m) => m.rankOverall != null && m.rankOverall <= 5)
       .sort((a, b) => (a.rankOverall ?? 0) - (b.rankOverall ?? 0))
     expect(top5.map((m) => [m.slug, m.overallIndex])).toEqual([
-      ['kimi-k3-1-pro', 3168.2],
-      ['gemini-4-argon', 3122],
-      ['muse-wonder-full', 3097.5],
-      ['claude-opus-5-5', 3066.7],
-      ['muse-wonder', 3015.7],
+      ['kimi-k3-1-pro', 3167],
+      ['gemini-4-argon', 3124.4],
+      ['muse-wonder-full', 3099.4],
+      ['claude-opus-5-5', 3068.1],
+      ['muse-wonder', 3017.3],
     ])
   })
 
@@ -280,10 +280,10 @@ describe('derived scores match the D21 contract (goldens)', () => {
     const { models, movers } = await derived()
     expect(movers.map((m) => [m.slug, m.prevSlug, m.delta])).toEqual([
       ['sarvam-105b', 'sarvam-1-2b', 1620.7],
-      ['mistral-large-4', 'mistral-large-3', 1229.6],
+      ['mistral-large-4', 'mistral-large-3', 1231.2],
       ['smollm3-3b-think', 'smollm2-1-7b', 1003.6],
-      ['deepseek-v4-flash-0731', 'deepseek-v4-flash-non-think', 996.3],
-      ['hy3', 'hunyuan-a13b', 909.1],
+      ['deepseek-v4-flash-0731', 'deepseek-v4-flash-non-think', 998],
+      ['hy3', 'hunyuan-a13b', 909.8],
     ])
     // structural: every mover delta is the rounded rating gap between two RANKED models
     const bySlug = new Map(models.map((m) => [m.slug, m]))

@@ -103,7 +103,7 @@ test.describe('dashboard overview', () => {
     const rail = page.getByTestId('arena-rail')
     // rail now leads with the #1 overall model by Elo rating
     await expect(rail).toContainText('Kimi K3.1 Pro')
-    await expect(rail).toContainText('3168.2')
+    await expect(rail).toContainText('3167.0')
     await pickOption(page, 'qc-b', 'Llama 3.1 405B — Meta')
     await page.getByTestId('qc-go').click()
     // quick-compare slot A defaults to the #1 rank-eligible model (Kimi K3.1 Pro)

@@ -6,6 +6,7 @@
   "familySlug": "nemotron-3-5",
   "slug": "nemotron-3-5-bolt-e4b",
   "releaseDate": "2026-10-23",
+  "predecessor": null,
   "status": "released",
   "openness": "open-weights",
   "license": "OpenMDW License 1.1 (base Gemma 4 E4B under Apache-2.0)",
@@ -26,7 +27,7 @@
     "toolUse": true,
     "agentic": true
   },
-  "apiAvailable": false,
+  "apiAvailable": true,
   "price": null,
   "links": {
     "hf": "nvidia/NVIDIA-Nemotron-3.5-Bolt-E4B-4GB",
@@ -37,7 +38,7 @@
     "4-bit",
     "GGUF"
   ],
-  "vramQ4Gb": null,
+  "vramQ4Gb": 6.18,
   "vramFp16Gb": null,
   "tps4090": null,
   "tpsNote": null,
@@ -47,7 +48,9 @@
   "specSources": {
     "paramsB/ctxK/license/quants/releaseDate": "https://huggingface.co/nvidia/NVIDIA-Nemotron-3.5-Bolt-E4B-4GB",
     "architecture": "https://huggingface.co/nvidia/NVIDIA-Nemotron-3.5-Bolt-E4B-4GB",
-    "blog": "https://research.nvidia.com/labs/nemotron/NVIDIA-Nemotron-3.5-Bolt-E4B-4GB/"
+    "blog": "https://research.nvidia.com/labs/nemotron/NVIDIA-Nemotron-3.5-Bolt-E4B-4GB/",
+    "apiAvailable": "https://build.nvidia.com/nvidia/nemotron-3.5-bolt-e4b",
+    "vramQ4Gb": "https://huggingface.co/nvidia/NVIDIA-Nemotron-3.5-Bolt-E4B-4GB"
   },
   "results": [
     {

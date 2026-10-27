@@ -35,7 +35,7 @@
     "docs": "https://platform.minimax.io/docs/guides/text-generation",
     "hf": "MiniMaxAI/MiniMax-M3.1-Flash"
   },
-  "note": "MiniMax's Oct 19, 2026 general release of the Flash model it had tested as M3.1-Flash-Preview inside MiniMax Code since Sep 27 (and anonymously as 'Space Bunny' on OpenRouter). Served on the MiniMax API, M Plan and MiniMax Code at a flat $0.15/$0.60 per Mtok ($0.015 cached input); MiniMax says agentic-task cost is 70% below M3 and output speed is about 3x faster. Thinking defaults to max effort. The promised weights landed on Hugging Face on Oct 23, 2026 under the MiniMax Community License (non-commercial free; commercial use needs attribution and a notice, or authorization above $20M revenue), so openness moved from closed to open-weights; the card also gives the architecture (about 428B total / 23B active MoE). The Hugging Face card publishes the launch comparison table as text, so its figures are now filed from the card (Terminal-Bench 4.0, NL2Repo, HLE no-tools, AutomationBench v1.0.6, CharXiv RQ; CyberGym 82.2 replaces the blog's rounded '82%'). NOT FILED: Agents' Last Exam 29.6 is a pass rate (the same table gives GPT-5.6 Sol 30.6, against its 52.7 score component), so it is not filed under the corpus's score-component convention. GDP.pdf AA 20.8 is taken from Artificial Analysis (AA variants are not filed). BankerToolBench 76.2, LOCA-Bench 256K 60.3, PostTrain Bench v1.1 39.3, SWE Refactor Bench 23.0 and BabyVision (with tools) 91.0 have no corpus column.",
+  "note": "MiniMax's Oct 19, 2026 general release of the Flash model it had tested as M3.1-Flash-Preview inside MiniMax Code since Sep 27 (and anonymously as 'Space Bunny' on OpenRouter). Served on the MiniMax API, M Plan and MiniMax Code at a flat $0.15/$0.60 per Mtok ($0.015 cached input); MiniMax says agentic-task cost is 70% below M3 and output speed is about 3x faster. Thinking defaults to max effort. The promised weights landed on Hugging Face on Oct 23, 2026 under the MiniMax Community License (non-commercial free; commercial use needs attribution and a notice, or authorization above $20M revenue), so openness moved from closed to open-weights; the card also gives the architecture (about 428B total / 23B active MoE). The Hugging Face card publishes the launch comparison table as text, so its figures are now filed from the card (Terminal-Bench 4.0, NL2Repo, AutomationBench v1.0.6, CharXiv RQ; CyberGym 82.2 replaces the blog's rounded '82%'). NOT FILED: HLE no-tools 43.4 is the text-only subset (2,158 questions), and the corpus HLE column is the full set. Agents' Last Exam 29.6 is a pass rate (the same table gives GPT-5.6 Sol 30.6, against its 52.7 score component), so it is not filed under the corpus's score-component convention. GDP.pdf AA 20.8 is taken from Artificial Analysis (AA variants are not filed). BankerToolBench 76.2, LOCA-Bench 256K 60.3, PostTrain Bench v1.1 39.3, SWE Refactor Bench 23.0 and BabyVision (with tools) 91.0 have no corpus column.",
   "quants": [],
   "vramQ4Gb": null,
   "vramFp16Gb": null,
@@ -91,14 +91,6 @@
       "sourceUrl": "https://huggingface.co/MiniMaxAI/MiniMax-M3.1-Flash/raw/main/README.md",
       "evaluatedAt": "2026-10-23",
       "notes": "MiniMax-M3.1-Flash Hugging Face model card (MiniMaxAI, weights released Oct 23, 2026), M3.1 Flash column of the benchmark table. NL2Repo-Bench (Claude Code 2.1.233, 512K context; two inconsistent tasks corrected). The table gives DeepSeek V4.1 Flash-1017 68.2 and GLM-5.3 58.0, matching their corpus rows."
-    },
-    {
-      "benchmarkSlug": "hle",
-      "score": 43.4,
-      "source": "self-reported",
-      "sourceUrl": "https://huggingface.co/MiniMaxAI/MiniMax-M3.1-Flash/raw/main/README.md",
-      "evaluatedAt": "2026-10-23",
-      "notes": "MiniMax-M3.1-Flash Hugging Face model card (MiniMaxAI, weights released Oct 23, 2026), M3.1 Flash column of the benchmark table. HLE without tools, text-only subset (2,158 questions); same no-tools setting as the DeepSeek V4.1 Flash-1017 row (42.6, also on this table)."
     },
     {
       "benchmarkSlug": "automationbench",
