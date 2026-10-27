@@ -110,7 +110,7 @@
       "source": "independent",
       "sourceUrl": "https://www.vals.ai/benchmarks/terminal-bench-4",
       "evaluatedAt": "2026-10-12",
-      "notes": "Terminal-Bench 4.0, Vals AI independent run (mini-swe-agent harness, avg@3, 8-hour agent limit); #27 of 47 on the Vals board."
+      "notes": "Terminal-Bench 4.0, Vals AI independent run (mini-swe-agent harness, avg@3, 8-hour agent limit); #27 of 47 on the Vals board. Vals lists this run under 'DeepSeek V4 Flash 0731' (vals.ai/models/deepseek_deepseek-v4-flash-0731)."
     },
     {
       "benchmarkSlug": "terminal-bench-science",
@@ -118,7 +118,7 @@
       "source": "independent",
       "sourceUrl": "https://www.vals.ai/benchmarks/terminal-bench-science",
       "evaluatedAt": "2026-10-08",
-      "notes": "Terminal-Bench Science 0.1, Vals AI independent run (single-run pass@1, mostly mini-swe-agent harness; Vals notes its figures sit below vendor-harness numbers); #23 of 39 on the Vals board."
+      "notes": "Terminal-Bench Science 0.1, Vals AI independent run (single-run pass@1, mostly mini-swe-agent harness; Vals notes its figures sit below vendor-harness numbers); #23 of 39 on the Vals board. Vals lists this run under 'DeepSeek V4 Flash 0731' (vals.ai/models/deepseek_deepseek-v4-flash-0731)."
     },
     {
       "benchmarkSlug": "harvey-legal-agent",
@@ -126,7 +126,7 @@
       "source": "independent",
       "sourceUrl": "https://www.vals.ai/benchmarks/hlab-v1",
       "evaluatedAt": "2026-10-12",
-      "notes": "Harvey's Legal Agent Benchmark, Vals AI independent run on the held-out set (task pass rate, average of GPT 5.5 and Sonnet 4.6 judges); #27 of 81 on the Vals v1 board. On Oct 19 Vals moved this v1 board to /benchmarks/hlab-v1 (archived) and replaced it at /benchmarks/hlab with HLAB-Vals-1.1, whose scores are not comparable."
+      "notes": "Harvey's Legal Agent Benchmark, Vals AI independent run on the held-out set (task pass rate, average of GPT 5.5 and Sonnet 4.6 judges); #27 of 81 on the Vals v1 board. On Oct 19 Vals moved this v1 board to /benchmarks/hlab-v1 (archived) and replaced it at /benchmarks/hlab with HLAB-Vals-1.1, whose scores are not comparable. Vals lists this run under 'DeepSeek V4 Flash 0731' (vals.ai/models/deepseek_deepseek-v4-flash-0731)."
     },
     {
       "benchmarkSlug": "vals-finance-agent",
@@ -134,7 +134,7 @@
       "source": "independent",
       "sourceUrl": "https://www.vals.ai/benchmarks/fabv2",
       "evaluatedAt": "2026-10-12",
-      "notes": "Vals Finance Agent v2, Vals AI independent run (dealbreaker-gated partial credit, mean of 3 runs, test split); #45 of 59 on the Vals board."
+      "notes": "Vals Finance Agent v2, Vals AI independent run (dealbreaker-gated partial credit, mean of 3 runs, test split); #45 of 78 on the Vals board. Vals lists this run under 'DeepSeek V4 Flash 0731' (vals.ai/models/deepseek_deepseek-v4-flash-0731)."
     }
   ]
 }

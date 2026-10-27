@@ -131,7 +131,7 @@
     },
     {
       "slug": "amazon-nova-lite",
-      "overallIndex": 906.9,
+      "overallIndex": 907,
       "rankOverall": 257,
       "ranked": true,
       "arenaElo": null,
@@ -323,7 +323,7 @@
     },
     {
       "slug": "aya-expanse-32b",
-      "overallIndex": 435.6,
+      "overallIndex": 435.7,
       "rankOverall": 337,
       "ranked": true,
       "arenaElo": null,
@@ -371,7 +371,7 @@
     },
     {
       "slug": "baichuan-4",
-      "overallIndex": 2431.3,
+      "overallIndex": 2431.4,
       "rankOverall": null,
       "ranked": false,
       "arenaElo": null,
@@ -435,7 +435,7 @@
     },
     {
       "slug": "bloom-7b1",
-      "overallIndex": -559.5,
+      "overallIndex": -559.4,
       "rankOverall": 489,
       "ranked": true,
       "arenaElo": null,
@@ -563,7 +563,7 @@
     },
     {
       "slug": "claude-1",
-      "overallIndex": 638.6,
+      "overallIndex": 638.7,
       "rankOverall": 304,
       "ranked": true,
       "arenaElo": 1195,
@@ -579,7 +579,7 @@
     },
     {
       "slug": "claude-2",
-      "overallIndex": 699.6,
+      "overallIndex": 699.7,
       "rankOverall": 297,
       "ranked": true,
       "arenaElo": null,
@@ -611,7 +611,7 @@
     },
     {
       "slug": "claude-3-5-haiku",
-      "overallIndex": 927.1,
+      "overallIndex": 927.2,
       "rankOverall": 250,
       "ranked": true,
       "arenaElo": 1324,
@@ -723,7 +723,7 @@
     },
     {
       "slug": "claude-fable-5",
-      "overallIndex": 2821.6,
+      "overallIndex": 2822,
       "rankOverall": 13,
       "ranked": true,
       "arenaElo": 1504,
@@ -739,7 +739,7 @@
     },
     {
       "slug": "claude-fable-5-1",
-      "overallIndex": 2892.3,
+      "overallIndex": 2917.1,
       "rankOverall": 7,
       "ranked": true,
       "arenaElo": 1501,
@@ -750,7 +750,7 @@
         "coding": 81.5,
         "math": null,
         "vision": 67,
-        "agents": 72.4
+        "agents": 78.2
       }
     },
     {
@@ -771,7 +771,7 @@
     },
     {
       "slug": "claude-haiku-5-5",
-      "overallIndex": 2592.4,
+      "overallIndex": 2593.2,
       "rankOverall": 33,
       "ranked": true,
       "arenaElo": null,
@@ -803,7 +803,7 @@
     },
     {
       "slug": "claude-mythos-5-1",
-      "overallIndex": 3232.1,
+      "overallIndex": 3234.3,
       "rankOverall": null,
       "ranked": false,
       "arenaElo": null,
@@ -819,7 +819,7 @@
     },
     {
       "slug": "claude-opus-4",
-      "overallIndex": 1607.5,
+      "overallIndex": 1607.6,
       "rankOverall": 133,
       "ranked": true,
       "arenaElo": null,
@@ -899,7 +899,7 @@
     },
     {
       "slug": "claude-opus-4-6",
-      "overallIndex": 2393.8,
+      "overallIndex": 2393.9,
       "rankOverall": 51,
       "ranked": true,
       "arenaElo": 1504,
@@ -915,7 +915,7 @@
     },
     {
       "slug": "claude-opus-4-7",
-      "overallIndex": 2611.8,
+      "overallIndex": 2612.1,
       "rankOverall": 31,
       "ranked": true,
       "arenaElo": 1501,
@@ -931,7 +931,7 @@
     },
     {
       "slug": "claude-opus-4-8",
-      "overallIndex": 2628.8,
+      "overallIndex": 2628.6,
       "rankOverall": 28,
       "ranked": true,
       "arenaElo": 1481,
@@ -947,7 +947,7 @@
     },
     {
       "slug": "claude-opus-5",
-      "overallIndex": 2870.3,
+      "overallIndex": 2871.8,
       "rankOverall": 10,
       "ranked": true,
       "arenaElo": 1490,
@@ -963,7 +963,7 @@
     },
     {
       "slug": "claude-opus-5-5",
-      "overallIndex": 3068.1,
+      "overallIndex": 3072.4,
       "rankOverall": 4,
       "ranked": true,
       "arenaElo": 1508,
@@ -1011,7 +1011,7 @@
     },
     {
       "slug": "claude-sonnet-4-6",
-      "overallIndex": 2338,
+      "overallIndex": 2338.1,
       "rankOverall": 62,
       "ranked": true,
       "arenaElo": 1472,
@@ -1043,7 +1043,7 @@
     },
     {
       "slug": "claude-sonnet-5-5",
-      "overallIndex": 2809.7,
+      "overallIndex": 2812.6,
       "rankOverall": 14,
       "ranked": true,
       "arenaElo": 1475,
@@ -1059,7 +1059,7 @@
     },
     {
       "slug": "code-llama-13b",
-      "overallIndex": 113.1,
+      "overallIndex": 113.2,
       "rankOverall": null,
       "ranked": false,
       "arenaElo": null,
@@ -1203,7 +1203,7 @@
     },
     {
       "slug": "codegen2-5-7b",
-      "overallIndex": 28.1,
+      "overallIndex": 28.2,
       "rankOverall": null,
       "ranked": false,
       "arenaElo": null,
@@ -1571,7 +1571,7 @@
     },
     {
       "slug": "deepseek-r1-zero",
-      "overallIndex": 1347.2,
+      "overallIndex": 1347.3,
       "rankOverall": 177,
       "ranked": true,
       "arenaElo": null,
@@ -1715,7 +1715,7 @@
     },
     {
       "slug": "deepseek-v4-1-flash-1017",
-      "overallIndex": 2748.1,
+      "overallIndex": 2747.3,
       "rankOverall": 19,
       "ranked": true,
       "arenaElo": null,
@@ -1731,7 +1731,7 @@
     },
     {
       "slug": "deepseek-v4-flash-0731",
-      "overallIndex": 2529.7,
+      "overallIndex": 2528.2,
       "rankOverall": 40,
       "ranked": true,
       "arenaElo": null,
@@ -1827,7 +1827,7 @@
     },
     {
       "slug": "deepseek-v4-pro-think-max",
-      "overallIndex": 2387.4,
+      "overallIndex": 2387.5,
       "rankOverall": 53,
       "ranked": true,
       "arenaElo": null,
@@ -2211,7 +2211,7 @@
     },
     {
       "slug": "falcon-mamba-7b",
-      "overallIndex": 78.7,
+      "overallIndex": 78.8,
       "rankOverall": 407,
       "ranked": true,
       "arenaElo": null,
@@ -2531,7 +2531,7 @@
     },
     {
       "slug": "gemini-3-1-pro",
-      "overallIndex": 2513.3,
+      "overallIndex": 2513.5,
       "rankOverall": 43,
       "ranked": true,
       "arenaElo": 1487,
@@ -2547,7 +2547,7 @@
     },
     {
       "slug": "gemini-3-5-flash",
-      "overallIndex": 2463.1,
+      "overallIndex": 2463.3,
       "rankOverall": 49,
       "ranked": true,
       "arenaElo": 1478,
@@ -2563,7 +2563,7 @@
     },
     {
       "slug": "gemini-3-5-flash-cyber",
-      "overallIndex": 2652.3,
+      "overallIndex": 2652.2,
       "rankOverall": null,
       "ranked": false,
       "arenaElo": null,
@@ -2595,7 +2595,7 @@
     },
     {
       "slug": "gemini-3-6-flash",
-      "overallIndex": 2521.1,
+      "overallIndex": 2521.4,
       "rankOverall": 42,
       "ranked": true,
       "arenaElo": 1482,
@@ -2611,7 +2611,7 @@
     },
     {
       "slug": "gemini-3-7-flash",
-      "overallIndex": 2648.3,
+      "overallIndex": 2648,
       "rankOverall": 26,
       "ranked": true,
       "arenaElo": 1486,
@@ -2691,7 +2691,7 @@
     },
     {
       "slug": "gemini-4-argon",
-      "overallIndex": 3124.4,
+      "overallIndex": 3126.1,
       "rankOverall": 2,
       "ranked": true,
       "arenaElo": null,
@@ -2851,8 +2851,8 @@
     },
     {
       "slug": "gigachat",
-      "overallIndex": -112.1,
-      "rankOverall": 447,
+      "overallIndex": -112,
+      "rankOverall": 446,
       "ranked": true,
       "arenaElo": null,
       "categoryIdx": {
@@ -2931,7 +2931,7 @@
     },
     {
       "slug": "glm-4-5-air-106b-a12b",
-      "overallIndex": 1541,
+      "overallIndex": 1541.1,
       "rankOverall": 139,
       "ranked": true,
       "arenaElo": null,
@@ -2995,7 +2995,7 @@
     },
     {
       "slug": "glm-4v-9b",
-      "overallIndex": 521.5,
+      "overallIndex": 521.6,
       "rankOverall": null,
       "ranked": false,
       "arenaElo": null,
@@ -3059,7 +3059,7 @@
     },
     {
       "slug": "glm-5-2-max",
-      "overallIndex": 2370.1,
+      "overallIndex": 2370.2,
       "rankOverall": 57,
       "ranked": true,
       "arenaElo": 1475,
@@ -3075,7 +3075,7 @@
     },
     {
       "slug": "glm-5-3",
-      "overallIndex": 2719.4,
+      "overallIndex": 2718.7,
       "rankOverall": 21,
       "ranked": true,
       "arenaElo": 1478,
@@ -3091,7 +3091,7 @@
     },
     {
       "slug": "glm-5-3-flash",
-      "overallIndex": 2684.1,
+      "overallIndex": 2684.3,
       "rankOverall": 23,
       "ranked": true,
       "arenaElo": 1475,
@@ -3347,7 +3347,7 @@
     },
     {
       "slug": "gpt-5-2",
-      "overallIndex": 2385.4,
+      "overallIndex": 2385.5,
       "rankOverall": 54,
       "ranked": true,
       "arenaElo": null,
@@ -3411,7 +3411,7 @@
     },
     {
       "slug": "gpt-5-4-pro",
-      "overallIndex": 2668.2,
+      "overallIndex": 2668.7,
       "rankOverall": 25,
       "ranked": true,
       "arenaElo": null,
@@ -3427,7 +3427,7 @@
     },
     {
       "slug": "gpt-5-5",
-      "overallIndex": 2543.6,
+      "overallIndex": 2543.8,
       "rankOverall": 37,
       "ranked": true,
       "arenaElo": null,
@@ -3443,7 +3443,7 @@
     },
     {
       "slug": "gpt-5-5-high",
-      "overallIndex": 2513.1,
+      "overallIndex": 2513.3,
       "rankOverall": 44,
       "ranked": true,
       "arenaElo": 1482,
@@ -3459,7 +3459,7 @@
     },
     {
       "slug": "gpt-5-5-xhigh",
-      "overallIndex": 2566.2,
+      "overallIndex": 2566.4,
       "rankOverall": 36,
       "ranked": true,
       "arenaElo": null,
@@ -3491,7 +3491,7 @@
     },
     {
       "slug": "gpt-5-6-luna",
-      "overallIndex": 2473.4,
+      "overallIndex": 2473.6,
       "rankOverall": 47,
       "ranked": true,
       "arenaElo": 1452,
@@ -3507,7 +3507,7 @@
     },
     {
       "slug": "gpt-5-6-sol",
-      "overallIndex": 2758.9,
+      "overallIndex": 2759.9,
       "rankOverall": 18,
       "ranked": true,
       "arenaElo": 1485,
@@ -3523,8 +3523,8 @@
     },
     {
       "slug": "gpt-5-6-terra",
-      "overallIndex": 2583.9,
-      "rankOverall": 35,
+      "overallIndex": 2584.3,
+      "rankOverall": 34,
       "ranked": true,
       "arenaElo": 1466,
       "categoryIdx": {
@@ -3603,7 +3603,7 @@
     },
     {
       "slug": "gpt-6-1-sol",
-      "overallIndex": 2871.1,
+      "overallIndex": 2873.8,
       "rankOverall": 9,
       "ranked": true,
       "arenaElo": 1484,
@@ -3619,7 +3619,7 @@
     },
     {
       "slug": "gpt-6-1-terra",
-      "overallIndex": 2995.4,
+      "overallIndex": 2997.6,
       "rankOverall": 6,
       "ranked": true,
       "arenaElo": null,
@@ -3635,7 +3635,7 @@
     },
     {
       "slug": "gpt-6-astra",
-      "overallIndex": 2879.2,
+      "overallIndex": 2882.1,
       "rankOverall": 8,
       "ranked": true,
       "arenaElo": 1475,
@@ -3667,7 +3667,7 @@
     },
     {
       "slug": "gpt-6-sol",
-      "overallIndex": 2630.1,
+      "overallIndex": 2631,
       "rankOverall": 27,
       "ranked": true,
       "arenaElo": 1458,
@@ -3683,7 +3683,7 @@
     },
     {
       "slug": "gpt-j-6b",
-      "overallIndex": -549.1,
+      "overallIndex": -549,
       "rankOverall": 485,
       "ranked": true,
       "arenaElo": null,
@@ -3843,7 +3843,7 @@
     },
     {
       "slug": "granite-3-0-8b-instruct",
-      "overallIndex": 302.3,
+      "overallIndex": 302.4,
       "rankOverall": 371,
       "ranked": true,
       "arenaElo": null,
@@ -3923,7 +3923,7 @@
     },
     {
       "slug": "granite-4-0-h-small",
-      "overallIndex": 799.1,
+      "overallIndex": 799.2,
       "rankOverall": 276,
       "ranked": true,
       "arenaElo": null,
@@ -3939,7 +3939,7 @@
     },
     {
       "slug": "granite-4-1-8b-instruct",
-      "overallIndex": 849.6,
+      "overallIndex": 849.7,
       "rankOverall": 269,
       "ranked": true,
       "arenaElo": 1307,
@@ -4051,7 +4051,7 @@
     },
     {
       "slug": "grok-3-mini",
-      "overallIndex": 1623.4,
+      "overallIndex": 1623.5,
       "rankOverall": 132,
       "ranked": true,
       "arenaElo": null,
@@ -4099,7 +4099,7 @@
     },
     {
       "slug": "grok-4",
-      "overallIndex": 1860.8,
+      "overallIndex": 1860.9,
       "rankOverall": 105,
       "ranked": true,
       "arenaElo": null,
@@ -4115,7 +4115,7 @@
     },
     {
       "slug": "grok-4-20",
-      "overallIndex": 2577.3,
+      "overallIndex": 2577.6,
       "rankOverall": null,
       "ranked": false,
       "arenaElo": 1474,
@@ -4179,7 +4179,7 @@
     },
     {
       "slug": "grok-4-5",
-      "overallIndex": 2375.6,
+      "overallIndex": 2374.7,
       "rankOverall": 56,
       "ranked": true,
       "arenaElo": 1464,
@@ -4195,8 +4195,8 @@
     },
     {
       "slug": "grok-4-6",
-      "overallIndex": 2584.6,
-      "rankOverall": 34,
+      "overallIndex": 2583.9,
+      "rankOverall": 35,
       "ranked": true,
       "arenaElo": 1454,
       "categoryIdx": {
@@ -4211,7 +4211,7 @@
     },
     {
       "slug": "grok-4-7",
-      "overallIndex": 2535.7,
+      "overallIndex": 2534.3,
       "rankOverall": 39,
       "ranked": true,
       "arenaElo": 1443,
@@ -4371,7 +4371,7 @@
     },
     {
       "slug": "hunyuan-large-a52b",
-      "overallIndex": 950.5,
+      "overallIndex": 950.6,
       "rankOverall": 246,
       "ranked": true,
       "arenaElo": null,
@@ -4419,7 +4419,7 @@
     },
     {
       "slug": "hy3",
-      "overallIndex": 2354,
+      "overallIndex": 2354.1,
       "rankOverall": 59,
       "ranked": true,
       "arenaElo": 1454,
@@ -4611,7 +4611,7 @@
     },
     {
       "slug": "inkling-small",
-      "overallIndex": 2289.3,
+      "overallIndex": 2289.4,
       "rankOverall": 66,
       "ranked": true,
       "arenaElo": null,
@@ -4675,7 +4675,7 @@
     },
     {
       "slug": "internlm3-8b-instruct",
-      "overallIndex": 788.5,
+      "overallIndex": 788.6,
       "rankOverall": 279,
       "ranked": true,
       "arenaElo": null,
@@ -4835,7 +4835,7 @@
     },
     {
       "slug": "kimi-k2-6",
-      "overallIndex": 2364.2,
+      "overallIndex": 2364.3,
       "rankOverall": 58,
       "ranked": true,
       "arenaElo": 1462,
@@ -4883,7 +4883,7 @@
     },
     {
       "slug": "kimi-k3",
-      "overallIndex": 2709,
+      "overallIndex": 2709.6,
       "rankOverall": 22,
       "ranked": true,
       "arenaElo": 1488,
@@ -4899,7 +4899,7 @@
     },
     {
       "slug": "kimi-k3-1-pro",
-      "overallIndex": 3167,
+      "overallIndex": 3169.9,
       "rankOverall": 1,
       "ranked": true,
       "arenaElo": null,
@@ -5715,7 +5715,7 @@
     },
     {
       "slug": "mimo-v2-6-flash",
-      "overallIndex": 2615.8,
+      "overallIndex": 2614.8,
       "rankOverall": 30,
       "ranked": true,
       "arenaElo": 1451,
@@ -5731,7 +5731,7 @@
     },
     {
       "slug": "mimo-v2-6-pro",
-      "overallIndex": 2790.7,
+      "overallIndex": 2790.1,
       "rankOverall": 16,
       "ranked": true,
       "arenaElo": 1479,
@@ -5843,7 +5843,7 @@
     },
     {
       "slug": "minimax-m2",
-      "overallIndex": 1758.4,
+      "overallIndex": 1758.5,
       "rankOverall": 120,
       "ranked": true,
       "arenaElo": null,
@@ -5891,7 +5891,7 @@
     },
     {
       "slug": "minimax-m3-1-flash",
-      "overallIndex": 2744.9,
+      "overallIndex": 2745.6,
       "rankOverall": 20,
       "ranked": true,
       "arenaElo": null,
@@ -6019,7 +6019,7 @@
     },
     {
       "slug": "mistral-large-24-11",
-      "overallIndex": 587.4,
+      "overallIndex": 587.5,
       "rankOverall": 314,
       "ranked": true,
       "arenaElo": null,
@@ -6051,7 +6051,7 @@
     },
     {
       "slug": "mistral-large-4",
-      "overallIndex": 2444.8,
+      "overallIndex": 2441.3,
       "rankOverall": 50,
       "ranked": true,
       "arenaElo": 1431,
@@ -6067,7 +6067,7 @@
     },
     {
       "slug": "mistral-medium-3",
-      "overallIndex": 1115.8,
+      "overallIndex": 1115.9,
       "rankOverall": 220,
       "ranked": true,
       "arenaElo": null,
@@ -6179,7 +6179,7 @@
     },
     {
       "slug": "mixtral-8x7b",
-      "overallIndex": 323.9,
+      "overallIndex": 324,
       "rankOverall": 365,
       "ranked": true,
       "arenaElo": null,
@@ -6323,7 +6323,7 @@
     },
     {
       "slug": "muse-spark-1-1-xhigh",
-      "overallIndex": 2473,
+      "overallIndex": 2473.1,
       "rankOverall": 48,
       "ranked": true,
       "arenaElo": null,
@@ -6339,7 +6339,7 @@
     },
     {
       "slug": "muse-spark-1-2",
-      "overallIndex": 2763.5,
+      "overallIndex": 2762.2,
       "rankOverall": 17,
       "ranked": true,
       "arenaElo": 1492,
@@ -6371,7 +6371,7 @@
     },
     {
       "slug": "muse-spark-open",
-      "overallIndex": 2597,
+      "overallIndex": 2595.7,
       "rankOverall": 32,
       "ranked": true,
       "arenaElo": null,
@@ -6403,7 +6403,7 @@
     },
     {
       "slug": "muse-wonder-full",
-      "overallIndex": 3099.4,
+      "overallIndex": 3100.5,
       "rankOverall": 3,
       "ranked": true,
       "arenaElo": null,
@@ -6483,7 +6483,7 @@
     },
     {
       "slug": "nemotron-3-5-super-vl",
-      "overallIndex": 2076.8,
+      "overallIndex": 2076.9,
       "rankOverall": 87,
       "ranked": true,
       "arenaElo": null,
@@ -7139,7 +7139,7 @@
     },
     {
       "slug": "pharia-1-llm-7b-control",
-      "overallIndex": -251.6,
+      "overallIndex": -251.5,
       "rankOverall": 458,
       "ranked": true,
       "arenaElo": null,
@@ -7443,7 +7443,7 @@
     },
     {
       "slug": "plamo-100b",
-      "overallIndex": 100.8,
+      "overallIndex": 100.9,
       "rankOverall": 402,
       "ranked": true,
       "arenaElo": null,
@@ -7699,7 +7699,7 @@
     },
     {
       "slug": "qwen2-5-32b",
-      "overallIndex": 732.6,
+      "overallIndex": 732.7,
       "rankOverall": 291,
       "ranked": true,
       "arenaElo": null,
@@ -7795,7 +7795,7 @@
     },
     {
       "slug": "qwen2-5-vl-72b",
-      "overallIndex": 1101.1,
+      "overallIndex": 1101.2,
       "rankOverall": 224,
       "ranked": true,
       "arenaElo": null,
@@ -7971,7 +7971,7 @@
     },
     {
       "slug": "qwen3-235b-a22b-thinking-2507",
-      "overallIndex": 1750.6,
+      "overallIndex": 1750.7,
       "rankOverall": 122,
       "ranked": true,
       "arenaElo": 1399,
@@ -8067,7 +8067,7 @@
     },
     {
       "slug": "qwen3-5-397b-a17b",
-      "overallIndex": 2076.1,
+      "overallIndex": 2076.2,
       "rankOverall": 88,
       "ranked": true,
       "arenaElo": 1442,
@@ -8195,7 +8195,7 @@
     },
     {
       "slug": "qwen3-7-max",
-      "overallIndex": 2315.5,
+      "overallIndex": 2315.6,
       "rankOverall": 64,
       "ranked": true,
       "arenaElo": null,
@@ -8211,7 +8211,7 @@
     },
     {
       "slug": "qwen3-7-plus",
-      "overallIndex": 2286.2,
+      "overallIndex": 2286.3,
       "rankOverall": 67,
       "ranked": true,
       "arenaElo": 1456,
@@ -8227,7 +8227,7 @@
     },
     {
       "slug": "qwen3-8-27b",
-      "overallIndex": 2379,
+      "overallIndex": 2377.9,
       "rankOverall": 55,
       "ranked": true,
       "arenaElo": 1438,
@@ -8243,7 +8243,7 @@
     },
     {
       "slug": "qwen3-8-flash-next",
-      "overallIndex": 2512.9,
+      "overallIndex": 2513.1,
       "rankOverall": 45,
       "ranked": true,
       "arenaElo": null,
@@ -8259,7 +8259,7 @@
     },
     {
       "slug": "qwen3-8-max",
-      "overallIndex": 2679,
+      "overallIndex": 2679.4,
       "rankOverall": 24,
       "ranked": true,
       "arenaElo": 1483,
@@ -8275,7 +8275,7 @@
     },
     {
       "slug": "qwen3-8-max-0902",
-      "overallIndex": 2843.1,
+      "overallIndex": 2844.2,
       "rankOverall": 12,
       "ranked": true,
       "arenaElo": null,
@@ -8291,7 +8291,7 @@
     },
     {
       "slug": "qwen3-8-omni-flash",
-      "overallIndex": 2484.9,
+      "overallIndex": 2485,
       "rankOverall": 46,
       "ranked": true,
       "arenaElo": null,
@@ -8307,7 +8307,7 @@
     },
     {
       "slug": "qwen3-8b-non-thinking",
-      "overallIndex": 829.8,
+      "overallIndex": 829.9,
       "rankOverall": 272,
       "ranked": true,
       "arenaElo": null,
@@ -8323,7 +8323,7 @@
     },
     {
       "slug": "qwen3-8b-thinking",
-      "overallIndex": 1242.8,
+      "overallIndex": 1242.9,
       "rankOverall": 193,
       "ranked": true,
       "arenaElo": null,
@@ -8403,7 +8403,7 @@
     },
     {
       "slug": "r1-1776",
-      "overallIndex": 1472.8,
+      "overallIndex": 1472.9,
       "rankOverall": null,
       "ranked": false,
       "arenaElo": null,
@@ -8643,7 +8643,7 @@
     },
     {
       "slug": "seed-2-1-pro",
-      "overallIndex": 2525,
+      "overallIndex": 2525.1,
       "rankOverall": 41,
       "ranked": true,
       "arenaElo": null,
@@ -8980,7 +8980,7 @@
     {
       "slug": "stablelm-zephyr-3b",
       "overallIndex": -112,
-      "rankOverall": 446,
+      "rankOverall": 447,
       "ranked": true,
       "arenaElo": null,
       "categoryIdx": {
@@ -9139,7 +9139,7 @@
     },
     {
       "slug": "step-5-preview",
-      "overallIndex": 2542.6,
+      "overallIndex": 2542,
       "rankOverall": 38,
       "ranked": true,
       "arenaElo": 1446,
@@ -9203,7 +9203,7 @@
     },
     {
       "slug": "teuken-7b-instruct",
-      "overallIndex": -127.7,
+      "overallIndex": -127.6,
       "rankOverall": 449,
       "ranked": true,
       "arenaElo": null,
@@ -9219,7 +9219,7 @@
     },
     {
       "slug": "trinity-large-thinking",
-      "overallIndex": 1805.8,
+      "overallIndex": 1805.9,
       "rankOverall": 112,
       "ranked": true,
       "arenaElo": null,
@@ -9523,7 +9523,7 @@
     },
     {
       "slug": "yi-lightning",
-      "overallIndex": 957.7,
+      "overallIndex": 957.8,
       "rankOverall": 244,
       "ranked": true,
       "arenaElo": 1287,
@@ -9567,7 +9567,7 @@
       "name": "Mistral Large 4",
       "prevSlug": "mistral-large-3",
       "prevName": "Mistral Large 3",
-      "delta": 1231.2
+      "delta": 1227.7
     },
     {
       "slug": "smollm3-3b-think",
@@ -9581,14 +9581,14 @@
       "name": "DeepSeek-V4-Flash-0731",
       "prevSlug": "deepseek-v4-flash-non-think",
       "prevName": "DeepSeek-V4-Flash (Non-Think)",
-      "delta": 998
+      "delta": 996.5
     },
     {
       "slug": "hy3",
       "name": "Hy3",
       "prevSlug": "hunyuan-a13b",
       "prevName": "Hunyuan-A13B",
-      "delta": 909.8
+      "delta": 909.9
     }
   ]
 }

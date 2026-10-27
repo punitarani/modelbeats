@@ -188,7 +188,7 @@
       "source": "independent",
       "sourceUrl": "https://www.vals.ai/benchmarks/terminal-bench-science",
       "evaluatedAt": "2026-10-08",
-      "notes": "Terminal-Bench Science 0.1, Vals AI independent run (single-run pass@1, mostly mini-swe-agent harness; Vals notes its figures sit below vendor-harness numbers); #3 of 39 on the Vals board. Supersedes the self-reported 58.7 row as headline."
+      "notes": "Terminal-Bench Science 0.1, Vals AI independent run (single-run pass@1, mostly mini-swe-agent harness; Vals notes its figures sit below vendor-harness numbers); #3 of 39 on the Vals board. Supersedes the self-reported 58.7 row as headline. Vals ran Opus 5.5 with Claude Opus 5 and Opus 4.8 as server-side refusal fallbacks; 47.14 is the score with fallback-assisted tasks counted as failures (48.57 with them), so no fallback model's work is credited."
     },
     {
       "benchmarkSlug": "harvey-legal-agent",
@@ -204,7 +204,7 @@
       "source": "independent",
       "sourceUrl": "https://www.vals.ai/benchmarks/fabv2",
       "evaluatedAt": "2026-10-12",
-      "notes": "Vals Finance Agent v2, Vals AI independent run (dealbreaker-gated partial credit, mean of 3 runs, test split); #10 of 59 on the Vals board."
+      "notes": "Vals Finance Agent v2, Vals AI independent run (dealbreaker-gated partial credit, mean of 3 runs, test split); #10 of 78 on the Vals board."
     },
     {
       "benchmarkSlug": "arena",
