@@ -1,0 +1,11 @@
+{
+  "slug": "swe-marathon",
+  "name": "SWE-Marathon",
+  "category": "coding",
+  "unit": "%",
+  "description": "SWE-Marathon v1.1 (Abundant AI) — 20 realistic multi-hour software-engineering projects (library reproductions, full-stack clones, ML engineering) graded by executing project tests. Binary reward per task, pass@1 averaged over k=8 trials. Each row uses the agent harness the leaderboard lists for it: usually the lab's own product (Claude Code, Codex, Grok Build, Muse Code), but third-party harnesses for other labs (Kimi and GLM in Claude Code, Gemini 3.7 Flash in OpenCode, DeepSeek V4 Pro in Mini-SWE-Agent), so rows compare model+harness pairs.",
+  "normMin": 0,
+  "normMax": 60,
+  "higherIsBetter": true,
+  "methodologyUrl": "https://github.com/abundant-ai/swe-marathon"
+}

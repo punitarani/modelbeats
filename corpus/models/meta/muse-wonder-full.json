@@ -1,0 +1,148 @@
+{
+  "name": "Muse Wonder Full",
+  "org": "Meta",
+  "orgSlug": "meta",
+  "family": "Muse Wonder",
+  "familySlug": "muse-wonder",
+  "slug": "muse-wonder-full",
+  "releaseDate": "2026-10-12",
+  "status": "released",
+  "openness": "closed",
+  "license": "Proprietary",
+  "paramsB": null,
+  "activeParamsB": null,
+  "archClass": "dense",
+  "archDisplay": "Proprietary multimodal reasoning model (architecture undisclosed); Meta's most capable Muse Wonder variant, 1M-token context",
+  "ctxK": 1000,
+  "modalities": [
+    "text",
+    "vision",
+    "audio",
+    "video"
+  ],
+  "langCount": null,
+  "capabilities": {
+    "reasoning": true,
+    "coding": true,
+    "vision": true,
+    "functionCalling": true,
+    "toolUse": true,
+    "agentic": true
+  },
+  "apiAvailable": false,
+  "price": null,
+  "links": {
+    "docs": "https://research.meta.ai/blog/muse-wonder"
+  },
+  "note": "The larger Muse Wonder variant, released October 12, 2026 but not offered in the Meta Model API: it is available only inside Muse Code on the $50/month Power Usage and $200/month Maximum Usage plans (dev.meta.ai lists no per-token price), so price is null and apiAvailable false, following the Gemini 3.8 Flash Cyber precedent (Gemini 4 Argon followed it too until its Oct 13 GA). Meta's scorecard and Artificial Analysis (Intelligence Index 56, #4) put it just behind Claude Opus 5.5 (58). It leads Meta's table on SWE-Marathon (57.5, run at xhigh), DeepSWE 1.1 (79.0) and Vals Finance Agent v2; Vals AI independently ranks it #5 of 47 on the Vals Index (64.57%) and #4 of 79 on Harvey's Legal Agent Benchmark. Cyber rows come from the model card's risk section (ExploitGym's 92 flags are not filed: only 21 used the intended vulnerability). NOT FILED: Personal Superintelligence Index (59.1) and MemoryBench (85.5) are Meta-internal; Harvey LAB-AA 13.1 and AutomationBench-AA 45.4 are Artificial Analysis variants that do not match the corpus columns; ProgramBench 59.0 conflicts with Vals' 0.50% on its own ProgramBench metric.",
+  "quants": [],
+  "vramQ4Gb": null,
+  "vramFp16Gb": null,
+  "tps4090": null,
+  "tpsNote": null,
+  "effortLabel": null,
+  "isDefaultConfig": true,
+  "isBestConfig": true,
+  "specSources": {
+    "releaseDate": "https://research.meta.ai/static/muse-wonder-model-card",
+    "ctxK": "https://research.meta.ai/static/muse-wonder-model-card"
+  },
+  "results": [
+    {
+      "benchmarkSlug": "harvey-legal-agent",
+      "score": 21.67,
+      "source": "independent",
+      "sourceUrl": "https://www.vals.ai/benchmarks/hlab-v1",
+      "evaluatedAt": "2026-10-12",
+      "notes": "Harvey's Legal Agent Benchmark, Vals AI launch-day evaluation (±3.54, #4 of 81 on the Vals v1 board). Meta's scorecard reports the different Harvey LAB-AA v1.1 (13.1), not filed. On Oct 19 Vals moved this v1 board to /benchmarks/hlab-v1 (archived) and replaced it at /benchmarks/hlab with HLAB-Vals-1.1, whose scores are not comparable."
+    },
+    {
+      "benchmarkSlug": "vals-finance-agent",
+      "score": 59.06,
+      "source": "independent",
+      "sourceUrl": "https://www.vals.ai/benchmarks/fabv2",
+      "evaluatedAt": "2026-10-12",
+      "notes": "Vals Finance Agent v2, Vals AI evaluation (±0.21, #5 of 78); matches the 59.1 on Meta's scorecard."
+    },
+    {
+      "benchmarkSlug": "terminal-bench-4",
+      "score": 58.08,
+      "source": "independent",
+      "sourceUrl": "https://www.vals.ai/models/meta_muse-wonder-full",
+      "evaluatedAt": "2026-10-12",
+      "notes": "Terminal-Bench 4.0, Vals AI evaluation (±3.31, #5 of 47). Meta's scorecard cites Artificial Analysis's run at 57.1."
+    },
+    {
+      "benchmarkSlug": "deepswe",
+      "score": 79.0,
+      "source": "self-reported",
+      "sourceUrl": "https://dev.meta.ai/models/muse-wonder",
+      "evaluatedAt": "2026-10-12",
+      "notes": "DeepSWE v1.1, Meta's launch scorecard on dev.meta.ai (max reasoning effort; peers GPT-6 Astra, Claude Fable 5.1 and Claude Opus 5.5 also at max); Meta cites Datacurve's third-party run. Best in row."
+    },
+    {
+      "benchmarkSlug": "healthbench-professional",
+      "score": 62.3,
+      "source": "self-reported",
+      "sourceUrl": "https://dev.meta.ai/models/muse-wonder",
+      "evaluatedAt": "2026-10-12",
+      "notes": "HealthBench Pro (length-normalized), Meta's launch scorecard on dev.meta.ai (max reasoning effort; peers GPT-6 Astra, Claude Fable 5.1 and Claude Opus 5.5 also at max); behind Opus 5.5 (65.6) and GPT-6 Astra (65.3)."
+    },
+    {
+      "benchmarkSlug": "jobbench",
+      "score": 75.3,
+      "source": "self-reported",
+      "sourceUrl": "https://dev.meta.ai/models/muse-wonder",
+      "evaluatedAt": "2026-10-12",
+      "notes": "JobBench, Meta's launch scorecard on dev.meta.ai (max reasoning effort; peers GPT-6 Astra, Claude Fable 5.1 and Claude Opus 5.5 also at max); level with Opus 5.5 (75.4)."
+    },
+    {
+      "benchmarkSlug": "osworld-2",
+      "score": 78.4,
+      "source": "self-reported",
+      "sourceUrl": "https://dev.meta.ai/models/muse-wonder",
+      "evaluatedAt": "2026-10-12",
+      "notes": "OSWorld V2.1 mean per-task partial reward (corpus convention: partial credit), Meta's launch scorecard on dev.meta.ai (max reasoning effort; peers GPT-6 Astra, Claude Fable 5.1 and Claude Opus 5.5 also at max); strict binary 39.4. Opus 5.5 81.8 partial, Fable 5.1 80.7."
+    },
+    {
+      "benchmarkSlug": "gdp-pdf",
+      "score": 33.2,
+      "source": "self-reported",
+      "sourceUrl": "https://dev.meta.ai/models/muse-wonder",
+      "evaluatedAt": "2026-10-12",
+      "notes": "GDP.pdf (Surge-reported score), Meta's launch scorecard on dev.meta.ai (max reasoning effort; peers GPT-6 Astra, Claude Fable 5.1 and Claude Opus 5.5 also at max); GPT-6 Astra 34.2."
+    },
+    {
+      "benchmarkSlug": "swe-marathon",
+      "score": 57.5,
+      "source": "self-reported",
+      "sourceUrl": "https://dev.meta.ai/models/muse-wonder",
+      "evaluatedAt": "2026-10-12",
+      "notes": "SWE-Marathon pass@1, Meta's launch scorecard on dev.meta.ai. Run at XHIGH effort per Meta's footnote, unlike the scorecard's other rows (max reasoning effort; peers GPT-6 Astra, Claude Fable 5.1 and Claude Opus 5.5 at max). Attributed to Abundant AI but not yet on the public swemarathon.org leaderboard, so filed as self-reported. Best in row."
+    },
+    {
+      "benchmarkSlug": "cybergym",
+      "score": 88.4,
+      "source": "self-reported",
+      "sourceUrl": "https://research.meta.ai/static/muse-wonder-model-card",
+      "evaluatedAt": "2026-10-12",
+      "notes": "CyberGym, Muse Wonder model card section 4 (cyber capability evaluations, unmitigated model)."
+    },
+    {
+      "benchmarkSlug": "exploitbench",
+      "score": 58.9,
+      "source": "self-reported",
+      "sourceUrl": "https://research.meta.ai/static/muse-wonder-model-card",
+      "evaluatedAt": "2026-10-12",
+      "notes": "ExploitBench, Muse Wonder model card section 4. ExploitGym (92 flags, of which 21 via the intended vulnerability) has no corpus column."
+    },
+    {
+      "benchmarkSlug": "terminal-bench-science",
+      "score": 37.14,
+      "source": "independent",
+      "sourceUrl": "https://www.vals.ai/benchmarks/terminal-bench-science",
+      "evaluatedAt": "2026-10-14",
+      "notes": "Terminal-Bench Science 0.1, Vals AI independent run (single-run pass@1, mini-swe-agent harness; Vals notes its figures sit below vendor-harness numbers); #7 of 41 on the Vals board (updated 2026-10-14). ±5.82; fallback rate 0.00% on Vals' Wonder Full page."
+    }
+  ]
+}

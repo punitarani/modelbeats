@@ -1,0 +1,125 @@
+{
+  "name": "Kimi K3.1 Pro",
+  "org": "Moonshot AI",
+  "family": "Kimi K3",
+  "releaseDate": "2026-10-23",
+  "predecessor": "kimi-k3",
+  "status": "released",
+  "openness": "closed",
+  "license": "Proprietary API for now (Moonshot says full model weights will be released by Nov 4, 2026)",
+  "paramsB": 2800,
+  "activeParamsB": null,
+  "archClass": "moe",
+  "archDisplay": "Post-trained version of Kimi K3 (same 2.8T-parameter MoE base) with substantially larger multi-domain joint RL; 1M-token context; always-on thinking with reasoning_effort low, high or max (default max); text, image and video input",
+  "ctxK": 1024,
+  "modalities": [
+    "text",
+    "vision",
+    "video"
+  ],
+  "langCount": null,
+  "capabilities": {
+    "reasoning": true,
+    "coding": true,
+    "vision": true,
+    "functionCalling": true,
+    "toolUse": true,
+    "agentic": true
+  },
+  "apiAvailable": true,
+  "price": {
+    "input": 2,
+    "output": 10
+  },
+  "links": {
+    "docs": "https://platform.kimi.ai/docs/guide/kimi-k3-1-pro-quickstart"
+  },
+  "note": "First model of Moonshot's K3.1 series, launched Oct 23, 2026 on Kimi.ai, Kimi Work, Kimi Code and the Kimi API, alongside a 2-3x faster Kimi K3.1 Pro Highspeed. Moonshot calls it a post-trained Kimi K3 with much more RL compute and says full weights will ship by Nov 4, 2026, so it is filed as closed until they do (MiniMax M3.1 Flash precedent). Moonshot also says it removed cyber-related data from mid-training and RL for the open-weight release. API price $2/$10 per Mtok (Artificial Analysis, from Kimi's API; Kimi's own pricing table renders client-side and could not be read). Scores are Moonshot's at max effort. NOT FILED: OfficeQA Pro v2 (64.4; the corpus officeqa-pro column holds v1 figures, e.g. Opus 5.5 67.7 vs 62.2 on v2), Frontier Finance (58.6), ProgramBench (binary-score variant), GDPval-AA v2.1 (AA re-based scale), Agents' Last Exam, GDP.pdf, ChartoGraphy, ZeroBench, HLE without tools, and Kimi's internal suites (Kimi Code Bench, Hallu Bench, xdev-bench-hard); DeepSWE v1.1 (75.5) and MMMU-Pro (84.1) appear in only one transcription of the image grid. Kimi K3.1 Pro Highspeed is not filed separately: no benchmark table and no first-party price could be read.",
+  "quants": [],
+  "vramQ4Gb": null,
+  "vramFp16Gb": null,
+  "tps4090": null,
+  "tpsNote": null,
+  "effortLabel": null,
+  "isDefaultConfig": true,
+  "isBestConfig": true,
+  "specSources": {
+    "releaseDate/weightsPromise/archDisplay": "https://www.kimi.ai/blog/kimi-k3-1-pro",
+    "ctxK/reasoningEffort/modalities": "https://platform.kimi.ai/docs/guide/kimi-k3-1-pro-quickstart",
+    "paramsB/price": "https://artificialanalysis.ai/models/kimi-k3-1-pro"
+  },
+  "results": [
+    {
+      "benchmarkSlug": "terminal-bench-4",
+      "score": 63.64,
+      "source": "independent",
+      "sourceUrl": "https://www.vals.ai/benchmarks/terminal-bench-4",
+      "evaluatedAt": "2026-10-24",
+      "notes": "Terminal-Bench 4.0, Vals AI independent run (mini-swe-agent harness, avg@3, 8-hour agent limit; ±1.75); #3 of 55 on the Vals board (updated 2026-10-24), behind Claude Opus 5.5 and Sonnet 5.5. Vals' Kimi K3.1 Pro page lists the same 63.64% with Moonshot AI as default provider at max reasoning effort. Moonshot's own figure is 65.7% (Claude Code harness)."
+    },
+    {
+      "benchmarkSlug": "terminal-bench-4",
+      "score": 65.7,
+      "source": "self-reported",
+      "sourceUrl": "https://www.kimi.ai/blog/kimi-k3-1-pro",
+      "evaluatedAt": "2026-10-23",
+      "notes": "Terminal-Bench 4.0, stated in the text of Moonshot's Oct 23, 2026 launch blog (65.7%, vs GPT-6 Astra 58.2% and Claude Opus 5.5 66.4%); Claude Code harness, reasoning effort max."
+    },
+    {
+      "benchmarkSlug": "benchcad",
+      "score": 92.7,
+      "source": "self-reported",
+      "sourceUrl": "https://www.kimi.ai/blog/kimi-k3-1-pro",
+      "evaluatedAt": "2026-10-23",
+      "notes": "BenchCAD Vision2Code with tools, 1,000-case subset, Voxel IoU, stated in the text of Moonshot's launch blog (Opus 5.5 96.2, GPT-6 Astra 95.9); Claude Code harness. The without-tools score (72.8) is not filed."
+    },
+    {
+      "benchmarkSlug": "swe-marathon",
+      "score": 51.7,
+      "source": "self-reported",
+      "sourceUrl": "https://www.kimi.ai/blog/kimi-k3-1-pro",
+      "evaluatedAt": "2026-10-23",
+      "notes": "SWE-Marathon v1.1, Claude Code harness (Moonshot's own run; rival columns from the official leaderboard). Figure is in the image-only benchmark grid of Moonshot's Oct 23, 2026 launch blog (K3.1 Pro column, reasoning effort max); the blog's alt text does not carry it, so it was checked against independent text transcriptions of that grid that agree exactly (wokey.ai/models/kimi-k3.1-pro, mer.vin K3.1 Pro launch write-up, benchmarklist.com/models/moonshotai-kimi-k3.1-pro). Same convention as the Kimi K3 entry. The blog does not say how many trials Moonshot ran, so this may not match the leaderboard's pass@1 over k=8 trials."
+    },
+    {
+      "benchmarkSlug": "terminal-bench-science",
+      "score": 38.1,
+      "source": "self-reported",
+      "sourceUrl": "https://www.kimi.ai/blog/kimi-k3-1-pro",
+      "evaluatedAt": "2026-10-23",
+      "notes": "Terminal-Bench Science 0.1, Claude Code harness. Figure is in the image-only benchmark grid of Moonshot's Oct 23, 2026 launch blog (K3.1 Pro column, reasoning effort max); the blog's alt text does not carry it, so it was checked against independent text transcriptions of that grid that agree exactly (wokey.ai/models/kimi-k3.1-pro, mer.vin K3.1 Pro launch write-up, benchmarklist.com/models/moonshotai-kimi-k3.1-pro). Same convention as the Kimi K3 entry."
+    },
+    {
+      "benchmarkSlug": "hle",
+      "score": 70.0,
+      "source": "self-reported",
+      "sourceUrl": "https://www.kimi.ai/blog/kimi-k3-1-pro",
+      "evaluatedAt": "2026-10-23",
+      "notes": "Humanity's Last Exam, full 2,500-question set, with tools (the corpus's Kimi convention; the no-tools 51.1 is not filed). Figure is in the image-only benchmark grid of Moonshot's Oct 23, 2026 launch blog (K3.1 Pro column, reasoning effort max); the blog's alt text does not carry it, so it was checked against independent text transcriptions of that grid that agree exactly (wokey.ai/models/kimi-k3.1-pro, mer.vin K3.1 Pro launch write-up, benchmarklist.com/models/moonshotai-kimi-k3.1-pro). Same convention as the Kimi K3 entry."
+    },
+    {
+      "benchmarkSlug": "gpqa",
+      "score": 94.2,
+      "source": "self-reported",
+      "sourceUrl": "https://www.kimi.ai/blog/kimi-k3-1-pro",
+      "evaluatedAt": "2026-10-23",
+      "notes": "GPQA Diamond. Figure is in the image-only benchmark grid of Moonshot's Oct 23, 2026 launch blog (K3.1 Pro column, reasoning effort max); the blog's alt text does not carry it, so it was checked against independent text transcriptions of that grid that agree exactly (wokey.ai/models/kimi-k3.1-pro, benchmarklist.com/models/moonshotai-kimi-k3.1-pro). Same convention as the Kimi K3 entry."
+    },
+    {
+      "benchmarkSlug": "browsecomp",
+      "score": 92.1,
+      "source": "self-reported",
+      "sourceUrl": "https://www.kimi.ai/blog/kimi-k3-1-pro",
+      "evaluatedAt": "2026-10-23",
+      "notes": "BrowseComp with context compaction at 200K tokens and up to 500 steps. Figure is in the image-only benchmark grid of Moonshot's Oct 23, 2026 launch blog (K3.1 Pro column, reasoning effort max); the blog's alt text does not carry it, so it was checked against independent text transcriptions of that grid that agree exactly (wokey.ai/models/kimi-k3.1-pro, benchmarklist.com/models/moonshotai-kimi-k3.1-pro). Same convention as the Kimi K3 entry."
+    },
+    {
+      "benchmarkSlug": "osworld-2",
+      "score": 79.6,
+      "source": "self-reported",
+      "sourceUrl": "https://www.kimi.ai/blog/kimi-k3-1-pro",
+      "evaluatedAt": "2026-10-23",
+      "notes": "OSWorld V2.1 with the Kimi Agent harness in the official OSWorld v2 repo. Figure is in the image-only benchmark grid of Moonshot's Oct 23, 2026 launch blog (K3.1 Pro column, reasoning effort max); the blog's alt text does not carry it, so it was checked against independent text transcriptions of that grid that agree exactly (wokey.ai/models/kimi-k3.1-pro, mer.vin K3.1 Pro launch write-up). Same convention as the Kimi K3 entry."
+    }
+  ]
+}

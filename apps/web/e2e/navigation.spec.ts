@@ -15,8 +15,9 @@ test.describe('history-aware back links', () => {
 
   test('dashboard scatter point → model → back lands on the dashboard', async ({ page }) => {
     await gotoHydrated(page, '/')
-    await page.locator('a[aria-label^="Gemini 3.1 Pro —"]').click()
-    await expect(page).toHaveURL(/\/models\/gemini-3-1-pro$/)
+    // Gemini 3.1 Pro's point sits under GPT-5.6 Terra's (same $12/M price, close Elo), so use the #1 model's point
+    await page.locator('a[aria-label^="Kimi K3.1 Pro —"]').click()
+    await expect(page).toHaveURL(/\/models\/kimi-k3-1-pro$/)
     await page.getByRole('link', { name: 'Back', exact: true }).click()
     await expect(page).toHaveURL(/\/$/)
   })

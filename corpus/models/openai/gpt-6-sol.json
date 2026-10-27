@@ -101,6 +101,70 @@
       "sourceUrl": "https://deploymentsafety.openai.com/gpt-6-1-sol",
       "evaluatedAt": "2026-09-29",
       "notes": "Length-adjusted (raw 59.5), GPT-6.1 Sol system card addendum."
+    },
+    {
+      "benchmarkSlug": "terminal-bench-4",
+      "score": 44.44,
+      "source": "independent",
+      "sourceUrl": "https://www.vals.ai/benchmarks/terminal-bench-4",
+      "evaluatedAt": "2026-10-12",
+      "notes": "Terminal-Bench 4.0, Vals AI independent run (mini-swe-agent harness, avg@3, 8-hour agent limit); #10 of 47 on the Vals board."
+    },
+    {
+      "benchmarkSlug": "terminal-bench-science",
+      "score": 30.0,
+      "source": "independent",
+      "sourceUrl": "https://www.vals.ai/benchmarks/terminal-bench-science",
+      "evaluatedAt": "2026-10-08",
+      "notes": "Terminal-Bench Science 0.1, Vals AI independent run (single-run pass@1, mostly mini-swe-agent harness; Vals notes its figures sit below vendor-harness numbers); #7 of 39 on the Vals board."
+    },
+    {
+      "benchmarkSlug": "harvey-legal-agent",
+      "score": 1.67,
+      "source": "independent",
+      "sourceUrl": "https://www.vals.ai/benchmarks/hlab-v1",
+      "evaluatedAt": "2026-10-12",
+      "notes": "Harvey's Legal Agent Benchmark, Vals AI independent run on the held-out set (task pass rate, average of GPT 5.5 and Sonnet 4.6 judges); #52 of 81 on the Vals v1 board. On Oct 19 Vals moved this v1 board to /benchmarks/hlab-v1 (archived) and replaced it at /benchmarks/hlab with HLAB-Vals-1.1, whose scores are not comparable."
+    },
+    {
+      "benchmarkSlug": "vals-finance-agent",
+      "score": 49.05,
+      "source": "independent",
+      "sourceUrl": "https://www.vals.ai/benchmarks/fabv2",
+      "evaluatedAt": "2026-10-12",
+      "notes": "Vals Finance Agent v2, Vals AI independent run (dealbreaker-gated partial credit, mean of 3 runs, test split); #46 of 78 on the Vals board."
+    },
+    {
+      "benchmarkSlug": "arena",
+      "score": 1458,
+      "source": "arena",
+      "sourceUrl": "https://arena.ai/leaderboard/text",
+      "evaluatedAt": "2026-10-13",
+      "notes": "Text Arena row 'gpt-6-sol-max', 11,903 votes; leaderboard last updated Oct 13 2026. No arena row in the corpus today."
+    },
+    {
+      "benchmarkSlug": "arc-agi-1",
+      "score": 95.5,
+      "source": "independent",
+      "sourceUrl": "https://arcprize.org/results/openai-gpt-6-sol",
+      "evaluatedAt": "2026-09-22",
+      "notes": "ARC Prize verified result on the Semi-Private set, run by the ARC Prize team. Max variant (XHigh 92.7%)."
+    },
+    {
+      "benchmarkSlug": "arc-agi-2",
+      "score": 89.6,
+      "source": "independent",
+      "sourceUrl": "https://arcprize.org/results/openai-gpt-6-sol",
+      "evaluatedAt": "2026-09-22",
+      "notes": "ARC Prize verified result on the Semi-Private set, run by the ARC Prize team. Max variant (XHigh 78.1%)."
+    },
+    {
+      "benchmarkSlug": "arc-agi-3",
+      "score": 4.62,
+      "source": "independent",
+      "sourceUrl": "https://arcprize.org/results/openai-gpt-6-sol",
+      "evaluatedAt": "2026-09-22",
+      "notes": "ARC Prize verified result on the Semi-Private set, run by the ARC Prize team. Max, Standard harness (the comparable figure for older ARC-AGI-3 rows). Provider Adapter harness gives 23.03%."
     }
   ]
 }

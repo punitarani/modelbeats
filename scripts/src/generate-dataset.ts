@@ -166,7 +166,8 @@ export function generate(corpus: Corpus): Generated {
     })
     .sort((a, b) => a.slug.localeCompare(b.slug))
 
-  // ---- Predecessors: per-family, nearest strictly-older; same-day = size variants (no pred). ----
+  // ---- Predecessors: the corpus `predecessor` override when set, else per-family nearest
+  // strictly-older; same-day = size variants (no pred). ----
   const byFamily = new Map<string, Resolved[]>()
   for (const r of resolved) {
     if (!byFamily.has(r.familySlug)) byFamily.set(r.familySlug, [])
@@ -181,6 +182,10 @@ export function generate(corpus: Corpus): Generated {
   const predecessorOf = new Map<string, string | null>()
   for (const group of byFamily.values()) {
     for (const r of group) {
+      if (r.m.predecessor !== undefined) {
+        predecessorOf.set(r.slug, r.m.predecessor)
+        continue
+      }
       const older = group.filter((c) => c.m.releaseDate < r.m.releaseDate)
       if (older.length === 0) {
         predecessorOf.set(r.slug, null)

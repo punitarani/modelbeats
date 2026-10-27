@@ -5,8 +5,8 @@
   "slug": "step-5-preview",
   "releaseDate": "2026-09-20",
   "status": "preview",
-  "openness": "closed",
-  "license": "Proprietary for now (open weights promised for October 15, 2026)",
+  "openness": "open-weights",
+  "license": "StepFun Model License 1.0 (custom; attribution required, commercial use subject to StepFun's commercial-license conditions)",
   "paramsB": 600,
   "activeParamsB": 27,
   "archClass": "moe",
@@ -33,10 +33,14 @@
     "provider": "StepFun"
   },
   "links": {
+    "hf": "stepfun-ai/Step-5-Preview",
     "docs": "https://platform.stepfun.ai/docs/en/guides/models/step-5-preview"
   },
-  "note": "StepFun's new flagship for agentic work: a 600B-total / 27B-active sparse MoE with a 1M-token context and text/image/video input, launched API-only around 2026-09-20 with open weights promised for October 15. StepFun's own table runs it at High effort against rivals at Max; it ties or edges Kimi K3 and GLM-5.3 on DeepSWE v1.1 (67.7) and GPQA (93.5) but trails them on Terminal-Bench v4 (33.3 vs GLM-5.3 41.9) and several agent rows. Priced at $1.00/$2.70 per Mtok. StepFun's comparison set contains no 'Step-4', 'Kimi K3.1' or other model the corpus added on 2026-09-23. Release date is secondary-sourced: StepFun pages print no date, and 2026-09-20 comes from MarkTechPost coverage (https://www.marktechpost.com/2026/09/20/stepfun-launches-step-5-preview/).",
-  "quants": [],
+  "note": "StepFun's new flagship for agentic work: a 600B-total / 27B-active sparse MoE with a 1M-token context and text/image/video input, launched API-only around 2026-09-20; StepFun published the open weights on its official Hugging Face org on the promised date, 2026-10-15 (stepfun-ai/Step-5-Preview in FP8, plus -BF16 and -NVFP4 repos), under the StepFun Model License 1.0, an Apache-2.0-style license with added attribution and commercial-license conditions. StepFun's own table runs it at High effort against rivals at Max; it ties or edges Kimi K3 and GLM-5.3 on DeepSWE v1.1 (67.7) and GPQA (93.5) but trails them on Terminal-Bench v4 (33.3 vs GLM-5.3 41.9) and several agent rows. Priced at $1.00/$2.70 per Mtok. StepFun's comparison set contains no 'Step-4', 'Kimi K3.1' or other model the corpus added on 2026-09-23. Release date is secondary-sourced: StepFun pages print no date, and 2026-09-20 comes from MarkTechPost coverage (https://www.marktechpost.com/2026/09/20/stepfun-launches-step-5-preview/).",
+  "quants": [
+    "FP8",
+    "NVFP4"
+  ],
   "vramQ4Gb": null,
   "vramFp16Gb": null,
   "tps4090": null,
@@ -49,10 +53,12 @@
     "ctxK": "https://platform.stepfun.ai/docs/en/guides/models/step-5-preview",
     "maxOutput": "https://platform.stepfun.ai/docs/en/guides/models/step-5-preview",
     "modalities": "https://platform.stepfun.ai/docs/en/llm/modeloverview",
-    "openness": "https://www.stepfun.com/step-5-preview",
+    "openness": "https://huggingface.co/stepfun-ai/Step-5-Preview",
     "price": "https://platform.stepfun.ai/docs/en/pricing/details",
     "effortTiers": "https://platform.stepfun.ai/docs/en/guides/models/step-5-preview",
-    "releaseDate": "secondary only: https://www.marktechpost.com/2026/09/20/stepfun-launches-step-5-preview/"
+    "releaseDate": "secondary only: https://www.marktechpost.com/2026/09/20/stepfun-launches-step-5-preview/",
+    "license": "https://huggingface.co/stepfun-ai/Step-5-Preview/blob/main/LICENSE.txt",
+    "quants": "https://huggingface.co/collections/stepfun-ai/step-5-preview"
   },
   "results": [
     {
@@ -190,6 +196,46 @@
       "sourceUrl": "https://www.stepfun.com/step-5-preview",
       "evaluatedAt": "2026-09-20",
       "notes": "Step 5 Preview (High effort) column of the official launch table."
+    },
+    {
+      "benchmarkSlug": "terminal-bench-4",
+      "score": 31.82,
+      "source": "independent",
+      "sourceUrl": "https://www.vals.ai/benchmarks/terminal-bench-4",
+      "evaluatedAt": "2026-10-12",
+      "notes": "Terminal-Bench 4.0, Vals AI independent run (mini-swe-agent harness, avg@3, 8-hour agent limit); #16 of 47 on the Vals board. Supersedes the self-reported 33.3 row as headline."
+    },
+    {
+      "benchmarkSlug": "terminal-bench-science",
+      "score": 2.86,
+      "source": "independent",
+      "sourceUrl": "https://www.vals.ai/benchmarks/terminal-bench-science",
+      "evaluatedAt": "2026-10-08",
+      "notes": "Terminal-Bench Science 0.1, Vals AI independent run (single-run pass@1, mostly mini-swe-agent harness; Vals notes its figures sit below vendor-harness numbers); #30 of 39 on the Vals board."
+    },
+    {
+      "benchmarkSlug": "harvey-legal-agent",
+      "score": 9.17,
+      "source": "independent",
+      "sourceUrl": "https://www.vals.ai/benchmarks/hlab-v1",
+      "evaluatedAt": "2026-10-12",
+      "notes": "Harvey's Legal Agent Benchmark, Vals AI independent run on the held-out set (task pass rate, average of GPT 5.5 and Sonnet 4.6 judges); #23 of 81 on the Vals v1 board. On Oct 19 Vals moved this v1 board to /benchmarks/hlab-v1 (archived) and replaced it at /benchmarks/hlab with HLAB-Vals-1.1, whose scores are not comparable."
+    },
+    {
+      "benchmarkSlug": "vals-finance-agent",
+      "score": 50.67,
+      "source": "independent",
+      "sourceUrl": "https://www.vals.ai/benchmarks/fabv2",
+      "evaluatedAt": "2026-10-12",
+      "notes": "Vals Finance Agent v2, Vals AI independent run (dealbreaker-gated partial credit, mean of 3 runs, test split); #40 of 78 on the Vals board."
+    },
+    {
+      "benchmarkSlug": "arena",
+      "score": 1446,
+      "source": "arena",
+      "sourceUrl": "https://arena.ai/leaderboard/text",
+      "evaluatedAt": "2026-10-13",
+      "notes": "Text Arena row 'Step 5 Preview', 6,432 votes; leaderboard last updated Oct 13 2026. No arena row in the corpus today."
     }
   ]
 }

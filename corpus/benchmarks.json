@@ -136,7 +136,7 @@
     "unit": "Elo",
     "description": "Blind pairwise human votes (arena.ai). The gold standard for conversational preference.",
     "normMin": 1000,
-    "normMax": 1460,
+    "normMax": 1480,
     "higherIsBetter": true
   },
   {
@@ -545,7 +545,7 @@
     "name": "Harvey Legal Agent Benchmark",
     "category": "agents",
     "unit": "%",
-    "description": "Harvey's Legal Agent Benchmark (Vals AI) — complex, multi-step legal workflows scored by practising lawyers. Scores stay low in absolute terms: the frontier is in the teens.",
+    "description": "Harvey's Legal Agent Benchmark v1 (Vals AI) — complex, multi-step legal workflows scored by practising lawyers. Scores stay low in absolute terms: the frontier sits in the low twenties. Vals' HLAB-Vals-1.1 (Oct 2026) runs on a remediated holdout and is not comparable, so it is not filed in this column.",
     "normMin": 0,
     "normMax": 25,
     "higherIsBetter": true
@@ -1586,9 +1586,9 @@
     "name": "AutomationBench",
     "category": "agents",
     "unit": "%",
-    "description": "Zapier's cross-application workflow-orchestration benchmark: whether an agent can complete real business tasks end to end via REST/tool calls. Scored on a held-out private set where every assertion must pass.",
+    "description": "Zapier's cross-application workflow-orchestration benchmark: whether an agent can complete real business tasks end to end via REST/tool calls. Every assertion must pass. Zapier's own leaderboard scores a held-out private set; several labs instead report the 600 publicly released tasks (v1.0.6), and each row's note says which set it used.",
     "normMin": 0,
-    "normMax": 50,
+    "normMax": 58,
     "higherIsBetter": true,
     "methodologyUrl": "https://zapier.com/benchmarks"
   },
@@ -1702,5 +1702,16 @@
     "normMin": 0,
     "normMax": 85,
     "higherIsBetter": true
+  },
+  {
+    "slug": "swe-marathon",
+    "name": "SWE-Marathon",
+    "category": "coding",
+    "unit": "%",
+    "description": "SWE-Marathon v1.1 (Abundant AI) — 20 realistic multi-hour software-engineering projects (library reproductions, full-stack clones, ML engineering) graded by executing project tests. Binary reward per task, pass@1 averaged over k=8 trials. Each row uses the agent harness the leaderboard lists for it: usually the lab's own product (Claude Code, Codex, Grok Build, Muse Code), but third-party harnesses for other labs (Kimi and GLM in Claude Code, Gemini 3.7 Flash in OpenCode, DeepSeek V4 Pro in Mini-SWE-Agent), so rows compare model+harness pairs.",
+    "normMin": 0,
+    "normMax": 60,
+    "higherIsBetter": true,
+    "methodologyUrl": "https://github.com/abundant-ai/swe-marathon"
   }
 ]

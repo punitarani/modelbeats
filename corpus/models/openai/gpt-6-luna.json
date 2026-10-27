@@ -76,6 +76,70 @@
       "sourceUrl": "https://www.anthropic.com/claude-haiku-5-5",
       "evaluatedAt": "2026-10-07",
       "notes": "FrontierCode 1.1 (Main), GPT-6 Luna column of Anthropic's Haiku 5.5 table (effort not stated)."
+    },
+    {
+      "benchmarkSlug": "terminal-bench-4",
+      "score": 13.64,
+      "source": "independent",
+      "sourceUrl": "https://www.vals.ai/benchmarks/terminal-bench-4",
+      "evaluatedAt": "2026-10-12",
+      "notes": "Terminal-Bench 4.0, Vals AI independent run (mini-swe-agent harness, avg@3, 8-hour agent limit); #31 of 47 on the Vals board. Supersedes the self-reported 16.4 row as headline."
+    },
+    {
+      "benchmarkSlug": "terminal-bench-science",
+      "score": 4.29,
+      "source": "independent",
+      "sourceUrl": "https://www.vals.ai/benchmarks/terminal-bench-science",
+      "evaluatedAt": "2026-10-08",
+      "notes": "Terminal-Bench Science 0.1, Vals AI independent run (single-run pass@1, mostly mini-swe-agent harness; Vals notes its figures sit below vendor-harness numbers); #23 of 39 on the Vals board."
+    },
+    {
+      "benchmarkSlug": "harvey-legal-agent",
+      "score": 2.92,
+      "source": "independent",
+      "sourceUrl": "https://www.vals.ai/benchmarks/hlab-v1",
+      "evaluatedAt": "2026-10-12",
+      "notes": "Harvey's Legal Agent Benchmark, Vals AI independent run on the held-out set (task pass rate, average of GPT 5.5 and Sonnet 4.6 judges); #45 of 81 on the Vals v1 board. On Oct 19 Vals moved this v1 board to /benchmarks/hlab-v1 (archived) and replaced it at /benchmarks/hlab with HLAB-Vals-1.1, whose scores are not comparable."
+    },
+    {
+      "benchmarkSlug": "vals-finance-agent",
+      "score": 49.87,
+      "source": "independent",
+      "sourceUrl": "https://www.vals.ai/benchmarks/fabv2",
+      "evaluatedAt": "2026-10-12",
+      "notes": "Vals Finance Agent v2, Vals AI independent run (dealbreaker-gated partial credit, mean of 3 runs, test split); #43 of 78 on the Vals board."
+    },
+    {
+      "benchmarkSlug": "arena",
+      "score": 1443,
+      "source": "arena",
+      "sourceUrl": "https://arena.ai/leaderboard/text",
+      "evaluatedAt": "2026-10-13",
+      "notes": "Text Arena row 'gpt-6-luna-max', 43,294 votes; leaderboard last updated Oct 13 2026. No arena row in the corpus today."
+    },
+    {
+      "benchmarkSlug": "arc-agi-1",
+      "score": 86.7,
+      "source": "independent",
+      "sourceUrl": "https://arcprize.org/results/openai-gpt-6-luna",
+      "evaluatedAt": "2026-09-22",
+      "notes": "ARC Prize verified result on the Semi-Private set, run by the ARC Prize team. Max variant (XHigh 73.0%)."
+    },
+    {
+      "benchmarkSlug": "arc-agi-2",
+      "score": 59.3,
+      "source": "independent",
+      "sourceUrl": "https://arcprize.org/results/openai-gpt-6-luna",
+      "evaluatedAt": "2026-09-22",
+      "notes": "ARC Prize verified result on the Semi-Private set, run by the ARC Prize team. Max variant (XHigh 41.9%)."
+    },
+    {
+      "benchmarkSlug": "arc-agi-3",
+      "score": 0.19,
+      "source": "independent",
+      "sourceUrl": "https://arcprize.org/results/openai-gpt-6-luna",
+      "evaluatedAt": "2026-09-22",
+      "notes": "ARC Prize verified result on the Semi-Private set, run by the ARC Prize team. Medium, Standard harness (the comparable figure for older ARC-AGI-3 rows); the best of six variants (Max 0.10%). Provider Adapter harness gives 0.59% (Max)."
     }
   ]
 }

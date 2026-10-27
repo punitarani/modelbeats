@@ -1,0 +1,48 @@
+{
+  "slug": "minimax-m3-1-flash",
+  "name": "MiniMax M3.1 Flash",
+  "orgSlug": "minimax",
+  "familySlug": "minimax-m3",
+  "releaseDate": "2026-10-19",
+  "status": "released",
+  "predecessor": "minimax-m3",
+  "openness": "open-weights",
+  "license": "MiniMax Community License (M3.1-Flash): free for non-commercial use; commercial use must display 'Built with MiniMax M3.1-Flash' and send MiniMax a one-time notice, or get prior written authorization above US$20M yearly revenue",
+  "paramsB": 428,
+  "activeParamsB": 23,
+  "archClass": "moe",
+  "archDisplay": "native multimodal MoE, about 428B total / 23B active per token; MiniMax Sparse Attention throughout (M3's first three full-attention layers replaced), quantization-aware training of routed experts and attention, DSpark speculative-decoding draft head; 1M-token context, text/image/video input, thinking effort low to max",
+  "ctxK": 1000,
+  "modalities": [
+    "text",
+    "vision",
+    "video"
+  ],
+  "langCount": null,
+  "capabilities": {
+    "reasoning": true,
+    "coding": true,
+    "vision": true,
+    "functionCalling": true,
+    "toolUse": true,
+    "agentic": true
+  },
+  "apiAvailable": true,
+  "price": {
+    "input": 0.15,
+    "output": 0.6
+  },
+  "links": {
+    "hf": "MiniMaxAI/MiniMax-M3.1-Flash",
+    "docs": "https://platform.minimax.io/docs/guides/text-generation"
+  },
+  "note": "MiniMax's Oct 19, 2026 general release of the Flash model it had tested as M3.1-Flash-Preview inside MiniMax Code since Sep 27 (and anonymously as 'Space Bunny' on OpenRouter). Served on the MiniMax API, M Plan and MiniMax Code at a flat $0.15/$0.60 per Mtok ($0.015 cached input); MiniMax says agentic-task cost is 70% below M3 and output speed is about 3x faster. Thinking defaults to max effort. The promised weights landed on Hugging Face on Oct 23, 2026 under the MiniMax Community License (non-commercial free; commercial use needs attribution and a notice, or authorization above $20M revenue), so openness moved from closed to open-weights; the card also gives the architecture (about 428B total / 23B active MoE). The Hugging Face card publishes the launch comparison table as text, so its figures are now filed from the card (Terminal-Bench 4.0, NL2Repo, AutomationBench v1.0.6, CharXiv RQ; CyberGym 82.2 replaces the blog's rounded '82%'). NOT FILED: HLE no-tools 43.4 is the text-only subset (2,158 questions), and the corpus HLE column is the full set. Agents' Last Exam 29.6 is a pass rate (the same table gives GPT-5.6 Sol 30.6, against its 52.7 score component), so it is not filed under the corpus's score-component convention. GDP.pdf AA 20.8 is taken from Artificial Analysis (AA variants are not filed). BankerToolBench 76.2, LOCA-Bench 256K 60.3, PostTrain Bench v1.1 39.3, SWE Refactor Bench 23.0 and BabyVision (with tools) 91.0 have no corpus column.",
+  "quants": [],
+  "vramQ4Gb": null,
+  "vramFp16Gb": null,
+  "tps4090": null,
+  "tpsNote": null,
+  "effortLabel": null,
+  "isDefaultConfig": true,
+  "isBestConfig": true
+}

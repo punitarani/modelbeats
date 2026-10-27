@@ -1,0 +1,122 @@
+{
+  "name": "Nemotron 3.5 Bolt 74B-A9B",
+  "org": "NVIDIA",
+  "orgSlug": "nvidia",
+  "family": "Nemotron 3.5",
+  "familySlug": "nemotron-3-5",
+  "slug": "nemotron-3-5-bolt-74b-a9b",
+  "releaseDate": "2026-10-15",
+  "status": "released",
+  "openness": "open-weights",
+  "license": "OpenMDW License 1.1",
+  "paramsB": 74,
+  "activeParamsB": 9,
+  "archClass": "hybrid",
+  "archDisplay": "Hybrid Mamba-2 / Transformer LatentMoE, 74B total / 9B active, compressed from Nemotron 3.5 Super VL with Star Elastic architecture search and distillation; C-RADIO v4-H vision encoder; 256K-token context; native 2-bit 24GB release",
+  "ctxK": 256,
+  "modalities": [
+    "text",
+    "vision",
+    "video"
+  ],
+  "langCount": null,
+  "capabilities": {
+    "reasoning": true,
+    "coding": true,
+    "vision": true,
+    "functionCalling": true,
+    "toolUse": true,
+    "agentic": true
+  },
+  "apiAvailable": false,
+  "price": null,
+  "links": {
+    "hf": "nvidia/NVIDIA-Nemotron-3.5-Bolt-74B-A9B-BF16",
+    "docs": "https://developer.nvidia.com/blog/nvidia-nemotron-3-5-super-vl-powers-specialized-agents-with-multimodal-reasoning"
+  },
+  "note": "First model in NVIDIA's edge-focused Bolt line, released October 15, 2026 with Nemotron 3.5 Super VL: a 74B-total / 9B-active hybrid LatentMoE compressed from Super VL and shipped with native 2-bit quantization so it runs in 24GB of memory, plus BF16 reference weights, under OpenMDW-1.1. A smaller Bolt E4B 4GB followed on October 23 (separate entry). Scores are NVIDIA's for the 24GB IQ2 build. NOT FILED: GDPVal-AA-V2 (28.47) is on a different scale from the corpus gdpval-aa column; AA-Omniscience, AA-LCR and WebArena (vision) have no matching column.",
+  "quants": [
+    "2-bit",
+    "GGUF"
+  ],
+  "vramQ4Gb": null,
+  "vramFp16Gb": null,
+  "tps4090": null,
+  "tpsNote": null,
+  "effortLabel": null,
+  "isDefaultConfig": true,
+  "isBestConfig": true,
+  "specSources": {
+    "paramsB/activeParamsB": "https://huggingface.co/nvidia/NVIDIA-Nemotron-3.5-Bolt-74B-A9B-BF16",
+    "ctxK": "https://huggingface.co/nvidia/NVIDIA-Nemotron-3.5-Bolt-74B-A9B-BF16",
+    "releaseDate": "https://huggingface.co/nvidia/NVIDIA-Nemotron-3.5-Bolt-74B-A9B-24GB-GGUF",
+    "license": "https://openmdw.ai/license/1-1/",
+    "quants": "https://huggingface.co/nvidia/NVIDIA-Nemotron-3.5-Bolt-74B-A9B-24GB-GGUF"
+  },
+  "results": [
+    {
+      "benchmarkSlug": "terminal-bench-2",
+      "score": 50.98,
+      "source": "self-reported",
+      "sourceUrl": "https://huggingface.co/nvidia/NVIDIA-Nemotron-3.5-Bolt-74B-A9B-BF16",
+      "evaluatedAt": "2026-10-15",
+      "notes": "Nemotron 3.5 Bolt 74B-A9B-24GB (IQ2) column of the evaluation table on NVIDIA's Hugging Face model card; NVIDIA reports the 2-bit 24GB release, which is how the model ships for local use. Terminal-Bench 2.1 (mapped to terminal-bench-2 per corpus precedent for 2.1 rows)."
+    },
+    {
+      "benchmarkSlug": "tau3-banking",
+      "score": 17.01,
+      "source": "self-reported",
+      "sourceUrl": "https://huggingface.co/nvidia/NVIDIA-Nemotron-3.5-Bolt-74B-A9B-BF16",
+      "evaluatedAt": "2026-10-15",
+      "notes": "Nemotron 3.5 Bolt 74B-A9B-24GB (IQ2) column of the evaluation table on NVIDIA's Hugging Face model card; NVIDIA reports the 2-bit 24GB release, which is how the model ships for local use. Tau3 Banking."
+    },
+    {
+      "benchmarkSlug": "hle",
+      "score": 25.3,
+      "source": "self-reported",
+      "sourceUrl": "https://huggingface.co/nvidia/NVIDIA-Nemotron-3.5-Bolt-74B-A9B-BF16",
+      "evaluatedAt": "2026-10-15",
+      "notes": "Nemotron 3.5 Bolt 74B-A9B-24GB (IQ2) column of the evaluation table on NVIDIA's Hugging Face model card; NVIDIA reports the 2-bit 24GB release, which is how the model ships for local use. HLE, no tools."
+    },
+    {
+      "benchmarkSlug": "scicode",
+      "score": 41.02,
+      "source": "self-reported",
+      "sourceUrl": "https://huggingface.co/nvidia/NVIDIA-Nemotron-3.5-Bolt-74B-A9B-BF16",
+      "evaluatedAt": "2026-10-15",
+      "notes": "Nemotron 3.5 Bolt 74B-A9B-24GB (IQ2) column of the evaluation table on NVIDIA's Hugging Face model card; NVIDIA reports the 2-bit 24GB release, which is how the model ships for local use. SciCode."
+    },
+    {
+      "benchmarkSlug": "gpqa",
+      "score": 86.43,
+      "source": "self-reported",
+      "sourceUrl": "https://huggingface.co/nvidia/NVIDIA-Nemotron-3.5-Bolt-74B-A9B-BF16",
+      "evaluatedAt": "2026-10-15",
+      "notes": "Nemotron 3.5 Bolt 74B-A9B-24GB (IQ2) column of the evaluation table on NVIDIA's Hugging Face model card; NVIDIA reports the 2-bit 24GB release, which is how the model ships for local use. GPQA Diamond."
+    },
+    {
+      "benchmarkSlug": "mcp-atlas",
+      "score": 52.2,
+      "source": "self-reported",
+      "sourceUrl": "https://huggingface.co/nvidia/NVIDIA-Nemotron-3.5-Bolt-74B-A9B-BF16",
+      "evaluatedAt": "2026-10-15",
+      "notes": "Nemotron 3.5 Bolt 74B-A9B-24GB (IQ2) column of the evaluation table on NVIDIA's Hugging Face model card; NVIDIA reports the 2-bit 24GB release, which is how the model ships for local use. MCP-Atlas."
+    },
+    {
+      "benchmarkSlug": "browsecomp",
+      "score": 66.75,
+      "source": "self-reported",
+      "sourceUrl": "https://huggingface.co/nvidia/NVIDIA-Nemotron-3.5-Bolt-74B-A9B-BF16",
+      "evaluatedAt": "2026-10-15",
+      "notes": "Nemotron 3.5 Bolt 74B-A9B-24GB (IQ2) column of the evaluation table on NVIDIA's Hugging Face model card; NVIDIA reports the 2-bit 24GB release, which is how the model ships for local use. BrowseComp."
+    },
+    {
+      "benchmarkSlug": "pinchbench",
+      "score": 87.82,
+      "source": "self-reported",
+      "sourceUrl": "https://huggingface.co/nvidia/NVIDIA-Nemotron-3.5-Bolt-74B-A9B-BF16",
+      "evaluatedAt": "2026-10-15",
+      "notes": "Nemotron 3.5 Bolt 74B-A9B-24GB (IQ2) column of the evaluation table on NVIDIA's Hugging Face model card; NVIDIA reports the 2-bit 24GB release, which is how the model ships for local use. PinchBench."
+    }
+  ]
+}

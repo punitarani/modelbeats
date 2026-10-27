@@ -184,6 +184,46 @@
       "sourceUrl": "https://www.vals.ai/benchmarks/swebench",
       "evaluatedAt": "2026-09-01",
       "notes": "Vals.ai SWE-bench Verified (mini-SWE-agent), 'As of September 1, 2026'. Vals has archived this benchmark: 'Since performance on this benchmark has saturated, we no longer run this benchmark on new model releases.'"
+    },
+    {
+      "benchmarkSlug": "swe-marathon",
+      "score": 24.4,
+      "source": "independent",
+      "sourceUrl": "https://www.swemarathon.org/",
+      "evaluatedAt": "2026-10-13",
+      "notes": "SWE-Marathon v1.1 official leaderboard (Abundant AI), pass@1 over k=8 trials: GPT-5.6 Luna (max) / Codex."
+    },
+    {
+      "benchmarkSlug": "terminal-bench-4",
+      "score": 11.62,
+      "source": "independent",
+      "sourceUrl": "https://www.vals.ai/benchmarks/terminal-bench-4",
+      "evaluatedAt": "2026-10-12",
+      "notes": "Terminal-Bench 4.0, Vals AI independent run (mini-swe-agent harness, avg@3, 8-hour agent limit); #33 of 47 on the Vals board."
+    },
+    {
+      "benchmarkSlug": "terminal-bench-science",
+      "score": 0.0,
+      "source": "independent",
+      "sourceUrl": "https://www.vals.ai/benchmarks/terminal-bench-science",
+      "evaluatedAt": "2026-10-08",
+      "notes": "Terminal-Bench Science 0.1, Vals AI independent run (single-run pass@1, mostly mini-swe-agent harness; Vals notes its figures sit below vendor-harness numbers); #36 of 39 on the Vals board."
+    },
+    {
+      "benchmarkSlug": "harvey-legal-agent",
+      "score": 1.25,
+      "source": "independent",
+      "sourceUrl": "https://www.vals.ai/benchmarks/hlab-v1",
+      "evaluatedAt": "2026-10-12",
+      "notes": "Harvey's Legal Agent Benchmark, Vals AI independent run on the held-out set (task pass rate, average of GPT 5.5 and Sonnet 4.6 judges); #57 of 81 on the Vals v1 board. On Oct 19 Vals moved this v1 board to /benchmarks/hlab-v1 (archived) and replaced it at /benchmarks/hlab with HLAB-Vals-1.1, whose scores are not comparable."
+    },
+    {
+      "benchmarkSlug": "vals-finance-agent",
+      "score": 55.04,
+      "source": "independent",
+      "sourceUrl": "https://www.vals.ai/benchmarks/fabv2",
+      "evaluatedAt": "2026-10-12",
+      "notes": "Vals Finance Agent v2, Vals AI independent run (dealbreaker-gated partial credit, mean of 3 runs, test split); #22 of 78 on the Vals board."
     }
   ],
   "verificationNotes": "Existence, tier positioning, $1/$6 pricing, 1.05M context, 128K max output, Feb 16 2026 knowledge cutoff, and text+vision(input) modalities all confirmed directly from OpenAI's official model docs page (developers.openai.com/api/docs/models/gpt-5.6-luna, fetched 2026-07-24); pricing independently corroborated by finout.io, eesel.ai and aipricing.guru tier-pricing explainers. Added to the corpus as part of the GPT-5.6 tier split; the sibling flagship Sol tier was already tracked (formerly under the bare gpt-5-6 slug).\n\n2026-07-24 TIER SPLIT / FULL INGESTION: promoted to a full sibling model of Sol and Terra (config flags true/true — three distinct capability-tier models like Claude Opus/Sonnet/Haiku, not an effort cohort). Ingested 11 further benchmark rows: six self-reported from OpenAI's launch comparison table (via kingy.ai's digest, cross-corroborated by BenchLM's independent tracker where available — every overlapping value matched exactly) and five independent (BenchLM tracker snapshots plus the MarkTechPost-reported GDPval-AA launch table). Unlike Sol and Terra, BenchLM's Luna tracker publishes NO Humanity's Last Exam or IFBench figure — both omitted rather than estimated. Deliberately not mapped for lack of a taxonomy slug: OSWorld 2.0 (45.6%), ARC-AGI-3 (0.2%), DeepSWE (67.2%), Toolathlon (53.4%), Terminal-Bench Hard, FrontierCode/CursorBench/SciCode/CritPt/HealthBench/Omniscience/ExploitBench/ExploitGym, BenchCAD, MRCR/GraphWalks (Luna's 41.3% MRCR figures), and all AA composite indices.\n\n2026-07-24 FRONTIERBENCH: ingested the FrontierBench v0.1 leaderboard row (see the result's own notes for harness, effort, CI, tokens and cost)."

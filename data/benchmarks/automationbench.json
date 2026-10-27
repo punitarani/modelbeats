@@ -3,9 +3,9 @@
   "name": "AutomationBench",
   "category": "agents",
   "unit": "%",
-  "description": "Zapier's cross-application workflow-orchestration benchmark: whether an agent can complete real business tasks end to end via REST/tool calls. Scored on a held-out private set where every assertion must pass.",
+  "description": "Zapier's cross-application workflow-orchestration benchmark: whether an agent can complete real business tasks end to end via REST/tool calls. Every assertion must pass. Zapier's own leaderboard scores a held-out private set; several labs instead report the 600 publicly released tasks (v1.0.6), and each row's note says which set it used.",
   "normMin": 0,
-  "normMax": 50,
+  "normMax": 58,
   "higherIsBetter": true,
   "methodologyUrl": "https://zapier.com/benchmarks"
 }

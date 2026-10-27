@@ -1,0 +1,45 @@
+{
+  "slug": "muse-wonder-full",
+  "name": "Muse Wonder Full",
+  "orgSlug": "meta",
+  "familySlug": "muse-wonder",
+  "releaseDate": "2026-10-12",
+  "status": "released",
+  "predecessor": null,
+  "openness": "closed",
+  "license": "Proprietary",
+  "paramsB": null,
+  "activeParamsB": null,
+  "archClass": "dense",
+  "archDisplay": "Proprietary multimodal reasoning model (architecture undisclosed); Meta's most capable Muse Wonder variant, 1M-token context",
+  "ctxK": 1000,
+  "modalities": [
+    "text",
+    "vision",
+    "audio",
+    "video"
+  ],
+  "langCount": null,
+  "capabilities": {
+    "reasoning": true,
+    "coding": true,
+    "vision": true,
+    "functionCalling": true,
+    "toolUse": true,
+    "agentic": true
+  },
+  "apiAvailable": false,
+  "price": null,
+  "links": {
+    "docs": "https://research.meta.ai/blog/muse-wonder"
+  },
+  "note": "The larger Muse Wonder variant, released October 12, 2026 but not offered in the Meta Model API: it is available only inside Muse Code on the $50/month Power Usage and $200/month Maximum Usage plans (dev.meta.ai lists no per-token price), so price is null and apiAvailable false, following the Gemini 3.8 Flash Cyber precedent (Gemini 4 Argon followed it too until its Oct 13 GA). Meta's scorecard and Artificial Analysis (Intelligence Index 56, #4) put it just behind Claude Opus 5.5 (58). It leads Meta's table on SWE-Marathon (57.5, run at xhigh), DeepSWE 1.1 (79.0) and Vals Finance Agent v2; Vals AI independently ranks it #5 of 47 on the Vals Index (64.57%) and #4 of 79 on Harvey's Legal Agent Benchmark. Cyber rows come from the model card's risk section (ExploitGym's 92 flags are not filed: only 21 used the intended vulnerability). NOT FILED: Personal Superintelligence Index (59.1) and MemoryBench (85.5) are Meta-internal; Harvey LAB-AA 13.1 and AutomationBench-AA 45.4 are Artificial Analysis variants that do not match the corpus columns; ProgramBench 59.0 conflicts with Vals' 0.50% on its own ProgramBench metric.",
+  "quants": [],
+  "vramQ4Gb": null,
+  "vramFp16Gb": null,
+  "tps4090": null,
+  "tpsNote": null,
+  "effortLabel": null,
+  "isDefaultConfig": true,
+  "isBestConfig": true
+}

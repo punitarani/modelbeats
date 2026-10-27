@@ -123,6 +123,30 @@
       "sourceUrl": "https://www.vals.ai/benchmarks/swebench",
       "evaluatedAt": "2026-09-01",
       "notes": "Vals.ai SWE-bench Verified (mini-SWE-agent), 'As of September 1, 2026'. Vals has archived this benchmark: 'Since performance on this benchmark has saturated, we no longer run this benchmark on new model releases.'"
+    },
+    {
+      "benchmarkSlug": "terminal-bench-science",
+      "score": 4.29,
+      "source": "independent",
+      "sourceUrl": "https://www.vals.ai/benchmarks/terminal-bench-science",
+      "evaluatedAt": "2026-10-08",
+      "notes": "Terminal-Bench Science 0.1, Vals AI independent run (single-run pass@1, mostly mini-swe-agent harness; Vals notes its figures sit below vendor-harness numbers); #23 of 39 on the Vals board."
+    },
+    {
+      "benchmarkSlug": "harvey-legal-agent",
+      "score": 3.33,
+      "source": "independent",
+      "sourceUrl": "https://www.vals.ai/benchmarks/hlab-v1",
+      "evaluatedAt": "2026-10-12",
+      "notes": "Harvey's Legal Agent Benchmark, Vals AI independent run on the held-out set (task pass rate, average of GPT 5.5 and Sonnet 4.6 judges); #44 of 81 on the Vals v1 board. On Oct 19 Vals moved this v1 board to /benchmarks/hlab-v1 (archived) and replaced it at /benchmarks/hlab with HLAB-Vals-1.1, whose scores are not comparable."
+    },
+    {
+      "benchmarkSlug": "vals-finance-agent",
+      "score": 56.3,
+      "source": "independent",
+      "sourceUrl": "https://www.vals.ai/benchmarks/fabv2",
+      "evaluatedAt": "2026-10-12",
+      "notes": "Vals Finance Agent v2, Vals AI independent run (dealbreaker-gated partial credit, mean of 3 runs, test split); #18 of 78 on the Vals board."
     }
   ],
   "verificationNotes": "ROUND (2026-07-22): New model, added following Google DeepMind's July-21-2026 Flash wave. Two-pass research + adversarial re-verification against primary sources (official launch blog, model card PDF) and independent trackers (Artificial Analysis, BenchLM.ai, 9to5Google, OfficeChai, TechCrunch).\n\nSCOPE DECISIONS in this wave: (1) Gemini 3.5 PRO was NOT released -- deepmind.google/models/gemini/pro/ shows 'coming soon' and TechCrunch (2026-07-21, 'Google releases three new Gemini models -- but no 3.5 Pro') confirms it slipped into partner testing after missing internal performance goals. Excluded as unreleased/vaporware with zero citable data. (2) Gemini 3.5 Flash CYBER was excluded as out-of-scope: it is a cybersecurity-specialized fine-tune of 3.5 Flash that runs only inside Google's CodeMender agent framework, gated to governments and trusted partners, with no public API and no standard benchmark table (only a qualitative CyberGym 'competitive at the frontier' claim and a domain-specific V8 vuln-count of 55 unique issues) -- matches this corpus's convention of ruling out non-benchmarkable/gated specialized artifacts. Gemini 3.6 Flash and Gemini 3.5 Flash-Lite (both general multimodal LLMs) were ingested.\n\nDISCARDED UNVERIFIABLE DATA: BenchLM.ai's gemini-3-6-flash page displays what look like Artificial Analysis per-benchmark component scores (aaTerminalBench21 77.5, AA-GPQA Diamond 92.8, AA-HLE 38.3, AA-MMMU-Pro 83.2). Direct fetch of artificialanalysis.ai/models/gemini-3-6-flash confirms AA displays ONLY its composite Intelligence Index (50, rank #21/186) and per-benchmark RANKINGS, NOT per-benchmark numeric scores -- so these figures are not confirmable at their claimed source and were NOT recorded, per this corpus's documented AA-per-benchmark-hallucination caution (see Kimi K3 verificationNotes).\n\nOMITTED (single-source, unconfirmable): CharXiv Reasoning (reported as 85.2% no-tools / 89.4% with-tools on the model card) was found in only one reading of the model-card PDF and could not be independently confirmed (BenchLM.ai lists CharXiv as 'not shown'); given the documented risk of cross-contaminating Gemini 3.5 Flash's charxiv value (84.2) with 3.6 Flash's, it was omitted rather than recorded on a single unverifiable source. Also omitted as NO-SLUG: DeepSWE v1.1 (49%), MLE-Bench (63.9%), GDM-MRCR v2 long-context (91.8%/54.0%), and AA's composite indices (Intelligence 50, Coding 69.2, Chatbot Arena Elo 1485) -- no matching taxonomy slug.\n\nRESULT: 4 self-reported benchmarks across 2 categories (coding: SWE-Bench Pro, Terminal-Bench 2.1; agents: GDPval-AA v2, OSWorld-Verified) -- meets the D20 coverage gate, so this model is ranked. All 4 are Google self-reported with no independent counterweight yet available (released one day before ingestion). Recommend re-checking Artificial Analysis, llm-stats and Vals.ai for independent per-benchmark scores in a later round, exactly as gemini-3-5-flash's independent GPQA/AIME/SWE-bench rows were backfilled after its own launch."

@@ -1,0 +1,47 @@
+{
+  "name": "iFlytek Spark X2.6 (Xinghuo X2.6)",
+  "org": "iFlytek",
+  "family": "Spark (Xinghuo)",
+  "releaseDate": "2026-10-22",
+  "predecessor": "iflytek-spark-x1-xinghuo-x1",
+  "status": "released",
+  "openness": "closed",
+  "license": "Proprietary (cloud API and iFlytek Spark website; no weight release)",
+  "paramsB": 293,
+  "activeParamsB": 30,
+  "archClass": "moe",
+  "archDisplay": "Mixture-of-Experts, 293B total / 30B active, trained on domestic Chinese compute; context up to 1M tokens",
+  "ctxK": 1000,
+  "modalities": [
+    "text"
+  ],
+  "langCount": null,
+  "capabilities": {
+    "reasoning": true,
+    "coding": true,
+    "vision": false,
+    "functionCalling": true,
+    "toolUse": true,
+    "agentic": true
+  },
+  "apiAvailable": true,
+  "price": null,
+  "links": {
+    "docs": "https://xinghuo.xfyun.cn/sparkapi"
+  },
+  "note": "iFlytek's cloud flagship, launched Oct 22, 2026 at its 1024 Global Developer Festival in Beijing as the cloud half of an 'end-cloud' pairing with the open Spark-X2.6-4B. iFlytek says it was trained entirely on domestic compute and leads on code and agent tasks, but published no benchmark table with the launch, so no scores are filed. Launch pricing is a limited-time CNY rate (input 0.9 yuan, cached input 0.08 yuan, output 3.6 yuan per million tokens); price is left empty rather than converted.",
+  "quants": [],
+  "vramQ4Gb": null,
+  "vramFp16Gb": null,
+  "tps4090": null,
+  "tpsNote": null,
+  "effortLabel": null,
+  "isDefaultConfig": true,
+  "isBestConfig": true,
+  "specSources": {
+    "releaseDate/paramsB/activeParamsB/ctxK": "https://www.ithome.com/1/016/403.htm",
+    "releaseDate": "https://news.china.com/socialgd/10000169/20261022/49811122.html"
+  },
+  "results": [],
+  "verificationNotes": "Launch, 293B-A30B MoE architecture, 1M context and limited-time CNY pricing come from IT Home's Oct 22, 2026 report from the event; China.com (via East Money) independently reports the Oct 22 launch and the domestic-compute training claims. No iFlytek English page or model card was found."
+}
