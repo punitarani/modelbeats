@@ -1,0 +1,100 @@
+{
+  "name": "GPT-6.1 Terra",
+  "org": "OpenAI",
+  "orgSlug": "openai",
+  "family": "GPT-6.1",
+  "familySlug": "gpt-6-1",
+  "slug": "gpt-6-1-terra",
+  "releaseDate": "2026-10-26",
+  "status": "released",
+  "openness": "closed",
+  "license": "Proprietary",
+  "paramsB": null,
+  "activeParamsB": null,
+  "archClass": "dense",
+  "archDisplay": "Proprietary model; architecture and parameter count undisclosed; 1.05M-token context (922K max input), text+image in / text out",
+  "ctxK": 1050,
+  "modalities": [
+    "text",
+    "vision"
+  ],
+  "langCount": null,
+  "capabilities": {
+    "reasoning": true,
+    "coding": true,
+    "vision": true,
+    "functionCalling": true,
+    "toolUse": true,
+    "agentic": true
+  },
+  "apiAvailable": true,
+  "price": {
+    "input": 1,
+    "output": 5,
+    "provider": "OpenAI"
+  },
+  "links": {
+    "docs": "https://developers.openai.com/api/docs/models/gpt-6.1-terra"
+  },
+  "note": "API id gpt-6.1-terra, released 2026-10-26 as 'a fast, efficient model that combines detailed visual reasoning and precise computer use alongside clearer, more natural writing' and the successor to GPT-5.6 Terra. It costs $1/$5 per Mtok with cached input at $0.05 and 30-minute cache writes at $1.25, which OpenAI says is 50% below GPT-5.6 Terra and GPT-6.1 Sol. It has a 1.05M context with 922K max input. The launch post gives Agents' Last Exam, MMMU-Pro, OSWorld 2.1 and Terminal-Bench Science 0.1 only as charts and relative claims (e.g. Agents' Last Exam +15 pp over GPT-5.6 Terra at medium effort; Terminal-Bench Science within five points of Opus 5.5 at max), so none of those are filed. OpenAI treats it as Critical in cybersecurity under its Preparedness Framework and applies the GPT-6 Astra safeguards stack.",
+  "quants": [],
+  "vramQ4Gb": null,
+  "vramFp16Gb": null,
+  "tps4090": null,
+  "tpsNote": null,
+  "effortLabel": null,
+  "isDefaultConfig": true,
+  "isBestConfig": true,
+  "specSources": {
+    "releaseDate": "https://openai.com/index/introducing-gpt-6-1-terra/",
+    "releaseDateAlt": "https://deploymentsafety.openai.com/gpt-6-1-terra",
+    "price": "https://developers.openai.com/api/docs/models/gpt-6.1-terra",
+    "priceAlt": "https://developers.openai.com/api/docs/pricing",
+    "ctxK": "https://developers.openai.com/api/docs/models/gpt-6.1-terra",
+    "modalities": "https://developers.openai.com/api/docs/models/gpt-6.1-terra",
+    "announcement": "https://openai.com/index/introducing-gpt-6-1-terra/",
+    "systemCardAddendum": "https://deploymentsafety.openai.com/gpt-6-1-terra"
+  },
+  "results": [
+    {
+      "benchmarkSlug": "terminal-bench-4",
+      "score": 49.49,
+      "source": "independent",
+      "sourceUrl": "https://www.vals.ai/benchmarks/terminal-bench-4",
+      "evaluatedAt": "2026-10-26",
+      "notes": "Terminal-Bench 4.0, Vals AI independent run (mini-swe-agent harness, avg@3, 8-hour agent limit; ±1.82); tied #10 of 56 on the Vals board (updated 2026-10-26) with Wonder. Vals ran it via OpenAI's API at max reasoning effort. OpenAI's own figure is 50.3% at max effort."
+    },
+    {
+      "benchmarkSlug": "terminal-bench-4",
+      "score": 50.3,
+      "source": "self-reported",
+      "sourceUrl": "https://openai.com/index/introducing-gpt-6-1-terra/",
+      "evaluatedAt": "2026-10-26",
+      "notes": "Terminal-Bench 4.0 at maximum reasoning effort, OpenAI launch post ('more than double GPT-5.6 Terra's published score of 21.5%')."
+    },
+    {
+      "benchmarkSlug": "healthbench-professional",
+      "score": 62.7,
+      "source": "self-reported",
+      "sourceUrl": "https://deploymentsafety.openai.com/gpt-6-1-terra",
+      "evaluatedAt": "2026-10-26",
+      "notes": "Length-adjusted (raw 64.2, mean response 2,531 characters), GPT-6.1 Terra system card addendum §5.1; GPT-5.6 Terra 57.7, GPT-6.1 Sol 64.2."
+    },
+    {
+      "benchmarkSlug": "exploitbench",
+      "score": 97.1,
+      "source": "self-reported",
+      "sourceUrl": "https://deploymentsafety.openai.com/gpt-6-1-terra",
+      "evaluatedAt": "2026-10-26",
+      "notes": "ACE-normalized mean capability score, system card addendum §9.2.1. OpenAI caveat: historical vulnerabilities back to 2023 raise a contamination risk 'that may inflate the reported results'. On the private Internal Port it scores 24.5% (GPT-6.1 Sol 21.5%, GPT-6 Astra 31.5%)."
+    },
+    {
+      "benchmarkSlug": "sec-bench-pro",
+      "score": 83.33,
+      "source": "self-reported",
+      "sourceUrl": "https://deploymentsafety.openai.com/gpt-6-1-terra",
+      "evaluatedAt": "2026-10-26",
+      "notes": "SEC-Bench Pro pass@1 (vulnerability discovery in V8 and SpiderMonkey), GPT-6.1 Terra system card addendum cybersecurity section."
+    }
+  ]
+}

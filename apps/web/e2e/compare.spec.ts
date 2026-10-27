@@ -7,9 +7,9 @@ test.describe('compare', () => {
     await gotoHydrated(page, '/compare?m=gpt-5-2,deepseek-v3-1-thinking')
     const legend = page.getByTestId('compare-legend')
     await expect(legend).toContainText('GPT-5.2')
-    await expect(legend).toContainText('2387.2')
+    await expect(legend).toContainText('2384.6')
     await expect(legend).toContainText('DeepSeek-V3.1 (Thinking)')
-    await expect(legend).toContainText('1813.5')
+    await expect(legend).toContainText('1811.0')
     // honest coverage badges (D24): GPT-5.2 has no PREF/KNOW → 4/6; DeepSeek adds KNOW → 5/6
     await expect(legend).toContainText('4/6')
     await expect(legend).toContainText('5/6')
