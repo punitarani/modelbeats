@@ -90,7 +90,7 @@
       "source": "self-reported",
       "sourceUrl": "https://huggingface.co/deepseek-ai/DeepSeek-V4.1-Flash-1017/raw/main/README.md",
       "evaluatedAt": "2026-10-17",
-      "notes": "DS-V4.1-Flash-1017 column of the comparison table on the deepseek-ai Hugging Face model card (also in DeepSeek's Oct 17 API change log; recommended sampling temperature 1.0, top_p 1.0). Automation-Bench v1.0.6. Above the old slug normMax (50), which this PR widens to 56 so the bound guard admits it."
+      "notes": "DS-V4.1-Flash-1017 column of the comparison table on the deepseek-ai Hugging Face model card (also in DeepSeek's Oct 17 API change log; recommended sampling temperature 1.0, top_p 1.0). Automation-Bench v1.0.6. Above the old slug normMax (50); the bound is now 58, which lets this figure pass the bound guard, but it still normalizes at the cap."
     }
   ]
 }

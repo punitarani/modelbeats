@@ -54,6 +54,12 @@ export const corpusModelSchema = z.object({
   family: z.string().min(1),
   familySlug: slugSchema.optional(),
   releaseDate: isoDateSchema,
+  /**
+   * Lineage override: the generated slug of the same-family model this one succeeds, or `null`
+   * for none. Omit it to take the nearest strictly-older family member (the usual case); set it
+   * when that guess is wrong, e.g. a smaller tier or a variant released after the flagship.
+   */
+  predecessor: slugSchema.nullable().optional(),
   status: z.enum(MODEL_STATUS).default('released'),
   openness: z.enum(OPENNESS),
   license: z.string().min(1),

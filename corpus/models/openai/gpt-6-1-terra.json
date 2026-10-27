@@ -6,6 +6,7 @@
   "familySlug": "gpt-6-1",
   "slug": "gpt-6-1-terra",
   "releaseDate": "2026-10-26",
+  "predecessor": null,
   "status": "released",
   "openness": "closed",
   "license": "Proprietary",
@@ -86,7 +87,7 @@
       "source": "self-reported",
       "sourceUrl": "https://deploymentsafety.openai.com/gpt-6-1-terra",
       "evaluatedAt": "2026-10-26",
-      "notes": "ACE-normalized mean capability score, system card addendum §9.2.1. OpenAI caveat: historical vulnerabilities back to 2023 raise a contamination risk 'that may inflate the reported results'. On the private Internal Port it scores 24.5% (GPT-6.1 Sol 21.5%, GPT-6 Astra 31.5%)."
+      "notes": "ACE-normalized mean capability score, system card addendum §9.2.1. OpenAI caveat: historical vulnerabilities back to 2023 raise a contamination risk 'that may inflate the reported results'. On the private Internal Port it scores 24.5% (GPT-6.1 Sol 21.5%, GPT-6 Astra 31.5%). Same ExploitBench evaluation as the GPT-6.1 Sol row (99.7 at maximum reasoning effort); Terra's addendum names the metric but not the effort level."
     },
     {
       "benchmarkSlug": "sec-bench-pro",

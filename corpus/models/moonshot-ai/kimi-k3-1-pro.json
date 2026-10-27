@@ -3,6 +3,7 @@
   "org": "Moonshot AI",
   "family": "Kimi K3",
   "releaseDate": "2026-10-23",
+  "predecessor": "kimi-k3",
   "status": "released",
   "openness": "closed",
   "license": "Proprietary API for now (Moonshot says full model weights will be released by Nov 4, 2026)",
@@ -70,7 +71,7 @@
       "source": "self-reported",
       "sourceUrl": "https://www.kimi.ai/blog/kimi-k3-1-pro",
       "evaluatedAt": "2026-10-23",
-      "notes": "SWE-Marathon v1.1, Claude Code harness (Moonshot's own run; rival columns from the official leaderboard). Figure is in the image-only benchmark grid of Moonshot's Oct 23, 2026 launch blog (K3.1 Pro column, reasoning effort max); the blog's alt text does not carry it, so it was checked against independent text transcriptions of that grid that agree exactly (wokey.ai/models/kimi-k3.1-pro, mer.vin K3.1 Pro launch write-up, benchmarklist.com/models/moonshotai-kimi-k3.1-pro). Same convention as the Kimi K3 entry."
+      "notes": "SWE-Marathon v1.1, Claude Code harness (Moonshot's own run; rival columns from the official leaderboard). Figure is in the image-only benchmark grid of Moonshot's Oct 23, 2026 launch blog (K3.1 Pro column, reasoning effort max); the blog's alt text does not carry it, so it was checked against independent text transcriptions of that grid that agree exactly (wokey.ai/models/kimi-k3.1-pro, mer.vin K3.1 Pro launch write-up, benchmarklist.com/models/moonshotai-kimi-k3.1-pro). Same convention as the Kimi K3 entry. The blog does not say how many trials Moonshot ran, so this may not match the leaderboard's pass@1 over k=8 trials."
     },
     {
       "benchmarkSlug": "terminal-bench-science",

@@ -5,7 +5,7 @@
   "familySlug": "nemotron-3-5",
   "releaseDate": "2026-10-23",
   "status": "released",
-  "predecessor": "nemotron-3-5-bolt-74b-a9b",
+  "predecessor": null,
   "openness": "open-weights",
   "license": "OpenMDW License 1.1 (base Gemma 4 E4B under Apache-2.0)",
   "paramsB": 8,
@@ -25,7 +25,7 @@
     "toolUse": true,
     "agentic": true
   },
-  "apiAvailable": false,
+  "apiAvailable": true,
   "price": null,
   "links": {
     "hf": "nvidia/NVIDIA-Nemotron-3.5-Bolt-E4B-4GB",
@@ -36,7 +36,7 @@
     "4-bit",
     "GGUF"
   ],
-  "vramQ4Gb": null,
+  "vramQ4Gb": 6.18,
   "vramFp16Gb": null,
   "tps4090": null,
   "tpsNote": null,
