@@ -217,6 +217,7 @@ orca-2-13b,57.73,self-reported,https://ar5iv.labs.arxiv.org/html/2311.11045,,
 palm-2,78.3,self-reported,https://arxiv.org/abs/2305.10403,2023-05-17,"Flan-PaLM 2 (L), instruction-tuned, 5-shot MMLU. From Table 16 (Appendix A.2, instruction-tuning ablation) -- explicitly labeled 'Flan-PaLM 2 (L)' in the paper, matching the instruction-tuned variant already anchoring the existing BBH=78.1 entry."
 palm-540b,69.3,self-reported,https://arxiv.org/abs/2204.02311,,5-shot average
 palmyra-x-004,81.3,self-reported,https://dev.writer.com/home/models,,HELM MMLU
+particle-1,86.08,self-reported,https://particle.ai/blog/introducing-particle-1,2026-10-28,"""Standard MMLU"", Particle launch post (base DeepSeek V4.1 Flash 85.98 in the same comparison)."
 pharia-1-llm-7b-control,48.4,self-reported,https://huggingface.co/Aleph-Alpha/Pharia-1-LLM-7B-control,,
 phi-1-5-1-3b,37.6,self-reported,https://ar5iv.labs.arxiv.org/html/2309.05463,2023-09-11,"2-shot, Table 3."
 phi-2-2-7b,56.3,self-reported,https://arxiv.org/pdf/2404.14219,,reported in Phi-3 Technical Report comparison table

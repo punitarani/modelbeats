@@ -28,7 +28,7 @@ test.describe('dashboard overview', () => {
     // real top mover is a rank-eligible family edge; deltas are Elo points (D21), so a large
     // cross-tier lineage jump (105B succeeding a 2B) posts a four-digit gain
     await expect(movers).toContainText('Sarvam-105B')
-    await expect(movers).toContainText('+1620.7')
+    await expect(movers).toContainText('+1618.5')
   })
 
   test('quality-vs-price scatter draws the Pareto frontier (D27)', async ({ page }) => {
@@ -102,12 +102,12 @@ test.describe('dashboard overview', () => {
     await gotoHydrated(page, '/')
     const rail = page.getByTestId('arena-rail')
     // rail now leads with the #1 overall model by Elo rating
-    await expect(rail).toContainText('Kimi K3.1 Pro')
-    await expect(rail).toContainText('3169.9')
+    await expect(rail).toContainText('Gemini 4 Carbon')
+    await expect(rail).toContainText('3231.9')
     await pickOption(page, 'qc-b', 'Llama 3.1 405B — Meta')
     await page.getByTestId('qc-go').click()
-    // quick-compare slot A defaults to the #1 rank-eligible model (Kimi K3.1 Pro)
-    await expect(page).toHaveURL(/m=kimi-k3-1-pro(%2C|,)llama-3-1-405b/)
+    // quick-compare slot A defaults to the #1 rank-eligible model (Gemini 4 Carbon)
+    await expect(page).toHaveURL(/m=gemini-4-carbon(%2C|,)llama-3-1-405b/)
   })
 })
 
@@ -132,7 +132,7 @@ test.describe('dashboard releases + bench tabs', () => {
     await gotoHydrated(page, '/?tab=releases')
     const frontier = page.getByTestId('frontier')
     // regrounded on the universal Elo rating, so both camps' leaders always plot
-    await expect(frontier).toContainText('Kimi K3.1 Pro')
+    await expect(frontier).toContainText('Gemini 4 Carbon')
     await expect(frontier).toContainText('MiMo-V2.6-Pro')
     await expect(page.getByTestId('gap-note')).not.toHaveText('')
   })
