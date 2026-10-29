@@ -182,6 +182,14 @@
       "sourceUrl": "https://arcprize.org/results/google-gemini-4-argon",
       "evaluatedAt": "2026-10-13",
       "notes": "ARC Prize verified result on the Semi-Private set, run by the ARC Prize team. Low, Standard harness (the comparable figure for older ARC-AGI-3 rows; Medium 46.3%). API issues left the Standard-harness runs incomplete (42 of 55 tasks finished at Low), and ARC Prize's score keeps partial credit on all 55; the row follows ARC Prize's own reported figure. Provider Adapter harness gives 97.5% (Low) / 97.3% (Medium, High)."
+    },
+    {
+      "benchmarkSlug": "arena",
+      "score": 1520,
+      "source": "arena",
+      "sourceUrl": "https://arena.ai/leaderboard/text",
+      "evaluatedAt": "2026-10-27",
+      "notes": "Text Arena row 'Gemini 4 Argon (High)', 1520 ±6, 11,889 votes; leaderboard last updated Oct 27 2026 (default style-control view). Previously Preliminary (1525 on the Oct 13 board), so not filed; the Oct 27 board drops the flag."
     }
   ]
 }
