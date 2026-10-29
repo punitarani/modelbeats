@@ -140,6 +140,14 @@
       "sourceUrl": "https://arcprize.org/results/anthropic-claude-haiku-5-5",
       "evaluatedAt": "2026-10-07",
       "notes": "ARC Prize verified result on the Semi-Private set, run by the ARC Prize team. Max, Standard harness (the comparable figure for older ARC-AGI-3 rows). Provider Adapter harness gives 2.82%."
+    },
+    {
+      "benchmarkSlug": "arena",
+      "score": 1425,
+      "source": "arena",
+      "sourceUrl": "https://arena.ai/leaderboard/text",
+      "evaluatedAt": "2026-10-27",
+      "notes": "Text Arena row 'Claude Haiku 5.5 (High)', 1425 ±7, 7,890 votes; leaderboard last updated Oct 27 2026 (default style-control view). Not on the Oct 13 board."
     }
   ]
 }
