@@ -4,13 +4,13 @@
   "family": "Mistral Large",
   "slug": "mistral-large-4",
   "releaseDate": "2026-10-06",
-  "status": "preview",
+  "status": "released",
   "openness": "open-weights",
-  "license": "Not yet published (open weights promised by end of October 2026)",
+  "license": "Mistral Ecosystem Open-Weight License (modified MIT; Model-as-a-Service operators need a separate commercial license)",
   "paramsB": 1050,
   "activeParamsB": 52,
   "archClass": "moe",
-  "archDisplay": "1.05T-total/52B-active granular MoE with a 1.6B vision encoder; 1M-token context; public preview, open weights promised by end of Oct 2026",
+  "archDisplay": "1.05T-total/52B-active granular MoE with a 1.6B vision encoder; 1M-token context; open weights (Oct 29, 2026) with low/medium/high reasoning modes",
   "ctxK": 1000,
   "modalities": [
     "text",
@@ -27,14 +27,16 @@
   },
   "apiAvailable": true,
   "price": {
-    "input": 1.36,
-    "output": 4.18,
-    "provider": "Mistral AI (Studio, public preview)"
+    "input": 0.7,
+    "output": 2.1,
+    "provider": "Mistral AI",
+    "effectiveAt": "2026-10-29"
   },
   "links": {
-    "docs": "https://docs.mistral.ai/models/mistral-large-4-0"
+    "docs": "https://docs.mistral.ai/models/mistral-large-4-0",
+    "hf": "mistralai/Mistral-Large-4-1T-A52B"
   },
-  "note": "Mistral's Oct 6, 2026 public preview of its largest model to date: a 1.05T-total/52B-active MoE with a 1.6B vision encoder and 1M context, trained on 3,800 Grace Blackwell GPUs in Mistral's own European datacenters. The preview API is priced at $1.36/$4.18 per Mtok and weights are promised by the end of October, so no license or Hugging Face repo exists yet. Mistral reports DeepSWE v1.1 61.7%, SWE-Atlas-QnA 59.4%, Terminal-Bench 4 28.3% and AA-Briefcase 1,393 Elo, plus strong cyber numbers (Cybench 93%). Most launch figures appear only in prose; the charts are images.",
+  "note": "Mistral's Oct 6, 2026 public preview of its largest model to date: a 1.05T-total/52B-active MoE with a 1.6B vision encoder and 1M context, trained on 3,800 Grace Blackwell GPUs in Mistral's own European datacenters. On Oct 29 Mistral released open weights (mistralai/Mistral-Large-4-1T-A52B) for an improved checkpoint with three more weeks of RL, under the Mistral Ecosystem Open-Weight License (modified MIT; Model-as-a-Service operators need a commercial license), and cut the API price from the preview's $1.36/$4.18 to $0.70/$2.10 per Mtok ($0.07 cached input). The DeepSWE, SWE-Atlas-QnA and self-reported Terminal-Bench 4 rows are from the preview launch post; the Vals rows were run on the preview API. Not filed from the Oct 29 post: Terminal-Bench 4.0 41% (Artificial Analysis harness, not comparable with the Vals-sourced column), FrontierCode 2.0 19.7% (new version, no column), AA Coding Agent Index 48%, AA Cyber Index 51%, FinWorkBench (Finch) 73.3% and B3 attack resistance 97.1% (no columns). Hugging Face's Oct 29 blog says about 49B active parameters, which conflicts with the docs' 52B; the docs figure is kept.",
   "quants": [],
   "vramQ4Gb": null,
   "vramFp16Gb": null,
@@ -45,12 +47,13 @@
   "isBestConfig": true,
   "specSources": {
     "releaseDate": "https://docs.mistral.ai/models/mistral-large-4-0",
-    "status": "https://mistral.ai/news/mistral-large-4/",
+    "status": "https://mistral.ai/news/mistral-large-4-oss/",
     "paramsB": "https://docs.mistral.ai/models/mistral-large-4-0",
     "activeParamsB": "https://docs.mistral.ai/models/mistral-large-4-0",
     "ctxK": "https://docs.mistral.ai/models/mistral-large-4-0",
-    "price": "https://mistral.ai/news/mistral-large-4/",
-    "openness": "https://mistral.ai/news/mistral-large-4/"
+    "price": "https://mistral.ai/news/mistral-large-4-oss/",
+    "openness": "https://mistral.ai/news/mistral-large-4-oss/",
+    "license": "https://mistral.ai/news/mistral-large-4-oss/"
   },
   "results": [
     {
@@ -76,6 +79,14 @@
       "sourceUrl": "https://mistral.ai/news/mistral-large-4/",
       "evaluatedAt": "2026-10-06",
       "notes": "\"28.3% on Terminal-Bench 4\" (chart label \"Terminal Bench 4.0\")."
+    },
+    {
+      "benchmarkSlug": "browsecomp",
+      "score": 84.5,
+      "source": "self-reported",
+      "sourceUrl": "https://mistral.ai/news/mistral-large-4-oss/",
+      "evaluatedAt": "2026-10-29",
+      "notes": "BrowseComp 84.5%, Oct 29 open-weights post (improved checkpoint; harness and effort unstated)."
     },
     {
       "benchmarkSlug": "terminal-bench-4",
