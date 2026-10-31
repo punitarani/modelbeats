@@ -36,7 +36,7 @@
     "docs": "https://docs.mistral.ai/models/mistral-large-4-0",
     "hf": "mistralai/Mistral-Large-4-1T-A52B"
   },
-  "note": "Mistral's Oct 6, 2026 public preview of its largest model to date: a 1.05T-total/52B-active MoE with a 1.6B vision encoder and 1M context, trained on 3,800 Grace Blackwell GPUs in Mistral's own European datacenters. On Oct 29 Mistral released open weights (mistralai/Mistral-Large-4-1T-A52B) for an improved checkpoint with three more weeks of RL, under the Mistral Ecosystem Open-Weight License (modified MIT; Model-as-a-Service operators need a commercial license), and cut the API price from the preview's $1.36/$4.18 to $0.70/$2.10 per Mtok ($0.07 cached input). The DeepSWE, SWE-Atlas-QnA and self-reported Terminal-Bench 4 rows are from the preview launch post; the Vals rows were run on the preview API. Not filed from the Oct 29 post: Terminal-Bench 4.0 41% (Artificial Analysis harness, not comparable with the Vals-sourced column), FrontierCode 2.0 19.7% (new version, no column), AA Coding Agent Index 48%, AA Cyber Index 51%, FinWorkBench (Finch) 73.3% and B3 attack resistance 97.1% (no columns). Hugging Face's Oct 29 blog says about 49B active parameters, which conflicts with the docs' 52B; the docs figure is kept.",
+  "note": "Mistral's Oct 6, 2026 public preview of its largest model to date: a 1.05T-total/52B-active MoE with a 1.6B vision encoder and 1M context, trained on 3,800 Grace Blackwell GPUs in Mistral's own European datacenters. On Oct 29 Mistral released open weights (mistralai/Mistral-Large-4-1T-A52B) for an improved checkpoint with three more weeks of RL, under the Mistral Ecosystem Open-Weight License (modified MIT; Model-as-a-Service operators need a commercial license), and cut the API price from the preview's $1.36/$4.18 to $0.70/$2.10 per Mtok ($0.07 cached input). The DeepSWE, SWE-Atlas-QnA and self-reported Terminal-Bench 4 rows are from the preview launch post; the Harvey and Finance Agent Vals rows were run on the preview API, while the Vals Terminal-Bench 4 row is the open-weights checkpoint. Not filed from the Oct 29 post: Terminal-Bench 4.0 41% (Artificial Analysis harness, not comparable with the Vals-sourced column), FrontierCode 2.0 19.7% (new version, no column), AA Coding Agent Index 48%, AA Cyber Index 51%, FinWorkBench (Finch) 73.3% and B3 attack resistance 97.1% (no columns). Hugging Face's Oct 29 blog says about 49B active parameters, which conflicts with the docs' 52B; the docs figure is kept.",
   "quants": [],
   "vramQ4Gb": null,
   "vramFp16Gb": null,
@@ -90,11 +90,11 @@
     },
     {
       "benchmarkSlug": "terminal-bench-4",
-      "score": 27.78,
+      "score": 26.26,
       "source": "independent",
       "sourceUrl": "https://www.vals.ai/benchmarks/terminal-bench-4",
-      "evaluatedAt": "2026-10-16",
-      "notes": "Terminal-Bench 4.0, Vals AI independent run (mini-swe-agent harness, avg@3, 8-hour agent limit; ±1.82); #20 of 49 on the Vals board (updated 2026-10-16). Vals re-scored this row from 22.73 (Oct 12 board) to 27.78; the model page agrees. Supersedes the self-reported 28.3 row as headline."
+      "evaluatedAt": "2026-10-29",
+      "notes": "Terminal-Bench 4.0, Vals AI independent run of the Oct 29 open-weights checkpoint, listed by Vals as 'Mistral Large 4 OSS' (mini-swe-agent harness, avg@3, 8-hour agent limit; ±5.13); #26 of 59 on the Vals board (updated 2026-10-29), no fallback work credited. Replaces the preview-API run (27.78 ±1.82, #25 on the same board), which Vals still lists as 'Mistral Large 4'. Supersedes the self-reported 28.3 row as headline."
     },
     {
       "benchmarkSlug": "harvey-legal-agent",
