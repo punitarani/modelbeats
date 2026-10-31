@@ -2,3 +2,4 @@ model_slug,score,source,source_url,evaluated_at,notes
 claude-fable-5-1,56.3,self-reported,https://anthropic.com/claude-opus-5-5-system-card,2026-09-22,Claude Opus 5.5 System Card §8.7.
 claude-opus-5-5,62.3,self-reported,https://anthropic.com/claude-opus-5-5-system-card,2026-09-22,Claude Opus 5.5 System Card §8.7.
 gemini-4-argon,55,self-reported,https://deepmind.google/models/gemini/,2026-09-30,Google DeepMind Gemini 4 Argon evaluation table.
+gemini-4-carbon,61.2,self-reported,https://deepmind.google/models/gemini/,2026-10-28,FrontierSWE 2; methodology: reported from Proximal's official public leaderboard. Google DeepMind Gemini 4 Carbon evaluation table.

@@ -20,7 +20,7 @@ test.describe('benchmarks', () => {
     await expect(first).toContainText('Claude Opus 5')
     await expect(first).toContainText('97.0%')
     await expect(first.getByTestId('provenance-badge')).toHaveText('independent')
-    // real field: 140 of the 597 models carry a SWE-bench Verified score
+    // real field: 140 of the 599 models carry a SWE-bench Verified score
     await expect(page.getByTestId('leaderboard-row')).toHaveCount(140)
   })
 
