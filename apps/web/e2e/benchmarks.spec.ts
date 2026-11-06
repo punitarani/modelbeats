@@ -21,7 +21,7 @@ test.describe('benchmarks', () => {
     await expect(first).toContainText('97.0%')
     await expect(first.getByTestId('provenance-badge')).toHaveText('independent')
     // real field: 140 of the 599 models carry a SWE-bench Verified score
-    await expect(page.getByTestId('leaderboard-row')).toHaveCount(140)
+    await expect(page.getByTestId('leaderboard-row')).toHaveCount(141)
   })
 
   test('distribution histogram + open-only params scatter render', async ({ page }) => {

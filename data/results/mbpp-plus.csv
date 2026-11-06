@@ -7,6 +7,7 @@ command-r7b,72,self-reported,https://arxiv.org/abs/2504.00698,,MBPP+
 deepseek-coder-v2-236b,76.2,self-reported,https://github.com/deepseek-ai/DeepSeek-Coder-V2,,MBPP+ (EvalPlus)
 doubao-1-5-pro,78,self-reported,https://seed.bytedance.com/doubao_1_5_pro,,"Labeled 'MBPP+' (the MBPP-Plus variant, not plain MBPP) in the Code section of the official launch-page table; mapped to the mbpp-plus taxonomy slug specifically because of the '+' naming."
 ernie-4-5-300b-a47b,81,self-reported,https://ernie.baidu.com/blog/publication/ERNIE_Technical_Report.pdf,2025-06-29,"MBPP+, Table 5."
+ernie-5-5-flash-base,81.5,self-reported,https://huggingface.co/baidu/ERNIE-5.5-Flash-Base/raw/main/README.md,2026-11-05,"MBPP+, 0-shot pass@1. Base model, ERNIE-5.5-Flash-Base column of the Evaluation table on Baidu's Hugging Face model card (same pipeline as DeepSeek-V4-Flash-Base, Hy3-preview-Base and MiMo-V2.5-Base)."
 falcon-h1-34b,71.43,self-reported,https://huggingface.co/tiiuae/Falcon-H1-34B-Instruct,,MBPP+
 gpt-4o,87.8,independent,https://arxiv.org/abs/2407.21783,2024-07-23,"MBPP EvalPlus (i.e. MBPP+), 0-shot. From the same Meta Llama-3 paper comparison table (Table 2), verified directly against the PDF."
 granite-4-0-h-small,71,self-reported,https://huggingface.co/ibm-granite/granite-4.0-h-small,,"MBPP+, pass@1"

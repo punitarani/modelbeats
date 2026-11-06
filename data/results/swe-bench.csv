@@ -100,6 +100,7 @@ grok-4-6,95.6,independent,https://www.vals.ai/benchmarks/swebench,2026-09-01,"Va
 hy3,78,self-reported,https://huggingface.co/tencent/Hy3,,SWE-bench Verified; also confirmed via HF's structured Evaluation-results widget (SWE-bench/SWE-bench_Verified = 78) and the model card's benchmark-appendix image
 inkling,77.6,independent,https://www.vals.ai/benchmarks/swebench,2026-09-01,"Vals.ai SWE-bench Verified (mini-SWE-agent), 'As of September 1, 2026'. Vals has archived this benchmark: 'Since performance on this benchmark has saturated, we no longer run this benchmark on new model releases.' Read on first fetch only."
 inkling,77.6,self-reported,https://thinkingmachines.ai/model-card/inkling/,2026-07-15,SWE-bench Verified.
+inkling-2-small,82.2,self-reported,https://thinkingmachines.ai/model-card/inkling-2-small/,2026-11-05,SWE-bench Verified. Inkling 2 Small column of the Evaluations table on Thinking Machines Lab's official model card.
 inkling-small,82.2,independent,https://www.vals.ai/benchmarks/swebench,2026-09-01,"Vals.ai SWE-bench Verified (mini-SWE-agent), 'As of September 1, 2026'. Vals has archived this benchmark: 'Since performance on this benchmark has saturated, we no longer run this benchmark on new model releases.'"
 inkling-small,80.2,self-reported,https://thinkingmachines.ai/model-card/inkling-small,2026-07-30,"SWE-bench Verified, official Inkling-Small model card evaluation table."
 kimi-k2,65.8,self-reported,https://huggingface.co/moonshotai/Kimi-K2-Instruct,,"SWE-bench Verified, single-attempt agentic"
