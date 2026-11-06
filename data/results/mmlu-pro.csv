@@ -45,6 +45,7 @@ deepseek-v4-pro-think-high,87.1,self-reported,https://arxiv.org/abs/2606.19348,,
 deepseek-v4-pro-think-max,87.5,self-reported,https://huggingface.co/deepseek-ai/DeepSeek-V4-Pro,,Pro-Max mode
 doubao-1-5-pro,80.1,self-reported,https://seed.bytedance.com/doubao_1_5_pro,,MMLU_PRO row of the same official launch-page benchmark table (Knowledge section); Doubao-1.5-pro's best score in that row (next best Gemini-exp-1205 76.4).
 ernie-4-5-300b-a47b,78.4,self-reported,https://ernie.baidu.com/blog/publication/ERNIE_Technical_Report.pdf,,"[Corrected during full-corpus audit: The existing 78.4 is HF's auto-linked 'Evaluation Results' widget value, which is itself sourced to the TIGER-Lab/MMLU-Pro community leaderboard (an independent third-party eval), not a Baidu self-report, despite being labeled 'self-reported' in the corpus. Directly read Table 5 (p.38) of Baidu's own ERNIE 4.5 Technical Report PDF (June 29, 2025), which reports MMLU-Pro = 78.9 for the post-trained]"
+ernie-5-5-flash-base,78.4,self-reported,https://huggingface.co/baidu/ERNIE-5.5-Flash-Base/raw/main/README.md,2026-11-05,"MMLU-Pro, 5-shot EM. Base model, ERNIE-5.5-Flash-Base column of the Evaluation table on Baidu's Hugging Face model card (same pipeline as DeepSeek-V4-Flash-Base, Hy3-preview-Base and MiMo-V2.5-Base)."
 exaone-4-5,83.3,self-reported,https://arxiv.org/abs/2604.08644,2026-04-09,
 falcon-h1-34b,58.73,self-reported,https://huggingface.co/tiiuae/Falcon-H1-34B-Instruct,,
 falcon-h1r-7b,72.1,self-reported,https://falcon-lm.github.io/blog/falcon-h1r-7b/,,

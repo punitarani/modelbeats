@@ -1,0 +1,71 @@
+{
+  "name": "Particle-1",
+  "org": "Particle AI",
+  "family": "Particle",
+  "releaseDate": "2026-10-28",
+  "status": "released",
+  "openness": "closed",
+  "license": "Proprietary",
+  "paramsB": 552,
+  "activeParamsB": 16,
+  "archClass": "moe",
+  "archDisplay": "Rank-64 LoRA adapter (about 1.25% of the base parameter count) on DeepSeek V4.1 Flash, a 552B sparse MoE causal encoder-decoder (~8B active in prefill, 16B in decode)",
+  "ctxK": 1000,
+  "modalities": [
+    "text",
+    "vision"
+  ],
+  "langCount": null,
+  "capabilities": {
+    "reasoning": true,
+    "coding": true,
+    "vision": true,
+    "functionCalling": true,
+    "toolUse": true,
+    "agentic": true
+  },
+  "apiAvailable": true,
+  "price": {
+    "input": 0.25,
+    "output": 1.0,
+    "provider": "Particle AI"
+  },
+  "links": {
+    "docs": "https://docs.particle.ai/models"
+  },
+  "note": "First model from Particle, the San Francisco startup Suhail (Mixpanel's founder) announced on Oct 28, 2026. It is DeepSeek V4.1 Flash post-trained with GSPO reinforcement learning (a rank-64 LoRA on the experts) to finish software-engineering tasks with fewer tokens: Particle reports 28.4-52.2% fewer output tokens and 34.4-51.6% lower cost per task than the base on Terminal-Bench 2.1, ReactBench, ADE Bench and DeepSWE 1.1, with pass@1 inside the base model's confidence intervals. Weights are not released; it is served through the Particle API (and Vercel AI Gateway). Price is the Particle docs' $0.25/$1.00 per Mtok (cached input $0.03); the launch post's cost footnote assumes $0.30/$1.20. paramsB/activeParamsB are the base model's, since the adapter does not change the served architecture. NOT FILED: per-benchmark coding pass rates (the post shows them in an unlabelled chart toggle); Tau Airlines 86.00 (the post does not say which tau-bench version); BabyVision with tools 89.18 has no corpus column.",
+  "quants": [],
+  "vramQ4Gb": null,
+  "vramFp16Gb": null,
+  "tps4090": null,
+  "tpsNote": null,
+  "effortLabel": null,
+  "isDefaultConfig": true,
+  "isBestConfig": true,
+  "specSources": {
+    "releaseDate": "https://particle.ai/blog/introducing-particle-1",
+    "arch": "https://particle.ai/blog/introducing-particle-1",
+    "ctxK": "https://docs.particle.ai/models",
+    "price": "https://docs.particle.ai/models",
+    "openness": "https://docs.particle.ai/models",
+    "results": "https://particle.ai/blog/introducing-particle-1"
+  },
+  "results": [
+    {
+      "benchmarkSlug": "gpqa",
+      "score": 90.4,
+      "source": "self-reported",
+      "sourceUrl": "https://particle.ai/blog/introducing-particle-1",
+      "evaluatedAt": "2026-10-28",
+      "notes": "GPQA Diamond, Particle launch post (base DeepSeek V4.1 Flash 90.91 in the same comparison)."
+    },
+    {
+      "benchmarkSlug": "mmlu",
+      "score": 86.08,
+      "source": "self-reported",
+      "sourceUrl": "https://particle.ai/blog/introducing-particle-1",
+      "evaluatedAt": "2026-10-28",
+      "notes": "\"Standard MMLU\", Particle launch post (base DeepSeek V4.1 Flash 85.98 in the same comparison)."
+    }
+  ]
+}

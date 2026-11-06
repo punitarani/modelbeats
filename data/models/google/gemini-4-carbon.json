@@ -1,0 +1,44 @@
+{
+  "slug": "gemini-4-carbon",
+  "name": "Gemini 4 Carbon",
+  "orgSlug": "google",
+  "familySlug": "gemini-4",
+  "releaseDate": "2026-10-28",
+  "status": "released",
+  "predecessor": "gemini-4-argon",
+  "openness": "closed",
+  "license": "Proprietary",
+  "paramsB": null,
+  "activeParamsB": null,
+  "archClass": "dense",
+  "archDisplay": "Proprietary model; architecture and parameter count undisclosed; 1M-token context",
+  "ctxK": 1000,
+  "modalities": [
+    "text",
+    "vision",
+    "video"
+  ],
+  "langCount": null,
+  "capabilities": {
+    "reasoning": true,
+    "coding": true,
+    "vision": true,
+    "functionCalling": true,
+    "toolUse": true,
+    "agentic": true
+  },
+  "apiAvailable": false,
+  "price": null,
+  "links": {
+    "docs": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-4-carbon/"
+  },
+  "note": "Google DeepMind's Oct 28, 2026 frontier model, the successor to Gemini 4 Argon. Like Argon at launch, it is rolling out first to selected users (trusted cyber defenders in the Fairwind Program) and has no self-serve API yet. Google states an introductory price of $2/$10 per Mtok before the $4/$20 list price; Vals AI bills its runs at $4/$20. Following the Argon and Gemini 3.8 Flash Cyber precedent, the record is filed as released with apiAvailable false and price null until self-serve access opens; ctxK is 1000 from the 1M-token window Vals AI and Artificial Analysis list. Vals AI's independent runs put it #2 of 29 on the Vals Index (70.36), #1 of 87 on Legal Research Bench and #4 of 57 on Terminal-Bench 4.0 (63.13). Artificial Analysis puts it #1 on Intelligence Index v5 (59) and reports Terminal-Bench 4.0 65.2% and Terminal-Bench-Science 64.8% on its own harness; Google's table quotes those AA figures. NOT FILED: the AA Terminal-Bench rows (the corpus columns use the Vals boards; Vals has no Terminal-Bench-Science run for Carbon yet); Agents' Last Exam v1.1 (77.4) and OSWorld-2.1 offline (81.5) are newer versions than the corpus columns; CWE-bench 71.0 is above the column's bounds (normMax 60, as with Argon's 68.0); Vals Finance Agent v2.1 (67.16) and HLAB-Vals-1.1 (17.50) are not comparable with the v2/v1 columns; SWE-sweep, GraphWalks, RiemannBench, Vending-Bench 2, Blueprint-Bench 2, ExploitGym, Vals Index and AA Index have no corpus column.",
+  "quants": [],
+  "vramQ4Gb": null,
+  "vramFp16Gb": null,
+  "tps4090": null,
+  "tpsNote": null,
+  "effortLabel": null,
+  "isDefaultConfig": true,
+  "isBestConfig": true
+}

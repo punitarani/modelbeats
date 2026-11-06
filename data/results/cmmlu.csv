@@ -10,6 +10,7 @@ deepseek-v2-236b,81.6,self-reported,https://huggingface.co/deepseek-ai/DeepSeek-
 deepseekmoe-16b,42.5,self-reported,https://ar5iv.labs.arxiv.org/html/2401.06066,2024-01-11,"Table 3, CMMLU accuracy 5-shot, DeepSeekMoE 16B column."
 doubao-1-5-pro,90.9,self-reported,https://seed.bytedance.com/doubao_1_5_pro,,CMMLU row of the official launch-page table (Chinese section); Doubao-1.5-pro's best score in that row.
 ernie-4-5-300b-a47b,90.2,self-reported,https://ernie.baidu.com/blog/publication/ERNIE_Technical_Report.pdf,2025-06-29,Table 5.
+ernie-5-5-flash-base,90,self-reported,https://huggingface.co/baidu/ERNIE-5.5-Flash-Base/raw/main/README.md,2026-11-05,"CMMLU, 5-shot EM. Base model, ERNIE-5.5-Flash-Base column of the Evaluation table on Baidu's Hugging Face model card (same pipeline as DeepSeek-V4-Flash-Base, Hy3-preview-Base and MiMo-V2.5-Base)."
 hunyuan-large-a52b,90.2,self-reported,https://huggingface.co/tencent/Tencent-Hunyuan-Large,,Pretrain/base model table.
 hunyuan-t1,90,self-reported,https://winbuzzer.com/2025/03/23/tencents-releases-its-hunyuan-t1-reasoning-model-beating-deepseek-r1-gpt-4-5-o1-across-benchmarks-xcxwbn/,,
 hunyuan-turbos,89.4,self-reported,https://arxiv.org/abs/2505.15431,2025-04-16,"5-shot, Table 4"
