@@ -1,0 +1,64 @@
+{
+  "name": "Hy4",
+  "org": "Tencent",
+  "family": "Hunyuan",
+  "slug": "hy4",
+  "releaseDate": "2026-11-04",
+  "status": "released",
+  "openness": "closed",
+  "license": "Proprietary (open weights promised)",
+  "paramsB": null,
+  "activeParamsB": null,
+  "archClass": "moe",
+  "archDisplay": "Reasoning model with vision and computer use (first Hy model with image input); architecture and size of the GA build not restated at launch",
+  "ctxK": 1000,
+  "modalities": [
+    "text",
+    "vision"
+  ],
+  "langCount": null,
+  "capabilities": {
+    "reasoning": true,
+    "coding": true,
+    "vision": true,
+    "functionCalling": true,
+    "toolUse": true,
+    "agentic": true
+  },
+  "apiAvailable": true,
+  "price": {
+    "input": 0.834,
+    "output": 2.501,
+    "provider": "Tencent Cloud"
+  },
+  "links": {
+    "docs": "https://hy.tencent.ai/research/hy4"
+  },
+  "note": "Tencent's Hy4, released November 4, 2026 on Tencent Cloud TokenHub and OpenRouter: the GA successor to Hy4 preview (Aug 2026, not in this corpus), with scaled-up pre- and post-training and vision and computer use for the first time. WEIGHTS PROMISED, NOT YET PUBLIC: Tencent says it plans to open-source the weights with a system card, so openness stays closed until the Hugging Face repo lands. Price is the launch page's USD list ($0.042 cached / $0.834 input / $2.501 output per Mtok); a 50% TokenHub discount through Dec 31, 2026 is promotional and not filed. Parameters are left null: the 770B/49B figures in circulation are Hy4 preview's and the GA post doesn't restate them. Context (1M) is from Vals AI's model page. Tencent's own benchmark tables are images only and its text figures are internal evaluations (579-task finance study 3.04, IRAB 61.63, WorkBuddy 83.18), so no self-reported rows are filed. Vals AI (via OpenRouter, fallback rate 0%) adds the independent Terminal-Bench 4.0 row; its Finance Agent v2.1 64.70, HLAB-Vals-1.1 12.50 and Vals Index 59.35 have no corpus columns.",
+  "quants": [],
+  "vramQ4Gb": null,
+  "vramFp16Gb": null,
+  "tps4090": null,
+  "tpsNote": null,
+  "effortLabel": null,
+  "isDefaultConfig": true,
+  "isBestConfig": true,
+  "specSources": {
+    "releaseDate": "https://hy.tencent.ai/research/hy4",
+    "price": "https://hy.tencent.ai/research/hy4",
+    "weightsPromise": "https://hy.tencent.ai/research/hy4",
+    "modalities": "https://hy.tencent.ai/research/hy4",
+    "ctxK": "https://www.vals.ai/models/tencent_hy4",
+    "announcement": "https://www.tencent.com/tencent-launches-hy4-joining-the-ranks-of-the-worlds-leading-open-source-ai-models"
+  },
+  "results": [
+    {
+      "benchmarkSlug": "terminal-bench-4",
+      "score": 39.39,
+      "source": "independent",
+      "sourceUrl": "https://www.vals.ai/benchmarks/terminal-bench-4",
+      "evaluatedAt": "2026-11-04",
+      "notes": "Terminal-Bench 4.0, Vals AI independent run (mini-swe-agent harness, avg@3, 8-hour agent limit; ±0.88) via OpenRouter, fallback rate 0%; #15 of 61 per the Vals model page, the #2 open-weight model on the board. Hy4 preview scored 8.08."
+    }
+  ]
+}
