@@ -229,6 +229,22 @@
       "sourceUrl": "https://www.vals.ai/benchmarks/terminal-bench-science",
       "evaluatedAt": "2026-11-05",
       "notes": "Terminal-Bench Science 0.1, Vals AI independent run (single-run pass@1, mostly mini-swe-agent harness; ±2.01); #33 of 44 per the Vals model page. TML's own figure is 5.7."
+    },
+    {
+      "benchmarkSlug": "arc-agi-1",
+      "score": 96.5,
+      "source": "independent",
+      "sourceUrl": "https://arcprize.org/results/thinky-inkling-2-small",
+      "evaluatedAt": "2026-11-05",
+      "notes": "ARC Prize Verified, semi-private set, XHigh reasoning (the only config tested); listed on the ARC Prize leaderboard dated 2026-11-05. ARC Prize notes it is the top open-weight-family score it has evaluated; weights are still pending."
+    },
+    {
+      "benchmarkSlug": "arc-agi-2",
+      "score": 81.7,
+      "source": "independent",
+      "sourceUrl": "https://arcprize.org/results/thinky-inkling-2-small",
+      "evaluatedAt": "2026-11-05",
+      "notes": "ARC Prize Verified, semi-private set, XHigh reasoning (the only config tested); listed on the ARC Prize leaderboard dated 2026-11-05. ARC Prize notes it is the top open-weight-family score it has evaluated; weights are still pending."
     }
   ]
 }
