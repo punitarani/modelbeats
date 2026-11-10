@@ -1,5 +1,6 @@
 model_slug,score,source,source_url,evaluated_at,notes
 claude-fable-5-1,44.8,self-reported,https://anthropic.com/claude-opus-5-5-system-card,2026-09-22,"No tools, Claude Opus 5.5 System Card §8.13.1."
+claude-fable-5-2,73.4,self-reported,https://www.anthropic.com/claude-fable-and-mythos-5-2,2026-11-09,"Chartography, no tools, Claude Fable 5.2 launch table at highest-available effort; the launch post gives 66.4 at Medium effort. Gemini 4 Carbon 72.5, GPT-6 Astra 71.0, Opus 5.5 64.4, Fable 5.1 44.8."
 claude-haiku-5-5,46.4,self-reported,https://www.anthropic.com/claude-haiku-5-5,2026-10-07,"No tools, Claude Haiku 5.5 launch table."
 claude-opus-5,29.8,self-reported,https://anthropic.com/claude-opus-5-5-system-card,2026-09-22,"No tools, Claude Opus 5.5 System Card §8.13.1."
 claude-opus-5-5,64.4,self-reported,https://www.anthropic.com/claude-sonnet-5-5,2026-09-28,"No tools, Claude Opus 5.5 column of the Claude Sonnet 5.5 launch table (89.0 with tools)."

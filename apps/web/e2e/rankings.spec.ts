@@ -14,7 +14,7 @@ test.describe('rankings', () => {
     // #1 row is the broadly-benchmarked frontier leader (Frontier Elo, D21)
     const first = page.getByTestId('ranking-row').first()
     await expect(first).toContainText('Gemini 4 Carbon')
-    await expect(first).toContainText('3251.4')
+    await expect(first).toContainText('3227.1')
   })
 
   test('column sort click mutates URL and reorders rows', async ({ page }) => {
@@ -55,7 +55,7 @@ test.describe('rankings', () => {
     await gotoHydrated(page, '/rankings')
     await pickOption(page, 'rankings-org', 'Anthropic')
     await expect(page).toHaveURL(/org=anthropic/)
-    await expect(page.getByTestId('rankings-meta')).toContainText('31 models')
+    await expect(page.getByTestId('rankings-meta')).toContainText('33 models')
   })
 
   test('category param filters benchmark columns; bogus category 404s', async ({ page }) => {

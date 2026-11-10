@@ -2,12 +2,12 @@ import { expect, test } from '@playwright/test'
 import { gotoHydrated } from './helpers'
 
 test.describe('organization + family hubs', () => {
-  test('/organizations/anthropic lists its 31 models with cadence', async ({ page }) => {
+  test('/organizations/anthropic lists its 33 models with cadence', async ({ page }) => {
     await gotoHydrated(page, '/organizations/anthropic')
-    await expect(page.getByTestId('org-meta')).toContainText('31 tracked models · 9 families')
-    await expect(page.getByTestId('org-model-row')).toHaveCount(31)
-    // rows sort by release date desc — Claude Haiku 5.5 (2026-10-07) is Anthropic's newest
-    await expect(page.getByTestId('org-model-row').first()).toContainText('Claude Haiku 5.5')
+    await expect(page.getByTestId('org-meta')).toContainText('33 tracked models · 9 families')
+    await expect(page.getByTestId('org-model-row')).toHaveCount(33)
+    // rows sort by release date desc — Claude Fable 5.2 (2026-11-09, ahead of same-day Mythos 5.2) is Anthropic's newest
+    await expect(page.getByTestId('org-model-row').first()).toContainText('Claude Fable 5.2')
   })
 
   test('/families/claude-4 shows progression and succession deltas', async ({ page }) => {
@@ -21,7 +21,7 @@ test.describe('organization + family hubs', () => {
     // "succeeds Claude Opus 4.6" (its own nearest-by-date predecessor within the shared family).
     const opus46 = page.getByTestId('family-member').filter({ hasText: /Claude Opus 4\.6CLOSED/ })
     await expect(opus46).toContainText('succeeds Claude Opus 4.5')
-    await expect(opus46).toContainText('+243.1')
+    await expect(opus46).toContainText('+242.9')
   })
 
   test('model → family: the back affordance returns to the model, not the parent', async ({

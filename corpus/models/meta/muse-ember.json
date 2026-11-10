@@ -1,0 +1,67 @@
+{
+  "name": "Muse Ember",
+  "org": "Meta",
+  "orgSlug": "meta",
+  "family": "Muse Ember",
+  "familySlug": "muse-ember",
+  "slug": "muse-ember",
+  "releaseDate": "2026-11-09",
+  "predecessor": null,
+  "status": "released",
+  "openness": "closed",
+  "license": "Proprietary",
+  "paramsB": null,
+  "activeParamsB": null,
+  "archClass": "dense",
+  "archDisplay": "Meta's smallest and most efficient Muse model (architecture and size undisclosed), the first trained using Muse Wonder Full; 1M-token context with up to 512K output, text+image+audio+video in",
+  "ctxK": 1000,
+  "modalities": [
+    "text",
+    "vision",
+    "audio",
+    "video"
+  ],
+  "langCount": null,
+  "capabilities": {
+    "reasoning": true,
+    "coding": true,
+    "vision": true,
+    "functionCalling": true,
+    "toolUse": true,
+    "agentic": true
+  },
+  "apiAvailable": true,
+  "price": {
+    "input": 0.1,
+    "output": 0.5,
+    "provider": "Meta"
+  },
+  "links": {
+    "docs": "https://research.meta.ai/blog/muse-ember"
+  },
+  "note": "Meta's November 9, 2026 small model, available as `muse-ember-1.0` on the Meta Model API and Muse Code (also Google Cloud and Oracle Cloud). Priced at $0.10/$0.50 per Mtok for prompts up to 200K tokens ($0.30/$1.50 above), with cached input at $0.004. The launch post says nothing about weights or a license, so it is recorded as closed and API-only. Meta compares it with Claude Haiku 5.5 and GPT-6 Luna, all at max reasoning. ONLY ONE ROW IS FILED. NOT FILED: the Artificial Analysis-run rows Meta labels -AA (AutomationBench-AA 37.8, FrontierCode 2.0-AA 27.2, GDP.pdf-AA 22.8, Coding Agent Index-AA 46, AA Index 36), per the corpus rule on Meta's AA variants; Meta-internal evaluations (Agents' Last Exam Linux subset 61.6, OSWorld 2.1 69.5 partial / 33.8 binary, PerceptionBench with tools 80.6, Personal Superintelligence Index 46.8); and Meta's own Terminal-Bench 4.0 figure (40.9), which pairs each model with a different harness and is superseded by Vals AI's independent run. That leaves it below the ranking-coverage floor until more independent results appear.",
+  "quants": [],
+  "vramQ4Gb": null,
+  "vramFp16Gb": null,
+  "tps4090": null,
+  "tpsNote": null,
+  "effortLabel": null,
+  "isDefaultConfig": true,
+  "isBestConfig": true,
+  "specSources": {
+    "price": "https://research.meta.ai/blog/muse-ember",
+    "releaseDate": "https://research.meta.ai/blog/muse-ember",
+    "ctxK": "https://research.meta.ai/blog/muse-ember",
+    "modalities": "https://research.meta.ai/blog/muse-ember"
+  },
+  "results": [
+    {
+      "benchmarkSlug": "terminal-bench-4",
+      "score": 39.39,
+      "source": "independent",
+      "sourceUrl": "https://www.vals.ai/models/meta_muse-ember",
+      "evaluatedAt": "2026-11-09",
+      "notes": "Terminal-Bench 4.0, Vals AI independent run (reasoning effort max, Meta provider; ±2.31); #15 of 62 on the Vals board. Meta reports 40.9 in its own mini-swe-agent harness. Vals lists no fallback rate for this run."
+    }
+  ]
+}

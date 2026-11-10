@@ -1,6 +1,7 @@
 model_slug,score,source,source_url,evaluated_at,notes
 claude-fable-5,89.2,independent,https://arcprize.org/results/anthropic-claude-fable-5,2026-08-03,Max variant.
 claude-fable-5-1,90,independent,https://arcprize.org/results/anthropic-claude-fable-5-1,2026-09-01,"ARC-AGI-2 at max effort, ARC Prize semi-private test set. Behind GPT-5.6 Sol (92.5) and level with Opus 5 (90.4)."
+claude-fable-5-2,93.8,independent,https://arcprize.org/results/anthropic-claude-fable-5-2,2026-11-09,"ARC Prize Verified, Semi-Private set, run by the ARC Prize team. XHigh variant, the best of five (Max 92.5%, High 90.4%, Medium 89.6%, Low 86.7%); $0.98/task per ARC Prize. ARC-AGI-3 Standard 81.2% (XHigh) is not filed: above the column bound."
 claude-haiku-5-5,61.3,independent,https://arcprize.org/results/anthropic-claude-haiku-5-5,2026-10-07,"ARC Prize verified result on the Semi-Private set, run by the ARC Prize team. XHigh variant; ARC Prize omits the Max run because only 74 of 120 tasks completed."
 claude-opus-4-5,37.6,independent,https://arcprize.org/blog/arc-prize-2025-results-analysis,2025-11-24,"ARC Prize's own verified run: 'the top verified commercial model, Opus 4.5 (Thinking, 64k), scores 37.6% for $2.20/task' — confirmed via direct fetch."
 claude-opus-4-5-high,37.6,self-reported,https://www.anthropic.com/news/claude-opus-4-5,2025-11-24,"ARC-AGI-2 (Verified), 64k thinking budget; confirmed on both the official launch-page comparison chart ('Novel problem solving / ARC-AGI-2 (Verified)': 37.6%) and system card Section 2.10/Figure 2.10.B."
