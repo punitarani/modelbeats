@@ -1,5 +1,5 @@
 {
-  "computedFor": "2026-11-10",
+  "computedFor": "2026-11-11",
   "models": [
     {
       "slug": "abab6-5",
@@ -2109,6 +2109,22 @@
         "reasoning": 92.8,
         "coding": 70.8,
         "math": 90.6,
+        "vision": null,
+        "agents": null
+      }
+    },
+    {
+      "slug": "ernie-5-5-flash-preview",
+      "overallIndex": 1000,
+      "rankOverall": null,
+      "ranked": false,
+      "arenaElo": null,
+      "categoryIdx": {
+        "human-preference": null,
+        "knowledge": null,
+        "reasoning": null,
+        "coding": null,
+        "math": null,
         "vision": null,
         "agents": null
       }
