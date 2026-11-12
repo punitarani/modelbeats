@@ -95,6 +95,30 @@
       "sourceUrl": "https://www.vals.ai/benchmarks/terminal-bench-4",
       "evaluatedAt": "2026-10-28",
       "notes": "Terminal-Bench 4.0, Vals AI independent run (mini-swe-agent harness, avg@3, 8-hour agent limit, reasoning effort high; ±2.20); #4 of 57 on the Vals board, behind Kimi K3.1 Pro (63.64) and ahead of GPT-6 Astra (59.60). Artificial Analysis reports 65.2% on its own harness, the figure Google quotes."
+    },
+    {
+      "benchmarkSlug": "arc-agi-1",
+      "score": 98.5,
+      "source": "independent",
+      "sourceUrl": "https://arcprize.org/results/google-gemini-4-carbon",
+      "evaluatedAt": "2026-11-10",
+      "notes": "ARC Prize Verified result on the Semi-Private set, run by the ARC Prize team (results page dated 2026-11-10). Medium variant, the best of three (High 97.5%, Low 85.5%)."
+    },
+    {
+      "benchmarkSlug": "arc-agi-2",
+      "score": 94.2,
+      "source": "independent",
+      "sourceUrl": "https://arcprize.org/results/google-gemini-4-carbon",
+      "evaluatedAt": "2026-11-10",
+      "notes": "ARC Prize Verified result on the Semi-Private set, run by the ARC Prize team (results page dated 2026-11-10). Medium variant, the best of three (High 92.1%, Low 49.6%)."
+    },
+    {
+      "benchmarkSlug": "arc-agi-3",
+      "score": 65.1,
+      "source": "independent",
+      "sourceUrl": "https://arcprize.org/results/google-gemini-4-carbon",
+      "evaluatedAt": "2026-11-10",
+      "notes": "ARC Prize Verified result on the Semi-Private set, run by the ARC Prize team (results page dated 2026-11-10). Low, Standard harness (the comparable figure for older ARC-AGI-3 rows; Medium 63.9%). ARC Prize omitted the High Standard-harness run because it completed only 30 of 55 games. Provider Adapter harness gives 99.1% (Medium)."
     }
   ]
 }

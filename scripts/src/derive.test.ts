@@ -191,11 +191,11 @@ describe('derived scores match the D21 contract (goldens)', () => {
       .filter((m) => m.rankOverall != null && m.rankOverall <= 5)
       .sort((a, b) => (a.rankOverall ?? 0) - (b.rankOverall ?? 0))
     expect(top5.map((m) => [m.slug, m.overallIndex])).toEqual([
-      ['gemini-4-carbon', 3227.1],
-      ['gpt-6-cyber', 3222.5],
-      ['claude-fable-5-2', 3218.4],
-      ['kimi-k3-1-pro', 3133.4],
-      ['gemini-4-argon', 3085.4],
+      ['gemini-4-carbon', 3232.7],
+      ['gpt-6-cyber', 3224],
+      ['claude-fable-5-2', 3211.4],
+      ['kimi-k3-1-pro', 3133.5],
+      ['gemini-4-argon', 3083.4],
     ])
   })
 
@@ -279,9 +279,9 @@ describe('derived scores match the D21 contract (goldens)', () => {
   it('pins the real top-5 movers and their rating self-consistency', async () => {
     const { models, movers } = await derived()
     expect(movers.map((m) => [m.slug, m.prevSlug, m.delta])).toEqual([
-      ['sarvam-105b', 'sarvam-1-2b', 1615.8],
+      ['sarvam-105b', 'sarvam-1-2b', 1615.9],
       ['mistral-large-4', 'mistral-large-3', 1238.1],
-      ['smollm3-3b-think', 'smollm2-1-7b', 1002.8],
+      ['smollm3-3b-think', 'smollm2-1-7b', 1002.9],
       ['deepseek-v4-flash-0731', 'deepseek-v4-flash-non-think', 991.8],
       ['hy3', 'hunyuan-a13b', 896.7],
     ])
