@@ -78,7 +78,9 @@ granite-3-3-8b-instruct,89.73,self-reported,https://huggingface.co/ibm-granite/g
 granite-34b-code-instruct,54.8,independent,https://arxiv.org/html/2405.04324v1,,"HumanEvalSynthesize, avg across 6 languages (paper Table 3)"
 granite-34b-code-instruct,62.2,self-reported,https://huggingface.co/ibm-granite/granite-34b-code-instruct-8k,,"HumanEvalSynthesize, Python pass@1"
 granite-4-0-h-small,88,self-reported,https://huggingface.co/ibm-granite/granite-4.0-h-small,,
+granite-4-1-3b-llmon-preview,84.15,self-reported,https://huggingface.co/ibm-granite/granite-4.1-3b-llmon-preview/blob/main/README.md,2026-11-12,"pass@1, 3B-LLMON column"
 granite-4-1-8b-instruct,85.37,self-reported,https://huggingface.co/ibm-granite/granite-4.1-8b,,pass@1
+granite-4-1-8b-llmon-preview,86.59,self-reported,https://huggingface.co/ibm-granite/granite-4.1-8b-llmon-preview/blob/main/README.md,2026-11-12,"pass@1, 8B-LLMON column"
 granite-8b-code-instruct,49.6,independent,https://arxiv.org/html/2405.04324v1,,"HumanEvalSynthesize, avg across 6 languages (paper Table 3)"
 granite-8b-code-instruct,57.9,self-reported,https://huggingface.co/ibm-granite/granite-8b-code-instruct-4k,,"HumanEvalSynthesize, Python pass@1"
 grok-1,63.2,self-reported,https://x.ai/news/grok,2023-11-03,"0-shot pass@1, per xAI's original 'Announcing Grok' blog post benchmark table; also corroborated in the later 'Announcing Grok-1.5' post's Grok-1 comparison column."

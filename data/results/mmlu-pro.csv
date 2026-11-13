@@ -76,7 +76,9 @@ granite-3-0-8b-instruct,34.45,self-reported,https://huggingface.co/ibm-granite/g
 granite-3-1-8b-instruct,28.19,independent,https://huggingface.co/ibm-granite/granite-3.1-8b-instruct,,HF Open LLM Leaderboard V2
 granite-3-1-8b-instruct,41.03,self-reported,https://huggingface.co/ibm-granite/granite-3.1-8b-instruct,,IBM's own separate MMLU-Pro evaluation
 granite-4-0-h-small,55.47,self-reported,https://huggingface.co/ibm-granite/granite-4.0-h-small,,
+granite-4-1-3b-llmon-preview,46.08,self-reported,https://huggingface.co/ibm-granite/granite-4.1-3b-llmon-preview/blob/main/README.md,2026-11-12,"5-shot, CoT, 3B-LLMON column"
 granite-4-1-8b-instruct,55.99,self-reported,https://huggingface.co/ibm-granite/granite-4.1-8b,,
+granite-4-1-8b-llmon-preview,53.11,self-reported,https://huggingface.co/ibm-granite/granite-4.1-8b-llmon-preview/blob/main/README.md,2026-11-12,"5-shot, CoT, 8B-LLMON column"
 grok-1-5,51,self-reported,https://klu.ai/glossary/xai-grok-2,,As reported in xAI's later Grok-2 comparison table
 grok-2,75.5,self-reported,https://klu.ai/glossary/xai-grok-2,2024-08-13,
 grok-2-mini,72,self-reported,https://klu.ai/glossary/xai-grok-2,2024-08-13,

@@ -23,7 +23,9 @@ gpt-4o-mini,87,self-reported,https://openai.com/index/gpt-4o-mini-advancing-cost
 granite-3-0-2b-instruct,37.13,self-reported,https://huggingface.co/ibm-granite/granite-3.0-2b-instruct,,"averaged across 6 languages, pass@1"
 granite-3-0-8b-instruct,48.2,self-reported,https://huggingface.co/ibm-granite/granite-3.0-8b-instruct,,"MGSM averaged across 6 languages, 5-shot. Confirmed in HF model-index YAML and technical report Table 10."
 granite-4-0-h-small,38.72,self-reported,https://huggingface.co/ibm-granite/granite-4.0-h-small,,8-shot
+granite-4-1-3b-llmon-preview,72.32,self-reported,https://huggingface.co/ibm-granite/granite-4.1-3b-llmon-preview/blob/main/README.md,2026-11-12,"8-shot, 3B-LLMON column"
 granite-4-1-8b-instruct,82.32,self-reported,https://huggingface.co/ibm-granite/granite-4.1-8b,,8-shot
+granite-4-1-8b-llmon-preview,76.16,self-reported,https://huggingface.co/ibm-granite/granite-4.1-8b-llmon-preview/blob/main/README.md,2026-11-12,"8-shot, 8B-LLMON column"
 llama-3-1-405b,91.6,self-reported,https://huggingface.co/meta-llama/Meta-Llama-3.1-405B-Instruct,2024-07-23,"Multilingual MGSM, chain-of-thought, 0-shot exact match, Instruct 405B (confirmed verbatim: 'Multilingual MGSM (CoT) | 0 | em | ... | 91.6')."
 llama-3-1-70b,86.9,self-reported,https://github.com/meta-llama/llama-models/blob/main/models/llama3_1/MODEL_CARD.md,2024-07-01,"Instruct, Multilingual MGSM CoT 0-shot em"
 llama-3-1-8b,68.9,self-reported,https://github.com/meta-llama/llama-models/blob/main/models/llama3_1/MODEL_CARD.md,2024-07-01,"Instruct, Multilingual MGSM CoT 0-shot em"

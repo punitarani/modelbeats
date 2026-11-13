@@ -11,6 +11,8 @@ gemma-2b,24.2,self-reported,https://huggingface.co/google/gemma-2b,,
 gemma-7b,41.7,self-reported,https://storage.googleapis.com/deepmind-media/gemma/gemma-report.pdf,2024-02-21,"Table 6, English subset average."
 granite-3-0-2b-instruct,29.75,self-reported,https://huggingface.co/ibm-granite/granite-3.0-2b-instruct,,AGI-Eval
 granite-3-0-8b-instruct,40.52,self-reported,https://huggingface.co/ibm-granite/granite-3.0-8b-instruct,,"AGI-Eval, 5-shot pass@1. Present in HF model-index YAML and corroborated verbatim in the Granite 3.0 technical report (Table 10, arxiv/paper.pdf via github.com/ibm-granite/granite-3.0-language-models)."
+granite-4-1-3b-llmon-preview,65.7,self-reported,https://huggingface.co/ibm-granite/granite-4.1-3b-llmon-preview/blob/main/README.md,2026-11-12,"AGI EVAL, 0-shot, CoT, 3B-LLMON column"
+granite-4-1-8b-llmon-preview,73.3,self-reported,https://huggingface.co/ibm-granite/granite-4.1-8b-llmon-preview/blob/main/README.md,2026-11-12,"AGI EVAL, 0-shot, CoT, 8B-LLMON column"
 hermes-3-405b,61.84,self-reported,https://arxiv.org/pdf/2408.11857,,"0-shot, Table 5."
 internlm2-20b,50.3,self-reported,https://huggingface.co/internlm/internlm2-chat-20b,,"InternLM2-Chat-20B AGIEval score, from the official HF model-card OpenCompass evaluation table (fetched directly, raw README); base InternLM2-20B scores 53.0 on the same table."
 llama-13b,33.9,self-reported,https://ar5iv.labs.arxiv.org/html/2307.09288,2023-07-18,"3-5 shot, English tasks average. Same source/table as the BBH addition above (Llama 2 paper's Table 3 baseline comparison)."

@@ -11,7 +11,9 @@ ernie-5-5-flash-base,81.5,self-reported,https://huggingface.co/baidu/ERNIE-5.5-F
 falcon-h1-34b,71.43,self-reported,https://huggingface.co/tiiuae/Falcon-H1-34B-Instruct,,MBPP+
 gpt-4o,87.8,independent,https://arxiv.org/abs/2407.21783,2024-07-23,"MBPP EvalPlus (i.e. MBPP+), 0-shot. From the same Meta Llama-3 paper comparison table (Table 2), verified directly against the PDF."
 granite-4-0-h-small,71,self-reported,https://huggingface.co/ibm-granite/granite-4.0-h-small,,"MBPP+, pass@1"
+granite-4-1-3b-llmon-preview,65.87,self-reported,https://huggingface.co/ibm-granite/granite-4.1-3b-llmon-preview/blob/main/README.md,2026-11-12,"pass@1, 3B-LLMON column"
 granite-4-1-8b-instruct,73.81,self-reported,https://huggingface.co/ibm-granite/granite-4.1-8b,,pass@1
+granite-4-1-8b-llmon-preview,74.6,self-reported,https://huggingface.co/ibm-granite/granite-4.1-8b-llmon-preview/blob/main/README.md,2026-11-12,"pass@1, 8B-LLMON column"
 llama-3-1-405b,88.6,self-reported,https://huggingface.co/meta-llama/Meta-Llama-3.1-405B-Instruct,2024-07-23,"MBPP++ (EvalPlus-augmented) base version, 0-shot pass@1, Instruct 405B (confirmed verbatim: 'MBPP ++ base version | 0 | pass@1 | ... | 88.6')."
 llama-3-1-70b,86,self-reported,https://github.com/meta-llama/llama-models/blob/main/models/llama3_1/MODEL_CARD.md,2024-07-01,"Instruct, 'MBPP++ base' 0-shot pass@1"
 llama-3-1-8b,72.8,self-reported,https://github.com/meta-llama/llama-models/blob/main/models/llama3_1/MODEL_CARD.md,2024-07-01,"Instruct, 'MBPP++ base' 0-shot pass@1"

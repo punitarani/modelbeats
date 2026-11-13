@@ -6,8 +6,8 @@
   "releaseDate": "2026-11-05",
   "status": "released",
   "predecessor": "inkling-small",
-  "openness": "closed",
-  "license": "Tinker Terms of Use",
+  "openness": "open-weights",
+  "license": "Apache 2.0",
   "paramsB": 594,
   "activeParamsB": 17,
   "archClass": "moe",
@@ -32,9 +32,10 @@
     "output": 1
   },
   "links": {
+    "hf": "thinkingmachines/Inkling-2-Small",
     "docs": "https://thinkingmachines.ai/model-card/inkling-2-small/"
   },
-  "note": "First model of Thinking Machines Lab's second generation, released November 5, 2026 on Tinker (API, fine-tuning and playground). Larger than Inkling-Small (594B/17B active vs 276B/12B) and drops audio input. WEIGHTS PROMISED, NOT YET PUBLIC: the launch post says the full weights will follow under Apache 2.0 'next week' after external safety testing and red-teaming, so openness stays closed and the license is the Tinker Terms of Use until the Hugging Face repo lands. Price is Tinker's prefill/sample rate ($0.30 / $0.03 cached / $1.00 per Mtok, the same as its serverless-inference beta). Self-reported rows come from the model card's own column; Vals AI's Nov 5 runs add independent Terminal-Bench 4.0 (12.63) and Terminal-Bench Science (2.86) rows. Vals' Finance Agent v2.1 67.54 and HLAB-Vals-1.1 21.67 match the card's figures but have no v2.1/v1.1 columns. TML re-ran its rivals, so their columns are not filed. Not filed: FrontierCode v2.0 25.4 (the frontiercode column holds 1.1), SWE-bench Pro v2 Hard/Full 86.3/97.7 and SWE-bench Multimodal v2 43.1 (re-versioned sets on a different scale), Finance Agent v2.1 67.5 and Harvey LAB v1.1 21.7 (no v2.1/v1.1 columns), HLE text-only 44.1 and HLE-Diamond 28.7 (subsets), GDPval-AA v2.1 1630 and AA-Briefcase v1.1 1527 (re-based AA scales), and rows with no column (AA Index 30.6, Vals Index 56.1, Vibe Code Bench 81.6, CyberBench 72.7, PatchEval 79.6, Code Arena 1653 and others).",
+  "note": "First model of Thinking Machines Lab's second generation, released November 5, 2026 on Tinker (API, fine-tuning and playground). Larger than Inkling-Small (594B/17B active vs 276B/12B) and drops audio input. OPEN WEIGHTS since Nov 12, 2026: the launch post's update banner says the weights are on Hugging Face, and the repo (thinkingmachines/Inkling-2-Small, NVFP4, recommended; MXFP8 at thinkingmachines/Inkling-2-Small-MXFP8) declares Apache 2.0. Before that it was Tinker-only under the Tinker Terms of Use. Price is Tinker's prefill/sample rate ($0.30 / $0.03 cached / $1.00 per Mtok, the same as its serverless-inference beta). Self-reported rows come from the model card's own column; Vals AI's Nov 5 runs add independent Terminal-Bench 4.0 (12.63) and Terminal-Bench Science (2.86) rows. Vals' Finance Agent v2.1 67.54 and HLAB-Vals-1.1 21.67 match the card's figures but have no v2.1/v1.1 columns. TML re-ran its rivals, so their columns are not filed. Not filed: FrontierCode v2.0 25.4 (the frontiercode column holds 1.1), SWE-bench Pro v2 Hard/Full 86.3/97.7 and SWE-bench Multimodal v2 43.1 (re-versioned sets on a different scale), Finance Agent v2.1 67.5 and Harvey LAB v1.1 21.7 (no v2.1/v1.1 columns), HLE text-only 44.1 and HLE-Diamond 28.7 (subsets), GDPval-AA v2.1 1630 and AA-Briefcase v1.1 1527 (re-based AA scales), and rows with no column (AA Index 30.6, Vals Index 56.1, Vibe Code Bench 81.6, CyberBench 72.7, PatchEval 79.6, Code Arena 1653 and others).",
   "quants": [],
   "vramQ4Gb": null,
   "vramFp16Gb": null,

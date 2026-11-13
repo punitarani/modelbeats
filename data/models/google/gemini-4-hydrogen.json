@@ -1,0 +1,48 @@
+{
+  "slug": "gemini-4-hydrogen",
+  "name": "Gemini 4 Hydrogen",
+  "orgSlug": "google",
+  "familySlug": "gemini-4",
+  "releaseDate": "2026-11-12",
+  "status": "released",
+  "predecessor": null,
+  "openness": "closed",
+  "license": "Proprietary",
+  "paramsB": null,
+  "activeParamsB": null,
+  "archClass": "dense",
+  "archDisplay": "Proprietary model adapted from Gemini 4 Carbon; architecture and parameter count undisclosed; 1M-token context",
+  "ctxK": 1000,
+  "modalities": [
+    "text",
+    "vision",
+    "audio",
+    "video"
+  ],
+  "langCount": null,
+  "capabilities": {
+    "reasoning": true,
+    "coding": true,
+    "vision": true,
+    "functionCalling": true,
+    "toolUse": true,
+    "agentic": true
+  },
+  "apiAvailable": true,
+  "price": {
+    "input": 1.5,
+    "output": 7.5
+  },
+  "links": {
+    "docs": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-4-hydrogen/"
+  },
+  "note": "Google DeepMind's fast, cost-efficient Gemini 4 model, released Nov 12, 2026 and rolling out globally to the Gemini API (AI Studio, Android Studio), Gemini for business, Antigravity and the Gemini app. The model card says it is 'adapted from Gemini 4 Carbon'; Google pitches it as the upgrade for teams migrating from Gemini 3.8 Flash. That model sits in the Gemini 3.8 family, and Hydrogen is not Carbon's successor, so predecessor is null. Priced flat at $1.50/$7.50 per Mtok across the 1M-token window (blog). Four thinking levels (low, medium, high default, xhigh); the card does not say which level its table used. Self-reported rows come from the model card's table (results as of November 2026; Chartography 66.6 vs Sonnet 5.5 61.6 and GPT-6.1 Terra 63.2; Terminal-Bench-Science 0.1 51.4 vs 59.9 and 58.3). NOT FILED: Terminal-Bench 4.1 cheating-adjusted 57.0, Agents' Last Exam v1.1 71.6 and OSWorld-2.1 offline 77.6 (newer versions than the corpus columns, as with Carbon); AutomationBench-AA 76.1 (Artificial Analysis variant, not the Zapier automationbench column); HLE-Diamond 58.8 (subset); SWE-sweep 13.5, Vending-Bench 2 $14,549 and MKA 53.4 (no corpus column); and, from the blog, AA Intelligence Index 51 (54 at xhigh), Vals Tax Agent Bench 52.3 and Legal Research Bench 55.8 (no corpus column) and Agent Arena rank #5 (no score).",
+  "quants": [],
+  "vramQ4Gb": null,
+  "vramFp16Gb": null,
+  "tps4090": null,
+  "tpsNote": null,
+  "effortLabel": null,
+  "isDefaultConfig": true,
+  "isBestConfig": true
+}

@@ -137,7 +137,9 @@ granite-3-0-2b-instruct,28.61,self-reported,https://huggingface.co/ibm-granite/g
 granite-3-0-8b-instruct,33.81,self-reported,https://huggingface.co/ibm-granite/granite-3.0-8b-instruct,,"GPQA, 0-shot. IBM's own self-reported eval (distinct from the much lower HF Open-LLM-Leaderboard-style GPQA figures seen on later Granite models). Confirmed in HF model-index YAML and technical report Table 10."
 granite-3-1-8b-instruct,8.28,independent,https://huggingface.co/ibm-granite/granite-3.1-8b-instruct,,HF Open LLM Leaderboard V2
 granite-4-0-h-small,40.63,self-reported,https://huggingface.co/ibm-granite/granite-4.0-h-small,,
+granite-4-1-3b-llmon-preview,31.92,self-reported,https://huggingface.co/ibm-granite/granite-4.1-3b-llmon-preview/blob/main/README.md,2026-11-12,"0-shot, CoT, 3B-LLMON column"
 granite-4-1-8b-instruct,41.96,self-reported,https://huggingface.co/ibm-granite/granite-4.1-8b,,
+granite-4-1-8b-llmon-preview,35.05,self-reported,https://huggingface.co/ibm-granite/granite-4.1-8b-llmon-preview/blob/main/README.md,2026-11-12,"0-shot, CoT, 8B-LLMON column"
 grok-1-5,35.9,self-reported,https://klu.ai/glossary/xai-grok-2,,As reported in xAI's later Grok-2 comparison table
 grok-2,56,self-reported,https://klu.ai/glossary/xai-grok-2,2024-08-13,
 grok-2-mini,51,self-reported,https://klu.ai/glossary/xai-grok-2,2024-08-13,

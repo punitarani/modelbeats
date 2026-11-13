@@ -36,7 +36,9 @@ gemma-7b,44.4,self-reported,https://storage.googleapis.com/deepmind-media/gemma/
 granite-3-0-2b-instruct,41,self-reported,https://huggingface.co/ibm-granite/granite-3.0-2b-instruct,,pass@1
 granite-3-0-8b-instruct,49.6,self-reported,https://huggingface.co/ibm-granite/granite-3.0-8b-instruct,,"MBPP, pass@1. Confirmed in HF model-index YAML and technical report Table 10."
 granite-4-0-h-small,84,self-reported,https://huggingface.co/ibm-granite/granite-4.0-h-small,,
+granite-4-1-3b-llmon-preview,76.72,self-reported,https://huggingface.co/ibm-granite/granite-4.1-3b-llmon-preview/blob/main/README.md,2026-11-12,"pass@1, 3B-LLMON column"
 granite-4-1-8b-instruct,87.3,self-reported,https://huggingface.co/ibm-granite/granite-4.1-8b,,pass@1
+granite-4-1-8b-llmon-preview,85.19,self-reported,https://huggingface.co/ibm-granite/granite-4.1-8b-llmon-preview/blob/main/README.md,2026-11-12,"pass@1, 8B-LLMON column"
 hunyuan-large-a52b,72.6,self-reported,https://huggingface.co/tencent/Tencent-Hunyuan-Large,,Pretrain/base model table.
 inflection-1,43.8,self-reported,https://inflection.ai/assets/Inflection-1.pdf,2023-06-23,"pass@1, 3-shot prompt (Table 9 of the technical memo)."
 inflection-2,53,self-reported,https://www.searchenginejournal.com/new-ai-model-outperforms-googles-powerful-palm-2/502191/,2023-11-27,"Confirmed via direct raw-HTML fetch (not summarized) of the SEJ article: literal text 'MBPP Scores: LLaMA-2 70B: 45.0 | PaLM-2S: 50.0 | Inflection-2: 53.0' appears verbatim in the page body, relaying Inflection AI's own published chart (the inflection.ai/inflection-2 blog page shows the same data only as an unreadable chart image, so this press relay is the only text-form citation found). Labeled self-reported per the corpus's existing convention for this same source/page (aggregator relay of a vendor-published figure, not an independent re-measurement)."

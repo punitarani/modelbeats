@@ -10,7 +10,9 @@ falcon3-10b,74.7,self-reported,https://huggingface.co/tiiuae/Falcon3-10B-Instruc
 granite-3-2-8b-instruct,85.72,self-reported,https://huggingface.co/ibm-granite/granite-3.2-8b-instruct,,Listed as 'HumanEval+' immediately next to the existing HumanEval 89.35 column in the same table.
 granite-3-3-8b-instruct,86.09,self-reported,https://huggingface.co/ibm-granite/granite-3.3-8b-instruct,,Listed as 'HumanEval+' immediately next to the existing HumanEval 89.73 column in the same table.
 granite-4-0-h-small,83,self-reported,https://huggingface.co/ibm-granite/granite-4.0-h-small,,"HumanEval+, pass@1"
+granite-4-1-3b-llmon-preview,78.66,self-reported,https://huggingface.co/ibm-granite/granite-4.1-3b-llmon-preview/blob/main/README.md,2026-11-12,"pass@1, 3B-LLMON column"
 granite-4-1-8b-instruct,79.88,self-reported,https://huggingface.co/ibm-granite/granite-4.1-8b,,pass@1
+granite-4-1-8b-llmon-preview,81.71,self-reported,https://huggingface.co/ibm-granite/granite-4.1-8b-llmon-preview/blob/main/README.md,2026-11-12,"pass@1, 8B-LLMON column"
 llama-3-1-405b,82.3,self-reported,https://arxiv.org/abs/2407.21783,2024-07-23,"Instruct 405B, 0-shot pass@1, EvalPlus-augmented HumanEval (±5.8). From Table 18 ('Pass@1 scores on code generation benchmarks') of Meta's 'The Llama 3 Herd of Models' technical report (arXiv:2407.21783), which reports HumanEval, HumanEval+, MBPP, and MBPP EvalPlus(base) side by side. Not previously tracked — corpus only had the plain HumanEval (89.0) and MBPP EvalPlus/mbpp-plus (88.6) figures from the HF model card."
 minicpm3-4b,68.3,self-reported,https://huggingface.co/openbmb/MiniCPM3-4B,2024-09-01,HumanEval+
 mistral-large-2-24-07,87,self-reported,https://huggingface.co/mistralai/Mistral-Large-Instruct-2407,2024-07-24,HF model card 'Code & Reasoning Benchmarks' table (Human Eval Plus row).
