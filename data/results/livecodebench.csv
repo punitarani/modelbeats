@@ -38,6 +38,7 @@ deepseek-v4-pro-think-high,89.8,self-reported,https://arxiv.org/abs/2606.19348,,
 deepseek-v4-pro-think-max,93.5,self-reported,https://huggingface.co/deepseek-ai/DeepSeek-V4-Pro,,Pro-Max mode
 doubao-seed-1-6,66.8,self-reported,https://github.com/ByteDance-Seed/seed-oss/blob/master/README.md,2025-08-20,LiveCodeBench v6 score from the ByteDance-authored comparison table.
 ernie-4-5-300b-a47b,38.8,self-reported,https://ernie.baidu.com/blog/publication/ERNIE_Technical_Report.pdf,2025-06-29,Table 5.
+ernie-5-5-flash-base,40.1,self-reported,https://huggingface.co/baidu/ERNIE-5.5-Flash-Base/raw/main/README.md,2026-11-05,"LiveCodeBench, 1-shot pass@1. Base model, ERNIE-5.5-Flash-Base column of the Evaluation table on Baidu's Hugging Face model card (same pipeline as DeepSeek-V4-Flash-Base, Hy3-preview-Base and MiMo-V2.5-Base)."
 exaone-4-5,81.4,self-reported,https://www.prnewswire.com/news-releases/lg-reveals-next-gen-multimodal-ai-exaone-4-5-302736993.html,,"LiveCodeBench v6, vendor-reported vs Gemma 4 (80.0)"
 falcon-h1-34b,49.71,self-reported,https://huggingface.co/tiiuae/Falcon-H1-34B-Instruct,,
 falcon-h1r-7b,68.6,self-reported,https://falcon-lm.github.io/blog/falcon-h1r-7b/,,LiveCodeBench v6

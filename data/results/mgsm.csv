@@ -8,6 +8,7 @@ claude-3-5-sonnet-new,92.5,self-reported,https://assets.anthropic.com/m/1cd9d098
 claude-3-haiku,75.1,self-reported,https://www-cdn.anthropic.com/de8ba9b01c9ab7cbabf5c33b80b7bbc618857627/Model_Card_Claude_3.pdf,2024-03-13,"MGSM (multilingual math), 0-shot, from Table 1 / Table 4 of the Claude 3 Model Card."
 claude-3-opus,90.7,self-reported,https://www-cdn.anthropic.com/de8ba9b01c9ab7cbabf5c33b80b7bbc618857627/Model_Card_Claude_3.pdf,2024-03-04,"MGSM (multilingual math), 0-shot, from Table 1 / Table 4 of the Claude 3 Model Card; explicitly called out in the text as state-of-the-art (first model to score above 90% 0-shot)."
 claude-3-sonnet,83.5,self-reported,https://www-cdn.anthropic.com/de8ba9b01c9ab7cbabf5c33b80b7bbc618857627/Model_Card_Claude_3.pdf,2024-03-04,"MGSM (multilingual math), 0-shot, from Table 1 / Table 4 of the Claude 3 Model Card."
+ernie-5-5-flash-base,87,self-reported,https://huggingface.co/baidu/ERNIE-5.5-Flash-Base/raw/main/README.md,2026-11-05,"MGSM, 8-shot CoT. Base model, ERNIE-5.5-Flash-Base column of the Evaluation table on Baidu's Hugging Face model card (same pipeline as DeepSeek-V4-Flash-Base, Hy3-preview-Base and MiMo-V2.5-Base)."
 flan-t5-xxl,4.9,self-reported,https://arxiv.org/abs/2210.11416,2022-10-20,"Table 5 ('Scaling Instruction-Finetuned Language Models'), Flan-T5-XXL (11B) row, MGSM held-out benchmark, CoT prompting, 10-language average. Score is genuinely very low compared to the PaLM-family rows in the same table -- T5's pretraining/tokenizer is not optimized for multilingual math reasoning, so this is real, not an error."
 gemini-1-0-pro,63.5,self-reported,https://storage.googleapis.com/deepmind-media/gemini/gemini_1_report.pdf,2023-12-06,"Table 5, 8-shot, multilingual average."
 gemini-1-0-ultra,79,self-reported,https://storage.googleapis.com/deepmind-media/gemini/gemini_1_report.pdf,2023-12-06,"Table 5, 8-shot, multilingual average."
@@ -22,7 +23,9 @@ gpt-4o-mini,87,self-reported,https://openai.com/index/gpt-4o-mini-advancing-cost
 granite-3-0-2b-instruct,37.13,self-reported,https://huggingface.co/ibm-granite/granite-3.0-2b-instruct,,"averaged across 6 languages, pass@1"
 granite-3-0-8b-instruct,48.2,self-reported,https://huggingface.co/ibm-granite/granite-3.0-8b-instruct,,"MGSM averaged across 6 languages, 5-shot. Confirmed in HF model-index YAML and technical report Table 10."
 granite-4-0-h-small,38.72,self-reported,https://huggingface.co/ibm-granite/granite-4.0-h-small,,8-shot
+granite-4-1-3b-llmon-preview,72.32,self-reported,https://huggingface.co/ibm-granite/granite-4.1-3b-llmon-preview/blob/main/README.md,2026-11-12,"8-shot, 3B-LLMON column"
 granite-4-1-8b-instruct,82.32,self-reported,https://huggingface.co/ibm-granite/granite-4.1-8b,,8-shot
+granite-4-1-8b-llmon-preview,76.16,self-reported,https://huggingface.co/ibm-granite/granite-4.1-8b-llmon-preview/blob/main/README.md,2026-11-12,"8-shot, 8B-LLMON column"
 llama-3-1-405b,91.6,self-reported,https://huggingface.co/meta-llama/Meta-Llama-3.1-405B-Instruct,2024-07-23,"Multilingual MGSM, chain-of-thought, 0-shot exact match, Instruct 405B (confirmed verbatim: 'Multilingual MGSM (CoT) | 0 | em | ... | 91.6')."
 llama-3-1-70b,86.9,self-reported,https://github.com/meta-llama/llama-models/blob/main/models/llama3_1/MODEL_CARD.md,2024-07-01,"Instruct, Multilingual MGSM CoT 0-shot em"
 llama-3-1-8b,68.9,self-reported,https://github.com/meta-llama/llama-models/blob/main/models/llama3_1/MODEL_CARD.md,2024-07-01,"Instruct, Multilingual MGSM CoT 0-shot em"

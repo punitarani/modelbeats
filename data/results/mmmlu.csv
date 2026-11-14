@@ -30,7 +30,9 @@ gpt-oss-20b-high,75.7,self-reported,https://arxiv.org/abs/2508.10925,2025-08-05,
 gpt-oss-20b-low,67,self-reported,https://arxiv.org/abs/2508.10925,2025-08-05,"Multilingual MMLU average, low reasoning effort"
 gpt-oss-20b-medium,73.5,self-reported,https://arxiv.org/abs/2508.10925,2025-08-05,"Multilingual MMLU average, medium reasoning effort"
 granite-4-0-h-small,69.69,self-reported,https://huggingface.co/ibm-granite/granite-4.0-h-small,,5-shot
+granite-4-1-3b-llmon-preview,59.01,self-reported,https://huggingface.co/ibm-granite/granite-4.1-3b-llmon-preview/blob/main/README.md,2026-11-12,"5-shot, 3B-LLMON column"
 granite-4-1-8b-instruct,64.84,self-reported,https://huggingface.co/ibm-granite/granite-4.1-8b,,5-shot
+granite-4-1-8b-llmon-preview,64.96,self-reported,https://huggingface.co/ibm-granite/granite-4.1-8b-llmon-preview/blob/main/README.md,2026-11-12,"5-shot, 8B-LLMON column"
 lg-exaone-4-0-32b-non-reasoning,80.6,self-reported,https://arxiv.org/abs/2507.11407,,"MMMLU (Multilingual MMLU) Spanish-language split, non-reasoning mode."
 lg-exaone-4-0-32b-reasoning,85.6,self-reported,https://arxiv.org/abs/2507.11407,,"MMMLU (Multilingual MMLU) Spanish-language split, reasoning mode."
 phi-3-5-mini-3-8b,55.4,self-reported,https://huggingface.co/microsoft/Phi-3.5-mini-instruct,,"Multilingual MMLU, 5-shot; HF model card."

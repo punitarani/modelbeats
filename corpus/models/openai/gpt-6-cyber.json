@@ -1,0 +1,79 @@
+{
+  "name": "GPT-6 Cyber",
+  "org": "OpenAI",
+  "orgSlug": "openai",
+  "family": "GPT-6",
+  "familySlug": "gpt-6",
+  "slug": "gpt-6-cyber",
+  "releaseDate": "2026-11-05",
+  "predecessor": "gpt-6-astra",
+  "status": "released",
+  "openness": "closed",
+  "license": "Proprietary",
+  "paramsB": null,
+  "activeParamsB": null,
+  "archClass": "dense",
+  "archDisplay": "Cyber-specialised post-training of GPT-6 Astra (architecture and size undisclosed); 1.05M-token context (922K max input / 128K max output), text+image in / text out, Responses API only",
+  "ctxK": 1050,
+  "modalities": [
+    "text",
+    "vision"
+  ],
+  "langCount": null,
+  "capabilities": {
+    "reasoning": true,
+    "coding": true,
+    "vision": true,
+    "functionCalling": true,
+    "toolUse": true,
+    "agentic": true
+  },
+  "apiAvailable": false,
+  "price": null,
+  "links": {
+    "docs": "https://developers.openai.com/api/docs/models/gpt-6-cyber"
+  },
+  "note": "OpenAI's second purpose-trained cybersecurity model, announced November 5, 2026 as `gpt-6-cyber`: a cyber-specialised variant of GPT-6 Astra for authorised vulnerability research, exploit development and security testing, rated Critical in Cybersecurity under OpenAI's Preparedness Framework (GPT-5.6 Cyber was High). GATED LAUNCH: available only to select Daybreak Red customers through the API and Codex, with access expanding over time, so it follows the Gemini 4 Carbon / Argon precedent here: apiAvailable false and price null. The model page already lists $20 input / $2 cached / $100 output per Mtok (standard short-context), to be filed once access is general. Benchmark rows come from the system card's cybersecurity evaluations at the highest tested reasoning budget. Not filed (no corpus column): ExploitGym intended-exploit success 48.45% (Astra 42.43%, GPT-5.6 Cyber 32.1%), ExploitGym Hardened 36.94%, the internal ExploitBench port 42% (V8/Chrome), and Irregular's CyScenarioBench 61% average success.",
+  "quants": [],
+  "vramQ4Gb": null,
+  "vramFp16Gb": null,
+  "tps4090": null,
+  "tpsNote": null,
+  "effortLabel": null,
+  "isDefaultConfig": true,
+  "isBestConfig": true,
+  "specSources": {
+    "releaseDate": "https://openai.com/index/introducing-gpt-6-cyber/",
+    "ctxK": "https://developers.openai.com/api/docs/models/gpt-6-cyber",
+    "modalities": "https://developers.openai.com/api/docs/models/gpt-6-cyber",
+    "listPrice": "https://developers.openai.com/api/docs/models/gpt-6-cyber",
+    "access": "https://deploymentsafety.openai.com/gpt-6-cyber",
+    "archDisplay": "https://deploymentsafety.openai.com/gpt-6-cyber"
+  },
+  "results": [
+    {
+      "benchmarkSlug": "exploitbench",
+      "score": 100.0,
+      "source": "self-reported",
+      "sourceUrl": "https://deploymentsafety.openai.com/gpt-6-cyber/exploitbench",
+      "evaluatedAt": "2026-11-05",
+      "notes": "ExploitBench ACE-normalized mean capability score, GPT-6 Cyber system card §7.1 (highest tested reasoning budget). OpenAI caveat: historical vulnerabilities back to 2023 raise a contamination risk that may inflate the result."
+    },
+    {
+      "benchmarkSlug": "sec-bench-pro",
+      "score": 87.02,
+      "source": "self-reported",
+      "sourceUrl": "https://deploymentsafety.openai.com/gpt-6-cyber/sec-bench-pro",
+      "evaluatedAt": "2026-11-05",
+      "notes": "SEC-Bench Pro pass@1 (vulnerability discovery in V8 and SpiderMonkey), GPT-6 Cyber system card §7.3; GPT-6 Astra 85.38 on the same chart."
+    },
+    {
+      "benchmarkSlug": "sre-bench",
+      "score": 92.84,
+      "source": "self-reported",
+      "sourceUrl": "https://deploymentsafety.openai.com/gpt-6-cyber/sre-bench",
+      "evaluatedAt": "2026-11-05",
+      "notes": "SRE-Bench (binary reverse engineering, all six objectives) pass@1, GPT-6 Cyber system card §7.4; GPT-6 Astra 87.98 on the same chart."
+    }
+  ]
+}

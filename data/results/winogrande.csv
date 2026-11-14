@@ -17,6 +17,7 @@ dbrx,81.8,self-reported,https://www.databricks.com/blog/introducing-dbrx-new-sta
 decilm-7b,79.95,self-reported,https://huggingface.co/Deci/DeciLM-7B,,
 deepseek-llm-67b,76,self-reported,https://ar5iv.labs.arxiv.org/html/2401.02954,,"DeepSeek LLM 67B Chat, paper Table 6"
 deepseekmoe-16b,70.2,self-reported,https://ar5iv.labs.arxiv.org/html/2401.06066,2024-01-11,"Table 3, WinoGrande accuracy 0-shot, DeepSeekMoE 16B column."
+ernie-5-5-flash-base,87.8,self-reported,https://huggingface.co/baidu/ERNIE-5.5-Flash-Base/raw/main/README.md,2026-11-05,"WinoGrande, 5-shot. Base model, ERNIE-5.5-Flash-Base column of the Evaluation table on Baidu's Hugging Face model card (same pipeline as DeepSeek-V4-Flash-Base, Hy3-preview-Base and MiMo-V2.5-Base)."
 falcon-180b,86.9,independent,https://huggingface.co/datasets/open-llm-leaderboard-old/details_tiiuae__falcon-180B,2023-10-24,"5-shot (harness|winogrande|5), archived Open LLM Leaderboard v1 evaluation run"
 falcon-2-11b,78.3,independent,https://huggingface.co/blog/falcon2-11b,2024-05-13,5-shot
 falcon-40b,81.29,independent,https://huggingface.co/blog/falcon2-11b,2024-05-24,"5-shot, same comparison table"

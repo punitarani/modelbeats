@@ -5,10 +5,10 @@
   "releaseDate": "2026-10-23",
   "predecessor": "kimi-k3",
   "status": "released",
-  "openness": "closed",
-  "license": "Proprietary API for now (Moonshot says full model weights will be released by Nov 4, 2026)",
+  "openness": "open-weights",
+  "license": "Kimi K3.1 Pro License (modified MIT; Model-as-a-Service operators with over $20M in trailing 12-month revenue need a separate agreement, and products over 100M MAU or $20M monthly revenue must display \"Kimi K3.1-Pro\")",
   "paramsB": 2800,
-  "activeParamsB": null,
+  "activeParamsB": 104,
   "archClass": "moe",
   "archDisplay": "Post-trained version of Kimi K3 (same 2.8T-parameter MoE base) with substantially larger multi-domain joint RL; 1M-token context; always-on thinking with reasoning_effort low, high or max (default max); text, image and video input",
   "ctxK": 1024,
@@ -32,9 +32,10 @@
     "output": 10
   },
   "links": {
-    "docs": "https://platform.kimi.ai/docs/guide/kimi-k3-1-pro-quickstart"
+    "docs": "https://platform.kimi.ai/docs/guide/kimi-k3-1-pro-quickstart",
+    "hf": "moonshotai/Kimi-K3.1-Pro"
   },
-  "note": "First model of Moonshot's K3.1 series, launched Oct 23, 2026 on Kimi.ai, Kimi Work, Kimi Code and the Kimi API, alongside a 2-3x faster Kimi K3.1 Pro Highspeed. Moonshot calls it a post-trained Kimi K3 with much more RL compute and says full weights will ship by Nov 4, 2026, so it is filed as closed until they do (MiniMax M3.1 Flash precedent). Moonshot also says it removed cyber-related data from mid-training and RL for the open-weight release. API price $2/$10 per Mtok (Artificial Analysis, from Kimi's API; Kimi's own pricing table renders client-side and could not be read). Scores are Moonshot's at max effort. NOT FILED: OfficeQA Pro v2 (64.4; the corpus officeqa-pro column holds v1 figures, e.g. Opus 5.5 67.7 vs 62.2 on v2), Frontier Finance (58.6), ProgramBench (binary-score variant), GDPval-AA v2.1 (AA re-based scale), Agents' Last Exam, GDP.pdf, ChartoGraphy, ZeroBench, HLE without tools, and Kimi's internal suites (Kimi Code Bench, Hallu Bench, xdev-bench-hard); DeepSWE v1.1 (75.5) and MMMU-Pro (84.1) appear in only one transcription of the image grid. Kimi K3.1 Pro Highspeed is not filed separately: no benchmark table and no first-party price could be read.",
+  "note": "First model of Moonshot's K3.1 series, launched Oct 23, 2026 on Kimi.ai, Kimi Work, Kimi Code and the Kimi API, alongside a 2-3x faster Kimi K3.1 Pro Highspeed. Moonshot calls it a post-trained Kimi K3 with much more RL compute. Weights were published on Hugging Face (moonshotai/Kimi-K3.1-Pro) on Nov 4, 2026 under the Kimi K3.1 Pro License: 2.8T total / 104B activated MoE (896 experts, 16 per token, 2 shared), 93 layers mixing 69 KDA and 24 Gated DSA attention layers, MXFP4 weights with MXFP8 activations, text and image input. Moonshot also says it removed cyber-related data from mid-training and RL for the open-weight release. API price $2/$10 per Mtok (Artificial Analysis, from Kimi's API; Kimi's own pricing table renders client-side and could not be read). Scores are Moonshot's at max effort. NOT FILED: OfficeQA Pro v2 (64.4; the corpus officeqa-pro column holds v1 figures, e.g. Opus 5.5 67.7 vs 62.2 on v2), Frontier Finance (58.6), ProgramBench (binary-score variant), GDPval-AA v2.1 (AA re-based scale), Agents' Last Exam, GDP.pdf, ChartoGraphy, ZeroBench, HLE without tools, and Kimi's internal suites (Kimi Code Bench, Hallu Bench, xdev-bench-hard); DeepSWE v1.1 (75.5) and MMMU-Pro (84.1) were held at launch because they appeared in only one transcription of the image grid; both are filed from the Nov 4 Hugging Face card, which states them in text. Kimi K3.1 Pro Highspeed is not filed separately: no benchmark table and no first-party price could be read.",
   "quants": [],
   "vramQ4Gb": null,
   "vramFp16Gb": null,
@@ -46,7 +47,8 @@
   "specSources": {
     "releaseDate/weightsPromise/archDisplay": "https://www.kimi.ai/blog/kimi-k3-1-pro",
     "ctxK/reasoningEffort/modalities": "https://platform.kimi.ai/docs/guide/kimi-k3-1-pro-quickstart",
-    "paramsB/price": "https://artificialanalysis.ai/models/kimi-k3-1-pro"
+    "paramsB/price": "https://artificialanalysis.ai/models/kimi-k3-1-pro",
+    "openness/license/activeParamsB": "https://huggingface.co/moonshotai/Kimi-K3.1-Pro"
   },
   "results": [
     {
@@ -120,6 +122,22 @@
       "sourceUrl": "https://www.kimi.ai/blog/kimi-k3-1-pro",
       "evaluatedAt": "2026-10-23",
       "notes": "OSWorld V2.1 with the Kimi Agent harness in the official OSWorld v2 repo. Figure is in the image-only benchmark grid of Moonshot's Oct 23, 2026 launch blog (K3.1 Pro column, reasoning effort max); the blog's alt text does not carry it, so it was checked against independent text transcriptions of that grid that agree exactly (wokey.ai/models/kimi-k3.1-pro, mer.vin K3.1 Pro launch write-up). Same convention as the Kimi K3 entry."
+    },
+    {
+      "benchmarkSlug": "deepswe",
+      "score": 75.5,
+      "source": "self-reported",
+      "sourceUrl": "https://huggingface.co/moonshotai/Kimi-K3.1-Pro",
+      "evaluatedAt": "2026-11-04",
+      "notes": "DeepSWE v1.1, Evaluation Results table on Moonshot's Hugging Face model card (reasoning effort max, Claude Code harness); behind DeepSeek-V4.1-Flash-1017 (77.0), ahead of Claude Opus 5.5 (74.2) in the same table. The launch blog had it only in an image grid; the Nov 4 card states it in text."
+    },
+    {
+      "benchmarkSlug": "mmmu-pro",
+      "score": 84.1,
+      "source": "self-reported",
+      "sourceUrl": "https://huggingface.co/moonshotai/Kimi-K3.1-Pro",
+      "evaluatedAt": "2026-11-04",
+      "notes": "MMMU-Pro without tools, Evaluation Results table on Moonshot's Hugging Face model card (reasoning effort max). The card's separate 'MMMU-Pro w/ python' figure (90.0) is a tool-assisted run and is not filed."
     }
   ]
 }

@@ -1,0 +1,46 @@
+{
+  "slug": "claude-fable-5-2",
+  "name": "Claude Fable 5.2",
+  "orgSlug": "anthropic",
+  "familySlug": "claude-5",
+  "releaseDate": "2026-11-09",
+  "status": "released",
+  "predecessor": "claude-fable-5-1",
+  "openness": "closed",
+  "license": "Proprietary",
+  "paramsB": null,
+  "activeParamsB": null,
+  "archClass": "dense",
+  "archDisplay": "Proprietary frontier model (architecture and size undisclosed); adaptive thinking (always on) with selectable effort, 1M-token context, 128K max output, text+image in / text out",
+  "ctxK": 1000,
+  "modalities": [
+    "text",
+    "vision"
+  ],
+  "langCount": null,
+  "capabilities": {
+    "reasoning": true,
+    "coding": true,
+    "vision": true,
+    "functionCalling": true,
+    "toolUse": true,
+    "agentic": true
+  },
+  "apiAvailable": true,
+  "price": {
+    "input": 8,
+    "output": 40
+  },
+  "links": {
+    "docs": "https://platform.claude.com/docs/en/models/fable-5-2/overview"
+  },
+  "note": "Anthropic's November 9, 2026 flagship, shipping as `claude-fable-5-2` on the Claude API, Bedrock, Google Cloud and Microsoft Foundry. List price drops 20% to $8/$40 per Mtok (Fable 5.1: $10/$50); cache reads $0.20, Batch 50% off, fast mode $16/$80. Default API effort is high; Claude apps and Claude Code default to Medium. Like 5.1, Fable 5.2 and Mythos 5.2 are the SAME model with different safeguard levels; this row is the generally available one, and the cyber and protein-design rows of the launch table (Mythos 5.2 only) are not filed here. The launch table is vendor-run at each model's highest-available effort with safeguards on. Anthropic publishes a row it loses: Gemini 4 Carbon leads AutomationBench (53.9 vs 51.4). NOT FILED: FrontierCode 2.0 (49.1, Xhigh) and OSWorld 2.1 offline set (89.3), new versions with no corpus column (same treatment as Gemini 4 Carbon); AA-Briefcase v1.1 (66.1) and the unlabelled Elo row under it (1785); Remote Labor Index (41.3), WANDR (82.1) and the internally run RoboDojo Sim (64.9), which have no column; Humanity's Last Exam with tools (74.2) and ARC Prize's ARC-AGI-3 Standard result (81.2, XHigh), both above the curated bounds of their columns (hle normMax 65, arc-agi-3 normMax 70), so they wait on a bounds decision. Vals AI's independent runs (Terminal-Bench 4.0 65.15, #1 of 63; Terminal-Bench-Science 55.71, #2 of 45) are not filed: Vals ran it with a 1.88% provider-fallback rate and shows no fallbacks-as-failures figure.",
+  "quants": [],
+  "vramQ4Gb": null,
+  "vramFp16Gb": null,
+  "tps4090": null,
+  "tpsNote": null,
+  "effortLabel": null,
+  "isDefaultConfig": true,
+  "isBestConfig": true
+}

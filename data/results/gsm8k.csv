@@ -71,7 +71,9 @@ granite-3-1-8b-instruct,73.84,independent,https://huggingface.co/ibm-granite/gra
 granite-3-2-8b-instruct,81.65,self-reported,https://huggingface.co/ibm-granite/granite-3.2-8b-instruct,,
 granite-3-3-8b-instruct,80.89,self-reported,https://huggingface.co/ibm-granite/granite-3.3-8b-instruct,,
 granite-4-0-h-small,87.27,self-reported,https://huggingface.co/ibm-granite/granite-4.0-h-small,,
+granite-4-1-3b-llmon-preview,86.96,self-reported,https://huggingface.co/ibm-granite/granite-4.1-3b-llmon-preview/blob/main/README.md,2026-11-12,"8-shot, 3B-LLMON column"
 granite-4-1-8b-instruct,92.49,self-reported,https://huggingface.co/ibm-granite/granite-4.1-8b,,8-shot
+granite-4-1-8b-llmon-preview,89.16,self-reported,https://huggingface.co/ibm-granite/granite-4.1-8b-llmon-preview/blob/main/README.md,2026-11-12,"8-shot, 8B-LLMON column"
 grok-1,62.9,self-reported,https://x.ai/news/grok,2023-11-03,"8-shot, chain-of-thought prompt, per xAI's original 'Announcing Grok' blog post benchmark table; also corroborated in the later 'Announcing Grok-1.5' post's Grok-1 comparison column."
 grok-1-5,90,self-reported,https://x.ai/news/grok-1.5,2024-03-29,
 guanaco-65b,26,independent,https://huggingface.co/datasets/open-llm-leaderboard-old/details_TheBloke__guanaco-65B-HF,2023-10-23,GSM8K 5-shot accuracy from the same HF Open LLM Leaderboard (old) details dataset run (harness|gsm8k|5 acc 0.260045).

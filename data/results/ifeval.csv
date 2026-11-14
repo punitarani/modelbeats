@@ -58,7 +58,9 @@ granite-3-1-8b-instruct,72.08,independent,https://huggingface.co/ibm-granite/gra
 granite-3-2-8b-instruct,74.31,self-reported,https://huggingface.co/ibm-granite/granite-3.2-8b-instruct,,
 granite-3-3-8b-instruct,74.82,self-reported,https://huggingface.co/ibm-granite/granite-3.3-8b-instruct,,
 granite-4-0-h-small,87.55,self-reported,https://huggingface.co/ibm-granite/granite-4.0-h-small,,Average of instruct + prompt strict
+granite-4-1-3b-llmon-preview,81.02,self-reported,https://huggingface.co/ibm-granite/granite-4.1-3b-llmon-preview/blob/main/README.md,2026-11-12,"IFEval Avg, 3B-LLMON column"
 granite-4-1-8b-instruct,87.06,self-reported,https://huggingface.co/ibm-granite/granite-4.1-8b,,IFEval Avg
+granite-4-1-8b-llmon-preview,86.69,self-reported,https://huggingface.co/ibm-granite/granite-4.1-8b-llmon-preview/blob/main/README.md,2026-11-12,"IFEval Avg, 8B-LLMON column"
 hermes-3-405b,84.87,self-reported,https://arxiv.org/pdf/2408.11857,,"Strict accuracy, Table 5."
 hunyuan-a13b,84.7,self-reported,https://huggingface.co/tencent/Hunyuan-A13B-Instruct,,IF-Eval strict-prompt.
 hunyuan-large-a52b,85,self-reported,https://huggingface.co/tencent/Tencent-Hunyuan-Large,,"IFEval strict-prompt, Instruct-model table."
