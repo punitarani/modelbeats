@@ -1,0 +1,55 @@
+{
+  "name": "Hy4 Flash",
+  "org": "Tencent",
+  "family": "Hunyuan",
+  "slug": "hy4-flash",
+  "releaseDate": "2026-11-16",
+  "predecessor": null,
+  "status": "released",
+  "openness": "closed",
+  "license": "Proprietary",
+  "paramsB": null,
+  "activeParamsB": null,
+  "archClass": "moe",
+  "archDisplay": "Fast, low-cost sibling of Hy4 with retained deep thinking and image understanding; architecture and size not stated on Tencent's pages; 1M-token context",
+  "ctxK": 1000,
+  "modalities": [
+    "text",
+    "vision"
+  ],
+  "langCount": null,
+  "capabilities": {
+    "reasoning": true,
+    "coding": true,
+    "vision": true,
+    "functionCalling": true,
+    "toolUse": true,
+    "agentic": false
+  },
+  "apiAvailable": true,
+  "price": {
+    "input": 0.07,
+    "output": 0.281,
+    "provider": "Tencent Cloud",
+    "effectiveAt": "2026-11-16"
+  },
+  "links": {
+    "docs": "https://www-sg.tencentcloud.com/zh/document/product/1300/78934"
+  },
+  "note": "Tencent's Hy4 Flash, listed on Tencent Cloud TokenHub on Nov 16, 2026 (model list and price pages last updated that day) as model hy4-flash: 1M context, 960K max input, 64K max output, retained deep thinking, structured output, function calling, caching and image understanding, the same limits as Hy4. List price is $0.07 input / $0.281 output / $0.003 cached per Mtok (Hy4 is $0.834/$2.501); a 50% launch discount through Nov 30, 2026 is promotional and not filed. Hy4 Flash is a smaller sibling of Hy4, not its successor, so predecessor is null. The launch post (hunyuan.tencent.com/research/hy4-flash) renders client-side and could not be read, so the 224B total / 12B active parameters, planned open weights and benchmark figures reported by the press (HLE with tools 55.2, APEX-Agents v1.1 63.1, DeepSWE v1.1 64.6, Terminal-Bench 4.0 19.2 and others) are unverified and not filed. Not on Vals AI yet.",
+  "quants": [],
+  "vramQ4Gb": null,
+  "vramFp16Gb": null,
+  "tps4090": null,
+  "tpsNote": null,
+  "effortLabel": null,
+  "isDefaultConfig": true,
+  "isBestConfig": true,
+  "specSources": {
+    "releaseDate": "https://www-sg.tencentcloud.com/zh/document/product/1300/78934",
+    "ctxK": "https://www-sg.tencentcloud.com/zh/document/product/1300/78934",
+    "modalities": "https://www-sg.tencentcloud.com/zh/document/product/1300/78934",
+    "price": "https://www-sg.tencentcloud.com/zh/document/product/1300/78937"
+  },
+  "results": []
+}
