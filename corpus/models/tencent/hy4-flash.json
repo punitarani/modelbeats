@@ -7,11 +7,11 @@
   "predecessor": null,
   "status": "released",
   "openness": "closed",
-  "license": "Proprietary",
-  "paramsB": null,
-  "activeParamsB": null,
+  "license": "Proprietary (open weights planned)",
+  "paramsB": 224,
+  "activeParamsB": 12,
   "archClass": "moe",
-  "archDisplay": "Fast, low-cost sibling of Hy4 with retained deep thinking and image understanding; architecture and size not stated on Tencent's pages; 1M-token context",
+  "archDisplay": "MoE, 224B total parameters (including 64B Engram parameters) with 12B active per token; natively multimodal, 1M-token context",
   "ctxK": 1000,
   "modalities": [
     "text",
@@ -34,9 +34,9 @@
     "effectiveAt": "2026-11-16"
   },
   "links": {
-    "docs": "https://www-sg.tencentcloud.com/zh/document/product/1300/78934"
+    "docs": "https://hy.tencent.ai/research/hy4-flash"
   },
-  "note": "Tencent's Hy4 Flash, listed on Tencent Cloud TokenHub on Nov 16, 2026 (model list and price pages last updated that day) as model hy4-flash: 1M context, 960K max input, 64K max output, retained deep thinking, structured output, function calling, caching and image understanding, the same limits as Hy4. List price is $0.07 input / $0.281 output / $0.003 cached per Mtok (Hy4 is $0.834/$2.501); a 50% launch discount through Nov 30, 2026 is promotional and not filed. Hy4 Flash is a smaller sibling of Hy4, not its successor, so predecessor is null. The launch post (hunyuan.tencent.com/research/hy4-flash) renders client-side and could not be read, so the 224B total / 12B active parameters, planned open weights and benchmark figures reported by the press (HLE with tools 55.2, APEX-Agents v1.1 63.1, DeepSWE v1.1 64.6, Terminal-Bench 4.0 19.2 and others) are unverified and not filed. Not on Vals AI yet.",
+  "note": "Tencent's Hy4 Flash, announced Nov 16, 2026 (launch post) as its most cost-effective Hy model: 224B total parameters (including 64B Engram parameters), 12B active per token, natively multimodal. WEIGHTS PLANNED, NOT YET PUBLIC: Tencent says it plans an open-weight release, so openness stays closed. Tencent Cloud TokenHub lists it as model hy4-flash: 1M context, 960K max input, 64K max output, retained deep thinking, structured output, function calling, caching and image understanding, the same limits as Hy4. List price is $0.07 input / $0.281 output / $0.003 cached per Mtok (Hy4 is $0.834/$2.501); a 50% launch discount through Nov 30, 2026 is promotional and not filed. Hy4 Flash is a smaller sibling of Hy4, not its successor, so predecessor is null. The launch post's benchmark appendix is an image, so the figures reported by the press (HLE with tools 55.2, APEX-Agents v1.1 63.1, DeepSWE v1.1 64.6, Terminal-Bench 4.0 19.2 and others) are unverified and not filed; its text gives only internal evaluations (WorkIndex cost per task 1/20 of Hy4's, blind user satisfaction close to Claude Haiku 5.5). Not on Vals AI yet.",
   "quants": [],
   "vramQ4Gb": null,
   "vramFp16Gb": null,
@@ -46,7 +46,10 @@
   "isDefaultConfig": true,
   "isBestConfig": true,
   "specSources": {
-    "releaseDate": "https://www-sg.tencentcloud.com/zh/document/product/1300/78934",
+    "releaseDate": "https://hy.tencent.ai/research/hy4-flash",
+    "paramsB": "https://hy.tencent.ai/research/hy4-flash",
+    "activeParamsB": "https://hy.tencent.ai/research/hy4-flash",
+    "weightsPlan": "https://hy.tencent.ai/research/hy4-flash",
     "ctxK": "https://www-sg.tencentcloud.com/zh/document/product/1300/78934",
     "modalities": "https://www-sg.tencentcloud.com/zh/document/product/1300/78934",
     "price": "https://www-sg.tencentcloud.com/zh/document/product/1300/78937"
