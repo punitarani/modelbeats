@@ -18,6 +18,7 @@ minicpm3-4b,68.3,self-reported,https://huggingface.co/openbmb/MiniCPM3-4B,2024-0
 mistral-large-2-24-07,87,self-reported,https://huggingface.co/mistralai/Mistral-Large-Instruct-2407,2024-07-24,HF model card 'Code & Reasoning Benchmarks' table (Human Eval Plus row).
 mistral-small-3-2-24b,92.9,self-reported,https://huggingface.co/mistralai/Mistral-Small-3.2-24B-Instruct-2506,,"HumanEval Plus, pass@5"
 nemotron-h-56b,54.27,self-reported,https://huggingface.co/nvidia/Nemotron-H-56B-Base-8K,,"HumanEval+, 0-shot"
+olala-v1-0-mini-7a1b,88.3,self-reported,https://huggingface.co/OVHaiLLM/Olala-v1.0-mini-7A1B,2026-11-19,"Olala v1.0 mini 7A1B column of the comparison table on the OVHaiLLM Hugging Face model card (zero-shot, reasoning effort high; pass@1 averaged over 5 samples)."
 olmo-3-7b,77.2,self-reported,https://huggingface.co/allenai/Olmo-3-7B-Instruct,,HumanEvalPlus
 olmo-3-think-32b,91.4,self-reported,https://huggingface.co/allenai/Olmo-3-32B-Think,,HumanEvalPlus; Qwen 3 32B 91.2
 phi-4-14b,82.8,self-reported,https://arxiv.org/abs/2412.08905,,"Table 1, row 'HumanEval+', confirmed via direct PDF page read of the official Microsoft Research PDF."

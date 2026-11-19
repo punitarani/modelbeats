@@ -90,6 +90,7 @@ gemini-3-pro,Google (Gemini API / Vertex AI),2,12,2025-11-18
 gemini-4-argon,Google,2,10,2026-10-13
 gemini-4-carbon,Google,2,10,2026-11-10
 gemini-4-hydrogen,Google,1.5,7.5,2026-11-12
+gemini-4-neon,Google,3,15,2026-11-18
 glm-4-5-355b-a32b,Z.ai,0.6,2.2,2025-07-28
 glm-4-5-air-106b-a12b,Z.ai,0.2,1.1,2025-07-28
 glm-4-6,zhipu-ai-z-ai-tsinghua,0.6,2.2,2025-09-30
@@ -129,6 +130,8 @@ gpt-5-nano,OpenAI,0.05,0.4,2025-08-07
 gpt-5-pro,openai,15,120,2025-08-07
 gpt-6-1-sol,OpenAI,2,10,2026-09-29
 gpt-6-1-terra,OpenAI,1,5,2026-10-26
+gpt-6-2-astra,OpenAI,8,40,2026-11-17
+gpt-6-2-sol,OpenAI,2,10,2026-11-17
 gpt-6-astra,OpenAI,10,50,2026-09-03
 gpt-6-luna,OpenAI,0.1,0.5,2026-09-22
 gpt-6-sol,OpenAI,2,10,2026-09-22
@@ -175,6 +178,8 @@ llama-3-3-nemotron-super-49b-v1-reasoning-on,DeepInfra,0.1,0.5,2025-03-18
 luminous-supreme-70b,Aleph Alpha,175,192.5,2022-04-14
 magistral-medium,Mistral La Plateforme,2,5,2025-06-10
 magistral-small,Mistral La Plateforme,0.5,1.5,2025-06-10
+mai-code-2,GitHub Copilot,0.5,2.5,2026-11-17
+mai-code-2-flash,GitHub Copilot,0.05,0.25,2026-11-17
 mimo-v2-5,xiaomi,0.14,0.28,2026-04-22
 mimo-v2-5-pro,xiaomi,0.435,0.87,2026-04-22
 mimo-v2-6-flash,Xiaomi,0.14,0.28,2026-09-22

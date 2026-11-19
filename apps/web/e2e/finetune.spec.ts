@@ -107,7 +107,7 @@ test.describe('fine-tune selector', () => {
     await gotoHydrated(page, '/finetune')
     await pickOption(page, 'finetune-sort', 'Cheapest training')
     await expect(page).toHaveURL(/sort=cost/)
-    await expect(page.getByTestId('finetune-row').first()).toContainText('SantaCoder 1.1B')
+    await expect(page.getByTestId('finetune-row').first()).toContainText('Olala v1.0 mini 7A1B')
   })
 
   test('effort/mode variants collapse to one row per checkpoint', async ({ page }) => {

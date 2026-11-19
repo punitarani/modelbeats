@@ -1,0 +1,86 @@
+{
+  "name": "MAI Code 2",
+  "org": "Microsoft",
+  "family": "MAI Code 2",
+  "familySlug": "mai-code-2",
+  "slug": "mai-code-2",
+  "releaseDate": "2026-11-17",
+  "predecessor": null,
+  "status": "released",
+  "openness": "closed",
+  "license": "Proprietary",
+  "paramsB": null,
+  "activeParamsB": null,
+  "archClass": "moe",
+  "archDisplay": "Decoder-only transformer with sparse Mixture-of-Experts layers and an integrated vision encoder; 1.05M-token context (922K input, 128K output); reasoning effort low to max",
+  "ctxK": 1050,
+  "modalities": [
+    "text",
+    "vision"
+  ],
+  "langCount": null,
+  "capabilities": {
+    "reasoning": true,
+    "coding": true,
+    "vision": true,
+    "functionCalling": true,
+    "toolUse": true,
+    "agentic": true
+  },
+  "apiAvailable": true,
+  "price": {
+    "input": 0.5,
+    "output": 2.5,
+    "provider": "GitHub Copilot",
+    "effectiveAt": "2026-11-17"
+  },
+  "links": {
+    "docs": "https://microsoft.ai/news/introducing-mai-code-2-and-mai-code-2-flash/",
+    "modelCard": "https://microsoft.ai/pdf/MAI-Code-2-And-MAI-Code-2-Flash-Model-Card.pdf?v=2"
+  },
+  "note": "Microsoft AI's MAI Code 2, released Nov 17, 2026 (model card) in GitHub Copilot, billed per token under usage-based billing. Microsoft's larger agentic coding model for complex, long-horizon software engineering, available on Copilot Pro, Pro+, Max, Business and Enterprise. Parameters are left null because the card contradicts itself: its summary says '50B-100B (80B active)' while Section 1 says 77B active and about 2.8T total. Price is GitHub's promotional rate ($0.5/$2.5 per Mtok) until May 17, 2027, then $1/$5, following the Gemini 4 Carbon precedent of filing the current introductory headline price. Weights are not distributed (model card). Predecessor is null: the card compares the family with MAI-Code-1.1-Flash, which is not in this corpus and is a different family. Rows come from the model card's quality table (Section 3: MSBench with the GitHub Copilot CLI harness, subagents off, max reasoning, pass rate) plus GPQA from its CBRN evaluation table (settings not stated). NOT FILED: SWE Atlas 43.1 (the full three-workflow benchmark, not the Codebase QnA column); the card's advanced-autonomy table gives different DeepSWE 1.1 (60.2) and SWE Atlas (80.9) figures and GAIA 67.27, and its loss-of-control table gives Terminal-Bench 4 26.3, all under unstated settings, so they are left out; the launch post's comparisons are relative only. Not on Vals AI yet.",
+  "quants": [],
+  "vramQ4Gb": null,
+  "vramFp16Gb": null,
+  "tps4090": null,
+  "tpsNote": null,
+  "effortLabel": null,
+  "isDefaultConfig": true,
+  "isBestConfig": true,
+  "specSources": {
+    "releaseDate": "https://microsoft.ai/pdf/MAI-Code-2-And-MAI-Code-2-Flash-Model-Card.pdf?v=2",
+    "announcement": "https://microsoft.ai/news/introducing-mai-code-2-and-mai-code-2-flash/",
+    "archDisplay": "https://microsoft.ai/pdf/MAI-Code-2-And-MAI-Code-2-Flash-Model-Card.pdf?v=2",
+    "ctxK": "https://microsoft.ai/pdf/MAI-Code-2-And-MAI-Code-2-Flash-Model-Card.pdf?v=2",
+    "modalities": "https://microsoft.ai/pdf/MAI-Code-2-And-MAI-Code-2-Flash-Model-Card.pdf?v=2",
+    "activeParamsB": "https://microsoft.ai/pdf/MAI-Code-2-And-MAI-Code-2-Flash-Model-Card.pdf?v=2",
+    "price": "https://docs.github.com/en/copilot/reference/copilot-billing/models-and-pricing",
+    "openness": "https://microsoft.ai/pdf/MAI-Code-2-And-MAI-Code-2-Flash-Model-Card.pdf?v=2"
+  },
+  "results": [
+    {
+      "benchmarkSlug": "deepswe",
+      "score": 73.2,
+      "source": "self-reported",
+      "sourceUrl": "https://microsoft.ai/pdf/MAI-Code-2-And-MAI-Code-2-Flash-Model-Card.pdf?v=2",
+      "evaluatedAt": "2026-11-17",
+      "notes": "DeepSWE 1.1, model card Section 3 quality table (MSBench, GitHub Copilot CLI harness, subagents off, max reasoning; mean single-attempt pass rate over 3 runs)."
+    },
+    {
+      "benchmarkSlug": "terminal-bench-2",
+      "score": 84.6,
+      "source": "self-reported",
+      "sourceUrl": "https://microsoft.ai/pdf/MAI-Code-2-And-MAI-Code-2-Flash-Model-Card.pdf?v=2",
+      "evaluatedAt": "2026-11-17",
+      "notes": "Terminal-Bench 2.1, model card Section 3 quality table (MSBench, GitHub Copilot CLI harness, subagents off, max reasoning; mean over 3 runs)."
+    },
+    {
+      "benchmarkSlug": "gpqa",
+      "score": 93.43,
+      "source": "self-reported",
+      "sourceUrl": "https://microsoft.ai/pdf/MAI-Code-2-And-MAI-Code-2-Flash-Model-Card.pdf?v=2",
+      "evaluatedAt": "2026-11-17",
+      "notes": "GPQA, model card CBRN automated-evaluations table (Section 3.2.3.1); subset and settings not stated beyond 'GPQA'."
+    }
+  ]
+}

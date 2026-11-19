@@ -41,6 +41,8 @@ gpt-5-6-terra,83.9,independent,https://arcprize.org/results/openai-gpt-5-6-terra
 gpt-5-nano,22.6,independent,https://themodelbeat.com/models/gpt-5-nano,,"ARC-AGI-2 score from Epoch AI's independent evaluation of GPT-5 nano, relayed via themodelbeat.com."
 gpt-5-pro,18.3,independent,https://epoch.ai/models/gpt-5-pro,,"Epoch AI's independent ARC-AGI-2 evaluation of GPT-5 Pro -- a genuinely hard, non-saturating eval (contrast with the model's much higher scores on GPQA/AIME)."
 gpt-6-1-sol,94.2,independent,https://arcprize.org/results/openai-gpt-6-1-sol,2026-09-29,"ARC Prize verified result on the Semi-Private set, run by the ARC Prize team. Max variant (XHigh and High 91.7%)."
+gpt-6-2-astra,95.8,independent,https://arcprize.org/results/openai-gpt-6-2-astra,2026-11-17,"ARC Prize Verified result on the Semi-Private set, run by the ARC Prize team (results page dated 2026-11-17). Max and XHigh 95.8% (High 94.6%, Medium 93.3%, Low 91.7%)."
+gpt-6-2-sol,85.8,independent,https://arcprize.org/results/openai-gpt-6-2-sol,2026-11-17,"ARC Prize Verified result on the Semi-Private set, run by the ARC Prize team (results page dated 2026-11-17). Max, XHigh and High 85.8% (Medium 82.9%, Low 57.9%)."
 gpt-6-astra,95,independent,https://arcprize.org/results/openai-gpt-6-astra,2026-09-18,"ARC Prize verified result, Max effort (XHigh 93.3%, High 92.1%). Replaces an unsourced 94.6."
 gpt-6-astra,95,self-reported,https://openai.com/index/gpt-6-astra,2026-09-03,"ARC-AGI-2, GPT-6 Astra launch table; best in row ahead of GPT-5.6 Sol (92.5) and Claude Opus 5 (90.4)."
 gpt-6-luna,59.3,independent,https://arcprize.org/results/openai-gpt-6-luna,2026-09-22,"ARC Prize verified result on the Semi-Private set, run by the ARC Prize team. Max variant (XHigh 41.9%)."

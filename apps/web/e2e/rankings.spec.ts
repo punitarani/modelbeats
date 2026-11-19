@@ -2,9 +2,7 @@ import { expect, test } from '@playwright/test'
 import { datasetCounts, gotoHydrated, pickOption } from './helpers'
 
 test.describe('rankings', () => {
-  test('default view: rank-eligible rows sorted by Elo, Gemini 4 Carbon first', async ({
-    page,
-  }) => {
+  test('default view: rank-eligible rows sorted by Elo, Gemini 4 Neon first', async ({ page }) => {
     const { models } = datasetCounts()
     await gotoHydrated(page, '/rankings')
     await expect(page.getByTestId('rankings-meta')).toContainText(
@@ -13,8 +11,8 @@ test.describe('rankings', () => {
     // the coverage gate (D20) keeps single-benchmark curiosities (Doubao) out of the top; the
     // #1 row is the broadly-benchmarked frontier leader (Frontier Elo, D21)
     const first = page.getByTestId('ranking-row').first()
-    await expect(first).toContainText('Gemini 4 Carbon')
-    await expect(first).toContainText('3248.8')
+    await expect(first).toContainText('Gemini 4 Neon')
+    await expect(first).toContainText('3340.7')
   })
 
   test('column sort click mutates URL and reorders rows', async ({ page }) => {
@@ -26,12 +24,12 @@ test.describe('rankings', () => {
       await page.getByTestId('sort-gpqa').click()
       await expect(page).toHaveURL(/sort=-gpqa/, { timeout: 2000 })
     }).toPass({ timeout: 15_000 })
-    // GPQA Diamond's leader (GPT-6 Astra, 96.0) also happens to lead on Elo, so the reorder
-    // shows in the SECOND row: under Elo it is Muse Spark 1.3 (no GPQA score at all), under
-    // GPQA it is GPT-5.6 Sol (94.6). The sort both mutates the URL and reorders the rows.
+    // Under Elo the first row is Gemini 4 Neon (no GPQA score); under GPQA it is GPT-6.2 Astra
+    // (97.0), then GPT-6.2 Sol (96.0, tied with GPT-6 Astra and ahead of it on the slug
+    // tiebreak). The sort both mutates the URL and reorders the rows.
     const sorted = page.getByTestId('ranking-row')
-    await expect(sorted.first()).toContainText('GPT-6 Astra')
-    await expect(sorted.nth(1)).toContainText('GPT-5.6 Sol')
+    await expect(sorted.first()).toContainText('GPT-6.2 Astra')
+    await expect(sorted.nth(1)).toContainText('GPT-6.2 Sol')
     // second click flips to ascending
     await page.getByTestId('sort-gpqa').click()
     await expect(page).toHaveURL(/sort=gpqa/, { timeout: 10_000 })

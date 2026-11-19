@@ -1,0 +1,45 @@
+{
+  "slug": "olala-v1-0-mini-7a1b",
+  "name": "Olala v1.0 mini 7A1B",
+  "orgSlug": "ovhcloud",
+  "familySlug": "olala",
+  "releaseDate": "2026-11-19",
+  "status": "released",
+  "predecessor": null,
+  "openness": "open-weights",
+  "license": "Apache-2.0",
+  "paramsB": 6.8,
+  "activeParamsB": 1,
+  "archClass": "moe",
+  "archDisplay": "6.8B-parameter hybrid Mixture-of-Experts (about 1B active/token): 36 layers (29 Mamba-3 + 7 differential attention), each followed by an MoE block with 256 routed experts (6 active) + 1 shared; BF16; 32K-token context",
+  "ctxK": 32,
+  "modalities": [
+    "text"
+  ],
+  "langCount": 37,
+  "capabilities": {
+    "reasoning": true,
+    "coding": true,
+    "vision": false,
+    "functionCalling": true,
+    "toolUse": true,
+    "agentic": false
+  },
+  "apiAvailable": false,
+  "price": null,
+  "links": {
+    "hf": "https://huggingface.co/OVHaiLLM/Olala-v1.0-mini-7A1B",
+    "docs": "https://corporate.ovhcloud.com/en/newsroom/news/ovh-olala-mini/"
+  },
+  "note": "OVHcloud's first in-house LLM, built by its OVHai LLM unit in France: a small post-trained (SFT + RL) reasoning model for chat, instruction following and tool use. Announced Nov 17, 2026 and launched with open weights on Hugging Face at the OVHcloud AI Summit on Nov 19 under Apache 2.0, alongside the pre-trained base, an SFT checkpoint, summarise/translate variants and a technical report. No hosted API price is published. Total parameters are 6.8B on the card (the press release rounds to 7B). Four reasoning-effort levels (disabled, low, medium default, high); the card's table ran Olala at high. A 128K-context v1.1 is planned. NOT FILED: Multi-IF 71.2 and LIFEBench 79.3 (no corpus column), AIME 2024 60.7 (the aime column tracks AIME 2025), and the AIME 2026, MGSM and BFCL V3 rows, which could not be read verbatim from the card. Press-release speed claims (160 tok/s on an RTX A4500, 50 tok/s on CPU) are not filed.",
+  "quants": [
+    "BF16"
+  ],
+  "vramQ4Gb": null,
+  "vramFp16Gb": null,
+  "tps4090": null,
+  "tpsNote": null,
+  "effortLabel": null,
+  "isDefaultConfig": true,
+  "isBestConfig": true
+}

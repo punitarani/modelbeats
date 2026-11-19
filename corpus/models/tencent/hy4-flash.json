@@ -36,7 +36,7 @@
   "links": {
     "docs": "https://hy.tencent.ai/research/hy4-flash"
   },
-  "note": "Tencent's Hy4 Flash, announced Nov 16, 2026 (launch post) as its most cost-effective Hy model: 224B total parameters (including 64B Engram parameters), 12B active per token, natively multimodal. WEIGHTS PLANNED, NOT YET PUBLIC: Tencent says it plans an open-weight release, so openness stays closed. Tencent Cloud TokenHub lists it as model hy4-flash: 1M context, 960K max input, 64K max output, retained deep thinking, structured output, function calling, caching and image understanding, the same limits as Hy4. List price is $0.07 input / $0.281 output / $0.003 cached per Mtok (Hy4 is $0.834/$2.501); a 50% launch discount through Nov 30, 2026 is promotional and not filed. Hy4 Flash is a smaller sibling of Hy4, not its successor, so predecessor is null. The launch post's benchmark appendix is an image, so the figures reported by the press (HLE with tools 55.2, APEX-Agents v1.1 63.1, DeepSWE v1.1 64.6, Terminal-Bench 4.0 19.2 and others) are unverified and not filed; its text gives only internal evaluations (WorkIndex cost per task 1/20 of Hy4's, blind user satisfaction close to Claude Haiku 5.5). Not on Vals AI yet.",
+  "note": "Tencent's Hy4 Flash, announced Nov 16, 2026 (launch post) as its most cost-effective Hy model: 224B total parameters (including 64B Engram parameters), 12B active per token, natively multimodal. WEIGHTS PLANNED, NOT YET PUBLIC: Tencent says it plans an open-weight release, so openness stays closed. Tencent Cloud TokenHub lists it as model hy4-flash: 1M context, 960K max input, 64K max output, retained deep thinking, structured output, function calling, caching and image understanding, the same limits as Hy4. List price is $0.07 input / $0.281 output / $0.003 cached per Mtok (Hy4 is $0.834/$2.501); a 50% launch discount through Nov 30, 2026 is promotional and not filed. Hy4 Flash is a smaller sibling of Hy4, not its successor, so predecessor is null. The launch post's benchmark appendix is an image, so the figures reported by the press (HLE with tools 55.2, APEX-Agents v1.1 63.1, DeepSWE v1.1 64.6, Terminal-Bench 4.0 19.2 and others) are unverified and not filed; its text gives only internal evaluations (WorkIndex cost per task 1/20 of Hy4's, blind user satisfaction close to Claude Haiku 5.5). Vals AI's independent run adds Terminal-Bench 4.0 15.15 (#45 of 68, fallback rate 0%); its Finance Agent v2.1, HLAB-Vals-1.1, EMB v1.1 and Vals Index runs have no corpus column.",
   "quants": [],
   "vramQ4Gb": null,
   "vramFp16Gb": null,
@@ -54,5 +54,14 @@
     "modalities": "https://www-sg.tencentcloud.com/zh/document/product/1300/78934",
     "price": "https://www-sg.tencentcloud.com/zh/document/product/1300/78937"
   },
-  "results": []
+  "results": [
+    {
+      "benchmarkSlug": "terminal-bench-4",
+      "score": 15.15,
+      "source": "independent",
+      "sourceUrl": "https://www.vals.ai/benchmarks/terminal-bench-4",
+      "evaluatedAt": "2026-11-16",
+      "notes": "Terminal-Bench 4.0, Vals AI independent run (mini-swe-agent harness, avg@3; ±1.75) via OpenRouter, fallback rate 0.00%; #45 of 68 per the Vals model page (https://www.vals.ai/models/tencent_hy4-flash). Hy4 scored 39.39."
+    }
+  ]
 }
