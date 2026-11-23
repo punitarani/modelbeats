@@ -9,7 +9,7 @@ test.describe('compare', () => {
     await expect(legend).toContainText('GPT-5.2')
     await expect(legend).toContainText('2331')
     await expect(legend).toContainText('DeepSeek-V3.1 (Thinking)')
-    await expect(legend).toContainText('1759.4')
+    await expect(legend).toContainText('1752.1')
     // honest coverage badges (D24): GPT-5.2 has no PREF/KNOW → 4/6; DeepSeek adds KNOW → 5/6
     await expect(legend).toContainText('4/6')
     await expect(legend).toContainText('5/6')

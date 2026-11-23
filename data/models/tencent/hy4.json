@@ -6,12 +6,12 @@
   "releaseDate": "2026-11-04",
   "status": "released",
   "predecessor": "hy3",
-  "openness": "closed",
-  "license": "Proprietary (open weights promised)",
-  "paramsB": null,
-  "activeParamsB": null,
+  "openness": "open-weights",
+  "license": "Tencent Hy License",
+  "paramsB": 770,
+  "activeParamsB": 49,
   "archClass": "moe",
-  "archDisplay": "Reasoning model with vision and computer use (first Hy model with image input); architecture and size of the GA build not restated at launch",
+  "archDisplay": "MoE language backbone, 770B total / 49B active per token (plus a 1.23B-active vision path), 78 layers, 256 routed experts + 1 shared (top-8); reasoning model with vision and computer use, 1M-token context",
   "ctxK": 1000,
   "modalities": [
     "text",
@@ -32,9 +32,10 @@
     "output": 2.501
   },
   "links": {
+    "hf": "tencent/Hy4",
     "docs": "https://hy.tencent.ai/research/hy4"
   },
-  "note": "Tencent's Hy4, released November 4, 2026 on Tencent Cloud TokenHub and OpenRouter: the GA successor to Hy4 preview (Aug 2026, not in this corpus), with scaled-up pre- and post-training and vision and computer use for the first time. WEIGHTS PROMISED, NOT YET PUBLIC: Tencent says it plans to open-source the weights with a system card, so openness stays closed until the Hugging Face repo lands. Price is the launch page's USD list ($0.042 cached / $0.834 input / $2.501 output per Mtok); a 50% TokenHub discount through Dec 31, 2026 is promotional and not filed. Parameters are left null: the 770B/49B figures in circulation are Hy4 preview's and the GA post doesn't restate them. Context (1M) is from Vals AI's model page. Tencent's own benchmark tables are images only and its text figures are internal evaluations (579-task finance study 3.04, IRAB 61.63, WorkBuddy 83.18), so no self-reported rows are filed. Vals AI (via OpenRouter, fallback rate 0%) adds the independent Terminal-Bench 4.0 row; its Finance Agent v2.1 64.70, HLAB-Vals-1.1 12.50 and Vals Index 59.35 have no corpus columns.",
+  "note": "Tencent's Hy4, released November 4, 2026 on Tencent Cloud TokenHub and OpenRouter: the GA successor to Hy4 preview (Aug 2026, not in this corpus), with scaled-up pre- and post-training and vision and computer use for the first time. OPEN WEIGHTS since Nov 20, 2026: tencent/Hy4 (also Hy4-FP8 and Hy4-base) on Hugging Face under the Tencent Hy License, which requires separate permission for large MaaS operators (over $50M revenue) and products over 100M MAU. Price is the launch page's USD list ($0.042 cached / $0.834 input / $2.501 output per Mtok); a 50% TokenHub discount through Dec 31, 2026 is promotional and not filed. Parameters are from the Hugging Face card: 770B total (excluding ViT, adapter and DFly2), 49B active for text. Context (1M) is from Vals AI's model page. Tencent's own instruct benchmark tables are images only (the card's text table covers Hy4-Base few-shot only) and its text figures are internal evaluations (579-task finance study 3.04, IRAB 61.63, WorkBuddy 83.18), so no self-reported rows are filed. Vals AI (via OpenRouter, fallback rate 0%) adds the independent Terminal-Bench 4.0 row; its Finance Agent v2.1 64.70, HLAB-Vals-1.1 12.50 and Vals Index 59.35 have no corpus columns.",
   "quants": [],
   "vramQ4Gb": null,
   "vramFp16Gb": null,

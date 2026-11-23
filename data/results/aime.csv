@@ -144,6 +144,7 @@ qwq-32b,79.5,self-reported,https://www.datacamp.com/blog/qwq-32b,,"AIME24; DeepS
 qwq-32b-preview,50,self-reported,https://qwenlm.github.io/blog/qwq-32b-preview/,,AIME 2024
 r1-1776,79.8,self-reported,https://www.deeplearning.ai/the-batch/perplexity-launches-uncensored-version-of-deepseek-r1-ai-model,,"AIME 2024 pass@1, relaying Perplexity's own launch benchmark chart (original R1-1776 base model scored 80.96 on the same eval) [score corrected during round-5 full-corpus accuracy re-verify: 80.96 -> 79.8]"
 sarvam-105b,88.3,self-reported,https://huggingface.co/sarvamai/sarvam-105b,2026-02-18,"AIME 2025, without tools (96.7 with tools)"
+sarvam-105b-1711,87.9,self-reported,https://huggingface.co/sarvamai/sarvam-105b-1711,2026-11-22,"AIME 2025, no tools, mean@64. BF16 column of the Hugging Face model card's benchmark table (thinking mode)."
 seed-oss-36b,91.7,self-reported,https://huggingface.co/ByteDance-Seed/Seed-OSS-36B-Instruct,,AIME24
 seed1-5-thinking,86.7,self-reported,https://arxiv.org/abs/2504.13914,,AIME 2024
 skywork-r1v-38b,72,self-reported,https://arxiv.org/abs/2504.05599,,AIME 2024

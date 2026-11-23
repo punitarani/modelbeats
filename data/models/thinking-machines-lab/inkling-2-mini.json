@@ -1,0 +1,50 @@
+{
+  "slug": "inkling-2-mini",
+  "name": "Inkling 2 Mini",
+  "orgSlug": "thinking-machines-lab",
+  "familySlug": "inkling",
+  "releaseDate": "2026-11-20",
+  "status": "released",
+  "predecessor": null,
+  "openness": "open-weights",
+  "license": "Apache 2.0",
+  "paramsB": 26.4,
+  "activeParamsB": 5.4,
+  "archClass": "moe",
+  "archDisplay": "Looped sparse MoE (26.4B total / 5.4B activated per token): 24 layers whose two middle blocks run three times (48 layer applications); NVFP4 + MXFP8 weights (~20GB); text+image in / text out",
+  "ctxK": 1000,
+  "modalities": [
+    "text",
+    "vision"
+  ],
+  "langCount": null,
+  "capabilities": {
+    "reasoning": true,
+    "coding": true,
+    "vision": true,
+    "functionCalling": true,
+    "toolUse": true,
+    "agentic": true
+  },
+  "apiAvailable": true,
+  "price": {
+    "input": 0.15,
+    "output": 0.5
+  },
+  "links": {
+    "hf": "thinkingmachines/Inkling-2-Mini",
+    "docs": "https://thinkingmachines.ai/model-card/inkling-2-mini/"
+  },
+  "note": "Smallest model of Thinking Machines Lab's second generation, released November 20, 2026 as open weights (Apache 2.0) on Hugging Face and on Tinker. A looped MoE: the card's params row reads 5.4B activated / 26.4B total, because two middle blocks run three times per token. Context is up to 1M tokens per the model card. Price is Tinker's prefill/sample rate ($0.15 / $0.015 cached / $0.50 per Mtok, 64K and 256K tiers alike); Tinker lists no serverless-inference row for it. Inkling 2 Small is a larger sibling, not its predecessor. Self-reported rows come from the model card's own column (the card notes evaluation setups vary by model); Vals AI's runs add independent Terminal-Bench 4.0 (6.57) and Terminal-Bench Science (0.00) rows. Not filed: Terminal-Bench 2.1 71.6 (Pi harness only, no Terminus figure), ARC-AGI v1/v2 84.5/49.3 (evaluation set not stated), FrontierCode v2.0 15.1 (the frontiercode column holds 1.1), SWE-bench Pro v2 Hard 77.9 (re-versioned set), HLE-Diamond 15.2 (subset), GDPval-AA v2.1 1319 and AA-Briefcase v1.1 1263 (re-based AA scales), and rows with no column (AA Index 20.1, Vals Index 46.5, Vibe Code Bench 77.9, Vals Finance Index 50.1, LongBench v2 66.9, GraphWalks 69.7, MultiChallenge 50.0 and others).",
+  "quants": [
+    "NVFP4",
+    "MXFP8"
+  ],
+  "vramQ4Gb": null,
+  "vramFp16Gb": null,
+  "tps4090": null,
+  "tpsNote": null,
+  "effortLabel": null,
+  "isDefaultConfig": true,
+  "isBestConfig": true
+}

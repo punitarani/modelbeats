@@ -166,6 +166,7 @@ qwq-32b,63.4,self-reported,https://www.datacamp.com/blog/qwq-32b,,
 qwq-32b-preview,50,self-reported,https://qwenlm.github.io/blog/qwq-32b-preview/,,
 reka-flash-3,62,self-reported,https://reka.ai/news/introducing-reka-flash,2025-03-10,Labeled 'LiveCodeBench V5' in the official launch blog's benchmark chart
 sarvam-105b,71.7,self-reported,https://huggingface.co/sarvamai/sarvam-105b,2026-02-18,LiveCodeBench v6
+sarvam-105b-1711,75.3,self-reported,https://huggingface.co/sarvamai/sarvam-105b-1711,2026-11-22,"LiveCodeBench v6 (Aug 2024-May 2025 problems), mean@8. BF16 column of the Hugging Face model card's benchmark table (thinking mode)."
 seed-oss-36b,67.4,self-reported,https://huggingface.co/ByteDance-Seed/Seed-OSS-36B-Instruct,,LiveCodeBench v6
 seed1-5-thinking,64.9,self-reported,https://github.com/ByteDance-Seed/Seed-Thinking-v1.5,,LiveCodeBench v5
 skywork-o1-open-llama-3-1-8b,26,self-reported,https://huggingface.co/Skywork/Skywork-o1-Open-Llama-3.1-8B,2024-11-26,Column labeled 'LiveCodeBench-2024.01-2024.11' in official HF model card table (row 'Skywork-o1-Open-8B').

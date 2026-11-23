@@ -1,0 +1,45 @@
+{
+  "slug": "sarvam-105b-1711",
+  "name": "Sarvam-105B-1711",
+  "orgSlug": "sarvam-ai",
+  "familySlug": "sarvam",
+  "releaseDate": "2026-11-22",
+  "status": "released",
+  "predecessor": "sarvam-105b",
+  "openness": "open-weights",
+  "license": "Apache 2.0",
+  "paramsB": 105,
+  "activeParamsB": 10.3,
+  "archClass": "moe",
+  "archDisplay": "105B MoE transformer (~10.3B active/token) with Multi-head Latent Attention; updated post-training of Sarvam-105B, shipped as NVFP4 and BF16 weights",
+  "ctxK": 160,
+  "modalities": [
+    "text"
+  ],
+  "langCount": null,
+  "capabilities": {
+    "reasoning": true,
+    "coding": true,
+    "vision": false,
+    "functionCalling": true,
+    "toolUse": true,
+    "agentic": true
+  },
+  "apiAvailable": true,
+  "price": null,
+  "links": {
+    "hf": "sarvamai/sarvam-105b-1711",
+    "docs": "https://www.sarvam.ai/blogs/sarvam-105b-1711"
+  },
+  "note": "Sarvam AI's November 22, 2026 update to Sarvam-105B: the same 105B/10.3B-active MoE with new post-training, released as Apache-2.0 open weights (NVFP4 at sarvamai/sarvam-105b-1711, BF16 at sarvamai/sarvam-105b-1711-bf16). The API ids sarvam-105b and sarvam-105b-conversations now serve these weights. Context is 160K per the launch blog (the card's evals ran at 131,072). Price is left null: Sarvam lists INR only (₹10 input / ₹25 output per Mtok on Token Factory). Rows are the card's BF16 column, all self-run in thinking mode at temperature 1.0. Not filed as non-standard settings: IFEval 96.5 (sampled mean@4; the official setting is greedy), IFBench 82.5 (prompt-level strict, mean@8), HLE 12.3 (GPT-4.1 judge), Arena-Hard v2 76.6 (no style control), τ²-Bench 85.5 and τ³ Banking 19.8 (GPT-5.2 user simulator). Not filed for lack of a column: BFCL v4 62.4, MultiChallenge 62.2, WritingBench 86.5, HMMT, AIME 2026 89.7, and the internal GDPval-S and Indic Suite.",
+  "quants": [
+    "NVFP4"
+  ],
+  "vramQ4Gb": null,
+  "vramFp16Gb": null,
+  "tps4090": null,
+  "tpsNote": null,
+  "effortLabel": null,
+  "isDefaultConfig": true,
+  "isBestConfig": true
+}
