@@ -191,11 +191,11 @@ describe('derived scores match the D21 contract (goldens)', () => {
       .filter((m) => m.rankOverall != null && m.rankOverall <= 5)
       .sort((a, b) => (a.rankOverall ?? 0) - (b.rankOverall ?? 0))
     expect(top5.map((m) => [m.slug, m.overallIndex])).toEqual([
-      ['gemini-4-neon', 3340.5],
-      ['gpt-6-2-astra', 3305.9],
-      ['claude-fable-5-2', 3238.1],
-      ['gemini-4-carbon', 3235.6],
-      ['gpt-6-cyber', 3182.4],
+      ['gemini-4-neon', 3275.7],
+      ['gemini-4-carbon', 3229.1],
+      ['claude-fable-5-2', 3154.3],
+      ['gpt-6-cyber', 3133.6],
+      ['kimi-k3-1-pro', 3103.1],
     ])
   })
 
@@ -217,7 +217,7 @@ describe('derived scores match the D21 contract (goldens)', () => {
     const codex = models.find((m) => m.slug === 'openai-codex')
     expect(codex?.ranked).toBe(false)
     expect(codex?.rankOverall).toBeNull()
-    expect(codex?.overallIndex).toBe(-159.8)
+    expect(codex?.overallIndex).toBe(-162.5)
     const top = models.find((m) => m.rankOverall === 1)
     expect(top?.slug).toBe('gemini-4-neon')
   })
@@ -252,8 +252,8 @@ describe('derived scores match the D21 contract (goldens)', () => {
     const { models } = await derived()
     const llama = models.find((m) => m.slug === 'llama-3-1-405b')
     expect(llama?.ranked).toBe(true)
-    expect(llama?.overallIndex).toBe(1078.1)
-    expect(llama?.rankOverall).toBe(231)
+    expect(llama?.overallIndex).toBe(1075.4)
+    expect(llama?.rankOverall).toBe(232)
     // categoryIdx stays min-max (D21 keeps the radar on D2 bounds) — unchanged literals
     expect(llama?.categoryIdx).toEqual({
       'human-preference': 68.4,
@@ -279,11 +279,11 @@ describe('derived scores match the D21 contract (goldens)', () => {
   it('pins the real top-5 movers and their rating self-consistency', async () => {
     const { models, movers } = await derived()
     expect(movers.map((m) => [m.slug, m.prevSlug, m.delta])).toEqual([
-      ['sarvam-105b', 'sarvam-1-2b', 1616.9],
-      ['mistral-large-4', 'mistral-large-3', 1248.8],
+      ['sarvam-105b', 'sarvam-1-2b', 1616.8],
+      ['mistral-large-4', 'mistral-large-3', 1245.2],
       ['smollm3-3b-think', 'smollm2-1-7b', 1002.8],
-      ['deepseek-v4-flash-0731', 'deepseek-v4-flash-non-think', 997.8],
-      ['hy3', 'hunyuan-a13b', 900.8],
+      ['deepseek-v4-flash-0731', 'deepseek-v4-flash-non-think', 994.2],
+      ['hy3', 'hunyuan-a13b', 900],
     ])
     // structural: every mover delta is the rounded rating gap between two RANKED models
     const bySlug = new Map(models.map((m) => [m.slug, m]))

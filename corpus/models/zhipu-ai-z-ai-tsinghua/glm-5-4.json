@@ -1,0 +1,51 @@
+{
+  "name": "GLM-5.4",
+  "org": "Zhipu AI / Z.ai (Tsinghua)",
+  "family": "GLM-5",
+  "releaseDate": "2026-11-23",
+  "predecessor": "glm-5-3",
+  "status": "released",
+  "openness": "closed",
+  "license": "Proprietary (open weights planned)",
+  "paramsB": null,
+  "activeParamsB": null,
+  "archClass": "moe",
+  "archDisplay": "Loops 28 layers of the GLM-5 base model for two iterations (\"750B scale\"); exact parameter counts undisclosed; 1M-token context, 128K max output; text, image, video and file in",
+  "ctxK": 1000,
+  "modalities": [
+    "text",
+    "vision",
+    "video"
+  ],
+  "langCount": null,
+  "capabilities": {
+    "reasoning": true,
+    "coding": true,
+    "vision": true,
+    "functionCalling": true,
+    "toolUse": true,
+    "agentic": true
+  },
+  "apiAvailable": false,
+  "price": null,
+  "links": {
+    "docs": "https://docs.z.ai/guides/llm/glm-5.4"
+  },
+  "note": "Z.ai's November 23, 2026 release, available at launch on the GLM Coding Plan, ZCode and Z.ai Chat; the API is listed as coming soon, and Z.ai plans to open-source the weights after safety hardening, so openness stays closed. It loops 28 layers of the GLM-5 base for two iterations at \"750B scale\" and serves up to 200 tokens/s off-peak. Z.ai's model docs give a 1M context and 128K max output with video, image, text and file input. No price yet (the pricing page still ends at GLM-5.3), and no benchmark score in text: the blog's win-rate and 30B ablation charts are images, so no rows are filed.",
+  "quants": [],
+  "vramQ4Gb": null,
+  "vramFp16Gb": null,
+  "tps4090": null,
+  "tpsNote": null,
+  "effortLabel": null,
+  "isDefaultConfig": true,
+  "isBestConfig": true,
+  "specSources": {
+    "releaseDate": "https://z.ai/blog/glm-5.4",
+    "archDisplay": "https://z.ai/blog/glm-5.4",
+    "openness": "https://z.ai/blog/glm-5.4",
+    "ctxK": "https://docs.z.ai/guides/llm/glm-5.4",
+    "modalities": "https://docs.z.ai/guides/llm/glm-5.4"
+  },
+  "results": []
+}

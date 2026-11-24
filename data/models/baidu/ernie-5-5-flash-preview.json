@@ -6,8 +6,8 @@
   "releaseDate": "2026-11-11",
   "status": "preview",
   "predecessor": null,
-  "openness": "closed",
-  "license": "Proprietary (Apache 2.0 weights promised)",
+  "openness": "open-weights",
+  "license": "Apache 2.0",
   "paramsB": 280,
   "activeParamsB": 14,
   "archClass": "moe",
@@ -31,9 +31,10 @@
     "output": 1.13
   },
   "links": {
+    "hf": "baidu/ERNIE-5.5-Flash-Preview",
     "docs": "https://ernie.baidu.com/release/ernie-5-5-flash-preview/"
   },
-  "note": "Baidu's post-trained ERNIE 5.5 Flash, released as a preview: the API went live on Qianfan as `ernie-5.5-flash-preview` on Nov 10, 2026 and the launch post is dated Nov 11. It is the instruction-tuned model built on ERNIE-5.5-Flash-Base (Nov 5), so `predecessor` is null rather than the base checkpoint. Baidu's English post says the weights 'will be open-sourced under Apache 2.0 soon' and its Chinese post (https://ernie.baidu.com/zh/release/ernie-5-5-flash-preview/) says before Nov 25, so openness is closed for now. Qianfan lists $0.28 input / $0.028 cache hit / $1.13 output per Mtok, and 1M max input and output. NO BENCHMARK ROWS YET: Baidu publishes its launch table only as an image, which could not be read from this environment, and the only text transcription is a third-party one (OrcaRouter). The scores will be filed once they can be checked against Baidu's own table.",
+  "note": "Baidu's post-trained ERNIE 5.5 Flash, released as a preview: the API went live on Qianfan as `ernie-5.5-flash-preview` on Nov 10, 2026 and the launch post is dated Nov 11. It is the instruction-tuned model built on ERNIE-5.5-Flash-Base (Nov 5), so `predecessor` is null rather than the base checkpoint. OPEN WEIGHTS since Nov 24, 2026: Baidu published the preview checkpoint (\"an intermediate checkpoint from post-training\") as baidu/ERNIE-5.5-Flash-Preview (FP8 with FP4 experts; -FP8 and -BF16 variants) under Apache 2.0, keeping its promise of weights before Nov 25. Qianfan lists $0.28 input / $0.028 cache hit / $1.13 output per Mtok, and 1M max input and output. Rows come from the Hugging Face card's benchmark table (now in text), the ERNIE column, Baidu's own runs at the highest reasoning setting, with each benchmark's official harness where one exists and Claude Code otherwise. Not filed: ProgramBench, CookieBench, BlenderWorld, APEX-Agents 1.1, DRACO, SpreadsheetBench V2, SkillsBench 1.1, AA-Omniscience-Public and AA-LCR v1.1 (no columns), OfficeQA Pro V2 67.9 (re-versioned), Agents' Last Exam (CLI) 29.0 (the card doesn't say whether it is the Score component or a pass rate) and HLE 46.4 (text-only subset).",
   "quants": [],
   "vramQ4Gb": null,
   "vramFp16Gb": null,

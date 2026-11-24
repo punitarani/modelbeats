@@ -38,7 +38,7 @@
   "links": {
     "docs": "https://developers.openai.com/api/docs/models/gpt-6.2-astra"
   },
-  "note": "OpenAI's GPT-6.2 Astra, released Nov 17, 2026 alongside GPT-6.2 Sol (system card dated Nov 17) in the API as gpt-6.2-astra, ChatGPT Work and Codex. $8/$40 per Mtok (cached input $0.40, cache writes $10), 20% below GPT-6 Astra's $10/$50; prompts over 272K input tokens double input and cache rates and bill output at 1.5x. 1.05M context (922K input, 128K output), May 18, 2026 knowledge cutoff. The launch post positions it against GPT-6 Astra, but GPT-6.2 is a new family, so predecessor is null. Vals AI's independent runs give Terminal-Bench 4.0 63.13 (#5 of 68) and Terminal-Bench-Science 71.43 (#1 of 47, ahead of GPT-6 Astra's 62.86). NOT FILED: the launch post gives benchmark scores only as chart images and relative deltas (Agents' Last Exam +5.2 pts over GPT-6 Astra; Terminal-Bench-Science +9 pts; FrontierCode 2.0 Sol within 0.5 pts of Astra; GDPval v2; BenchCAD 2.1; AutomationBench), so no absolute launch-chart figures are filed; third-party transcriptions are unverified. From the system card, ExploitBench V8 100% (unclear whether it matches the public ExploitBench column), ExploitBench Internal Port, virology, protein-design and research-engineering evals (MLE-Bench Revised, PostTrainBench Lite, KernelGen, NanoGPT) have no matching column. Vals' Finance Agent v2.1, HLAB-Vals-1.1, EMB v1.1, Vals Index and other Vals runs have no column. ARC Prize verified results (Nov 17) are filed for ARC-AGI-1, -2 and -3 (Standard harness); no Text Arena row yet.",
+  "note": "OpenAI's GPT-6.2 Astra, released Nov 17, 2026 alongside GPT-6.2 Sol (system card dated Nov 17) in the API as gpt-6.2-astra, ChatGPT Work and Codex. $8/$40 per Mtok (cached input $0.40, cache writes $10), 20% below GPT-6 Astra's $10/$50; prompts over 272K input tokens double input and cache rates and bill output at 1.5x. 1.05M context (922K input, 128K output), May 18, 2026 knowledge cutoff. The launch post positions it against GPT-6 Astra, but GPT-6.2 is a new family, so predecessor is null. Vals AI's independent runs give Terminal-Bench 4.0 63.13 (#5 of 68) and Terminal-Bench-Science 71.43 (#1 of 47, ahead of GPT-6 Astra's 62.86). NOT FILED: the launch post gives benchmark scores only as chart images and relative deltas (Agents' Last Exam +5.2 pts over GPT-6 Astra; Terminal-Bench-Science +9 pts; FrontierCode 2.0 Sol within 0.5 pts of Astra; GDPval v2; BenchCAD 2.1; AutomationBench), so no absolute launch-chart figures are filed; third-party transcriptions are unverified. From the system card, ExploitBench V8 100% (unclear whether it matches the public ExploitBench column), ExploitBench Internal Port, virology, protein-design and research-engineering evals (MLE-Bench Revised, PostTrainBench Lite, KernelGen, NanoGPT) have no matching column. Vals' Finance Agent v2.1, HLAB-Vals-1.1, EMB v1.1, Vals Index and other Vals runs have no column. ARC Prize verified results (Nov 17) are filed for ARC-AGI-1, -2 and -3 (Standard harness); Text Arena row (1,468, Nov 22 board) added Nov 24.",
   "quants": [],
   "vramQ4Gb": null,
   "vramFp16Gb": null,
@@ -111,6 +111,14 @@
       "sourceUrl": "https://arcprize.org/results/openai-gpt-6-2-astra",
       "evaluatedAt": "2026-11-17",
       "notes": "ARC Prize Verified result, Max, Standard harness (results page dated 2026-11-17; XHigh 56.5%, High 58.0%). The Provider Adapter harness gives 99.8% (Max) / 100.0% (XHigh); Standard harness is the comparable figure for older ARC-AGI-3 rows."
+    },
+    {
+      "benchmarkSlug": "arena",
+      "score": 1468,
+      "source": "independent",
+      "sourceUrl": "https://arena.ai/leaderboard/chat/text",
+      "evaluatedAt": "2026-11-22",
+      "notes": "Text Arena row 'GPT-6.2 Astra (Max)', 1,468 ±12 with 2,398 votes (#55 overall); ranking updated Nov 20 2026; added to Text Arena Nov 19. Board dated Nov 22 2026 (427 models); the row carries no Preliminary marker (Carbon and Hydrogen did on Nov 11). No arena row in the corpus before."
     }
   ]
 }

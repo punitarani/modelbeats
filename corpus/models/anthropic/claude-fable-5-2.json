@@ -100,6 +100,14 @@
       "sourceUrl": "https://arcprize.org/results/anthropic-claude-fable-5-2",
       "evaluatedAt": "2026-11-09",
       "notes": "ARC Prize Verified, Semi-Private set, run by the ARC Prize team. XHigh variant, the best of five (Max 92.5%, High 90.4%, Medium 89.6%, Low 86.7%); $0.98/task per ARC Prize. ARC-AGI-3 Standard 81.2% (XHigh) is not filed: above the column bound."
+    },
+    {
+      "benchmarkSlug": "arena",
+      "score": 1502,
+      "source": "independent",
+      "sourceUrl": "https://arena.ai/leaderboard/chat/text",
+      "evaluatedAt": "2026-11-22",
+      "notes": "Text Arena row 'Claude Fable 5.2 (Max)', 1,502 (#8 overall; 1,503 ±9 with 5,216 votes on the Nov 20 update); added to Text Arena Nov 19. Board dated Nov 22 2026 (427 models); the row carries no Preliminary marker (Carbon and Hydrogen did on Nov 11). No arena row in the corpus before."
     }
   ]
 }

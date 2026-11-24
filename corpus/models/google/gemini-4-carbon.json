@@ -119,6 +119,14 @@
       "sourceUrl": "https://arcprize.org/results/google-gemini-4-carbon",
       "evaluatedAt": "2026-11-10",
       "notes": "ARC Prize Verified result on the Semi-Private set, run by the ARC Prize team (results page dated 2026-11-10). Low, Standard harness (the comparable figure for older ARC-AGI-3 rows; Medium 63.9%). ARC Prize omitted the High Standard-harness run because it completed only 30 of 55 games. Provider Adapter harness gives 99.1% (Medium)."
+    },
+    {
+      "benchmarkSlug": "arena",
+      "score": 1527,
+      "source": "independent",
+      "sourceUrl": "https://arena.ai/leaderboard/chat/text",
+      "evaluatedAt": "2026-11-22",
+      "notes": "Text Arena row 'Gemini 4 Carbon (High)', 1,527 ±10 with 4,255 votes (#1 overall); ranking updated Nov 22 2026. Board dated Nov 22 2026 (427 models); the row carries no Preliminary marker (Carbon and Hydrogen did on Nov 11). No arena row in the corpus before."
     }
   ]
 }

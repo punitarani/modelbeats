@@ -13,6 +13,7 @@ deepseek-v4-flash-think-high,53.5,self-reported,https://huggingface.co/deepseek-
 deepseek-v4-flash-think-max,73.2,self-reported,https://huggingface.co/deepseek-ai/DeepSeek-V4-Flash,2026-04-24,"BrowseComp Pass@1, Think Max / Pro-Max mode. Cross-verified identical value in DeepSeek-V4 tech report Table 7 (arXiv:2606.19348)."
 deepseek-v4-pro-think-high,80.4,self-reported,https://huggingface.co/deepseek-ai/DeepSeek-V4-Pro,2026-04-24,"BrowseComp Pass@1, Think High mode. Cross-verified identical value in DeepSeek-V4 tech report Table 7 (arXiv:2606.19348)."
 deepseek-v4-pro-think-max,83.4,self-reported,https://huggingface.co/deepseek-ai/DeepSeek-V4-Pro,2026-04-24,"BrowseComp Pass@1, Think Max / Pro-Max mode. Cross-verified identical value in DeepSeek-V4 tech report Table 6/7 (arXiv:2606.19348)."
+ernie-5-5-flash-preview,87.4,self-reported,https://huggingface.co/baidu/ERNIE-5.5-Flash-Preview,2026-11-24,"BrowseComp. ERNIE 5.5 Flash Preview column of the Hugging Face card's benchmark table (highest reasoning setting; official harness where one exists, otherwise Claude Code)."
 gemini-3-1-pro,85.9,self-reported,https://deepmind.google/models/gemini/pro/,2026-02-19,"BrowseComp agentic web-browsing benchmark, Search+Python+Browse tool setting."
 glm-4-5-355b-a32b,26.4,self-reported,https://arxiv.org/abs/2508.06471,,"Table 3, Agentic Benchmarks."
 glm-4-5-air-106b-a12b,21.3,self-reported,https://arxiv.org/abs/2508.06471,,"Table 3, Agentic Benchmarks."
