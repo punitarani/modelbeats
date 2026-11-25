@@ -202,6 +202,14 @@
       "sourceUrl": "https://www.vals.ai/benchmarks/terminal-bench-science",
       "evaluatedAt": "2026-11-19",
       "notes": "Terminal-Bench Science 0.1, Vals AI independent run (Mini-SWE-agent harness; ±0.00); #46 of 49 per the Vals model page, board updated 2026-11-19. TML's own figure is 1.4."
+    },
+    {
+      "benchmarkSlug": "arena",
+      "score": 1367,
+      "source": "independent",
+      "sourceUrl": "https://arena.ai/leaderboard/chat/text/models/inkling-2-mini-ez3a",
+      "evaluatedAt": "2026-11-22",
+      "notes": "Text Arena row 'Inkling 2 Mini', 1,367 ±15 with 1,793 votes (#210 of 427); ranking updated Nov 22 2026. Board dated Nov 22 2026 (427 models); the model page carries no Preliminary marker. No arena row in the corpus before."
     }
   ]
 }

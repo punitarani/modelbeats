@@ -96,6 +96,14 @@
       "sourceUrl": "https://deploymentsafety.openai.com/gpt-6-1-terra",
       "evaluatedAt": "2026-10-26",
       "notes": "SEC-Bench Pro pass@1 (vulnerability discovery in V8 and SpiderMonkey), GPT-6.1 Terra system card addendum cybersecurity section."
+    },
+    {
+      "benchmarkSlug": "arena",
+      "score": 1474,
+      "source": "independent",
+      "sourceUrl": "https://arena.ai/leaderboard/chat/text/models/gpt-6.1-terra-max-9oju",
+      "evaluatedAt": "2026-11-22",
+      "notes": "Text Arena row 'GPT-6.1 Terra (Max)', 1,474 ±8 with 9,100 votes (#45 of 427); ranking updated Nov 22 2026. Board dated Nov 22 2026 (427 models); the model page carries no Preliminary marker. No arena row in the corpus before."
     }
   ]
 }

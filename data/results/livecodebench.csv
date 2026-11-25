@@ -94,6 +94,7 @@ kimi-k2,53.7,self-reported,https://huggingface.co/moonshotai/Kimi-K2-Instruct,,
 kimi-k2-5,85,self-reported,https://www.kimi.com/blog/kimi-k2-5,,LiveCodeBench v6
 kimi-k2-6,89.6,self-reported,https://www.kimi.com/blog/kimi-k2-6,,LiveCodeBench v6
 kimi-k2-thinking,83.1,self-reported,https://huggingface.co/moonshotai/Kimi-K2-Thinking,,"LiveCodeBench V6, no tools, from Coding Tasks table on official model card"
+kolibri-1-1,93,self-reported,https://aleph-alpha.com/en/blog/kolibri-1-1,2026-11-23,LiveCodeBench v6. Kolibri 1.1 column of the launch blog's benchmark table; Aleph Alpha's own harnesses at the highest reasoning setting.
 lg-exaone-4-0-32b-non-reasoning,43.3,self-reported,https://arxiv.org/abs/2507.11407,,"LiveCodeBench v5, non-reasoning mode"
 lg-exaone-4-0-32b-reasoning,72.6,self-reported,https://arxiv.org/abs/2507.11407,,"LiveCodeBench v5, reasoning mode"
 lg-exaone-deep-32b,59.5,self-reported,https://github.com/LG-AI-EXAONE/EXAONE-Deep,2025-03-01,"LiveCodeBench, pass@1"

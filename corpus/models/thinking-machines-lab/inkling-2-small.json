@@ -247,6 +247,14 @@
       "sourceUrl": "https://arcprize.org/results/thinky-inkling-2-small",
       "evaluatedAt": "2026-11-05",
       "notes": "ARC Prize Verified, semi-private set, XHigh reasoning (the only config tested); listed on the ARC Prize leaderboard dated 2026-11-05. ARC Prize notes it is the top open-weight-family score it has evaluated; weights are still pending."
+    },
+    {
+      "benchmarkSlug": "arena",
+      "score": 1412,
+      "source": "independent",
+      "sourceUrl": "https://arena.ai/leaderboard/chat/text/models/inkling-2-small-6u86",
+      "evaluatedAt": "2026-11-22",
+      "notes": "Text Arena row 'Inkling 2 Small', 1,412 ±12 with 2,682 votes (#156 of 427); ranking updated Nov 22 2026. Board dated Nov 22 2026 (427 models); the model page carries no Preliminary marker. No arena row in the corpus before."
     }
   ]
 }

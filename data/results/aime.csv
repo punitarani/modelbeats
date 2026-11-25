@@ -87,6 +87,7 @@ kimi-k2,69.6,self-reported,https://huggingface.co/moonshotai/Kimi-K2-Instruct,,"
 kimi-k2-5,96.1,self-reported,https://www.kimi.com/blog/kimi-k2-5,,"AIME 2025, avg@32"
 kimi-k2-6,96.4,self-reported,https://www.kimi.com/blog/kimi-k2-6,,vendor-labeled 'AIME 2026'
 kimi-k2-thinking,99.1,self-reported,https://huggingface.co/moonshotai/Kimi-K2-Thinking,,AIME25 with python tool
+kolibri-1-1,95.8,self-reported,https://huggingface.co/Aleph-Alpha/Kolibri-1.1,2026-11-23,AIME 2026 (EN). Kolibri 1.1 column of the launch blog's benchmark table and the card's eval results (MathArena AIME 2026); Aleph Alpha's own harnesses at the highest reasoning setting.
 lg-exaone-4-0-32b-non-reasoning,35.9,self-reported,https://arxiv.org/abs/2507.11407,,"AIME 2025, non-reasoning mode"
 lg-exaone-4-0-32b-reasoning,85.3,self-reported,https://arxiv.org/abs/2507.11407,,"AIME 2025, reasoning mode"
 lg-exaone-deep-32b,65.8,self-reported,https://github.com/LG-AI-EXAONE/EXAONE-Deep,2025-03-01,"AIME 2025, pass@1 (80.0 consistency@64). Distinct sitting from the existing AIME 2024 result above; both appear in Table 2 of the arXiv paper (2503.12524) and the GitHub README performance table."

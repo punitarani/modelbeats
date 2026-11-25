@@ -111,6 +111,14 @@
       "sourceUrl": "https://arcprize.org/results/openai-gpt-6-2-sol",
       "evaluatedAt": "2026-11-17",
       "notes": "ARC Prize Verified result, Max, Standard harness (results page dated 2026-11-17; XHigh 40.1%). The Provider Adapter harness gives 98.2% (Max); Standard harness is the comparable figure for older ARC-AGI-3 rows."
+    },
+    {
+      "benchmarkSlug": "arena",
+      "score": 1464,
+      "source": "independent",
+      "sourceUrl": "https://arena.ai/leaderboard/chat/text/models/gpt-6.2-sol-max-i7fj",
+      "evaluatedAt": "2026-11-22",
+      "notes": "Text Arena row 'GPT-6.2 Sol (Max)', 1,464 ±8 with 5,526 votes (#64 of 427); ranking updated Nov 22 2026. Board dated Nov 22 2026 (427 models); the model page carries no Preliminary marker. No arena row in the corpus before."
     }
   ]
 }
