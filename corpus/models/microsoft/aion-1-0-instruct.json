@@ -1,0 +1,85 @@
+{
+  "name": "Aion 1.0 Instruct",
+  "org": "Microsoft",
+  "family": "Aion",
+  "releaseDate": "2026-11-19",
+  "predecessor": null,
+  "status": "released",
+  "openness": "open-weights",
+  "license": "MIT",
+  "paramsB": 2.29,
+  "activeParamsB": null,
+  "archClass": "dense",
+  "archDisplay": "Dense 2.3B decoder (28 layers, GQA 24/8 heads; 21 sliding-window layers of 2,048 tokens plus 7 full-attention layers with YaRN; tied embeddings, 200K vocab)",
+  "ctxK": 32,
+  "modalities": [
+    "text"
+  ],
+  "langCount": 8,
+  "capabilities": {
+    "reasoning": false,
+    "coding": false,
+    "vision": false,
+    "functionCalling": true,
+    "toolUse": true,
+    "agentic": false
+  },
+  "apiAvailable": false,
+  "price": null,
+  "links": {
+    "hf": "microsoft/Aion-1.0-Instruct-2.3B",
+    "docs": "https://blogs.windows.com/msedgedev/2026/11/19/hybrid-intelligence-on-the-web-introducing-aion-instruct-and-prompt-api-in-microsoft-edge/"
+  },
+  "note": "Microsoft's on-device small language model, made generally available on November 19, 2026 as open weights on Hugging Face under MIT and as Microsoft Edge's built-in model (replacing Phi-4-mini), after a developer preview announced at Build on June 2. It is also replacing Phi Silica as the Windows OS model (Insider rollout from December 4, retail by late January 2027). 2.29B parameters, 32,768-token context, text only, eight languages (English, German, Spanish, Portuguese, Italian, French, Chinese, Japanese), with tool calling. No hosted API price. New family; Phi Silica is not in the catalog, so predecessor is null. Rows are the card's evaluation table (lm-evaluation-harness). Not filed: GPQA 28.18 (variant not stated), GSM8K 74.91 (loose matching, shot count not stated, against the column's 8-shot strict setting), IFEval 83.90 (mean of prompt- and instruction-level strict, not the standard prompt-level strict figure), IFBench 32.00 (prompt-level loose), and GSMPlus 49.56, Multi-IF 64.70 and chrF++ 43.18 (no columns). The safety benchmarks are a chart image.",
+  "quants": [
+    "ONNX (WebGPU)"
+  ],
+  "vramQ4Gb": null,
+  "vramFp16Gb": null,
+  "tps4090": null,
+  "tpsNote": null,
+  "effortLabel": null,
+  "isDefaultConfig": true,
+  "isBestConfig": true,
+  "specSources": {
+    "releaseDate": "https://blogs.windows.com/msedgedev/2026/11/19/hybrid-intelligence-on-the-web-introducing-aion-instruct-and-prompt-api-in-microsoft-edge/",
+    "paramsB": "https://huggingface.co/microsoft/Aion-1.0-Instruct-2.3B",
+    "ctxK": "https://huggingface.co/microsoft/Aion-1.0-Instruct-2.3B",
+    "license": "https://huggingface.co/microsoft/Aion-1.0-Instruct-2.3B",
+    "openness": "https://huggingface.co/microsoft/Aion-1.0-Instruct-2.3B"
+  },
+  "results": [
+    {
+      "benchmarkSlug": "mmlu",
+      "score": 55.15,
+      "source": "self-reported",
+      "sourceUrl": "https://huggingface.co/microsoft/Aion-1.0-Instruct-2.3B",
+      "evaluatedAt": "2026-11-19",
+      "notes": "Aion 1.0 Instruct model card's evaluation table; Microsoft's own run with EleutherAI's lm-evaluation-harness (shot count not stated)."
+    },
+    {
+      "benchmarkSlug": "mmlu-pro",
+      "score": 33.35,
+      "source": "self-reported",
+      "sourceUrl": "https://huggingface.co/microsoft/Aion-1.0-Instruct-2.3B",
+      "evaluatedAt": "2026-11-19",
+      "notes": "Aion 1.0 Instruct model card's evaluation table; Microsoft's own run with EleutherAI's lm-evaluation-harness (shot count not stated)."
+    },
+    {
+      "benchmarkSlug": "mmmlu",
+      "score": 45.51,
+      "source": "self-reported",
+      "sourceUrl": "https://huggingface.co/microsoft/Aion-1.0-Instruct-2.3B",
+      "evaluatedAt": "2026-11-19",
+      "notes": "Aion 1.0 Instruct model card's evaluation table; Microsoft's own run with EleutherAI's lm-evaluation-harness (shot count not stated). Multilingual MMLU."
+    },
+    {
+      "benchmarkSlug": "math",
+      "score": 48.0,
+      "source": "self-reported",
+      "sourceUrl": "https://huggingface.co/microsoft/Aion-1.0-Instruct-2.3B",
+      "evaluatedAt": "2026-11-19",
+      "notes": "Aion 1.0 Instruct model card's evaluation table; Microsoft's own run with EleutherAI's lm-evaluation-harness (shot count not stated). MATH-500."
+    }
+  ]
+}

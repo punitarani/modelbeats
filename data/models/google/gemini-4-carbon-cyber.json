@@ -1,0 +1,45 @@
+{
+  "slug": "gemini-4-carbon-cyber",
+  "name": "Gemini 4 Carbon for cyber",
+  "orgSlug": "google",
+  "familySlug": "gemini-4",
+  "releaseDate": "2026-11-10",
+  "status": "released",
+  "predecessor": null,
+  "openness": "closed",
+  "license": "Proprietary (Fairwind Program allowlist; Google Frontier Cyber Model terms)",
+  "paramsB": null,
+  "activeParamsB": null,
+  "archClass": "dense",
+  "archDisplay": "Gemini 4 Carbon specialised for defensive cybersecurity (gemini-4-carbon-cyber-permissive), served behind a separate allowlist; architecture undisclosed",
+  "ctxK": 1000,
+  "modalities": [
+    "text",
+    "vision",
+    "audio",
+    "video"
+  ],
+  "langCount": null,
+  "capabilities": {
+    "reasoning": true,
+    "coding": true,
+    "vision": true,
+    "functionCalling": true,
+    "toolUse": true,
+    "agentic": true
+  },
+  "apiAvailable": false,
+  "price": null,
+  "links": {
+    "docs": "https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/gemini/4-carbon"
+  },
+  "note": "Google's Gemini 4 Carbon for cyber (model id gemini-4-carbon-cyber-permissive), a version of Gemini 4 Carbon for defensive cybersecurity work (vulnerability discovery, reverse engineering, exploit verification, patch generation). Google's model-versions page gives a release date of November 10, 2026. It is generally available on Gemini Enterprise Agent Platform but only behind the Fairwind Program allowlist, so it is filed with apiAvailable false and no headline price, following GPT-6 Cyber, Gemini 3.8 Flash Cyber and Gemini 4 Neon for cyber. Same 1,048,576-token context as Gemini 4 Carbon; default thinking level HIGH (LOW, MEDIUM, HIGH supported), no computer use, regions global and us. Google's Model Garden pricing lists it at $4 input / $20 output per Mtok on the global endpoint ($4.40 / $22 non-global), the post-December-1 Gemini 4 Carbon rate, with no promotional pricing. Google published no benchmark figures for it, so it is spec-only. Predecessor is null: it is a variant of Gemini 4 Carbon, not its successor.",
+  "quants": [],
+  "vramQ4Gb": null,
+  "vramFp16Gb": null,
+  "tps4090": null,
+  "tpsNote": null,
+  "effortLabel": null,
+  "isDefaultConfig": true,
+  "isBestConfig": true
+}

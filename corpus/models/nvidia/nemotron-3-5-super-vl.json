@@ -188,6 +188,22 @@
       "sourceUrl": "https://huggingface.co/nvidia/NVIDIA-Nemotron-3.5-Super-VL-120B-A12B-BF16",
       "evaluatedAt": "2026-10-15",
       "notes": "Nemotron 3.5 Super BF16 column of the evaluation table on NVIDIA's Hugging Face model card; all scores collected by NVIDIA via NeMo Gym (recipes published in the NeMo Gym repo). OSWorld-Verified."
+    },
+    {
+      "benchmarkSlug": "arc-agi-1",
+      "score": 22.7,
+      "source": "independent",
+      "sourceUrl": "https://arcprize.org/results/nvidia-nemotron-3-5-super-vl-120b-a12b",
+      "evaluatedAt": "2026-10-15",
+      "notes": "ARC Prize Verified, semi-private set, High reasoning, the best of three variants on this column (Medium 20.2%, None 2.0%); results page dated 2026-10-15."
+    },
+    {
+      "benchmarkSlug": "arc-agi-2",
+      "score": 1.5,
+      "source": "independent",
+      "sourceUrl": "https://arcprize.org/results/nvidia-nemotron-3-5-super-vl-120b-a12b",
+      "evaluatedAt": "2026-10-15",
+      "notes": "ARC Prize Verified, semi-private set, High reasoning, the same variant as the ARC-AGI-1 row (Medium 1.9%, None 0.8%); results page dated 2026-10-15. No ARC-AGI-3 run."
     }
   ]
 }
