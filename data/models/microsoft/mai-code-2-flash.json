@@ -1,0 +1,46 @@
+{
+  "slug": "mai-code-2-flash",
+  "name": "MAI Code 2 Flash",
+  "orgSlug": "microsoft",
+  "familySlug": "mai-code-2",
+  "releaseDate": "2026-11-17",
+  "status": "released",
+  "predecessor": null,
+  "openness": "closed",
+  "license": "Proprietary",
+  "paramsB": null,
+  "activeParamsB": 12,
+  "archClass": "moe",
+  "archDisplay": "Decoder-only transformer with sparse Mixture-of-Experts layers and an integrated vision encoder; 1.05M-token context (922K input, 128K output); reasoning effort low to max",
+  "ctxK": 1050,
+  "modalities": [
+    "text",
+    "vision"
+  ],
+  "langCount": null,
+  "capabilities": {
+    "reasoning": true,
+    "coding": true,
+    "vision": true,
+    "functionCalling": true,
+    "toolUse": true,
+    "agentic": true
+  },
+  "apiAvailable": true,
+  "price": {
+    "input": 0.05,
+    "output": 0.25
+  },
+  "links": {
+    "docs": "https://microsoft.ai/news/introducing-mai-code-2-and-mai-code-2-flash/"
+  },
+  "note": "Microsoft AI's MAI Code 2 Flash, released Nov 17, 2026 (model card) in GitHub Copilot, billed per token under usage-based billing. The smaller, low-latency sibling of MAI Code 2, available on every Copilot plan and in limited-access preview on Microsoft Foundry. 12B active parameters (stated consistently); total is left null because the card's summary says '5B-15B' while Section 1 says about 398B. Price is GitHub's promotional rate ($0.05/$0.25 per Mtok) until May 17, 2027, then $0.1/$0.5, following the Gemini 4 Carbon precedent of filing the current introductory headline price. Weights are not distributed (model card). Predecessor is null: the card compares the family with MAI-Code-1.1-Flash, which is not in this corpus and is a different family. Rows come from the model card's quality table (Section 3: MSBench with the GitHub Copilot CLI harness, subagents off, max reasoning, pass rate) plus GPQA from its CBRN evaluation table (settings not stated). NOT FILED: SWE Atlas 44.8 (the full three-workflow benchmark, not the Codebase QnA column); the card's advanced-autonomy table gives different DeepSWE 1.1 (27.4) and SWE Atlas (65.2) figures and GAIA 56.36, and its loss-of-control table gives Terminal-Bench 4 2.5, all under unstated settings, so they are left out; the launch post's comparisons are relative only. Not on Vals AI yet.",
+  "quants": [],
+  "vramQ4Gb": null,
+  "vramFp16Gb": null,
+  "tps4090": null,
+  "tpsNote": null,
+  "effortLabel": null,
+  "isDefaultConfig": true,
+  "isBestConfig": true
+}

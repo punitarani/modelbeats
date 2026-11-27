@@ -1,0 +1,231 @@
+{
+  "name": "Inkling 2 Mini",
+  "org": "Thinking Machines Lab",
+  "family": "Inkling",
+  "releaseDate": "2026-11-20",
+  "predecessor": null,
+  "status": "released",
+  "openness": "open-weights",
+  "license": "Apache 2.0",
+  "paramsB": 26.4,
+  "activeParamsB": 5.4,
+  "archClass": "moe",
+  "archDisplay": "Looped sparse MoE (26.4B total / 5.4B activated per token): 24 layers whose two middle blocks run three times (48 layer applications); NVFP4 + MXFP8 weights (~20GB); text+image in / text out",
+  "ctxK": 1000,
+  "modalities": [
+    "text",
+    "vision"
+  ],
+  "langCount": null,
+  "capabilities": {
+    "reasoning": true,
+    "coding": true,
+    "vision": true,
+    "functionCalling": true,
+    "toolUse": true,
+    "agentic": true
+  },
+  "apiAvailable": true,
+  "price": {
+    "input": 0.15,
+    "output": 0.5,
+    "provider": "Tinker",
+    "effectiveAt": "2026-11-20"
+  },
+  "links": {
+    "docs": "https://thinkingmachines.ai/model-card/inkling-2-mini/",
+    "hf": "thinkingmachines/Inkling-2-Mini"
+  },
+  "note": "Smallest model of Thinking Machines Lab's second generation, released November 20, 2026 as open weights (Apache 2.0) on Hugging Face and on Tinker. A looped MoE: the card's params row reads 5.4B activated / 26.4B total, because two middle blocks run three times per token. Context is up to 1M tokens per the model card. Price is Tinker's prefill/sample rate ($0.15 / $0.015 cached / $0.50 per Mtok, 64K and 256K tiers alike); Tinker lists no serverless-inference row for it. Inkling 2 Small is a larger sibling, not its predecessor. Self-reported rows come from the model card's own column (the card notes evaluation setups vary by model); Vals AI's runs add independent Terminal-Bench 4.0 (6.57) and Terminal-Bench Science (0.00) rows, and ARC Prize Verified adds ARC-AGI-1 84.5 and ARC-AGI-2 49.3 on the semi-private set (the same figures the card quotes without naming the set). Not filed: Terminal-Bench 2.1 71.6 (Pi harness only, no Terminus figure), FrontierCode v2.0 15.1 (the frontiercode column holds 1.1), SWE-bench Pro v2 Hard 77.9 (re-versioned set), HLE-Diamond 15.2 (subset), GDPval-AA v2.1 1319 and AA-Briefcase v1.1 1263 (re-based AA scales), and rows with no column (AA Index 20.1, Vals Index 46.5, Vibe Code Bench 77.9, Vals Finance Index 50.1, LongBench v2 66.9, GraphWalks 69.7, MultiChallenge 50.0 and others).",
+  "quants": [
+    "NVFP4",
+    "MXFP8"
+  ],
+  "vramQ4Gb": null,
+  "vramFp16Gb": null,
+  "tps4090": null,
+  "tpsNote": null,
+  "effortLabel": null,
+  "isDefaultConfig": true,
+  "isBestConfig": true,
+  "specSources": {
+    "releaseDate": "https://thinkingmachines.ai/model-card/inkling-2-mini/",
+    "paramsB": "https://thinkingmachines.ai/model-card/inkling-2-mini/",
+    "activeParamsB": "https://thinkingmachines.ai/model-card/inkling-2-mini/",
+    "ctxK": "https://huggingface.co/thinkingmachines/Inkling-2-Mini",
+    "archDisplay": "https://thinkingmachines.ai/news/inkling-2-mini/",
+    "license": "https://huggingface.co/thinkingmachines/Inkling-2-Mini",
+    "openness": "https://huggingface.co/thinkingmachines/Inkling-2-Mini",
+    "price": "https://tinker-docs.thinkingmachines.ai/tinker/models/models_and_pricing/"
+  },
+  "results": [
+    {
+      "benchmarkSlug": "swe-bench",
+      "score": 79.2,
+      "source": "self-reported",
+      "sourceUrl": "https://thinkingmachines.ai/model-card/inkling-2-mini/",
+      "evaluatedAt": "2026-11-20",
+      "notes": "SWE-bench Verified, bash only. Inkling 2 Mini column of the Evaluations table on Thinking Machines Lab's official model card."
+    },
+    {
+      "benchmarkSlug": "swe-bench-multilingual",
+      "score": 73.7,
+      "source": "self-reported",
+      "sourceUrl": "https://thinkingmachines.ai/model-card/inkling-2-mini/",
+      "evaluatedAt": "2026-11-20",
+      "notes": "SWE-bench Multilingual, bash only. Inkling 2 Mini column of the Evaluations table on Thinking Machines Lab's official model card."
+    },
+    {
+      "benchmarkSlug": "deepswe",
+      "score": 48.2,
+      "source": "self-reported",
+      "sourceUrl": "https://thinkingmachines.ai/model-card/inkling-2-mini/",
+      "evaluatedAt": "2026-11-20",
+      "notes": "DeepSWE v1.1 (mini-swe-agent v2.4.6). Inkling 2 Mini column of the Evaluations table on Thinking Machines Lab's official model card."
+    },
+    {
+      "benchmarkSlug": "terminal-bench-4",
+      "score": 5.6,
+      "source": "self-reported",
+      "sourceUrl": "https://thinkingmachines.ai/model-card/inkling-2-mini/",
+      "evaluatedAt": "2026-11-20",
+      "notes": "Terminal-Bench 4.0 (mini-swe-agent v2.4.6). Inkling 2 Mini column of the Evaluations table on Thinking Machines Lab's official model card."
+    },
+    {
+      "benchmarkSlug": "terminal-bench-science",
+      "score": 1.4,
+      "source": "self-reported",
+      "sourceUrl": "https://thinkingmachines.ai/model-card/inkling-2-mini/",
+      "evaluatedAt": "2026-11-20",
+      "notes": "Terminal-Bench Science v0.1 (mini-swe-agent v2.4.6). Inkling 2 Mini column of the Evaluations table on Thinking Machines Lab's official model card."
+    },
+    {
+      "benchmarkSlug": "browsecomp",
+      "score": 79.0,
+      "source": "self-reported",
+      "sourceUrl": "https://thinkingmachines.ai/model-card/inkling-2-mini/",
+      "evaluatedAt": "2026-11-20",
+      "notes": "BrowseComp with compaction. Inkling 2 Mini column of the Evaluations table on Thinking Machines Lab's official model card."
+    },
+    {
+      "benchmarkSlug": "deepsearchqa",
+      "score": 85.3,
+      "source": "self-reported",
+      "sourceUrl": "https://thinkingmachines.ai/model-card/inkling-2-mini/",
+      "evaluatedAt": "2026-11-20",
+      "notes": "DeepSearchQA with compaction. Inkling 2 Mini column of the Evaluations table on Thinking Machines Lab's official model card."
+    },
+    {
+      "benchmarkSlug": "mcp-atlas",
+      "score": 82.7,
+      "source": "self-reported",
+      "sourceUrl": "https://thinkingmachines.ai/model-card/inkling-2-mini/",
+      "evaluatedAt": "2026-11-20",
+      "notes": "MCP Atlas public set. Inkling 2 Mini column of the Evaluations table on Thinking Machines Lab's official model card."
+    },
+    {
+      "benchmarkSlug": "jobbench",
+      "score": 49.6,
+      "source": "self-reported",
+      "sourceUrl": "https://thinkingmachines.ai/model-card/inkling-2-mini/",
+      "evaluatedAt": "2026-11-20",
+      "notes": "JobBench. Inkling 2 Mini column of the Evaluations table on Thinking Machines Lab's official model card."
+    },
+    {
+      "benchmarkSlug": "automationbench",
+      "score": 41.8,
+      "source": "self-reported",
+      "sourceUrl": "https://thinkingmachines.ai/model-card/inkling-2-mini/",
+      "evaluatedAt": "2026-11-20",
+      "notes": "AutomationBench-AA v1.0.6. Inkling 2 Mini column of the Evaluations table on Thinking Machines Lab's official model card."
+    },
+    {
+      "benchmarkSlug": "gdp-pdf",
+      "score": 16.8,
+      "source": "self-reported",
+      "sourceUrl": "https://thinkingmachines.ai/model-card/inkling-2-mini/",
+      "evaluatedAt": "2026-11-20",
+      "notes": "GDP.pdf. Inkling 2 Mini column of the Evaluations table on Thinking Machines Lab's official model card."
+    },
+    {
+      "benchmarkSlug": "screenspot-pro",
+      "score": 76.5,
+      "source": "self-reported",
+      "sourceUrl": "https://thinkingmachines.ai/model-card/inkling-2-mini/",
+      "evaluatedAt": "2026-11-20",
+      "notes": "ScreenSpot-Pro original, no tools (87.7 with Python). Inkling 2 Mini column of the Evaluations table on Thinking Machines Lab's official model card."
+    },
+    {
+      "benchmarkSlug": "mmmu-pro",
+      "score": 74.9,
+      "source": "self-reported",
+      "sourceUrl": "https://thinkingmachines.ai/model-card/inkling-2-mini/",
+      "evaluatedAt": "2026-11-20",
+      "notes": "MMMU-Pro, Standard (10 options). Inkling 2 Mini column of the Evaluations table on Thinking Machines Lab's official model card."
+    },
+    {
+      "benchmarkSlug": "chartography",
+      "score": 22.1,
+      "source": "self-reported",
+      "sourceUrl": "https://thinkingmachines.ai/model-card/inkling-2-mini/",
+      "evaluatedAt": "2026-11-20",
+      "notes": "Chartography, no tools (72.5 with Python). Inkling 2 Mini column of the Evaluations table on Thinking Machines Lab's official model card."
+    },
+    {
+      "benchmarkSlug": "mrcr-v2-8n-256k",
+      "score": 46.4,
+      "source": "self-reported",
+      "sourceUrl": "https://thinkingmachines.ai/model-card/inkling-2-mini/",
+      "evaluatedAt": "2026-11-20",
+      "notes": "MRCR v2, 8-needle, 256K-512K. Inkling 2 Mini column of the Evaluations table on Thinking Machines Lab's official model card."
+    },
+    {
+      "benchmarkSlug": "gpqa",
+      "score": 86.6,
+      "source": "self-reported",
+      "sourceUrl": "https://thinkingmachines.ai/model-card/inkling-2-mini/",
+      "evaluatedAt": "2026-11-20",
+      "notes": "GPQA Diamond. Inkling 2 Mini column of the Evaluations table on Thinking Machines Lab's official model card."
+    },
+    {
+      "benchmarkSlug": "terminal-bench-4",
+      "score": 6.57,
+      "source": "independent",
+      "sourceUrl": "https://www.vals.ai/benchmarks/terminal-bench-4",
+      "evaluatedAt": "2026-11-19",
+      "notes": "Terminal-Bench 4.0, Vals AI independent run (Mini-SWE-agent harness, avg@3; ±0.51); #57 of 70 per the Vals model page (https://www.vals.ai/models/thinkingmachines_inkling-2-mini), board updated 2026-11-19; no fallback is noted. Supersedes the self-reported 5.6 row as headline."
+    },
+    {
+      "benchmarkSlug": "terminal-bench-science",
+      "score": 0.0,
+      "source": "independent",
+      "sourceUrl": "https://www.vals.ai/benchmarks/terminal-bench-science",
+      "evaluatedAt": "2026-11-19",
+      "notes": "Terminal-Bench Science 0.1, Vals AI independent run (Mini-SWE-agent harness; ±0.00); #46 of 49 per the Vals model page, board updated 2026-11-19. TML's own figure is 1.4."
+    },
+    {
+      "benchmarkSlug": "arena",
+      "score": 1367,
+      "source": "independent",
+      "sourceUrl": "https://arena.ai/leaderboard/chat/text/models/inkling-2-mini-ez3a",
+      "evaluatedAt": "2026-11-22",
+      "notes": "Text Arena row 'Inkling 2 Mini', 1,367 ±15 with 1,793 votes (#210 of 427); ranking updated Nov 22 2026. Board dated Nov 22 2026 (427 models); the model page carries no Preliminary marker. No arena row in the corpus before."
+    },
+    {
+      "benchmarkSlug": "arc-agi-1",
+      "score": 84.5,
+      "source": "independent",
+      "sourceUrl": "https://arcprize.org/results/thinky-inkling-2-mini",
+      "evaluatedAt": "2026-11-20",
+      "notes": "ARC Prize Verified, semi-private set, XHigh reasoning (the only config tested); results page dated 2026-11-20. The model card quotes the same 84.5 / 49.3 without naming the set."
+    },
+    {
+      "benchmarkSlug": "arc-agi-2",
+      "score": 49.3,
+      "source": "independent",
+      "sourceUrl": "https://arcprize.org/results/thinky-inkling-2-mini",
+      "evaluatedAt": "2026-11-20",
+      "notes": "ARC Prize Verified, semi-private set, XHigh reasoning (the only config tested); results page dated 2026-11-20. The model card quotes the same 84.5 / 49.3 without naming the set. No ARC-AGI-3 run."
+    }
+  ]
+}

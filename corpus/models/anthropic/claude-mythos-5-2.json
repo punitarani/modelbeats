@@ -1,0 +1,58 @@
+{
+  "name": "Claude Mythos 5.2",
+  "org": "Anthropic",
+  "orgSlug": "anthropic",
+  "family": "Claude 5",
+  "familySlug": "claude-5",
+  "slug": "claude-mythos-5-2",
+  "releaseDate": "2026-11-09",
+  "predecessor": "claude-mythos-5-1",
+  "status": "released",
+  "openness": "closed",
+  "license": "Proprietary (trusted-access only)",
+  "paramsB": null,
+  "activeParamsB": null,
+  "archClass": "dense",
+  "archDisplay": "The same weights as Claude Fable 5.2, served with looser cybersecurity and biology safeguards; 1M-token context, 128K max output",
+  "ctxK": 1000,
+  "modalities": [
+    "text",
+    "vision"
+  ],
+  "langCount": null,
+  "capabilities": {
+    "reasoning": true,
+    "coding": true,
+    "vision": true,
+    "functionCalling": true,
+    "toolUse": true,
+    "agentic": true
+  },
+  "apiAvailable": false,
+  "price": null,
+  "links": {
+    "docs": "https://www.anthropic.com/claude-fable-and-mythos-5-2"
+  },
+  "note": "The trusted-access twin of Claude Fable 5.2, released the same day (November 9, 2026): same model, specs and $8/$40 per Mtok list price, but limited to organisations verified through Anthropic's Cyber and Life Sciences Verification Programs, so no public price is recorded. Anthropic's launch table credits it with CyScenarioBench 76.3 (Mythos 5.1 61.7; GPT-6 Cyber 61), CVE Rediscovery 89.6 and de novo binder design (24 hr) 85.1; none of those benchmarks has a corpus column. ONLY ONE BENCHMARK ROW IS RECORDED HERE, as with Mythos 5.1: every other score is the shared Fable 5.2 measurement and is filed there, so duplicating it would double-count. Terminal-Bench-Science is the one row where the safeguard difference is broken out. That leaves this entry deliberately below the ranking-coverage floor.",
+  "quants": [],
+  "vramQ4Gb": null,
+  "vramFp16Gb": null,
+  "tps4090": null,
+  "tpsNote": null,
+  "effortLabel": null,
+  "isDefaultConfig": true,
+  "isBestConfig": true,
+  "specSources": {
+    "releaseDate": "https://www.anthropic.com/claude-fable-and-mythos-5-2"
+  },
+  "results": [
+    {
+      "benchmarkSlug": "terminal-bench-science",
+      "score": 75.3,
+      "source": "self-reported",
+      "sourceUrl": "https://www.anthropic.com/claude-fable-and-mythos-5-2",
+      "evaluatedAt": "2026-11-09",
+      "notes": "Terminal-Bench-Science 0.1, Claude Fable 5.2 launch table: the Mythos 5.2 figure, against 74.6 for the generally available Fable 5.2. Exceeds the normMax of 70."
+    }
+  ]
+}

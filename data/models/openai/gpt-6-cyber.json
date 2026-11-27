@@ -1,0 +1,43 @@
+{
+  "slug": "gpt-6-cyber",
+  "name": "GPT-6 Cyber",
+  "orgSlug": "openai",
+  "familySlug": "gpt-6",
+  "releaseDate": "2026-11-05",
+  "status": "released",
+  "predecessor": "gpt-6-astra",
+  "openness": "closed",
+  "license": "Proprietary",
+  "paramsB": null,
+  "activeParamsB": null,
+  "archClass": "dense",
+  "archDisplay": "Cyber-specialised post-training of GPT-6 Astra (architecture and size undisclosed); 1.05M-token context (922K max input / 128K max output), text+image in / text out, Responses API only",
+  "ctxK": 1050,
+  "modalities": [
+    "text",
+    "vision"
+  ],
+  "langCount": null,
+  "capabilities": {
+    "reasoning": true,
+    "coding": true,
+    "vision": true,
+    "functionCalling": true,
+    "toolUse": true,
+    "agentic": true
+  },
+  "apiAvailable": false,
+  "price": null,
+  "links": {
+    "docs": "https://developers.openai.com/api/docs/models/gpt-6-cyber"
+  },
+  "note": "OpenAI's second purpose-trained cybersecurity model, announced November 5, 2026 as `gpt-6-cyber`: a cyber-specialised variant of GPT-6 Astra for authorised vulnerability research, exploit development and security testing, rated Critical in Cybersecurity under OpenAI's Preparedness Framework (GPT-5.6 Cyber was High). GATED LAUNCH: available only to select Daybreak Red customers through the API and Codex, with access expanding over time, so it follows the Gemini 4 Carbon / Argon precedent here: apiAvailable false and price null. The model page already lists $20 input / $2 cached / $100 output per Mtok (standard short-context), to be filed once access is general. Benchmark rows come from the system card's cybersecurity evaluations at the highest tested reasoning budget. Not filed (no corpus column): ExploitGym intended-exploit success 48.45% (Astra 42.43%, GPT-5.6 Cyber 32.1%), ExploitGym Hardened 36.94%, the internal ExploitBench port 42% (V8/Chrome), and Irregular's CyScenarioBench 61% average success.",
+  "quants": [],
+  "vramQ4Gb": null,
+  "vramFp16Gb": null,
+  "tps4090": null,
+  "tpsNote": null,
+  "effortLabel": null,
+  "isDefaultConfig": true,
+  "isBestConfig": true
+}

@@ -44,6 +44,8 @@ gemini-3-flash,95.2,self-reported,https://storage.googleapis.com/deepmind-media/
 gemini-3-pro,95,self-reported,https://storage.googleapis.com/deepmind-media/Model-Cards/Gemini-3-Pro-Model-Card.pdf,2025-11-01,"AIME 2025, no tools (100% with code execution)"
 gemma-4,89.2,self-reported,https://ai.google.dev/gemma/docs/core/model_card_4,2026-04-02,"AIME 2026, no tools, 31B"
 gemma-4-26b-a4b,88.3,self-reported,https://huggingface.co/google/gemma-4-26B-A4B-it,2026-04-02,"AIME 2026, no tools, 26B A4B."
+gigachat-4-37b-a4b,88,self-reported,https://huggingface.co/ai-sage/GigaChat4-37B-A4B,2026-11-26,"AIME 2025, mean@8 (average pass@1 over 8 samples), Reasoning mode, Hugging Face model card; pass@8 93.00 not filed."
+gigachat-4-708b-a41b,93.33,self-reported,https://huggingface.co/ai-sage/GigaChat4-708B-A41B,2026-11-26,"AIME 2025, mean@8 (average pass@1 over 8 samples), Reasoning mode, from the Hugging Face model card; pass@8 96.67 and AIME 2026 mean@8 95.00 not filed."
 glm-4-5-355b-a32b,91,self-reported,https://arxiv.org/abs/2508.06471,,"AIME 2024, GLM-4.5 paper"
 glm-4-5-air-106b-a12b,89.4,independent,https://llm-stats.com/models/compare/glm-4.5-vs-glm-4.5-air,2026-07-12,AIME 2024
 glm-4-6,93.9,self-reported,https://cirra.ai/articles/glm-4-6-vs-claude-sonnet-comparison,,"AIME 2025, standard (non-tool) mode; Z.ai's own launch figure, relayed via Communeify/cirra.ai"
@@ -87,6 +89,7 @@ kimi-k2,69.6,self-reported,https://huggingface.co/moonshotai/Kimi-K2-Instruct,,"
 kimi-k2-5,96.1,self-reported,https://www.kimi.com/blog/kimi-k2-5,,"AIME 2025, avg@32"
 kimi-k2-6,96.4,self-reported,https://www.kimi.com/blog/kimi-k2-6,,vendor-labeled 'AIME 2026'
 kimi-k2-thinking,99.1,self-reported,https://huggingface.co/moonshotai/Kimi-K2-Thinking,,AIME25 with python tool
+kolibri-1-1,95.8,self-reported,https://huggingface.co/Aleph-Alpha/Kolibri-1.1,2026-11-23,AIME 2026 (EN). Kolibri 1.1 column of the launch blog's benchmark table and the card's eval results (MathArena AIME 2026); Aleph Alpha's own harnesses at the highest reasoning setting.
 lg-exaone-4-0-32b-non-reasoning,35.9,self-reported,https://arxiv.org/abs/2507.11407,,"AIME 2025, non-reasoning mode"
 lg-exaone-4-0-32b-reasoning,85.3,self-reported,https://arxiv.org/abs/2507.11407,,"AIME 2025, reasoning mode"
 lg-exaone-deep-32b,65.8,self-reported,https://github.com/LG-AI-EXAONE/EXAONE-Deep,2025-03-01,"AIME 2025, pass@1 (80.0 consistency@64). Distinct sitting from the existing AIME 2024 result above; both appear in Table 2 of the arXiv paper (2503.12524) and the GitHub README performance table."
@@ -104,6 +107,7 @@ muse-glimmer-30b,94.7,self-reported,https://huggingface.co/meta-models/Muse-Glim
 nemotron-3-nano-omni,82.1,self-reported,https://arxiv.org/abs/2604.24954,,"Table 10; AIME25, no tools, Pass@1 average of 8 runs."
 nemotron-3-super,90.21,self-reported,https://arxiv.org/abs/2604.12374,,"Table 5, AIME25 no tools."
 nemotron-nano-2-nemotron-nano-9b-v2,72.1,self-reported,https://huggingface.co/nvidia/NVIDIA-Nemotron-Nano-9B-v2,,"AIME25, Reasoning On, vs Qwen3-8B's 69.3"
+olala-v1-0-mini-7a1b,61.3,self-reported,https://huggingface.co/OVHaiLLM/Olala-v1.0-mini-7A1B,2026-11-19,"Olala v1.0 mini 7A1B column of the comparison table on the OVHaiLLM Hugging Face model card (zero-shot, reasoning effort high; pass@1 averaged over 5 samples); AIME 2025 row (AIME 2024 60.7 not filed)."
 olmo-3-7b,44.3,self-reported,https://huggingface.co/allenai/Olmo-3-7B-Instruct,,AIME 2024
 olmo-3-think-32b,76.8,self-reported,https://huggingface.co/allenai/Olmo-3-32B-Think,,AIME 2024; Qwen 3 32B 80.8
 openai-o1,74.3,self-reported,https://www.datacamp.com/blog/o3-openai,2024-12-01,"AIME 2024 [relabeled self-reported: aggregator/press relay of a vendor figure, not an independent re-measurement]"
@@ -143,6 +147,7 @@ qwq-32b,79.5,self-reported,https://www.datacamp.com/blog/qwq-32b,,"AIME24; DeepS
 qwq-32b-preview,50,self-reported,https://qwenlm.github.io/blog/qwq-32b-preview/,,AIME 2024
 r1-1776,79.8,self-reported,https://www.deeplearning.ai/the-batch/perplexity-launches-uncensored-version-of-deepseek-r1-ai-model,,"AIME 2024 pass@1, relaying Perplexity's own launch benchmark chart (original R1-1776 base model scored 80.96 on the same eval) [score corrected during round-5 full-corpus accuracy re-verify: 80.96 -> 79.8]"
 sarvam-105b,88.3,self-reported,https://huggingface.co/sarvamai/sarvam-105b,2026-02-18,"AIME 2025, without tools (96.7 with tools)"
+sarvam-105b-1711,87.9,self-reported,https://huggingface.co/sarvamai/sarvam-105b-1711,2026-11-22,"AIME 2025, no tools, mean@64. BF16 column of the Hugging Face model card's benchmark table (thinking mode)."
 seed-oss-36b,91.7,self-reported,https://huggingface.co/ByteDance-Seed/Seed-OSS-36B-Instruct,,AIME24
 seed1-5-thinking,86.7,self-reported,https://arxiv.org/abs/2504.13914,,AIME 2024
 skywork-r1v-38b,72,self-reported,https://arxiv.org/abs/2504.05599,,AIME 2024

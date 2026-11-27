@@ -1,0 +1,141 @@
+{
+  "name": "ERNIE-5.5-Flash-Base",
+  "org": "Baidu",
+  "family": "ERNIE 5.5",
+  "slug": "ernie-5-5-flash-base",
+  "releaseDate": "2026-11-05",
+  "status": "released",
+  "openness": "open-weights",
+  "license": "ERNIE 5.5 Flash Base Model License Agreement v1.0",
+  "paramsB": 280,
+  "activeParamsB": 14,
+  "archClass": "moe",
+  "archDisplay": "Pretrained MoE base (no mid- or post-training): 43 layers (1 dense + 42 Multi-Router Latent MoE, 512 routed experts top-10 + 1 shared), hybrid attention (37 heavily compressed + 6 MLA with sparse attention), 33.5T tokens; 128K training context, 1M for fine-tuning and inference",
+  "ctxK": 1024,
+  "modalities": [
+    "text"
+  ],
+  "langCount": null,
+  "capabilities": {
+    "reasoning": false,
+    "coding": true,
+    "vision": false,
+    "functionCalling": false,
+    "toolUse": false,
+    "agentic": false
+  },
+  "apiAvailable": false,
+  "price": null,
+  "links": {
+    "hf": "baidu/ERNIE-5.5-Flash-Base",
+    "docs": "https://ernie.baidu.com/release/ernie-5-5-flash-base/"
+  },
+  "note": "Baidu's first ERNIE 5.5 release, published November 5, 2026: the checkpoint at the end of pre-training, released before any mid- or post-training as a starting point for fine-tuning and RL research. FP8 and BF16 safetensors on Hugging Face under Baidu's own ERNIE 5.5 Flash Base Model License Agreement v1.0; Baidu says the post-trained ERNIE 5.5 Flash will follow. Scores are few-shot base-model evaluations. Not filed: GPQA (5-shot, subset not stated), SimpleQA (10-shot base prompt, not the chat protocol), MMMLU-lite and INCLUDE-lite (subsets), RepoBench 50.3 (above the column's bound), and rows with no column (ChineseSimpleQA, PreciseWikiQA, HotpotQA, PopQA, MathBench-CN, MultiLoKo, FullStackBench, HELMET, RepoQA, LongBench v2, InfiniteBench).",
+  "quants": [],
+  "vramQ4Gb": null,
+  "vramFp16Gb": null,
+  "tps4090": null,
+  "tpsNote": null,
+  "effortLabel": null,
+  "isDefaultConfig": true,
+  "isBestConfig": true,
+  "specSources": {
+    "releaseDate": "https://ernie.baidu.com/release/ernie-5-5-flash-base/",
+    "paramsB": "https://huggingface.co/baidu/ERNIE-5.5-Flash-Base/raw/main/README.md",
+    "activeParamsB": "https://huggingface.co/baidu/ERNIE-5.5-Flash-Base/raw/main/README.md",
+    "ctxK": "https://huggingface.co/baidu/ERNIE-5.5-Flash-Base/raw/main/README.md",
+    "archDisplay": "https://huggingface.co/baidu/ERNIE-5.5-Flash-Base/raw/main/README.md",
+    "license": "https://huggingface.co/baidu/ERNIE-5.5-Flash-Base/raw/main/README.md",
+    "openness": "https://huggingface.co/baidu/ERNIE-5.5-Flash-Base"
+  },
+  "results": [
+    {
+      "benchmarkSlug": "mmlu",
+      "score": 93.3,
+      "source": "self-reported",
+      "sourceUrl": "https://huggingface.co/baidu/ERNIE-5.5-Flash-Base/raw/main/README.md",
+      "evaluatedAt": "2026-11-05",
+      "notes": "MMLU, 5-shot EM. Base model, ERNIE-5.5-Flash-Base column of the Evaluation table on Baidu's Hugging Face model card (same pipeline as DeepSeek-V4-Flash-Base, Hy3-preview-Base and MiMo-V2.5-Base)."
+    },
+    {
+      "benchmarkSlug": "mmlu-redux",
+      "score": 94.1,
+      "source": "self-reported",
+      "sourceUrl": "https://huggingface.co/baidu/ERNIE-5.5-Flash-Base/raw/main/README.md",
+      "evaluatedAt": "2026-11-05",
+      "notes": "MMLU-Redux, 5-shot EM. Base model, ERNIE-5.5-Flash-Base column of the Evaluation table on Baidu's Hugging Face model card (same pipeline as DeepSeek-V4-Flash-Base, Hy3-preview-Base and MiMo-V2.5-Base)."
+    },
+    {
+      "benchmarkSlug": "mmlu-pro",
+      "score": 78.4,
+      "source": "self-reported",
+      "sourceUrl": "https://huggingface.co/baidu/ERNIE-5.5-Flash-Base/raw/main/README.md",
+      "evaluatedAt": "2026-11-05",
+      "notes": "MMLU-Pro, 5-shot EM. Base model, ERNIE-5.5-Flash-Base column of the Evaluation table on Baidu's Hugging Face model card (same pipeline as DeepSeek-V4-Flash-Base, Hy3-preview-Base and MiMo-V2.5-Base)."
+    },
+    {
+      "benchmarkSlug": "cmmlu",
+      "score": 90.0,
+      "source": "self-reported",
+      "sourceUrl": "https://huggingface.co/baidu/ERNIE-5.5-Flash-Base/raw/main/README.md",
+      "evaluatedAt": "2026-11-05",
+      "notes": "CMMLU, 5-shot EM. Base model, ERNIE-5.5-Flash-Base column of the Evaluation table on Baidu's Hugging Face model card (same pipeline as DeepSeek-V4-Flash-Base, Hy3-preview-Base and MiMo-V2.5-Base)."
+    },
+    {
+      "benchmarkSlug": "mgsm",
+      "score": 87.0,
+      "source": "self-reported",
+      "sourceUrl": "https://huggingface.co/baidu/ERNIE-5.5-Flash-Base/raw/main/README.md",
+      "evaluatedAt": "2026-11-05",
+      "notes": "MGSM, 8-shot CoT. Base model, ERNIE-5.5-Flash-Base column of the Evaluation table on Baidu's Hugging Face model card (same pipeline as DeepSeek-V4-Flash-Base, Hy3-preview-Base and MiMo-V2.5-Base)."
+    },
+    {
+      "benchmarkSlug": "bbh",
+      "score": 89.2,
+      "source": "self-reported",
+      "sourceUrl": "https://huggingface.co/baidu/ERNIE-5.5-Flash-Base/raw/main/README.md",
+      "evaluatedAt": "2026-11-05",
+      "notes": "BIG-Bench Hard, 3-shot CoT (77.1 direct). Base model, ERNIE-5.5-Flash-Base column of the Evaluation table on Baidu's Hugging Face model card (same pipeline as DeepSeek-V4-Flash-Base, Hy3-preview-Base and MiMo-V2.5-Base)."
+    },
+    {
+      "benchmarkSlug": "winogrande",
+      "score": 87.8,
+      "source": "self-reported",
+      "sourceUrl": "https://huggingface.co/baidu/ERNIE-5.5-Flash-Base/raw/main/README.md",
+      "evaluatedAt": "2026-11-05",
+      "notes": "WinoGrande, 5-shot. Base model, ERNIE-5.5-Flash-Base column of the Evaluation table on Baidu's Hugging Face model card (same pipeline as DeepSeek-V4-Flash-Base, Hy3-preview-Base and MiMo-V2.5-Base)."
+    },
+    {
+      "benchmarkSlug": "piqa",
+      "score": 96.0,
+      "source": "self-reported",
+      "sourceUrl": "https://huggingface.co/baidu/ERNIE-5.5-Flash-Base/raw/main/README.md",
+      "evaluatedAt": "2026-11-05",
+      "notes": "PIQA, 5-shot. Base model, ERNIE-5.5-Flash-Base column of the Evaluation table on Baidu's Hugging Face model card (same pipeline as DeepSeek-V4-Flash-Base, Hy3-preview-Base and MiMo-V2.5-Base)."
+    },
+    {
+      "benchmarkSlug": "humaneval-plus",
+      "score": 82.3,
+      "source": "self-reported",
+      "sourceUrl": "https://huggingface.co/baidu/ERNIE-5.5-Flash-Base/raw/main/README.md",
+      "evaluatedAt": "2026-11-05",
+      "notes": "HumanEval+, 1-shot pass@1. Base model, ERNIE-5.5-Flash-Base column of the Evaluation table on Baidu's Hugging Face model card (same pipeline as DeepSeek-V4-Flash-Base, Hy3-preview-Base and MiMo-V2.5-Base)."
+    },
+    {
+      "benchmarkSlug": "mbpp-plus",
+      "score": 81.5,
+      "source": "self-reported",
+      "sourceUrl": "https://huggingface.co/baidu/ERNIE-5.5-Flash-Base/raw/main/README.md",
+      "evaluatedAt": "2026-11-05",
+      "notes": "MBPP+, 0-shot pass@1. Base model, ERNIE-5.5-Flash-Base column of the Evaluation table on Baidu's Hugging Face model card (same pipeline as DeepSeek-V4-Flash-Base, Hy3-preview-Base and MiMo-V2.5-Base)."
+    },
+    {
+      "benchmarkSlug": "livecodebench",
+      "score": 40.1,
+      "source": "self-reported",
+      "sourceUrl": "https://huggingface.co/baidu/ERNIE-5.5-Flash-Base/raw/main/README.md",
+      "evaluatedAt": "2026-11-05",
+      "notes": "LiveCodeBench, 1-shot pass@1. Base model, ERNIE-5.5-Flash-Base column of the Evaluation table on Baidu's Hugging Face model card (same pipeline as DeepSeek-V4-Flash-Base, Hy3-preview-Base and MiMo-V2.5-Base)."
+    }
+  ]
+}

@@ -1,0 +1,43 @@
+{
+  "slug": "ernie-5-5-flash-base",
+  "name": "ERNIE-5.5-Flash-Base",
+  "orgSlug": "baidu",
+  "familySlug": "ernie-5-5",
+  "releaseDate": "2026-11-05",
+  "status": "released",
+  "predecessor": null,
+  "openness": "open-weights",
+  "license": "ERNIE 5.5 Flash Base Model License Agreement v1.0",
+  "paramsB": 280,
+  "activeParamsB": 14,
+  "archClass": "moe",
+  "archDisplay": "Pretrained MoE base (no mid- or post-training): 43 layers (1 dense + 42 Multi-Router Latent MoE, 512 routed experts top-10 + 1 shared), hybrid attention (37 heavily compressed + 6 MLA with sparse attention), 33.5T tokens; 128K training context, 1M for fine-tuning and inference",
+  "ctxK": 1024,
+  "modalities": [
+    "text"
+  ],
+  "langCount": null,
+  "capabilities": {
+    "reasoning": false,
+    "coding": true,
+    "vision": false,
+    "functionCalling": false,
+    "toolUse": false,
+    "agentic": false
+  },
+  "apiAvailable": false,
+  "price": null,
+  "links": {
+    "hf": "baidu/ERNIE-5.5-Flash-Base",
+    "docs": "https://ernie.baidu.com/release/ernie-5-5-flash-base/"
+  },
+  "note": "Baidu's first ERNIE 5.5 release, published November 5, 2026: the checkpoint at the end of pre-training, released before any mid- or post-training as a starting point for fine-tuning and RL research. FP8 and BF16 safetensors on Hugging Face under Baidu's own ERNIE 5.5 Flash Base Model License Agreement v1.0; Baidu says the post-trained ERNIE 5.5 Flash will follow. Scores are few-shot base-model evaluations. Not filed: GPQA (5-shot, subset not stated), SimpleQA (10-shot base prompt, not the chat protocol), MMMLU-lite and INCLUDE-lite (subsets), RepoBench 50.3 (above the column's bound), and rows with no column (ChineseSimpleQA, PreciseWikiQA, HotpotQA, PopQA, MathBench-CN, MultiLoKo, FullStackBench, HELMET, RepoQA, LongBench v2, InfiniteBench).",
+  "quants": [],
+  "vramQ4Gb": null,
+  "vramFp16Gb": null,
+  "tps4090": null,
+  "tpsNote": null,
+  "effortLabel": null,
+  "isDefaultConfig": true,
+  "isBestConfig": true
+}

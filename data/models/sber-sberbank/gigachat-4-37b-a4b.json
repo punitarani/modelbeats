@@ -1,0 +1,43 @@
+{
+  "slug": "gigachat-4-37b-a4b",
+  "name": "GigaChat 4 37B-A4B",
+  "orgSlug": "sber-sberbank",
+  "familySlug": "gigachat",
+  "releaseDate": "2026-11-26",
+  "status": "released",
+  "predecessor": null,
+  "openness": "open-weights",
+  "license": "GigaChat Noncommercial License for individuals 1.0",
+  "paramsB": 37,
+  "activeParamsB": 4,
+  "archClass": "moe",
+  "archDisplay": "MoE, 37B total / 4B active (192 routed experts, 8 active, plus 1 shared); hybrid Gated DeltaNet + MLA/DSA attention; instant and reasoning modes in one checkpoint",
+  "ctxK": 1024,
+  "modalities": [
+    "text"
+  ],
+  "langCount": null,
+  "capabilities": {
+    "reasoning": true,
+    "coding": true,
+    "vision": false,
+    "functionCalling": true,
+    "toolUse": true,
+    "agentic": true
+  },
+  "apiAvailable": true,
+  "price": null,
+  "links": {
+    "hf": "ai-sage/GigaChat4-37B-A4B",
+    "docs": "https://giga.chat/blog/en/posts/gigachat-4"
+  },
+  "note": "Sber's compact GigaChat 4 model, released Nov 26, 2026 alongside GigaChat 4 708B-A41B (launch post dated Nov 26). OPEN WEIGHTS on Hugging Face (ai-sage/GigaChat4-37B-A4B, plus -bf16, -GGUF, -base and -checkpoints) under Sber's Noncommercial License for individuals 1.0, which bars commercial use. 37B total / 4B active MoE (the launch post says about 3.8B active; 192 routed experts, 8 active, 1 shared); 32 layers, 24 Gated DeltaNet and 8 MLA/DSA; 1,048,576-token context; text only; instant and reasoning modes in one checkpoint. Smaller sibling of the 708B, so predecessor is null. Rows are the card's Reasoning-mode figures, which the card reports rounded to whole points. Instant mode scores LiveCodeBench v6 52.00, GPQA Diamond 55.00, AIME 2025 mean@8 39.00 and τ³-Bench Banking 10.00. Not filed: SWE-bench Verified 70.80, SWE-bench Multilingual 61.67, Terminal-Bench 2.0 38.20 and 2.1 39.33, because the card gives identical values in its reasoning and instant tables, which looks like a copy error; Toolathlon 39.00 (split not stated; the corpus column is the Verified split); BFCL overall accuracy 72.00 (version not stated); IFBench 75.00 (prompt-level loose); pass@8 rows; HLE 9.00 (text-only subset); τ²-Bench and τ³-Bench mean@3 (no all-domain columns); and HMMT, AIME 2026, IMO-AnswerBench, NL2Repo (mean score / pass rate 14.89 / 25.03, a different metric from the column), CoworkBench, SkillsBench, JobBench and the general-ability rows (no columns or different metric). API on GigaChat AI Studio with no per-token price published, so price is null. The technical report for this size is still to come.",
+  "quants": [],
+  "vramQ4Gb": null,
+  "vramFp16Gb": null,
+  "tps4090": null,
+  "tpsNote": null,
+  "effortLabel": null,
+  "isDefaultConfig": true,
+  "isBestConfig": true
+}

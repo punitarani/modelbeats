@@ -9,7 +9,9 @@ glm-4-5-355b-a32b,77.8,self-reported,https://arxiv.org/abs/2508.06471,,"BFCL V3 
 glm-4-5-air-106b-a12b,76.4,self-reported,https://arxiv.org/abs/2508.06471,,"BFCL V3 (Full), Table 3 of the GLM-4.5 technical report (which covers both GLM-4.5 and GLM-4.5-Air)."
 glm-z1-32b-0414,70.5,self-reported,https://github.com/zai-org/GLM-4/blob/main/README.md,,Labeled 'BFCL (v3)' in the official GitHub README benchmark chart.
 granite-4-0-h-small,64.69,self-reported,https://huggingface.co/ibm-granite/granite-4.0-h-small,,
+granite-4-1-3b-llmon-preview,60.71,self-reported,https://huggingface.co/ibm-granite/granite-4.1-3b-llmon-preview/blob/main/README.md,2026-11-12,3B-LLMON column
 granite-4-1-8b-instruct,68.27,self-reported,https://huggingface.co/ibm-granite/granite-4.1-8b,,
+granite-4-1-8b-llmon-preview,67.93,self-reported,https://huggingface.co/ibm-granite/granite-4.1-8b-llmon-preview/blob/main/README.md,2026-11-12,8B-LLMON column
 hunyuan-a13b,78.3,self-reported,https://www.marktechpost.com/2025/06/28/tencent-open-sources-hunyuan-a13b-a-13b-active-parameter-moe-model-with-dual-mode-reasoning-and-256k-context/,,"Berkeley Function-Calling Leaderboard v3, agentic tool-use"
 kimi-k2,25.3,independent,https://pricepertoken.com/leaderboards/benchmark/bfcl-v3,2026-07-15,"Berkeley Function Calling Leaderboard v3, listed as 'Kimi K2 0711' ($0.55/$2.20 pricing, matching this model's price fields exactly). Data attributed to Artificial Analysis, independently measured. Not previously tracked for this model."
 kimi-k2-5,64.5,independent,https://pricepertoken.com/leaderboards/benchmark/bfcl-v3,2026-07-15,"Berkeley Function Calling Leaderboard v3, Kimi K2.5 (both 'Thinking' and base rows show identical 64.5). Data attributed on-page to Artificial Analysis ('Benchmarks from Artificial Analysis'), independently measured rather than vendor self-reported. Not previously tracked for this model."

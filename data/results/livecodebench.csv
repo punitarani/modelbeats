@@ -38,6 +38,7 @@ deepseek-v4-pro-think-high,89.8,self-reported,https://arxiv.org/abs/2606.19348,,
 deepseek-v4-pro-think-max,93.5,self-reported,https://huggingface.co/deepseek-ai/DeepSeek-V4-Pro,,Pro-Max mode
 doubao-seed-1-6,66.8,self-reported,https://github.com/ByteDance-Seed/seed-oss/blob/master/README.md,2025-08-20,LiveCodeBench v6 score from the ByteDance-authored comparison table.
 ernie-4-5-300b-a47b,38.8,self-reported,https://ernie.baidu.com/blog/publication/ERNIE_Technical_Report.pdf,2025-06-29,Table 5.
+ernie-5-5-flash-base,40.1,self-reported,https://huggingface.co/baidu/ERNIE-5.5-Flash-Base/raw/main/README.md,2026-11-05,"LiveCodeBench, 1-shot pass@1. Base model, ERNIE-5.5-Flash-Base column of the Evaluation table on Baidu's Hugging Face model card (same pipeline as DeepSeek-V4-Flash-Base, Hy3-preview-Base and MiMo-V2.5-Base)."
 exaone-4-5,81.4,self-reported,https://www.prnewswire.com/news-releases/lg-reveals-next-gen-multimodal-ai-exaone-4-5-302736993.html,,"LiveCodeBench v6, vendor-reported vs Gemma 4 (80.0)"
 falcon-h1-34b,49.71,self-reported,https://huggingface.co/tiiuae/Falcon-H1-34B-Instruct,,
 falcon-h1r-7b,68.6,self-reported,https://falcon-lm.github.io/blog/falcon-h1r-7b/,,LiveCodeBench v6
@@ -58,6 +59,8 @@ gemma-3-27b,29.7,self-reported,https://storage.googleapis.com/deepmind-media/gem
 gemma-3-4b,12.6,self-reported,https://storage.googleapis.com/deepmind-media/gemma/Gemma3Report.pdf,2025-03-12,
 gemma-4,80,self-reported,https://ai.google.dev/gemma/docs/core/model_card_4,2026-04-02,"LiveCodeBench v6, 31B dense, also confirmed on huggingface.co/google/gemma-4-31B-it."
 gemma-4-26b-a4b,77.1,self-reported,https://huggingface.co/google/gemma-4-26B-A4B-it,2026-04-02,"LiveCodeBench v6, 26B A4B."
+gigachat-4-37b-a4b,85,self-reported,https://huggingface.co/ai-sage/GigaChat4-37B-A4B,2026-11-26,"LiveCodeBench v6, Reasoning mode, Reasoning > Code table of Sber's Hugging Face model card (instant mode 52.00)."
+gigachat-4-708b-a41b,88.82,self-reported,https://huggingface.co/ai-sage/GigaChat4-708B-A41B,2026-11-26,"LiveCodeBench v6, Reasoning mode, from the Reasoning > Code table on Sber's Hugging Face model card (instant mode 78.77)."
 glm-4-5-355b-a32b,72.9,independent,https://llm-stats.com/models/compare/glm-4.5-vs-glm-4.5-air,2026-07-12,
 glm-4-5-air-106b-a12b,70.7,independent,https://llm-stats.com/models/compare/glm-4.5-vs-glm-4.5-air,2026-07-12,
 glm-4-6,82.8,self-reported,https://cirra.ai/articles/glm-4-6-vs-claude-sonnet-comparison,,LiveCodeBench v6; corroborated separately by CometAPI's write-up of the same launch figure
@@ -93,6 +96,7 @@ kimi-k2,53.7,self-reported,https://huggingface.co/moonshotai/Kimi-K2-Instruct,,
 kimi-k2-5,85,self-reported,https://www.kimi.com/blog/kimi-k2-5,,LiveCodeBench v6
 kimi-k2-6,89.6,self-reported,https://www.kimi.com/blog/kimi-k2-6,,LiveCodeBench v6
 kimi-k2-thinking,83.1,self-reported,https://huggingface.co/moonshotai/Kimi-K2-Thinking,,"LiveCodeBench V6, no tools, from Coding Tasks table on official model card"
+kolibri-1-1,93,self-reported,https://aleph-alpha.com/en/blog/kolibri-1-1,2026-11-23,LiveCodeBench v6. Kolibri 1.1 column of the launch blog's benchmark table; Aleph Alpha's own harnesses at the highest reasoning setting.
 lg-exaone-4-0-32b-non-reasoning,43.3,self-reported,https://arxiv.org/abs/2507.11407,,"LiveCodeBench v5, non-reasoning mode"
 lg-exaone-4-0-32b-reasoning,72.6,self-reported,https://arxiv.org/abs/2507.11407,,"LiveCodeBench v5, reasoning mode"
 lg-exaone-deep-32b,59.5,self-reported,https://github.com/LG-AI-EXAONE/EXAONE-Deep,2025-03-01,"LiveCodeBench, pass@1"
@@ -165,6 +169,7 @@ qwq-32b,63.4,self-reported,https://www.datacamp.com/blog/qwq-32b,,
 qwq-32b-preview,50,self-reported,https://qwenlm.github.io/blog/qwq-32b-preview/,,
 reka-flash-3,62,self-reported,https://reka.ai/news/introducing-reka-flash,2025-03-10,Labeled 'LiveCodeBench V5' in the official launch blog's benchmark chart
 sarvam-105b,71.7,self-reported,https://huggingface.co/sarvamai/sarvam-105b,2026-02-18,LiveCodeBench v6
+sarvam-105b-1711,75.3,self-reported,https://huggingface.co/sarvamai/sarvam-105b-1711,2026-11-22,"LiveCodeBench v6 (Aug 2024-May 2025 problems), mean@8. BF16 column of the Hugging Face model card's benchmark table (thinking mode)."
 seed-oss-36b,67.4,self-reported,https://huggingface.co/ByteDance-Seed/Seed-OSS-36B-Instruct,,LiveCodeBench v6
 seed1-5-thinking,64.9,self-reported,https://github.com/ByteDance-Seed/Seed-Thinking-v1.5,,LiveCodeBench v5
 skywork-o1-open-llama-3-1-8b,26,self-reported,https://huggingface.co/Skywork/Skywork-o1-Open-Llama-3.1-8B,2024-11-26,Column labeled 'LiveCodeBench-2024.01-2024.11' in official HF model card table (row 'Skywork-o1-Open-8B').

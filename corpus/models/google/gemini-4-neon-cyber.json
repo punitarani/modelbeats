@@ -1,0 +1,53 @@
+{
+  "name": "Gemini 4 Neon for cyber",
+  "org": "Google",
+  "orgSlug": "google",
+  "family": "Gemini 4",
+  "familySlug": "gemini-4",
+  "slug": "gemini-4-neon-cyber",
+  "releaseDate": "2026-11-23",
+  "predecessor": null,
+  "status": "released",
+  "openness": "closed",
+  "license": "Proprietary (Fairwind Program allowlist; Google Frontier Cyber Model terms)",
+  "paramsB": null,
+  "activeParamsB": null,
+  "archClass": "dense",
+  "archDisplay": "Gemini 4 Neon specialised for defensive cybersecurity (gemini-4-neon-cyber-permissive), served behind a separate allowlist; architecture undisclosed",
+  "ctxK": 1000,
+  "modalities": [
+    "text",
+    "vision",
+    "audio",
+    "video"
+  ],
+  "langCount": null,
+  "capabilities": {
+    "reasoning": true,
+    "coding": true,
+    "vision": true,
+    "functionCalling": true,
+    "toolUse": true,
+    "agentic": true
+  },
+  "apiAvailable": false,
+  "price": null,
+  "links": {
+    "docs": "https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/gemini/4-neon"
+  },
+  "note": "Google's Gemini 4 Neon for cyber (model id gemini-4-neon-cyber-permissive), generally available on Gemini Enterprise Agent Platform from November 23, 2026 for defensive cybersecurity work (vulnerability discovery, reverse engineering, exploit verification, patch generation), but only behind the Fairwind Program allowlist, so it is filed with apiAvailable false and no headline price, following GPT-6 Cyber and Gemini 3.8 Flash Cyber. Same 1,048,576-token context and thinking levels as Gemini 4 Neon. Google's Model Garden pricing lists it at $3 input / $15 output per Mtok on the global endpoint ($3.30 / $16.50 regional), the same as Neon. Google published no benchmark figures for it, so it is spec-only. Predecessor is null: it is a variant of Neon, not its successor. The earlier Gemini 4 Argon Cyber Permissive (Oct 13) and Gemini 4 Carbon for cyber (Nov 10) have their own entries.",
+  "quants": [],
+  "vramQ4Gb": null,
+  "vramFp16Gb": null,
+  "tps4090": null,
+  "tpsNote": null,
+  "effortLabel": null,
+  "isDefaultConfig": true,
+  "isBestConfig": true,
+  "specSources": {
+    "releaseDate": "https://docs.cloud.google.com/gemini-enterprise-agent-platform/release-notes",
+    "ctxK": "https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/gemini/4-neon",
+    "license": "https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/gemini/4-neon"
+  },
+  "results": []
+}

@@ -31,6 +31,7 @@ deepseek-r1-distill-qwen-32b,41.8,independent,https://huggingface.co/datasets/op
 deepseek-v2-236b,79.7,self-reported,https://huggingface.co/deepseek-ai/DeepSeek-V2-Chat,,Chat (RL) variant
 doubao-1-5-pro,91.6,self-reported,https://seed.bytedance.com/doubao_1_5_pro,,BBH row of the official launch-page table (Reasoning section).
 ernie-4-5-300b-a47b,94.3,self-reported,https://ernie.baidu.com/blog/publication/ERNIE_Technical_Report.pdf,2025-06-29,Table 5.
+ernie-5-5-flash-base,89.2,self-reported,https://huggingface.co/baidu/ERNIE-5.5-Flash-Base/raw/main/README.md,2026-11-05,"BIG-Bench Hard, 3-shot CoT (77.1 direct). Base model, ERNIE-5.5-Flash-Base column of the Evaluation table on Baidu's Hugging Face model card (same pipeline as DeepSeek-V4-Flash-Base, Hy3-preview-Base and MiMo-V2.5-Base)."
 falcon-h1-34b,70.68,self-reported,https://huggingface.co/tiiuae/Falcon-H1-34B-Instruct,,
 falcon-mamba-7b,19.88,independent,https://huggingface.co/blog/falconmamba,2024-08-12,
 falcon3-10b,44.82,self-reported,https://huggingface.co/tiiuae/Falcon3-10B-Instruct,,
@@ -59,7 +60,9 @@ granite-3-1-8b-instruct,34.09,independent,https://huggingface.co/ibm-granite/gra
 granite-3-2-8b-instruct,64.77,self-reported,https://huggingface.co/ibm-granite/granite-3.2-8b-instruct,,BigBenchHard
 granite-3-3-8b-instruct,69.13,self-reported,https://huggingface.co/ibm-granite/granite-3.3-8b-instruct,,BigBenchHard
 granite-4-0-h-small,81.62,self-reported,https://huggingface.co/ibm-granite/granite-4.0-h-small,,
+granite-4-1-3b-llmon-preview,74.04,self-reported,https://huggingface.co/ibm-granite/granite-4.1-3b-llmon-preview/blob/main/README.md,2026-11-12,"3-shot, CoT, 3B-LLMON column"
 granite-4-1-8b-instruct,80.51,self-reported,https://huggingface.co/ibm-granite/granite-4.1-8b,,
+granite-4-1-8b-llmon-preview,80.88,self-reported,https://huggingface.co/ibm-granite/granite-4.1-8b-llmon-preview/blob/main/README.md,2026-11-12,"3-shot, CoT, 8B-LLMON column"
 h2o-danube3-4b,38.92,self-reported,https://arxiv.org/abs/2407.09276,,"3-shot CoT, from H2O-Danube3 technical report Table 2"
 hermes-3-405b,75.37,self-reported,https://arxiv.org/pdf/2408.11857,,3-shot
 hunyuan-a13b,89.1,self-reported,https://huggingface.co/tencent/Hunyuan-A13B-Instruct,,"Instruct-model competitive-table figure (base/pretrain table separately reports BBH=87.56, not used here to stay consistent with the Instruct framing of this catalog entry)."

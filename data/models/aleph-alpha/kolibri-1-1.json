@@ -1,0 +1,43 @@
+{
+  "slug": "kolibri-1-1",
+  "name": "Kolibri 1.1",
+  "orgSlug": "aleph-alpha",
+  "familySlug": "kolibri",
+  "releaseDate": "2026-11-23",
+  "status": "released",
+  "predecessor": null,
+  "openness": "open-weights",
+  "license": "Apache 2.0",
+  "paramsB": 75.1,
+  "activeParamsB": 3.44,
+  "archClass": "moe",
+  "archDisplay": "75B MoE (3.44B active/token; 384 routed experts, top-6, 1 shared) with 4:1 sliding-window to sparse attention; German and English",
+  "ctxK": 262,
+  "modalities": [
+    "text"
+  ],
+  "langCount": 2,
+  "capabilities": {
+    "reasoning": true,
+    "coding": true,
+    "vision": false,
+    "functionCalling": true,
+    "toolUse": true,
+    "agentic": true
+  },
+  "apiAvailable": false,
+  "price": null,
+  "links": {
+    "hf": "Aleph-Alpha/Kolibri-1.1",
+    "docs": "https://aleph-alpha.com/en/blog/kolibri-1-1"
+  },
+  "note": "Aleph Alpha's November 23, 2026 open-weight English-German MoE, released under Apache 2.0 seven weeks after Kolibri 1.0 (which is not in the catalog, so predecessor is null). Same pre-trained model as 1.0 with new mid- and post-training and a sparse-attention recipe; the first layers were densified, bringing it to 75.1B total (from 78B) with 3.44B active. Context is 262,144 tokens native, extendable to 1,048,576, with Aleph Alpha recommending at most 262K for complex tasks, so ctxK is the native length. Self-hosted only, with no hosted API price. Rows are Aleph Alpha's own runs at the highest reasoning setting (eval-framework; SWE-bench and Terminal-Bench in Harbor). Not filed: IFBench 82.7 (prompt-level loose, not the standard strict metric), Humanity's Last Exam Diamond and the German HLE (subsets), AA-Omniscience and AA-LCR (Artificial Analysis metrics), and rows with no column (BeyondAIME, BFCL v4, BrowseComp-Plus, MuSiQue, RGB, SQuAD grounding, AgentDojo, BenchCAD, WMT24++).",
+  "quants": [],
+  "vramQ4Gb": null,
+  "vramFp16Gb": null,
+  "tps4090": null,
+  "tpsNote": null,
+  "effortLabel": null,
+  "isDefaultConfig": true,
+  "isBestConfig": true
+}

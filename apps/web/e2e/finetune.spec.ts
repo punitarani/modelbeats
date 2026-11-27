@@ -107,7 +107,7 @@ test.describe('fine-tune selector', () => {
     await gotoHydrated(page, '/finetune')
     await pickOption(page, 'finetune-sort', 'Cheapest training')
     await expect(page).toHaveURL(/sort=cost/)
-    await expect(page.getByTestId('finetune-row').first()).toContainText('SantaCoder 1.1B')
+    await expect(page.getByTestId('finetune-row').first()).toContainText('Olala v1.0 mini 7A1B')
   })
 
   test('effort/mode variants collapse to one row per checkpoint', async ({ page }) => {
@@ -130,7 +130,7 @@ test.describe('fine-tune selector', () => {
     await gotoHydrated(page, '/finetune')
     await pickOption(page, 'finetune-ctx', '≥ 1M tokens')
     await expect(page).toHaveURL(/ctx=1000/)
-    await expect(page.getByTestId('finetune-count')).toHaveText(/^3 fit your hardware/)
+    await expect(page.getByTestId('finetune-count')).toHaveText(/^4 fit your hardware/)
   })
 
   test('All mode surfaces non-fitting big models with a won’t-fit verdict', async ({ page }) => {
@@ -140,7 +140,8 @@ test.describe('fine-tune selector', () => {
     // …flip to All and it becomes discoverable as a non-fitting row
     await page.getByRole('button', { name: 'All', exact: true }).click()
     await expect(page).toHaveURL(/show=all/)
-    const row = page.getByTestId('finetune-row').filter({ hasText: 'Kimi K3' })
+    // the regex keeps Kimi K3.1 Pro (also 2800B open weights since Nov 4) out of the match
+    const row = page.getByTestId('finetune-row').filter({ hasText: /Kimi K3(?!\.1)/ })
     await expect(row).toHaveCount(1)
     await expect(row).toContainText('exceeds 8× B200')
   })

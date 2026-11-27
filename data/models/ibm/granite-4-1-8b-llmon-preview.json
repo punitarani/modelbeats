@@ -1,0 +1,43 @@
+{
+  "slug": "granite-4-1-8b-llmon-preview",
+  "name": "Granite 4.1 8B LLMON (Preview)",
+  "orgSlug": "ibm",
+  "familySlug": "granite-4-1",
+  "releaseDate": "2026-11-12",
+  "status": "preview",
+  "predecessor": "granite-4-1-8b-instruct",
+  "openness": "open-weights",
+  "license": "Apache 2.0",
+  "paramsB": 8,
+  "activeParamsB": null,
+  "archClass": "dense",
+  "archDisplay": "Dense decoder-only Transformer fine-tuned from Granite-4.1-8B-base on LLMON markup; 128K-token context; text only",
+  "ctxK": 128,
+  "modalities": [
+    "text"
+  ],
+  "langCount": 12,
+  "capabilities": {
+    "reasoning": false,
+    "coding": true,
+    "vision": false,
+    "functionCalling": true,
+    "toolUse": true,
+    "agentic": false
+  },
+  "apiAvailable": false,
+  "price": null,
+  "links": {
+    "hf": "ibm-granite/granite-4.1-8b-llmon-preview",
+    "docs": "https://huggingface.co/blog/ibm-granite/llmon-an-llm-native-markup-language-now-in-granite"
+  },
+  "note": "One of two experimental preview models IBM released on Nov 12, 2026 (with the 3B sibling): a 8B instruct model fine-tuned from Granite-4.1-8B-base to read and write LLMON, an LLM-native markup language meant to separate trusted instructions from untrusted data and so resist prompt injection. IBM's blog calls it 'an experimental preview, ready for exploration and evaluation but not for production'. The README's goal is parity with Granite-4.1-8B-Instruct on general benchmarks. The prompt-injection results (OPI, ASB, StruQ) appear only as charts. ctxK is from max_position_embeddings 131072 in the repo's config.json; paramsB is the README's '8B' (Hugging Face metadata shows 9B stored weights). Self-reported rows come from the README's 8B-LLMON column. NOT FILED (no corpus column): GSM Symbolic 86.30, Minerva Math 72.20, DeepMind Math 70.86, CRUXEval-O 36.88, MULTIPLE 61.08, INCLUDE 63.60, SALAD-Bench 97.70, AttaQ 86.07 and Tulu3 Safety Eval Avg 87.31.",
+  "quants": [],
+  "vramQ4Gb": null,
+  "vramFp16Gb": null,
+  "tps4090": null,
+  "tpsNote": null,
+  "effortLabel": null,
+  "isDefaultConfig": true,
+  "isBestConfig": true
+}

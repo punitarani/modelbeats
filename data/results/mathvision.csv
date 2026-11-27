@@ -3,6 +3,7 @@ deepseek-vl2,17.3,independent,https://arxiv.org/html/2504.07491v1,2025-04-10,"Ki
 exaone-4-5,75.2,self-reported,https://arxiv.org/abs/2604.08644,2026-04-09,MATH-Vision
 gemma-4,85.6,self-reported,https://ai.google.dev/gemma/docs/core/model_card_4,2026-04-02,"MATH-Vision, 31B."
 gemma-4-26b-a4b,82.4,self-reported,https://huggingface.co/google/gemma-4-26B-A4B-it,2026-04-02,"MATH-Vision, 26B A4B."
+inkling-2-small,92.8,self-reported,https://thinkingmachines.ai/model-card/inkling-2-small/,2026-11-05,MathVision. Inkling 2 Small column of the Evaluations table on Thinking Machines Lab's official model card.
 internvl2-5-78b,32.2,self-reported,https://internvl.github.io/blog/2024-12-05-InternVL-2.5/,,MathVision full test set (mini split scored 34.9)
 internvl3-78b,43.1,self-reported,https://internvl.github.io/blog/2025-04-11-InternVL-3.0/,,
 kimi-k1-5,38.6,self-reported,https://arxiv.org/abs/2501.12599,,"MathVision-Full (Pass@1) = 38.6, Kimi k1.5 long-CoT model, Table 2 (short-CoT model scores 31.0 per Table 3)."

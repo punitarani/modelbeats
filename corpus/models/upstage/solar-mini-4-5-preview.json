@@ -1,0 +1,61 @@
+{
+  "name": "Solar Mini 4.5 Preview",
+  "org": "Upstage",
+  "family": "SOLAR",
+  "slug": "solar-mini-4-5-preview",
+  "releaseDate": "2026-11-23",
+  "status": "preview",
+  "openness": "closed",
+  "license": "Proprietary",
+  "paramsB": 35,
+  "activeParamsB": 3,
+  "archClass": "moe",
+  "archDisplay": "Mixture-of-Experts (35B total / 3B active); reasoning mode available",
+  "ctxK": 512,
+  "modalities": [
+    "text"
+  ],
+  "langCount": 3,
+  "capabilities": {
+    "reasoning": true,
+    "coding": true,
+    "vision": false,
+    "functionCalling": true,
+    "toolUse": true,
+    "agentic": true
+  },
+  "apiAvailable": true,
+  "price": {
+    "input": 0.1,
+    "output": 0.4,
+    "provider": "Upstage",
+    "effectiveAt": "2026-11-23"
+  },
+  "links": {
+    "docs": "https://console.upstage.ai/docs/models/solar-mini-4-5-preview"
+  },
+  "note": "Early-access preview of Upstage's Solar Mini 4.5, released Nov 23, 2026 per the Console version list (solar-mini-4-5-preview, also in the Nov 23 changelog). Closed weights, API only (Upstage Console, OpenRouter, on-prem). 35B total / 3B active MoE like Solar Mini 4, 512K context, 128K max output, August 2026 training cutoff, reasoning mode, tool calling and structured outputs; English, Korean and Japanese. Price is the $0.10 input / $0.40 output / $0.01 cached per Mtok list price; the 90% preview discount ($0.01 / $0.04) is promotional and not filed. Upstage says Solar Mini 4.5 is officially released on Dec 3, 2026, when this ID routes to solar-mini-4-5. No benchmark figures are published (Upstage's Korean newsletter says only that it beat Solar Pro 4 in internal tests), so it is spec-only and unranked.",
+  "quants": [],
+  "vramQ4Gb": null,
+  "vramFp16Gb": null,
+  "tps4090": null,
+  "tpsNote": null,
+  "effortLabel": null,
+  "isDefaultConfig": true,
+  "isBestConfig": true,
+  "specSources": {
+    "releaseDate": "https://console.upstage.ai/docs/models/solar-mini-4-5-preview",
+    "paramsB": "https://console.upstage.ai/docs/models/solar-mini-4-5-preview",
+    "activeParamsB": "https://console.upstage.ai/docs/models/solar-mini-4-5-preview",
+    "ctxK": "https://console.upstage.ai/docs/models/solar-mini-4-5-preview",
+    "price": "https://console.upstage.ai/docs/models/solar-mini-4-5-preview",
+    "langCount": "https://console.upstage.ai/docs/models/solar-mini-4-5-preview",
+    "capabilities": "https://console.upstage.ai/docs/models/solar-mini-4-5-preview",
+    "status": "https://console.upstage.ai/docs/models/solar-mini-4-5-preview"
+  },
+  "aliases": [
+    "solar-mini-4-5-preview"
+  ],
+  "results": [],
+  "predecessor": "solar-mini-4"
+}

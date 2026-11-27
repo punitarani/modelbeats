@@ -1,0 +1,143 @@
+{
+  "name": "Gemini 4 Neon",
+  "org": "Google",
+  "orgSlug": "google",
+  "family": "Gemini 4",
+  "familySlug": "gemini-4",
+  "slug": "gemini-4-neon",
+  "releaseDate": "2026-11-18",
+  "predecessor": null,
+  "status": "released",
+  "openness": "closed",
+  "license": "Proprietary",
+  "paramsB": null,
+  "activeParamsB": null,
+  "archClass": "dense",
+  "archDisplay": "Proprietary model adapted from Gemini 4 Carbon; architecture and parameter count undisclosed; 1M-token context",
+  "ctxK": 1000,
+  "modalities": [
+    "text",
+    "vision",
+    "audio",
+    "video"
+  ],
+  "langCount": null,
+  "capabilities": {
+    "reasoning": true,
+    "coding": true,
+    "vision": true,
+    "functionCalling": true,
+    "toolUse": true,
+    "agentic": true
+  },
+  "apiAvailable": true,
+  "price": {
+    "input": 3,
+    "output": 15,
+    "provider": "Google",
+    "effectiveAt": "2026-11-18"
+  },
+  "links": {
+    "docs": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-4-neon/"
+  },
+  "note": "Google DeepMind's mid-tier Gemini 4 model, released Nov 18, 2026 and rolling out to the Gemini API (AI Studio, paid tier only), Gemini for business, Google Antigravity and the Gemini app (Pro and Ultra). Google positions it between Carbon (hardest long-horizon work) and Hydrogen (fast everyday execution); the model card says it is 'adapted from Gemini 4 Carbon'. It is a sibling, not a successor, so predecessor is null (as with Hydrogen). Priced flat at $3/$15 per Mtok across the 1M-token window, cached input $0.15 (AI Studio docs, blog); no introductory wording. Four thinking levels (low, medium, high default, xhigh). Vals AI's independent runs (model page, xhigh, no fallbacks shown) add Terminal-Bench 4.0 61.62 (#7 of 69) and Terminal-Bench-Science 62.86 (#2 of 48); Vals Index 70.87 (#2 of 42) has no column. Self-reported rows come from the model card table (results as of November 2026; comparison columns Claude Opus 5.5 and GPT-6.2 Sol). NOT FILED: Terminal-Bench 4.1 cheating-adjusted 65.2, Agents' Last Exam v1.1 75.8, CursorBench 4.1 65.4 and FrontierCode 2.0 46.2 (newer versions than the corpus columns); CWE-Bench v2 70.7 (above the column's bounds, as with Carbon's 71.0); HLE-Diamond 71.3 (subset); SWE-sweep (39.0 provider harness, 12.8 mini-SWE), RiemannBench 84.0, MKA 56.5, GraphWalks 95.2, WebExploitBench v1.2 51.3, AA Index 61 and Vals Index v2.2 70.9 (no corpus column); and, from the blog, Vending-Bench 2 $16,843, Agent Arena Index 1336, AA Coding Agent Index 58.6 and AutoBaxBench hard tier 76% (no corpus column). The card's Opus 5.5 and GPT-6.2 Sol comparison figures are not filed as rows for those models. No ARC Prize result yet. Text Arena's Nov 22 board adds 'Gemini 4 Neon (High)' at 1,512 ±8 (#3), with no Preliminary marker.",
+  "quants": [],
+  "vramQ4Gb": null,
+  "vramFp16Gb": null,
+  "tps4090": null,
+  "tpsNote": null,
+  "effortLabel": null,
+  "isDefaultConfig": true,
+  "isBestConfig": true,
+  "specSources": {
+    "releaseDate": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-4-neon/",
+    "price": "https://aistudio.google.com/docs/whats-new-gemini-4-neon",
+    "status": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-4-neon/",
+    "ctxK": "https://deepmind.google/models/model-cards/gemini-4-neon/",
+    "modalities": "https://deepmind.google/models/model-cards/gemini-4-neon/",
+    "archDisplay": "https://deepmind.google/models/model-cards/gemini-4-neon/",
+    "results": "https://deepmind.google/models/model-cards/gemini-4-neon/"
+  },
+  "results": [
+    {
+      "benchmarkSlug": "automationbench",
+      "score": 56.3,
+      "source": "self-reported",
+      "sourceUrl": "https://deepmind.google/models/model-cards/gemini-4-neon/",
+      "evaluatedAt": "2026-11-18",
+      "notes": "Zapier AutomationBench, Google DeepMind Gemini 4 Neon model card table (the blog names it 'Zapier AutomationBench', #1); Claude Opus 5.5 42.5, GPT-6.2 Sol 41.3."
+    },
+    {
+      "benchmarkSlug": "chartography",
+      "score": 73.5,
+      "source": "self-reported",
+      "sourceUrl": "https://deepmind.google/models/model-cards/gemini-4-neon/",
+      "evaluatedAt": "2026-11-18",
+      "notes": "Chartography, Google DeepMind Gemini 4 Neon model card table (no tool setting or thinking level stated); Claude Opus 5.5 66.3, GPT-6.2 Sol 75.1."
+    },
+    {
+      "benchmarkSlug": "lvbench",
+      "score": 89.0,
+      "source": "self-reported",
+      "sourceUrl": "https://deepmind.google/models/model-cards/gemini-4-neon/",
+      "evaluatedAt": "2026-11-18",
+      "notes": "LVBench, Google DeepMind Gemini 4 Neon model card table (settings not stated); Claude Opus 5.5 83.7, GPT-6.2 Sol 87.6."
+    },
+    {
+      "benchmarkSlug": "terminal-bench-science",
+      "score": 70.5,
+      "source": "self-reported",
+      "sourceUrl": "https://deepmind.google/models/model-cards/gemini-4-neon/",
+      "evaluatedAt": "2026-11-18",
+      "notes": "Terminal-Bench-Science 0.1, Google DeepMind Gemini 4 Neon model card table (harness and thinking level not stated); Claude Opus 5.5 63.3, GPT-6.2 Sol 68.0. Vals AI's own run gives 62.86 (separate row)."
+    },
+    {
+      "benchmarkSlug": "sec-bench-pro",
+      "score": 90.5,
+      "source": "self-reported",
+      "sourceUrl": "https://deepmind.google/models/model-cards/gemini-4-neon/",
+      "evaluatedAt": "2026-11-18",
+      "notes": "SEC-bench Pro, Google DeepMind Gemini 4 Neon model card table; GPT-6.2 Sol 88.3, no Claude Opus 5.5 figure."
+    },
+    {
+      "benchmarkSlug": "terminal-bench-4",
+      "score": 61.62,
+      "source": "independent",
+      "sourceUrl": "https://www.vals.ai/benchmarks/terminal-bench-4",
+      "evaluatedAt": "2026-11-18",
+      "notes": "Terminal-Bench 4.0, Vals AI independent run (mini-swe-agent harness, avg@3; model page lists xhigh reasoning effort; ±2.02); #7 of 69 on the Vals model page dated Nov 18. No fallback rate or fallback model is shown for Neon."
+    },
+    {
+      "benchmarkSlug": "terminal-bench-science",
+      "score": 62.86,
+      "source": "independent",
+      "sourceUrl": "https://www.vals.ai/models/google_gemini-4-neon",
+      "evaluatedAt": "2026-11-18",
+      "notes": "Terminal-Bench-Science, Vals AI independent run (xhigh reasoning effort; ±5.82); #2 of 48 on the Vals model page dated Nov 18. No fallback rate or fallback model is shown."
+    },
+    {
+      "benchmarkSlug": "arena",
+      "score": 1512,
+      "source": "independent",
+      "sourceUrl": "https://arena.ai/leaderboard/chat/text",
+      "evaluatedAt": "2026-11-22",
+      "notes": "Text Arena row 'Gemini 4 Neon (High)', 1,512 ±8 with 5,611 votes (#3 overall); ranking updated Nov 22 2026. Board dated Nov 22 2026 (427 models); the row carries no Preliminary marker (Carbon and Hydrogen did on Nov 11). No arena row in the corpus before."
+    },
+    {
+      "benchmarkSlug": "arc-agi-1",
+      "score": 98.5,
+      "source": "independent",
+      "sourceUrl": "https://arcprize.org/results/google-gemini-4-neon",
+      "evaluatedAt": "2026-11-18",
+      "notes": "ARC Prize Verified result on the Semi-Private set, run by the ARC Prize team (results page dated 2026-11-18). Medium reasoning, the best of three variants (Low ties at 98.5 / 93.8; High 96.5 / 90.8). ARC Prize notes one Medium task stayed incomplete because of API issues, and lengthy API response times prevented xhigh runs and any ARC-AGI-3 run."
+    },
+    {
+      "benchmarkSlug": "arc-agi-2",
+      "score": 93.8,
+      "source": "independent",
+      "sourceUrl": "https://arcprize.org/results/google-gemini-4-neon",
+      "evaluatedAt": "2026-11-18",
+      "notes": "ARC Prize Verified result on the Semi-Private set, run by the ARC Prize team (results page dated 2026-11-18). Medium reasoning, the best of three variants (Low ties at 98.5 / 93.8; High 96.5 / 90.8). ARC Prize notes one Medium task stayed incomplete because of API issues, and lengthy API response times prevented xhigh runs and any ARC-AGI-3 run."
+    }
+  ]
+}

@@ -1,0 +1,46 @@
+{
+  "slug": "gpt-6-2-sol",
+  "name": "GPT-6.2 Sol",
+  "orgSlug": "openai",
+  "familySlug": "gpt-6-2",
+  "releaseDate": "2026-11-17",
+  "status": "released",
+  "predecessor": null,
+  "openness": "closed",
+  "license": "Proprietary",
+  "paramsB": null,
+  "activeParamsB": null,
+  "archClass": "dense",
+  "archDisplay": "Proprietary reasoning model (architecture and size undisclosed); 1.05M-token context (922K input, 128K output), text+image in / text out",
+  "ctxK": 1050,
+  "modalities": [
+    "text",
+    "vision"
+  ],
+  "langCount": null,
+  "capabilities": {
+    "reasoning": true,
+    "coding": true,
+    "vision": true,
+    "functionCalling": true,
+    "toolUse": true,
+    "agentic": true
+  },
+  "apiAvailable": true,
+  "price": {
+    "input": 2,
+    "output": 10
+  },
+  "links": {
+    "docs": "https://developers.openai.com/api/docs/models/gpt-6.2-sol"
+  },
+  "note": "OpenAI's GPT-6.2 Sol, released Nov 17, 2026 alongside GPT-6.2 Astra (system card dated Nov 17) in the API as gpt-6.2-sol, ChatGPT Work and Codex. It keeps GPT-6.1 Sol's $2/$10 per Mtok (cached input $0.10, cache writes $2.50); prompts over 272K input tokens double input and cache rates and bill output at 1.5x. 1.05M context (922K input, 128K output), June 1, 2026 knowledge cutoff. The launch post compares it with GPT-6.1 Sol, but GPT-6.2 is a new family, so predecessor is null. Vals AI's independent runs give Terminal-Bench 4.0 60.61 (#7 of 68) and Terminal-Bench-Science 58.57 (#3 of 47). NOT FILED: the launch post gives benchmark scores only as chart images and relative deltas (Agents' Last Exam +5.2 pts over GPT-6 Astra; Terminal-Bench-Science +9 pts; FrontierCode 2.0 Sol within 0.5 pts of Astra; GDPval v2; BenchCAD 2.1; AutomationBench), so no absolute launch-chart figures are filed; third-party transcriptions are unverified. From the system card, ExploitBench V8 100% (unclear whether it matches the public ExploitBench column), ExploitBench Internal Port, virology, protein-design and research-engineering evals (MLE-Bench Revised, PostTrainBench Lite, KernelGen, NanoGPT) have no matching column. Vals' Finance Agent v2.1, HLAB-Vals-1.1, EMB v1.1, Vals Index and other Vals runs have no column. ARC Prize verified results (Nov 17) are filed for ARC-AGI-1, -2 and -3 (Standard harness); no Text Arena row yet.",
+  "quants": [],
+  "vramQ4Gb": null,
+  "vramFp16Gb": null,
+  "tps4090": null,
+  "tpsNote": null,
+  "effortLabel": null,
+  "isDefaultConfig": true,
+  "isBestConfig": true
+}
