@@ -59,6 +59,8 @@ gemma-3-27b,29.7,self-reported,https://storage.googleapis.com/deepmind-media/gem
 gemma-3-4b,12.6,self-reported,https://storage.googleapis.com/deepmind-media/gemma/Gemma3Report.pdf,2025-03-12,
 gemma-4,80,self-reported,https://ai.google.dev/gemma/docs/core/model_card_4,2026-04-02,"LiveCodeBench v6, 31B dense, also confirmed on huggingface.co/google/gemma-4-31B-it."
 gemma-4-26b-a4b,77.1,self-reported,https://huggingface.co/google/gemma-4-26B-A4B-it,2026-04-02,"LiveCodeBench v6, 26B A4B."
+gigachat-4-37b-a4b,85,self-reported,https://huggingface.co/ai-sage/GigaChat4-37B-A4B,2026-11-26,"LiveCodeBench v6, Reasoning mode, Reasoning > Code table of Sber's Hugging Face model card (instant mode 52.00)."
+gigachat-4-708b-a41b,88.82,self-reported,https://huggingface.co/ai-sage/GigaChat4-708B-A41B,2026-11-26,"LiveCodeBench v6, Reasoning mode, from the Reasoning > Code table on Sber's Hugging Face model card (instant mode 78.77)."
 glm-4-5-355b-a32b,72.9,independent,https://llm-stats.com/models/compare/glm-4.5-vs-glm-4.5-air,2026-07-12,
 glm-4-5-air-106b-a12b,70.7,independent,https://llm-stats.com/models/compare/glm-4.5-vs-glm-4.5-air,2026-07-12,
 glm-4-6,82.8,self-reported,https://cirra.ai/articles/glm-4-6-vs-claude-sonnet-comparison,,LiveCodeBench v6; corroborated separately by CometAPI's write-up of the same launch figure

@@ -1,4 +1,6 @@
 model_slug,score,source,source_url,evaluated_at,notes
+gigachat-4-37b-a4b,9,self-reported,https://huggingface.co/ai-sage/GigaChat4-37B-A4B,2026-11-26,"τ³-Bench Banking, mean@3, Reasoning mode, Reasoning > Agentic table of the Hugging Face model card (instant mode 10.00)."
+gigachat-4-708b-a41b,18.03,self-reported,https://huggingface.co/ai-sage/GigaChat4-708B-A41B,2026-11-26,"τ³-Bench Banking, mean@3, Reasoning mode, Reasoning > Agentic table of the Hugging Face model card (instant mode 15.00)."
 gpt-5-6-luna,27.2,independent,https://benchlm.ai/models/gpt-5-6-luna,2026-07-24,"τ³-Banking (Artificial Analysis methodology), GPT-5.6 Luna = 27.2%, BenchLM tracker snapshot."
 gpt-5-6-sol,33,independent,https://benchlm.ai/models/gpt-5-6-sol,2026-07-24,"τ³-Banking (Artificial Analysis methodology), GPT-5.6 Sol = 33.0%, BenchLM tracker snapshot of the AA figure. Within the tau3-banking taxonomy bounds [0,45]."
 gpt-5-6-terra,31.8,independent,https://benchlm.ai/models/gpt-5-6-terra,2026-07-24,"τ³-Banking (Artificial Analysis methodology), GPT-5.6 Terra = 31.8%, BenchLM tracker snapshot."

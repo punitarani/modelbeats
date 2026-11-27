@@ -1,0 +1,43 @@
+{
+  "slug": "gigachat-4-708b-a41b",
+  "name": "GigaChat 4 708B-A41B",
+  "orgSlug": "sber-sberbank",
+  "familySlug": "gigachat",
+  "releaseDate": "2026-11-26",
+  "status": "released",
+  "predecessor": null,
+  "openness": "open-weights",
+  "license": "MIT",
+  "paramsB": 708,
+  "activeParamsB": 41,
+  "archClass": "moe",
+  "archDisplay": "MoE, 708B total / 41B active (256 routed experts, 8 active, plus 1 shared); hybrid Gated DeltaNet + MLA/DSA attention; instant and reasoning modes in one checkpoint",
+  "ctxK": 1024,
+  "modalities": [
+    "text"
+  ],
+  "langCount": null,
+  "capabilities": {
+    "reasoning": true,
+    "coding": true,
+    "vision": false,
+    "functionCalling": true,
+    "toolUse": true,
+    "agentic": true
+  },
+  "apiAvailable": true,
+  "price": null,
+  "links": {
+    "hf": "ai-sage/GigaChat4-708B-A41B",
+    "docs": "https://giga.chat/blog/en/posts/gigachat-4"
+  },
+  "note": "Sber's GigaChat 4 flagship, released Nov 26, 2026 at AI Journey (launch post and tech report dated Nov 26). OPEN WEIGHTS under the MIT License: ai-sage/GigaChat4-708B-A41B (FP8) on Hugging Face, plus -bf16, -GGUF, -base and -checkpoints repos. 708B total / 41B active MoE (256 routed experts, 8 active, 1 shared); 64 layers, 48 Gated DeltaNet linear-attention and 16 MLA with DeepSeek sparse attention; 1,048,576-token context; text only. One checkpoint serves both instant and reasoning modes (chat_template_kwargs.reasoning), unlike GigaChat 3.5's separate checkpoints. Rows are the card's Reasoning-mode figures. Instant mode scores LiveCodeBench v6 78.77, GPQA Diamond 70.20, AIME 2025 mean@8 68.75 and τ³-Bench Banking 15.00. Not filed: every coding-agent row (SWE-bench Verified 80.89, SWE-bench Multilingual 77.00, DeepSWE 35.40, NL2Repo cheating-adjusted 30.89, Terminal-Bench 2.0 71.26, Terminal-Bench 2.1 69.66) because the card marks them as run with a seven-hour timeout (non-standard setting); IFBench 80.33 (prompt-level loose); pass@8 rows (HMMT 98.33, AIME 2025 96.67, AIME 2026 96.67); HLE 23.91 (text-only subset); BFCL v4 79.55 (no BFCL v4 column); τ²-Bench mean@3 83.31 (no all-domain column); and HMMT mean@8 93.75, AIME 2026 mean@8 95.00, IMO-AnswerBench 82.69, JSONSchemaBench, StructEval, POLLUX, GraphWalks, Natural Plan, NIH Complex, AA-LCR, CoworkBench, SkillsBench and HealthAdminBench (no columns). API on GigaChat AI Studio (OpenAI-compatible, 25 requests/min per user) and the Evolution Foundation Models catalog on cloud.ru; no per-token price published, so price is null. The corpus's only earlier GigaChat entry is the 2023 closed product (GigaChat 3.x is not in the corpus), so predecessor is null.",
+  "quants": [],
+  "vramQ4Gb": null,
+  "vramFp16Gb": null,
+  "tps4090": null,
+  "tpsNote": null,
+  "effortLabel": null,
+  "isDefaultConfig": true,
+  "isBestConfig": true
+}

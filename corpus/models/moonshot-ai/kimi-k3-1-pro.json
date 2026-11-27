@@ -138,6 +138,14 @@
       "sourceUrl": "https://huggingface.co/moonshotai/Kimi-K3.1-Pro",
       "evaluatedAt": "2026-11-04",
       "notes": "MMMU-Pro without tools, Evaluation Results table on Moonshot's Hugging Face model card (reasoning effort max). The card's separate 'MMMU-Pro w/ python' figure (90.0) is a tool-assisted run and is not filed."
+    },
+    {
+      "benchmarkSlug": "arena",
+      "score": 1483,
+      "source": "independent",
+      "sourceUrl": "https://arena.ai/leaderboard/chat/text/models/kimi-k3.1-pro-max-0s1y",
+      "evaluatedAt": "2026-11-22",
+      "notes": "Text Arena row 'Kimi K3.1 Pro (Max)', 1,483 ±8 with 7,378 votes (#27 of 427); ranking updated Nov 22 2026. Board dated Nov 22 2026 (427 models); the model page carries no Preliminary marker. No arena row in the corpus before (held on Nov 25 and 26 while the model page still showed the Nov 20 ranking)."
     }
   ]
 }

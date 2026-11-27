@@ -44,6 +44,8 @@ gemini-3-flash,95.2,self-reported,https://storage.googleapis.com/deepmind-media/
 gemini-3-pro,95,self-reported,https://storage.googleapis.com/deepmind-media/Model-Cards/Gemini-3-Pro-Model-Card.pdf,2025-11-01,"AIME 2025, no tools (100% with code execution)"
 gemma-4,89.2,self-reported,https://ai.google.dev/gemma/docs/core/model_card_4,2026-04-02,"AIME 2026, no tools, 31B"
 gemma-4-26b-a4b,88.3,self-reported,https://huggingface.co/google/gemma-4-26B-A4B-it,2026-04-02,"AIME 2026, no tools, 26B A4B."
+gigachat-4-37b-a4b,88,self-reported,https://huggingface.co/ai-sage/GigaChat4-37B-A4B,2026-11-26,"AIME 2025, mean@8 (average pass@1 over 8 samples), Reasoning mode, Hugging Face model card; pass@8 93.00 not filed."
+gigachat-4-708b-a41b,93.33,self-reported,https://huggingface.co/ai-sage/GigaChat4-708B-A41B,2026-11-26,"AIME 2025, mean@8 (average pass@1 over 8 samples), Reasoning mode, from the Hugging Face model card; pass@8 96.67 and AIME 2026 mean@8 95.00 not filed."
 glm-4-5-355b-a32b,91,self-reported,https://arxiv.org/abs/2508.06471,,"AIME 2024, GLM-4.5 paper"
 glm-4-5-air-106b-a12b,89.4,independent,https://llm-stats.com/models/compare/glm-4.5-vs-glm-4.5-air,2026-07-12,AIME 2024
 glm-4-6,93.9,self-reported,https://cirra.ai/articles/glm-4-6-vs-claude-sonnet-comparison,,"AIME 2025, standard (non-tool) mode; Z.ai's own launch figure, relayed via Communeify/cirra.ai"
